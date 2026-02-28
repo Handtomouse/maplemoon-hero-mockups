@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MapleMoon — Face-Off: Bars vs Elixirs</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  @font-face {
+    font-family: 'P22 Mackinac Pro';
+    src: local('P22 Mackinac Pro Book'), local('P22MackinacPro-Book');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+  }
+  @font-face {
+    font-family: 'P22 Mackinac Pro';
+    src: local('P22 Mackinac Pro Medium'), local('P22MackinacPro-Medium');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+  }
+  @font-face {
+    font-family: 'P22 Mackinac Pro';
+    src: local('P22 Mackinac Pro Bold'), local('P22MackinacPro-Bold');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  *, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  :root {
+    --navy: #1E4366;
+    --forest: #1B3A2A;
+    --cream: #E7E4CA;
+    --cream-light: #F5F3E8;
+    --lilac: #D8CFF2;
+    --heading: 'P22 Mackinac Pro', Georgia, serif;
+    --body: 'Inter', sans-serif;
+  }
+
+  html, body {
+    height: 100%;
+    overflow: hidden;
+    font-family: var(--body);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  /* NAV */
+  .nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 24px 48px;
+    pointer-events: none;
+  }
+  .nav > * { pointer-events: auto; }
+  .nav-links {
+    display: flex;
+    gap: 32px;
+    list-style: none;
+  }
+  .nav-links a {
+    color: var(--cream);
+    text-decoration: none;
+    font-family: var(--body);
+    font-size: 13px;
+    font-weight: 400;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    opacity: 0.7;
+    transition: opacity 0.3s;
+  }
+  .nav-links a:hover { opacity: 1; }
+  .nav-logo {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .nav-logo img {
+    height: 28px;
+    filter: brightness(0) invert(0.9);
+  }
+
+  /* HERO SPLIT */
+  .hero {
+    display: flex;
+    height: 100vh;
+    width: 100%;
+    position: relative;
+  }
+
+  .half {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: flex 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    overflow: hidden;
+    cursor: pointer;
+    flex: 1;
+  }
+  .half--bars {
+    background-color: var(--navy);
+  }
+  .half--elixirs {
+    background-color: var(--forest);
+  }
+
+  /* Hover states — desktop */
+  @media (min-width: 769px) {
+    .hero:hover .half--bars {
+      flex: 0.9;
+    }
+    .hero:hover .half--elixirs {
+      flex: 0.9;
+    }
+    .hero:hover .half--bars:hover {
+      flex: 1.2;
+    }
+    .hero:hover .half--elixirs:hover {
+      flex: 1.2;
+    }
+    .half:hover .product-img {
+      transform: scale(1.08);
+    }
+    .half:hover .half-label {
+      letter-spacing: 0.25em;
+    }
+    .half:hover .half-cta {
+      background: rgba(231,228,202,0.12);
+      border-color: var(--cream);
+    }
+  }
+
+  /* Content */
+  .half-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    z-index: 2;
+    text-align: center;
+    padding: 0 40px;
+  }
+
+  .product-img {
+    height: 340px;
+    width: auto;
+    object-fit: contain;
+    transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    filter: drop-shadow(0 20px 60px rgba(0,0,0,0.3));
+    margin-bottom: 12px;
+  }
+
+  .half-label {
+    font-family: var(--heading);
+    font-weight: 500;
+    font-size: 42px;
+    color: var(--cream);
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    transition: letter-spacing 0.5s ease;
+  }
+
+  .half-subtitle {
+    font-family: var(--body);
+    font-size: 14px;
+    font-weight: 300;
+    color: var(--cream);
+    opacity: 0.5;
+    letter-spacing: 0.06em;
+    margin-top: -8px;
+  }
+
+  .half-cta {
+    display: inline-block;
+    margin-top: 8px;
+    padding: 14px 36px;
+    border: 1px solid rgba(231,228,202,0.4);
+    color: var(--cream);
+    font-family: var(--body);
+    font-size: 13px;
+    font-weight: 400;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    text-decoration: none;
+    background: transparent;
+    cursor: pointer;
+    transition: all 0.35s ease;
+  }
+  .half-cta:hover {
+    background: rgba(231,228,202,0.15);
+    border-color: var(--cream);
+  }
+
+  /* CENTER DIVIDER */
+  .divider {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    width: 1px;
+    background: rgba(231,228,202,0.15);
+    z-index: 50;
+    transform: translateX(-50%);
+    pointer-events: none;
+    transition: left 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  }
+  .divider-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-90deg);
+    z-index: 51;
+    pointer-events: none;
+    white-space: nowrap;
+  }
+  .divider-text span {
+    font-family: var(--body);
+    font-size: 10px;
+    font-weight: 300;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--cream);
+    opacity: 0.35;
+    background: var(--navy);
+    padding: 8px 16px;
+  }
+
+  .vs-badge {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 52;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    border: 1px solid rgba(231,228,202,0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(30,67,102,0.6);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    pointer-events: none;
+  }
+  .vs-badge span {
+    font-family: var(--heading);
+    font-size: 11px;
+    font-weight: 500;
+    color: var(--cream);
+    opacity: 0.6;
+    letter-spacing: 0.08em;
+  }
+
+  /* Subtle texture overlay */
+  .half::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse at center, transparent 0%, rgba(0,0,0,0.15) 100%);
+    pointer-events: none;
+  }
+
+  /* Elixir moon glow */
+  .half--elixirs .product-img {
+    filter: drop-shadow(0 0 60px rgba(216,207,242,0.15)) drop-shadow(0 20px 60px rgba(0,0,0,0.3));
+  }
+
+  /* MOBILE */
+  @media (max-width: 768px) {
+    html, body { overflow: auto; }
+
+    .hero {
+      flex-direction: column;
+      height: auto;
+      min-height: 100vh;
+    }
+    .half {
+      min-height: 50vh;
+      padding: 80px 24px 60px;
+    }
+    .product-img {
+      height: 220px;
+    }
+    .half-label {
+      font-size: 32px;
+    }
+    .divider {
+      display: none;
+    }
+    .divider-text { display: none; }
+    .vs-badge {
+      top: 50%;
+      left: 50%;
+    }
+    .nav {
+      padding: 16px 24px;
+    }
+    .nav-links { gap: 16px; }
+    .nav-links a { font-size: 11px; }
+    .nav-logo img { height: 22px; }
+
+    /* Horizontal divider between sections on mobile */
+    .half--bars::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 10%;
+      right: 10%;
+      height: 1px;
+      background: rgba(231,228,202,0.15);
+    }
+  }
+
+  /* Gallery link */
+  .gallery-link {
+    position: fixed;
+    bottom: 24px;
+    left: 24px;
+    z-index: 100;
+    color: var(--cream);
+    font-family: var(--body);
+    font-size: 12px;
+    font-weight: 300;
+    letter-spacing: 0.06em;
+    text-decoration: none;
+    opacity: 0.4;
+    transition: opacity 0.3s;
+  }
+  .gallery-link:hover { opacity: 0.8; }
+
+  /* Mockup label */
+  .mockup-id {
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
+    z-index: 100;
+    font-family: var(--body);
+    font-size: 10px;
+    font-weight: 300;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--cream);
+    opacity: 0.25;
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav">
+  <ul class="nav-links">
+    <li><a href="#">Shop</a></li>
+    <li><a href="#">Story</a></li>
+  </ul>
+  <div class="nav-logo">
+    <img src="assets/maplemoon_logo.svg" alt="MapleMoon">
+  </div>
+  <ul class="nav-links">
+    <li><a href="#">Stockists</a></li>
+    <li><a href="#">Cart (0)</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<div class="hero" id="hero">
+
+  <!-- BARS -->
+  <div class="half half--bars" id="halfBars">
+    <div class="half-content">
+      <img src="assets/bar_pcar_front.png" alt="MapleMoon Carob Bar" class="product-img">
+      <h2 class="half-label">Bars</h2>
+      <p class="half-subtitle">Six handcrafted flavours</p>
+      <a href="#" class="half-cta">Shop Bars &rarr;</a>
+    </div>
+  </div>
+
+  <!-- DIVIDER -->
+  <div class="divider" id="divider"></div>
+  <div class="divider-text">
+    <span>choose your ritual</span>
+  </div>
+  <div class="vs-badge"><span>VS</span></div>
+
+  <!-- ELIXIRS -->
+  <div class="half half--elixirs" id="halfElixirs">
+    <div class="half-content">
+      <img src="assets/mm_moon_logo.png" alt="MapleMoon Elixir" class="product-img" style="height:280px; opacity:0.9;">
+      <h2 class="half-label">Elixirs</h2>
+      <p class="half-subtitle">Plain &amp; Spiced</p>
+      <a href="#" class="half-cta">Shop Elixirs &rarr;</a>
+    </div>
+  </div>
+
+</div>
+
+<a href="#" class="gallery-link">&larr; Back to Gallery</a>
+<div class="mockup-id">Mockup 29 — Face-Off</div>
+
+</body>
+</html>

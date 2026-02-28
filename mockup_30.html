@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MapleMoon — Circular Reveal</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  @font-face {
+    font-family: 'P22 Mackinac Pro';
+    src: local('P22 Mackinac Pro Book'), local('P22MackinacPro-Book');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+  }
+  @font-face {
+    font-family: 'P22 Mackinac Pro';
+    src: local('P22 Mackinac Pro Medium'), local('P22MackinacPro-Medium');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+  }
+  @font-face {
+    font-family: 'P22 Mackinac Pro';
+    src: local('P22 Mackinac Pro Bold'), local('P22MackinacPro-Bold');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  *, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  :root {
+    --navy: #1E4366;
+    --navy-deep: #152f49;
+    --cream: #E7E4CA;
+    --cream-light: #F5F3E8;
+    --lilac: #D8CFF2;
+    --heading: 'P22 Mackinac Pro', Georgia, serif;
+    --body: 'Inter', sans-serif;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    font-family: var(--body);
+    background: var(--navy);
+    color: var(--cream);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
+  }
+
+  /* NAV */
+  .nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 24px 48px;
+  }
+  .nav-links {
+    display: flex;
+    gap: 32px;
+    list-style: none;
+  }
+  .nav-links a {
+    color: var(--cream);
+    text-decoration: none;
+    font-family: var(--body);
+    font-size: 13px;
+    font-weight: 400;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    opacity: 0.5;
+    transition: opacity 0.3s;
+  }
+  .nav-links a:hover { opacity: 1; }
+  .nav-logo {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .nav-logo img {
+    height: 28px;
+    filter: brightness(0) invert(0.9);
+  }
+
+  /* HERO SECTION */
+  .hero {
+    position: relative;
+    height: 200vh; /* Extra height for scroll effect */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hero-sticky {
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+
+  /* Background subtle radial */
+  .hero-sticky::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse at 50% 45%, rgba(216,207,242,0.04) 0%, transparent 60%);
+    pointer-events: none;
+  }
+
+  /* MOON CIRCLE */
+  .moon-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+  }
+
+  .moon-circle {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 1px solid rgba(231,228,202,0.2);
+    transition: width 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+                height 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+                border-color 0.6s ease;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    position: relative;
+    background: rgba(21,47,73,0.5);
+  }
+
+  .moon-circle img {
+    width: 85%;
+    height: 85%;
+    object-fit: contain;
+    opacity: 0.9;
+    transition: opacity 0.4s ease;
+  }
+
+  .moon-circle:hover {
+    border-color: rgba(231,228,202,0.35);
+  }
+
+  /* Concentric decorative ring */
+  .outer-ring {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 450px;
+    height: 450px;
+    border-radius: 50%;
+    border: 1px dashed rgba(231,228,202,0);
+    pointer-events: none;
+    transition: border-color 0.8s ease 0.3s, width 0.8s ease, height 0.8s ease;
+    z-index: 5;
+  }
+
+  /* Second subtle ring */
+  .outer-ring-2 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 550px;
+    height: 550px;
+    border-radius: 50%;
+    border: 1px solid rgba(231,228,202,0);
+    pointer-events: none;
+    transition: border-color 1s ease 0.5s;
+    z-index: 4;
+  }
+
+  /* Reveal text elements */
+  .reveal-above {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin-top: -240px;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.6s ease 0.2s, transform 0.6s ease 0.2s;
+    z-index: 11;
+    pointer-events: none;
+  }
+  .reveal-above h2 {
+    font-family: var(--heading);
+    font-weight: 400;
+    font-size: 18px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--cream);
+    opacity: 0.7;
+  }
+
+  .reveal-below {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin-top: 240px;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.6s ease 0.3s, transform 0.6s ease 0.3s;
+    z-index: 11;
+    pointer-events: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+  .reveal-below .tagline {
+    font-family: var(--body);
+    font-size: 14px;
+    font-weight: 300;
+    letter-spacing: 0.06em;
+    color: var(--cream);
+    opacity: 0.5;
+    max-width: 280px;
+  }
+  .reveal-below .cta {
+    display: inline-block;
+    padding: 14px 40px;
+    border: 1px solid rgba(231,228,202,0.35);
+    color: var(--cream);
+    font-family: var(--body);
+    font-size: 13px;
+    font-weight: 400;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    text-decoration: none;
+    background: transparent;
+    cursor: pointer;
+    transition: all 0.35s ease;
+  }
+  .reveal-below .cta:hover {
+    background: rgba(231,228,202,0.1);
+    border-color: var(--cream);
+  }
+
+  /* EXPANDED STATE (class added by JS) */
+  .moon-expanded .moon-circle {
+    width: 350px;
+    height: 350px;
+    border-color: rgba(231,228,202,0.3);
+  }
+  .moon-expanded .outer-ring {
+    border-color: rgba(231,228,202,0.06);
+  }
+  .moon-expanded .outer-ring-2 {
+    border-color: rgba(231,228,202,0.03);
+  }
+  .moon-expanded .reveal-above {
+    opacity: 1;
+    pointer-events: auto;
+  }
+  .moon-expanded .reveal-below {
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  /* WORDMARK below circle */
+  .wordmark {
+    margin-top: 40px;
+    z-index: 10;
+    transition: opacity 0.5s ease;
+  }
+  .wordmark img {
+    height: 20px;
+    opacity: 0.3;
+    transition: opacity 0.5s ease;
+  }
+  .moon-expanded ~ .wordmark img {
+    opacity: 0.5;
+  }
+
+  /* Scroll hint */
+  .scroll-hint {
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    opacity: 0.3;
+    animation: scrollPulse 2s ease infinite;
+    z-index: 10;
+  }
+  .scroll-hint span {
+    font-family: var(--body);
+    font-size: 10px;
+    font-weight: 300;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--cream);
+  }
+  .scroll-hint .arrow {
+    width: 16px;
+    height: 16px;
+    border-right: 1px solid var(--cream);
+    border-bottom: 1px solid var(--cream);
+    transform: rotate(45deg);
+    margin-top: -4px;
+  }
+
+  @keyframes scrollPulse {
+    0%, 100% { opacity: 0.3; transform: translateX(-50%) translateY(0); }
+    50% { opacity: 0.5; transform: translateX(-50%) translateY(6px); }
+  }
+
+  /* Gallery link */
+  .gallery-link {
+    position: fixed;
+    bottom: 24px;
+    left: 24px;
+    z-index: 100;
+    color: var(--cream);
+    font-family: var(--body);
+    font-size: 12px;
+    font-weight: 300;
+    letter-spacing: 0.06em;
+    text-decoration: none;
+    opacity: 0.4;
+    transition: opacity 0.3s;
+  }
+  .gallery-link:hover { opacity: 0.8; }
+
+  /* Mockup label */
+  .mockup-id {
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
+    z-index: 100;
+    font-family: var(--body);
+    font-size: 10px;
+    font-weight: 300;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--cream);
+    opacity: 0.25;
+  }
+
+  /* Particle dots (decorative) */
+  .particle {
+    position: absolute;
+    width: 2px;
+    height: 2px;
+    border-radius: 50%;
+    background: var(--cream);
+    pointer-events: none;
+    z-index: 3;
+  }
+
+  /* MOBILE */
+  @media (max-width: 768px) {
+    .nav { padding: 16px 24px; }
+    .nav-links { gap: 16px; }
+    .nav-links a { font-size: 11px; }
+    .nav-logo img { height: 22px; }
+
+    .moon-circle {
+      width: 120px;
+      height: 120px;
+    }
+    .moon-expanded .moon-circle {
+      width: 280px;
+      height: 280px;
+    }
+    .outer-ring {
+      width: 360px;
+      height: 360px;
+    }
+    .outer-ring-2 {
+      width: 440px;
+      height: 440px;
+    }
+    .reveal-above {
+      margin-top: -200px;
+    }
+    .reveal-below {
+      margin-top: 200px;
+    }
+    .reveal-above h2 {
+      font-size: 15px;
+    }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav">
+  <ul class="nav-links">
+    <li><a href="#">Shop</a></li>
+    <li><a href="#">Story</a></li>
+  </ul>
+  <div class="nav-logo">
+    <img src="assets/maplemoon_logo.svg" alt="MapleMoon">
+  </div>
+  <ul class="nav-links">
+    <li><a href="#">Stockists</a></li>
+    <li><a href="#">Cart (0)</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="hero">
+  <div class="hero-sticky" id="heroSticky">
+
+    <div class="moon-container" id="moonContainer">
+      <!-- Reveal text above -->
+      <div class="reveal-above">
+        <h2>Artisan Carob</h2>
+      </div>
+
+      <!-- Moon -->
+      <div class="moon-circle" id="moonCircle">
+        <img src="assets/mm_moon_logo.png" alt="MapleMoon">
+      </div>
+
+      <!-- Concentric rings -->
+      <div class="outer-ring"></div>
+      <div class="outer-ring-2"></div>
+
+      <!-- Reveal text below -->
+      <div class="reveal-below">
+        <p class="tagline">Nature's gentle alternative, handcrafted with care</p>
+        <a href="#" class="cta">Explore the Collection &rarr;</a>
+      </div>
+    </div>
+
+    <!-- Wordmark -->
+    <div class="wordmark">
+      <img src="assets/carob_wordmark.svg" alt="MapleMoon">
+    </div>
+
+    <!-- Decorative particles -->
+    <div class="particle" style="top:20%;left:15%;opacity:0.08;width:3px;height:3px;"></div>
+    <div class="particle" style="top:35%;left:80%;opacity:0.06;"></div>
+    <div class="particle" style="top:70%;left:25%;opacity:0.05;width:3px;height:3px;"></div>
+    <div class="particle" style="top:60%;left:85%;opacity:0.07;"></div>
+    <div class="particle" style="top:15%;left:70%;opacity:0.04;width:4px;height:4px;"></div>
+    <div class="particle" style="top:80%;left:60%;opacity:0.06;"></div>
+
+    <!-- Scroll hint -->
+    <div class="scroll-hint" id="scrollHint">
+      <span>Scroll to reveal</span>
+      <div class="arrow"></div>
+    </div>
+
+  </div>
+</section>
+
+<a href="#" class="gallery-link">&larr; Back to Gallery</a>
+<div class="mockup-id">Mockup 30 — Circular Reveal</div>
+
+<script>
+(function() {
+  const moonContainer = document.getElementById('moonContainer');
+  const moonCircle = document.getElementById('moonCircle');
+  const heroSticky = document.getElementById('heroSticky');
+  const scrollHint = document.getElementById('scrollHint');
+
+  let isHovered = false;
+  let scrollExpanded = false;
+
+  // Hover interaction
+  moonCircle.addEventListener('mouseenter', function() {
+    isHovered = true;
+    updateState();
+  });
+
+  moonCircle.addEventListener('mouseleave', function() {
+    isHovered = false;
+    updateState();
+  });
+
+  // Scroll interaction
+  function handleScroll() {
+    const scrollY = window.scrollY;
+    const maxScroll = 400;
+    const progress = Math.min(scrollY / maxScroll, 1);
+
+    // Scale the moon based on scroll
+    const scale = 1 + (progress * 2.5); // 1x to 3.5x
+    const baseSize = window.innerWidth <= 768 ? 120 : 100;
+    const newSize = baseSize * scale;
+
+    if (!isHovered) {
+      moonCircle.style.width = newSize + 'px';
+      moonCircle.style.height = newSize + 'px';
+    }
+
+    // Determine if scroll-expanded
+    scrollExpanded = progress > 0.5;
+    updateState();
+
+    // Fade scroll hint
+    if (scrollHint) {
+      scrollHint.style.opacity = Math.max(0, 0.3 - (progress * 0.6));
+    }
+
+    // Update ring opacity based on scroll
+    const rings = document.querySelectorAll('.outer-ring, .outer-ring-2');
+    rings.forEach(ring => {
+      if (!isHovered && !scrollExpanded) {
+        ring.style.borderColor = `rgba(231,228,202,${progress * 0.06})`;
+      }
+    });
+  }
+
+  function updateState() {
+    if (isHovered || scrollExpanded) {
+      moonContainer.classList.add('moon-expanded');
+      if (isHovered) {
+        // Reset scroll-driven size when hovering
+        const hoverSize = window.innerWidth <= 768 ? 280 : 350;
+        moonCircle.style.width = hoverSize + 'px';
+        moonCircle.style.height = hoverSize + 'px';
+      }
+    } else {
+      moonContainer.classList.remove('moon-expanded');
+    }
+  }
+
+  window.addEventListener('scroll', handleScroll, { passive: true });
+  handleScroll(); // Init
+})();
+</script>
+
+</body>
+</html>

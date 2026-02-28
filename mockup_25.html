@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MapleMoon — Lookbook</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  @font-face {
+    font-family: 'P22 Mackinac Pro';
+    src: local('P22 Mackinac Pro Book'), local('P22MackinacPro-Book');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+  }
+  @font-face {
+    font-family: 'P22 Mackinac Pro';
+    src: local('P22 Mackinac Pro Medium'), local('P22MackinacPro-Medium');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+  }
+  @font-face {
+    font-family: 'P22 Mackinac Pro';
+    src: local('P22 Mackinac Pro Bold'), local('P22MackinacPro-Bold');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+  :root {
+    --navy: #1E4366;
+    --cream: #E7E4CA;
+    --cream-light: #F5F3E8;
+    --lilac: #D8CFF2;
+  }
+
+  body {
+    font-family: 'Inter', sans-serif;
+    overflow: hidden;
+  }
+
+  .hero {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    background:
+      linear-gradient(
+        175deg,
+        #0F2A40 0%,
+        #1E4366 25%,
+        #2A4F6B 40%,
+        #3D4A3E 55%,
+        #5C4A35 68%,
+        #6B4C3B 78%,
+        #5C3D2E 88%,
+        #3A2518 100%
+      );
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* Noise texture overlay */
+  .hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.06'/%3E%3C/svg%3E");
+    pointer-events: none;
+    z-index: 1;
+  }
+
+  /* Warm light bloom effect */
+  .hero::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 30%;
+    width: 70%;
+    height: 60%;
+    background: radial-gradient(
+      ellipse at 60% 80%,
+      rgba(107, 76, 59, 0.25) 0%,
+      rgba(92, 61, 46, 0.12) 40%,
+      transparent 70%
+    );
+    pointer-events: none;
+    z-index: 1;
+  }
+
+  /* Back link */
+  .back-link {
+    position: absolute;
+    top: 24px;
+    left: 32px;
+    font-size: 13px;
+    font-weight: 400;
+    color: var(--cream);
+    opacity: 0.45;
+    text-decoration: none;
+    letter-spacing: 0.02em;
+    transition: opacity 0.3s;
+    z-index: 20;
+  }
+  .back-link:hover { opacity: 0.9; }
+
+  /* Nav */
+  nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 24px 48px;
+    position: relative;
+    z-index: 10;
+  }
+  nav .logo img {
+    height: 36px;
+    width: auto;
+    opacity: 0.9;
+  }
+  nav .nav-links {
+    display: flex;
+    gap: 32px;
+    list-style: none;
+  }
+  nav .nav-links a {
+    color: var(--cream);
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 0.04em;
+    opacity: 0.55;
+    transition: opacity 0.3s;
+  }
+  nav .nav-links a:hover { opacity: 1; }
+
+  /* Giant watermark */
+  .watermark {
+    position: absolute;
+    top: 50%;
+    left: 8%;
+    transform: translateY(-50%);
+    z-index: 2;
+    pointer-events: none;
+  }
+  .watermark img {
+    height: clamp(300px, 45vh, 500px);
+    width: auto;
+    opacity: 0.05;
+  }
+
+  /* Atmospheric light rays */
+  .light-rays {
+    position: absolute;
+    top: 0;
+    right: 20%;
+    width: 40%;
+    height: 100%;
+    background: linear-gradient(
+      195deg,
+      transparent 0%,
+      rgba(231, 228, 202, 0.015) 30%,
+      rgba(231, 228, 202, 0.03) 50%,
+      transparent 70%
+    );
+    pointer-events: none;
+    z-index: 2;
+  }
+
+  /* Floating product card */
+  .product-card {
+    position: absolute;
+    bottom: 72px;
+    right: 72px;
+    width: 280px;
+    height: 400px;
+    background: var(--cream-light);
+    border-radius: 12px;
+    box-shadow:
+      0 24px 80px rgba(0, 0, 0, 0.3),
+      0 8px 24px rgba(0, 0, 0, 0.15),
+      0 0 0 1px rgba(231, 228, 202, 0.1);
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    animation: cardFloat 3s ease-in-out infinite;
+    transition: box-shadow 0.4s ease, transform 0.4s ease;
+    cursor: default;
+  }
+  .product-card:hover {
+    box-shadow:
+      0 32px 100px rgba(0, 0, 0, 0.4),
+      0 12px 32px rgba(0, 0, 0, 0.2),
+      0 0 0 1px rgba(231, 228, 202, 0.15);
+    transform: translateY(-12px);
+    animation-play-state: paused;
+  }
+
+  @keyframes cardFloat {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-8px); }
+  }
+
+  .card-image {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 24px 24px 8px;
+    background: linear-gradient(180deg, #FAFAF5 0%, var(--cream-light) 100%);
+    position: relative;
+  }
+  .card-image img {
+    height: 180px;
+    width: auto;
+    object-fit: contain;
+    filter: drop-shadow(0 8px 24px rgba(0, 0, 0, 0.1));
+    transition: transform 0.4s ease;
+  }
+  .product-card:hover .card-image img {
+    transform: scale(1.04);
+  }
+
+  /* Subtle badge on card */
+  .card-badge {
+    position: absolute;
+    top: 16px;
+    left: 16px;
+    font-size: 9px;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--navy);
+    opacity: 0.35;
+    background: rgba(30, 67, 102, 0.06);
+    padding: 4px 8px;
+    border-radius: 4px;
+  }
+
+  .card-details {
+    padding: 20px 24px 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  .card-name {
+    font-family: 'P22 Mackinac Pro', Georgia, serif;
+    font-weight: 500;
+    font-size: 18px;
+    color: var(--navy);
+    line-height: 1.25;
+  }
+
+  .card-weight {
+    font-size: 13px;
+    font-weight: 400;
+    color: var(--navy);
+    opacity: 0.4;
+  }
+
+  .card-price-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 8px;
+  }
+
+  .card-price {
+    font-family: 'P22 Mackinac Pro', Georgia, serif;
+    font-weight: 700;
+    font-size: 20px;
+    color: var(--navy);
+  }
+
+  .card-btn {
+    background: var(--navy);
+    color: var(--cream);
+    border: none;
+    border-radius: 8px;
+    padding: 10px 20px;
+    font-family: 'Inter', sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 0.03em;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+  }
+  .card-btn:hover {
+    background: #15334D;
+    transform: translateY(-1px);
+  }
+  .card-btn:active {
+    transform: translateY(0);
+  }
+
+  /* Ambient text on left */
+  .ambient-text {
+    position: absolute;
+    bottom: 120px;
+    left: 72px;
+    z-index: 5;
+    max-width: 400px;
+  }
+  .ambient-text h2 {
+    font-family: 'P22 Mackinac Pro', Georgia, serif;
+    font-weight: 400;
+    font-size: clamp(28px, 3.5vw, 48px);
+    color: var(--cream);
+    line-height: 1.2;
+    opacity: 0.85;
+  }
+  .ambient-text p {
+    font-size: 14px;
+    font-weight: 300;
+    color: var(--cream);
+    opacity: 0.35;
+    margin-top: 16px;
+    line-height: 1.6;
+    letter-spacing: 0.01em;
+  }
+
+  /* Small trust icons stacked vertically on far left */
+  .side-trust {
+    position: absolute;
+    left: 48px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    z-index: 5;
+  }
+  .side-trust img {
+    width: 22px;
+    height: auto;
+    opacity: 0.2;
+    filter: brightness(0) invert(0.9);
+    transition: opacity 0.3s;
+  }
+  .side-trust img:hover { opacity: 0.5; }
+
+  /* Mockup label */
+  .mockup-label {
+    position: absolute;
+    bottom: 12px;
+    left: 20px;
+    font-size: 10px;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    opacity: 0.15;
+    color: var(--cream);
+    z-index: 20;
+  }
+</style>
+</head>
+<body>
+<div class="hero">
+  <a href="#" class="back-link">&larr; Back to Gallery</a>
+
+  <nav>
+    <div class="logo">
+      <img src="assets/maplemoon_logo.svg" alt="MapleMoon">
+    </div>
+    <ul class="nav-links">
+      <li><a href="#">Shop</a></li>
+      <li><a href="#">Our Story</a></li>
+      <li><a href="#">Stockists</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Giant watermark -->
+  <div class="watermark">
+    <img src="assets/carob_wordmark.svg" alt="">
+  </div>
+
+  <!-- Light rays -->
+  <div class="light-rays"></div>
+
+  <!-- Side trust icons -->
+  <div class="side-trust">
+    <img src="assets/icon_caffeine_free.svg" alt="Caffeine Free">
+    <img src="assets/icon_vegan.svg" alt="Vegan">
+    <img src="assets/icon_organic.svg" alt="Organic">
+    <img src="assets/icon_gluten_free.svg" alt="Gluten Free">
+    <img src="assets/icon_made_in_aus.svg" alt="Made in Australia">
+  </div>
+
+  <!-- Ambient text -->
+  <div class="ambient-text">
+    <h2>A quieter kind<br>of indulgence</h2>
+    <p>Naturally sweet, caffeine-free carob.<br>Handcrafted in Melbourne.</p>
+  </div>
+
+  <!-- Floating product card -->
+  <div class="product-card">
+    <div class="card-image">
+      <span class="card-badge">Bestseller</span>
+      <img src="assets/bar_pcar_front.png" alt="Pure Carob Bar">
+    </div>
+    <div class="card-details">
+      <span class="card-name">Pure Carob Bar</span>
+      <span class="card-weight">90g</span>
+      <div class="card-price-row">
+        <span class="card-price">$8.50</span>
+        <button class="card-btn">Add to Cart</button>
+      </div>
+    </div>
+  </div>
+
+  <span class="mockup-label">Mockup 25 &mdash; Lookbook</span>
+</div>
+</body>
+</html>
