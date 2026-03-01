@@ -90,20 +90,15 @@
     display: none;
   }
 
-  /* CAROB giant text — mobile */
+  /* CAROB giant wordmark — mobile */
   .carob-giant {
     position: absolute;
     bottom: 10vh;
     left: 50%;
     transform: translateX(-50%);
-    font-family: 'P22 Mackinac Pro', 'Georgia', serif;
-    font-weight: 700;
-    font-size: 18vw;
-    color: #E7E4CA;
-    letter-spacing: 0.06em;
-    white-space: nowrap;
+    width: 90vw;
     z-index: 2;
-    line-height: 1;
+    display: block;
   }
 
   /* CAROB watermark behind — mobile */
@@ -112,15 +107,11 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    font-family: 'P22 Mackinac Pro', 'Georgia', serif;
-    font-weight: 700;
-    font-size: 30vw;
-    color: #E7E4CA;
-    opacity: 0.09;
-    letter-spacing: 0.05em;
-    white-space: nowrap;
+    width: 80vw;
+    opacity: 0.08;
     pointer-events: none;
     z-index: 1;
+    display: block;
   }
 
   /* Desktop layout */
@@ -165,7 +156,7 @@
     /* Giant CAROB anchored to bottom, bleeding off */
     .carob-giant {
       bottom: -5vh;
-      font-size: 22vw;
+      width: 85vw;
       opacity: 1;
     }
 
@@ -205,10 +196,10 @@
   </nav>
 
   <!-- Watermark (mobile) -->
-  <div class="carob-watermark">CAROB</div>
+  <img class="carob-watermark" src="assets/carob_wordmark.svg" alt="CAROB">
 
   <!-- Giant CAROB -->
-  <div class="carob-giant">CAROB</div>
+  <img class="carob-giant" src="assets/carob_wordmark.svg" alt="CAROB">
 </div>
 
 </body>

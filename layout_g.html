@@ -110,20 +110,11 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    font-family: 'P22 Mackinac Pro', 'Georgia', serif;
-    font-weight: 700;
-    font-size: 28vw;
-    color: #E7E4CA;
-    opacity: 0.10;
-    letter-spacing: 0.05em;
-    white-space: nowrap;
+    width: 120%;
+    opacity: 0.08;
     pointer-events: none;
     z-index: 1;
-  }
-  @media (min-width: 768px) {
-    .carob-watermark {
-      font-size: 120px;
-    }
+    display: block;
   }
 
   /* Product image */
@@ -150,19 +141,10 @@
     bottom: 22%;
     left: 50%;
     transform: translateX(-50%);
-    font-family: 'P22 Mackinac Pro', 'Georgia', serif;
-    font-weight: 700;
-    font-size: 20vw;
-    color: #E7E4CA;
-    letter-spacing: 0.08em;
-    white-space: nowrap;
+    width: 80vw;
     z-index: 4;
-    opacity: 0.85;
-  }
-  @media (min-width: 768px) {
-    .carob-label {
-      font-size: 86px;
-    }
+    opacity: 1;
+    display: block;
   }
 
   /* Category strip */
@@ -233,7 +215,7 @@
   </div>
 
   <!-- CAROB watermark -->
-  <div class="carob-watermark">CAROB</div>
+  <img class="carob-watermark" src="assets/carob_wordmark.svg" alt="CAROB">
 
   <!-- Product -->
   <div class="product-container">
@@ -241,7 +223,7 @@
   </div>
 
   <!-- CAROB label -->
-  <div class="carob-label">CAROB</div>
+  <img class="carob-label" src="assets/carob_wordmark.svg" alt="CAROB">
 
   <!-- Category strip -->
   <div class="category-strip">

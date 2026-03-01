@@ -97,14 +97,9 @@
   /* CAROB headline — mobile */
   .carob-headline {
     margin-top: 80px;
-    font-family: 'P22 Mackinac Pro', 'Georgia', serif;
-    font-weight: 700;
-    font-size: 15vw;
-    color: #E7E4CA;
-    letter-spacing: 0.06em;
+    width: 85vw;
     z-index: 5;
-    text-align: center;
-    line-height: 1;
+    display: block;
   }
 
   /* Product image */
@@ -181,9 +176,7 @@
 
     .carob-headline {
       margin-top: 0;
-      font-size: 12vw;
-      text-align: left;
-      line-height: 0.9;
+      width: 100%;
     }
     /* Hide the mobile carob (shown inside .hero flow) */
     .hero > .carob-headline { display: none; }
@@ -244,7 +237,7 @@
       padding-left: 72px;
     }
     .carob-headline {
-      font-size: 10vw;
+      width: 100%;
     }
     .product-image {
       right: 15%;
@@ -273,11 +266,11 @@
   </div>
 
   <!-- CAROB headline (mobile flow position) -->
-  <div class="carob-headline">CAROB</div>
+  <img class="carob-headline" src="assets/carob_wordmark.svg" alt="CAROB">
 
   <!-- Left column for desktop: CAROB + categories -->
   <div class="left-column">
-    <div class="carob-headline">CAROB</div>
+    <img class="carob-headline" src="assets/carob_wordmark.svg" alt="CAROB">
     <nav class="categories">
       <a href="#">Bars</a>
       <a href="#">Moons</a>

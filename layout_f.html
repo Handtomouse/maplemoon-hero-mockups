@@ -57,16 +57,11 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  font-family: 'P22 Mackinac Pro', 'Georgia', serif;
-  font-weight: 700;
-  font-size: 30vw;
-  color: #E7E4CA;
+  width: 80vw;
   opacity: 0.08;
   pointer-events: none;
-  user-select: none;
-  letter-spacing: 0.04em;
-  white-space: nowrap;
   z-index: 1;
+  display: block;
 }
 
 /* Mobile header */
@@ -223,7 +218,7 @@ body {
   .back-link { top: 16px; left: 20px; font-size: 0.8rem; }
 
   .watermark {
-    font-size: 25vw;
+    width: 80vw;
   }
 
   /* Shift product slightly right to account for left nav */
@@ -262,7 +257,7 @@ body {
 <section class="hero">
 
   <!-- CAROB watermark -->
-  <div class="watermark">CAROB</div>
+  <img class="watermark" src="assets/carob_wordmark.svg" alt="CAROB">
 
   <!-- Mobile header -->
   <div class="mobile-header">
