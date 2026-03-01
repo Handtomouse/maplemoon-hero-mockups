@@ -51,6 +51,15 @@
     background: var(--navy);
   }
 
+  /* Lifestyle background image */
+  .hero-bg-image {
+    position: absolute;
+    inset: 0;
+    background: url('assets/bar_lifestyle.png') center center / cover no-repeat;
+    opacity: 0.25;
+    z-index: 0;
+  }
+
   /* Animated gradient simulating atmospheric video */
   .hero::before {
     content: '';
@@ -271,6 +280,7 @@
 <body>
 
 <section class="hero">
+  <div class="hero-bg-image"></div>
   <a href="index.html" class="back-link">&larr; Back to Gallery</a>
 
   <nav>
@@ -292,7 +302,7 @@
   </div>
 
   <div class="floating-bar">
-    <img src="assets/bar_pcar_front.png" alt="MapleMoon Pure Carob Bar">
+    <img src="assets/bar_hero_front.png" alt="MapleMoon Pure Carob Bar">
   </div>
 
   <div class="trust-strip">
