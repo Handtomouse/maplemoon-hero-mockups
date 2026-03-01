@@ -25,6 +25,12 @@ body {
   min-height: 100vh;
 }
 
+/* #19 Page load fade-in */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
 .hero {
   position: relative;
   width: 100%;
@@ -36,32 +42,100 @@ body {
   overflow: hidden;
 }
 
-/* Back link */
+/* #5 Back link — fixed top-left */
 .back-link {
   position: fixed;
-  top: 12px;
-  left: 12px;
+  top: 16px;
+  left: 16px;
   font-family: 'Inter', sans-serif;
   font-size: 0.75rem;
   color: #E7E4CA;
   text-decoration: none;
   opacity: 0.6;
-  z-index: 100;
+  z-index: 101;
   transition: opacity 0.2s;
 }
 .back-link:hover { opacity: 1; }
 
-/* CAROB watermark */
+/* #11 Focus-visible accessibility */
+a:focus-visible, button:focus-visible, label:focus-visible {
+  outline: 2px solid #E7E4CA;
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+/* #2 CAROB watermark — opacity 0.12 */
 .watermark {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   width: 80vw;
-  opacity: 0.08;
+  opacity: 0.12;
   pointer-events: none;
   z-index: 1;
   display: block;
+  /* #19 stagger: CAROB 0.3s */
+  opacity: 0;
+  animation: fadeIn 0.6s ease forwards 0.3s;
+}
+
+/* #6 Mobile menu checkbox toggle */
+#menu-toggle:checked ~ .mobile-menu {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #E7E4CA;
+  z-index: 100;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+.mobile-menu a {
+  font-family: 'P22 Mackinac Pro', 'Georgia', serif;
+  font-size: 1.4rem;
+  font-weight: 500;
+  color: #1E4366;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+.mobile-menu .menu-nav-links a {
+  font-family: 'Inter', sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  text-transform: none;
+  letter-spacing: 0.02em;
+}
+.mobile-menu .menu-nav-links {
+  margin-top: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+.mobile-menu .menu-close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 1.5rem;
+  color: #1E4366;
+  cursor: pointer;
+  background: none;
+  border: none;
+  font-family: 'Inter', sans-serif;
 }
 
 /* Mobile header */
@@ -77,6 +151,7 @@ body {
   z-index: 10;
 }
 
+/* #6 Hamburger as label */
 .hamburger {
   display: flex;
   flex-direction: column;
@@ -98,9 +173,13 @@ body {
   display: flex;
   align-items: center;
   gap: 8px;
+  /* #19 stagger: logo 0s */
+  opacity: 0;
+  animation: fadeIn 0.6s ease forwards 0s;
 }
+/* #4 Logo 40px mobile */
 .mobile-logo img {
-  height: 28px;
+  height: 40px;
   width: auto;
 }
 .mobile-logo .logo-text {
@@ -144,7 +223,11 @@ body {
   display: flex;
   align-items: center;
   gap: 10px;
+  /* #19 stagger: logo 0s */
+  opacity: 0;
+  animation: fadeIn 0.6s ease forwards 0s;
 }
+/* #4 Logo 56px desktop — applied in media query */
 .desktop-logo img {
   height: 32px;
   width: auto;
@@ -157,20 +240,28 @@ body {
   letter-spacing: 0.05em;
 }
 
-/* Product image */
+/* #3 Product image — mobile drop-shadow */
 .product {
   position: relative;
   z-index: 2;
   width: 60%;
   max-width: 260px;
+  /* #19 stagger: product 0.2s */
+  opacity: 0;
+  animation: fadeIn 0.6s ease forwards 0.2s;
 }
 .product img {
   width: 100%;
   height: auto;
-  filter: drop-shadow(0 16px 40px rgba(0,0,0,0.25));
+  filter: drop-shadow(0 16px 32px rgba(0,0,0,0.15));
+  /* #18 Product hover */
+  transition: transform 0.4s ease, filter 0.4s ease;
+}
+.product img:hover {
+  transform: scale(1.03);
 }
 
-/* Category strip */
+/* #7 Category links (a tags), #1 uppercase, #8 hover underline, #14 min-height touch targets */
 .categories {
   position: absolute;
   bottom: 0;
@@ -184,10 +275,28 @@ body {
   white-space: nowrap;
   -ms-overflow-style: none;
   scrollbar-width: none;
+  /* #20 scroll-snap */
+  scroll-snap-type: x mandatory;
+  /* #19 stagger: categories 0.4s */
+  opacity: 0;
+  animation: fadeIn 0.6s ease forwards 0.4s;
 }
 .categories::-webkit-scrollbar { display: none; }
 
-.categories span {
+/* #13 Right-edge fade on mobile category strip */
+.categories::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 40px;
+  height: 100%;
+  background: linear-gradient(to right, transparent, #A8BDD4);
+  pointer-events: none;
+  z-index: 11;
+}
+
+.categories a {
   font-family: 'P22 Mackinac Pro', 'Georgia', serif;
   font-weight: 500;
   font-size: 0.85rem;
@@ -196,12 +305,25 @@ body {
   letter-spacing: 0.1em;
   opacity: 0.75;
   cursor: pointer;
-  transition: opacity 0.2s;
+  transition: opacity 0.2s, border-color 0.2s ease;
   flex-shrink: 0;
+  text-decoration: none;
+  /* #8 hover underline */
+  border-bottom: 1.5px solid transparent;
+  /* #14 touch target */
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
+  padding: 8px 12px;
+  /* #20 scroll-snap */
+  scroll-snap-align: start;
 }
-.categories span:hover { opacity: 1; }
+.categories a:hover {
+  opacity: 1;
+  border-color: #E7E4CA;
+}
 
-/* Separator dots */
+/* #9 Separator dots */
 .categories .dot {
   font-family: 'P22 Mackinac Pro', 'Georgia', serif;
   font-size: 0.85rem;
@@ -209,16 +331,26 @@ body {
   opacity: 0.4;
   pointer-events: none;
   flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
 }
 
-/* Desktop breakpoint */
+/* #17 Breakpoint 768px */
 @media (min-width: 768px) {
   .mobile-header { display: none; }
   .desktop-nav { display: flex; }
-  .back-link { top: 16px; left: 20px; font-size: 0.8rem; }
+  .back-link { top: 16px; left: 16px; font-size: 0.8rem; }
+
+  /* #13 Remove right-edge fade on desktop */
+  .categories::after { display: none; }
 
   .watermark {
     width: 80vw;
+  }
+
+  /* #4 Logo 56px desktop */
+  .desktop-logo img {
+    height: 56px;
   }
 
   .product {
@@ -228,6 +360,8 @@ body {
   .product img {
     height: 340px;
     width: auto;
+    /* #3 Desktop drop-shadow */
+    filter: drop-shadow(0 24px 48px rgba(0,0,0,0.18));
   }
 
   .categories {
@@ -235,12 +369,20 @@ body {
     overflow-x: visible;
     gap: 24px;
     padding: 20px 40px 32px;
+    position: relative;
   }
-  .categories span {
+  .categories a {
     font-size: 1rem;
   }
   .categories .dot {
     font-size: 1rem;
+  }
+}
+
+/* #17 Breakpoint 1024px */
+@media (min-width: 1024px) {
+  .product img {
+    height: 400px;
   }
 }
 </style>
@@ -249,6 +391,28 @@ body {
 
 <a href="index.html" class="back-link">&larr; Back to Gallery</a>
 
+<!-- #6 Menu toggle checkbox -->
+<input type="checkbox" id="menu-toggle" hidden>
+
+<!-- #6 Mobile menu overlay -->
+<div class="mobile-menu">
+  <label for="menu-toggle" class="menu-close" aria-label="Close menu">&times;</label>
+  <a href="#">BARS</a>
+  <a href="#">MOONS</a>
+  <a href="#">BANANAS</a>
+  <a href="#">BITES</a>
+  <a href="#">ELIXIRS</a>
+  <a href="#">PACKS</a>
+  <a href="#">GIFTS</a>
+  <div class="menu-nav-links">
+    <a href="#">Our Story</a>
+    <a href="#">Shop</a>
+    <a href="#">Stockists</a>
+    <a href="#">Recipes</a>
+    <a href="#">Contact</a>
+  </div>
+</div>
+
 <section class="hero">
 
   <!-- CAROB watermark -->
@@ -256,9 +420,10 @@ body {
 
   <!-- Mobile header -->
   <div class="mobile-header">
-    <button class="hamburger" aria-label="Menu">
+    <!-- #6 Hamburger as label, #12 aria-expanded -->
+    <label for="menu-toggle" class="hamburger" aria-label="Menu" aria-expanded="false" role="button">
       <span></span><span></span><span></span>
-    </button>
+    </label>
     <div class="mobile-logo">
       <img src="assets/maplemoon_logo.svg" alt="MapleMoon">
       <span class="logo-text">maple moon</span>
@@ -266,12 +431,12 @@ body {
   </div>
 
   <!-- Desktop nav -->
-  <nav class="desktop-nav">
+  <nav class="desktop-nav" role="navigation">
     <ul class="nav-links">
-      <li><a href="#">Carob?</a></li>
+      <!-- #10 Renamed "Carob?" to "Our Story" -->
+      <li><a href="#">Our Story</a></li>
       <li><a href="#">Shop</a></li>
       <li><a href="#">Stockists</a></li>
-      <li><a href="#">Story</a></li>
       <li><a href="#">Recipes</a></li>
       <li><a href="#">Contact</a></li>
     </ul>
@@ -286,15 +451,15 @@ body {
     <img src="assets/bar_hero_front.png" alt="MapleMoon Carob Bar">
   </div>
 
-  <!-- Category strip -->
-  <div class="categories">
-    <span>Bars</span><span class="dot">&middot;</span>
-    <span>Moons</span><span class="dot">&middot;</span>
-    <span>Bananas</span><span class="dot">&middot;</span>
-    <span>Bites</span><span class="dot">&middot;</span>
-    <span>Elixirs</span><span class="dot">&middot;</span>
-    <span>Packs</span><span class="dot">&middot;</span>
-    <span>Gifts</span>
+  <!-- #7 Category strip with <a> tags, #9 dot separators, #12 aria-label -->
+  <div class="categories" aria-label="Product categories" role="navigation">
+    <a href="#">Bars</a><span class="dot">&middot;</span>
+    <a href="#">Moons</a><span class="dot">&middot;</span>
+    <a href="#">Bananas</a><span class="dot">&middot;</span>
+    <a href="#">Bites</a><span class="dot">&middot;</span>
+    <a href="#">Elixirs</a><span class="dot">&middot;</span>
+    <a href="#">Packs</a><span class="dot">&middot;</span>
+    <a href="#">Gifts</a>
   </div>
 
 </section>

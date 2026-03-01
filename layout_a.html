@@ -18,6 +18,12 @@
     font-family: 'Inter', sans-serif;
   }
 
+  /* #19 Fade-in animation */
+  @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+
+  /* #11 Focus-visible styles */
+  a:focus-visible, button:focus-visible, label:focus-visible { outline: 2px solid #E7E4CA; outline-offset: 3px; border-radius: 2px; }
+
   .back-link {
     position: fixed;
     top: 16px;
@@ -27,7 +33,7 @@
     font-family: 'Inter', sans-serif;
     font-size: 0.75rem;
     text-decoration: none;
-    z-index: 100;
+    z-index: 101;
     letter-spacing: 0.02em;
   }
   .back-link:hover { opacity: 0.8; }
@@ -38,6 +44,51 @@
     background: linear-gradient(180deg, #7B9DBF 0%, #A8BDD4 100%);
     position: relative;
     overflow: hidden;
+  }
+
+  /* #6 Mobile menu overlay */
+  #menu-toggle:checked ~ .mobile-menu { opacity: 1; pointer-events: auto; }
+  .mobile-menu {
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: #E7E4CA;
+    z-index: 100;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+  }
+  .mobile-menu a {
+    font-family: 'P22 Mackinac Pro', 'Georgia', serif;
+    font-weight: 500;
+    font-size: 1.5rem;
+    color: #1E4366;
+    text-decoration: none;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+  .mobile-menu a:hover { opacity: 0.7; }
+  .mobile-menu .menu-divider {
+    width: 40px;
+    height: 1px;
+    background: #1E4366;
+    opacity: 0.2;
+    margin: 8px 0;
+  }
+  .close-menu {
+    position: absolute;
+    top: 48px;
+    right: 24px;
+    font-size: 2rem;
+    color: #1E4366;
+    cursor: pointer;
+    line-height: 1;
+    font-family: 'Inter', sans-serif;
+    font-weight: 300;
   }
 
   /* Top bar */
@@ -51,6 +102,7 @@
     z-index: 10;
   }
 
+  /* #6 Hamburger as label */
   .hamburger {
     display: flex;
     flex-direction: column;
@@ -71,7 +123,10 @@
     flex-direction: column;
     align-items: center;
     gap: 6px;
+    opacity: 0;
+    animation: fadeIn 0.6s ease forwards;
   }
+  /* #4 Logo: 40px mobile */
   .logo-group img {
     width: 40px;
     height: auto;
@@ -90,6 +145,62 @@
     display: none;
   }
 
+  /* #13 Mobile category strip (bottom bar) */
+  .mobile-category-bar {
+    position: absolute;
+    bottom: 3vh;
+    left: 0; right: 0;
+    z-index: 10;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    white-space: nowrap;
+    padding: 0 16px;
+    /* #20 scroll-snap */
+    scroll-snap-type: x mandatory;
+    /* #19 fade-in */
+    opacity: 0;
+    animation: fadeIn 0.6s ease forwards;
+    animation-delay: 0.4s;
+  }
+  /* #13 right-edge fade */
+  .mobile-category-bar-wrapper {
+    position: relative;
+  }
+  .mobile-category-bar-wrapper::after {
+    content: '';
+    position: absolute;
+    right: 0; top: 0; bottom: 0;
+    width: 40px;
+    background: linear-gradient(to right, transparent, #A8BDD4);
+    pointer-events: none;
+    z-index: 11;
+  }
+  /* #1 uppercase, #7 <a> tags, #9 dot separators, #14 touch targets, #20 snap */
+  .mobile-category-bar a {
+    font-family: 'P22 Mackinac Pro', 'Georgia', serif;
+    font-weight: 500;
+    font-size: 0.85rem;
+    color: #E7E4CA;
+    text-decoration: none;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    opacity: 0.8;
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
+    padding: 8px 12px;
+    scroll-snap-align: start;
+  }
+  .mobile-category-bar .dot-sep {
+    color: #E7E4CA;
+    opacity: 0.5;
+    padding: 0 2px;
+    font-size: 0.7rem;
+    display: inline-flex;
+    align-items: center;
+    min-height: 44px;
+  }
+
   /* CAROB giant wordmark — mobile */
   .carob-giant {
     position: absolute;
@@ -99,16 +210,20 @@
     width: 90vw;
     z-index: 2;
     display: block;
+    /* #19 fade-in */
+    opacity: 0;
+    animation: fadeIn 0.6s ease forwards;
+    animation-delay: 0.3s;
   }
 
-  /* CAROB watermark behind — mobile */
+  /* #2 CAROB watermark opacity 0.12 */
   .carob-watermark {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     width: 80vw;
-    opacity: 0.08;
+    opacity: 0.12;
     pointer-events: none;
     z-index: 1;
     display: block;
@@ -117,11 +232,13 @@
   /* Desktop layout */
   @media (min-width: 768px) {
     .hamburger { display: none; }
+    .mobile-category-bar-wrapper { display: none; }
 
     .top-bar {
       padding: 48px 48px 0;
     }
 
+    /* #12 role nav + aria */
     .category-nav {
       display: flex;
       flex-direction: column;
@@ -130,6 +247,7 @@
       left: 48px;
       z-index: 10;
     }
+    /* #1 uppercase, #7 <a> tags, #8 hover underline */
     .category-nav a {
       font-family: 'P22 Mackinac Pro', 'Georgia', serif;
       font-weight: 500;
@@ -140,28 +258,45 @@
       text-transform: uppercase;
       line-height: 2.2;
       opacity: 0.8;
-      transition: opacity 0.2s;
+      transition: opacity 0.2s, border-color 0.2s ease;
+      border-bottom: 1.5px solid transparent;
+      /* #19 fade-in */
+      opacity: 0;
+      animation: fadeIn 0.6s ease forwards;
+      animation-delay: 0.4s;
     }
-    .category-nav a:hover { opacity: 1; }
+    .category-nav a:hover { opacity: 1; border-color: #E7E4CA; }
 
     .logo-group {
       position: absolute;
       top: 48px;
       right: 48px;
     }
+    /* #4 Logo: 56px desktop */
     .logo-group img {
-      width: 48px;
+      width: 56px;
     }
 
-    /* Giant CAROB anchored to bottom, bleeding off */
+    /* #15 Giant CAROB anchored to bottom — fixed bleed */
     .carob-giant {
-      bottom: -5vh;
+      bottom: -2vh;
       width: 85vw;
-      opacity: 1;
+      max-height: 40vh;
+      overflow: hidden;
     }
 
     .carob-watermark {
       display: none;
+    }
+  }
+
+  /* #17 Only 768px and 1024px breakpoints */
+  @media (min-width: 1024px) {
+    .category-nav a {
+      font-size: 1.5rem;
+    }
+    .logo-group img {
+      width: 56px;
     }
   }
 </style>
@@ -170,22 +305,45 @@
 
 <a href="index.html" class="back-link">&larr; Back to Gallery</a>
 
+<!-- #6 Menu toggle checkbox -->
+<input type="checkbox" id="menu-toggle" hidden>
+
+<!-- #6 Mobile menu overlay -->
+<div class="mobile-menu">
+  <label for="menu-toggle" class="close-menu" aria-label="Close menu">&times;</label>
+  <a href="#">Bars</a>
+  <a href="#">Moons</a>
+  <a href="#">Bananas</a>
+  <a href="#">Bites</a>
+  <a href="#">Elixirs</a>
+  <a href="#">Packs</a>
+  <a href="#">Gifts</a>
+  <div class="menu-divider"></div>
+  <a href="#">Our Story</a>
+  <a href="#">Shop</a>
+  <a href="#">Stockists</a>
+  <a href="#">Story</a>
+  <a href="#">Recipes</a>
+  <a href="#">Contact</a>
+</div>
+
 <div class="hero">
   <!-- Top bar (mobile) -->
   <div class="top-bar">
-    <div class="hamburger">
+    <!-- #6 Hamburger as label, #12 aria-expanded -->
+    <label for="menu-toggle" class="hamburger" aria-label="Open menu" aria-expanded="false">
       <span></span>
       <span></span>
       <span></span>
-    </div>
+    </label>
     <div class="logo-group">
       <img src="assets/maplemoon_logo.svg" alt="MapleMoon">
       <span class="logo-text">maple moon</span>
     </div>
   </div>
 
-  <!-- Category nav (desktop only) -->
-  <nav class="category-nav">
+  <!-- #12 Category nav (desktop only) with aria-label and role -->
+  <nav class="category-nav" role="navigation" aria-label="Product categories">
     <a href="#">BARS</a>
     <a href="#">MOONS</a>
     <a href="#">BANANAS</a>
@@ -194,6 +352,13 @@
     <a href="#">PACKS</a>
     <a href="#">GIFTS</a>
   </nav>
+
+  <!-- #9 Mobile bottom category strip with dot separators -->
+  <div class="mobile-category-bar-wrapper">
+    <div class="mobile-category-bar" role="navigation" aria-label="Product categories">
+      <a href="#">BARS</a><span class="dot-sep">&middot;</span><a href="#">MOONS</a><span class="dot-sep">&middot;</span><a href="#">BANANAS</a><span class="dot-sep">&middot;</span><a href="#">BITES</a><span class="dot-sep">&middot;</span><a href="#">ELIXIRS</a><span class="dot-sep">&middot;</span><a href="#">PACKS</a><span class="dot-sep">&middot;</span><a href="#">GIFTS</a>
+    </div>
+  </div>
 
   <!-- Watermark (mobile) -->
   <img class="carob-watermark" src="assets/carob_wordmark.svg" alt="CAROB">
