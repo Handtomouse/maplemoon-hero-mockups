@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MapleMoon — Layout C: Logo Left, Categories Right</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  @font-face { font-family: 'P22 Mackinac Pro'; font-weight: 400; src: local('P22 Mackinac Pro Book'), local('P22MackinacPro-Book'); }
+  @font-face { font-family: 'P22 Mackinac Pro'; font-weight: 500; src: local('P22 Mackinac Pro Medium'), local('P22MackinacPro-Medium'); }
+  @font-face { font-family: 'P22 Mackinac Pro'; font-weight: 700; src: local('P22 Mackinac Pro Bold'), local('P22MackinacPro-Bold'); }
+
+  *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'Inter', sans-serif;
+    background: linear-gradient(180deg, #7B9DBF 0%, #A8BDD4 100%);
+    min-height: 100vh;
+    overflow-x: hidden;
+    position: relative;
+    color: #E7E4CA;
+  }
+
+  .back-link {
+    position: fixed;
+    top: 16px;
+    right: 16px;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.75rem;
+    color: #E7E4CA;
+    opacity: 0.5;
+    text-decoration: none;
+    z-index: 100;
+    letter-spacing: 0.02em;
+    transition: opacity 0.2s;
+  }
+  .back-link:hover { opacity: 0.8; }
+
+  .hero {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+
+  /* CAROB watermark */
+  .carob-watermark {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: 'P22 Mackinac Pro', 'Georgia', serif;
+    font-weight: 700;
+    font-size: 30vw;
+    color: #E7E4CA;
+    opacity: 0.06;
+    letter-spacing: 0.05em;
+    white-space: nowrap;
+    pointer-events: none;
+    z-index: 1;
+    user-select: none;
+  }
+
+  /* Logo block — top left */
+  .logo-block {
+    position: absolute;
+    top: 28px;
+    left: 24px;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+  }
+  .logo-block img {
+    width: 40px;
+    height: auto;
+    filter: brightness(0) invert(0.92) sepia(0.15) saturate(0.4) hue-rotate(10deg);
+  }
+  .logo-block .brand-name {
+    font-family: 'Inter', sans-serif;
+    font-weight: 300;
+    font-size: 0.7rem;
+    letter-spacing: 0.15em;
+    text-transform: lowercase;
+    color: #E7E4CA;
+    opacity: 0.85;
+  }
+
+  /* Product image */
+  .product-image {
+    position: relative;
+    z-index: 5;
+    width: 60%;
+    max-width: 280px;
+  }
+  .product-image img {
+    width: 100%;
+    height: auto;
+    filter: drop-shadow(0 20px 40px rgba(0,0,0,0.18));
+  }
+
+  /* Categories — mobile: horizontal scroll at bottom */
+  .categories {
+    position: absolute;
+    bottom: 32px;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+    display: flex;
+    gap: 20px;
+    padding: 0 24px;
+    overflow-x: auto;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    white-space: nowrap;
+  }
+  .categories::-webkit-scrollbar { display: none; }
+  .categories a {
+    font-family: 'P22 Mackinac Pro', 'Georgia', serif;
+    font-weight: 500;
+    font-size: 0.75rem;
+    letter-spacing: 0.1em;
+    color: #E7E4CA;
+    text-decoration: none;
+    text-transform: uppercase;
+    opacity: 0.7;
+    transition: opacity 0.2s;
+    flex-shrink: 0;
+  }
+  .categories a:hover { opacity: 1; }
+
+  /* Desktop — 768px+ */
+  @media (min-width: 768px) {
+    .logo-block {
+      top: 48px;
+      left: 48px;
+      gap: 8px;
+    }
+    .logo-block img {
+      width: 80px;
+    }
+    .logo-block .brand-name {
+      font-size: 0.85rem;
+      letter-spacing: 0.18em;
+    }
+
+    .carob-watermark {
+      font-size: 25vw;
+      opacity: 0.07;
+    }
+
+    .product-image {
+      width: 300px;
+      max-width: 300px;
+    }
+    .product-image img {
+      filter: drop-shadow(0 30px 60px rgba(0,0,0,0.2));
+    }
+
+    /* Categories stacked vertically on right */
+    .categories {
+      position: absolute;
+      bottom: auto;
+      left: auto;
+      right: 56px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: auto;
+      flex-direction: column;
+      gap: 0;
+      padding: 0;
+      overflow-x: visible;
+      align-items: flex-end;
+    }
+    .categories a {
+      font-size: 1.2rem;
+      line-height: 2.2;
+      opacity: 0.65;
+    }
+    .categories a:hover {
+      opacity: 1;
+    }
+
+    .back-link {
+      top: 24px;
+      right: 48px;
+      font-size: 0.8rem;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .categories {
+      right: 80px;
+    }
+    .logo-block {
+      left: 64px;
+      top: 56px;
+    }
+  }
+</style>
+</head>
+<body>
+
+<a href="index.html" class="back-link">&larr; Back to Gallery</a>
+
+<section class="hero">
+  <div class="carob-watermark">CAROB</div>
+
+  <div class="logo-block">
+    <img src="assets/maplemoon_logo.svg" alt="MapleMoon">
+    <span class="brand-name">maple moon</span>
+  </div>
+
+  <div class="product-image">
+    <img src="assets/bar_hero_front.png" alt="MapleMoon Carob Bar">
+  </div>
+
+  <nav class="categories">
+    <a href="#">Bars</a>
+    <a href="#">Moons</a>
+    <a href="#">Bananas</a>
+    <a href="#">Bites</a>
+    <a href="#">Elixirs</a>
+    <a href="#">Packs</a>
+    <a href="#">Gifts</a>
+  </nav>
+</section>
+
+</body>
+</html>

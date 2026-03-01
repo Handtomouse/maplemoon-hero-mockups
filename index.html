@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>MapleMoon Hero Mockups — 7 Concepts</title>
+<title>MapleMoon Hero Mockups — 14 Concepts</title>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
 @font-face { font-family: 'P22 Mackinac Pro'; font-weight: 400; src: local('P22 Mackinac Pro Book'), local('P22MackinacPro-Book'); }
@@ -80,6 +80,30 @@ body { font-family: 'Inter', sans-serif; background: #1E4366; color: #E7E4CA; mi
 .preview-29 { background: linear-gradient(to right, #1E4366 50%, #1B3A2A 50%); }
 .preview-30 { background: #1E4366; display: flex; align-items: center; justify-content: center; }
 
+/* New CAROB wordmark layouts */
+.preview-layout { background: linear-gradient(180deg, #7B9DBF 0%, #A8BDD4 100%); display: flex; align-items: flex-end; justify-content: center; overflow: hidden; }
+.preview-layout::after { content: 'CAROB'; font-family: 'P22 Mackinac Pro', Georgia, serif; font-size: 5rem; font-weight: 400; color: rgba(231,228,202,0.12); letter-spacing: 0.05em; margin-bottom: -10px; }
+
+.section-divider {
+    grid-column: 1 / -1;
+    text-align: center;
+    padding: 30px 0 10px;
+    border-top: 1px solid rgba(231,228,202,0.08);
+    margin-top: 10px;
+}
+.section-divider h2 {
+    font-family: 'P22 Mackinac Pro', Georgia, serif;
+    font-weight: 400;
+    font-size: 1.4rem;
+    letter-spacing: 0.02em;
+    margin-bottom: 4px;
+}
+.section-divider p {
+    color: rgba(231,228,202,0.4);
+    font-size: 0.75rem;
+    font-weight: 300;
+}
+
 .preview-16::after, .preview-30::after {
     content: '';
     width: 60px;
@@ -146,7 +170,7 @@ body { font-family: 'Inter', sans-serif; background: #1E4366; color: #E7E4CA; mi
     <div class="gallery-header">
         <img src="assets/maplemoon_logo.svg" alt="MapleMoon">
         <h1>Hero Concepts</h1>
-        <p>7 full-size interactive mockups — click to view each one</p>
+        <p>14 mockups — 7 original + 7 new CAROB wordmark layouts (mobile-first)</p>
     </div>
 
     <div class="grid">
@@ -217,6 +241,81 @@ body { font-family: 'Inter', sans-serif; background: #1E4366; color: #E7E4CA; mi
                 <span class="card-title">Circular Reveal — Moon Expands</span>
                 <div class="card-desc">Circular product reveal on hover + scroll. Uniquely ownable for the moon product shape.</div>
                 <span class="card-tag">Interactive</span>
+            </div>
+        </a>
+        <!-- New CAROB Wordmark Layouts -->
+        <div class="section-divider">
+            <h2>CAROB Wordmark Layouts</h2>
+            <p>Mobile-first — 7 compositions with giant CAROB watermark</p>
+        </div>
+
+        <a href="layout_a.html" class="card">
+            <div class="card-preview preview-layout"></div>
+            <div class="card-info">
+                <span class="card-num">A</span>
+                <span class="card-title">Category Stack + Wordmark</span>
+                <div class="card-desc">Vertical category nav left, giant CAROB anchored to bottom. No product — pure brand statement.</div>
+                <span class="card-tag">Minimal</span>
+            </div>
+        </a>
+
+        <a href="layout_b.html" class="card">
+            <div class="card-preview preview-layout"></div>
+            <div class="card-info">
+                <span class="card-num">B</span>
+                <span class="card-title">Product Over Wordmark</span>
+                <div class="card-desc">Bar product sits on top of the CAROB text. Product meets typography.</div>
+                <span class="card-tag">Hero Product</span>
+            </div>
+        </a>
+
+        <a href="layout_c.html" class="card">
+            <div class="card-preview preview-layout"></div>
+            <div class="card-info">
+                <span class="card-num">C</span>
+                <span class="card-title">Logo Left, Categories Right</span>
+                <div class="card-desc">Large logo top-left, product centered, categories stacked right. Balanced composition.</div>
+                <span class="card-tag">Balanced</span>
+            </div>
+        </a>
+
+        <a href="layout_d.html" class="card">
+            <div class="card-preview preview-layout"></div>
+            <div class="card-info">
+                <span class="card-num">D</span>
+                <span class="card-title">CAROB Top, Nav Left</span>
+                <div class="card-desc">Giant CAROB as visible headline top-left, categories below, product right. Bold typographic lead.</div>
+                <span class="card-tag">Typography</span>
+            </div>
+        </a>
+
+        <a href="layout_e.html" class="card">
+            <div class="card-preview preview-layout"></div>
+            <div class="card-info">
+                <span class="card-num">E</span>
+                <span class="card-title">Horizontal Nav + Bottom Categories</span>
+                <div class="card-desc">Classic horizontal nav top, product centered, category strip at bottom. Clean and commercial.</div>
+                <span class="card-tag">Commercial</span>
+            </div>
+        </a>
+
+        <a href="layout_f.html" class="card">
+            <div class="card-preview preview-layout"></div>
+            <div class="card-info">
+                <span class="card-num">F</span>
+                <span class="card-title">Vertical Nav Left + Bottom Categories</span>
+                <div class="card-desc">Page nav stacked left, product centered, categories at bottom. Editorial feel.</div>
+                <span class="card-tag">Editorial</span>
+            </div>
+        </a>
+
+        <a href="layout_g.html" class="card">
+            <div class="card-preview preview-layout"></div>
+            <div class="card-info">
+                <span class="card-num">G</span>
+                <span class="card-title">Mobile Hero</span>
+                <div class="card-desc">Pure mobile concept — hamburger, half-open bar, CAROB text, horizontal scroll categories.</div>
+                <span class="card-tag">Mobile-First</span>
             </div>
         </a>
     </div>

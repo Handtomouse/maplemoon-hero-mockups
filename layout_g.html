@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MapleMoon — Layout G: Mobile Hero</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  @font-face { font-family: 'P22 Mackinac Pro'; font-weight: 400; src: local('P22 Mackinac Pro Book'), local('P22MackinacPro-Book'); }
+  @font-face { font-family: 'P22 Mackinac Pro'; font-weight: 500; src: local('P22 Mackinac Pro Medium'), local('P22MackinacPro-Medium'); }
+  @font-face { font-family: 'P22 Mackinac Pro'; font-weight: 700; src: local('P22 Mackinac Pro Bold'), local('P22MackinacPro-Bold'); }
+
+  *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background: linear-gradient(180deg, #7B9DBF 0%, #A8BDD4 100%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Inter', sans-serif;
+  }
+
+  .back-link {
+    position: fixed;
+    top: 16px;
+    left: 16px;
+    color: #E7E4CA;
+    opacity: 0.5;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.75rem;
+    text-decoration: none;
+    z-index: 100;
+    letter-spacing: 0.02em;
+  }
+  .back-link:hover { opacity: 0.8; }
+
+  .phone-frame {
+    width: 100%;
+    max-width: 430px;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(180deg, #7B9DBF 0%, #A8BDD4 100%);
+  }
+
+  /* Desktop: show as phone mockup */
+  @media (min-width: 768px) {
+    body {
+      align-items: center;
+      padding: 40px 20px;
+    }
+    .phone-frame {
+      height: 844px;
+      border-radius: 40px;
+      border: 3px solid rgba(231, 228, 202, 0.15);
+      box-shadow: 0 40px 80px rgba(0,0,0,0.2), 0 0 0 1px rgba(255,255,255,0.05);
+    }
+  }
+
+  /* Top bar */
+  .top-bar {
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    padding: 48px 24px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    z-index: 10;
+  }
+
+  .hamburger {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+    padding: 4px 0;
+  }
+  .hamburger span {
+    display: block;
+    width: 24px;
+    height: 2px;
+    background: #E7E4CA;
+    border-radius: 1px;
+  }
+
+  .logo-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+  }
+  .logo-group img {
+    width: 40px;
+    height: auto;
+  }
+  .logo-group .logo-text {
+    font-family: 'Inter', sans-serif;
+    font-weight: 300;
+    font-size: 0.65rem;
+    color: #E7E4CA;
+    letter-spacing: 0.15em;
+    text-transform: lowercase;
+  }
+
+  /* CAROB watermark */
+  .carob-watermark {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: 'P22 Mackinac Pro', 'Georgia', serif;
+    font-weight: 700;
+    font-size: 28vw;
+    color: #E7E4CA;
+    opacity: 0.10;
+    letter-spacing: 0.05em;
+    white-space: nowrap;
+    pointer-events: none;
+    z-index: 1;
+  }
+  @media (min-width: 768px) {
+    .carob-watermark {
+      font-size: 120px;
+    }
+  }
+
+  /* Product image */
+  .product-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -55%);
+    z-index: 5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .product-container img {
+    width: 65vw;
+    max-width: 280px;
+    height: auto;
+    filter: drop-shadow(0 16px 32px rgba(0,0,0,0.18));
+  }
+
+  /* CAROB label below product */
+  .carob-label {
+    position: absolute;
+    bottom: 22%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-family: 'P22 Mackinac Pro', 'Georgia', serif;
+    font-weight: 700;
+    font-size: 20vw;
+    color: #E7E4CA;
+    letter-spacing: 0.08em;
+    white-space: nowrap;
+    z-index: 4;
+    opacity: 0.85;
+  }
+  @media (min-width: 768px) {
+    .carob-label {
+      font-size: 86px;
+    }
+  }
+
+  /* Category strip */
+  .category-strip {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 0 24px 40px;
+    z-index: 10;
+  }
+  .category-scroll {
+    display: flex;
+    gap: 30px;
+    overflow-x: auto;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    padding-bottom: 4px;
+  }
+  .category-scroll::-webkit-scrollbar { display: none; }
+
+  .category-scroll a {
+    font-family: 'P22 Mackinac Pro', 'Georgia', serif;
+    font-weight: 500;
+    font-size: 0.9rem;
+    color: #E7E4CA;
+    text-decoration: none;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    opacity: 0.75;
+    flex-shrink: 0;
+    transition: opacity 0.2s;
+  }
+  .category-scroll a:hover { opacity: 1; }
+
+  /* Fade hint on the right side of categories */
+  .category-strip::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    bottom: 40px;
+    width: 60px;
+    height: 24px;
+    background: linear-gradient(to right, transparent, #A8BDD4);
+    pointer-events: none;
+    z-index: 11;
+  }
+</style>
+</head>
+<body>
+
+<a href="index.html" class="back-link">&larr; Back to Gallery</a>
+
+<div class="phone-frame">
+  <!-- Top bar -->
+  <div class="top-bar">
+    <div class="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <div class="logo-group">
+      <img src="assets/maplemoon_logo.svg" alt="MapleMoon">
+      <span class="logo-text">maple moon</span>
+    </div>
+  </div>
+
+  <!-- CAROB watermark -->
+  <div class="carob-watermark">CAROB</div>
+
+  <!-- Product -->
+  <div class="product-container">
+    <img src="assets/moon_halfopen.png" alt="MapleMoon Carob Bar — half open">
+  </div>
+
+  <!-- CAROB label -->
+  <div class="carob-label">CAROB</div>
+
+  <!-- Category strip -->
+  <div class="category-strip">
+    <div class="category-scroll">
+      <a href="#">BARS</a>
+      <a href="#">MOONS</a>
+      <a href="#">BANANAS</a>
+      <a href="#">BITES</a>
+      <a href="#">ELIXIRS</a>
+      <a href="#">PACKS</a>
+      <a href="#">GIFTS</a>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

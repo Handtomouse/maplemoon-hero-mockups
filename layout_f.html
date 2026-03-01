@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MapleMoon — Layout F: Vertical Nav Left + Bottom Categories</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap" rel="stylesheet">
+<style>
+@font-face { font-family: 'P22 Mackinac Pro'; font-weight: 400; src: local('P22 Mackinac Pro Book'), local('P22MackinacPro-Book'); }
+@font-face { font-family: 'P22 Mackinac Pro'; font-weight: 500; src: local('P22 Mackinac Pro Medium'), local('P22MackinacPro-Medium'); }
+@font-face { font-family: 'P22 Mackinac Pro'; font-weight: 700; src: local('P22 Mackinac Pro Bold'), local('P22MackinacPro-Bold'); }
+
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+html, body {
+  height: 100%;
+  overflow: hidden;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: linear-gradient(180deg, #7B9DBF 0%, #A8BDD4 100%);
+  color: #E7E4CA;
+  min-height: 100vh;
+}
+
+.hero {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+/* Back link */
+.back-link {
+  position: fixed;
+  top: 12px;
+  left: 12px;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.75rem;
+  color: #E7E4CA;
+  text-decoration: none;
+  opacity: 0.6;
+  z-index: 100;
+  transition: opacity 0.2s;
+}
+.back-link:hover { opacity: 1; }
+
+/* CAROB watermark */
+.watermark {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: 'P22 Mackinac Pro', 'Georgia', serif;
+  font-weight: 700;
+  font-size: 30vw;
+  color: #E7E4CA;
+  opacity: 0.08;
+  pointer-events: none;
+  user-select: none;
+  letter-spacing: 0.04em;
+  white-space: nowrap;
+  z-index: 1;
+}
+
+/* Mobile header */
+.mobile-header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 20px;
+  z-index: 10;
+}
+
+.hamburger {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+  background: none;
+  border: none;
+  padding: 4px;
+}
+.hamburger span {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background: #E7E4CA;
+  border-radius: 1px;
+}
+
+.mobile-logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.mobile-logo img {
+  height: 28px;
+  width: auto;
+}
+.mobile-logo .logo-text {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: #E7E4CA;
+  letter-spacing: 0.05em;
+}
+
+/* Desktop top-right logo */
+.desktop-logo {
+  display: none;
+  position: absolute;
+  top: 28px;
+  right: 40px;
+  z-index: 10;
+  align-items: center;
+  gap: 10px;
+}
+.desktop-logo img {
+  height: 32px;
+  width: auto;
+}
+.desktop-logo .logo-text {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #E7E4CA;
+  letter-spacing: 0.05em;
+}
+
+/* Desktop vertical nav */
+.vertical-nav {
+  display: none;
+  position: absolute;
+  left: 40px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  list-style: none;
+}
+.vertical-nav li {
+  line-height: 2.0;
+}
+.vertical-nav a {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 400;
+  color: #E7E4CA;
+  text-decoration: none;
+  opacity: 0.85;
+  transition: opacity 0.2s;
+}
+.vertical-nav a:hover { opacity: 1; }
+
+/* Product image */
+.product {
+  position: relative;
+  z-index: 2;
+  width: 60%;
+  max-width: 260px;
+}
+.product img {
+  width: 100%;
+  height: auto;
+  filter: drop-shadow(0 16px 40px rgba(0,0,0,0.25));
+}
+
+/* Category strip */
+.categories {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  padding: 18px 20px 24px;
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  white-space: nowrap;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.categories::-webkit-scrollbar { display: none; }
+
+.categories span {
+  font-family: 'P22 Mackinac Pro', 'Georgia', serif;
+  font-weight: 500;
+  font-size: 0.85rem;
+  color: #E7E4CA;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  opacity: 0.75;
+  cursor: pointer;
+  transition: opacity 0.2s;
+  flex-shrink: 0;
+}
+.categories span:hover { opacity: 1; }
+
+.categories .dot {
+  font-family: 'P22 Mackinac Pro', 'Georgia', serif;
+  font-size: 0.85rem;
+  color: #E7E4CA;
+  opacity: 0.4;
+  pointer-events: none;
+  flex-shrink: 0;
+}
+
+/* Desktop breakpoint */
+@media (min-width: 768px) {
+  .mobile-header { display: none; }
+  .desktop-logo { display: flex; }
+  .vertical-nav { display: block; }
+  .back-link { top: 16px; left: 20px; font-size: 0.8rem; }
+
+  .watermark {
+    font-size: 25vw;
+  }
+
+  /* Shift product slightly right to account for left nav */
+  .hero {
+    padding-left: 140px;
+  }
+
+  .product {
+    width: auto;
+    max-width: none;
+  }
+  .product img {
+    height: 340px;
+    width: auto;
+  }
+
+  .categories {
+    justify-content: center;
+    overflow-x: visible;
+    gap: 24px;
+    padding: 20px 40px 32px;
+  }
+  .categories span {
+    font-size: 1rem;
+  }
+  .categories .dot {
+    font-size: 1rem;
+  }
+}
+</style>
+</head>
+<body>
+
+<a href="index.html" class="back-link">&larr; Back to Gallery</a>
+
+<section class="hero">
+
+  <!-- CAROB watermark -->
+  <div class="watermark">CAROB</div>
+
+  <!-- Mobile header -->
+  <div class="mobile-header">
+    <button class="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+    <div class="mobile-logo">
+      <img src="assets/maplemoon_logo.svg" alt="MapleMoon">
+      <span class="logo-text">maple moon</span>
+    </div>
+  </div>
+
+  <!-- Desktop vertical nav (left side) -->
+  <ul class="vertical-nav">
+    <li><a href="#">Carob?</a></li>
+    <li><a href="#">Shop</a></li>
+    <li><a href="#">Stockists</a></li>
+    <li><a href="#">Story</a></li>
+    <li><a href="#">Recipes</a></li>
+    <li><a href="#">Contact</a></li>
+  </ul>
+
+  <!-- Desktop logo (top-right) -->
+  <div class="desktop-logo">
+    <img src="assets/maplemoon_logo.svg" alt="MapleMoon">
+    <span class="logo-text">maple moon</span>
+  </div>
+
+  <!-- Product -->
+  <div class="product">
+    <img src="assets/bar_hero_front.png" alt="MapleMoon Carob Bar">
+  </div>
+
+  <!-- Category strip -->
+  <div class="categories">
+    <span>Bars</span><span class="dot">&middot;</span>
+    <span>Moons</span><span class="dot">&middot;</span>
+    <span>Bananas</span><span class="dot">&middot;</span>
+    <span>Bites</span><span class="dot">&middot;</span>
+    <span>Elixirs</span><span class="dot">&middot;</span>
+    <span>Packs</span><span class="dot">&middot;</span>
+    <span>Gifts</span>
+  </div>
+
+</section>
+
+</body>
+</html>
