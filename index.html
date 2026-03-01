@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>MapleMoon Hero Mockups — 14 Concepts</title>
+<title>MapleMoon — 5 Hero Options</title>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
 @font-face { font-family: 'P22 Mackinac Pro'; font-weight: 400; src: local('P22 Mackinac Pro Book'), local('P22MackinacPro-Book'); }
@@ -11,11 +11,11 @@
 @font-face { font-family: 'P22 Mackinac Pro'; font-weight: 700; src: local('P22 Mackinac Pro Bold'), local('P22MackinacPro-Bold'); }
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
-body { font-family: 'Inter', sans-serif; background: #1E4366; color: #E7E4CA; min-height: 100vh; }
+body { font-family: 'Inter', sans-serif; background: linear-gradient(180deg, #7B9DBF 0%, #A8BDD4 100%); color: #E7E4CA; min-height: 100vh; }
 
-.hero-gallery {
+.gallery {
     padding: 60px 40px 40px;
-    max-width: 1200px;
+    max-width: 1000px;
     margin: 0 auto;
 }
 .gallery-header {
@@ -23,14 +23,14 @@ body { font-family: 'Inter', sans-serif; background: #1E4366; color: #E7E4CA; mi
     margin-bottom: 50px;
 }
 .gallery-header img {
-    width: 120px;
-    opacity: 0.6;
-    margin-bottom: 20px;
+    width: 80px;
+    opacity: 0.5;
+    margin-bottom: 16px;
 }
 .gallery-header h1 {
     font-family: 'P22 Mackinac Pro', Georgia, serif;
     font-weight: 400;
-    font-size: 2.2rem;
+    font-size: 2rem;
     letter-spacing: 0.02em;
     margin-bottom: 8px;
 }
@@ -40,15 +40,10 @@ body { font-family: 'Inter', sans-serif; background: #1E4366; color: #E7E4CA; mi
     font-weight: 300;
 }
 
-.grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 24px;
-}
-@media (max-width: 700px) { .grid { grid-template-columns: 1fr; } }
+.cards { display: flex; flex-direction: column; gap: 20px; }
 
 .card {
-    position: relative;
+    display: flex;
     border-radius: 12px;
     overflow: hidden;
     background: rgba(231,228,202,0.04);
@@ -57,103 +52,64 @@ body { font-family: 'Inter', sans-serif; background: #1E4366; color: #E7E4CA; mi
     cursor: pointer;
     text-decoration: none;
     color: inherit;
-    display: block;
 }
 .card:hover {
-    transform: translateY(-4px);
+    transform: translateY(-3px);
     border-color: rgba(231,228,202,0.15);
-    box-shadow: 0 12px 40px rgba(0,0,0,0.3);
+    box-shadow: 0 12px 40px rgba(0,0,0,0.2);
 }
 
 .card-preview {
-    height: 220px;
+    width: 200px;
+    min-height: 140px;
+    flex-shrink: 0;
+    background: linear-gradient(180deg, #7B9DBF 0%, #A8BDD4 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
     position: relative;
     overflow: hidden;
 }
-
-/* Individual card preview backgrounds */
-.preview-02 { background: linear-gradient(135deg, #0f2233 0%, #1E4366 40%, #2a5a3a 100%); }
-.preview-06 { background: linear-gradient(to right, #1E4366 60%, #E7E4CA 60%); }
-.preview-16 { background: #1E4366; display: flex; align-items: center; justify-content: center; }
-.preview-22 { background: linear-gradient(180deg, #1E4366 40%, #5C3D2E 100%); }
-.preview-25 { background: linear-gradient(160deg, #1E4366 0%, #3a2a1a 60%, #5a4020 100%); }
-.preview-29 { background: linear-gradient(to right, #1E4366 50%, #1B3A2A 50%); }
-.preview-30 { background: #1E4366; display: flex; align-items: center; justify-content: center; }
-
-/* New CAROB wordmark layouts */
-.preview-layout { background: linear-gradient(180deg, #7B9DBF 0%, #A8BDD4 100%); display: flex; align-items: flex-end; justify-content: center; overflow: hidden; }
-.preview-layout::after { content: 'CAROB'; font-family: 'P22 Mackinac Pro', Georgia, serif; font-size: 5rem; font-weight: 400; color: rgba(231,228,202,0.12); letter-spacing: 0.05em; margin-bottom: -10px; }
-
-.section-divider {
-    grid-column: 1 / -1;
-    text-align: center;
-    padding: 30px 0 10px;
-    border-top: 1px solid rgba(231,228,202,0.08);
-    margin-top: 10px;
-}
-.section-divider h2 {
+.card-preview .num {
     font-family: 'P22 Mackinac Pro', Georgia, serif;
+    font-size: 3rem;
     font-weight: 400;
-    font-size: 1.4rem;
-    letter-spacing: 0.02em;
-    margin-bottom: 4px;
-}
-.section-divider p {
-    color: rgba(231,228,202,0.4);
-    font-size: 0.75rem;
-    font-weight: 300;
-}
-
-.preview-16::after, .preview-30::after {
-    content: '';
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    border: 1.5px solid rgba(231,228,202,0.15);
-    background: rgba(231,228,202,0.04);
+    opacity: 0.15;
 }
 
 .card-info {
-    padding: 18px 20px;
+    padding: 24px 28px;
+    flex: 1;
 }
-.card-num {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    width: 26px;
-    height: 26px;
-    border-radius: 50%;
-    background: rgba(231,228,202,0.1);
-    font-size: 0.7rem;
-    font-weight: 600;
-    margin-right: 10px;
-    vertical-align: middle;
-}
-.card-title {
-    font-family: 'P22 Mackinac Pro', Georgia, serif;
-    font-weight: 400;
-    font-size: 1.1rem;
-    display: inline;
-    vertical-align: middle;
-}
-.card-desc {
-    margin-top: 8px;
-    font-size: 0.78rem;
-    color: rgba(231,228,202,0.45);
-    font-weight: 300;
-    line-height: 1.5;
-}
-.card-tag {
+.card-goal {
     display: inline-block;
-    margin-top: 10px;
     padding: 3px 10px;
     border-radius: 20px;
     font-size: 0.65rem;
     font-weight: 500;
     text-transform: uppercase;
     letter-spacing: 0.06em;
-    background: rgba(231,228,202,0.08);
+    background: rgba(231,228,202,0.1);
+    color: rgba(231,228,202,0.6);
+    margin-bottom: 10px;
+}
+.card-title {
+    font-family: 'P22 Mackinac Pro', Georgia, serif;
+    font-weight: 400;
+    font-size: 1.2rem;
+    margin-bottom: 6px;
+}
+.card-desc {
+    font-size: 0.8rem;
     color: rgba(231,228,202,0.5);
+    font-weight: 300;
+    line-height: 1.5;
+}
+
+@media (max-width: 600px) {
+    .card { flex-direction: column; }
+    .card-preview { width: 100%; min-height: 100px; }
+    .gallery { padding: 40px 20px; }
 }
 
 .footer {
@@ -166,162 +122,62 @@ body { font-family: 'Inter', sans-serif; background: #1E4366; color: #E7E4CA; mi
 </head>
 <body>
 
-<div class="hero-gallery">
+<div class="gallery">
     <div class="gallery-header">
         <img src="assets/maplemoon_logo.svg" alt="MapleMoon">
-        <h1>Hero Concepts</h1>
-        <p>14 mockups — 7 original + 7 new CAROB wordmark layouts (mobile-first)</p>
+        <h1>5 Hero Options</h1>
+        <p>Each targeting a different goal — Desktop + iPhone responsive</p>
     </div>
 
-    <div class="grid">
-        <a href="mockup_02.html" class="card">
-            <div class="card-preview preview-02"></div>
+    <div class="cards">
+        <a href="hero_v1.html" class="card">
+            <div class="card-preview"><span class="num">V1</span></div>
             <div class="card-info">
-                <span class="card-num">2</span>
-                <span class="card-title">Video BG + Bottom-Left Headline</span>
-                <div class="card-desc">Full-viewport atmospheric background with CAROB wordmark, floating product, and trust strip.</div>
-                <span class="card-tag">Immersive</span>
+                <span class="card-goal">Brand Recognition</span>
+                <div class="card-title">Brand Statement</div>
+                <div class="card-desc">Giant CAROB wordmark dominates. Categories as navigation. Premium, minimal, confident. The brand IS the hero.</div>
             </div>
         </a>
 
-        <a href="mockup_06.html" class="card">
-            <div class="card-preview preview-06"></div>
+        <a href="hero_v2.html" class="card">
+            <div class="card-preview"><span class="num">V2</span></div>
             <div class="card-info">
-                <span class="card-num">6</span>
-                <span class="card-title">60/40 Split — Product + Text</span>
-                <div class="card-desc">Navy product showcase left, cream editorial text right. Clean, commercial, conversion-focused.</div>
-                <span class="card-tag">Split Layout</span>
+                <span class="card-goal">Sell Product</span>
+                <div class="card-title">Shop Now</div>
+                <div class="card-desc">Product front and center with "Shop All" CTA. Horizontal nav, tagline, category strip. Commercial and conversion-focused.</div>
             </div>
         </a>
 
-        <a href="mockup_16.html" class="card">
-            <div class="card-preview preview-16"></div>
+        <a href="hero_v3.html" class="card">
+            <div class="card-preview"><span class="num">V3</span></div>
             <div class="card-info">
-                <span class="card-num">16</span>
-                <span class="card-title">Scroll-Reveal — Product Expands</span>
-                <div class="card-desc">Small moon circle expands as you scroll, revealing the brand. Interactive and memorable.</div>
-                <span class="card-tag">Interactive</span>
+                <span class="card-goal">Educate</span>
+                <div class="card-title">What is Carob?</div>
+                <div class="card-desc">Split layout — product left, story right. "Not chocolate. Better." Trust badges, body copy, CTA. Answers the #1 visitor question.</div>
             </div>
         </a>
 
-        <a href="mockup_22.html" class="card">
-            <div class="card-preview preview-22"></div>
+        <a href="hero_v4.html" class="card">
+            <div class="card-preview"><span class="num">V4</span></div>
             <div class="card-info">
-                <span class="card-num">22</span>
-                <span class="card-title">Origin Story — 4 Panels</span>
-                <div class="card-desc">Pod → Process → Product → Pour. Tell the MapleMoon journey in four frames.</div>
-                <span class="card-tag">Storytelling</span>
+                <span class="card-goal">Show Range</span>
+                <div class="card-title">The Range</div>
+                <div class="card-desc">3 product columns — Bars, Moons, Elixirs. Swipeable cards on mobile. Shows MapleMoon isn't just one product.</div>
             </div>
         </a>
 
-        <a href="mockup_25.html" class="card">
-            <div class="card-preview preview-25"></div>
+        <a href="hero_v5.html" class="card">
+            <div class="card-preview"><span class="num">V5</span></div>
             <div class="card-info">
-                <span class="card-num">25</span>
-                <span class="card-title">Lookbook — Lifestyle + Floating Card</span>
-                <div class="card-desc">Atmospheric backdrop with a floating product card. Editorial meets e-commerce.</div>
-                <span class="card-tag">Editorial</span>
-            </div>
-        </a>
-
-        <a href="mockup_29.html" class="card">
-            <div class="card-preview preview-29"></div>
-            <div class="card-info">
-                <span class="card-num">29</span>
-                <span class="card-title">Face-Off — Bars vs Elixirs</span>
-                <div class="card-desc">Split screen, "choose your ritual." Hover expands each side. Two entry points.</div>
-                <span class="card-tag">Interactive</span>
-            </div>
-        </a>
-
-        <a href="mockup_30.html" class="card">
-            <div class="card-preview preview-30"></div>
-            <div class="card-info">
-                <span class="card-num">30</span>
-                <span class="card-title">Circular Reveal — Moon Expands</span>
-                <div class="card-desc">Circular product reveal on hover + scroll. Uniquely ownable for the moon product shape.</div>
-                <span class="card-tag">Interactive</span>
-            </div>
-        </a>
-        <!-- New CAROB Wordmark Layouts -->
-        <div class="section-divider">
-            <h2>CAROB Wordmark Layouts</h2>
-            <p>Mobile-first — 7 compositions with giant CAROB watermark</p>
-        </div>
-
-        <a href="layout_a.html" class="card">
-            <div class="card-preview preview-layout"></div>
-            <div class="card-info">
-                <span class="card-num">A</span>
-                <span class="card-title">Category Stack + Wordmark</span>
-                <div class="card-desc">Vertical category nav left, giant CAROB anchored to bottom. No product — pure brand statement.</div>
-                <span class="card-tag">Minimal</span>
-            </div>
-        </a>
-
-        <a href="layout_b.html" class="card">
-            <div class="card-preview preview-layout"></div>
-            <div class="card-info">
-                <span class="card-num">B</span>
-                <span class="card-title">Product Over Wordmark</span>
-                <div class="card-desc">Bar product sits on top of the CAROB text. Product meets typography.</div>
-                <span class="card-tag">Hero Product</span>
-            </div>
-        </a>
-
-        <a href="layout_c.html" class="card">
-            <div class="card-preview preview-layout"></div>
-            <div class="card-info">
-                <span class="card-num">C</span>
-                <span class="card-title">Logo Left, Categories Right</span>
-                <div class="card-desc">Large logo top-left, product centered, categories stacked right. Balanced composition.</div>
-                <span class="card-tag">Balanced</span>
-            </div>
-        </a>
-
-        <a href="layout_d.html" class="card">
-            <div class="card-preview preview-layout"></div>
-            <div class="card-info">
-                <span class="card-num">D</span>
-                <span class="card-title">CAROB Top, Nav Left</span>
-                <div class="card-desc">Giant CAROB as visible headline top-left, categories below, product right. Bold typographic lead.</div>
-                <span class="card-tag">Typography</span>
-            </div>
-        </a>
-
-        <a href="layout_e.html" class="card">
-            <div class="card-preview preview-layout"></div>
-            <div class="card-info">
-                <span class="card-num">E</span>
-                <span class="card-title">Horizontal Nav + Bottom Categories</span>
-                <div class="card-desc">Classic horizontal nav top, product centered, category strip at bottom. Clean and commercial.</div>
-                <span class="card-tag">Commercial</span>
-            </div>
-        </a>
-
-        <a href="layout_f.html" class="card">
-            <div class="card-preview preview-layout"></div>
-            <div class="card-info">
-                <span class="card-num">F</span>
-                <span class="card-title">Vertical Nav Left + Bottom Categories</span>
-                <div class="card-desc">Page nav stacked left, product centered, categories at bottom. Editorial feel.</div>
-                <span class="card-tag">Editorial</span>
-            </div>
-        </a>
-
-        <a href="layout_g.html" class="card">
-            <div class="card-preview preview-layout"></div>
-            <div class="card-info">
-                <span class="card-num">G</span>
-                <span class="card-title">Mobile Hero</span>
-                <div class="card-desc">Pure mobile concept — hamburger, half-open bar, CAROB text, horizontal scroll categories.</div>
-                <span class="card-tag">Mobile-First</span>
+                <span class="card-goal">Interactive</span>
+                <div class="card-title">Moon Reveal</div>
+                <div class="card-desc">Scroll-triggered reveal — small moon circle expands as you scroll. CAROB wordmark, tagline, CTA all fade in. Uniquely ownable.</div>
             </div>
         </a>
     </div>
 </div>
 
-<div class="footer">MapleMoon Hero Concepts — HandToMouse Studio</div>
+<div class="footer">MapleMoon Hero Options — HandToMouse Studio</div>
 
 </body>
 </html>

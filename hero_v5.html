@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MapleMoon — Moon Reveal</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  @font-face { font-family: 'P22 Mackinac Pro'; font-weight: 400; src: local('P22 Mackinac Pro Book'), local('P22MackinacPro-Book'); }
+  @font-face { font-family: 'P22 Mackinac Pro'; font-weight: 500; src: local('P22 Mackinac Pro Medium'), local('P22MackinacPro-Medium'); }
+  @font-face { font-family: 'P22 Mackinac Pro'; font-weight: 700; src: local('P22 Mackinac Pro Bold'), local('P22MackinacPro-Bold'); }
+
+  *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+  :root {
+    --cream: #E7E4CA;
+    --navy: #1E4366;
+    --grad-top: #7B9DBF;
+    --grad-bot: #A8BDD4;
+  }
+
+  html { scroll-behavior: auto; }
+
+  body {
+    min-height: 200vh;
+    font-family: 'Inter', sans-serif;
+    color: var(--cream);
+    background: linear-gradient(180deg, var(--grad-top) 0%, var(--grad-bot) 100%);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  /* --- Focus visible --- */
+  :focus-visible {
+    outline: 2px solid var(--cream);
+    outline-offset: 3px;
+  }
+
+  /* --- Back link --- */
+  .back-link {
+    position: fixed;
+    top: 16px;
+    left: 16px;
+    z-index: 101;
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 0.75rem;
+    color: var(--cream);
+    text-decoration: none;
+    opacity: 0.6;
+    transition: opacity 0.2s ease;
+    letter-spacing: 0.02em;
+  }
+  .back-link:hover { opacity: 1; }
+
+  /* --- Hero (fixed) --- */
+  .hero {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    z-index: 1;
+  }
+
+  /* --- Scroll spacer --- */
+  .scroll-spacer {
+    position: relative;
+    top: 100vh;
+    height: 100vh;
+    z-index: 0;
+  }
+
+  /* --- Nav --- */
+  .nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 20px;
+    transition: background 0.3s ease, backdrop-filter 0.3s ease;
+  }
+  .nav.scrolled {
+    background: rgba(123, 157, 191, 0.8);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+  }
+
+  /* Hamburger */
+  .hamburger-toggle { display: none; }
+  .hamburger-label {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+    z-index: 102;
+    padding: 4px;
+  }
+  .hamburger-label span {
+    display: block;
+    width: 22px;
+    height: 1.5px;
+    background: var(--cream);
+    border-radius: 1px;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+  }
+  .hamburger-toggle:checked + .hamburger-label span:nth-child(1) {
+    transform: rotate(45deg) translate(4.5px, 4.5px);
+  }
+  .hamburger-toggle:checked + .hamburger-label span:nth-child(2) {
+    opacity: 0;
+  }
+  .hamburger-toggle:checked + .hamburger-label span:nth-child(3) {
+    transform: rotate(-45deg) translate(4.5px, -4.5px);
+  }
+
+  .nav-left { display: flex; align-items: center; gap: 12px; }
+
+  .nav-right {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .nav-logo { height: 40px; width: auto; }
+  .nav-brand-text {
+    font-family: 'P22 Mackinac Pro', Georgia, serif;
+    font-weight: 400;
+    font-size: 0.85rem;
+    color: var(--cream);
+    letter-spacing: 0.08em;
+    opacity: 0.8;
+  }
+
+  /* Desktop nav links */
+  .nav-links {
+    display: none;
+    list-style: none;
+    gap: 28px;
+    align-items: center;
+  }
+  .nav-links a {
+    font-family: 'P22 Mackinac Pro', Georgia, serif;
+    font-weight: 400;
+    font-size: 0.85rem;
+    color: var(--cream);
+    text-decoration: none;
+    opacity: 0.7;
+    transition: opacity 0.2s ease;
+    letter-spacing: 0.03em;
+  }
+  .nav-links a:hover { opacity: 1; }
+
+  /* Mobile menu overlay */
+  .mobile-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(180deg, var(--grad-top) 0%, var(--grad-bot) 100%);
+    z-index: 99;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 32px;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+  }
+  .hamburger-toggle:checked ~ .mobile-menu {
+    opacity: 1;
+    pointer-events: auto;
+  }
+  .mobile-menu a {
+    font-family: 'P22 Mackinac Pro', Georgia, serif;
+    font-weight: 400;
+    font-size: 1.4rem;
+    color: var(--cream);
+    text-decoration: none;
+    opacity: 0.8;
+    letter-spacing: 0.05em;
+    transition: opacity 0.2s ease;
+  }
+  .mobile-menu a:hover { opacity: 1; }
+
+  /* --- Moon circle --- */
+  .moon-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 14px;
+    z-index: 2;
+    position: relative;
+  }
+  .moon-circle {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 1.5px solid rgba(231, 228, 202, 0.2);
+    background: rgba(231, 228, 202, 0.05);
+    will-change: transform;
+    transform: scale(1);
+    transition: none;
+  }
+  .moon-circle img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+  .moon-label {
+    font-family: 'Inter', sans-serif;
+    font-weight: 300;
+    font-size: 0.8rem;
+    color: var(--cream);
+    opacity: 0.4;
+    letter-spacing: 0.12em;
+    text-transform: lowercase;
+  }
+
+  /* --- Carob wordmark (behind circle) --- */
+  .carob-watermark {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90vw;
+    max-width: 600px;
+    opacity: 0;
+    z-index: 1;
+    pointer-events: none;
+  }
+  .carob-watermark img {
+    width: 100%;
+    height: auto;
+    filter: brightness(0) invert(1);
+  }
+
+  /* --- Reveal elements (start hidden) --- */
+  .reveal-tagline,
+  .reveal-cta,
+  .reveal-categories {
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    z-index: 3;
+    position: relative;
+  }
+
+  .reveal-tagline {
+    font-family: 'Inter', sans-serif;
+    font-weight: 300;
+    font-size: 0.9rem;
+    color: var(--cream);
+    letter-spacing: 0.06em;
+    margin-top: 20px;
+    text-align: center;
+  }
+
+  .reveal-cta {
+    margin-top: 24px;
+  }
+  .reveal-cta a {
+    display: inline-block;
+    font-family: 'P22 Mackinac Pro', Georgia, serif;
+    font-weight: 500;
+    font-size: 0.85rem;
+    color: var(--navy);
+    background: var(--cream);
+    padding: 12px 32px;
+    border-radius: 28px;
+    text-decoration: none;
+    letter-spacing: 0.06em;
+    transition: background 0.2s ease, transform 0.2s ease;
+  }
+  .reveal-cta a:hover {
+    background: #f0edd6;
+    transform: translateY(-1px);
+  }
+
+  /* --- Category strip --- */
+  .reveal-categories {
+    position: absolute;
+    bottom: 40px;
+    left: 0;
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    padding: 0 20px;
+  }
+  .reveal-categories::-webkit-scrollbar { display: none; }
+  .category-track {
+    display: flex;
+    gap: 20px;
+    white-space: nowrap;
+    justify-content: flex-start;
+    padding-bottom: 4px;
+  }
+  .category-track a {
+    font-family: 'P22 Mackinac Pro', Georgia, serif;
+    font-weight: 400;
+    font-size: 0.8rem;
+    color: var(--cream);
+    text-decoration: none;
+    opacity: 0.6;
+    letter-spacing: 0.05em;
+    flex-shrink: 0;
+    transition: opacity 0.2s ease;
+  }
+  .category-track a:hover { opacity: 1; }
+
+  /* --- Scroll indicator --- */
+  .scroll-indicator {
+    position: absolute;
+    bottom: 32px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    z-index: 3;
+    transition: opacity 0.3s ease;
+  }
+  .scroll-indicator svg {
+    animation: bounce 1.5s ease-in-out infinite;
+  }
+
+  /* --- Animations --- */
+  @keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(6px); }
+  }
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  /* ============================
+     Desktop 768px+
+     ============================ */
+  @media (min-width: 768px) {
+    .back-link {
+      top: 20px;
+      left: 24px;
+      font-size: 0.8rem;
+    }
+
+    .nav {
+      padding: 20px 40px;
+    }
+
+    /* Hide hamburger, show links */
+    .hamburger-label { display: none; }
+    .nav-links {
+      display: flex;
+    }
+    .mobile-menu { display: none; }
+
+    .nav-logo { height: 80px; }
+    .nav-brand-text { display: none; }
+
+    .nav-right {
+      gap: 12px;
+    }
+
+    /* Moon circle desktop */
+    .moon-circle {
+      width: 100px;
+      height: 100px;
+    }
+
+    .moon-label {
+      font-size: 0.85rem;
+    }
+
+    .carob-watermark {
+      width: 100vw;
+      max-width: none;
+    }
+
+    .reveal-tagline {
+      font-size: 1.1rem;
+      margin-top: 28px;
+    }
+
+    .reveal-cta a {
+      font-size: 0.95rem;
+      padding: 14px 40px;
+    }
+
+    .reveal-categories {
+      bottom: 48px;
+      padding: 0 60px;
+    }
+    .category-track {
+      justify-content: center;
+      gap: 12px;
+    }
+    .category-track a {
+      font-size: 1.3rem;
+    }
+    .category-track .cat-dot {
+      display: inline-block;
+      color: var(--cream);
+      opacity: 0.3;
+      font-size: 0.5rem;
+      line-height: 1.3rem;
+      vertical-align: middle;
+      flex-shrink: 0;
+    }
+
+    .scroll-indicator {
+      bottom: 40px;
+    }
+  }
+</style>
+</head>
+<body>
+
+<!-- Back link -->
+<a href="#" class="back-link" aria-label="Back to Gallery">&larr; Back to Gallery</a>
+
+<!-- Navigation -->
+<nav class="nav" id="mainNav">
+  <div class="nav-left">
+    <input type="checkbox" id="hamburgerToggle" class="hamburger-toggle" aria-label="Toggle menu">
+    <label for="hamburgerToggle" class="hamburger-label" aria-hidden="true">
+      <span></span>
+      <span></span>
+      <span></span>
+    </label>
+    <ul class="nav-links">
+      <li><a href="#">Our Story</a></li>
+      <li><a href="#">Shop</a></li>
+      <li><a href="#">Stockists</a></li>
+      <li><a href="#">Recipes</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </div>
+  <div class="nav-right">
+    <span class="nav-brand-text">maple moon</span>
+    <img src="assets/maplemoon_logo.svg" alt="MapleMoon" class="nav-logo">
+  </div>
+  <!-- Mobile menu overlay -->
+  <div class="mobile-menu">
+    <a href="#">Our Story</a>
+    <a href="#">Shop</a>
+    <a href="#">Stockists</a>
+    <a href="#">Recipes</a>
+    <a href="#">Contact</a>
+  </div>
+</nav>
+
+<!-- Hero (fixed) -->
+<section class="hero" id="hero">
+  <!-- Carob wordmark watermark -->
+  <div class="carob-watermark" id="carobWatermark">
+    <img src="assets/carob_wordmark.svg" alt="" aria-hidden="true">
+  </div>
+
+  <!-- Moon circle + label -->
+  <div class="moon-container">
+    <div class="moon-circle" id="moonCircle">
+      <img src="assets/moon_halfopen.png" alt="MapleMoon carob chocolate, half open revealing the chocolate inside">
+    </div>
+    <span class="moon-label" id="moonLabel">maple moon</span>
+  </div>
+
+  <!-- Tagline -->
+  <p class="reveal-tagline" id="revealTagline">Artisan Carob. Naturally Sweet.</p>
+
+  <!-- CTA -->
+  <div class="reveal-cta" id="revealCta">
+    <a href="#">Shop Moons</a>
+  </div>
+
+  <!-- Category strip -->
+  <div class="reveal-categories" id="revealCategories">
+    <div class="category-track">
+      <a href="#">Moons</a>
+      <span class="cat-dot" aria-hidden="true">&bull;</span>
+      <a href="#">Elixirs</a>
+      <span class="cat-dot" aria-hidden="true">&bull;</span>
+      <a href="#">Bars</a>
+      <span class="cat-dot" aria-hidden="true">&bull;</span>
+      <a href="#">Bundles</a>
+      <span class="cat-dot" aria-hidden="true">&bull;</span>
+      <a href="#">Gifts</a>
+    </div>
+  </div>
+
+  <!-- Scroll indicator -->
+  <div class="scroll-indicator" id="scrollIndicator">
+    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M4 7L10 13L16 7" stroke="#E7E4CA" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.5"/>
+    </svg>
+  </div>
+</section>
+
+<!-- Scroll spacer -->
+<div class="scroll-spacer"></div>
+
+<script>
+(function() {
+  'use strict';
+
+  var moonCircle     = document.getElementById('moonCircle');
+  var moonLabel      = document.getElementById('moonLabel');
+  var carobWatermark = document.getElementById('carobWatermark');
+  var revealTagline  = document.getElementById('revealTagline');
+  var revealCta      = document.getElementById('revealCta');
+  var revealCats     = document.getElementById('revealCategories');
+  var scrollInd      = document.getElementById('scrollIndicator');
+  var nav            = document.getElementById('mainNav');
+
+  var isDesktop = window.matchMedia('(min-width: 768px)');
+  var ticking = false;
+
+  function easeOutCubic(t) {
+    return 1 - Math.pow(1 - t, 3);
+  }
+
+  function clamp(v, min, max) {
+    return v < min ? min : v > max ? max : v;
+  }
+
+  function onScroll() {
+    if (ticking) return;
+    ticking = true;
+    requestAnimationFrame(update);
+  }
+
+  function update() {
+    ticking = false;
+    var scrollY = window.scrollY;
+    var raw = clamp(scrollY / 400, 0, 1);
+    var p = easeOutCubic(raw);
+
+    // Nav background on scroll
+    if (scrollY > 60) {
+      nav.classList.add('scrolled');
+    } else {
+      nav.classList.remove('scrolled');
+    }
+
+    // Scale factor
+    var scaleFactor = isDesktop.matches ? (1 + p * 4) : (1 + p * 3);
+    moonCircle.style.transform = 'scale(' + scaleFactor + ')';
+
+    // Border fade
+    var borderOpacity = 0.2 * (1 - p);
+    moonCircle.style.borderColor = 'rgba(231,228,202,' + borderOpacity + ')';
+
+    // Moon label fades 0-30%
+    var labelProgress = clamp(raw / 0.3, 0, 1);
+    moonLabel.style.opacity = 0.4 * (1 - labelProgress);
+
+    // Scroll indicator fades 0-20%
+    var indProgress = clamp(raw / 0.2, 0, 1);
+    scrollInd.style.opacity = 1 - indProgress;
+
+    // Carob watermark at >0.4
+    if (p > 0.4) {
+      carobWatermark.style.opacity = p * 0.15;
+    } else {
+      carobWatermark.style.opacity = 0;
+    }
+
+    // Tagline at >0.6
+    if (p > 0.6) {
+      var tagP = clamp((p - 0.6) / 0.15, 0, 1);
+      revealTagline.style.opacity = tagP;
+    } else {
+      revealTagline.style.opacity = 0;
+    }
+
+    // CTA at >0.7
+    if (p > 0.7) {
+      var ctaP = clamp((p - 0.7) / 0.15, 0, 1);
+      revealCta.style.opacity = ctaP;
+    } else {
+      revealCta.style.opacity = 0;
+    }
+
+    // Categories at >0.8
+    if (p > 0.8) {
+      var catP = clamp((p - 0.8) / 0.15, 0, 1);
+      revealCats.style.opacity = catP;
+    } else {
+      revealCats.style.opacity = 0;
+    }
+  }
+
+  window.addEventListener('scroll', onScroll, { passive: true });
+
+  // Initial state
+  update();
+})();
+</script>
+</body>
+</html>
