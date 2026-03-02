@@ -28,8 +28,6 @@
   *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 
   :root {
-    --cream: #E7E4CA;
-    --navy: #1E4366;
     --grad-top: #7B9DBF;
     --grad-bottom: #A8BDD4;
     --gap: 4px;
@@ -38,7 +36,7 @@
   html, body { height: 100%; overflow: hidden; }
   body {
     font-family: var(--mm-sans);
-    color: var(--cream);
+    color: var(--mm-cream);
     background: var(--mm-dark-bg);
     text-rendering: optimizeLegibility;
     overflow-x: hidden;
@@ -47,17 +45,17 @@
   /* ── Skip link ── */
   .skip-link {
     position: absolute; top: -100%; left: 16px;
-    padding: 8px 16px; background: var(--cream); color: var(--navy);
+    padding: 8px 16px; background: var(--mm-cream); color: var(--mm-navy);
     border-radius: var(--radius-sm); z-index: 999; font-size: 0.85rem;
     text-decoration: none;
   }
   .skip-link:focus { top: 8px; }
-  :focus-visible { outline: 2px solid var(--cream); outline-offset: 3px; }
+  :focus-visible { outline: 2px solid var(--mm-cream); outline-offset: 3px; }
 
   /* ── Back link ── */
   .back-link {
     position: fixed; top: 16px; left: 16px; z-index: 101;
-    color: var(--cream); text-decoration: none;
+    color: var(--mm-cream); text-decoration: none;
     font-family: var(--mm-sans); font-size: 0.8rem; font-weight: 400;
     opacity: 0.7; transition: opacity 0.2s;
     display: none;
@@ -74,7 +72,7 @@
   }
   .hamburger span {
     display: block; width: 100%; height: 2px;
-    background: var(--cream); border-radius: 1px;
+    background: var(--mm-cream); border-radius: 1px;
     transition: transform 0.3s, opacity 0.3s;
   }
   #menu-toggle:checked ~ .hamburger span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
@@ -84,7 +82,7 @@
   /* ── Mobile menu overlay ── */
   .mobile-menu {
     position: fixed; inset: 0; z-index: 150;
-    background: var(--cream); color: var(--navy);
+    background: var(--mm-cream); color: var(--mm-navy);
     display: flex; flex-direction: column;
     align-items: center; justify-content: center; gap: 28px;
     opacity: 0; pointer-events: none;
@@ -94,12 +92,12 @@
   .mobile-menu a {
     font-family: var(--mm-serif); font-size: 1.4rem;
     font-weight: 500; text-transform: uppercase; letter-spacing: 0.12em;
-    color: var(--navy); text-decoration: none;
+    color: var(--mm-navy); text-decoration: none;
     transition: opacity 0.2s; min-height: 44px; padding: 12px 0;
     display: inline-flex; align-items: center;
   }
   .mobile-menu a:hover { opacity: 0.6; }
-  .mobile-menu .menu-divider { width: 40px; height: 1px; background: var(--navy); opacity: 0.2; }
+  .mobile-menu .menu-divider { width: 40px; height: 1px; background: var(--mm-navy); opacity: 0.2; }
   .mobile-menu .menu-nav {
     display: flex; flex-direction: column; align-items: center; gap: 20px;
     margin-top: 24px; padding-top: 24px;
@@ -108,7 +106,7 @@
   .mobile-menu .menu-nav a {
     font-family: var(--mm-sans); font-size: 0.95rem;
     font-weight: 400; text-transform: none; letter-spacing: 0.04em;
-    color: var(--navy); opacity: 0.6;
+    color: var(--mm-navy); opacity: 0.6;
   }
 
   /* ── Mobile header (logo) ── */
@@ -186,7 +184,7 @@
     font-family: var(--mm-serif);
     font-weight: 500; font-size: 0.7rem;
     text-transform: uppercase; letter-spacing: 0.12em;
-    color: var(--cream); opacity: 0.7;
+    color: var(--mm-cream); opacity: 0.7;
   }
 
   /* ── Tile 2: Moon ── */
@@ -205,7 +203,7 @@
     font-family: var(--mm-serif);
     font-weight: 500; font-size: 0.75rem;
     text-transform: uppercase; letter-spacing: 0.1em;
-    color: var(--cream); opacity: 0.6;
+    color: var(--mm-cream); opacity: 0.6;
   }
 
   /* ── Tile 3: Ingredient/Lifestyle ── */
@@ -228,13 +226,13 @@
     font-family: var(--mm-serif);
     font-weight: 500; font-size: 0.75rem;
     text-transform: uppercase; letter-spacing: 0.1em;
-    color: var(--cream); opacity: 0.7;
+    color: var(--mm-cream); opacity: 0.7;
     text-shadow: 0 1px 4px rgba(0,0,0,0.4);
   }
 
   /* ── Tile 4: CTA / Shop Now ── */
   .tile-cta {
-    background: var(--navy);
+    background: var(--mm-navy);
     display: flex; flex-direction: column;
     align-items: center; justify-content: center;
     gap: 8px;
@@ -243,17 +241,17 @@
     font-family: var(--mm-serif);
     font-weight: 500; font-size: 1rem;
     text-transform: uppercase; letter-spacing: 0.12em;
-    color: var(--cream);
+    color: var(--mm-cream);
   }
   .tile-cta .cta-arrow {
     width: 24px; height: 24px;
-    fill: none; stroke: var(--cream); stroke-width: 2;
+    fill: none; stroke: var(--mm-cream); stroke-width: 2;
     opacity: 0.6;
   }
 
   /* ── Tile 5: Origin ── */
   .tile-origin {
-    background: var(--cream);
+    background: var(--mm-cream);
     display: flex; flex-direction: column;
     align-items: center; justify-content: center;
     gap: 4px;
@@ -261,12 +259,12 @@
   .tile-origin .origin-title {
     font-family: var(--mm-serif);
     font-weight: 400; font-size: 1rem;
-    color: var(--navy); letter-spacing: 0.06em;
+    color: var(--mm-navy); letter-spacing: 0.06em;
   }
   .tile-origin .origin-sub {
     font-family: var(--mm-sans);
     font-weight: 300; font-size: 0.65rem;
-    color: var(--navy); opacity: 0.5;
+    color: var(--mm-navy); opacity: 0.5;
     letter-spacing: 0.06em;
   }
   .tile-origin .origin-icons {
@@ -299,7 +297,7 @@
     }
     .header-desktop nav a {
       font-family: var(--mm-sans); font-size: 1rem;
-      font-weight: 400; color: var(--cream); text-decoration: none;
+      font-weight: 400; color: var(--mm-cream); text-decoration: none;
       opacity: 0.9; transition: opacity 0.2s;
     }
     .header-desktop nav a:hover { opacity: 0.6; }
@@ -377,7 +375,7 @@
       font-family: var(--mm-serif);
       font-weight: 500; font-size: 0.9rem;
       text-transform: uppercase; letter-spacing: 0.12em;
-      color: var(--cream);
+      color: var(--mm-cream);
     }
     .tile:hover .hover-text {
       opacity: 1;
@@ -416,7 +414,7 @@
   .tile-trust-desktop .trust-label {
     font-family: var(--mm-sans);
     font-weight: 300; font-size: 0.65rem;
-    color: var(--cream); opacity: 0.5;
+    color: var(--mm-cream); opacity: 0.5;
     text-transform: uppercase; letter-spacing: 0.1em;
   }
 
@@ -438,7 +436,7 @@
     font-family: var(--mm-serif);
     font-weight: 500; font-size: 0.65rem;
     text-transform: uppercase; letter-spacing: 0.1em;
-    color: var(--cream); opacity: 0.6;
+    color: var(--mm-cream); opacity: 0.6;
   }
 
   @media (min-width: 1024px) {

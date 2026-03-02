@@ -27,15 +27,13 @@
   *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 
   :root {
-    --cream: #E7E4CA;
-    --navy: #1E4366;
   }
 
   html, body { height: 100%; overflow: hidden; }
 
   body {
     font-family: var(--mm-sans);
-    color: var(--cream);
+    color: var(--mm-cream);
     position: relative;
     min-height: 100vh;
     min-height: 100dvh;
@@ -44,12 +42,12 @@
     background: var(--mm-dark-bg);
   }
 
-  :focus-visible { outline: 2px solid var(--cream); outline-offset: 3px; }
+  :focus-visible { outline: 2px solid var(--mm-cream); outline-offset: 3px; }
 
   /* ── Skip link ── */
   .skip-link {
     position: absolute; top: -100%; left: 16px;
-    padding: 8px 16px; background: var(--cream); color: var(--navy);
+    padding: 8px 16px; background: var(--mm-cream); color: var(--mm-navy);
     border-radius: var(--radius-sm); z-index: 999; font-size: 0.85rem;
     text-decoration: none;
   }
@@ -96,7 +94,7 @@
   /* ── Back link ── */
   .back-link {
     position: fixed; top: 16px; left: 16px; z-index: 10;
-    color: var(--cream); text-decoration: none;
+    color: var(--mm-cream); text-decoration: none;
     font-family: var(--mm-sans); font-size: 0.8rem; font-weight: 400;
     opacity: 0.7; transition: opacity 0.2s;
   }
@@ -121,7 +119,7 @@
   }
   .hamburger span {
     display: block; width: 100%; height: 2px;
-    background: var(--cream); border-radius: 1px;
+    background: var(--mm-cream); border-radius: 1px;
     transition: transform 0.3s, opacity 0.3s;
   }
   #menu-toggle:checked ~ .hamburger span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
@@ -131,7 +129,7 @@
   /* ── Mobile menu overlay ── */
   .mobile-menu {
     position: fixed; inset: 0; z-index: 150;
-    background: var(--cream); color: var(--navy);
+    background: var(--mm-cream); color: var(--mm-navy);
     display: flex; flex-direction: column;
     align-items: center; justify-content: center; gap: 28px;
     opacity: 0; pointer-events: none;
@@ -142,7 +140,7 @@
   .mobile-menu a {
     font-family: var(--mm-serif); font-size: 1.4rem;
     font-weight: 500; text-transform: uppercase; letter-spacing: 0.12em;
-    color: var(--navy); text-decoration: none;
+    color: var(--mm-navy); text-decoration: none;
     transition: opacity 0.2s;
     min-height: 44px; padding: 12px 0;
     display: inline-flex; align-items: center;
@@ -150,7 +148,7 @@
   .mobile-menu a:hover { opacity: 0.6; }
 
   .mobile-menu .menu-divider {
-    width: 40px; height: 1px; background: var(--navy); opacity: 0.2;
+    width: 40px; height: 1px; background: var(--mm-navy); opacity: 0.2;
   }
 
   .mobile-menu .menu-nav {
@@ -161,7 +159,7 @@
   .mobile-menu .menu-nav a {
     font-family: var(--mm-sans); font-size: 0.95rem;
     font-weight: 400; text-transform: none; letter-spacing: 0.04em;
-    color: var(--navy); opacity: 0.6;
+    color: var(--mm-navy); opacity: 0.6;
   }
 
   /* ── Desktop nav ── */
@@ -180,7 +178,7 @@
     font-family: var(--mm-serif);
     font-weight: 400;
     font-size: 1.8rem;
-    color: var(--cream);
+    color: var(--mm-cream);
     letter-spacing: 0.06em;
     line-height: 1.15;
     margin-bottom: 10px;
@@ -190,14 +188,14 @@
     font-family: var(--mm-sans);
     font-weight: 300;
     font-size: 0.9rem;
-    color: var(--cream);
+    color: var(--mm-cream);
     opacity: 0.8;
     margin-bottom: 24px;
   }
 
   .cta-btn {
     display: inline-flex; align-items: center; justify-content: center;
-    border: 1.5px solid var(--cream); color: var(--cream);
+    border: 1.5px solid var(--mm-cream); color: var(--mm-cream);
     background: transparent; border-radius: var(--radius-pill);
     padding: 12px 32px; min-height: 48px;
     font-family: var(--mm-sans); font-size: 0.85rem;
@@ -206,7 +204,7 @@
     transition: background 0.3s, color 0.3s, transform 0.15s;
   }
   .cta-btn:hover {
-    background: var(--cream); color: var(--navy);
+    background: var(--mm-cream); color: var(--mm-navy);
   }
   .cta-btn:active {
     transform: scale(0.97);
@@ -228,7 +226,7 @@
     .header-mobile { display: none; }
 
     .back-link {
-      color: var(--cream);
+      color: var(--mm-cream);
     }
 
     /* Desktop nav overlaid on photo */
@@ -244,7 +242,7 @@
     }
     .header-desktop nav a {
       font-family: var(--mm-sans); font-size: 1rem;
-      font-weight: 400; color: var(--cream); text-decoration: none;
+      font-weight: 400; color: var(--mm-cream); text-decoration: none;
       opacity: 0.9; transition: opacity 0.2s;
     }
     .header-desktop nav a:hover { opacity: 0.6; }

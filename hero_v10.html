@@ -27,19 +27,16 @@
   *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 
   :root {
-    --cream: #E7E4CA;
-    --navy: #1E4366;
     --grad-top: #7B9DBF;
     --grad-bottom: #A8BDD4;
     --bar-height: 60px;
-    --black: var(--mm-dark-bg);
   }
 
   html, body { height: 100%; overflow: hidden; }
   body {
     font-family: var(--mm-sans);
-    color: var(--cream);
-    background: var(--black);
+    color: var(--mm-cream);
+    background: var(--mm-dark-bg);
     text-rendering: optimizeLegibility;
     overflow-x: hidden;
   }
@@ -47,17 +44,17 @@
   /* ── Skip link ── */
   .skip-link {
     position: absolute; top: -100%; left: 16px;
-    padding: 8px 16px; background: var(--cream); color: var(--navy);
+    padding: 8px 16px; background: var(--mm-cream); color: var(--mm-navy);
     border-radius: var(--radius-sm); z-index: 999; font-size: 0.85rem;
     text-decoration: none;
   }
   .skip-link:focus { top: 8px; }
-  :focus-visible { outline: 2px solid var(--cream); outline-offset: 3px; }
+  :focus-visible { outline: 2px solid var(--mm-cream); outline-offset: 3px; }
 
   /* ── Back link ── */
   .back-link {
     position: fixed; top: 16px; left: 16px; z-index: 101;
-    color: var(--cream); text-decoration: none;
+    color: var(--mm-cream); text-decoration: none;
     font-family: var(--mm-sans); font-size: 0.8rem; font-weight: 400;
     opacity: 0.7; transition: opacity 0.2s;
     display: none; min-height: 44px; padding: 12px 0;
@@ -88,14 +85,14 @@
   .letterbox-top {
     position: fixed; top: 0; left: 0; right: 0;
     height: var(--bar-height);
-    background: var(--black);
+    background: var(--mm-dark-bg);
     z-index: 50;
     display: flex; align-items: center; justify-content: center;
   }
   .letterbox-top .bar-text {
     font-family: var(--mm-sans);
     font-size: 0.65rem; font-weight: 400;
-    color: var(--cream); opacity: 0.6;
+    color: var(--mm-cream); opacity: 0.6;
     text-transform: uppercase;
     letter-spacing: 0.3em;
   }
@@ -103,7 +100,7 @@
   .letterbox-bottom {
     position: fixed; bottom: 0; left: 0; right: 0;
     height: var(--bar-height);
-    background: var(--black);
+    background: var(--mm-dark-bg);
     z-index: 50;
     display: flex; align-items: center; justify-content: center;
     gap: 8px;
@@ -176,20 +173,20 @@
   .cinema-tagline {
     font-family: var(--mm-sans);
     font-weight: 300; font-size: 0.85rem;
-    color: var(--cream); opacity: 0.8;
+    color: var(--mm-cream); opacity: 0.8;
     letter-spacing: 0.15em;
   }
 
   .cinema-origin {
     font-family: var(--mm-serif);
     font-weight: 400; font-size: 0.75rem;
-    color: var(--cream); opacity: 0.5;
+    color: var(--mm-cream); opacity: 0.5;
     letter-spacing: 0.1em;
   }
 
   .cinema-enter {
     display: inline-flex; align-items: center; justify-content: center;
-    border: 1px solid var(--cream); color: var(--cream);
+    border: 1px solid var(--mm-cream); color: var(--mm-cream);
     background: transparent; border-radius: var(--radius-pill);
     padding: 10px 32px; min-height: 44px;
     font-family: var(--mm-sans); font-size: 0.8rem;
@@ -199,7 +196,7 @@
     margin-top: 8px;
   }
   .cinema-enter:hover {
-    background: var(--cream); color: var(--navy);
+    background: var(--mm-cream); color: var(--mm-navy);
   }
   .cinema-enter:active {
     transform: scale(0.97);
@@ -265,7 +262,7 @@
     display: none;
     font-family: var(--mm-sans);
     font-size: 0.65rem; font-weight: 300;
-    color: var(--cream); opacity: 0.4;
+    color: var(--mm-cream); opacity: 0.4;
     letter-spacing: 0.08em;
     margin-left: 16px;
   }

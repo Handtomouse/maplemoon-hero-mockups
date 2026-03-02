@@ -28,8 +28,6 @@
   *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 
   :root {
-    --cream: #E7E4CA;
-    --navy: #1E4366;
     --grad-top: #7B9DBF;
     --grad-bottom: #A8BDD4;
   }
@@ -37,7 +35,7 @@
   html, body { height: 100%; }
   body {
     font-family: var(--mm-sans);
-    color: var(--cream);
+    color: var(--mm-cream);
     overflow-x: hidden;
     overflow-y: hidden;
     text-rendering: optimizeLegibility;
@@ -46,17 +44,17 @@
   /* ── Skip link ── */
   .skip-link {
     position: absolute; top: -100%; left: 16px;
-    padding: 8px 16px; background: var(--cream); color: var(--navy);
+    padding: 8px 16px; background: var(--mm-cream); color: var(--mm-navy);
     border-radius: var(--radius-sm); z-index: 999; font-size: 0.85rem;
     text-decoration: none;
   }
   .skip-link:focus { top: 8px; }
-  :focus-visible { outline: 2px solid var(--cream); outline-offset: 3px; }
+  :focus-visible { outline: 2px solid var(--mm-cream); outline-offset: 3px; }
 
   /* ── Back link ── */
   .back-link {
     position: fixed; top: 16px; left: 16px; z-index: 101;
-    color: var(--cream); text-decoration: none;
+    color: var(--mm-cream); text-decoration: none;
     font-family: var(--mm-sans); font-size: 0.8rem; font-weight: 400;
     opacity: 0.7; transition: opacity 0.2s;
     display: none;
@@ -73,7 +71,7 @@
   }
   .hamburger span {
     display: block; width: 100%; height: 2px;
-    background: var(--cream); border-radius: 1px;
+    background: var(--mm-cream); border-radius: 1px;
     transition: transform 0.3s, opacity 0.3s;
   }
   #menu-toggle:checked ~ .hamburger span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
@@ -83,7 +81,7 @@
   /* ── Mobile menu overlay ── */
   .mobile-menu {
     position: fixed; inset: 0; z-index: 150;
-    background: var(--cream); color: var(--navy);
+    background: var(--mm-cream); color: var(--mm-navy);
     display: flex; flex-direction: column;
     align-items: center; justify-content: center; gap: 28px;
     opacity: 0; pointer-events: none;
@@ -93,12 +91,12 @@
   .mobile-menu a {
     font-family: var(--mm-serif); font-size: 1.4rem;
     font-weight: 500; text-transform: uppercase; letter-spacing: 0.12em;
-    color: var(--navy); text-decoration: none;
+    color: var(--mm-navy); text-decoration: none;
     transition: opacity 0.2s; min-height: 44px; padding: 12px 0;
     display: inline-flex; align-items: center;
   }
   .mobile-menu a:hover { opacity: 0.6; }
-  .mobile-menu .menu-divider { width: 40px; height: 1px; background: var(--navy); opacity: 0.2; }
+  .mobile-menu .menu-divider { width: 40px; height: 1px; background: var(--mm-navy); opacity: 0.2; }
   .mobile-menu .menu-nav {
     display: flex; flex-direction: column; align-items: center; gap: 20px;
     margin-top: 24px; padding-top: 24px;
@@ -107,7 +105,7 @@
   .mobile-menu .menu-nav a {
     font-family: var(--mm-sans); font-size: 0.95rem;
     font-weight: 400; text-transform: none; letter-spacing: 0.04em;
-    color: var(--navy); opacity: 0.6;
+    color: var(--mm-navy); opacity: 0.6;
   }
 
   /* ── Mobile header (logo) ── */
@@ -180,13 +178,13 @@
   .card-pod .card-title {
     font-family: var(--mm-serif);
     font-weight: 400; font-size: 1.6rem;
-    color: var(--cream);
+    color: var(--mm-cream);
     line-height: 1.35;
     text-shadow: 0 2px 16px rgba(0,0,0,0.3);
   }
   .card-pod .card-subtitle {
     font-family: var(--mm-sans); font-weight: 300;
-    font-size: 0.8rem; color: var(--cream); opacity: 0.7;
+    font-size: 0.8rem; color: var(--mm-cream); opacity: 0.7;
     margin-top: 12px; letter-spacing: 0.08em;
     text-shadow: 0 1px 8px rgba(0,0,0,0.3);
   }
@@ -202,7 +200,7 @@
   .card-craft .card-title {
     font-family: var(--mm-serif);
     font-weight: 400; font-size: 1.6rem;
-    color: var(--cream); line-height: 1.35;
+    color: var(--mm-cream); line-height: 1.35;
   }
   .card-craft .trust-cluster {
     display: flex; flex-wrap: wrap;
@@ -216,7 +214,7 @@
   }
   .card-craft .card-subtitle {
     font-family: var(--mm-sans); font-weight: 300;
-    font-size: 0.8rem; color: var(--cream); opacity: 0.6;
+    font-size: 0.8rem; color: var(--mm-cream); opacity: 0.6;
     margin-top: 16px; letter-spacing: 0.06em;
   }
 
@@ -236,14 +234,14 @@
   }
   .card-bar .card-subtitle {
     font-family: var(--mm-sans); font-weight: 300;
-    font-size: 0.9rem; color: var(--cream); opacity: 0.8;
+    font-size: 0.9rem; color: var(--mm-cream); opacity: 0.8;
     letter-spacing: 0.04em;
   }
 
   /* ── Card 4: Shop ── */
   .card-shop {
-    background: var(--cream);
-    color: var(--navy);
+    background: var(--mm-cream);
+    color: var(--mm-navy);
   }
   .card-shop .card-content {
     position: relative; z-index: 2;
@@ -254,7 +252,7 @@
   .card-shop .card-title {
     font-family: var(--mm-serif);
     font-weight: 500; font-size: 1.4rem;
-    color: var(--navy); letter-spacing: 0.04em;
+    color: var(--mm-navy); letter-spacing: 0.04em;
     text-transform: uppercase;
   }
   .card-shop .shop-grid {
@@ -268,7 +266,7 @@
   }
   .card-shop .cta-btn {
     display: inline-flex; align-items: center; justify-content: center;
-    border: 1.5px solid var(--navy); color: var(--navy);
+    border: 1.5px solid var(--mm-navy); color: var(--mm-navy);
     background: transparent; border-radius: var(--radius-pill);
     padding: 12px 32px; min-height: 48px;
     font-family: var(--mm-sans); font-size: 0.85rem;
@@ -277,7 +275,7 @@
     transition: background 0.3s, color 0.3s;
   }
   .card-shop .cta-btn:hover {
-    background: var(--navy); color: var(--cream);
+    background: var(--mm-navy); color: var(--mm-cream);
   }
 
   /* ── Progress dots ── */
@@ -290,7 +288,7 @@
   .progress-dots .dot {
     width: 8px; height: 8px;
     border-radius: var(--radius-full);
-    background: var(--cream);
+    background: var(--mm-cream);
     opacity: 0.3;
     transition: opacity 0.3s, transform 0.3s;
   }
@@ -300,7 +298,7 @@
   }
   /* Card 4 has cream bg, so dots need navy */
   .progress-dots.on-cream .dot {
-    background: var(--navy);
+    background: var(--mm-navy);
   }
 
   /* ── Swipe hint ── */
@@ -314,7 +312,7 @@
     z-index: 10;
     display: flex; align-items: center; gap: 6px;
     font-family: var(--mm-sans); font-size: 0.7rem;
-    color: var(--cream); opacity: 0.6;
+    color: var(--mm-cream); opacity: 0.6;
     letter-spacing: 0.08em; text-transform: uppercase;
     animation: pulseHint 2s ease-in-out infinite;
     transition: opacity 0.5s;
@@ -322,7 +320,7 @@
   .swipe-hint.hidden { opacity: 0; pointer-events: none; }
   .swipe-hint svg {
     width: 16px; height: 16px;
-    fill: none; stroke: var(--cream); stroke-width: 2;
+    fill: none; stroke: var(--mm-cream); stroke-width: 2;
   }
 
   /* ═══════════════════════════════════
@@ -346,7 +344,7 @@
     }
     .header-desktop nav a {
       font-family: var(--mm-sans); font-size: 1rem;
-      font-weight: 400; color: var(--cream); text-decoration: none;
+      font-weight: 400; color: var(--mm-cream); text-decoration: none;
       opacity: 0.9; transition: opacity 0.2s;
     }
     .header-desktop nav a:hover { opacity: 0.6; }
