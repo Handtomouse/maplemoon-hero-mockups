@@ -59,10 +59,12 @@
       radial-gradient(1.5px 1.5px at 82% 45%, rgba(255,255,255,0.7), transparent),
       radial-gradient(1px 1px at 20% 55%, rgba(255,255,255,0.4), transparent),
       radial-gradient(1px 1px at 60% 50%, rgba(255,255,255,0.6), transparent);
-    animation: starPulse 4s ease-in-out infinite alternate;
   }
 
   @media (prefers-reduced-motion: no-preference) {
+    body.night::before {
+      animation: starPulse 4s ease-in-out infinite alternate;
+    }
     @keyframes starPulse {
       from { opacity: 0.4; }
       to   { opacity: 0.9; }

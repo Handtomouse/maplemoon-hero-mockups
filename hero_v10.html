@@ -130,7 +130,6 @@
   .cinema-bg img {
     width: 100%; height: 100%;
     object-fit: cover;
-    will-change: transform;
   }
   @media (prefers-reduced-motion: no-preference) {
     @keyframes kenBurns {
@@ -139,6 +138,7 @@
     }
     .cinema-bg img {
       animation: kenBurns 25s ease-in-out infinite alternate;
+      will-change: transform;
     }
   }
   .cinema-overlay {
