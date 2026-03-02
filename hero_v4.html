@@ -288,6 +288,25 @@
   /* ── Desktop columns ── */
   .hero-desktop { display: none; }
 
+  /* ═══════════ VERY SMALL SCREENS ═══════════ */
+  @media (max-width: 320px) {
+    .product-card {
+      width: 85vw;
+    }
+    .product-card .card-label {
+      font-size: 1rem;
+    }
+    .product-card .card-subtitle {
+      font-size: 0.65rem;
+    }
+    .product-card .card-image {
+      height: 140px;
+    }
+    .product-card .card-image img {
+      max-height: 140px;
+    }
+  }
+
   /* ═══════════ INTERMEDIATE ═══════════ */
   @media (min-width: 480px) and (max-width: 767px) {
     .product-card .card-label { font-size: 1.1rem; }
