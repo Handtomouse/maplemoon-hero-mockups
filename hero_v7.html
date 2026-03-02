@@ -40,6 +40,9 @@
     transition: background 0.5s ease;
     overflow-x: hidden;
   }
+  @media (prefers-reduced-motion: reduce) {
+    :root { transition: none; }
+  }
 
   /* Radial mesh overlay */
   body::after {
@@ -172,7 +175,7 @@
   /* Tagline */
   .tagline {
     font-family: var(--mm-sans); font-weight: 300;
-    font-size: 0.9rem; color: var(--cream); opacity: 0.7;
+    font-size: 0.9rem; color: var(--cream); opacity: 0.85;
     text-align: center; position: relative; z-index: 2;
     transition: opacity 0.3s ease;
     min-height: 1.4em;
