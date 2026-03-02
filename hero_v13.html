@@ -10,7 +10,7 @@
 <meta property="og:description" content="MapleMoon — artisan carob and cacao butter. No caffeine, no added sugar, nothing artificial.">
 <meta property="og:type" content="website">
 <link rel="stylesheet" href="brand_kit.css">
-<link rel="preload" as="image" href="assets/products/bar_bundle.jpg">
+<link rel="preload" as="image" href="assets/products/bar_bundle.jpg" fetchpriority="high">
 <link rel="preload" as="image" href="assets/carob_wordmark.svg">
 <link rel="icon" href="assets/maplemoon_logo.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="assets/maplemoon_logo.svg">
@@ -32,7 +32,7 @@
     min-height: 100dvh;
     text-rendering: optimizeLegibility;
     overflow-x: hidden;
-    background: #111;
+    background: var(--mm-dark-bg);
   }
 
   :focus-visible { outline: 2px solid var(--cream); outline-offset: 3px; }
