@@ -105,7 +105,7 @@
     display: flex; flex-direction: column;
     align-items: center; justify-content: center; gap: 28px;
     opacity: 0; pointer-events: none;
-    transition: opacity 0.35s ease;
+    transition: opacity 0.3s ease;
   }
   #menu-toggle:checked ~ .mobile-menu { opacity: 1; pointer-events: auto; }
 
@@ -160,7 +160,7 @@
 
   .product-img {
     width: 60%; max-width: 260px; height: auto;
-    filter: drop-shadow(0 4px 8px rgba(0,0,0,0.1)) drop-shadow(0 16px 32px rgba(0,0,0,0.15)) drop-shadow(0 32px 64px rgba(0,0,0,0.1));
+    filter: drop-shadow(0 4px 8px var(--mm-black-10)) drop-shadow(0 16px 32px var(--mm-black-15)) drop-shadow(0 32px 64px var(--mm-black-10));
     position: relative; z-index: 2;
   }
 
@@ -193,7 +193,7 @@
   .category-strip-mobile a:hover { opacity: 0.7; }
   .category-strip-mobile .dot {
     display: inline-block; width: 4px; height: 4px;
-    background: var(--cream); border-radius: 50%;
+    background: var(--cream); border-radius: var(--radius-full);
     margin: 0 12px; opacity: 0.5; flex-shrink: 0;
   }
 
@@ -224,7 +224,7 @@
       backdrop-filter: blur(20px) saturate(180%);
       -webkit-backdrop-filter: blur(20px) saturate(180%);
       background: rgba(123, 157, 191, 0.6);
-      border-bottom: 1px solid rgba(231,228,202,0.1);
+      border-bottom: 1px solid var(--mm-cream-10);
     }
     .logo-group img { width: 80px; }
     .logo-group span { font-size: 0.65rem; }
@@ -251,7 +251,7 @@
       position: absolute;
       bottom: 10vw; left: 50%;
       transform: translateX(-50%);
-      filter: drop-shadow(0 4px 8px rgba(0,0,0,0.1)) drop-shadow(0 16px 32px rgba(0,0,0,0.15)) drop-shadow(0 32px 64px rgba(0,0,0,0.1));
+      filter: drop-shadow(0 4px 8px var(--mm-black-10)) drop-shadow(0 16px 32px var(--mm-black-15)) drop-shadow(0 32px 64px var(--mm-black-10));
       animation: float 3s ease-in-out infinite;
     }
 
@@ -273,7 +273,7 @@
 
 <a href="#main" class="skip-link">Skip to content</a>
 
-<a href="#" class="back-link fade-1">&larr; Back to Gallery</a>
+<a href="index.html" class="back-link fade-1">&larr; Back to Gallery</a>
 
 <input type="checkbox" id="menu-toggle" hidden>
 <label for="menu-toggle" class="hamburger fade-1" aria-label="Menu">

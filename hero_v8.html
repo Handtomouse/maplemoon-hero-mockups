@@ -130,7 +130,7 @@
   #menu-toggle { display: none; }
 
   .hamburger {
-    position: fixed; top: 20px; left: 20px; z-index: 200;
+    position: fixed; top: 12px; left: 12px; z-index: 200;
     cursor: pointer; display: flex; flex-direction: column;
     justify-content: center; gap: 5px; width: 44px; height: 44px;
     padding: 8px;
@@ -151,7 +151,7 @@
     display: flex; flex-direction: column;
     align-items: center; justify-content: center; gap: 28px;
     opacity: 0; pointer-events: none;
-    transition: opacity 0.35s ease;
+    transition: opacity 0.3s ease;
   }
   #menu-toggle:checked ~ .mobile-menu { opacity: 1; pointer-events: auto; }
 
@@ -212,7 +212,7 @@
   .product-img {
     width: 65%; max-width: 280px; height: auto;
     filter: drop-shadow(0 20px 40px rgba(0,0,0,0.18))
-            drop-shadow(0 6px 12px rgba(0,0,0,0.08));
+            drop-shadow(0 6px 12px var(--mm-black-08));
     position: relative; z-index: 2;
     transition: transform 0.4s ease;
   }
@@ -319,7 +319,7 @@
     .product-img {
       width: auto; height: 45vh; max-height: 440px; max-width: none;
       filter: drop-shadow(0 24px 48px rgba(0,0,0,0.18))
-              drop-shadow(0 6px 12px rgba(0,0,0,0.08));
+              drop-shadow(0 6px 12px var(--mm-black-08));
     }
     .product-img:hover { transform: scale(1.03); }
 
@@ -369,7 +369,7 @@
 <body>
 
 <a href="#main-content" class="skip-link">Skip to content</a>
-<a href="#" class="back-link fade-1">&larr; Back to Gallery</a>
+<a href="index.html" class="back-link fade-1">&larr; Back to Gallery</a>
 
 <input type="checkbox" id="menu-toggle" hidden>
 <label for="menu-toggle" class="hamburger fade-1" aria-label="Menu">

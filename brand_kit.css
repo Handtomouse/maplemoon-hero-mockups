@@ -14,6 +14,48 @@
   --mm-cream-60: rgba(231,228,202,0.6);
   --mm-serif: 'P22 Mackinac Pro', Georgia, serif;
   --mm-sans: 'Neue Haas Grotesk Display Pro', 'Inter', 'Helvetica Neue', sans-serif;
+  --mm-cream-08: rgba(231,228,202,0.08);
+  --mm-cream-15: rgba(231,228,202,0.15);
+  --mm-cream-20: rgba(231,228,202,0.2);
+  --mm-cream-25: rgba(231,228,202,0.25);
+  --mm-cream-40: rgba(231,228,202,0.4);
+  --mm-cream-80: rgba(231,228,202,0.8);
+  --mm-navy-10: rgba(30,67,102,0.1);
+  --mm-navy-15: rgba(30,67,102,0.15);
+  --mm-navy-50: rgba(30,67,102,0.5);
+  --mm-black-08: rgba(0,0,0,0.08);
+  --mm-black-10: rgba(0,0,0,0.1);
+  --mm-black-15: rgba(0,0,0,0.15);
+  --mm-black-20: rgba(0,0,0,0.2);
+  --mm-black-35: rgba(0,0,0,0.35);
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 24px;
+  --space-8: 32px;
+  --space-10: 40px;
+  --space-12: 48px;
+  --space-16: 64px;
+  --radius-sm: 4px;
+  --radius-md: 12px;
+  --radius-lg: 24px;
+  --radius-pill: 50px;
+  --radius-full: 50%;
+  --shadow-sm: drop-shadow(0 2px 4px rgba(0,0,0,0.08));
+  --shadow-md: drop-shadow(0 8px 16px rgba(0,0,0,0.12));
+  --shadow-lg: drop-shadow(0 16px 32px rgba(0,0,0,0.15)) drop-shadow(0 4px 8px rgba(0,0,0,0.08));
+  --shadow-xl: drop-shadow(0 24px 48px rgba(0,0,0,0.18)) drop-shadow(0 8px 16px rgba(0,0,0,0.1));
+  --z-base: 1;
+  --z-sticky: 10;
+  --z-dropdown: 50;
+  --z-fixed: 100;
+  --z-modal: 150;
+  --z-tooltip: 200;
+  --ease-default: 0.3s ease;
+  --ease-slow: 0.5s ease;
+  --ease-spring: 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 
 /* ── Typography ── */

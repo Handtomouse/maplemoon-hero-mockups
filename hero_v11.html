@@ -69,7 +69,7 @@
     display: flex; flex-direction: column;
     align-items: center; justify-content: center; gap: 28px;
     opacity: 0; pointer-events: none;
-    transition: opacity 0.35s ease;
+    transition: opacity 0.3s ease;
   }
   #menu-toggle:checked ~ .mobile-menu { opacity: 1; pointer-events: auto; }
   .mobile-menu a {
@@ -165,7 +165,7 @@
   }
   .tile-bar .tile-product {
     width: 45%; max-width: 200px; height: auto;
-    filter: drop-shadow(0 4px 8px rgba(0,0,0,0.1)) drop-shadow(0 12px 24px rgba(0,0,0,0.15));
+    filter: drop-shadow(0 4px 8px var(--mm-black-10)) drop-shadow(0 12px 24px var(--mm-black-15));
     position: relative; z-index: 2;
   }
   .tile-bar .tile-label {
@@ -183,7 +183,7 @@
   }
   .tile-moon .tile-product {
     width: 70%; max-width: 120px; height: auto;
-    filter: drop-shadow(0 2px 6px rgba(0,0,0,0.15));
+    filter: drop-shadow(0 2px 6px var(--mm-black-15));
     position: relative; z-index: 2;
   }
   .tile-moon .tile-label {
@@ -418,7 +418,7 @@
   }
   .tile-powder-desktop .powder-img {
     width: 60%; max-width: 100px; height: auto;
-    filter: drop-shadow(0 2px 6px rgba(0,0,0,0.15));
+    filter: drop-shadow(0 2px 6px var(--mm-black-15));
   }
   .tile-powder-desktop .tile-label {
     font-family: var(--mm-serif);
@@ -436,7 +436,7 @@
 <body>
 
 <a href="#main" class="skip-link">Skip to content</a>
-<a href="#" class="back-link">&larr; Back to Gallery</a>
+<a href="index.html" class="back-link">&larr; Back to Gallery</a>
 
 <input type="checkbox" id="menu-toggle" hidden>
 <label for="menu-toggle" class="hamburger" aria-label="Menu">
