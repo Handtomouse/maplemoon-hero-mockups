@@ -30,7 +30,26 @@
     background: linear-gradient(180deg, var(--grad-top) 0%, var(--grad-bot) 100%);
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    overscroll-behavior: contain;
+    text-rendering: optimizeLegibility;
   }
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background: radial-gradient(ellipse at 30% 20%, rgba(139,180,212,0.4) 0%, transparent 60%);
+    z-index: 0;
+    pointer-events: none;
+  }
+
+  /* --- Skip link --- */
+  .skip-link {
+    position: absolute; top: -100%; left: 16px;
+    padding: 8px 16px; background: var(--cream); color: var(--navy);
+    border-radius: 4px; z-index: 999; font-size: 0.85rem;
+    text-decoration: none;
+  }
+  .skip-link:focus { top: 8px; }
 
   /* --- Focus visible --- */
   :focus-visible {
@@ -92,9 +111,10 @@
     transition: background 0.3s ease, backdrop-filter 0.3s ease;
   }
   .nav.scrolled {
-    background: rgba(123, 157, 191, 0.8);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(20px) saturate(180%);
+    -webkit-backdrop-filter: blur(20px) saturate(180%);
+    background: rgba(123, 157, 191, 0.6);
+    border-bottom: 1px solid rgba(231,228,202,0.1);
   }
 
   /* Hamburger */
@@ -192,6 +212,8 @@
     opacity: 0.8;
     letter-spacing: 0.05em;
     transition: opacity 0.2s ease;
+    min-height: 44px; padding: 12px 0;
+    display: inline-flex; align-items: center;
   }
   .mobile-menu a:hover { opacity: 1; }
 
@@ -267,22 +289,23 @@
     letter-spacing: 0.06em;
     margin-top: 20px;
     text-align: center;
+    text-wrap: balance;
   }
 
   .reveal-cta {
     margin-top: 24px;
   }
   .reveal-cta a {
-    display: inline-block;
+    display: inline-flex; align-items: center; justify-content: center;
     font-family: 'P22 Mackinac Pro', Georgia, serif;
     font-weight: 500;
     font-size: 0.85rem;
     color: var(--navy);
     background: var(--cream);
-    padding: 12px 32px;
+    padding: 12px 32px; min-height: 48px;
     border-radius: 28px;
     text-decoration: none;
-    letter-spacing: 0.06em;
+    letter-spacing: 0.04em;
     transition: background 0.2s ease, transform 0.2s ease;
   }
   .reveal-cta a:hover {
@@ -319,6 +342,9 @@
     letter-spacing: 0.05em;
     flex-shrink: 0;
     transition: opacity 0.2s ease;
+    min-height: 44px; padding: 10px 0;
+    display: inline-flex; align-items: center;
+    font-feature-settings: 'kern' 1, 'liga' 1;
   }
   .category-track a:hover { opacity: 1; }
 
@@ -342,11 +368,29 @@
   /* --- Animations --- */
   @keyframes bounce {
     0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(6px); }
+    50% { transform: translateY(10px); }
   }
   @keyframes fadeIn {
     from { opacity: 0; transform: translateY(10px); }
     to { opacity: 1; transform: translateY(0); }
+  }
+
+  /* ── Reduced motion: degrade scroll reveal to static expanded state ── */
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+    .moon-circle { transform: scale(4) !important; }
+    .moon-label { opacity: 0 !important; }
+    .carob-watermark { opacity: 0.15 !important; }
+    .reveal-tagline,
+    .reveal-cta,
+    .reveal-categories { opacity: 1 !important; }
+    .scroll-indicator { display: none !important; }
+    body { min-height: 100vh; overflow: hidden; }
+    .scroll-spacer { display: none; }
   }
 
   /* ============================
@@ -431,6 +475,8 @@
 </head>
 <body>
 
+<a href="#main" class="skip-link">Skip to content</a>
+
 <!-- Back link -->
 <a href="#" class="back-link" aria-label="Back to Gallery">&larr; Back to Gallery</a>
 
@@ -453,7 +499,7 @@
   </div>
   <div class="nav-right">
     <span class="nav-brand-text">maple moon</span>
-    <img src="assets/maplemoon_logo.svg" alt="MapleMoon" class="nav-logo">
+    <img src="assets/maplemoon_logo.svg" alt="MapleMoon" class="nav-logo" width="80" height="40" loading="lazy" decoding="async">
   </div>
   <!-- Mobile menu overlay -->
   <div class="mobile-menu">
@@ -466,16 +512,16 @@
 </nav>
 
 <!-- Hero (fixed) -->
-<section class="hero" id="hero">
+<section class="hero" id="main">
   <!-- Carob wordmark watermark -->
   <div class="carob-watermark" id="carobWatermark">
-    <img src="assets/carob_wordmark.svg" alt="" aria-hidden="true">
+    <img src="assets/carob_wordmark.svg" alt="" aria-hidden="true" width="800" height="200" loading="lazy" decoding="async">
   </div>
 
   <!-- Moon circle + label -->
   <div class="moon-container">
     <div class="moon-circle" id="moonCircle">
-      <img src="assets/moon_halfopen.png" alt="MapleMoon carob chocolate, half open revealing the chocolate inside">
+      <img src="assets/moon_halfopen.png" alt="MapleMoon carob chocolate, half open revealing the chocolate inside" width="400" height="600" fetchpriority="high" decoding="sync">
     </div>
     <span class="moon-label" id="moonLabel">maple moon</span>
   </div>
@@ -505,6 +551,7 @@
 
   <!-- Scroll indicator -->
   <div class="scroll-indicator" id="scrollIndicator">
+    <span style="font-family:'Inter',sans-serif;font-size:0.65rem;color:var(--cream);opacity:0.5;letter-spacing:0.1em;text-transform:uppercase;">Scroll to reveal</span>
     <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
       <path d="M4 7L10 13L16 7" stroke="#E7E4CA" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.5"/>
     </svg>
@@ -529,6 +576,7 @@
 
   var isDesktop = window.matchMedia('(min-width: 768px)');
   var ticking = false;
+  var lastProgress = -1;
 
   function easeOutCubic(t) {
     return 1 - Math.pow(1 - t, 3);
@@ -545,10 +593,13 @@
   }
 
   function update() {
-    ticking = false;
     var scrollY = window.scrollY;
     var raw = clamp(scrollY / 400, 0, 1);
     var p = easeOutCubic(raw);
+
+    // Early return if fully scrolled and no change
+    if (p >= 1 && lastProgress >= 1) { ticking = false; return; }
+    ticking = false;
 
     // Nav background on scroll
     if (scrollY > 60) {
@@ -603,6 +654,8 @@
     } else {
       revealCats.style.opacity = 0;
     }
+
+    lastProgress = p;
   }
 
   window.addEventListener('scroll', onScroll, { passive: true });
@@ -611,5 +664,39 @@
   update();
 })();
 </script>
+
+<!-- Focus trap + auto-close -->
+<script>
+(function() {
+  var toggle = document.getElementById('hamburgerToggle');
+  var menu = document.querySelector('.mobile-menu');
+
+  // Auto-close on link tap
+  document.querySelectorAll('.mobile-menu a').forEach(function(link) {
+    link.addEventListener('click', function() { toggle.checked = false; });
+  });
+
+  // Focus trap on mobile menu
+  toggle.addEventListener('change', function() {
+    if (!toggle.checked) return;
+    var focusable = menu.querySelectorAll('a, button, [tabindex]');
+    if (!focusable.length) return;
+    var first = focusable[0], last = focusable[focusable.length - 1];
+    function trap(e) {
+      if (e.key === 'Escape') { toggle.checked = false; return; }
+      if (e.key !== 'Tab') return;
+      if (e.shiftKey) { if (document.activeElement === first) { e.preventDefault(); last.focus(); } }
+      else { if (document.activeElement === last) { e.preventDefault(); first.focus(); } }
+    }
+    menu.addEventListener('keydown', trap);
+    first.focus();
+    var observer = new MutationObserver(function() {
+      if (!toggle.checked) { menu.removeEventListener('keydown', trap); observer.disconnect(); }
+    });
+    observer.observe(toggle, { attributes: true });
+  });
+})();
+</script>
+
 </body>
 </html>

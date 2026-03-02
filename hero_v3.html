@@ -30,7 +30,25 @@
     position: relative;
     min-height: 100vh;
     min-height: 100dvh;
+    text-rendering: optimizeLegibility;
   }
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background: radial-gradient(ellipse at 30% 20%, rgba(139,180,212,0.4) 0%, transparent 60%);
+    z-index: 0;
+    pointer-events: none;
+  }
+
+  /* ── Skip link ── */
+  .skip-link {
+    position: absolute; top: -100%; left: 16px;
+    padding: 8px 16px; background: var(--cream); color: var(--navy);
+    border-radius: 4px; z-index: 999; font-size: 0.85rem;
+    text-decoration: none;
+  }
+  .skip-link:focus { top: 8px; }
 
   /* ── Focus ── */
   :focus-visible { outline: 2px solid var(--cream); outline-offset: 3px; }
@@ -40,13 +58,33 @@
     from { opacity: 0; transform: translateY(12px); }
     to   { opacity: 1; transform: translateY(0); }
   }
+  /* ── Product image entrance (scale-up) ── */
+  @keyframes productEntrance {
+    from { opacity: 0; transform: scale(0.95); }
+    to   { opacity: 1; transform: scale(1); }
+  }
+  /* ── CTA pulse ── */
+  @keyframes ctaPulse {
+    0%, 100% { box-shadow: 0 0 0 0 rgba(231,228,202,0.4); }
+    50% { box-shadow: 0 0 0 8px rgba(231,228,202,0); }
+  }
   .fade-1 { animation: fadeIn 0.6s ease both 0.1s; }
   .fade-2 { animation: fadeIn 0.6s ease both 0.25s; }
+  .fade-product { animation: productEntrance 0.6s ease-out both 0.3s; }
   .fade-3 { animation: fadeIn 0.6s ease both 0.4s; }
   .fade-4 { animation: fadeIn 0.6s ease both 0.55s; }
   .fade-5 { animation: fadeIn 0.6s ease both 0.7s; }
   .fade-6 { animation: fadeIn 0.6s ease both 0.85s; }
   .fade-7 { animation: fadeIn 0.6s ease both 1.0s; }
+
+  /* ── Reduced motion ── */
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
 
   /* ── Back link ── */
   .back-link {
@@ -91,6 +129,8 @@
     font-weight: 500; text-transform: uppercase; letter-spacing: 0.12em;
     color: var(--navy); text-decoration: none;
     transition: opacity 0.2s;
+    min-height: 44px; padding: 12px 0;
+    display: inline-flex; align-items: center;
   }
   .mobile-menu a:hover { opacity: 0.6; }
 
@@ -145,7 +185,7 @@
   /* ── Product image ── */
   .product-img {
     width: 55%; max-width: 240px; height: auto;
-    filter: drop-shadow(0 20px 40px rgba(0,0,0,0.18));
+    filter: drop-shadow(0 4px 8px rgba(0,0,0,0.1)) drop-shadow(0 16px 32px rgba(0,0,0,0.15)) drop-shadow(0 32px 64px rgba(0,0,0,0.1));
     position: relative; z-index: 2;
     transition: transform 0.4s ease;
   }
@@ -157,6 +197,7 @@
     color: var(--cream); text-align: center;
     position: relative; z-index: 2;
     line-height: 1.2;
+    text-wrap: balance;
   }
 
   /* ── Body text ── */
@@ -174,6 +215,26 @@
     gap: 16px;
     position: relative; z-index: 2;
   }
+  .trust-badges .badge-item {
+    position: relative;
+    display: inline-flex;
+  }
+  .trust-badges .badge-item:hover::after,
+  .trust-badges .badge-item:focus::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--navy);
+    color: var(--cream);
+    padding: 4px 10px;
+    border-radius: 4px;
+    font-size: 0.7rem;
+    white-space: nowrap;
+    pointer-events: none;
+    margin-bottom: 4px;
+  }
   .trust-badges img {
     width: 24px; height: 24px;
     opacity: 0.6;
@@ -182,18 +243,23 @@
 
   /* ── CTA ── */
   .cta-btn {
-    display: inline-block;
+    display: inline-flex; align-items: center; justify-content: center;
     border: 1.5px solid var(--cream); color: var(--cream);
     background: transparent; border-radius: 30px;
-    padding: 12px 32px;
+    padding: 12px 32px; min-height: 48px;
     font-family: 'Inter', sans-serif; font-size: 0.85rem;
-    font-weight: 400; letter-spacing: 0.08em; text-transform: uppercase;
+    font-weight: 400; letter-spacing: 0.04em; text-transform: uppercase;
     text-decoration: none; cursor: pointer;
-    transition: background 0.3s, color 0.3s;
+    transition: background 0.3s, color 0.3s, transform 0.15s;
     position: relative; z-index: 2;
+    animation: ctaPulse 1.5s ease 1.5s 1;
   }
   .cta-btn:hover {
     background: var(--cream); color: var(--grad-top);
+  }
+  .cta-btn:active {
+    transform: scale(0.97);
+    background: #d5d2b8; color: var(--grad-top);
   }
 
   /* ── Categories (mobile): horizontal scroll strip ── */
@@ -217,14 +283,24 @@
     font-family: 'P22 Mackinac Pro', sans-serif; font-size: 0.75rem;
     font-weight: 500; text-transform: uppercase; letter-spacing: 0.12em;
     color: var(--cream); text-decoration: none;
-    padding: 4px 0; white-space: nowrap;
+    padding: 10px 0; min-height: 44px; white-space: nowrap;
     transition: opacity 0.2s;
+    display: inline-flex; align-items: center;
+    font-feature-settings: 'kern' 1, 'liga' 1;
   }
   .category-strip a:hover { opacity: 0.7; }
   .category-strip .dot {
     display: inline-block; width: 4px; height: 4px;
     background: var(--cream); border-radius: 50%;
     margin: 0 12px; opacity: 0.5; flex-shrink: 0;
+  }
+
+  /* ── Category strip scroll indicator ── */
+  .strip-progress {
+    position: fixed; bottom: 0; left: 0; z-index: 51;
+    height: 2px; width: 0%;
+    background: var(--cream); opacity: 0.3;
+    transition: width 0.1s linear;
   }
 
   /* ── Desktop category bar (bottom) ── */
@@ -253,6 +329,13 @@
       display: flex; align-items: center;
       position: fixed; top: 0; left: 0; right: 0; z-index: 100;
       padding: 28px 40px;
+      transition: background 0.3s ease, backdrop-filter 0.3s ease;
+    }
+    .header-desktop.scrolled {
+      backdrop-filter: blur(20px) saturate(180%);
+      -webkit-backdrop-filter: blur(20px) saturate(180%);
+      background: rgba(123, 157, 191, 0.6);
+      border-bottom: 1px solid rgba(231,228,202,0.1);
     }
     .header-desktop nav {
       flex: 1; display: flex; align-items: center;
@@ -311,7 +394,7 @@
 
     .split-left .product-img-desktop {
       height: 50vh; width: auto;
-      filter: drop-shadow(0 24px 48px rgba(0,0,0,0.18));
+      filter: drop-shadow(0 4px 8px rgba(0,0,0,0.1)) drop-shadow(0 16px 32px rgba(0,0,0,0.15)) drop-shadow(0 32px 64px rgba(0,0,0,0.1));
       position: relative; z-index: 2;
       transition: transform 0.4s ease;
     }
@@ -379,6 +462,7 @@
       font-weight: 500; text-transform: uppercase; letter-spacing: 0.15em;
       color: var(--cream); text-decoration: none;
       transition: opacity 0.2s;
+      font-feature-settings: 'kern' 1, 'liga' 1;
     }
     .category-bar-desktop a:hover { opacity: 0.65; }
     .category-bar-desktop .dot {
@@ -397,6 +481,8 @@
 </style>
 </head>
 <body>
+
+<a href="#main" class="skip-link">Skip to content</a>
 
 <a href="index.html" class="back-link fade-1">&larr; Back to Gallery</a>
 
@@ -425,7 +511,7 @@
 
 <!-- Mobile header -->
 <header class="header-mobile fade-1">
-  <img src="assets/maplemoon_logo.svg" alt="Maple Moon" class="logo-img">
+  <img src="assets/maplemoon_logo.svg" alt="Maple Moon" class="logo-img" width="40" height="40" loading="lazy" decoding="async">
 </header>
 
 <!-- Desktop header -->
@@ -437,44 +523,44 @@
     <a href="#">Recipes</a>
     <a href="#">Contact</a>
   </nav>
-  <img src="assets/maplemoon_logo.svg" alt="Maple Moon" class="logo-desktop">
+  <img src="assets/maplemoon_logo.svg" alt="Maple Moon" class="logo-desktop" width="80" height="40" loading="lazy" decoding="async">
 </header>
 
 <!-- ═══════════ MOBILE HERO ═══════════ -->
-<main class="hero">
-  <img src="assets/carob_wordmark.svg" alt="" class="carob-watermark fade-2" aria-hidden="true">
-  <img src="assets/bar_hero_front.png" alt="Maple Moon Carob Bar" class="product-img fade-3">
+<main class="hero" id="main">
+  <img src="assets/carob_wordmark.svg" alt="" class="carob-watermark fade-2" aria-hidden="true" width="800" height="200" loading="lazy" decoding="async">
+  <img src="assets/bar_hero_front.png" alt="Maple Moon Carob Bar" class="product-img fade-product" width="400" height="600" fetchpriority="high" decoding="sync">
   <h1 class="headline fade-4">Not chocolate. Better.</h1>
   <p class="body-text fade-5">Carob is naturally sweet with no caffeine, no added sugar. Just pure, artisan goodness.</p>
   <div class="trust-badges fade-6">
-    <img src="assets/icon_caffeine_free.svg" alt="Caffeine free">
-    <img src="assets/icon_organic.svg" alt="Organic">
-    <img src="assets/icon_vegan.svg" alt="Vegan">
-    <img src="assets/icon_gluten_free.svg" alt="Gluten free">
-    <img src="assets/icon_made_in_aus.svg" alt="Made in Australia">
+    <span class="badge-item" data-tooltip="Caffeine Free"><img src="assets/icon_caffeine_free.svg" alt="Caffeine Free" width="32" height="32" loading="lazy" decoding="async"></span>
+    <span class="badge-item" data-tooltip="Certified Organic"><img src="assets/icon_organic.svg" alt="Certified Organic" width="32" height="32" loading="lazy" decoding="async"></span>
+    <span class="badge-item" data-tooltip="100% Vegan"><img src="assets/icon_vegan.svg" alt="100% Vegan" width="32" height="32" loading="lazy" decoding="async"></span>
+    <span class="badge-item" data-tooltip="Gluten Free"><img src="assets/icon_gluten_free.svg" alt="Gluten Free" width="32" height="32" loading="lazy" decoding="async"></span>
+    <span class="badge-item" data-tooltip="Made in Australia"><img src="assets/icon_made_in_aus.svg" alt="Made in Australia" width="32" height="32" loading="lazy" decoding="async"></span>
   </div>
   <a href="#" class="cta-btn fade-7">Discover Carob</a>
 </main>
 
 <!-- ═══════════ DESKTOP SPLIT HERO ═══════════ -->
 <div class="hero-split">
-  <img src="assets/carob_wordmark.svg" alt="" class="carob-watermark-desktop fade-2" aria-hidden="true">
+  <img src="assets/carob_wordmark.svg" alt="" class="carob-watermark-desktop fade-2" aria-hidden="true" width="800" height="200" loading="lazy" decoding="async">
 
   <div class="split-left">
     <div class="lifestyle-bg"></div>
-    <img src="assets/bar_hero_front.png" alt="Maple Moon Carob Bar" class="product-img-desktop fade-3">
+    <img src="assets/bar_hero_front.png" alt="Maple Moon Carob Bar" class="product-img-desktop fade-3" width="400" height="600" fetchpriority="high" decoding="sync">
   </div>
 
   <div class="split-right">
-    <div class="story-panel fade-4">
-      <h1 class="headline">Not chocolate.<br>Better.</h1>
+    <div class="story-panel fade-4" role="region" aria-label="About Carob">
+      <h1 class="headline"><span style="display:block">Not chocolate.</span><span style="display:block">Better.</span></h1>
       <p class="body-text">Carob is naturally sweet with no caffeine, no added sugar. Just pure, artisan goodness.</p>
       <div class="trust-badges fade-5">
-        <img src="assets/icon_caffeine_free.svg" alt="Caffeine free">
-        <img src="assets/icon_organic.svg" alt="Organic">
-        <img src="assets/icon_vegan.svg" alt="Vegan">
-        <img src="assets/icon_gluten_free.svg" alt="Gluten free">
-        <img src="assets/icon_made_in_aus.svg" alt="Made in Australia">
+        <span class="badge-item" data-tooltip="Caffeine Free"><img src="assets/icon_caffeine_free.svg" alt="Caffeine Free" width="32" height="32" loading="lazy" decoding="async"></span>
+        <span class="badge-item" data-tooltip="Certified Organic"><img src="assets/icon_organic.svg" alt="Certified Organic" width="32" height="32" loading="lazy" decoding="async"></span>
+        <span class="badge-item" data-tooltip="100% Vegan"><img src="assets/icon_vegan.svg" alt="100% Vegan" width="32" height="32" loading="lazy" decoding="async"></span>
+        <span class="badge-item" data-tooltip="Gluten Free"><img src="assets/icon_gluten_free.svg" alt="Gluten Free" width="32" height="32" loading="lazy" decoding="async"></span>
+        <span class="badge-item" data-tooltip="Made in Australia"><img src="assets/icon_made_in_aus.svg" alt="Made in Australia" width="32" height="32" loading="lazy" decoding="async"></span>
       </div>
       <a href="#" class="cta-btn fade-6">Discover Carob</a>
     </div>
@@ -504,6 +590,65 @@
   <a href="#">Packs</a><span class="dot"></span>
   <a href="#">Gifts</a>
 </nav>
+
+<div class="strip-progress" id="stripProgress"></div>
+
+<!-- Focus trap + glassmorphism scroll + auto-close -->
+<script>
+(function() {
+  var toggle = document.getElementById('menu-toggle');
+  var menu = document.querySelector('.mobile-menu');
+
+  // Auto-close on link tap
+  document.querySelectorAll('.mobile-menu a').forEach(function(link) {
+    link.addEventListener('click', function() { toggle.checked = false; });
+  });
+
+  // Focus trap on mobile menu
+  toggle.addEventListener('change', function() {
+    if (!toggle.checked) return;
+    var focusable = menu.querySelectorAll('a, button, [tabindex]');
+    if (!focusable.length) return;
+    var first = focusable[0], last = focusable[focusable.length - 1];
+    function trap(e) {
+      if (e.key === 'Escape') { toggle.checked = false; return; }
+      if (e.key !== 'Tab') return;
+      if (e.shiftKey) { if (document.activeElement === first) { e.preventDefault(); last.focus(); } }
+      else { if (document.activeElement === last) { e.preventDefault(); first.focus(); } }
+    }
+    menu.addEventListener('keydown', trap);
+    first.focus();
+    var observer = new MutationObserver(function() {
+      if (!toggle.checked) { menu.removeEventListener('keydown', trap); observer.disconnect(); }
+    });
+    observer.observe(toggle, { attributes: true });
+  });
+
+  // Glassmorphism nav on scroll (desktop)
+  var header = document.querySelector('.header-desktop');
+  if (header) {
+    window.addEventListener('scroll', function() {
+      if (window.scrollY > 60) { header.classList.add('scrolled'); }
+      else { header.classList.remove('scrolled'); }
+    }, { passive: true });
+  }
+})();
+</script>
+
+<!-- Category strip scroll indicator -->
+<script>
+(function() {
+  var strip = document.querySelector('.category-strip');
+  var bar = document.getElementById('stripProgress');
+  if (!strip || !bar) return;
+  strip.addEventListener('scroll', function() {
+    var maxScroll = strip.scrollWidth - strip.clientWidth;
+    if (maxScroll <= 0) { bar.style.width = '0%'; return; }
+    var pct = (strip.scrollLeft / maxScroll) * 100;
+    bar.style.width = pct + '%';
+  }, { passive: true });
+})();
+</script>
 
 </body>
 </html>

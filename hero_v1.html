@@ -30,7 +30,25 @@
     position: relative;
     min-height: 100vh;
     min-height: 100dvh;
+    text-rendering: optimizeLegibility;
   }
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background: radial-gradient(ellipse at 30% 20%, rgba(139,180,212,0.4) 0%, transparent 60%);
+    z-index: 0;
+    pointer-events: none;
+  }
+
+  /* ── Skip link ── */
+  .skip-link {
+    position: absolute; top: -100%; left: 16px;
+    padding: 8px 16px; background: var(--cream); color: var(--navy);
+    border-radius: 4px; z-index: 999; font-size: 0.85rem;
+    text-decoration: none;
+  }
+  .skip-link:focus { top: 8px; }
 
   /* ── Focus ── */
   :focus-visible { outline: 2px solid var(--cream); outline-offset: 3px; }
@@ -40,11 +58,39 @@
     from { opacity: 0; transform: translateY(12px); }
     to   { opacity: 1; transform: translateY(0); }
   }
+  /* ── Product image entrance (scale-up) ── */
+  @keyframes productEntrance {
+    from { opacity: 0; transform: scale(0.95); }
+    to   { opacity: 1; transform: scale(1); }
+  }
   .fade-1 { animation: fadeIn 0.6s ease both 0.1s; }
   .fade-2 { animation: fadeIn 0.6s ease both 0.25s; }
+  .fade-product { animation: productEntrance 0.6s ease-out both 0.3s; }
   .fade-3 { animation: fadeIn 0.6s ease both 0.4s; }
   .fade-4 { animation: fadeIn 0.6s ease both 0.55s; }
   .fade-5 { animation: fadeIn 0.6s ease both 0.7s; }
+
+  /* ── Staggered category entrance ── */
+  @keyframes catFadeIn {
+    from { opacity: 0; transform: translateY(8px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+  .cat-stagger-1 { animation: catFadeIn 0.4s ease both 0.3s; }
+  .cat-stagger-2 { animation: catFadeIn 0.4s ease both 0.35s; }
+  .cat-stagger-3 { animation: catFadeIn 0.4s ease both 0.4s; }
+  .cat-stagger-4 { animation: catFadeIn 0.4s ease both 0.45s; }
+  .cat-stagger-5 { animation: catFadeIn 0.4s ease both 0.5s; }
+  .cat-stagger-6 { animation: catFadeIn 0.4s ease both 0.55s; }
+  .cat-stagger-7 { animation: catFadeIn 0.4s ease both 0.6s; }
+
+  /* ── Reduced motion ── */
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
 
   /* ── Back link ── */
   .back-link {
@@ -89,6 +135,8 @@
     font-weight: 500; text-transform: uppercase; letter-spacing: 0.12em;
     color: var(--navy); text-decoration: none;
     transition: opacity 0.2s;
+    min-height: 44px; padding: 12px 0;
+    display: inline-flex; align-items: center;
   }
   .mobile-menu a:hover { opacity: 0.6; }
 
@@ -133,7 +181,7 @@
 
   .product-img {
     width: 60%; max-width: 260px; height: auto;
-    filter: drop-shadow(0 16px 32px rgba(0,0,0,0.15));
+    filter: drop-shadow(0 4px 8px rgba(0,0,0,0.1)) drop-shadow(0 16px 32px rgba(0,0,0,0.15)) drop-shadow(0 32px 64px rgba(0,0,0,0.1));
     position: relative; z-index: 2;
   }
 
@@ -168,14 +216,24 @@
     font-family: 'P22 Mackinac Pro', sans-serif; font-size: 0.75rem;
     font-weight: 500; text-transform: uppercase; letter-spacing: 0.12em;
     color: var(--cream); text-decoration: none;
-    padding: 4px 0; white-space: nowrap;
+    padding: 10px 0; min-height: 44px; white-space: nowrap;
     transition: opacity 0.2s;
+    display: inline-flex; align-items: center;
+    font-feature-settings: 'kern' 1, 'liga' 1;
   }
   .category-strip-mobile a:hover { opacity: 0.7; }
   .category-strip-mobile .dot {
     display: inline-block; width: 4px; height: 4px;
     background: var(--cream); border-radius: 50%;
     margin: 0 12px; opacity: 0.5; flex-shrink: 0;
+  }
+
+  /* ── Category strip scroll indicator ── */
+  .strip-progress {
+    position: fixed; bottom: 0; left: 0; z-index: 51;
+    height: 2px; width: 0%;
+    background: var(--cream); opacity: 0.3;
+    transition: width 0.1s linear;
   }
 
   /* ── Desktop categories (left stack) ── */
@@ -190,7 +248,16 @@
     .carob-wordmark-mobile { display: none; }
     .back-link { display: block; }
 
-    .header { padding: 32px 40px; }
+    .header {
+      padding: 32px 40px;
+      transition: background 0.3s ease, backdrop-filter 0.3s ease;
+    }
+    .header.scrolled {
+      backdrop-filter: blur(20px) saturate(180%);
+      -webkit-backdrop-filter: blur(20px) saturate(180%);
+      background: rgba(123, 157, 191, 0.6);
+      border-bottom: 1px solid rgba(231,228,202,0.1);
+    }
     .logo-group img { width: 80px; }
     .logo-group span { font-size: 0.65rem; }
 
@@ -206,6 +273,7 @@
       text-transform: uppercase; letter-spacing: 0.12em;
       line-height: 2.0; color: var(--cream);
       text-decoration: none; transition: opacity 0.2s;
+      font-feature-settings: 'kern' 1, 'liga' 1;
     }
     .category-stack-desktop a:hover { opacity: 0.65; }
 
@@ -215,7 +283,7 @@
       position: absolute;
       bottom: 10vw; left: 50%;
       transform: translateX(-50%);
-      filter: drop-shadow(0 24px 48px rgba(0,0,0,0.18));
+      filter: drop-shadow(0 4px 8px rgba(0,0,0,0.1)) drop-shadow(0 16px 32px rgba(0,0,0,0.15)) drop-shadow(0 32px 64px rgba(0,0,0,0.1));
       animation: float 3s ease-in-out infinite;
     }
 
@@ -240,6 +308,8 @@
 </style>
 </head>
 <body>
+
+<a href="#main" class="skip-link">Skip to content</a>
 
 <a href="#" class="back-link fade-1">&larr; Back to Gallery</a>
 
@@ -268,25 +338,25 @@
 
 <header class="header fade-1">
   <div class="logo-group">
-    <img src="assets/maplemoon_logo.svg" alt="Maple Moon">
+    <img src="assets/maplemoon_logo.svg" alt="Maple Moon" width="80" height="40" loading="lazy" decoding="async">
     <span>maple moon</span>
   </div>
 </header>
 
 <nav class="category-stack-desktop" aria-label="Product categories">
-  <a href="#" class="fade-1">Bars</a>
-  <a href="#" class="fade-2">Moons</a>
-  <a href="#" class="fade-3">Bananas</a>
-  <a href="#" class="fade-3">Bites</a>
-  <a href="#" class="fade-4">Elixirs</a>
-  <a href="#" class="fade-4">Packs</a>
-  <a href="#" class="fade-5">Gifts</a>
+  <a href="#" class="cat-stagger-1">Bars</a>
+  <a href="#" class="cat-stagger-2">Moons</a>
+  <a href="#" class="cat-stagger-3">Bananas</a>
+  <a href="#" class="cat-stagger-4">Bites</a>
+  <a href="#" class="cat-stagger-5">Elixirs</a>
+  <a href="#" class="cat-stagger-6">Packs</a>
+  <a href="#" class="cat-stagger-7">Gifts</a>
 </nav>
 
-<main class="hero">
-  <img src="assets/bar_hero_front.png" alt="Maple Moon Carob Bar" class="product-img fade-2">
-  <img src="assets/carob_wordmark.svg" alt="CAROB" class="carob-wordmark-mobile fade-3">
-  <img src="assets/carob_wordmark.svg" alt="CAROB" class="carob-wordmark-desktop fade-4">
+<main class="hero" id="main">
+  <img src="assets/bar_hero_front.png" alt="Maple Moon Carob Bar" class="product-img fade-product" width="400" height="600" fetchpriority="high" decoding="sync">
+  <img src="assets/carob_wordmark.svg" alt="CAROB" class="carob-wordmark-mobile fade-3" width="800" height="200" loading="lazy" decoding="async">
+  <img src="assets/carob_wordmark.svg" alt="CAROB" class="carob-wordmark-desktop fade-4" width="800" height="200" loading="lazy" decoding="async">
 </main>
 
 <nav class="category-strip-mobile fade-5" aria-label="Product categories">
@@ -300,6 +370,81 @@
     <a href="#">Gifts</a>
   </div>
 </nav>
+
+<div class="strip-progress" id="stripProgress"></div>
+
+<!-- Hamburger auto-close on link tap + focus trap + glassmorphism scroll -->
+<script>
+(function() {
+  var toggle = document.getElementById('menu-toggle');
+  var menu = document.querySelector('.mobile-menu');
+
+  // Auto-close on link tap
+  document.querySelectorAll('.mobile-menu a').forEach(function(link) {
+    link.addEventListener('click', function() { toggle.checked = false; });
+  });
+
+  // Focus trap on mobile menu
+  toggle.addEventListener('change', function() {
+    if (!toggle.checked) return;
+    var focusable = menu.querySelectorAll('a, button, [tabindex]');
+    if (!focusable.length) return;
+    var first = focusable[0], last = focusable[focusable.length - 1];
+    function trap(e) {
+      if (e.key === 'Escape') { toggle.checked = false; return; }
+      if (e.key !== 'Tab') return;
+      if (e.shiftKey) { if (document.activeElement === first) { e.preventDefault(); last.focus(); } }
+      else { if (document.activeElement === last) { e.preventDefault(); first.focus(); } }
+    }
+    menu.addEventListener('keydown', trap);
+    first.focus();
+    var observer = new MutationObserver(function() {
+      if (!toggle.checked) { menu.removeEventListener('keydown', trap); observer.disconnect(); }
+    });
+    observer.observe(toggle, { attributes: true });
+  });
+
+  // Glassmorphism nav on scroll (desktop)
+  var header = document.querySelector('.header');
+  if (header) {
+    window.addEventListener('scroll', function() {
+      if (window.scrollY > 60) { header.classList.add('scrolled'); }
+      else { header.classList.remove('scrolled'); }
+    }, { passive: true });
+  }
+})();
+</script>
+
+<!-- Parallax CAROB watermark (desktop only) -->
+<script>
+(function() {
+  if (window.innerWidth <= 768) return;
+  var watermark = document.querySelector('.carob-wordmark-desktop');
+  if (!watermark) return;
+  function onScroll() {
+    requestAnimationFrame(function() {
+      var scrollY = window.scrollY || window.pageYOffset;
+      watermark.style.transform = 'translateY(' + (scrollY * 0.3) + 'px)';
+    });
+  }
+  window.addEventListener('scroll', onScroll, { passive: true });
+})();
+</script>
+
+<!-- Category strip scroll indicator -->
+<script>
+(function() {
+  var strip = document.querySelector('.category-strip-mobile');
+  var bar = document.getElementById('stripProgress');
+  if (!strip || !bar) return;
+  strip.addEventListener('scroll', function() {
+    var maxScroll = strip.scrollWidth - strip.clientWidth;
+    if (maxScroll <= 0) { bar.style.width = '0%'; return; }
+    var pct = (strip.scrollLeft / maxScroll) * 100;
+    bar.style.width = pct + '%';
+  }, { passive: true });
+})();
+</script>
 
 </body>
 </html>
