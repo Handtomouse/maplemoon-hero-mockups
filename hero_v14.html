@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MapleMoon — Ingredient Journey | Hero Concept</title>
+<meta name="description" content="From carob pod to handcrafted bar — the MapleMoon ingredient journey. Organic, vegan, caffeine-free.">
+<meta name="theme-color" content="#7B9DBF">
+<meta property="og:title" content="MapleMoon — Ingredient Journey">
+<meta property="og:description" content="From carob pod to handcrafted bar — the MapleMoon ingredient journey. Organic, vegan, caffeine-free.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://maplemoon-hero-mockups.vercel.app/assets/products/bar_original.jpg">
+<meta property="og:image:width" content="400">
+<meta property="og:image:height" content="600">
+<meta property="og:site_name" content="Maple Moon">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="MapleMoon — Ingredient Journey">
+<meta name="twitter:description" content="Artisan carob and cacao butter, handmade in Byron Bay. Organic, vegan, caffeine-free.">
+<meta name="twitter:image" content="https://maplemoon-hero-mockups.vercel.app/assets/products/bar_original.jpg">
+<link rel="canonical" href="https://maplemoon-hero-mockups.vercel.app/hero_v14.html">
+<link rel="preload" as="image" href="assets/moodboard/moodboard_20_dust_cream_stone.jpg">
+<link rel="preload" as="image" href="assets/carob_wordmark.svg">
+<link rel="icon" href="assets/maplemoon_logo.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="assets/maplemoon_logo.svg">
+<link rel="stylesheet" href="brand_kit.css">
+<style>
+  *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+  :root {
+    --grad-top: #7B9DBF;
+    --grad-bottom: #A8BDD4;
+  }
+
+  html, body { height: auto; overflow-x: hidden; }
+
+  body {
+    background: linear-gradient(180deg, var(--grad-top) 0%, var(--grad-bottom) 100%);
+    font-family: var(--mm-sans);
+    color: var(--mm-cream);
+    position: relative;
+    text-rendering: optimizeLegibility;
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(12px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  .fade-1 { animation: fadeIn 0.8s ease both 0.2s; }
+  .fade-2 { animation: fadeIn 0.8s ease both 0.4s; }
+  .fade-3 { animation: fadeIn 0.8s ease both 0.6s; }
+  .fade-4 { animation: fadeIn 0.8s ease both 0.8s; }
+
+  /* ── Back link ── */
+  .back-link {
+    position: fixed; top: 16px; left: 16px; z-index: 10;
+    color: var(--mm-cream); text-decoration: none;
+    font-family: var(--mm-sans); font-size: 0.8rem; font-weight: 400;
+    opacity: 0.7; transition: opacity 0.2s;
+  }
+  .back-link:hover { opacity: 1; }
+
+  /* ── Mobile header ── */
+  .header-mobile {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 10;
+    display: flex; justify-content: space-between; align-items: flex-start;
+    padding: 20px;
+  }
+  .header-mobile .logo-img { width: 40px; height: auto; }
+
+  /* ── Hamburger ── */
+  #menu-toggle { display: none; }
+
+  .hamburger {
+    position: fixed; top: 12px; left: 12px; z-index: 200;
+    cursor: pointer; display: flex; flex-direction: column;
+    justify-content: center; gap: 5px; width: 44px; height: 44px;
+    padding: 8px;
+  }
+  .hamburger span {
+    display: block; width: 100%; height: 2px;
+    background: var(--mm-cream); border-radius: 1px;
+    transition: transform 0.3s, opacity 0.3s;
+  }
+  #menu-toggle:checked ~ .hamburger span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
+  #menu-toggle:checked ~ .hamburger span:nth-child(2) { opacity: 0; }
+  #menu-toggle:checked ~ .hamburger span:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); }
+
+  /* ── Mobile menu overlay ── */
+  .mobile-menu {
+    position: fixed; inset: 0; z-index: 150;
+    background: var(--mm-cream); color: var(--mm-navy);
+    display: flex; flex-direction: column;
+    align-items: center; justify-content: center; gap: 28px;
+    opacity: 0; pointer-events: none;
+    transition: opacity 0.3s ease;
+  }
+  #menu-toggle:checked ~ .mobile-menu { opacity: 1; pointer-events: auto; }
+
+  .mobile-menu a {
+    font-family: var(--mm-serif); font-size: 1.4rem;
+    font-weight: 500; text-transform: uppercase; letter-spacing: 0.12em;
+    color: var(--mm-navy); text-decoration: none;
+    transition: opacity 0.2s;
+    min-height: 44px; padding: 12px 0;
+    display: inline-flex; align-items: center;
+  }
+  .mobile-menu a:hover { opacity: 0.6; }
+
+  .mobile-menu .menu-divider {
+    width: 40px; height: 1px; background: var(--mm-navy); opacity: 0.2;
+  }
+
+  .mobile-menu .menu-nav {
+    display: flex; flex-direction: column; align-items: center; gap: 20px;
+    margin-top: 24px; padding-top: 24px;
+    border-top: 1px solid var(--mm-navy-15);
+  }
+  .mobile-menu .menu-nav a {
+    font-family: var(--mm-sans); font-size: 0.95rem;
+    font-weight: 400; text-transform: none; letter-spacing: 0.04em;
+    color: var(--mm-navy); opacity: 0.6;
+  }
+
+  /* ── Desktop nav ── */
+  .header-desktop { display: none; }
+
+  /* ── Scroll journey layout ── */
+  .journey-wrapper {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+  }
+
+  /* ── Sticky visual panel ── */
+  .visual-panel {
+    position: sticky;
+    top: 0;
+    height: 50vh;
+    width: 100%;
+    overflow: hidden;
+    z-index: 1;
+  }
+
+  .visual-panel .journey-img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 0.8s ease;
+  }
+  .visual-panel .journey-img.active {
+    opacity: 1;
+  }
+
+  .visual-panel::after {
+    content: '';
+    position: absolute;
+    bottom: 0; left: 0; right: 0;
+    height: 80px;
+    background: linear-gradient(to top, var(--grad-bottom), transparent);
+    z-index: 2;
+    pointer-events: none;
+  }
+
+  /* ── Chapters (scrolling text panels) ── */
+  .chapters {
+    position: relative;
+    z-index: 2;
+  }
+
+  .chapter {
+    min-height: 80vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 60px 32px;
+    opacity: 0.3;
+    transition: opacity 0.6s ease;
+  }
+  .chapter.active {
+    opacity: 1;
+  }
+
+  .chapter-number {
+    font-family: var(--mm-sans);
+    font-size: 0.7rem;
+    font-weight: 400;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    opacity: 0.5;
+    margin-bottom: 16px;
+  }
+
+  .chapter-title {
+    font-family: var(--mm-serif);
+    font-weight: 400;
+    font-size: 1.6rem;
+    letter-spacing: 0.04em;
+    line-height: 1.2;
+    margin-bottom: 16px;
+  }
+
+  .chapter-body {
+    font-family: var(--mm-sans);
+    font-weight: 300;
+    font-size: 0.9rem;
+    line-height: 1.6;
+    max-width: 360px;
+    opacity: 0.85;
+  }
+
+  .chapter .cta-btn {
+    display: inline-flex; align-items: center; justify-content: center;
+    border: 1.5px solid var(--mm-cream); color: var(--mm-cream);
+    background: transparent; border-radius: var(--radius-pill);
+    padding: 12px 32px; min-height: 48px;
+    font-family: var(--mm-sans); font-size: 0.85rem;
+    font-weight: 400; letter-spacing: 0.06em; text-transform: uppercase;
+    text-decoration: none; cursor: pointer;
+    transition: background 0.3s, color 0.3s, transform 0.15s;
+    margin-top: 24px;
+  }
+  .chapter .cta-btn:hover {
+    background: var(--mm-cream); color: var(--mm-navy);
+  }
+  .chapter .cta-btn:active {
+    transform: scale(0.97);
+  }
+
+  /* ── Progress dots ── */
+  .progress-dots {
+    position: fixed;
+    right: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    z-index: 10;
+  }
+
+  .progress-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--mm-cream);
+    opacity: 0.25;
+    transition: opacity 0.4s, transform 0.3s;
+  }
+  .progress-dot.active {
+    opacity: 1;
+    transform: scale(1.3);
+  }
+
+  /* ── Trust row ── */
+  .trust-row {
+    display: flex; align-items: center; justify-content: center; gap: 14px;
+    margin-top: 20px;
+  }
+  .trust-row img {
+    width: 20px; height: 20px;
+    filter: brightness(0) invert(0.92) sepia(0.1) saturate(0.3);
+    opacity: 0.5;
+  }
+
+  /* ── Watermark ── */
+  .carob-watermark-wrap {
+    position: fixed;
+    bottom: 0; left: 0; right: 0;
+    z-index: 0;
+  }
+
+  /* ── DESKTOP ── */
+  @media (min-width: 768px) {
+    .hamburger { display: none; }
+    .header-mobile { display: none; }
+
+    .header-desktop {
+      display: flex; align-items: center;
+      position: fixed; top: 0; left: 0; right: 0; z-index: 10;
+      padding: 28px 40px;
+      background: transparent;
+    }
+    .header-desktop nav {
+      flex: 1; display: flex; align-items: center;
+      justify-content: center; gap: 40px;
+    }
+    .header-desktop nav a {
+      font-family: var(--mm-sans); font-size: 1rem;
+      font-weight: 400; color: var(--mm-cream); text-decoration: none;
+      opacity: 0.9; transition: opacity 0.2s;
+    }
+    .header-desktop nav a:hover { opacity: 0.6; }
+    .header-desktop .logo-desktop {
+      width: 80px; height: auto; margin-left: auto; flex-shrink: 0;
+    }
+
+    /* Side-by-side layout */
+    .journey-wrapper {
+      flex-direction: row;
+    }
+
+    .visual-panel {
+      width: 50%;
+      height: 100vh;
+      flex-shrink: 0;
+    }
+
+    .visual-panel::after {
+      display: none;
+    }
+
+    .chapters {
+      width: 50%;
+    }
+
+    .chapter {
+      min-height: 100vh;
+      padding: 80px 60px;
+      align-items: flex-start;
+      text-align: left;
+    }
+
+    .chapter-title {
+      font-size: 2.4rem;
+    }
+
+    .chapter-body {
+      font-size: 1rem;
+      max-width: 420px;
+    }
+
+    .progress-dots {
+      right: calc(50% + 20px);
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .header-desktop { padding: 32px 48px; }
+    .header-desktop nav { gap: 52px; }
+
+    .chapter {
+      padding: 100px 80px;
+    }
+
+    .chapter-title {
+      font-size: 2.8rem;
+    }
+  }
+</style>
+</head>
+<body>
+
+<a href="#main" class="skip-link">Skip to content</a>
+
+<a href="index.html" class="back-link fade-1">&larr; Back to Gallery</a>
+
+<input type="checkbox" id="menu-toggle" hidden>
+<label for="menu-toggle" class="hamburger fade-1" aria-label="Menu" aria-expanded="false">
+  <span></span><span></span><span></span>
+</label>
+
+<div class="mobile-menu" role="dialog" aria-modal="true" aria-label="Navigation menu" aria-hidden="true">
+  <a href="/shop/bars">Bars</a>
+  <a href="/shop/moons">Moons</a>
+  <a href="/shop/bananas">Bananas</a>
+  <a href="/shop/bites">Bites</a>
+  <a href="/shop/elixirs">Elixirs</a>
+  <a href="/shop/packs">Packs</a>
+  <a href="/shop/gifts">Gifts</a>
+  <div class="menu-divider"></div>
+  <div class="menu-nav">
+    <a href="/our-story">Our Story</a>
+    <a href="/shop">Shop</a>
+    <a href="/stockists">Stockists</a>
+    <a href="/recipes">Recipes</a>
+    <a href="/contact">Contact</a>
+  </div>
+</div>
+
+<!-- Mobile header -->
+<header class="header-mobile fade-1">
+  <div></div>
+  <img src="assets/maplemoon_logo.svg" alt="Maple Moon" class="logo-img" width="40" height="40" loading="eager" decoding="async">
+</header>
+
+<!-- Desktop header -->
+<header class="header-desktop fade-1">
+  <nav>
+    <a href="/our-story">Our Story</a>
+    <a href="/shop">Shop</a>
+    <a href="/stockists">Stockists</a>
+    <a href="/recipes">Recipes</a>
+    <a href="/contact">Contact</a>
+  </nav>
+  <img src="assets/maplemoon_logo.svg" alt="Maple Moon" class="logo-desktop" width="80" height="40" loading="eager" decoding="async">
+</header>
+
+<!-- Progress dots -->
+<div class="progress-dots fade-2" aria-hidden="true">
+  <div class="progress-dot active" data-chapter="0"></div>
+  <div class="progress-dot" data-chapter="1"></div>
+  <div class="progress-dot" data-chapter="2"></div>
+  <div class="progress-dot" data-chapter="3"></div>
+</div>
+
+<div class="carob-watermark-wrap wm-subtle" aria-hidden="true"><img src="assets/carob_wordmark.svg" alt="" aria-hidden="true" width="800" height="200"></div>
+
+<!-- Main scroll journey -->
+<main id="main" class="journey-wrapper">
+
+  <!-- Sticky visual panel -->
+  <div class="visual-panel">
+    <img class="journey-img active" src="assets/moodboard/moodboard_20_dust_cream_stone.jpg" alt="Raw carob pods and natural ingredients" decoding="auto">
+    <img class="journey-img" src="assets/moodboard/moodboard_16_chamberlain_coffee.jpg" alt="Carob roasting process" decoding="auto">
+    <img class="journey-img" src="assets/products/bar_original.jpg" alt="MapleMoon Original Bar" decoding="auto">
+    <img class="journey-img" src="assets/products/bar_bundle.jpg" alt="MapleMoon bar collection" decoding="auto">
+  </div>
+
+  <!-- Scrolling chapters -->
+  <div class="chapters">
+
+    <section class="chapter active" data-index="0">
+      <span class="chapter-number">01 &mdash; Origin</span>
+      <h1 class="chapter-title">It starts with the pod</h1>
+      <p class="chapter-body">Carob grows wild across the Mediterranean — a sun-loving tree that thrives without irrigation. Each pod is hand-harvested, dried slowly, and selected for sweetness. No caffeine. No bitterness. Just warmth.</p>
+    </section>
+
+    <section class="chapter" data-index="1">
+      <span class="chapter-number">02 &mdash; Craft</span>
+      <h2 class="chapter-title">Roasted by hand in Byron Bay</h2>
+      <p class="chapter-body">We roast in small batches to draw out deep caramel and malt notes. The carob is stone-ground, then blended with organic cacao butter — nothing else. Every bar is shaped, wrapped, and packed by hand.</p>
+    </section>
+
+    <section class="chapter" data-index="2">
+      <span class="chapter-number">03 &mdash; The Bar</span>
+      <h2 class="chapter-title">Simple ingredients, nothing hidden</h2>
+      <p class="chapter-body">Organic carob. Organic cacao butter. That's it. No emulsifiers, no preservatives, no refined sugar. Each bar snaps clean with a velvet melt — proof that less makes more.</p>
+      <div class="trust-row">
+        <img src="assets/icon_organic.svg" alt="Organic" width="20" height="20" loading="lazy" decoding="async">
+        <img src="assets/icon_vegan.svg" alt="Vegan" width="20" height="20" loading="lazy" decoding="async">
+        <img src="assets/icon_caffeine_free.svg" alt="Caffeine Free" width="20" height="20" loading="lazy" decoding="async">
+        <img src="assets/icon_gluten_free.svg" alt="Gluten Free" width="20" height="20" loading="lazy" decoding="async">
+        <img src="assets/icon_made_in_aus.svg" alt="Made in Australia" width="20" height="20" loading="lazy" decoding="async">
+      </div>
+    </section>
+
+    <section class="chapter" data-index="3">
+      <span class="chapter-number">04 &mdash; Shop</span>
+      <h2 class="chapter-title">Find your flavour</h2>
+      <p class="chapter-body">Six bars. Two elixirs. One mission — to make something good enough that you forget it's good for you.</p>
+      <a href="/shop" class="cta-btn">Shop the Range</a>
+    </section>
+
+  </div>
+</main>
+
+<script>
+(function() {
+  if (!('IntersectionObserver' in window)) {
+    document.querySelectorAll('[class*="fade"]').forEach(function(el) { el.style.opacity = '1'; });
+    document.querySelectorAll('.chapter').forEach(function(ch) { ch.style.opacity = '1'; });
+    document.querySelector('.journey-img').classList.add('active');
+    return;
+  }
+
+  var images = document.querySelectorAll('.journey-img');
+  var chapters = document.querySelectorAll('.chapter');
+  var dots = document.querySelectorAll('.progress-dot');
+
+  var observer = new IntersectionObserver(function(entries) {
+    entries.forEach(function(entry) {
+      if (!entry.isIntersecting) return;
+      var idx = parseInt(entry.target.getAttribute('data-index'), 10);
+
+      // Crossfade images
+      images.forEach(function(img, i) {
+        img.classList.toggle('active', i === idx);
+      });
+
+      // Highlight active chapter
+      chapters.forEach(function(ch, i) {
+        ch.classList.toggle('active', i === idx);
+      });
+
+      // Update progress dots
+      dots.forEach(function(dot, i) {
+        dot.classList.toggle('active', i === idx);
+      });
+    });
+  }, {
+    threshold: 0.5
+  });
+
+  chapters.forEach(function(ch) { observer.observe(ch); });
+
+  // Mobile menu
+  var toggle = document.getElementById('menu-toggle');
+  var menu = document.querySelector('.mobile-menu');
+  var hamburger = document.querySelector('.hamburger');
+
+  document.querySelectorAll('.mobile-menu a').forEach(function(link) {
+    link.addEventListener('click', function() { toggle.checked = false; toggle.dispatchEvent(new Event('change')); });
+  });
+
+  toggle.addEventListener('change', function() {
+    var isOpen = toggle.checked;
+    menu.setAttribute('aria-hidden', isOpen ? 'false' : 'true');
+    hamburger.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    if (!isOpen) { hamburger.focus(); return; }
+    var focusable = menu.querySelectorAll('a, button, [tabindex]');
+    if (!focusable.length) return;
+    var first = focusable[0], last = focusable[focusable.length - 1];
+    function trap(e) {
+      if (e.key === 'Escape') { toggle.checked = false; toggle.dispatchEvent(new Event('change')); return; }
+      if (e.key !== 'Tab') return;
+      if (e.shiftKey) { if (document.activeElement === first) { e.preventDefault(); last.focus(); } }
+      else { if (document.activeElement === last) { e.preventDefault(); first.focus(); } }
+    }
+    menu.addEventListener('keydown', trap);
+    first.focus();
+    var obs = new MutationObserver(function() {
+      if (!toggle.checked) { menu.removeEventListener('keydown', trap); obs.disconnect(); }
+    });
+    obs.observe(toggle, { attributes: true });
+  });
+})();
+</script>
+
+</body>
+</html>

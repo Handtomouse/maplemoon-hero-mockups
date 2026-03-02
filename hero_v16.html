@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MapleMoon — Moodboard | Hero Concept</title>
+<meta name="description" content="The world of MapleMoon — artisan carob and cacao butter, handmade in Byron Bay. Organic, vegan, caffeine-free.">
+<meta name="theme-color" content="#1a1a1a">
+<meta property="og:title" content="MapleMoon — Moodboard">
+<meta property="og:description" content="The world of MapleMoon — artisan carob and cacao butter, handmade in Byron Bay. Organic, vegan, caffeine-free.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://maplemoon-hero-mockups.vercel.app/assets/products/bar_original.jpg">
+<meta property="og:image:width" content="400">
+<meta property="og:image:height" content="600">
+<meta property="og:site_name" content="Maple Moon">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="MapleMoon — Moodboard">
+<meta name="twitter:description" content="Artisan carob and cacao butter, handmade in Byron Bay. Organic, vegan, caffeine-free.">
+<meta name="twitter:image" content="https://maplemoon-hero-mockups.vercel.app/assets/products/bar_original.jpg">
+<link rel="canonical" href="https://maplemoon-hero-mockups.vercel.app/hero_v16.html">
+<link rel="preload" as="image" href="assets/carob_wordmark.svg">
+<link rel="icon" href="assets/maplemoon_logo.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="assets/maplemoon_logo.svg">
+<link rel="stylesheet" href="brand_kit.css">
+<style>
+  *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+  :root {
+  }
+
+  html, body { height: 100%; overflow: hidden; }
+
+  body {
+    background: var(--mm-dark-bg);
+    font-family: var(--mm-sans);
+    color: var(--mm-cream);
+    position: relative;
+    min-height: 100vh;
+    min-height: 100dvh;
+    text-rendering: optimizeLegibility;
+    overflow: hidden;
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(12px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  .fade-1 { animation: fadeIn 0.8s ease both 0.2s; }
+  .fade-2 { animation: fadeIn 0.8s ease both 0.4s; }
+  .fade-3 { animation: fadeIn 0.8s ease both 0.6s; }
+  .fade-4 { animation: fadeIn 0.8s ease both 0.8s; }
+
+  /* ── Back link ── */
+  .back-link {
+    position: fixed; top: 16px; left: 16px; z-index: 10;
+    color: var(--mm-cream); text-decoration: none;
+    font-family: var(--mm-sans); font-size: 0.8rem; font-weight: 400;
+    opacity: 0.7; transition: opacity 0.2s;
+  }
+  .back-link:hover { opacity: 1; }
+
+  /* ── Mobile header ── */
+  .header-mobile {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 10;
+    display: flex; justify-content: space-between; align-items: flex-start;
+    padding: 20px;
+  }
+  .header-mobile .logo-img { width: 40px; height: auto; }
+
+  /* ── Hamburger ── */
+  #menu-toggle { display: none; }
+
+  .hamburger {
+    position: fixed; top: 12px; left: 12px; z-index: 200;
+    cursor: pointer; display: flex; flex-direction: column;
+    justify-content: center; gap: 5px; width: 44px; height: 44px;
+    padding: 8px;
+  }
+  .hamburger span {
+    display: block; width: 100%; height: 2px;
+    background: var(--mm-cream); border-radius: 1px;
+    transition: transform 0.3s, opacity 0.3s;
+  }
+  #menu-toggle:checked ~ .hamburger span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
+  #menu-toggle:checked ~ .hamburger span:nth-child(2) { opacity: 0; }
+  #menu-toggle:checked ~ .hamburger span:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); }
+
+  /* ── Mobile menu overlay ── */
+  .mobile-menu {
+    position: fixed; inset: 0; z-index: 150;
+    background: var(--mm-cream); color: var(--mm-navy);
+    display: flex; flex-direction: column;
+    align-items: center; justify-content: center; gap: 28px;
+    opacity: 0; pointer-events: none;
+    transition: opacity 0.3s ease;
+  }
+  #menu-toggle:checked ~ .mobile-menu { opacity: 1; pointer-events: auto; }
+
+  .mobile-menu a {
+    font-family: var(--mm-serif); font-size: 1.4rem;
+    font-weight: 500; text-transform: uppercase; letter-spacing: 0.12em;
+    color: var(--mm-navy); text-decoration: none;
+    transition: opacity 0.2s;
+    min-height: 44px; padding: 12px 0;
+    display: inline-flex; align-items: center;
+  }
+  .mobile-menu a:hover { opacity: 0.6; }
+
+  .mobile-menu .menu-divider {
+    width: 40px; height: 1px; background: var(--mm-navy); opacity: 0.2;
+  }
+
+  .mobile-menu .menu-nav {
+    display: flex; flex-direction: column; align-items: center; gap: 20px;
+    margin-top: 24px; padding-top: 24px;
+    border-top: 1px solid var(--mm-navy-15);
+  }
+  .mobile-menu .menu-nav a {
+    font-family: var(--mm-sans); font-size: 0.95rem;
+    font-weight: 400; text-transform: none; letter-spacing: 0.04em;
+    color: var(--mm-navy); opacity: 0.6;
+  }
+
+  /* ── Desktop nav ── */
+  .header-desktop { display: none; }
+
+  /* ── Masonry drift ── */
+  .masonry-viewport {
+    position: fixed;
+    inset: 0;
+    overflow: hidden;
+    z-index: 0;
+  }
+
+  @keyframes drift {
+    from { transform: translateY(0); }
+    to   { transform: translateY(-50%); }
+  }
+
+  .masonry-track {
+    column-count: 3;
+    column-gap: 6px;
+    padding: 6px;
+    width: 100%;
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    .masonry-track {
+      animation: drift 90s linear infinite;
+    }
+  }
+
+  .masonry-track.paused {
+    animation-play-state: paused;
+  }
+
+  .masonry-track img {
+    width: 100%;
+    display: block;
+    border-radius: var(--radius-sm);
+    margin-bottom: 6px;
+    break-inside: avoid;
+    opacity: 0.6;
+    transition: opacity 0.4s;
+  }
+
+  .masonry-track.paused img {
+    opacity: 0.3;
+  }
+
+  /* ── Vignette overlay ── */
+  .vignette {
+    position: fixed;
+    inset: 0;
+    z-index: 1;
+    pointer-events: none;
+    background: radial-gradient(ellipse at center, transparent 30%, rgba(0,0,0,0.7) 100%);
+  }
+
+  /* ── Hero overlay content ── */
+  .hero-overlay-content {
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    z-index: 5;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 24px;
+    pointer-events: none;
+  }
+
+  .hero-overlay-content > * {
+    pointer-events: auto;
+  }
+
+  .hero-wordmark {
+    width: 140px;
+    height: auto;
+    margin-bottom: 12px;
+    filter: brightness(10);
+    opacity: 0.9;
+  }
+
+  .hero-title {
+    font-family: var(--mm-serif);
+    font-weight: 400;
+    font-size: 1.8rem;
+    letter-spacing: 0.06em;
+    line-height: 1.15;
+    margin-bottom: 8px;
+    text-shadow: 0 2px 20px rgba(0,0,0,0.5);
+  }
+
+  .hero-tagline {
+    font-family: var(--mm-sans);
+    font-weight: 300;
+    font-size: 0.9rem;
+    opacity: 0.85;
+    margin-bottom: 28px;
+    text-shadow: 0 1px 10px rgba(0,0,0,0.5);
+  }
+
+  .cta-btn {
+    display: inline-flex; align-items: center; justify-content: center;
+    border: 1.5px solid var(--mm-cream); color: var(--mm-cream);
+    background: rgba(0,0,0,0.3); border-radius: var(--radius-pill);
+    padding: 12px 32px; min-height: 48px;
+    font-family: var(--mm-sans); font-size: 0.85rem;
+    font-weight: 400; letter-spacing: 0.06em; text-transform: uppercase;
+    text-decoration: none; cursor: pointer;
+    transition: background 0.3s, color 0.3s, transform 0.15s;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+  }
+  .cta-btn:hover {
+    background: var(--mm-cream); color: var(--mm-navy);
+  }
+  .cta-btn:active {
+    transform: scale(0.97);
+  }
+
+  /* ── Trust row ── */
+  .trust-row {
+    display: flex; align-items: center; justify-content: center; gap: 14px;
+    margin-top: 20px;
+  }
+  .trust-row img {
+    width: 20px; height: 20px;
+    filter: brightness(0) invert(0.92) sepia(0.1) saturate(0.3);
+    opacity: 0.5;
+  }
+
+  /* ── Reduced motion fallback ── */
+  @media (prefers-reduced-motion: reduce) {
+    .masonry-viewport {
+      overflow-y: auto;
+    }
+    .masonry-track img {
+      opacity: 0.5;
+    }
+  }
+
+  /* ── DESKTOP ── */
+  @media (min-width: 768px) {
+    .hamburger { display: none; }
+    .header-mobile { display: none; }
+
+    .header-desktop {
+      display: flex; align-items: center;
+      position: fixed; top: 0; left: 0; right: 0; z-index: 10;
+      padding: 28px 40px;
+      background: transparent;
+    }
+    .header-desktop nav {
+      flex: 1; display: flex; align-items: center;
+      justify-content: center; gap: 40px;
+    }
+    .header-desktop nav a {
+      font-family: var(--mm-sans); font-size: 1rem;
+      font-weight: 400; color: var(--mm-cream); text-decoration: none;
+      opacity: 0.9; transition: opacity 0.2s;
+    }
+    .header-desktop nav a:hover { opacity: 0.6; }
+    .header-desktop .logo-desktop {
+      width: 80px; height: auto; margin-left: auto; flex-shrink: 0;
+    }
+
+    .masonry-track {
+      column-count: 4;
+      column-gap: 8px;
+      padding: 8px;
+    }
+
+    .masonry-track img {
+      border-radius: var(--radius-md);
+      margin-bottom: 8px;
+    }
+
+    @media (prefers-reduced-motion: no-preference) {
+      .masonry-track {
+        animation-duration: 120s;
+      }
+    }
+
+    .hero-overlay-content {
+      align-items: flex-start;
+      justify-content: flex-end;
+      text-align: left;
+      padding: 0 60px 80px;
+    }
+
+    .hero-wordmark {
+      width: 180px;
+      margin-bottom: 16px;
+    }
+
+    .hero-title {
+      font-size: 3rem;
+      margin-bottom: 12px;
+    }
+
+    .hero-tagline {
+      font-size: 1.05rem;
+      margin-bottom: 32px;
+    }
+
+    .cta-btn {
+      padding: 14px 40px;
+      font-size: 0.95rem;
+    }
+
+    .trust-row {
+      justify-content: flex-start;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .header-desktop { padding: 32px 48px; }
+    .header-desktop nav { gap: 52px; }
+
+    .masonry-track {
+      column-count: 5;
+    }
+
+    .hero-overlay-content {
+      padding: 0 80px 100px;
+    }
+
+    .hero-title {
+      font-size: 3.4rem;
+    }
+  }
+</style>
+</head>
+<body>
+
+<a href="#main" class="skip-link">Skip to content</a>
+
+<a href="index.html" class="back-link fade-1">&larr; Back to Gallery</a>
+
+<input type="checkbox" id="menu-toggle" hidden>
+<label for="menu-toggle" class="hamburger fade-1" aria-label="Menu" aria-expanded="false">
+  <span></span><span></span><span></span>
+</label>
+
+<div class="mobile-menu" role="dialog" aria-modal="true" aria-label="Navigation menu" aria-hidden="true">
+  <a href="/shop/bars">Bars</a>
+  <a href="/shop/moons">Moons</a>
+  <a href="/shop/bananas">Bananas</a>
+  <a href="/shop/bites">Bites</a>
+  <a href="/shop/elixirs">Elixirs</a>
+  <a href="/shop/packs">Packs</a>
+  <a href="/shop/gifts">Gifts</a>
+  <div class="menu-divider"></div>
+  <div class="menu-nav">
+    <a href="/our-story">Our Story</a>
+    <a href="/shop">Shop</a>
+    <a href="/stockists">Stockists</a>
+    <a href="/recipes">Recipes</a>
+    <a href="/contact">Contact</a>
+  </div>
+</div>
+
+<!-- Mobile header -->
+<header class="header-mobile fade-1">
+  <div></div>
+  <img src="assets/maplemoon_logo.svg" alt="Maple Moon" class="logo-img" width="40" height="40" loading="eager" decoding="async">
+</header>
+
+<!-- Desktop header -->
+<header class="header-desktop fade-1">
+  <nav>
+    <a href="/our-story">Our Story</a>
+    <a href="/shop">Shop</a>
+    <a href="/stockists">Stockists</a>
+    <a href="/recipes">Recipes</a>
+    <a href="/contact">Contact</a>
+  </nav>
+  <img src="assets/maplemoon_logo.svg" alt="Maple Moon" class="logo-desktop" width="80" height="40" loading="eager" decoding="async">
+</header>
+
+<!-- Drifting masonry background -->
+<div class="masonry-viewport" aria-hidden="true">
+  <div class="masonry-track" id="masonry-track">
+    <!-- First set of 25 pins -->
+    <img src="assets/moodboard/pin_01.jpg" alt="" width="200" height="300" loading="eager" decoding="async">
+    <img src="assets/moodboard/pin_02.jpg" alt="" width="200" height="300" loading="eager" decoding="async">
+    <img src="assets/moodboard/pin_03.jpg" alt="" width="200" height="300" loading="eager" decoding="async">
+    <img src="assets/moodboard/pin_04.jpg" alt="" width="200" height="300" loading="eager" decoding="async">
+    <img src="assets/moodboard/pin_05.jpg" alt="" width="200" height="300" loading="eager" decoding="async">
+    <img src="assets/moodboard/pin_06.jpg" alt="" width="200" height="300" loading="lazy" decoding="async">
+    <img src="assets/moodboard/pin_07.jpg" alt="" width="200" height="300" loading="lazy" decoding="async">
+    <img src="assets/moodboard/pin_08.jpg" alt="" width="200" height="300" loading="lazy" decoding="async">
+    <img src="assets/moodboard/pin_09.jpg" alt="" width="200" height="300" loading="lazy" decoding="async">
+    <img src="assets/moodboard/pin_10.jpg" alt="" width="200" height="300" loading="lazy" decoding="async">
+    <img src="assets/moodboard/pin_11.jpg" alt="" width="200" height="300" loading="lazy" decoding="async">
+    <img src="assets/moodboard/pin_12.jpg" alt="" width="200" height="300" loading="lazy" decoding="async">
+    <img src="assets/moodboard/pin_13.jpg" alt="" width="200" height="300" loading="lazy" decoding="async">
+    <img src="assets/moodboard/pin_14.jpg" alt="" width="200" height="300" loading="lazy" decoding="async">
+    <img src="assets/moodboard/pin_15.jpg" alt="" width="200" height="300" loading="lazy" decoding="async">
+    <img src="assets/moodboard/pin_16.jpg" alt="" width="200" height="300" loading="lazy" decoding="async">
+    <img src="assets/moodboard/pin_17.jpg" alt="" width="200" height="300" loading="lazy" decoding="async">
+    <img src="assets/moodboard/pin_18.jpg" alt="" width="200" height="300" loading="lazy" decoding="async">
+    <img src="assets/moodboard/pin_19.jpg" alt="" width="200" height="300" loading="lazy" decoding="async">
+    <img src="assets/moodboard/pin_20.jpg" alt="" width="200" height="300" loading="lazy" decoding="async">
+    <img src="assets/moodboard/pin_21.jpg" alt="" width="200" height="300" loading="lazy" decoding="async">
+    <img src="assets/moodboard/pin_22.jpg" alt="" width="200" height="300" loading="lazy" decoding="async">
+    <img src="assets/moodboard/pin_23.jpg" alt="" width="200" height="300" loading="lazy" decoding="async">
+    <img src="assets/moodboard/pin_24.jpg" alt="" width="200" height="300" loading="lazy" decoding="async">
+    <img src="assets/moodboard/pin_25.jpg" alt="" width="200" height="300" loading="lazy" decoding="async">
+    <!-- Duplicated set for seamless loop -->
+    <img src="assets/moodboard/pin_01.jpg" alt="" width="200" height="300" loading="lazy" decoding="async">
+    <img src="assets/moodboard/pin_02.jpg" alt="" width="200" height="300" loading="lazy" decoding="async">
+    <img src="assets/moodboard/pin_03.jpg" alt="" width="200" height="300" loading="lazy" decoding="async">
+    <img src="assets/moodboard/pin_04.jpg" alt="" width="200" height="300" loading="lazy" decoding="async">
+    <img src="assets/moodboard/pin_05.jpg" alt="" width="200" height="300" loading="lazy" decoding="async">
+    <img src="assets/moodboard/pin_06.jpg" alt="" width="200" height="300" loading="lazy" decoding="async">
+    <img src="assets/moodboard/pin_07.jpg" alt="" width="200" height="300" loading="lazy" decoding="async">
+    <img src="assets/moodboard/pin_08.jpg" alt="" width="200" height="300" loading="lazy" decoding="async">
+    <img src="assets/moodboard/pin_09.jpg" alt="" width="200" height="300" loading="lazy" decoding="async">
+    <img src="assets/moodboard/pin_10.jpg" alt="" width="200" height="300" loading="lazy" decoding="async">
+    <img src="assets/moodboard/pin_11.jpg" alt="" width="200" height="300" loading="lazy" decoding="async">
+    <img src="assets/moodboard/pin_12.jpg" alt="" width="200" height="300" loading="lazy" decoding="async">
+    <img src="assets/moodboard/pin_13.jpg" alt="" width="200" height="300" loading="lazy" decoding="async">
+    <img src="assets/moodboard/pin_14.jpg" alt="" width="200" height="300" loading="lazy" decoding="async">
+    <img src="assets/moodboard/pin_15.jpg" alt="" width="200" height="300" loading="lazy" decoding="async">
+    <img src="assets/moodboard/pin_16.jpg" alt="" width="200" height="300" loading="lazy" decoding="async">
+    <img src="assets/moodboard/pin_17.jpg" alt="" width="200" height="300" loading="lazy" decoding="async">
+    <img src="assets/moodboard/pin_18.jpg" alt="" width="200" height="300" loading="lazy" decoding="async">
+    <img src="assets/moodboard/pin_19.jpg" alt="" width="200" height="300" loading="lazy" decoding="async">
+    <img src="assets/moodboard/pin_20.jpg" alt="" width="200" height="300" loading="lazy" decoding="async">
+    <img src="assets/moodboard/pin_21.jpg" alt="" width="200" height="300" loading="lazy" decoding="async">
+    <img src="assets/moodboard/pin_22.jpg" alt="" width="200" height="300" loading="lazy" decoding="async">
+    <img src="assets/moodboard/pin_23.jpg" alt="" width="200" height="300" loading="lazy" decoding="async">
+    <img src="assets/moodboard/pin_24.jpg" alt="" width="200" height="300" loading="lazy" decoding="async">
+    <img src="assets/moodboard/pin_25.jpg" alt="" width="200" height="300" loading="lazy" decoding="async">
+  </div>
+</div>
+
+<!-- Vignette -->
+<div class="vignette"></div>
+
+<!-- Hero overlay -->
+<main id="main" class="hero-overlay-content">
+  <img class="hero-wordmark fade-1" src="assets/carob_wordmark.svg" alt="Maple Moon" width="180" height="45">
+  <h1 class="hero-title fade-2">MAPLE MOON</h1>
+  <p class="hero-tagline fade-3">Artisan carob and cacao butter. Byron Bay.</p>
+  <a href="/shop" class="cta-btn fade-3">Shop Now</a>
+  <div class="trust-row fade-4">
+    <img src="assets/icon_organic.svg" alt="Organic" width="20" height="20" loading="lazy" decoding="async">
+    <img src="assets/icon_vegan.svg" alt="Vegan" width="20" height="20" loading="lazy" decoding="async">
+    <img src="assets/icon_caffeine_free.svg" alt="Caffeine Free" width="20" height="20" loading="lazy" decoding="async">
+    <img src="assets/icon_gluten_free.svg" alt="Gluten Free" width="20" height="20" loading="lazy" decoding="async">
+    <img src="assets/icon_made_in_aus.svg" alt="Made in Australia" width="20" height="20" loading="lazy" decoding="async">
+  </div>
+</main>
+
+<script>
+(function() {
+  if (!('IntersectionObserver' in window)) {
+    document.querySelectorAll('[class*="fade"]').forEach(function(el) { el.style.opacity = '1'; });
+  }
+
+  // Pause/resume drift on interaction
+  var track = document.getElementById('masonry-track');
+  var viewport = document.querySelector('.masonry-viewport');
+
+  viewport.addEventListener('mouseenter', function() {
+    track.classList.add('paused');
+  });
+  viewport.addEventListener('mouseleave', function() {
+    track.classList.remove('paused');
+  });
+  viewport.addEventListener('touchstart', function() {
+    track.classList.add('paused');
+  }, { passive: true });
+  viewport.addEventListener('touchend', function() {
+    track.classList.remove('paused');
+  }, { passive: true });
+
+  // Mobile menu
+  var toggle = document.getElementById('menu-toggle');
+  var menu = document.querySelector('.mobile-menu');
+  var hamburger = document.querySelector('.hamburger');
+
+  document.querySelectorAll('.mobile-menu a').forEach(function(link) {
+    link.addEventListener('click', function() { toggle.checked = false; toggle.dispatchEvent(new Event('change')); });
+  });
+
+  toggle.addEventListener('change', function() {
+    var isOpen = toggle.checked;
+    menu.setAttribute('aria-hidden', isOpen ? 'false' : 'true');
+    hamburger.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    if (!isOpen) { hamburger.focus(); return; }
+    var focusable = menu.querySelectorAll('a, button, [tabindex]');
+    if (!focusable.length) return;
+    var first = focusable[0], last = focusable[focusable.length - 1];
+    function trap(e) {
+      if (e.key === 'Escape') { toggle.checked = false; toggle.dispatchEvent(new Event('change')); return; }
+      if (e.key !== 'Tab') return;
+      if (e.shiftKey) { if (document.activeElement === first) { e.preventDefault(); last.focus(); } }
+      else { if (document.activeElement === last) { e.preventDefault(); first.focus(); } }
+    }
+    menu.addEventListener('keydown', trap);
+    first.focus();
+    var obs = new MutationObserver(function() {
+      if (!toggle.checked) { menu.removeEventListener('keydown', trap); obs.disconnect(); }
+    });
+    obs.observe(toggle, { attributes: true });
+  });
+})();
+</script>
+
+</body>
+</html>
