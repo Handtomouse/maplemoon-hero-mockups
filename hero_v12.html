@@ -520,16 +520,13 @@
   <!-- MOBILE: product stage with tap cycling -->
   <div class="product-stage fade-2">
     <div class="product-item active" data-state="0">
-      <img src="assets/bar_hero_front.png" alt="Maple Moon Carob Bar" width="400" height="600" fetchpriority="high" decoding="sync">
+      <img src="assets/products/bar_original.jpg" alt="Maple Moon Carob Bar" width="400" height="600" fetchpriority="high" decoding="sync">
     </div>
     <div class="product-item hidden-right" data-state="1">
-      <img src="assets/moon_halfopen.png" alt="Peppermint Buckwheat Crescent Moon" width="400" height="400" loading="lazy" decoding="async">
+      <img src="assets/products/moon_peppermint.jpg" alt="Carob Crescent Moon" width="400" height="400" loading="lazy" decoding="async">
     </div>
     <div class="product-item hidden-right" data-state="2">
-      <div class="elixir-placeholder">
-        <span class="elixir-title">Elixirs</span>
-        <span class="elixir-sub">Coming Soon</span>
-      </div>
+      <img src="assets/products/elixir_plain.jpg" alt="Carob Elixir" width="400" height="600" loading="lazy" decoding="async">
     </div>
   </div>
 
@@ -541,10 +538,10 @@
   <!-- DESKTOP: all 3 products spread horizontally -->
   <div class="desktop-products fade-2">
     <div class="desktop-product">
-      <img src="assets/bar_hero_front.png" alt="Maple Moon Carob Bar" width="400" height="600" loading="lazy" decoding="async">
+      <img src="assets/products/bar_original.jpg" alt="Maple Moon Carob Bar" width="400" height="600" loading="lazy" decoding="async">
       <div class="desktop-info">
         <div class="d-title">Pure Carob &amp; Cacao Butter</div>
-        <div class="d-sub">Organic &middot; Vegan &middot; Caffeine Free</div>
+        <div class="d-sub">Organic &middot; Vegan &middot; Caffeine Free &middot; 90g</div>
         <div class="d-trust">
           <img src="assets/icon_organic.svg" alt="Organic" width="18" height="18" loading="lazy" decoding="async">
           <img src="assets/icon_vegan.svg" alt="Vegan" width="18" height="18" loading="lazy" decoding="async">
@@ -557,9 +554,9 @@
     </div>
 
     <div class="desktop-product">
-      <img src="assets/moon_halfopen.png" alt="Peppermint Buckwheat Crescent Moon" width="400" height="400" loading="lazy" decoding="async">
+      <img src="assets/products/moon_peppermint.jpg" alt="Carob Crescent Moon" width="400" height="400" loading="lazy" decoding="async">
       <div class="desktop-info">
-        <div class="d-title">Peppermint Buckwheat Crescent Moon</div>
+        <div class="d-title">Carob Crescent Moon</div>
         <div class="d-sub">Organic &middot; Vegan &middot; Caffeine Free</div>
         <div class="d-trust">
           <img src="assets/icon_organic.svg" alt="Organic" width="18" height="18" loading="lazy" decoding="async">
@@ -568,19 +565,16 @@
           <img src="assets/icon_gluten_free.svg" alt="Gluten Free" width="18" height="18" loading="lazy" decoding="async">
           <img src="assets/icon_made_in_aus.svg" alt="Made in Australia" width="18" height="18" loading="lazy" decoding="async">
         </div>
-        <a href="#" class="d-cta">From $2.50</a>
+        <a href="#" class="d-cta">From $2.50 &mdash; 12g</a>
       </div>
     </div>
 
     <div class="desktop-product">
-      <div class="desktop-elixir-card">
-        <span class="elixir-title">Elixirs</span>
-        <span class="elixir-sub">Coming Soon</span>
-      </div>
+      <img src="assets/products/elixir_plain.jpg" alt="Carob Elixir" width="400" height="600" loading="lazy" decoding="async">
       <div class="desktop-info">
-        <div class="d-title">Carob Elixirs</div>
-        <div class="d-sub">Plain &amp; Spiced &middot; Launching Soon</div>
-        <a href="#" class="d-cta">Notify Me</a>
+        <div class="d-title">Carob Elixir</div>
+        <div class="d-sub">Plain &amp; Spiced</div>
+        <a href="#" class="d-cta">Add to Cart &mdash; $23.95</a>
       </div>
     </div>
   </div>
@@ -623,9 +617,9 @@
 
   var stateData = [
     { title: '', sub: '', cta: '', showTrust: false, showPanel: false },
-    { title: 'Pure Carob & Cacao Butter', sub: 'Organic \u00b7 Vegan \u00b7 Caffeine Free', cta: 'Add to Cart \u2014 $12.95', showTrust: true, showPanel: true },
-    { title: 'Peppermint Buckwheat Crescent Moon', sub: 'Organic \u00b7 Vegan \u00b7 Caffeine Free', cta: 'From $2.50', showTrust: true, showPanel: true },
-    { title: 'Carob Elixirs', sub: 'Plain & Spiced \u00b7 Launching Soon', cta: 'Notify Me', showTrust: false, showPanel: true }
+    { title: 'Pure Carob & Cacao Butter', sub: 'Organic \u00b7 Vegan \u00b7 Caffeine Free \u00b7 90g', cta: 'Add to Cart \u2014 $12.95', showTrust: true, showPanel: true },
+    { title: 'Carob Crescent Moon', sub: 'Organic \u00b7 Vegan \u00b7 Caffeine Free \u00b7 12g', cta: 'From $2.50', showTrust: true, showPanel: true },
+    { title: 'Carob Elixir', sub: 'Plain & Spiced', cta: 'Add to Cart \u2014 $23.95', showTrust: false, showPanel: true }
   ];
 
   function updateState() {
