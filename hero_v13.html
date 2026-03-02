@@ -28,6 +28,15 @@
 
   :focus-visible { outline: 2px solid var(--cream); outline-offset: 3px; }
 
+  /* ── Skip link ── */
+  .skip-link {
+    position: absolute; top: -100%; left: 16px;
+    padding: 8px 16px; background: var(--cream); color: var(--navy);
+    border-radius: 4px; z-index: 999; font-size: 0.85rem;
+    text-decoration: none;
+  }
+  .skip-link:focus { top: 8px; }
+
   @keyframes fadeIn {
     from { opacity: 0; transform: translateY(12px); }
     to   { opacity: 1; transform: translateY(0); }
@@ -86,7 +95,8 @@
   .hamburger {
     position: fixed; top: 20px; left: 20px; z-index: 200;
     cursor: pointer; display: flex; flex-direction: column;
-    justify-content: center; gap: 5px; width: 28px; height: 28px;
+    justify-content: center; gap: 5px; width: 44px; height: 44px;
+    padding: 8px;
   }
   .hamburger span {
     display: block; width: 100%; height: 2px;
@@ -269,10 +279,12 @@
 </head>
 <body>
 
+<a href="#main" class="skip-link">Skip to content</a>
+
 <!-- Full bleed photo background -->
 <div class="hero-bg"></div>
 <div class="hero-overlay"></div>
-<div class="carob-watermark-wrap wm-subtle"><img src="assets/carob_wordmark.svg" alt="" aria-hidden="true"></div>
+<div class="carob-watermark-wrap wm-subtle"><img src="assets/carob_wordmark.svg" alt="" aria-hidden="true" width="800" height="200"></div>
 
 <a href="index.html" class="back-link fade-1">&larr; Back to Gallery</a>
 
@@ -318,18 +330,18 @@
 </header>
 
 <!-- Hero content in the dark zone -->
-<div class="hero-content">
+<main class="hero-content" id="main">
   <h1 class="hero-title fade-2">MAPLE MOON</h1>
   <p class="hero-tagline fade-3">Naturally sweet carob chocolate</p>
   <a href="#" class="cta-btn fade-3">Shop Now</a>
   <div class="trust-row fade-4">
-    <img src="assets/icon_organic.svg" alt="Organic">
-    <img src="assets/icon_vegan.svg" alt="Vegan">
-    <img src="assets/icon_caffeine_free.svg" alt="Caffeine Free">
-    <img src="assets/icon_gluten_free.svg" alt="Gluten Free">
-    <img src="assets/icon_made_in_aus.svg" alt="Made in Australia">
+    <img src="assets/icon_organic.svg" alt="Organic" width="20" height="20" loading="lazy" decoding="async">
+    <img src="assets/icon_vegan.svg" alt="Vegan" width="20" height="20" loading="lazy" decoding="async">
+    <img src="assets/icon_caffeine_free.svg" alt="Caffeine Free" width="20" height="20" loading="lazy" decoding="async">
+    <img src="assets/icon_gluten_free.svg" alt="Gluten Free" width="20" height="20" loading="lazy" decoding="async">
+    <img src="assets/icon_made_in_aus.svg" alt="Made in Australia" width="20" height="20" loading="lazy" decoding="async">
   </div>
-</div>
+</main>
 
 <script>
 (function() {

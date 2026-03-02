@@ -30,6 +30,15 @@
 
   :focus-visible { outline: 2px solid var(--cream); outline-offset: 3px; }
 
+  /* ── Skip link ── */
+  .skip-link {
+    position: absolute; top: -100%; left: 16px;
+    padding: 8px 16px; background: var(--cream); color: var(--navy);
+    border-radius: 4px; z-index: 999; font-size: 0.85rem;
+    text-decoration: none;
+  }
+  .skip-link:focus { top: 8px; }
+
   /* ── Back link ── */
   .back-link {
     position: fixed; top: 16px; left: 16px; z-index: 101;
@@ -46,7 +55,8 @@
   .hamburger {
     position: fixed; top: 20px; left: 20px; z-index: 200;
     cursor: pointer; display: flex; flex-direction: column;
-    justify-content: center; gap: 5px; width: 28px; height: 28px;
+    justify-content: center; gap: 5px; width: 44px; height: 44px;
+    padding: 8px;
   }
   .hamburger span {
     display: block; width: 100%; height: 2px;
@@ -456,6 +466,7 @@
 </head>
 <body>
 
+<a href="#main" class="skip-link">Skip to content</a>
 <a href="index.html" class="back-link fade-1">&larr; Back to Gallery</a>
 
 <input type="checkbox" id="menu-toggle" hidden>
@@ -499,7 +510,7 @@
 </header>
 
 <main class="hero" id="main">
-  <div class="carob-watermark-wrap wm-full"><img src="assets/carob_wordmark.svg" alt="" aria-hidden="true"></div>
+  <div class="carob-watermark-wrap wm-full"><img src="assets/carob_wordmark.svg" alt="" aria-hidden="true" width="800" height="200"></div>
 
   <!-- MOBILE: product stage with tap cycling -->
   <div class="product-stage fade-2">
@@ -530,11 +541,11 @@
         <div class="d-title">Pure Carob &amp; Cacao Butter</div>
         <div class="d-sub">Organic &middot; Vegan &middot; Caffeine Free</div>
         <div class="d-trust">
-          <img src="assets/icon_organic.svg" alt="Organic">
-          <img src="assets/icon_vegan.svg" alt="Vegan">
-          <img src="assets/icon_caffeine_free.svg" alt="Caffeine Free">
-          <img src="assets/icon_gluten_free.svg" alt="Gluten Free">
-          <img src="assets/icon_made_in_aus.svg" alt="Made in Australia">
+          <img src="assets/icon_organic.svg" alt="Organic" width="18" height="18" loading="lazy" decoding="async">
+          <img src="assets/icon_vegan.svg" alt="Vegan" width="18" height="18" loading="lazy" decoding="async">
+          <img src="assets/icon_caffeine_free.svg" alt="Caffeine Free" width="18" height="18" loading="lazy" decoding="async">
+          <img src="assets/icon_gluten_free.svg" alt="Gluten Free" width="18" height="18" loading="lazy" decoding="async">
+          <img src="assets/icon_made_in_aus.svg" alt="Made in Australia" width="18" height="18" loading="lazy" decoding="async">
         </div>
         <a href="#" class="d-cta">Add to Cart &mdash; $12.95</a>
       </div>
@@ -546,11 +557,11 @@
         <div class="d-title">Peppermint Buckwheat Crescent Moon</div>
         <div class="d-sub">Organic &middot; Vegan &middot; Caffeine Free</div>
         <div class="d-trust">
-          <img src="assets/icon_organic.svg" alt="Organic">
-          <img src="assets/icon_vegan.svg" alt="Vegan">
-          <img src="assets/icon_caffeine_free.svg" alt="Caffeine Free">
-          <img src="assets/icon_gluten_free.svg" alt="Gluten Free">
-          <img src="assets/icon_made_in_aus.svg" alt="Made in Australia">
+          <img src="assets/icon_organic.svg" alt="Organic" width="18" height="18" loading="lazy" decoding="async">
+          <img src="assets/icon_vegan.svg" alt="Vegan" width="18" height="18" loading="lazy" decoding="async">
+          <img src="assets/icon_caffeine_free.svg" alt="Caffeine Free" width="18" height="18" loading="lazy" decoding="async">
+          <img src="assets/icon_gluten_free.svg" alt="Gluten Free" width="18" height="18" loading="lazy" decoding="async">
+          <img src="assets/icon_made_in_aus.svg" alt="Made in Australia" width="18" height="18" loading="lazy" decoding="async">
         </div>
         <a href="#" class="d-cta">From $2.50</a>
       </div>
@@ -575,11 +586,11 @@
   <div class="info-title" id="infoTitle">Pure Carob &amp; Cacao Butter</div>
   <div class="info-sub" id="infoSub">Organic &middot; Vegan &middot; Caffeine Free</div>
   <div class="trust-row" id="trustRow">
-    <img src="assets/icon_organic.svg" alt="Organic">
-    <img src="assets/icon_vegan.svg" alt="Vegan">
-    <img src="assets/icon_caffeine_free.svg" alt="Caffeine Free">
-    <img src="assets/icon_gluten_free.svg" alt="Gluten Free">
-    <img src="assets/icon_made_in_aus.svg" alt="Made in Australia">
+    <img src="assets/icon_organic.svg" alt="Organic" width="24" height="24" loading="lazy" decoding="async">
+    <img src="assets/icon_vegan.svg" alt="Vegan" width="24" height="24" loading="lazy" decoding="async">
+    <img src="assets/icon_caffeine_free.svg" alt="Caffeine Free" width="24" height="24" loading="lazy" decoding="async">
+    <img src="assets/icon_gluten_free.svg" alt="Gluten Free" width="24" height="24" loading="lazy" decoding="async">
+    <img src="assets/icon_made_in_aus.svg" alt="Made in Australia" width="24" height="24" loading="lazy" decoding="async">
   </div>
   <a href="#" class="cta-btn" id="infoCta">Add to Cart &mdash; $12.95</a>
 </div>

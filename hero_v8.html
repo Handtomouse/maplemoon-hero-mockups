@@ -132,7 +132,8 @@
   .hamburger {
     position: fixed; top: 20px; left: 20px; z-index: 200;
     cursor: pointer; display: flex; flex-direction: column;
-    justify-content: center; gap: 5px; width: 28px; height: 28px;
+    justify-content: center; gap: 5px; width: 44px; height: 44px;
+    padding: 8px;
   }
   .hamburger span {
     display: block; width: 100%; height: 2px;
@@ -159,6 +160,8 @@
     font-weight: 500; text-transform: uppercase; letter-spacing: 0.12em;
     color: var(--navy); text-decoration: none;
     transition: opacity 0.2s;
+    min-height: 44px; padding: 12px 0;
+    display: inline-flex; align-items: center;
   }
   .mobile-menu a:hover { opacity: 0.6; }
 
@@ -258,7 +261,8 @@
     font-family: var(--mm-serif); font-size: 0.75rem;
     font-weight: 500; text-transform: uppercase; letter-spacing: 0.12em;
     color: var(--cream); text-decoration: none;
-    padding: 4px 0; white-space: nowrap;
+    padding: 12px 0; min-height: 44px; white-space: nowrap;
+    display: inline-flex; align-items: center;
     transition: opacity 0.2s;
   }
   .category-strip a:hover { opacity: 0.7; }
@@ -401,7 +405,7 @@
 
 <!-- Mobile header -->
 <header class="header-mobile fade-1">
-  <img src="assets/maplemoon_logo.svg" alt="Maple Moon" class="logo-img">
+  <img src="assets/maplemoon_logo.svg" alt="Maple Moon" class="logo-img" width="40" height="40" loading="lazy" decoding="async">
 </header>
 
 <!-- Desktop header -->
@@ -413,12 +417,12 @@
     <a href="#">Recipes</a>
     <a href="#">Contact</a>
   </nav>
-  <img src="assets/maplemoon_logo.svg" alt="Maple Moon" class="logo-desktop">
+  <img src="assets/maplemoon_logo.svg" alt="Maple Moon" class="logo-desktop" width="80" height="40" loading="lazy" decoding="async">
 </header>
 
 <main id="main-content" class="hero">
-  <div class="carob-watermark-wrap wm-subtle"><img src="assets/carob_wordmark.svg" alt="" aria-hidden="true"></div>
-  <img src="assets/bar_hero_front.png" alt="Maple Moon Carob Bar" class="product-img fade-3">
+  <div class="carob-watermark-wrap wm-subtle"><img src="assets/carob_wordmark.svg" alt="" aria-hidden="true" width="800" height="200"></div>
+  <img src="assets/bar_hero_front.png" alt="Maple Moon Carob Bar" class="product-img fade-3" width="400" height="600" fetchpriority="high" loading="eager">
   <p class="tagline fade-4" id="tagline">Naturally sweet, nothing added.</p>
   <a href="#" class="cta-btn fade-5">Shop Now</a>
 </main>

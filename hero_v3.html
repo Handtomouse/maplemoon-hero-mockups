@@ -36,17 +36,7 @@
     pointer-events: none;
   }
 
-  /* ── Skip link ── */
-  .skip-link {
-    position: absolute; top: -100%; left: 16px;
-    padding: 8px 16px; background: var(--cream); color: var(--navy);
-    border-radius: 4px; z-index: 999; font-size: 0.85rem;
-    text-decoration: none;
-  }
-  .skip-link:focus { top: 8px; }
-
-  /* ── Focus ── */
-  :focus-visible { outline: 2px solid var(--cream); outline-offset: 3px; }
+  /* skip-link, focus-visible → brand_kit.css */
 
   /* ── Fade-in ── */
   @keyframes fadeIn {
@@ -72,22 +62,15 @@
   .fade-6 { animation: fadeIn 0.6s ease both 0.85s; }
   .fade-7 { animation: fadeIn 0.6s ease both 1.0s; }
 
-  /* ── Reduced motion ── */
-  @media (prefers-reduced-motion: reduce) {
-    *, *::before, *::after {
-      animation-duration: 0.01ms !important;
-      animation-iteration-count: 1 !important;
-      transition-duration: 0.01ms !important;
-    }
-  }
+  /* reduced-motion → brand_kit.css */
 
   /* ── Back link ── */
   .back-link {
-    position: fixed; top: 16px; left: 16px; z-index: 101;
+    position: fixed; top: 12px; left: 12px; z-index: 101;
     color: var(--cream); text-decoration: none;
     font-family: var(--mm-sans); font-size: 0.8rem; font-weight: 400;
     opacity: 0.7; transition: opacity 0.2s;
-    display: none;
+    display: none; min-height: 44px; padding: 12px 16px;
   }
   .back-link:hover { opacity: 1; }
 
@@ -95,9 +78,10 @@
   #menu-toggle { display: none; }
 
   .hamburger {
-    position: fixed; top: 20px; left: 20px; z-index: 200;
+    position: fixed; top: 12px; left: 12px; z-index: 200;
     cursor: pointer; display: flex; flex-direction: column;
-    justify-content: center; gap: 5px; width: 28px; height: 28px;
+    justify-content: center; gap: 5px; width: 44px; height: 44px;
+    padding: 8px;
   }
   .hamburger span {
     display: block; width: 100%; height: 2px;
@@ -499,7 +483,7 @@
 
 <!-- ═══════════ MOBILE HERO ═══════════ -->
 <main class="hero" id="main">
-  <div class="carob-watermark-wrap wm-full"><img src="assets/carob_wordmark.svg" alt="" aria-hidden="true"></div>
+  <div class="carob-watermark-wrap wm-full"><img src="assets/carob_wordmark.svg" alt="" aria-hidden="true" width="800" height="200"></div>
   <img src="assets/bar_hero_front.png" alt="Maple Moon Carob Bar" class="product-img fade-product" width="400" height="600" fetchpriority="high" decoding="sync">
   <h1 class="headline fade-4">Not chocolate. Better.</h1>
   <p class="body-text fade-5">Carob is naturally sweet with no caffeine, no added sugar. Just pure, artisan goodness.</p>
@@ -515,7 +499,7 @@
 
 <!-- ═══════════ DESKTOP SPLIT HERO ═══════════ -->
 <div class="hero-split">
-  <div class="carob-watermark-wrap wm-full"><img src="assets/carob_wordmark.svg" alt="" aria-hidden="true"></div>
+  <div class="carob-watermark-wrap wm-full"><img src="assets/carob_wordmark.svg" alt="" aria-hidden="true" width="800" height="200"></div>
 
   <div class="split-left">
     <div class="lifestyle-bg"></div>

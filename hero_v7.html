@@ -39,26 +39,7 @@
     z-index: 0;
   }
 
-  /* -- Skip link -- */
-  .skip-link {
-    position: absolute; top: -100px; left: 16px; z-index: 9999;
-    background: var(--cream); color: var(--navy);
-    padding: 8px 16px; border-radius: 4px;
-    font-size: 0.85rem; text-decoration: none;
-    transition: top 0.2s;
-  }
-  .skip-link:focus { top: 16px; }
-
-  /* -- Focus -- */
-  :focus-visible { outline: 2px solid var(--cream); outline-offset: 3px; }
-
-  /* -- Reduced motion -- */
-  @media (prefers-reduced-motion: reduce) {
-    *, *::before, *::after {
-      animation-duration: 0.01ms !important;
-      transition-duration: 0.01ms !important;
-    }
-  }
+  /* skip-link, focus-visible, reduced-motion → brand_kit.css */
 
   /* -- Fade-in -- */
   @keyframes fadeIn {
@@ -74,11 +55,11 @@
 
   /* -- Back link -- */
   .back-link {
-    position: fixed; top: 16px; left: 16px; z-index: 101;
+    position: fixed; top: 12px; left: 12px; z-index: 101;
     color: var(--cream); text-decoration: none;
     font-family: var(--mm-sans); font-size: 0.8rem; font-weight: 400;
     opacity: 0.7; transition: opacity 0.2s;
-    display: none;
+    display: none; min-height: 44px; padding: 12px 16px;
   }
   .back-link:hover { opacity: 1; }
 
@@ -86,9 +67,10 @@
   #menu-toggle { display: none; }
 
   .hamburger {
-    position: fixed; top: 20px; left: 20px; z-index: 200;
+    position: fixed; top: 12px; left: 12px; z-index: 200;
     cursor: pointer; display: flex; flex-direction: column;
-    justify-content: center; gap: 5px; width: 28px; height: 28px;
+    justify-content: center; gap: 5px; width: 44px; height: 44px;
+    padding: 8px;
   }
   .hamburger span {
     display: block; width: 100%; height: 2px;
@@ -115,6 +97,8 @@
     font-weight: 500; text-transform: uppercase; letter-spacing: 0.12em;
     color: var(--navy); text-decoration: none;
     transition: opacity 0.2s;
+    min-height: 44px; padding: 12px 0;
+    display: inline-flex; align-items: center;
   }
   .mobile-menu a:hover { opacity: 0.6; }
 
@@ -255,8 +239,9 @@
     font-family: var(--mm-serif); font-size: 0.75rem;
     font-weight: 500; text-transform: uppercase; letter-spacing: 0.12em;
     color: var(--cream); text-decoration: none;
-    padding: 4px 0; white-space: nowrap;
+    padding: 10px 0; min-height: 44px; white-space: nowrap;
     transition: opacity 0.2s;
+    display: inline-flex; align-items: center;
   }
   .category-strip a:hover { opacity: 0.7; }
   .category-strip .dot {
@@ -391,7 +376,7 @@
 
 <!-- Mobile header -->
 <header class="header-mobile fade-1">
-  <img src="assets/maplemoon_logo.svg" alt="Maple Moon" class="logo-img">
+  <img src="assets/maplemoon_logo.svg" alt="Maple Moon" class="logo-img" width="40" height="40" loading="lazy" decoding="async">
 </header>
 
 <!-- Desktop header -->
@@ -403,18 +388,18 @@
     <a href="#">Recipes</a>
     <a href="#">Contact</a>
   </nav>
-  <img src="assets/maplemoon_logo.svg" alt="Maple Moon" class="logo-desktop">
+  <img src="assets/maplemoon_logo.svg" alt="Maple Moon" class="logo-desktop" width="80" height="40" loading="lazy" decoding="async">
 </header>
 
 <main id="main-content" class="hero">
-  <div class="carob-watermark-wrap wm-full"><img src="assets/carob_wordmark.svg" alt="" aria-hidden="true"></div>
+  <div class="carob-watermark-wrap wm-full"><img src="assets/carob_wordmark.svg" alt="" aria-hidden="true" width="800" height="200"></div>
 
   <div class="product-stack fade-3" aria-live="polite">
-    <img src="assets/bar_hero_front.png"  alt="Maple Moon Original Carob Bar" class="active" data-flavour="original">
-    <img src="assets/bar_pcar_front.png"  alt="Maple Moon Spiced Carob Bar"   data-flavour="spiced">
-    <img src="assets/bar_gcoc.png"        alt="Maple Moon Coconut Carob Bar"  data-flavour="coconut">
-    <img src="assets/bar_asal.png"        alt="Maple Moon Coffee Carob Bar"   data-flavour="coffee">
-    <img src="assets/bar_pmin.png"        alt="Maple Moon Mint Carob Bar"     data-flavour="mint">
+    <img src="assets/bar_hero_front.png"  alt="Maple Moon Original Carob Bar" class="active" data-flavour="original" width="400" height="600" fetchpriority="high" decoding="sync">
+    <img src="assets/bar_pcar_front.png"  alt="Maple Moon Spiced Carob Bar"   data-flavour="spiced" width="400" height="600" loading="lazy" decoding="async">
+    <img src="assets/bar_gcoc.png"        alt="Maple Moon Coconut Carob Bar"  data-flavour="coconut" width="400" height="600" loading="lazy" decoding="async">
+    <img src="assets/bar_asal.png"        alt="Maple Moon Coffee Carob Bar"   data-flavour="coffee" width="400" height="600" loading="lazy" decoding="async">
+    <img src="assets/bar_pmin.png"        alt="Maple Moon Mint Carob Bar"     data-flavour="mint" width="400" height="600" loading="lazy" decoding="async">
   </div>
 
   <p class="tagline fade-4" id="tagline">Rich &amp; smooth</p>

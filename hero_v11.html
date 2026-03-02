@@ -50,7 +50,8 @@
   .hamburger {
     position: fixed; top: 12px; left: 12px; z-index: 200;
     cursor: pointer; display: flex; flex-direction: column;
-    justify-content: center; gap: 5px; width: 28px; height: 28px;
+    justify-content: center; gap: 5px; width: 44px; height: 44px;
+    padding: 8px;
   }
   .hamburger span {
     display: block; width: 100%; height: 2px;
@@ -130,7 +131,7 @@
 
   .grid-hero {
     position: relative;
-    width: 100vw;
+    width: 100%;
     height: 100vh;
     height: 100dvh;
     padding: var(--gap);
@@ -481,7 +482,7 @@
 <main class="grid-hero" id="main">
 
   <!-- CAROB watermark over entire grid -->
-  <div class="carob-watermark-wrap wm-subtle"><img src="assets/carob_wordmark.svg" alt="" aria-hidden="true"></div>
+  <div class="carob-watermark-wrap wm-subtle"><img src="assets/carob_wordmark.svg" alt="" aria-hidden="true" width="800" height="200"></div>
 
   <!-- Tile 1: Bar Hero (spans 2 cols on mobile) -->
   <a href="#" class="tile tile-bar" aria-label="Shop Bars">
@@ -516,20 +517,20 @@
     <span class="origin-title">Byron Bay</span>
     <span class="origin-sub">Est. 2022</span>
     <div class="origin-icons">
-      <img src="assets/icon_organic.svg" alt="Organic" width="18" height="18">
-      <img src="assets/icon_vegan.svg" alt="Vegan" width="18" height="18">
-      <img src="assets/icon_made_in_aus.svg" alt="Made in Aus" width="18" height="18">
+      <img src="assets/icon_organic.svg" alt="Organic" width="18" height="18" loading="lazy" decoding="async">
+      <img src="assets/icon_vegan.svg" alt="Vegan" width="18" height="18" loading="lazy" decoding="async">
+      <img src="assets/icon_made_in_aus.svg" alt="Made in Aus" width="18" height="18" loading="lazy" decoding="async">
     </div>
   </a>
 
   <!-- Desktop-only: Trust tile -->
   <div class="tile tile-trust-desktop" aria-label="Certifications">
     <div class="trust-grid">
-      <img src="assets/icon_organic.svg" alt="Organic" width="28" height="28">
-      <img src="assets/icon_vegan.svg" alt="Vegan" width="28" height="28">
-      <img src="assets/icon_caffeine_free.svg" alt="Caffeine Free" width="28" height="28">
-      <img src="assets/icon_gluten_free.svg" alt="Gluten Free" width="28" height="28">
-      <img src="assets/icon_made_in_aus.svg" alt="Made in Aus" width="28" height="28">
+      <img src="assets/icon_organic.svg" alt="Organic" width="28" height="28" loading="lazy" decoding="async">
+      <img src="assets/icon_vegan.svg" alt="Vegan" width="28" height="28" loading="lazy" decoding="async">
+      <img src="assets/icon_caffeine_free.svg" alt="Caffeine Free" width="28" height="28" loading="lazy" decoding="async">
+      <img src="assets/icon_gluten_free.svg" alt="Gluten Free" width="28" height="28" loading="lazy" decoding="async">
+      <img src="assets/icon_made_in_aus.svg" alt="Made in Aus" width="28" height="28" loading="lazy" decoding="async">
     </div>
     <span class="trust-label">Certified</span>
     <span class="hover-text">Certifications</span>
