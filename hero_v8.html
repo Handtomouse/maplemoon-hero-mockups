@@ -31,6 +31,7 @@
     min-height: 100vh;
     min-height: 100dvh;
     transition: background 1s ease;
+    overflow-x: hidden;
   }
 
   /* -- Stars overlay (night mode, desktop only) -- */
@@ -328,8 +329,11 @@
 
     /* Watermark */
     .carob-watermark {
-      width: 100%; max-width: none;
-      opacity: 0.10;
+      width: 90%; max-width: 1200px;
+      opacity: 0.08;
+      bottom: 5%; left: 50%;
+      transform: translateX(-50%);
+      top: auto;
     }
 
     /* Product */

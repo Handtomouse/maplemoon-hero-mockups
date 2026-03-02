@@ -31,6 +31,7 @@
     min-height: 100vh;
     min-height: 100dvh;
     text-rendering: optimizeLegibility;
+    overflow-x: hidden;
   }
   body::before {
     content: '';
@@ -295,8 +296,9 @@
     /* CAROB wordmark desktop */
     .carob-wordmark-desktop {
       display: block;
-      width: 100vw; height: auto;
-      position: absolute; bottom: -3vw; left: 0;
+      width: 95%; height: auto;
+      position: absolute; bottom: 0; left: 50%;
+      transform: translateX(-50%);
       z-index: 1;
     }
   }
@@ -424,7 +426,7 @@
   function onScroll() {
     requestAnimationFrame(function() {
       var scrollY = window.scrollY || window.pageYOffset;
-      watermark.style.transform = 'translateY(' + (scrollY * 0.3) + 'px)';
+      watermark.style.transform = 'translateX(-50%) translateY(' + (scrollY * 0.3) + 'px)';
     });
   }
   window.addEventListener('scroll', onScroll, { passive: true });

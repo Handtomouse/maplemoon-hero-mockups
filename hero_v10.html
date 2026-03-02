@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Maple Moon — Letterbox Cinema (V10)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  @font-face { font-family: 'P22 Mackinac Pro'; font-weight: 400; src: local('P22 Mackinac Pro Book'), local('P22MackinacPro-Book'); }
+  @font-face { font-family: 'P22 Mackinac Pro'; font-weight: 500; src: local('P22 Mackinac Pro Medium'), local('P22MackinacPro-Medium'); }
+  @font-face { font-family: 'P22 Mackinac Pro'; font-weight: 700; src: local('P22 Mackinac Pro Bold'), local('P22MackinacPro-Bold'); }
+
+  *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+  :root {
+    --cream: #E7E4CA;
+    --navy: #1E4366;
+    --grad-top: #7B9DBF;
+    --grad-bottom: #A8BDD4;
+    --bar-height: 60px;
+    --black: #0a0a0a;
+  }
+
+  html, body { height: 100%; overflow: hidden; }
+  body {
+    font-family: 'Inter', sans-serif;
+    color: var(--cream);
+    background: var(--black);
+    text-rendering: optimizeLegibility;
+    overflow-x: hidden;
+  }
+
+  /* ── Skip link ── */
+  .skip-link {
+    position: absolute; top: -100%; left: 16px;
+    padding: 8px 16px; background: var(--cream); color: var(--navy);
+    border-radius: 4px; z-index: 999; font-size: 0.85rem;
+    text-decoration: none;
+  }
+  .skip-link:focus { top: 8px; }
+  :focus-visible { outline: 2px solid var(--cream); outline-offset: 3px; }
+
+  /* ── Back link ── */
+  .back-link {
+    position: fixed; top: 16px; left: 16px; z-index: 101;
+    color: var(--cream); text-decoration: none;
+    font-family: 'Inter', sans-serif; font-size: 0.8rem; font-weight: 400;
+    opacity: 0.7; transition: opacity 0.2s;
+    display: none;
+  }
+  .back-link:hover { opacity: 1; }
+
+  /* ── Reduced motion ── */
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+
+  /* ── Fade-in ── */
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(8px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+  @keyframes fadeInSlow {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+  }
+  .fade-1 { animation: fadeIn 0.8s ease both 0.3s; }
+  .fade-2 { animation: fadeIn 0.8s ease both 0.6s; }
+  .fade-3 { animation: fadeIn 0.8s ease both 0.9s; }
+  .fade-4 { animation: fadeIn 0.8s ease both 1.2s; }
+  .fade-bars { animation: fadeInSlow 1.2s ease both 0s; }
+
+  /* ═══════════════════════════════════
+     V10 — LETTERBOX CINEMA
+  ═══════════════════════════════════ */
+
+  /* ── Letterbox bars ── */
+  .letterbox-top {
+    position: fixed; top: 0; left: 0; right: 0;
+    height: var(--bar-height);
+    background: var(--black);
+    z-index: 50;
+    display: flex; align-items: center; justify-content: center;
+  }
+  .letterbox-top .bar-text {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.65rem; font-weight: 400;
+    color: var(--cream); opacity: 0.6;
+    text-transform: uppercase;
+    letter-spacing: 0.3em;
+  }
+
+  .letterbox-bottom {
+    position: fixed; bottom: 0; left: 0; right: 0;
+    height: var(--bar-height);
+    background: var(--black);
+    z-index: 50;
+    display: flex; align-items: center; justify-content: center;
+    gap: 8px;
+  }
+  .letterbox-bottom img {
+    width: 20px; height: 20px;
+    filter: brightness(0) saturate(100%) invert(91%) sepia(8%) saturate(580%) hue-rotate(18deg) brightness(100%) contrast(88%);
+    opacity: 0.5;
+  }
+
+  /* ── Content area ── */
+  .cinema-viewport {
+    position: fixed;
+    top: var(--bar-height);
+    left: 0; right: 0;
+    height: calc(100dvh - var(--bar-height) * 2);
+    overflow: hidden;
+  }
+
+  /* ── Ken Burns background ── */
+  @keyframes kenBurns {
+    0% { transform: scale(1) translateX(0); }
+    100% { transform: scale(1.15) translateX(0); }
+  }
+  .cinema-bg {
+    position: absolute; inset: 0;
+    z-index: 0;
+  }
+  .cinema-bg img {
+    width: 100%; height: 100%;
+    object-fit: cover;
+    animation: kenBurns 25s ease-in-out infinite alternate;
+    will-change: transform;
+  }
+  .cinema-overlay {
+    position: absolute; inset: 0;
+    background: rgba(0,0,0,0.35);
+    z-index: 1;
+  }
+
+  /* ── Title card content ── */
+  .cinema-content {
+    position: relative; z-index: 2;
+    width: 100%; height: 100%;
+    display: flex; flex-direction: column;
+    align-items: center; justify-content: center;
+    gap: 16px;
+    padding: 0 32px;
+    text-align: center;
+  }
+
+  .cinema-wordmark {
+    width: 60%; max-width: 280px;
+    height: auto;
+    opacity: 0.85;
+    filter: brightness(0) saturate(100%) invert(91%) sepia(8%) saturate(580%) hue-rotate(18deg) brightness(100%) contrast(88%);
+  }
+
+  .cinema-tagline {
+    font-family: 'Inter', sans-serif;
+    font-weight: 300; font-size: 0.85rem;
+    color: var(--cream); opacity: 0.8;
+    letter-spacing: 0.15em;
+  }
+
+  .cinema-origin {
+    font-family: 'P22 Mackinac Pro', sans-serif;
+    font-weight: 400; font-size: 0.75rem;
+    color: var(--cream); opacity: 0.5;
+    letter-spacing: 0.1em;
+  }
+
+  .cinema-enter {
+    display: inline-flex; align-items: center; justify-content: center;
+    border: 1px solid var(--cream); color: var(--cream);
+    background: transparent; border-radius: 50px;
+    padding: 10px 32px; min-height: 44px;
+    font-family: 'Inter', sans-serif; font-size: 0.8rem;
+    font-weight: 400; letter-spacing: 0.1em; text-transform: uppercase;
+    text-decoration: none; cursor: pointer;
+    transition: background 0.4s, color 0.4s, transform 0.15s;
+    margin-top: 8px;
+  }
+  .cinema-enter:hover {
+    background: var(--cream); color: var(--navy);
+  }
+  .cinema-enter:active {
+    transform: scale(0.97);
+  }
+
+  /* ═══════════════════════════════════
+     DESKTOP
+  ═══════════════════════════════════ */
+  @media (min-width: 768px) {
+    :root {
+      --bar-height: 80px;
+    }
+
+    .back-link { display: block; z-index: 60; }
+
+    /* Letterbox bottom: add text */
+    .letterbox-bottom {
+      gap: 16px;
+    }
+    .letterbox-bottom .shipping-text {
+      display: inline;
+    }
+
+    /* Ken Burns: slower, with pan */
+    @keyframes kenBurnsDesktop {
+      0% { transform: scale(1) translateX(0); }
+      50% { transform: scale(1.1) translateX(-2%); }
+      100% { transform: scale(1.15) translateX(1%); }
+    }
+    .cinema-bg img {
+      animation: kenBurnsDesktop 30s ease-in-out infinite alternate;
+    }
+
+    /* Wordmark larger */
+    .cinema-wordmark {
+      width: 50%; max-width: 600px;
+    }
+
+    .cinema-tagline {
+      font-size: 1rem;
+      letter-spacing: 0.18em;
+    }
+
+    .cinema-origin {
+      font-size: 0.85rem;
+    }
+
+    .cinema-enter {
+      padding: 14px 48px;
+      font-size: 0.9rem;
+      margin-top: 16px;
+    }
+
+    .letterbox-bottom img {
+      width: 24px; height: 24px;
+    }
+  }
+
+  /* ── Shipping text hidden on mobile ── */
+  .letterbox-bottom .shipping-text {
+    display: none;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.65rem; font-weight: 300;
+    color: var(--cream); opacity: 0.4;
+    letter-spacing: 0.08em;
+    margin-left: 16px;
+  }
+  @media (min-width: 768px) {
+    .letterbox-bottom .shipping-text { display: inline; }
+  }
+</style>
+</head>
+<body>
+
+<a href="#main" class="skip-link">Skip to content</a>
+<a href="#" class="back-link">&larr; Back to Gallery</a>
+
+<!-- ═══ LETTERBOX TOP BAR ═══ -->
+<div class="letterbox-top fade-bars">
+  <span class="bar-text">Maple Moon</span>
+</div>
+
+<!-- ═══ LETTERBOX BOTTOM BAR ═══ -->
+<div class="letterbox-bottom fade-bars">
+  <img src="assets/icon_organic.svg" alt="Organic" width="20" height="20">
+  <img src="assets/icon_vegan.svg" alt="Vegan" width="20" height="20">
+  <img src="assets/icon_caffeine_free.svg" alt="Caffeine Free" width="20" height="20">
+  <img src="assets/icon_gluten_free.svg" alt="Gluten Free" width="20" height="20">
+  <img src="assets/icon_made_in_aus.svg" alt="Made in Australia" width="20" height="20">
+  <span class="shipping-text">Free shipping over $99</span>
+</div>
+
+<!-- ═══ CINEMA VIEWPORT ═══ -->
+<main class="cinema-viewport" id="main">
+  <div class="cinema-bg">
+    <img src="assets/bar_lifestyle.png" alt="" aria-hidden="true" width="1200" height="800" fetchpriority="high" decoding="async">
+  </div>
+  <div class="cinema-overlay"></div>
+
+  <div class="cinema-content">
+    <img src="assets/carob_wordmark.svg" alt="CAROB" class="cinema-wordmark fade-1" id="wordmark" width="800" height="200">
+    <p class="cinema-tagline fade-2">Handmade carob chocolate</p>
+    <p class="cinema-origin fade-3">BYRON BAY</p>
+    <a href="#" class="cinema-enter fade-4">Enter</a>
+  </div>
+</main>
+
+<!-- Desktop parallax on wordmark -->
+<script>
+(function() {
+  if (window.innerWidth < 768) return;
+  var wordmark = document.getElementById('wordmark');
+  if (!wordmark) return;
+
+  var maxShift = 10;
+
+  document.addEventListener('mousemove', function(e) {
+    requestAnimationFrame(function() {
+      var cx = window.innerWidth / 2;
+      var cy = window.innerHeight / 2;
+      var dx = (e.clientX - cx) / cx;
+      var dy = (e.clientY - cy) / cy;
+      wordmark.style.transform = 'translateX(' + (dx * maxShift) + 'px) translateY(' + (dy * maxShift) + 'px)';
+    });
+  }, { passive: true });
+})();
+</script>
+
+</body>
+</html>

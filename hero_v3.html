@@ -31,6 +31,7 @@
     min-height: 100vh;
     min-height: 100dvh;
     text-rendering: optimizeLegibility;
+    overflow-x: hidden;
   }
   body::before {
     content: '';
@@ -363,13 +364,15 @@
     /* CAROB watermark desktop */
     .hero-split .carob-watermark-desktop {
       position: absolute;
-      top: 50%; left: 50%;
-      transform: translate(-50%, -50%);
-      width: 100%;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 90%; max-width: 1200px;
       height: auto;
       opacity: 0.08;
       z-index: 1;
       pointer-events: none;
+      bottom: 5%;
+      top: auto;
     }
 
     /* Left: product */
