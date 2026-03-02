@@ -527,7 +527,7 @@
   <img src="assets/maplemoon_logo.svg" alt="Maple Moon" class="logo-desktop" width="80" height="40" loading="eager" decoding="async">
 </header>
 
-<main class="hero" id="main" tabindex="0">
+<main class="hero" id="main">
   <div class="carob-watermark-wrap wm-full" aria-hidden="true"><img src="assets/carob_wordmark.svg" alt="" aria-hidden="true" width="800" height="200"></div>
 
   <!-- MOBILE: product stage with tap cycling -->
@@ -721,6 +721,7 @@
   // Also allow tapping info panel area to cycle
   infoPanel.addEventListener('click', function(e) {
     if (e.target.closest('.cta-btn')) return;
+    e.stopPropagation();
     state = (state + 1) % 4;
     updateState();
   });
