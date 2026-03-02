@@ -196,6 +196,7 @@
     margin-left: calc(var(--node-size) / -2);
     cursor: pointer;
     z-index: 2;
+    background: none; border: none; padding: 0; font: inherit;
   }
 
   .product-node:nth-child(1) { transform: rotate(0deg)   translateX(var(--orbit-radius)) rotate(0deg); }
@@ -448,24 +449,24 @@
       <img class="wordmark" src="assets/carob_wordmark.svg" alt="" aria-hidden="true" width="120" height="30">
     </div>
 
-    <div class="orbit-ring" role="list" aria-label="Products">
-      <button class="product-node" role="listitem" data-name="Original Bar" data-desc="Our signature — roasted carob and organic cacao butter. Smooth, sweet, caffeine-free." data-href="/shop/bars/original" aria-label="Original Bar">
+    <div class="orbit-ring" role="group" aria-label="Products">
+      <button class="product-node" data-name="Original Bar" data-desc="Our signature — roasted carob and organic cacao butter. Smooth, sweet, caffeine-free." data-href="/shop/bars/original" aria-label="Original Bar">
         <div class="product-node-inner"><img src="assets/products/bar_original.jpg" alt="" width="104" height="104" loading="eager" decoding="async"></div>
       </button>
-      <button class="product-node" role="listitem" data-name="Almond Eclipse" data-desc="Whole roasted almonds set in a dark carob disc. Crunch meets caramel." data-href="/shop/eclipses/almond" aria-label="Almond Eclipse">
+      <button class="product-node" data-name="Almond Eclipse" data-desc="Whole roasted almonds set in a dark carob disc. Crunch meets caramel." data-href="/shop/eclipses/almond" aria-label="Almond Eclipse">
         <div class="product-node-inner"><img src="assets/products/eclipse_almond.jpg" alt="" width="104" height="104" loading="eager" decoding="async"></div>
       </button>
-      <button class="product-node" role="listitem" data-name="Coconut Moon" data-desc="A half-sphere of carob filled with toasted coconut cream. Tropical warmth." data-href="/shop/moons/coconut" aria-label="Coconut Moon">
-        <div class="product-node-inner"><img src="assets/products/moon_coconut.jpg" alt="" width="104" height="104" loading="lazy" decoding="async"></div>
+      <button class="product-node" data-name="Coconut Moon" data-desc="A half-sphere of carob filled with toasted coconut cream. Tropical warmth." data-href="/shop/moons/coconut" aria-label="Coconut Moon">
+        <div class="product-node-inner"><img src="assets/products/moon_coconut.jpg" alt="" width="104" height="104" loading="eager" decoding="async"></div>
       </button>
-      <button class="product-node" role="listitem" data-name="Spiced Elixir" data-desc="Hot carob with cinnamon, cardamom, and vanilla. The evening ritual." data-href="/shop/elixirs/spiced" aria-label="Spiced Elixir">
-        <div class="product-node-inner"><img src="assets/products/elixir_spiced.jpg" alt="" width="104" height="104" loading="lazy" decoding="async"></div>
+      <button class="product-node" data-name="Spiced Elixir" data-desc="Hot carob with cinnamon, cardamom, and vanilla. The evening ritual." data-href="/shop/elixirs/spiced" aria-label="Spiced Elixir">
+        <div class="product-node-inner"><img src="assets/products/elixir_spiced.jpg" alt="" width="104" height="104" loading="eager" decoding="async"></div>
       </button>
-      <button class="product-node" role="listitem" data-name="Roasted Powder" data-desc="Pure stone-ground carob. For baking, smoothies, or a simple warm drink." data-href="/shop/powder/roasted" aria-label="Roasted Powder">
-        <div class="product-node-inner"><img src="assets/products/powder_roasted.jpg" alt="" width="104" height="104" loading="lazy" decoding="async"></div>
+      <button class="product-node" data-name="Roasted Powder" data-desc="Pure stone-ground carob. For baking, smoothies, or a simple warm drink." data-href="/shop/powder/roasted" aria-label="Roasted Powder">
+        <div class="product-node-inner"><img src="assets/products/powder_roasted.jpg" alt="" width="104" height="104" loading="eager" decoding="async"></div>
       </button>
-      <button class="product-node" role="listitem" data-name="Gift Bundle" data-desc="Six bars, beautifully boxed. The whole range in one place." data-href="/shop/gifts/bundle" aria-label="Gift Bundle">
-        <div class="product-node-inner"><img src="assets/products/bar_bundle.jpg" alt="" width="104" height="104" loading="lazy" decoding="async"></div>
+      <button class="product-node" data-name="Gift Bundle" data-desc="Six bars, beautifully boxed. The whole range in one place." data-href="/shop/gifts/bundle" aria-label="Gift Bundle">
+        <div class="product-node-inner"><img src="assets/products/bar_bundle.jpg" alt="" width="104" height="104" loading="eager" decoding="async"></div>
       </button>
     </div>
   </div>
@@ -487,7 +488,7 @@
 
 <!-- Info panel -->
 <div class="info-panel" role="region" aria-label="Product details" aria-hidden="true">
-  <button class="close-btn" aria-label="Close product details">&times;</button>
+  <button type="button" class="close-btn" aria-label="Close product details">&times;</button>
   <h2 class="product-name"></h2>
   <p class="product-desc"></p>
   <a href="/shop" class="cta-btn">View Product</a>
@@ -506,8 +507,10 @@
   var panelDesc = panel.querySelector('.product-desc');
   var panelCta = panel.querySelector('.cta-btn');
   var closeBtn = panel.querySelector('.close-btn');
+  var lastFocusedNode = null;
 
   function openProduct(node) {
+    lastFocusedNode = node;
     panelName.textContent = node.getAttribute('data-name');
     panelDesc.textContent = node.getAttribute('data-desc');
     panelCta.href = node.getAttribute('data-href');
@@ -521,6 +524,7 @@
     ring.classList.remove('dimmed');
     panel.classList.remove('visible');
     panel.setAttribute('aria-hidden', 'true');
+    if (lastFocusedNode) lastFocusedNode.focus();
   }
 
   nodes.forEach(function(node) {
