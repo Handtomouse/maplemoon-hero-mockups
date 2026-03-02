@@ -493,7 +493,7 @@
     var isOpen = toggle.checked;
     menu.setAttribute('aria-hidden', isOpen ? 'false' : 'true');
     hamburger.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
-  });
+    if (!isOpen) hamburger.focus();  });
 
   // Desktop split divider drag
   var divider = document.querySelector('.split-divider');

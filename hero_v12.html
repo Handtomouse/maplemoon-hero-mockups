@@ -621,7 +621,7 @@
     var isOpen = toggle.checked;
     menu.setAttribute('aria-hidden', isOpen ? 'false' : 'true');
     hamburger.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
-    if (!toggle.checked) return;
+    if (!isOpen) { hamburger.focus(); return; }
     var focusable = menu.querySelectorAll('a, button, [tabindex]');
     if (!focusable.length) return;
     var first = focusable[0], last = focusable[focusable.length - 1];
