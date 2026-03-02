@@ -435,7 +435,7 @@
   </div>
 
   <!-- Divider (desktop only) -->
-  <div class="split-divider fade-4" aria-label="Drag to compare before and after" role="slider" aria-valuemin="0" aria-valuemax="100" tabindex="0">
+  <div class="split-divider fade-4" aria-label="Drag to compare before and after" role="slider" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50" tabindex="0">
     <div class="split-divider-handle"></div>
   </div>
 
@@ -494,6 +494,7 @@
     var pct = ((clientX - rect.left) / rect.width) * 100;
     pct = Math.max(20, Math.min(80, pct));
     document.documentElement.style.setProperty('--split', pct);
+    divider.setAttribute('aria-valuenow', Math.round(pct));
   }
 
   divider.addEventListener('mousedown', function(e) {
@@ -525,10 +526,33 @@
   document.addEventListener('touchmove', function(e) {
     if (!isDragging) return;
     updateSplit(e.touches[0].clientX);
-  }, { passive: false });
+  }, { passive: true });
 
   document.addEventListener('touchend', function() {
     isDragging = false;
+  });
+
+  // Keyboard support for slider
+  divider.addEventListener('keydown', function(e) {
+    var current = parseFloat(divider.getAttribute('aria-valuenow')) || 50;
+    var step = 5;
+    if (e.key === 'ArrowRight' || e.key === 'ArrowUp') {
+      e.preventDefault();
+      current = Math.min(80, current + step);
+    } else if (e.key === 'ArrowLeft' || e.key === 'ArrowDown') {
+      e.preventDefault();
+      current = Math.max(20, current - step);
+    } else if (e.key === 'Home') {
+      e.preventDefault();
+      current = 20;
+    } else if (e.key === 'End') {
+      e.preventDefault();
+      current = 80;
+    } else {
+      return;
+    }
+    document.documentElement.style.setProperty('--split', current);
+    divider.setAttribute('aria-valuenow', Math.round(current));
   });
 })();
 </script>
