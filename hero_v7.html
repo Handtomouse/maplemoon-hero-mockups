@@ -9,6 +9,14 @@
 <meta property="og:title" content="MapleMoon — Flavour Picker">
 <meta property="og:description" content="Five flavours of handmade carob bars. Original, spiced, coconut, coffee, or peppermint. Organic, vegan, caffeine-free.">
 <meta property="og:type" content="website">
+<link rel="preload" as="image" href="assets/products/bar_original.jpg">
+<link rel="preload" as="image" href="assets/carob_wordmark.svg">
+<link rel="preload" as="image" href="assets/bar_pcar_front.png">
+<link rel="preload" as="image" href="assets/products/bar_coconut_goji.jpg">
+<link rel="preload" as="image" href="assets/bar_asal.png">
+<link rel="preload" as="image" href="assets/products/bar_peppermint.jpg">
+<link rel="icon" href="assets/maplemoon_logo.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="assets/maplemoon_logo.svg">
 <link rel="stylesheet" href="brand_kit.css">
 <style>
   *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
@@ -113,7 +121,7 @@
   .mobile-menu .menu-nav {
     display: flex; flex-direction: column; align-items: center; gap: 20px;
     margin-top: 24px; padding-top: 24px;
-    border-top: 1px solid rgba(30,67,102,0.15);
+    border-top: 1px solid var(--mm-navy-15);
   }
   .mobile-menu .menu-nav a {
     font-family: var(--mm-sans); font-size: 0.95rem;
@@ -274,7 +282,7 @@
       display: flex; align-items: center;
       position: fixed; top: 0; left: 0; right: 0; z-index: 100;
       padding: 28px 40px;
-      background: rgba(30, 67, 102, 0.15);
+      background: var(--mm-navy-15);
       backdrop-filter: blur(12px);
       -webkit-backdrop-filter: blur(12px);
     }
@@ -303,7 +311,7 @@
     }
     .product-stack img {
       width: auto; height: 100%;
-      filter: drop-shadow(0 24px 48px rgba(0,0,0,0.18))
+      filter: drop-shadow(0 24px 48px var(--mm-black-20))
               drop-shadow(0 6px 12px var(--mm-black-08));
     }
 

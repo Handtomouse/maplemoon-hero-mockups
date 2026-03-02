@@ -4,11 +4,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>MapleMoon — Hero Concepts | HandToMouse Studio</title>
-  <meta name="description" content="12 responsive hero concepts for maplemoon.com.au — organic carob chocolate from Byron Bay.">
+  <meta name="description" content="12 responsive hero concepts for maplemoon.com.au — organic artisan carob from Byron Bay.">
   <meta name="theme-color" content="#7B9DBF">
   <meta property="og:title" content="MapleMoon — Hero Concepts">
   <meta property="og:description" content="12 responsive hero concepts for maplemoon.com.au by HandToMouse Studio.">
   <meta property="og:type" content="website">
+  <link rel="icon" href="assets/maplemoon_logo.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="assets/maplemoon_logo.svg">
   <link rel="stylesheet" href="brand_kit.css">
   <style>
     /* ============================================================
@@ -76,7 +78,7 @@
     .gallery-header__subtitle {
       font-weight: 300;
       font-size: 0.85rem;
-      color: rgba(30, 67, 102, 0.5);
+      color: var(--mm-navy-50);
       margin-top: 6px;
       letter-spacing: 0.04em;
     }
@@ -141,7 +143,7 @@
     .hero-card__desc {
       font-size: 0.875rem;
       font-weight: 300;
-      color: rgba(30, 67, 102, 0.5);
+      color: var(--mm-navy-50);
       line-height: 1.5;
       max-width: 560px;
     }
@@ -202,6 +204,13 @@
       border: 1px solid var(--mm-black-08);
       background: #F0F0EC;
       position: relative;
+    }
+
+    .device-frame {
+      transition: border-color 0.3s ease;
+    }
+    .hero-card:hover .device-frame {
+      border-color: var(--mm-blue-top);
     }
 
     .device-frame iframe {
@@ -513,7 +522,7 @@
           const card = entry.target;
           const frames = card.querySelectorAll('.device-frame[data-src]');
 
-          frames.forEach(frame => {
+          frames.forEach((frame, index) => {
             if (frame.querySelector('iframe')) return; // already loaded
 
             const src = frame.dataset.src;
@@ -527,7 +536,9 @@
               frame.classList.add('loaded');
             });
 
-            frame.appendChild(iframe);
+            setTimeout(() => {
+              frame.appendChild(iframe);
+            }, index * 150);
           });
 
           observer.unobserve(card);

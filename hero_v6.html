@@ -9,6 +9,11 @@
 <meta property="og:title" content="MapleMoon — Before & After">
 <meta property="og:description" content="From carob pod to finished bar — the MapleMoon craft story. Handmade in Byron Bay.">
 <meta property="og:type" content="website">
+<link rel="preload" as="image" href="assets/products/bar_original.jpg">
+<link rel="preload" as="image" href="assets/carob_wordmark.svg">
+<link rel="preload" as="image" href="assets/bar_lifestyle.png">
+<link rel="icon" href="assets/maplemoon_logo.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="assets/maplemoon_logo.svg">
 <link rel="stylesheet" href="brand_kit.css">
 <style>
   *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
@@ -103,7 +108,7 @@
   .mobile-menu .menu-nav {
     display: flex; flex-direction: column; align-items: center; gap: 20px;
     margin-top: 24px; padding-top: 24px;
-    border-top: 1px solid rgba(30,67,102,0.15);
+    border-top: 1px solid var(--mm-navy-15);
   }
   .mobile-menu .menu-nav a {
     font-family: var(--mm-sans); font-size: 0.95rem;
@@ -152,7 +157,7 @@
     font-size: 1.6rem; font-weight: 500;
     letter-spacing: 0.03em; line-height: 1.15;
     color: var(--cream); z-index: 2;
-    text-shadow: 0 2px 12px rgba(0,0,0,0.3);
+    text-shadow: 0 2px 12px var(--mm-black-35);
   }
 
   .split-right {
@@ -251,7 +256,7 @@
       display: flex; align-items: center;
       position: fixed; top: 0; left: 0; right: 0; z-index: 100;
       padding: 28px 40px;
-      background: rgba(30, 67, 102, 0.15);
+      background: var(--mm-navy-15);
       backdrop-filter: blur(12px);
       -webkit-backdrop-filter: blur(12px);
     }
@@ -430,7 +435,7 @@
   </div>
 
   <!-- Divider (desktop only) -->
-  <div class="split-divider fade-4" aria-hidden="true">
+  <div class="split-divider fade-4" aria-label="Drag to compare before and after" role="slider" aria-valuemin="0" aria-valuemax="100" tabindex="0">
     <div class="split-divider-handle"></div>
   </div>
 

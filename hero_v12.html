@@ -10,6 +10,10 @@
 <meta property="og:description" content="Tap to discover MapleMoon — organic artisan carob, handmade in Byron Bay.">
 <meta property="og:type" content="website">
 <link rel="stylesheet" href="brand_kit.css">
+<link rel="preload" as="image" href="assets/products/bar_original.jpg">
+<link rel="preload" as="image" href="assets/carob_wordmark.svg">
+<link rel="icon" href="assets/maplemoon_logo.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="assets/maplemoon_logo.svg">
 <style>
   *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 
@@ -100,7 +104,7 @@
   .mobile-menu .menu-nav {
     display: flex; flex-direction: column; align-items: center; gap: 20px;
     margin-top: 24px; padding-top: 24px;
-    border-top: 1px solid rgba(30,67,102,0.15);
+    border-top: 1px solid var(--mm-navy-15);
   }
   .mobile-menu .menu-nav a {
     font-family: var(--mm-sans); font-size: 0.95rem;
@@ -439,7 +443,7 @@
     .desktop-elixir-card {
       width: 220px; height: 320px;
       border-radius: 16px;
-      background: linear-gradient(135deg, rgba(231,228,202,0.1) 0%, rgba(231,228,202,0.03) 100%);
+      background: linear-gradient(135deg, var(--mm-cream-10) 0%, rgba(231,228,202,0.03) 100%);
       border: 1px solid rgba(231,228,202,0.12);
       display: flex; flex-direction: column;
       align-items: center; justify-content: center;
@@ -483,18 +487,18 @@
 <div class="mobile-menu" role="dialog" aria-label="Navigation menu">
   <a href="/shop/bars">Bars</a>
   <a href="/shop/moons">Moons</a>
-  <a href="#">Bananas</a>
-  <a href="#">Bites</a>
-  <a href="#">Elixirs</a>
-  <a href="#">Packs</a>
-  <a href="#">Gifts</a>
+  <a href="/shop/bananas">Bananas</a>
+  <a href="/shop/bites">Bites</a>
+  <a href="/shop/elixirs">Elixirs</a>
+  <a href="/shop/packs">Packs</a>
+  <a href="/shop/gifts">Gifts</a>
   <div class="menu-divider"></div>
   <div class="menu-nav">
     <a href="/our-story">Our Story</a>
     <a href="/shop">Shop</a>
-    <a href="#">Stockists</a>
-    <a href="#">Recipes</a>
-    <a href="#">Contact</a>
+    <a href="/stockists">Stockists</a>
+    <a href="/recipes">Recipes</a>
+    <a href="/contact">Contact</a>
   </div>
 </div>
 
@@ -508,14 +512,14 @@
   <nav>
     <a href="/our-story">Our Story</a>
     <a href="/shop">Shop</a>
-    <a href="#">Stockists</a>
-    <a href="#">Recipes</a>
-    <a href="#">Contact</a>
+    <a href="/stockists">Stockists</a>
+    <a href="/recipes">Recipes</a>
+    <a href="/contact">Contact</a>
   </nav>
   <img src="assets/maplemoon_logo.svg" alt="Maple Moon" class="logo-desktop" width="80" height="40" loading="lazy" decoding="async">
 </header>
 
-<main class="hero" id="main">
+<main class="hero" id="main" tabindex="0">
   <div class="carob-watermark-wrap wm-full"><img src="assets/carob_wordmark.svg" alt="" aria-hidden="true" width="800" height="200"></div>
 
   <!-- MOBILE: product stage with tap cycling -->
@@ -685,11 +689,22 @@
     }
   }
 
+  function advanceState() {
+    state = (state + 1) % 4;
+    updateState();
+  }
+
   hero.addEventListener('click', function(e) {
     // Don't cycle if tapping CTA or menu
     if (e.target.closest('.cta-btn') || e.target.closest('.hamburger') || e.target.closest('.mobile-menu') || e.target.closest('.back-link') || e.target.closest('a')) return;
-    state = (state + 1) % 4;
-    updateState();
+    advanceState();
+  });
+
+  hero.addEventListener('keydown', function(e) {
+    if (e.key === 'Enter' || e.key === ' ') {
+      e.preventDefault();
+      advanceState();
+    }
   });
 
   // Also allow tapping info panel area to cycle

@@ -144,6 +144,17 @@ body { overflow-x: hidden; }
   }
 }
 
+@media (max-width: 400px) {
+  .carob-watermark-wrap.wm-full img {
+    width: 95%;
+    max-width: 280px;
+  }
+  .carob-watermark-wrap.wm-bleed img {
+    width: 100%;
+    max-width: 320px;
+  }
+}
+
 /* ── Common Components ── */
 
 /* Skip to content link */
@@ -205,6 +216,11 @@ body { overflow-x: hidden; }
 
 .product-shadow {
   filter: drop-shadow(0 20px 40px rgba(0,0,0,0.15));
+}
+
+.product-hero-img {
+  max-height: 50vh;
+  width: auto;
 }
 
 /* ── Atmospheric Texture ── */

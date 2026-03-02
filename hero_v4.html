@@ -9,6 +9,10 @@
 <meta property="og:title" content="MapleMoon — The Range">
 <meta property="og:description" content="Explore the full MapleMoon range — bars, moons, bites, and elixirs. All organic, all handmade in Byron Bay.">
 <meta property="og:type" content="website">
+<link rel="preload" as="image" href="assets/products/bar_original.jpg">
+<link rel="preload" as="image" href="assets/carob_wordmark.svg">
+<link rel="icon" href="assets/maplemoon_logo.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="assets/maplemoon_logo.svg">
 <link rel="stylesheet" href="brand_kit.css">
 <style>
   *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
@@ -50,7 +54,7 @@
   }
   /* ── CTA pulse ── */
   @keyframes ctaPulse {
-    0%, 100% { box-shadow: 0 0 0 0 rgba(231,228,202,0.4); }
+    0%, 100% { box-shadow: 0 0 0 0 var(--mm-cream-40); }
     50% { box-shadow: 0 0 0 8px rgba(231,228,202,0); }
   }
   .fade-1 { animation: fadeIn 0.6s ease both 0.1s; }
@@ -119,7 +123,7 @@
   .mobile-menu .menu-nav {
     display: flex; flex-direction: column; align-items: center; gap: 20px;
     margin-top: 24px; padding-top: 24px;
-    border-top: 1px solid rgba(30,67,102,0.15);
+    border-top: 1px solid var(--mm-navy-15);
   }
   .mobile-menu .menu-nav a {
     font-family: var(--mm-sans); font-size: 0.95rem;
@@ -213,9 +217,11 @@
     position: relative; z-index: 2;
   }
   .scroll-dots .dot {
-    width: 6px; height: 6px;
+    width: 12px; height: 12px;
+    padding: 16px;
+    background-clip: content-box;
     border-radius: var(--radius-full);
-    background: var(--cream);
+    background-color: var(--cream);
     opacity: 0.3;
     transition: opacity 0.3s, transform 0.3s;
     transform: scale(1);
@@ -282,6 +288,13 @@
   /* ── Desktop columns ── */
   .hero-desktop { display: none; }
 
+  /* ═══════════ INTERMEDIATE ═══════════ */
+  @media (min-width: 480px) and (max-width: 767px) {
+    .product-card .card-label { font-size: 1.1rem; }
+    .product-card .card-subtitle { font-size: 0.85rem; }
+    .card-scroll { padding: 0 24px; }
+  }
+
   /* ═══════════ DESKTOP ═══════════ */
   @media (min-width: 768px) {
     html, body { overflow: hidden; }
@@ -306,6 +319,9 @@
       -webkit-backdrop-filter: blur(20px) saturate(180%);
       background: rgba(123, 157, 191, 0.6);
       border-bottom: 1px solid var(--mm-cream-10);
+    }
+    @supports not (backdrop-filter: blur(1px)) {
+      .header-desktop.scrolled { background: rgba(123, 157, 191, 0.85); }
     }
     .header-desktop nav {
       flex: 1; display: flex; align-items: center;
