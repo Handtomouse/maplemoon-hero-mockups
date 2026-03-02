@@ -476,25 +476,29 @@
       gradTop: '#D4A574',
       gradBottom: '#E8C9A0',
       tagline: 'A gentle start. No caffeine, just carob.',
-      greeting: 'Good morning'
+      greeting: 'Good morning',
+      iconColor: '#1E4366'
     },
     afternoon: {
       gradTop: '#7B9DBF',
       gradBottom: '#A8BDD4',
       tagline: 'Naturally sweet, nothing added.',
-      greeting: 'Good afternoon'
+      greeting: 'Good afternoon',
+      iconColor: '#E7E4CA'
     },
     evening: {
       gradTop: '#5B7A99',
       gradBottom: '#3D5A78',
       tagline: 'Wind down with something pure.',
-      greeting: 'Good evening'
+      greeting: 'Good evening',
+      iconColor: '#E7E4CA'
     },
     night: {
       gradTop: '#1E4366',
       gradBottom: '#2C5578',
       tagline: 'No caffeine. No regrets. Just carob.',
-      greeting: 'Good night'
+      greeting: 'Good night',
+      iconColor: '#E7E4CA'
     }
   };
 
@@ -521,6 +525,14 @@
 
   // Apply body class for star/glow effects
   document.body.classList.add(period);
+
+  // Apply icon color for contrast (morning needs navy on warm bg)
+  if (config.iconColor) {
+    var svg = document.querySelector('.time-greeting svg');
+    if (svg) { svg.style.stroke = config.iconColor; }
+    var greetingText = document.getElementById('greeting-text');
+    if (greetingText && period === 'morning') { greetingText.style.color = config.iconColor; }
+  }
 })();
 </script>
 </body>

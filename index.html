@@ -327,10 +327,31 @@
        Responsive
        ============================================================ */
 
-    /* Tablet: hide iPad, keep iPhone + Desktop */
-    @media (max-width: 1199px) {
+    /* Tablet: hide iPad below 1024px, keep iPhone + Desktop */
+    @media (max-width: 1023px) {
       .device-col--ipad {
         display: none;
+      }
+
+      .device-desktop {
+        width: 400px;
+        height: 250px;
+      }
+
+      .device-desktop iframe {
+        transform: scale(0.2778); /* 400/1440 */
+      }
+    }
+
+    /* Landscape tablet: show iPad at reduced size */
+    @media (min-width: 1024px) and (max-width: 1199px) {
+      .device-ipad {
+        width: 200px;
+        height: 267px;
+      }
+
+      .device-ipad iframe {
+        transform: scale(0.2604); /* 200/768 */
       }
 
       .device-desktop {
