@@ -8,6 +8,13 @@
   --mm-navy: #1E4366;
   --mm-blue-top: #7B9DBF;
   --mm-blue-bottom: #A8BDD4;
+  --mm-blue-deep: #4A7B9D;
+  --mm-teal: #2D6B7F;
+  --mm-sky: #87ADCF;
+  --mm-carob-dark: #3a2a1a;
+  --mm-story-blue: #5a7fa0;
+  --mm-story-green: #4a6b5a;
+  --mm-story-cream: #c4b89a;
   --mm-cream-10: rgba(231,228,202,0.1);
   --mm-cream-30: rgba(231,228,202,0.3);
   --mm-cream-50: rgba(231,228,202,0.5);
@@ -61,14 +68,14 @@
 /* ── Typography ── */
 
 /* P22 Mackinac Pro — 400 + 500 ONLY (never bold/700) */
-@font-face { font-family: 'P22 Mackinac Pro'; font-weight: 400; src: local('P22 Mackinac Pro Book'), local('P22MackinacPro-Book'); }
-@font-face { font-family: 'P22 Mackinac Pro'; font-weight: 500; src: local('P22 Mackinac Pro Medium'), local('P22MackinacPro-Medium'); }
+@font-face { font-family: 'P22 Mackinac Pro'; font-weight: 400; font-display: swap; src: local('P22 Mackinac Pro Book'), local('P22MackinacPro-Book'); }
+@font-face { font-family: 'P22 Mackinac Pro'; font-weight: 500; font-display: swap; src: local('P22 Mackinac Pro Medium'), local('P22MackinacPro-Medium'); }
 
 /* Neue Haas Grotesk Display Pro */
-@font-face { font-family: 'Neue Haas Grotesk Display Pro'; font-weight: 300; font-style: normal; src: local('Neue Haas Grotesk Display Pro 45 Light'), local('NeueHaasDisplay-Light'); }
-@font-face { font-family: 'Neue Haas Grotesk Display Pro'; font-weight: 400; font-style: normal; src: local('Neue Haas Grotesk Display Pro 55 Roman'), local('NeueHaasDisplay-Roman'); }
-@font-face { font-family: 'Neue Haas Grotesk Display Pro'; font-weight: 500; font-style: normal; src: local('Neue Haas Grotesk Display Pro 65 Medium'), local('NeueHaasDisplay-Mediu'); }
-@font-face { font-family: 'Neue Haas Grotesk Display Pro'; font-weight: 700; font-style: normal; src: local('Neue Haas Grotesk Display Pro 75 Bold'), local('NeueHaasDisplay-Bold'); }
+@font-face { font-family: 'Neue Haas Grotesk Display Pro'; font-weight: 300; font-style: normal; font-display: swap; src: local('Neue Haas Grotesk Display Pro 45 Light'), local('NeueHaasDisplay-Light'); }
+@font-face { font-family: 'Neue Haas Grotesk Display Pro'; font-weight: 400; font-style: normal; font-display: swap; src: local('Neue Haas Grotesk Display Pro 55 Roman'), local('NeueHaasDisplay-Roman'); }
+@font-face { font-family: 'Neue Haas Grotesk Display Pro'; font-weight: 500; font-style: normal; font-display: swap; src: local('Neue Haas Grotesk Display Pro 65 Medium'), local('NeueHaasDisplay-Mediu'); }
+@font-face { font-family: 'Neue Haas Grotesk Display Pro'; font-weight: 700; font-style: normal; font-display: swap; src: local('Neue Haas Grotesk Display Pro 75 Bold'), local('NeueHaasDisplay-Bold'); }
 
 /* ── Base Resets ── */
 html { overflow-x: hidden; }
@@ -190,3 +197,33 @@ body { overflow-x: hidden; }
 .fade-3 { animation: fadeIn 0.6s ease both; animation-delay: 0.5s; }
 .fade-4 { animation: fadeIn 0.6s ease both; animation-delay: 0.7s; }
 .fade-product { animation: fadeIn 0.8s ease both; animation-delay: 0.2s; }
+
+/* ── Product Presentation ── */
+.product-glow {
+  filter: drop-shadow(0 8px 32px rgba(180, 140, 80, 0.25));
+}
+
+.product-shadow {
+  filter: drop-shadow(0 20px 40px rgba(0,0,0,0.15));
+}
+
+/* ── Atmospheric Texture ── */
+.noise-overlay::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  opacity: 0.03;
+  pointer-events: none;
+  z-index: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  background-repeat: repeat;
+  background-size: 256px 256px;
+}
+
+.text-refined {
+  font-feature-settings: 'kern' 1, 'liga' 1;
+}
+
+.gpu-animated {
+  will-change: transform;
+}

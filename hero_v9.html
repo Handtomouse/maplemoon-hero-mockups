@@ -33,7 +33,7 @@
   .skip-link {
     position: absolute; top: -100%; left: 16px;
     padding: 8px 16px; background: var(--cream); color: var(--navy);
-    border-radius: 4px; z-index: 999; font-size: 0.85rem;
+    border-radius: var(--radius-sm); z-index: 999; font-size: 0.85rem;
     text-decoration: none;
   }
   .skip-link:focus { top: 8px; }
@@ -92,7 +92,7 @@
   }
   .mobile-menu .menu-nav a {
     font-family: var(--mm-sans); font-size: 0.95rem;
-    font-weight: 400; text-transform: none; letter-spacing: 0.02em;
+    font-weight: 400; text-transform: none; letter-spacing: 0.04em;
     color: var(--navy); opacity: 0.6;
   }
 
@@ -155,7 +155,7 @@
 
   /* ── Card 1: The Pod ── */
   .card-pod {
-    background: #3a2a1a;
+    background: var(--mm-carob-dark);
   }
   .card-pod .card-bg {
     position: absolute; inset: 0;
@@ -187,7 +187,7 @@
 
   /* ── Card 2: The Craft ── */
   .card-craft {
-    background: linear-gradient(180deg, #5a7fa0 0%, #7B9DBF 100%);
+    background: linear-gradient(180deg, var(--mm-story-blue) 0%, #7B9DBF 100%);
   }
   .card-craft .card-content {
     position: relative; z-index: 2;
@@ -231,7 +231,7 @@
   .card-bar .card-subtitle {
     font-family: var(--mm-sans); font-weight: 300;
     font-size: 0.9rem; color: var(--cream); opacity: 0.8;
-    letter-spacing: 0.02em;
+    letter-spacing: 0.04em;
   }
 
   /* ── Card 4: Shop ── */
@@ -256,13 +256,14 @@
   }
   .card-shop .shop-thumb {
     width: 80px; height: 100px; object-fit: contain;
-    border-radius: 8px;
+    border-radius: var(--radius-md);
+    object-fit: contain; object-position: center;
     filter: drop-shadow(0 2px 8px var(--mm-black-10));
   }
   .card-shop .cta-btn {
     display: inline-flex; align-items: center; justify-content: center;
     border: 1.5px solid var(--navy); color: var(--navy);
-    background: transparent; border-radius: 30px;
+    background: transparent; border-radius: var(--radius-pill);
     padding: 12px 32px; min-height: 48px;
     font-family: var(--mm-sans); font-size: 0.85rem;
     font-weight: 400; letter-spacing: 0.04em; text-transform: uppercase;
@@ -282,7 +283,7 @@
   }
   .progress-dots .dot {
     width: 8px; height: 8px;
-    border-radius: 50%;
+    border-radius: var(--radius-full);
     background: var(--cream);
     opacity: 0.3;
     transition: opacity 0.3s, transform 0.3s;
@@ -418,8 +419,8 @@
 </label>
 
 <div class="mobile-menu">
-  <a href="#">Bars</a>
-  <a href="#">Moons</a>
+  <a href="/shop/bars">Bars</a>
+  <a href="/shop/moons">Moons</a>
   <a href="#">Bananas</a>
   <a href="#">Bites</a>
   <a href="#">Elixirs</a>
@@ -427,8 +428,8 @@
   <a href="#">Gifts</a>
   <div class="menu-divider"></div>
   <div class="menu-nav">
-    <a href="#">Our Story</a>
-    <a href="#">Shop</a>
+    <a href="/our-story">Our Story</a>
+    <a href="/shop">Shop</a>
     <a href="#">Stockists</a>
     <a href="#">Recipes</a>
     <a href="#">Contact</a>
@@ -443,8 +444,8 @@
 <!-- Desktop header -->
 <header class="header-desktop">
   <nav>
-    <a href="#">Our Story</a>
-    <a href="#">Shop</a>
+    <a href="/our-story">Our Story</a>
+    <a href="/shop">Shop</a>
     <a href="#">Stockists</a>
     <a href="#">Recipes</a>
     <a href="#">Contact</a>
@@ -489,7 +490,7 @@
     <section class="story-card card-bar" aria-label="The Bar">
       <div class="carob-watermark-wrap wm-subtle"><img src="assets/carob_wordmark.svg" alt="" aria-hidden="true" width="800" height="200"></div>
       <div class="card-content">
-        <img src="assets/products/bar_original.jpg" alt="Maple Moon Carob Bar" class="product-img" width="400" height="600" fetchpriority="high" decoding="sync">
+        <img src="assets/products/bar_original.jpg" alt="Maple Moon Carob Bar" class="product-img" width="400" height="600" fetchpriority="high" decoding="sync" loading="eager">
         <p class="card-subtitle">Naturally sweet. Nothing added.</p>
       </div>
     </section>
@@ -499,11 +500,11 @@
       <div class="card-content">
         <p class="card-title">Shop</p>
         <div class="shop-grid">
-          <img src="assets/products/bar_original.jpg" alt="Carob Bar" class="shop-thumb" width="80" height="100" loading="lazy" decoding="async">
-          <img src="assets/products/moon_peppermint.jpg" alt="Carob Moon" class="shop-thumb" width="80" height="100" loading="lazy" decoding="async">
-          <img src="assets/products/eclipse_bundle.jpg" alt="Eclipse Bundle" class="shop-thumb" width="80" height="100" loading="lazy" decoding="async">
+          <img src="assets/products/bar_original.jpg" alt="Carob Bar" class="shop-thumb" width="400" height="600" loading="lazy" decoding="async">
+          <img src="assets/products/moon_peppermint.jpg" alt="Carob Moon" class="shop-thumb" width="400" height="400" loading="lazy" decoding="async">
+          <img src="assets/products/eclipse_bundle.jpg" alt="Eclipse Bundle" class="shop-thumb" width="400" height="400" loading="lazy" decoding="async">
         </div>
-        <a href="#" class="cta-btn">Shop All</a>
+        <a href="/shop" class="cta-btn">Shop All</a>
       </div>
     </section>
 

@@ -68,7 +68,7 @@
       font-family: var(--mm-serif, 'P22 Mackinac Pro', Georgia, serif);
       font-weight: 400;
       font-size: 1.8rem;
-      letter-spacing: 0.01em;
+      letter-spacing: 0.03em;
       line-height: 1.2;
       color: var(--mm-navy);
     }
@@ -78,7 +78,7 @@
       font-size: 0.85rem;
       color: rgba(30, 67, 102, 0.5);
       margin-top: 6px;
-      letter-spacing: 0.01em;
+      letter-spacing: 0.04em;
     }
 
     /* --- Divider --- */
@@ -111,6 +111,11 @@
       display: flex;
       flex-direction: column;
       gap: 28px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .hero-card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(0,0,0,0.06);
     }
 
     .hero-card__header {
@@ -125,7 +130,7 @@
       font-family: var(--mm-serif, 'P22 Mackinac Pro', Georgia, serif);
       font-weight: 400;
       font-size: 1.25rem;
-      letter-spacing: 0.01em;
+      letter-spacing: 0.03em;
       color: var(--mm-navy);
     }
 

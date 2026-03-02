@@ -35,7 +35,7 @@
   .skip-link {
     position: absolute; top: -100%; left: 16px;
     padding: 8px 16px; background: var(--cream); color: var(--navy);
-    border-radius: 4px; z-index: 999; font-size: 0.85rem;
+    border-radius: var(--radius-sm); z-index: 999; font-size: 0.85rem;
     text-decoration: none;
   }
   .skip-link:focus { top: 8px; }
@@ -138,6 +138,13 @@
     background: var(--mm-black-35);
     z-index: 1;
   }
+  .cinema-bg::before {
+    content: '';
+    position: absolute; inset: 0;
+    background: linear-gradient(rgba(30,67,102,0.4), rgba(30,67,102,0.6));
+    z-index: 1;
+    pointer-events: none;
+  }
 
   /* ── Title card content ── */
   .cinema-content {
@@ -174,7 +181,7 @@
   .cinema-enter {
     display: inline-flex; align-items: center; justify-content: center;
     border: 1px solid var(--cream); color: var(--cream);
-    background: transparent; border-radius: 50px;
+    background: transparent; border-radius: var(--radius-pill);
     padding: 10px 32px; min-height: 44px;
     font-family: var(--mm-sans); font-size: 0.8rem;
     font-weight: 400; letter-spacing: 0.1em; text-transform: uppercase;
@@ -279,7 +286,7 @@
 <!-- ═══ CINEMA VIEWPORT ═══ -->
 <main class="cinema-viewport" id="main">
   <div class="cinema-bg">
-    <img src="assets/products/bar_bundle.jpg" alt="" aria-hidden="true" width="1200" height="800" fetchpriority="high" decoding="async">
+    <img src="assets/products/bar_bundle.jpg" alt="" aria-hidden="true" width="1200" height="800" fetchpriority="high" decoding="sync" loading="eager">
   </div>
   <div class="cinema-overlay"></div>
 
@@ -287,7 +294,7 @@
     <img src="assets/carob_wordmark.svg" alt="CAROB" class="cinema-wordmark fade-1" id="wordmark" width="800" height="200">
     <p class="cinema-tagline fade-2">Artisan carob from Byron Bay</p>
     <p class="cinema-origin fade-3">HANDMADE</p>
-    <a href="#" class="cinema-enter fade-4">Enter</a>
+    <a href="/shop" class="cinema-enter fade-4">Enter</a>
   </div>
 </main>
 

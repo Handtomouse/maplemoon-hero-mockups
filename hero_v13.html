@@ -37,7 +37,7 @@
   .skip-link {
     position: absolute; top: -100%; left: 16px;
     padding: 8px 16px; background: var(--cream); color: var(--navy);
-    border-radius: 4px; z-index: 999; font-size: 0.85rem;
+    border-radius: var(--radius-sm); z-index: 999; font-size: 0.85rem;
     text-decoration: none;
   }
   .skip-link:focus { top: 8px; }
@@ -69,6 +69,9 @@
     position: fixed; inset: 0; z-index: 0;
     background: url('assets/products/bar_bundle.jpg') center/cover no-repeat;
     filter: saturate(1.1) contrast(1.05);
+  }
+  @media (min-width: 768px) and (prefers-reduced-motion: no-preference) {
+    .hero-bg { background-attachment: fixed; }
   }
 
   /* ── Dark gradient overlay ── */
@@ -144,7 +147,7 @@
   }
   .mobile-menu .menu-nav a {
     font-family: var(--mm-sans); font-size: 0.95rem;
-    font-weight: 400; text-transform: none; letter-spacing: 0.02em;
+    font-weight: 400; text-transform: none; letter-spacing: 0.04em;
     color: var(--navy); opacity: 0.6;
   }
 
@@ -166,6 +169,7 @@
     font-size: 1.8rem;
     color: var(--cream);
     letter-spacing: 0.06em;
+    line-height: 1.15;
     margin-bottom: 10px;
   }
 
@@ -181,7 +185,7 @@
   .cta-btn {
     display: inline-flex; align-items: center; justify-content: center;
     border: 1.5px solid var(--cream); color: var(--cream);
-    background: transparent; border-radius: 30px;
+    background: transparent; border-radius: var(--radius-pill);
     padding: 12px 32px; min-height: 48px;
     font-family: var(--mm-sans); font-size: 0.85rem;
     font-weight: 400; letter-spacing: 0.06em; text-transform: uppercase;
@@ -298,9 +302,9 @@
   <span></span><span></span><span></span>
 </label>
 
-<div class="mobile-menu">
-  <a href="#">Bars</a>
-  <a href="#">Moons</a>
+<div class="mobile-menu" role="dialog" aria-label="Navigation menu">
+  <a href="/shop/bars">Bars</a>
+  <a href="/shop/moons">Moons</a>
   <a href="#">Bananas</a>
   <a href="#">Bites</a>
   <a href="#">Elixirs</a>
@@ -308,8 +312,8 @@
   <a href="#">Gifts</a>
   <div class="menu-divider"></div>
   <div class="menu-nav">
-    <a href="#">Our Story</a>
-    <a href="#">Shop</a>
+    <a href="/our-story">Our Story</a>
+    <a href="/shop">Shop</a>
     <a href="#">Stockists</a>
     <a href="#">Recipes</a>
     <a href="#">Contact</a>
@@ -325,8 +329,8 @@
 <!-- Desktop header (overlaid, cream text, no bg) -->
 <header class="header-desktop fade-1">
   <nav>
-    <a href="#">Our Story</a>
-    <a href="#">Shop</a>
+    <a href="/our-story">Our Story</a>
+    <a href="/shop">Shop</a>
     <a href="#">Stockists</a>
     <a href="#">Recipes</a>
     <a href="#">Contact</a>
@@ -338,7 +342,7 @@
 <main class="hero-content" id="main">
   <h1 class="hero-title fade-2">MAPLE MOON</h1>
   <p class="hero-tagline fade-3">Artisan carob and cacao butter. Byron Bay.</p>
-  <a href="#" class="cta-btn fade-3">Shop Now</a>
+  <a href="/shop" class="cta-btn fade-3">Shop Now</a>
   <div class="trust-row fade-4">
     <img src="assets/icon_organic.svg" alt="Organic" width="20" height="20" loading="lazy" decoding="async">
     <img src="assets/icon_vegan.svg" alt="Vegan" width="20" height="20" loading="lazy" decoding="async">
@@ -354,6 +358,27 @@
   var toggle = document.getElementById('menu-toggle');
   document.querySelectorAll('.mobile-menu a').forEach(function(link) {
     link.addEventListener('click', function() { toggle.checked = false; });
+  });
+
+  // Focus trap
+  var menu = document.querySelector('.mobile-menu');
+  toggle.addEventListener('change', function() {
+    if (!toggle.checked) return;
+    var focusable = menu.querySelectorAll('a, button, [tabindex]');
+    if (!focusable.length) return;
+    var first = focusable[0], last = focusable[focusable.length - 1];
+    function trap(e) {
+      if (e.key === 'Escape') { toggle.checked = false; return; }
+      if (e.key !== 'Tab') return;
+      if (e.shiftKey) { if (document.activeElement === first) { e.preventDefault(); last.focus(); } }
+      else { if (document.activeElement === last) { e.preventDefault(); first.focus(); } }
+    }
+    menu.addEventListener('keydown', trap);
+    first.focus();
+    var observer = new MutationObserver(function() {
+      if (!toggle.checked) { menu.removeEventListener('keydown', trap); observer.disconnect(); }
+    });
+    observer.observe(toggle, { attributes: true });
   });
 })();
 </script>

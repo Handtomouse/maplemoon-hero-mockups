@@ -34,7 +34,7 @@
   .skip-link {
     position: absolute; top: -100%; left: 16px;
     padding: 8px 16px; background: var(--cream); color: var(--navy);
-    border-radius: 4px; z-index: 999; font-size: 0.85rem;
+    border-radius: var(--radius-sm); z-index: 999; font-size: 0.85rem;
     text-decoration: none;
   }
   .skip-link:focus { top: 8px; }
@@ -93,7 +93,7 @@
   }
   .mobile-menu .menu-nav a {
     font-family: var(--mm-sans); font-size: 0.95rem;
-    font-weight: 400; text-transform: none; letter-spacing: 0.02em;
+    font-weight: 400; text-transform: none; letter-spacing: 0.04em;
     color: var(--navy); opacity: 0.6;
   }
 
@@ -149,7 +149,7 @@
 
   /* ── Tile base ── */
   .tile {
-    border-radius: 8px;
+    border-radius: var(--radius-md);
     overflow: hidden;
     position: relative;
     display: flex;
@@ -170,6 +170,7 @@
   }
   .tile-bar .tile-product {
     width: 45%; max-width: 200px; height: auto;
+    object-fit: contain; object-position: center;
     filter: drop-shadow(0 4px 8px var(--mm-black-10)) drop-shadow(0 12px 24px var(--mm-black-15));
     position: relative; z-index: 2;
   }
@@ -188,6 +189,7 @@
   }
   .tile-moon .tile-product {
     width: 70%; max-width: 120px; height: auto;
+    object-fit: contain; object-position: center;
     filter: drop-shadow(0 2px 6px var(--mm-black-15));
     position: relative; z-index: 2;
   }
@@ -391,7 +393,7 @@
     align-items: center;
     justify-content: center;
     gap: 10px;
-    border-radius: 8px;
+    border-radius: var(--radius-md);
     overflow: hidden;
   }
   .tile-trust-desktop .trust-grid {
@@ -418,11 +420,12 @@
     align-items: center;
     justify-content: center;
     gap: 8px;
-    border-radius: 8px;
+    border-radius: var(--radius-md);
     overflow: hidden;
   }
   .tile-powder-desktop .powder-img {
     width: 60%; max-width: 100px; height: auto;
+    object-fit: contain; object-position: center;
     filter: drop-shadow(0 2px 6px var(--mm-black-15));
   }
   .tile-powder-desktop .tile-label {
@@ -448,9 +451,9 @@
   <span></span><span></span><span></span>
 </label>
 
-<div class="mobile-menu">
-  <a href="#">Bars</a>
-  <a href="#">Moons</a>
+<div class="mobile-menu" role="dialog" aria-label="Navigation menu">
+  <a href="/shop/bars">Bars</a>
+  <a href="/shop/moons">Moons</a>
   <a href="#">Bananas</a>
   <a href="#">Bites</a>
   <a href="#">Elixirs</a>
@@ -458,8 +461,8 @@
   <a href="#">Gifts</a>
   <div class="menu-divider"></div>
   <div class="menu-nav">
-    <a href="#">Our Story</a>
-    <a href="#">Shop</a>
+    <a href="/our-story">Our Story</a>
+    <a href="/shop">Shop</a>
     <a href="#">Stockists</a>
     <a href="#">Recipes</a>
     <a href="#">Contact</a>
@@ -474,8 +477,8 @@
 <!-- Desktop header -->
 <header class="header-desktop">
   <nav>
-    <a href="#">Our Story</a>
-    <a href="#">Shop</a>
+    <a href="/our-story">Our Story</a>
+    <a href="/shop">Shop</a>
     <a href="#">Stockists</a>
     <a href="#">Recipes</a>
     <a href="#">Contact</a>
@@ -490,21 +493,21 @@
   <div class="carob-watermark-wrap wm-subtle"><img src="assets/carob_wordmark.svg" alt="" aria-hidden="true" width="800" height="200"></div>
 
   <!-- Tile 1: Bar Hero (spans 2 cols on mobile) -->
-  <a href="#" class="tile tile-bar" aria-label="Shop Bars">
-    <img src="assets/products/bar_original.jpg" alt="Maple Moon Carob Bar" class="tile-product" width="400" height="600" fetchpriority="high" decoding="sync">
+  <a href="/shop/bars" class="tile tile-bar" aria-label="Shop Bars">
+    <img src="assets/products/bar_original.jpg" alt="Maple Moon Carob Bar" class="tile-product" width="400" height="600" fetchpriority="high" decoding="sync" loading="eager">
     <span class="tile-label">Bars</span>
     <span class="hover-text">Shop Bars</span>
   </a>
 
   <!-- Tile 2: Moon -->
-  <a href="#" class="tile tile-moon" aria-label="Shop Moons">
-    <img src="assets/products/moon_peppermint.jpg" alt="Carob Crescent Moon" class="tile-product" width="300" height="300" loading="lazy" decoding="async">
+  <a href="/shop/moons" class="tile tile-moon" aria-label="Shop Moons">
+    <img src="assets/products/moon_peppermint.jpg" alt="Carob Crescent Moon" class="tile-product" width="400" height="400" loading="lazy" decoding="async">
     <span class="tile-label">Moons</span>
     <span class="hover-text">Shop Moons</span>
   </a>
 
   <!-- Tile 3: Lifestyle / Ingredient -->
-  <a href="#" class="tile tile-lifestyle" aria-label="Our Story">
+  <a href="/our-story" class="tile tile-lifestyle" aria-label="Our Story">
     <img src="assets/bar_lifestyle.png" alt="" class="tile-bg" aria-hidden="true" width="800" height="600" loading="lazy" decoding="async">
     <div class="tile-overlay"></div>
     <span class="tile-label">Our Story</span>
@@ -512,13 +515,13 @@
   </a>
 
   <!-- Tile 4: CTA -->
-  <a href="#" class="tile tile-cta" aria-label="Shop Now">
+  <a href="/shop" class="tile tile-cta" aria-label="Shop Now">
     <span class="cta-text">Shop Now</span>
     <svg class="cta-arrow" viewBox="0 0 24 24"><polyline points="9 6 15 12 9 18"></polyline></svg>
   </a>
 
   <!-- Tile 5: Origin -->
-  <a href="#" class="tile tile-origin" aria-label="Byron Bay">
+  <a href="/our-story" class="tile tile-origin" aria-label="Byron Bay">
     <span class="origin-title">Byron Bay</span>
     <span class="origin-sub">Est. 2022</span>
     <div class="origin-icons">
@@ -543,7 +546,7 @@
 
   <!-- Desktop-only: Powder/Apparel tile -->
   <div class="tile tile-powder-desktop" aria-label="Carob Powder">
-    <img src="assets/products/powder_roasted.jpg" alt="Roasted Carob Powder" class="powder-img" width="200" height="300" loading="lazy" decoding="async">
+    <img src="assets/products/powder_roasted.jpg" alt="Roasted Carob Powder" class="powder-img" width="400" height="400" loading="lazy" decoding="async">
     <span class="tile-label">More</span>
     <span class="hover-text">Explore More</span>
   </div>
