@@ -198,12 +198,12 @@
     z-index: 2;
   }
 
-  .product-node:nth-child(1) { transform: rotate(0deg)   translateX(var(--orbit-radius)); }
-  .product-node:nth-child(2) { transform: rotate(60deg)  translateX(var(--orbit-radius)); }
-  .product-node:nth-child(3) { transform: rotate(120deg) translateX(var(--orbit-radius)); }
-  .product-node:nth-child(4) { transform: rotate(180deg) translateX(var(--orbit-radius)); }
-  .product-node:nth-child(5) { transform: rotate(240deg) translateX(var(--orbit-radius)); }
-  .product-node:nth-child(6) { transform: rotate(300deg) translateX(var(--orbit-radius)); }
+  .product-node:nth-child(1) { transform: rotate(0deg)   translateX(var(--orbit-radius)) rotate(0deg); }
+  .product-node:nth-child(2) { transform: rotate(60deg)  translateX(var(--orbit-radius)) rotate(-60deg); }
+  .product-node:nth-child(3) { transform: rotate(120deg) translateX(var(--orbit-radius)) rotate(-120deg); }
+  .product-node:nth-child(4) { transform: rotate(180deg) translateX(var(--orbit-radius)) rotate(-180deg); }
+  .product-node:nth-child(5) { transform: rotate(240deg) translateX(var(--orbit-radius)) rotate(-240deg); }
+  .product-node:nth-child(6) { transform: rotate(300deg) translateX(var(--orbit-radius)) rotate(-300deg); }
 
   .product-node-inner {
     width: 100%;
@@ -372,7 +372,7 @@
     }
 
     .orbit-stage {
-      left: 40%;
+      left: 50%;
     }
   }
 
@@ -386,7 +386,7 @@
     .header-desktop nav { gap: 52px; }
 
     .orbit-stage {
-      left: 42%;
+      left: 50%;
     }
   }
 </style>
