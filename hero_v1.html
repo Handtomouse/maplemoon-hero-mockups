@@ -291,11 +291,11 @@
 <a href="index.html" class="back-link fade-1">&larr; Back to Gallery</a>
 
 <input type="checkbox" id="menu-toggle" hidden>
-<label for="menu-toggle" class="hamburger fade-1" aria-label="Menu">
+<label for="menu-toggle" class="hamburger fade-1" aria-label="Menu" aria-expanded="false">
   <span></span><span></span><span></span>
 </label>
 
-<div class="mobile-menu">
+<div class="mobile-menu" role="dialog" aria-modal="true" aria-label="Navigation menu" aria-hidden="true">
   <a href="/shop/bars">Bars</a>
   <a href="/shop/moons">Moons</a>
   <a href="/shop/bananas">Bananas</a>
@@ -354,20 +354,23 @@
 (function() {
   var toggle = document.getElementById('menu-toggle');
   var menu = document.querySelector('.mobile-menu');
-
+  var hamburger = document.querySelector('.hamburger');
   // Auto-close on link tap
   document.querySelectorAll('.mobile-menu a').forEach(function(link) {
-    link.addEventListener('click', function() { toggle.checked = false; });
+    link.addEventListener('click', function() { toggle.checked = false; toggle.dispatchEvent(new Event('change')); });
   });
 
   // Focus trap on mobile menu
   toggle.addEventListener('change', function() {
+    var isOpen = toggle.checked;
+    menu.setAttribute('aria-hidden', isOpen ? 'false' : 'true');
+    hamburger.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
     if (!toggle.checked) return;
     var focusable = menu.querySelectorAll('a, button, [tabindex]');
     if (!focusable.length) return;
     var first = focusable[0], last = focusable[focusable.length - 1];
     function trap(e) {
-      if (e.key === 'Escape') { toggle.checked = false; return; }
+      if (e.key === 'Escape') { toggle.checked = false; toggle.dispatchEvent(new Event('change')); return; }
       if (e.key !== 'Tab') return;
       if (e.shiftKey) { if (document.activeElement === first) { e.preventDefault(); last.focus(); } }
       else { if (document.activeElement === last) { e.preventDefault(); first.focus(); } }

@@ -385,11 +385,11 @@
 <a href="index.html" class="back-link fade-1">&larr; Back to Gallery</a>
 
 <input type="checkbox" id="menu-toggle" hidden>
-<label for="menu-toggle" class="hamburger fade-1" aria-label="Menu">
+<label for="menu-toggle" class="hamburger fade-1" aria-label="Menu" aria-expanded="false">
   <span></span><span></span><span></span>
 </label>
 
-<div class="mobile-menu" role="dialog" aria-label="Navigation menu">
+<div class="mobile-menu" role="dialog" aria-modal="true" aria-label="Navigation menu" aria-hidden="true">
   <a href="/shop/bars">Bars</a>
   <a href="/shop/moons">Moons</a>
   <a href="/shop/bananas">Bananas</a>
@@ -478,8 +478,21 @@
 (function() {
   // Close menu on link click
   const toggle = document.getElementById('menu-toggle');
+  var menu = document.querySelector('.mobile-menu');
+  var hamburger = document.querySelector('.hamburger');
   document.querySelectorAll('.mobile-menu a').forEach(function(a) {
-    a.addEventListener('click', function() { toggle.checked = false; });
+    a.addEventListener('click', function() {
+      toggle.checked = false;
+      menu.setAttribute('aria-hidden', 'true');
+      hamburger.setAttribute('aria-expanded', 'false');
+    });
+  });
+
+  // ARIA state on open/close
+  toggle.addEventListener('change', function() {
+    var isOpen = toggle.checked;
+    menu.setAttribute('aria-hidden', isOpen ? 'false' : 'true');
+    hamburger.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
   });
 
   // Desktop split divider drag
