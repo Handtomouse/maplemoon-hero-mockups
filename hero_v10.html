@@ -4,14 +4,8 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Maple Moon — Letterbox Cinema (V10)</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="brand_kit.css">
 <style>
-  @font-face { font-family: 'P22 Mackinac Pro'; font-weight: 400; src: local('P22 Mackinac Pro Book'), local('P22MackinacPro-Book'); }
-  @font-face { font-family: 'P22 Mackinac Pro'; font-weight: 500; src: local('P22 Mackinac Pro Medium'), local('P22MackinacPro-Medium'); }
-  @font-face { font-family: 'P22 Mackinac Pro'; font-weight: 700; src: local('P22 Mackinac Pro Bold'), local('P22MackinacPro-Bold'); }
-
   *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 
   :root {
@@ -25,7 +19,7 @@
 
   html, body { height: 100%; overflow: hidden; }
   body {
-    font-family: 'Inter', sans-serif;
+    font-family: var(--mm-sans);
     color: var(--cream);
     background: var(--black);
     text-rendering: optimizeLegibility;
@@ -46,7 +40,7 @@
   .back-link {
     position: fixed; top: 16px; left: 16px; z-index: 101;
     color: var(--cream); text-decoration: none;
-    font-family: 'Inter', sans-serif; font-size: 0.8rem; font-weight: 400;
+    font-family: var(--mm-sans); font-size: 0.8rem; font-weight: 400;
     opacity: 0.7; transition: opacity 0.2s;
     display: none;
   }
@@ -89,7 +83,7 @@
     display: flex; align-items: center; justify-content: center;
   }
   .letterbox-top .bar-text {
-    font-family: 'Inter', sans-serif;
+    font-family: var(--mm-sans);
     font-size: 0.65rem; font-weight: 400;
     color: var(--cream); opacity: 0.6;
     text-transform: uppercase;
@@ -159,14 +153,14 @@
   }
 
   .cinema-tagline {
-    font-family: 'Inter', sans-serif;
+    font-family: var(--mm-sans);
     font-weight: 300; font-size: 0.85rem;
     color: var(--cream); opacity: 0.8;
     letter-spacing: 0.15em;
   }
 
   .cinema-origin {
-    font-family: 'P22 Mackinac Pro', sans-serif;
+    font-family: var(--mm-serif);
     font-weight: 400; font-size: 0.75rem;
     color: var(--cream); opacity: 0.5;
     letter-spacing: 0.1em;
@@ -177,7 +171,7 @@
     border: 1px solid var(--cream); color: var(--cream);
     background: transparent; border-radius: 50px;
     padding: 10px 32px; min-height: 44px;
-    font-family: 'Inter', sans-serif; font-size: 0.8rem;
+    font-family: var(--mm-sans); font-size: 0.8rem;
     font-weight: 400; letter-spacing: 0.1em; text-transform: uppercase;
     text-decoration: none; cursor: pointer;
     transition: background 0.4s, color 0.4s, transform 0.15s;
@@ -246,7 +240,7 @@
   /* ── Shipping text hidden on mobile ── */
   .letterbox-bottom .shipping-text {
     display: none;
-    font-family: 'Inter', sans-serif;
+    font-family: var(--mm-sans);
     font-size: 0.65rem; font-weight: 300;
     color: var(--cream); opacity: 0.4;
     letter-spacing: 0.08em;

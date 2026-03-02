@@ -4,14 +4,8 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Maple Moon — The Unwrap</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="brand_kit.css">
 <style>
-  @font-face { font-family: 'P22 Mackinac Pro'; font-weight: 400; src: local('P22 Mackinac Pro Book'), local('P22MackinacPro-Book'); }
-  @font-face { font-family: 'P22 Mackinac Pro'; font-weight: 500; src: local('P22 Mackinac Pro Medium'), local('P22MackinacPro-Medium'); }
-  @font-face { font-family: 'P22 Mackinac Pro'; font-weight: 700; src: local('P22 Mackinac Pro Bold'), local('P22MackinacPro-Bold'); }
-
   *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 
   :root {
@@ -25,7 +19,7 @@
 
   body {
     background: linear-gradient(180deg, var(--grad-top) 0%, var(--grad-bottom) 100%);
-    font-family: 'Inter', sans-serif;
+    font-family: var(--mm-sans);
     color: var(--cream);
     position: relative;
     min-height: 100vh;
@@ -40,7 +34,7 @@
   .back-link {
     position: fixed; top: 16px; left: 16px; z-index: 101;
     color: var(--cream); text-decoration: none;
-    font-family: 'Inter', sans-serif; font-size: 0.8rem; font-weight: 400;
+    font-family: var(--mm-sans); font-size: 0.8rem; font-weight: 400;
     opacity: 0.7; transition: opacity 0.2s;
     display: none;
   }
@@ -75,7 +69,7 @@
   #menu-toggle:checked ~ .mobile-menu { opacity: 1; pointer-events: auto; }
 
   .mobile-menu a {
-    font-family: 'P22 Mackinac Pro', sans-serif; font-size: 1.4rem;
+    font-family: var(--mm-serif); font-size: 1.4rem;
     font-weight: 500; text-transform: uppercase; letter-spacing: 0.12em;
     color: var(--navy); text-decoration: none;
     transition: opacity 0.2s;
@@ -94,7 +88,7 @@
     border-top: 1px solid rgba(30,67,102,0.15);
   }
   .mobile-menu .menu-nav a {
-    font-family: 'Inter', sans-serif; font-size: 0.95rem;
+    font-family: var(--mm-sans); font-size: 0.95rem;
     font-weight: 400; text-transform: none; letter-spacing: 0.02em;
     color: var(--navy); opacity: 0.6;
   }
@@ -143,17 +137,6 @@
     -webkit-user-select: none;
   }
 
-  /* ── CAROB watermark ── */
-  .carob-watermark {
-    position: absolute;
-    bottom: 5%; left: 50%;
-    transform: translateX(-50%);
-    width: 90%; max-width: 1200px;
-    height: auto;
-    opacity: 0.08;
-    z-index: 1;
-    pointer-events: none;
-  }
 
   /* ── Product area ── */
   .product-stage {
@@ -205,7 +188,7 @@
     gap: 8px;
   }
   .elixir-placeholder .elixir-title {
-    font-family: 'P22 Mackinac Pro', serif;
+    font-family: var(--mm-serif);
     font-size: 1.1rem; font-weight: 400;
     color: var(--cream);
   }
@@ -222,7 +205,7 @@
     transition: opacity 0.5s ease-out;
   }
   .tap-prompt p {
-    font-family: 'Inter', sans-serif;
+    font-family: var(--mm-sans);
     font-size: 0.85rem; font-weight: 300;
     color: var(--cream); opacity: 0.7;
     animation: pulse 2s ease-in-out infinite;
@@ -254,7 +237,7 @@
   }
 
   .info-panel .info-title {
-    font-family: 'P22 Mackinac Pro', serif;
+    font-family: var(--mm-serif);
     font-size: 1.2rem; font-weight: 400;
     color: var(--cream);
     opacity: 0; transform: translateY(10px);
@@ -266,7 +249,7 @@
   }
 
   .info-panel .info-sub {
-    font-family: 'Inter', sans-serif;
+    font-family: var(--mm-sans);
     font-size: 0.8rem; font-weight: 300;
     color: var(--cream); opacity: 0;
     margin-top: 6px;
@@ -299,7 +282,7 @@
     border: 1.5px solid var(--cream); color: var(--cream);
     background: transparent; border-radius: 30px;
     padding: 12px 32px; min-height: 48px;
-    font-family: 'Inter', sans-serif; font-size: 0.85rem;
+    font-family: var(--mm-sans); font-size: 0.85rem;
     font-weight: 400; letter-spacing: 0.04em; text-transform: uppercase;
     text-decoration: none; cursor: pointer;
     transition: background 0.3s, color 0.3s, transform 0.15s, opacity 0.4s ease-out;
@@ -335,7 +318,7 @@
       justify-content: center; gap: 40px;
     }
     .header-desktop nav a {
-      font-family: 'Inter', sans-serif; font-size: 1rem;
+      font-family: var(--mm-sans); font-size: 1rem;
       font-weight: 400; color: var(--cream); text-decoration: none;
       opacity: 0.9; transition: opacity 0.2s;
     }
@@ -404,7 +387,7 @@
       pointer-events: auto;
     }
     .desktop-info .d-title {
-      font-family: 'P22 Mackinac Pro', serif;
+      font-family: var(--mm-serif);
       font-size: 1rem; font-weight: 400;
       color: var(--cream);
     }
@@ -418,7 +401,7 @@
       border: 1px solid var(--cream); color: var(--cream);
       background: transparent; border-radius: 20px;
       padding: 8px 20px;
-      font-family: 'Inter', sans-serif; font-size: 0.75rem;
+      font-family: var(--mm-sans); font-size: 0.75rem;
       font-weight: 400; letter-spacing: 0.04em; text-transform: uppercase;
       text-decoration: none;
       margin-top: 10px;
@@ -447,7 +430,7 @@
       gap: 8px;
     }
     .desktop-elixir-card .elixir-title {
-      font-family: 'P22 Mackinac Pro', serif;
+      font-family: var(--mm-serif);
       font-size: 1.1rem; font-weight: 400;
       color: var(--cream);
     }
@@ -456,13 +439,6 @@
       color: var(--cream); opacity: 0.6;
     }
 
-    .carob-watermark {
-      bottom: 5%; left: 50%;
-      transform: translateX(-50%);
-      top: auto;
-      width: 90%; max-width: 1200px;
-      opacity: 0.08;
-    }
   }
 
   @media (min-width: 1024px) {
@@ -523,7 +499,7 @@
 </header>
 
 <main class="hero" id="main">
-  <img src="assets/carob_wordmark.svg" alt="" class="carob-watermark fade-2" aria-hidden="true" width="800" height="200" loading="lazy" decoding="async">
+  <div class="carob-watermark-wrap wm-full"><img src="assets/carob_wordmark.svg" alt="" aria-hidden="true"></div>
 
   <!-- MOBILE: product stage with tap cycling -->
   <div class="product-stage fade-2">

@@ -1,246 +1,499 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>MapleMoon — 12 Hero Options</title>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
-<style>
-@font-face { font-family: 'P22 Mackinac Pro'; font-weight: 400; src: local('P22 Mackinac Pro Book'), local('P22MackinacPro-Book'); }
-@font-face { font-family: 'P22 Mackinac Pro'; font-weight: 500; src: local('P22 Mackinac Pro Medium'), local('P22MackinacPro-Medium'); }
-@font-face { font-family: 'P22 Mackinac Pro'; font-weight: 700; src: local('P22 Mackinac Pro Bold'), local('P22MackinacPro-Bold'); }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MapleMoon — Hero Concepts</title>
+  <link rel="stylesheet" href="brand_kit.css">
+  <style>
+    /* ============================================================
+       MapleMoon Hero Gallery — Aesop / Le Labo editorial style
+       ============================================================ */
 
-* { margin: 0; padding: 0; box-sizing: border-box; }
-body { font-family: 'Inter', sans-serif; background: linear-gradient(180deg, #7B9DBF 0%, #A8BDD4 100%); color: #E7E4CA; min-height: 100vh; }
+    *, *::before, *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-.gallery {
-    padding: 60px 40px 40px;
-    max-width: 1000px;
-    margin: 0 auto;
-}
-.gallery-header {
-    text-align: center;
-    margin-bottom: 50px;
-}
-.gallery-header img {
-    width: 80px;
-    opacity: 0.5;
-    margin-bottom: 16px;
-}
-.gallery-header h1 {
-    font-family: 'P22 Mackinac Pro', Georgia, serif;
-    font-weight: 400;
-    font-size: 2rem;
-    letter-spacing: 0.02em;
-    margin-bottom: 8px;
-}
-.gallery-header p {
-    color: rgba(231,228,202,0.5);
-    font-size: 0.85rem;
-    font-weight: 300;
-}
+    html {
+      scroll-behavior: smooth;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
 
-.cards { display: flex; flex-direction: column; gap: 20px; }
+    body {
+      font-family: var(--mm-sans, 'Neue Haas Grotesk Display Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif);
+      font-weight: 300;
+      background: #FAFAF7;
+      color: #1E4366;
+      min-height: 100vh;
+      line-height: 1.6;
+    }
 
-.card {
-    display: flex;
-    border-radius: 12px;
-    overflow: hidden;
-    background: rgba(231,228,202,0.04);
-    border: 1px solid rgba(231,228,202,0.08);
-    transition: all 0.3s ease;
-    cursor: pointer;
-    text-decoration: none;
-    color: inherit;
-}
-.card:hover {
-    transform: translateY(-3px);
-    border-color: rgba(231,228,202,0.15);
-    box-shadow: 0 12px 40px rgba(0,0,0,0.2);
-}
+    /* --- Header --- */
 
-.card-preview {
-    width: 200px;
-    min-height: 140px;
-    flex-shrink: 0;
-    background: linear-gradient(180deg, #7B9DBF 0%, #A8BDD4 100%);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    overflow: hidden;
-}
-.card-preview .num {
-    font-family: 'P22 Mackinac Pro', Georgia, serif;
-    font-size: 3rem;
-    font-weight: 400;
-    opacity: 0.15;
-}
+    .gallery-header {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 56px 48px 0;
+      display: flex;
+      align-items: flex-start;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
 
-.card-info {
-    padding: 24px 28px;
-    flex: 1;
-}
-.card-goal {
-    display: inline-block;
-    padding: 3px 10px;
-    border-radius: 20px;
-    font-size: 0.65rem;
-    font-weight: 500;
-    text-transform: uppercase;
-    letter-spacing: 0.06em;
-    background: rgba(231,228,202,0.1);
-    color: rgba(231,228,202,0.6);
-    margin-bottom: 10px;
-}
-.card-title {
-    font-family: 'P22 Mackinac Pro', Georgia, serif;
-    font-weight: 400;
-    font-size: 1.2rem;
-    margin-bottom: 6px;
-}
-.card-desc {
-    font-size: 0.8rem;
-    color: rgba(231,228,202,0.5);
-    font-weight: 300;
-    line-height: 1.5;
-}
+    .gallery-header__logo {
+      width: 40px;
+      height: auto;
+      opacity: 0.7;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
 
-@media (max-width: 600px) {
-    .card { flex-direction: column; }
-    .card-preview { width: 100%; min-height: 100px; }
-    .gallery { padding: 40px 20px; }
-}
+    .gallery-header__text {
+      flex: 1;
+      min-width: 240px;
+    }
 
-.footer {
-    text-align: center;
-    padding: 40px;
-    color: rgba(231,228,202,0.25);
-    font-size: 0.7rem;
-}
-</style>
+    .gallery-header__title {
+      font-family: var(--mm-serif, 'P22 Mackinac Pro', Georgia, serif);
+      font-weight: 400;
+      font-size: 1.8rem;
+      letter-spacing: 0.01em;
+      line-height: 1.2;
+      color: #1E4366;
+    }
+
+    .gallery-header__subtitle {
+      font-weight: 300;
+      font-size: 0.85rem;
+      color: rgba(30, 67, 102, 0.5);
+      margin-top: 6px;
+      letter-spacing: 0.01em;
+    }
+
+    /* --- Divider --- */
+
+    .gallery-divider {
+      max-width: 1200px;
+      margin: 40px auto 0;
+      padding: 0 48px;
+    }
+
+    .gallery-divider hr {
+      border: none;
+      border-top: 1px solid rgba(0, 0, 0, 0.06);
+    }
+
+    /* --- Cards Container --- */
+
+    .gallery-cards {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 48px 48px 80px;
+      display: flex;
+      flex-direction: column;
+      gap: 72px;
+    }
+
+    /* --- Single Hero Card --- */
+
+    .hero-card {
+      display: flex;
+      flex-direction: column;
+      gap: 28px;
+    }
+
+    .hero-card__header {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 8px 24px;
+    }
+
+    .hero-card__title {
+      font-family: var(--mm-serif, 'P22 Mackinac Pro', Georgia, serif);
+      font-weight: 400;
+      font-size: 1.25rem;
+      letter-spacing: 0.01em;
+      color: #1E4366;
+    }
+
+    .hero-card__title span {
+      color: rgba(30, 67, 102, 0.35);
+    }
+
+    .hero-card__desc {
+      font-size: 0.875rem;
+      font-weight: 300;
+      color: rgba(30, 67, 102, 0.5);
+      line-height: 1.5;
+      max-width: 560px;
+    }
+
+    .hero-card__link {
+      font-size: 0.75rem;
+      font-weight: 400;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: rgba(30, 67, 102, 0.4);
+      text-decoration: none;
+      transition: color 0.2s ease;
+      white-space: nowrap;
+    }
+
+    .hero-card__link:hover {
+      color: #1E4366;
+    }
+
+    .hero-card__link::after {
+      content: ' \2197';
+      font-size: 0.85em;
+    }
+
+    /* --- Device Previews Row --- */
+
+    .device-row {
+      display: flex;
+      align-items: flex-start;
+      gap: 24px;
+    }
+
+    .device-col {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 12px;
+      flex-shrink: 0;
+    }
+
+    .device-label {
+      font-size: 0.65rem;
+      font-weight: 400;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: rgba(30, 67, 102, 0.3);
+    }
+
+    /* --- Device Frames --- */
+
+    .device-frame {
+      overflow: hidden;
+      border-radius: 8px;
+      border: 1px solid rgba(0, 0, 0, 0.08);
+      background: #F0F0EC;
+      position: relative;
+    }
+
+    .device-frame iframe {
+      display: block;
+      border: none;
+      pointer-events: none;
+      transform-origin: 0 0;
+    }
+
+    /* iPhone: 390x844 displayed at 180x390 */
+    .device-iphone {
+      width: 180px;
+      height: 390px;
+    }
+
+    .device-iphone iframe {
+      width: 390px;
+      height: 844px;
+      transform: scale(0.4615);
+    }
+
+    /* iPad: 768x1024 displayed at 260x347 */
+    .device-ipad {
+      width: 260px;
+      height: 347px;
+    }
+
+    .device-ipad iframe {
+      width: 768px;
+      height: 1024px;
+      transform: scale(0.3385);
+    }
+
+    /* Desktop: 1440x900 displayed at 480x300 */
+    .device-desktop {
+      width: 480px;
+      height: 300px;
+    }
+
+    .device-desktop iframe {
+      width: 1440px;
+      height: 900px;
+      transform: scale(0.3333);
+    }
+
+    /* --- Placeholder (before iframe loads) --- */
+
+    .device-placeholder {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.7rem;
+      font-weight: 300;
+      color: rgba(30, 67, 102, 0.2);
+      letter-spacing: 0.04em;
+      pointer-events: none;
+      transition: opacity 0.4s ease;
+    }
+
+    .device-frame.loaded .device-placeholder {
+      opacity: 0;
+    }
+
+    /* --- Footer --- */
+
+    .gallery-footer {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 48px 56px;
+    }
+
+    .gallery-footer hr {
+      border: none;
+      border-top: 1px solid rgba(0, 0, 0, 0.06);
+      margin-bottom: 24px;
+    }
+
+    .gallery-footer__text {
+      text-align: center;
+      font-size: 0.7rem;
+      font-weight: 300;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: rgba(30, 67, 102, 0.25);
+    }
+
+    /* ============================================================
+       Responsive
+       ============================================================ */
+
+    /* Tablet: hide iPad, keep iPhone + Desktop */
+    @media (max-width: 1199px) {
+      .device-col--ipad {
+        display: none;
+      }
+
+      .device-desktop {
+        width: 400px;
+        height: 250px;
+      }
+
+      .device-desktop iframe {
+        transform: scale(0.2778); /* 400/1440 */
+      }
+    }
+
+    /* Mobile: stack vertically, reduce sizes */
+    @media (max-width: 767px) {
+      .gallery-header {
+        padding: 40px 24px 0;
+        gap: 14px;
+      }
+
+      .gallery-header__title {
+        font-size: 1.4rem;
+      }
+
+      .gallery-divider {
+        padding: 0 24px;
+        margin-top: 28px;
+      }
+
+      .gallery-cards {
+        padding: 36px 24px 60px;
+        gap: 56px;
+      }
+
+      .device-row {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 20px;
+      }
+
+      .device-col {
+        align-items: center;
+      }
+
+      .device-col--ipad {
+        display: flex;
+      }
+
+      /* Smaller iPhone on mobile */
+      .device-iphone {
+        width: 150px;
+        height: 325px;
+      }
+
+      .device-iphone iframe {
+        transform: scale(0.3846); /* 150/390 */
+      }
+
+      /* Smaller iPad on mobile */
+      .device-ipad {
+        width: 220px;
+        height: 293px;
+      }
+
+      .device-ipad iframe {
+        transform: scale(0.2865); /* 220/768 */
+      }
+
+      /* Full-width desktop on mobile */
+      .device-desktop {
+        width: 100%;
+        max-width: 400px;
+        height: 250px;
+      }
+
+      .device-desktop iframe {
+        transform: scale(0.2778);
+      }
+
+      .gallery-footer {
+        padding: 0 24px 40px;
+      }
+    }
+
+    /* Very small screens */
+    @media (max-width: 480px) {
+      .device-desktop {
+        height: 190px;
+      }
+
+      .device-desktop iframe {
+        /* scale to fit ~320px container */
+        transform: scale(0.2222);
+      }
+    }
+  </style>
 </head>
 <body>
 
-<div class="gallery">
-    <div class="gallery-header">
-        <img src="assets/maplemoon_logo.svg" alt="MapleMoon">
-        <h1>12 Hero Options</h1>
-        <p>Each targeting a different goal — Desktop + iPhone responsive — 20 improvements applied</p>
+  <!-- Header -->
+  <header class="gallery-header">
+    <img src="assets/maplemoon_logo.svg" alt="MapleMoon" class="gallery-header__logo">
+    <div class="gallery-header__text">
+      <h1 class="gallery-header__title">Hero Concepts</h1>
+      <p class="gallery-header__subtitle">12 responsive hero concepts for maplemoon.com.au</p>
     </div>
+  </header>
 
-    <div class="cards">
-        <a href="hero_v1.html" class="card">
-            <div class="card-preview"><span class="num">V1</span></div>
-            <div class="card-info">
-                <span class="card-goal">Brand Recognition</span>
-                <div class="card-title">Brand Statement</div>
-                <div class="card-desc">Giant CAROB wordmark dominates. Categories as navigation. Premium, minimal, confident. The brand IS the hero.</div>
+  <div class="gallery-divider"><hr></div>
+
+  <!-- Hero Cards (generated by JS) -->
+  <main class="gallery-cards" id="gallery"></main>
+
+  <!-- Footer -->
+  <footer class="gallery-footer">
+    <hr>
+    <p class="gallery-footer__text">HandToMouse Studio</p>
+  </footer>
+
+  <script>
+    const heroes = [
+      { id: 'v1',  file: 'hero_v1.html',  title: 'Brand Statement',   desc: 'Giant CAROB wordmark dominates. The brand IS the hero.' },
+      { id: 'v2',  file: 'hero_v2.html',  title: 'Shop Now',          desc: 'Product front and center with Shop All CTA. Conversion-focused.' },
+      { id: 'v3',  file: 'hero_v3.html',  title: 'What is Carob?',    desc: 'Split layout with story panel. Answers the #1 visitor question.' },
+      { id: 'v4',  file: 'hero_v4.html',  title: 'The Range',         desc: 'Three product columns. Shows MapleMoon is a full range.' },
+      { id: 'v6',  file: 'hero_v6.html',  title: 'Before & After',    desc: 'Draggable split-screen. Raw carob pods to finished product.' },
+      { id: 'v7',  file: 'hero_v7.html',  title: 'Flavour Picker',    desc: 'Click a flavour, everything crossfades. Browsing becomes exploration.' },
+      { id: 'v8',  file: 'hero_v8.html',  title: 'Time of Day',       desc: 'Hero adapts to your local time. Every visit feels personal.' },
+      { id: 'v9',  file: 'hero_v9.html',  title: 'Story Cards',       desc: 'Swipe through chapters: Pod, Craft, Bar, Shop.' },
+      { id: 'v10', file: 'hero_v10.html', title: 'Letterbox Cinema',  desc: 'Cinematic framing with Ken Burns zoom. Criterion Collection vibes.' },
+      { id: 'v11', file: 'hero_v11.html', title: 'The Grid',          desc: 'Bento grid showing the full world of MapleMoon at a glance.' },
+      { id: 'v12', file: 'hero_v12.html', title: 'The Unwrap',        desc: 'Tap to discover. Product rotates and reveals details.' },
+      { id: 'v13', file: 'hero_v13.html', title: 'Full Bleed Photo',  desc: 'Magazine cover layout. Designed for photoshoot hero shots.' },
+    ];
+
+    const gallery = document.getElementById('gallery');
+
+    heroes.forEach(hero => {
+      const vNum = hero.id.toUpperCase();
+
+      const card = document.createElement('article');
+      card.className = 'hero-card';
+      card.dataset.heroFile = hero.file;
+
+      card.innerHTML = `
+        <div class="hero-card__header">
+          <div>
+            <h2 class="hero-card__title"><span>${vNum} &mdash;</span> ${hero.title}</h2>
+            <p class="hero-card__desc">${hero.desc}</p>
+          </div>
+          <a href="${hero.file}" target="_blank" class="hero-card__link">Open Full Screen</a>
+        </div>
+        <div class="device-row">
+          <div class="device-col device-col--iphone">
+            <div class="device-frame device-iphone" data-src="${hero.file}">
+              <div class="device-placeholder">Loading&hellip;</div>
             </div>
-        </a>
-
-        <a href="hero_v2.html" class="card">
-            <div class="card-preview"><span class="num">V2</span></div>
-            <div class="card-info">
-                <span class="card-goal">Sell Product</span>
-                <div class="card-title">Shop Now</div>
-                <div class="card-desc">Product front and center with "Shop All" CTA. Horizontal nav, tagline, category strip. Commercial and conversion-focused.</div>
+            <span class="device-label">iPhone</span>
+          </div>
+          <div class="device-col device-col--ipad">
+            <div class="device-frame device-ipad" data-src="${hero.file}">
+              <div class="device-placeholder">Loading&hellip;</div>
             </div>
-        </a>
-
-        <a href="hero_v3.html" class="card">
-            <div class="card-preview"><span class="num">V3</span></div>
-            <div class="card-info">
-                <span class="card-goal">Educate</span>
-                <div class="card-title">What is Carob?</div>
-                <div class="card-desc">Split layout — product left, story right. "Not chocolate. Better." Trust badges, body copy, CTA. Answers the #1 visitor question.</div>
+            <span class="device-label">iPad</span>
+          </div>
+          <div class="device-col device-col--desktop">
+            <div class="device-frame device-desktop" data-src="${hero.file}">
+              <div class="device-placeholder">Loading&hellip;</div>
             </div>
-        </a>
+            <span class="device-label">Desktop</span>
+          </div>
+        </div>
+      `;
 
-        <a href="hero_v4.html" class="card">
-            <div class="card-preview"><span class="num">V4</span></div>
-            <div class="card-info">
-                <span class="card-goal">Show Range</span>
-                <div class="card-title">The Range</div>
-                <div class="card-desc">3 product columns — Bars, Moons, Elixirs. Swipeable cards on mobile. Shows MapleMoon isn't just one product.</div>
-            </div>
-        </a>
+      gallery.appendChild(card);
+    });
 
-        <a href="hero_v6.html" class="card">
-            <div class="card-preview"><span class="num">V6</span></div>
-            <div class="card-info">
-                <span class="card-goal">Craft Story</span>
-                <div class="card-title">Before & After</div>
-                <div class="card-desc">Draggable split-screen — raw carob pods on left, finished product on right. "From pod to bar." Interactive comparison slider.</div>
-            </div>
-        </a>
+    /* ---- Lazy-load iframes with IntersectionObserver ---- */
 
-        <a href="hero_v7.html" class="card">
-            <div class="card-preview"><span class="num">V7</span></div>
-            <div class="card-info">
-                <span class="card-goal">Personalisation</span>
-                <div class="card-title">Flavour Picker</div>
-                <div class="card-desc">Click a flavour pill — product, tagline, gradient all crossfade. Original, Spiced, Coconut, Coffee, Mint. Turns browsing into exploration.</div>
-            </div>
-        </a>
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const card = entry.target;
+          const frames = card.querySelectorAll('.device-frame[data-src]');
 
-        <a href="hero_v8.html" class="card">
-            <div class="card-preview"><span class="num">V8</span></div>
-            <div class="card-info">
-                <span class="card-goal">Contextual</span>
-                <div class="card-title">Time of Day</div>
-                <div class="card-desc">Hero adapts to your local time — sunrise warmth in the morning, blue afternoon, dusk evening, starry night. Every visit feels personal.</div>
-            </div>
-        </a>
+          frames.forEach(frame => {
+            if (frame.querySelector('iframe')) return; // already loaded
 
-        <a href="hero_v9.html" class="card">
-            <div class="card-preview"><span class="num">V9</span></div>
-            <div class="card-info">
-                <span class="card-goal">Storytelling</span>
-                <div class="card-title">Story Cards</div>
-                <div class="card-desc">Swipe through 4 full-screen chapters: The Pod, The Craft, The Bar, Shop. DVD chapter select meets Instagram Stories.</div>
-            </div>
-        </a>
+            const src = frame.dataset.src;
+            const iframe = document.createElement('iframe');
+            iframe.src = src;
+            iframe.setAttribute('loading', 'lazy');
+            iframe.setAttribute('tabindex', '-1');
+            iframe.setAttribute('aria-hidden', 'true');
 
-        <a href="hero_v10.html" class="card">
-            <div class="card-preview"><span class="num">V10</span></div>
-            <div class="card-info">
-                <span class="card-goal">Premium Mood</span>
-                <div class="card-title">Letterbox Cinema</div>
-                <div class="card-desc">Cinematic letterbox framing with slow Ken Burns zoom. CAROB title card. 'Enter' to begin. Criterion Collection vibes.</div>
-            </div>
-        </a>
+            iframe.addEventListener('load', () => {
+              frame.classList.add('loaded');
+            });
 
-        <a href="hero_v11.html" class="card">
-            <div class="card-preview"><span class="num">V11</span></div>
-            <div class="card-info">
-                <span class="card-goal">Full World</span>
-                <div class="card-title">The Grid</div>
-                <div class="card-desc">Bento grid showing everything at a glance — products, ingredients, trust badges, origin. DVD scene select meets Pinterest.</div>
-            </div>
-        </a>
+            frame.appendChild(iframe);
+          });
 
-        <a href="hero_v12.html" class="card">
-            <div class="card-preview"><span class="num">V12</span></div>
-            <div class="card-info">
-                <span class="card-goal">Discovery</span>
-                <div class="card-title">The Unwrap</div>
-                <div class="card-desc">Tap to discover — product rotates and reveals details, price, and Add to Cart. Cycle through Bar, Moon, Elixirs.</div>
-            </div>
-        </a>
+          observer.unobserve(card);
+        }
+      });
+    }, {
+      rootMargin: '200px 0px', /* start loading 200px before visible */
+      threshold: 0
+    });
 
-        <a href="hero_v13.html" class="card">
-            <div class="card-preview"><span class="num">V13</span></div>
-            <div class="card-info">
-                <span class="card-goal">Photography</span>
-                <div class="card-title">Full Bleed Photo</div>
-                <div class="card-desc">Magazine cover layout — full-bleed lifestyle photo, dark gradient overlay, editorial text. Designed for photoshoot hero shots.</div>
-            </div>
-        </a>
-    </div>
-</div>
-
-<div class="footer">MapleMoon Hero Options — HandToMouse Studio</div>
+    document.querySelectorAll('.hero-card').forEach(card => {
+      observer.observe(card);
+    });
+  </script>
 
 </body>
 </html>

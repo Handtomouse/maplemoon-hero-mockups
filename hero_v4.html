@@ -4,14 +4,8 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Maple Moon — The Range</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="brand_kit.css">
 <style>
-  @font-face { font-family: 'P22 Mackinac Pro'; font-weight: 400; src: local('P22 Mackinac Pro Book'), local('P22MackinacPro-Book'); }
-  @font-face { font-family: 'P22 Mackinac Pro'; font-weight: 500; src: local('P22 Mackinac Pro Medium'), local('P22MackinacPro-Medium'); }
-  @font-face { font-family: 'P22 Mackinac Pro'; font-weight: 700; src: local('P22 Mackinac Pro Bold'), local('P22MackinacPro-Bold'); }
-
   *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 
   :root {
@@ -25,7 +19,7 @@
 
   body {
     background: linear-gradient(180deg, var(--grad-top) 0%, var(--grad-bottom) 100%);
-    font-family: 'Inter', sans-serif;
+    font-family: var(--mm-sans);
     color: var(--cream);
     position: relative;
     min-height: 100vh;
@@ -85,7 +79,7 @@
   .back-link {
     position: fixed; top: 16px; left: 16px; z-index: 101;
     color: var(--cream); text-decoration: none;
-    font-family: 'Inter', sans-serif; font-size: 0.8rem; font-weight: 400;
+    font-family: var(--mm-sans); font-size: 0.8rem; font-weight: 400;
     opacity: 0.7; transition: opacity 0.2s;
     display: none;
   }
@@ -120,7 +114,7 @@
   #menu-toggle:checked ~ .mobile-menu { opacity: 1; pointer-events: auto; }
 
   .mobile-menu a {
-    font-family: 'P22 Mackinac Pro', sans-serif; font-size: 1.4rem;
+    font-family: var(--mm-serif); font-size: 1.4rem;
     font-weight: 500; text-transform: uppercase; letter-spacing: 0.12em;
     color: var(--navy); text-decoration: none;
     transition: opacity 0.2s;
@@ -139,7 +133,7 @@
     border-top: 1px solid rgba(30,67,102,0.15);
   }
   .mobile-menu .menu-nav a {
-    font-family: 'Inter', sans-serif; font-size: 0.95rem;
+    font-family: var(--mm-sans); font-size: 0.95rem;
     font-weight: 400; text-transform: none; letter-spacing: 0.02em;
     color: var(--navy); opacity: 0.6;
   }
@@ -154,18 +148,6 @@
 
   /* ── Desktop nav bar ── */
   .header-desktop { display: none; }
-
-  /* ── CAROB watermark ── */
-  .carob-watermark {
-    position: absolute;
-    top: 50%; left: 50%;
-    transform: translate(-50%, -50%);
-    width: 110%; max-width: 480px;
-    height: auto;
-    opacity: 0.08;
-    z-index: 1;
-    pointer-events: none;
-  }
 
   /* ── MOBILE HERO ── */
   .hero-mobile {
@@ -221,7 +203,7 @@
   }
 
   .product-card .card-label {
-    font-family: 'P22 Mackinac Pro', sans-serif;
+    font-family: var(--mm-serif);
     font-size: 1.2rem; font-weight: 500;
     color: var(--cream);
     text-transform: uppercase;
@@ -229,7 +211,7 @@
     font-feature-settings: 'kern' 1, 'liga' 1;
   }
   .product-card .card-subtitle {
-    font-family: 'Inter', sans-serif;
+    font-family: var(--mm-sans);
     font-size: 0.75rem; font-weight: 300;
     color: var(--cream); opacity: 0.5;
   }
@@ -256,7 +238,7 @@
     border: 1.5px solid var(--cream); color: var(--cream);
     background: transparent; border-radius: 30px;
     padding: 12px 32px; min-height: 48px;
-    font-family: 'Inter', sans-serif; font-size: 0.85rem;
+    font-family: var(--mm-sans); font-size: 0.85rem;
     font-weight: 400; letter-spacing: 0.04em; text-transform: uppercase;
     text-decoration: none; cursor: pointer;
     transition: background 0.3s, color 0.3s, transform 0.15s;
@@ -289,7 +271,7 @@
   }
   .category-strip a {
     scroll-snap-align: center;
-    font-family: 'P22 Mackinac Pro', sans-serif; font-size: 0.75rem;
+    font-family: var(--mm-serif); font-size: 0.75rem;
     font-weight: 500; text-transform: uppercase; letter-spacing: 0.12em;
     color: var(--cream); text-decoration: none;
     padding: 10px 0; min-height: 44px; white-space: nowrap;
@@ -340,7 +322,7 @@
       justify-content: center; gap: 40px;
     }
     .header-desktop nav a {
-      font-family: 'Inter', sans-serif; font-size: 1rem;
+      font-family: var(--mm-sans); font-size: 1rem;
       font-weight: 400; color: var(--cream); text-decoration: none;
       opacity: 0.9; transition: opacity 0.2s;
     }
@@ -358,20 +340,6 @@
       width: 100%; height: 100vh; height: 100dvh;
       position: relative;
       overflow: hidden;
-    }
-
-    /* Watermark desktop */
-    .hero-desktop .carob-watermark-desktop {
-      position: absolute;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 90%; max-width: 1200px;
-      height: auto;
-      opacity: 0.08;
-      z-index: 1;
-      pointer-events: none;
-      bottom: 5%;
-      top: auto;
     }
 
     /* 3-column layout */
@@ -415,7 +383,7 @@
     }
 
     .range-col .col-label {
-      font-family: 'P22 Mackinac Pro', sans-serif;
+      font-family: var(--mm-serif);
       font-size: 1.4rem; font-weight: 500;
       color: var(--cream);
       text-transform: uppercase;
@@ -423,7 +391,7 @@
       margin-top: 20px;
     }
     .range-col .col-subtitle {
-      font-family: 'Inter', sans-serif;
+      font-family: var(--mm-sans);
       font-size: 0.85rem; font-weight: 300;
       color: var(--cream); opacity: 0.5;
       margin-top: 6px;
@@ -445,7 +413,7 @@
       padding: 24px 0 32px;
     }
     .category-bar-desktop a {
-      font-family: 'P22 Mackinac Pro', sans-serif; font-size: 1.3rem;
+      font-family: var(--mm-serif); font-size: 1.3rem;
       font-weight: 500; text-transform: uppercase; letter-spacing: 0.15em;
       color: var(--cream); text-decoration: none;
       transition: opacity 0.2s;
@@ -517,7 +485,7 @@
 
 <!-- ═══════════ MOBILE HERO ═══════════ -->
 <main class="hero-mobile" id="main">
-  <img src="assets/carob_wordmark.svg" alt="" class="carob-watermark fade-2" aria-hidden="true" width="800" height="200" loading="lazy" decoding="async">
+  <div class="carob-watermark-wrap wm-full"><img src="assets/carob_wordmark.svg" alt="" aria-hidden="true"></div>
 
   <div class="card-scroll fade-3" id="cardScroll">
     <!-- Card 1: Bars -->
@@ -559,7 +527,7 @@
 
 <!-- ═══════════ DESKTOP HERO ═══════════ -->
 <div class="hero-desktop">
-  <img src="assets/carob_wordmark.svg" alt="" class="carob-watermark-desktop fade-2" aria-hidden="true" width="800" height="200" loading="lazy" decoding="async">
+  <div class="carob-watermark-wrap wm-full"><img src="assets/carob_wordmark.svg" alt="" aria-hidden="true"></div>
 
   <div class="range-columns">
     <div class="range-col fade-3">

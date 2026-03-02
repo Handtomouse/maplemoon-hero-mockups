@@ -4,14 +4,8 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Maple Moon — Shop Carob</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="brand_kit.css">
 <style>
-  @font-face { font-family: 'P22 Mackinac Pro'; font-weight: 400; src: local('P22 Mackinac Pro Book'), local('P22MackinacPro-Book'); }
-  @font-face { font-family: 'P22 Mackinac Pro'; font-weight: 500; src: local('P22 Mackinac Pro Medium'), local('P22MackinacPro-Medium'); }
-  @font-face { font-family: 'P22 Mackinac Pro'; font-weight: 700; src: local('P22 Mackinac Pro Bold'), local('P22MackinacPro-Bold'); }
-
   *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 
   :root {
@@ -25,7 +19,7 @@
 
   body {
     background: linear-gradient(180deg, var(--grad-top) 0%, var(--grad-bottom) 100%);
-    font-family: 'Inter', sans-serif;
+    font-family: var(--mm-sans);
     color: var(--cream);
     position: relative;
     min-height: 100vh;
@@ -90,7 +84,7 @@
   .back-link {
     position: fixed; top: 16px; left: 16px; z-index: 101;
     color: var(--cream); text-decoration: none;
-    font-family: 'Inter', sans-serif; font-size: 0.8rem; font-weight: 400;
+    font-family: var(--mm-sans); font-size: 0.8rem; font-weight: 400;
     opacity: 0.7; transition: opacity 0.2s;
     display: none;
   }
@@ -125,7 +119,7 @@
   #menu-toggle:checked ~ .mobile-menu { opacity: 1; pointer-events: auto; }
 
   .mobile-menu a {
-    font-family: 'P22 Mackinac Pro', sans-serif; font-size: 1.4rem;
+    font-family: var(--mm-serif); font-size: 1.4rem;
     font-weight: 500; text-transform: uppercase; letter-spacing: 0.12em;
     color: var(--navy); text-decoration: none;
     transition: opacity 0.2s;
@@ -144,7 +138,7 @@
     border-top: 1px solid rgba(30,67,102,0.15);
   }
   .mobile-menu .menu-nav a {
-    font-family: 'Inter', sans-serif; font-size: 0.95rem;
+    font-family: var(--mm-sans); font-size: 0.95rem;
     font-weight: 400; text-transform: none; letter-spacing: 0.02em;
     color: var(--navy); opacity: 0.6;
   }
@@ -171,18 +165,6 @@
     gap: 20px;
   }
 
-  /* ── CAROB watermark ── */
-  .carob-watermark {
-    position: absolute;
-    top: 50%; left: 50%;
-    transform: translate(-50%, -50%);
-    width: 110%; max-width: 480px;
-    height: auto;
-    opacity: 0.10;
-    z-index: 1;
-    pointer-events: none;
-  }
-
   /* ── Product ── */
   .product-img {
     width: 65%; max-width: 280px; height: auto;
@@ -193,7 +175,7 @@
 
   /* ── Tagline ── */
   .tagline {
-    font-family: 'Inter', sans-serif; font-weight: 300;
+    font-family: var(--mm-sans); font-weight: 300;
     font-size: 0.9rem; color: var(--cream); opacity: 0.7;
     text-align: center; position: relative; z-index: 2;
     text-wrap: balance;
@@ -205,7 +187,7 @@
     border: 1.5px solid var(--cream); color: var(--cream);
     background: transparent; border-radius: 30px;
     padding: 12px 32px; min-height: 48px;
-    font-family: 'Inter', sans-serif; font-size: 0.85rem;
+    font-family: var(--mm-sans); font-size: 0.85rem;
     font-weight: 400; letter-spacing: 0.04em; text-transform: uppercase;
     text-decoration: none; cursor: pointer;
     transition: background 0.3s, color 0.3s, transform 0.15s;
@@ -238,7 +220,7 @@
   }
   .category-strip a {
     scroll-snap-align: center;
-    font-family: 'P22 Mackinac Pro', sans-serif; font-size: 0.75rem;
+    font-family: var(--mm-serif); font-size: 0.75rem;
     font-weight: 500; text-transform: uppercase; letter-spacing: 0.12em;
     color: var(--cream); text-decoration: none;
     padding: 10px 0; min-height: 44px; white-space: nowrap;
@@ -291,7 +273,7 @@
       justify-content: center; gap: 40px;
     }
     .header-desktop nav a {
-      font-family: 'Inter', sans-serif; font-size: 1rem;
+      font-family: var(--mm-sans); font-size: 1rem;
       font-weight: 400; color: var(--cream); text-decoration: none;
       opacity: 0.9; transition: opacity 0.2s;
     }
@@ -301,13 +283,6 @@
     }
 
     /* Watermark */
-    .carob-watermark {
-      width: 90%; max-width: 1200px;
-      opacity: 0.08;
-      bottom: 5%; left: 50%;
-      transform: translateX(-50%);
-      top: auto;
-    }
 
     /* Product */
     .product-img {
@@ -333,7 +308,7 @@
       padding: 24px 0 32px;
     }
     .category-bar-desktop a {
-      font-family: 'P22 Mackinac Pro', sans-serif; font-size: 1.3rem;
+      font-family: var(--mm-serif); font-size: 1.3rem;
       font-weight: 500; text-transform: uppercase; letter-spacing: 0.15em;
       color: var(--cream); text-decoration: none;
       transition: opacity 0.2s;
@@ -400,7 +375,7 @@
 </header>
 
 <main class="hero" id="main">
-  <img src="assets/carob_wordmark.svg" alt="" class="carob-watermark fade-2" id="carobWatermark" aria-hidden="true" width="800" height="200" loading="lazy" decoding="async">
+  <div class="carob-watermark-wrap wm-full"><img src="assets/carob_wordmark.svg" alt="" aria-hidden="true"></div>
   <img src="assets/bar_hero_front.png" alt="Maple Moon Carob Bar" class="product-img fade-product" width="400" height="600" fetchpriority="high" decoding="sync">
   <p class="tagline fade-4">Naturally sweet, nothing added.</p>
   <a href="#" class="cta-btn fade-5">Shop All</a>
@@ -474,21 +449,6 @@
 })();
 </script>
 
-<!-- Parallax CAROB watermark (desktop only) -->
-<script>
-(function() {
-  if (window.innerWidth <= 768) return;
-  var watermark = document.getElementById('carobWatermark');
-  if (!watermark) return;
-  function onScroll() {
-    requestAnimationFrame(function() {
-      var scrollY = window.scrollY || window.pageYOffset;
-      watermark.style.transform = 'translateX(-50%) translateY(' + (scrollY * 0.3) + 'px)';
-    });
-  }
-  window.addEventListener('scroll', onScroll, { passive: true });
-})();
-</script>
 
 <!-- Category strip scroll indicator -->
 <script>

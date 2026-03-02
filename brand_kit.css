@@ -1,0 +1,96 @@
+/* ══════════════════════════════════════════════════════
+   MapleMoon Brand Kit — Single Source of Truth
+   ══════════════════════════════════════════════════════ */
+
+/* ── Colors ── */
+:root {
+  --mm-cream: #E7E4CA;
+  --mm-navy: #1E4366;
+  --mm-blue-top: #7B9DBF;
+  --mm-blue-bottom: #A8BDD4;
+  --mm-cream-10: rgba(231,228,202,0.1);
+  --mm-cream-30: rgba(231,228,202,0.3);
+  --mm-cream-50: rgba(231,228,202,0.5);
+  --mm-cream-60: rgba(231,228,202,0.6);
+  --mm-serif: 'P22 Mackinac Pro', Georgia, serif;
+  --mm-sans: 'Neue Haas Grotesk Display Pro', 'Inter', 'Helvetica Neue', sans-serif;
+}
+
+/* ── Typography ── */
+
+/* P22 Mackinac Pro — 400 + 500 ONLY (never bold/700) */
+@font-face { font-family: 'P22 Mackinac Pro'; font-weight: 400; src: local('P22 Mackinac Pro Book'), local('P22MackinacPro-Book'); }
+@font-face { font-family: 'P22 Mackinac Pro'; font-weight: 500; src: local('P22 Mackinac Pro Medium'), local('P22MackinacPro-Medium'); }
+
+/* Neue Haas Grotesk Display Pro */
+@font-face { font-family: 'Neue Haas Grotesk Display Pro'; font-weight: 300; font-style: normal; src: local('Neue Haas Grotesk Display Pro 45 Light'), local('NeueHaasDisplay-Light'); }
+@font-face { font-family: 'Neue Haas Grotesk Display Pro'; font-weight: 400; font-style: normal; src: local('Neue Haas Grotesk Display Pro 55 Roman'), local('NeueHaasDisplay-Roman'); }
+@font-face { font-family: 'Neue Haas Grotesk Display Pro'; font-weight: 500; font-style: normal; src: local('Neue Haas Grotesk Display Pro 65 Medium'), local('NeueHaasDisplay-Mediu'); }
+@font-face { font-family: 'Neue Haas Grotesk Display Pro'; font-weight: 700; font-style: normal; src: local('Neue Haas Grotesk Display Pro 75 Bold'), local('NeueHaasDisplay-Bold'); }
+
+/* ── Base Resets ── */
+html { overflow-x: hidden; }
+body { overflow-x: hidden; }
+
+/* ── CAROB Watermark System ── */
+/* Uses a flex container with overflow:hidden — physically impossible to overflow */
+
+.carob-watermark-wrap {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.carob-watermark-wrap img {
+  flex-shrink: 0;
+  height: auto;
+  display: block;
+}
+
+/* Variant: fully visible, centered */
+.carob-watermark-wrap.wm-full img {
+  width: 80%;
+  max-width: 1000px;
+  opacity: 0.08;
+}
+
+/* Variant: bleeding off bottom (bottom half cropped) */
+.carob-watermark-wrap.wm-bleed {
+  bottom: -15%;
+}
+.carob-watermark-wrap.wm-bleed img {
+  width: 90%;
+  max-width: 1200px;
+  opacity: 0.06;
+}
+
+/* Variant: super subtle background texture */
+.carob-watermark-wrap.wm-subtle img {
+  width: 70%;
+  max-width: 900px;
+  opacity: 0.04;
+}
+
+/* Mobile adjustments */
+@media (max-width: 767px) {
+  .carob-watermark-wrap.wm-full img {
+    width: 90%;
+    max-width: 360px;
+  }
+  .carob-watermark-wrap.wm-bleed img {
+    width: 100%;
+    max-width: 400px;
+  }
+  .carob-watermark-wrap.wm-subtle img {
+    width: 80%;
+    max-width: 320px;
+  }
+}
