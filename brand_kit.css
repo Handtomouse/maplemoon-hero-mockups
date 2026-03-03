@@ -75,7 +75,7 @@
 /* Neue Haas Grotesk Display Pro */
 @font-face { font-family: 'Neue Haas Grotesk Display Pro'; font-weight: 300; font-style: normal; font-display: swap; src: local('Neue Haas Grotesk Display Pro 45 Light'), local('NeueHaasDisplay-Light'); }
 @font-face { font-family: 'Neue Haas Grotesk Display Pro'; font-weight: 400; font-style: normal; font-display: swap; src: local('Neue Haas Grotesk Display Pro 55 Roman'), local('NeueHaasDisplay-Roman'); }
-@font-face { font-family: 'Neue Haas Grotesk Display Pro'; font-weight: 500; font-style: normal; font-display: swap; src: local('Neue Haas Grotesk Display Pro 65 Medium'), local('NeueHaasDisplay-Mediu'); }
+@font-face { font-family: 'Neue Haas Grotesk Display Pro'; font-weight: 500; font-style: normal; font-display: swap; src: local('Neue Haas Grotesk Display Pro 65 Medium'), local('NeueHaasDisplay-Medium'); }
 @font-face { font-family: 'Neue Haas Grotesk Display Pro'; font-weight: 700; font-style: normal; font-display: swap; src: local('Neue Haas Grotesk Display Pro 75 Bold'), local('NeueHaasDisplay-Bold'); }
 
 /* ── Base Resets ── */
