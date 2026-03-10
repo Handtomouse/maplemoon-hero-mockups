@@ -2,6 +2,9 @@
    MapleMoon Brand Kit — Single Source of Truth
    ══════════════════════════════════════════════════════ */
 
+/* ── Reset ── */
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
 /* ── Colors ── */
 :root {
   --mm-dark-bg: #1a1a1a;
@@ -84,6 +87,7 @@ body { overflow-x: hidden; }
 
 /* ── CAROB Watermark System ── */
 /* Uses a flex container with overflow:hidden — physically impossible to overflow */
+/* Variants: .wm-full (80% width, 0.08 opacity), .wm-bleed (bottom -15%, 90% width), .wm-subtle (70% width, 0.04 opacity) */
 
 .carob-watermark-wrap {
   position: absolute;
@@ -177,9 +181,9 @@ body { overflow-x: hidden; }
   top: 16px;
 }
 
-/* Focus visible */
+/* Focus visible — navy for contrast on both light and dark backgrounds */
 :focus-visible {
-  outline: 2px solid var(--mm-cream);
+  outline: 2px solid var(--mm-navy);
   outline-offset: 2px;
 }
 

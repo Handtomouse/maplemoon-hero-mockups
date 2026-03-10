@@ -3,3 +3,6 @@ node_modules/
 _archive/
 BRIEF_COPYWRITING.md
 assets/moodboard/
+*.bak
+*.r20_pre_edit
+.DS_Store

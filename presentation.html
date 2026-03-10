@@ -401,9 +401,9 @@ body {
   </div>
   <div class="lightbox-frame-wrap" id="lbFrameWrap">
     <div class="lb-loading" id="lbLoading">Loading…</div>
-    <iframe id="lbFrame" title="Hero preview" onload="document.getElementById('lbLoading').classList.add('hidden')"></iframe>
-    <button class="lb-arrow lb-arrow-prev" id="lbPrev" onclick="stepLightbox(-1)" aria-label="Previous">←</button>
-    <button class="lb-arrow lb-arrow-next" id="lbNext" onclick="stepLightbox(1)" aria-label="Next">→</button>
+    <iframe id="lbFrame" title="Hero preview" onload="document.getElementById('lbLoading').classList.add('hidden')" onerror="document.getElementById('lbLoading').classList.add('hidden')"></iframe>
+    <button class="lb-arrow lb-arrow-prev" id="lbPrev" onclick="stepLightbox(-1)" aria-label="Previous hero (← Arrow key)">←</button>
+    <button class="lb-arrow lb-arrow-next" id="lbNext" onclick="stepLightbox(1)" aria-label="Next hero (→ Arrow key)">→</button>
   </div>
 </div>
 
@@ -495,7 +495,7 @@ function renderCards() {
 function renderThemes() {
   const grid = document.getElementById('themesGrid');
   grid.innerHTML = THEMES.map(t => `
-    <div class="theme-card" onclick="window.open('${t.file}', '_blank')">
+    <div class="theme-card" onclick="window.open(new URL('${t.file}', window.location.href).href, '_blank')">
       <div class="theme-card-left">
         <div class="theme-card-tag">${t.label}</div>
         <div class="theme-card-title">${t.title}</div>
@@ -532,6 +532,9 @@ function loadIntoLightbox(hero) {
   document.getElementById('lbNum').textContent = `Hero ${String(hero.v).padStart(2,'0')}`;
   document.getElementById('lbTitle').textContent = hero.title;
   document.getElementById('lbFrame').src = `hero_v${hero.v}.html`;
+  // Fallback: hide spinner after 5s if onload/onerror don't fire
+  clearTimeout(window._lbLoadTimeout);
+  window._lbLoadTimeout = setTimeout(() => document.getElementById('lbLoading').classList.add('hidden'), 5000);
   updateLbFavBtn();
 }
 

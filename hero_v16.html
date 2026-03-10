@@ -9,23 +9,24 @@
 <meta property="og:title" content="MapleMoon — Moodboard">
 <meta property="og:description" content="The world of MapleMoon — artisan carob and cacao butter, handmade in Byron Bay. Organic, vegan, caffeine-free.">
 <meta property="og:type" content="website">
-<meta property="og:image" content="https://maplemoon-hero-mockups.vercel.app/assets/products_clean/bar_pure_carob.png">
+<meta property="og:image" content="/assets/products_clean/bar_pure_carob.png">
 <meta property="og:image:width" content="400">
 <meta property="og:image:height" content="600">
 <meta property="og:site_name" content="Maple Moon">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="MapleMoon — Moodboard">
 <meta name="twitter:description" content="Artisan carob and cacao butter, handmade in Byron Bay. Organic, vegan, caffeine-free.">
-<meta name="twitter:image" content="https://maplemoon-hero-mockups.vercel.app/assets/products_clean/bar_pure_carob.png">
-<link rel="canonical" href="https://maplemoon-hero-mockups.vercel.app/hero_v16.html">
+<meta name="twitter:image" content="/assets/products_clean/bar_pure_carob.png">
+<link rel="canonical" href="https://maplemoon-website.vercel.app/hero_v16.html">
 <link rel="preload" as="image" href="assets/carob_wordmark.svg">
 <link rel="icon" href="assets/maplemoon_logo.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="assets/maplemoon_logo.svg">
 <link rel="stylesheet" href="brand_kit.css">
 <style>
-  *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
 
   :root {
+    --z-product: 2;
   }
 
   html, body { height: 100%; overflow: hidden; }
@@ -41,19 +42,16 @@
     overflow: hidden;
   }
 
-  @keyframes fadeIn {
-    from { opacity: 0; transform: translateY(12px); }
-    to   { opacity: 1; transform: translateY(0); }
+  @media (prefers-reduced-motion: no-preference) {
+    .fade-1 { animation: fadeIn 0.8s ease both 0.2s; }
+    .fade-2 { animation: fadeIn 0.8s ease both 0.4s; }
+    .fade-3 { animation: fadeIn 0.8s ease both 0.6s; }
+    .fade-4 { animation: fadeIn 0.8s ease both 0.8s; }
   }
-
-  .fade-1 { animation: fadeIn 0.8s ease both 0.2s; }
-  .fade-2 { animation: fadeIn 0.8s ease both 0.4s; }
-  .fade-3 { animation: fadeIn 0.8s ease both 0.6s; }
-  .fade-4 { animation: fadeIn 0.8s ease both 0.8s; }
 
   /* ── Back link ── */
   .back-link {
-    position: fixed; top: 16px; left: 16px; z-index: 10;
+    position: fixed; top: 16px; left: 16px; z-index: calc(var(--z-fixed) + 1);
     color: var(--mm-cream); text-decoration: none;
     font-family: var(--mm-sans); font-size: 0.8rem; font-weight: 400;
     opacity: 0.7; transition: opacity 0.2s;
@@ -61,9 +59,21 @@
   .back-link:hover { opacity: 1; }
   @media (max-width: 767px) { .back-link { display: none; } }
 
+  #main:focus { outline: none; }
+
+  .menu-close {
+    position: absolute; top: 20px; right: 20px;
+    background: none; border: none; cursor: pointer;
+    font-size: 1.5rem; color: var(--mm-navy); opacity: 0.5;
+    padding: 12px; min-width: 44px; min-height: 44px;
+    display: flex; align-items: center; justify-content: center;
+    transition: opacity 0.2s;
+  }
+  .menu-close:hover { opacity: 1; }
+
   /* ── Mobile header ── */
   .header-mobile {
-    position: fixed; top: 0; left: 0; right: 0; z-index: 10;
+    position: fixed; top: 0; left: 0; right: 0; z-index: var(--z-fixed);
     display: flex; justify-content: space-between; align-items: flex-start;
     padding: 20px;
   }
@@ -73,7 +83,7 @@
   #menu-toggle { display: none; }
 
   .hamburger {
-    position: fixed; top: 12px; left: 12px; z-index: 200;
+    position: fixed; top: 12px; left: 12px; z-index: var(--z-tooltip);
     cursor: pointer; display: flex; flex-direction: column;
     justify-content: center; gap: 5px; width: 44px; height: 44px;
     padding: 8px;
@@ -89,7 +99,7 @@
 
   /* ── Mobile menu overlay ── */
   .mobile-menu {
-    position: fixed; inset: 0; z-index: 150;
+    position: fixed; inset: 0; z-index: var(--z-modal);
     background: var(--mm-cream); color: var(--mm-navy);
     display: flex; flex-direction: column;
     align-items: center; justify-content: center; gap: 28px;
@@ -181,7 +191,7 @@
   .vignette {
     position: fixed;
     inset: 0;
-    z-index: 1;
+    z-index: var(--z-base);
     pointer-events: none;
     background: radial-gradient(ellipse at center, transparent 30%, rgba(0,0,0,0.7) 100%);
   }
@@ -190,7 +200,7 @@
   .hero-overlay-content {
     position: fixed;
     top: 0; left: 0; right: 0; bottom: 0;
-    z-index: 5;
+    z-index: var(--z-sticky);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -279,7 +289,7 @@
 
     .header-desktop {
       display: flex; align-items: center;
-      position: fixed; top: 0; left: 0; right: 0; z-index: 10;
+      position: fixed; top: 0; left: 0; right: 0; z-index: var(--z-fixed);
       padding: 28px 40px;
       background: transparent;
     }
@@ -363,11 +373,12 @@
 <a href="index.html" class="back-link fade-1">&larr; Back to Gallery</a>
 
 <input type="checkbox" id="menu-toggle" hidden>
-<label for="menu-toggle" class="hamburger fade-1" aria-label="Menu" aria-expanded="false">
+<label for="menu-toggle" class="hamburger fade-1" role="button" aria-label="Menu" aria-expanded="false">
   <span></span><span></span><span></span>
 </label>
 
 <div class="mobile-menu" role="dialog" aria-modal="true" aria-label="Navigation menu" aria-hidden="true">
+  <button class="menu-close" aria-label="Close menu">&times;</button>
   <a href="/shop/bars">Bars</a>
   <a href="/shop/moons">Moons</a>
   <a href="/shop/bananas">Bananas</a>
@@ -485,7 +496,7 @@
 <div class="vignette"></div>
 
 <!-- Hero overlay -->
-<main id="main" class="hero-overlay-content">
+<main id="main" class="hero-overlay-content" tabindex="-1">
   <img class="hero-wordmark fade-1" src="assets/carob_wordmark.svg" alt="Maple Moon" width="180" height="45">
   <h1 class="hero-title fade-2">MAPLE MOON</h1>
   <p class="hero-tagline fade-3">Artisan carob and cacao butter. Byron Bay.</p>
@@ -530,6 +541,14 @@
   document.querySelectorAll('.mobile-menu a').forEach(function(link) {
     link.addEventListener('click', function() { toggle.checked = false; toggle.dispatchEvent(new Event('change')); });
   });
+
+  var closeBtn = document.querySelector('.menu-close');
+  if (closeBtn) {
+    closeBtn.addEventListener('click', function() {
+      toggle.checked = false;
+      toggle.dispatchEvent(new Event('change'));
+    });
+  }
 
   toggle.addEventListener('change', function() {
     var isOpen = toggle.checked;
