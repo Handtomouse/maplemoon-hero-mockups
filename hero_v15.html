@@ -9,16 +9,16 @@
 <meta property="og:title" content="MapleMoon — Product Orbit">
 <meta property="og:description" content="Explore the MapleMoon range — bars, moons, eclipses, and elixirs orbiting around our world. Organic, vegan, caffeine-free.">
 <meta property="og:type" content="website">
-<meta property="og:image" content="https://maplemoon-hero-mockups.vercel.app/assets/products/bar_original.jpg">
+<meta property="og:image" content="https://maplemoon-hero-mockups.vercel.app/assets/products_clean/bar_pure_carob.png">
 <meta property="og:image:width" content="400">
 <meta property="og:image:height" content="600">
 <meta property="og:site_name" content="Maple Moon">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="MapleMoon — Product Orbit">
 <meta name="twitter:description" content="Artisan carob and cacao butter, handmade in Byron Bay. Organic, vegan, caffeine-free.">
-<meta name="twitter:image" content="https://maplemoon-hero-mockups.vercel.app/assets/products/bar_original.jpg">
+<meta name="twitter:image" content="https://maplemoon-hero-mockups.vercel.app/assets/products_clean/bar_pure_carob.png">
 <link rel="canonical" href="https://maplemoon-hero-mockups.vercel.app/hero_v15.html">
-<link rel="preload" as="image" href="assets/products/bar_original.jpg">
+<link rel="preload" as="image" href="assets/products_clean/bar_pure_carob.png">
 <link rel="preload" as="image" href="assets/carob_wordmark.svg">
 <link rel="icon" href="assets/maplemoon_logo.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="assets/maplemoon_logo.svg">
@@ -27,47 +27,67 @@
   *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 
   :root {
-    --grad-top: #7B9DBF;
-    --grad-bottom: #A8BDD4;
-    --orbit-radius: 120px;
-    --node-size: 68px;
+    --z-product: 2;
+    --orbit-radius: 150px;
+    --node-size: 88px;
   }
 
-  html, body { height: 100%; overflow: hidden; }
+  html { height: 100%; }
+  body { height: 100%; overflow: hidden; }
 
   body {
-    background: linear-gradient(180deg, var(--grad-top) 0%, var(--grad-bottom) 100%);
+    background: linear-gradient(180deg, var(--mm-blue-top) 0%, var(--mm-blue-bottom) 100%);
     font-family: var(--mm-sans);
     color: var(--mm-cream);
     position: relative;
     min-height: 100vh;
     min-height: 100dvh;
     text-rendering: optimizeLegibility;
-    overflow-x: hidden;
   }
 
-  @keyframes fadeIn {
-    from { opacity: 0; transform: translateY(12px); }
-    to   { opacity: 1; transform: translateY(0); }
+  @media (prefers-reduced-motion: no-preference) {
+    .fade-1 { animation: fadeIn 0.8s ease both 0.2s; }
+    .fade-2 { animation: fadeIn 0.8s ease both 0.4s; }
+    .fade-3 { animation: fadeIn 0.8s ease both 0.6s; }
+    .fade-4 { animation: fadeIn 0.8s ease both 0.8s; }
   }
 
-  .fade-1 { animation: fadeIn 0.8s ease both 0.2s; }
-  .fade-2 { animation: fadeIn 0.8s ease both 0.4s; }
-  .fade-3 { animation: fadeIn 0.8s ease both 0.6s; }
-  .fade-4 { animation: fadeIn 0.8s ease both 0.8s; }
+  /* ── Main stage ── */
+  main#main {
+    position: relative;
+    height: 100vh;
+    height: 100dvh;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 
   /* ── Back link ── */
   .back-link {
-    position: fixed; top: 16px; left: 16px; z-index: 10;
+    position: fixed; top: 16px; left: 16px; z-index: calc(var(--z-fixed) + 1);
     color: var(--mm-cream); text-decoration: none;
     font-family: var(--mm-sans); font-size: 0.8rem; font-weight: 400;
     opacity: 0.7; transition: opacity 0.2s;
   }
   .back-link:hover { opacity: 1; }
+  @media (max-width: 767px) { .back-link { display: none; } }
+
+  #main:focus { outline: none; }
+
+  .menu-close {
+    position: absolute; top: 20px; right: 20px;
+    background: none; border: none; cursor: pointer;
+    font-size: 1.5rem; color: var(--mm-navy); opacity: 0.5;
+    padding: 12px; min-width: 44px; min-height: 44px;
+    display: flex; align-items: center; justify-content: center;
+    transition: opacity 0.2s;
+  }
+  .menu-close:hover { opacity: 1; }
 
   /* ── Mobile header ── */
   .header-mobile {
-    position: fixed; top: 0; left: 0; right: 0; z-index: 10;
+    position: fixed; top: 0; left: 0; right: 0; z-index: var(--z-fixed);
     display: flex; justify-content: space-between; align-items: flex-start;
     padding: 20px;
   }
@@ -77,7 +97,7 @@
   #menu-toggle { display: none; }
 
   .hamburger {
-    position: fixed; top: 12px; left: 12px; z-index: 200;
+    position: fixed; top: 12px; left: 12px; z-index: var(--z-tooltip);
     cursor: pointer; display: flex; flex-direction: column;
     justify-content: center; gap: 5px; width: 44px; height: 44px;
     padding: 8px;
@@ -93,7 +113,7 @@
 
   /* ── Mobile menu overlay ── */
   .mobile-menu {
-    position: fixed; inset: 0; z-index: 150;
+    position: fixed; inset: 0; z-index: var(--z-modal);
     background: var(--mm-cream); color: var(--mm-navy);
     display: flex; flex-direction: column;
     align-items: center; justify-content: center; gap: 28px;
@@ -132,10 +152,8 @@
 
   /* ── Orbit system ── */
   .orbit-stage {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    position: relative;
+    flex-shrink: 0;
     width: calc(var(--orbit-radius) * 2 + var(--node-size));
     height: calc(var(--orbit-radius) * 2 + var(--node-size));
   }
@@ -146,13 +164,13 @@
     top: 50%; left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
-    z-index: 3;
+    z-index: calc(var(--z-product) + 1);
     pointer-events: none;
   }
   .orbit-center .wordmark {
     width: 80px;
     height: auto;
-    opacity: 0.15;
+    opacity: 0.25;
   }
 
   /* Rotating ring */
@@ -195,16 +213,18 @@
     margin-top: calc(var(--node-size) / -2);
     margin-left: calc(var(--node-size) / -2);
     cursor: pointer;
-    z-index: 2;
+    z-index: var(--z-product);
     background: none; border: none; padding: 0; font: inherit;
   }
 
   .product-node:nth-child(1) { transform: rotate(0deg)   translateX(var(--orbit-radius)) rotate(0deg); }
-  .product-node:nth-child(2) { transform: rotate(60deg)  translateX(var(--orbit-radius)) rotate(-60deg); }
-  .product-node:nth-child(3) { transform: rotate(120deg) translateX(var(--orbit-radius)) rotate(-120deg); }
-  .product-node:nth-child(4) { transform: rotate(180deg) translateX(var(--orbit-radius)) rotate(-180deg); }
-  .product-node:nth-child(5) { transform: rotate(240deg) translateX(var(--orbit-radius)) rotate(-240deg); }
-  .product-node:nth-child(6) { transform: rotate(300deg) translateX(var(--orbit-radius)) rotate(-300deg); }
+  .product-node:nth-child(2) { transform: rotate(45deg)  translateX(var(--orbit-radius)) rotate(-45deg); }
+  .product-node:nth-child(3) { transform: rotate(90deg)  translateX(var(--orbit-radius)) rotate(-90deg); }
+  .product-node:nth-child(4) { transform: rotate(135deg) translateX(var(--orbit-radius)) rotate(-135deg); }
+  .product-node:nth-child(5) { transform: rotate(180deg) translateX(var(--orbit-radius)) rotate(-180deg); }
+  .product-node:nth-child(6) { transform: rotate(225deg) translateX(var(--orbit-radius)) rotate(-225deg); }
+  .product-node:nth-child(7) { transform: rotate(270deg) translateX(var(--orbit-radius)) rotate(-270deg); }
+  .product-node:nth-child(8) { transform: rotate(315deg) translateX(var(--orbit-radius)) rotate(-315deg); }
 
   .product-node-inner {
     width: 100%;
@@ -213,7 +233,8 @@
     overflow: hidden;
     border: 2px solid var(--mm-cream-30);
     transition: border-color 0.3s, transform 0.3s;
-    background: var(--mm-cream-10);
+    background: rgba(231, 228, 202, 0.12);
+    display: flex; align-items: center; justify-content: center;
   }
   .product-node-inner:hover {
     border-color: var(--mm-cream-80);
@@ -223,7 +244,8 @@
   .product-node-inner img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: contain;
+    padding: 10px;
     display: block;
   }
 
@@ -310,9 +332,9 @@
     z-index: 3;
   }
   .trust-row img {
-    width: 20px; height: 20px;
+    width: 24px; height: 24px;
     filter: brightness(0) invert(0.92) sepia(0.1) saturate(0.3);
-    opacity: 0.5;
+    opacity: 0.7;
   }
 
   /* ── Watermark ── */
@@ -325,8 +347,8 @@
   /* ── DESKTOP ── */
   @media (min-width: 768px) {
     :root {
-      --orbit-radius: 200px;
-      --node-size: 96px;
+      --orbit-radius: 220px;
+      --node-size: 120px;
     }
 
     .hamburger { display: none; }
@@ -372,23 +394,16 @@
       opacity: 1;
     }
 
-    .orbit-stage {
-      left: 50%;
-    }
   }
 
   @media (min-width: 1024px) {
     :root {
-      --orbit-radius: 240px;
-      --node-size: 104px;
+      --orbit-radius: 270px;
+      --node-size: 140px;
     }
 
     .header-desktop { padding: 32px 48px; }
     .header-desktop nav { gap: 52px; }
-
-    .orbit-stage {
-      left: 50%;
-    }
   }
 </style>
 </head>
@@ -451,22 +466,28 @@
 
     <div class="orbit-ring" role="group" aria-label="Products">
       <button class="product-node" data-name="Original Bar" data-desc="Our signature — roasted carob and organic cacao butter. Smooth, sweet, caffeine-free." data-href="/shop/bars/original" aria-label="Original Bar">
-        <div class="product-node-inner"><img src="assets/products/bar_original.jpg" alt="" width="104" height="104" loading="eager" decoding="async"></div>
+        <div class="product-node-inner"><img src="assets/products_clean/bar_pure_carob.png" alt="" width="104" height="104" loading="eager" decoding="async"></div>
       </button>
-      <button class="product-node" data-name="Almond Eclipse" data-desc="Whole roasted almonds set in a dark carob disc. Crunch meets caramel." data-href="/shop/eclipses/almond" aria-label="Almond Eclipse">
-        <div class="product-node-inner"><img src="assets/products/eclipse_almond.jpg" alt="" width="104" height="104" loading="eager" decoding="async"></div>
+      <button class="product-node" data-name="Hazelnut Eclipse" data-desc="Whole roasted hazelnuts set in a dark carob disc. Crunch meets caramel." data-href="/shop/eclipses/hazelnut" aria-label="Hazelnut Eclipse">
+        <div class="product-node-inner"><img src="assets/products_clean/eclipse_hazelnut_a.png" alt="" width="104" height="104" loading="eager" decoding="async"></div>
       </button>
       <button class="product-node" data-name="Coconut Moon" data-desc="A half-sphere of carob filled with toasted coconut cream. Tropical warmth." data-href="/shop/moons/coconut" aria-label="Coconut Moon">
         <div class="product-node-inner"><img src="assets/products/moon_coconut.jpg" alt="" width="104" height="104" loading="eager" decoding="async"></div>
       </button>
       <button class="product-node" data-name="Spiced Elixir" data-desc="Hot carob with cinnamon, cardamom, and vanilla. The evening ritual." data-href="/shop/elixirs/spiced" aria-label="Spiced Elixir">
-        <div class="product-node-inner"><img src="assets/products/elixir_spiced.jpg" alt="" width="104" height="104" loading="eager" decoding="async"></div>
+        <div class="product-node-inner"><img src="assets/products_clean/elixir_spiced.png" alt="" width="104" height="104" loading="eager" decoding="async"></div>
       </button>
       <button class="product-node" data-name="Roasted Powder" data-desc="Pure stone-ground carob. For baking, smoothies, or a simple warm drink." data-href="/shop/powder/roasted" aria-label="Roasted Powder">
         <div class="product-node-inner"><img src="assets/products/powder_roasted.jpg" alt="" width="104" height="104" loading="eager" decoding="async"></div>
       </button>
       <button class="product-node" data-name="Gift Bundle" data-desc="Six bars, beautifully boxed. The whole range in one place." data-href="/shop/gifts/bundle" aria-label="Gift Bundle">
         <div class="product-node-inner"><img src="assets/products/bar_bundle.jpg" alt="" width="104" height="104" loading="eager" decoding="async"></div>
+      </button>
+      <button class="product-node" data-name="Coconut Bite" data-desc="Soft carob bites rolled in toasted coconut. A two-bite treat." data-href="/shop/bites/coconut" aria-label="Coconut Bite">
+        <div class="product-node-inner"><img src="assets/products_clean/bite_coconut.png" alt="" width="104" height="104" loading="lazy" decoding="async"></div>
+      </button>
+      <button class="product-node" data-name="Gold Bite" data-desc="Carob bites dusted in golden luster. Indulgent, dairy-free." data-href="/shop/bites/gold" aria-label="Gold Bite">
+        <div class="product-node-inner"><img src="assets/products_clean/bite_gold.png" alt="" width="104" height="104" loading="lazy" decoding="async"></div>
       </button>
     </div>
   </div>
@@ -477,11 +498,11 @@
   </div>
 
   <div class="trust-row fade-4">
-    <img src="assets/icon_organic.svg" alt="Organic" width="20" height="20" loading="lazy" decoding="async">
-    <img src="assets/icon_vegan.svg" alt="Vegan" width="20" height="20" loading="lazy" decoding="async">
-    <img src="assets/icon_caffeine_free.svg" alt="Caffeine Free" width="20" height="20" loading="lazy" decoding="async">
-    <img src="assets/icon_gluten_free.svg" alt="Gluten Free" width="20" height="20" loading="lazy" decoding="async">
-    <img src="assets/icon_made_in_aus.svg" alt="Made in Australia" width="20" height="20" loading="lazy" decoding="async">
+    <img src="assets/icon_organic.svg" alt="Organic" width="24" height="24" loading="lazy" decoding="async">
+    <img src="assets/icon_vegan.svg" alt="Vegan" width="24" height="24" loading="lazy" decoding="async">
+    <img src="assets/icon_caffeine_free.svg" alt="Caffeine Free" width="24" height="24" loading="lazy" decoding="async">
+    <img src="assets/icon_gluten_free.svg" alt="Gluten Free" width="24" height="24" loading="lazy" decoding="async">
+    <img src="assets/icon_made_in_aus.svg" alt="Made in Australia" width="24" height="24" loading="lazy" decoding="async">
   </div>
 
 </main>

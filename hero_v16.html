@@ -9,14 +9,14 @@
 <meta property="og:title" content="MapleMoon — Moodboard">
 <meta property="og:description" content="The world of MapleMoon — artisan carob and cacao butter, handmade in Byron Bay. Organic, vegan, caffeine-free.">
 <meta property="og:type" content="website">
-<meta property="og:image" content="https://maplemoon-hero-mockups.vercel.app/assets/products/bar_original.jpg">
+<meta property="og:image" content="https://maplemoon-hero-mockups.vercel.app/assets/products_clean/bar_pure_carob.png">
 <meta property="og:image:width" content="400">
 <meta property="og:image:height" content="600">
 <meta property="og:site_name" content="Maple Moon">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="MapleMoon — Moodboard">
 <meta name="twitter:description" content="Artisan carob and cacao butter, handmade in Byron Bay. Organic, vegan, caffeine-free.">
-<meta name="twitter:image" content="https://maplemoon-hero-mockups.vercel.app/assets/products/bar_original.jpg">
+<meta name="twitter:image" content="https://maplemoon-hero-mockups.vercel.app/assets/products_clean/bar_pure_carob.png">
 <link rel="canonical" href="https://maplemoon-hero-mockups.vercel.app/hero_v16.html">
 <link rel="preload" as="image" href="assets/carob_wordmark.svg">
 <link rel="icon" href="assets/maplemoon_logo.svg" type="image/svg+xml">
@@ -59,6 +59,7 @@
     opacity: 0.7; transition: opacity 0.2s;
   }
   .back-link:hover { opacity: 1; }
+  @media (max-width: 767px) { .back-link { display: none; } }
 
   /* ── Mobile header ── */
   .header-mobile {
@@ -207,7 +208,7 @@
     width: 140px;
     height: auto;
     margin-bottom: 12px;
-    filter: brightness(10);
+    filter: brightness(0) invert(1);
     opacity: 0.9;
   }
 
@@ -255,9 +256,9 @@
     margin-top: 20px;
   }
   .trust-row img {
-    width: 20px; height: 20px;
+    width: 24px; height: 24px;
     filter: brightness(0) invert(0.92) sepia(0.1) saturate(0.3);
-    opacity: 0.5;
+    opacity: 0.7;
   }
 
   /* ── Reduced motion fallback ── */
@@ -408,61 +409,73 @@
 
     <!-- Column 1: 8 images × 2 (drift 80s) -->
     <div class="drift-col">
-      <img src="assets/products/bar_original.jpg" alt="" loading="eager" decoding="async">
-      <img src="assets/products/eclipse_almond.jpg" alt="" loading="eager" decoding="async">
-      <img src="assets/products/moon_coconut.jpg" alt="" loading="lazy" decoding="async">
-      <img src="assets/products/bar_almond.jpg" alt="" loading="lazy" decoding="async">
-      <img src="assets/products/eclipse_hazelnut.jpg" alt="" loading="lazy" decoding="async">
-      <img src="assets/products/elixir_spiced.jpg" alt="" loading="lazy" decoding="async">
-      <img src="assets/products/bar_chilli.jpg" alt="" loading="lazy" decoding="async">
-      <img src="assets/products/moon_almond.jpg" alt="" loading="lazy" decoding="async">
+      <img src="assets/products_clean/bar_pure_carob.png" alt="" loading="eager" decoding="async">
+      <img src="assets/mood/brand_palette/pinterest_702913454385917460.png" alt="" loading="eager" decoding="async">
+      <img src="assets/mood/brand_palette/pinterest_702913454385917456.jpg" alt="" loading="lazy" decoding="async">
+      <img src="assets/products_clean/bar_almond.png" alt="" loading="lazy" decoding="async">
+      <img src="assets/products_clean/eclipse_hazelnut_a.png" alt="" loading="lazy" decoding="async">
+      <img src="assets/mood/flatlay_editorial/pinterest_702913454385918064.jpg" alt="" loading="lazy" decoding="async">
+      <img src="assets/products_clean/bar_cayenne.png" alt="" loading="lazy" decoding="async">
+      <img src="assets/mood/brand_palette/pinterest_702913454385917963.jpg" alt="" loading="lazy" decoding="async">
+      <img src="assets/hero_shots/hero_bar_lineup.jpg" alt="" loading="lazy" decoding="async">
+      <img src="assets/products_clean/bite_coconut.png" alt="" loading="lazy" decoding="async">
       <!-- duplicate for loop -->
-      <img src="assets/products/bar_original.jpg" alt="" loading="lazy" decoding="async">
-      <img src="assets/products/eclipse_almond.jpg" alt="" loading="lazy" decoding="async">
-      <img src="assets/products/moon_coconut.jpg" alt="" loading="lazy" decoding="async">
-      <img src="assets/products/bar_almond.jpg" alt="" loading="lazy" decoding="async">
-      <img src="assets/products/eclipse_hazelnut.jpg" alt="" loading="lazy" decoding="async">
-      <img src="assets/products/elixir_spiced.jpg" alt="" loading="lazy" decoding="async">
-      <img src="assets/products/bar_chilli.jpg" alt="" loading="lazy" decoding="async">
-      <img src="assets/products/moon_almond.jpg" alt="" loading="lazy" decoding="async">
+      <img src="assets/products_clean/bar_pure_carob.png" alt="" loading="lazy" decoding="async">
+      <img src="assets/mood/brand_palette/pinterest_702913454385917460.png" alt="" loading="lazy" decoding="async">
+      <img src="assets/mood/brand_palette/pinterest_702913454385917456.jpg" alt="" loading="lazy" decoding="async">
+      <img src="assets/products_clean/bar_almond.png" alt="" loading="lazy" decoding="async">
+      <img src="assets/products_clean/eclipse_hazelnut_a.png" alt="" loading="lazy" decoding="async">
+      <img src="assets/mood/flatlay_editorial/pinterest_702913454385918064.jpg" alt="" loading="lazy" decoding="async">
+      <img src="assets/products_clean/bar_cayenne.png" alt="" loading="lazy" decoding="async">
+      <img src="assets/mood/brand_palette/pinterest_702913454385917963.jpg" alt="" loading="lazy" decoding="async">
+      <img src="assets/hero_shots/hero_bar_lineup.jpg" alt="" loading="lazy" decoding="async">
+      <img src="assets/products_clean/bite_coconut.png" alt="" loading="lazy" decoding="async">
     </div>
 
     <!-- Column 2: 7 images × 2 (drift 90s) -->
     <div class="drift-col">
-      <img src="assets/products/bar_peppermint.jpg" alt="" loading="eager" decoding="async">
-      <img src="assets/products/eclipse_goji.jpg" alt="" loading="lazy" decoding="async">
-      <img src="assets/products/bar_hazelnut.jpg" alt="" loading="lazy" decoding="async">
-      <img src="assets/products/moon_hazelnut.jpg" alt="" loading="lazy" decoding="async">
-      <img src="assets/products/elixir_plain.jpg" alt="" loading="lazy" decoding="async">
-      <img src="assets/products/bar_coconut_goji.jpg" alt="" loading="lazy" decoding="async">
-      <img src="assets/products/eclipse_pecan.jpg" alt="" loading="lazy" decoding="async">
+      <img src="assets/products_clean/bar_peppermint.png" alt="" loading="eager" decoding="async">
+      <img src="assets/mood/flatlay_editorial/pinterest_702913454385918053.jpg" alt="" loading="lazy" decoding="async">
+      <img src="assets/products_clean/bar_hazelnut.png" alt="" loading="lazy" decoding="async">
+      <img src="assets/mood/hero_lifestyle/pinterest_702913454385866270.jpg" alt="" loading="lazy" decoding="async">
+      <img src="assets/products_clean/elixir_plain.png" alt="" loading="lazy" decoding="async">
+      <img src="assets/products_clean/bar_goji_coconut.png" alt="" loading="lazy" decoding="async">
+      <img src="assets/products_clean/eclipse_pecan.png" alt="" loading="lazy" decoding="async">
+      <img src="assets/hero_shots/hero_carob_bar_smoke_wide.jpg" alt="" loading="lazy" decoding="async">
+      <img src="assets/products_clean/bite_gold.png" alt="" loading="lazy" decoding="async">
       <!-- duplicate for loop -->
-      <img src="assets/products/bar_peppermint.jpg" alt="" loading="lazy" decoding="async">
-      <img src="assets/products/eclipse_goji.jpg" alt="" loading="lazy" decoding="async">
-      <img src="assets/products/bar_hazelnut.jpg" alt="" loading="lazy" decoding="async">
-      <img src="assets/products/moon_hazelnut.jpg" alt="" loading="lazy" decoding="async">
-      <img src="assets/products/elixir_plain.jpg" alt="" loading="lazy" decoding="async">
-      <img src="assets/products/bar_coconut_goji.jpg" alt="" loading="lazy" decoding="async">
-      <img src="assets/products/eclipse_pecan.jpg" alt="" loading="lazy" decoding="async">
+      <img src="assets/products_clean/bar_peppermint.png" alt="" loading="lazy" decoding="async">
+      <img src="assets/mood/flatlay_editorial/pinterest_702913454385918053.jpg" alt="" loading="lazy" decoding="async">
+      <img src="assets/products_clean/bar_hazelnut.png" alt="" loading="lazy" decoding="async">
+      <img src="assets/mood/hero_lifestyle/pinterest_702913454385866270.jpg" alt="" loading="lazy" decoding="async">
+      <img src="assets/products_clean/elixir_plain.png" alt="" loading="lazy" decoding="async">
+      <img src="assets/products_clean/bar_goji_coconut.png" alt="" loading="lazy" decoding="async">
+      <img src="assets/products_clean/eclipse_pecan.png" alt="" loading="lazy" decoding="async">
+      <img src="assets/hero_shots/hero_carob_bar_smoke_wide.jpg" alt="" loading="lazy" decoding="async">
+      <img src="assets/products_clean/bite_gold.png" alt="" loading="lazy" decoding="async">
     </div>
 
     <!-- Column 3: 7 images × 2 (drift 100s) -->
     <div class="drift-col">
       <img src="assets/products/moon_peppermint.jpg" alt="" loading="eager" decoding="async">
-      <img src="assets/products/powder_roasted.jpg" alt="" loading="lazy" decoding="async">
-      <img src="assets/products/eclipse_fudge.jpg" alt="" loading="lazy" decoding="async">
-      <img src="assets/products/bar_bundle.jpg" alt="" loading="lazy" decoding="async">
-      <img src="assets/products/eclipse_bundle.jpg" alt="" loading="lazy" decoding="async">
-      <img src="assets/products/bananas.jpg" alt="" loading="lazy" decoding="async">
-      <img src="assets/products/bath_salts.jpg" alt="" loading="lazy" decoding="async">
+      <img src="assets/mood/flatlay_editorial/pinterest_702913454385918122.jpg" alt="" loading="lazy" decoding="async">
+      <img src="assets/product_shots/eclipse_hazelnut_a.png" alt="" loading="lazy" decoding="async">
+      <img src="assets/mood/flatlay_editorial/pinterest_702913454385918034.jpg" alt="" loading="lazy" decoding="async">
+      <img src="assets/mood/flatlay_editorial/pinterest_702913454385918078.jpg" alt="" loading="lazy" decoding="async">
+      <img src="assets/mood/flatlay_editorial/pinterest_702913454385918066.jpg" alt="" loading="lazy" decoding="async">
+      <img src="assets/stock/stock_flatlay_dark.jpg" alt="" loading="lazy" decoding="async">
+      <img src="assets/hero_shots/hero_elixir_hand.jpg" alt="" loading="lazy" decoding="async">
+      <img src="assets/hero_shots/hero_carob_bar_smoke_portrait.jpg" alt="" loading="lazy" decoding="async">
       <!-- duplicate for loop -->
       <img src="assets/products/moon_peppermint.jpg" alt="" loading="lazy" decoding="async">
-      <img src="assets/products/powder_roasted.jpg" alt="" loading="lazy" decoding="async">
-      <img src="assets/products/eclipse_fudge.jpg" alt="" loading="lazy" decoding="async">
-      <img src="assets/products/bar_bundle.jpg" alt="" loading="lazy" decoding="async">
-      <img src="assets/products/eclipse_bundle.jpg" alt="" loading="lazy" decoding="async">
-      <img src="assets/products/bananas.jpg" alt="" loading="lazy" decoding="async">
-      <img src="assets/products/bath_salts.jpg" alt="" loading="lazy" decoding="async">
+      <img src="assets/mood/flatlay_editorial/pinterest_702913454385918122.jpg" alt="" loading="lazy" decoding="async">
+      <img src="assets/product_shots/eclipse_hazelnut_a.png" alt="" loading="lazy" decoding="async">
+      <img src="assets/mood/flatlay_editorial/pinterest_702913454385918034.jpg" alt="" loading="lazy" decoding="async">
+      <img src="assets/mood/flatlay_editorial/pinterest_702913454385918078.jpg" alt="" loading="lazy" decoding="async">
+      <img src="assets/mood/flatlay_editorial/pinterest_702913454385918066.jpg" alt="" loading="lazy" decoding="async">
+      <img src="assets/stock/stock_flatlay_dark.jpg" alt="" loading="lazy" decoding="async">
+      <img src="assets/hero_shots/hero_elixir_hand.jpg" alt="" loading="lazy" decoding="async">
+      <img src="assets/hero_shots/hero_carob_bar_smoke_portrait.jpg" alt="" loading="lazy" decoding="async">
     </div>
 
   </div>
@@ -478,11 +491,11 @@
   <p class="hero-tagline fade-3">Artisan carob and cacao butter. Byron Bay.</p>
   <a href="/shop" class="cta-btn fade-3">Shop Now</a>
   <div class="trust-row fade-4">
-    <img src="assets/icon_organic.svg" alt="Organic" width="20" height="20" loading="lazy" decoding="async">
-    <img src="assets/icon_vegan.svg" alt="Vegan" width="20" height="20" loading="lazy" decoding="async">
-    <img src="assets/icon_caffeine_free.svg" alt="Caffeine Free" width="20" height="20" loading="lazy" decoding="async">
-    <img src="assets/icon_gluten_free.svg" alt="Gluten Free" width="20" height="20" loading="lazy" decoding="async">
-    <img src="assets/icon_made_in_aus.svg" alt="Made in Australia" width="20" height="20" loading="lazy" decoding="async">
+    <img src="assets/icon_organic.svg" alt="Organic" width="24" height="24" loading="lazy" decoding="async">
+    <img src="assets/icon_vegan.svg" alt="Vegan" width="24" height="24" loading="lazy" decoding="async">
+    <img src="assets/icon_caffeine_free.svg" alt="Caffeine Free" width="24" height="24" loading="lazy" decoding="async">
+    <img src="assets/icon_gluten_free.svg" alt="Gluten Free" width="24" height="24" loading="lazy" decoding="async">
+    <img src="assets/icon_made_in_aus.svg" alt="Made in Australia" width="24" height="24" loading="lazy" decoding="async">
   </div>
 </main>
 

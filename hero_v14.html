@@ -9,16 +9,16 @@
 <meta property="og:title" content="MapleMoon — Ingredient Journey">
 <meta property="og:description" content="From carob pod to handcrafted bar — the MapleMoon ingredient journey. Organic, vegan, caffeine-free.">
 <meta property="og:type" content="website">
-<meta property="og:image" content="https://maplemoon-hero-mockups.vercel.app/assets/products/bar_original.jpg">
+<meta property="og:image" content="https://maplemoon-hero-mockups.vercel.app/assets/products_clean/bar_pure_carob.png">
 <meta property="og:image:width" content="400">
 <meta property="og:image:height" content="600">
 <meta property="og:site_name" content="Maple Moon">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="MapleMoon — Ingredient Journey">
 <meta name="twitter:description" content="Artisan carob and cacao butter, handmade in Byron Bay. Organic, vegan, caffeine-free.">
-<meta name="twitter:image" content="https://maplemoon-hero-mockups.vercel.app/assets/products/bar_original.jpg">
+<meta name="twitter:image" content="https://maplemoon-hero-mockups.vercel.app/assets/products_clean/bar_pure_carob.png">
 <link rel="canonical" href="https://maplemoon-hero-mockups.vercel.app/hero_v14.html">
-<link rel="preload" as="image" href="assets/products/powder_roasted.jpg">
+<link rel="preload" as="image" href="assets/mood/flatlay_editorial/pinterest_702913454385918122.jpg">
 <link rel="preload" as="image" href="assets/carob_wordmark.svg">
 <link rel="icon" href="assets/maplemoon_logo.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="assets/maplemoon_logo.svg">
@@ -27,42 +27,51 @@
   *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 
   :root {
-    --grad-top: #7B9DBF;
-    --grad-bottom: #A8BDD4;
+    --z-product: 2;
   }
 
   html, body { height: auto; overflow-x: hidden; }
 
   body {
-    background: linear-gradient(180deg, var(--grad-top) 0%, var(--grad-bottom) 100%);
+    background: linear-gradient(180deg, var(--mm-blue-top) 0%, var(--mm-blue-bottom) 100%);
     font-family: var(--mm-sans);
     color: var(--mm-cream);
     position: relative;
     text-rendering: optimizeLegibility;
   }
 
-  @keyframes fadeIn {
-    from { opacity: 0; transform: translateY(12px); }
-    to   { opacity: 1; transform: translateY(0); }
+  @media (prefers-reduced-motion: no-preference) {
+    .fade-1 { animation: fadeIn 0.8s ease both 0.2s; }
+    .fade-2 { animation: fadeIn 0.8s ease both 0.4s; }
+    .fade-3 { animation: fadeIn 0.8s ease both 0.6s; }
+    .fade-4 { animation: fadeIn 0.8s ease both 0.8s; }
   }
-
-  .fade-1 { animation: fadeIn 0.8s ease both 0.2s; }
-  .fade-2 { animation: fadeIn 0.8s ease both 0.4s; }
-  .fade-3 { animation: fadeIn 0.8s ease both 0.6s; }
-  .fade-4 { animation: fadeIn 0.8s ease both 0.8s; }
 
   /* ── Back link ── */
   .back-link {
-    position: fixed; top: 16px; left: 16px; z-index: 10;
+    position: fixed; top: 16px; left: 16px; z-index: calc(var(--z-fixed) + 1);
     color: var(--mm-cream); text-decoration: none;
     font-family: var(--mm-sans); font-size: 0.8rem; font-weight: 400;
     opacity: 0.7; transition: opacity 0.2s;
   }
   .back-link:hover { opacity: 1; }
+  @media (max-width: 767px) { .back-link { display: none; } }
+
+  #main:focus { outline: none; }
+
+  .menu-close {
+    position: absolute; top: 20px; right: 20px;
+    background: none; border: none; cursor: pointer;
+    font-size: 1.5rem; color: var(--mm-navy); opacity: 0.5;
+    padding: 12px; min-width: 44px; min-height: 44px;
+    display: flex; align-items: center; justify-content: center;
+    transition: opacity 0.2s;
+  }
+  .menu-close:hover { opacity: 1; }
 
   /* ── Mobile header ── */
   .header-mobile {
-    position: fixed; top: 0; left: 0; right: 0; z-index: 10;
+    position: fixed; top: 0; left: 0; right: 0; z-index: var(--z-fixed);
     display: flex; justify-content: space-between; align-items: flex-start;
     padding: 20px;
   }
@@ -72,7 +81,7 @@
   #menu-toggle { display: none; }
 
   .hamburger {
-    position: fixed; top: 12px; left: 12px; z-index: 200;
+    position: fixed; top: 12px; left: 12px; z-index: var(--z-tooltip);
     cursor: pointer; display: flex; flex-direction: column;
     justify-content: center; gap: 5px; width: 44px; height: 44px;
     padding: 8px;
@@ -88,7 +97,7 @@
 
   /* ── Mobile menu overlay ── */
   .mobile-menu {
-    position: fixed; inset: 0; z-index: 150;
+    position: fixed; inset: 0; z-index: var(--z-modal);
     background: var(--mm-cream); color: var(--mm-navy);
     display: flex; flex-direction: column;
     align-items: center; justify-content: center; gap: 28px;
@@ -139,7 +148,7 @@
     height: 60vh;
     width: 100%;
     overflow: hidden;
-    z-index: 1;
+    z-index: var(--z-base);
   }
 
   .visual-panel .journey-img {
@@ -160,15 +169,15 @@
     position: absolute;
     bottom: 0; left: 0; right: 0;
     height: 80px;
-    background: linear-gradient(to top, var(--grad-bottom), transparent);
-    z-index: 2;
+    background: linear-gradient(to top, var(--mm-blue-bottom), transparent);
+    z-index: var(--z-product);
     pointer-events: none;
   }
 
   /* ── Chapters (scrolling text panels) ── */
   .chapters {
     position: relative;
-    z-index: 2;
+    z-index: var(--z-product);
   }
 
   .chapter {
@@ -235,13 +244,13 @@
   /* ── Progress dots ── */
   .progress-dots {
     position: fixed;
-    right: 16px;
+    right: 8px;
     top: 50%;
     transform: translateY(-50%);
     display: flex;
     flex-direction: column;
     gap: 12px;
-    z-index: 10;
+    z-index: var(--z-sticky);
   }
 
   .progress-dot {
@@ -263,9 +272,9 @@
     margin-top: 20px;
   }
   .trust-row img {
-    width: 20px; height: 20px;
+    width: 24px; height: 24px;
     filter: brightness(0) invert(0.92) sepia(0.1) saturate(0.3);
-    opacity: 0.5;
+    opacity: 0.7;
   }
 
   /* ── Watermark ── */
@@ -282,7 +291,7 @@
 
     .header-desktop {
       display: flex; align-items: center;
-      position: fixed; top: 0; left: 0; right: 0; z-index: 10;
+      position: fixed; top: 0; left: 0; right: 0; z-index: var(--z-fixed);
       padding: 28px 40px;
       background: transparent;
     }
@@ -361,11 +370,12 @@
 <a href="index.html" class="back-link fade-1">&larr; Back to Gallery</a>
 
 <input type="checkbox" id="menu-toggle" hidden>
-<label for="menu-toggle" class="hamburger fade-1" aria-label="Menu" aria-expanded="false">
+<label for="menu-toggle" class="hamburger fade-1" role="button" aria-label="Menu" aria-expanded="false">
   <span></span><span></span><span></span>
 </label>
 
 <div class="mobile-menu" role="dialog" aria-modal="true" aria-label="Navigation menu" aria-hidden="true">
+  <button class="menu-close" aria-label="Close menu">&times;</button>
   <a href="/shop/bars">Bars</a>
   <a href="/shop/moons">Moons</a>
   <a href="/shop/bananas">Bananas</a>
@@ -412,13 +422,13 @@
 <div class="carob-watermark-wrap wm-subtle" aria-hidden="true"><img src="assets/carob_wordmark.svg" alt="" aria-hidden="true" width="800" height="200"></div>
 
 <!-- Main scroll journey -->
-<main id="main" class="journey-wrapper">
+<main id="main" class="journey-wrapper" tabindex="-1">
 
   <!-- Sticky visual panel -->
   <div class="visual-panel">
-    <img class="journey-img active" src="assets/products/powder_roasted.jpg" alt="Raw carob pods and natural ingredients" decoding="async">
-    <img class="journey-img" src="assets/products/bath_salts.jpg" alt="Carob roasting process" decoding="async">
-    <img class="journey-img" src="assets/products/bar_original.jpg" alt="MapleMoon Original Bar" decoding="async">
+    <img class="journey-img active" src="assets/mood/flatlay_editorial/pinterest_702913454385918122.jpg" alt="Raw carob pods and natural ingredients" decoding="async">
+    <img class="journey-img" src="assets/stock/stock_spices_warm.jpg" alt="Carob roasting process" decoding="async">
+    <img class="journey-img" src="assets/mood/flatlay_editorial/pinterest_702913454385918064.jpg" alt="MapleMoon Original Bar" decoding="async">
     <img class="journey-img" src="assets/products/bar_bundle.jpg" alt="MapleMoon bar collection" decoding="async">
   </div>
 
@@ -442,11 +452,11 @@
       <h2 class="chapter-title">Simple ingredients, nothing hidden</h2>
       <p class="chapter-body">Organic carob. Organic cacao butter. That's it. No emulsifiers, no preservatives, no refined sugar. Each bar snaps clean with a velvet melt — proof that less makes more.</p>
       <div class="trust-row">
-        <img src="assets/icon_organic.svg" alt="Organic" width="20" height="20" loading="lazy" decoding="async">
-        <img src="assets/icon_vegan.svg" alt="Vegan" width="20" height="20" loading="lazy" decoding="async">
-        <img src="assets/icon_caffeine_free.svg" alt="Caffeine Free" width="20" height="20" loading="lazy" decoding="async">
-        <img src="assets/icon_gluten_free.svg" alt="Gluten Free" width="20" height="20" loading="lazy" decoding="async">
-        <img src="assets/icon_made_in_aus.svg" alt="Made in Australia" width="20" height="20" loading="lazy" decoding="async">
+        <img src="assets/icon_organic.svg" alt="Organic" width="24" height="24" loading="lazy" decoding="async">
+        <img src="assets/icon_vegan.svg" alt="Vegan" width="24" height="24" loading="lazy" decoding="async">
+        <img src="assets/icon_caffeine_free.svg" alt="Caffeine Free" width="24" height="24" loading="lazy" decoding="async">
+        <img src="assets/icon_gluten_free.svg" alt="Gluten Free" width="24" height="24" loading="lazy" decoding="async">
+        <img src="assets/icon_made_in_aus.svg" alt="Made in Australia" width="24" height="24" loading="lazy" decoding="async">
       </div>
     </section>
 
@@ -494,7 +504,7 @@
       });
     });
   }, {
-    threshold: 0.5
+    threshold: 0.3
   });
 
   chapters.forEach(function(ch) { observer.observe(ch); });
@@ -507,6 +517,14 @@
   document.querySelectorAll('.mobile-menu a').forEach(function(link) {
     link.addEventListener('click', function() { toggle.checked = false; toggle.dispatchEvent(new Event('change')); });
   });
+
+  var closeBtn = document.querySelector('.menu-close');
+  if (closeBtn) {
+    closeBtn.addEventListener('click', function() {
+      toggle.checked = false;
+      toggle.dispatchEvent(new Event('change'));
+    });
+  }
 
   toggle.addEventListener('change', function() {
     var isOpen = toggle.checked;

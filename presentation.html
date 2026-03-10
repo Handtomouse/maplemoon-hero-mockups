@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MapleMoon — Hero Direction Review</title>
+<link rel="icon" href="assets/maplemoon_logo.svg" type="image/svg+xml">
+<link rel="stylesheet" href="brand_kit.css">
+<style>
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  background: var(--mm-dark-bg);
+  color: var(--mm-cream);
+  font-family: var(--mm-sans);
+  min-height: 100vh;
+  padding: var(--space-8) var(--space-6);
+}
+
+/* ── Header ── */
+.header {
+  text-align: center;
+  padding: var(--space-12) var(--space-6) var(--space-10);
+  max-width: 720px;
+  margin: 0 auto;
+}
+.header-logo {
+  width: 48px;
+  height: 48px;
+  margin-bottom: var(--space-6);
+  opacity: 0.9;
+}
+.header h1 {
+  font-family: var(--mm-serif);
+  font-size: clamp(1.6rem, 4vw, 2.4rem);
+  font-weight: 400;
+  letter-spacing: -0.01em;
+  margin-bottom: var(--space-4);
+}
+.header p {
+  font-size: 0.95rem;
+  opacity: 0.65;
+  line-height: 1.6;
+  max-width: 480px;
+  margin: 0 auto;
+}
+
+/* ── Section label ── */
+.section-label {
+  font-size: 0.7rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  opacity: 0.45;
+  margin: var(--space-12) 0 var(--space-6);
+}
+
+/* ── Favourites bar ── */
+.fav-bar {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  margin-bottom: var(--space-8);
+  flex-wrap: wrap;
+}
+.fav-bar-label {
+  font-size: 0.8rem;
+  opacity: 0.5;
+}
+.fav-chips {
+  display: flex;
+  gap: var(--space-2);
+  flex-wrap: wrap;
+}
+.fav-chip {
+  font-size: 0.75rem;
+  padding: 4px 12px;
+  border-radius: var(--radius-pill);
+  background: var(--mm-cream-15);
+  color: var(--mm-cream);
+  opacity: 0.8;
+}
+.fav-bar-empty {
+  font-size: 0.8rem;
+  opacity: 0.35;
+  font-style: italic;
+}
+
+/* ── Grid ── */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-4);
+  max-width: 1100px;
+  margin: 0 auto;
+}
+@media (max-width: 800px) { .grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 500px) { .grid { grid-template-columns: 1fr; } }
+
+/* ── Card ── */
+.card {
+  position: relative;
+  background: var(--mm-cream-08);
+  border: 1px solid var(--mm-cream-15);
+  border-radius: var(--radius-md);
+  padding: var(--space-6);
+  cursor: pointer;
+  transition: border-color 0.2s, background 0.2s, transform 0.15s;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  min-height: 130px;
+}
+.card:hover {
+  border-color: var(--mm-cream-50);
+  background: var(--mm-cream-15);
+  transform: translateY(-2px);
+}
+.card.coming-soon {
+  opacity: 0.35;
+  cursor: default;
+  pointer-events: none;
+}
+.card.is-fav {
+  border-color: var(--mm-blue-top);
+  background: rgba(123,157,191,0.1);
+}
+
+.card-num {
+  font-size: 0.7rem;
+  letter-spacing: 0.1em;
+  opacity: 0.45;
+  font-family: var(--mm-sans);
+}
+.card-title {
+  font-family: var(--mm-serif);
+  font-size: 1.1rem;
+  font-weight: 400;
+  line-height: 1.3;
+  flex: 1;
+}
+.card-coming {
+  font-size: 0.75rem;
+  opacity: 0.4;
+  font-style: italic;
+}
+
+.card-actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: var(--space-2);
+}
+.btn-view {
+  font-size: 0.8rem;
+  color: var(--mm-cream);
+  opacity: 0.6;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  font-family: var(--mm-sans);
+  transition: opacity 0.2s;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+.btn-view:hover { opacity: 1; }
+
+.btn-fav {
+  font-size: 1rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+  border-radius: 50%;
+  transition: transform 0.2s;
+  line-height: 1;
+  opacity: 0.45;
+}
+.btn-fav:hover { transform: scale(1.25); opacity: 1; }
+.card.is-fav .btn-fav { opacity: 1; }
+
+/* ── Theme section ── */
+.themes-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-4);
+  max-width: 1100px;
+  margin: 0 auto;
+}
+@media (max-width: 500px) { .themes-grid { grid-template-columns: 1fr; } }
+
+.theme-card {
+  background: var(--mm-cream-08);
+  border: 1px solid var(--mm-cream-15);
+  border-radius: var(--radius-md);
+  padding: var(--space-6);
+  cursor: pointer;
+  transition: border-color 0.2s, background 0.2s, transform 0.15s;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.theme-card:hover {
+  border-color: var(--mm-cream-50);
+  background: var(--mm-cream-15);
+  transform: translateY(-2px);
+}
+.theme-card-left {}
+.theme-card-tag {
+  font-size: 0.7rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  opacity: 0.45;
+  margin-bottom: var(--space-2);
+}
+.theme-card-title {
+  font-family: var(--mm-serif);
+  font-size: 1.1rem;
+  font-weight: 400;
+}
+.theme-arrow {
+  opacity: 0.4;
+  font-size: 1.1rem;
+}
+
+/* ── Footer ── */
+.footer {
+  text-align: center;
+  margin-top: var(--space-16);
+  padding-bottom: var(--space-12);
+  font-size: 0.8rem;
+  opacity: 0.3;
+}
+
+/* ── Lightbox ── */
+.lightbox {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: #0e0e0e;
+  z-index: 1000;
+  flex-direction: column;
+}
+.lightbox.open { display: flex; }
+
+.lightbox-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--space-3) var(--space-6);
+  background: rgba(26,26,26,0.95);
+  border-bottom: 1px solid var(--mm-cream-15);
+  flex-shrink: 0;
+  gap: var(--space-4);
+  flex-wrap: wrap;
+}
+.lb-meta {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+}
+.lb-num {
+  font-size: 0.7rem;
+  letter-spacing: 0.1em;
+  opacity: 0.45;
+}
+.lb-title {
+  font-family: var(--mm-serif);
+  font-size: 1rem;
+}
+.lb-actions {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+}
+.lb-btn {
+  background: var(--mm-cream-15);
+  border: 1px solid var(--mm-cream-20);
+  color: var(--mm-cream);
+  border-radius: var(--radius-pill);
+  padding: 6px 16px;
+  font-size: 0.8rem;
+  cursor: pointer;
+  font-family: var(--mm-sans);
+  transition: background 0.2s;
+  white-space: nowrap;
+}
+.lb-btn:hover { background: var(--mm-cream-25); }
+.lb-btn.lb-fav-active {
+  background: rgba(123,157,191,0.25);
+  border-color: var(--mm-blue-top);
+  color: var(--mm-blue-top);
+}
+.lb-close {
+  background: none;
+  border: none;
+  color: var(--mm-cream);
+  font-size: 1.4rem;
+  cursor: pointer;
+  opacity: 0.55;
+  padding: 4px 8px;
+  line-height: 1;
+  transition: opacity 0.2s;
+}
+.lb-close:hover { opacity: 1; }
+
+.lightbox-frame-wrap {
+  flex: 1;
+  position: relative;
+  overflow: hidden;
+}
+.lightbox-frame-wrap iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+/* prev/next arrows */
+.lb-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(26,26,26,0.7);
+  border: 1px solid var(--mm-cream-20);
+  color: var(--mm-cream);
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+  cursor: pointer;
+  z-index: 10;
+  transition: background 0.2s, opacity 0.2s;
+  opacity: 0.7;
+}
+.lb-arrow:hover { background: rgba(26,26,26,0.95); opacity: 1; }
+.lb-arrow-prev { left: var(--space-4); }
+.lb-arrow-next { right: var(--space-4); }
+.lb-arrow[disabled] { opacity: 0.2; pointer-events: none; }
+
+/* loading indicator */
+.lb-loading {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--mm-dark-bg);
+  font-size: 0.85rem;
+  opacity: 0.45;
+  pointer-events: none;
+  transition: opacity 0.3s;
+}
+.lb-loading.hidden { opacity: 0; }
+</style>
+</head>
+<body>
+
+<!-- Header -->
+<div class="header">
+  <img class="header-logo" src="assets/maplemoon_logo.svg" alt="MapleMoon" onerror="this.style.display='none'">
+  <h1>Hero Direction Review</h1>
+  <p>16 homepage concepts for the new MapleMoon site. Browse each one, mark your favourites, and we'll go from there.</p>
+</div>
+
+<div style="max-width:1100px; margin:0 auto;">
+
+  <!-- Favourites summary bar -->
+  <p class="section-label">Your shortlist</p>
+  <div class="fav-bar" id="favBar">
+    <span class="fav-bar-empty" id="favEmpty">No favourites yet — click ♥ on any card below</span>
+    <div class="fav-chips" id="favChips"></div>
+  </div>
+
+  <!-- Hero grid -->
+  <p class="section-label">Hero concepts</p>
+  <div class="grid" id="heroGrid"></div>
+
+  <!-- Shopify themes section -->
+  <p class="section-label" style="margin-top: var(--space-16);">Full site concepts</p>
+  <p style="font-size:0.85rem; opacity:0.5; margin-bottom:var(--space-6); max-width:520px;">Four full Shopify-style mockups showing the complete site treatment — scroll through each to get a feel for the full experience.</p>
+  <div class="themes-grid" id="themesGrid"></div>
+
+  <div class="footer">MapleMoon × HandToMouse Studio · For review only · Not for distribution</div>
+</div>
+
+<!-- Lightbox -->
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true">
+  <div class="lightbox-bar">
+    <div class="lb-meta">
+      <span class="lb-num" id="lbNum"></span>
+      <span class="lb-title" id="lbTitle"></span>
+    </div>
+    <div class="lb-actions">
+      <button class="lb-btn" id="lbFavBtn" onclick="toggleFavLightbox()">♥ Add to shortlist</button>
+      <button class="lb-close" id="lbClose" onclick="closeLightbox()" aria-label="Close">✕</button>
+    </div>
+  </div>
+  <div class="lightbox-frame-wrap" id="lbFrameWrap">
+    <div class="lb-loading" id="lbLoading">Loading…</div>
+    <iframe id="lbFrame" title="Hero preview" onload="document.getElementById('lbLoading').classList.add('hidden')"></iframe>
+    <button class="lb-arrow lb-arrow-prev" id="lbPrev" onclick="stepLightbox(-1)" aria-label="Previous">←</button>
+    <button class="lb-arrow lb-arrow-next" id="lbNext" onclick="stepLightbox(1)" aria-label="Next">→</button>
+  </div>
+</div>
+
+<script>
+const HEROES = [
+  { v: 1,  title: 'Brand Statement' },
+  { v: 2,  title: 'Shop Now' },
+  { v: 3,  title: 'What is Carob?' },
+  { v: 4,  title: 'The Range' },
+  { v: 6,  title: 'Before & After' },
+  { v: 7,  title: 'Flavour Picker' },
+  { v: 8,  title: 'Time of Day' },
+  { v: 9,  title: 'Story Cards' },
+  { v: 10, title: 'Letterbox Cinema' },
+  { v: 11, title: 'The Grid' },
+  { v: 12, title: 'The Unwrap' },
+  { v: 13, title: 'Full Bleed Photo' },
+  { v: 14, title: 'Ingredient Journey' },
+  { v: 15, title: 'Product Orbit' },
+  { v: 16, title: 'Moodboard' },
+  { v: 17, title: 'Coming Soon', coming: true },
+];
+
+const THEMES = [
+  { file: 'mockups/ethereal.html',         label: 'Theme 01', title: 'Ethereal' },
+  { file: 'mockups/normcore_matte.html',   label: 'Theme 02', title: 'NormCore Matte' },
+  { file: 'mockups/futurer_basser.html',   label: 'Theme 03', title: 'Futurer Basser' },
+  { file: 'mockups/shapes.html',           label: 'Theme 04', title: 'Shapes' },
+];
+
+const FAV_KEY = 'mm_hero_favs';
+
+function getFavs() {
+  try { return JSON.parse(localStorage.getItem(FAV_KEY)) || []; } catch { return []; }
+}
+function setFavs(favs) {
+  localStorage.setItem(FAV_KEY, JSON.stringify(favs));
+}
+function isFav(v) { return getFavs().includes(v); }
+function toggleFav(v) {
+  let favs = getFavs();
+  if (favs.includes(v)) favs = favs.filter(f => f !== v);
+  else favs.push(v);
+  setFavs(favs);
+  renderFavBar();
+  renderCards();
+  if (currentIndex !== null && HEROES[currentIndex].v === v) updateLbFavBtn();
+}
+
+function renderFavBar() {
+  const favs = getFavs();
+  const empty = document.getElementById('favEmpty');
+  const chips = document.getElementById('favChips');
+  if (favs.length === 0) {
+    empty.style.display = '';
+    chips.innerHTML = '';
+  } else {
+    empty.style.display = 'none';
+    chips.innerHTML = favs.map(v => {
+      const h = HEROES.find(h => h.v === v);
+      return `<span class="fav-chip">Hero ${String(v).padStart(2,'0')} — ${h ? h.title : ''}</span>`;
+    }).join('');
+  }
+}
+
+function renderCards() {
+  const grid = document.getElementById('heroGrid');
+  grid.innerHTML = HEROES.map((h, i) => {
+    const fav = !h.coming && isFav(h.v);
+    return `
+      <div class="card${h.coming ? ' coming-soon' : ''}${fav ? ' is-fav' : ''}"
+           id="card-${h.v}"
+           ${!h.coming ? `onclick="openLightbox(${i})"` : ''}>
+        <span class="card-num">Hero ${String(h.v).padStart(2,'0')}</span>
+        <span class="card-title">${h.title}</span>
+        ${h.coming
+          ? `<span class="card-coming">In progress — check back Friday</span>`
+          : `<div class="card-actions">
+               <button class="btn-view" onclick="event.stopPropagation(); openLightbox(${i})">View full →</button>
+               <button class="btn-fav" onclick="event.stopPropagation(); toggleFav(${h.v})"
+                 aria-label="${fav ? 'Remove from' : 'Add to'} shortlist"
+                 title="${fav ? 'Remove from shortlist' : 'Add to shortlist'}">${fav ? '♥' : '♡'}</button>
+             </div>`
+        }
+      </div>`;
+  }).join('');
+}
+
+function renderThemes() {
+  const grid = document.getElementById('themesGrid');
+  grid.innerHTML = THEMES.map(t => `
+    <div class="theme-card" onclick="window.open('${t.file}', '_blank')">
+      <div class="theme-card-left">
+        <div class="theme-card-tag">${t.label}</div>
+        <div class="theme-card-title">${t.title}</div>
+      </div>
+      <span class="theme-arrow">→</span>
+    </div>
+  `).join('');
+}
+
+// ── Lightbox ──
+let currentIndex = null;
+const activableHeroes = HEROES.filter(h => !h.coming);
+
+function openLightbox(heroArrayIndex) {
+  const hero = HEROES[heroArrayIndex];
+  if (!hero || hero.coming) return;
+  currentIndex = heroArrayIndex;
+  document.getElementById('lightbox').classList.add('open');
+  document.body.style.overflow = 'hidden';
+  loadIntoLightbox(hero);
+  updateArrows();
+}
+
+function closeLightbox() {
+  document.getElementById('lightbox').classList.remove('open');
+  document.getElementById('lbFrame').src = '';
+  document.getElementById('lbLoading').classList.remove('hidden');
+  document.body.style.overflow = '';
+  currentIndex = null;
+}
+
+function loadIntoLightbox(hero) {
+  document.getElementById('lbLoading').classList.remove('hidden');
+  document.getElementById('lbNum').textContent = `Hero ${String(hero.v).padStart(2,'0')}`;
+  document.getElementById('lbTitle').textContent = hero.title;
+  document.getElementById('lbFrame').src = `hero_v${hero.v}.html`;
+  updateLbFavBtn();
+}
+
+function updateLbFavBtn() {
+  const hero = HEROES[currentIndex];
+  const btn = document.getElementById('lbFavBtn');
+  if (!hero) return;
+  const fav = isFav(hero.v);
+  btn.textContent = fav ? '♥ In shortlist' : '♡ Add to shortlist';
+  btn.classList.toggle('lb-fav-active', fav);
+}
+
+function toggleFavLightbox() {
+  if (currentIndex === null) return;
+  toggleFav(HEROES[currentIndex].v);
+}
+
+function stepLightbox(dir) {
+  if (currentIndex === null) return;
+  // find next non-coming hero
+  let next = currentIndex + dir;
+  while (next >= 0 && next < HEROES.length && HEROES[next].coming) next += dir;
+  if (next < 0 || next >= HEROES.length) return;
+  currentIndex = next;
+  loadIntoLightbox(HEROES[currentIndex]);
+  updateArrows();
+}
+
+function updateArrows() {
+  const prevHero = HEROES.slice(0, currentIndex).reverse().find(h => !h.coming);
+  const nextHero = HEROES.slice(currentIndex + 1).find(h => !h.coming);
+  document.getElementById('lbPrev').toggleAttribute('disabled', !prevHero);
+  document.getElementById('lbNext').toggleAttribute('disabled', !nextHero);
+}
+
+// Keyboard nav
+document.addEventListener('keydown', e => {
+  if (!document.getElementById('lightbox').classList.contains('open')) return;
+  if (e.key === 'Escape') closeLightbox();
+  if (e.key === 'ArrowRight') stepLightbox(1);
+  if (e.key === 'ArrowLeft') stepLightbox(-1);
+  if (e.key === 'f' || e.key === 'F') toggleFavLightbox();
+});
+
+// Init
+renderCards();
+renderThemes();
+renderFavBar();
+</script>
+</body>
+</html>

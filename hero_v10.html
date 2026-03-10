@@ -9,17 +9,17 @@
 <meta property="og:title" content="MapleMoon — Letterbox Cinema">
 <meta property="og:description" content="Enter the world of MapleMoon — artisan carob from Byron Bay. Organic, vegan, caffeine-free.">
 <meta property="og:type" content="website">
-<meta property="og:image" content="https://maplemoon-hero-mockups.vercel.app/assets/products/bar_original.jpg">
+<meta property="og:image" content="https://maplemoon-hero-mockups.vercel.app/assets/products_clean/bar_pure_carob.png">
 <meta property="og:image:width" content="400">
 <meta property="og:image:height" content="600">
 <meta property="og:site_name" content="Maple Moon">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="MapleMoon — Letterbox Cinema">
 <meta name="twitter:description" content="Artisan carob and cacao butter, handmade in Byron Bay. Organic, vegan, caffeine-free.">
-<meta name="twitter:image" content="https://maplemoon-hero-mockups.vercel.app/assets/products/bar_original.jpg">
+<meta name="twitter:image" content="https://maplemoon-hero-mockups.vercel.app/assets/products_clean/bar_pure_carob.png">
 <link rel="canonical" href="https://maplemoon-hero-mockups.vercel.app/hero_v10.html">
 <link rel="stylesheet" href="brand_kit.css">
-<link rel="preload" as="image" href="assets/products/bar_bundle.jpg">
+<link rel="preload" as="image" href="assets/hero_shots/hero_bar_lineup.jpg">
 <link rel="preload" as="image" href="assets/carob_wordmark.svg">
 <link rel="icon" href="assets/maplemoon_logo.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="assets/maplemoon_logo.svg">
@@ -27,9 +27,8 @@
   *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 
   :root {
-    --grad-top: #7B9DBF;
-    --grad-bottom: #A8BDD4;
     --bar-height: 60px;
+    --z-product: 2;
   }
 
   html, body { height: 100%; overflow: hidden; }
@@ -38,35 +37,33 @@
     color: var(--mm-cream);
     background: var(--mm-dark-bg);
     text-rendering: optimizeLegibility;
-    overflow-x: hidden;
   }
 
 
   /* ── Back link ── */
   .back-link {
-    position: fixed; top: 16px; left: 16px; z-index: 101;
+    position: fixed; top: 16px; left: 16px; z-index: calc(var(--z-fixed) + 1);
     color: var(--mm-cream); text-decoration: none;
     font-family: var(--mm-sans); font-size: 0.8rem; font-weight: 400;
     opacity: 0.7; transition: opacity 0.2s;
-    display: none; min-height: 44px; padding: 12px 0;
+    display: block; min-height: 44px; padding: 12px 0;
   }
   .back-link:hover { opacity: 1; }
 
+  #main:focus { outline: none; }
 
   /* ── Fade-in ── */
-  @keyframes fadeIn {
-    from { opacity: 0; transform: translateY(8px); }
-    to   { opacity: 1; transform: translateY(0); }
-  }
   @keyframes fadeInSlow {
     from { opacity: 0; }
     to   { opacity: 1; }
   }
-  .fade-1 { animation: fadeIn 0.8s ease both 0.3s; }
-  .fade-2 { animation: fadeIn 0.8s ease both 0.6s; }
-  .fade-3 { animation: fadeIn 0.8s ease both 0.9s; }
-  .fade-4 { animation: fadeIn 0.8s ease both 1.2s; }
-  .fade-bars { animation: fadeInSlow 1.2s ease both 0s; }
+  @media (prefers-reduced-motion: no-preference) {
+    .fade-1 { animation: fadeIn 0.8s ease both 0.3s; }
+    .fade-2 { animation: fadeIn 0.8s ease both 0.6s; }
+    .fade-3 { animation: fadeIn 0.8s ease both 0.9s; }
+    .fade-4 { animation: fadeIn 0.8s ease both 1.2s; }
+    .fade-bars { animation: fadeInSlow 1.2s ease both 0s; }
+  }
 
   /* ═══════════════════════════════════
      V10 — LETTERBOX CINEMA
@@ -76,8 +73,8 @@
   .letterbox-top {
     position: fixed; top: 0; left: 0; right: 0;
     height: var(--bar-height);
-    background: var(--mm-dark-bg);
-    z-index: 50;
+    background: #08101e;
+    z-index: var(--z-dropdown);
     display: flex; align-items: center; justify-content: center;
   }
   .letterbox-top .bar-text {
@@ -91,8 +88,8 @@
   .letterbox-bottom {
     position: fixed; bottom: 0; left: 0; right: 0;
     height: var(--bar-height);
-    background: var(--mm-dark-bg);
-    z-index: 50;
+    background: #08101e;
+    z-index: var(--z-dropdown);
     display: flex; align-items: center; justify-content: center;
     gap: 8px;
   }
@@ -130,32 +127,27 @@
       will-change: transform;
     }
   }
-  .cinema-overlay {
-    position: absolute; inset: 0;
-    background: var(--mm-black-35);
-    z-index: 1;
-  }
   .cinema-bg::before {
     content: '';
     position: absolute; inset: 0;
     background: linear-gradient(rgba(30,67,102,0.4), rgba(30,67,102,0.6));
-    z-index: 1;
+    z-index: var(--z-base);
     pointer-events: none;
   }
 
   /* ── Title card content ── */
   .cinema-content {
-    position: relative; z-index: 2;
+    position: relative; z-index: var(--z-product);
     width: 100%; height: 100%;
     display: flex; flex-direction: column;
-    align-items: center; justify-content: center;
+    align-items: center; justify-content: flex-start;
     gap: 16px;
-    padding: 0 32px;
+    padding: 12vh 32px 0;
     text-align: center;
   }
 
   .cinema-wordmark {
-    width: 60%; max-width: 280px;
+    width: 55%; max-width: 220px;
     height: auto;
     opacity: 0.85;
     filter: brightness(0) saturate(100%) invert(91%) sepia(8%) saturate(580%) hue-rotate(18deg) brightness(100%) contrast(88%);
@@ -169,7 +161,7 @@
   }
 
   .cinema-origin {
-    font-family: var(--mm-serif);
+    font-family: var(--mm-sans);
     font-weight: 400; font-size: 0.75rem;
     color: var(--mm-cream); opacity: 0.5;
     letter-spacing: 0.1em;
@@ -201,7 +193,7 @@
       --bar-height: 80px;
     }
 
-    .back-link { display: block; z-index: 60; }
+    .back-link { display: block; z-index: calc(var(--z-fixed) + 1); }
 
     /* Letterbox bottom: add text */
     .letterbox-bottom {
@@ -223,9 +215,17 @@
       }
     }
 
-    /* Wordmark larger */
+    /* Wordmark — sized to sit above bar */
     .cinema-wordmark {
-      width: 50%; max-width: 600px;
+      width: 40%; max-width: 360px;
+    }
+
+    /* Push text to upper-left, clear of bar packaging */
+    .cinema-content {
+      align-items: flex-start;
+      padding-top: 10vh;
+      padding-left: 8%;
+      text-align: left;
     }
 
     .cinema-tagline {
@@ -283,11 +283,10 @@
 </div>
 
 <!-- ═══ CINEMA VIEWPORT ═══ -->
-<main class="cinema-viewport" id="main">
+<main class="cinema-viewport" id="main" tabindex="-1">
   <div class="cinema-bg">
-    <img src="assets/products/bar_bundle.jpg" alt="" aria-hidden="true" width="1200" height="800" fetchpriority="high" decoding="async" loading="eager">
+    <img src="assets/hero_shots/hero_bar_lineup.jpg" alt="" aria-hidden="true" width="1536" height="1024" fetchpriority="high" decoding="async" loading="eager">
   </div>
-  <div class="cinema-overlay"></div>
 
   <div class="cinema-content">
     <img src="assets/carob_wordmark.svg" alt="CAROB" class="cinema-wordmark fade-1" id="wordmark" width="800" height="200">

@@ -9,17 +9,17 @@
 <meta property="og:title" content="MapleMoon — Full Bleed Photo">
 <meta property="og:description" content="MapleMoon — artisan carob and cacao butter. No caffeine, no added sugar, nothing artificial.">
 <meta property="og:type" content="website">
-<meta property="og:image" content="https://maplemoon-hero-mockups.vercel.app/assets/products/bar_original.jpg">
+<meta property="og:image" content="https://maplemoon-hero-mockups.vercel.app/assets/products_clean/bar_pure_carob.png">
 <meta property="og:image:width" content="400">
 <meta property="og:image:height" content="600">
 <meta property="og:site_name" content="Maple Moon">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="MapleMoon — Full Bleed Photo">
 <meta name="twitter:description" content="Artisan carob and cacao butter, handmade in Byron Bay. Organic, vegan, caffeine-free.">
-<meta name="twitter:image" content="https://maplemoon-hero-mockups.vercel.app/assets/products/bar_original.jpg">
+<meta name="twitter:image" content="https://maplemoon-hero-mockups.vercel.app/assets/products_clean/bar_pure_carob.png">
 <link rel="canonical" href="https://maplemoon-hero-mockups.vercel.app/hero_v13.html">
 <link rel="stylesheet" href="brand_kit.css">
-<link rel="preload" as="image" href="assets/products/bar_bundle.jpg">
+<link rel="preload" as="image" href="assets/hero_shots/hero_elixir_hand.jpg">
 <link rel="preload" as="image" href="assets/carob_wordmark.svg">
 <link rel="icon" href="assets/maplemoon_logo.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="assets/maplemoon_logo.svg">
@@ -27,6 +27,7 @@
   *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 
   :root {
+    --z-product: 2;
   }
 
   html, body { height: 100%; overflow: hidden; }
@@ -38,71 +39,73 @@
     min-height: 100vh;
     min-height: 100dvh;
     text-rendering: optimizeLegibility;
-    overflow-x: hidden;
     background: var(--mm-dark-bg);
   }
 
 
-  @keyframes fadeIn {
-    from { opacity: 0; transform: translateY(12px); }
-    to   { opacity: 1; transform: translateY(0); }
-  }
   @keyframes kenBurns {
     0% { transform: scale(1); }
     100% { transform: scale(1.08); }
   }
 
-  .fade-1 { animation: fadeIn 0.8s ease both 0.2s; }
-  .fade-2 { animation: fadeIn 0.8s ease both 0.4s; }
-  .fade-3 { animation: fadeIn 0.8s ease both 0.6s; }
-  .fade-4 { animation: fadeIn 0.8s ease both 0.8s; }
+  /* fade-* timing uses brand_kit.css definitions */
 
 
   /* ── Full bleed background ── */
   .hero-bg {
-    position: fixed; inset: 0; z-index: 0;
-    background: url('assets/products/bar_bundle.jpg') center/cover no-repeat;
-    filter: saturate(1.1) contrast(1.05);
+    position: fixed; inset: 0; z-index: 0; /* intentionally below z-base */
+    background: url('assets/hero_shots/hero_elixir_hand.jpg') center/cover no-repeat;
   }
   .hero-bg::after {
     content: '';
     position: absolute;
     inset: 0;
-    background: linear-gradient(to top, rgba(30,67,102,0.7) 0%, rgba(30,67,102,0.2) 50%, transparent 100%);
+    background: linear-gradient(to bottom, rgba(10,18,36,0.7) 0%, rgba(10,18,36,0.2) 45%, transparent 100%);
     z-index: 1;
   }
-  @media (min-width: 768px) and (prefers-reduced-motion: no-preference) {
-    .hero-bg { background-attachment: fixed; }
-  }
+  /* background-attachment: fixed removed — hero-bg is already position:fixed;
+     combining both triggers GPU compositor issues on iOS Safari */
 
   /* ── Dark gradient overlay ── */
   .hero-overlay {
-    position: fixed; inset: 0; z-index: 1;
-    background: linear-gradient(to bottom, transparent 55%, rgba(0,0,0,0.65));
+    position: fixed; inset: 0; z-index: var(--z-base);
+    background: linear-gradient(to top, rgba(10,18,36,0.65) 0%, rgba(10,18,36,0.1) 30%, transparent 100%);
   }
 
   /* ── Back link ── */
   .back-link {
-    position: fixed; top: 16px; left: 16px; z-index: 10;
+    position: fixed; top: 16px; left: 16px; z-index: calc(var(--z-fixed) + 1);
     color: var(--mm-cream); text-decoration: none;
     font-family: var(--mm-sans); font-size: 0.8rem; font-weight: 400;
     opacity: 0.7; transition: opacity 0.2s;
   }
   .back-link:hover { opacity: 1; }
 
+  #main:focus { outline: none; }
+
+  .menu-close {
+    position: absolute; top: 20px; right: 20px;
+    background: none; border: none; cursor: pointer;
+    font-size: 1.5rem; color: var(--mm-navy); opacity: 0.5;
+    padding: 12px; min-width: 44px; min-height: 44px;
+    display: flex; align-items: center; justify-content: center;
+    transition: opacity 0.2s;
+  }
+  .menu-close:hover { opacity: 1; }
+
   /* ── Mobile header (overlaid, no background) ── */
   .header-mobile {
-    position: fixed; top: 0; left: 0; right: 0; z-index: 10;
+    position: fixed; top: 0; left: 0; right: 0; z-index: var(--z-fixed);
     display: flex; justify-content: space-between; align-items: flex-start;
     padding: 20px;
   }
   .header-mobile .logo-img { width: 40px; height: auto; }
 
   /* ── Hamburger ── */
-  #menu-toggle { display: none; }
+  /* #menu-toggle hidden via HTML 'hidden' attribute — CSS rule redundant, removed */
 
   .hamburger {
-    position: fixed; top: 12px; left: 12px; z-index: 200;
+    position: fixed; top: 12px; left: 12px; z-index: var(--z-tooltip);
     cursor: pointer; display: flex; flex-direction: column;
     justify-content: center; gap: 5px; width: 44px; height: 44px;
     padding: 8px;
@@ -118,7 +121,7 @@
 
   /* ── Mobile menu overlay ── */
   .mobile-menu {
-    position: fixed; inset: 0; z-index: 150;
+    position: fixed; inset: 0; z-index: var(--z-modal);
     background: var(--mm-cream); color: var(--mm-navy);
     display: flex; flex-direction: column;
     align-items: center; justify-content: center; gap: 28px;
@@ -158,20 +161,33 @@
   /* ── Hero content (in the dark zone) ── */
   .hero-content {
     position: fixed;
-    bottom: 0; left: 0; right: 0;
-    padding: 0 24px 100px;
-    z-index: 2;
-    text-align: center;
+    top: 0; bottom: auto; left: 0;
+    padding: 84px 24px 0;
+    z-index: var(--z-product);
   }
 
-  .hero-title {
-    font-family: var(--mm-serif);
-    font-weight: 400;
-    font-size: 1.8rem;
-    color: var(--mm-cream);
-    letter-spacing: 0.06em;
-    line-height: 1.15;
-    margin-bottom: 10px;
+  .hero-footer {
+    position: fixed;
+    bottom: 0; left: 0; right: 0;
+    padding: 0 24px 36px;
+    z-index: var(--z-product);
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 16px;
+  }
+
+  .hero-footer-left {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  .hero-logo {
+    width: 80px;
+    height: auto;
+    margin-bottom: 12px;
+    filter: brightness(0) saturate(100%) invert(91%) sepia(8%) saturate(580%) hue-rotate(18deg) brightness(100%) contrast(88%);
   }
 
   .hero-tagline {
@@ -180,7 +196,7 @@
     font-size: 0.9rem;
     color: var(--mm-cream);
     opacity: 0.8;
-    margin-bottom: 24px;
+    margin-bottom: 0;
   }
 
   .cta-btn {
@@ -201,8 +217,8 @@
   }
 
   .trust-row {
-    display: flex; align-items: center; justify-content: center; gap: 14px;
-    margin-top: 20px;
+    display: flex; align-items: center; gap: 10px;
+    margin-top: 0;
   }
   .trust-row img {
     width: 20px; height: 20px;
@@ -222,7 +238,7 @@
     /* Desktop nav overlaid on photo */
     .header-desktop {
       display: flex; align-items: center;
-      position: fixed; top: 0; left: 0; right: 0; z-index: 10;
+      position: fixed; top: 0; left: 0; right: 0; z-index: var(--z-fixed);
       padding: 28px 40px;
       background: transparent;
     }
@@ -240,36 +256,37 @@
       width: 80px; height: auto; margin-left: auto; flex-shrink: 0;
     }
 
-    /* Ken Burns zoom on desktop */
+  @media (prefers-reduced-motion: no-preference) {
     .hero-bg {
       animation: kenBurns 30s ease-in-out infinite alternate;
     }
+  }
 
-    /* Text positioned bottom-left — editorial asymmetry */
     .hero-content {
-      text-align: left;
-      max-width: 500px;
-      padding: 0 60px 80px;
+      padding: 120px 60px 0;
     }
 
-    .hero-title {
-      font-size: 3rem;
-      margin-bottom: 14px;
+    .hero-logo {
+      width: 120px;
+      margin-bottom: 18px;
+    }
+
+    .hero-footer {
+      padding: 0 60px 48px;
     }
 
     .hero-tagline {
       font-size: 1.05rem;
-      margin-bottom: 28px;
     }
 
     .cta-btn {
+      flex-shrink: 0;
       padding: 14px 40px;
       font-size: 0.95rem;
     }
 
     .trust-row {
-      justify-content: flex-start;
-      margin-top: 24px;
+      gap: 14px;
     }
   }
 
@@ -278,11 +295,15 @@
     .header-desktop nav { gap: 52px; }
 
     .hero-content {
-      padding: 0 80px 100px;
+      padding: 120px 80px 0;
     }
 
-    .hero-title {
-      font-size: 3.4rem;
+    .hero-footer {
+      padding: 0 80px 60px;
+    }
+
+    .hero-logo {
+      width: 140px;
     }
   }
 </style>
@@ -294,16 +315,16 @@
 <!-- Full bleed photo background -->
 <div class="hero-bg"></div>
 <div class="hero-overlay"></div>
-<div class="carob-watermark-wrap wm-subtle" aria-hidden="true"><img src="assets/carob_wordmark.svg" alt="" aria-hidden="true" width="800" height="200"></div>
 
 <a href="index.html" class="back-link fade-1">&larr; Back to Gallery</a>
 
 <input type="checkbox" id="menu-toggle" hidden>
-<label for="menu-toggle" class="hamburger fade-1" aria-label="Menu" aria-expanded="false">
+<label for="menu-toggle" class="hamburger fade-1" aria-label="Menu" aria-expanded="false" role="button" tabindex="0">
   <span></span><span></span><span></span>
 </label>
 
 <div class="mobile-menu" role="dialog" aria-modal="true" aria-label="Navigation menu" aria-hidden="true">
+  <button class="menu-close" aria-label="Close menu">&times;</button>
   <a href="/shop/bars">Bars</a>
   <a href="/shop/moons">Moons</a>
   <a href="/shop/bananas">Bananas</a>
@@ -322,13 +343,13 @@
 </div>
 
 <!-- Mobile header (overlaid on photo, no bg) -->
-<header class="header-mobile fade-1">
+<header class="header-mobile fade-1" aria-label="Mobile navigation">
   <div></div><!-- spacer for hamburger -->
   <img src="assets/maplemoon_logo.svg" alt="Maple Moon" class="logo-img" width="40" height="40" loading="eager" decoding="async">
 </header>
 
 <!-- Desktop header (overlaid, cream text, no bg) -->
-<header class="header-desktop fade-1">
+<header class="header-desktop fade-1" aria-label="Main navigation">
   <nav>
     <a href="/our-story">Our Story</a>
     <a href="/shop">Shop</a>
@@ -339,19 +360,25 @@
   <img src="assets/maplemoon_logo.svg" alt="Maple Moon" class="logo-desktop" width="80" height="40" loading="eager" decoding="async">
 </header>
 
-<!-- Hero content in the dark zone -->
-<main class="hero-content" id="main">
-  <h1 class="hero-title fade-2">MAPLE MOON</h1>
-  <p class="hero-tagline fade-3">Artisan carob and cacao butter. Byron Bay.</p>
-  <a href="/shop" class="cta-btn fade-3">Shop Now</a>
-  <div class="trust-row fade-4">
-    <img src="assets/icon_organic.svg" alt="Organic" width="20" height="20" loading="lazy" decoding="async">
-    <img src="assets/icon_vegan.svg" alt="Vegan" width="20" height="20" loading="lazy" decoding="async">
-    <img src="assets/icon_caffeine_free.svg" alt="Caffeine Free" width="20" height="20" loading="lazy" decoding="async">
-    <img src="assets/icon_gluten_free.svg" alt="Gluten Free" width="20" height="20" loading="lazy" decoding="async">
-    <img src="assets/icon_made_in_aus.svg" alt="Made in Australia" width="20" height="20" loading="lazy" decoding="async">
-  </div>
+<!-- Logo — top left -->
+<main class="hero-content" id="main" tabindex="-1">
+  <img src="assets/maplemoon_logo.svg" class="hero-logo fade-2" alt="Maple Moon" width="100" height="100" loading="eager" decoding="async">
 </main>
+
+<!-- Tagline + CTA — split bottom corners -->
+<div class="hero-footer">
+  <div class="hero-footer-left">
+    <p class="hero-tagline fade-3">Artisan carob and cacao butter. Byron Bay.</p>
+    <div class="trust-row fade-4">
+      <img src="assets/icon_organic.svg" alt="Organic" width="20" height="20" loading="lazy" decoding="async">
+      <img src="assets/icon_vegan.svg" alt="Vegan" width="20" height="20" loading="lazy" decoding="async">
+      <img src="assets/icon_caffeine_free.svg" alt="Caffeine Free" width="20" height="20" loading="lazy" decoding="async">
+      <img src="assets/icon_gluten_free.svg" alt="Gluten Free" width="20" height="20" loading="lazy" decoding="async">
+      <img src="assets/icon_made_in_aus.svg" alt="Made in Australia" width="20" height="20" loading="lazy" decoding="async">
+    </div>
+  </div>
+  <a href="/shop" class="cta-btn fade-4">Shop Now</a>
+</div>
 
 <script>
 (function() {
@@ -365,6 +392,14 @@
   document.querySelectorAll('.mobile-menu a').forEach(function(link) {
     link.addEventListener('click', function() { toggle.checked = false; toggle.dispatchEvent(new Event('change')); });
   });
+
+  var closeBtn = document.querySelector('.menu-close');
+  if (closeBtn) {
+    closeBtn.addEventListener('click', function() {
+      toggle.checked = false;
+      toggle.dispatchEvent(new Event('change'));
+    });
+  }
 
   // Focus trap
   var menu = document.querySelector('.mobile-menu');

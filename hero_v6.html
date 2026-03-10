@@ -9,18 +9,18 @@
 <meta property="og:title" content="MapleMoon — Before & After">
 <meta property="og:description" content="From carob pod to finished bar — the MapleMoon craft story. Handmade in Byron Bay.">
 <meta property="og:type" content="website">
-<meta property="og:image" content="https://maplemoon-hero-mockups.vercel.app/assets/products/bar_original.jpg">
+<meta property="og:image" content="https://maplemoon-hero-mockups.vercel.app/assets/products_clean/bar_pure_carob.png">
 <meta property="og:image:width" content="400">
 <meta property="og:image:height" content="600">
 <meta property="og:site_name" content="Maple Moon">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="MapleMoon — Before & After">
 <meta name="twitter:description" content="Artisan carob and cacao butter, handmade in Byron Bay. Organic, vegan, caffeine-free.">
-<meta name="twitter:image" content="https://maplemoon-hero-mockups.vercel.app/assets/products/bar_original.jpg">
+<meta name="twitter:image" content="https://maplemoon-hero-mockups.vercel.app/assets/products_clean/bar_pure_carob.png">
 <link rel="canonical" href="https://maplemoon-hero-mockups.vercel.app/hero_v6.html">
-<link rel="preload" as="image" href="assets/products/bar_original.jpg">
+<link rel="preload" as="image" href="assets/products_clean/bar_pure_carob.png">
 <link rel="preload" as="image" href="assets/carob_wordmark.svg">
-<link rel="preload" as="image" href="assets/bar_lifestyle.png">
+<link rel="preload" as="image" href="assets/stock/stock_hero_lifestyle.jpg">
 <link rel="icon" href="assets/maplemoon_logo.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="assets/maplemoon_logo.svg">
 <link rel="stylesheet" href="brand_kit.css">
@@ -28,10 +28,9 @@
   *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 
   :root {
-    --grad-top: #7B9DBF;
-    --grad-bottom: #A8BDD4;
     --warm-overlay: rgba(139, 100, 60, 0.45);
     --split: 50;
+    --z-product: 2;
   }
 
   html, body { height: 100%; overflow: hidden; }
@@ -43,30 +42,26 @@
     min-height: 100vh;
     min-height: 100dvh;
     background: var(--mm-navy);
-    overflow-x: hidden;
   }
 
   /* skip-link, focus-visible, reduced-motion → brand_kit.css */
 
-  /* -- Fade-in -- */
-  @keyframes fadeIn {
-    from { opacity: 0; transform: translateY(12px); }
-    to   { opacity: 1; transform: translateY(0); }
+  @media (prefers-reduced-motion: no-preference) {
+    .fade-1 { animation: fadeIn 0.6s ease both 0.1s; }
+    .fade-2 { animation: fadeIn 0.6s ease both 0.25s; }
+    .fade-3 { animation: fadeIn 0.6s ease both 0.4s; }
+    .fade-4 { animation: fadeIn 0.6s ease both 0.55s; }
+    .fade-5 { animation: fadeIn 0.6s ease both 0.7s; }
+    .fade-6 { animation: fadeIn 0.6s ease both 0.85s; }
   }
-  .fade-1 { animation: fadeIn 0.6s ease both 0.1s; }
-  .fade-2 { animation: fadeIn 0.6s ease both 0.25s; }
-  .fade-3 { animation: fadeIn 0.6s ease both 0.4s; }
-  .fade-4 { animation: fadeIn 0.6s ease both 0.55s; }
-  .fade-5 { animation: fadeIn 0.6s ease both 0.7s; }
-  .fade-6 { animation: fadeIn 0.6s ease both 0.85s; }
 
   /* -- Back link -- */
   .back-link {
-    position: fixed; top: 12px; left: 12px; z-index: 101;
+    position: fixed; top: 12px; left: 56px; z-index: calc(var(--z-fixed) + 1);
     color: var(--mm-cream); text-decoration: none;
     font-family: var(--mm-sans); font-size: 0.8rem; font-weight: 400;
     opacity: 0.7; transition: opacity 0.2s;
-    display: none; min-height: 44px; padding: 12px 16px;
+    display: block; min-height: 44px; padding: 12px 8px;
   }
   .back-link:hover { opacity: 1; }
 
@@ -74,7 +69,7 @@
   #menu-toggle { display: none; }
 
   .hamburger {
-    position: fixed; top: 12px; left: 12px; z-index: 200;
+    position: fixed; top: 12px; left: 12px; z-index: var(--z-tooltip);
     cursor: pointer; display: flex; flex-direction: column;
     justify-content: center; gap: 5px; width: 44px; height: 44px;
     padding: 8px;
@@ -88,9 +83,21 @@
   #menu-toggle:checked ~ .hamburger span:nth-child(2) { opacity: 0; }
   #menu-toggle:checked ~ .hamburger span:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); }
 
+  #main-content:focus { outline: none; }
+
+  .menu-close {
+    position: absolute; top: 20px; right: 20px;
+    background: none; border: none; cursor: pointer;
+    font-size: 1.5rem; color: var(--mm-navy); opacity: 0.5;
+    padding: 12px; min-width: 44px; min-height: 44px;
+    display: flex; align-items: center; justify-content: center;
+    transition: opacity 0.2s;
+  }
+  .menu-close:hover { opacity: 1; }
+
   /* -- Mobile menu overlay -- */
   .mobile-menu {
-    position: fixed; inset: 0; z-index: 150;
+    position: fixed; inset: 0; z-index: var(--z-modal);
     background: var(--mm-cream); color: var(--mm-navy);
     display: flex; flex-direction: column;
     align-items: center; justify-content: center; gap: 28px;
@@ -125,7 +132,7 @@
 
   /* -- Mobile header -- */
   .header-mobile {
-    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    position: fixed; top: 0; left: 0; right: 0; z-index: var(--z-fixed);
     display: flex; justify-content: flex-end; align-items: flex-start;
     padding: 20px;
   }
@@ -152,25 +159,25 @@
   }
   .split-left-bg {
     position: absolute; inset: 0;
-    background: url('assets/bar_lifestyle.png') center/cover no-repeat;
+    background: url('assets/stock/stock_hero_lifestyle.jpg') center/cover no-repeat;
   }
   .split-left-overlay {
     position: absolute; inset: 0;
-    background: linear-gradient(180deg, rgba(139,100,60,0.55) 0%, rgba(100,70,30,0.65) 100%);
+    background: linear-gradient(180deg, rgba(139,100,60,0.40) 0%, rgba(100,70,30,0.55) 100%);
   }
   .split-left-text {
     position: absolute; bottom: 24px; left: 24px;
     font-family: var(--mm-serif);
     font-size: 1.6rem; font-weight: 500;
     letter-spacing: 0.03em; line-height: 1.15;
-    color: var(--mm-cream); z-index: 2;
+    color: var(--mm-cream); z-index: var(--z-product);
     text-shadow: 0 2px 12px var(--mm-black-35);
   }
 
   .split-right {
     position: relative;
     width: 100%; flex: 1;
-    background: linear-gradient(180deg, var(--grad-top) 0%, var(--grad-bottom) 100%);
+    background: linear-gradient(180deg, var(--mm-blue-top) 0%, var(--mm-blue-bottom) 100%);
     display: flex; flex-direction: column;
     align-items: center; justify-content: center;
     overflow: hidden;
@@ -180,14 +187,15 @@
     width: 55%; max-width: 220px; height: auto;
     filter: drop-shadow(0 16px 32px var(--mm-black-20))
             drop-shadow(0 4px 8px var(--mm-black-10));
-    z-index: 2;
+    z-index: var(--z-product);
+    object-fit: contain; object-position: center;
   }
   .split-right-text {
     font-family: var(--mm-serif);
     font-size: 1.2rem; font-weight: 500;
     letter-spacing: 0.03em; line-height: 1.15;
     color: var(--mm-cream); margin-top: 16px;
-    text-align: center; z-index: 2;
+    text-align: center; z-index: var(--z-product);
   }
 
   /* Divider (hidden on mobile) */
@@ -197,8 +205,8 @@
 
   /* CTA */
   .cta-container {
-    position: fixed; bottom: 80px; left: 0; right: 0;
-    display: flex; justify-content: center; z-index: 10;
+    position: fixed; bottom: calc(112px + env(safe-area-inset-bottom)); left: 0; right: 0;
+    display: flex; justify-content: center; z-index: var(--z-sticky);
   }
   .cta-btn {
     display: inline-block;
@@ -211,12 +219,12 @@
     transition: background 0.3s, color 0.3s;
   }
   .cta-btn:hover {
-    background: var(--mm-cream); color: var(--grad-top);
+    background: var(--mm-cream); color: var(--mm-blue-top);
   }
 
   /* -- Category strip (mobile) -- */
   .category-strip {
-    position: fixed; bottom: 0; left: 0; right: 0; z-index: 50;
+    position: fixed; bottom: 0; left: 0; right: 0; z-index: var(--z-dropdown);
     padding: 18px 0 28px;
     overflow-x: auto; overflow-y: hidden;
     white-space: nowrap;
@@ -256,12 +264,12 @@
     .hamburger { display: none; }
     .header-mobile { display: none; }
     .category-strip { display: none; }
-    .back-link { display: block; }
+    .back-link { display: block; left: 12px; }
 
     /* Desktop nav */
     .header-desktop {
       display: flex; align-items: center;
-      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      position: fixed; top: 0; left: 0; right: 0; z-index: var(--z-fixed);
       padding: 28px 40px;
       background: var(--mm-navy-15);
       backdrop-filter: blur(12px);
@@ -323,7 +331,7 @@
       transform: translateX(-50%);
       width: 3px;
       background: var(--mm-cream);
-      z-index: 10;
+      z-index: var(--z-sticky);
       cursor: ew-resize;
     }
     .split-divider-handle {
@@ -333,9 +341,10 @@
       width: 40px; height: 40px;
       border: 2px solid var(--mm-cream);
       border-radius: var(--radius-full);
-      background: rgba(30, 67, 102, 0.3);
+      background: rgba(30, 67, 102, 0.7);
       backdrop-filter: blur(6px);
       -webkit-backdrop-filter: blur(6px);
+      box-shadow: 0 0 0 2px rgba(231,228,202,0.5);
       cursor: ew-resize;
       display: flex; align-items: center; justify-content: center;
     }
@@ -347,8 +356,8 @@
       background: var(--mm-cream);
       border-radius: 1px;
     }
-    .split-divider-handle::before { left: 12px; }
-    .split-divider-handle::after { right: 12px; }
+    .split-divider-handle::before { left: 8px; }
+    .split-divider-handle::after { right: 8px; }
 
     /* Watermark */
 
@@ -363,8 +372,9 @@
     /* Desktop category bar */
     .category-bar-desktop {
       display: flex; align-items: center; justify-content: center; gap: 0;
-      position: fixed; bottom: 0; left: 0; right: 0; z-index: 50;
+      position: fixed; bottom: 0; left: 0; right: 0; z-index: var(--z-dropdown);
       padding: 24px 0 32px;
+      background: linear-gradient(to top, rgba(0,0,0,0.25) 0%, transparent 100%);
     }
     .category-bar-desktop a {
       font-family: var(--mm-serif); font-size: 1.3rem;
@@ -392,11 +402,12 @@
 <a href="index.html" class="back-link fade-1">&larr; Back to Gallery</a>
 
 <input type="checkbox" id="menu-toggle" hidden>
-<label for="menu-toggle" class="hamburger fade-1" aria-label="Menu" aria-expanded="false">
+<label for="menu-toggle" class="hamburger fade-1" role="button" aria-label="Open menu" aria-expanded="false">
   <span></span><span></span><span></span>
 </label>
 
 <div class="mobile-menu" role="dialog" aria-modal="true" aria-label="Navigation menu" aria-hidden="true">
+  <button class="menu-close" aria-label="Close menu">&times;</button>
   <a href="/shop/bars">Bars</a>
   <a href="/shop/moons">Moons</a>
   <a href="/shop/bananas">Bananas</a>
@@ -431,7 +442,7 @@
   <img src="assets/maplemoon_logo.svg" alt="Maple Moon" class="logo-desktop" width="80" height="40" loading="eager" decoding="async">
 </header>
 
-<main id="main-content" class="split-hero">
+<main id="main-content" class="split-hero" tabindex="-1">
   <div class="carob-watermark-wrap wm-subtle" aria-hidden="true"><img src="assets/carob_wordmark.svg" alt="" aria-hidden="true" width="800" height="200"></div>
 
   <!-- Left: Lifestyle / Origin -->
@@ -448,7 +459,7 @@
 
   <!-- Right: Product -->
   <div class="split-right fade-3">
-    <img src="assets/products/bar_original.jpg" alt="Maple Moon Pure Carob Bar" class="split-right-product product-glow" width="400" height="600" fetchpriority="high" decoding="async">
+    <img src="assets/products_clean/bar_pure_carob.png" alt="Maple Moon Pure Carob Bar" class="split-right-product product-glow" width="400" height="600" fetchpriority="high" loading="eager" decoding="async">
     <p class="split-right-text">Slow-roasted and hand-tempered in Byron Bay</p>
   </div>
 </main>
@@ -460,25 +471,25 @@
 <!-- Mobile category strip -->
 <nav class="category-strip fade-6" aria-label="Product categories">
   <div class="inner">
-    <a href="/shop/bars">Bars</a><span class="dot" aria-hidden="true"></span>
-    <a href="/shop/moons">Moons</a><span class="dot" aria-hidden="true"></span>
-    <a href="/shop/bananas">Bananas</a><span class="dot" aria-hidden="true"></span>
-    <a href="/shop/bites">Bites</a><span class="dot" aria-hidden="true"></span>
-    <a href="/shop/elixirs">Elixirs</a><span class="dot" aria-hidden="true"></span>
-    <a href="/shop/packs">Packs</a><span class="dot" aria-hidden="true"></span>
-    <a href="/shop/gifts">Gifts</a>
+    <a href="/shop/bars" class="text-refined">Bars</a><span class="dot" aria-hidden="true"></span>
+    <a href="/shop/moons" class="text-refined">Moons</a><span class="dot" aria-hidden="true"></span>
+    <a href="/shop/bananas" class="text-refined">Bananas</a><span class="dot" aria-hidden="true"></span>
+    <a href="/shop/bites" class="text-refined">Bites</a><span class="dot" aria-hidden="true"></span>
+    <a href="/shop/elixirs" class="text-refined">Elixirs</a><span class="dot" aria-hidden="true"></span>
+    <a href="/shop/packs" class="text-refined">Packs</a><span class="dot" aria-hidden="true"></span>
+    <a href="/shop/gifts" class="text-refined">Gifts</a>
   </div>
 </nav>
 
 <!-- Desktop category bar -->
 <nav class="category-bar-desktop fade-6" aria-label="Product categories">
-  <a href="/shop/bars">Bars</a><span class="dot" aria-hidden="true"></span>
-  <a href="/shop/moons">Moons</a><span class="dot" aria-hidden="true"></span>
-  <a href="/shop/bananas">Bananas</a><span class="dot" aria-hidden="true"></span>
-  <a href="/shop/bites">Bites</a><span class="dot" aria-hidden="true"></span>
-  <a href="/shop/elixirs">Elixirs</a><span class="dot" aria-hidden="true"></span>
-  <a href="/shop/packs">Packs</a><span class="dot" aria-hidden="true"></span>
-  <a href="/shop/gifts">Gifts</a>
+  <a href="/shop/bars" class="text-refined">Bars</a><span class="dot" aria-hidden="true"></span>
+  <a href="/shop/moons" class="text-refined">Moons</a><span class="dot" aria-hidden="true"></span>
+  <a href="/shop/bananas" class="text-refined">Bananas</a><span class="dot" aria-hidden="true"></span>
+  <a href="/shop/bites" class="text-refined">Bites</a><span class="dot" aria-hidden="true"></span>
+  <a href="/shop/elixirs" class="text-refined">Elixirs</a><span class="dot" aria-hidden="true"></span>
+  <a href="/shop/packs" class="text-refined">Packs</a><span class="dot" aria-hidden="true"></span>
+  <a href="/shop/gifts" class="text-refined">Gifts</a>
 </nav>
 
 <script>
@@ -494,6 +505,15 @@
       hamburger.setAttribute('aria-expanded', 'false');
     });
   });
+
+  // Close button
+  var closeBtn = document.querySelector('.menu-close');
+  if (closeBtn) {
+    closeBtn.addEventListener('click', function() {
+      toggle.checked = false;
+      toggle.dispatchEvent(new Event('change'));
+    });
+  }
 
   // ARIA state on open/close
   toggle.addEventListener('change', function() {

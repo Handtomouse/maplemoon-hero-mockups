@@ -9,18 +9,18 @@
 <meta property="og:title" content="MapleMoon — Story Cards">
 <meta property="og:description" content="The MapleMoon story in four chapters — from pod to shop. Organic artisan carob from Byron Bay.">
 <meta property="og:type" content="website">
-<meta property="og:image" content="https://maplemoon-hero-mockups.vercel.app/assets/products/bar_original.jpg">
+<meta property="og:image" content="https://maplemoon-hero-mockups.vercel.app/assets/products_clean/bar_pure_carob.png">
 <meta property="og:image:width" content="400">
 <meta property="og:image:height" content="600">
 <meta property="og:site_name" content="Maple Moon">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="MapleMoon — Story Cards">
 <meta name="twitter:description" content="Artisan carob and cacao butter, handmade in Byron Bay. Organic, vegan, caffeine-free.">
-<meta name="twitter:image" content="https://maplemoon-hero-mockups.vercel.app/assets/products/bar_original.jpg">
+<meta name="twitter:image" content="https://maplemoon-hero-mockups.vercel.app/assets/products_clean/bar_pure_carob.png">
 <link rel="canonical" href="https://maplemoon-hero-mockups.vercel.app/hero_v9.html">
-<link rel="preload" as="image" href="assets/products/bar_original.jpg">
+<link rel="preload" as="image" href="assets/products_clean/bar_pure_carob.png">
 <link rel="preload" as="image" href="assets/carob_wordmark.svg">
-<link rel="preload" as="image" href="assets/bar_lifestyle.png">
+<link rel="preload" as="image" href="assets/stock/stock_hero_lifestyle.jpg">
 <link rel="icon" href="assets/maplemoon_logo.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="assets/maplemoon_logo.svg">
 <link rel="stylesheet" href="brand_kit.css">
@@ -28,34 +28,32 @@
   *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 
   :root {
-    --grad-top: #7B9DBF;
-    --grad-bottom: #A8BDD4;
+    --z-product: 2;
   }
 
   html, body { height: 100%; }
   body {
     font-family: var(--mm-sans);
     color: var(--mm-cream);
-    overflow-x: hidden;
-    overflow-y: hidden;
+    overflow: hidden;
     text-rendering: optimizeLegibility;
   }
 
 
   /* ── Back link ── */
   .back-link {
-    position: fixed; top: 16px; left: 16px; z-index: 101;
+    position: fixed; top: 12px; left: 56px; z-index: calc(var(--z-fixed) + 1);
     color: var(--mm-cream); text-decoration: none;
     font-family: var(--mm-sans); font-size: 0.8rem; font-weight: 400;
     opacity: 0.7; transition: opacity 0.2s;
-    display: none;
+    display: block; min-height: 44px; padding: 12px 8px;
   }
   .back-link:hover { opacity: 1; }
 
   /* ── Hamburger (mobile only) ── */
   #menu-toggle { display: none; }
   .hamburger {
-    position: fixed; top: 12px; left: 12px; z-index: 200;
+    position: fixed; top: 12px; left: 12px; z-index: var(--z-tooltip);
     cursor: pointer; display: flex; flex-direction: column;
     justify-content: center; gap: 5px; width: 44px; height: 44px;
     padding: 8px;
@@ -71,7 +69,7 @@
 
   /* ── Mobile menu overlay ── */
   .mobile-menu {
-    position: fixed; inset: 0; z-index: 150;
+    position: fixed; inset: 0; z-index: var(--z-modal);
     background: var(--mm-cream); color: var(--mm-navy);
     display: flex; flex-direction: column;
     align-items: center; justify-content: center; gap: 28px;
@@ -99,9 +97,21 @@
     color: var(--mm-navy); opacity: 0.6;
   }
 
+  #main:focus { outline: none; }
+
+  .menu-close {
+    position: absolute; top: 20px; right: 20px;
+    background: none; border: none; cursor: pointer;
+    font-size: 1.5rem; color: var(--mm-navy); opacity: 0.5;
+    padding: 12px; min-width: 44px; min-height: 44px;
+    display: flex; align-items: center; justify-content: center;
+    transition: opacity 0.2s;
+  }
+  .menu-close:hover { opacity: 1; }
+
   /* ── Mobile header (logo) ── */
   .header-mobile {
-    position: fixed; top: 0; right: 0; z-index: 100;
+    position: fixed; top: 0; right: 0; z-index: var(--z-fixed);
     display: flex; justify-content: flex-end; align-items: flex-start;
     padding: 20px;
   }
@@ -154,16 +164,16 @@
   }
   .card-pod .card-bg {
     position: absolute; inset: 0;
-    background: url('assets/bar_lifestyle.png') center/cover no-repeat;
+    background: url('assets/stock/stock_hero_lifestyle.jpg') center/cover no-repeat;
     z-index: 0;
   }
   .card-pod .card-overlay {
     position: absolute; inset: 0;
-    background: rgba(180,140,80,0.3);
-    z-index: 1;
+    background: rgba(58,42,26,0.4);
+    z-index: var(--z-base);
   }
   .card-pod .card-content {
-    position: relative; z-index: 2;
+    position: relative; z-index: var(--z-product);
     text-align: center; padding: 0 32px;
   }
   .card-pod .card-title {
@@ -185,7 +195,7 @@
     background: linear-gradient(180deg, var(--mm-story-blue) 0%, #7B9DBF 100%);
   }
   .card-craft .card-content {
-    position: relative; z-index: 2;
+    position: relative; z-index: var(--z-product);
     text-align: center; padding: 0 32px;
   }
   .card-craft .card-title {
@@ -211,10 +221,10 @@
 
   /* ── Card 3: The Bar ── */
   .card-bar {
-    background: linear-gradient(180deg, var(--grad-top) 0%, var(--grad-bottom) 100%);
+    background: linear-gradient(180deg, var(--mm-blue-top) 0%, var(--mm-blue-bottom) 100%);
   }
   .card-bar .card-content {
-    position: relative; z-index: 2;
+    position: relative; z-index: var(--z-product);
     text-align: center; padding: 0 32px;
     display: flex; flex-direction: column;
     align-items: center; gap: 20px;
@@ -233,9 +243,10 @@
   .card-shop {
     background: var(--mm-cream);
     color: var(--mm-navy);
+    border-left: 1px solid rgba(30,67,102,0.2);
   }
   .card-shop .card-content {
-    position: relative; z-index: 2;
+    position: relative; z-index: var(--z-product);
     text-align: center; padding: 0 32px;
     display: flex; flex-direction: column;
     align-items: center; gap: 24px;
@@ -273,7 +284,7 @@
   .progress-dots {
     position: fixed; bottom: 32px; left: 50%;
     transform: translateX(-50%);
-    z-index: 50;
+    z-index: var(--z-dropdown);
     display: flex; gap: 10px;
   }
   .progress-dots .dot {
@@ -281,7 +292,7 @@
     border-radius: var(--radius-full);
     background: var(--mm-cream);
     opacity: 0.3;
-    transition: opacity 0.3s, transform 0.3s;
+    transition: opacity 0.3s, transform 0.3s, background 0.3s;
   }
   .progress-dots .dot.active {
     opacity: 1;
@@ -300,13 +311,15 @@
   .swipe-hint {
     position: absolute; bottom: 72px; left: 50%;
     transform: translateX(-50%);
-    z-index: 10;
+    z-index: var(--z-sticky);
     display: flex; align-items: center; gap: 6px;
     font-family: var(--mm-sans); font-size: 0.7rem;
     color: var(--mm-cream); opacity: 0.6;
     letter-spacing: 0.08em; text-transform: uppercase;
-    animation: pulseHint 2s ease-in-out infinite;
     transition: opacity 0.5s;
+  }
+  @media (prefers-reduced-motion: no-preference) {
+    .swipe-hint { animation: pulseHint 2s ease-in-out infinite; }
   }
   .swipe-hint.hidden { opacity: 0; pointer-events: none; }
   .swipe-hint svg {
@@ -322,12 +335,15 @@
     .header-mobile { display: none; }
     .progress-dots { display: none; }
     .swipe-hint { display: none; }
-    .back-link { display: block; }
+    .back-link { display: block; left: 12px; }
 
     .header-desktop {
       display: flex; align-items: center;
-      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      position: fixed; top: 0; left: 0; right: 0; z-index: var(--z-fixed);
       padding: 28px 40px;
+      background: rgba(30,67,102,0.1);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
     }
     .header-desktop nav {
       flex: 1; display: flex; align-items: center;
@@ -359,9 +375,15 @@
       width: 25vw;
       height: 100vh;
       scroll-snap-align: unset;
-      transition: width 0.5s cubic-bezier(0.4, 0, 0.2, 1);
       cursor: pointer;
     }
+  }
+  @media (min-width: 768px) and (prefers-reduced-motion: no-preference) {
+    .story-card {
+      transition: width 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+  }
+  @media (min-width: 768px) {
 
     .story-track:hover .story-card {
       width: 20vw;
@@ -409,11 +431,12 @@
 <a href="index.html" class="back-link">&larr; Back to Gallery</a>
 
 <input type="checkbox" id="menu-toggle" hidden>
-<label for="menu-toggle" class="hamburger" aria-label="Menu" aria-expanded="false">
+<label for="menu-toggle" class="hamburger" role="button" aria-label="Menu" aria-expanded="false">
   <span></span><span></span><span></span>
 </label>
 
 <div class="mobile-menu" role="dialog" aria-modal="true" aria-label="Navigation menu" aria-hidden="true">
+  <button class="menu-close" aria-label="Close menu">&times;</button>
   <a href="/shop/bars">Bars</a>
   <a href="/shop/moons">Moons</a>
   <a href="/shop/bananas">Bananas</a>
@@ -449,7 +472,7 @@
 </header>
 
 <!-- ═══ STORY CARDS ═══ -->
-<main class="story-wrapper" id="main">
+<main class="story-wrapper" id="main" tabindex="-1">
   <div class="story-track">
 
     <!-- Card 1: The Pod -->
@@ -485,7 +508,7 @@
     <section class="story-card card-bar" aria-label="The Bar">
       <div class="carob-watermark-wrap wm-subtle" aria-hidden="true"><img src="assets/carob_wordmark.svg" alt="" aria-hidden="true" width="800" height="200"></div>
       <div class="card-content">
-        <img src="assets/products/bar_original.jpg" alt="Maple Moon Carob Bar" class="product-img" width="400" height="600" fetchpriority="high" decoding="async" loading="eager">
+        <img src="assets/products_clean/bar_pure_carob.png" alt="Maple Moon Carob Bar" class="product-img" width="400" height="600" fetchpriority="high" decoding="async" loading="eager">
         <p class="card-subtitle">Naturally sweet. Nothing added.</p>
       </div>
     </section>
@@ -495,9 +518,10 @@
       <div class="card-content">
         <p class="card-title">Shop</p>
         <div class="shop-grid">
-          <img src="assets/products/bar_original.jpg" alt="Carob Bar" class="shop-thumb" width="400" height="600" loading="lazy" decoding="async">
-          <img src="assets/products/moon_peppermint.jpg" alt="Carob Moon" class="shop-thumb" width="400" height="400" loading="lazy" decoding="async">
-          <img src="assets/products/eclipse_bundle.jpg" alt="Eclipse Bundle" class="shop-thumb" width="400" height="400" loading="lazy" decoding="async">
+          <img src="assets/products_clean/bar_pure_carob.png" alt="Carob Bar" class="shop-thumb" width="400" height="600" loading="lazy" decoding="async">
+          <img src="assets/products_clean/eclipse_hazelnut_a.png" alt="Eclipse Hazelnut" class="shop-thumb" width="400" height="400" loading="lazy" decoding="async">
+          <img src="assets/products_clean/eclipse_pecan.png" alt="Eclipse Pecan" class="shop-thumb" width="400" height="400" loading="lazy" decoding="async">
+          <img src="assets/products_clean/bite_gold.png" alt="Gold Bite" class="shop-thumb" width="400" height="400" loading="lazy" decoding="async">
         </div>
         <a href="/shop" class="cta-btn">Shop All</a>
       </div>
@@ -521,6 +545,15 @@
   document.querySelectorAll('.mobile-menu a').forEach(function(link) {
     link.addEventListener('click', function() { toggle.checked = false; toggle.dispatchEvent(new Event('change')); });
   });
+
+  // Close button
+  var closeBtn = document.querySelector('.menu-close');
+  if (closeBtn) {
+    closeBtn.addEventListener('click', function() {
+      toggle.checked = false;
+      toggle.dispatchEvent(new Event('change'));
+    });
+  }
 
   // Focus trap
   var menu = document.querySelector('.mobile-menu');

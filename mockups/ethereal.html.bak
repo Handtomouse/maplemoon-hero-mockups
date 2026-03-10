@@ -1,0 +1,1030 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MapleMoon — Wholefood Carob | Ethereal Theme</title>
+    <link rel="stylesheet" href="shared.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* ── Etheryx / Ethereal Preset — Faithful Recreation ── */
+
+        :root {
+            --eth-bg: #F5F3EE;
+            --eth-bg-card: #EFEDE7;
+            --eth-text: #2C2C24;
+            --eth-text-muted: #6B6B5E;
+            --eth-text-faded: #9B9B8E;
+            --eth-border: #E0DDD4;
+            --eth-white: #FFFFFF;
+            --eth-radius: 12px;
+        }
+
+        html { scroll-behavior: smooth; }
+
+        body {
+            background: var(--eth-bg);
+            color: var(--eth-text);
+            overflow-x: hidden;
+        }
+
+        /* ── 1. Header ── */
+
+        .header {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            height: 60px;
+            background: var(--eth-bg);
+            display: flex;
+            align-items: center;
+            transition: box-shadow 0.4s ease;
+        }
+
+        .header.scrolled {
+            box-shadow: 0 1px 12px rgba(44, 44, 36, 0.06);
+        }
+
+        .header-inner {
+            width: 100%;
+            max-width: 1440px;
+            margin: 0 auto;
+            padding: 0 40px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .header-left {
+            display: flex;
+            align-items: center;
+            gap: 32px;
+        }
+
+        .header-logo {
+            font-family: var(--font-heading);
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: var(--eth-text);
+        }
+
+        .header-nav {
+            display: flex;
+            align-items: center;
+            gap: 24px;
+        }
+
+        .header-nav a {
+            font-family: var(--font-body);
+            font-weight: 400;
+            font-size: 14px;
+            color: var(--eth-text);
+            display: flex;
+            align-items: center;
+            gap: 4px;
+            transition: opacity 0.3s ease;
+        }
+
+        .header-nav a:hover { opacity: 0.55; }
+
+        .header-nav a i { font-size: 8px; }
+
+        .header-right {
+            display: flex;
+            align-items: center;
+            gap: 18px;
+        }
+
+        .header-icon {
+            color: var(--eth-text);
+            font-size: 16px;
+            transition: opacity 0.3s ease;
+        }
+
+        .header-icon:hover { opacity: 0.55; }
+
+        /* ── 2. Hero Heading ── */
+
+        .hero-heading {
+            padding: 80px 40px 40px;
+            max-width: 1440px;
+            margin: 0 auto;
+        }
+
+        .hero-heading h1 {
+            font-family: var(--font-heading);
+            font-size: clamp(3.5rem, 8vw, 7rem);
+            font-weight: 400;
+            color: var(--eth-text);
+            line-height: 0.95;
+        }
+
+        /* ── 3. Image Collage ── */
+
+        .collage {
+            padding: 0 40px 80px;
+            max-width: 1440px;
+            margin: 0 auto;
+        }
+
+        .collage-grid {
+            display: flex;
+            gap: 12px;
+            align-items: flex-end;
+            height: 480px;
+        }
+
+        .collage-item {
+            flex: 1;
+            border-radius: var(--eth-radius);
+            overflow: hidden;
+            position: relative;
+        }
+
+        .collage-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.6s ease;
+        }
+
+        .collage-item:hover img {
+            transform: scale(1.04);
+        }
+
+        /* Varying heights for masonry effect */
+        .collage-item:nth-child(1) { height: 70%; }
+        .collage-item:nth-child(2) { height: 85%; }
+        .collage-item:nth-child(3) { height: 100%; }
+        .collage-item:nth-child(4) { height: 80%; }
+        .collage-item:nth-child(5) { height: 65%; }
+
+        /* ── 4. Bestsellers ── */
+
+        .bestsellers {
+            padding: 0 40px 80px;
+            max-width: 1440px;
+            margin: 0 auto;
+        }
+
+        .bestsellers-title {
+            font-family: var(--font-body);
+            font-weight: 400;
+            font-size: 1rem;
+            color: var(--eth-text);
+            margin-bottom: 28px;
+        }
+
+        .product-grid-6 {
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            gap: 16px;
+        }
+
+        .eth-product-card {
+            cursor: pointer;
+        }
+
+        .eth-product-card .card-image {
+            aspect-ratio: 1;
+            background: var(--eth-bg-card);
+            border-radius: var(--eth-radius);
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .eth-product-card .card-image img {
+            width: 80%;
+            height: 80%;
+            object-fit: contain;
+            transition: transform 0.6s ease;
+        }
+
+        .eth-product-card:hover .card-image img {
+            transform: scale(1.06);
+        }
+
+        .eth-product-card .card-info {
+            padding-top: 12px;
+            text-align: center;
+        }
+
+        .card-vendor {
+            font-family: var(--font-body);
+            font-weight: 400;
+            font-size: 0.75rem;
+            color: var(--eth-text-muted);
+            margin-bottom: 2px;
+        }
+
+        .card-name {
+            font-family: var(--font-body);
+            font-weight: 400;
+            font-size: 0.8rem;
+            color: var(--eth-text);
+            margin-bottom: 6px;
+        }
+
+        .card-price {
+            font-family: var(--font-body);
+            font-weight: 400;
+            font-size: 0.8rem;
+            color: var(--eth-text);
+        }
+
+        /* ── 5. Brand Story (Hero Text + Image) ── */
+
+        .brand-story {
+            padding: 80px 40px;
+            max-width: 1440px;
+            margin: 0 auto;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 500px;
+        }
+
+        .brand-story-image {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 380px;
+            height: 480px;
+            border-radius: var(--eth-radius);
+            overflow: hidden;
+            z-index: 1;
+        }
+
+        .brand-story-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .brand-story-text {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+            max-width: 1100px;
+        }
+
+        .brand-story-text p {
+            font-family: var(--font-heading);
+            font-size: clamp(1.6rem, 3.5vw, 2.8rem);
+            font-weight: 400;
+            color: var(--eth-text);
+            line-height: 1.35;
+        }
+
+        .brand-story-text a {
+            color: var(--eth-text-muted);
+            text-decoration: underline;
+            text-underline-offset: 3px;
+        }
+
+        /* ── 6. Collection List ── */
+
+        .collection-list {
+            padding: 0 40px 80px;
+            max-width: 1440px;
+            margin: 0 auto;
+        }
+
+        .collection-list-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+        }
+
+        .collection-card {
+            border-radius: var(--eth-radius);
+            overflow: hidden;
+            position: relative;
+            aspect-ratio: 3/2;
+        }
+
+        .collection-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.6s ease;
+        }
+
+        .collection-card:hover img {
+            transform: scale(1.04);
+        }
+
+        .collection-label {
+            font-family: var(--font-body);
+            font-weight: 400;
+            font-size: 0.9rem;
+            color: var(--eth-text);
+            margin-top: 12px;
+        }
+
+        /* ── 7. Featured Collection ── */
+
+        .featured-collection {
+            padding: 80px 40px;
+            max-width: 1440px;
+            margin: 0 auto;
+        }
+
+        .featured-header {
+            display: grid;
+            grid-template-columns: 250px 1fr;
+            gap: 40px;
+            align-items: start;
+            margin-bottom: 48px;
+        }
+
+        .featured-eyebrow {
+            font-family: var(--font-body);
+            font-weight: 400;
+            font-size: 0.7rem;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            color: var(--eth-text-muted);
+            padding-top: 8px;
+        }
+
+        .featured-description {
+            font-family: var(--font-heading);
+            font-size: clamp(1.1rem, 2vw, 1.5rem);
+            font-weight: 400;
+            color: var(--eth-text);
+            line-height: 1.6;
+        }
+
+        .product-grid-5 {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 16px;
+        }
+
+        /* ── 8. Collection Banners ── */
+
+        .collection-banners {
+            padding: 40px 40px 80px;
+            max-width: 1440px;
+            margin: 0 auto;
+        }
+
+        .banners-grid {
+            display: grid;
+            grid-template-columns: 1.2fr 1fr;
+            gap: 16px;
+        }
+
+        .banner-card {
+            border-radius: var(--eth-radius);
+            overflow: hidden;
+            position: relative;
+            aspect-ratio: 4/3;
+        }
+
+        .banner-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.6s ease;
+        }
+
+        .banner-card:hover img {
+            transform: scale(1.04);
+        }
+
+        .banner-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: 24px;
+            background: linear-gradient(to top, rgba(0,0,0,0.4), transparent);
+        }
+
+        .banner-label {
+            font-family: var(--font-body);
+            font-weight: 400;
+            font-size: 0.9rem;
+            color: #fff;
+        }
+
+        .banner-label a {
+            margin-left: 12px;
+            opacity: 0.7;
+        }
+
+        /* ── 9. Trust Badges ── */
+
+        .trust-badges {
+            padding: 60px 40px;
+            max-width: 1440px;
+            margin: 0 auto;
+        }
+
+        .badges-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 24px;
+            text-align: center;
+        }
+
+        .badge-item i {
+            font-size: 32px;
+            color: var(--eth-text-muted);
+            margin-bottom: 16px;
+        }
+
+        .badge-title {
+            font-family: var(--font-body);
+            font-weight: 500;
+            font-size: 0.95rem;
+            color: var(--eth-text);
+            margin-bottom: 4px;
+        }
+
+        .badge-subtitle {
+            font-family: var(--font-body);
+            font-weight: 300;
+            font-size: 0.8rem;
+            color: var(--eth-text-muted);
+        }
+
+        /* ── 10. Footer ── */
+
+        .footer {
+            padding: 60px 40px 30px;
+            max-width: 1440px;
+            margin: 0 auto;
+            border-top: 1px solid var(--eth-border);
+        }
+
+        .footer-top {
+            display: grid;
+            grid-template-columns: 1.8fr 1fr 1fr 1fr 1fr;
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-brand {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .footer-logo-stack {
+            font-family: var(--font-heading);
+            font-size: 1.6rem;
+            font-weight: 700;
+            line-height: 0.85;
+            color: var(--eth-text);
+            margin-bottom: 8px;
+        }
+
+        .footer-brand-text {
+            font-family: var(--font-body);
+            font-weight: 300;
+            font-size: 0.8rem;
+            line-height: 1.6;
+            color: var(--eth-text-muted);
+            max-width: 300px;
+        }
+
+        .footer-col-title {
+            font-family: var(--font-body);
+            font-weight: 500;
+            font-size: 0.85rem;
+            color: var(--eth-text);
+            margin-bottom: 14px;
+        }
+
+        .footer-col a {
+            display: block;
+            font-family: var(--font-body);
+            font-weight: 300;
+            font-size: 0.8rem;
+            color: var(--eth-text-muted);
+            padding: 4px 0;
+            transition: color 0.3s ease;
+        }
+
+        .footer-col a:hover { color: var(--eth-text); }
+
+        .footer-social {
+            display: flex;
+            gap: 14px;
+            margin-top: 4px;
+        }
+
+        .footer-social a {
+            font-size: 16px;
+            color: var(--eth-text-muted);
+            transition: color 0.3s ease;
+            padding: 0;
+            display: inline;
+        }
+
+        .footer-social a:hover { color: var(--eth-text); }
+
+        .footer-bottom {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            padding-top: 20px;
+            border-top: 1px solid var(--eth-border);
+        }
+
+        .footer-copy {
+            font-family: var(--font-body);
+            font-weight: 300;
+            font-size: 0.7rem;
+            color: var(--eth-text-faded);
+        }
+
+        .footer-copy a {
+            display: inline;
+            padding: 0;
+            font-size: inherit;
+        }
+
+        /* ── Back to Top ── */
+
+        .back-to-top {
+            position: fixed;
+            bottom: 24px;
+            right: 24px;
+            width: 40px;
+            height: 40px;
+            border: 1px solid var(--eth-border);
+            border-radius: 50%;
+            background: var(--eth-bg);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--eth-text-muted);
+            font-size: 14px;
+            cursor: pointer;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            z-index: 50;
+        }
+
+        .back-to-top.visible { opacity: 1; }
+        .back-to-top:hover { color: var(--eth-text); }
+
+        /* ── Responsive ── */
+
+        @media (max-width: 1200px) {
+            .product-grid-6 { grid-template-columns: repeat(3, 1fr); }
+            .product-grid-5 { grid-template-columns: repeat(3, 1fr); }
+            .collage-grid { height: 380px; }
+        }
+
+        @media (max-width: 1024px) {
+            .footer-top { grid-template-columns: 1fr 1fr 1fr; }
+            .collage-item:nth-child(5) { display: none; }
+            .collage-grid { gap: 8px; }
+        }
+
+        @media (max-width: 768px) {
+            .header-nav { display: none; }
+            .header-inner, .hero-heading, .collage,
+            .bestsellers, .brand-story, .collection-list,
+            .featured-collection, .collection-banners,
+            .trust-badges, .footer { padding-left: 20px; padding-right: 20px; }
+
+            .hero-heading h1 { font-size: 3rem; }
+
+            .collage-grid {
+                height: auto;
+                flex-wrap: wrap;
+            }
+            .collage-item {
+                flex: 0 0 calc(50% - 6px);
+                height: 200px !important;
+            }
+            .collage-item:nth-child(5) { display: block; flex: 0 0 100%; height: 180px !important; }
+
+            .product-grid-6, .product-grid-5 { grid-template-columns: repeat(2, 1fr); }
+
+            .brand-story-image {
+                width: 240px;
+                height: 300px;
+            }
+            .brand-story-text p { font-size: 1.3rem; }
+
+            .collection-list-grid { grid-template-columns: 1fr; }
+
+            .featured-header {
+                grid-template-columns: 1fr;
+                gap: 16px;
+            }
+
+            .banners-grid { grid-template-columns: 1fr; }
+
+            .badges-grid { grid-template-columns: repeat(2, 1fr); gap: 32px; }
+
+            .footer-top { grid-template-columns: 1fr 1fr; gap: 24px; }
+        }
+
+        @media (max-width: 480px) {
+            .hero-heading h1 { font-size: 2.4rem; }
+            .product-grid-6, .product-grid-5 { grid-template-columns: 1fr 1fr; gap: 12px; }
+            .brand-story-image { width: 180px; height: 230px; }
+            .brand-story-text p { font-size: 1.05rem; }
+            .badges-grid { grid-template-columns: 1fr 1fr; }
+            .footer-top { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ── 1. Header ── -->
+    <header class="header" id="header">
+        <div class="header-inner">
+            <div class="header-left">
+                <a href="#" class="header-logo">MapleMoon</a>
+                <nav class="header-nav">
+                    <a href="#bestsellers">Catalog <i class="fa-solid fa-chevron-down"></i></a>
+                    <a href="#collections">Collections <i class="fa-solid fa-chevron-down"></i></a>
+                    <a href="#story">About</a>
+                </nav>
+            </div>
+            <div class="header-right">
+                <a href="#" class="header-icon" aria-label="Search"><i class="fa-solid fa-magnifying-glass"></i></a>
+                <a href="#" class="header-icon" aria-label="Cart"><i class="fa-solid fa-bag-shopping"></i></a>
+            </div>
+        </div>
+    </header>
+
+    <!-- ── 2. Hero Heading ── -->
+    <section class="hero-heading">
+        <h1>MapleMoon</h1>
+    </section>
+
+    <!-- ── 3. Image Collage ── -->
+    <section class="collage">
+        <div class="collage-grid">
+            <div class="collage-item">
+                <img src="img/orris_cluster_warm.jpg" alt="Artisanal carob products" loading="lazy">
+            </div>
+            <div class="collage-item">
+                <img src="img/orris_silhouette_glow.jpg" alt="Carob elixir, amber light" loading="lazy">
+            </div>
+            <div class="collage-item">
+                <img src="img/orris_stacked_amber.jpg" alt="Stacked carob bars" loading="lazy">
+            </div>
+            <div class="collage-item">
+                <img src="img/orris_editorial_white.jpg" alt="Carob bar with produce" loading="lazy">
+            </div>
+            <div class="collage-item">
+                <img src="img/orris_bar_backlit.jpg" alt="Backlit carob bar" loading="lazy">
+            </div>
+        </div>
+    </section>
+
+    <!-- ── 4. Bestsellers ── -->
+    <section class="bestsellers" id="bestsellers">
+        <h2 class="bestsellers-title">Bestsellers</h2>
+        <div class="product-grid-6">
+
+            <div class="eth-product-card">
+                <div class="card-image">
+                    <img src="https://orrisparis.com/cdn/shop/products/Deesse_packshot_2_2048x2048.png" alt="Pure Carob Bar" loading="lazy">
+                </div>
+                <div class="card-info">
+                    <div class="card-vendor">MapleMoon</div>
+                    <div class="card-name">Pure Carob Bar</div>
+                    <div class="card-price">$6.95</div>
+                </div>
+            </div>
+
+            <div class="eth-product-card">
+                <div class="card-image">
+                    <img src="https://orrisparis.com/cdn/shop/products/Soliste_packshotcopy_2048x2048.png" alt="Goji & Coconut Bar" loading="lazy">
+                </div>
+                <div class="card-info">
+                    <div class="card-vendor">MapleMoon</div>
+                    <div class="card-name">Goji &amp; Coconut Bar</div>
+                    <div class="card-price">$7.50</div>
+                </div>
+            </div>
+
+            <div class="eth-product-card">
+                <div class="card-image">
+                    <img src="https://orrisparis.com/cdn/shop/products/Nomade_packshotBcopy_2048x2048.png" alt="Cayenne Chilli Bar" loading="lazy">
+                </div>
+                <div class="card-info">
+                    <div class="card-vendor">MapleMoon</div>
+                    <div class="card-name">Cayenne Chilli Bar</div>
+                    <div class="card-price">$7.50</div>
+                </div>
+            </div>
+
+            <div class="eth-product-card">
+                <div class="card-image">
+                    <img src="https://orrisparis.com/cdn/shop/files/DSCF2385_2048x2048.jpg" alt="Pure Carob Moon" loading="lazy">
+                </div>
+                <div class="card-info">
+                    <div class="card-vendor">MapleMoon</div>
+                    <div class="card-name">Pure Carob Moon 4-Pack</div>
+                    <div class="card-price">$12.95</div>
+                </div>
+            </div>
+
+            <div class="eth-product-card">
+                <div class="card-image">
+                    <img src="https://orrisparis.com/cdn/shop/products/Botaniste_packshotcopy_2048x2048.png" alt="Peppermint Moon" loading="lazy">
+                </div>
+                <div class="card-info">
+                    <div class="card-vendor">MapleMoon</div>
+                    <div class="card-name">Peppermint Moon 4-Pack</div>
+                    <div class="card-price">$12.95</div>
+                </div>
+            </div>
+
+            <div class="eth-product-card">
+                <div class="card-image">
+                    <img src="https://orrisparis.com/cdn/shop/products/LeQuartet_shopify_2048x2048.png" alt="The Starter Bundle" loading="lazy">
+                </div>
+                <div class="card-info">
+                    <div class="card-vendor">MapleMoon</div>
+                    <div class="card-name">The Starter Bundle</div>
+                    <div class="card-price">$34.95</div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ── 5. Brand Story (Hero Text + Floating Image) ── -->
+    <section class="brand-story" id="story">
+        <div class="brand-story-image">
+            <img src="img/orris_bar_backlit.jpg" alt="Hand-harvested carob" loading="lazy">
+        </div>
+        <div class="brand-story-text">
+            <p>Welcome to <a href="#">MapleMoon</a>. Wholefood carob for your table, home and life.
+            Our approach is to work with nature and allow form to emerge from function.
+            Beauty should be woven into quiet, everyday moments. Timeless is more.</p>
+        </div>
+    </section>
+
+    <!-- ── 6. Collection List ── -->
+    <section class="collection-list" id="collections">
+        <div class="collection-list-grid">
+            <div>
+                <a href="#" class="collection-card">
+                    <img src="img/orris_flatlay_dark.jpg" alt="Bars collection" loading="lazy">
+                </a>
+                <div class="collection-label">Bars</div>
+            </div>
+            <div>
+                <a href="#" class="collection-card">
+                    <img src="img/orris_cluster_warm.jpg" alt="Moons collection" loading="lazy">
+                </a>
+                <div class="collection-label">Moons</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ── 7. Featured Collection ── -->
+    <section class="featured-collection">
+        <div class="featured-header">
+            <div class="featured-eyebrow">MAPLEMOON X NATURE</div>
+            <div class="featured-description">
+                // MapleMoon's core collection draws inspiration from the intrinsic beauty
+                of Australian-grown carob, quality ingredients, and a serene colour palette.
+                This results in a line of wholefood treats that exudes subtle elegance
+                and calm sophistication, reflecting the poetic undertones of nature's craft.
+            </div>
+        </div>
+        <div class="product-grid-5">
+
+            <div class="eth-product-card">
+                <div class="card-image">
+                    <img src="https://orrisparis.com/cdn/shop/products/Deesse_packshot_2_2048x2048.png" alt="Pure Carob Bar" loading="lazy">
+                </div>
+                <div class="card-info">
+                    <div class="card-vendor">MapleMoon</div>
+                    <div class="card-name">Pure Carob Bar</div>
+                    <div class="card-price">$6.95</div>
+                </div>
+            </div>
+
+            <div class="eth-product-card">
+                <div class="card-image">
+                    <img src="https://orrisparis.com/cdn/shop/products/Soliste_packshotcopy_2048x2048.png" alt="Goji & Coconut Bar" loading="lazy">
+                </div>
+                <div class="card-info">
+                    <div class="card-vendor">MapleMoon</div>
+                    <div class="card-name">Goji &amp; Coconut Bar</div>
+                    <div class="card-price">$7.50</div>
+                </div>
+            </div>
+
+            <div class="eth-product-card">
+                <div class="card-image">
+                    <img src="https://orrisparis.com/cdn/shop/products/Nomade_packshotBcopy_2048x2048.png" alt="Cayenne Chilli Bar" loading="lazy">
+                </div>
+                <div class="card-info">
+                    <div class="card-vendor">MapleMoon</div>
+                    <div class="card-name">Cayenne Chilli Bar</div>
+                    <div class="card-price">$7.50</div>
+                </div>
+            </div>
+
+            <div class="eth-product-card">
+                <div class="card-image">
+                    <img src="https://orrisparis.com/cdn/shop/files/ORRIS_Dish_Soap_01_2048x2048.png" alt="Plain Carob Elixir" loading="lazy">
+                </div>
+                <div class="card-info">
+                    <div class="card-vendor">MapleMoon</div>
+                    <div class="card-name">Plain Carob Elixir</div>
+                    <div class="card-price">$9.95</div>
+                </div>
+            </div>
+
+            <div class="eth-product-card">
+                <div class="card-image">
+                    <img src="https://orrisparis.com/cdn/shop/files/ritualsetsquare_2048x2048.png" alt="Carob Bananas" loading="lazy">
+                </div>
+                <div class="card-info">
+                    <div class="card-vendor">MapleMoon</div>
+                    <div class="card-name">Carob Bananas 4-Pack</div>
+                    <div class="card-price">$8.50</div>
+                </div>
+            </div>
+
+            <div class="eth-product-card">
+                <div class="card-image">
+                    <img src="https://orrisparis.com/cdn/shop/products/Deesse_packshot_2_2048x2048.png" alt="Salted Almond Bar" loading="lazy">
+                </div>
+                <div class="card-info">
+                    <div class="card-vendor">MapleMoon</div>
+                    <div class="card-name">Salted Almond Bar</div>
+                    <div class="card-price">$7.50</div>
+                </div>
+            </div>
+
+            <div class="eth-product-card">
+                <div class="card-image">
+                    <img src="https://orrisparis.com/cdn/shop/products/Nomade_packshotBcopy_2048x2048.png" alt="Hazelnut Bar" loading="lazy">
+                </div>
+                <div class="card-info">
+                    <div class="card-vendor">MapleMoon</div>
+                    <div class="card-name">Hazelnut Bar</div>
+                    <div class="card-price">$7.50</div>
+                </div>
+            </div>
+
+            <div class="eth-product-card">
+                <div class="card-image">
+                    <img src="https://orrisparis.com/cdn/shop/products/Botaniste_packshotcopy_2048x2048.png" alt="Peppermint Moon" loading="lazy">
+                </div>
+                <div class="card-info">
+                    <div class="card-vendor">MapleMoon</div>
+                    <div class="card-name">Peppermint Moon 4-Pack</div>
+                    <div class="card-price">$12.95</div>
+                </div>
+            </div>
+
+            <div class="eth-product-card">
+                <div class="card-image">
+                    <img src="https://orrisparis.com/cdn/shop/files/DSCF2385_2048x2048.jpg" alt="Pure Carob Moon" loading="lazy">
+                </div>
+                <div class="card-info">
+                    <div class="card-vendor">MapleMoon</div>
+                    <div class="card-name">Pure Carob Moon 4-Pack</div>
+                    <div class="card-price">$12.95</div>
+                </div>
+            </div>
+
+            <div class="eth-product-card">
+                <div class="card-image">
+                    <img src="https://orrisparis.com/cdn/shop/products/LeQuartet_shopify_2048x2048.png" alt="The Starter Bundle" loading="lazy">
+                </div>
+                <div class="card-info">
+                    <div class="card-vendor">MapleMoon</div>
+                    <div class="card-name">The Starter Bundle</div>
+                    <div class="card-price">$34.95</div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ── 8. Collection Banners ── -->
+    <section class="collection-banners">
+        <div class="banners-grid">
+            <a href="#" class="banner-card">
+                <img src="img/orris_stacked_amber.jpg" alt="Bars & Moons" loading="lazy">
+                <div class="banner-overlay">
+                    <span class="banner-label">Bars &amp; Moons <a href="#">Discover</a></span>
+                </div>
+            </a>
+            <a href="#" class="banner-card">
+                <img src="img/orris_editorial_white.jpg" alt="Elixirs & Bundles" loading="lazy">
+                <div class="banner-overlay">
+                    <span class="banner-label">Elixirs &amp; Bundles</span>
+                </div>
+            </a>
+        </div>
+    </section>
+
+    <!-- ── 9. Trust Badges ── -->
+    <section class="trust-badges">
+        <div class="badges-grid">
+            <div class="badge-item">
+                <i class="fa-regular fa-face-smile"></i>
+                <div class="badge-title">Free shipping</div>
+                <div class="badge-subtitle">on orders above $80</div>
+            </div>
+            <div class="badge-item">
+                <i class="fa-regular fa-envelope"></i>
+                <div class="badge-title">Sign up and get 10% off</div>
+                <div class="badge-subtitle">your first purchase</div>
+            </div>
+            <div class="badge-item">
+                <i class="fa-regular fa-circle-check"></i>
+                <div class="badge-title">Shop with confidence</div>
+                <div class="badge-subtitle">simple &amp; secure checkout</div>
+            </div>
+            <div class="badge-item">
+                <i class="fa-solid fa-plane-departure"></i>
+                <div class="badge-title">Enjoy fast delivery</div>
+                <div class="badge-subtitle">2-5 business days</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ── 10. Footer ── -->
+    <footer class="footer">
+        <div class="footer-inner">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <div class="footer-logo-stack">MapleMoon</div>
+                    <p class="footer-brand-text">
+                        This is a demo store, featuring products from
+                        <a href="#" style="text-decoration: underline;">MapleMoon</a>.
+                        Huge thank you to them for the stunning imagery.
+                    </p>
+                </div>
+                <div class="footer-col">
+                    <div class="footer-col-title">Shop</div>
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                </div>
+                <div class="footer-col">
+                    <div class="footer-col-title">Learn</div>
+                    <a href="#">Shipping</a>
+                    <a href="#">Returns</a>
+                    <a href="#">FAQ</a>
+                    <a href="#">About</a>
+                </div>
+                <div class="footer-col">
+                    <div class="footer-col-title">Connect</div>
+                    <a href="#">Contact</a>
+                    <a href="#">Facebook</a>
+                    <a href="#">Instagram</a>
+                    <a href="#">TikTok</a>
+                </div>
+                <div class="footer-col">
+                    <div class="footer-col-title">Follow</div>
+                    <div class="footer-social">
+                        <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+                        <a href="#"><i class="fa-brands fa-pinterest-p"></i></a>
+                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#"><i class="fa-brands fa-tumblr"></i></a>
+                        <a href="#"><i class="fa-brands fa-snapchat"></i></a>
+                        <a href="#"><i class="fa-brands fa-tiktok"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <span class="footer-copy">&copy; 2026, <a href="#">MapleMoon</a>. <a href="#">Powered by Shopify</a></span>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ── Back to Top ── -->
+    <a href="#" class="back-to-top" id="backToTop" aria-label="Back to top">
+        <i class="fa-solid fa-arrow-up"></i>
+    </a>
+
+    <!-- ── JS ── -->
+    <script>
+        const header = document.getElementById('header');
+        const backToTop = document.getElementById('backToTop');
+        window.addEventListener('scroll', () => {
+            header.classList.toggle('scrolled', window.scrollY > 20);
+            backToTop.classList.toggle('visible', window.scrollY > 600);
+        });
+    </script>
+
+</body>
+</html>

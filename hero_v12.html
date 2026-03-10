@@ -9,17 +9,17 @@
 <meta property="og:title" content="MapleMoon — The Unwrap">
 <meta property="og:description" content="Tap to discover MapleMoon — organic artisan carob, handmade in Byron Bay.">
 <meta property="og:type" content="website">
-<meta property="og:image" content="https://maplemoon-hero-mockups.vercel.app/assets/products/bar_original.jpg">
+<meta property="og:image" content="https://maplemoon-hero-mockups.vercel.app/assets/products_clean/bar_pure_carob.png">
 <meta property="og:image:width" content="400">
 <meta property="og:image:height" content="600">
 <meta property="og:site_name" content="Maple Moon">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="MapleMoon — The Unwrap">
 <meta name="twitter:description" content="Artisan carob and cacao butter, handmade in Byron Bay. Organic, vegan, caffeine-free.">
-<meta name="twitter:image" content="https://maplemoon-hero-mockups.vercel.app/assets/products/bar_original.jpg">
+<meta name="twitter:image" content="https://maplemoon-hero-mockups.vercel.app/assets/products_clean/bar_pure_carob.png">
 <link rel="canonical" href="https://maplemoon-hero-mockups.vercel.app/hero_v12.html">
 <link rel="stylesheet" href="brand_kit.css">
-<link rel="preload" as="image" href="assets/products/bar_original.jpg">
+<link rel="preload" as="image" href="assets/products_clean/bar_pure_carob.png">
 <link rel="preload" as="image" href="assets/carob_wordmark.svg">
 <link rel="icon" href="assets/maplemoon_logo.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="assets/maplemoon_logo.svg">
@@ -27,27 +27,25 @@
   *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 
   :root {
-    --grad-top: #7B9DBF;
-    --grad-bottom: #A8BDD4;
+    --z-product: 2;
   }
 
   html, body { height: 100%; overflow: hidden; }
 
   body {
-    background: linear-gradient(180deg, var(--grad-top) 0%, var(--grad-bottom) 100%);
+    background: linear-gradient(180deg, var(--mm-blue-top) 0%, var(--mm-blue-bottom) 100%);
     font-family: var(--mm-sans);
     color: var(--mm-cream);
     position: relative;
     min-height: 100vh;
     min-height: 100dvh;
     text-rendering: optimizeLegibility;
-    overflow-x: hidden;
   }
 
 
   /* ── Back link ── */
   .back-link {
-    position: fixed; top: 16px; left: 16px; z-index: 101;
+    position: fixed; top: 16px; left: 16px; z-index: calc(var(--z-fixed) + 1);
     color: var(--mm-cream); text-decoration: none;
     font-family: var(--mm-sans); font-size: 0.8rem; font-weight: 400;
     opacity: 0.7; transition: opacity 0.2s;
@@ -55,11 +53,23 @@
   }
   .back-link:hover { opacity: 1; }
 
+  #main:focus { outline: none; }
+
+  .menu-close {
+    position: absolute; top: 20px; right: 20px;
+    background: none; border: none; cursor: pointer;
+    font-size: 1.5rem; color: var(--mm-navy); opacity: 0.5;
+    padding: 12px; min-width: 44px; min-height: 44px;
+    display: flex; align-items: center; justify-content: center;
+    transition: opacity 0.2s;
+  }
+  .menu-close:hover { opacity: 1; }
+
   /* ── Hamburger (mobile only) ── */
   #menu-toggle { display: none; }
 
   .hamburger {
-    position: fixed; top: 12px; left: 12px; z-index: 200;
+    position: fixed; top: 12px; left: 12px; z-index: var(--z-tooltip);
     cursor: pointer; display: flex; flex-direction: column;
     justify-content: center; gap: 5px; width: 44px; height: 44px;
     padding: 8px;
@@ -75,7 +85,7 @@
 
   /* ── Mobile menu overlay ── */
   .mobile-menu {
-    position: fixed; inset: 0; z-index: 150;
+    position: fixed; inset: 0; z-index: var(--z-modal);
     background: var(--mm-cream); color: var(--mm-navy);
     display: flex; flex-direction: column;
     align-items: center; justify-content: center; gap: 28px;
@@ -111,7 +121,7 @@
 
   /* ── Mobile header ── */
   .header-mobile {
-    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    position: fixed; top: 0; left: 0; right: 0; z-index: var(--z-fixed);
     display: flex; justify-content: flex-end; align-items: flex-start;
     padding: 20px;
   }
@@ -121,18 +131,16 @@
   .header-desktop { display: none; }
 
   /* ── Animations ── */
-  @keyframes fadeIn {
-    from { opacity: 0; transform: translateY(12px); }
-    to   { opacity: 1; transform: translateY(0); }
-  }
   @keyframes pulse {
     0%, 100% { opacity: 0.5; }
     50% { opacity: 1; }
   }
 
-  .fade-1 { animation: fadeIn 0.6s ease both 0.1s; }
-  .fade-2 { animation: fadeIn 0.6s ease both 0.25s; }
-  .fade-3 { animation: fadeIn 0.6s ease both 0.4s; }
+  @media (prefers-reduced-motion: no-preference) {
+    .fade-1 { animation: fadeIn 0.6s ease both 0.1s; }
+    .fade-2 { animation: fadeIn 0.6s ease both 0.25s; }
+    .fade-3 { animation: fadeIn 0.6s ease both 0.4s; }
+  }
 
 
   /* ── Hero layout ── */
@@ -153,7 +161,8 @@
     width: 65%;
     max-width: 280px;
     height: 360px;
-    z-index: 2;
+    z-index: var(--z-product);
+    perspective: 800px;
   }
 
   .product-item {
@@ -209,7 +218,7 @@
 
   /* ── Tap prompt ── */
   .tap-prompt {
-    position: relative; z-index: 2;
+    position: relative; z-index: var(--z-product);
     text-align: center;
     margin-top: 24px;
     transition: opacity 0.5s ease-out;
@@ -218,7 +227,6 @@
     font-family: var(--mm-sans);
     font-size: 0.85rem; font-weight: 300;
     color: var(--mm-cream); opacity: 0.7;
-    animation: pulse 2s ease-in-out infinite;
   }
   .tap-prompt .arrow {
     display: block;
@@ -226,14 +234,17 @@
     font-size: 1.2rem;
     color: var(--mm-cream);
     opacity: 0.5;
-    animation: pulse 2s ease-in-out infinite;
+  }
+  @media (prefers-reduced-motion: no-preference) {
+    .tap-prompt p { animation: pulse 2s ease-in-out infinite; }
+    .tap-prompt .arrow { animation: pulse 2s ease-in-out infinite; }
   }
 
   /* ── Info panel ── */
   .info-panel {
     position: fixed;
     bottom: 0; left: 0; right: 0;
-    z-index: 10;
+    z-index: var(--z-sticky);
     padding: 28px 24px 40px;
     background: linear-gradient(to top, rgba(30,67,102,0.6) 0%, transparent 100%);
     transform: translateY(100%);
@@ -304,7 +315,7 @@
     transition-delay: 0.4s;
   }
   .info-panel .cta-btn:hover {
-    background: var(--mm-cream); color: var(--grad-top);
+    background: var(--mm-cream); color: var(--mm-blue-top);
   }
   .info-panel .cta-btn:active {
     transform: scale(0.97);
@@ -328,7 +339,7 @@
 
     .header-desktop {
       display: flex; align-items: center;
-      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      position: fixed; top: 0; left: 0; right: 0; z-index: var(--z-fixed);
       padding: 28px 40px;
     }
     .header-desktop nav {
@@ -352,7 +363,6 @@
       align-items: center;
       gap: 0;
       cursor: default;
-      perspective: 800px;
     }
 
     .product-stage { display: none; }
@@ -364,7 +374,7 @@
       gap: 60px;
       perspective: 800px;
       position: relative;
-      z-index: 2;
+      z-index: var(--z-product);
     }
 
     .desktop-product {
@@ -426,7 +436,7 @@
       transition: background 0.3s, color 0.3s;
     }
     .desktop-info .d-cta:hover {
-      background: var(--mm-cream); color: var(--grad-top);
+      background: var(--mm-cream); color: var(--mm-blue-top);
     }
     .desktop-info .d-trust {
       display: flex; align-items: center; justify-content: center; gap: 8px;
@@ -442,7 +452,7 @@
       width: 220px; height: 320px;
       border-radius: 16px;
       background: linear-gradient(135deg, var(--mm-cream-10) 0%, rgba(231,228,202,0.03) 100%);
-      border: 1px solid rgba(231,228,202,0.12);
+      border: 1px solid var(--mm-cream-15);
       display: flex; flex-direction: column;
       align-items: center; justify-content: center;
       gap: 8px;
@@ -478,11 +488,12 @@
 <a href="index.html" class="back-link fade-1">&larr; Back to Gallery</a>
 
 <input type="checkbox" id="menu-toggle" hidden>
-<label for="menu-toggle" class="hamburger fade-1" aria-label="Menu" aria-expanded="false">
+<label for="menu-toggle" class="hamburger fade-1" role="button" aria-label="Menu" aria-expanded="false">
   <span></span><span></span><span></span>
 </label>
 
 <div class="mobile-menu" role="dialog" aria-modal="true" aria-label="Navigation menu" aria-hidden="true">
+  <button class="menu-close" aria-label="Close menu">&times;</button>
   <a href="/shop/bars">Bars</a>
   <a href="/shop/moons">Moons</a>
   <a href="/shop/bananas">Bananas</a>
@@ -517,19 +528,19 @@
   <img src="assets/maplemoon_logo.svg" alt="Maple Moon" class="logo-desktop" width="80" height="40" loading="eager" decoding="async">
 </header>
 
-<main class="hero" id="main">
+<main class="hero" id="main" tabindex="-1">
   <div class="carob-watermark-wrap wm-full" aria-hidden="true"><img src="assets/carob_wordmark.svg" alt="" aria-hidden="true" width="800" height="200"></div>
 
   <!-- MOBILE: product stage with tap cycling -->
   <div class="product-stage fade-2">
     <div class="product-item active" data-state="0">
-      <img src="assets/products/bar_original.jpg" alt="Maple Moon Carob Bar" width="400" height="600" fetchpriority="high" decoding="async" loading="eager">
+      <img src="assets/products_clean/bar_pure_carob.png" alt="Maple Moon Carob Bar" width="400" height="600" fetchpriority="high" decoding="async" loading="eager">
     </div>
     <div class="product-item hidden-right" data-state="1">
-      <img src="assets/products/moon_peppermint.jpg" alt="Carob Crescent Moon" width="400" height="400" loading="lazy" decoding="async">
+      <img src="assets/products_clean/eclipse_hazelnut_a.png" alt="Eclipse Whole Hazelnuts" width="400" height="400" loading="lazy" decoding="async">
     </div>
     <div class="product-item hidden-right" data-state="2">
-      <img src="assets/products/elixir_plain.jpg" alt="Carob Elixir" width="400" height="600" loading="lazy" decoding="async">
+      <img src="assets/products_clean/elixir_plain.png" alt="Carob Elixir" width="400" height="600" loading="lazy" decoding="async">
     </div>
   </div>
 
@@ -541,7 +552,7 @@
   <!-- DESKTOP: all 3 products spread horizontally -->
   <div class="desktop-products fade-2">
     <div class="desktop-product">
-      <img src="assets/products/bar_original.jpg" alt="Maple Moon Carob Bar" width="400" height="600" loading="lazy" decoding="async">
+      <img src="assets/products_clean/bar_pure_carob.png" alt="Maple Moon Carob Bar" width="400" height="600" loading="lazy" decoding="async">
       <div class="desktop-info">
         <div class="d-title">Pure Carob and Cacao Butter</div>
         <div class="d-sub">Organic. Vegan. Caffeine Free.</div>
@@ -552,14 +563,14 @@
           <img src="assets/icon_gluten_free.svg" alt="Gluten Free" width="18" height="18" loading="lazy" decoding="async">
           <img src="assets/icon_made_in_aus.svg" alt="Made in Australia" width="18" height="18" loading="lazy" decoding="async">
         </div>
-        <a href="/cart" class="d-cta">Add to Cart &mdash; $12.95</a>
+        <a href="/cart" class="d-cta">Add to Cart · $12.95</a>
       </div>
     </div>
 
     <div class="desktop-product">
-      <img src="assets/products/moon_peppermint.jpg" alt="Carob Crescent Moon" width="400" height="400" loading="lazy" decoding="async">
+      <img src="assets/products_clean/eclipse_hazelnut_a.png" alt="Eclipse Whole Hazelnuts" width="400" height="400" loading="lazy" decoding="async">
       <div class="desktop-info">
-        <div class="d-title">Peppermint Buckwheat Crescent Moon</div>
+        <div class="d-title">Eclipse - Whole Hazelnuts</div>
         <div class="d-sub">Organic. Vegan. Caffeine Free.</div>
         <div class="d-trust">
           <img src="assets/icon_organic.svg" alt="Organic" width="18" height="18" loading="lazy" decoding="async">
@@ -573,7 +584,7 @@
     </div>
 
     <div class="desktop-product">
-      <img src="assets/products/elixir_plain.jpg" alt="Carob Elixir" width="400" height="600" loading="lazy" decoding="async">
+      <img src="assets/products_clean/elixir_plain.png" alt="Carob Elixir" width="400" height="600" loading="lazy" decoding="async">
       <div class="desktop-info">
         <div class="d-title">Carob Elixirs</div>
         <div class="d-sub">Plain and Spiced. Launching Soon.</div>
@@ -594,7 +605,7 @@
     <img src="assets/icon_gluten_free.svg" alt="Gluten Free" width="24" height="24" loading="lazy" decoding="async">
     <img src="assets/icon_made_in_aus.svg" alt="Made in Australia" width="24" height="24" loading="lazy" decoding="async">
   </div>
-  <a href="/cart" class="cta-btn" id="infoCta">Add to Cart &mdash; $12.95</a>
+  <a href="/cart" class="cta-btn" id="infoCta">Add to Cart · $12.95</a>
 </div>
 
 <script>
@@ -604,6 +615,14 @@
   document.querySelectorAll('.mobile-menu a').forEach(function(link) {
     link.addEventListener('click', function() { toggle.checked = false; toggle.dispatchEvent(new Event('change')); });
   });
+
+  var closeBtn = document.querySelector('.menu-close');
+  if (closeBtn) {
+    closeBtn.addEventListener('click', function() {
+      toggle.checked = false;
+      toggle.dispatchEvent(new Event('change'));
+    });
+  }
 
   // Focus trap
   var menu = document.querySelector('.mobile-menu');
@@ -644,8 +663,8 @@
 
   var stateData = [
     { title: '', sub: '', cta: '', showTrust: false, showPanel: false },
-    { title: 'Pure Carob and Cacao Butter', sub: 'Organic. Vegan. Caffeine Free.', cta: 'Add to Cart \u2014 $12.95', showTrust: true, showPanel: true },
-    { title: 'Peppermint Buckwheat Crescent Moon', sub: 'Organic. Vegan. Caffeine Free.', cta: 'From $2.50', showTrust: true, showPanel: true },
+    { title: 'Pure Carob and Cacao Butter', sub: 'Organic. Vegan. Caffeine Free.', cta: 'Add to Cart \u00B7 $12.95', showTrust: true, showPanel: true },
+    { title: 'Eclipse \u2013 Whole Hazelnuts', sub: 'Organic. Vegan. Caffeine Free.', cta: 'From $2.50', showTrust: true, showPanel: true },
     { title: 'Carob Elixirs', sub: 'Plain and Spiced. Launching Soon.', cta: 'Notify Me', showTrust: false, showPanel: true }
   ];
 
