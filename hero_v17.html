@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MapleMoon — What is Carob? | Light Editorial</title>
+<meta name="description" content="Discover carob — naturally sweet, caffeine-free, nothing added. Handmade in Byron Bay by MapleMoon.">
+<meta name="theme-color" content="#F0EDDF">
+<meta property="og:title" content="MapleMoon — What is Carob?">
+<meta property="og:description" content="Discover carob — naturally sweet, caffeine-free, nothing added. Handmade in Byron Bay by MapleMoon.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="/assets/product_shots/bar_pure_carob.webp">
+<meta property="og:image:width" content="400">
+<meta property="og:image:height" content="600">
+<meta property="og:site_name" content="Maple Moon">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="MapleMoon — What is Carob?">
+<meta name="twitter:description" content="Artisan carob and cacao butter, handmade in Byron Bay. Organic, vegan, caffeine-free.">
+<meta name="twitter:image" content="/assets/product_shots/bar_pure_carob.webp">
+<link rel="canonical" href="https://maplemoon-hero-mockups.vercel.app/hero_v17.html">
+<link rel="preload" as="image" href="assets/product_shots/bar_pure_carob.webp">
+<link rel="icon" href="assets/maplemoon_logo.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="assets/maplemoon_logo.svg">
+<link rel="stylesheet" href="brand_kit.css">
+<style>
+
+  :root {
+    --z-product: 2;
+    --light-bg: #F0EDDF;
+    --light-gold: #E1D78E;
+  }
+
+  html, body { height: 100%; overflow: hidden; }
+
+  body {
+    background: var(--light-bg);
+    font-family: var(--mm-sans);
+    color: var(--mm-navy);
+    position: relative;
+    min-height: 100vh;
+    min-height: 100dvh;
+    text-rendering: optimizeLegibility;
+  }
+
+  /* ── Product image entrance ── */
+  @keyframes productEntrance {
+    from { opacity: 0; transform: scale(0.95); }
+    to   { opacity: 1; transform: scale(1); }
+  }
+  @media (prefers-reduced-motion: no-preference) {
+    .fade-1 { animation: fadeIn 0.6s ease both 0.1s; }
+    .fade-2 { animation: fadeIn 0.6s ease both 0.25s; }
+    .fade-product { animation: productEntrance 0.6s ease-out both 0.3s; }
+    .fade-3 { animation: fadeIn 0.6s ease both 0.4s; }
+    .fade-4 { animation: fadeIn 0.6s ease both 0.55s; }
+    .fade-5 { animation: fadeIn 0.6s ease both 0.7s; }
+    .fade-6 { animation: fadeIn 0.6s ease both 0.85s; }
+    .fade-7 { animation: fadeIn 0.6s ease both 1.0s; }
+  }
+
+  /* ── Back link ── */
+  .back-link {
+    position: fixed; top: 12px; left: 12px; z-index: calc(var(--z-fixed) + 1);
+    color: var(--mm-navy); text-decoration: none;
+    font-family: var(--mm-sans); font-size: 0.8rem; font-weight: 400;
+    opacity: 0.6; transition: opacity 0.2s;
+    display: none; min-height: 44px; padding: 12px 16px;
+  }
+  .back-link:hover { opacity: 1; }
+
+  /* ── Hamburger (mobile only) ── */
+  #menu-toggle { display: none; }
+
+  .hamburger {
+    position: fixed; top: 12px; left: 12px; z-index: var(--z-tooltip);
+    cursor: pointer; display: flex; flex-direction: column;
+    justify-content: center; gap: 5px; width: 44px; height: 44px;
+    padding: 8px;
+  }
+  .hamburger span {
+    display: block; width: 100%; height: 2px;
+    background: var(--mm-navy); border-radius: 1px;
+    transition: transform 0.3s, opacity 0.3s;
+  }
+  #menu-toggle:checked ~ .hamburger span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
+  #menu-toggle:checked ~ .hamburger span:nth-child(2) { opacity: 0; }
+  #menu-toggle:checked ~ .hamburger span:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); }
+
+  #main:focus { outline: none; }
+
+  .menu-close {
+    position: absolute; top: 20px; right: 20px;
+    background: none; border: none; cursor: pointer;
+    font-size: 1.5rem; color: var(--mm-navy); opacity: 0.5;
+    padding: 12px; min-width: 44px; min-height: 44px;
+    display: flex; align-items: center; justify-content: center;
+    transition: opacity 0.2s;
+  }
+  .menu-close:hover { opacity: 1; }
+
+  /* ── Mobile menu overlay ── */
+  .mobile-menu {
+    position: fixed; inset: 0; z-index: var(--z-modal);
+    background: var(--mm-cream); color: var(--mm-navy);
+    display: flex; flex-direction: column;
+    align-items: center; justify-content: center; gap: 28px;
+    opacity: 0; pointer-events: none;
+    transition: opacity 0.3s ease;
+  }
+  #menu-toggle:checked ~ .mobile-menu { opacity: 1; pointer-events: auto; }
+
+  .mobile-menu a {
+    font-family: var(--mm-serif); font-size: 1.4rem;
+    font-weight: 500; text-transform: uppercase; letter-spacing: 0.12em;
+    color: var(--mm-navy); text-decoration: none;
+    transition: opacity 0.2s;
+    min-height: 44px; padding: 12px 0;
+    display: inline-flex; align-items: center;
+  }
+  .mobile-menu a:hover { opacity: 0.6; }
+
+  .mobile-menu .menu-divider {
+    width: 40px; height: 1px; background: var(--mm-navy); opacity: 0.2;
+  }
+
+  .mobile-menu .menu-nav {
+    display: flex; flex-direction: column; align-items: center; gap: 20px;
+    margin-top: 24px; padding-top: 24px;
+    border-top: 1px solid var(--mm-navy-15);
+  }
+  .mobile-menu .menu-nav a {
+    font-family: var(--mm-sans); font-size: 0.95rem;
+    font-weight: 400; text-transform: none; letter-spacing: 0.02em;
+    color: var(--mm-navy); opacity: 0.6;
+  }
+
+  /* ── Mobile header ── */
+  .header-mobile {
+    position: fixed; top: 0; left: 0; right: 0; z-index: var(--z-fixed);
+    display: flex; justify-content: flex-end; align-items: flex-start;
+    padding: 20px;
+  }
+  .header-mobile .logo-img { width: 40px; height: auto; }
+
+  /* ── Desktop nav bar ── */
+  .header-desktop { display: none; }
+
+  /* ── Hero layout (mobile: stacked) ── */
+  .hero {
+    position: relative; width: 100%; height: 100vh; height: 100dvh;
+    display: flex; flex-direction: column;
+    align-items: center; justify-content: center;
+    overflow-x: hidden; overflow-y: auto;
+    gap: 16px;
+    padding: 70px 24px 40px;
+  }
+
+  /* ── Watermark (gold-tinted) ── */
+  .carob-watermark-wrap img {
+    filter: sepia(1) saturate(2) hue-rotate(-10deg) brightness(0.85);
+    opacity: 0.15;
+  }
+
+  /* ── Product image ── */
+  .product-img {
+    width: 55%; max-width: 200px; height: auto;
+    filter: drop-shadow(0 4px 8px rgba(0,0,0,0.06))
+            drop-shadow(0 12px 24px rgba(0,0,0,0.08));
+    position: relative; z-index: var(--z-product);
+  }
+
+  /* ── Headline ── */
+  .headline {
+    font-family: var(--mm-serif);
+    font-weight: 500; font-size: 1.6rem;
+    color: var(--mm-navy); text-align: center;
+    position: relative; z-index: var(--z-product);
+    line-height: 1.2;
+    letter-spacing: 0.03em;
+    text-wrap: balance;
+  }
+
+  /* ── Gold rule divider ── */
+  .gold-rule {
+    border: none;
+    border-top: 1px solid var(--light-gold);
+    width: 60px;
+    opacity: 0.5;
+    margin: 0;
+  }
+
+  /* ── Panel sub (mobile) ── */
+  .panel-sub {
+    font-family: var(--mm-serif); font-size: 0.95rem; font-weight: 400;
+    color: var(--mm-carob-dark); opacity: 0.8; text-align: center;
+    position: relative; z-index: var(--z-product);
+    margin: 0;
+  }
+
+  /* ── Body text ── */
+  .body-text {
+    font-family: var(--mm-sans); font-weight: 300;
+    font-size: 0.85rem; line-height: 1.65;
+    color: var(--mm-carob-dark); opacity: 0.85;
+    text-align: center; max-width: 300px;
+    position: relative; z-index: var(--z-product);
+  }
+
+  /* ── Trust badges ── */
+  .trust-badges {
+    display: flex; align-items: center; justify-content: center;
+    gap: 16px;
+    position: relative; z-index: var(--z-product);
+  }
+  .trust-badges .badge-item {
+    position: relative;
+    display: inline-flex;
+  }
+  .trust-badges .badge-item:hover::after,
+  .trust-badges .badge-item:focus::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--mm-navy);
+    color: var(--light-bg);
+    padding: 4px 10px;
+    border-radius: var(--radius-sm);
+    font-size: 0.7rem;
+    white-space: nowrap;
+    pointer-events: none;
+    margin-bottom: 4px;
+  }
+  .trust-badges img {
+    width: 24px; height: 24px;
+    opacity: 0.75;
+    filter: brightness(0.4);
+  }
+
+  /* ── CTA ── */
+  .cta-btn {
+    display: inline-flex; align-items: center; justify-content: center;
+    border: 1.5px solid var(--mm-navy); color: var(--mm-navy);
+    background: transparent; border-radius: var(--radius-pill);
+    padding: 12px 32px; min-height: 48px;
+    font-family: var(--mm-sans); font-size: 0.85rem;
+    font-weight: 400; letter-spacing: 0.04em; text-transform: uppercase;
+    text-decoration: none; cursor: pointer;
+    transition: background 0.3s, color 0.3s, transform 0.15s;
+    position: relative; z-index: var(--z-product);
+  }
+  .cta-btn:hover {
+    background: var(--mm-navy); color: var(--light-bg);
+  }
+  .cta-btn:active {
+    transform: scale(0.97);
+    background: var(--mm-navy); color: var(--light-bg);
+  }
+  .cta-btn:focus-visible {
+    outline: 2px solid var(--mm-navy);
+    outline-offset: 4px;
+  }
+  .cta-btn-compact { margin-top: -8px; }
+
+  /* ── Desktop split layout ── */
+  .hero-split { display: none; }
+
+  /* ═══════════ DESKTOP ═══════════ */
+  @media (min-width: 768px) {
+    .hamburger { display: none; }
+    .header-mobile { display: none; }
+    .back-link { display: block; }
+
+    /* Hide mobile hero */
+    .hero { display: none; }
+
+    /* Desktop nav */
+    .header-desktop {
+      display: flex; align-items: center;
+      position: fixed; top: 0; left: 0; right: 0; z-index: var(--z-fixed);
+      padding: 28px 40px;
+      background: rgba(240, 237, 223, 0.6);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+    }
+    @supports not (backdrop-filter: blur(1px)) {
+      .header-desktop { background: rgba(240, 237, 223, 0.9); }
+    }
+    .header-desktop nav {
+      flex: 1; display: flex; align-items: center;
+      justify-content: center; gap: 40px;
+    }
+    .header-desktop nav a {
+      font-family: var(--mm-sans); font-size: 1rem;
+      font-weight: 400; color: var(--mm-navy); text-decoration: none;
+      opacity: 0.9; transition: opacity 0.2s;
+    }
+    .header-desktop nav a:hover { opacity: 0.5; }
+    .header-desktop .logo-desktop {
+      width: 80px; height: auto; margin-left: auto; flex-shrink: 0;
+    }
+
+    /* Show split layout */
+    .hero-split {
+      display: flex;
+      width: 100%; height: 100vh; height: 100dvh;
+      align-items: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    /* Left: copy/story panel */
+    .split-left {
+      flex: 0 0 55%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      height: 100%;
+      z-index: var(--z-product);
+    }
+
+    .story-panel {
+      padding: 48px 40px;
+      max-width: 480px;
+      display: flex; flex-direction: column; gap: 16px;
+      align-items: flex-start;
+    }
+
+    .panel-h1 {
+      font-family: var(--mm-serif); font-size: 2.8rem; font-weight: 400;
+      color: var(--mm-navy); line-height: 1.1; margin: 0;
+    }
+
+    .panel-sub {
+      font-family: var(--mm-serif); font-size: 0.9rem; font-weight: 300;
+      color: var(--mm-carob-dark); opacity: 0.8; margin: 0;
+      text-align: left;
+    }
+
+    .panel-descriptor {
+      font-family: var(--mm-sans); font-size: 0.95rem; font-weight: 300;
+      color: var(--mm-carob-dark); opacity: 0.85; margin: 0;
+      line-height: 1.6;
+    }
+
+    .story-panel .cta-btn { align-self: flex-start; }
+
+    .story-panel .trust-badges {
+      justify-content: flex-start;
+      gap: 14px;
+    }
+
+    /* Right panel: product + watermark + CTA */
+    .split-right {
+      flex: 0 0 45%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 24px;
+      padding: 0 40px;
+      position: relative;
+      z-index: var(--z-product);
+    }
+
+    .split-right .product-img-desktop {
+      height: 46vh; width: auto;
+      filter: drop-shadow(0 4px 8px rgba(0,0,0,0.06))
+              drop-shadow(0 12px 24px rgba(0,0,0,0.08))
+              drop-shadow(0 24px 48px rgba(0,0,0,0.06));
+      flex-shrink: 0;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .header-desktop { padding: 32px 48px; }
+    .header-desktop nav { gap: 52px; }
+    .story-panel { padding: 56px 48px; }
+    .panel-h1 { font-size: 3.4rem; }
+  }
+</style>
+</head>
+<body>
+
+<a href="#main" class="skip-link">Skip to content</a>
+
+<a href="index.html" class="back-link fade-1">&larr; Back to Gallery</a>
+
+<input type="checkbox" id="menu-toggle" hidden>
+<label for="menu-toggle" class="hamburger fade-1" role="button" aria-label="Open menu" aria-expanded="false">
+  <span></span><span></span><span></span>
+</label>
+
+<div class="mobile-menu" inert role="dialog" aria-modal="true" aria-label="Navigation menu" aria-hidden="true">
+  <button class="menu-close" aria-label="Close menu">&times;</button>
+  <a href="/shop/bars">Bars</a>
+  <a href="/shop/moons">Moons</a>
+  <a href="/shop/bananas">Bananas</a>
+  <a href="/shop/bites">Bites</a>
+  <a href="/shop/elixirs">Elixirs</a>
+  <a href="/shop/packs">Packs</a>
+  <a href="/shop/gifts">Gifts</a>
+  <div class="menu-divider"></div>
+  <div class="menu-nav">
+    <a href="/our-story">Our Story</a>
+    <a href="/shop">Shop</a>
+    <a href="/stockists">Stockists</a>
+    <a href="/recipes">Recipes</a>
+    <a href="/contact">Contact</a>
+  </div>
+</div>
+
+<!-- Mobile header -->
+<header class="header-mobile fade-1">
+  <img src="assets/maplemoon_logo.svg" alt="Maple Moon" class="logo-img" width="40" height="40" loading="eager" decoding="async">
+</header>
+
+<!-- Desktop header -->
+<header class="header-desktop fade-1">
+  <nav>
+    <a href="/our-story">Our Story</a>
+    <a href="/shop">Shop</a>
+    <a href="/stockists">Stockists</a>
+    <a href="/recipes">Recipes</a>
+    <a href="/contact">Contact</a>
+  </nav>
+  <img src="assets/maplemoon_logo.svg" alt="Maple Moon" class="logo-desktop" width="80" height="40" loading="eager" decoding="async">
+</header>
+
+<!-- ═══════════ MOBILE HERO ═══════════ -->
+<main class="hero" id="main" tabindex="-1">
+  <div class="carob-watermark-wrap wm-full" aria-hidden="true"><img src="assets/carob_wordmark.svg" alt="" aria-hidden="true" width="800" height="200"></div>
+  <img src="assets/product_shots/bar_pure_carob.webp" alt="Maple Moon Pure Carob Bar" class="product-img fade-product" width="400" height="600" fetchpriority="high" loading="eager" decoding="async">
+  <h1 class="headline fade-4">What is Carob?</h1>
+  <hr class="gold-rule fade-4" aria-hidden="true">
+  <p class="panel-sub fade-5">Not chocolate. Its own thing.</p>
+  <p class="body-text fade-5">The naturally sweet pod. No caffeine, no added sugar. Handmade in Byron Bay from organic carob and cacao butter.</p>
+  <div class="trust-badges fade-6">
+    <span class="badge-item" tabindex="0" role="img" data-tooltip="Caffeine Free" title="Caffeine Free"><img src="assets/icon_caffeine_free.svg" alt="Caffeine Free" width="24" height="24" loading="lazy" decoding="async"></span>
+    <span class="badge-item" tabindex="0" role="img" data-tooltip="Certified Organic" title="Certified Organic"><img src="assets/icon_organic.svg" alt="Certified Organic" width="24" height="24" loading="lazy" decoding="async"></span>
+    <span class="badge-item" tabindex="0" role="img" data-tooltip="100% Vegan" title="100% Vegan"><img src="assets/icon_vegan.svg" alt="100% Vegan" width="24" height="24" loading="lazy" decoding="async"></span>
+    <span class="badge-item" tabindex="0" role="img" data-tooltip="Gluten Free" title="Gluten Free"><img src="assets/icon_gluten_free.svg" alt="Gluten Free" width="24" height="24" loading="lazy" decoding="async"></span>
+    <span class="badge-item" tabindex="0" role="img" data-tooltip="Made in Australia" title="Made in Australia"><img src="assets/icon_made_in_aus.svg" alt="Made in Australia" width="24" height="24" loading="lazy" decoding="async"></span>
+  </div>
+  <a href="/our-story" class="cta-btn fade-7">Learn More</a>
+  <a href="/shop/bars" class="cta-btn cta-btn-compact fade-7">Shop Bars</a>
+</main>
+
+<!-- ═══════════ DESKTOP SPLIT HERO ═══════════ -->
+<div class="hero-split">
+  <!-- LEFT: copy/story panel -->
+  <div class="split-left">
+    <div class="story-panel fade-3" role="region" aria-label="About Carob">
+      <p class="panel-h1">What is Carob?</p>
+      <hr class="gold-rule" aria-hidden="true">
+      <p class="panel-sub">Not chocolate. Its own thing.</p>
+      <p class="panel-descriptor">The naturally sweet pod. No caffeine, no added sugar. Handmade in Byron Bay from organic carob and cacao butter.</p>
+      <div class="trust-badges fade-5">
+        <span class="badge-item" tabindex="0" role="img" data-tooltip="Caffeine Free" title="Caffeine Free"><img src="assets/icon_caffeine_free.svg" alt="Caffeine Free" width="28" height="28" loading="lazy" decoding="async"></span>
+        <span class="badge-item" tabindex="0" role="img" data-tooltip="Certified Organic" title="Certified Organic"><img src="assets/icon_organic.svg" alt="Certified Organic" width="28" height="28" loading="lazy" decoding="async"></span>
+        <span class="badge-item" tabindex="0" role="img" data-tooltip="100% Vegan" title="100% Vegan"><img src="assets/icon_vegan.svg" alt="100% Vegan" width="28" height="28" loading="lazy" decoding="async"></span>
+        <span class="badge-item" tabindex="0" role="img" data-tooltip="Gluten Free" title="Gluten Free"><img src="assets/icon_gluten_free.svg" alt="Gluten Free" width="28" height="28" loading="lazy" decoding="async"></span>
+        <span class="badge-item" tabindex="0" role="img" data-tooltip="Made in Australia" title="Made in Australia"><img src="assets/icon_made_in_aus.svg" alt="Made in Australia" width="28" height="28" loading="lazy" decoding="async"></span>
+      </div>
+      <a href="/our-story" class="cta-btn fade-6">Learn More</a>
+    </div>
+  </div>
+
+  <!-- RIGHT: product + watermark + CTA -->
+  <div class="split-right">
+    <div class="carob-watermark-wrap wm-full" aria-hidden="true"><img src="assets/carob_wordmark.svg" alt="" aria-hidden="true" width="800" height="200"></div>
+    <img src="assets/product_shots/bar_pure_carob.webp" alt="Maple Moon Pure Carob Bar" class="product-img-desktop fade-4" width="400" height="600" loading="eager" decoding="async">
+    <a href="/shop/bars" class="cta-btn fade-6">Shop Bars</a>
+  </div>
+
+</div>
+
+<script>
+(function() {
+  var toggle = document.getElementById('menu-toggle');
+  var menu = document.querySelector('.mobile-menu');
+  var hamburger = document.querySelector('.hamburger');
+
+  // Auto-close on link tap
+  document.querySelectorAll('.mobile-menu a').forEach(function(link) {
+    link.addEventListener('click', function() {
+      toggle.checked = false;
+      toggle.dispatchEvent(new Event('change'));
+    });
+  });
+
+  // Close button
+  var closeBtn = document.querySelector('.menu-close');
+  if (closeBtn) {
+    closeBtn.addEventListener('click', function() {
+      toggle.checked = false;
+      toggle.dispatchEvent(new Event('change'));
+    });
+  }
+
+  // ARIA state sync + inert toggle
+  toggle.addEventListener('change', function() {
+    var isOpen = toggle.checked;
+    menu.setAttribute('aria-hidden', isOpen ? 'false' : 'true');
+    hamburger.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    if (isOpen) {
+      menu.removeAttribute('inert');
+    } else {
+      menu.setAttribute('inert', '');
+      hamburger.focus();
+      return;
+    }
+    var focusable = menu.querySelectorAll('a, button, [tabindex]');
+    if (!focusable.length) return;
+    var first = focusable[0], last = focusable[focusable.length - 1];
+    function trap(e) {
+      if (e.key === 'Escape') { toggle.checked = false; toggle.dispatchEvent(new Event('change')); return; }
+      if (e.key !== 'Tab') return;
+      if (e.shiftKey) { if (document.activeElement === first) { e.preventDefault(); last.focus(); } }
+      else { if (document.activeElement === last) { e.preventDefault(); first.focus(); } }
+    }
+    menu.addEventListener('keydown', trap);
+    first.focus();
+    var observer = new MutationObserver(function() {
+      if (!toggle.checked) { menu.removeEventListener('keydown', trap); observer.disconnect(); }
+    });
+    observer.observe(toggle, { attributes: true });
+  });
+})();
+</script>
+
+</body>
+</html>

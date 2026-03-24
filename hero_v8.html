@@ -9,22 +9,25 @@
 <meta property="og:title" content="MapleMoon — Time of Day">
 <meta property="og:description" content="MapleMoon artisan carob — a different moment for every time of day. Handmade in Byron Bay.">
 <meta property="og:type" content="website">
-<meta property="og:image" content="https://maplemoon-hero-mockups.vercel.app/assets/products_clean/bar_pure_carob.png">
+<meta property="og:image" content="/assets/product_shots/bar_pure_carob.png">
 <meta property="og:image:width" content="400">
 <meta property="og:image:height" content="600">
 <meta property="og:site_name" content="Maple Moon">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="MapleMoon — Time of Day">
 <meta name="twitter:description" content="Artisan carob and cacao butter, handmade in Byron Bay. Organic, vegan, caffeine-free.">
-<meta name="twitter:image" content="https://maplemoon-hero-mockups.vercel.app/assets/products_clean/bar_pure_carob.png">
+<meta name="twitter:image" content="/assets/product_shots/bar_pure_carob.png">
 <link rel="canonical" href="https://maplemoon-hero-mockups.vercel.app/hero_v8.html">
-<link rel="preload" as="image" href="assets/products_clean/bar_pure_carob.png">
+<link rel="preload" as="image" href="assets/stock/stock_kitchen_morning.jpg" fetchpriority="high">
+<link rel="preload" as="image" href="assets/stock/stock_spices_warm.jpg">
+<link rel="preload" as="image" href="assets/stock/stock_flatlay_dark.jpg">
+<link rel="preload" as="image" href="assets/hero_shots/hero_carob_pods_macro_dark.jpg">
 <link rel="preload" as="image" href="assets/carob_wordmark.svg">
 <link rel="icon" href="assets/maplemoon_logo.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="assets/maplemoon_logo.svg">
 <link rel="stylesheet" href="brand_kit.css">
 <style>
-  *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
 
   :root {
     --grad-top: #7B9DBF;
@@ -35,13 +38,49 @@
   html, body { height: 100%; overflow: hidden; }
 
   body {
-    background: linear-gradient(180deg, var(--grad-top) 0%, var(--grad-bottom) 100%);
+    background: #1a1a1a;
     font-family: var(--mm-sans);
     color: var(--mm-cream);
     position: relative;
     min-height: 100vh;
     min-height: 100dvh;
-    transition: background 1s ease;
+  }
+
+  /* ── Hero background photo (period-driven) ── */
+  .hero-bg {
+    position: absolute;
+    inset: 0;
+    background-size: cover;
+    background-position: center;
+    z-index: 0;
+  }
+
+  /* Period-specific hero shots — ingredient/origin imagery, no product packaging */
+  body.morning   .hero-bg { background-image: url('assets/stock/stock_kitchen_morning.jpg'); }
+  body.afternoon .hero-bg { background-image: url('assets/stock/stock_spices_warm.jpg'); }
+  body.evening   .hero-bg { background-image: url('assets/stock/stock_flatlay_dark.jpg'); }
+  body.night     .hero-bg { background-image: url('assets/hero_shots/hero_carob_pods_macro_dark.jpg'); }
+
+  /* Gradient scrim — dark top + dark bottom for text legibility */
+  .hero-bg::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background:
+      linear-gradient(to bottom, rgba(10,18,36,0.65) 0%, rgba(10,18,36,0.25) 45%, rgba(10,18,36,0.6) 100%);
+    pointer-events: none;
+  }
+
+  /* Ken Burns zoom */
+  @media (prefers-reduced-motion: no-preference) {
+    @keyframes kenBurns {
+      from { transform: scale(1); }
+      to   { transform: scale(1.07); }
+    }
+    .hero-bg {
+      animation: kenBurns 22s ease-in-out infinite alternate;
+      will-change: transform;
+    }
   }
 
   /* -- Stars overlay (night mode, desktop only) -- */
@@ -110,12 +149,6 @@
     display: block; min-height: 44px; padding: 12px 8px;
   }
   .back-link:hover { opacity: 1; }
-
-  /* Morning mode: dark text on warm tan background for contrast */
-  body.morning .back-link { color: var(--mm-navy); }
-  body.morning .tagline { color: #1E4366; opacity: 0.85; }
-  body.morning .cta-btn { color: #1E4366; border-color: #1E4366; }
-  body.morning .cta-btn:hover { background: #1E4366; color: var(--mm-cream); }
 
   /* -- Time greeting -- */
   .time-greeting {
@@ -236,9 +269,11 @@
 
   /* Tagline */
   .tagline {
-    font-family: var(--mm-sans); font-weight: 300;
-    font-size: 0.9rem; color: var(--mm-cream); opacity: 0.7;
+    font-family: var(--mm-serif); font-weight: 400;
+    font-size: 1.6rem; color: var(--mm-cream); opacity: 0.9;
     text-align: center; position: relative; z-index: var(--z-product);
+    letter-spacing: 0.04em; line-height: 1.4;
+    max-width: 480px; padding: 0 24px;
   }
 
   /* CTA */
@@ -260,7 +295,7 @@
   /* -- Category strip (mobile) -- */
   .category-strip {
     position: fixed; bottom: 0; left: 0; right: 0; z-index: var(--z-dropdown);
-    padding: 18px 0 28px;
+    padding: 18px 0 max(28px, env(safe-area-inset-bottom));
     overflow-x: auto; overflow-y: hidden;
     white-space: nowrap;
     -webkit-overflow-scrolling: touch;
@@ -341,7 +376,7 @@
     .product-img:hover { transform: scale(1.03); }
 
     /* Tagline */
-    .tagline { font-size: 1.1rem; }
+    .tagline { font-size: 2.4rem; max-width: 600px; }
 
     /* CTA */
     .cta-btn {
@@ -439,10 +474,9 @@
 </header>
 
 <main id="main-content" class="hero" tabindex="-1">
-  <div class="carob-watermark-wrap wm-subtle" aria-hidden="true"><img src="assets/carob_wordmark.svg" alt="" aria-hidden="true" width="800" height="200"></div>
-  <img src="assets/products_clean/bar_pure_carob.png" alt="Maple Moon Carob Bar" class="product-img fade-3" width="400" height="600" fetchpriority="high" decoding="async" loading="eager">
-  <h1 class="tagline fade-4" id="tagline" aria-live="polite">Naturally sweet, nothing added.</h1>
-  <a href="/shop" class="cta-btn fade-5">Shop Now</a>
+  <div class="hero-bg" aria-hidden="true"></div>
+  <h1 class="tagline fade-3" id="tagline" aria-live="polite">Naturally sweet. Nothing added.</h1>
+  <a href="/shop" class="cta-btn fade-4">Shop Now</a>
 </main>
 
 <!-- Mobile category strip -->
@@ -506,7 +540,7 @@
       gradBottom: '#E8C9A0',
       tagline: 'A gentle start. No caffeine, just carob.',
       greeting: 'Good morning',
-      iconColor: '#1E4366'
+      iconColor: '#E7E4CA'
     },
     afternoon: {
       gradTop: '#7B9DBF',
@@ -555,13 +589,9 @@
   // Apply body class for star/glow effects
   document.body.classList.add(period);
 
-  // Apply icon color for contrast (morning needs navy on warm bg)
-  if (config.iconColor) {
-    var svg = document.querySelector('.time-greeting svg');
-    if (svg) { svg.style.stroke = config.iconColor; }
-    var greetingText = document.getElementById('greeting-text');
-    if (greetingText && period === 'morning') { greetingText.style.color = config.iconColor; }
-  }
+  // Apply icon color (cream for all periods — all periods now have dark photo backgrounds)
+  var svg = document.querySelector('.time-greeting svg');
+  if (svg) { svg.style.stroke = '#E7E4CA'; }
 })();
 </script>
 </body>

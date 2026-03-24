@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MapleMoon — Review</title>
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      background: #F0EDDF;
+      color: #1E4366;
+      min-height: 100vh;
+      padding: 20px;
+    }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      margin-bottom: 16px;
+    }
+
+    .nav button {
+      background: #1E4366;
+      color: #F0EDDF;
+      border: none;
+      border-radius: 6px;
+      padding: 8px 20px;
+      font-size: 14px;
+      font-weight: 500;
+      cursor: pointer;
+      transition: opacity 0.2s;
+    }
+
+    .nav button:hover { opacity: 0.8; }
+    .nav button:disabled { opacity: 0.3; cursor: default; }
+
+    .nav button.inspect-btn {
+      background: transparent;
+      color: #1E4366;
+      border: 2px solid #1E4366;
+      padding: 6px 14px;
+      font-size: 12px;
+      margin-left: 16px;
+    }
+    .nav button.inspect-btn.active {
+      background: #c0392b;
+      color: #fff;
+      border-color: #c0392b;
+    }
+
+    .nav .label {
+      font-size: 18px;
+      font-weight: 600;
+      min-width: 280px;
+      text-align: center;
+    }
+
+    .devices {
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: nowrap;
+    }
+
+    .device {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 8px;
+      flex-shrink: 0;
+    }
+
+    .device-label {
+      font-size: 11px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      opacity: 0.6;
+    }
+
+    .frame {
+      border: 2px solid rgba(30, 67, 102, 0.15);
+      border-radius: 8px;
+      overflow: hidden;
+      background: #1a1a1a;
+    }
+
+    .frame iframe {
+      display: block;
+      border: none;
+      transform-origin: top left;
+    }
+
+    .frame--desktop { width: 520px; height: 325px; }
+    .frame--desktop iframe { width: 1440px; height: 900px; transform: scale(0.3611); }
+
+    .frame--tablet { width: 280px; height: 373px; }
+    .frame--tablet iframe { width: 768px; height: 1024px; transform: scale(0.3646); }
+
+    .frame--mobile { width: 170px; height: 368px; }
+    .frame--mobile iframe { width: 375px; height: 812px; transform: scale(0.4533); }
+
+    /* Legend panel */
+    .legend {
+      margin-top: 20px;
+      background: #fff;
+      border: 1px solid rgba(30, 67, 102, 0.12);
+      border-radius: 8px;
+      padding: 16px 20px;
+      max-width: 1000px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .legend h3 {
+      font-size: 12px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      opacity: 0.5;
+      margin-bottom: 10px;
+    }
+    .legend-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2px 24px;
+    }
+    .legend-item {
+      font-size: 12px;
+      line-height: 1.6;
+      display: flex;
+      align-items: baseline;
+      gap: 6px;
+      padding: 3px 6px;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background 0.15s;
+    }
+    .legend-item:hover {
+      background: rgba(30, 67, 102, 0.06);
+    }
+    .legend-item.active {
+      background: rgba(192, 57, 43, 0.1);
+    }
+    .legend-num {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 18px; height: 18px;
+      border-radius: 50%;
+      background: #1E4366;
+      color: #F0EDDF;
+      font-size: 9px;
+      font-weight: 700;
+      flex-shrink: 0;
+    }
+    .legend-item.active .legend-num {
+      background: #c0392b;
+    }
+    .legend-tag {
+      font-weight: 600;
+      color: #1E4366;
+    }
+    .legend-text {
+      color: #666;
+      font-style: italic;
+    }
+
+    /* Inspect info panel */
+    .inspect-panel {
+      display: none;
+      position: fixed;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: #1E4366;
+      color: #F0EDDF;
+      border-radius: 10px;
+      padding: 14px 20px;
+      font-size: 12px;
+      line-height: 1.6;
+      z-index: 1000;
+      max-width: 500px;
+      box-shadow: 0 8px 30px rgba(0,0,0,0.3);
+    }
+    .inspect-panel.visible { display: block; }
+    .inspect-panel .ip-tag { font-weight: 700; font-size: 14px; }
+    .inspect-panel .ip-styles { opacity: 0.7; font-family: 'SF Mono', Monaco, monospace; font-size: 11px; }
+    .inspect-panel .ip-text { opacity: 0.8; margin-top: 4px; }
+    .inspect-panel .ip-num { float: left; margin-right: 10px; margin-top: 2px; background: rgba(255,255,255,0.2); border-radius: 50%; width: 22px; height: 22px; display: inline-flex; align-items: center; justify-content: center; font-weight: 700; font-size: 11px; }
+    .inspect-panel .ip-close {
+      position: absolute; top: 8px; right: 10px;
+      background: none; border: none; color: #F0EDDF; opacity: 0.5;
+      font-size: 16px; cursor: pointer; padding: 4px 8px; line-height: 1;
+    }
+    .inspect-panel .ip-close:hover { opacity: 1; }
+  </style>
+</head>
+<body>
+  <div class="nav">
+    <button id="prev">Prev</button>
+    <span class="label" id="label">V1</span>
+    <button id="next">Next</button>
+    <button class="inspect-btn" id="inspect-toggle">Inspect (I)</button>
+  </div>
+
+  <div class="devices">
+    <div class="device">
+      <span class="device-label">Desktop 1440</span>
+      <div class="frame frame--desktop">
+        <iframe id="iframe-desktop"></iframe>
+      </div>
+    </div>
+    <div class="device">
+      <span class="device-label">Tablet 768</span>
+      <div class="frame frame--tablet">
+        <iframe id="iframe-tablet"></iframe>
+      </div>
+    </div>
+    <div class="device">
+      <span class="device-label">Mobile 375</span>
+      <div class="frame frame--mobile">
+        <iframe id="iframe-mobile"></iframe>
+      </div>
+    </div>
+  </div>
+
+  <div class="legend" id="legend">
+    <h3>Element Map (click to highlight)</h3>
+    <div class="legend-grid" id="legend-grid"></div>
+  </div>
+
+  <div class="inspect-panel" id="inspect-panel"></div>
+
+  <script>
+    const variants = [
+      { v: 1,  name: 'Brand Statement' },
+      { v: 2,  name: 'Shop Now' },
+      { v: 3,  name: 'What is Carob?' },
+      { v: 4,  name: 'The Range' },
+      { v: 6,  name: 'Before & After' },
+      { v: 7,  name: 'Flavour Picker' },
+      { v: 8,  name: 'Time of Day' },
+      { v: 9,  name: 'Story Cards' },
+      { v: 10, name: 'Letterbox Cinema' },
+      { v: 11, name: 'The Grid' },
+      { v: 12, name: 'The Unwrap' },
+      { v: 13, name: 'Full Bleed Photo' },
+      { v: 14, name: 'Ingredient Journey' },
+      { v: 15, name: 'Product Orbit' },
+      { v: 16, name: 'Moodboard' },
+      { v: 17, name: 'Light Editorial' },
+      { v: 18, name: 'Light Flavour Picker' },
+      { v: 19, name: 'Light Grid' },
+    ];
+
+    const SELECTOR = 'h1, h2, h3, p, a[href], button, nav, img, [class*="hero"]:not(html):not(body), [class*="cta"], [class*="product"], [class*="watermark"], [class*="carob"], [class*="category"], [class*="headline"], [class*="tagline"], [class*="strip"], [class*="logo"], [class*="stage"]';
+
+    const iframes = {
+      desktop: { el: document.getElementById('iframe-desktop'), scale: 0.3611 },
+      tablet:  { el: document.getElementById('iframe-tablet'),  scale: 0.3646 },
+      mobile:  { el: document.getElementById('iframe-mobile'),  scale: 0.4533 },
+    };
+
+    const label        = document.getElementById('label');
+    const prevBtn      = document.getElementById('prev');
+    const nextBtn      = document.getElementById('next');
+    const inspectBtn   = document.getElementById('inspect-toggle');
+    const legendGrid   = document.getElementById('legend-grid');
+    const inspectPanel = document.getElementById('inspect-panel');
+
+    let currentIndex = 0;
+    let inspectActive = false;
+    let scannedElements = [];
+    let activeItemIndex = -1;
+    let highlightedEls = []; // track outlined elements to clear
+    let elToIndex = new Map(); // direct element -> scanned index lookup (per iframe)
+
+    // --- Variant navigation ---
+
+    function getIndexFromURL() {
+      const params = new URLSearchParams(window.location.search);
+      const v = parseInt(params.get('v'), 10);
+      if (isNaN(v)) return 0;
+      const idx = variants.findIndex(item => item.v === v);
+      return idx >= 0 ? idx : 0;
+    }
+
+    currentIndex = getIndexFromURL();
+
+    function load(index) {
+      currentIndex = index;
+      const variant = variants[index];
+      const src = `hero_v${variant.v}.html`;
+
+      legendGrid.innerHTML = '';
+      inspectPanel.classList.remove('visible');
+      clearHighlights();
+      activeItemIndex = -1;
+
+      let loaded = 0;
+      const onAllLoaded = () => {
+        loaded++;
+        if (loaded === 3) {
+          setTimeout(() => {
+            scanAndRender();
+            if (inspectActive) wireInspect();
+          }, 300);
+        }
+      };
+
+      for (const key of Object.keys(iframes)) {
+        iframes[key].el.onload = onAllLoaded;
+        iframes[key].el.src = src;
+      }
+
+      label.textContent = `V${variant.v} — ${variant.name}`;
+      prevBtn.disabled = index === 0;
+      nextBtn.disabled = index === variants.length - 1;
+      history.replaceState(null, '', `?v=${variant.v}`);
+    }
+
+    prevBtn.addEventListener('click', () => { if (currentIndex > 0) load(currentIndex - 1); });
+    nextBtn.addEventListener('click', () => { if (currentIndex < variants.length - 1) load(currentIndex + 1); });
+
+    // --- Element scanner ---
+
+    function scanElements(doc) {
+      if (!doc) return [];
+      const els = [];
+      const seen = new Set();
+      try {
+        doc.querySelectorAll(SELECTOR).forEach(el => {
+          if (seen.has(el)) return;
+          const rect = el.getBoundingClientRect();
+          // Allow carob-hero-type even if visually large/odd position
+          const isCarob = el.className && typeof el.className === 'string' && el.className.includes('carob');
+          if (!isCarob && (rect.width < 10 || rect.height < 10)) return;
+          if (!isCarob && el.offsetParent === null && el.tagName !== 'BODY' && getComputedStyle(el).position === 'static') return;
+
+          const tag = el.tagName.toLowerCase();
+          const cls = el.className && typeof el.className === 'string'
+            ? '.' + el.className.trim().split(/\s+/).slice(0, 2).join('.')
+            : '';
+          const text = (el.textContent || '').trim().substring(0, 50);
+          const isImg = tag === 'img';
+          const alt = isImg ? (el.alt || el.src.split('/').pop()) : '';
+
+          // Build a unique CSS selector for this element
+          let uniqueSel = tag;
+          if (el.id) uniqueSel = '#' + el.id;
+          else if (el.className && typeof el.className === 'string') {
+            uniqueSel = tag + '.' + el.className.trim().split(/\s+/).join('.');
+          }
+
+          // Deduplicate by position
+          const posKey = `${Math.round(rect.left/5)*5},${Math.round(rect.top/5)*5}`;
+          if (seen.has(posKey)) return;
+          seen.add(posKey);
+          seen.add(el);
+
+          els.push({ el, tag, cls, text: isImg ? alt : text, uniqueSel, posKey });
+        });
+      } catch (e) {}
+      return els;
+    }
+
+    // --- Find matching element across iframes ---
+
+    function findMatchInIframe(iframeKey, item) {
+      try {
+        const doc = iframes[iframeKey].el.contentDocument;
+        if (!doc) return null;
+
+        // Try by unique selector first
+        const candidates = doc.querySelectorAll(item.uniqueSel);
+        if (candidates.length === 1) return candidates[0];
+
+        // Fallback: match by position key
+        const allEls = doc.querySelectorAll(SELECTOR);
+        for (const el of allEls) {
+          const r = el.getBoundingClientRect();
+          const pk = `${Math.round(r.left/5)*5},${Math.round(r.top/5)*5}`;
+          if (pk === item.posKey) return el;
+        }
+
+        // Last resort: first match of selector
+        if (candidates.length > 0) return candidates[0];
+      } catch (e) {}
+      return null;
+    }
+
+    // --- Highlight / clear ---
+
+    function clearHighlights() {
+      highlightedEls.forEach(el => {
+        try { el.style.outline = ''; el.style.outlineOffset = ''; } catch(e) {}
+      });
+      highlightedEls = [];
+    }
+
+    function highlightElement(itemIndex) {
+      clearHighlights();
+
+      // Update legend active state
+      document.querySelectorAll('.legend-item').forEach((li, i) => {
+        li.classList.toggle('active', i === itemIndex);
+      });
+
+      if (itemIndex < 0 || itemIndex >= scannedElements.length) {
+        activeItemIndex = -1;
+        return;
+      }
+
+      activeItemIndex = itemIndex;
+      const item = scannedElements[itemIndex];
+
+      for (const key of Object.keys(iframes)) {
+        const matchEl = findMatchInIframe(key, item);
+        if (matchEl) {
+          matchEl.style.outline = '3px solid #c0392b';
+          matchEl.style.outlineOffset = '2px';
+          highlightedEls.push(matchEl);
+        }
+      }
+    }
+
+    // --- Legend ---
+
+    function renderLegend(elements) {
+      legendGrid.innerHTML = '';
+      elements.forEach((item, i) => {
+        const div = document.createElement('div');
+        div.className = 'legend-item';
+        const displayText = item.text ? ` "${item.text.substring(0, 40)}${item.text.length > 40 ? '...' : ''}"` : '';
+        div.innerHTML = `<span class="legend-num">${i + 1}</span><span class="legend-tag">${item.tag}${item.cls}</span><span class="legend-text">${displayText}</span>`;
+
+        div.addEventListener('click', () => {
+          if (activeItemIndex === i) {
+            highlightElement(-1); // toggle off
+          } else {
+            highlightElement(i);
+          }
+        });
+
+        legendGrid.appendChild(div);
+      });
+    }
+
+    // --- Combined scan + render ---
+
+    function buildElToIndexMap() {
+      elToIndex.clear();
+      for (const key of Object.keys(iframes)) {
+        for (let i = 0; i < scannedElements.length; i++) {
+          const match = findMatchInIframe(key, scannedElements[i]);
+          if (match) elToIndex.set(match, i);
+        }
+      }
+    }
+
+    function scanAndRender() {
+      const desktopDoc = iframes.desktop.el.contentDocument;
+      scannedElements = scanElements(desktopDoc);
+      renderLegend(scannedElements);
+      buildElToIndexMap();
+    }
+
+    // --- Inspect mode ---
+
+    let inspectCleanups = [];
+
+    function getElementNumber(el) {
+      // Direct lookup
+      if (elToIndex.has(el)) return elToIndex.get(el) + 1;
+      // Walk up parents to find a mapped ancestor
+      let node = el.parentElement;
+      while (node) {
+        if (elToIndex.has(node)) return elToIndex.get(node) + 1;
+        node = node.parentElement;
+      }
+      return null;
+    }
+
+    function wireInspect() {
+      unwireInspect();
+
+      for (const key of Object.keys(iframes)) {
+        const doc = iframes[key].el.contentDocument;
+        if (!doc) continue;
+
+        let lastHighlight = null;
+
+        const onMove = (e) => {
+          if (!inspectActive) return;
+          if (lastHighlight) { lastHighlight.style.outline = ''; lastHighlight.style.outlineOffset = ''; }
+          const target = e.target;
+          if (target && target !== doc.body && target !== doc.documentElement) {
+            target.style.outline = '2px solid #c0392b';
+            target.style.outlineOffset = '1px';
+            lastHighlight = target;
+          }
+        };
+
+        const onClick = (e) => {
+          if (!inspectActive) return;
+          e.preventDefault();
+          e.stopPropagation();
+          let target = e.target;
+          const num = getElementNumber(target);
+
+          // Walk up to the mapped element so we show useful info, not a covering child
+          if (num && elToIndex.has(target) === false) {
+            let node = target.parentElement;
+            while (node) {
+              if (elToIndex.has(node)) { target = node; break; }
+              node = node.parentElement;
+            }
+          }
+
+          const tag = target.tagName.toLowerCase();
+          const cls = target.className && typeof target.className === 'string'
+            ? '.' + target.className.trim().split(/\s+/).slice(0, 3).join('.')
+            : '';
+          const text = (target.textContent || '').trim().substring(0, 60);
+          const cs = getComputedStyle(target);
+
+          inspectPanel.innerHTML = `
+            <button class="ip-close" aria-label="Close">&times;</button>
+            ${num ? `<span class="ip-num">${num}</span>` : ''}
+            <div class="ip-tag">${tag}${cls}</div>
+            <div class="ip-styles">font: ${cs.fontSize} ${cs.fontWeight} ${cs.fontFamily.split(',')[0]} | color: ${cs.color} | padding: ${cs.padding}</div>
+            ${text ? `<div class="ip-text">"${text}"</div>` : ''}
+          `;
+          inspectPanel.querySelector('.ip-close').addEventListener('click', () => {
+            inspectPanel.classList.remove('visible');
+            highlightElement(-1);
+          });
+          inspectPanel.classList.add('visible');
+
+          // Also highlight in legend if matched + scroll legend item into view
+          if (num) {
+            highlightElement(num - 1);
+            const legendItems = document.querySelectorAll('.legend-item');
+            if (legendItems[num - 1]) {
+              legendItems[num - 1].scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+            }
+          }
+        };
+
+        doc.addEventListener('mousemove', onMove);
+        doc.addEventListener('click', onClick, true);
+
+        inspectCleanups.push(() => {
+          doc.removeEventListener('mousemove', onMove);
+          doc.removeEventListener('click', onClick, true);
+          if (lastHighlight) { lastHighlight.style.outline = ''; lastHighlight.style.outlineOffset = ''; }
+        });
+      }
+    }
+
+    function unwireInspect() {
+      inspectCleanups.forEach(fn => fn());
+      inspectCleanups = [];
+      inspectPanel.classList.remove('visible');
+    }
+
+    inspectBtn.addEventListener('click', () => {
+      inspectActive = !inspectActive;
+      inspectBtn.classList.toggle('active', inspectActive);
+      if (inspectActive) wireInspect();
+      else unwireInspect();
+    });
+
+    // --- Keyboard shortcuts ---
+
+    document.addEventListener('keydown', (e) => {
+      if (e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA') return;
+
+      if (e.key === 'ArrowLeft' && currentIndex > 0) load(currentIndex - 1);
+      if (e.key === 'ArrowRight' && currentIndex < variants.length - 1) load(currentIndex + 1);
+
+      if (e.key === 'i' || e.key === 'I') {
+        inspectActive = !inspectActive;
+        inspectBtn.classList.toggle('active', inspectActive);
+        if (inspectActive) wireInspect();
+        else unwireInspect();
+      }
+
+      if (e.key === 'Escape') {
+        highlightElement(-1);
+        inspectPanel.classList.remove('visible');
+      }
+    });
+
+    // --- Init ---
+    load(currentIndex);
+  </script>
+</body>
+</html>

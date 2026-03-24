@@ -10,16 +10,16 @@
 <meta property="og:title" content="MapleMoon — Brand Statement">
 <meta property="og:description" content="Artisan carob and cacao butter, handmade in Byron Bay. Organic, vegan, caffeine-free.">
 <meta property="og:type" content="website">
-<meta property="og:image" content="/assets/gemini/artisan/maplemoon_bar_original_artisan_20260305.png">
+<meta property="og:image" content="/assets/product_shots/bar_pure_carob.png">
 <meta property="og:image:width" content="400">
 <meta property="og:image:height" content="600">
 <meta property="og:site_name" content="Maple Moon">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="MapleMoon — Brand Statement">
 <meta name="twitter:description" content="Artisan carob and cacao butter, handmade in Byron Bay. Organic, vegan, caffeine-free.">
-<meta name="twitter:image" content="/assets/gemini/artisan/maplemoon_bar_original_artisan_20260305.png">
+<meta name="twitter:image" content="/assets/product_shots/bar_pure_carob.png">
 <link rel="canonical" href="https://maplemoon-website.vercel.app/hero_v1.html">
-<link rel="preload" as="image" href="assets/gemini/artisan/maplemoon_bar_original_artisan_20260305.png">
+<link rel="preload" as="image" href="assets/product_shots/bar_pure_carob.webp">
 <link rel="preload" as="image" href="assets/carob_wordmark.svg">
 <link rel="icon" href="assets/maplemoon_logo.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="assets/maplemoon_logo.svg">
@@ -38,7 +38,7 @@
 
   body {
     /* [8] Use brand_kit color tokens — removed --grad-top/--grad-bottom */
-    background: linear-gradient(180deg, var(--mm-blue-top) 0%, var(--mm-blue-bottom) 100%);
+    background: linear-gradient(180deg, var(--mm-dark-bg) 0%, var(--mm-navy) 100%);
     font-family: var(--mm-sans);
     color: var(--mm-cream);
     position: relative;
@@ -50,8 +50,7 @@
     content: '';
     position: fixed;
     inset: 0;
-    /* [23] Exact --mm-sky channels: #87ADCF = rgb(135,173,207) */
-    background: radial-gradient(ellipse at 30% 20%, rgba(135,173,207,0.4) 0%, transparent 60%);
+    background: radial-gradient(ellipse at 30% 20%, var(--mm-navy-50) 0%, transparent 60%);
     z-index: 0;
     pointer-events: none;
   }
@@ -66,6 +65,12 @@
   @keyframes productEntrance {
     from { opacity: 0; transform: scale(0.95); }
     to   { opacity: 1; transform: scale(1); }
+  }
+
+  /* ── Float animation (product hover — all breakpoints) ── */
+  @keyframes float {
+    0%, 100% { transform: translate(-50%, -50%) translateY(0); }
+    50%      { transform: translate(-50%, -50%) translateY(-10px); }
   }
 
   /* [2][29] All entrance animations wrapped — respect prefers-reduced-motion */
@@ -85,6 +90,8 @@
     .cat-stagger-5 { animation: fadeIn 0.4s ease both 0.5s; }
     .cat-stagger-6 { animation: fadeIn 0.4s ease both 0.55s; }
     .cat-stagger-7 { animation: fadeIn 0.4s ease both 0.6s; }
+    /* Float on product stage — all breakpoints */
+    .product-stage { animation: float 2s ease-in-out infinite 0.9s; will-change: transform; }
   }
 
   /* ── Back link ── */
@@ -184,7 +191,7 @@
     display: flex; flex-direction: column; align-items: center;
   }
   /* [26] Width controlled by CSS only — HTML width/height attrs removed */
-  .logo-group img { width: 40px; height: auto; }
+  .logo-group img { width: 112px; height: auto; }
 
   /* ── Main layout (mobile) ── */
   .hero {
@@ -192,14 +199,18 @@
     display: flex; flex-direction: column;
     align-items: center; justify-content: center;
     overflow: hidden;
+    padding-bottom: 0;
+    gap: 0;
   }
 
   /* ── Product stage (stacked crossfade) ── */
   .product-stage {
-    position: relative;
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
     /* [17] page-specific z-index token */
     z-index: var(--z-product);
-    width: 72%; max-width: 300px;
+    width: 70%; max-width: 260px;
     aspect-ratio: 2/3;
   }
   .product-stage img {
@@ -215,82 +226,96 @@
   }
   .product-stage img.active { opacity: 1; }
 
-  /* ── Categories (mobile): horizontal scroll strip ── */
-  .category-strip-mobile {
-    position: fixed; bottom: 0; left: 0; right: 0;
-    /* [17] --z-dropdown: 50 */
+  /* ── Categories (mobile): horizontal scroll strip — hidden (sidebar is sole nav) ── */
+  .category-strip-mobile { display: none; }
+
+  /* ── Category strip scroll indicator — hidden ── */
+  .strip-progress { display: none; }
+
+
+  /* ── Category left stack — visible at all breakpoints ── */
+  .category-stack-desktop {
+    display: flex; flex-direction: column; gap: 8px;
+    position: fixed; top: 52%; left: 16px;
     z-index: var(--z-dropdown);
-    padding: 18px 0 28px;
-    overflow-x: auto; overflow-y: hidden;
-    white-space: nowrap;
-    -webkit-overflow-scrolling: touch;
-    scroll-snap-type: x mandatory;
-    mask-image: linear-gradient(to right, transparent 0%, black 8%, black 85%, transparent 100%);
-    -webkit-mask-image: linear-gradient(to right, transparent 0%, black 8%, black 85%, transparent 100%);
-    text-align: center;
+    transform: translateY(-50%);
+    max-height: 72vh; overflow: hidden;
   }
-  .category-strip-mobile .inner {
-    display: inline-flex; align-items: center; gap: 0;
-    padding: 0 24px;
+  .category-stack-desktop a {
+    font-family: var(--mm-serif);
+    font-size: 0.85rem; font-weight: 400;
+    text-transform: uppercase; letter-spacing: 0.12em;
+    line-height: 1.6; color: var(--mm-cream);
+    text-decoration: none;
+    opacity: 0.3;
+    transition: opacity 0.25s ease;
   }
-  .category-strip-mobile a {
-    scroll-snap-align: center;
-    font-family: var(--mm-serif); font-size: 0.75rem;
-    font-weight: 400; text-transform: uppercase; letter-spacing: 0.12em;
-    color: var(--mm-cream); text-decoration: none;
-    padding: 10px 0; min-height: 44px; white-space: nowrap;
-    /* [27] Raised from 0.45 → 0.55 for improved contrast */
-    opacity: 0.55;
-    transition: opacity 0.25s;
-    display: inline-flex; align-items: center;
-    /* [15] font-feature-settings via .text-refined class on element */
-  }
-  .category-strip-mobile a:hover { opacity: 0.75; }
-  /* [12] Active state — underline in addition to opacity */
-  .category-strip-mobile a.active {
+  .category-stack-desktop a:hover { opacity: 0.7; }
+  .category-stack-desktop a.active {
     opacity: 1;
     text-decoration: underline;
     text-underline-offset: 3px;
   }
-  .category-strip-mobile .dot {
-    display: inline-block; width: 4px; height: 4px;
-    background: var(--mm-cream); border-radius: var(--radius-full);
-    margin: 0 12px; opacity: 0.5; flex-shrink: 0;
-  }
-
-  /* ── Category strip scroll indicator ── */
-  .strip-progress {
-    position: fixed; bottom: 0; left: 0;
-    /* [17] one above --z-dropdown */
-    z-index: calc(var(--z-dropdown) + 1);
-    height: 2px; width: 0%;
-    background: var(--mm-cream); opacity: 0.3;
-    transition: width 0.1s linear;
-  }
-
-  /* ── Desktop categories (left stack) ── */
-  .category-stack-desktop {
-    display: none;
-  }
 
   /* ── CAROB hero type (mobile default) ── */
+  /* top = product bottom: 50% + half product height (260px × 3/2 = 390px, half = 195px) */
   .carob-hero-type {
     position: absolute;
-    top: 50%; left: 50%;
-    transform: translate(-50%, -50%);
-    width: 88%; max-width: 360px;
+    bottom: 0; left: 50%;
+    transform: translateX(-50%);
+    width: 115vw; max-width: none;
     /* [17] page-specific z-index token */
     z-index: var(--z-carob);
     pointer-events: none;
   }
   .carob-hero-type img {
     width: 100%; height: auto; display: block;
-    opacity: 0.14;
+    opacity: 0.16;
+  }
+
+  /* ── CTA ── */
+  .cta-btn {
+    display: inline-flex; align-items: center; justify-content: center;
+    border: 1.5px solid var(--mm-cream); color: var(--mm-cream);
+    background: transparent; border-radius: var(--radius-pill);
+    padding: 12px 32px; min-height: 48px;
+    font-family: var(--mm-sans); font-size: 0.85rem;
+    font-weight: 400; letter-spacing: 0.04em; text-transform: uppercase;
+    text-decoration: none; cursor: pointer;
+    transition: background 0.3s, color 0.3s, transform 0.15s;
+    position: relative; z-index: var(--z-product);
+  }
+  .cta-btn:hover { background: var(--mm-cream); color: var(--mm-navy); }
+  .cta-btn:active { transform: scale(0.97); background: var(--mm-cream); color: var(--mm-navy); }
+
+  /* ── Hero headline + sub + CTA — anchored from bottom (all breakpoints) ── */
+  .hero-headline {
+    font-family: var(--mm-serif); font-size: 1.05rem; font-weight: 400;
+    color: var(--mm-cream); text-align: center;
+    position: absolute; bottom: 92px; left: 0; right: 0;
+    z-index: var(--z-product);
+    padding: 0 24px; margin: 0;
+    max-width: none; overflow-wrap: break-word;
+    white-space: nowrap;
+  }
+  .hero-sub {
+    display: none;
+    font-family: var(--mm-sans); font-size: 0.9rem; font-weight: 300;
+    color: var(--mm-cream); opacity: 0.7; text-align: center;
+    position: absolute; bottom: 72px; left: 0; right: 0;
+    z-index: var(--z-product);
+    padding: 0 32px; margin: 0;
+    max-width: none; overflow-wrap: break-word; white-space: normal;
+  }
+  .hero-cta-wrap {
+    position: absolute; bottom: 24px; left: 0; right: 0;
+    z-index: var(--z-product);
+    display: flex; justify-content: center;
+    margin: 0;
   }
 
   /* ── DESKTOP ── */
   @media (min-width: 768px) {
-    .hamburger { display: none; }
     .category-strip-mobile { display: none; }
     .back-link { display: block; }
 
@@ -307,7 +332,7 @@
     @supports not (backdrop-filter: blur(1px)) {
       .header.scrolled { background: rgba(123, 157, 191, 0.85); }
     }
-    .logo-group img { width: 80px; }
+    .logo-group img { width: 219px; }
 
     /* Desktop categories */
     .category-stack-desktop {
@@ -320,12 +345,11 @@
     }
     .category-stack-desktop a {
       font-family: var(--mm-serif);
-      font-size: 1.5rem; font-weight: 400;
+      font-size: 1.1rem; font-weight: 400;
       text-transform: uppercase; letter-spacing: 0.12em;
       line-height: 1.6; color: var(--mm-cream);
       text-decoration: none;
-      /* [27] Raised from 0.35 → 0.45 for improved contrast */
-      opacity: 0.45;
+      opacity: 0.3;
       transition: opacity 0.25s ease, letter-spacing 0.25s ease;
       /* [15] font-feature-settings via .text-refined class on element */
     }
@@ -340,37 +364,62 @@
 
     /* Product stage on desktop */
     .product-stage {
-      width: 26vw; min-width: 260px; max-width: 400px;
+      width: 44vw; min-width: 320px; max-width: 460px;
       aspect-ratio: 2/3;
       position: absolute;
-      top: 50%; left: 55%;
+      top: 50%; left: 50%;
       transform: translate(-50%, -50%);
     }
 
-    @media (prefers-reduced-motion: no-preference) {
-      .product-stage { animation: float 3s ease-in-out infinite 0.9s; will-change: transform; }
-    }
-
-    @keyframes float {
-      0%, 100% { transform: translate(-50%, -50%) translateY(0); }
-      50%      { transform: translate(-50%, -50%) translateY(-10px); }
-    }
-
-    /* CAROB hero type — desktop */
+    /* CAROB hero type — desktop. top = product bottom (50% + half product height) */
+    /* At 44vw product: height = 66vw, half ≈ 253px at 768bp */
     .carob-hero-type {
-      top: 50%; left: 55%;
-      transform: translate(-50%, -50%);
-      width: 54vw;
-      max-width: 740px;
+      bottom: 0; left: 50%;
+      transform: translateX(-50%);
+      top: auto;
+      width: 115vw;
+      max-width: none;
     }
     .carob-hero-type img { opacity: 0.16; }
+
+    /* Pull text out of flex flow — anchor to bottom, below the floating product */
+    .hero { padding-bottom: 0; gap: 0; justify-content: flex-start; }
+
+    /* Use left:0/right:0 + text-align rather than transform (animation resets transform) */
+    .hero-headline {
+      position: absolute;
+      bottom: 112px; left: 0; right: 0;
+      font-size: 1.8rem;
+      text-align: center;
+      padding: 0 80px;
+      max-width: none;
+      white-space: nowrap;
+    }
+    .hero-sub {
+      position: absolute;
+      bottom: 95px; left: 0; right: 0;
+      text-align: center;
+      max-width: none; padding: 0 60px;
+      white-space: normal;
+    }
+    .hero-cta-wrap {
+      position: absolute;
+      bottom: 46px; left: 0; right: 0;
+      display: flex; justify-content: center;
+      margin-top: 0;
+    }
   }
 
   @media (min-width: 1024px) {
-    .category-stack-desktop a { font-size: 2rem; }
+    .hamburger { display: none; }
+    .category-stack-desktop a { font-size: 1.4rem; }
     .header { padding: 36px 48px; }
-    .product-stage { width: 22vw; min-width: 280px; max-width: 420px; }
-    .carob-hero-type { width: 50vw; max-width: 800px; }
+    .product-stage { width: 30vw; min-width: 360px; max-width: 560px; }
+    /* CAROB midpoint at product bottom: 30vw @ 1440px = 432px → height 648px, half = 324px */
+    .carob-hero-type { width: 115vw; max-width: none; bottom: 0; top: auto; }
+    .hero-headline { font-size: 2.4rem; bottom: 100px; padding: 0 160px; }
+    .hero-sub { font-size: 0.95rem; bottom: 60px; }
+    .hero-cta-wrap { bottom: 30px; }
   }
 </style>
 </head>
@@ -430,15 +479,20 @@
   <!-- [6] aria-live — screen readers announce product switch on category change -->
   <div class="product-stage fade-product" aria-live="polite" aria-atomic="true" aria-label="Selected product: Pure Carob Bar">
     <!-- Valid data-cat values: bars, moons, bananas, bites, elixirs, packs, gifts -->
-    <img src="assets/gemini/artisan/maplemoon_bar_original_artisan_20260305.png"     alt="Pure Carob Bar"      data-cat="bars"    class="active" fetchpriority="high" loading="eager" decoding="async">
-    <img src="assets/gemini/artisan/maplemoon_eclipse_hazelnut_artisan_20260305.png" alt="Hazelnut Eclipse"    data-cat="moons"   loading="lazy" decoding="async">
-    <img src="assets/products/bananas.jpg"                  alt="Carob Banana"        data-cat="bananas" loading="lazy" decoding="async">
-    <img src="assets/products_clean/bite_coconut.png"       alt="Coconut Carob Bite"  data-cat="bites"   loading="lazy" decoding="async">
-    <img src="assets/gemini/artisan/maplemoon_elixir_plain_artisan_20260305.png"       alt="Carob Elixir"        data-cat="elixirs" loading="lazy" decoding="async">
-    <img src="assets/gemini/artisan/maplemoon_bar_bundle_artisan_20260305.png"               alt="Bar Bundle Pack"     data-cat="packs"   loading="lazy" decoding="async">
-    <img src="assets/gemini/artisan/maplemoon_eclipse_bundle_artisan_20260305.png"           alt="Eclipse Gift Bundle" data-cat="gifts"   loading="lazy" decoding="async">
+    <img src="assets/product_shots/bar_pure_carob.webp"     alt="Pure Carob Bar"      data-cat="bars"    class="active" fetchpriority="high" loading="eager" decoding="async">
+    <img src="assets/product_shots/moon_pure_carob.webp" alt="Carob Moons"         data-cat="moons"   loading="lazy" decoding="async">
+    <img src="assets/product_shots/bananas.webp"          alt="Carob Banana"        data-cat="bananas" loading="lazy" decoding="async">
+    <img src="assets/product_shots/bite_coconut.webp"       alt="Coconut Carob Bite"  data-cat="bites"   loading="lazy" decoding="async">
+    <img src="assets/product_shots/elixir_plain.png"       alt="Carob Elixir"        data-cat="elixirs" loading="lazy" decoding="async">
+    <img src="assets/products/bar_bundle.jpg"               alt="Bar Bundle Pack"     data-cat="packs"   loading="lazy" decoding="async">
+    <img src="assets/products/eclipse_bundle.jpg"           alt="Eclipse Gift Bundle" data-cat="gifts"   loading="lazy" decoding="async">
   </div>
   <div class="carob-hero-type" aria-hidden="true"><img src="assets/carob_wordmark.svg" alt="Carob wordmark"></div>
+  <p class="hero-headline fade-2">Naturally sweet. Nothing added.</p>
+  <p class="hero-sub fade-3">Naturally sweet. Nothing added.</p>
+  <div class="hero-cta-wrap fade-4">
+    <a href="/shop" class="cta-btn">Shop Now</a>
+  </div>
 </main>
 
 <!-- [15] text-refined class added to all category links -->
@@ -476,8 +530,16 @@
   }
 
   // [5] Focus trap — observer declared in outer scope to prevent memory leak
+  // [23] Race condition guard — prevents event queue buildup during 0.3s animation
   var observer = null;
+  var menuAnimating = false;
   toggle.addEventListener('change', function() {
+    if (menuAnimating) { toggle.checked = !toggle.checked; return; }
+    menuAnimating = true;
+    menu.addEventListener('transitionend', function handler() {
+      menuAnimating = false;
+      menu.removeEventListener('transitionend', handler);
+    }, { once: true });
     var isOpen = toggle.checked;
     menu.setAttribute('aria-hidden', isOpen ? 'false' : 'true');
     hamburger.setAttribute('aria-expanded', isOpen ? 'true' : 'false');

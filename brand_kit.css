@@ -34,6 +34,9 @@
   --mm-navy-10: rgba(30,67,102,0.1);
   --mm-navy-15: rgba(30,67,102,0.15);
   --mm-navy-50: rgba(30,67,102,0.5);
+  --mm-navy-60: rgba(30,67,102,0.6);
+  --mm-navy-70: rgba(30,67,102,0.7);
+  --mm-cream-04: rgba(231,228,202,0.04);
   --mm-black-08: rgba(0,0,0,0.08);
   --mm-black-10: rgba(0,0,0,0.1);
   --mm-black-15: rgba(0,0,0,0.15);
@@ -59,6 +62,7 @@
   --shadow-lg: drop-shadow(0 16px 32px rgba(0,0,0,0.15)) drop-shadow(0 4px 8px rgba(0,0,0,0.08));
   --shadow-xl: drop-shadow(0 24px 48px rgba(0,0,0,0.18)) drop-shadow(0 8px 16px rgba(0,0,0,0.1));
   --z-base: 1;
+  --z-product: 2;
   --z-sticky: 10;
   --z-dropdown: 50;
   --z-fixed: 100;
@@ -67,6 +71,21 @@
   --ease-default: 0.3s ease;
   --ease-slow: 0.5s ease;
   --ease-spring: 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+  /* ── Breakpoints (use in @media queries for consistency) ── */
+  --bp-mobile: 480px;
+  --bp-tablet: 768px;
+  --bp-desktop: 1024px;
+  /* ── Type Scale ── */
+  --fs-xs:      0.65rem;   /* 10.4px — labels, badges, legal */
+  --fs-sm:      0.75rem;   /* 12px   — captions, meta */
+  --fs-base:    0.875rem;  /* 14px   — body, nav links */
+  --fs-md:      1rem;      /* 16px   — default body */
+  --fs-lg:      1.125rem;  /* 18px   — lead / intro */
+  --fs-xl:      1.5rem;    /* 24px   — h3 / section heads */
+  --fs-2xl:     2rem;      /* 32px   — h2 */
+  --fs-3xl:     2.75rem;   /* 44px   — h1 mobile */
+  --fs-4xl:     3.5rem;    /* 56px   — h1 desktop */
+  --fs-display: 5rem;      /* 80px   — display / hero headline */
 }
 
 /* ── Typography ── */
@@ -206,6 +225,12 @@ body { overflow-x: hidden; }
 @keyframes fadeIn {
   from { opacity: 0; transform: translateY(8px); }
   to { opacity: 1; transform: translateY(0); }
+}
+
+/* Product reveal — used by .fade-product + category switcher in hero pages */
+@keyframes productEntrance {
+  from { opacity: 0; transform: translateY(16px) scale(0.97); }
+  to   { opacity: 1; transform: translateY(0)    scale(1); }
 }
 
 .fade-1 { animation: fadeIn 0.6s ease both; animation-delay: 0.1s; }

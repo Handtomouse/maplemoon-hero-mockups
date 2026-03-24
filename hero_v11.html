@@ -9,23 +9,23 @@
 <meta property="og:title" content="MapleMoon — The Grid">
 <meta property="og:description" content="The full world of MapleMoon at a glance — bars, moons, bites, and more.">
 <meta property="og:type" content="website">
-<meta property="og:image" content="https://maplemoon-hero-mockups.vercel.app/assets/products_clean/bar_pure_carob.png">
+<meta property="og:image" content="/assets/product_shots/bar_pure_carob.png">
 <meta property="og:image:width" content="400">
 <meta property="og:image:height" content="600">
 <meta property="og:site_name" content="Maple Moon">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="MapleMoon — The Grid">
 <meta name="twitter:description" content="Artisan carob and cacao butter, handmade in Byron Bay. Organic, vegan, caffeine-free.">
-<meta name="twitter:image" content="https://maplemoon-hero-mockups.vercel.app/assets/products_clean/bar_pure_carob.png">
+<meta name="twitter:image" content="/assets/product_shots/bar_pure_carob.png">
 <link rel="canonical" href="https://maplemoon-hero-mockups.vercel.app/hero_v11.html">
 <link rel="stylesheet" href="brand_kit.css">
-<link rel="preload" as="image" href="assets/products_clean/bar_pure_carob.png">
-<link rel="preload" as="image" href="assets/products_clean/eclipse_pecan.png">
+<link rel="preload" as="image" href="assets/hero_shots/hero_bar_carob_pods_studio.png">
+<link rel="preload" as="image" href="assets/product_shots/eclipse_pecan.webp">
 <link rel="preload" as="image" href="assets/carob_wordmark.svg">
 <link rel="icon" href="assets/maplemoon_logo.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="assets/maplemoon_logo.svg">
 <style>
-  *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
 
   :root {
     --gap: 4px;
@@ -170,113 +170,55 @@
     transform: scale(0.98);
   }
 
+  /* ── Wire label (shared across all tiles) ── */
+  .tile-wire-label {
+    font-family: var(--mm-sans);
+    font-weight: 400; font-size: 0.7rem;
+    text-transform: uppercase; letter-spacing: 0.12em;
+    color: var(--mm-cream); opacity: 0.9;
+    text-align: center; padding: 0 16px;
+    line-height: 2;
+  }
+  .tile-wire-label em {
+    display: block;
+    font-style: normal; font-size: 0.6rem;
+    opacity: 0.5; text-transform: none;
+    letter-spacing: 0.06em; line-height: 1.4;
+  }
+  .tile-origin .tile-wire-label { color: var(--mm-navy); }
+
   /* ── Tile 1: Bar hero (spans 2 cols) ── */
   .tile-bar {
     grid-column: 1 / 3;
     background: linear-gradient(180deg, var(--mm-blue-top) 0%, var(--mm-blue-bottom) 100%);
   }
-  .tile-bar .tile-product {
-    width: 45%; max-width: 200px; height: auto;
-    object-fit: contain; object-position: center;
-    filter: drop-shadow(0 4px 8px var(--mm-black-10)) drop-shadow(0 12px 24px var(--mm-black-15));
-    position: relative; z-index: var(--z-product);
-  }
-  .tile-bar .tile-label {
-    position: absolute; bottom: 12px; left: 0; right: 0;
-    text-align: center; z-index: calc(var(--z-product) + 1);
-    font-family: var(--mm-serif);
-    font-weight: 500; font-size: 0.7rem;
-    text-transform: uppercase; letter-spacing: 0.12em;
-    color: var(--mm-cream); opacity: 0.7;
+  .tile-bar-photo {
+    width: 100%; height: 100%;
+    object-fit: cover; object-position: center;
   }
 
   /* ── Tile 2: Moon ── */
   .tile-moon {
     background: linear-gradient(180deg, var(--mm-story-blue) 0%, var(--mm-blue-top) 100%);
   }
-  .tile-moon .tile-product {
-    width: 70%; max-width: 120px; height: auto;
-    object-fit: contain; object-position: center;
-    filter: drop-shadow(0 2px 6px var(--mm-black-15));
-    position: relative; z-index: var(--z-product);
-  }
-  .tile-moon .tile-label {
-    position: absolute; bottom: 10px; left: 0; right: 0;
-    text-align: center; z-index: calc(var(--z-product) + 1);
-    font-family: var(--mm-serif);
-    font-weight: 500; font-size: 0.75rem;
-    text-transform: uppercase; letter-spacing: 0.1em;
-    color: var(--mm-cream); opacity: 0.6;
-  }
 
-  /* ── Tile 3: Ingredient/Lifestyle ── */
+  /* ── Tile 3: Craft / Origin ── */
   .tile-lifestyle {
-    background: #3a2a1a;
+    background: var(--mm-carob-dark);
   }
-  .tile-lifestyle .tile-bg {
-    position: absolute; inset: 0;
-    object-fit: cover; width: 100%; height: 100%;
-    z-index: 0;
-  }
-  .tile-lifestyle .tile-overlay {
-    position: absolute; inset: 0;
-    background: rgba(58,42,26,0.35);
-    z-index: var(--z-base);
-  }
-  .tile-lifestyle .tile-label {
-    position: absolute; bottom: 10px; left: 0; right: 0;
-    text-align: center; z-index: calc(var(--z-product) + 1);
-    font-family: var(--mm-serif);
-    font-weight: 500; font-size: 0.75rem;
-    text-transform: uppercase; letter-spacing: 0.1em;
-    color: var(--mm-cream); opacity: 0.7;
-    text-shadow: 0 1px 4px rgba(0,0,0,0.4);
+  .tile-lifestyle-photo {
+    width: 100%; height: 100%;
+    object-fit: cover; object-position: center;
   }
 
-  /* ── Tile 4: CTA / Shop Now ── */
+  /* ── Tile 4: Accent ── */
   .tile-cta {
     background: var(--mm-navy);
-    display: flex; flex-direction: column;
-    align-items: center; justify-content: center;
-    gap: 8px;
-  }
-  .tile-cta .cta-text {
-    font-family: var(--mm-serif);
-    font-weight: 500; font-size: 1rem;
-    text-transform: uppercase; letter-spacing: 0.12em;
-    color: var(--mm-cream);
-  }
-  .tile-cta .cta-arrow {
-    width: 24px; height: 24px;
-    fill: none; stroke: var(--mm-cream); stroke-width: 2;
-    opacity: 0.6;
   }
 
-  /* ── Tile 5: Origin ── */
+  /* ── Tile 5: Provenance ── */
   .tile-origin {
     background: var(--mm-cream);
-    display: flex; flex-direction: column;
-    align-items: center; justify-content: center;
-    gap: 4px;
-  }
-  .tile-origin .origin-title {
-    font-family: var(--mm-serif);
-    font-weight: 400; font-size: 1rem;
-    color: var(--mm-navy); letter-spacing: 0.06em;
-  }
-  .tile-origin .origin-sub {
-    font-family: var(--mm-sans);
-    font-weight: 300; font-size: 0.65rem;
-    color: var(--mm-navy); opacity: 0.5;
-    letter-spacing: 0.06em;
-  }
-  .tile-origin .origin-icons {
-    display: flex; gap: 8px; margin-top: 6px;
-  }
-  .tile-origin .origin-icons img {
-    width: 18px; height: 18px;
-    filter: brightness(0) saturate(100%) invert(20%) sepia(30%) saturate(1200%) hue-rotate(180deg) brightness(60%) contrast(100%);
-    opacity: 0.4;
   }
 
   /* ═══════════════════════════════════
@@ -293,6 +235,7 @@
       display: flex; align-items: center;
       position: fixed; top: 0; left: 0; right: 0; z-index: var(--z-fixed);
       padding: 28px 40px;
+      background: linear-gradient(to bottom, var(--mm-navy-50) 0%, transparent 100%);
     }
     .header-desktop nav {
       flex: 1; display: flex; align-items: center;
@@ -319,10 +262,6 @@
       grid-column: 1 / 2;
       grid-row: 1 / 3;
     }
-    .tile-bar .tile-product {
-      width: 55%; max-width: 280px;
-    }
-    .tile-bar .tile-label { font-size: 0.8rem; bottom: 20px; }
 
     .tile-moon {
       grid-column: 2 / 3;
@@ -357,32 +296,8 @@
     }
 
     /* Hover effects */
-    .tile:hover {
-      transform: scale(1.03);
-    }
-    .tile:active {
-      transform: scale(0.99);
-    }
-
-    /* Show overlay text on hover */
-    .tile .hover-text {
-      position: absolute; inset: 0;
-      display: flex; align-items: center; justify-content: center;
-      background: var(--mm-navy-50);
-      opacity: 0;
-      transition: opacity 0.3s;
-      z-index: var(--z-sticky);
-      font-family: var(--mm-serif);
-      font-weight: 500; font-size: 0.9rem;
-      text-transform: uppercase; letter-spacing: 0.12em;
-      color: var(--mm-cream);
-    }
-    .tile:hover .hover-text {
-      opacity: 1;
-    }
-    /* Don't darken CTA/Origin on hover */
-    .tile-cta .hover-text,
-    .tile-origin .hover-text { display: none; }
+    .tile:hover { transform: scale(1.03); }
+    .tile:active { transform: scale(0.99); }
   }
 
   /* ── Extra tiles: hidden on mobile ── */
@@ -393,50 +308,10 @@
 
   .tile-trust-desktop {
     background: linear-gradient(180deg, var(--mm-story-blue) 0%, var(--mm-blue-top) 100%);
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-    border-radius: var(--radius-md);
-    overflow: hidden;
-  }
-  .tile-trust-desktop .trust-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 12px;
-    justify-items: center;
-  }
-  .tile-trust-desktop .trust-grid img {
-    width: 28px; height: 28px;
-    filter: brightness(0) saturate(100%) invert(91%) sepia(8%) saturate(580%) hue-rotate(18deg) brightness(100%) contrast(88%);
-    opacity: 0.7;
-  }
-  .tile-trust-desktop .trust-label {
-    font-family: var(--mm-sans);
-    font-weight: 300; font-size: 0.65rem;
-    color: var(--mm-cream); opacity: 0.5;
-    text-transform: uppercase; letter-spacing: 0.1em;
   }
 
   .tile-powder-desktop {
     background: linear-gradient(180deg, var(--mm-sky) 0%, var(--mm-blue-bottom) 100%);
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 8px;
-    border-radius: var(--radius-md);
-    overflow: hidden;
-  }
-  .tile-powder-desktop .powder-img {
-    width: 60%; max-width: 100px; height: auto;
-    object-fit: contain; object-position: center;
-    filter: drop-shadow(0 2px 6px var(--mm-black-15));
-  }
-  .tile-powder-desktop .tile-label {
-    font-family: var(--mm-serif);
-    font-weight: 500; font-size: 0.65rem;
-    text-transform: uppercase; letter-spacing: 0.1em;
-    color: var(--mm-cream); opacity: 0.6;
   }
 
   @media (min-width: 768px) and (prefers-reduced-motion: no-preference) {
@@ -497,68 +372,42 @@
 
 <!-- ═══ THE GRID ═══ -->
 <main class="grid-hero" id="main" tabindex="-1">
+  <h1 style="position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0">Maple Moon — Artisan Carob from Byron Bay</h1>
 
-  <!-- CAROB watermark over entire grid -->
-  <div class="carob-watermark-wrap wm-subtle" aria-hidden="true"><img src="assets/carob_wordmark.svg" alt="" aria-hidden="true" width="800" height="200"></div>
-
-  <!-- Tile 1: Bar Hero (spans 2 cols on mobile) -->
-  <a href="/shop/bars" class="tile tile-bar" aria-label="Shop Bars">
-    <img src="assets/products_clean/bar_pure_carob.png" alt="Maple Moon Carob Bar" class="tile-product" width="400" height="600" fetchpriority="high" decoding="async" loading="eager">
-    <span class="tile-label">Bars</span>
-    <span class="hover-text">Shop Bars</span>
-  </a>
+  <!-- Tile 1: Bar Hero (spans 2 cols mobile / full left col desktop) -->
+  <div class="tile tile-bar">
+    <img src="assets/hero_shots/hero_bar_carob_pods_studio.png" alt="Maple Moon Carob Bar with carob pods" class="tile-bar-photo" width="1080" height="1080" loading="eager" fetchpriority="high" decoding="async">
+  </div>
 
   <!-- Tile 2: Moon -->
-  <a href="/shop/moons" class="tile tile-moon" aria-label="Shop Moons">
-    <img src="assets/products_clean/eclipse_pecan.png" alt="Eclipse Pecan Carob Moon" class="tile-product" width="400" height="400" loading="lazy" decoding="async">
-    <span class="tile-label">Moons</span>
-    <span class="hover-text">Shop Moons</span>
-  </a>
+  <div class="tile tile-moon">
+    <span class="tile-wire-label">Moon / Eclipse<em>Carob crescents, handmade</em></span>
+  </div>
 
-  <!-- Tile 3: Lifestyle / Ingredient -->
-  <a href="/our-story" class="tile tile-lifestyle" aria-label="Our Story">
-    <img src="assets/stock/stock_flatlay_dark.jpg" alt="" class="tile-bg" aria-hidden="true" width="800" height="600" loading="lazy" decoding="async">
-    <div class="tile-overlay"></div>
-    <span class="tile-label">Our Story</span>
-    <span class="hover-text">Our Story</span>
-  </a>
+  <!-- Tile 3: Craft / Origin -->
+  <div class="tile tile-lifestyle">
+    <img src="assets/hero_shots/hero_carob_pods_macro_dark.jpg" alt="Raw carob pods — the ingredient behind Maple Moon" class="tile-lifestyle-photo" width="1080" height="1080" loading="lazy" decoding="async">
+  </div>
 
-  <!-- Tile 4: CTA -->
-  <a href="/shop" class="tile tile-cta" aria-label="Shop Now">
-    <span class="cta-text">Shop Now</span>
-    <svg class="cta-arrow" viewBox="0 0 24 24"><polyline points="9 6 15 12 9 18"></polyline></svg>
-  </a>
+  <!-- Tile 4: CTA tile -->
+  <div class="tile tile-cta" style="cursor:default">
+    <a href="/shop" style="display:inline-flex;align-items:center;justify-content:center;border:1.5px solid var(--mm-cream);color:var(--mm-cream);background:transparent;border-radius:999px;padding:12px 28px;min-height:48px;font-family:var(--mm-sans);font-size:0.8rem;font-weight:400;letter-spacing:0.08em;text-transform:uppercase;text-decoration:none;transition:background 0.3s,color 0.3s">Shop Now</a>
+  </div>
 
-  <!-- Tile 5: Origin -->
-  <a href="/our-story" class="tile tile-origin" aria-label="Byron Bay">
-    <span class="origin-title">Byron Bay</span>
-    <span class="origin-sub">Est. 2022</span>
-    <div class="origin-icons">
-      <img src="assets/icon_organic.svg" alt="Organic" width="18" height="18" loading="lazy" decoding="async">
-      <img src="assets/icon_vegan.svg" alt="Vegan" width="18" height="18" loading="lazy" decoding="async">
-      <img src="assets/icon_made_in_aus.svg" alt="Made in Aus" width="18" height="18" loading="lazy" decoding="async">
-    </div>
-  </a>
+  <!-- Tile 5: Provenance -->
+  <div class="tile tile-origin">
+    <span class="tile-wire-label">Provenance<em>Handmade in Byron Bay</em></span>
+  </div>
 
-  <!-- Desktop-only: Trust tile -->
-  <section class="tile tile-trust-desktop" aria-label="Certifications">
-    <div class="trust-grid">
-      <img src="assets/icon_organic.svg" alt="Organic" width="28" height="28" loading="lazy" decoding="async">
-      <img src="assets/icon_vegan.svg" alt="Vegan" width="28" height="28" loading="lazy" decoding="async">
-      <img src="assets/icon_caffeine_free.svg" alt="Caffeine Free" width="28" height="28" loading="lazy" decoding="async">
-      <img src="assets/icon_gluten_free.svg" alt="Gluten Free" width="28" height="28" loading="lazy" decoding="async">
-      <img src="assets/icon_made_in_aus.svg" alt="Made in Aus" width="28" height="28" loading="lazy" decoding="async">
-    </div>
-    <span class="trust-label">Certified</span>
-    <span class="hover-text">Certifications</span>
-  </section>
+  <!-- Desktop: Certifications tile -->
+  <div class="tile tile-trust-desktop">
+    <span class="tile-wire-label">Certifications<em>icons only · no photo</em></span>
+  </div>
 
-  <!-- Desktop-only: Powder/Apparel tile -->
-  <section class="tile tile-powder-desktop" aria-label="Carob Powder">
-    <img src="assets/products/powder_roasted.jpg" alt="Roasted Carob Powder" class="powder-img" width="400" height="400" loading="lazy" decoding="async">
-    <span class="tile-label">More</span>
-    <span class="hover-text">Explore More</span>
-  </section>
+  <!-- Desktop: Second range tile -->
+  <div class="tile tile-powder-desktop">
+    <span class="tile-wire-label">Second range<em>elixir · powder · ingredient</em></span>
+  </div>
 
 </main>
 

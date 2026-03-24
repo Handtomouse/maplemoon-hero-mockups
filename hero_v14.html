@@ -9,22 +9,25 @@
 <meta property="og:title" content="MapleMoon — Ingredient Journey">
 <meta property="og:description" content="From carob pod to handcrafted bar — the MapleMoon ingredient journey. Organic, vegan, caffeine-free.">
 <meta property="og:type" content="website">
-<meta property="og:image" content="https://maplemoon-hero-mockups.vercel.app/assets/products_clean/bar_pure_carob.png">
+<meta property="og:image" content="/assets/product_shots/bar_pure_carob.png">
 <meta property="og:image:width" content="400">
 <meta property="og:image:height" content="600">
 <meta property="og:site_name" content="Maple Moon">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="MapleMoon — Ingredient Journey">
 <meta name="twitter:description" content="Artisan carob and cacao butter, handmade in Byron Bay. Organic, vegan, caffeine-free.">
-<meta name="twitter:image" content="https://maplemoon-hero-mockups.vercel.app/assets/products_clean/bar_pure_carob.png">
+<meta name="twitter:image" content="/assets/product_shots/bar_pure_carob.png">
 <link rel="canonical" href="https://maplemoon-hero-mockups.vercel.app/hero_v14.html">
-<link rel="preload" as="image" href="assets/mood/flatlay_editorial/pinterest_702913454385918122.jpg">
+<link rel="preload" as="image" href="assets/stock/stock_carob_pods_macro2.jpg" fetchpriority="high">
+<link rel="preload" as="image" href="assets/stock/stock_carob_powder_wood.jpg">
+<link rel="preload" as="image" href="assets/hero_shots/hero_carob_bar_smoke_portrait.jpg">
+<link rel="preload" as="image" href="assets/hero_shots/hero_bar_lineup.jpg">
 <link rel="preload" as="image" href="assets/carob_wordmark.svg">
 <link rel="icon" href="assets/maplemoon_logo.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="assets/maplemoon_logo.svg">
 <link rel="stylesheet" href="brand_kit.css">
 <style>
-  *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
 
   :root {
     --z-product: 2;
@@ -33,9 +36,9 @@
   html, body { height: auto; overflow-x: hidden; }
 
   body {
-    background: linear-gradient(180deg, var(--mm-blue-top) 0%, var(--mm-blue-bottom) 100%);
+    background: var(--mm-cream);
     font-family: var(--mm-sans);
-    color: var(--mm-cream);
+    color: var(--mm-carob-dark);
     position: relative;
     text-rendering: optimizeLegibility;
   }
@@ -50,7 +53,7 @@
   /* ── Back link ── */
   .back-link {
     position: fixed; top: 16px; left: 16px; z-index: calc(var(--z-fixed) + 1);
-    color: var(--mm-cream); text-decoration: none;
+    color: var(--mm-navy); text-decoration: none;
     font-family: var(--mm-sans); font-size: 0.8rem; font-weight: 400;
     opacity: 0.7; transition: opacity 0.2s;
   }
@@ -88,7 +91,7 @@
   }
   .hamburger span {
     display: block; width: 100%; height: 2px;
-    background: var(--mm-cream); border-radius: 1px;
+    background: var(--mm-navy); border-radius: 1px;
     transition: transform 0.3s, opacity 0.3s;
   }
   #menu-toggle:checked ~ .hamburger span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
@@ -141,14 +144,14 @@
     position: relative;
   }
 
-  /* ── Sticky visual panel ── */
+  /* ── Full-bleed fixed background (mobile) ── */
   .visual-panel {
-    position: sticky;
-    top: 0;
-    height: 60vh;
+    position: fixed;
+    inset: 0;
     width: 100%;
+    height: 100%;
     overflow: hidden;
-    z-index: var(--z-base);
+    z-index: 0;
   }
 
   .visual-panel .journey-img {
@@ -164,13 +167,13 @@
     opacity: 1;
   }
 
-  .visual-panel::after {
-    content: '';
-    position: absolute;
+  /* ── Cream gradient for mobile text legibility ── */
+  .mobile-vignette {
+    position: fixed;
     bottom: 0; left: 0; right: 0;
-    height: 80px;
-    background: linear-gradient(to top, var(--mm-blue-bottom), transparent);
-    z-index: var(--z-product);
+    height: 70%;
+    background: linear-gradient(to top, var(--mm-cream) 35%, transparent 100%);
+    z-index: 1;
     pointer-events: none;
   }
 
@@ -181,14 +184,14 @@
   }
 
   .chapter {
-    min-height: 80vh;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-end;
     text-align: center;
-    padding: 60px 32px;
-    opacity: 0.3;
+    padding: 0 48px 64px 32px;
+    opacity: 0.25;
     transition: opacity 0.6s ease;
   }
   .chapter.active {
@@ -225,7 +228,7 @@
 
   .chapter .cta-btn {
     display: inline-flex; align-items: center; justify-content: center;
-    border: 1.5px solid var(--mm-cream); color: var(--mm-cream);
+    border: 1.5px solid var(--mm-navy); color: var(--mm-navy);
     background: transparent; border-radius: var(--radius-pill);
     padding: 12px 32px; min-height: 48px;
     font-family: var(--mm-sans); font-size: 0.85rem;
@@ -235,17 +238,21 @@
     margin-top: 24px;
   }
   .chapter .cta-btn:hover {
-    background: var(--mm-cream); color: var(--mm-navy);
+    background: var(--mm-navy); color: var(--mm-cream);
   }
   .chapter .cta-btn:active {
     transform: scale(0.97);
+  }
+  .chapter .cta-btn:focus-visible {
+    outline: 2px solid var(--mm-navy);
+    outline-offset: 4px;
   }
 
   /* ── Progress dots ── */
   .progress-dots {
     position: fixed;
-    right: 8px;
-    top: 50%;
+    right: 16px;
+    top: 40%;
     transform: translateY(-50%);
     display: flex;
     flex-direction: column;
@@ -257,7 +264,7 @@
     width: 8px;
     height: 8px;
     border-radius: 50%;
-    background: var(--mm-cream);
+    background: var(--mm-navy);
     opacity: 0.25;
     transition: opacity 0.4s, transform 0.3s;
   }
@@ -272,9 +279,42 @@
     margin-top: 20px;
   }
   .trust-row img {
-    width: 24px; height: 24px;
-    filter: brightness(0) invert(0.92) sepia(0.1) saturate(0.3);
-    opacity: 0.7;
+    width: 32px; height: 32px;
+    filter: brightness(0) invert(0.15) sepia(0.3) saturate(0.5);
+    opacity: 0.75;
+  }
+
+  /* ── Scroll hint ── */
+  .scroll-hint {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    margin-top: 20px;
+    opacity: 0.4;
+  }
+  .scroll-hint span {
+    font-family: var(--mm-sans);
+    font-size: 0.65rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+  }
+  .scroll-hint-line {
+    width: 1px;
+    height: 24px;
+    background: var(--mm-navy);
+  }
+  @media (prefers-reduced-motion: no-preference) {
+    .scroll-hint-line {
+      animation: scrollPulse 1.6s ease-in-out infinite;
+    }
+    @keyframes scrollPulse {
+      0%, 100% { transform: scaleY(1); opacity: 0.4; }
+      50% { transform: scaleY(0.5); opacity: 0.2; }
+    }
+  }
+  @media (min-width: 768px) {
+    .scroll-hint { display: none; }
   }
 
   /* ── Watermark ── */
@@ -293,7 +333,7 @@
       display: flex; align-items: center;
       position: fixed; top: 0; left: 0; right: 0; z-index: var(--z-fixed);
       padding: 28px 40px;
-      background: transparent;
+      background: linear-gradient(to bottom, rgba(10,18,36,0.6) 0%, rgba(10,18,36,0.3) 70%, transparent 100%);
     }
     .header-desktop nav {
       flex: 1; display: flex; align-items: center;
@@ -303,6 +343,7 @@
       font-family: var(--mm-sans); font-size: 1rem;
       font-weight: 400; color: var(--mm-cream); text-decoration: none;
       opacity: 0.9; transition: opacity 0.2s;
+      text-shadow: 0 1px 8px rgba(0,0,0,0.4);
     }
     .header-desktop nav a:hover { opacity: 0.6; }
     .header-desktop .logo-desktop {
@@ -314,14 +355,16 @@
       flex-direction: row;
     }
 
+    .mobile-vignette {
+      display: none;
+    }
+
     .visual-panel {
+      position: sticky;
+      top: 0;
       width: 50%;
       height: 100vh;
       flex-shrink: 0;
-    }
-
-    .visual-panel::after {
-      display: none;
     }
 
     .chapters {
@@ -332,6 +375,7 @@
       min-height: 100vh;
       padding: 80px 60px;
       align-items: flex-start;
+      justify-content: center;
       text-align: left;
     }
 
@@ -421,34 +465,40 @@
 
 <div class="carob-watermark-wrap wm-subtle" aria-hidden="true"><img src="assets/carob_wordmark.svg" alt="" aria-hidden="true" width="800" height="200"></div>
 
+<div class="mobile-vignette" aria-hidden="true"></div>
+
 <!-- Main scroll journey -->
 <main id="main" class="journey-wrapper" tabindex="-1">
 
   <!-- Sticky visual panel -->
   <div class="visual-panel">
-    <img class="journey-img active" src="assets/mood/flatlay_editorial/pinterest_702913454385918122.jpg" alt="Raw carob pods and natural ingredients" decoding="async">
-    <img class="journey-img" src="assets/stock/stock_spices_warm.jpg" alt="Carob roasting process" decoding="async">
-    <img class="journey-img" src="assets/mood/flatlay_editorial/pinterest_702913454385918064.jpg" alt="MapleMoon Original Bar" decoding="async">
-    <img class="journey-img" src="assets/products/bar_bundle.jpg" alt="MapleMoon bar collection" decoding="async">
+    <img class="journey-img active" src="assets/stock/stock_carob_pods_macro2.jpg" alt="Macro detail of dried carob pods" loading="eager" fetchpriority="high" decoding="async">
+    <img class="journey-img" src="assets/stock/stock_carob_powder_wood.jpg" alt="Carob ground to powder on a wooden surface" loading="lazy" fetchpriority="low" decoding="async">
+    <img class="journey-img" src="assets/hero_shots/hero_carob_bar_smoke_portrait.jpg" alt="MapleMoon carob bar with smoke" loading="lazy" fetchpriority="low" decoding="async">
+    <img class="journey-img" src="assets/hero_shots/hero_bar_lineup.jpg" alt="MapleMoon full bar collection" loading="lazy" fetchpriority="low" decoding="async">
   </div>
 
   <!-- Scrolling chapters -->
   <div class="chapters">
 
     <section class="chapter active" data-index="0">
-      <span class="chapter-number">01 &mdash; Origin</span>
+      <span class="chapter-number">01 &middot; Origin</span>
       <h1 class="chapter-title">It starts with the pod</h1>
-      <p class="chapter-body">Carob grows wild across the Mediterranean — a sun-loving tree that thrives without irrigation. Each pod is hand-harvested, dried slowly, and selected for sweetness. No caffeine. No bitterness. Just warmth.</p>
+      <p class="chapter-body">Carob grows wild across the Mediterranean. A sun-loving tree that thrives without irrigation. Each pod is hand-harvested, dried slowly, and selected for sweetness. No caffeine. No bitterness. Just warmth.</p>
+      <div class="scroll-hint" aria-hidden="true">
+        <div class="scroll-hint-line"></div>
+        <span>Scroll</span>
+      </div>
     </section>
 
     <section class="chapter" data-index="1">
-      <span class="chapter-number">02 &mdash; Craft</span>
+      <span class="chapter-number">02 &middot; Craft</span>
       <h2 class="chapter-title">Roasted by hand in Byron Bay</h2>
-      <p class="chapter-body">We roast in small batches to draw out deep caramel and malt notes. The carob is stone-ground, then blended with organic cacao butter — nothing else. Every bar is shaped, wrapped, and packed by hand.</p>
+      <p class="chapter-body">We roast in small batches to draw out deep caramel and malt notes. The carob is stone-ground, then blended with organic cacao butter. Nothing else. Every bar is shaped, wrapped, and packed by hand.</p>
     </section>
 
     <section class="chapter" data-index="2">
-      <span class="chapter-number">03 &mdash; The Bar</span>
+      <span class="chapter-number">03 &middot; The Bar</span>
       <h2 class="chapter-title">Simple ingredients, nothing hidden</h2>
       <p class="chapter-body">Organic carob. Organic cacao butter. That's it. No emulsifiers, no preservatives, no refined sugar. Each bar snaps clean with a velvet melt — proof that less makes more.</p>
       <div class="trust-row">
@@ -461,7 +511,7 @@
     </section>
 
     <section class="chapter" data-index="3">
-      <span class="chapter-number">04 &mdash; Shop</span>
+      <span class="chapter-number">04 &middot; Shop</span>
       <h2 class="chapter-title">Find your flavour</h2>
       <p class="chapter-body">Six bars. Two elixirs. One mission — to make something good enough that you forget it's good for you.</p>
       <a href="/shop" class="cta-btn">Shop the Range</a>

@@ -428,6 +428,7 @@
         min-height: 50vh;
       }
     }
+    #main:focus { outline: none; }
   </style>
 </head>
 <body>
@@ -445,7 +446,7 @@
     <span class="mm-header__title">Mockup Maker</span>
   </header>
 
-  <main class="mm-tool" id="main">
+  <main class="mm-tool" id="main" tabindex="-1">
 
     <!-- LEFT: CONTROLS -->
     <aside class="mm-controls" aria-label="Mockup controls">
@@ -511,7 +512,7 @@
           </div>
 
           <div class="mm-canvas__product-wrap">
-            <img src="assets/product_shots/bar_pure_carob.png" alt="Original Bar" id="canvas-product-img" class="mm-canvas__product-img">
+            <img src="assets/product_shots/bar_pure_carob.webp" alt="Original Bar" id="canvas-product-img" class="mm-canvas__product-img">
           </div>
 
           <div class="mm-canvas__text" id="canvas-text">
@@ -541,32 +542,32 @@
 
     var PRODUCTS = [
       // Bars
-      { key: 'bar_original',     label: 'Original',     src: 'assets/product_shots/bar_pure_carob.png',     group: 'Bars' },
-      { key: 'bar_almond',       label: 'Almond',       src: 'assets/product_shots/bar_almond.png',       group: 'Bars' },
-      { key: 'bar_chilli',       label: 'Chilli',       src: 'assets/product_shots/bar_cayenne.png',       group: 'Bars' },
-      { key: 'bar_hazelnut',     label: 'Hazelnut',     src: 'assets/product_shots/bar_hazelnut.png',     group: 'Bars' },
-      { key: 'bar_peppermint',   label: 'Peppermint',   src: 'assets/product_shots/bar_peppermint.png',   group: 'Bars' },
-      { key: 'bar_coconut_goji', label: 'Coconut Goji', src: 'assets/product_shots/bar_goji_coconut.png', group: 'Bars' },
+      { key: 'bar_original',     label: 'Original',     src: 'assets/product_shots/bar_pure_carob.webp',     group: 'Bars' },
+      { key: 'bar_almond',       label: 'Almond',       src: 'assets/product_shots/bar_almond.webp',       group: 'Bars' },
+      { key: 'bar_chilli',       label: 'Chilli',       src: 'assets/product_shots/bar_cayenne.webp',       group: 'Bars' },
+      { key: 'bar_hazelnut',     label: 'Hazelnut',     src: 'assets/product_shots/bar_hazelnut.webp',     group: 'Bars' },
+      { key: 'bar_peppermint',   label: 'Peppermint',   src: 'assets/product_shots/bar_peppermint.webp',   group: 'Bars' },
+      { key: 'bar_coconut_goji', label: 'Coconut Goji', src: 'assets/product_shots/bar_goji_coconut.webp', group: 'Bars' },
       { key: 'bar_bundle',       label: 'Bar Bundle',   src: 'assets/products/bar_bundle.jpg',       group: 'Bars' },
       // Moons
-      { key: 'moon_almond',      label: 'Almond',       src: 'assets/products/moon_almond.jpg',      group: 'Moons' },
-      { key: 'moon_coconut',     label: 'Coconut',      src: 'assets/products/moon_coconut.jpg',     group: 'Moons' },
-      { key: 'moon_hazelnut',    label: 'Hazelnut',     src: 'assets/products/moon_hazelnut.jpg',    group: 'Moons' },
-      { key: 'moon_peppermint',  label: 'Peppermint',   src: 'assets/products/moon_peppermint.jpg',  group: 'Moons' },
+      { key: 'moon_almond',      label: 'Almond',       src: 'assets/product_shots/moon_almond.webp',      group: 'Moons' },
+      { key: 'moon_goji_coconut',label: 'Goji Coconut', src: 'assets/product_shots/moon_goji_coconut.webp',group: 'Moons' },
+      { key: 'moon_hazelnut',    label: 'Hazelnut',     src: 'assets/product_shots/moon_hazelnut.webp',    group: 'Moons' },
+      { key: 'moon_peppermint',  label: 'Peppermint',   src: 'assets/product_shots/moon_peppermint.webp',  group: 'Moons' },
+      { key: 'moon_cayenne',     label: 'Cayenne',      src: 'assets/product_shots/moon_cayenne.webp',     group: 'Moons' },
+      { key: 'moon_pure_carob',  label: 'Pure Carob',   src: 'assets/product_shots/moon_pure_carob.webp',  group: 'Moons' },
       // Eclipses
-      { key: 'eclipse_almond',   label: 'Almond',       src: 'assets/product_shots/eclipse_hazelnut_a.png',   group: 'Eclipses' },
-      { key: 'eclipse_hazelnut', label: 'Hazelnut',     src: 'assets/product_shots/eclipse_hazelnut_a.png', group: 'Eclipses' },
-      { key: 'eclipse_fudge',    label: 'Fudge',        src: 'assets/product_shots/eclipse_hazelnut_a.png',    group: 'Eclipses' },
-      { key: 'eclipse_goji',     label: 'Goji',         src: 'assets/product_shots/eclipse_hazelnut_a.png',     group: 'Eclipses' },
-      { key: 'eclipse_pecan',    label: 'Pecan',        src: 'assets/product_shots/eclipse_pecan.png',    group: 'Eclipses' },
+      { key: 'eclipse_almond',   label: 'Almond',       src: 'assets/product_shots/eclipse_almond.webp',   group: 'Eclipses' },
+      { key: 'eclipse_hazelnut', label: 'Hazelnut',     src: 'assets/product_shots/eclipse_hazelnut.webp', group: 'Eclipses' },
+      { key: 'eclipse_pecan',    label: 'Pecan',        src: 'assets/product_shots/eclipse_pecan.webp',    group: 'Eclipses' },
       { key: 'eclipse_bundle',   label: 'Bundle',       src: 'assets/products/eclipse_bundle.jpg',   group: 'Eclipses' },
       // Bites
-      { key: 'bite_coconut',     label: 'Coconut Bite', src: 'assets/product_shots/bite_coconut.png',     group: 'Bites' },
-      { key: 'bite_gold',        label: 'Gold Bite',    src: 'assets/product_shots/bite_gold.png',        group: 'Bites' },
+      { key: 'bite_coconut',     label: 'Coconut Bite', src: 'assets/product_shots/bite_coconut.webp',     group: 'Bites' },
+      { key: 'bite_goji',        label: 'Goji Bite',    src: 'assets/product_shots/bite_goji.webp',        group: 'Bites' },
       // Other
       { key: 'elixir_plain',     label: 'Elixir Plain', src: 'assets/product_shots/elixir_plain.png',     group: 'Other' },
       { key: 'elixir_spiced',    label: 'Elixir Spiced',src: 'assets/product_shots/elixir_spiced.png',    group: 'Other' },
-      { key: 'bananas',          label: 'Bananas',      src: 'assets/products/bananas.jpg',          group: 'Other' },
+      { key: 'bananas',          label: 'Bananas',      src: 'assets/product_shots/bananas.webp', group: 'Other' },
       { key: 'powder_roasted',   label: 'Powder',       src: 'assets/products/powder_roasted.jpg',   group: 'Other' },
       { key: 'bath_salts',       label: 'Bath Salts',   src: 'assets/product_shots/bath_salts_lavender.png',       group: 'Other' },
     ];

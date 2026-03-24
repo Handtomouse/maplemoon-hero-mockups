@@ -3,20 +3,20 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>MapleMoon — Letterbox Cinema | Hero Concept</title>
-<meta name="description" content="Enter the world of MapleMoon — artisan carob from Byron Bay. Organic, vegan, caffeine-free.">
-<meta name="theme-color" content="#7B9DBF">
-<meta property="og:title" content="MapleMoon — Letterbox Cinema">
-<meta property="og:description" content="Enter the world of MapleMoon — artisan carob from Byron Bay. Organic, vegan, caffeine-free.">
+<title>Maple Moon: Letterbox Cinema</title>
+<meta name="description" content="Enter the world of Maple Moon: artisan carob from Byron Bay. Organic, vegan, caffeine-free.">
+<meta name="theme-color" content="#08101e">
+<meta property="og:title" content="Maple Moon: Letterbox Cinema">
+<meta property="og:description" content="Enter the world of Maple Moon: artisan carob from Byron Bay. Organic, vegan, caffeine-free.">
 <meta property="og:type" content="website">
-<meta property="og:image" content="https://maplemoon-hero-mockups.vercel.app/assets/products_clean/bar_pure_carob.png">
+<meta property="og:image" content="/assets/product_shots/bar_pure_carob.png">
 <meta property="og:image:width" content="400">
 <meta property="og:image:height" content="600">
 <meta property="og:site_name" content="Maple Moon">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="MapleMoon — Letterbox Cinema">
+<meta name="twitter:title" content="Maple Moon: Letterbox Cinema">
 <meta name="twitter:description" content="Artisan carob and cacao butter, handmade in Byron Bay. Organic, vegan, caffeine-free.">
-<meta name="twitter:image" content="https://maplemoon-hero-mockups.vercel.app/assets/products_clean/bar_pure_carob.png">
+<meta name="twitter:image" content="/assets/product_shots/bar_pure_carob.png">
 <link rel="canonical" href="https://maplemoon-hero-mockups.vercel.app/hero_v10.html">
 <link rel="stylesheet" href="brand_kit.css">
 <link rel="preload" as="image" href="assets/hero_shots/hero_bar_lineup.jpg">
@@ -24,11 +24,14 @@
 <link rel="icon" href="assets/maplemoon_logo.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="assets/maplemoon_logo.svg">
 <style>
-  *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
 
   :root {
     --bar-height: 60px;
     --z-product: 2;
+    --letterbox-bar: #08101e;
+    --mm-navy-40: rgba(30,67,102,0.4);
+    --mm-navy-60: rgba(30,67,102,0.6);
   }
 
   html, body { height: 100%; overflow: hidden; }
@@ -50,6 +53,9 @@
   }
   .back-link:hover { opacity: 1; }
 
+  /* Skip link: override brand-kit absolute → fixed so it shows above overflow:hidden html/body */
+  .skip-link { position: fixed; }
+
   #main:focus { outline: none; }
 
   /* ── Fade-in ── */
@@ -57,6 +63,8 @@
     from { opacity: 0; }
     to   { opacity: 1; }
   }
+  /* Intentional cinematic override — slower than brand-kit defaults (0.8s vs 0.6s)
+     to match the title-card entrance feel. Do not normalise to brand-kit timing. */
   @media (prefers-reduced-motion: no-preference) {
     .fade-1 { animation: fadeIn 0.8s ease both 0.3s; }
     .fade-2 { animation: fadeIn 0.8s ease both 0.6s; }
@@ -73,14 +81,14 @@
   .letterbox-top {
     position: fixed; top: 0; left: 0; right: 0;
     height: var(--bar-height);
-    background: #08101e;
+    background: var(--letterbox-bar);
     z-index: var(--z-dropdown);
     display: flex; align-items: center; justify-content: center;
   }
   .letterbox-top .bar-text {
     font-family: var(--mm-sans);
     font-size: 0.65rem; font-weight: 400;
-    color: var(--mm-cream); opacity: 0.6;
+    color: var(--mm-cream); opacity: 0.8;
     text-transform: uppercase;
     letter-spacing: 0.3em;
   }
@@ -88,14 +96,14 @@
   .letterbox-bottom {
     position: fixed; bottom: 0; left: 0; right: 0;
     height: var(--bar-height);
-    background: #08101e;
+    background: var(--letterbox-bar);
     z-index: var(--z-dropdown);
     display: flex; align-items: center; justify-content: center;
     gap: 8px;
   }
   .letterbox-bottom img {
     width: 20px; height: 20px;
-    filter: brightness(0) saturate(100%) invert(91%) sepia(8%) saturate(580%) hue-rotate(18deg) brightness(100%) contrast(88%);
+    filter: brightness(0) invert(0.92) sepia(0.1) saturate(0.3);
     opacity: 0.5;
   }
 
@@ -112,6 +120,7 @@
   .cinema-bg {
     position: absolute; inset: 0;
     z-index: 0;
+    background-color: var(--mm-navy); /* fallback while hero_bar_lineup.jpg loads */
   }
   .cinema-bg img {
     width: 100%; height: 100%;
@@ -119,18 +128,19 @@
   }
   @media (prefers-reduced-motion: no-preference) {
     @keyframes kenBurns {
-      0% { transform: scale(1) translateX(0); }
-      100% { transform: scale(1.15) translateX(0); }
+      0% { transform: scale(1) translateX(0) translateZ(0); }
+      100% { transform: scale(1.15) translateX(0) translateZ(0); }
     }
     .cinema-bg img {
       animation: kenBurns 25s ease-in-out infinite alternate;
       will-change: transform;
+      transform: translateZ(0); /* promote to GPU layer */
     }
   }
   .cinema-bg::before {
     content: '';
     position: absolute; inset: 0;
-    background: linear-gradient(rgba(30,67,102,0.4), rgba(30,67,102,0.6));
+    background: linear-gradient(var(--mm-navy-40), var(--mm-navy-60));
     z-index: var(--z-base);
     pointer-events: none;
   }
@@ -147,15 +157,15 @@
   }
 
   .cinema-wordmark {
-    width: 55%; max-width: 220px;
+    width: 65%; max-width: 260px;
     height: auto;
     opacity: 0.85;
-    filter: brightness(0) saturate(100%) invert(91%) sepia(8%) saturate(580%) hue-rotate(18deg) brightness(100%) contrast(88%);
+    filter: brightness(0) invert(0.92) sepia(0.1) saturate(0.3);
   }
 
   .cinema-tagline {
     font-family: var(--mm-sans);
-    font-weight: 300; font-size: 0.85rem;
+    font-weight: 300; font-size: 0.95rem;
     color: var(--mm-cream); opacity: 0.8;
     letter-spacing: 0.15em;
   }
@@ -163,7 +173,7 @@
   .cinema-origin {
     font-family: var(--mm-sans);
     font-weight: 400; font-size: 0.75rem;
-    color: var(--mm-cream); opacity: 0.5;
+    color: var(--mm-cream); opacity: 0.65;
     letter-spacing: 0.1em;
   }
 
@@ -248,6 +258,14 @@
     }
   }
 
+  /* ── Short-phone layout ── */
+  @media (max-height: 620px) {
+    .cinema-content {
+      padding-top: 6vh;
+      gap: 10px;
+    }
+  }
+
   /* ── Shipping text hidden on mobile ── */
   .letterbox-bottom .shipping-text {
     display: none;
@@ -274,11 +292,11 @@
 
 <!-- ═══ LETTERBOX BOTTOM BAR ═══ -->
 <div class="letterbox-bottom fade-bars">
-  <img src="assets/icon_organic.svg" alt="Organic" width="20" height="20" loading="lazy" decoding="async">
-  <img src="assets/icon_vegan.svg" alt="Vegan" width="20" height="20" loading="lazy" decoding="async">
-  <img src="assets/icon_caffeine_free.svg" alt="Caffeine Free" width="20" height="20" loading="lazy" decoding="async">
-  <img src="assets/icon_gluten_free.svg" alt="Gluten Free" width="20" height="20" loading="lazy" decoding="async">
-  <img src="assets/icon_made_in_aus.svg" alt="Made in Australia" width="20" height="20" loading="lazy" decoding="async">
+  <img src="assets/icon_organic.svg" alt="Organic" width="20" height="20" loading="eager" decoding="async">
+  <img src="assets/icon_vegan.svg" alt="Vegan" width="20" height="20" loading="eager" decoding="async">
+  <img src="assets/icon_caffeine_free.svg" alt="Caffeine Free" width="20" height="20" loading="eager" decoding="async">
+  <img src="assets/icon_gluten_free.svg" alt="Gluten Free" width="20" height="20" loading="eager" decoding="async">
+  <img src="assets/icon_made_in_aus.svg" alt="Made in Australia" width="20" height="20" loading="eager" decoding="async">
   <span class="shipping-text">Free shipping over $99</span>
 </div>
 
@@ -289,10 +307,10 @@
   </div>
 
   <div class="cinema-content">
-    <img src="assets/carob_wordmark.svg" alt="CAROB" class="cinema-wordmark fade-1" id="wordmark" width="800" height="200">
-    <h1 class="cinema-tagline fade-2">Artisan carob from Byron Bay</h1>
-    <p class="cinema-origin fade-3">HANDMADE</p>
-    <a href="/shop" class="cinema-enter fade-4">Explore</a>
+    <img src="assets/carob_wordmark.svg" alt="Maple Moon carob wordmark" class="cinema-wordmark fade-1" id="wordmark" width="800" height="200">
+    <h1 class="cinema-tagline fade-2">Not chocolate. Its own thing.</h1>
+    <p class="cinema-origin fade-3">Handmade in Byron Bay</p>
+    <a href="/shop" class="cinema-enter fade-4">Enter</a>
   </div>
 </main>
 

@@ -9,22 +9,21 @@
 <meta property="og:title" content="MapleMoon — Full Bleed Photo">
 <meta property="og:description" content="MapleMoon — artisan carob and cacao butter. No caffeine, no added sugar, nothing artificial.">
 <meta property="og:type" content="website">
-<meta property="og:image" content="https://maplemoon-hero-mockups.vercel.app/assets/products_clean/bar_pure_carob.png">
+<meta property="og:image" content="/assets/product_shots/bar_pure_carob.png">
 <meta property="og:image:width" content="400">
 <meta property="og:image:height" content="600">
 <meta property="og:site_name" content="Maple Moon">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="MapleMoon — Full Bleed Photo">
 <meta name="twitter:description" content="Artisan carob and cacao butter, handmade in Byron Bay. Organic, vegan, caffeine-free.">
-<meta name="twitter:image" content="https://maplemoon-hero-mockups.vercel.app/assets/products_clean/bar_pure_carob.png">
+<meta name="twitter:image" content="/assets/product_shots/bar_pure_carob.png">
 <link rel="canonical" href="https://maplemoon-hero-mockups.vercel.app/hero_v13.html">
 <link rel="stylesheet" href="brand_kit.css">
-<link rel="preload" as="image" href="assets/hero_shots/hero_elixir_hand.jpg">
-<link rel="preload" as="image" href="assets/carob_wordmark.svg">
+<link rel="preload" as="image" href="assets/hero_shots/hero_elixir_hand.jpg" fetchpriority="high">
 <link rel="icon" href="assets/maplemoon_logo.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="assets/maplemoon_logo.svg">
 <style>
-  *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
 
   :root {
     --z-product: 2;
@@ -78,6 +77,7 @@
     color: var(--mm-cream); text-decoration: none;
     font-family: var(--mm-sans); font-size: 0.8rem; font-weight: 400;
     opacity: 0.7; transition: opacity 0.2s;
+    min-height: 44px; padding: 12px 0; display: block;
   }
   .back-link:hover { opacity: 1; }
 
@@ -215,6 +215,10 @@
   .cta-btn:active {
     transform: scale(0.97);
   }
+  .cta-btn:focus-visible {
+    outline: 2px solid var(--mm-cream);
+    outline-offset: 4px;
+  }
 
   .trust-row {
     display: flex; align-items: center; gap: 10px;
@@ -290,6 +294,31 @@
     }
   }
 
+  /* ── TABLET (768–1023px) ── */
+  @media (min-width: 768px) and (max-width: 1023px) {
+    .hero-content {
+      padding: 100px 48px 0;
+    }
+
+    .hero-footer {
+      padding: 0 48px 40px;
+    }
+
+    .hero-logo {
+      width: 100px;
+      margin-bottom: 14px;
+    }
+
+    .hero-tagline {
+      font-size: 0.95rem;
+    }
+
+    .cta-btn {
+      padding: 12px 32px;
+      font-size: 0.85rem;
+    }
+  }
+
   @media (min-width: 1024px) {
     .header-desktop { padding: 32px 48px; }
     .header-desktop nav { gap: 52px; }
@@ -360,12 +389,13 @@
   <img src="assets/maplemoon_logo.svg" alt="Maple Moon" class="logo-desktop" width="80" height="40" loading="eager" decoding="async">
 </header>
 
-<!-- Logo — top left -->
-<main class="hero-content" id="main" tabindex="-1">
+<!-- Main content: logo top-left + footer bottom corners (both position:fixed, DOM wrapped for semantics) -->
+<main id="main" tabindex="-1">
+<h1 style="position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0">Maple Moon — Artisan Carob and Cacao Butter</h1>
+<div class="hero-content">
   <img src="assets/maplemoon_logo.svg" class="hero-logo fade-2" alt="Maple Moon" width="100" height="100" loading="eager" decoding="async">
-</main>
+</div>
 
-<!-- Tagline + CTA — split bottom corners -->
 <div class="hero-footer">
   <div class="hero-footer-left">
     <p class="hero-tagline fade-3">Artisan carob and cacao butter. Byron Bay.</p>
@@ -379,6 +409,7 @@
   </div>
   <a href="/shop" class="cta-btn fade-4">Shop Now</a>
 </div>
+</main>
 
 <script>
 (function() {
