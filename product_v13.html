@@ -378,6 +378,21 @@
     outline: 2px solid var(--mm-cream); outline-offset: 4px;
   }
 
+  /* ── Shipping trust line ── */
+  .shipping-line {
+    display: flex; flex-direction: column; gap: 4px;
+    align-self: flex-start; margin-top: var(--space-2);
+  }
+  .shipping-line span {
+    font-family: var(--mm-sans); font-size: 0.72rem; font-weight: 300;
+    color: var(--mm-cream); opacity: 0.35;
+    display: flex; align-items: center; gap: 6px;
+  }
+  .shipping-line .dot {
+    width: 4px; height: 4px; border-radius: var(--radius-full);
+    background: var(--mm-cream-20); flex-shrink: 0;
+  }
+
   /* ── Pack selector ── */
   .pack-selector { display: flex; gap: var(--space-2); align-self: flex-start; }
   .pack-option {
@@ -596,6 +611,10 @@
           <button class="qty-btn" type="button" aria-label="Decrease quantity">&#8722;</button>
           <input class="qty-value" type="number" value="1" min="1" max="99" aria-label="Quantity">
           <button class="qty-btn" type="button" aria-label="Increase quantity">&#43;</button>
+        </div>
+        <div class="shipping-line">
+          <span><span class="dot"></span>Free shipping over $50</span>
+          <span><span class="dot"></span>Handmade in Byron Bay</span>
         </div>
       </div>
       <img src="assets/product_shots/bar_pure_carob.webp" alt="Maple Moon Pure Carob Bar, 80g" class="product-hero-img fade-3" width="400" height="600" fetchpriority="high" decoding="async">

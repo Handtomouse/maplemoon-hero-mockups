@@ -256,6 +256,21 @@
   }
 
   /* Add to Cart */
+  /* ── Shipping trust line ── */
+  .shipping-line {
+    display: flex; flex-direction: column; gap: 4px;
+    align-self: flex-start; margin-top: var(--space-2);
+  }
+  .shipping-line span {
+    font-family: var(--mm-sans); font-size: 0.75rem; font-weight: 300;
+    color: var(--mm-carob-dark); opacity: 0.5;
+    display: flex; align-items: center; gap: 6px;
+  }
+  .shipping-line .dot {
+    width: 4px; height: 4px; border-radius: var(--radius-full);
+    background: var(--light-gold); flex-shrink: 0;
+  }
+
   /* ── Pack selector ── */
   .pack-selector { display: flex; gap: var(--space-2); align-self: flex-start; }
   .pack-option {
@@ -799,6 +814,10 @@
             <button class="qty-btn" type="button" aria-label="Increase quantity">&#43;</button>
           </div>
           <button class="add-to-cart" type="button">Add to Cart</button>
+        </div>
+        <div class="shipping-line">
+          <span><span class="dot"></span>Free shipping on orders over $50</span>
+          <span><span class="dot"></span>Handmade in Byron Bay</span>
         </div>
       </div>
     </div>

@@ -206,6 +206,21 @@
     font-size: 1.2rem; font-weight: 400;
     color: var(--mm-cream);
   }
+  /* ── Shipping trust line ── */
+  .shipping-line {
+    display: flex; flex-direction: column; gap: 4px;
+    align-self: flex-start; margin-top: var(--space-2);
+  }
+  .shipping-line span {
+    font-family: var(--mm-sans); font-size: 0.75rem; font-weight: 300;
+    color: var(--mm-cream); opacity: 0.35;
+    display: flex; align-items: center; gap: 6px;
+  }
+  .shipping-line .dot {
+    width: 4px; height: 4px; border-radius: var(--radius-full);
+    background: var(--mm-cream-25); flex-shrink: 0;
+  }
+
   /* ── Pack selector ── */
   .pack-selector { display: flex; gap: var(--space-2); align-self: flex-start; }
   .pack-option {
@@ -333,6 +348,14 @@
     border: none;
     border-top: 1px solid var(--mm-cream-08);
     margin: var(--space-10) 0;
+  }
+  .editorial-photo-break {
+    width: 100%; max-height: 280px;
+    object-fit: cover; object-position: center;
+    border-radius: var(--radius-md);
+    margin: var(--space-10) 0;
+    opacity: 0.7;
+    filter: sepia(0.15) contrast(1.05);
   }
 
   /* ── Related products (editorial cards) ── */
@@ -627,6 +650,10 @@
           </div>
           <button class="add-to-cart-hero" type="button">Add to Cart</button>
         </div>
+        <div class="shipping-line">
+          <span><span class="dot"></span>Free shipping on orders over $50</span>
+          <span><span class="dot"></span>Handmade in Byron Bay</span>
+        </div>
       </div>
       <img src="assets/product_shots/bar_pure_carob.webp" alt="Maple Moon Pure Carob Bar, 80g" class="product-hero-img fade-3" width="400" height="600" fetchpriority="high" decoding="async">
     </section>
@@ -642,7 +669,7 @@
           <p class="editorial-body">If you've never tried carob before, start here.</p>
         </div>
 
-        <hr class="editorial-divider">
+        <img src="assets/stock/stock_carob_macro.jpg" alt="Open carob pods showing seeds on roasted carob powder" class="editorial-photo-break reveal" width="680" height="280" loading="lazy" decoding="async">
 
         <div class="editorial-section reveal">
           <h2 class="editorial-label">What's Inside</h2>

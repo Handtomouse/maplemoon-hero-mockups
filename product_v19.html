@@ -259,6 +259,25 @@
     opacity: 0.85;
   }
 
+  /* ── Shipping trust line ── */
+  .shipping-line {
+    display: flex; flex-direction: column; gap: 4px;
+    align-self: flex-start;
+    margin-top: var(--space-2);
+  }
+  .shipping-line span {
+    font-family: var(--mm-sans);
+    font-size: 0.75rem; font-weight: 300;
+    color: var(--mm-carob-dark); opacity: 0.5;
+    display: flex; align-items: center; gap: 6px;
+  }
+  .shipping-line .dot {
+    width: 4px; height: 4px;
+    border-radius: var(--radius-full);
+    background: var(--light-gold);
+    flex-shrink: 0;
+  }
+
   /* ── Pack selector ── */
   .pack-selector {
     display: flex; gap: var(--space-2);
@@ -465,19 +484,18 @@
     margin-top: var(--space-1);
   }
   .related-card .related-cta {
-    display: inline-flex; align-items: center; justify-content: center;
-    border: 1.5px solid var(--mm-navy); color: var(--mm-navy);
-    background: transparent; border-radius: var(--radius-pill);
-    padding: 8px 20px; min-height: 44px;
+    display: inline-flex; align-items: center; gap: 4px;
+    border: none; color: var(--mm-navy);
+    background: transparent;
+    padding: 8px 0; min-height: 44px;
     font-family: var(--mm-sans); font-size: 0.72rem;
     font-weight: 400; letter-spacing: 0.06em; text-transform: uppercase;
     text-decoration: none; cursor: pointer;
-    transition: background 0.3s, color 0.3s;
-    margin-top: var(--space-3);
+    transition: opacity 0.2s;
+    margin-top: var(--space-2); opacity: 0.5;
   }
-  .related-card .related-cta:hover {
-    background: var(--mm-navy); color: var(--light-bg);
-  }
+  .related-card .related-cta:hover { opacity: 1; }
+  .related-card .related-cta::after { content: ' \2192'; }
   @media (prefers-reduced-motion: no-preference) {
     .related-card .pdp-card {
       transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -770,6 +788,10 @@
             <button class="qty-btn" type="button" aria-label="Increase quantity">&#43;</button>
           </div>
           <button class="add-to-cart" type="button">Add to Cart</button>
+        </div>
+        <div class="shipping-line">
+          <span><span class="dot"></span>Free shipping on orders over $50</span>
+          <span><span class="dot"></span>Handmade in Byron Bay</span>
         </div>
       </div>
     </div>
