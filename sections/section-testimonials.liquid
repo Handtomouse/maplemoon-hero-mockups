@@ -1,0 +1,433 @@
+{%- comment -%}
+  MapleMoon Testimonials Section
+  Mobile: single testimonial with swipe dots.
+  Desktop: 3-column card grid.
+  Minimal, editorial feel matching the brand.
+{%- endcomment -%}
+
+{%- assign heading_tag = section.settings.heading_tag | default: 'h2' -%}
+
+<style>
+  /* =============================================
+     TESTIMONIALS — Base (mobile-first)
+     ============================================= */
+  .testimonials {
+    position: relative;
+    width: 100%;
+    padding: 64px 24px max(48px, env(safe-area-inset-bottom));
+    background: var(--tm-bg);
+    color: var(--tm-text);
+    font-family: var(--tm-sans, 'Neue Haas Grotesk Display Pro', 'Inter', 'Helvetica Neue', sans-serif);
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .testimonials__inner {
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  /* ── Headline ── */
+  .testimonials__headline {
+    font-family: var(--tm-serif, 'P22 Mackinac Pro', Georgia, serif);
+    font-weight: 400;
+    font-size: 2rem;
+    text-align: center;
+    margin: 0 0 8px;
+    letter-spacing: 0.03em;
+    line-height: 1.2;
+  }
+  .testimonials__subtitle {
+    font-weight: 300;
+    font-size: 0.9rem;
+    opacity: 0.6;
+    text-align: center;
+    margin: 0 0 36px;
+  }
+
+  /* ── Mobile carousel ── */
+  .testimonials__carousel {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+    gap: 16px;
+    padding: 0 8vw;
+    scrollbar-width: none;
+  }
+  .testimonials__carousel::-webkit-scrollbar { display: none; }
+
+  /* ── Card ── */
+  .testimonials__card {
+    flex-shrink: 0;
+    width: 80vw;
+    max-width: 400px;
+    scroll-snap-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 32px 24px;
+    border: 1px solid var(--tm-border, rgba(30, 67, 102, 0.08));
+    border-radius: 12px;
+    background: var(--tm-card-bg, rgba(30, 67, 102, 0.02));
+  }
+
+  /* ── Stars ── */
+  .testimonials__stars {
+    display: flex;
+    gap: 2px;
+    margin-bottom: 16px;
+  }
+  .testimonials__star {
+    width: 14px;
+    height: 14px;
+    fill: var(--tm-accent, #E1D78E);
+  }
+
+  /* ── Quote ── */
+  .testimonials__quote {
+    font-family: var(--tm-serif, 'P22 Mackinac Pro', Georgia, serif);
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.6;
+    font-style: italic;
+    opacity: 0.85;
+    margin: 0 0 16px;
+  }
+  .testimonials__quote::before { content: '\201C'; }
+  .testimonials__quote::after { content: '\201D'; }
+
+  /* ── Author ── */
+  .testimonials__author {
+    font-size: 0.8rem;
+    font-weight: 500;
+    letter-spacing: 0.04em;
+    opacity: 0.6;
+  }
+  .testimonials__location {
+    font-size: 0.7rem;
+    font-weight: 300;
+    opacity: 0.4;
+    margin-top: 2px;
+  }
+
+  /* ── Scroll dots ── */
+  .testimonials__dots {
+    display: flex;
+    gap: 6px;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  .testimonials__dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--tm-text);
+    opacity: 0.2;
+    transition: opacity 0.3s;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+  }
+  .testimonials__dot.active { opacity: 0.6; }
+
+  /* ── Reduced motion ── */
+  @media (prefers-reduced-motion: reduce) {
+    .testimonials, .testimonials * {
+      transition: none !important;
+      animation: none !important;
+    }
+  }
+  @media (prefers-reduced-motion: no-preference) {
+    @keyframes tmFadeIn {
+      from { opacity: 0; transform: translateY(8px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .tm-fade-1 { animation: tmFadeIn 0.6s ease both 0.1s; }
+    .tm-fade-2 { animation: tmFadeIn 0.6s ease both 0.25s; }
+  }
+
+  /* ── Desktop grid (hidden mobile) ── */
+  .testimonials__grid { display: none; }
+
+  /* =============================================
+     DESKTOP (768px+)
+     ============================================= */
+  @media (min-width: 768px) {
+    .testimonials {
+      padding: 80px 48px 64px;
+    }
+    .testimonials__headline {
+      font-size: 2.5rem;
+    }
+    .testimonials__subtitle {
+      margin-bottom: 48px;
+    }
+
+    .testimonials__mobile { display: none; }
+
+    .testimonials__grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 24px;
+    }
+    .testimonials__grid .testimonials__card {
+      width: auto;
+      max-width: none;
+      align-items: flex-start;
+      text-align: left;
+    }
+    .testimonials__grid .testimonials__quote {
+      font-size: 1.05rem;
+    }
+
+    @media (prefers-reduced-motion: no-preference) {
+      .testimonials__grid .testimonials__card {
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+      .testimonials__grid .testimonials__card:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 8px 24px rgba(0,0,0,0.06);
+      }
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .testimonials__headline { font-size: 2.75rem; }
+    .testimonials__grid { gap: 32px; }
+  }
+</style>
+
+<section
+  class="testimonials"
+  id="testimonials-{{ section.id }}"
+  aria-label="Customer testimonials"
+  style="
+    --tm-bg: {{ section.settings.background_color | default: '#F0EDDF' }};
+    --tm-text: {{ section.settings.text_color | default: '#1E4366' }};
+    --tm-accent: {{ section.settings.accent_color | default: '#E1D78E' }};
+    --tm-serif: 'P22 Mackinac Pro', Georgia, serif;
+    --tm-sans: 'Neue Haas Grotesk Display Pro', 'Inter', 'Helvetica Neue', sans-serif;
+  "
+>
+  <div class="testimonials__inner">
+    {%- if section.settings.headline != blank -%}
+      <{{ heading_tag }} class="testimonials__headline tm-fade-1">{{ section.settings.headline }}</{{ heading_tag }}>
+    {%- endif -%}
+    {%- if section.settings.subtitle != blank -%}
+      <p class="testimonials__subtitle tm-fade-1">{{ section.settings.subtitle }}</p>
+    {%- endif -%}
+
+    {%- comment -%} ── MOBILE: carousel ── {%- endcomment -%}
+    <div class="testimonials__mobile tm-fade-2">
+      <div class="testimonials__carousel" role="region" aria-label="Testimonial carousel" tabindex="0">
+        {%- for block in section.blocks -%}
+          {%- if block.type == 'testimonial' -%}
+            <blockquote class="testimonials__card" {{ block.shopify_attributes }}>
+              {%- if section.settings.show_stars -%}
+                <div class="testimonials__stars" aria-label="{{ block.settings.stars | default: 5 }} out of 5 stars">
+                  {%- assign star_count = block.settings.stars | default: 5 -%}
+                  {%- for i in (1..5) -%}
+                    <svg class="testimonials__star" viewBox="0 0 20 20" aria-hidden="true" {% if i > star_count %}style="opacity:0.2"{% endif %}>
+                      <path d="M10 1l2.39 4.84 5.34.78-3.87 3.77.91 5.32L10 13.27l-4.77 2.51.91-5.32L2.27 6.69l5.34-.78L10 1z"/>
+                    </svg>
+                  {%- endfor -%}
+                </div>
+              {%- endif -%}
+              <p class="testimonials__quote">{{ block.settings.quote }}</p>
+              {%- if block.settings.author != blank -%}
+                <cite class="testimonials__author">{{ block.settings.author }}</cite>
+              {%- endif -%}
+              {%- if block.settings.location != blank -%}
+                <span class="testimonials__location">{{ block.settings.location }}</span>
+              {%- endif -%}
+            </blockquote>
+          {%- endif -%}
+        {%- endfor -%}
+      </div>
+      <div class="testimonials__dots" role="tablist" aria-label="Testimonial position">
+        {%- assign t_index = 0 -%}
+        {%- for block in section.blocks -%}
+          {%- if block.type == 'testimonial' -%}
+            <button class="testimonials__dot{% if t_index == 0 %} active{% endif %}" role="tab" aria-label="Go to testimonial {{ t_index | plus: 1 }}" data-index="{{ t_index }}"></button>
+            {%- assign t_index = t_index | plus: 1 -%}
+          {%- endif -%}
+        {%- endfor -%}
+      </div>
+    </div>
+
+    {%- comment -%} ── DESKTOP: grid ── {%- endcomment -%}
+    <div class="testimonials__grid tm-fade-2">
+      {%- for block in section.blocks -%}
+        {%- if block.type == 'testimonial' -%}
+          <blockquote class="testimonials__card" {{ block.shopify_attributes }}>
+            {%- if section.settings.show_stars -%}
+              <div class="testimonials__stars" aria-label="{{ block.settings.stars | default: 5 }} out of 5 stars">
+                {%- assign star_count = block.settings.stars | default: 5 -%}
+                {%- for i in (1..5) -%}
+                  <svg class="testimonials__star" viewBox="0 0 20 20" aria-hidden="true" {% if i > star_count %}style="opacity:0.2"{% endif %}>
+                    <path d="M10 1l2.39 4.84 5.34.78-3.87 3.77.91 5.32L10 13.27l-4.77 2.51.91-5.32L2.27 6.69l5.34-.78L10 1z"/>
+                  </svg>
+                {%- endfor -%}
+              </div>
+            {%- endif -%}
+            <p class="testimonials__quote">{{ block.settings.quote }}</p>
+            {%- if block.settings.author != blank -%}
+              <cite class="testimonials__author">{{ block.settings.author }}</cite>
+            {%- endif -%}
+            {%- if block.settings.location != blank -%}
+              <span class="testimonials__location">{{ block.settings.location }}</span>
+            {%- endif -%}
+          </blockquote>
+        {%- endif -%}
+      {%- endfor -%}
+    </div>
+  </div>
+</section>
+
+<script>
+(function() {
+  'use strict';
+  function initTestimonials() {
+    var root = document.querySelector('.testimonials');
+    if (!root) return;
+    var carousel = root.querySelector('.testimonials__carousel');
+    var dots = root.querySelectorAll('.testimonials__dot');
+    var cards = carousel ? carousel.querySelectorAll('.testimonials__card') : [];
+    if (!carousel || !dots.length || !cards.length) return;
+
+    var observer = new IntersectionObserver(function(entries) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          var idx = Array.from(cards).indexOf(entry.target);
+          dots.forEach(function(d, i) { d.classList.toggle('active', i === idx); });
+        }
+      });
+    }, { root: carousel, threshold: 0.6 });
+    cards.forEach(function(c) { observer.observe(c); });
+
+    dots.forEach(function(dot) {
+      dot.addEventListener('click', function() {
+        var idx = parseInt(this.getAttribute('data-index'), 10);
+        if (cards[idx]) cards[idx].scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+      });
+    });
+  }
+  initTestimonials();
+  document.addEventListener('shopify:section:load', function(e) {
+    if (e.target.querySelector('.testimonials')) initTestimonials();
+  });
+})();
+</script>
+
+{% schema %}
+{
+  "name": "Testimonials",
+  "tag": "div",
+  "class": "testimonials-wrapper",
+  "settings": [
+    {
+      "type": "text",
+      "id": "headline",
+      "label": "Headline",
+      "default": "What People Are Saying"
+    },
+    {
+      "type": "select",
+      "id": "heading_tag",
+      "label": "Heading level",
+      "options": [
+        { "value": "h2", "label": "H2 (default)" },
+        { "value": "h3", "label": "H3" }
+      ],
+      "default": "h2"
+    },
+    {
+      "type": "text",
+      "id": "subtitle",
+      "label": "Subtitle",
+      "default": "Real carob converts. No actors."
+    },
+    {
+      "type": "checkbox",
+      "id": "show_stars",
+      "label": "Show star ratings",
+      "default": true
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background",
+      "default": "#F0EDDF"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text",
+      "default": "#1E4366"
+    },
+    {
+      "type": "color",
+      "id": "accent_color",
+      "label": "Accent (stars)",
+      "default": "#E1D78E"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "testimonial",
+      "name": "Testimonial",
+      "limit": 8,
+      "settings": [
+        {
+          "type": "textarea",
+          "id": "quote",
+          "label": "Quote",
+          "default": "I stopped buying chocolate. This is better."
+        },
+        {
+          "type": "text",
+          "id": "author",
+          "label": "Name",
+          "default": "Sarah M."
+        },
+        {
+          "type": "text",
+          "id": "location",
+          "label": "Location",
+          "default": "Sydney, NSW"
+        },
+        {
+          "type": "range",
+          "id": "stars",
+          "label": "Stars",
+          "min": 1,
+          "max": 5,
+          "step": 1,
+          "default": 5
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Testimonials",
+      "settings": {
+        "headline": "What People Are Saying",
+        "subtitle": "Real carob converts. No actors.",
+        "show_stars": true,
+        "background_color": "#F0EDDF",
+        "text_color": "#1E4366",
+        "accent_color": "#E1D78E"
+      },
+      "blocks": [
+        { "type": "testimonial", "settings": { "quote": "I stopped buying chocolate. This is better.", "author": "Sarah M.", "location": "Sydney, NSW", "stars": 5 } },
+        { "type": "testimonial", "settings": { "quote": "My kids ask for the Peppermint bar every week. Caffeine-free is a game changer for us.", "author": "Tom R.", "location": "Melbourne, VIC", "stars": 5 } },
+        { "type": "testimonial", "settings": { "quote": "The Spiced Elixir on a cold morning is pure comfort. Nothing else comes close.", "author": "Jess K.", "location": "Byron Bay, NSW", "stars": 5 } }
+      ]
+    }
+  ]
+}
+{% endschema %}
