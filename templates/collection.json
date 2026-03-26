@@ -1,0 +1,14 @@
+{
+  "name": "Collection",
+  "sections": {
+    "main": {
+      "type": "section-product-grid",
+      "settings": {
+        "headline": "",
+        "subtitle": "",
+        "columns_desktop": 3
+      }
+    }
+  },
+  "order": ["main"]
+}

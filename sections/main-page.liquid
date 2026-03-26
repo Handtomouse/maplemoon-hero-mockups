@@ -1,0 +1,73 @@
+{%- comment -%}
+  Generic page section — renders Shopify page title + rich text content.
+  Used by templates/page.json for Our Story, Contact, etc.
+{%- endcomment -%}
+
+<style>
+  .main-page {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 80px 24px 64px;
+    color: #1E4366;
+    font-family: 'Neue Haas Grotesk Display Pro', 'Inter', 'Helvetica Neue', sans-serif;
+  }
+  .main-page__title {
+    font-family: 'P22 Mackinac Pro', Georgia, serif;
+    font-size: 2.5rem;
+    font-weight: 400;
+    margin: 0 0 32px;
+    line-height: 1.2;
+    letter-spacing: 0.03em;
+  }
+  .main-page__content {
+    font-size: 1rem;
+    font-weight: 300;
+    line-height: 1.8;
+  }
+  .main-page__content p { margin: 0 0 16px; }
+  .main-page__content h2 {
+    font-family: 'P22 Mackinac Pro', Georgia, serif;
+    font-size: 1.5rem;
+    font-weight: 400;
+    margin: 32px 0 12px;
+  }
+  .main-page__content h3 {
+    font-family: 'P22 Mackinac Pro', Georgia, serif;
+    font-size: 1.2rem;
+    font-weight: 500;
+    margin: 24px 0 8px;
+  }
+  .main-page__content ul,
+  .main-page__content ol { padding-left: 24px; margin: 0 0 16px; }
+  .main-page__content li { margin-bottom: 4px; }
+  .main-page__content a {
+    color: #1E4366;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+  .main-page__content img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 12px;
+    margin: 16px 0;
+  }
+  @media (min-width: 768px) {
+    .main-page { padding: 96px 48px 80px; }
+    .main-page__title { font-size: 3rem; }
+  }
+</style>
+
+<section class="main-page">
+  <h1 class="main-page__title">{{ page.title }}</h1>
+  <div class="main-page__content">
+    {{ page.content }}
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Page Content",
+  "tag": "div",
+  "class": "main-page-wrapper"
+}
+{% endschema %}

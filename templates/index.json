@@ -1,0 +1,54 @@
+{
+  "name": "Homepage",
+  "sections": {
+    "hero": {
+      "type": "section-hero-evolved",
+      "settings": {
+        "headline": "What is Carob?",
+        "headline_subtext": "Not chocolate. Its own thing.",
+        "show_greeting": true,
+        "show_trust_badges": true,
+        "heading_tag": "h1"
+      }
+    },
+    "education": {
+      "type": "section-education-split",
+      "settings": {
+        "headline": "What is Carob?",
+        "subtitle": "Not chocolate. Its own thing.",
+        "body_text": "The naturally sweet pod. No caffeine, no added sugar. Handmade in Byron Bay from organic carob and cacao butter.",
+        "heading_tag": "h2"
+      }
+    },
+    "product_grid": {
+      "type": "section-product-grid",
+      "settings": {
+        "headline": "The Range",
+        "subtitle": "Organic. Vegan. Handmade in Byron Bay.",
+        "columns_desktop": 3
+      }
+    },
+    "testimonials": {
+      "type": "section-testimonials",
+      "settings": {
+        "headline": "What People Are Saying",
+        "subtitle": "Real carob converts. No actors."
+      }
+    },
+    "faq": {
+      "type": "section-faq-accordion",
+      "settings": {
+        "headline": "Frequently Asked Questions",
+        "subtitle": "Everything you need to know about carob.",
+        "open_first": true
+      }
+    }
+  },
+  "order": [
+    "hero",
+    "education",
+    "product_grid",
+    "testimonials",
+    "faq"
+  ]
+}
