@@ -238,6 +238,7 @@
 
   <script>
     const variants = [
+      { v: 'evolved', name: 'Evolved (Shopify)', file: 'sections/section-hero-evolved.liquid' },
       { v: 1,  name: 'Brand Statement' },
       { v: 2,  name: 'Shop Now' },
       { v: 3,  name: 'What is Carob?' },
@@ -284,8 +285,10 @@
 
     function getIndexFromURL() {
       const params = new URLSearchParams(window.location.search);
-      const v = parseInt(params.get('v'), 10);
-      if (isNaN(v)) return 0;
+      const vParam = params.get('v');
+      if (!vParam) return 0;
+      const vNum = parseInt(vParam, 10);
+      const v = isNaN(vNum) ? vParam : vNum;
       const idx = variants.findIndex(item => item.v === v);
       return idx >= 0 ? idx : 0;
     }
@@ -295,7 +298,7 @@
     function load(index) {
       currentIndex = index;
       const variant = variants[index];
-      const src = `hero_v${variant.v}.html`;
+      const src = variant.file || `hero_v${variant.v}.html`;
 
       legendGrid.innerHTML = '';
       inspectPanel.classList.remove('visible');
