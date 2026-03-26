@@ -1,20 +1,20 @@
 {%- comment -%} MapleMoon List Collections Section {%- endcomment -%}
 
 <style>
-  .mm-collections { max-width: 1200px; margin: 0 auto; padding: 80px 24px 64px; color: #1E4366; font-family: 'Neue Haas Grotesk Display Pro', 'Inter', sans-serif; }
+  .mm-collections { max-width: 1200px; margin: 0 auto; padding: 80px 24px 64px; color: var(--lc-text, #1E4366); font-family: 'Neue Haas Grotesk Display Pro', 'Inter', sans-serif; }
   .mm-collections__title { font-family: 'P22 Mackinac Pro', Georgia, serif; font-size: 2rem; font-weight: 400; text-align: center; margin: 0 0 40px; }
   .mm-collections__grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; }
   .mm-collections__card { text-decoration: none; color: inherit; text-align: center; }
-  .mm-collections__card-img { aspect-ratio: 1; border-radius: 16px; overflow: hidden; background: #EDE8D4; display: flex; align-items: center; justify-content: center; margin-bottom: 12px; }
+  .mm-collections__card-img { aspect-ratio: 1; border-radius: 16px; overflow: hidden; background: var(--lc-warm, #EDE8D4); display: flex; align-items: center; justify-content: center; margin-bottom: 12px; }
   .mm-collections__card-img img { width: 100%; height: 100%; object-fit: cover; }
-  .mm-collections__card-title { font-family: 'P22 Mackinac Pro', Georgia, serif; font-size: 1.1rem; font-weight: 500; text-transform: uppercase; letter-spacing: 0.06em; text-decoration: underline; text-decoration-color: #E1D78E; text-underline-offset: 4px; text-decoration-thickness: 2px; }
+  .mm-collections__card-title { font-family: 'P22 Mackinac Pro', Georgia, serif; font-size: 1.1rem; font-weight: 500; text-transform: uppercase; letter-spacing: 0.06em; text-decoration: underline; text-decoration-color: var(--lc-accent, #E1D78E); text-underline-offset: 4px; text-decoration-thickness: 2px; }
   .mm-collections__card-count { font-size: 0.75rem; font-weight: 300; opacity: 0.5; margin-top: 4px; }
   @media (prefers-reduced-motion: no-preference) { .mm-collections__card { transition: transform 0.3s ease; } .mm-collections__card:hover { transform: translateY(-4px); } }
   @media (prefers-reduced-motion: reduce) { .mm-collections__card { transition: none !important; } }
   @media (min-width: 768px) { .mm-collections { padding: 96px 48px 80px; } .mm-collections__title { font-size: 2.5rem; } .mm-collections__grid { grid-template-columns: repeat(3, 1fr); gap: 32px; } }
 </style>
 
-<section class="mm-collections">
+<section class="mm-collections" style="--lc-text: {{ section.settings.text_color | default: '#1E4366' }}; --lc-warm: {{ section.settings.card_bg | default: '#EDE8D4' }}; --lc-accent: {{ section.settings.accent_color | default: '#E1D78E' }};">
   <h1 class="mm-collections__title">{{ section.settings.title | default: 'Collections' }}</h1>
 
   <div class="mm-collections__grid">
@@ -39,7 +39,10 @@
   "name": "Collection List",
   "tag": "div",
   "settings": [
-    { "type": "text", "id": "title", "label": "Title", "default": "Collections" }
+    { "type": "text", "id": "title", "label": "Title", "default": "Collections" },
+    { "type": "color", "id": "text_color", "label": "Text", "default": "#1E4366" },
+    { "type": "color", "id": "accent_color", "label": "Accent", "default": "#E1D78E" },
+    { "type": "color", "id": "card_bg", "label": "Card background", "default": "#EDE8D4" }
   ]
 }
 {% endschema %}
