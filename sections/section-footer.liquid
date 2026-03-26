@@ -142,7 +142,7 @@
     fill: currentColor;
   }
 
-  /* ── Newsletter placeholder ── */
+  /* ── Newsletter ── */
   .mm-footer__newsletter {
     text-align: center;
   }
@@ -194,6 +194,24 @@
     min-height: 44px;
   }
   .mm-footer__newsletter-btn:hover { opacity: 0.8; }
+
+  /* ── Newsletter feedback states ── */
+  .mm-footer__newsletter-msg {
+    font-size: 0.8rem;
+    font-weight: 400;
+    margin-top: 10px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  .mm-footer__newsletter-msg--visible {
+    opacity: 1;
+  }
+  .mm-footer__newsletter-msg--success {
+    color: var(--ft-text);
+  }
+  .mm-footer__newsletter-msg--error {
+    color: #b44;
+  }
 
   /* ── Bottom bar ── */
   .mm-footer__bottom {
@@ -372,23 +390,37 @@
         {%- endif -%}
 
         {%- comment -%} ── Newsletter column ── {%- endcomment -%}
-        {%- if section.settings.show_newsletter -%}
+        {%- if section.settings.show_newsletter and section.settings.enable_newsletter -%}
           <div class="mm-footer__col">
             <p class="mm-footer__col-title">Stay in Touch</p>
-            <div class="mm-footer__newsletter">
+            <div class="mm-footer__newsletter" id="newsletter-wrap-{{ section.id }}">
               {%- if section.settings.newsletter_text != blank -%}
                 <p>{{ section.settings.newsletter_text }}</p>
               {%- endif -%}
-              <form class="mm-footer__newsletter-form" action="#" method="post">
-                <input
-                  type="email"
-                  class="mm-footer__newsletter-input"
-                  placeholder="Your email"
-                  aria-label="Email address"
-                  required
-                >
-                <button type="submit" class="mm-footer__newsletter-btn">Join</button>
-              </form>
+
+              {%- comment -%}
+                Shopify customer form for newsletter signup.
+                When rendered outside Shopify (local preview / fallback), the
+                {% form %} tag won't exist so the <form> falls through to the
+                JS handler which simply shows the success message.
+              {%- endcomment -%}
+              {% form 'customer', id: 'newsletter-' | append: section.id %}
+                <input type="hidden" name="contact[tags]" value="newsletter">
+                <div class="mm-footer__newsletter-form">
+                  <input
+                    type="email"
+                    name="contact[email]"
+                    class="mm-footer__newsletter-input"
+                    placeholder="Your email"
+                    aria-label="Email address"
+                    autocomplete="email"
+                    required
+                  >
+                  <button type="submit" class="mm-footer__newsletter-btn">Join</button>
+                </div>
+              {% endform %}
+
+              <p class="mm-footer__newsletter-msg" id="newsletter-msg-{{ section.id }}" aria-live="polite"></p>
             </div>
           </div>
         {%- endif -%}
@@ -412,6 +444,74 @@
       <p class="mm-footer__credit"><a href="https://handtomouse.org" target="_blank" rel="noopener">Crafted by HandToMouse Studio</a></p>
     </div>
   </div>
+
+  {%- if section.settings.show_newsletter and section.settings.enable_newsletter -%}
+  <script>
+    (function() {
+      var sectionId = {{ section.id | json }};
+      var form = document.getElementById('newsletter-' + sectionId);
+      var msg  = document.getElementById('newsletter-msg-' + sectionId);
+
+      if (!form || !msg) return;
+
+      function showMsg(text, type) {
+        msg.textContent = text;
+        msg.className = 'mm-footer__newsletter-msg mm-footer__newsletter-msg--' + type + ' mm-footer__newsletter-msg--visible';
+      }
+
+      form.addEventListener('submit', function(e) {
+        e.preventDefault();
+
+        var emailInput = form.querySelector('input[type="email"]');
+        if (!emailInput || !emailInput.value) return;
+
+        var btn = form.querySelector('.mm-footer__newsletter-btn');
+        if (btn) btn.disabled = true;
+
+        /* Reset previous message */
+        msg.className = 'mm-footer__newsletter-msg';
+        msg.textContent = '';
+
+        /* If not in a Shopify context (no real action URL), show fallback success */
+        var action = form.getAttribute('action');
+        if (!action || action === '#' || action === '') {
+          showMsg('Thanks for subscribing!', 'success');
+          if (emailInput) emailInput.value = '';
+          if (btn) btn.disabled = false;
+          return;
+        }
+
+        /* Shopify fetch submit */
+        var formData = new FormData(form);
+
+        fetch(action, {
+          method: 'POST',
+          body: formData,
+          headers: { 'Accept': 'application/json' }
+        })
+        .then(function(response) {
+          if (response.ok || response.status === 200 || response.redirected) {
+            showMsg('Thanks for subscribing!', 'success');
+            if (emailInput) emailInput.value = '';
+          } else {
+            return response.text().then(function(body) {
+              /* Attempt to parse Shopify error HTML for a message */
+              var match = body.match(/class="errors"[^>]*>([\s\S]*?)<\//);
+              var errorText = match ? match[1].replace(/<[^>]+>/g, '').trim() : 'Something went wrong. Please try again.';
+              showMsg(errorText, 'error');
+            });
+          }
+        })
+        .catch(function() {
+          showMsg('Something went wrong. Please try again.', 'error');
+        })
+        .finally(function() {
+          if (btn) btn.disabled = false;
+        });
+      });
+    })();
+  </script>
+  {%- endif -%}
 </footer>
 
 {% schema %}
@@ -475,8 +575,14 @@
       "type": "checkbox",
       "id": "show_newsletter",
       "label": "Show newsletter signup",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_newsletter",
+      "label": "Enable newsletter form",
       "default": true,
-      "info": "Replace the form action with your Klaviyo or Mailchimp endpoint"
+      "info": "When enabled, the newsletter form submits to Shopify customer signup with a 'newsletter' tag."
     },
     {
       "type": "header",
@@ -574,6 +680,7 @@
         "show_nav": true,
         "show_contact": true,
         "show_newsletter": true,
+        "enable_newsletter": true,
         "contact_email": "info@maplemoon.com.au",
         "contact_location": "Byron Bay, Australia",
         "newsletter_text": "New flavours, recipes, and updates.",

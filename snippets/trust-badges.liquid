@@ -1,0 +1,41 @@
+{%- comment -%}
+  Shared trust badges snippet.
+  Usage: {% render 'trust-badges', blocks: section.blocks, size: 24 %}
+
+  Parameters:
+    blocks  — section.blocks containing trust_badge block types
+    size    — icon size in px (default 24)
+    prefix  — CSS class prefix (default 'trust')
+{%- endcomment -%}
+
+{%- assign badge_size = size | default: 24 -%}
+{%- assign badge_prefix = prefix | default: 'trust' -%}
+
+{%- assign has_badges = false -%}
+{%- for block in blocks -%}
+  {%- if block.type == 'trust_badge' -%}
+    {%- assign has_badges = true -%}
+    {%- break -%}
+  {%- endif -%}
+{%- endfor -%}
+
+{%- if has_badges -%}
+  {%- for block in blocks -%}
+    {%- if block.type == 'trust_badge' and block.settings.icon != blank -%}
+      <span class="{{ badge_prefix }}__badge" tabindex="0" role="img"
+        aria-label="{{ block.settings.label | escape }}"
+        data-tooltip="{{ block.settings.label | escape }}"
+        title="{{ block.settings.label | escape }}"
+        {{ block.shopify_attributes }}>
+        <img
+          src="{{ block.settings.icon | image_url: width: badge_size | times: 2 }}"
+          alt="{{ block.settings.label | escape }}"
+          width="{{ badge_size }}"
+          height="{{ badge_size }}"
+          loading="lazy"
+          decoding="async"
+        >
+      </span>
+    {%- endif -%}
+  {%- endfor -%}
+{%- endif -%}

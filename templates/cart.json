@@ -1,8 +1,8 @@
 {
-  "name": "Collection",
+  "name": "Cart",
   "sections": {
     "main": {
-      "type": "section-collection-main",
+      "type": "section-cart",
       "settings": {}
     }
   },
