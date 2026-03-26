@@ -285,6 +285,10 @@
   .pack-option[aria-pressed="true"] {
     border-color: var(--light-gold); background: var(--light-gold); color: var(--mm-navy);
   }
+  @media (prefers-reduced-motion: no-preference) {
+    .pack-option { transition: border-color 0.2s, background 0.2s, transform 0.15s; }
+    .pack-option:active { transform: scale(0.95); }
+  }
   .pack-option:focus-visible { outline: 2px solid var(--mm-navy); outline-offset: 2px; }
   .qty-row { display: flex; align-items: center; gap: var(--space-4); align-self: flex-start; }
   .qty-stepper {
@@ -334,20 +338,7 @@
     border-radius: var(--radius-md);
     padding: var(--space-6) var(--space-8);
     margin-bottom: var(--space-8);
-    display: flex;
-    gap: var(--space-6);
-    align-items: flex-start;
-  }
-  .edu-callout-icon {
-    flex-shrink: 0;
-    width: 32px; height: 32px;
-    border-radius: var(--radius-full);
-    background: var(--light-gold);
-    display: flex; align-items: center; justify-content: center;
-    font-family: var(--mm-serif);
-    font-size: 1rem; font-weight: 500;
-    color: var(--mm-navy);
-    margin-top: 2px;
+    border-left: 3px solid var(--light-gold);
   }
   .edu-callout-text {
     flex: 1;
@@ -412,9 +403,18 @@
 
   .tab-panel {
     display: none;
+    opacity: 0;
   }
   .tab-panel.active {
     display: block;
+    animation: tabFadeIn 0.3s ease forwards;
+  }
+  @keyframes tabFadeIn {
+    from { opacity: 0; transform: translateY(4px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .tab-panel.active { animation: none; opacity: 1; }
   }
 
   .tab-panel p {
@@ -824,7 +824,6 @@
 
     <!-- Educational callout — V7a signature element -->
     <div class="edu-callout fade-4 reveal">
-      <div class="edu-callout-icon" aria-hidden="true">?</div>
       <div class="edu-callout-text">
         <h2 class="edu-callout-title">What is carob?</h2>
         <p class="edu-callout-body">Carob is a naturally sweet pod grown on trees across Australia and the Mediterranean. Unlike cacao, it contains zero caffeine and requires no added sugar. It's roasted, milled, and tempered into bars, just like chocolate, but with a flavour entirely its own.</p>

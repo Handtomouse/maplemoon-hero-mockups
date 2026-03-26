@@ -235,6 +235,10 @@
   .pack-option[aria-pressed="true"] {
     border-color: var(--mm-cream); background: var(--mm-cream); color: var(--mm-carob-dark);
   }
+  @media (prefers-reduced-motion: no-preference) {
+    .pack-option { transition: border-color 0.2s, background 0.2s, transform 0.15s; }
+    .pack-option:active { transform: scale(0.95); }
+  }
   .pack-option:focus-visible { outline: 2px solid var(--mm-cream); outline-offset: 2px; }
   .qty-row { display: flex; align-items: center; gap: var(--space-4); align-self: flex-start; }
   .qty-stepper {

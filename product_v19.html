@@ -296,6 +296,10 @@
     border-color: var(--mm-navy); background: var(--mm-navy);
     color: var(--light-bg);
   }
+  @media (prefers-reduced-motion: no-preference) {
+    .pack-option { transition: border-color 0.2s, background 0.2s, transform 0.15s; }
+    .pack-option:active { transform: scale(0.95); }
+  }
   .pack-option:focus-visible {
     outline: 2px solid var(--mm-navy); outline-offset: 2px;
   }
@@ -865,7 +869,7 @@
             </div>
             <h3 class="related-name">Hazelnut</h3>
             <p class="related-price">$XX.XX</p>
-            <a href="/shop/bars/hazelnut" class="related-cta">View Product</a>
+            <a href="/shop/bars/hazelnut" class="related-cta">Shop</a>
           </div>
         </div>
         <div class="related-card">
@@ -875,7 +879,7 @@
             </div>
             <h3 class="related-name">Peppermint</h3>
             <p class="related-price">$XX.XX</p>
-            <a href="/shop/bars/peppermint" class="related-cta">View Product</a>
+            <a href="/shop/bars/peppermint" class="related-cta">Shop</a>
           </div>
         </div>
         <div class="related-card">
@@ -885,7 +889,7 @@
             </div>
             <h3 class="related-name">Golden Coconut</h3>
             <p class="related-price">$XX.XX</p>
-            <a href="/shop/bars/golden-coconut" class="related-cta">View Product</a>
+            <a href="/shop/bars/golden-coconut" class="related-cta">Shop</a>
           </div>
         </div>
       </div>

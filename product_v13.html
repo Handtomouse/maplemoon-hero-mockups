@@ -241,11 +241,11 @@
   .detail-block:last-child { margin-bottom: 0; }
 
   .detail-heading {
-    font-family: var(--mm-sans);
-    font-size: 0.72rem; font-weight: 400;
-    color: var(--mm-cream); opacity: 0.4;
+    font-family: var(--mm-serif);
+    font-size: 0.82rem; font-weight: 400;
+    color: var(--mm-cream); opacity: 0.5;
     text-transform: uppercase;
-    letter-spacing: 0.12em;
+    letter-spacing: 0.1em;
     margin: 0 0 var(--space-4);
   }
 
@@ -406,6 +406,10 @@
   .pack-option:hover { border-color: var(--mm-cream); }
   .pack-option[aria-pressed="true"] {
     border-color: var(--mm-cream); background: var(--mm-cream); color: var(--mm-navy);
+  }
+  @media (prefers-reduced-motion: no-preference) {
+    .pack-option { transition: border-color 0.2s, background 0.2s, transform 0.15s; }
+    .pack-option:active { transform: scale(0.95); }
   }
   .pack-option:focus-visible { outline: 2px solid var(--mm-cream); outline-offset: 2px; }
   .qty-stepper {
