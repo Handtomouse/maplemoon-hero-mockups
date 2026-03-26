@@ -1,0 +1,680 @@
+{%- comment -%}
+  MapleMoon "What is Carob?" Educational Split-Panel Section
+  Based on V3 (dark) and V17 (light) hero variants.
+  Desktop: 55/45 split — story panel left, product image right.
+  Mobile: stacked — product image, headline, body, badges, CTAs.
+  No JS required — purely content-driven section.
+{%- endcomment -%}
+
+{%- assign heading_tag = section.settings.heading_tag | default: 'h2' -%}
+
+<style>
+  /* =============================================
+     EDUCATION SPLIT — Base (mobile-first)
+     ============================================= */
+  .edu-split {
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    padding: 64px 24px max(40px, env(safe-area-inset-bottom));
+    background: var(--edu-bg);
+    color: var(--edu-text);
+    font-family: var(--edu-sans, 'Neue Haas Grotesk Display Pro', 'Inter', 'Helvetica Neue', sans-serif);
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    overflow: hidden;
+    min-height: 100vh;
+    min-height: 100dvh;
+  }
+
+  /* ── Fade-in animations ── */
+  @media (prefers-reduced-motion: no-preference) {
+    @keyframes eduFadeIn {
+      from { opacity: 0; transform: translateY(8px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes eduProductEntrance {
+      from { opacity: 0; transform: scale(0.95); }
+      to { opacity: 1; transform: scale(1); }
+    }
+    .edu-fade-1 { animation: eduFadeIn 0.6s ease both 0.1s; }
+    .edu-fade-2 { animation: eduFadeIn 0.6s ease both 0.25s; }
+    .edu-fade-product { animation: eduProductEntrance 0.6s ease-out both 0.3s; }
+    .edu-fade-3 { animation: eduFadeIn 0.6s ease both 0.4s; }
+    .edu-fade-4 { animation: eduFadeIn 0.6s ease both 0.55s; }
+    .edu-fade-5 { animation: eduFadeIn 0.6s ease both 0.7s; }
+    .edu-fade-6 { animation: eduFadeIn 0.6s ease both 0.85s; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .edu-split,
+    .edu-split * {
+      transition: none !important;
+      animation: none !important;
+    }
+  }
+
+  /* ── Watermark ── */
+  .edu-split__watermark {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    pointer-events: none;
+    z-index: 0;
+  }
+  .edu-split__watermark img {
+    width: 80%;
+    max-width: 800px;
+    height: auto;
+    filter: sepia(1) saturate(2) hue-rotate(-10deg) brightness(0.85);
+    opacity: 0.15;
+  }
+
+  /* ── Product image (mobile) ── */
+  .edu-split__product-img {
+    width: 55%;
+    max-width: 200px;
+    height: auto;
+    filter: drop-shadow(0 4px 8px rgba(0,0,0,0.06))
+            drop-shadow(0 12px 24px rgba(0,0,0,0.08));
+    position: relative;
+    z-index: 1;
+  }
+
+  /* ── Headline ── */
+  .edu-split__headline {
+    font-family: var(--edu-serif, 'P22 Mackinac Pro', Georgia, serif);
+    font-weight: 500;
+    font-size: 1.6rem;
+    color: var(--edu-text);
+    text-align: center;
+    position: relative;
+    z-index: 1;
+    line-height: 1.2;
+    letter-spacing: 0.03em;
+    text-wrap: balance;
+    margin: 0;
+  }
+
+  /* ── Gold rule divider ── */
+  .edu-split__rule {
+    border: none;
+    border-top: 1px solid var(--edu-accent);
+    width: 60px;
+    opacity: 0.5;
+    margin: 0;
+    position: relative;
+    z-index: 1;
+  }
+
+  /* ── Subtitle ── */
+  .edu-split__subtitle {
+    font-family: var(--edu-serif, 'P22 Mackinac Pro', Georgia, serif);
+    font-size: 0.95rem;
+    font-weight: 400;
+    color: var(--edu-text);
+    opacity: 0.8;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+    margin: 0;
+  }
+
+  /* ── Body text ── */
+  .edu-split__body {
+    font-weight: 300;
+    font-size: 0.85rem;
+    line-height: 1.65;
+    color: var(--edu-text);
+    opacity: 0.85;
+    text-align: center;
+    max-width: 300px;
+    position: relative;
+    z-index: 1;
+    margin: 0;
+  }
+
+  /* ── Trust badges ── */
+  .edu-split__badges {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    position: relative;
+    z-index: 1;
+  }
+  .edu-split__badge {
+    position: relative;
+    display: inline-flex;
+    cursor: default;
+  }
+  .edu-split__badge:hover img,
+  .edu-split__badge:focus img {
+    opacity: 1;
+  }
+  .edu-split__badge:hover::after,
+  .edu-split__badge:focus::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--edu-text);
+    color: var(--edu-bg, #F0EDDF);
+    padding: 4px 10px;
+    border-radius: 4px;
+    font-size: 0.7rem;
+    white-space: nowrap;
+    pointer-events: none;
+    margin-bottom: 4px;
+  }
+  .edu-split__badge img {
+    width: 24px;
+    height: 24px;
+    opacity: 0.75;
+    transition: opacity 0.2s ease;
+    filter: brightness(0.4);
+  }
+
+  /* ── CTA buttons ── */
+  .edu-split__ctas {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    position: relative;
+    z-index: 1;
+  }
+  .edu-split__cta {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: 1.5px solid var(--edu-text);
+    color: var(--edu-text);
+    background: transparent;
+    border-radius: 50px;
+    padding: 12px 32px;
+    min-height: 48px;
+    font-family: var(--edu-sans, 'Neue Haas Grotesk Display Pro', 'Inter', sans-serif);
+    font-size: 0.85rem;
+    font-weight: 400;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background 0.3s, color 0.3s, transform 0.15s;
+  }
+  .edu-split__cta:hover {
+    background: var(--edu-text);
+    color: var(--edu-bg, #F0EDDF);
+  }
+  .edu-split__cta:active {
+    transform: scale(0.97);
+  }
+  .edu-split__cta:focus-visible {
+    outline: 2px solid var(--edu-text);
+    outline-offset: 4px;
+  }
+
+  /* ── Desktop split layout (hidden on mobile) ── */
+  .edu-split__desktop { display: none; }
+
+  /* ── Screen reader only ── */
+  .edu-split__sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0,0,0,0);
+    white-space: nowrap;
+    border: 0;
+  }
+
+  /* =============================================
+     TABLET / DESKTOP (768px+)
+     ============================================= */
+  @media (min-width: 768px) {
+    /* Hide mobile layout */
+    .edu-split__mobile { display: none; }
+
+    /* Show desktop split */
+    .edu-split {
+      flex-direction: row;
+      padding: 0;
+      gap: 0;
+      min-height: 100vh;
+      min-height: 100dvh;
+    }
+    .edu-split__desktop {
+      display: flex;
+      width: 100%;
+      height: 100%;
+      min-height: 100vh;
+      min-height: 100dvh;
+    }
+
+    /* Left panel: story */
+    .edu-split__left {
+      flex: 0 0 55%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      height: 100%;
+      z-index: 1;
+    }
+    .edu-split__story {
+      padding: 48px 40px;
+      max-width: 480px;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      align-items: flex-start;
+    }
+    .edu-split__story .edu-split__headline {
+      font-size: 2.8rem;
+      font-weight: 400;
+      text-align: left;
+      line-height: 1.1;
+    }
+    .edu-split__story .edu-split__subtitle {
+      text-align: left;
+      font-size: 0.9rem;
+      font-weight: 300;
+    }
+    .edu-split__story .edu-split__body {
+      text-align: left;
+      font-size: 0.95rem;
+      max-width: none;
+      line-height: 1.6;
+    }
+    .edu-split__story .edu-split__badges {
+      justify-content: flex-start;
+      gap: 14px;
+    }
+    .edu-split__story .edu-split__badge img {
+      width: 28px;
+      height: 28px;
+    }
+    .edu-split__story .edu-split__cta {
+      align-self: flex-start;
+    }
+
+    /* Right panel: product + watermark + CTA */
+    .edu-split__right {
+      flex: 0 0 45%;
+      height: 100%;
+      min-height: 100vh;
+      min-height: 100dvh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 24px;
+      padding: 0 40px;
+      position: relative;
+      z-index: 1;
+    }
+    .edu-split__right .edu-split__product-img {
+      width: auto;
+      max-width: none;
+      height: 46vh;
+      filter: drop-shadow(0 4px 8px rgba(0,0,0,0.06))
+              drop-shadow(0 12px 24px rgba(0,0,0,0.08))
+              drop-shadow(0 24px 48px rgba(0,0,0,0.06));
+      flex-shrink: 0;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .edu-split__story {
+      padding: 56px 48px;
+    }
+    .edu-split__story .edu-split__headline {
+      font-size: 3.4rem;
+    }
+  }
+</style>
+
+<section
+  class="edu-split"
+  id="edu-split-{{ section.id }}"
+  aria-label="About Carob"
+  style="
+    --edu-bg: {{ section.settings.background_color | default: '#F0EDDF' }};
+    --edu-text: {{ section.settings.text_color | default: '#1E4366' }};
+    --edu-accent: {{ section.settings.accent_color | default: '#E1D78E' }};
+    --edu-serif: 'P22 Mackinac Pro', Georgia, serif;
+    --edu-sans: 'Neue Haas Grotesk Display Pro', 'Inter', 'Helvetica Neue', sans-serif;
+  "
+>
+
+  {%- comment -%} ── MOBILE LAYOUT ── {%- endcomment -%}
+  <div class="edu-split__mobile">
+    {%- if section.settings.watermark_image != blank -%}
+      <div class="edu-split__watermark" aria-hidden="true">
+        <img
+          src="{{ section.settings.watermark_image | image_url: width: 800 }}"
+          alt="" aria-hidden="true" width="800" height="200" loading="lazy" decoding="async"
+        >
+      </div>
+    {%- endif -%}
+
+    {%- if section.settings.product_image != blank -%}
+      <img
+        src="{{ section.settings.product_image | image_url: width: 400 }}"
+        srcset="{{ section.settings.product_image | image_url: width: 200 }} 200w, {{ section.settings.product_image | image_url: width: 400 }} 400w"
+        sizes="200px"
+        class="edu-split__product-img edu-fade-product"
+        alt="{{ section.settings.product_image_alt | escape }}"
+        width="400" height="600"
+        loading="eager" fetchpriority="high" decoding="async"
+      >
+    {%- endif -%}
+
+    {%- if section.settings.headline != blank -%}
+      <{{ heading_tag }} class="edu-split__headline edu-fade-3">
+        {{ section.settings.headline }}
+      </{{ heading_tag }}>
+    {%- endif -%}
+
+    {%- if section.settings.show_divider -%}
+      <hr class="edu-split__rule edu-fade-3" aria-hidden="true">
+    {%- endif -%}
+
+    {%- if section.settings.subtitle != blank -%}
+      <p class="edu-split__subtitle edu-fade-4">{{ section.settings.subtitle }}</p>
+    {%- endif -%}
+
+    {%- if section.settings.body_text != blank -%}
+      <p class="edu-split__body edu-fade-4">{{ section.settings.body_text }}</p>
+    {%- endif -%}
+
+    {%- if section.settings.show_trust_badges -%}
+      {%- assign has_badges = false -%}
+      {%- for block in section.blocks -%}
+        {%- if block.type == 'trust_badge' -%}{%- assign has_badges = true -%}{%- break -%}{%- endif -%}
+      {%- endfor -%}
+      {%- if has_badges -%}
+        <div class="edu-split__badges edu-fade-5">
+          {%- for block in section.blocks -%}
+            {%- if block.type == 'trust_badge' and block.settings.icon != blank -%}
+              <span class="edu-split__badge" tabindex="0" role="img"
+                aria-label="{{ block.settings.label | escape }}"
+                data-tooltip="{{ block.settings.label | escape }}"
+                title="{{ block.settings.label | escape }}"
+                {{ block.shopify_attributes }}>
+                <img src="{{ block.settings.icon | image_url: width: 64 }}" alt="{{ block.settings.label | escape }}" width="24" height="24" loading="lazy" decoding="async">
+              </span>
+            {%- endif -%}
+          {%- endfor -%}
+        </div>
+      {%- endif -%}
+    {%- endif -%}
+
+    <div class="edu-split__ctas edu-fade-6">
+      {%- if section.settings.cta_primary_text != blank -%}
+        <a class="edu-split__cta" href="{{ section.settings.cta_primary_url | default: '#' }}">{{ section.settings.cta_primary_text }}</a>
+      {%- endif -%}
+      {%- if section.settings.cta_secondary_text != blank -%}
+        <a class="edu-split__cta" href="{{ section.settings.cta_secondary_url | default: '#' }}">{{ section.settings.cta_secondary_text }}</a>
+      {%- endif -%}
+    </div>
+  </div>
+
+  {%- comment -%} ── DESKTOP SPLIT LAYOUT ── {%- endcomment -%}
+  <div class="edu-split__desktop">
+    <div class="edu-split__left">
+      <div class="edu-split__story edu-fade-3" role="region" aria-label="About Carob">
+        {%- if section.settings.headline != blank -%}
+          <{{ heading_tag }} class="edu-split__headline">
+            {{ section.settings.headline }}
+          </{{ heading_tag }}>
+        {%- endif -%}
+
+        {%- if section.settings.show_divider -%}
+          <hr class="edu-split__rule" aria-hidden="true">
+        {%- endif -%}
+
+        {%- if section.settings.subtitle != blank -%}
+          <p class="edu-split__subtitle">{{ section.settings.subtitle }}</p>
+        {%- endif -%}
+
+        {%- if section.settings.body_text != blank -%}
+          <p class="edu-split__body">{{ section.settings.body_text }}</p>
+        {%- endif -%}
+
+        {%- if section.settings.show_trust_badges and has_badges -%}
+          <div class="edu-split__badges edu-fade-5">
+            {%- for block in section.blocks -%}
+              {%- if block.type == 'trust_badge' and block.settings.icon != blank -%}
+                <span class="edu-split__badge" tabindex="0" role="img"
+                  aria-label="{{ block.settings.label | escape }}"
+                  data-tooltip="{{ block.settings.label | escape }}"
+                  title="{{ block.settings.label | escape }}"
+                  {{ block.shopify_attributes }}>
+                  <img src="{{ block.settings.icon | image_url: width: 64 }}" alt="{{ block.settings.label | escape }}" width="28" height="28" loading="lazy" decoding="async">
+                </span>
+              {%- endif -%}
+            {%- endfor -%}
+          </div>
+        {%- endif -%}
+
+        {%- if section.settings.cta_primary_text != blank -%}
+          <a class="edu-split__cta edu-fade-6" href="{{ section.settings.cta_primary_url | default: '#' }}">{{ section.settings.cta_primary_text }}</a>
+        {%- endif -%}
+      </div>
+    </div>
+
+    <div class="edu-split__right">
+      {%- if section.settings.watermark_image != blank -%}
+        <div class="edu-split__watermark" aria-hidden="true">
+          <img src="{{ section.settings.watermark_image | image_url: width: 800 }}" alt="" aria-hidden="true" width="800" height="200" loading="lazy" decoding="async">
+        </div>
+      {%- endif -%}
+
+      {%- if section.settings.product_image != blank -%}
+        <img
+          src="{{ section.settings.product_image | image_url: width: 600 }}"
+          srcset="{{ section.settings.product_image | image_url: width: 300 }} 300w, {{ section.settings.product_image | image_url: width: 600 }} 600w"
+          sizes="(min-width: 768px) 46vh, 200px"
+          class="edu-split__product-img edu-fade-product"
+          alt="{{ section.settings.product_image_alt | escape }}"
+          width="400" height="600"
+          loading="eager" decoding="async"
+        >
+      {%- endif -%}
+
+      {%- if section.settings.cta_secondary_text != blank -%}
+        <a class="edu-split__cta edu-fade-6" href="{{ section.settings.cta_secondary_url | default: '#' }}">{{ section.settings.cta_secondary_text }}</a>
+      {%- endif -%}
+    </div>
+  </div>
+
+  <noscript>
+    <div style="text-align:center; padding:24px; position:relative; z-index:1;">
+      <p style="font-size:1rem; margin-bottom:16px;">{{ section.settings.headline | default: 'What is Carob?' }}</p>
+      <a href="{{ section.settings.cta_primary_url | default: '/our-story' }}" style="display:inline-block; border:1.5px solid currentColor; border-radius:50px; padding:12px 32px; text-decoration:none; color:inherit; font-size:0.85rem; letter-spacing:0.08em; text-transform:uppercase;">{{ section.settings.cta_primary_text | default: 'Learn More' }}</a>
+    </div>
+  </noscript>
+</section>
+
+{% schema %}
+{
+  "name": "Education Split",
+  "tag": "div",
+  "class": "edu-split-wrapper",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Content"
+    },
+    {
+      "type": "text",
+      "id": "headline",
+      "label": "Headline",
+      "default": "What is Carob?"
+    },
+    {
+      "type": "select",
+      "id": "heading_tag",
+      "label": "Heading level",
+      "options": [
+        { "value": "h1", "label": "H1" },
+        { "value": "h2", "label": "H2 (default)" },
+        { "value": "h3", "label": "H3" }
+      ],
+      "default": "h2",
+      "info": "Use H1 if this is the main heading on the page"
+    },
+    {
+      "type": "text",
+      "id": "subtitle",
+      "label": "Subtitle",
+      "default": "Not chocolate. Its own thing."
+    },
+    {
+      "type": "textarea",
+      "id": "body_text",
+      "label": "Body text",
+      "default": "The naturally sweet pod. No caffeine, no added sugar. Handmade in Byron Bay from organic carob and cacao butter."
+    },
+    {
+      "type": "checkbox",
+      "id": "show_divider",
+      "label": "Show gold rule divider",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "show_trust_badges",
+      "label": "Show trust badges",
+      "default": true
+    },
+    {
+      "type": "header",
+      "content": "Product Image"
+    },
+    {
+      "type": "image_picker",
+      "id": "product_image",
+      "label": "Product image"
+    },
+    {
+      "type": "text",
+      "id": "product_image_alt",
+      "label": "Image alt text",
+      "default": "Maple Moon Pure Carob Bar"
+    },
+    {
+      "type": "image_picker",
+      "id": "watermark_image",
+      "label": "Background watermark"
+    },
+    {
+      "type": "header",
+      "content": "Primary CTA (Learn More)"
+    },
+    {
+      "type": "text",
+      "id": "cta_primary_text",
+      "label": "Text",
+      "default": "Learn More"
+    },
+    {
+      "type": "url",
+      "id": "cta_primary_url",
+      "label": "Link"
+    },
+    {
+      "type": "header",
+      "content": "Secondary CTA (Shop)"
+    },
+    {
+      "type": "text",
+      "id": "cta_secondary_text",
+      "label": "Text",
+      "default": "Shop Bars"
+    },
+    {
+      "type": "url",
+      "id": "cta_secondary_url",
+      "label": "Link"
+    },
+    {
+      "type": "header",
+      "content": "Colors"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background",
+      "default": "#F0EDDF"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text",
+      "default": "#1E4366"
+    },
+    {
+      "type": "color",
+      "id": "accent_color",
+      "label": "Accent (divider)",
+      "default": "#E1D78E"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "trust_badge",
+      "name": "Trust Badge",
+      "limit": 6,
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "icon",
+          "label": "Badge icon (SVG)"
+        },
+        {
+          "type": "text",
+          "id": "label",
+          "label": "Label",
+          "default": "Certified Organic"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Education Split",
+      "settings": {
+        "headline": "What is Carob?",
+        "subtitle": "Not chocolate. Its own thing.",
+        "body_text": "The naturally sweet pod. No caffeine, no added sugar. Handmade in Byron Bay from organic carob and cacao butter.",
+        "show_divider": true,
+        "show_trust_badges": true,
+        "cta_primary_text": "Learn More",
+        "cta_secondary_text": "Shop Bars",
+        "background_color": "#F0EDDF",
+        "text_color": "#1E4366",
+        "accent_color": "#E1D78E"
+      },
+      "blocks": [
+        { "type": "trust_badge", "settings": { "label": "Caffeine Free" } },
+        { "type": "trust_badge", "settings": { "label": "Certified Organic" } },
+        { "type": "trust_badge", "settings": { "label": "100% Vegan" } },
+        { "type": "trust_badge", "settings": { "label": "Gluten Free" } },
+        { "type": "trust_badge", "settings": { "label": "Made in Australia" } }
+      ]
+    }
+  ]
+}
+{% endschema %}
