@@ -228,11 +228,20 @@
     background: rgba(10,18,36,0.85);
     backdrop-filter: blur(8px);
     -webkit-backdrop-filter: blur(8px);
-    padding: var(--space-12) 24px var(--space-8);
+    padding: var(--space-16) 24px var(--space-8);
+  }
+  .detail-section::before {
+    content: '';
+    position: absolute;
+    top: -80px; left: 0; right: 0;
+    height: 80px;
+    background: linear-gradient(to bottom, transparent, rgba(10,18,36,0.85));
+    pointer-events: none;
   }
   .detail-container {
     max-width: 720px;
     margin: 0 auto;
+    padding-bottom: 80px;
   }
 
   .detail-block {

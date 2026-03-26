@@ -335,8 +335,8 @@
   /* ── Educational callout (V7a signature) ── */
   .edu-callout {
     background: var(--v7a-callout);
-    border-radius: var(--radius-md);
-    padding: var(--space-6) var(--space-8);
+    border-radius: 0 var(--radius-md) var(--radius-md) 0;
+    padding: var(--space-6) var(--space-8) var(--space-6) var(--space-8);
     margin-bottom: var(--space-8);
     border-left: 3px solid var(--light-gold);
   }
@@ -527,6 +527,8 @@
     scroll-snap-align: center;
     text-align: center;
     cursor: pointer;
+    text-decoration: none;
+    color: inherit;
   }
   .related-card .related-image {
     height: 200px;
@@ -774,8 +776,8 @@
           <button class="product-thumb" type="button" data-src="assets/product_shots/bar_pure_carob_hero.webp" aria-label="Product hero view">
             <img src="assets/product_shots/bar_pure_carob_hero.webp" alt="" width="52" height="52" loading="lazy" decoding="async">
           </button>
-          <button class="product-thumb" type="button" data-src="assets/hero_shots/hero_carob_bar_hand.png" aria-label="Product in hand">
-            <img src="assets/hero_shots/hero_carob_bar_hand.png" alt="" width="52" height="52" loading="lazy" decoding="async">
+          <button class="product-thumb" type="button" data-src="assets/hero_shots/hero_bar_carob_pods_studio.png" aria-label="Studio shot with pods">
+            <img src="assets/hero_shots/hero_bar_carob_pods_studio.png" alt="" width="52" height="52" loading="lazy" decoding="async">
           </button>
         </div>
       </div>
