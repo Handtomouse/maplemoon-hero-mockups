@@ -195,7 +195,7 @@
     margin-top: var(--space-4);
   }
   .product-thumb {
-    width: 56px; height: 56px;
+    width: 68px; height: 68px;
     border-radius: var(--radius-sm);
     border: 1.5px solid var(--mm-black-10);
     overflow: hidden; cursor: pointer;
@@ -257,6 +257,70 @@
     color: var(--mm-carob-dark);
     line-height: 1.7;
     opacity: 0.85;
+  }
+
+  /* ── Hero stat ── */
+  .hero-stat {
+    display: flex; align-items: baseline; gap: var(--space-2);
+    margin-top: var(--space-1);
+  }
+  .hero-stat-number {
+    font-family: var(--mm-serif);
+    font-size: 2.4rem; font-weight: 400;
+    color: var(--mm-navy); line-height: 1;
+  }
+  .hero-stat-label {
+    font-family: var(--mm-sans);
+    font-size: 0.78rem; font-weight: 300;
+    color: var(--mm-carob-dark); opacity: 0.5;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+  }
+
+  /* ── Pairing line ── */
+  .pairing-line {
+    font-family: var(--mm-sans);
+    font-size: 0.78rem; font-weight: 300;
+    color: var(--mm-carob-dark); opacity: 0.45;
+    font-style: italic;
+    margin-top: var(--space-1);
+  }
+
+  /* ── Taste profile ── */
+  .taste-profile { margin-top: var(--space-2); }
+  .taste-profile-heading {
+    font-family: var(--mm-serif);
+    font-size: 0.82rem; font-weight: 500;
+    color: var(--mm-navy);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin: 0 0 var(--space-3);
+  }
+  .taste-bar-row {
+    display: flex; align-items: center; gap: var(--space-3);
+    margin-bottom: var(--space-2);
+  }
+  .taste-bar-label {
+    font-family: var(--mm-sans);
+    font-size: 0.7rem; font-weight: 400;
+    color: var(--mm-carob-dark); opacity: 0.6;
+    width: 72px; flex-shrink: 0;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+  }
+  .taste-bar-track {
+    flex: 1; height: 4px;
+    background: var(--mm-black-08);
+    border-radius: 2px; overflow: hidden;
+  }
+  .taste-bar-fill {
+    height: 100%;
+    background: var(--light-gold);
+    border-radius: 2px;
+    transition: width 0.6s ease;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .taste-bar-fill { transition: none; }
   }
 
   /* ── Shipping trust line ── */
@@ -779,7 +843,12 @@
           <span class="product-price">$XX.XX</span>
           <span class="product-weight">80g</span>
         </div>
+        <div class="hero-stat">
+          <span class="hero-stat-number">2</span>
+          <span class="hero-stat-label">Ingredients. That's it.</span>
+        </div>
         <p class="product-description">Our original bar is pure carob and cacao butter. No sugar, no sweetener, no flavouring. Hand-tempered in Byron Bay using Australian-grown carob that's naturally sweet on its own. This is where it all starts.</p>
+        <p class="pairing-line">Try with a morning flat white or break a piece after dinner.</p>
         <div class="pack-selector">
           <button class="pack-option" type="button" aria-pressed="true">1 Bar</button>
           <button class="pack-option" type="button" aria-pressed="false">3 Pack</button>
@@ -855,6 +924,29 @@
             <tr><th scope="row">Sodium</th><td>12mg</td></tr>
           </tbody>
         </table>
+      </div>
+    </div>
+
+    <!-- Taste profile -->
+    <div class="pdp-card reveal" style="margin-bottom: var(--space-8);">
+      <div class="taste-profile">
+        <h2 class="taste-profile-heading">Flavour Profile</h2>
+        <div class="taste-bar-row">
+          <span class="taste-bar-label">Sweetness</span>
+          <div class="taste-bar-track"><div class="taste-bar-fill" style="width: 70%"></div></div>
+        </div>
+        <div class="taste-bar-row">
+          <span class="taste-bar-label">Earthiness</span>
+          <div class="taste-bar-track"><div class="taste-bar-fill" style="width: 55%"></div></div>
+        </div>
+        <div class="taste-bar-row">
+          <span class="taste-bar-label">Richness</span>
+          <div class="taste-bar-track"><div class="taste-bar-fill" style="width: 80%"></div></div>
+        </div>
+        <div class="taste-bar-row">
+          <span class="taste-bar-label">Bitterness</span>
+          <div class="taste-bar-track"><div class="taste-bar-fill" style="width: 10%"></div></div>
+        </div>
       </div>
     </div>
 
@@ -953,10 +1045,13 @@
 <script>
 (function() {
   var packs = document.querySelectorAll('.pack-option');
+  var priceEl = document.querySelector('.product-price');
+  var prices = { '1 Bar': '$XX.XX', '3 Pack': '3 \u00d7 $XX.XX', '6 Pack': '6 \u00d7 $XX.XX' };
   packs.forEach(function(btn) {
     btn.addEventListener('click', function() {
       packs.forEach(function(b) { b.setAttribute('aria-pressed', 'false'); });
       btn.setAttribute('aria-pressed', 'true');
+      if (priceEl && prices[btn.textContent]) priceEl.textContent = prices[btn.textContent];
     });
   });
   var minus = document.querySelector('.qty-btn[aria-label="Decrease quantity"]');

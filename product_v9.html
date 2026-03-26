@@ -260,6 +260,22 @@
     pointer-events: none; margin-bottom: 4px;
   }
 
+  /* ── Hero stat ── */
+  .hero-stat { display: flex; align-items: baseline; gap: var(--space-2); margin-top: var(--space-1); }
+  .hero-stat-number { font-family: var(--mm-serif); font-size: 2.4rem; font-weight: 400; color: var(--mm-cream); line-height: 1; }
+  .hero-stat-label { font-family: var(--mm-sans); font-size: 0.78rem; font-weight: 300; color: var(--mm-cream); opacity: 0.4; text-transform: uppercase; letter-spacing: 0.06em; }
+
+  /* ── Pairing line ── */
+  .pairing-line { font-family: var(--mm-sans); font-size: 0.78rem; font-weight: 300; color: var(--mm-cream); opacity: 0.35; font-style: italic; margin-top: var(--space-1); }
+
+  /* ── Taste profile ── */
+  .taste-profile { margin-top: var(--space-2); }
+  .taste-profile-heading { font-family: var(--mm-serif); font-size: 0.82rem; font-weight: 500; color: var(--mm-cream); text-transform: uppercase; letter-spacing: 0.08em; margin: 0 0 var(--space-3); }
+  .taste-bar-row { display: flex; align-items: center; gap: var(--space-3); margin-bottom: var(--space-2); }
+  .taste-bar-label { font-family: var(--mm-sans); font-size: 0.7rem; font-weight: 400; color: var(--mm-cream); opacity: 0.4; width: 72px; flex-shrink: 0; text-transform: uppercase; letter-spacing: 0.04em; }
+  .taste-bar-track { flex: 1; height: 4px; background: var(--mm-cream-10); border-radius: 2px; overflow: hidden; }
+  .taste-bar-fill { height: 100%; background: var(--mm-cream-40); border-radius: 2px; }
+
   /* ── Pack selector ── */
   .pack-selector { display: flex; gap: var(--space-2); justify-content: center; }
   .pack-option {
@@ -576,6 +592,25 @@
         <h2 class="section-label reveal-item">The Craft</h2>
         <p class="section-body reveal-item">Slow-roasted and milled into a fine powder, the carob is combined with organic cacao butter and hand-tempered in our Byron Bay kitchen. Each batch is small. Each bar is set and wrapped by hand. There are no shortcuts.</p>
         <p class="section-body reveal-item" style="margin-top: var(--space-4);">Ingredients: Australian carob, organic cacao butter. Nothing else.</p>
+        <div class="taste-profile reveal-item">
+          <h2 class="taste-profile-heading">Flavour Profile</h2>
+          <div class="taste-bar-row">
+            <span class="taste-bar-label">Sweetness</span>
+            <div class="taste-bar-track"><div class="taste-bar-fill" style="width: 70%"></div></div>
+          </div>
+          <div class="taste-bar-row">
+            <span class="taste-bar-label">Earthiness</span>
+            <div class="taste-bar-track"><div class="taste-bar-fill" style="width: 55%"></div></div>
+          </div>
+          <div class="taste-bar-row">
+            <span class="taste-bar-label">Richness</span>
+            <div class="taste-bar-track"><div class="taste-bar-fill" style="width: 80%"></div></div>
+          </div>
+          <div class="taste-bar-row">
+            <span class="taste-bar-label">Bitterness</span>
+            <div class="taste-bar-track"><div class="taste-bar-fill" style="width: 10%"></div></div>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -587,7 +622,12 @@
         <span class="section-question reveal-item">What do you get?</span>
         <img src="assets/product_shots/bar_pure_carob.webp" alt="Maple Moon Pure Carob Bar, 80g" class="product-img-story reveal-item" width="400" height="600" fetchpriority="high" decoding="async">
         <h2 class="product-name-story reveal-item">Pure Carob Bar</h2>
+        <div class="hero-stat reveal-item">
+          <span class="hero-stat-number">2</span>
+          <span class="hero-stat-label">Ingredients. That's it.</span>
+        </div>
         <p class="section-body reveal-item" style="max-width: 420px;">Australian carob and cacao butter, hand-tempered and set. Nothing else.</p>
+        <p class="pairing-line reveal-item">Try with a morning flat white or break a piece after dinner.</p>
         <span class="product-price-story reveal-item">$XX.XX / 80g</span>
         <div class="trust-row-story reveal-item">
           <span class="badge-item" tabindex="0" role="img" data-tooltip="Certified Organic" title="Certified Organic"><img src="assets/icon_organic.svg" alt="Certified Organic" width="22" height="22" loading="lazy" decoding="async"></span>
@@ -654,10 +694,13 @@
 <script>
 (function() {
   var packs = document.querySelectorAll('.pack-option');
+  var priceEl = document.querySelector('.product-price-story');
+  var prices = { '1 Bar': '$XX.XX', '3 Pack': '3 \u00d7 $XX.XX', '6 Pack': '6 \u00d7 $XX.XX' };
   packs.forEach(function(btn) {
     btn.addEventListener('click', function() {
       packs.forEach(function(b) { b.setAttribute('aria-pressed', 'false'); });
       btn.setAttribute('aria-pressed', 'true');
+      if (priceEl && prices[btn.textContent]) priceEl.textContent = prices[btn.textContent];
     });
   });
   var minus = document.querySelector('.qty-btn[aria-label="Decrease quantity"]');
