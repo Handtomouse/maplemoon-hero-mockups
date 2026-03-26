@@ -529,6 +529,7 @@
             loading="lazy"
             decoding="async"
           {%- endif %}
+          {{ block.shopify_attributes }}
         >
         {%- assign img_index = img_index | plus: 1 -%}
       {%- endif -%}
@@ -558,9 +559,9 @@
           <span class="hero-evolved__cat-dot" aria-hidden="true"></span>
         {%- endif -%}
         <button
-          class="hero-evolved__cat-tab"
+          class="hero-evolved__cat-tab{% if cat_rendered == 0 %} active{% endif %}"
           role="tab"
-          aria-selected="false"
+          aria-selected="{% if cat_rendered == 0 %}true{% else %}false{% endif %}"
           data-cat="{{ cat_id_val }}"
         >
           {{ cat_name }}
@@ -574,13 +575,17 @@
   <div class="hero-evolved__pills he-fade-6" role="tablist" aria-label="Flavour selector">
     {%- for block in section.blocks -%}
       {%- if block.type == 'product' -%}
+        {%- assign pill_is_first_cat = false -%}
+        {%- if block.settings.category == cat_1_id -%}
+          {%- assign pill_is_first_cat = true -%}
+        {%- endif -%}
         <button
-          class="hero-evolved__pill"
+          class="hero-evolved__pill{% if pill_is_first_cat and block.settings.is_default %} active{% endif %}"
           role="tab"
-          aria-selected="false"
+          aria-selected="{% if pill_is_first_cat and block.settings.is_default %}true{% else %}false{% endif %}"
           data-product-key="{{ block.id }}"
           data-category="{{ block.settings.category }}"
-          style="display:none"
+          {% unless pill_is_first_cat %}style="display:none"{% endunless %}
           {{ block.shopify_attributes }}
         >
           {{ block.settings.flavour_name }}
@@ -1205,6 +1210,7 @@
     {
       "type": "product",
       "name": "Product",
+      "limit": 24,
       "settings": [
         {
           "type": "select",
