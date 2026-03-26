@@ -1,0 +1,535 @@
+{%- comment -%}
+  MapleMoon Header / Navigation Section
+  Mobile: hamburger + full-screen overlay menu + logo top-right.
+  Desktop: fixed glassmorphism bar, centered nav, logo right.
+  Checkbox-driven toggle (no JS for open/close). JS for focus trap + Escape.
+{%- endcomment -%}
+
+<style>
+  /* =============================================
+     HEADER — Base (mobile-first)
+     ============================================= */
+
+  /* ── Skip link ── */
+  .hd-skip {
+    position: absolute;
+    top: -100%;
+    left: 16px;
+    z-index: 9999;
+    padding: 12px 24px;
+    background: var(--hd-text);
+    color: var(--hd-bg, #F0EDDF);
+    font-family: var(--hd-sans, 'Neue Haas Grotesk Display Pro', 'Inter', 'Helvetica Neue', sans-serif);
+    font-size: 0.85rem;
+    text-decoration: none;
+    border-radius: 0 0 8px 8px;
+  }
+  .hd-skip:focus {
+    top: 0;
+  }
+
+  /* ── Hamburger ── */
+  .hd-toggle { display: none; }
+  .hd-hamburger {
+    position: fixed;
+    top: max(12px, env(safe-area-inset-top, 12px));
+    left: 12px;
+    z-index: 250;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    width: 44px;
+    height: 44px;
+    padding: 8px;
+  }
+  .hd-hamburger span {
+    display: block;
+    width: 100%;
+    height: 2px;
+    background: var(--hd-text);
+    border-radius: 1px;
+    transition: transform 0.3s, opacity 0.3s;
+  }
+  .hd-toggle:checked ~ .hd-hamburger span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+  .hd-toggle:checked ~ .hd-hamburger span:nth-child(2) {
+    opacity: 0;
+  }
+  .hd-toggle:checked ~ .hd-hamburger span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+  }
+
+  /* ── Mobile header (logo top-right) ── */
+  .hd-mobile {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 100;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+    padding: max(20px, env(safe-area-inset-top, 20px)) 20px 12px;
+  }
+  .hd-mobile__logo {
+    width: 40px;
+    height: auto;
+  }
+
+  /* ── Desktop header ── */
+  .hd-desktop {
+    display: none;
+  }
+
+  /* ── Mobile menu overlay ── */
+  .hd-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 200;
+    background: var(--hd-menu-bg, #E7E4CA);
+    color: var(--hd-menu-text, #1E4366);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 28px;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+  }
+  .hd-toggle:checked ~ .hd-overlay {
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  .hd-overlay__close {
+    position: absolute;
+    top: max(20px, env(safe-area-inset-top, 20px));
+    right: 20px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1.5rem;
+    color: var(--hd-menu-text, #1E4366);
+    opacity: 0.5;
+    padding: 12px;
+    min-width: 44px;
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 0.2s;
+  }
+  .hd-overlay__close:hover { opacity: 1; }
+
+  /* Category links (primary) */
+  .hd-overlay__categories a {
+    display: block;
+    text-align: center;
+    font-family: var(--hd-serif, 'P22 Mackinac Pro', Georgia, serif);
+    font-size: 1.4rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--hd-menu-text, #1E4366);
+    text-decoration: none;
+    transition: opacity 0.2s;
+    min-height: 44px;
+    padding: 12px 0;
+    display: inline-flex;
+    align-items: center;
+  }
+  .hd-overlay__categories a:hover { opacity: 0.6; }
+  .hd-overlay__categories {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+  }
+
+  .hd-overlay__divider {
+    width: 40px;
+    height: 1px;
+    background: var(--hd-menu-text, #1E4366);
+    opacity: 0.2;
+  }
+
+  /* Page nav links (secondary) */
+  .hd-overlay__nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    margin-top: 24px;
+    padding-top: 24px;
+    border-top: 1px solid rgba(30, 67, 102, 0.15);
+  }
+  .hd-overlay__nav a {
+    font-family: var(--hd-sans, 'Neue Haas Grotesk Display Pro', 'Inter', sans-serif);
+    font-size: 0.95rem;
+    font-weight: 400;
+    text-transform: none;
+    letter-spacing: 0.02em;
+    color: var(--hd-menu-text, #1E4366);
+    opacity: 0.6;
+    text-decoration: none;
+    transition: opacity 0.2s;
+    min-height: 44px;
+    padding: 4px 0;
+    display: inline-flex;
+    align-items: center;
+  }
+  .hd-overlay__nav a:hover { opacity: 1; }
+
+  /* ── Reduced motion ── */
+  @media (prefers-reduced-motion: reduce) {
+    .hd-hamburger span,
+    .hd-overlay,
+    .hd-overlay__close,
+    .hd-overlay__categories a,
+    .hd-overlay__nav a {
+      transition: none !important;
+    }
+  }
+
+  /* =============================================
+     TABLET / DESKTOP (768px+)
+     ============================================= */
+  @media (min-width: 768px) {
+    .hd-hamburger { display: none; }
+    .hd-mobile { display: none; }
+    .hd-overlay { display: none; }
+
+    .hd-desktop {
+      display: flex;
+      align-items: center;
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      padding: 28px 40px;
+      background: var(--hd-bar-bg);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+    }
+    @supports not (backdrop-filter: blur(1px)) {
+      .hd-desktop { background: var(--hd-bar-fallback); }
+    }
+
+    .hd-desktop__nav {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 40px;
+    }
+    .hd-desktop__nav a {
+      font-family: var(--hd-sans, 'Neue Haas Grotesk Display Pro', 'Inter', sans-serif);
+      font-size: 1rem;
+      font-weight: 400;
+      color: var(--hd-text);
+      text-decoration: none;
+      opacity: 0.9;
+      transition: opacity 0.2s;
+      min-height: 44px;
+      display: inline-flex;
+      align-items: center;
+    }
+    .hd-desktop__nav a:hover { opacity: 0.5; }
+    .hd-desktop__nav a:focus-visible {
+      outline: 2px solid var(--hd-text);
+      outline-offset: 4px;
+    }
+
+    .hd-desktop__logo {
+      width: 80px;
+      height: auto;
+      margin-left: auto;
+      flex-shrink: 0;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .hd-desktop {
+      padding: 32px 48px;
+    }
+    .hd-desktop__nav {
+      gap: 52px;
+    }
+  }
+</style>
+
+{%- capture logo_filter -%}
+  {%- if section.settings.theme == 'dark' -%}
+    filter: brightness(0) saturate(100%) invert(91%) sepia(8%) saturate(365%) hue-rotate(18deg) brightness(105%) contrast(92%);
+  {%- endif -%}
+{%- endcapture -%}
+
+{%- assign light_bg = section.settings.background_color | default: '#F0EDDF' -%}
+{%- assign text_color = section.settings.text_color | default: '#1E4366' -%}
+
+<div
+  class="hd-wrapper"
+  style="
+    --hd-text: {{ text_color }};
+    --hd-bg: {{ light_bg }};
+    --hd-serif: 'P22 Mackinac Pro', Georgia, serif;
+    --hd-sans: 'Neue Haas Grotesk Display Pro', 'Inter', 'Helvetica Neue', sans-serif;
+    --hd-menu-bg: {{ section.settings.menu_bg_color | default: '#E7E4CA' }};
+    --hd-menu-text: {{ text_color }};
+    {%- if section.settings.theme == 'dark' -%}
+      --hd-bar-bg: rgba(30,20,10,0.15);
+      --hd-bar-fallback: rgba(30,20,10,0.7);
+    {%- else -%}
+      --hd-bar-bg: {{ light_bg | color_modify: 'alpha', 0.6 | default: 'rgba(240,237,223,0.6)' }};
+      --hd-bar-fallback: {{ light_bg | color_modify: 'alpha', 0.9 | default: 'rgba(240,237,223,0.9)' }};
+    {%- endif -%}
+  "
+>
+
+  <a href="#main-content" class="hd-skip">Skip to content</a>
+
+  <input type="checkbox" id="hd-toggle-{{ section.id }}" class="hd-toggle" hidden>
+  <label
+    for="hd-toggle-{{ section.id }}"
+    class="hd-hamburger"
+    role="button"
+    aria-label="Open menu"
+    aria-expanded="false"
+  >
+    <span></span><span></span><span></span>
+  </label>
+
+  <!-- Mobile: logo top-right -->
+  <div class="hd-mobile">
+    {%- if section.settings.logo -%}
+      <img
+        src="{{ section.settings.logo | image_url: width: 80 }}"
+        alt="{{ shop.name }}"
+        class="hd-mobile__logo"
+        width="40" height="40"
+        loading="eager" decoding="async"
+        style="{{ logo_filter }}"
+      >
+    {%- endif -%}
+  </div>
+
+  <!-- Mobile: full-screen overlay menu -->
+  <div
+    class="hd-overlay"
+    inert
+    role="dialog"
+    aria-modal="true"
+    aria-label="Navigation menu"
+    aria-hidden="true"
+  >
+    <button class="hd-overlay__close" aria-label="Close menu">&times;</button>
+
+    <div class="hd-overlay__categories">
+      {%- for block in section.blocks -%}
+        {%- if block.type == 'category_link' -%}
+          <a href="{{ block.settings.url }}" {{ block.shopify_attributes }}>{{ block.settings.label }}</a>
+        {%- endif -%}
+      {%- endfor -%}
+    </div>
+
+    <div class="hd-overlay__divider"></div>
+
+    <div class="hd-overlay__nav">
+      {%- for block in section.blocks -%}
+        {%- if block.type == 'nav_link' -%}
+          <a href="{{ block.settings.url }}" {{ block.shopify_attributes }}>{{ block.settings.label }}</a>
+        {%- endif -%}
+      {%- endfor -%}
+    </div>
+  </div>
+
+  <!-- Desktop: fixed glassmorphism bar -->
+  <header class="hd-desktop">
+    <nav class="hd-desktop__nav" aria-label="Main navigation">
+      {%- for block in section.blocks -%}
+        {%- if block.type == 'nav_link' -%}
+          <a href="{{ block.settings.url }}" {{ block.shopify_attributes }}>{{ block.settings.label }}</a>
+        {%- endif -%}
+      {%- endfor -%}
+    </nav>
+    {%- if section.settings.logo -%}
+      <img
+        src="{{ section.settings.logo | image_url: width: 160 }}"
+        alt="{{ shop.name }}"
+        class="hd-desktop__logo"
+        width="80" height="40"
+        loading="eager" decoding="async"
+        style="{{ logo_filter }}"
+      >
+    {%- endif -%}
+  </header>
+
+</div>
+
+<script>
+  (function(){
+    var id = 'hd-toggle-{{ section.id }}';
+    var toggle = document.getElementById(id);
+    var overlay = toggle ? toggle.parentElement.querySelector('.hd-overlay') : null;
+    var closeBtn = overlay ? overlay.querySelector('.hd-overlay__close') : null;
+    var hamburger = toggle ? toggle.parentElement.querySelector('.hd-hamburger') : null;
+    if (!toggle || !overlay || !closeBtn) return;
+
+    function openMenu() {
+      overlay.removeAttribute('inert');
+      overlay.setAttribute('aria-hidden', 'false');
+      if (hamburger) hamburger.setAttribute('aria-expanded', 'true');
+      closeBtn.focus();
+    }
+    function closeMenu() {
+      toggle.checked = false;
+      overlay.setAttribute('inert', '');
+      overlay.setAttribute('aria-hidden', 'true');
+      if (hamburger) hamburger.setAttribute('aria-expanded', 'false');
+      hamburger.focus();
+    }
+
+    toggle.addEventListener('change', function() {
+      if (toggle.checked) openMenu();
+      else closeMenu();
+    });
+    closeBtn.addEventListener('click', closeMenu);
+
+    overlay.addEventListener('click', function(e) {
+      if (e.target.tagName === 'A') closeMenu();
+    });
+
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape' && toggle.checked) {
+        e.preventDefault();
+        closeMenu();
+      }
+    });
+
+    /* Focus trap */
+    overlay.addEventListener('keydown', function(e) {
+      if (e.key !== 'Tab') return;
+      var focusable = overlay.querySelectorAll('a, button, [tabindex]:not([tabindex="-1"])');
+      if (!focusable.length) return;
+      var first = focusable[0], last = focusable[focusable.length - 1];
+      if (e.shiftKey && document.activeElement === first) {
+        e.preventDefault(); last.focus();
+      } else if (!e.shiftKey && document.activeElement === last) {
+        e.preventDefault(); first.focus();
+      }
+    });
+  })();
+</script>
+
+{% schema %}
+{
+  "name": "Header",
+  "tag": "div",
+  "class": "hd-section-wrapper",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "logo",
+      "label": "Logo"
+    },
+    {
+      "type": "select",
+      "id": "theme",
+      "label": "Theme",
+      "options": [
+        { "value": "light", "label": "Light (cream bar)" },
+        { "value": "dark", "label": "Dark (transparent bar)" }
+      ],
+      "default": "light"
+    },
+    {
+      "type": "header",
+      "content": "Colors"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Bar background",
+      "default": "#F0EDDF"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text / icon color",
+      "default": "#1E4366"
+    },
+    {
+      "type": "color",
+      "id": "menu_bg_color",
+      "label": "Mobile menu background",
+      "default": "#E7E4CA"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "nav_link",
+      "name": "Nav Link",
+      "limit": 8,
+      "settings": [
+        {
+          "type": "text",
+          "id": "label",
+          "label": "Label",
+          "default": "Shop"
+        },
+        {
+          "type": "url",
+          "id": "url",
+          "label": "URL",
+          "default": "/collections/all"
+        }
+      ]
+    },
+    {
+      "type": "category_link",
+      "name": "Mobile Category",
+      "limit": 10,
+      "settings": [
+        {
+          "type": "text",
+          "id": "label",
+          "label": "Label",
+          "default": "Bars"
+        },
+        {
+          "type": "url",
+          "id": "url",
+          "label": "URL",
+          "default": "/collections/bars"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Header",
+      "settings": {
+        "theme": "light",
+        "background_color": "#F0EDDF",
+        "text_color": "#1E4366",
+        "menu_bg_color": "#E7E4CA"
+      },
+      "blocks": [
+        { "type": "category_link", "settings": { "label": "Bars", "url": "/collections/bars" } },
+        { "type": "category_link", "settings": { "label": "Moons", "url": "/collections/moons" } },
+        { "type": "category_link", "settings": { "label": "Bananas", "url": "/collections/bananas" } },
+        { "type": "category_link", "settings": { "label": "Bites", "url": "/collections/bites" } },
+        { "type": "category_link", "settings": { "label": "Elixirs", "url": "/collections/elixirs" } },
+        { "type": "category_link", "settings": { "label": "Packs", "url": "/collections/packs" } },
+        { "type": "category_link", "settings": { "label": "Gifts", "url": "/collections/gifts" } },
+        { "type": "nav_link", "settings": { "label": "Our Story", "url": "/pages/our-story" } },
+        { "type": "nav_link", "settings": { "label": "Shop", "url": "/collections/all" } },
+        { "type": "nav_link", "settings": { "label": "Stockists", "url": "/pages/stockists" } },
+        { "type": "nav_link", "settings": { "label": "Recipes", "url": "/pages/recipes" } },
+        { "type": "nav_link", "settings": { "label": "Contact", "url": "/pages/contact" } }
+      ]
+    }
+  ]
+}
+{% endschema %}
