@@ -200,7 +200,7 @@
     padding: 8px 4px;
     min-height: 44px;
     opacity: 0.35;
-    transition: opacity 0.2s;
+    transition: opacity 0.2s, border-color 0.2s;
     -webkit-tap-highlight-color: transparent;
     white-space: nowrap;
     border-bottom: 1.5px solid transparent;
@@ -451,8 +451,6 @@
   assign cat_4_id = section.settings.cat_4_id | default: 'elixirs'
 -%}
 
-<h2 class="hero-evolved__sr-only">{{ section.settings.headline | default: 'What is Carob?' }}</h2>
-
 <section
   class="hero-evolved"
   id="hero-evolved-{{ section.id }}"
@@ -477,7 +475,7 @@
         aria-hidden="true"
         width="800"
         height="200"
-        loading="eager"
+        loading="lazy"
         decoding="async"
       >
     </div>
@@ -485,7 +483,7 @@
 
   {%- comment -%} ── Time-of-day greeting ── {%- endcomment -%}
   {%- if section.settings.show_greeting -%}
-    <div class="hero-evolved__greeting he-fade-1" aria-live="polite">
+    <div class="hero-evolved__greeting he-fade-1">
       <svg viewBox="0 0 24 24" aria-hidden="true">
         <circle cx="12" cy="12" r="10"/>
         <polyline points="12 6 12 12 16 14"/>
@@ -496,9 +494,9 @@
 
   {%- comment -%} ── Headline ── {%- endcomment -%}
   {%- if section.settings.headline != blank -%}
-    <p class="hero-evolved__headline he-fade-2" aria-hidden="true">
+    <h2 class="hero-evolved__headline he-fade-2">
       {{ section.settings.headline }}
-    </p>
+    </h2>
   {%- endif -%}
   {%- if section.settings.headline_subtext != blank -%}
     <p class="hero-evolved__subtext he-fade-2">
@@ -562,6 +560,7 @@
           class="hero-evolved__cat-tab{% if cat_rendered == 0 %} active{% endif %}"
           role="tab"
           aria-selected="{% if cat_rendered == 0 %}true{% else %}false{% endif %}"
+          aria-controls="hero-evolved-panel-{{ section.id }}"
           data-cat="{{ cat_id_val }}"
         >
           {{ cat_name }}
@@ -571,8 +570,11 @@
     {%- endfor -%}
   </div>
 
-  {%- comment -%} ── Flavour pills ── {%- endcomment -%}
-  <div class="hero-evolved__pills he-fade-6" role="tablist" aria-label="Flavour selector">
+  {%- comment -%} ── Tabpanel: flavour selector region controlled by category tabs ── {%- endcomment -%}
+  <div id="hero-evolved-panel-{{ section.id }}" role="tabpanel" aria-label="Selected category products">
+
+  {%- comment -%} ── Flavour pills (radiogroup within tabpanel) ── {%- endcomment -%}
+  <div class="hero-evolved__pills he-fade-6" role="radiogroup" aria-label="Flavour selector">
     {%- for block in section.blocks -%}
       {%- if block.type == 'product' -%}
         {%- assign pill_is_first_cat = false -%}
@@ -581,8 +583,8 @@
         {%- endif -%}
         <button
           class="hero-evolved__pill{% if pill_is_first_cat and block.settings.is_default %} active{% endif %}"
-          role="tab"
-          aria-selected="{% if pill_is_first_cat and block.settings.is_default %}true{% else %}false{% endif %}"
+          role="radio"
+          aria-checked="{% if pill_is_first_cat and block.settings.is_default %}true{% else %}false{% endif %}"
           data-product-key="{{ block.id }}"
           data-category="{{ block.settings.category }}"
           {% unless pill_is_first_cat %}style="display:none"{% endunless %}
@@ -614,6 +616,8 @@
       <a href="/shop" style="display:inline-block; border:1.5px solid currentColor; border-radius:50px; padding:12px 32px; text-decoration:none; color:inherit; font-size:0.85rem; letter-spacing:0.08em; text-transform:uppercase;">Shop Now</a>
     </div>
   </noscript>
+
+  </div>{%- comment -%} /tabpanel {%- endcomment -%}
 
   {%- comment -%} ── Trust badges ── {%- endcomment -%}
   {%- if section.settings.show_trust_badges -%}
@@ -837,8 +841,8 @@
       config.products.forEach(function(p) {
         var btn = document.createElement('button');
         btn.className = 'hero-evolved__pill';
-        btn.setAttribute('role', 'tab');
-        btn.setAttribute('aria-selected', 'false');
+        btn.setAttribute('role', 'radio');
+        btn.setAttribute('aria-checked', 'false');
         btn.setAttribute('data-product-key', p.key);
         btn.setAttribute('data-category', p.category);
         btn.style.display = 'none';
@@ -894,7 +898,7 @@
     allPills.forEach(function(p) {
       var isActive = p.getAttribute('data-product-key') === key;
       p.classList.toggle('active', isActive);
-      p.setAttribute('aria-selected', isActive ? 'true' : 'false');
+      p.setAttribute('aria-checked', isActive ? 'true' : 'false');
     });
 
     allImages.forEach(function(img) {
@@ -927,7 +931,7 @@
       } else {
         pill.style.display = 'none';
         pill.classList.remove('active');
-        pill.setAttribute('aria-selected', 'false');
+        pill.setAttribute('aria-checked', 'false');
       }
     });
 
@@ -1059,11 +1063,6 @@
       "id": "show_trust_badges",
       "label": "Show trust badges",
       "default": true
-    },
-    {
-      "type": "image_picker",
-      "id": "logo_image",
-      "label": "Logo"
     },
     {
       "type": "image_picker",
