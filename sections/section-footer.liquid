@@ -1,0 +1,597 @@
+{%- comment -%}
+  MapleMoon Footer Section
+  4-column desktop layout: Brand, Navigation, Contact, Newsletter placeholder.
+  Mobile: stacked single column.
+  Includes social links, legal links, and HandToMouse credit.
+{%- endcomment -%}
+
+<style>
+  /* =============================================
+     FOOTER — Base (mobile-first)
+     ============================================= */
+  .mm-footer {
+    position: relative;
+    width: 100%;
+    padding: 48px 24px max(32px, env(safe-area-inset-bottom));
+    background: var(--ft-bg);
+    color: var(--ft-text);
+    font-family: var(--ft-sans, 'Neue Haas Grotesk Display Pro', 'Inter', 'Helvetica Neue', sans-serif);
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    border-top: 1px solid var(--ft-border, rgba(30, 67, 102, 0.08));
+  }
+
+  .mm-footer__inner {
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  /* ── Top: brand + columns ── */
+  .mm-footer__top {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+  }
+
+  /* ── Brand block ── */
+  .mm-footer__brand {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    text-align: center;
+  }
+  .mm-footer__logo {
+    width: 48px;
+    height: auto;
+    opacity: 0.5;
+  }
+  .mm-footer__tagline {
+    font-family: var(--ft-serif, 'P22 Mackinac Pro', Georgia, serif);
+    font-size: 0.95rem;
+    font-weight: 400;
+    opacity: 0.6;
+    max-width: 280px;
+  }
+
+  /* ── Column group (mobile: stacked) ── */
+  .mm-footer__columns {
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+  }
+  .mm-footer__col {
+    text-align: center;
+  }
+  .mm-footer__col-title {
+    font-family: var(--ft-serif, 'P22 Mackinac Pro', Georgia, serif);
+    font-size: 0.75rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    opacity: 0.4;
+    margin: 0 0 12px;
+  }
+
+  /* ── Nav links ── */
+  .mm-footer__nav {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    align-items: center;
+  }
+  .mm-footer__nav a {
+    font-size: 0.85rem;
+    font-weight: 300;
+    color: var(--ft-text);
+    text-decoration: none;
+    opacity: 0.7;
+    transition: opacity 0.2s;
+    padding: 4px 0;
+    min-height: 32px;
+    display: inline-flex;
+    align-items: center;
+  }
+  .mm-footer__nav a:hover { opacity: 1; }
+
+  /* ── Contact ── */
+  .mm-footer__contact {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    align-items: center;
+    font-size: 0.85rem;
+    font-weight: 300;
+    opacity: 0.7;
+  }
+  .mm-footer__contact a {
+    color: var(--ft-text);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    text-decoration-thickness: 1px;
+  }
+  .mm-footer__contact a:hover { opacity: 0.6; }
+
+  /* ── Social icons ── */
+  .mm-footer__social {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    margin-top: 8px;
+  }
+  .mm-footer__social a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    border: 1px solid var(--ft-border, rgba(30, 67, 102, 0.15));
+    color: var(--ft-text);
+    text-decoration: none;
+    opacity: 0.5;
+    transition: opacity 0.2s, background 0.2s;
+  }
+  .mm-footer__social a:hover {
+    opacity: 1;
+    background: var(--ft-border, rgba(30, 67, 102, 0.08));
+  }
+  .mm-footer__social svg {
+    width: 16px;
+    height: 16px;
+    fill: currentColor;
+  }
+
+  /* ── Newsletter placeholder ── */
+  .mm-footer__newsletter {
+    text-align: center;
+  }
+  .mm-footer__newsletter p {
+    font-size: 0.85rem;
+    font-weight: 300;
+    opacity: 0.7;
+    margin-bottom: 12px;
+  }
+  .mm-footer__newsletter-form {
+    display: flex;
+    gap: 0;
+    max-width: 320px;
+    margin: 0 auto;
+  }
+  .mm-footer__newsletter-input {
+    flex: 1;
+    padding: 10px 16px;
+    border: 1px solid var(--ft-border, rgba(30, 67, 102, 0.15));
+    border-right: none;
+    border-radius: 50px 0 0 50px;
+    background: transparent;
+    color: var(--ft-text);
+    font-family: inherit;
+    font-size: 0.8rem;
+    outline: none;
+    min-height: 44px;
+  }
+  .mm-footer__newsletter-input::placeholder {
+    color: var(--ft-text);
+    opacity: 0.4;
+  }
+  .mm-footer__newsletter-input:focus {
+    border-color: var(--ft-text);
+  }
+  .mm-footer__newsletter-btn {
+    padding: 10px 20px;
+    border: 1px solid var(--ft-border, rgba(30, 67, 102, 0.15));
+    border-radius: 0 50px 50px 0;
+    background: var(--ft-text);
+    color: var(--ft-bg, #F0EDDF);
+    font-family: inherit;
+    font-size: 0.7rem;
+    font-weight: 500;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: opacity 0.2s;
+    min-height: 44px;
+  }
+  .mm-footer__newsletter-btn:hover { opacity: 0.8; }
+
+  /* ── Bottom bar ── */
+  .mm-footer__bottom {
+    margin-top: 32px;
+    padding-top: 24px;
+    border-top: 1px solid var(--ft-border, rgba(30, 67, 102, 0.06));
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    text-align: center;
+  }
+  .mm-footer__legal {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .mm-footer__legal a {
+    font-size: 0.7rem;
+    font-weight: 300;
+    color: var(--ft-text);
+    text-decoration: none;
+    opacity: 0.4;
+    transition: opacity 0.2s;
+  }
+  .mm-footer__legal a:hover { opacity: 0.7; }
+  .mm-footer__copyright {
+    font-size: 0.7rem;
+    font-weight: 300;
+    opacity: 0.3;
+  }
+  .mm-footer__credit {
+    font-size: 0.65rem;
+    font-weight: 300;
+    opacity: 0.2;
+  }
+  .mm-footer__credit a {
+    color: inherit;
+    text-decoration: none;
+  }
+  .mm-footer__credit a:hover { opacity: 0.6; }
+
+  /* =============================================
+     DESKTOP (768px+)
+     ============================================= */
+  @media (min-width: 768px) {
+    .mm-footer {
+      padding: 56px 48px 40px;
+    }
+    .mm-footer__top {
+      flex-direction: row;
+      gap: 48px;
+      align-items: flex-start;
+    }
+    .mm-footer__brand {
+      align-items: flex-start;
+      text-align: left;
+      flex: 0 0 240px;
+    }
+    .mm-footer__columns {
+      flex: 1;
+      flex-direction: row;
+      gap: 40px;
+    }
+    .mm-footer__col {
+      flex: 1;
+      text-align: left;
+    }
+    .mm-footer__nav {
+      align-items: flex-start;
+    }
+    .mm-footer__contact {
+      align-items: flex-start;
+    }
+    .mm-footer__social {
+      justify-content: flex-start;
+    }
+    .mm-footer__newsletter {
+      text-align: left;
+    }
+    .mm-footer__newsletter-form {
+      margin: 0;
+    }
+    .mm-footer__bottom {
+      flex-direction: row;
+      justify-content: space-between;
+      margin-top: 40px;
+      padding-top: 24px;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .mm-footer__top {
+      gap: 64px;
+    }
+    .mm-footer__columns {
+      gap: 48px;
+    }
+  }
+</style>
+
+<footer
+  class="mm-footer"
+  id="mm-footer-{{ section.id }}"
+  role="contentinfo"
+  style="
+    --ft-bg: {{ section.settings.background_color | default: '#F0EDDF' }};
+    --ft-text: {{ section.settings.text_color | default: '#1E4366' }};
+    --ft-serif: 'P22 Mackinac Pro', Georgia, serif;
+    --ft-sans: 'Neue Haas Grotesk Display Pro', 'Inter', 'Helvetica Neue', sans-serif;
+  "
+>
+  <div class="mm-footer__inner">
+    <div class="mm-footer__top">
+      {%- comment -%} ── Brand column ── {%- endcomment -%}
+      <div class="mm-footer__brand">
+        {%- if section.settings.logo_image != blank -%}
+          <img
+            src="{{ section.settings.logo_image | image_url: width: 96 }}"
+            alt="{{ section.settings.logo_alt | default: 'Maple Moon' | escape }}"
+            class="mm-footer__logo"
+            width="48" height="48"
+            loading="lazy" decoding="async"
+          >
+        {%- endif -%}
+        {%- if section.settings.tagline != blank -%}
+          <p class="mm-footer__tagline">{{ section.settings.tagline }}</p>
+        {%- endif -%}
+
+        {%- comment -%} ── Social links ── {%- endcomment -%}
+        {%- if section.settings.social_instagram != blank or section.settings.social_facebook != blank -%}
+          <div class="mm-footer__social">
+            {%- if section.settings.social_instagram != blank -%}
+              <a href="{{ section.settings.social_instagram }}" aria-label="Instagram" target="_blank" rel="noopener">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+              </a>
+            {%- endif -%}
+            {%- if section.settings.social_facebook != blank -%}
+              <a href="{{ section.settings.social_facebook }}" aria-label="Facebook" target="_blank" rel="noopener">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+              </a>
+            {%- endif -%}
+          </div>
+        {%- endif -%}
+      </div>
+
+      <div class="mm-footer__columns">
+        {%- comment -%} ── Navigation column ── {%- endcomment -%}
+        {%- if section.settings.show_nav -%}
+          <div class="mm-footer__col">
+            <p class="mm-footer__col-title">Shop</p>
+            <nav class="mm-footer__nav" aria-label="Footer navigation">
+              {%- for block in section.blocks -%}
+                {%- if block.type == 'nav_link' -%}
+                  <a href="{{ block.settings.url | default: '#' }}" {{ block.shopify_attributes }}>{{ block.settings.label }}</a>
+                {%- endif -%}
+              {%- endfor -%}
+            </nav>
+          </div>
+        {%- endif -%}
+
+        {%- comment -%} ── Contact column ── {%- endcomment -%}
+        {%- if section.settings.show_contact -%}
+          <div class="mm-footer__col">
+            <p class="mm-footer__col-title">Contact</p>
+            <div class="mm-footer__contact">
+              {%- if section.settings.contact_email != blank -%}
+                <a href="mailto:{{ section.settings.contact_email }}">{{ section.settings.contact_email }}</a>
+              {%- endif -%}
+              {%- if section.settings.contact_location != blank -%}
+                <span>{{ section.settings.contact_location }}</span>
+              {%- endif -%}
+            </div>
+          </div>
+        {%- endif -%}
+
+        {%- comment -%} ── Newsletter column ── {%- endcomment -%}
+        {%- if section.settings.show_newsletter -%}
+          <div class="mm-footer__col">
+            <p class="mm-footer__col-title">Stay in Touch</p>
+            <div class="mm-footer__newsletter">
+              {%- if section.settings.newsletter_text != blank -%}
+                <p>{{ section.settings.newsletter_text }}</p>
+              {%- endif -%}
+              <form class="mm-footer__newsletter-form" action="#" method="post">
+                <input
+                  type="email"
+                  class="mm-footer__newsletter-input"
+                  placeholder="Your email"
+                  aria-label="Email address"
+                  required
+                >
+                <button type="submit" class="mm-footer__newsletter-btn">Join</button>
+              </form>
+            </div>
+          </div>
+        {%- endif -%}
+      </div>
+    </div>
+
+    {%- comment -%} ── Bottom bar ── {%- endcomment -%}
+    <div class="mm-footer__bottom">
+      <div class="mm-footer__legal">
+        {%- if section.settings.privacy_url != blank -%}
+          <a href="{{ section.settings.privacy_url }}">Privacy Policy</a>
+        {%- endif -%}
+        {%- if section.settings.terms_url != blank -%}
+          <a href="{{ section.settings.terms_url }}">Terms of Service</a>
+        {%- endif -%}
+        {%- if section.settings.shipping_url != blank -%}
+          <a href="{{ section.settings.shipping_url }}">Shipping</a>
+        {%- endif -%}
+      </div>
+      <p class="mm-footer__copyright">&copy; {{ 'now' | date: '%Y' }} {{ section.settings.copyright_name | default: 'Maple Moon' }}. All rights reserved.</p>
+      <p class="mm-footer__credit"><a href="https://handtomouse.org" target="_blank" rel="noopener">Crafted by HandToMouse Studio</a></p>
+    </div>
+  </div>
+</footer>
+
+{% schema %}
+{
+  "name": "Footer",
+  "tag": "div",
+  "class": "mm-footer-wrapper",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Brand"
+    },
+    {
+      "type": "image_picker",
+      "id": "logo_image",
+      "label": "Logo"
+    },
+    {
+      "type": "text",
+      "id": "logo_alt",
+      "label": "Logo alt text",
+      "default": "Maple Moon"
+    },
+    {
+      "type": "text",
+      "id": "tagline",
+      "label": "Tagline",
+      "default": "Artisan carob and cacao butter. Handmade in Byron Bay."
+    },
+    {
+      "type": "header",
+      "content": "Social"
+    },
+    {
+      "type": "url",
+      "id": "social_instagram",
+      "label": "Instagram URL"
+    },
+    {
+      "type": "url",
+      "id": "social_facebook",
+      "label": "Facebook URL"
+    },
+    {
+      "type": "header",
+      "content": "Columns"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_nav",
+      "label": "Show navigation",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "show_contact",
+      "label": "Show contact",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "show_newsletter",
+      "label": "Show newsletter signup",
+      "default": true,
+      "info": "Replace the form action with your Klaviyo or Mailchimp endpoint"
+    },
+    {
+      "type": "header",
+      "content": "Contact Details"
+    },
+    {
+      "type": "text",
+      "id": "contact_email",
+      "label": "Email",
+      "default": "info@maplemoon.com.au"
+    },
+    {
+      "type": "text",
+      "id": "contact_location",
+      "label": "Location",
+      "default": "Byron Bay, Australia"
+    },
+    {
+      "type": "header",
+      "content": "Newsletter"
+    },
+    {
+      "type": "text",
+      "id": "newsletter_text",
+      "label": "Signup text",
+      "default": "New flavours, recipes, and updates."
+    },
+    {
+      "type": "header",
+      "content": "Legal"
+    },
+    {
+      "type": "url",
+      "id": "privacy_url",
+      "label": "Privacy Policy URL"
+    },
+    {
+      "type": "url",
+      "id": "terms_url",
+      "label": "Terms of Service URL"
+    },
+    {
+      "type": "url",
+      "id": "shipping_url",
+      "label": "Shipping Policy URL"
+    },
+    {
+      "type": "text",
+      "id": "copyright_name",
+      "label": "Copyright name",
+      "default": "Maple Moon"
+    },
+    {
+      "type": "header",
+      "content": "Colors"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background",
+      "default": "#F0EDDF"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text",
+      "default": "#1E4366"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "nav_link",
+      "name": "Navigation Link",
+      "limit": 12,
+      "settings": [
+        {
+          "type": "text",
+          "id": "label",
+          "label": "Label",
+          "default": "Shop"
+        },
+        {
+          "type": "url",
+          "id": "url",
+          "label": "URL"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Footer",
+      "settings": {
+        "tagline": "Artisan carob and cacao butter. Handmade in Byron Bay.",
+        "show_nav": true,
+        "show_contact": true,
+        "show_newsletter": true,
+        "contact_email": "info@maplemoon.com.au",
+        "contact_location": "Byron Bay, Australia",
+        "newsletter_text": "New flavours, recipes, and updates.",
+        "copyright_name": "Maple Moon",
+        "background_color": "#F0EDDF",
+        "text_color": "#1E4366"
+      },
+      "blocks": [
+        { "type": "nav_link", "settings": { "label": "Bars" } },
+        { "type": "nav_link", "settings": { "label": "Moons" } },
+        { "type": "nav_link", "settings": { "label": "Bites" } },
+        { "type": "nav_link", "settings": { "label": "Elixirs" } },
+        { "type": "nav_link", "settings": { "label": "Our Story" } },
+        { "type": "nav_link", "settings": { "label": "Stockists" } },
+        { "type": "nav_link", "settings": { "label": "Recipes" } },
+        { "type": "nav_link", "settings": { "label": "Contact" } }
+      ]
+    }
+  ]
+}
+{% endschema %}
