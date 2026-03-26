@@ -269,6 +269,13 @@
     outline: 2px solid var(--pm-text);
     outline-offset: 4px;
   }
+  .prod-main__add-to-cart--disabled {
+    opacity: 0.4;
+    pointer-events: none;
+    cursor: not-allowed;
+    background: transparent;
+    border-color: var(--pm-text);
+  }
 
   /* ── Shipping trust line ── */
   .prod-main__shipping {
@@ -369,6 +376,12 @@
   .prod-main__tab-panel[hidden] { display: none; }
   .prod-main__tab-panel p { margin: 0 0 12px; }
   .prod-main__tab-panel p:last-child { margin-bottom: 0; }
+  .prod-main__tab-panel ul,
+  .prod-main__tab-panel ol { padding-left: 20px; margin: 0 0 12px; }
+  .prod-main__tab-panel li { margin-bottom: 4px; }
+  .prod-main__tab-panel a { color: var(--pm-text); text-decoration: underline; text-underline-offset: 3px; }
+  .prod-main__tab-panel a:hover { opacity: 0.6; }
+  .prod-main__tab-panel strong { font-weight: 500; }
 
   /* =============================================
      DESKTOP (768px+)
@@ -386,6 +399,8 @@
       position: sticky;
       top: 120px;
       padding: 48px 32px;
+      max-height: calc(100vh - 160px);
+      overflow: hidden;
     }
     .prod-main__main-img {
       max-height: 400px;
@@ -506,7 +521,7 @@
             <input class="prod-main__qty-input" type="number" value="1" min="1" max="99" aria-label="Quantity">
             <button class="prod-main__qty-btn" type="button" aria-label="Increase quantity">&#43;</button>
           </div>
-          <button class="prod-main__add-to-cart" type="button">{{ section.settings.cta_text | default: 'Add to Cart' }}</button>
+          <button class="prod-main__add-to-cart{% if section.settings.is_sold_out %} prod-main__add-to-cart--disabled{% endif %}" type="button" {% if section.settings.is_sold_out %}disabled aria-disabled="true"{% endif %}>{% if section.settings.is_sold_out %}Sold Out{% else %}{{ section.settings.cta_text | default: 'Add to Cart' }}{% endif %}</button>
         </div>
 
         <div class="prod-main__shipping">
@@ -688,6 +703,13 @@
       "id": "cta_text",
       "label": "Add to cart text",
       "default": "Add to Cart"
+    },
+    {
+      "type": "checkbox",
+      "id": "is_sold_out",
+      "label": "Product sold out",
+      "default": false,
+      "info": "Disables the Add to Cart button and shows 'Sold Out'. Replace with Shopify product.available when wiring to theme."
     },
     {
       "type": "header",
