@@ -182,11 +182,44 @@
   }
   .product-image-card .product-main-img {
     position: relative; z-index: 2;
-    max-height: 320px; width: auto;
+    max-height: 280px; width: auto;
     object-fit: contain;
     filter: drop-shadow(0 4px 8px rgba(0,0,0,0.06))
             drop-shadow(0 12px 24px rgba(0,0,0,0.08));
+    transition: opacity 0.3s ease;
   }
+  .product-thumbs {
+    position: relative; z-index: 2;
+    display: flex; gap: var(--space-2);
+    justify-content: center;
+    margin-top: var(--space-4);
+  }
+  .product-thumb {
+    width: 56px; height: 56px;
+    border-radius: var(--radius-sm);
+    border: 1.5px solid var(--mm-black-10);
+    overflow: hidden; cursor: pointer;
+    padding: 4px; background: rgba(255,255,255,0.6);
+    transition: border-color 0.2s;
+  }
+  .product-thumb:hover { border-color: var(--mm-navy); }
+  .product-thumb.active { border-color: var(--mm-navy); }
+  .product-thumb img {
+    width: 100%; height: 100%;
+    object-fit: contain;
+  }
+  .product-thumb:focus-visible {
+    outline: 2px solid var(--mm-navy); outline-offset: 2px;
+  }
+
+  .breadcrumb {
+    font-family: var(--mm-sans); font-size: 0.72rem; font-weight: 400;
+    color: var(--mm-navy); opacity: 0.4;
+    letter-spacing: 0.04em; text-transform: uppercase;
+    margin-bottom: var(--space-2);
+  }
+  .breadcrumb a { color: inherit; text-decoration: none; transition: opacity 0.2s; }
+  .breadcrumb a:hover { opacity: 1; }
 
   /* Product info card */
   .product-info-card {
@@ -579,6 +612,49 @@
     overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0;
   }
 
+  /* ── Sticky mobile CTA ── */
+  .sticky-cta {
+    position: fixed; bottom: 0; left: 0; right: 0;
+    z-index: var(--z-sticky);
+    background: var(--light-bg);
+    border-top: 1px solid var(--mm-black-08);
+    padding: 12px 20px;
+    display: flex; align-items: center; justify-content: space-between;
+    gap: var(--space-3);
+    transform: translateY(100%);
+    transition: transform 0.3s ease;
+    box-shadow: 0 -4px 12px rgba(0,0,0,0.06);
+  }
+  .sticky-cta.visible { transform: translateY(0); }
+  .sticky-cta-info {
+    display: flex; flex-direction: column; gap: 2px;
+    min-width: 0;
+  }
+  .sticky-cta-name {
+    font-family: var(--mm-serif); font-size: 0.85rem; font-weight: 500;
+    color: var(--mm-navy); white-space: nowrap;
+    overflow: hidden; text-overflow: ellipsis;
+  }
+  .sticky-cta-price {
+    font-family: var(--mm-sans); font-size: 0.78rem; font-weight: 300;
+    color: var(--mm-carob-dark); opacity: 0.6;
+  }
+  .sticky-cta .add-to-cart-sm {
+    display: inline-flex; align-items: center; justify-content: center;
+    border: none; color: var(--light-bg);
+    background: var(--mm-navy); border-radius: var(--radius-pill);
+    padding: 10px 24px; min-height: 44px;
+    font-family: var(--mm-sans); font-size: 0.78rem;
+    font-weight: 400; letter-spacing: 0.06em; text-transform: uppercase;
+    cursor: pointer; flex-shrink: 0;
+    transition: background 0.2s;
+  }
+  .sticky-cta .add-to-cart-sm:hover { background: var(--mm-carob-dark); }
+  @media (min-width: 768px) { .sticky-cta { display: none; } }
+  @media (prefers-reduced-motion: reduce) {
+    .sticky-cta { transition: none; }
+  }
+
   /* ── Scroll entrance animation ── */
   .reveal {
     opacity: 0; transform: translateY(16px);
@@ -649,10 +725,24 @@
         <div class="carob-watermark-wrap" aria-hidden="true">
           <img src="assets/carob_wordmark.svg" alt="" aria-hidden="true" width="800" height="200">
         </div>
-        <img src="assets/product_shots/bar_pure_carob.webp" alt="Maple Moon Pure Carob Bar, 80g" class="product-main-img" width="400" height="600" fetchpriority="high" decoding="async">
+        <img src="assets/product_shots/bar_pure_carob.webp" alt="Maple Moon Pure Carob Bar, 80g" class="product-main-img" id="mainProductImg" width="400" height="600" fetchpriority="high" decoding="async">
+        <div class="product-thumbs">
+          <button class="product-thumb active" type="button" data-src="assets/product_shots/bar_pure_carob.webp" aria-label="Product front view" title="Front view">
+            <img src="assets/product_shots/bar_pure_carob.webp" alt="" width="56" height="56" loading="lazy" decoding="async">
+          </button>
+          <button class="product-thumb" type="button" data-src="assets/product_shots/bar_pure_carob_hero.webp" aria-label="Product hero view" title="Hero view">
+            <img src="assets/product_shots/bar_pure_carob_hero.webp" alt="" width="56" height="56" loading="lazy" decoding="async">
+          </button>
+          <button class="product-thumb" type="button" data-src="assets/hero_shots/hero_carob_bar_hand.png" aria-label="Product in hand" title="In hand">
+            <img src="assets/hero_shots/hero_carob_bar_hand.png" alt="" width="56" height="56" loading="lazy" decoding="async">
+          </button>
+        </div>
       </div>
 
       <div class="pdp-card product-info-card">
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+          <a href="/shop">Shop</a> / <a href="/shop/bars">Bars</a> / Pure Carob
+        </nav>
         <h1 class="product-name">Pure Carob Bar</h1>
         <div class="product-meta">
           <span class="product-price">$XX.XX</span>
@@ -773,12 +863,56 @@
   </div>
 </main>
 
+<!-- Sticky mobile CTA -->
+<div class="sticky-cta" id="stickyCta" aria-hidden="true">
+  <div class="sticky-cta-info">
+    <span class="sticky-cta-name">Pure Carob Bar</span>
+    <span class="sticky-cta-price">$XX.XX</span>
+  </div>
+  <button class="add-to-cart-sm" type="button">Add to Cart</button>
+</div>
+
 <!-- Footer -->
 <footer class="site-footer">
   <img src="assets/maplemoon_logo.svg" alt="Maple Moon" class="footer-logo" width="48" height="48" loading="lazy" decoding="async">
   <p class="footer-tagline">Artisan carob and cacao butter. Handmade in Byron Bay.</p>
   <p class="footer-credit">Crafted by HandToMouse Studio</p>
 </footer>
+
+<!-- Product thumbnail gallery -->
+<script>
+(function() {
+  var thumbs = document.querySelectorAll('.product-thumb');
+  var mainImg = document.getElementById('mainProductImg');
+  if (!thumbs.length || !mainImg) return;
+  thumbs.forEach(function(thumb) {
+    thumb.addEventListener('click', function() {
+      thumbs.forEach(function(t) { t.classList.remove('active'); });
+      thumb.classList.add('active');
+      mainImg.style.opacity = '0';
+      setTimeout(function() {
+        mainImg.src = thumb.getAttribute('data-src');
+        mainImg.style.opacity = '1';
+      }, 150);
+    });
+  });
+})();
+</script>
+
+<!-- Sticky CTA observer -->
+<script>
+(function() {
+  var mainCta = document.querySelector('.add-to-cart');
+  var stickyCta = document.getElementById('stickyCta');
+  if (!mainCta || !stickyCta || !('IntersectionObserver' in window)) return;
+  var observer = new IntersectionObserver(function(entries) {
+    var visible = entries[0].isIntersecting;
+    stickyCta.classList.toggle('visible', !visible);
+    stickyCta.setAttribute('aria-hidden', visible ? 'true' : 'false');
+  }, { threshold: 0 });
+  observer.observe(mainCta);
+})();
+</script>
 
 <!-- Pack selector + quantity stepper -->
 <script>
