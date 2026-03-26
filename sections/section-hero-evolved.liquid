@@ -530,8 +530,15 @@
     {%- endfor -%}
   </div>
 
-  {%- comment -%} ── Tagline ── {%- endcomment -%}
-  <p class="hero-evolved__tagline he-fade-4" aria-live="polite"></p>
+  {%- comment -%} ── Tagline (SSR: first default product for SEO) ── {%- endcomment -%}
+  <p class="hero-evolved__tagline he-fade-4" aria-live="polite">
+    {%- for block in section.blocks -%}
+      {%- if block.type == 'product' and block.settings.is_default and block.settings.category == cat_1_id -%}
+        {{ block.settings.tagline }}
+        {%- break -%}
+      {%- endif -%}
+    {%- endfor -%}
+  </p>
 
   {%- comment -%} ── Category tabs ── {%- endcomment -%}
   <div class="hero-evolved__cat-tabs he-fade-5" role="tablist" aria-label="Product category">
@@ -577,8 +584,19 @@
     {%- endfor -%}
   </div>
 
-  {%- comment -%} ── CTA button ── {%- endcomment -%}
-  <a class="hero-evolved__cta he-fade-7" href="#">Shop</a>
+  {%- comment -%} ── CTA button (SSR: first default product for SEO) ── {%- endcomment -%}
+  {%- assign default_cta_label = 'Shop' -%}
+  {%- assign default_cta_url = '#' -%}
+  {%- assign default_is_prelaunch = false -%}
+  {%- for block in section.blocks -%}
+    {%- if block.type == 'product' and block.settings.is_default and block.settings.category == cat_1_id -%}
+      {%- assign default_cta_label = block.settings.cta_label -%}
+      {%- assign default_cta_url = block.settings.cta_url | default: '#' -%}
+      {%- assign default_is_prelaunch = block.settings.is_prelaunch -%}
+      {%- break -%}
+    {%- endif -%}
+  {%- endfor -%}
+  <a class="hero-evolved__cta he-fade-7{% if default_is_prelaunch %} hero-evolved__cta--notify{% endif %}" href="{{ default_cta_url }}">{{ default_cta_label }}</a>
 
   {%- comment -%} ── Trust badges ── {%- endcomment -%}
   {%- if section.settings.show_trust_badges -%}
@@ -807,6 +825,40 @@
       pillsWrap.appendChild(btn);
     });
     allPills = pillsWrap.querySelectorAll('.hero-evolved__pill');
+  }
+
+  /* ── Build fallback trust badges for browser preview ── */
+  if (config === FALLBACK) {
+    var badgesWrap = root.querySelector('.hero-evolved__badges');
+    if (badgesWrap) {
+      var existingBadges = badgesWrap.querySelectorAll('.hero-evolved__badge img');
+      if (existingBadges.length === 0) {
+        var badgeData = [
+          { icon: 'assets/icon_organic.svg',       label: 'Certified Organic' },
+          { icon: 'assets/icon_gluten_free.svg',    label: 'Gluten Free' },
+          { icon: 'assets/icon_no_artificial.svg',  label: 'No Artificial Additives' },
+          { icon: 'assets/icon_caffeine_free.svg',  label: 'Caffeine Free' },
+          { icon: 'assets/icon_made_in_aus.svg',    label: 'Made in Australia' }
+        ];
+        while (badgesWrap.firstChild) badgesWrap.removeChild(badgesWrap.firstChild);
+        badgeData.forEach(function(b) {
+          var span = document.createElement('span');
+          span.className = 'hero-evolved__badge';
+          span.setAttribute('tabindex', '0');
+          span.setAttribute('role', 'img');
+          span.setAttribute('aria-label', b.label);
+          span.setAttribute('data-tooltip', b.label);
+          span.setAttribute('title', b.label);
+          var img = document.createElement('img');
+          img.src = b.icon;
+          img.alt = b.label;
+          img.width = 32;
+          img.height = 32;
+          span.appendChild(img);
+          badgesWrap.appendChild(span);
+        });
+      }
+    }
   }
 
   /* ── Gradient (desktop only) ── */
@@ -1141,6 +1193,7 @@
           "type": "select",
           "id": "category",
           "label": "Category",
+          "info": "These 4 categories are fixed. To add a 5th, a developer must update the schema.",
           "options": [
             { "value": "bars",    "label": "Bars" },
             { "value": "moons",   "label": "Moons" },
