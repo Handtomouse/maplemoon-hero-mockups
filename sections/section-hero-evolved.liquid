@@ -494,9 +494,10 @@
 
   {%- comment -%} ── Headline ── {%- endcomment -%}
   {%- if section.settings.headline != blank -%}
-    <h2 class="hero-evolved__headline he-fade-2">
+    {%- assign heading_tag = section.settings.heading_tag | default: 'h2' -%}
+    <{{ heading_tag }} class="hero-evolved__headline he-fade-2">
       {{ section.settings.headline }}
-    </h2>
+    </{{ heading_tag }}>
   {%- endif -%}
   {%- if section.settings.headline_subtext != blank -%}
     <p class="hero-evolved__subtext he-fade-2">
@@ -505,7 +506,7 @@
   {%- endif -%}
 
   {%- comment -%} ── Product image stack ── {%- endcomment -%}
-  <div class="hero-evolved__product-stack he-fade-3" aria-label="Selected product">
+  <div class="hero-evolved__product-stack he-fade-3" aria-label="Selected product" aria-live="polite">
     {%- assign img_index = 0 -%}
     {%- for block in section.blocks -%}
       {%- if block.type == 'product' and block.settings.image != blank -%}
@@ -941,6 +942,9 @@
       root.style.setProperty('--he-grad-bottom', cat.gradBottom);
     }
 
+    var panel = root.querySelector('[role="tabpanel"]');
+    if (panel && cat) panel.setAttribute('aria-label', cat.name + ' products');
+
     if (categoryDefaults[catId]) {
       setFlavour(categoryDefaults[catId]);
     }
@@ -1051,6 +1055,18 @@
       "id": "headline_subtext",
       "label": "Subtext",
       "default": "Not chocolate. Its own thing."
+    },
+    {
+      "type": "select",
+      "id": "heading_tag",
+      "label": "Heading level",
+      "options": [
+        { "value": "h1", "label": "H1" },
+        { "value": "h2", "label": "H2 (default)" },
+        { "value": "h3", "label": "H3" }
+      ],
+      "default": "h2",
+      "info": "Use H1 if this is the main heading on the page"
     },
     {
       "type": "checkbox",
