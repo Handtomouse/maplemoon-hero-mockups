@@ -206,18 +206,56 @@
     font-size: 1.2rem; font-weight: 400;
     color: var(--mm-cream);
   }
+  /* ── Pack selector ── */
+  .pack-selector { display: flex; gap: var(--space-2); align-self: flex-start; }
+  .pack-option {
+    border: 1.5px solid var(--mm-cream-20); color: var(--mm-cream);
+    background: transparent; border-radius: var(--radius-pill);
+    padding: 8px 16px; min-height: 40px;
+    font-family: var(--mm-sans); font-size: 0.75rem;
+    font-weight: 400; letter-spacing: 0.04em;
+    cursor: pointer; transition: border-color 0.2s, background 0.2s;
+  }
+  .pack-option:hover { border-color: var(--mm-cream); }
+  .pack-option[aria-pressed="true"] {
+    border-color: var(--mm-cream); background: var(--mm-cream); color: var(--mm-carob-dark);
+  }
+  .pack-option:focus-visible { outline: 2px solid var(--mm-cream); outline-offset: 2px; }
+  .qty-row { display: flex; align-items: center; gap: var(--space-4); align-self: flex-start; }
+  .qty-stepper {
+    display: flex; align-items: center;
+    border: 1.5px solid var(--mm-cream-20);
+    border-radius: var(--radius-pill); overflow: hidden;
+  }
+  .qty-btn {
+    width: 40px; height: 40px; background: transparent; border: none;
+    font-family: var(--mm-sans); font-size: 1rem; color: var(--mm-cream);
+    cursor: pointer; display: flex; align-items: center; justify-content: center;
+    transition: background 0.2s;
+  }
+  .qty-btn:hover { background: rgba(231,228,202,0.1); }
+  .qty-btn:focus-visible { outline: 2px solid var(--mm-cream); outline-offset: -2px; }
+  .qty-value {
+    width: 40px; text-align: center; font-family: var(--mm-sans);
+    font-size: 0.9rem; font-weight: 400; color: var(--mm-cream);
+    border: none; background: none; -moz-appearance: textfield;
+  }
+  .qty-value::-webkit-outer-spin-button,
+  .qty-value::-webkit-inner-spin-button { -webkit-appearance: none; margin: 0; }
+
   .add-to-cart-hero {
     display: inline-flex; align-items: center; justify-content: center;
-    border: 1.5px solid var(--mm-cream); color: var(--mm-cream);
-    background: transparent; border-radius: var(--radius-pill);
+    border: 1.5px solid var(--mm-cream); color: var(--mm-carob-dark);
+    background: var(--mm-cream); border-radius: var(--radius-pill);
     padding: 12px 32px; min-height: 48px;
     font-family: var(--mm-sans); font-size: 0.85rem;
     font-weight: 400; letter-spacing: 0.08em; text-transform: uppercase;
     cursor: pointer;
-    transition: background 0.3s, color 0.3s;
+    transition: background 0.3s, color 0.3s, border-color 0.3s;
   }
   .add-to-cart-hero:hover {
-    background: var(--mm-cream); color: var(--mm-carob-dark);
+    background: transparent; color: var(--mm-cream);
+    border-color: var(--mm-cream);
   }
   .add-to-cart-hero:focus-visible {
     outline: 2px solid var(--mm-cream); outline-offset: 4px;
@@ -543,8 +581,18 @@
         <span class="editorial-tag">The Original</span>
         <h1 class="product-name">Pure Carob Bar</h1>
         <p class="editorial-quote">Naturally sweet. Nothing added.</p>
-        <div class="hero-meta">
-          <span class="product-price">$XX.XX</span>
+        <span class="product-price">$XX.XX</span>
+        <div class="pack-selector">
+          <button class="pack-option" type="button" aria-pressed="true">1 Bar</button>
+          <button class="pack-option" type="button" aria-pressed="false">3 Pack</button>
+          <button class="pack-option" type="button" aria-pressed="false">6 Pack</button>
+        </div>
+        <div class="qty-row">
+          <div class="qty-stepper">
+            <button class="qty-btn" type="button" aria-label="Decrease quantity">&#8722;</button>
+            <input class="qty-value" type="number" value="1" min="1" max="99" aria-label="Quantity">
+            <button class="qty-btn" type="button" aria-label="Increase quantity">&#43;</button>
+          </div>
           <button class="add-to-cart-hero" type="button">Add to Cart</button>
         </div>
       </div>
@@ -632,6 +680,26 @@
   <p class="footer-tagline">Artisan carob and cacao butter. Handmade in Byron Bay.</p>
   <p class="footer-credit">Crafted by HandToMouse Studio</p>
 </footer>
+
+<!-- Pack selector + quantity stepper -->
+<script>
+(function() {
+  var packs = document.querySelectorAll('.pack-option');
+  packs.forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      packs.forEach(function(b) { b.setAttribute('aria-pressed', 'false'); });
+      btn.setAttribute('aria-pressed', 'true');
+    });
+  });
+  var minus = document.querySelector('.qty-btn[aria-label="Decrease quantity"]');
+  var plus = document.querySelector('.qty-btn[aria-label="Increase quantity"]');
+  var input = document.querySelector('.qty-value');
+  if (minus && plus && input) {
+    minus.addEventListener('click', function() { var v = parseInt(input.value) || 1; input.value = Math.max(1, v - 1); });
+    plus.addEventListener('click', function() { var v = parseInt(input.value) || 1; input.value = Math.min(99, v + 1); });
+  }
+})();
+</script>
 
 <!-- Scroll reveal -->
 <script>
