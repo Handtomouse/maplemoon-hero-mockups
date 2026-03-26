@@ -388,7 +388,7 @@
 
   /* ── Scroll snapping on mobile ── */
   @media (max-width: 767px) {
-    .story-wrapper {
+    html {
       scroll-snap-type: y mandatory;
     }
     .story-section {
@@ -406,6 +406,12 @@
       display: flex; align-items: center;
       position: fixed; top: 0; left: 0; right: 0; z-index: var(--z-fixed);
       padding: 28px 40px;
+      background: rgba(30,20,10,0.15);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+    }
+    @supports not (backdrop-filter: blur(1px)) {
+      .header-desktop { background: rgba(30,20,10,0.7); }
     }
     .header-desktop nav {
       flex: 1; display: flex; align-items: center;
@@ -415,7 +421,6 @@
       font-family: var(--mm-sans); font-size: 1rem;
       font-weight: 400; color: var(--mm-cream); text-decoration: none;
       opacity: 0.7; transition: opacity 0.2s;
-      text-shadow: 0 1px 4px rgba(0,0,0,0.3);
     }
     .header-desktop nav a:hover { opacity: 0.4; }
     .header-desktop .logo-desktop {
@@ -541,6 +546,7 @@
         <span class="section-question reveal-item">What do you get?</span>
         <img src="assets/product_shots/bar_pure_carob.webp" alt="Maple Moon Pure Carob Bar, 80g" class="product-img-story reveal-item" width="400" height="600" fetchpriority="high" decoding="async">
         <h2 class="product-name-story reveal-item">Pure Carob Bar</h2>
+        <p class="section-body reveal-item" style="max-width: 420px;">Australian carob and cacao butter, hand-tempered and set. Nothing else.</p>
         <span class="product-price-story reveal-item">$XX.XX / 80g</span>
         <div class="trust-row-story reveal-item">
           <span class="badge-item" tabindex="0" role="img" data-tooltip="Certified Organic" title="Certified Organic"><img src="assets/icon_organic.svg" alt="Certified Organic" width="22" height="22" loading="lazy" decoding="async"></span>

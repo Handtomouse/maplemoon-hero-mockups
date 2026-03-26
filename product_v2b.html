@@ -26,8 +26,7 @@
 <style>
 
   :root {
-    --v2b-overlay: rgba(58,42,26,0.85);
-    --v2b-overlay-mid: rgba(58,42,26,0.6);
+    /* warm carob tones for overlay gradients */
   }
 
   html { scroll-behavior: smooth; }
@@ -399,6 +398,12 @@
       display: flex; align-items: center;
       position: fixed; top: 0; left: 0; right: 0; z-index: var(--z-fixed);
       padding: 28px 40px;
+      background: rgba(30,20,10,0.15);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+    }
+    @supports not (backdrop-filter: blur(1px)) {
+      .header-desktop { background: rgba(30,20,10,0.7); }
     }
     .header-desktop nav {
       flex: 1; display: flex; align-items: center;
@@ -618,15 +623,15 @@
       </div>
     </div>
 
-    <!-- Footer -->
-    <footer class="site-footer">
-      <img src="assets/maplemoon_logo.svg" alt="Maple Moon" class="footer-logo" width="48" height="48" loading="lazy" decoding="async">
-      <p class="footer-tagline">Artisan carob and cacao butter. Handmade in Byron Bay.</p>
-      <p class="footer-credit">Crafted by HandToMouse Studio</p>
-    </footer>
-
   </div>
 </main>
+
+<!-- Footer -->
+<footer class="site-footer">
+  <img src="assets/maplemoon_logo.svg" alt="Maple Moon" class="footer-logo" width="48" height="48" loading="lazy" decoding="async">
+  <p class="footer-tagline">Artisan carob and cacao butter. Handmade in Byron Bay.</p>
+  <p class="footer-credit">Crafted by HandToMouse Studio</p>
+</footer>
 
 <!-- Scroll reveal -->
 <script>

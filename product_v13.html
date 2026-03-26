@@ -422,6 +422,12 @@
       display: flex; align-items: center;
       position: fixed; top: 0; left: 0; right: 0; z-index: var(--z-fixed);
       padding: 28px 40px;
+      background: rgba(10,18,36,0.15);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+    }
+    @supports not (backdrop-filter: blur(1px)) {
+      .header-desktop { background: rgba(10,18,36,0.7); }
     }
     .header-desktop nav {
       flex: 1; display: flex; align-items: center;
@@ -596,15 +602,15 @@
       </div>
     </div>
 
-    <!-- Site footer -->
-    <footer class="site-footer">
-      <img src="assets/maplemoon_logo.svg" alt="Maple Moon" class="site-footer-logo" width="48" height="48" loading="lazy" decoding="async">
-      <p class="site-footer-tagline">Artisan carob and cacao butter. Handmade in Byron Bay.</p>
-      <p class="site-footer-credit">Crafted by HandToMouse Studio</p>
-    </footer>
-
   </div>
 </main>
+
+<!-- Site footer -->
+<footer class="site-footer">
+  <img src="assets/maplemoon_logo.svg" alt="Maple Moon" class="site-footer-logo" width="48" height="48" loading="lazy" decoding="async">
+  <p class="site-footer-tagline">Artisan carob and cacao butter. Handmade in Byron Bay.</p>
+  <p class="site-footer-credit">Crafted by HandToMouse Studio</p>
+</footer>
 
 <!-- Fixed footer bar -->
 <div class="product-footer fade-4">

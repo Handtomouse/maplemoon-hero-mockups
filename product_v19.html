@@ -515,6 +515,12 @@
     .related-card .related-name { font-size: 1.1rem; }
   }
 
+  /* ── Screen reader only ── */
+  .sr-only {
+    position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
+    overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0;
+  }
+
   /* ── Scroll entrance animation ── */
   .reveal {
     opacity: 0; transform: translateY(16px);
@@ -641,17 +647,17 @@
         <table class="nutrition-table">
           <caption class="sr-only">Nutritional information per 80g bar</caption>
           <thead class="sr-only">
-            <tr><th>Nutrient</th><td>Per Bar (80g)</td></tr>
+            <tr><th scope="col">Nutrient</th><th scope="col">Per Bar (80g)</th></tr>
           </thead>
           <tbody>
-            <tr><th>Serving Size</th><td>80g (1 bar)</td></tr>
-            <tr><th>Energy</th><td>1680kJ</td></tr>
-            <tr><th>Protein</th><td>3.2g</td></tr>
-            <tr><th>Fat, Total</th><td>22g</td></tr>
-            <tr><th>Carbohydrate</th><td>42g</td></tr>
-            <tr><th>Sugars</th><td>28g (naturally occurring)</td></tr>
-            <tr><th>Dietary Fibre</th><td>5.6g</td></tr>
-            <tr><th>Sodium</th><td>12mg</td></tr>
+            <tr><th scope="row">Serving Size</th><td>80g (1 bar)</td></tr>
+            <tr><th scope="row">Energy</th><td>1680kJ</td></tr>
+            <tr><th scope="row">Protein</th><td>3.2g</td></tr>
+            <tr><th scope="row">Fat, Total</th><td>22g</td></tr>
+            <tr><th scope="row">Carbohydrate</th><td>42g</td></tr>
+            <tr><th scope="row">Sugars</th><td>28g (naturally occurring)</td></tr>
+            <tr><th scope="row">Dietary Fibre</th><td>5.6g</td></tr>
+            <tr><th scope="row">Sodium</th><td>12mg</td></tr>
           </tbody>
         </table>
       </div>
@@ -666,7 +672,7 @@
             <div class="related-image">
               <img src="assets/product_shots/bar_hazelnut.webp" alt="Maple Moon Hazelnut Bar" width="400" height="600" loading="lazy" decoding="async">
             </div>
-            <p class="related-name">Hazelnut</p>
+            <h3 class="related-name">Hazelnut</h3>
             <p class="related-price">$XX.XX</p>
             <a href="/shop/bars/hazelnut" class="related-cta">View Product</a>
           </div>
@@ -676,7 +682,7 @@
             <div class="related-image">
               <img src="assets/product_shots/bar_peppermint.webp" alt="Maple Moon Peppermint Bar" width="400" height="600" loading="lazy" decoding="async">
             </div>
-            <p class="related-name">Peppermint</p>
+            <h3 class="related-name">Peppermint</h3>
             <p class="related-price">$XX.XX</p>
             <a href="/shop/bars/peppermint" class="related-cta">View Product</a>
           </div>
@@ -686,7 +692,7 @@
             <div class="related-image">
               <img src="assets/product_shots/bar_goji_coconut.webp" alt="Maple Moon Golden Coconut Bar" width="400" height="600" loading="lazy" decoding="async">
             </div>
-            <p class="related-name">Golden Coconut</p>
+            <h3 class="related-name">Golden Coconut</h3>
             <p class="related-price">$XX.XX</p>
             <a href="/shop/bars/golden-coconut" class="related-cta">View Product</a>
           </div>
@@ -695,14 +701,14 @@
     </section>
 
   </div>
-
-  <!-- Footer -->
-  <footer class="site-footer">
-    <img src="assets/maplemoon_logo.svg" alt="Maple Moon" class="footer-logo" width="48" height="48" loading="lazy" decoding="async">
-    <p class="footer-tagline">Artisan carob and cacao butter. Handmade in Byron Bay.</p>
-    <p class="footer-credit">Crafted by HandToMouse Studio</p>
-  </footer>
 </main>
+
+<!-- Footer -->
+<footer class="site-footer">
+  <img src="assets/maplemoon_logo.svg" alt="Maple Moon" class="footer-logo" width="48" height="48" loading="lazy" decoding="async">
+  <p class="footer-tagline">Artisan carob and cacao butter. Handmade in Byron Bay.</p>
+  <p class="footer-credit">Crafted by HandToMouse Studio</p>
+</footer>
 
 <!-- Scroll reveal -->
 <script>
