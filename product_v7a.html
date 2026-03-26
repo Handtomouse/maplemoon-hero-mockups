@@ -332,6 +332,15 @@
     background: var(--light-gold);
   }
 
+  .nutrition-heading {
+    font-family: var(--mm-serif);
+    font-size: 0.9rem; font-weight: 500;
+    color: var(--mm-navy);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin: var(--space-8) 0 var(--space-4);
+  }
+
   .nutrition-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -652,7 +661,7 @@
         </ul>
         <p>No sugar. No sweetener. No flavouring. No additives.</p>
 
-        <h3 style="font-family: var(--mm-serif); font-size: 0.9rem; font-weight: 500; color: var(--mm-navy); text-transform: uppercase; letter-spacing: 0.08em; margin: var(--space-8) 0 var(--space-4);">Nutritional Information</h3>
+        <h2 class="nutrition-heading">Nutritional Information</h2>
         <dl class="nutrition-grid">
           <dt>Serving Size</dt><dd>80g (1 bar)</dd>
           <dt>Energy</dt><dd>1680kJ</dd>
