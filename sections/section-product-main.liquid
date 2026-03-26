@@ -3,8 +3,41 @@
   Based on product_v7a.html (Light Educational).
   Split layout: image gallery left, product info + buy box right.
   Tabs: Details, Ingredients, Reviews.
-  Presentational — wire to Shopify product objects when implementing theme.
+
+  Data priority: Shopify product object > section settings > defaults.
+  Works in product template context (real data) and standalone (settings).
 {%- endcomment -%}
+
+{%- liquid
+  comment
+    Detect if we're in a product template with a real product object.
+    If product exists, use its data. Otherwise fall back to section settings.
+  endcomment
+  if product != blank and product.title != blank
+    assign pm_has_product = true
+    assign pm_title = product.title
+    assign pm_description = product.description
+    assign pm_price = product.price | money
+    assign pm_compare_price = product.compare_at_price | money
+    assign pm_available = product.available
+    assign pm_featured_image = product.featured_image
+    assign pm_images = product.images
+    assign pm_variants = product.variants
+    assign pm_first_variant = product.selected_or_first_available_variant
+    assign pm_vendor = product.vendor
+    assign pm_type = product.type
+  else
+    assign pm_has_product = false
+    assign pm_title = section.settings.product_name | default: 'Pure Carob Bar'
+    assign pm_price = section.settings.price | default: '$12.95'
+    assign pm_available = section.settings.is_sold_out | default: false
+    if pm_available
+      assign pm_available = false
+    else
+      assign pm_available = true
+    endif
+  endif
+-%}
 
 <style>
   /* =============================================
@@ -277,6 +310,42 @@
     border-color: var(--pm-text);
   }
 
+  /* ── Variant selector ── */
+  .prod-main__variants {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    align-self: flex-start;
+    margin-bottom: 4px;
+  }
+  .prod-main__variant-label {
+    font-size: 0.75rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    opacity: 0.6;
+  }
+  .prod-main__variant-select {
+    appearance: none;
+    -webkit-appearance: none;
+    border: 1.5px solid rgba(0,0,0,0.15);
+    border-radius: 50px;
+    padding: 10px 40px 10px 20px;
+    min-height: 44px;
+    font-family: inherit;
+    font-size: 0.85rem;
+    font-weight: 400;
+    color: var(--pm-text);
+    background: transparent url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%231E4366' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E") no-repeat right 16px center;
+    cursor: pointer;
+    transition: border-color 0.2s;
+  }
+  .prod-main__variant-select:hover { border-color: var(--pm-text); }
+  .prod-main__variant-select:focus-visible {
+    outline: 2px solid var(--pm-text);
+    outline-offset: 4px;
+  }
+
   /* ── Shipping trust line ── */
   .prod-main__shipping {
     display: flex;
@@ -445,50 +514,92 @@
           </div>
         {%- endif -%}
 
-        {%- if section.settings.product_image != blank -%}
+        {%- comment -%} ── Main product image ── {%- endcomment -%}
+        {%- if pm_has_product and pm_featured_image -%}
+          <img
+            src="{{ pm_featured_image | image_url: width: 600 }}"
+            srcset="{{ pm_featured_image | image_url: width: 300 }} 300w, {{ pm_featured_image | image_url: width: 600 }} 600w, {{ pm_featured_image | image_url: width: 900 }} 900w"
+            sizes="(min-width: 768px) 45vw, 80vw"
+            class="prod-main__main-img"
+            id="prod-main-img-{{ section.id }}"
+            alt="{{ pm_featured_image.alt | default: pm_title | escape }}"
+            width="{{ pm_featured_image.width }}"
+            height="{{ pm_featured_image.height }}"
+            loading="eager" fetchpriority="high" decoding="async"
+          >
+        {%- elsif section.settings.product_image != blank -%}
           <img
             src="{{ section.settings.product_image | image_url: width: 600 }}"
             class="prod-main__main-img"
-            alt="{{ section.settings.product_name | escape }}"
+            id="prod-main-img-{{ section.id }}"
+            alt="{{ pm_title | escape }}"
             width="400" height="600"
             loading="eager" fetchpriority="high" decoding="async"
           >
         {%- endif -%}
 
-        {%- assign has_thumbs = false -%}
-        {%- for block in section.blocks -%}
-          {%- if block.type == 'thumbnail' -%}{%- assign has_thumbs = true -%}{%- break -%}{%- endif -%}
-        {%- endfor -%}
-        {%- if has_thumbs -%}
+        {%- comment -%} ── Thumbnails: from product.images or block settings ── {%- endcomment -%}
+        {%- if pm_has_product and pm_images.size > 1 -%}
           <div class="prod-main__thumbs">
-            {%- for block in section.blocks -%}
-              {%- if block.type == 'thumbnail' and block.settings.image != blank -%}
-                <button class="prod-main__thumb{% if forloop.first %} active{% endif %}" type="button"
-                  data-src="{{ block.settings.image | image_url: width: 600 }}"
-                  aria-label="{{ block.settings.label | default: 'View' | escape }}"
-                  {{ block.shopify_attributes }}>
-                  <img src="{{ block.settings.image | image_url: width: 104 }}" alt="" width="52" height="52" loading="lazy" decoding="async">
-                </button>
-              {%- endif -%}
+            {%- for image in pm_images limit: 6 -%}
+              <button class="prod-main__thumb{% if forloop.first %} active{% endif %}" type="button"
+                data-src="{{ image | image_url: width: 600 }}"
+                aria-label="View image {{ forloop.index }}">
+                <img src="{{ image | image_url: width: 104 }}" alt="{{ image.alt | default: '' | escape }}" width="52" height="52" loading="lazy" decoding="async">
+              </button>
             {%- endfor -%}
           </div>
+        {%- else -%}
+          {%- assign has_thumbs = false -%}
+          {%- for block in section.blocks -%}
+            {%- if block.type == 'thumbnail' -%}{%- assign has_thumbs = true -%}{%- break -%}{%- endif -%}
+          {%- endfor -%}
+          {%- if has_thumbs -%}
+            <div class="prod-main__thumbs">
+              {%- for block in section.blocks -%}
+                {%- if block.type == 'thumbnail' and block.settings.image != blank -%}
+                  <button class="prod-main__thumb{% if forloop.first %} active{% endif %}" type="button"
+                    data-src="{{ block.settings.image | image_url: width: 600 }}"
+                    aria-label="{{ block.settings.label | default: 'View' | escape }}"
+                    {{ block.shopify_attributes }}>
+                    <img src="{{ block.settings.image | image_url: width: 104 }}" alt="" width="52" height="52" loading="lazy" decoding="async">
+                  </button>
+                {%- endif -%}
+              {%- endfor -%}
+            </div>
+          {%- endif -%}
         {%- endif -%}
       </div>
 
       <div class="prod-main__info">
-        {%- if section.settings.breadcrumb_text != blank -%}
+        {%- comment -%} ── Breadcrumb ── {%- endcomment -%}
+        {%- if pm_has_product -%}
+          <nav class="prod-main__breadcrumb" aria-label="Breadcrumb">
+            <a href="/">Home</a> /
+            {%- if product.collections.first -%}
+              <a href="{{ product.collections.first.url }}">{{ product.collections.first.title }}</a> /
+            {%- endif -%}
+            {{ pm_title }}
+          </nav>
+        {%- elsif section.settings.breadcrumb_text != blank -%}
           <nav class="prod-main__breadcrumb" aria-label="Breadcrumb">{{ section.settings.breadcrumb_text }}</nav>
         {%- endif -%}
 
-        <h1 class="prod-main__name">{{ section.settings.product_name | default: 'Pure Carob Bar' }}</h1>
+        <h1 class="prod-main__name">{{ pm_title }}</h1>
 
-        {%- if section.settings.tagline != blank -%}
+        {%- if pm_has_product -%}
+          {%- if product.metafields.custom.tagline != blank -%}
+            <p class="prod-main__tagline">{{ product.metafields.custom.tagline }}</p>
+          {%- endif -%}
+        {%- elsif section.settings.tagline != blank -%}
           <p class="prod-main__tagline">{{ section.settings.tagline }}</p>
         {%- endif -%}
 
         <div class="prod-main__meta">
-          <span class="prod-main__price">{{ section.settings.price | default: '$XX.XX' }}</span>
-          {%- if section.settings.weight != blank -%}
+          <span class="prod-main__price">{{ pm_price }}</span>
+          {%- if pm_has_product and pm_first_variant.weight > 0 -%}
+            <span class="prod-main__weight">{{ pm_first_variant.weight }}{{ pm_first_variant.weight_unit }}</span>
+          {%- elsif section.settings.weight != blank -%}
             <span class="prod-main__weight">{{ section.settings.weight }}</span>
           {%- endif -%}
         </div>
@@ -515,14 +626,70 @@
         {%- endif -%}
 
         {%- comment -%} ── Buy box ── {%- endcomment -%}
-        <div class="prod-main__buy-row">
-          <div class="prod-main__qty">
-            <button class="prod-main__qty-btn" type="button" aria-label="Decrease quantity">&#8722;</button>
-            <input class="prod-main__qty-input" type="number" value="1" min="1" max="99" aria-label="Quantity">
-            <button class="prod-main__qty-btn" type="button" aria-label="Increase quantity">&#43;</button>
+        {%- if pm_has_product -%}
+          {%- comment -%} Real Shopify product form {%- endcomment -%}
+          {%- form 'product', product, id: 'product-form-' | append: section.id -%}
+            {%- if pm_variants.size > 1 -%}
+              <div class="prod-main__variants">
+                <label class="prod-main__variant-label" for="variant-select-{{ section.id }}">
+                  {{ product.options.first.name | default: 'Option' }}
+                </label>
+                <select class="prod-main__variant-select" id="variant-select-{{ section.id }}" name="id">
+                  {%- for variant in pm_variants -%}
+                    <option
+                      value="{{ variant.id }}"
+                      {% if variant == pm_first_variant %}selected{% endif %}
+                      {% unless variant.available %}disabled{% endunless %}
+                    >
+                      {{ variant.title }}{% unless variant.available %} - Sold Out{% endunless %} - {{ variant.price | money }}
+                    </option>
+                  {%- endfor -%}
+                </select>
+              </div>
+            {%- else -%}
+              <input type="hidden" name="id" value="{{ pm_first_variant.id }}">
+            {%- endif -%}
+
+            <div class="prod-main__buy-row">
+              <div class="prod-main__qty">
+                <button class="prod-main__qty-btn" type="button" aria-label="Decrease quantity">&#8722;</button>
+                <input class="prod-main__qty-input" type="number" name="quantity" value="1" min="1" max="99" aria-label="Quantity">
+                <button class="prod-main__qty-btn" type="button" aria-label="Increase quantity">&#43;</button>
+              </div>
+              <button
+                class="prod-main__add-to-cart{% unless pm_available %} prod-main__add-to-cart--disabled{% endunless %}"
+                type="submit"
+                {% unless pm_available %}disabled aria-disabled="true"{% endunless %}
+              >
+                {%- if pm_available -%}
+                  {{ section.settings.cta_text | default: 'Add to Cart' }}
+                {%- else -%}
+                  Sold Out
+                {%- endif -%}
+              </button>
+            </div>
+          {%- endform -%}
+        {%- else -%}
+          {%- comment -%} Fallback: presentational button (no product context) {%- endcomment -%}
+          <div class="prod-main__buy-row">
+            <div class="prod-main__qty">
+              <button class="prod-main__qty-btn" type="button" aria-label="Decrease quantity">&#8722;</button>
+              <input class="prod-main__qty-input" type="number" value="1" min="1" max="99" aria-label="Quantity">
+              <button class="prod-main__qty-btn" type="button" aria-label="Increase quantity">&#43;</button>
+            </div>
+            <button
+              class="prod-main__add-to-cart{% unless pm_available %} prod-main__add-to-cart--disabled{% endunless %}"
+              type="button"
+              {% unless pm_available %}disabled aria-disabled="true"{% endunless %}
+            >
+              {%- if pm_available -%}
+                {{ section.settings.cta_text | default: 'Add to Cart' }}
+              {%- else -%}
+                Sold Out
+              {%- endif -%}
+            </button>
           </div>
-          <button class="prod-main__add-to-cart{% if section.settings.is_sold_out %} prod-main__add-to-cart--disabled{% endif %}" type="button" {% if section.settings.is_sold_out %}disabled aria-disabled="true"{% endif %}>{% if section.settings.is_sold_out %}Sold Out{% else %}{{ section.settings.cta_text | default: 'Add to Cart' }}{% endif %}</button>
-        </div>
+        {%- endif -%}
 
         <div class="prod-main__shipping">
           <span><span class="prod-main__shipping-dot"></span>{{ section.settings.shipping_line_1 | default: 'Free shipping on orders over $99' }}</span>
