@@ -598,6 +598,13 @@
   {%- endfor -%}
   <a class="hero-evolved__cta he-fade-7{% if default_is_prelaunch %} hero-evolved__cta--notify{% endif %}" href="{{ default_cta_url }}">{{ default_cta_label }}</a>
 
+  <noscript>
+    <div style="text-align:center; padding:24px; position:relative; z-index:1;">
+      <p style="font-size:1rem; margin-bottom:16px;">Enable JavaScript to explore our full range of flavours.</p>
+      <a href="/shop" style="display:inline-block; border:1.5px solid currentColor; border-radius:50px; padding:12px 32px; text-decoration:none; color:inherit; font-size:0.85rem; letter-spacing:0.08em; text-transform:uppercase;">Shop Now</a>
+    </div>
+  </noscript>
+
   {%- comment -%} ── Trust badges ── {%- endcomment -%}
   {%- if section.settings.show_trust_badges -%}
     {%- assign has_badges = false -%}
