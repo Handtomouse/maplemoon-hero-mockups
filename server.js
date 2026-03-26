@@ -14,8 +14,12 @@ app.get('/sections/:file.liquid', (req, res) => {
       .replace(/\{%-?\s*liquid[\s\S]*?-?%\}/g, '')
       .replace(/\{%-?\s*(?:if|unless|for|assign|capture|case)[\s\S]*?-?%\}/g, '')
       .replace(/\{%-?\s*(?:endif|endunless|endfor|endcapture|endcase|else|elsif|when|break)\s*-?%\}/g, '')
+      .replace(/\{%-?\s*form[\s\S]*?-?%\}/g, '<form>')
+      .replace(/\{%-?\s*endform\s*-?%\}/g, '</form>')
       .replace(/\{\{[^}]*\}\}/g, '')
-      .replace(/\{%\s*schema\s*%\}[\s\S]*?\{%\s*endschema\s*%\}/g, '');
+      .replace(/\{%\s*schema\s*%\}[\s\S]*?\{%\s*endschema\s*%\}/g, '')
+      // Clean broken srcset from stripped Liquid (e.g. " 300w,  600w" → remove)
+      .replace(/srcset="[^"]*"/g, '');
     res.type('html').send('<!DOCTYPE html><html lang="en-AU"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0"><title>MapleMoon — Hero Evolved Preview</title><link rel="stylesheet" href="/brand_kit.css"></head><body style="margin:0;padding:0">' + html + '</body></html>');
   });
 });
