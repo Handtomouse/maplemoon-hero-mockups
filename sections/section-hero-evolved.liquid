@@ -510,7 +510,7 @@
           src="{{ block.settings.image | image_url: width: 600 }}"
           srcset="{{ block.settings.image | image_url: width: 300 }} 300w, {{ block.settings.image | image_url: width: 600 }} 600w"
           sizes="(min-width: 768px) 520px, 260px"
-          class="hero-evolved__product-img"
+          class="hero-evolved__product-img{% if block.settings.is_default and block.settings.category == cat_1_id and img_index == 0 %} active{% endif %}"
           data-product-key="{{ block.id }}"
           data-category="{{ block.settings.category }}"
           alt="{{ block.settings.image_alt | escape }}"
@@ -780,58 +780,63 @@
     }
   });
 
-  /* ── Build DOM if running outside Shopify (fallback mode) ── */
+  /* ── Query server-rendered DOM ── */
   var allImages = productStack.querySelectorAll('.hero-evolved__product-img');
   var allPills  = pillsWrap.querySelectorAll('.hero-evolved__pill');
   var allTabs   = tabsWrap.querySelectorAll('.hero-evolved__cat-tab');
 
-  if (allImages.length === 0 && config === FALLBACK) {
-    config.products.forEach(function(p) {
-      var img = document.createElement('img');
-      img.className = 'hero-evolved__product-img';
-      img.setAttribute('data-product-key', p.key);
-      img.setAttribute('data-category', p.category);
-      img.alt = 'Maple Moon ' + p.name;
-      img.loading = 'lazy';
-      img.decoding = 'async';
-      if (FALLBACK_IMAGES[p.key]) img.src = FALLBACK_IMAGES[p.key];
-      productStack.appendChild(img);
-    });
-    allImages = productStack.querySelectorAll('.hero-evolved__product-img');
-  }
+  /* ── Browser preview: build full DOM from fallback data ──
+     Only runs when Liquid didn't render (config === FALLBACK).
+     In Shopify, the server-rendered HTML is used directly. */
+  if (config === FALLBACK) {
+    if (allImages.length === 0) {
+      config.products.forEach(function(p) {
+        var img = document.createElement('img');
+        img.className = 'hero-evolved__product-img';
+        img.setAttribute('data-product-key', p.key);
+        img.setAttribute('data-category', p.category);
+        img.alt = 'Maple Moon ' + p.name;
+        img.loading = 'lazy';
+        img.decoding = 'async';
+        if (FALLBACK_IMAGES[p.key]) img.src = FALLBACK_IMAGES[p.key];
+        productStack.appendChild(img);
+      });
+      allImages = productStack.querySelectorAll('.hero-evolved__product-img');
+    }
 
-  if (allTabs.length === 0 && config === FALLBACK) {
-    config.categories.forEach(function(c, i) {
-      if (i > 0) {
-        var dot = document.createElement('span');
-        dot.className = 'hero-evolved__cat-dot';
-        dot.setAttribute('aria-hidden', 'true');
-        tabsWrap.appendChild(dot);
-      }
-      var btn = document.createElement('button');
-      btn.className = 'hero-evolved__cat-tab';
-      btn.setAttribute('role', 'tab');
-      btn.setAttribute('aria-selected', 'false');
-      btn.setAttribute('data-cat', c.id);
-      btn.textContent = c.name;
-      tabsWrap.appendChild(btn);
-    });
-    allTabs = tabsWrap.querySelectorAll('.hero-evolved__cat-tab');
-  }
+    if (allTabs.length === 0) {
+      config.categories.forEach(function(c, i) {
+        if (i > 0) {
+          var dot = document.createElement('span');
+          dot.className = 'hero-evolved__cat-dot';
+          dot.setAttribute('aria-hidden', 'true');
+          tabsWrap.appendChild(dot);
+        }
+        var btn = document.createElement('button');
+        btn.className = 'hero-evolved__cat-tab';
+        btn.setAttribute('role', 'tab');
+        btn.setAttribute('aria-selected', 'false');
+        btn.setAttribute('data-cat', c.id);
+        btn.textContent = c.name;
+        tabsWrap.appendChild(btn);
+      });
+      allTabs = tabsWrap.querySelectorAll('.hero-evolved__cat-tab');
+    }
 
-  if (allPills.length === 0 && config === FALLBACK) {
-    config.products.forEach(function(p) {
-      var btn = document.createElement('button');
-      btn.className = 'hero-evolved__pill';
-      btn.setAttribute('role', 'tab');
-      btn.setAttribute('aria-selected', 'false');
-      btn.setAttribute('data-product-key', p.key);
-      btn.setAttribute('data-category', p.category);
-      btn.style.display = 'none';
-      btn.textContent = p.name;
-      pillsWrap.appendChild(btn);
-    });
-    allPills = pillsWrap.querySelectorAll('.hero-evolved__pill');
+    if (allPills.length === 0) {
+      config.products.forEach(function(p) {
+        var btn = document.createElement('button');
+        btn.className = 'hero-evolved__pill';
+        btn.setAttribute('role', 'tab');
+        btn.setAttribute('aria-selected', 'false');
+        btn.setAttribute('data-product-key', p.key);
+        btn.setAttribute('data-category', p.category);
+        btn.style.display = 'none';
+        btn.textContent = p.name;
+        pillsWrap.appendChild(btn);
+      });
+      allPills = pillsWrap.querySelectorAll('.hero-evolved__pill');
+    }
   }
 
   /* ── Build fallback trust badges for browser preview ── */
@@ -1263,6 +1268,7 @@
     {
       "type": "trust_badge",
       "name": "Trust Badge",
+      "limit": 6,
       "settings": [
         {
           "type": "image_picker",
