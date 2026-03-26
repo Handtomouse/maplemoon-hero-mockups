@@ -478,6 +478,15 @@
   .related-card .related-cta:hover {
     background: var(--mm-navy); color: var(--light-bg);
   }
+  @media (prefers-reduced-motion: no-preference) {
+    .related-card .pdp-card {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .related-card .pdp-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+    }
+  }
   .related-card .related-cta:focus-visible {
     outline: 2px solid var(--mm-navy); outline-offset: 4px;
   }
