@@ -145,6 +145,7 @@
     left: 0;
     opacity: 0;
     transition: opacity 0.4s ease;
+    will-change: opacity;
   }
   .hero-evolved__product-img.active {
     opacity: 1;
@@ -346,9 +347,12 @@
   }
   .hero-evolved__badge img {
     width: 24px;
-    transition: opacity 0.2s ease;
     height: 24px;
+    transition: opacity 0.2s ease;
     opacity: 0.5;
+    /* Badge SVGs are cream (#E7E4CA) for dark backgrounds.
+       brightness(0) converts to black for the light palette. */
+    filter: brightness(0);
   }
 
   /* ── Screen reader only ── */
@@ -717,6 +721,8 @@
 (function() {
   'use strict';
 
+  function initHeroEvolved() {
+
   /* ── Fallback data for browser preview (outside Shopify) ── */
   var FALLBACK = {
     sectionId: 'preview',
@@ -1031,6 +1037,15 @@
   /* ── Init: activate first category ── */
   var firstCat = config.categories[0];
   if (firstCat) setCategory(firstCat.id);
+  }
+
+  /* ── Run on page load ── */
+  initHeroEvolved();
+
+  /* ── Re-run when Shopify theme editor re-renders this section ── */
+  document.addEventListener('shopify:section:load', function(e) {
+    if (e.target.querySelector('.hero-evolved')) initHeroEvolved();
+  });
 })();
 </script>
 
