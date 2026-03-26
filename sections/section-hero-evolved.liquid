@@ -25,7 +25,7 @@
     justify-content: center;
     overflow: hidden;
     gap: 0;
-    padding: 64px 0 32px;
+    padding: 64px 0 max(32px, env(safe-area-inset-bottom));
     background: linear-gradient(180deg, var(--he-grad-top) 0%, var(--he-grad-bottom) 100%);
     color: var(--he-text);
     font-family: var(--he-sans, 'Neue Haas Grotesk Display Pro', 'Inter', 'Helvetica Neue', sans-serif);
@@ -324,6 +324,10 @@
     display: inline-flex;
     cursor: default;
   }
+  .hero-evolved__badge:hover img,
+  .hero-evolved__badge:focus img {
+    opacity: 0.8;
+  }
   .hero-evolved__badge:hover::after,
   .hero-evolved__badge:focus::after {
     content: attr(data-tooltip);
@@ -342,6 +346,7 @@
   }
   .hero-evolved__badge img {
     width: 24px;
+    transition: opacity 0.2s ease;
     height: 24px;
     opacity: 0.5;
   }
