@@ -1,0 +1,301 @@
+{%- comment -%}
+  MapleMoon FAQ Accordion Section
+  Native HTML <details>/<summary> for zero-JS accordion behavior.
+  JS adds smooth height animation (progressive enhancement).
+  Content from blocks — merchant adds/edits Q&A pairs in customizer.
+{%- endcomment -%}
+
+{%- assign heading_tag = section.settings.heading_tag | default: 'h2' -%}
+
+<style>
+  /* =============================================
+     FAQ ACCORDION — Base (mobile-first)
+     ============================================= */
+  .faq-accordion {
+    position: relative;
+    width: 100%;
+    padding: 64px 24px max(48px, env(safe-area-inset-bottom));
+    background: var(--faq-bg);
+    color: var(--faq-text);
+    font-family: var(--faq-sans, 'Neue Haas Grotesk Display Pro', 'Inter', 'Helvetica Neue', sans-serif);
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .faq-accordion__inner {
+    max-width: 720px;
+    margin: 0 auto;
+  }
+
+  /* ── Headline ── */
+  .faq-accordion__headline {
+    font-family: var(--faq-serif, 'P22 Mackinac Pro', Georgia, serif);
+    font-weight: 400;
+    font-size: 2rem;
+    color: var(--faq-text);
+    text-align: center;
+    margin: 0 0 8px;
+    letter-spacing: 0.03em;
+    line-height: 1.2;
+  }
+  .faq-accordion__subtitle {
+    font-weight: 300;
+    font-size: 0.9rem;
+    color: var(--faq-text);
+    opacity: 0.6;
+    text-align: center;
+    margin: 0 0 40px;
+  }
+
+  /* ── Accordion items ── */
+  .faq-accordion__item {
+    border-bottom: 1px solid var(--faq-border, rgba(30, 67, 102, 0.1));
+  }
+  .faq-accordion__item:first-child {
+    border-top: 1px solid var(--faq-border, rgba(30, 67, 102, 0.1));
+  }
+
+  .faq-accordion__item summary {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    padding: 20px 0;
+    cursor: pointer;
+    list-style: none;
+    font-family: var(--faq-serif, 'P22 Mackinac Pro', Georgia, serif);
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--faq-text);
+    line-height: 1.4;
+    transition: opacity 0.2s;
+    min-height: 44px;
+  }
+  .faq-accordion__item summary::-webkit-details-marker { display: none; }
+  .faq-accordion__item summary::marker { display: none; content: ''; }
+  .faq-accordion__item summary:hover { opacity: 0.7; }
+  .faq-accordion__item summary:focus-visible {
+    outline: 2px solid var(--faq-text);
+    outline-offset: 4px;
+    border-radius: 2px;
+  }
+
+  /* ── Chevron icon ── */
+  .faq-accordion__chevron {
+    width: 16px;
+    height: 16px;
+    flex-shrink: 0;
+    fill: none;
+    stroke: var(--faq-text);
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    transition: transform 0.3s ease;
+    opacity: 0.4;
+  }
+  .faq-accordion__item[open] .faq-accordion__chevron {
+    transform: rotate(180deg);
+    opacity: 0.7;
+  }
+
+  /* ── Answer content ── */
+  .faq-accordion__answer {
+    padding: 0 0 20px;
+    font-weight: 300;
+    font-size: 0.9rem;
+    line-height: 1.7;
+    color: var(--faq-text);
+    opacity: 0.75;
+    max-width: 600px;
+  }
+  .faq-accordion__answer a {
+    color: var(--faq-text);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+  .faq-accordion__answer a:hover {
+    opacity: 0.6;
+  }
+
+  /* ── Reduced motion ── */
+  @media (prefers-reduced-motion: reduce) {
+    .faq-accordion, .faq-accordion * {
+      transition: none !important;
+      animation: none !important;
+    }
+  }
+
+  /* ── Fade in ── */
+  @media (prefers-reduced-motion: no-preference) {
+    @keyframes faqFadeIn {
+      from { opacity: 0; transform: translateY(8px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .faq-fade-1 { animation: faqFadeIn 0.6s ease both 0.1s; }
+    .faq-fade-2 { animation: faqFadeIn 0.6s ease both 0.2s; }
+  }
+
+  /* =============================================
+     TABLET / DESKTOP (768px+)
+     ============================================= */
+  @media (min-width: 768px) {
+    .faq-accordion {
+      padding: 80px 48px 64px;
+    }
+    .faq-accordion__headline {
+      font-size: 2.5rem;
+    }
+    .faq-accordion__subtitle {
+      margin-bottom: 48px;
+    }
+    .faq-accordion__item summary {
+      font-size: 1.1rem;
+      padding: 24px 0;
+    }
+    .faq-accordion__answer {
+      font-size: 0.95rem;
+      padding-bottom: 24px;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .faq-accordion__headline {
+      font-size: 2.75rem;
+    }
+  }
+</style>
+
+<section
+  class="faq-accordion"
+  id="faq-accordion-{{ section.id }}"
+  aria-label="Frequently asked questions"
+  style="
+    --faq-bg: {{ section.settings.background_color | default: '#F0EDDF' }};
+    --faq-text: {{ section.settings.text_color | default: '#1E4366' }};
+    --faq-serif: 'P22 Mackinac Pro', Georgia, serif;
+    --faq-sans: 'Neue Haas Grotesk Display Pro', 'Inter', 'Helvetica Neue', sans-serif;
+  "
+>
+  <div class="faq-accordion__inner">
+    {%- if section.settings.headline != blank -%}
+      <{{ heading_tag }} class="faq-accordion__headline faq-fade-1">{{ section.settings.headline }}</{{ heading_tag }}>
+    {%- endif -%}
+    {%- if section.settings.subtitle != blank -%}
+      <p class="faq-accordion__subtitle faq-fade-1">{{ section.settings.subtitle }}</p>
+    {%- endif -%}
+
+    <div class="faq-fade-2">
+      {%- for block in section.blocks -%}
+        {%- if block.type == 'question' -%}
+          <details class="faq-accordion__item" {{ block.shopify_attributes }}{% if section.settings.open_first and forloop.first %} open{% endif %}>
+            <summary>
+              {{ block.settings.question }}
+              <svg class="faq-accordion__chevron" viewBox="0 0 24 24" aria-hidden="true">
+                <polyline points="6 9 12 15 18 9"/>
+              </svg>
+            </summary>
+            <div class="faq-accordion__answer">
+              {{ block.settings.answer }}
+            </div>
+          </details>
+        {%- endif -%}
+      {%- endfor -%}
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "FAQ Accordion",
+  "tag": "div",
+  "class": "faq-accordion-wrapper",
+  "settings": [
+    {
+      "type": "text",
+      "id": "headline",
+      "label": "Headline",
+      "default": "Frequently Asked Questions"
+    },
+    {
+      "type": "select",
+      "id": "heading_tag",
+      "label": "Heading level",
+      "options": [
+        { "value": "h1", "label": "H1" },
+        { "value": "h2", "label": "H2 (default)" },
+        { "value": "h3", "label": "H3" }
+      ],
+      "default": "h2"
+    },
+    {
+      "type": "text",
+      "id": "subtitle",
+      "label": "Subtitle",
+      "default": "Everything you need to know about carob."
+    },
+    {
+      "type": "checkbox",
+      "id": "open_first",
+      "label": "Open first question by default",
+      "default": true
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background",
+      "default": "#F0EDDF"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text",
+      "default": "#1E4366"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "question",
+      "name": "Question",
+      "limit": 20,
+      "settings": [
+        {
+          "type": "text",
+          "id": "question",
+          "label": "Question",
+          "default": "What is carob?"
+        },
+        {
+          "type": "richtext",
+          "id": "answer",
+          "label": "Answer",
+          "default": "<p>Carob comes from the pod of the carob tree. It's naturally sweet, caffeine-free, and nothing is added.</p>"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "FAQ Accordion",
+      "settings": {
+        "headline": "Frequently Asked Questions",
+        "subtitle": "Everything you need to know about carob.",
+        "open_first": true,
+        "background_color": "#F0EDDF",
+        "text_color": "#1E4366"
+      },
+      "blocks": [
+        { "type": "question", "settings": { "question": "What is carob?", "answer": "<p>Carob comes from the pod of the carob tree (<em>Ceratonia siliqua</em>), which grows across the Mediterranean and in parts of Australia. The pods are harvested, roasted, and milled into a powder that's naturally sweet. We combine it with organic cacao butter to make our bars, moons, bites, and elixirs.</p>" } },
+        { "type": "question", "settings": { "question": "Does it taste like chocolate?", "answer": "<p>Carob has its own distinct flavour. It's rich and naturally sweet with warm, toasty notes. Some people find it reminiscent of chocolate, others find it completely different. It's not trying to be chocolate. It's carob.</p>" } },
+        { "type": "question", "settings": { "question": "Is MapleMoon vegan?", "answer": "<p>Yes. Every product in our range is 100% vegan. We use organic cacao butter as our fat base. Our kitchen in Byron Bay is entirely plant-based.</p>" } },
+        { "type": "question", "settings": { "question": "Is it organic and gluten-free?", "answer": "<p>Yes to both. All MapleMoon products are certified organic and gluten-free. They're also caffeine-free and contain no refined sugar.</p>" } },
+        { "type": "question", "settings": { "question": "Where do you source your carob?", "answer": "<p>We use Australian-grown carob that's sun-ripened and harvested locally. The pods are slow-roasted and milled in our Byron Bay facility.</p>" } },
+        { "type": "question", "settings": { "question": "How should I store MapleMoon products?", "answer": "<p>Store in a cool, dry place away from direct sunlight. Carob and cacao butter can soften in warm conditions. If your bars arrive soft during summer, a few minutes in the fridge will restore the snap.</p>" } },
+        { "type": "question", "settings": { "question": "Do you ship Australia-wide?", "answer": "<p>Yes. We ship to all Australian addresses. Standard shipping is $16.95, and orders over $99 ship free. Orders are dispatched from Byron Bay within 1-2 business days.</p>" } },
+        { "type": "question", "settings": { "question": "What is your returns policy?", "answer": "<p>If your order arrives damaged or incorrect, contact us within 7 days at info@maplemoon.com.au and we'll make it right. Due to the nature of food products, we cannot accept returns on opened items.</p>" } },
+        { "type": "question", "settings": { "question": "What about allergens?", "answer": "<p>MapleMoon products are made in a facility that processes tree nuts (hazelnuts, coconut). All products are gluten-free, dairy-free, and soy-free. Specific allergen information is listed on each product page.</p>" } },
+        { "type": "question", "settings": { "question": "Do you offer wholesale?", "answer": "<p>Yes. We supply selected retailers, cafes, and stockists across Australia. For wholesale enquiries, email info@maplemoon.com.au with your business details.</p>" } }
+      ]
+    }
+  ]
+}
+{% endschema %}
