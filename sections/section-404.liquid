@@ -104,6 +104,9 @@
     z-index: 1;
   }
   .mm-404__back:hover { opacity: 0.7; }
+  @media (prefers-reduced-motion: reduce) {
+    .mm-404, .mm-404 * { transition: none !important; }
+  }
   @media (min-width: 768px) {
     .mm-404__code { font-size: 8rem; }
     .mm-404__title { font-size: 2.2rem; }
