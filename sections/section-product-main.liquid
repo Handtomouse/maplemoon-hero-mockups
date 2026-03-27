@@ -34,6 +34,8 @@
     assign pm_images = product.images
     assign pm_variants = product.variants
     assign pm_first_variant = product.selected_or_first_available_variant | default: product.variants.first
+    assign pm_vendor = product.vendor
+    assign pm_type = product.type
   else
     assign pm_has_product = false
     assign pm_title = section.settings.product_name | default: 'Pure Carob Bar'
