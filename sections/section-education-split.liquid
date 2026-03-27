@@ -363,7 +363,7 @@
       <div class="edu-split__watermark" aria-hidden="true">
         <img
           src="{{ section.settings.watermark_image | image_url: width: 800 }}"
-          alt="" aria-hidden="true" width="800" height="200" loading="lazy" decoding="async"
+          alt="" width="800" height="200" loading="lazy" decoding="async"
         >
       </div>
     {%- endif -%}
@@ -477,7 +477,7 @@
     <div class="edu-split__right">
       {%- if section.settings.watermark_image != blank -%}
         <div class="edu-split__watermark" aria-hidden="true">
-          <img src="{{ section.settings.watermark_image | image_url: width: 800 }}" alt="" aria-hidden="true" width="800" height="200" loading="lazy" decoding="async">
+          <img src="{{ section.settings.watermark_image | image_url: width: 800 }}" alt="" width="800" height="200" loading="lazy" decoding="async">
         </div>
       {%- endif -%}
 

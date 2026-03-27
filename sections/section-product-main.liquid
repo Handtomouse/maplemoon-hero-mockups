@@ -33,7 +33,7 @@
     assign pm_featured_image = product.featured_image
     assign pm_images = product.images
     assign pm_variants = product.variants
-    assign pm_first_variant = product.selected_or_first_available_variant
+    assign pm_first_variant = product.selected_or_first_available_variant | default: product.variants.first
     assign pm_vendor = product.vendor
     assign pm_type = product.type
   else
@@ -562,6 +562,8 @@
         {%- elsif section.settings.product_image != blank -%}
           <img
             src="{{ section.settings.product_image | image_url: width: 600 }}"
+            srcset="{{ section.settings.product_image | image_url: width: 300 }} 300w, {{ section.settings.product_image | image_url: width: 600 }} 600w, {{ section.settings.product_image | image_url: width: 900 }} 900w"
+            sizes="(min-width: 768px) 45vw, 80vw"
             class="prod-main__main-img"
             id="prod-main-img-{{ section.id }}"
             alt="{{ pm_title | escape }}"

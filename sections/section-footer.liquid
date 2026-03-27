@@ -472,11 +472,10 @@
         msg.className = 'mm-footer__newsletter-msg';
         msg.textContent = '';
 
-        /* If not in a Shopify context (no real action URL), show fallback success */
+        /* If not in a Shopify context (no real action URL), show preview notice */
         var action = form.getAttribute('action');
         if (!action || action === '#' || action === '') {
-          showMsg('Thanks for subscribing!', 'success');
-          if (emailInput) emailInput.value = '';
+          showMsg('Preview mode — form will work when connected to Shopify.', 'success');
           if (btn) btn.disabled = false;
           return;
         }

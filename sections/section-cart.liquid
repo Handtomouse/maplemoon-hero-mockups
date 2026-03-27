@@ -274,11 +274,11 @@
               {%- endif -%}
               <span class="mm-cart__item-price">{{ item.original_price | money }}</span>
               <div class="mm-cart__qty">
-                <button class="mm-cart__qty-btn" type="button" aria-label="Decrease" onclick="this.parentElement.querySelector('input').stepDown(); this.closest('form').submit();">&#8722;</button>
+                <button class="mm-cart__qty-btn" type="button" aria-label="Decrease" data-qty-action="decrease">&#8722;</button>
                 <input class="mm-cart__qty-input" type="number" name="updates[]" value="{{ item.quantity }}" min="0" max="99" aria-label="Quantity for {{ item.title | escape }}">
-                <button class="mm-cart__qty-btn" type="button" aria-label="Increase" onclick="this.parentElement.querySelector('input').stepUp(); this.closest('form').submit();">&#43;</button>
+                <button class="mm-cart__qty-btn" type="button" aria-label="Increase" data-qty-action="increase">&#43;</button>
               </div>
-              <button class="mm-cart__item-remove" type="button" onclick="this.closest('.mm-cart__item').querySelector('input').value=0; this.closest('form').submit();">Remove</button>
+              <button class="mm-cart__item-remove" type="button" data-qty-action="remove">Remove</button>
             </div>
             <div class="mm-cart__item-actions">
               <span class="mm-cart__line-price">{{ item.final_line_price | money }}</span>
@@ -304,6 +304,31 @@
     </div>
   {%- endif -%}
 </section>
+
+<script>
+(function() {
+  'use strict';
+  var cart = document.querySelector('.mm-cart');
+  if (!cart) return;
+
+  cart.addEventListener('click', function(e) {
+    var btn = e.target.closest('[data-qty-action]');
+    if (!btn) return;
+
+    var action = btn.dataset.qtyAction;
+    var item = btn.closest('.mm-cart__item');
+    var input = item ? item.querySelector('.mm-cart__qty-input') : null;
+    var form = btn.closest('form');
+    if (!input || !form) return;
+
+    if (action === 'decrease') input.stepDown();
+    else if (action === 'increase') input.stepUp();
+    else if (action === 'remove') input.value = 0;
+
+    form.submit();
+  });
+})();
+</script>
 
 {% schema %}
 {
