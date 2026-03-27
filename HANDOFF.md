@@ -87,6 +87,7 @@ Then run `shopify theme dev` to preview locally, or push via `shopify theme push
 | Cart drawer | Header cart icon | Add slide-out cart drawer or link to `/cart` page |
 | Metafields | Product Main | Create `custom.tagline` metafield in Shopify admin for product taglines |
 | Stock images | Hero Evolved, Education Split | Replace watermarked Adobe Stock with licensed originals |
+| Pagination wrapper | Collection, Blog, Search | These sections reference `paginate` but need `{% paginate collection.products by 24 %}` wrapper in their template JSON or theme.liquid |
 
 ## Design Tokens
 
