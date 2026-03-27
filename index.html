@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>MapleMoon — Hero Concepts | HandToMouse Studio</title>
-  <meta name="description" content="19 responsive hero concepts for maplemoon.com.au — organic artisan carob from Byron Bay.">
+  <meta name="description" content="Hero concepts, product pages, and Shopify theme sections for maplemoon.com.au — organic artisan carob from Byron Bay.">
   <meta name="theme-color" content="#7B9DBF">
   <meta property="og:title" content="MapleMoon — Hero Concepts">
   <meta property="og:description" content="19 responsive hero concepts for maplemoon.com.au by HandToMouse Studio.">
@@ -570,7 +570,7 @@
     <img src="assets/maplemoon_logo.svg" alt="MapleMoon" class="gallery-header__logo" width="40" height="40">
     <div class="gallery-header__text">
       <h1 class="gallery-header__title">Hero Concepts</h1>
-      <p class="gallery-header__subtitle">20 responsive hero concepts for maplemoon.com.au</p>
+      <p class="gallery-header__subtitle">Hero concepts, product pages, and Shopify theme sections for maplemoon.com.au</p>
     </div>
   </header>
 
@@ -610,6 +610,18 @@
     </div>
   </div>
   <div id="product-gallery" class="hero-cards"></div>
+
+  <!-- Shopify Theme Sections -->
+  <div class="gallery-divider" style="margin-top: 64px;">
+    <hr>
+  </div>
+  <div class="gallery-header" style="padding-top: 40px;">
+    <div class="gallery-header__text">
+      <h2 class="gallery-header__title">Shopify Theme Sections</h2>
+      <p class="gallery-header__subtitle">Supporting sections for the complete Shopify 2.0 theme: navigation, cart, collections, blog, search, and more.</p>
+    </div>
+  </div>
+  <div id="sections-gallery" class="hero-cards"></div>
 
   <!-- Scroll to top -->
   <div class="scroll-top-wrap">
@@ -779,6 +791,91 @@
 
       card.appendChild(deviceRow);
       productGallery.appendChild(card);
+    });
+
+    /* ---- Shopify Theme Sections ---- */
+
+    const shopifySections = [
+      { id: 'header', file: 'sections/section-header.liquid', title: 'Header / Nav', desc: 'Mobile hamburger + full-screen overlay. Desktop glassmorphism fixed bar. Cart icon with AJAX count badge.' },
+      { id: 'cart', file: 'sections/section-cart.liquid', title: 'Cart', desc: 'Line items with quantity update, remove, and checkout button. AJAX-powered updates.' },
+      { id: 'collection', file: 'sections/section-collection-main.liquid', title: 'Collection Grid', desc: 'Filterable product grid for collection pages. Responsive columns with hover effects.' },
+      { id: '404', file: 'sections/section-404.liquid', title: '404 Page', desc: 'On-brand error page with carob pod message and navigation back to shop.' },
+      { id: 'article', file: 'sections/section-article.liquid', title: 'Blog Article', desc: 'Single blog post template with featured image, author, date, and rich content.' },
+      { id: 'blog', file: 'sections/section-blog.liquid', title: 'Blog Listing', desc: 'Blog index with article cards, featured images, and pagination.' },
+      { id: 'search', file: 'sections/section-search.liquid', title: 'Search Results', desc: 'Search page with product and article results, empty state handling.' },
+      { id: 'password', file: 'sections/section-password.liquid', title: 'Password / Coming Soon', desc: 'Pre-launch page with email signup and brand messaging.' },
+      { id: 'list-collections', file: 'sections/section-list-collections.liquid', title: 'Collection Directory', desc: 'All collections displayed as a grid with featured images.' },
+      { id: 'main-page', file: 'sections/main-page.liquid', title: 'Generic Page', desc: 'Default page template for About, Contact, and custom pages.' },
+    ];
+
+    const sectionsGallery = document.getElementById('sections-gallery');
+
+    shopifySections.forEach(section => {
+      const sId = section.id.toUpperCase();
+
+      const card = document.createElement('article');
+      card.className = 'hero-card';
+      card.dataset.heroFile = section.file;
+      card.dataset.heroId = section.id;
+
+      const headerDiv = document.createElement('div');
+      headerDiv.className = 'hero-card__header';
+
+      const infoDiv = document.createElement('div');
+      const h2 = document.createElement('h2');
+      h2.className = 'hero-card__title';
+      const span = document.createElement('span');
+      span.textContent = sId;
+      h2.appendChild(span);
+      h2.appendChild(document.createTextNode(' ' + section.title));
+      const desc = document.createElement('p');
+      desc.className = 'hero-card__desc';
+      desc.textContent = section.desc;
+      infoDiv.appendChild(h2);
+      infoDiv.appendChild(desc);
+
+      const actionsDiv = document.createElement('div');
+      actionsDiv.style.cssText = 'display:flex;align-items:center;gap:12px;';
+      const link = document.createElement('a');
+      link.href = section.file;
+      link.target = '_blank';
+      link.className = 'hero-card__link';
+      link.textContent = 'Open Full Screen';
+      actionsDiv.appendChild(link);
+
+      headerDiv.appendChild(infoDiv);
+      headerDiv.appendChild(actionsDiv);
+      card.appendChild(headerDiv);
+
+      const deviceRow = document.createElement('div');
+      deviceRow.className = 'device-row';
+
+      ['iphone', 'ipad', 'desktop'].forEach(device => {
+        const col = document.createElement('div');
+        col.className = 'device-col device-col--' + device;
+        const frame = document.createElement('div');
+        frame.className = 'device-frame device-' + device;
+        frame.dataset.src = section.file;
+        const frameLink = document.createElement('a');
+        frameLink.href = section.file;
+        frameLink.target = '_blank';
+        frameLink.className = 'device-frame-link';
+        frameLink.setAttribute('aria-label', 'Open ' + section.title + ' at ' + device.charAt(0).toUpperCase() + device.slice(1) + ' size');
+        const placeholder = document.createElement('div');
+        placeholder.className = 'device-placeholder';
+        placeholder.textContent = 'Loading\u2026';
+        frame.appendChild(frameLink);
+        frame.appendChild(placeholder);
+        const label = document.createElement('span');
+        label.className = 'device-label';
+        label.textContent = device.charAt(0).toUpperCase() + device.slice(1);
+        col.appendChild(frame);
+        col.appendChild(label);
+        deviceRow.appendChild(col);
+      });
+
+      card.appendChild(deviceRow);
+      sectionsGallery.appendChild(card);
     });
 
     /* ---- Lazy-load iframes with IntersectionObserver ---- */
