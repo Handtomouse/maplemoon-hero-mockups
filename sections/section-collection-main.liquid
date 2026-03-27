@@ -170,13 +170,11 @@
       {%- endfor -%}
     </div>
 
-    {%- if collection.products.size > section.settings.products_per_page | default: 24 -%}
-      {%- comment -%} Pagination — Shopify handles this automatically {%- endcomment -%}
-      {%- if paginate.pages > 1 -%}
-        <nav class="coll-main__pagination" aria-label="Pagination">
-          {{ paginate | default_pagination }}
-        </nav>
-      {%- endif -%}
+    {%- comment -%} Pagination — requires {% paginate %} wrapper in template {%- endcomment -%}
+    {%- if paginate.pages > 1 -%}
+      <nav class="coll-main__pagination" aria-label="Pagination">
+        {{ paginate | default_pagination }}
+      </nav>
     {%- endif -%}
   {%- else -%}
     <p class="coll-main__empty">No products in this collection yet.</p>

@@ -130,7 +130,7 @@
   <h1 class="mm-404__title">{{ section.settings.title | default: 'Nothing here but carob pods.' }}</h1>
   <p class="mm-404__message">{{ section.settings.message | default: 'The page you were looking for has moved or never existed. But the carob is still here.' }}</p>
   <a class="mm-404__cta" href="{{ section.settings.cta_url | default: '/shop' }}">{{ section.settings.cta_text | default: 'Shop the Range' }}</a>
-  <a class="mm-404__back" href="/">Back to homepage</a>
+  <a class="mm-404__back" href="{{ routes.root_url }}">Back to homepage</a>
 </section>
 
 {% schema %}

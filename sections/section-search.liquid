@@ -28,7 +28,7 @@
 <section class="mm-search" style="--sr-text: {{ section.settings.text_color | default: '#1E4366' }}; --sr-bg: {{ section.settings.background_color | default: '#F0EDDF' }}; --sr-warm: {{ section.settings.card_bg | default: '#EDE8D4' }}; background: var(--sr-bg);">
   <h1 class="mm-search__title">{{ section.settings.title | default: 'Search' }}</h1>
 
-  <form class="mm-search__form" action="/search" method="get" role="search">
+  <form class="mm-search__form" action="{{ routes.search_url }}" method="get" role="search">
     <input class="mm-search__input" type="search" name="q" value="{{ search.terms | escape }}" placeholder="Search products, recipes..." aria-label="Search">
     <button class="mm-search__btn" type="submit">Search</button>
   </form>
@@ -57,7 +57,7 @@
     {%- else -%}
       <div class="mm-search__empty">
         <p>No results found for "{{ search.terms }}". Try a different search or browse our range.</p>
-        <a href="/collections/all" class="mm-search__shop-cta">Shop the Range</a>
+        <a href="{{ routes.all_products_collection_url }}" class="mm-search__shop-cta">Shop the Range</a>
       </div>
     {%- endif -%}
   {%- endif -%}

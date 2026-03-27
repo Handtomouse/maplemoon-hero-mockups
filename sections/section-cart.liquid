@@ -294,13 +294,13 @@
         </div>
         <p class="mm-cart__shipping-note">{{ section.settings.shipping_note | default: 'Shipping calculated at checkout. Free over $99.' }}</p>
         <button type="submit" name="checkout" class="mm-cart__checkout">Checkout</button>
-        <a href="/collections/all" class="mm-cart__continue">Continue Shopping</a>
+        <a href="{{ routes.all_products_collection_url }}" class="mm-cart__continue">Continue Shopping</a>
       </div>
     {%- endform -%}
   {%- else -%}
     <div class="mm-cart__empty">
       <p>{{ section.settings.empty_message | default: 'Your cart is empty. Time to fix that.' }}</p>
-      <a href="/collections/all" class="mm-cart__shop-cta">{{ section.settings.empty_cta | default: 'Shop the Range' }}</a>
+      <a href="{{ routes.all_products_collection_url }}" class="mm-cart__shop-cta">{{ section.settings.empty_cta | default: 'Shop the Range' }}</a>
     </div>
   {%- endif -%}
 </section>
