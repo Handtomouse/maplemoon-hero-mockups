@@ -365,7 +365,7 @@
     .header-desktop {
       display: flex; align-items: center;
       position: fixed; top: 0; left: 0; right: 0; z-index: var(--z-fixed);
-      padding: 28px 40px;
+      padding: 16px 40px;
       background: linear-gradient(to bottom, rgba(10,18,36,0.6) 0%, rgba(10,18,36,0.3) 70%, transparent 100%);
     }
     .header-desktop nav {
@@ -373,9 +373,10 @@
       justify-content: center; gap: 40px;
     }
     .header-desktop nav a {
-      font-family: var(--mm-sans); font-size: 1rem;
+      font-family: var(--mm-sans); font-size: 0.85rem;
       font-weight: 400; color: var(--mm-cream); text-decoration: none;
-      opacity: 0.9; transition: opacity 0.2s;
+      letter-spacing: 0.07em;
+      opacity: 0.7; transition: opacity 0.2s;
       text-shadow: 0 1px 8px rgba(0,0,0,0.4);
     }
     .header-desktop nav a:hover { opacity: 0.6; }

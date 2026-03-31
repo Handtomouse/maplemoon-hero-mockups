@@ -342,19 +342,24 @@
     .header-desktop {
       display: flex; align-items: center;
       position: fixed; top: 0; left: 0; right: 0; z-index: var(--z-fixed);
-      padding: 28px 40px;
-      background: var(--mm-navy-15);
-      backdrop-filter: blur(12px);
-      -webkit-backdrop-filter: blur(12px);
+      padding: 16px 40px;
+      transition: background 0.3s ease, backdrop-filter 0.3s ease;
+    }
+    .header-desktop.scrolled {
+      backdrop-filter: blur(8px) saturate(120%);
+      -webkit-backdrop-filter: blur(8px) saturate(120%);
+      background: rgba(123, 157, 191, 0.6);
+      border-bottom: 1px solid rgba(231,228,202,0.1);
     }
     .header-desktop nav {
       flex: 1; display: flex; align-items: center;
       justify-content: center; gap: 40px;
     }
     .header-desktop nav a {
-      font-family: var(--mm-sans); font-size: 1rem;
-      font-weight: 400; color: var(--mm-cream); text-decoration: none;
-      opacity: 0.9; transition: opacity 0.2s;
+      font-family: var(--mm-sans); font-size: 0.85rem;
+      font-weight: 400; letter-spacing: 0.07em;
+      color: var(--mm-cream); text-decoration: none;
+      opacity: 0.7; transition: opacity 0.2s;
     }
     .header-desktop nav a:hover { opacity: 0.6; }
     .header-desktop .logo-desktop {
@@ -410,7 +415,7 @@
   }
 
   @media (min-width: 1024px) {
-    .header-desktop { padding: 32px 48px; }
+    .header-desktop { padding: 16px 48px; }
     .header-desktop nav { gap: 52px; }
   }
 </style>
@@ -531,6 +536,12 @@
     menu.setAttribute('aria-hidden', isOpen ? 'false' : 'true');
     hamburger.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
     if (!isOpen) hamburger.focus();  });
+
+  // Scroll-based header blur
+  window.addEventListener('scroll', function() {
+    var h = document.querySelector('.header-desktop');
+    if (h) h.classList.toggle('scrolled', window.scrollY > 60);
+  });
 
   // Time-of-day configuration
   var periods = {
