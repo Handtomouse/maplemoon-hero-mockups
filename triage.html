@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MapleMoon Hero Triage</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    background: #0f1923;
+    color: #E7E4CA;
+    line-height: 1.5;
+  }
+
+  .sticky-header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: #1E4366;
+    border-bottom: 2px solid #E7E4CA33;
+    padding: 12px 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    backdrop-filter: blur(8px);
+  }
+  .sticky-header h1 {
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+  }
+  .header-right {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+  .progress {
+    font-size: 14px;
+    opacity: 0.8;
+  }
+  .progress .count { font-weight: 700; color: #E7E4CA; }
+  .btn {
+    padding: 8px 16px;
+    border: 1px solid #E7E4CA55;
+    background: transparent;
+    color: #E7E4CA;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 13px;
+    font-weight: 500;
+    transition: all 0.2s;
+  }
+  .btn:hover { background: #E7E4CA22; }
+  .btn-primary { background: #E7E4CA; color: #1E4366; font-weight: 600; }
+  .btn-primary:hover { background: #d4d1b8; }
+
+  .triage-list {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 24px;
+  }
+
+  .hero-card {
+    margin-bottom: 32px;
+    border: 1px solid #E7E4CA22;
+    border-radius: 12px;
+    overflow: hidden;
+    background: #162636;
+    transition: border-color 0.3s;
+  }
+  .hero-card.rated-keep { border-color: #4ade80; }
+  .hero-card.rated-fix { border-color: #fbbf24; }
+  .hero-card.rated-cut { border-color: #f87171; }
+
+  .card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 20px;
+    background: #1a2f44;
+    border-bottom: 1px solid #E7E4CA15;
+  }
+  .card-label {
+    font-size: 16px;
+    font-weight: 600;
+  }
+  .card-label .version {
+    color: #7B9DBF;
+    font-weight: 400;
+    margin-right: 8px;
+  }
+
+  .rating-group {
+    display: flex;
+    gap: 4px;
+  }
+  .rating-group label {
+    padding: 6px 16px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 13px;
+    font-weight: 500;
+    border: 1px solid transparent;
+    transition: all 0.2s;
+    user-select: none;
+  }
+  .rating-group input { display: none; }
+  .rating-group label:hover { background: #E7E4CA15; }
+  .rating-group input[value="keep"]:checked + label,
+  .rating-group label.active-keep { background: #4ade8033; color: #4ade80; border-color: #4ade80; }
+  .rating-group input[value="fix"]:checked + label,
+  .rating-group label.active-fix { background: #fbbf2433; color: #fbbf24; border-color: #fbbf24; }
+  .rating-group input[value="cut"]:checked + label,
+  .rating-group label.active-cut { background: #f8717133; color: #f87171; border-color: #f87171; }
+
+  .hero-iframe {
+    width: 100%;
+    height: 700px;
+    border: none;
+    display: block;
+    background: #111;
+  }
+
+  .notes-bar {
+    padding: 12px 20px;
+    background: #1a2f44;
+    border-top: 1px solid #E7E4CA15;
+  }
+  .notes-bar textarea {
+    width: 100%;
+    background: #0f1923;
+    border: 1px solid #E7E4CA22;
+    border-radius: 6px;
+    color: #E7E4CA;
+    padding: 8px 12px;
+    font-size: 13px;
+    font-family: inherit;
+    resize: vertical;
+    min-height: 36px;
+    max-height: 120px;
+  }
+  .notes-bar textarea::placeholder { color: #E7E4CA44; }
+  .notes-bar textarea:focus { outline: none; border-color: #7B9DBF; }
+
+  .summary-counts {
+    display: flex;
+    gap: 16px;
+    font-size: 13px;
+  }
+  .summary-counts span { font-weight: 600; }
+  .c-keep { color: #4ade80; }
+  .c-fix { color: #fbbf24; }
+  .c-cut { color: #f87171; }
+
+  .export-modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: #000c;
+    z-index: 200;
+    justify-content: center;
+    align-items: center;
+  }
+  .export-modal.open { display: flex; }
+  .export-content {
+    background: #162636;
+    border: 1px solid #E7E4CA33;
+    border-radius: 12px;
+    padding: 24px;
+    max-width: 700px;
+    width: 90%;
+    max-height: 80vh;
+    overflow-y: auto;
+  }
+  .export-content h2 { margin-bottom: 16px; font-size: 18px; }
+  .export-content pre {
+    background: #0f1923;
+    padding: 16px;
+    border-radius: 8px;
+    font-size: 12px;
+    overflow-x: auto;
+    white-space: pre-wrap;
+    color: #E7E4CA;
+    margin-bottom: 16px;
+  }
+  .export-actions { display: flex; gap: 8px; justify-content: flex-end; }
+
+  .jump-nav {
+    position: fixed;
+    right: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 50;
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+  }
+  .jump-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    border: 1px solid #E7E4CA44;
+    background: transparent;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+  .jump-dot:hover { background: #E7E4CA44; }
+  .jump-dot.dot-keep { background: #4ade80; border-color: #4ade80; }
+  .jump-dot.dot-fix { background: #fbbf24; border-color: #fbbf24; }
+  .jump-dot.dot-cut { background: #f87171; border-color: #f87171; }
+
+  @media (max-width: 900px) {
+    .sticky-header { flex-wrap: wrap; gap: 8px; padding: 8px 16px; }
+    .header-right { flex-wrap: wrap; gap: 8px; }
+    .summary-counts { font-size: 12px; gap: 10px; }
+    .hero-iframe { height: 500px; }
+  }
+
+  .hero-card.focused { box-shadow: 0 0 0 2px #7B9DBF; }
+  .kb-hint {
+    font-size: 11px;
+    color: #E7E4CA55;
+    margin-left: 8px;
+  }
+</style>
+</head>
+<body>
+
+<div class="sticky-header">
+  <h1>MapleMoon Hero Triage</h1>
+  <div class="header-right">
+    <div class="summary-counts">
+      <span class="c-keep">KEEP: <span id="keepCount">0</span></span>
+      <span class="c-fix">FIX: <span id="fixCount">0</span></span>
+      <span class="c-cut">CUT: <span id="cutCount">0</span></span>
+    </div>
+    <div class="progress"><span class="count" id="progressCount">0</span>/23 triaged</div>
+    <span class="kb-hint">1=KEEP 2=FIX 3=CUT J/K=nav</span>
+    <button class="btn" onclick="resetAll()">Reset</button>
+    <button class="btn btn-primary" onclick="showExport()">Export</button>
+  </div>
+</div>
+
+<div class="jump-nav" id="jumpNav"></div>
+
+<div class="triage-list" id="triageList"></div>
+
+<div class="export-modal" id="exportModal">
+  <div class="export-content">
+    <h2>Triage Summary</h2>
+    <pre id="exportPre"></pre>
+    <div class="export-actions">
+      <button class="btn" onclick="closeExport()">Close</button>
+      <button class="btn" onclick="downloadExport()">Download JSON</button>
+      <button class="btn btn-primary" onclick="copyExport(event)">Copy to Clipboard</button>
+    </div>
+  </div>
+</div>
+
+<script>
+const HEROES = [
+  { file: 'hero_v1.html', version: 'V1', name: 'Brand Statement' },
+  { file: 'hero_v2.html', version: 'V2', name: 'Shop Now' },
+  { file: 'hero_v3.html', version: 'V3', name: 'What is Carob?' },
+  { file: 'hero_v4.html', version: 'V4', name: 'The Range' },
+  { file: 'hero_v6.html', version: 'V6', name: 'Before & After' },
+  { file: 'hero_v7.html', version: 'V7', name: 'Flavour Picker' },
+  { file: 'hero_v8.html', version: 'V8', name: 'Time of Day' },
+  { file: 'hero_v9.html', version: 'V9a', name: 'Story Cards — Editorial' },
+  { file: 'hero_v9_atmospheric.html', version: 'V9b', name: 'Story Cards — Atmospheric' },
+  { file: 'hero_v9_product.html', version: 'V9c', name: 'Story Cards — Product' },
+  { file: 'hero_v10.html', version: 'V10', name: 'Letterbox Cinema' },
+  { file: 'hero_v11.html', version: 'V11', name: 'The Grid' },
+  { file: 'hero_v12.html', version: 'V12', name: 'The Unwrap' },
+  { file: 'hero_v13.html', version: 'V13', name: 'Full Bleed Photo' },
+  { file: 'hero_v14.html', version: 'V14', name: 'Ingredient Journey' },
+  { file: 'hero_v15.html', version: 'V15', name: 'Product Orbit' },
+  { file: 'hero_v16.html', version: 'V16', name: 'Moodboard' },
+  { file: 'hero_v17.html', version: 'V17', name: 'Light Editorial' },
+  { file: 'hero_v18.html', version: 'V18', name: 'Flavour Picker Light' },
+  { file: 'hero_v19.html', version: 'V19', name: 'Light Grid' },
+  { file: 'hero_photo_silhouettes.html', version: 'P1', name: 'Photo: Silhouettes' },
+  { file: 'hero_photo_products.html', version: 'P2', name: 'Photo: Product Shots' },
+  { file: 'hero_photo_gift_boxes.html', version: 'P3', name: 'Photo: Gift Boxes' },
+  { file: 'hero_photo_byron_bay.html', version: 'P4', name: 'Photo: Byron Bay' },
+  { file: 'hero_photo_atmospherics.html', version: 'P5', name: 'Photo: Atmospherics' },
+];
+
+const STORAGE_KEY = 'mm_triage_data';
+
+function loadData() {
+  try { return JSON.parse(localStorage.getItem(STORAGE_KEY)) || {}; }
+  catch { return {}; }
+}
+
+function saveData(data) {
+  localStorage.setItem(STORAGE_KEY, JSON.stringify(data));
+}
+
+function mount() {
+  const list = document.getElementById('triageList');
+  const nav = document.getElementById('jumpNav');
+  const data = loadData();
+
+  HEROES.forEach((h, i) => {
+    const slug = h.file.replace('.html', '');
+    const saved = data[slug] || {};
+
+    list.insertAdjacentHTML('beforeend', `
+      <div class="hero-card ${saved.rating ? 'rated-' + saved.rating : ''}" id="card-${slug}" data-slug="${slug}">
+        <div class="card-header">
+          <div class="card-label"><span class="version">${h.version}</span>${h.name}</div>
+          <div class="rating-group">
+            <input type="radio" name="rate-${slug}" id="keep-${slug}" value="keep" ${saved.rating === 'keep' ? 'checked' : ''}>
+            <label for="keep-${slug}" class="${saved.rating === 'keep' ? 'active-keep' : ''}">KEEP</label>
+            <input type="radio" name="rate-${slug}" id="fix-${slug}" value="fix" ${saved.rating === 'fix' ? 'checked' : ''}>
+            <label for="fix-${slug}" class="${saved.rating === 'fix' ? 'active-fix' : ''}">FIX</label>
+            <input type="radio" name="rate-${slug}" id="cut-${slug}" value="cut" ${saved.rating === 'cut' ? 'checked' : ''}>
+            <label for="cut-${slug}" class="${saved.rating === 'cut' ? 'active-cut' : ''}">CUT</label>
+          </div>
+        </div>
+        <iframe class="hero-iframe" src="${h.file}" loading="lazy"></iframe>
+        <div class="notes-bar">
+          <textarea placeholder="Notes... (e.g. swap hero image, headline too long)" data-slug="${slug}">${saved.notes || ''}</textarea>
+        </div>
+      </div>
+    `);
+
+    nav.insertAdjacentHTML('beforeend',
+      `<div class="jump-dot ${saved.rating ? 'dot-' + saved.rating : ''}" data-index="${i}" title="${h.version}: ${h.name}" onclick="jumpTo('card-${slug}')"></div>`
+    );
+  });
+
+  // Bind events
+  document.querySelectorAll('.rating-group input').forEach(r => {
+    r.addEventListener('change', (e) => {
+      const slug = e.target.name.replace('rate-', '');
+      const val = e.target.value;
+      const data = loadData();
+      data[slug] = data[slug] || {};
+      data[slug].rating = val;
+      saveData(data);
+      updateUI();
+    });
+  });
+
+  document.querySelectorAll('.notes-bar textarea').forEach(t => {
+    t.addEventListener('input', (e) => {
+      const slug = e.target.dataset.slug;
+      const data = loadData();
+      data[slug] = data[slug] || {};
+      data[slug].notes = e.target.value;
+      saveData(data);
+    });
+  });
+
+  updateUI();
+}
+
+function updateUI() {
+  const data = loadData();
+  let keep = 0, fix = 0, cut = 0, total = 0;
+
+  HEROES.forEach((h, i) => {
+    const slug = h.file.replace('.html', '');
+    const saved = data[slug] || {};
+    const card = document.getElementById('card-' + slug);
+    const dot = document.querySelectorAll('.jump-dot')[i];
+
+    card.className = 'hero-card' + (saved.rating ? ' rated-' + saved.rating : '');
+
+    // Update label active states
+    card.querySelectorAll('.rating-group label').forEach(l => {
+      l.className = '';
+      const input = l.previousElementSibling;
+      if (input && input.checked) l.className = 'active-' + input.value;
+    });
+
+    dot.className = 'jump-dot' + (saved.rating ? ' dot-' + saved.rating : '');
+
+    if (saved.rating) {
+      total++;
+      if (saved.rating === 'keep') keep++;
+      if (saved.rating === 'fix') fix++;
+      if (saved.rating === 'cut') cut++;
+    }
+  });
+
+  document.getElementById('keepCount').textContent = keep;
+  document.getElementById('fixCount').textContent = fix;
+  document.getElementById('cutCount').textContent = cut;
+  document.getElementById('progressCount').textContent = total;
+}
+
+function jumpTo(id) {
+  document.getElementById(id).scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
+
+function getExportData() {
+  const data = loadData();
+  const result = { timestamp: new Date().toISOString(), heroes: [] };
+  HEROES.forEach(h => {
+    const slug = h.file.replace('.html', '');
+    const saved = data[slug] || {};
+    result.heroes.push({
+      version: h.version,
+      name: h.name,
+      file: h.file,
+      rating: saved.rating || null,
+      notes: saved.notes || ''
+    });
+  });
+  result.summary = {
+    keep: result.heroes.filter(h => h.rating === 'keep').length,
+    fix: result.heroes.filter(h => h.rating === 'fix').length,
+    cut: result.heroes.filter(h => h.rating === 'cut').length,
+    unrated: result.heroes.filter(h => !h.rating).length
+  };
+  return result;
+}
+
+function showExport() {
+  const data = getExportData();
+  document.getElementById('exportPre').textContent = JSON.stringify(data, null, 2);
+  document.getElementById('exportModal').classList.add('open');
+}
+
+function closeExport() {
+  document.getElementById('exportModal').classList.remove('open');
+}
+
+function copyExport(e) {
+  const data = getExportData();
+  navigator.clipboard.writeText(JSON.stringify(data, null, 2)).then(() => {
+    const btn = e ? e.target : document.querySelector('.export-actions .btn-primary');
+    btn.textContent = 'Copied!';
+    setTimeout(() => btn.textContent = 'Copy to Clipboard', 1500);
+  });
+}
+
+function downloadExport() {
+  const data = getExportData();
+  const blob = new Blob([JSON.stringify(data, null, 2)], { type: 'application/json' });
+  const a = document.createElement('a');
+  a.href = URL.createObjectURL(blob);
+  a.download = 'mm_hero_triage_' + new Date().toISOString().slice(0, 10) + '.json';
+  a.click();
+}
+
+function resetAll() {
+  if (!confirm('Reset all ratings and notes?')) return;
+  localStorage.removeItem(STORAGE_KEY);
+  location.reload();
+}
+
+// ═══════ KEYBOARD NAV ═══════
+let focusedIndex = -1;
+
+function setFocused(idx) {
+  document.querySelectorAll('.hero-card').forEach(c => c.classList.remove('focused'));
+  if (idx >= 0 && idx < HEROES.length) {
+    focusedIndex = idx;
+    const slug = HEROES[idx].file.replace('.html', '');
+    const card = document.getElementById('card-' + slug);
+    card.classList.add('focused');
+    card.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
+}
+
+function rateCurrentCard(rating) {
+  if (focusedIndex < 0) focusedIndex = 0;
+  const slug = HEROES[focusedIndex].file.replace('.html', '');
+  const radio = document.getElementById(rating + '-' + slug);
+  if (radio) {
+    radio.checked = true;
+    radio.dispatchEvent(new Event('change', { bubbles: true }));
+  }
+}
+
+document.addEventListener('keydown', (e) => {
+  // Skip if typing in textarea
+  if (e.target.tagName === 'TEXTAREA' || e.target.tagName === 'INPUT') return;
+
+  switch (e.key) {
+    case '1': rateCurrentCard('keep'); break;
+    case '2': rateCurrentCard('fix'); break;
+    case '3': rateCurrentCard('cut'); break;
+    case 'j': case 'ArrowDown': e.preventDefault(); setFocused(Math.min(focusedIndex + 1, HEROES.length - 1)); break;
+    case 'k': case 'ArrowUp': e.preventDefault(); setFocused(Math.max(focusedIndex - 1, 0)); break;
+    case 'n': if (!e.metaKey) { e.preventDefault(); const slug = HEROES[Math.max(focusedIndex, 0)].file.replace('.html', ''); document.querySelector(`#card-${slug} textarea`).focus(); } break;
+    case 'Escape': document.activeElement.blur(); closeExport(); break;
+  }
+});
+
+// Auto-detect focused card on scroll
+let scrollTimeout;
+window.addEventListener('scroll', () => {
+  clearTimeout(scrollTimeout);
+  scrollTimeout = setTimeout(() => {
+    const cards = document.querySelectorAll('.hero-card');
+    const headerH = 60;
+    for (let i = 0; i < cards.length; i++) {
+      const rect = cards[i].getBoundingClientRect();
+      if (rect.top >= headerH - 50 && rect.top < window.innerHeight * 0.4) {
+        focusedIndex = i;
+        cards.forEach(c => c.classList.remove('focused'));
+        cards[i].classList.add('focused');
+        break;
+      }
+    }
+  }, 100);
+});
+
+document.addEventListener('DOMContentLoaded', mount);
+</script>
+</body>
+</html>
