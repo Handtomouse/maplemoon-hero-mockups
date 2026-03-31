@@ -217,6 +217,7 @@
   <h2>Homepage Hero Review</h2>
   <p>We've prepared several hero concepts for the Maple Moon homepage. Please review each one and rate it: <strong style="color:#4ade80">KEEP</strong> if you love it, <strong style="color:#fbbf24">FIX</strong> if it's close but needs changes, or <strong style="color:#f87171">CUT</strong> if it's not the right direction. Add notes to explain what you'd change.</p>
   <div class="hint">Keyboard: 1 = Keep &middot; 2 = Fix &middot; 3 = Cut &middot; J/K = Navigate</div>
+  <p style="font-size:0.75rem;opacity:0.5;margin-top:8px;">Note: Fonts shown are preview substitutes. The final site will use MapleMoon's brand typefaces.</p>
 </div>
 
 <div class="review-list" id="reviewList"></div>
@@ -398,7 +399,7 @@ async function submitFeedback() {
     form.append('_json', JSON.stringify(data));
 
     // Formspree endpoint — replace FORM_ID with actual ID after setup
-    const res = await fetch('https://formspree.io/f/FORM_ID_PLACEHOLDER', {
+    const res = await fetch('https://formspree.io/f/xgopagoy', {
       method: 'POST', body: form, headers: { 'Accept': 'application/json' }
     });
 

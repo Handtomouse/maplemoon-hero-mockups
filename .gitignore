@@ -13,3 +13,8 @@ triage_paper.html
 paper_screenshots/
 hero_v3.html
 outputs/
+assets/hero_shots/v9_gen/
+assets/hero_shots/v9_source/
+assets/hero_shots/moodboard/*.png
+.superpowers/
+tools/__pycache__/
