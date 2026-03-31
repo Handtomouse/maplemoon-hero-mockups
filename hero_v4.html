@@ -60,6 +60,12 @@
     body::before { animation: gradDrift 14s ease-in-out infinite; }
   }
 
+  /* ── Watermark override: full-bleed wider ── */
+  .carob-watermark-wrap img {
+    width: 110%;
+    max-width: none;
+  }
+
   /* skip-link, focus-visible → brand_kit.css */
 
   /* ── CTA pulse ── */
@@ -167,7 +173,7 @@
     display: flex; justify-content: flex-end; align-items: flex-start;
     padding: 20px;
   }
-  .header-mobile .logo-img { width: 40px; height: auto; }
+  .header-mobile .logo-img { width: 72px; height: auto; }
 
   /* ── Desktop nav bar ── */
   .header-desktop { display: none; }
@@ -317,8 +323,8 @@
     margin: 0 12px; opacity: 0.5; flex-shrink: 0;
   }
 
-  /* ── Desktop category bar ── */
-  .category-bar-desktop { display: none; }
+  /* ── Hide bottom category bars (all breakpoints) ── */
+  .category-strip, .category-bar-desktop { display: none !important; }
 
   /* ── Desktop columns ── */
   .hero-desktop { display: none; }
@@ -386,7 +392,7 @@
     }
     .header-desktop nav a:hover { opacity: 0.6; }
     .header-desktop .logo-desktop {
-      width: 80px; height: auto; margin-left: auto; flex-shrink: 0;
+      width: 160px; height: auto; margin-left: auto; flex-shrink: 0;
     }
 
     .range-headline { font-size: 3.12rem; }
@@ -401,13 +407,13 @@
       position: relative;
       overflow: hidden;
       padding-top: 40px;
-      padding-bottom: 80px;
+      padding-bottom: 40px;
     }
 
     /* 3-column layout */
     .range-columns {
       display: flex;
-      gap: 48px;
+      gap: 24px;
       justify-content: center;
       align-items: flex-end;
       padding: 0 80px;
@@ -415,7 +421,7 @@
     }
 
     .range-col {
-      flex: 1; max-width: 380px;
+      flex: 1; max-width: 240px;
       text-align: center;
       transition: transform 0.4s ease;
       cursor: default;
@@ -425,11 +431,11 @@
     }
 
     .range-col .col-image {
-      height: 330px;
+      height: 240px;
       display: flex; align-items: flex-end; justify-content: center;
     }
     .range-col .col-image img {
-      max-height: 330px; width: auto;
+      max-height: 240px; width: auto;
       object-fit: contain; object-position: center;
       filter: drop-shadow(0 4px 8px var(--mm-black-10)) drop-shadow(0 16px 32px var(--mm-black-15)) drop-shadow(0 32px 64px var(--mm-black-10));
       transition: transform 0.4s ease;
@@ -493,8 +499,8 @@
     .header-desktop { padding: 32px 48px; }
     .header-desktop nav { gap: 52px; }
 
-    .range-col .col-image { height: 330px; }
-    .range-col .col-image img { max-height: 330px; }
+    .range-col .col-image { height: 280px; }
+    .range-col .col-image img { max-height: 280px; }
     .range-col .col-label { font-size: 1.6rem; }
   }
 </style>
@@ -566,7 +572,7 @@
     <!-- Card 2: Moons -->
     <div class="product-card" data-index="1">
       <div class="card-image">
-        <img src="assets/product_shots/eclipse_hazelnut.webp" alt="Hazelnut Eclipse" class="product-shadow" width="400" height="600" loading="lazy" decoding="async">
+        <img src="assets/product_shots/moon_pure_carob.webp" alt="Pure Carob Moon" class="product-shadow" width="400" height="600" loading="lazy" decoding="async">
       </div>
       <span class="card-label text-refined">Moons</span>
       <span class="card-subtitle">4 Flavours</span>
@@ -575,10 +581,37 @@
     <!-- Card 3: Elixirs -->
     <div class="product-card" data-index="2">
       <div class="card-image">
-        <img src="assets/product_shots/elixir_plain.png" alt="Maple Moon Plain Elixir" class="product-shadow" width="400" height="600" loading="lazy" decoding="async">
+        <img src="assets/product_shots/elixir_spiced.webp" alt="Spiced Elixir" class="product-shadow" width="400" height="600" loading="lazy" decoding="async">
       </div>
       <span class="card-label">Elixirs</span>
       <span class="card-subtitle">Plain &amp; Spiced</span>
+    </div>
+
+    <!-- Card 4: Bites -->
+    <div class="product-card" data-index="3">
+      <div class="card-image">
+        <img src="assets/product_shots/bite_coconut.webp" alt="Coconut Carob Bite" class="product-shadow" width="400" height="600" loading="lazy" decoding="async">
+      </div>
+      <span class="card-label text-refined">Bites</span>
+      <span class="card-subtitle">3 Flavours</span>
+    </div>
+
+    <!-- Card 5: Bananas -->
+    <div class="product-card" data-index="4">
+      <div class="card-image">
+        <img src="assets/product_shots/bananas.webp" alt="Carob Bananas" class="product-shadow" width="400" height="600" loading="lazy" decoding="async">
+      </div>
+      <span class="card-label text-refined">Bananas</span>
+      <span class="card-subtitle">Carob Coated</span>
+    </div>
+
+    <!-- Card 6: Packs -->
+    <div class="product-card" data-index="5">
+      <div class="card-image">
+        <div class="card-placeholder"><span style="font-family:var(--mm-sans);font-size:0.7rem;color:var(--mm-cream);opacity:0.3;">Coming</span></div>
+      </div>
+      <span class="card-label text-refined">Packs</span>
+      <span class="card-subtitle">Bundles &amp; Gifts</span>
     </div>
   </div>
 
@@ -586,6 +619,9 @@
     <span class="dot active" data-dot="0"></span>
     <span class="dot" data-dot="1"></span>
     <span class="dot" data-dot="2"></span>
+    <span class="dot" data-dot="3"></span>
+    <span class="dot" data-dot="4"></span>
+    <span class="dot" data-dot="5"></span>
   </div>
 
   <a href="/shop" class="cta-btn fade-5">Browse All</a>
@@ -609,7 +645,7 @@
 
     <div class="range-col fade-4">
       <div class="col-image">
-        <img src="assets/product_shots/eclipse_hazelnut.webp" alt="Hazelnut Eclipse" class="product-shadow" width="400" height="600" loading="lazy" decoding="async">
+        <img src="assets/product_shots/moon_pure_carob.webp" alt="Pure Carob Moon" class="product-shadow" width="400" height="600" loading="lazy" decoding="async">
       </div>
       <div class="col-label">Moons</div>
       <div class="col-subtitle">4 Flavours</div>
@@ -617,10 +653,34 @@
 
     <div class="range-col fade-5">
       <div class="col-image">
-        <img src="assets/product_shots/elixir_plain.png" alt="Maple Moon Plain Elixir" class="product-shadow" width="400" height="600" loading="lazy" decoding="async">
+        <img src="assets/product_shots/elixir_spiced.webp" alt="Spiced Elixir" class="product-shadow" width="400" height="600" loading="lazy" decoding="async">
       </div>
       <div class="col-label">Elixirs</div>
       <div class="col-subtitle">Plain &amp; Spiced</div>
+    </div>
+
+    <div class="range-col fade-6">
+      <div class="col-image">
+        <img src="assets/product_shots/bite_coconut.webp" alt="Coconut Carob Bite" class="product-shadow" width="400" height="600" loading="lazy" decoding="async">
+      </div>
+      <div class="col-label">Bites</div>
+      <div class="col-subtitle">3 Flavours</div>
+    </div>
+
+    <div class="range-col fade-6">
+      <div class="col-image">
+        <img src="assets/product_shots/bananas.webp" alt="Carob Bananas" class="product-shadow" width="400" height="600" loading="lazy" decoding="async">
+      </div>
+      <div class="col-label">Bananas</div>
+      <div class="col-subtitle">Carob Coated</div>
+    </div>
+
+    <div class="range-col fade-7">
+      <div class="col-image">
+        <div class="col-placeholder"></div>
+      </div>
+      <div class="col-label">Packs</div>
+      <div class="col-subtitle">Bundles &amp; Gifts</div>
     </div>
   </div>
 

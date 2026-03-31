@@ -135,7 +135,13 @@
     display: flex; justify-content: flex-end; align-items: flex-start;
     padding: 20px;
   }
-  .header-mobile .logo-img { width: 40px; height: auto; }
+  .header-mobile .logo-img { width: 72px; height: auto; }
+
+  /* -- CAROB watermark full-width override -- */
+  .carob-watermark-wrap img { width: 110%; max-width: none; }
+
+  /* -- Remove bottom category bars -- */
+  .category-strip, .category-bar-desktop { display: none !important; }
 
   /* -- Desktop nav -- */
   .header-desktop { display: none; }
@@ -239,7 +245,7 @@
 
   /* CTA */
   .cta-container {
-    position: fixed; bottom: calc(112px + env(safe-area-inset-bottom)); left: 0; right: 0;
+    position: fixed; bottom: 40px; left: 0; right: 0;
     display: flex; justify-content: center; z-index: var(--z-sticky);
   }
   .cta-btn {
@@ -320,7 +326,7 @@
     }
     .header-desktop nav a:hover { opacity: 0.6; }
     .header-desktop .logo-desktop {
-      width: 80px; height: auto; margin-left: auto; flex-shrink: 0;
+      width: 160px; height: auto; margin-left: auto; flex-shrink: 0;
     }
 
     /* Split layout: side-by-side */
@@ -390,7 +396,7 @@
 
     /* CTA */
     .cta-container {
-      bottom: 100px;
+      bottom: 40px;
     }
     .cta-btn {
       padding: 14px 40px; font-size: 0.95rem;

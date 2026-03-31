@@ -93,6 +93,12 @@
   }
   .header-mobile .logo-img { width: 40px; height: auto; }
 
+  /* Override: logo sizing */
+  .header-mobile .logo-img { width: 72px; height: auto; }
+
+  /* Override: CAROB watermark full-width */
+  .carob-watermark-wrap img { width: 110%; max-width: none; }
+
   /* ── Hamburger ── */
   #menu-toggle { display: none; }
 
@@ -373,6 +379,7 @@
     .header-desktop .logo-desktop {
       width: 80px; height: auto; margin-left: auto; flex-shrink: 0;
     }
+    .header-desktop .logo-desktop { width: 160px; }
 
     .orbit-center .wordmark {
       width: 120px;

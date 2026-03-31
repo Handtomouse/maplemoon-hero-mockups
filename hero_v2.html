@@ -181,7 +181,7 @@
     display: flex; justify-content: flex-end; align-items: flex-start;
     padding: 20px;
   }
-  .header-mobile .logo-img { width: 40px; height: auto; }
+  .header-mobile .logo-img { width: 72px; height: auto; }
 
   /* ── Desktop nav bar ── */
   .header-desktop {
@@ -203,6 +203,7 @@
     filter: drop-shadow(0 4px 8px var(--mm-black-10)) drop-shadow(0 16px 32px var(--mm-black-15)) drop-shadow(0 32px 64px var(--mm-black-10));
     position: relative; z-index: var(--z-product);
     transition: transform 0.4s ease;
+    margin-top: 40px;
   }
 
   /* ── Tagline ── */
@@ -224,6 +225,7 @@
     text-decoration: none; cursor: pointer;
     transition: background 0.3s, color 0.3s, transform 0.15s;
     position: relative; z-index: var(--z-product);
+    margin-top: 12px;
   }
   .cta-btn:hover {
     background: var(--mm-cream); color: var(--mm-blue-top);
@@ -287,7 +289,7 @@
 
   /* ── Watermark overrides: full-bleed edge-to-edge + opacity lift ── */
   .carob-watermark-wrap.wm-subtle img {
-    width: 100%;
+    width: 110%;
     max-width: none;
     opacity: 0.08;
   }
@@ -332,22 +334,23 @@
     }
     .header-desktop nav a:hover { opacity: 1; }
     .header-desktop .logo-desktop {
-      width: 80px; height: auto; margin-left: auto; flex-shrink: 0;
+      width: 160px; height: auto; margin-left: auto; flex-shrink: 0;
     }
 
-    /* Hero bottom clearance for desktop category bar */
-    .hero { padding-bottom: 80px; }
+    /* Hero clearance: top for nav, bottom for category bar */
+    .hero { padding-top: 120px; padding-bottom: 80px; }
 
     /* Watermark */
 
     /* Product */
     .product-img {
-      width: auto; height: 76vh; max-height: 660px; max-width: 420px;
+      width: auto; height: 50vh; max-height: 520px; max-width: 420px;
       filter: drop-shadow(0 4px 8px var(--mm-black-10)) drop-shadow(0 16px 32px var(--mm-black-15)) drop-shadow(0 32px 64px var(--mm-black-10));
-      transform: translateY(-24px);
+      transform: translateY(0);
+      margin-top: 0;
     }
     .product-img:hover {
-      transform: translateY(-24px) scale(1.03);
+      transform: scale(1.03);
     }
 
     /* Tagline */

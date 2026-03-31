@@ -148,7 +148,10 @@
     display: flex; justify-content: flex-end; align-items: flex-start;
     padding: 20px;
   }
-  .header-mobile .logo-img { width: 40px; height: auto; }
+  .header-mobile .logo-img { width: 72px; height: auto; }
+
+  /* -- CAROB watermark full-width override -- */
+  .carob-watermark-wrap img { width: 110%; max-width: none; }
 
   /* -- Desktop nav -- */
   .header-desktop { display: none; }
@@ -162,7 +165,7 @@
     align-items: center; justify-content: center;
     overflow: hidden;
     gap: 0;
-    padding-top: 48px;
+    padding-top: 80px;
     z-index: var(--z-base);
   }
 
@@ -325,10 +328,10 @@
     }
     .header-desktop nav a:hover { opacity: 0.6; }
     .header-desktop .logo-desktop {
-      width: 80px; height: auto; margin-left: auto; flex-shrink: 0;
+      width: 160px; height: auto; margin-left: auto; flex-shrink: 0;
     }
 
-    .hero { gap: 0; padding-top: 96px; }
+    .hero { gap: 0; padding-top: 100px; }
 
     /* Product stack */
     .product-stack {

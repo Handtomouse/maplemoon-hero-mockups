@@ -132,7 +132,7 @@
     display: flex; justify-content: flex-end; align-items: flex-start;
     padding: 20px;
   }
-  .header-mobile .logo-img { width: 40px; height: auto; }
+  .header-mobile .logo-img { width: 72px; height: auto; }
 
   /* -- Desktop nav -- */
   .header-desktop { display: none; }
@@ -150,10 +150,12 @@
     z-index: var(--z-base);
   }
 
-  /* Watermark (gold-tinted) */
+  /* Watermark (gold-tinted, full-width darker beige) */
   .carob-watermark-wrap img {
-    filter: sepia(1) saturate(2) hue-rotate(-10deg) brightness(0.85);
-    opacity: 0.12;
+    width: 110%;
+    max-width: none;
+    filter: sepia(1) saturate(2.5) hue-rotate(-10deg) brightness(0.7);
+    opacity: 0.18;
   }
 
   /* Product image stack */
@@ -317,15 +319,15 @@
     }
     .header-desktop nav a:hover { opacity: 0.5; }
     .header-desktop .logo-desktop {
-      width: 80px; height: auto; margin-left: auto; flex-shrink: 0;
+      width: 160px; height: auto; margin-left: auto; flex-shrink: 0;
     }
 
-    .hero { gap: 0; padding-top: 96px; }
+    .hero { gap: 0; padding-top: 140px; }
 
     /* Product stack */
     .product-stack {
       width: auto; max-width: none;
-      height: 52vh; max-height: 520px;
+      height: 44vh; max-height: 440px;
     }
     .product-stack img {
       width: auto; height: 100%;
