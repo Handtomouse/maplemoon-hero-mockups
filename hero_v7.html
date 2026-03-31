@@ -33,7 +33,7 @@
   html, body { height: 100%; overflow: hidden; }
 
   body {
-    background: linear-gradient(180deg, var(--grad-top) 0%, var(--grad-bottom) 100%);
+    background: url('assets/hero_shots/blue_fog.png') center/cover no-repeat fixed;
     font-family: var(--mm-sans);
     color: var(--mm-cream);
     position: relative;
@@ -43,6 +43,16 @@
   }
   @media (prefers-reduced-motion: reduce) {
     body { transition: none; }
+  }
+
+  /* Gradient overlay on top of background image */
+  body::before {
+    content: '';
+    position: fixed; inset: 0;
+    background: linear-gradient(180deg, var(--grad-top) 0%, var(--grad-bottom) 100%);
+    opacity: 0.5;
+    pointer-events: none;
+    z-index: 0;
   }
 
   /* Radial mesh overlay */
@@ -166,7 +176,7 @@
     overflow: hidden;
     gap: 0;
     padding-top: 80px;
-    z-index: var(--z-base);
+    z-index: 1;
   }
 
   /* Product image stack */
@@ -312,10 +322,10 @@
     .header-desktop {
       display: flex; align-items: center;
       position: fixed; top: 0; left: 0; right: 0; z-index: var(--z-fixed);
-      padding: 28px 40px;
-      background: var(--mm-navy-15);
-      backdrop-filter: blur(12px);
-      -webkit-backdrop-filter: blur(12px);
+      padding: 16px 40px;
+      background: rgba(45, 74, 102, 0.3);
+      backdrop-filter: blur(8px) saturate(120%);
+      -webkit-backdrop-filter: blur(8px) saturate(120%);
     }
     .header-desktop nav {
       flex: 1; display: flex; align-items: center;

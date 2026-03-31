@@ -206,12 +206,12 @@
   /* ── Product stage (stacked crossfade) ── */
   .product-stage {
     position: absolute;
-    top: 50%; left: 50%;
+    top: 38%; left: 50%;
     transform: translate(-50%, -50%);
     /* [17] page-specific z-index token */
     z-index: var(--z-product);
-    width: 70%; max-width: 260px;
-    aspect-ratio: 2/3;
+    width: 60%; max-width: 260px;
+    height: 40vh;
   }
   .product-stage img {
     position: absolute; inset: 0;
@@ -292,7 +292,7 @@
   .hero-headline {
     font-family: var(--mm-serif); font-size: 1.05rem; font-weight: 400;
     color: var(--mm-cream); text-align: center;
-    position: absolute; bottom: 122px; left: 0; right: 0;
+    position: absolute; bottom: 100px; left: 0; right: 0;
     z-index: var(--z-product);
     padding: 0 24px; margin: 0;
     max-width: none; overflow-wrap: break-word;
@@ -308,7 +308,7 @@
     max-width: none; overflow-wrap: break-word; white-space: normal;
   }
   .hero-cta-wrap {
-    position: absolute; bottom: 44px; left: 0; right: 0;
+    position: absolute; bottom: 28px; left: 0; right: 0;
     z-index: var(--z-product);
     display: flex; justify-content: center;
     margin: 0;
@@ -364,10 +364,10 @@
 
     /* Product stage on desktop */
     .product-stage {
-      width: 44vw; min-width: 320px; max-width: 460px;
-      aspect-ratio: 2/3;
+      width: 30vw; min-width: 260px; max-width: 380px;
+      height: 50vh;
       position: absolute;
-      top: 50%; left: 50%;
+      top: 34%; left: 50%;
       transform: translate(-50%, -50%);
     }
 
@@ -388,7 +388,7 @@
     /* Use left:0/right:0 + text-align rather than transform (animation resets transform) */
     .hero-headline {
       position: absolute;
-      bottom: 142px; left: 0; right: 0;
+      bottom: 160px; left: 0; right: 0;
       font-size: 1.8rem;
       text-align: center;
       padding: 0 80px;
@@ -397,7 +397,7 @@
     }
     .hero-sub {
       position: absolute;
-      bottom: 115px; left: 0; right: 0;
+      bottom: 125px; left: 0; right: 0;
       text-align: center;
       max-width: none; padding: 0 60px;
       white-space: normal;
@@ -414,12 +414,12 @@
     .hamburger { display: none; }
     .category-stack-desktop a { font-size: 1.4rem; }
     .header { padding: 36px 48px; }
-    .product-stage { width: 30vw; min-width: 360px; max-width: 560px; }
+    .product-stage { width: 24vw; min-width: 300px; max-width: 420px; height: 50vh; top: 36%; }
     /* CAROB midpoint at product bottom: 30vw @ 1440px = 432px → height 648px, half = 324px */
     .carob-hero-type { width: 115vw; max-width: none; bottom: 0; top: auto; }
-    .hero-headline { font-size: 2.4rem; bottom: 130px; padding: 0 160px; }
-    .hero-sub { font-size: 0.95rem; bottom: 60px; }
-    .hero-cta-wrap { bottom: 50px; }
+    .hero-headline { font-size: 2.4rem; bottom: 100px; padding: 0 160px; }
+    .hero-sub { font-size: 0.95rem; bottom: 78px; }
+    .hero-cta-wrap { bottom: 24px; }
   }
 </style>
 </head>
@@ -484,12 +484,12 @@
   <div class="product-stage fade-product" aria-live="polite" aria-atomic="true" aria-label="Selected product: Pure Carob Bar">
     <!-- Valid data-cat values: bars, moons, bananas, bites, elixirs, packs, gifts -->
     <img src="assets/product_shots/bar_pure_carob.webp"     alt="Pure Carob Bar"      data-cat="bars"    class="active" fetchpriority="high" loading="eager" decoding="async">
-    <img src="assets/product_shots/moon_pure_carob.webp" alt="Carob Moons"         data-cat="moons"   loading="lazy" decoding="async">
-    <img src="assets/product_shots/bananas.webp"          alt="Carob Banana"        data-cat="bananas" loading="lazy" decoding="async">
-    <img src="assets/product_shots/bite_coconut.webp"       alt="Coconut Carob Bite"  data-cat="bites"   loading="lazy" decoding="async">
-    <img src="assets/product_shots/elixir_plain.png"       alt="Carob Elixir"        data-cat="elixirs" loading="lazy" decoding="async">
-    <img src="assets/products/bar_bundle.jpg"               alt="Bar Bundle Pack"     data-cat="packs"   loading="lazy" decoding="async">
-    <img src="assets/products/eclipse_bundle.jpg"           alt="Eclipse Gift Bundle" data-cat="gifts"   loading="lazy" decoding="async">
+    <img src="assets/product_shots/moon_pure_carob.webp" alt="Carob Moons"         data-cat="moons"   loading="eager" decoding="async">
+    <img src="assets/product_shots/bananas.webp"          alt="Carob Banana"        data-cat="bananas" loading="eager" decoding="async">
+    <img src="assets/product_shots/bite_coconut.webp"       alt="Coconut Carob Bite"  data-cat="bites"   loading="eager" decoding="async">
+    <img src="assets/product_shots/elixir_plain.png"       alt="Carob Elixir"        data-cat="elixirs" loading="eager" decoding="async">
+    <img src="assets/products/bar_bundle.jpg"               alt="Bar Bundle Pack"     data-cat="packs"   loading="eager" decoding="async">
+    <img src="assets/products/eclipse_bundle.jpg"           alt="Eclipse Gift Bundle" data-cat="gifts"   loading="eager" decoding="async">
   </div>
   <div class="carob-hero-type" aria-hidden="true"><img src="assets/carob_wordmark.svg" alt="Carob wordmark"></div>
   <p class="hero-headline fade-2">Naturally sweet. Nothing added.</p>

@@ -33,13 +33,24 @@
   html, body { height: 100%; overflow: hidden; }
 
   body {
-    background: var(--light-bg);
+    background: url('assets/hero_shots/bg_v19_light.png') center/cover no-repeat fixed;
     font-family: var(--mm-sans);
     color: var(--mm-navy);
     position: relative;
     min-height: 100vh;
     min-height: 100dvh;
     text-rendering: optimizeLegibility;
+  }
+
+  /* Soft cream overlay for depth */
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background: var(--light-bg);
+    opacity: 0.3;
+    z-index: 0;
+    pointer-events: none;
   }
 
   @media (prefers-reduced-motion: no-preference) {
@@ -155,6 +166,7 @@
     overflow: hidden;
     gap: 14px;
     padding: 70px 0 28px;
+    z-index: 1;
   }
 
   /* ── Watermark (gold-tinted, full-width darker beige) ── */
@@ -322,10 +334,10 @@
     .header-desktop {
       display: flex; align-items: center;
       position: fixed; top: 0; left: 0; right: 0; z-index: var(--z-fixed);
-      padding: 28px 40px;
-      background: rgba(240, 237, 223, 0.6);
-      backdrop-filter: blur(12px);
-      -webkit-backdrop-filter: blur(12px);
+      padding: 16px 40px;
+      background: rgba(240, 237, 223, 0.5);
+      backdrop-filter: blur(8px) saturate(120%);
+      -webkit-backdrop-filter: blur(8px) saturate(120%);
     }
     @supports not (backdrop-filter: blur(1px)) {
       .header-desktop { background: rgba(240, 237, 223, 0.9); }
@@ -355,8 +367,9 @@
       width: 100%; height: 100vh; height: 100dvh;
       position: relative;
       overflow: hidden;
-      padding-top: 140px;
+      padding-top: 100px;
       padding-bottom: 40px;
+      z-index: 1;
     }
 
     /* 3-column layout */

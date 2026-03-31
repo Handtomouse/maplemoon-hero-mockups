@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Maple Moon — Hero Review</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Inter:wght@300;400;500;600&display=swap');
+
+  :root {
+    --mm-navy: #1E4366;
+    --mm-blue: #7B9DBF;
+    --mm-cream: #E7E4CA;
+    --mm-dark: #0f1923;
+    --mm-card: #162636;
+    --mm-border: rgba(231,228,202,0.12);
+    --serif: 'DM Serif Display', Georgia, serif;
+    --sans: 'Inter', -apple-system, sans-serif;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: var(--sans);
+    background: var(--mm-dark);
+    color: var(--mm-cream);
+    line-height: 1.6;
+  }
+
+  /* Header */
+  .site-header {
+    position: sticky; top: 0; z-index: 100;
+    background: var(--mm-navy);
+    border-bottom: 1px solid var(--mm-border);
+    padding: 14px 32px;
+    display: flex; justify-content: space-between; align-items: center;
+    backdrop-filter: blur(12px);
+  }
+  .site-header .brand {
+    font-family: var(--serif);
+    font-size: 20px; letter-spacing: 0.03em;
+  }
+  .site-header .brand span { color: var(--mm-blue); }
+  .header-right { display: flex; align-items: center; gap: 16px; }
+  .header-counts { font-size: 13px; display: flex; gap: 14px; }
+  .c-keep { color: #4ade80; } .c-fix { color: #fbbf24; } .c-cut { color: #f87171; }
+  .header-counts span { font-weight: 600; }
+  .progress-text { font-size: 13px; color: var(--mm-blue); }
+  .progress-text strong { color: var(--mm-cream); }
+
+  .btn {
+    padding: 8px 18px; border: 1px solid var(--mm-border); background: transparent;
+    color: var(--mm-cream); border-radius: 6px; cursor: pointer; font-size: 13px;
+    font-weight: 500; transition: all 0.2s; font-family: var(--sans);
+  }
+  .btn:hover { background: rgba(231,228,202,0.08); }
+  .btn-primary { background: var(--mm-cream); color: var(--mm-navy); font-weight: 600; }
+  .btn-primary:hover { background: #d4d1b8; }
+
+  /* Intro */
+  .intro {
+    max-width: 720px; margin: 60px auto 48px; padding: 0 32px; text-align: center;
+  }
+  .intro h2 {
+    font-family: var(--serif); font-size: 32px; font-weight: 400;
+    margin-bottom: 12px; letter-spacing: 0.01em;
+  }
+  .intro p { font-size: 15px; color: var(--mm-blue); line-height: 1.7; }
+  .intro .hint {
+    margin-top: 16px; font-size: 12px; color: rgba(231,228,202,0.4);
+    letter-spacing: 0.04em; text-transform: uppercase;
+  }
+
+  /* Hero cards */
+  .review-list { max-width: 1400px; margin: 0 auto; padding: 0 24px 60px; }
+
+  .hero-card {
+    margin-bottom: 32px; border: 1px solid var(--mm-border); border-radius: 12px;
+    overflow: hidden; background: var(--mm-card); transition: border-color 0.3s;
+  }
+  .hero-card.rated-keep { border-color: #4ade80; }
+  .hero-card.rated-fix { border-color: #fbbf24; }
+  .hero-card.rated-cut { border-color: #f87171; }
+
+  .card-header {
+    display: flex; justify-content: space-between; align-items: center;
+    padding: 14px 20px; border-bottom: 1px solid var(--mm-border);
+  }
+  .card-label { font-size: 14px; font-weight: 500; }
+  .card-label .version {
+    font-family: var(--serif); font-size: 13px; color: var(--mm-blue);
+    margin-right: 10px; letter-spacing: 0.05em;
+  }
+
+  .rating-group { display: flex; gap: 0; }
+  .rating-group input { display: none; }
+  .rating-group label {
+    padding: 6px 16px; font-size: 12px; font-weight: 600; cursor: pointer;
+    border: 1px solid var(--mm-border); color: rgba(231,228,202,0.5);
+    transition: all 0.2s; letter-spacing: 0.06em;
+  }
+  .rating-group label:first-of-type { border-radius: 6px 0 0 6px; }
+  .rating-group label:last-of-type { border-radius: 0 6px 6px 0; }
+  .rating-group label:hover { color: var(--mm-cream); background: rgba(231,228,202,0.06); }
+  .active-keep { background: #4ade80 !important; color: var(--mm-dark) !important; border-color: #4ade80 !important; }
+  .active-fix { background: #fbbf24 !important; color: var(--mm-dark) !important; border-color: #fbbf24 !important; }
+  .active-cut { background: #f87171 !important; color: #fff !important; border-color: #f87171 !important; }
+
+  .hero-iframe {
+    width: 100%; height: 700px; border: none; background: var(--mm-dark);
+  }
+
+  .notes-bar { padding: 12px 20px; border-top: 1px solid var(--mm-border); }
+  .notes-bar textarea {
+    width: 100%; background: rgba(0,0,0,0.2); border: 1px solid var(--mm-border);
+    border-radius: 6px; padding: 10px 14px; color: var(--mm-cream); font-family: var(--sans);
+    font-size: 13px; resize: vertical; min-height: 44px; outline: none; transition: border-color 0.2s;
+  }
+  .notes-bar textarea::placeholder { color: rgba(231,228,202,0.3); }
+  .notes-bar textarea:focus { border-color: var(--mm-blue); }
+
+  /* Jump nav */
+  .jump-nav {
+    position: fixed; right: 16px; top: 50%; transform: translateY(-50%);
+    z-index: 50; display: flex; flex-direction: column; gap: 3px;
+  }
+  .jump-dot {
+    width: 10px; height: 10px; border-radius: 50%; border: 1px solid rgba(231,228,202,0.25);
+    background: transparent; cursor: pointer; transition: all 0.2s;
+  }
+  .jump-dot:hover { background: rgba(231,228,202,0.25); }
+  .jump-dot.dot-keep { background: #4ade80; border-color: #4ade80; }
+  .jump-dot.dot-fix { background: #fbbf24; border-color: #fbbf24; }
+  .jump-dot.dot-cut { background: #f87171; border-color: #f87171; }
+
+  /* Submit section */
+  .submit-section {
+    max-width: 600px; margin: 40px auto 80px; padding: 0 32px; text-align: center;
+  }
+  .submit-section h3 {
+    font-family: var(--serif); font-size: 22px; font-weight: 400; margin-bottom: 8px;
+  }
+  .submit-section p { font-size: 14px; color: var(--mm-blue); margin-bottom: 24px; }
+  .submit-section .reviewer-input {
+    width: 100%; max-width: 360px; padding: 10px 16px; margin-bottom: 16px;
+    background: rgba(0,0,0,0.3); border: 1px solid var(--mm-border); border-radius: 6px;
+    color: var(--mm-cream); font-family: var(--sans); font-size: 14px; outline: none;
+  }
+  .submit-section .reviewer-input::placeholder { color: rgba(231,228,202,0.3); }
+  .submit-section .reviewer-input:focus { border-color: var(--mm-blue); }
+  .submit-btn {
+    padding: 14px 40px; background: var(--mm-cream); color: var(--mm-navy);
+    border: none; border-radius: 8px; font-family: var(--sans); font-size: 15px;
+    font-weight: 600; cursor: pointer; transition: all 0.2s; letter-spacing: 0.02em;
+  }
+  .submit-btn:hover { background: #d4d1b8; transform: translateY(-1px); }
+  .submit-btn:disabled { opacity: 0.4; cursor: not-allowed; transform: none; }
+  .submit-success {
+    display: none; padding: 20px; background: rgba(74,222,128,0.1);
+    border: 1px solid #4ade80; border-radius: 8px; margin-top: 16px;
+    font-size: 14px; color: #4ade80;
+  }
+
+  /* Export modal */
+  .export-modal {
+    display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.8);
+    z-index: 200; justify-content: center; align-items: center;
+  }
+  .export-modal.open { display: flex; }
+  .export-content {
+    background: var(--mm-card); border: 1px solid var(--mm-border); border-radius: 12px;
+    padding: 24px; max-width: 700px; width: 90%; max-height: 80vh; overflow-y: auto;
+  }
+  .export-content h2 { margin-bottom: 16px; font-size: 18px; font-family: var(--serif); }
+  .export-content pre {
+    background: var(--mm-dark); padding: 16px; border-radius: 8px; font-size: 12px;
+    overflow-x: auto; white-space: pre-wrap; color: var(--mm-cream); margin-bottom: 16px;
+  }
+  .export-actions { display: flex; gap: 8px; justify-content: flex-end; }
+
+  .hero-card.focused { box-shadow: 0 0 0 2px var(--mm-blue); }
+
+  @media (max-width: 900px) {
+    .site-header { flex-wrap: wrap; gap: 8px; padding: 10px 16px; }
+    .header-right { flex-wrap: wrap; gap: 8px; }
+    .hero-iframe { height: 500px; }
+    .intro h2 { font-size: 24px; }
+  }
+
+  /* Footer */
+  .site-footer {
+    text-align: center; padding: 32px; border-top: 1px solid var(--mm-border);
+    font-size: 12px; color: rgba(231,228,202,0.3);
+  }
+  .site-footer a { color: var(--mm-blue); text-decoration: none; }
+</style>
+</head>
+<body>
+
+<div class="site-header">
+  <div class="brand"><span>maple</span>moon</div>
+  <div class="header-right">
+    <div class="header-counts">
+      <span class="c-keep">KEEP <span id="keepCount">0</span></span>
+      <span class="c-fix">FIX <span id="fixCount">0</span></span>
+      <span class="c-cut">CUT <span id="cutCount">0</span></span>
+    </div>
+    <div class="progress-text"><strong id="progressCount">0</strong>/<span id="totalCount">0</span> reviewed</div>
+    <button class="btn" onclick="showExport()">View Summary</button>
+    <button class="btn btn-primary" onclick="scrollToSubmit()">Submit Feedback</button>
+  </div>
+</div>
+
+<div class="jump-nav" id="jumpNav"></div>
+
+<div class="intro">
+  <h2>Homepage Hero Review</h2>
+  <p>We've prepared several hero concepts for the Maple Moon homepage. Please review each one and rate it: <strong style="color:#4ade80">KEEP</strong> if you love it, <strong style="color:#fbbf24">FIX</strong> if it's close but needs changes, or <strong style="color:#f87171">CUT</strong> if it's not the right direction. Add notes to explain what you'd change.</p>
+  <div class="hint">Keyboard: 1 = Keep &middot; 2 = Fix &middot; 3 = Cut &middot; J/K = Navigate</div>
+</div>
+
+<div class="review-list" id="reviewList"></div>
+
+<div class="submit-section" id="submitSection">
+  <h3>Submit Your Feedback</h3>
+  <p>When you're done reviewing, enter your name and hit submit. Your ratings and notes will be sent directly to us.</p>
+  <input class="reviewer-input" id="reviewerName" type="text" placeholder="Your name (e.g. Carli)"><br>
+  <button class="submit-btn" id="submitBtn" onclick="submitFeedback()">Submit All Feedback</button>
+  <div class="submit-success" id="submitSuccess">Your feedback has been sent. Thank you for your time.</div>
+</div>
+
+<div class="export-modal" id="exportModal">
+  <div class="export-content">
+    <h2>Review Summary</h2>
+    <pre id="exportPre"></pre>
+    <div class="export-actions">
+      <button class="btn" onclick="closeExport()">Close</button>
+      <button class="btn btn-primary" onclick="copyExport(event)">Copy</button>
+    </div>
+  </div>
+</div>
+
+<div class="site-footer">
+  Crafted by <a href="https://handtomouse.org" target="_blank">HandToMouse Studio</a>
+</div>
+
+<script>
+const HEROES = [
+  { file: 'hero_v1.html', version: 'V1', name: 'Brand Statement' },
+  { file: 'hero_v2.html', version: 'V2', name: 'Shop Now' },
+  { file: 'hero_v4.html', version: 'V4', name: 'The Range' },
+  { file: 'hero_v6.html', version: 'V6', name: 'Before & After' },
+  { file: 'hero_v7.html', version: 'V7', name: 'Flavour Picker' },
+  { file: 'hero_v8.html', version: 'V8', name: 'Time of Day' },
+  { file: 'hero_v9.html', version: 'V9', name: 'Story Cards' },
+  { file: 'hero_v10.html', version: 'V10', name: 'Letterbox Cinema' },
+  { file: 'hero_v11.html', version: 'V11', name: 'The Grid' },
+  { file: 'hero_v13.html', version: 'V13', name: 'Full Bleed Photo' },
+  { file: 'hero_v14.html', version: 'V14', name: 'Ingredient Journey' },
+  { file: 'hero_v15.html', version: 'V15', name: 'Product Orbit' },
+  { file: 'hero_v16.html', version: 'V16', name: 'Moodboard' },
+  { file: 'hero_v17.html', version: 'V17', name: 'Light Editorial' },
+  { file: 'hero_v18.html', version: 'V18', name: 'Flavour Picker Light' },
+  { file: 'hero_v19.html', version: 'V19', name: 'Light Grid' },
+];
+
+const STORAGE_KEY = 'mm_client_review';
+
+function loadData() { try { return JSON.parse(localStorage.getItem(STORAGE_KEY)) || {}; } catch { return {}; } }
+function saveData(d) { localStorage.setItem(STORAGE_KEY, JSON.stringify(d)); }
+
+function mount() {
+  const list = document.getElementById('reviewList');
+  const nav = document.getElementById('jumpNav');
+  const data = loadData();
+  document.getElementById('totalCount').textContent = HEROES.length;
+
+  HEROES.forEach((h, i) => {
+    const slug = h.file.replace('.html', '');
+    const saved = data[slug] || {};
+    list.insertAdjacentHTML('beforeend', `
+      <div class="hero-card ${saved.rating ? 'rated-' + saved.rating : ''}" id="card-${slug}" data-slug="${slug}">
+        <div class="card-header">
+          <div class="card-label"><span class="version">${h.version}</span>${h.name}</div>
+          <div class="rating-group">
+            <input type="radio" name="rate-${slug}" id="keep-${slug}" value="keep" ${saved.rating==='keep'?'checked':''}>
+            <label for="keep-${slug}" class="${saved.rating==='keep'?'active-keep':''}">KEEP</label>
+            <input type="radio" name="rate-${slug}" id="fix-${slug}" value="fix" ${saved.rating==='fix'?'checked':''}>
+            <label for="fix-${slug}" class="${saved.rating==='fix'?'active-fix':''}">FIX</label>
+            <input type="radio" name="rate-${slug}" id="cut-${slug}" value="cut" ${saved.rating==='cut'?'checked':''}>
+            <label for="cut-${slug}" class="${saved.rating==='cut'?'active-cut':''}">CUT</label>
+          </div>
+        </div>
+        <iframe class="hero-iframe" src="${h.file}" loading="lazy"></iframe>
+        <div class="notes-bar">
+          <textarea placeholder="What would you change? Any thoughts or preferences..." data-slug="${slug}">${saved.notes||''}</textarea>
+        </div>
+      </div>
+    `);
+    nav.insertAdjacentHTML('beforeend',
+      `<div class="jump-dot ${saved.rating?'dot-'+saved.rating:''}" data-index="${i}" title="${h.version}: ${h.name}" onclick="jumpTo('card-${slug}')"></div>`
+    );
+  });
+
+  document.querySelectorAll('.rating-group input').forEach(r => {
+    r.addEventListener('change', e => {
+      const slug = e.target.name.replace('rate-','');
+      const d = loadData(); d[slug] = d[slug]||{}; d[slug].rating = e.target.value;
+      saveData(d); updateUI();
+    });
+  });
+  document.querySelectorAll('.notes-bar textarea').forEach(t => {
+    t.addEventListener('input', e => {
+      const slug = e.target.dataset.slug;
+      const d = loadData(); d[slug] = d[slug]||{}; d[slug].notes = e.target.value; saveData(d);
+    });
+  });
+  updateUI();
+}
+
+function updateUI() {
+  const data = loadData();
+  let keep=0, fix=0, cut=0, total=0;
+  HEROES.forEach((h,i) => {
+    const slug = h.file.replace('.html','');
+    const saved = data[slug]||{};
+    const card = document.getElementById('card-'+slug);
+    const dot = document.querySelectorAll('.jump-dot')[i];
+    card.className = 'hero-card'+(saved.rating?' rated-'+saved.rating:'');
+    card.querySelectorAll('.rating-group label').forEach(l => {
+      l.className=''; const inp=l.previousElementSibling;
+      if(inp&&inp.checked) l.className='active-'+inp.value;
+    });
+    dot.className = 'jump-dot'+(saved.rating?' dot-'+saved.rating:'');
+    if(saved.rating){total++; if(saved.rating==='keep')keep++; if(saved.rating==='fix')fix++; if(saved.rating==='cut')cut++;}
+  });
+  document.getElementById('keepCount').textContent=keep;
+  document.getElementById('fixCount').textContent=fix;
+  document.getElementById('cutCount').textContent=cut;
+  document.getElementById('progressCount').textContent=total;
+}
+
+function jumpTo(id) { document.getElementById(id).scrollIntoView({behavior:'smooth',block:'start'}); }
+function scrollToSubmit() { document.getElementById('submitSection').scrollIntoView({behavior:'smooth'}); }
+
+function getExportData() {
+  const data = loadData();
+  const name = document.getElementById('reviewerName').value || 'Anonymous';
+  const result = { reviewer: name, timestamp: new Date().toISOString(), heroes: [] };
+  HEROES.forEach(h => {
+    const slug = h.file.replace('.html','');
+    const saved = data[slug]||{};
+    result.heroes.push({ version:h.version, name:h.name, rating:saved.rating||null, notes:saved.notes||'' });
+  });
+  result.summary = {
+    keep: result.heroes.filter(h=>h.rating==='keep').length,
+    fix: result.heroes.filter(h=>h.rating==='fix').length,
+    cut: result.heroes.filter(h=>h.rating==='cut').length,
+    unrated: result.heroes.filter(h=>!h.rating).length
+  };
+  return result;
+}
+
+function showExport() {
+  document.getElementById('exportPre').textContent = JSON.stringify(getExportData(), null, 2);
+  document.getElementById('exportModal').classList.add('open');
+}
+function closeExport() { document.getElementById('exportModal').classList.remove('open'); }
+function copyExport(e) {
+  navigator.clipboard.writeText(JSON.stringify(getExportData(),null,2)).then(() => {
+    e.target.textContent='Copied!'; setTimeout(()=>e.target.textContent='Copy',1500);
+  });
+}
+
+async function submitFeedback() {
+  const btn = document.getElementById('submitBtn');
+  const name = document.getElementById('reviewerName').value;
+  if(!name) { document.getElementById('reviewerName').focus(); document.getElementById('reviewerName').style.borderColor='#f87171'; return; }
+  btn.disabled = true; btn.textContent = 'Sending...';
+
+  const data = getExportData();
+  // Build readable summary for email
+  let body = `Hero Review from ${data.reviewer}\n\n`;
+  body += `Summary: ${data.summary.keep} KEEP, ${data.summary.fix} FIX, ${data.summary.cut} CUT, ${data.summary.unrated} unrated\n\n`;
+  data.heroes.forEach(h => {
+    if(h.rating || h.notes) {
+      body += `${h.version} ${h.name}: ${(h.rating||'unrated').toUpperCase()}`;
+      if(h.notes) body += `\n  Notes: ${h.notes}`;
+      body += '\n\n';
+    }
+  });
+
+  try {
+    const form = new FormData();
+    form.append('name', data.reviewer);
+    form.append('_subject', `Maple Moon Hero Review from ${data.reviewer}`);
+    form.append('message', body);
+    form.append('_json', JSON.stringify(data));
+
+    // Formspree endpoint — replace FORM_ID with actual ID after setup
+    const res = await fetch('https://formspree.io/f/FORM_ID_PLACEHOLDER', {
+      method: 'POST', body: form, headers: { 'Accept': 'application/json' }
+    });
+
+    if(res.ok) {
+      document.getElementById('submitSuccess').style.display='block';
+      btn.textContent='Sent!';
+    } else {
+      // Fallback: mailto
+      const mailto = `mailto:hello@handtomouse.org?subject=${encodeURIComponent('Maple Moon Hero Review from '+data.reviewer)}&body=${encodeURIComponent(body)}`;
+      window.location.href = mailto;
+      btn.textContent='Opening email...';
+      btn.disabled=false;
+    }
+  } catch {
+    // Fallback: mailto
+    const mailto = `mailto:hello@handtomouse.org?subject=${encodeURIComponent('Maple Moon Hero Review from '+(name||'Client'))}&body=${encodeURIComponent(body)}`;
+    window.location.href = mailto;
+    btn.textContent='Opening email...'; btn.disabled=false;
+  }
+}
+
+// Keyboard nav
+let focusedIndex = -1;
+function setFocused(idx) {
+  document.querySelectorAll('.hero-card').forEach(c=>c.classList.remove('focused'));
+  if(idx>=0&&idx<HEROES.length) {
+    focusedIndex=idx;
+    const slug=HEROES[idx].file.replace('.html','');
+    const card=document.getElementById('card-'+slug);
+    card.classList.add('focused');
+    card.scrollIntoView({behavior:'smooth',block:'start'});
+  }
+}
+function rateCard(rating) {
+  if(focusedIndex<0)focusedIndex=0;
+  const slug=HEROES[focusedIndex].file.replace('.html','');
+  const r=document.getElementById(rating+'-'+slug);
+  if(r){r.checked=true;r.dispatchEvent(new Event('change',{bubbles:true}));}
+}
+document.addEventListener('keydown',e=>{
+  if(e.target.tagName==='TEXTAREA'||e.target.tagName==='INPUT')return;
+  switch(e.key){
+    case'1':rateCard('keep');break;case'2':rateCard('fix');break;case'3':rateCard('cut');break;
+    case'j':case'ArrowDown':e.preventDefault();setFocused(Math.min(focusedIndex+1,HEROES.length-1));break;
+    case'k':case'ArrowUp':e.preventDefault();setFocused(Math.max(focusedIndex-1,0));break;
+    case'n':if(!e.metaKey){e.preventDefault();const s=HEROES[Math.max(focusedIndex,0)].file.replace('.html','');document.querySelector(`#card-${s} textarea`).focus();}break;
+    case'Escape':document.activeElement.blur();closeExport();break;
+  }
+});
+
+let scrollT;
+window.addEventListener('scroll',()=>{
+  clearTimeout(scrollT);
+  scrollT=setTimeout(()=>{
+    const cards=document.querySelectorAll('.hero-card');
+    for(let i=0;i<cards.length;i++){
+      const r=cards[i].getBoundingClientRect();
+      if(r.top>=0&&r.top<window.innerHeight*0.4){focusedIndex=i;cards.forEach(c=>c.classList.remove('focused'));cards[i].classList.add('focused');break;}
+    }
+  },100);
+});
+
+document.addEventListener('DOMContentLoaded', mount);
+</script>
+</body>
+</html>

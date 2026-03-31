@@ -18,10 +18,7 @@
 <meta name="twitter:description" content="Artisan carob and cacao butter, handmade in Byron Bay. Organic, vegan, caffeine-free.">
 <meta name="twitter:image" content="/assets/product_shots/bar_pure_carob.png">
 <link rel="canonical" href="https://maplemoon-hero-mockups.vercel.app/hero_v8.html">
-<link rel="preload" as="image" href="assets/stock/stock_kitchen_morning.jpg" fetchpriority="high">
-<link rel="preload" as="image" href="assets/stock/stock_spices_warm.jpg">
-<link rel="preload" as="image" href="assets/stock/stock_flatlay_dark.jpg">
-<link rel="preload" as="image" href="assets/hero_shots/hero_carob_pods_macro_dark.jpg">
+<link rel="preload" as="image" href="assets/hero_shots/silhouette_closeup.png" fetchpriority="high">
 <link rel="preload" as="image" href="assets/carob_wordmark.svg">
 <link rel="icon" href="assets/maplemoon_logo.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="assets/maplemoon_logo.svg">
@@ -55,11 +52,8 @@
     z-index: 0;
   }
 
-  /* Period-specific hero shots — ingredient/origin imagery, no product packaging */
-  body.morning   .hero-bg { background-image: url('assets/stock/stock_kitchen_morning.jpg'); }
-  body.afternoon .hero-bg { background-image: url('assets/stock/stock_spices_warm.jpg'); }
-  body.evening   .hero-bg { background-image: url('assets/stock/stock_flatlay_dark.jpg'); }
-  body.night     .hero-bg { background-image: url('assets/hero_shots/hero_carob_pods_macro_dark.jpg'); }
+  /* Single hero shot for all periods */
+  .hero-bg { background-image: url('assets/hero_shots/silhouette_closeup.png'); }
 
   /* Gradient scrim — dark top + dark bottom for text legibility */
   .hero-bg::after {
@@ -543,28 +537,28 @@
     morning: {
       gradTop: '#D4A574',
       gradBottom: '#E8C9A0',
-      tagline: 'A gentle start. No caffeine, just carob.',
+      tagline: 'Naturally sweet. Nothing added.',
       greeting: 'Good morning',
       iconColor: '#E7E4CA'
     },
     afternoon: {
       gradTop: '#7B9DBF',
       gradBottom: '#A8BDD4',
-      tagline: 'Naturally sweet, nothing added.',
+      tagline: 'Naturally sweet. Nothing added.',
       greeting: 'Good afternoon',
       iconColor: '#E7E4CA'
     },
     evening: {
       gradTop: '#3D5A78',
       gradBottom: '#5B7A99',
-      tagline: 'Wind down with something pure.',
+      tagline: 'Naturally sweet. Nothing added.',
       greeting: 'Good evening',
       iconColor: '#E7E4CA'
     },
     night: {
       gradTop: '#1E4366',
       gradBottom: '#2C5578',
-      tagline: 'No caffeine. No regrets. Just carob.',
+      tagline: 'Naturally sweet. Nothing added.',
       greeting: 'Good night',
       iconColor: '#E7E4CA'
     }

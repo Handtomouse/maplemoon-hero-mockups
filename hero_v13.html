@@ -53,7 +53,7 @@
   /* ── Full bleed background ── */
   .hero-bg {
     position: fixed; inset: 0; z-index: 0; /* intentionally below z-base */
-    background: url('assets/hero_shots/hero_elixir_hand.jpg') center/cover no-repeat;
+    background: url('assets/hero_shots/hero_elixir_hand.jpg') center 30%/cover no-repeat;
   }
   .hero-bg::after {
     content: '';
@@ -93,13 +93,7 @@
   }
   .menu-close:hover { opacity: 1; }
 
-  /* ── Mobile header (overlaid, no background) ── */
-  .header-mobile {
-    position: fixed; top: 0; left: 0; right: 0; z-index: var(--z-fixed);
-    display: flex; justify-content: space-between; align-items: flex-start;
-    padding: 20px;
-  }
-  .header-mobile .logo-img { width: 72px; height: auto; }
+  /* ── Mobile header removed — single logo via header-desktop ── */
 
   /* ── Hamburger ── */
   /* #menu-toggle hidden via HTML 'hidden' attribute — CSS rule redundant, removed */
@@ -156,12 +150,14 @@
   }
 
   /* ── Desktop nav ── */
-  .header-desktop { display: none; }
+  .header-desktop { display: flex; align-items: center; position: fixed; top: 0; left: 0; right: 0; z-index: var(--z-fixed); padding: 20px; background: transparent; }
+  .header-desktop nav { display: none; }
+  .header-desktop .logo-desktop { width: 80px; height: auto; margin-left: auto; flex-shrink: 0; }
 
   .hero-footer {
     position: fixed;
     bottom: 0; left: 0; right: 0;
-    padding: 0 24px 36px;
+    padding: 0 24px 44px;
     z-index: var(--z-product);
     display: flex;
     align-items: flex-end;
@@ -215,10 +211,66 @@
     opacity: 0.5;
   }
 
+  /* ── Aesop-style fine details ── */
+  .hero-detail-line {
+    position: fixed;
+    bottom: 0; left: 0; right: 0;
+    height: 1px;
+    background: var(--mm-cream);
+    opacity: 0.12;
+    z-index: var(--z-product);
+  }
+  .hero-provenance {
+    position: fixed;
+    bottom: 10px; left: 0; right: 0;
+    z-index: var(--z-product);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+  }
+  .hero-provenance span {
+    font-family: var(--mm-serif, Georgia, 'Times New Roman', serif);
+    font-size: 0.6rem;
+    font-weight: 400;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--mm-cream);
+    opacity: 0.35;
+  }
+  .hero-provenance .detail-dot {
+    width: 2px; height: 2px;
+    background: var(--mm-cream);
+    border-radius: 50%;
+    opacity: 0.3;
+    flex-shrink: 0;
+  }
+  .hero-separator {
+    width: 40px; height: 1px;
+    background: var(--mm-cream);
+    opacity: 0.2;
+    margin-top: 4px;
+  }
+  .hero-cert-text {
+    font-family: var(--mm-sans);
+    font-size: 0.55rem;
+    font-weight: 300;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--mm-cream);
+    opacity: 0.3;
+    margin-top: 4px;
+  }
+  .hero-footer-right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    flex-shrink: 0;
+  }
+
   /* ── DESKTOP ── */
   @media (min-width: 768px) {
     .hamburger { display: none; }
-    .header-mobile { display: none; }
 
     .back-link {
       color: var(--mm-cream);
@@ -226,13 +278,10 @@
 
     /* Desktop nav overlaid on photo */
     .header-desktop {
-      display: flex; align-items: center;
-      position: fixed; top: 0; left: 0; right: 0; z-index: var(--z-fixed);
       padding: 28px 40px;
-      background: transparent;
     }
     .header-desktop nav {
-      flex: 1; display: flex; align-items: center;
+      display: flex; flex: 1; align-items: center;
       justify-content: center; gap: 40px;
     }
     .header-desktop nav a {
@@ -241,9 +290,7 @@
       opacity: 0.9; transition: opacity 0.2s;
     }
     .header-desktop nav a:hover { opacity: 0.6; }
-    .header-desktop .logo-desktop {
-      width: 160px; height: auto; margin-left: auto; flex-shrink: 0;
-    }
+    .header-desktop .logo-desktop { width: 160px; }
 
     .trust-row {
       gap: 20px;
@@ -333,11 +380,7 @@
   </div>
 </div>
 
-<!-- Mobile header (overlaid on photo, no bg) -->
-<header class="header-mobile fade-1" aria-label="Mobile navigation">
-  <div></div><!-- spacer for hamburger -->
-  <img src="assets/maplemoon_logo.svg" alt="Maple Moon" class="logo-img" width="40" height="40" loading="eager" decoding="async">
-</header>
+<!-- Mobile header removed — single logo via desktop header -->
 
 <!-- Desktop header (overlaid, cream text, no bg) -->
 <header class="header-desktop fade-1" aria-label="Main navigation">
@@ -365,7 +408,21 @@
       <img src="assets/icon_made_in_aus.svg" alt="Made in Australia" width="20" height="20" loading="lazy" decoding="async">
     </div>
   </div>
-  <a href="/shop" class="cta-btn fade-4">Shop Now</a>
+  <div class="hero-footer-right">
+    <a href="/shop" class="cta-btn fade-4">Shop Now</a>
+    <div class="hero-separator fade-4" style="margin-left:auto;margin-right:auto;margin-top:10px;"></div>
+    <p class="hero-cert-text fade-4">Certified Organic &middot; ACO 12345</p>
+  </div>
+</div>
+
+<!-- Fine detail: provenance bar -->
+<div class="hero-detail-line" aria-hidden="true"></div>
+<div class="hero-provenance fade-4" aria-hidden="true">
+  <span>Est. 2024</span>
+  <span class="detail-dot"></span>
+  <span>Byron Bay, Australia</span>
+  <span class="detail-dot"></span>
+  <span>Handmade</span>
 </div>
 </main>
 

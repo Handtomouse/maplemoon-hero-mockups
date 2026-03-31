@@ -171,22 +171,14 @@
     background: linear-gradient(180deg, rgba(20,30,60,0.15) 0%, rgba(10,15,40,0.40) 100%);
   }
   .split-left-text {
-    position: absolute; top: 50%; left: 50%;
-    transform: translate(-50%, -50%);
+    position: absolute; bottom: 32px; left: 24px;
+    transform: none;
     font-family: var(--mm-serif);
-    font-size: 1.6rem; font-weight: 400;
+    font-size: 3.2rem; font-weight: 400;
     letter-spacing: 0.03em; line-height: 1.15;
     color: var(--mm-cream); z-index: var(--z-product);
     text-shadow: 0 2px 12px var(--mm-black-35);
-    text-align: center; white-space: nowrap;
-  }
-  /* Mobile/tablet: opposite corners for visual flow */
-  @media (max-width: 767px) {
-    .split-left-text {
-      top: auto; left: 24px;
-      bottom: 24px; transform: none;
-      text-align: left;
-    }
+    text-align: left; white-space: nowrap;
   }
 
   .split-right {
@@ -203,64 +195,25 @@
     background: linear-gradient(180deg, rgba(30,40,70,0.25) 0%, rgba(20,30,60,0.50) 100%);
   }
   .split-right-text {
-    position: absolute; top: 50%; left: 50%;
-    transform: translate(-50%, -50%);
+    position: absolute; bottom: 32px; right: 24px;
+    transform: none;
     font-family: var(--mm-serif);
-    font-size: 1.6rem; font-weight: 400;
+    font-size: 3.2rem; font-weight: 400;
     letter-spacing: 0.03em; line-height: 1.15;
     color: var(--mm-cream); z-index: var(--z-product);
     text-shadow: 0 2px 12px var(--mm-black-35);
-    text-align: center; white-space: nowrap;
-  }
-  @media (max-width: 767px) {
-    .split-right-text {
-      top: auto; left: auto;
-      bottom: 24px; right: 24px; transform: none;
-      text-align: right;
-    }
+    text-align: right; white-space: nowrap;
+    left: auto;
   }
 
-  /* Brand voice tagline */
-  .split-brand-voice {
-    position: absolute;
-    bottom: 80px;
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: var(--z-sticky);
-    font-family: var(--mm-sans);
-    font-size: 0.7rem;
-    font-weight: 300;
-    letter-spacing: 0.2em;
-    text-transform: uppercase;
-    color: var(--mm-cream);
-    opacity: 0.55;
-    white-space: nowrap;
-    pointer-events: none;
-  }
+  /* Brand voice tagline — removed from DOM */
 
   /* Divider (hidden on mobile) */
   .split-divider {
     display: none;
   }
 
-  /* CTA */
-  .cta-container {
-    position: fixed; bottom: 40px; left: 0; right: 0;
-    display: flex; justify-content: center; z-index: var(--z-sticky);
-  }
-  .cta-btn {
-    display: inline-block;
-    border: 1.5px solid var(--mm-cream); color: var(--mm-cream);
-    background: transparent; border-radius: var(--radius-pill);
-    padding: 12px 32px;
-    font-family: var(--mm-sans); font-size: 0.85rem;
-    font-weight: 400; letter-spacing: 0.08em; text-transform: uppercase;
-    text-decoration: none; cursor: pointer;
-    transition: background 0.3s, color 0.3s;
-  }
-  .cta-btn:hover {
-    background: var(--mm-cream); color: var(--mm-blue-top);
-  }
+  /* CTA — removed from DOM */
 
   /* -- Category strip (mobile) -- */
   .category-strip {
@@ -342,7 +295,9 @@
       transition: width 0.05s linear;
     }
     .split-left-text {
-      font-size: 2.4rem;
+      font-size: 4.5rem;
+      bottom: 48px;
+      left: 48px;
     }
 
     .split-right {
@@ -352,7 +307,9 @@
       transition: width 0.05s linear;
     }
     .split-right-text {
-      font-size: 2.4rem;
+      font-size: 4.5rem;
+      bottom: 48px;
+      right: 48px;
     }
 
     /* Divider */
@@ -394,13 +351,7 @@
 
     /* Watermark */
 
-    /* CTA */
-    .cta-container {
-      bottom: 40px;
-    }
-    .cta-btn {
-      padding: 14px 40px; font-size: 0.95rem;
-    }
+    /* CTA — removed */
 
     /* Desktop category bar */
     .category-bar-desktop {
@@ -477,7 +428,6 @@
 
 <main id="main-content" class="split-hero" tabindex="-1">
   <div class="carob-watermark-wrap wm-subtle" aria-hidden="true"><img src="assets/carob_wordmark.svg" alt="" aria-hidden="true" width="800" height="200"></div>
-  <p class="split-brand-voice">naturally sweet, nothing added.</p>
 
   <!-- Left: Lifestyle / Origin -->
   <div class="split-left fade-3">
@@ -498,10 +448,6 @@
     <a href="/shop" class="split-right-text" style="text-decoration:none">Shop.</a>
   </div>
 
-  <!-- CTA -->
-  <div class="cta-container fade-5">
-    <a href="/shop" class="cta-btn">Shop Now</a>
-  </div>
 </main>
 
 

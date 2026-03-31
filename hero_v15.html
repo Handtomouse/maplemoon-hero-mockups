@@ -36,13 +36,24 @@
   body { height: 100%; overflow: hidden; }
 
   body {
-    background: linear-gradient(180deg, var(--mm-blue-top) 0%, var(--mm-blue-bottom) 100%);
+    background: url('assets/hero_shots/blue_fog_001.png') center/cover no-repeat fixed;
     font-family: var(--mm-sans);
     color: var(--mm-cream);
     position: relative;
     min-height: 100vh;
     min-height: 100dvh;
     text-rendering: optimizeLegibility;
+  }
+
+  /* Gradient overlay for depth */
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background: linear-gradient(180deg, var(--mm-blue-top) 0%, var(--mm-blue-bottom) 100%);
+    opacity: 0.4;
+    z-index: 0;
+    pointer-events: none;
   }
 
   @media (prefers-reduced-motion: no-preference) {
@@ -61,6 +72,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    z-index: 1;
   }
 
   /* ── Back link ── */

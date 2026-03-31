@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 """
-MapleMoon — V9 Hero Compositing Script
+MapleMoon — V9 Hero Compositing Script v2
 Takes 1:1 product photography from --image mode (white bg),
-replaces background with brand blue, composites onto 16:9 canvas.
+smoothly blends white bg → brand blue, auto-crops product, composites onto 16:9.
 """
 import os, sys
 import numpy as np
@@ -12,68 +12,66 @@ OUT = os.path.expanduser("~/maplemoon-website/assets/hero_shots")
 os.makedirs(OUT, exist_ok=True)
 
 # Brand blue — #7B9DBF (cornflower), NOT deep navy
-BRAND_BLUE = (123, 157, 191)
+BRAND_BLUE = np.array([123, 157, 191], dtype=np.float32)
 
 # Canvas size: 4K 16:9
 W, H = 3840, 2160
 
 
-def remove_white_bg(img, threshold=230, feather=8):
-    """Replace white/near-white pixels with transparency."""
-    rgba = img.convert("RGBA")
-    data = np.array(rgba)
+def blend_white_to_blue(img, threshold=0.72, power=1.8):
+    """
+    Smoothly replace white/near-white pixels with brand blue.
+    Preserves product colors — only affects pixels whiter than threshold.
+    Shadows blend naturally to blue-tinted instead of grey artifacts.
+    """
+    data = np.array(img.convert("RGB"), dtype=np.float32)
 
-    # Mask: pixels where ALL of R,G,B > threshold
-    r, g, b, a = data[:, :, 0], data[:, :, 1], data[:, :, 2], data[:, :, 3]
-    white_mask = (r > threshold) & (g > threshold) & (b > threshold)
+    # Whiteness: how close each pixel is to pure white (0-1)
+    # Using min channel — light blue packaging (~170 min) won't be affected
+    whiteness = np.min(data, axis=2) / 255.0
 
-    # Set white pixels to transparent
-    data[white_mask, 3] = 0
+    # Blend curve: ramp from 0 at threshold to 1 at pure white
+    blend = np.clip((whiteness - threshold) / (1.0 - threshold), 0, 1) ** power
+    blend = blend[:, :, np.newaxis]  # Broadcast to 3 channels
 
-    result = Image.fromarray(data, "RGBA")
+    # Blend: white pixels → brand blue, product pixels → unchanged
+    blended = data * (1 - blend) + BRAND_BLUE[np.newaxis, np.newaxis, :] * blend
 
-    # Feather edges: blur the alpha channel for smooth transition
-    if feather > 0:
-        alpha = result.split()[3]
-        alpha = alpha.filter(ImageFilter.GaussianBlur(radius=feather))
-        result.putalpha(alpha)
-
-    return result
-
-
-def brand_blue_bg(size=None):
-    """Solid brand blue canvas."""
-    if size is None:
-        size = (W, H)
-    return Image.new("RGBA", size, BRAND_BLUE + (255,))
+    return Image.fromarray(blended.astype(np.uint8), "RGB")
 
 
-def drop_shadow(canvas, img, cx, cy):
-    """Soft drop shadow beneath product."""
-    w, h = img.size
-    _, _, _, a = img.split()
-    shadow_fill = Image.new("RGBA", (w, h), (40, 60, 80, 0))
-    shadow_alpha = a.point(lambda p: int(p * 0.35))
-    shadow_fill.putalpha(shadow_alpha)
-    sx = cx - w // 2 + 12
-    sy = cy - h // 2 + 18
-    shadow_layer = Image.new("RGBA", canvas.size, (0, 0, 0, 0))
-    shadow_layer.paste(shadow_fill, (sx, sy), shadow_fill)
-    shadow_layer = shadow_layer.filter(ImageFilter.GaussianBlur(radius=22))
-    return Image.alpha_composite(canvas, shadow_layer)
+def auto_crop(img, bg_color=None, margin=20):
+    """Crop to non-background bounding box with margin."""
+    data = np.array(img.convert("RGB"))
+
+    if bg_color is None:
+        # Sample background from top-left corner
+        bg_color = data[5, 5]
+
+    # Find pixels that differ significantly from background
+    diff = np.max(np.abs(data.astype(int) - bg_color.astype(int)), axis=2)
+    mask = diff > 30  # Pixels differing >30 from bg in any channel
+
+    rows = np.any(mask, axis=1)
+    cols = np.any(mask, axis=0)
+
+    if not rows.any() or not cols.any():
+        return img  # No crop needed
+
+    rmin, rmax = np.where(rows)[0][[0, -1]]
+    cmin, cmax = np.where(cols)[0][[0, -1]]
+
+    # Add margin
+    rmin = max(0, rmin - margin)
+    rmax = min(data.shape[0], rmax + margin)
+    cmin = max(0, cmin - margin)
+    cmax = min(data.shape[1], cmax + margin)
+
+    return img.crop((cmin, rmin, cmax, rmax))
 
 
-def paste_product(canvas, img, cx, cy):
-    """Paste product centered at cx,cy with drop shadow."""
-    canvas = drop_shadow(canvas, img, cx, cy)
-    x = cx - img.width // 2
-    y = cy - img.height // 2
-    canvas.paste(img, (x, y), img)
-    return canvas
-
-
-def vignette(canvas, strength=0.20):
-    """Subtle edge vignette — lighter than v2's 0.30."""
+def vignette(canvas, strength=0.15):
+    """Subtle edge vignette with blue-tinted darkening."""
     w, h = canvas.size
     vig = Image.new("RGBA", (w, h), (0, 0, 0, 0))
     draw = ImageDraw.Draw(vig)
@@ -85,50 +83,54 @@ def vignette(canvas, strength=0.20):
                         outline=(20, 35, 55, alpha),
                         width=max(1, int(min(w, h) * 0.012)))
     vig = vig.filter(ImageFilter.GaussianBlur(radius=min(w, h) // 7))
-    return Image.alpha_composite(canvas, vig)
+    return Image.alpha_composite(canvas.convert("RGBA"), vig).convert("RGB")
 
 
 def save(img, filename, note=""):
     """Save as high-quality JPEG."""
     path = os.path.join(OUT, filename)
-    final = img.convert("RGB")
-    final = ImageEnhance.Sharpness(final).enhance(1.08)
+    final = ImageEnhance.Sharpness(img).enhance(1.08)
     final.save(path, "JPEG", quality=93)
     kb = os.path.getsize(path) // 1024
     print(f"  ✅ {filename}  {img.size[0]}×{img.size[1]}  {kb}KB  {note}")
 
 
-def composite_hero(input_path, output_filename, product_height=1800, y_offset=-60, note=""):
+def composite_hero(input_path, output_filename, fill_pct=0.82, y_offset=-40, note=""):
     """
-    Full pipeline: load AI output → remove white bg → place on brand blue 16:9 canvas.
-
-    Args:
-        input_path: Path to 1:1 AI-generated product photo (white bg)
-        output_filename: e.g. 'v9_card1_who_moons.jpg'
-        product_height: Target height for the product on canvas
-        y_offset: Vertical offset from center (negative = up, for text space below)
+    Full pipeline:
+    1. Load AI output (1:1, white bg)
+    2. Blend white bg → brand blue (smooth, no artifacts)
+    3. Auto-crop to product bounding box
+    4. Scale product to fill_pct of canvas height
+    5. Place centered on brand blue 16:9 canvas
+    6. Add vignette
     """
     print(f"\n  Processing: {os.path.basename(input_path)}")
 
-    # Load and remove white background
-    raw = Image.open(input_path).convert("RGBA")
-    product = remove_white_bg(raw, threshold=230, feather=6)
+    raw = Image.open(input_path).convert("RGB")
 
-    # Resize to target height
-    scale = product_height / product.height
-    new_w = int(product.width * scale)
-    product = product.resize((new_w, product_height), Image.LANCZOS)
+    # Step 1: Blend white background to brand blue
+    blended = blend_white_to_blue(raw, threshold=0.72, power=1.8)
 
-    # Create brand blue canvas
-    canvas = brand_blue_bg()
+    # Step 2: Auto-crop to product bounding box
+    # Sample the new bg color (should be brand blue now)
+    cropped = auto_crop(blended, bg_color=np.array(list(BRAND_BLUE)), margin=40)
+    print(f"    Cropped: {raw.size} → {cropped.size}")
 
-    # Center product with slight upward offset
-    cx = W // 2
-    cy = H // 2 + y_offset
+    # Step 3: Scale to fill canvas height
+    target_h = int(H * fill_pct)
+    scale = target_h / cropped.height
+    target_w = int(cropped.width * scale)
+    product = cropped.resize((target_w, target_h), Image.LANCZOS)
 
-    # Composite
-    canvas = paste_product(canvas, product, cx, cy)
-    canvas = vignette(canvas, strength=0.18)
+    # Step 4: Create brand blue canvas and paste
+    canvas = Image.new("RGB", (W, H), tuple(BRAND_BLUE.astype(int)))
+    cx = (W - product.width) // 2
+    cy = (H - product.height) // 2 + y_offset
+    canvas.paste(product, (cx, cy))
+
+    # Step 5: Vignette
+    canvas = vignette(canvas, strength=0.15)
 
     save(canvas, output_filename, note)
     return os.path.join(OUT, output_filename)
@@ -136,13 +138,13 @@ def composite_hero(input_path, output_filename, product_height=1800, y_offset=-6
 
 if __name__ == "__main__":
     if len(sys.argv) < 3:
-        print("Usage: python3 build_v9_heroes.py <input_image> <output_filename> [product_height] [y_offset]")
-        print("Example: python3 build_v9_heroes.py moons_photo.png v9_card1_who_moons.jpg 1800 -60")
+        print("Usage: python3 build_v9_heroes.py <input_image> <output_filename> [fill_pct] [y_offset]")
+        print("Example: python3 build_v9_heroes.py moons_photo.png v9_card1_who_moons.jpg 0.82 -40")
         sys.exit(1)
 
     input_path = sys.argv[1]
     output_name = sys.argv[2]
-    height = int(sys.argv[3]) if len(sys.argv) > 3 else 1800
-    offset = int(sys.argv[4]) if len(sys.argv) > 4 else -60
+    fill = float(sys.argv[3]) if len(sys.argv) > 3 else 0.82
+    offset = int(sys.argv[4]) if len(sys.argv) > 4 else -40
 
-    composite_hero(input_path, output_name, product_height=height, y_offset=offset)
+    composite_hero(input_path, output_name, fill_pct=fill, y_offset=offset)
