@@ -6,3 +6,9 @@ assets/moodboard/
 *.bak
 *.r20_pre_edit
 .DS_Store
+
+# Review tools (not for deploy)
+triage.html
+triage_paper.html
+paper_screenshots/
+hero_v3.html
