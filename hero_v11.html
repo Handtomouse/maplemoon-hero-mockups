@@ -116,7 +116,7 @@
     display: flex; justify-content: flex-end; align-items: flex-start;
     padding: 12px;
   }
-  .header-mobile .logo-img { width: 36px; height: auto; }
+  .header-mobile .logo-img { width: 36px; height: auto; background: rgba(26,38,58,0.3); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); border-radius: 50%; padding: 8px; }
 
   /* ── Desktop nav bar ── */
   .header-desktop { display: none; }
@@ -377,36 +377,44 @@
   <!-- Tile 1: Bar Hero (spans 2 cols mobile / full left col desktop) -->
   <div class="tile tile-bar">
     <img src="assets/hero_shots/hero_bar_carob_pods_studio.png" alt="Maple Moon Carob Bar with carob pods" class="tile-bar-photo" width="1080" height="1080" loading="eager" fetchpriority="high" decoding="async">
+    <div style="position:absolute;bottom:12px;left:12px;right:12px;display:flex;justify-content:space-between;align-items:flex-end;"><span style="font-family:var(--mm-sans);font-size:0.6rem;font-weight:400;text-transform:uppercase;letter-spacing:0.12em;color:var(--mm-cream);opacity:0.6;">7 Flavours</span><a href="/shop/bars" style="font-family:var(--mm-sans);font-size:0.55rem;font-weight:400;text-transform:uppercase;letter-spacing:0.1em;color:var(--mm-cream);opacity:0.5;text-decoration:none;border:1px solid rgba(231,228,202,0.3);padding:4px 10px;border-radius:20px;">Shop</a></div>
   </div>
 
   <!-- Tile 2: Moon -->
   <div class="tile tile-moon">
     <span class="tile-wire-label">Moon / Eclipse<em>Carob crescents, handmade</em></span>
+    <div style="position:absolute;bottom:12px;left:12px;right:12px;display:flex;justify-content:space-between;align-items:flex-end;"><span style="font-family:var(--mm-sans);font-size:0.6rem;font-weight:400;text-transform:uppercase;letter-spacing:0.12em;color:var(--mm-cream);opacity:0.6;">Pure Carob Moons</span><a href="/shop/moons" style="font-family:var(--mm-sans);font-size:0.55rem;font-weight:400;text-transform:uppercase;letter-spacing:0.1em;color:var(--mm-cream);opacity:0.5;text-decoration:none;border:1px solid rgba(231,228,202,0.3);padding:4px 10px;border-radius:20px;">Explore</a></div>
   </div>
 
   <!-- Tile 3: Craft / Origin -->
   <div class="tile tile-lifestyle">
     <img src="assets/hero_shots/hero_carob_pods_macro_dark.jpg" alt="Raw carob pods — the ingredient behind Maple Moon" class="tile-lifestyle-photo" width="1080" height="1080" loading="lazy" decoding="async">
+    <div style="position:absolute;bottom:12px;left:12px;right:12px;"><span style="font-family:var(--mm-sans);font-size:0.6rem;font-weight:400;text-transform:uppercase;letter-spacing:0.12em;color:var(--mm-cream);opacity:0.6;">Byron Bay</span></div>
   </div>
 
   <!-- Tile 4: CTA tile -->
   <div class="tile tile-cta" style="cursor:default">
+    <p style="font-family:var(--mm-serif);font-size:0.7rem;font-weight:400;color:var(--mm-cream);opacity:0.5;margin:0 0 12px;text-transform:uppercase;letter-spacing:0.1em;">Discover the Range</p>
     <a href="/shop" style="display:inline-flex;align-items:center;justify-content:center;border:1.5px solid var(--mm-cream);color:var(--mm-cream);background:transparent;border-radius:999px;padding:12px 28px;min-height:48px;font-family:var(--mm-sans);font-size:0.8rem;font-weight:400;letter-spacing:0.08em;text-transform:uppercase;text-decoration:none;transition:background 0.3s,color 0.3s">Shop Now</a>
+    <span style="position:absolute;bottom:12px;left:12px;right:12px;text-align:center;font-family:var(--mm-sans);font-size:0.55rem;font-weight:300;color:var(--mm-cream);opacity:0.35;letter-spacing:0.08em;">Free shipping over $99</span>
   </div>
 
   <!-- Tile 5: Provenance -->
   <div class="tile tile-origin">
     <span class="tile-wire-label">Provenance<em>Handmade in Byron Bay</em></span>
+    <div style="position:absolute;bottom:12px;left:12px;right:12px;display:flex;justify-content:space-between;align-items:flex-end;"><span style="font-family:var(--mm-sans);font-size:0.6rem;font-weight:400;text-transform:uppercase;letter-spacing:0.12em;color:var(--mm-navy);opacity:0.5;">Handmade</span><a href="/our-story" style="font-family:var(--mm-sans);font-size:0.55rem;font-weight:400;text-transform:uppercase;letter-spacing:0.1em;color:var(--mm-navy);opacity:0.4;text-decoration:none;border:1px solid rgba(30,67,102,0.25);padding:4px 10px;border-radius:20px;">Our Story</a></div>
   </div>
 
   <!-- Desktop: Certifications tile -->
   <div class="tile tile-trust-desktop">
     <span class="tile-wire-label">Certifications<em>icons only · no photo</em></span>
+    <div style="position:absolute;bottom:12px;left:12px;right:12px;"><span style="font-family:var(--mm-sans);font-size:0.6rem;font-weight:400;text-transform:uppercase;letter-spacing:0.12em;color:var(--mm-cream);opacity:0.6;">Certified Organic</span></div>
   </div>
 
   <!-- Desktop: Second range tile -->
   <div class="tile tile-powder-desktop">
     <span class="tile-wire-label">Second range<em>elixir · powder · ingredient</em></span>
+    <div style="position:absolute;bottom:12px;left:12px;right:12px;"><span style="font-family:var(--mm-sans);font-size:0.6rem;font-weight:400;text-transform:uppercase;letter-spacing:0.12em;color:var(--mm-cream);opacity:0.6;">Raw Carob</span></div>
   </div>
 
 </main>
