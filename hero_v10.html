@@ -77,34 +77,84 @@
      V10 — LETTERBOX CINEMA
   ═══════════════════════════════════ */
 
-  /* ── Letterbox bars ── */
+  /* ── Letterbox top bar — Aesop-style nav ── */
   .letterbox-top {
     position: fixed; top: 0; left: 0; right: 0;
     height: var(--bar-height);
     background: var(--letterbox-bar);
     z-index: var(--z-dropdown);
-    display: flex; align-items: center; justify-content: center;
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 0 24px;
   }
-  .letterbox-top .bar-text {
-    font-family: var(--mm-sans);
-    font-size: 0.65rem; font-weight: 400;
-    color: var(--mm-cream); opacity: 0.8;
-    text-transform: uppercase;
-    letter-spacing: 0.3em;
+  .letterbox-top .nav-logo {
+    font-family: 'P22 Mackinac Pro', Georgia, serif;
+    font-size: 0.85rem; font-weight: 400;
+    color: var(--mm-cream); opacity: 0.9;
+    letter-spacing: 0.08em;
+    text-decoration: none;
+    white-space: nowrap;
+  }
+  .letterbox-top .nav-links {
+    display: flex; align-items: center; gap: 32px;
+    list-style: none; margin: 0; padding: 0;
+  }
+  .letterbox-top .nav-links a {
+    font-family: 'P22 Mackinac Pro', Georgia, serif;
+    font-size: 0.75rem; font-weight: 400;
+    color: var(--mm-cream); opacity: 0.7;
+    text-decoration: none;
+    letter-spacing: 0.14em;
+    transition: opacity 0.3s;
+  }
+  .letterbox-top .nav-links a:hover { opacity: 1; }
+  .letterbox-top .nav-est {
+    font-family: 'P22 Mackinac Pro', Georgia, serif;
+    font-size: 0.6rem; font-weight: 400;
+    color: var(--mm-cream); opacity: 0.35;
+    letter-spacing: 0.06em;
+    white-space: nowrap;
   }
 
+  /* ── Letterbox bottom bar — structured footer ── */
   .letterbox-bottom {
     position: fixed; bottom: 0; left: 0; right: 0;
     height: var(--bar-height);
     background: var(--letterbox-bar);
     z-index: var(--z-dropdown);
-    display: flex; align-items: center; justify-content: center;
-    gap: 8px;
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 0 24px;
   }
-  .letterbox-bottom img {
-    width: 20px; height: 20px;
+  .letterbox-bottom .footer-shipping {
+    display: flex; align-items: center; gap: 10px;
+  }
+  .letterbox-bottom .footer-shipping img {
+    width: 16px; height: 16px;
     filter: brightness(0) invert(0.92) sepia(0.1) saturate(0.3);
-    opacity: 0.5;
+    opacity: 0.4;
+  }
+  .letterbox-bottom .footer-shipping span {
+    font-family: 'P22 Mackinac Pro', Georgia, serif;
+    font-size: 0.6rem; font-weight: 400;
+    color: var(--mm-cream); opacity: 0.45;
+    letter-spacing: 0.06em;
+  }
+  .letterbox-bottom .footer-social {
+    display: flex; align-items: center; gap: 20px;
+  }
+  .letterbox-bottom .footer-social a {
+    font-family: 'P22 Mackinac Pro', Georgia, serif;
+    font-size: 0.6rem; font-weight: 400;
+    color: var(--mm-cream); opacity: 0.4;
+    text-decoration: none; letter-spacing: 0.08em;
+    transition: opacity 0.3s;
+  }
+  .letterbox-bottom .footer-social a:hover { opacity: 0.8; }
+  .letterbox-bottom .footer-origin {
+    font-family: 'P22 Mackinac Pro', Georgia, serif;
+    font-size: 0.55rem; font-weight: 400;
+    color: var(--mm-cream); opacity: 0.3;
+    letter-spacing: 0.06em;
+    white-space: nowrap;
   }
 
   /* ── Content area ── */
@@ -150,9 +200,9 @@
     position: relative; z-index: var(--z-product);
     width: 100%; height: 100%;
     display: flex; flex-direction: column;
-    align-items: center; justify-content: flex-start;
+    align-items: center; justify-content: flex-end;
     gap: 16px;
-    padding: 12vh 32px 0;
+    padding: 0 32px 12vh;
     text-align: center;
   }
 
@@ -205,12 +255,15 @@
 
     .back-link { display: block; z-index: calc(var(--z-fixed) + 1); }
 
-    /* Letterbox bottom: add text */
-    .letterbox-bottom {
-      gap: 16px;
+    /* Letterbox top: wider spacing on desktop */
+    .letterbox-top {
+      padding: 0 48px;
     }
-    .letterbox-bottom .shipping-text {
-      display: inline;
+    .letterbox-top .nav-links { gap: 48px; }
+
+    /* Letterbox bottom: structured on desktop */
+    .letterbox-bottom {
+      padding: 0 48px;
     }
 
     /* Ken Burns: slower, with pan */
@@ -230,10 +283,12 @@
       width: 40%; max-width: 360px;
     }
 
-    /* Push text to upper-left, clear of bar packaging */
+    /* Push text to bottom-left */
     .cinema-content {
       align-items: flex-start;
-      padding-top: 10vh;
+      justify-content: flex-end;
+      padding-top: 0;
+      padding-bottom: 10vh;
       padding-left: 8%;
       text-align: left;
     }
@@ -266,17 +321,16 @@
     }
   }
 
-  /* ── Shipping text hidden on mobile ── */
-  .letterbox-bottom .shipping-text {
-    display: none;
-    font-family: var(--mm-sans);
-    font-size: 0.65rem; font-weight: 300;
-    color: var(--mm-cream); opacity: 0.4;
-    letter-spacing: 0.08em;
-    margin-left: 16px;
-  }
+  /* ── Mobile: hide nav links, show on desktop ── */
+  .letterbox-top .nav-links { display: none; }
+  .letterbox-top .nav-est { display: none; }
+  .letterbox-bottom .footer-social { display: none; }
+  .letterbox-bottom .footer-origin { display: none; }
   @media (min-width: 768px) {
-    .letterbox-bottom .shipping-text { display: inline; }
+    .letterbox-top .nav-links { display: flex; }
+    .letterbox-top .nav-est { display: block; }
+    .letterbox-bottom .footer-social { display: flex; }
+    .letterbox-bottom .footer-origin { display: block; }
   }
 </style>
 </head>
@@ -285,19 +339,29 @@
 <a href="#main" class="skip-link">Skip to content</a>
 <a href="index.html" class="back-link">&larr; Back to Gallery</a>
 
-<!-- ═══ LETTERBOX TOP BAR ═══ -->
-<div class="letterbox-top fade-bars">
-  <span class="bar-text">Maple Moon</span>
-</div>
+<!-- ═══ LETTERBOX TOP BAR — Aesop-style nav ═══ -->
+<nav class="letterbox-top fade-bars" aria-label="Main navigation">
+  <a href="/" class="nav-logo">Maple Moon</a>
+  <div class="nav-links">
+    <a href="/shop">Shop</a>
+    <a href="/about">About</a>
+    <a href="/ingredients">Ingredients</a>
+    <a href="/contact">Contact</a>
+  </div>
+  <span class="nav-est">Est. 2024</span>
+</nav>
 
-<!-- ═══ LETTERBOX BOTTOM BAR ═══ -->
+<!-- ═══ LETTERBOX BOTTOM BAR — Structured footer ═══ -->
 <div class="letterbox-bottom fade-bars">
-  <img src="assets/icon_organic.svg" alt="Organic" width="20" height="20" loading="eager" decoding="async">
-  <img src="assets/icon_vegan.svg" alt="Vegan" width="20" height="20" loading="eager" decoding="async">
-  <img src="assets/icon_caffeine_free.svg" alt="Caffeine Free" width="20" height="20" loading="eager" decoding="async">
-  <img src="assets/icon_gluten_free.svg" alt="Gluten Free" width="20" height="20" loading="eager" decoding="async">
-  <img src="assets/icon_made_in_aus.svg" alt="Made in Australia" width="20" height="20" loading="eager" decoding="async">
-  <span class="shipping-text">Free shipping over $99</span>
+  <div class="footer-shipping">
+    <img src="assets/icon_made_in_aus.svg" alt="Made in Australia" width="16" height="16" loading="eager" decoding="async">
+    <span>Complimentary shipping over $99</span>
+  </div>
+  <span class="footer-origin">Byron Bay, Australia</span>
+  <div class="footer-social">
+    <a href="https://instagram.com/maplemoon">Instagram</a>
+    <a href="mailto:hello@maplemoon.com.au">Contact</a>
+  </div>
 </div>
 
 <!-- ═══ CINEMA VIEWPORT ═══ -->
@@ -308,6 +372,7 @@
 
   <div class="cinema-content">
     <img src="assets/carob_wordmark.svg" alt="Maple Moon carob wordmark" class="cinema-wordmark fade-1" id="wordmark" width="800" height="200">
+    <p class="cinema-origin fade-2" style="font-family:'P22 Mackinac Pro',Georgia,serif;font-size:0.65rem;letter-spacing:0.18em;opacity:0.4;margin-bottom:4px;">Est. 2024 &middot; Byron Bay, Australia</p>
     <h1 class="cinema-tagline fade-2">Not chocolate. Its own thing.</h1>
     <p class="cinema-origin fade-3">Handmade in Byron Bay</p>
     <a href="/shop" class="cinema-enter fade-4">Enter</a>

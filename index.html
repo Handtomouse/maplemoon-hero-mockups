@@ -4,10 +4,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>MapleMoon — Hero Concepts | HandToMouse Studio</title>
-  <meta name="description" content="18 responsive hero concepts for maplemoon.com.au — organic artisan carob from Byron Bay.">
+  <meta name="description" content="Hero concepts, product pages, and Shopify theme sections for maplemoon.com.au — organic artisan carob from Byron Bay.">
   <meta name="theme-color" content="#7B9DBF">
   <meta property="og:title" content="MapleMoon — Hero Concepts">
-  <meta property="og:description" content="18 responsive hero concepts for maplemoon.com.au by HandToMouse Studio.">
+  <meta property="og:description" content="19 responsive hero concepts for maplemoon.com.au by HandToMouse Studio.">
   <meta property="og:type" content="website">
   <link rel="icon" href="assets/maplemoon_logo.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="assets/maplemoon_logo.svg">
@@ -570,7 +570,7 @@
     <img src="assets/maplemoon_logo.svg" alt="MapleMoon" class="gallery-header__logo" width="40" height="40">
     <div class="gallery-header__text">
       <h1 class="gallery-header__title">Hero Concepts</h1>
-      <p class="gallery-header__subtitle">18 responsive hero concepts for maplemoon.com.au</p>
+      <p class="gallery-header__subtitle">Hero concepts, product pages, and Shopify theme sections for maplemoon.com.au</p>
     </div>
   </header>
 
@@ -599,6 +599,30 @@
     </div>
   </div>
 
+  <!-- Product Pages Section -->
+  <div class="gallery-divider" style="margin-top: 64px;">
+    <hr>
+  </div>
+  <div class="gallery-header" style="padding-top: 40px;">
+    <div class="gallery-header__text">
+      <h2 class="gallery-header__title">Product Pages</h2>
+      <p class="gallery-header__subtitle">Pure Carob Bar — same product, five design directions. Each matches its parent hero variant.</p>
+    </div>
+  </div>
+  <div id="product-gallery" class="hero-cards"></div>
+
+  <!-- Shopify Theme Sections -->
+  <div class="gallery-divider" style="margin-top: 64px;">
+    <hr>
+  </div>
+  <div class="gallery-header" style="padding-top: 40px;">
+    <div class="gallery-header__text">
+      <h2 class="gallery-header__title">Shopify Theme Sections</h2>
+      <p class="gallery-header__subtitle">Supporting sections for the complete Shopify 2.0 theme: navigation, cart, collections, blog, search, and more.</p>
+    </div>
+  </div>
+  <div id="sections-gallery" class="hero-cards"></div>
+
   <!-- Scroll to top -->
   <div class="scroll-top-wrap">
     <a href="#top" class="scroll-top">Back to top</a>
@@ -612,6 +636,13 @@
 
   <script>
     const heroes = [
+      { id: 'evolved', file: 'sections/section-hero-evolved.liquid', title: 'Evolved (Shopify Section)', desc: 'The final hero. V7 picker + V3 headline + V8 greeting + V3 badges + V12 CTAs. Shopify 2.0 section schema. Open full screen for interactive preview.' },
+      { id: 'edu-split', file: 'sections/section-education-split.liquid', title: 'Education Split (Shopify Section)', desc: 'V3/V17 "What is Carob?" split panel. 55/45 story+product layout. Shopify 2.0 section.' },
+      { id: 'prod-grid', file: 'sections/section-product-grid.liquid', title: 'Product Grid (Shopify Section)', desc: 'V19 "The Range" collection showcase. Mobile carousel + desktop grid. Shopify 2.0 section.' },
+      { id: 'faq', file: 'sections/section-faq-accordion.liquid', title: 'FAQ Accordion (Shopify Section)', desc: '10 Q&As using native details/summary. Zero JS core, chevron animation, richtext answers. Shopify 2.0 section.' },
+      { id: 'footer', file: 'sections/section-footer.liquid', title: 'Footer (Shopify Section)', desc: '4-col footer: brand, nav, contact, newsletter. Social icons, legal links, HandToMouse credit. Shopify 2.0 section.' },
+      { id: 'testimonials', file: 'sections/section-testimonials.liquid', title: 'Testimonials (Shopify Section)', desc: 'Customer quotes with star ratings. Mobile carousel, desktop grid. Gold stars, italic serif quotes. Shopify 2.0 section.' },
+      { id: 'product-main', file: 'sections/section-product-main.liquid', title: 'Product Page (Shopify Section)', desc: 'V7a product page: image gallery, buy box, qty stepper, trust badges, edu callout, info tabs. Shopify 2.0 section.' },
       { id: 'v1',  file: 'hero_v1.html',  title: 'Brand Statement',   desc: 'Giant CAROB wordmark dominates. The brand IS the hero.' },
       { id: 'v2',  file: 'hero_v2.html',  title: 'Shop Now',          desc: 'Product front and center with Shop All CTA. Conversion-focused.' },
       { id: 'v3',  file: 'hero_v3.html',  title: 'What is Carob?',    desc: 'Split layout with story panel. Answers the #1 visitor question.' },
@@ -680,6 +711,171 @@
       `;
 
       gallery.appendChild(card);
+    });
+
+    /* ---- Product Pages ---- */
+
+    const products = [
+      { id: 'pv7a', file: 'product_v7a.html', title: 'Light Educational',   desc: 'Tab-based product explorer. Discovery energy on warm cream.' },
+      { id: 'pv2b', file: 'product_v2b.html', title: 'Lifestyle Editorial',  desc: 'Magazine-article layout on marble photography.' },
+      { id: 'pv9',  file: 'product_v9.html',  title: 'Story Cards',          desc: 'Narrative scroll: Origin, Process, Product, Taste.' },
+      { id: 'pv13', file: 'product_v13.html', title: 'Full Bleed Photo',     desc: 'Minimal, confident. Product on full-bleed photography.' },
+      { id: 'pv19', file: 'product_v19.html', title: 'Light Grid',           desc: 'Card-based, structured. Clean grid on warm cream.' },
+    ];
+
+    const productGallery = document.getElementById('product-gallery');
+
+    products.forEach(product => {
+      const pNum = product.id.replace('pv', 'PV').toUpperCase();
+
+      const card = document.createElement('article');
+      card.className = 'hero-card';
+      card.dataset.heroFile = product.file;
+      card.dataset.heroId = product.id;
+
+      const headerDiv = document.createElement('div');
+      headerDiv.className = 'hero-card__header';
+
+      const infoDiv = document.createElement('div');
+      const h2 = document.createElement('h2');
+      h2.className = 'hero-card__title';
+      const span = document.createElement('span');
+      span.textContent = pNum;
+      h2.appendChild(span);
+      h2.appendChild(document.createTextNode(' ' + product.title));
+      const desc = document.createElement('p');
+      desc.className = 'hero-card__desc';
+      desc.textContent = product.desc;
+      infoDiv.appendChild(h2);
+      infoDiv.appendChild(desc);
+
+      const actionsDiv = document.createElement('div');
+      actionsDiv.style.cssText = 'display:flex;align-items:center;gap:12px;';
+      const link = document.createElement('a');
+      link.href = product.file;
+      link.target = '_blank';
+      link.className = 'hero-card__link';
+      link.textContent = 'Open Full Screen';
+      actionsDiv.appendChild(link);
+
+      headerDiv.appendChild(infoDiv);
+      headerDiv.appendChild(actionsDiv);
+      card.appendChild(headerDiv);
+
+      const deviceRow = document.createElement('div');
+      deviceRow.className = 'device-row';
+
+      ['iphone', 'ipad', 'desktop'].forEach(device => {
+        const col = document.createElement('div');
+        col.className = 'device-col device-col--' + device;
+        const frame = document.createElement('div');
+        frame.className = 'device-frame device-' + device;
+        frame.dataset.src = product.file;
+        const frameLink = document.createElement('a');
+        frameLink.href = product.file;
+        frameLink.target = '_blank';
+        frameLink.className = 'device-frame-link';
+        frameLink.setAttribute('aria-label', 'Open ' + product.title + ' at ' + device.charAt(0).toUpperCase() + device.slice(1) + ' size');
+        const placeholder = document.createElement('div');
+        placeholder.className = 'device-placeholder';
+        placeholder.textContent = 'Loading\u2026';
+        frame.appendChild(frameLink);
+        frame.appendChild(placeholder);
+        const label = document.createElement('span');
+        label.className = 'device-label';
+        label.textContent = device.charAt(0).toUpperCase() + device.slice(1);
+        col.appendChild(frame);
+        col.appendChild(label);
+        deviceRow.appendChild(col);
+      });
+
+      card.appendChild(deviceRow);
+      productGallery.appendChild(card);
+    });
+
+    /* ---- Shopify Theme Sections ---- */
+
+    const shopifySections = [
+      { id: 'header', file: 'sections/section-header.liquid', title: 'Header / Nav', desc: 'Mobile hamburger + full-screen overlay. Desktop glassmorphism fixed bar. Cart icon with AJAX count badge.' },
+      { id: 'cart', file: 'sections/section-cart.liquid', title: 'Cart', desc: 'Line items with quantity update, remove, and checkout button. AJAX-powered updates.' },
+      { id: 'collection', file: 'sections/section-collection-main.liquid', title: 'Collection Grid', desc: 'Filterable product grid for collection pages. Responsive columns with hover effects.' },
+      { id: '404', file: 'sections/section-404.liquid', title: '404 Page', desc: 'On-brand error page with carob pod message and navigation back to shop.' },
+      { id: 'article', file: 'sections/section-article.liquid', title: 'Blog Article', desc: 'Single blog post template with featured image, author, date, and rich content.' },
+      { id: 'blog', file: 'sections/section-blog.liquid', title: 'Blog Listing', desc: 'Blog index with article cards, featured images, and pagination.' },
+      { id: 'search', file: 'sections/section-search.liquid', title: 'Search Results', desc: 'Search page with product and article results, empty state handling.' },
+      { id: 'password', file: 'sections/section-password.liquid', title: 'Password / Coming Soon', desc: 'Pre-launch page with email signup and brand messaging.' },
+      { id: 'list-collections', file: 'sections/section-list-collections.liquid', title: 'Collection Directory', desc: 'All collections displayed as a grid with featured images.' },
+      { id: 'main-page', file: 'sections/main-page.liquid', title: 'Generic Page', desc: 'Default page template for About, Contact, and custom pages.' },
+    ];
+
+    const sectionsGallery = document.getElementById('sections-gallery');
+
+    shopifySections.forEach(section => {
+      const sId = section.id.toUpperCase();
+
+      const card = document.createElement('article');
+      card.className = 'hero-card';
+      card.dataset.heroFile = section.file;
+      card.dataset.heroId = section.id;
+
+      const headerDiv = document.createElement('div');
+      headerDiv.className = 'hero-card__header';
+
+      const infoDiv = document.createElement('div');
+      const h2 = document.createElement('h2');
+      h2.className = 'hero-card__title';
+      const span = document.createElement('span');
+      span.textContent = sId;
+      h2.appendChild(span);
+      h2.appendChild(document.createTextNode(' ' + section.title));
+      const desc = document.createElement('p');
+      desc.className = 'hero-card__desc';
+      desc.textContent = section.desc;
+      infoDiv.appendChild(h2);
+      infoDiv.appendChild(desc);
+
+      const actionsDiv = document.createElement('div');
+      actionsDiv.style.cssText = 'display:flex;align-items:center;gap:12px;';
+      const link = document.createElement('a');
+      link.href = section.file;
+      link.target = '_blank';
+      link.className = 'hero-card__link';
+      link.textContent = 'Open Full Screen';
+      actionsDiv.appendChild(link);
+
+      headerDiv.appendChild(infoDiv);
+      headerDiv.appendChild(actionsDiv);
+      card.appendChild(headerDiv);
+
+      const deviceRow = document.createElement('div');
+      deviceRow.className = 'device-row';
+
+      ['iphone', 'ipad', 'desktop'].forEach(device => {
+        const col = document.createElement('div');
+        col.className = 'device-col device-col--' + device;
+        const frame = document.createElement('div');
+        frame.className = 'device-frame device-' + device;
+        frame.dataset.src = section.file;
+        const frameLink = document.createElement('a');
+        frameLink.href = section.file;
+        frameLink.target = '_blank';
+        frameLink.className = 'device-frame-link';
+        frameLink.setAttribute('aria-label', 'Open ' + section.title + ' at ' + device.charAt(0).toUpperCase() + device.slice(1) + ' size');
+        const placeholder = document.createElement('div');
+        placeholder.className = 'device-placeholder';
+        placeholder.textContent = 'Loading\u2026';
+        frame.appendChild(frameLink);
+        frame.appendChild(placeholder);
+        const label = document.createElement('span');
+        label.className = 'device-label';
+        label.textContent = device.charAt(0).toUpperCase() + device.slice(1);
+        col.appendChild(frame);
+        col.appendChild(label);
+        deviceRow.appendChild(col);
+      });
+
+      card.appendChild(deviceRow);
+      sectionsGallery.appendChild(card);
     });
 
     /* ---- Lazy-load iframes with IntersectionObserver ---- */

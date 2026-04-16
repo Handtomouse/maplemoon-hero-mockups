@@ -1,13 +1,20 @@
 {
   "buildCommand": "",
   "outputDirectory": ".",
+  "redirects": [
+    { "source": "/shop", "destination": "/collections/bars.html", "statusCode": 302 },
+    { "source": "/stockists", "destination": "/faq.html", "statusCode": 302 },
+    { "source": "/recipes", "destination": "/homepage.html", "statusCode": 302 },
+    { "source": "/contact", "destination": "/faq.html", "statusCode": 302 },
+    { "source": "/ingredients", "destination": "/homepage.html", "statusCode": 302 }
+  ],
   "headers": [
     {
       "source": "/(.*)",
       "headers": [
         { "key": "X-Content-Type-Options", "value": "nosniff" },
         { "key": "X-Frame-Options", "value": "SAMEORIGIN" },
-        { "key": "Content-Security-Policy", "value": "default-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; script-src 'self' 'unsafe-inline'; frame-src 'self'" },
+        { "key": "Content-Security-Policy", "value": "default-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https://i.pinimg.com; script-src 'self' 'unsafe-inline'; connect-src 'self' https://formspree.io; frame-src 'self'" },
         { "key": "Referrer-Policy", "value": "strict-origin-when-cross-origin" },
         { "key": "Strict-Transport-Security", "value": "max-age=31536000; includeSubDomains" },
         { "key": "Permissions-Policy", "value": "camera=(), microphone=(), geolocation=()" }

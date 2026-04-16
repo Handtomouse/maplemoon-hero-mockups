@@ -33,7 +33,7 @@
   html, body { height: 100%; overflow: hidden; }
 
   body {
-    background: linear-gradient(180deg, var(--grad-top) 0%, var(--grad-bottom) 100%);
+    background: url('assets/hero_shots/blue_fog.webp') center/cover no-repeat fixed;
     font-family: var(--mm-sans);
     color: var(--mm-cream);
     position: relative;
@@ -43,6 +43,16 @@
   }
   @media (prefers-reduced-motion: reduce) {
     body { transition: none; }
+  }
+
+  /* Gradient overlay on top of background image */
+  body::before {
+    content: '';
+    position: fixed; inset: 0;
+    background: linear-gradient(180deg, var(--grad-top) 0%, var(--grad-bottom) 100%);
+    opacity: 0.5;
+    pointer-events: none;
+    z-index: 0;
   }
 
   /* Radial mesh overlay */
@@ -148,7 +158,10 @@
     display: flex; justify-content: flex-end; align-items: flex-start;
     padding: 20px;
   }
-  .header-mobile .logo-img { width: 40px; height: auto; }
+  .header-mobile .logo-img { width: 72px; height: auto; }
+
+  /* -- CAROB watermark full-width override -- */
+  .carob-watermark-wrap img { width: 110%; max-width: none; }
 
   /* -- Desktop nav -- */
   .header-desktop { display: none; }
@@ -162,8 +175,8 @@
     align-items: center; justify-content: center;
     overflow: hidden;
     gap: 0;
-    padding-top: 48px;
-    z-index: var(--z-base);
+    padding-top: 80px;
+    z-index: 1;
   }
 
   /* Product image stack */
@@ -309,26 +322,31 @@
     .header-desktop {
       display: flex; align-items: center;
       position: fixed; top: 0; left: 0; right: 0; z-index: var(--z-fixed);
-      padding: 28px 40px;
-      background: var(--mm-navy-15);
-      backdrop-filter: blur(12px);
-      -webkit-backdrop-filter: blur(12px);
+      padding: 16px 40px;
+      transition: background 0.3s ease, backdrop-filter 0.3s ease;
+    }
+    .header-desktop.scrolled {
+      backdrop-filter: blur(8px) saturate(120%);
+      -webkit-backdrop-filter: blur(8px) saturate(120%);
+      background: rgba(123, 157, 191, 0.6);
+      border-bottom: 1px solid rgba(231,228,202,0.1);
     }
     .header-desktop nav {
       flex: 1; display: flex; align-items: center;
       justify-content: center; gap: 40px;
     }
     .header-desktop nav a {
-      font-family: var(--mm-sans); font-size: 1rem;
-      font-weight: 400; color: var(--mm-cream); text-decoration: none;
-      opacity: 0.9; transition: opacity 0.2s;
+      font-family: var(--mm-sans); font-size: 0.85rem;
+      font-weight: 400; letter-spacing: 0.07em;
+      color: var(--mm-cream); text-decoration: none;
+      opacity: 0.7; transition: opacity 0.2s;
     }
     .header-desktop nav a:hover { opacity: 0.6; }
     .header-desktop .logo-desktop {
-      width: 80px; height: auto; margin-left: auto; flex-shrink: 0;
+      width: 160px; height: auto; margin-left: auto; flex-shrink: 0;
     }
 
-    .hero { gap: 0; padding-top: 96px; }
+    .hero { gap: 0; padding-top: 100px; }
 
     /* Product stack */
     .product-stack {
@@ -370,7 +388,7 @@
   }
 
   @media (min-width: 1024px) {
-    .header-desktop { padding: 32px 48px; }
+    .header-desktop { padding: 16px 48px; }
     .header-desktop nav { gap: 52px; }
     .category-tab { font-size: 1rem; }
   }
@@ -429,17 +447,17 @@
   <div class="product-stack fade-3" aria-live="polite" aria-label="Selected product">
     <!-- Bars -->
     <img src="assets/product_shots/bar_pure_carob.webp"  alt="Maple Moon Pure Carob Bar" class="active" data-flavour="original" data-category="bars" width="400" height="600" fetchpriority="high" loading="eager" decoding="async">
-    <img src="assets/product_shots/bar_goji_coconut.webp"  alt="Maple Moon Golden Coconut Bar" data-flavour="coconut" data-category="bars" width="400" height="600" loading="lazy" decoding="async">
-    <img src="assets/product_shots/bar_peppermint.webp"  alt="Maple Moon Peppermint Bar" data-flavour="mint" data-category="bars" width="400" height="600" loading="lazy" decoding="async">
-    <img src="assets/product_shots/bar_hazelnut.webp"  alt="Maple Moon Hazelnut Bar" data-flavour="hazelnut" data-category="bars" width="400" height="600" loading="lazy" decoding="async">
+    <img src="assets/product_shots/bar_goji_coconut.webp"  alt="Maple Moon Golden Coconut Bar" data-flavour="coconut" data-category="bars" width="400" height="600" loading="eager" decoding="async">
+    <img src="assets/product_shots/bar_peppermint.webp"  alt="Maple Moon Peppermint Bar" data-flavour="mint" data-category="bars" width="400" height="600" loading="eager" decoding="async">
+    <img src="assets/product_shots/bar_hazelnut.webp"  alt="Maple Moon Hazelnut Bar" data-flavour="hazelnut" data-category="bars" width="400" height="600" loading="eager" decoding="async">
     <!-- Moons -->
-    <img src="assets/product_shots/moon_hazelnut.webp"  alt="Maple Moon Hazelnut Moon" data-flavour="moon_hazelnut" data-category="moons" width="400" height="400" loading="lazy" decoding="async">
+    <img src="assets/product_shots/moon_hazelnut.webp"  alt="Maple Moon Hazelnut Moon" data-flavour="moon_hazelnut" data-category="moons" width="400" height="400" loading="eager" decoding="async">
     <!-- Bites -->
-    <img src="assets/product_shots/bite_coconut.webp"  alt="Maple Moon Coconut Bite" data-flavour="bite_coconut" data-category="bites" width="400" height="400" loading="lazy" decoding="async">
-    <img src="assets/product_shots/bite_goji.webp"  alt="Maple Moon Gold Bite" data-flavour="bite_gold" data-category="bites" width="400" height="400" loading="lazy" decoding="async">
+    <img src="assets/product_shots/bite_coconut.webp"  alt="Maple Moon Coconut Bite" data-flavour="bite_coconut" data-category="bites" width="400" height="400" loading="eager" decoding="async">
+    <img src="assets/product_shots/bite_goji.webp"  alt="Maple Moon Gold Bite" data-flavour="bite_gold" data-category="bites" width="400" height="400" loading="eager" decoding="async">
     <!-- Elixirs -->
-    <img src="assets/product_shots/elixir_plain.webp"  alt="Maple Moon Pure Elixir" data-flavour="elixir_pure" data-category="elixirs" width="400" height="600" loading="lazy" decoding="async">
-    <img src="assets/product_shots/elixir_spiced.webp"  alt="Maple Moon Spiced Elixir" data-flavour="elixir_spiced" data-category="elixirs" width="400" height="600" loading="lazy" decoding="async">
+    <img src="assets/product_shots/elixir_plain.webp"  alt="Maple Moon Pure Elixir" data-flavour="elixir_pure" data-category="elixirs" width="400" height="600" loading="eager" decoding="async">
+    <img src="assets/product_shots/elixir_spiced.webp"  alt="Maple Moon Spiced Elixir" data-flavour="elixir_spiced" data-category="elixirs" width="400" height="600" loading="eager" decoding="async">
   </div>
 
   <p class="tagline fade-4" id="tagline" aria-live="polite">Rich and smooth. Nothing added.</p>
@@ -634,6 +652,12 @@
       var prev = (idx - 1 + visible.length) % visible.length;
       visible[prev].focus(); visible[prev].click();
     }
+  });
+
+  // Scroll-based header blur
+  window.addEventListener('scroll', function() {
+    var h = document.querySelector('.header-desktop');
+    if (h) h.classList.toggle('scrolled', window.scrollY > 60);
   });
 
   // Init: Bars category active

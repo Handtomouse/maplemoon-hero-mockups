@@ -127,6 +127,12 @@
   }
   .header-mobile .logo-img { width: 40px; height: auto; }
 
+  /* Override: logo sizing */
+  .header-mobile .logo-img { width: 72px; height: auto; }
+
+  /* Override: CAROB watermark full-width */
+  .carob-watermark-wrap img { width: 110%; max-width: none; }
+
   /* ── Desktop nav bar ── */
   .header-desktop { display: none; }
 
@@ -355,6 +361,7 @@
     .header-desktop .logo-desktop {
       width: 80px; height: auto; margin-left: auto; flex-shrink: 0;
     }
+    .header-desktop .logo-desktop { width: 160px; }
 
     /* Desktop: all 3 products side by side */
     .hero {

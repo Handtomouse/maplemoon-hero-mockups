@@ -36,13 +36,24 @@
   body { height: 100%; overflow: hidden; }
 
   body {
-    background: linear-gradient(180deg, var(--mm-blue-top) 0%, var(--mm-blue-bottom) 100%);
+    background: url('assets/hero_shots/blue_fog_001.webp') center/cover no-repeat fixed;
     font-family: var(--mm-sans);
     color: var(--mm-cream);
     position: relative;
     min-height: 100vh;
     min-height: 100dvh;
     text-rendering: optimizeLegibility;
+  }
+
+  /* Gradient overlay for depth */
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background: linear-gradient(180deg, var(--mm-blue-top) 0%, var(--mm-blue-bottom) 100%);
+    opacity: 0.4;
+    z-index: 0;
+    pointer-events: none;
   }
 
   @media (prefers-reduced-motion: no-preference) {
@@ -61,6 +72,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    z-index: 1;
   }
 
   /* ── Back link ── */
@@ -92,6 +104,12 @@
     padding: 20px;
   }
   .header-mobile .logo-img { width: 40px; height: auto; }
+
+  /* Override: logo sizing */
+  .header-mobile .logo-img { width: 72px; height: auto; }
+
+  /* Override: CAROB watermark full-width */
+  .carob-watermark-wrap img { width: 110%; max-width: none; }
 
   /* ── Hamburger ── */
   #menu-toggle { display: none; }
@@ -357,7 +375,7 @@
     .header-desktop {
       display: flex; align-items: center;
       position: fixed; top: 0; left: 0; right: 0; z-index: var(--z-fixed);
-      padding: 28px 40px;
+      padding: 16px 40px;
       background: transparent;
     }
     .header-desktop nav {
@@ -365,14 +383,16 @@
       justify-content: center; gap: 40px;
     }
     .header-desktop nav a {
-      font-family: var(--mm-sans); font-size: 1rem;
+      font-family: var(--mm-sans); font-size: 0.85rem;
       font-weight: 400; color: var(--mm-cream); text-decoration: none;
-      opacity: 0.9; transition: opacity 0.2s;
+      letter-spacing: 0.07em;
+      opacity: 0.7; transition: opacity 0.2s;
     }
     .header-desktop nav a:hover { opacity: 0.6; }
     .header-desktop .logo-desktop {
       width: 80px; height: auto; margin-left: auto; flex-shrink: 0;
     }
+    .header-desktop .logo-desktop { width: 160px; }
 
     .orbit-center .wordmark {
       width: 120px;
@@ -402,7 +422,7 @@
       --node-size: 140px;
     }
 
-    .header-desktop { padding: 32px 48px; }
+    .header-desktop { padding: 16px 48px; }
     .header-desktop nav { gap: 52px; }
   }
 </style>
@@ -476,7 +496,7 @@
         <div class="product-node-inner"><img src="assets/product_shots/moon_pure_carob.webp" alt="" width="104" height="104" loading="eager" decoding="async"></div>
       </button>
       <button class="product-node" data-name="Spiced Elixir" data-desc="Hot carob with cinnamon, cardamom, and vanilla. The evening ritual." data-href="/shop/elixirs/spiced" aria-label="Spiced Elixir">
-        <div class="product-node-inner"><img src="assets/product_shots/elixir_spiced.png" alt="" width="104" height="104" loading="eager" decoding="async"></div>
+        <div class="product-node-inner"><img src="assets/product_shots/elixir_spiced.webp" alt="" width="104" height="104" loading="eager" decoding="async"></div>
       </button>
       <button class="product-node" data-name="Peppermint Bar" data-desc="Cool peppermint folded through roasted carob and cacao butter. Refreshing." data-href="/shop/bars/peppermint" aria-label="Peppermint Bar">
         <div class="product-node-inner"><img src="assets/product_shots/bar_peppermint.webp" alt="" width="104" height="104" loading="eager" decoding="async"></div>
@@ -485,10 +505,10 @@
         <div class="product-node-inner"><img src="assets/product_shots/eclipse_almond.webp" alt="" width="104" height="104" loading="eager" decoding="async"></div>
       </button>
       <button class="product-node" data-name="Coconut Bite" data-desc="Soft carob bites rolled in toasted coconut. A two-bite treat." data-href="/shop/bites/coconut" aria-label="Coconut Bite">
-        <div class="product-node-inner"><img src="assets/product_shots/bite_coconut.webp" alt="" width="104" height="104" loading="lazy" decoding="async"></div>
+        <div class="product-node-inner"><img src="assets/product_shots/bite_coconut.webp" alt="" width="104" height="104" loading="eager" decoding="async"></div>
       </button>
       <button class="product-node" data-name="Gold Bite" data-desc="Carob bites dusted in golden luster. Indulgent, dairy-free." data-href="/shop/bites/gold" aria-label="Gold Bite">
-        <div class="product-node-inner"><img src="assets/product_shots/bite_goji.webp" alt="" width="104" height="104" loading="lazy" decoding="async"></div>
+        <div class="product-node-inner"><img src="assets/product_shots/bite_goji.webp" alt="" width="104" height="104" loading="eager" decoding="async"></div>
       </button>
     </div>
   </div>

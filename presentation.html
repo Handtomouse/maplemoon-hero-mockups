@@ -409,6 +409,12 @@ body {
 
 <script>
 const HEROES = [
+  { v: 'evolved', title: 'Evolved (Shopify)', file: 'sections/section-hero-evolved.liquid' },
+  { v: 'edu-split', title: 'Education Split (Shopify)', file: 'sections/section-education-split.liquid' },
+  { v: 'prod-grid', title: 'Product Grid (Shopify)', file: 'sections/section-product-grid.liquid' },
+  { v: 'faq', title: 'FAQ Accordion (Shopify)', file: 'sections/section-faq-accordion.liquid' },
+  { v: 'footer', title: 'Footer (Shopify)', file: 'sections/section-footer.liquid' },
+  { v: 'testimonials', title: 'Testimonials (Shopify)', file: 'sections/section-testimonials.liquid' },
   { v: 1,  title: 'Brand Statement' },
   { v: 2,  title: 'Shop Now' },
   { v: 3,  title: 'What is Carob?' },
@@ -529,9 +535,9 @@ function closeLightbox() {
 
 function loadIntoLightbox(hero) {
   document.getElementById('lbLoading').classList.remove('hidden');
-  document.getElementById('lbNum').textContent = `Hero ${String(hero.v).padStart(2,'0')}`;
+  document.getElementById('lbNum').textContent = typeof hero.v === 'string' ? hero.v.toUpperCase() : `Hero ${String(hero.v).padStart(2,'0')}`;
   document.getElementById('lbTitle').textContent = hero.title;
-  document.getElementById('lbFrame').src = `hero_v${hero.v}.html`;
+  document.getElementById('lbFrame').src = hero.file || `hero_v${hero.v}.html`;
   // Fallback: hide spinner after 5s if onload/onerror don't fire
   clearTimeout(window._lbLoadTimeout);
   window._lbLoadTimeout = setTimeout(() => document.getElementById('lbLoading').classList.add('hidden'), 5000);

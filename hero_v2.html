@@ -33,7 +33,7 @@
   html, body { height: 100%; overflow: hidden; }
 
   body {
-    background: linear-gradient(180deg, var(--mm-blue-top) 0%, var(--mm-blue-bottom) 100%);
+    background: url('assets/hero_shots/bg_v2_gradient.webp') center/cover no-repeat fixed;
     font-family: var(--mm-sans);
     color: var(--mm-cream);
     position: relative;
@@ -58,7 +58,7 @@
     content: '';
     position: fixed;
     inset: 0;
-    background: radial-gradient(ellipse 72% 62% at 25% 15%, rgba(135,173,207,0.55) 0%, transparent 65%);
+    background: radial-gradient(ellipse 72% 62% at 25% 15%, rgba(135,173,207,0.35) 0%, transparent 65%);
     background-size: 230% 230%;
     z-index: 0;
     pointer-events: none;
@@ -67,7 +67,7 @@
     content: '';
     position: fixed;
     inset: 0;
-    background: radial-gradient(ellipse 55% 45% at 75% 80%, rgba(168,189,212,0.32) 0%, transparent 60%);
+    background: radial-gradient(ellipse 55% 45% at 75% 80%, rgba(168,189,212,0.2) 0%, transparent 60%);
     background-size: 230% 230%;
     z-index: 0;
     pointer-events: none;
@@ -181,7 +181,7 @@
     display: flex; justify-content: flex-end; align-items: flex-start;
     padding: 20px;
   }
-  .header-mobile .logo-img { width: 40px; height: auto; }
+  .header-mobile .logo-img { width: 72px; height: auto; }
 
   /* ── Desktop nav bar ── */
   .header-desktop {
@@ -195,6 +195,8 @@
     align-items: center; justify-content: center;
     overflow: hidden;
     gap: 20px;
+    padding-top: 80px;
+    z-index: 1;
   }
 
   /* ── Product ── */
@@ -203,6 +205,7 @@
     filter: drop-shadow(0 4px 8px var(--mm-black-10)) drop-shadow(0 16px 32px var(--mm-black-15)) drop-shadow(0 32px 64px var(--mm-black-10));
     position: relative; z-index: var(--z-product);
     transition: transform 0.4s ease;
+    margin-top: 40px;
   }
 
   /* ── Tagline ── */
@@ -224,6 +227,7 @@
     text-decoration: none; cursor: pointer;
     transition: background 0.3s, color 0.3s, transform 0.15s;
     position: relative; z-index: var(--z-product);
+    margin-top: 12px;
   }
   .cta-btn:hover {
     background: var(--mm-cream); color: var(--mm-blue-top);
@@ -287,7 +291,7 @@
 
   /* ── Watermark overrides: full-bleed edge-to-edge + opacity lift ── */
   .carob-watermark-wrap.wm-subtle img {
-    width: 100%;
+    width: 110%;
     max-width: none;
     opacity: 0.08;
   }
@@ -308,12 +312,12 @@
     .header-desktop {
       display: flex; align-items: center;
       position: fixed; top: 0; left: 0; right: 0; z-index: var(--z-fixed);
-      padding: 28px 40px;
+      padding: 16px 40px;
       transition: background 0.3s ease, backdrop-filter 0.3s ease;
     }
     .header-desktop.scrolled {
-      backdrop-filter: blur(20px) saturate(180%);
-      -webkit-backdrop-filter: blur(20px) saturate(180%);
+      backdrop-filter: blur(8px) saturate(120%);
+      -webkit-backdrop-filter: blur(8px) saturate(120%);
       background: rgba(123, 157, 191, 0.6);
       border-bottom: 1px solid var(--mm-cream-10);
     }
@@ -332,22 +336,23 @@
     }
     .header-desktop nav a:hover { opacity: 1; }
     .header-desktop .logo-desktop {
-      width: 80px; height: auto; margin-left: auto; flex-shrink: 0;
+      width: 160px; height: auto; margin-left: auto; flex-shrink: 0;
     }
 
-    /* Hero bottom clearance for desktop category bar */
-    .hero { padding-bottom: 80px; }
+    /* Hero clearance: top for nav, bottom for category bar */
+    .hero { padding-top: 80px; padding-bottom: 80px; }
 
     /* Watermark */
 
     /* Product */
     .product-img {
-      width: auto; height: 76vh; max-height: 660px; max-width: 420px;
+      width: auto; height: 50vh; max-height: 520px; max-width: 420px;
       filter: drop-shadow(0 4px 8px var(--mm-black-10)) drop-shadow(0 16px 32px var(--mm-black-15)) drop-shadow(0 32px 64px var(--mm-black-10));
-      transform: translateY(-24px);
+      transform: translateY(0);
+      margin-top: 0;
     }
     .product-img:hover {
-      transform: translateY(-24px) scale(1.03);
+      transform: scale(1.03);
     }
 
     /* Tagline */

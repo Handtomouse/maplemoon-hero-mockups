@@ -18,10 +18,7 @@
 <meta name="twitter:description" content="Artisan carob and cacao butter, handmade in Byron Bay. Organic, vegan, caffeine-free.">
 <meta name="twitter:image" content="/assets/product_shots/bar_pure_carob.png">
 <link rel="canonical" href="https://maplemoon-hero-mockups.vercel.app/hero_v8.html">
-<link rel="preload" as="image" href="assets/stock/stock_kitchen_morning.jpg" fetchpriority="high">
-<link rel="preload" as="image" href="assets/stock/stock_spices_warm.jpg">
-<link rel="preload" as="image" href="assets/stock/stock_flatlay_dark.jpg">
-<link rel="preload" as="image" href="assets/hero_shots/hero_carob_pods_macro_dark.jpg">
+<link rel="preload" as="image" href="assets/hero_shots/silhouette_closeup.webp" fetchpriority="high">
 <link rel="preload" as="image" href="assets/carob_wordmark.svg">
 <link rel="icon" href="assets/maplemoon_logo.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="assets/maplemoon_logo.svg">
@@ -55,11 +52,8 @@
     z-index: 0;
   }
 
-  /* Period-specific hero shots — ingredient/origin imagery, no product packaging */
-  body.morning   .hero-bg { background-image: url('assets/stock/stock_kitchen_morning.jpg'); }
-  body.afternoon .hero-bg { background-image: url('assets/stock/stock_spices_warm.jpg'); }
-  body.evening   .hero-bg { background-image: url('assets/stock/stock_flatlay_dark.jpg'); }
-  body.night     .hero-bg { background-image: url('assets/hero_shots/hero_carob_pods_macro_dark.jpg'); }
+  /* Single hero shot for all periods */
+  .hero-bg { background-image: url('assets/hero_shots/silhouette_closeup.webp'); }
 
   /* Gradient scrim — dark top + dark bottom for text legibility */
   .hero-bg::after {
@@ -274,6 +268,7 @@
     text-align: center; position: relative; z-index: var(--z-product);
     letter-spacing: 0.04em; line-height: 1.4;
     max-width: 480px; padding: 0 24px;
+    text-wrap: balance;
   }
 
   /* CTA */
@@ -318,6 +313,7 @@
     transition: opacity 0.2s;
   }
   .category-strip a:hover { opacity: 0.7; }
+  .category-strip a.active { opacity: 1; text-decoration: underline; text-underline-offset: 5px; text-decoration-thickness: 1px; }
   .category-strip .dot {
     display: inline-block; width: 4px; height: 4px;
     background: var(--mm-cream); border-radius: var(--radius-full);
@@ -346,19 +342,24 @@
     .header-desktop {
       display: flex; align-items: center;
       position: fixed; top: 0; left: 0; right: 0; z-index: var(--z-fixed);
-      padding: 28px 40px;
-      background: var(--mm-navy-15);
-      backdrop-filter: blur(12px);
-      -webkit-backdrop-filter: blur(12px);
+      padding: 16px 40px;
+      transition: background 0.3s ease, backdrop-filter 0.3s ease;
+    }
+    .header-desktop.scrolled {
+      backdrop-filter: blur(8px) saturate(120%);
+      -webkit-backdrop-filter: blur(8px) saturate(120%);
+      background: rgba(123, 157, 191, 0.6);
+      border-bottom: 1px solid rgba(231,228,202,0.1);
     }
     .header-desktop nav {
       flex: 1; display: flex; align-items: center;
       justify-content: center; gap: 40px;
     }
     .header-desktop nav a {
-      font-family: var(--mm-sans); font-size: 1rem;
-      font-weight: 400; color: var(--mm-cream); text-decoration: none;
-      opacity: 0.9; transition: opacity 0.2s;
+      font-family: var(--mm-sans); font-size: 0.85rem;
+      font-weight: 400; letter-spacing: 0.07em;
+      color: var(--mm-cream); text-decoration: none;
+      opacity: 0.7; transition: opacity 0.2s;
     }
     .header-desktop nav a:hover { opacity: 0.6; }
     .header-desktop .logo-desktop {
@@ -376,7 +377,7 @@
     .product-img:hover { transform: scale(1.03); }
 
     /* Tagline */
-    .tagline { font-size: 2.4rem; max-width: 600px; }
+    .tagline { font-size: 2.4rem; max-width: 600px; white-space: nowrap; }
 
     /* CTA */
     .cta-btn {
@@ -396,6 +397,7 @@
       transition: opacity 0.2s;
     }
     .category-bar-desktop a:hover { opacity: 0.65; }
+    .category-bar-desktop a.active { opacity: 1; text-decoration: underline; text-underline-offset: 6px; text-decoration-thickness: 1px; }
     .category-bar-desktop .dot {
       display: inline-block; width: 5px; height: 5px;
       background: var(--mm-cream); border-radius: var(--radius-full);
@@ -413,7 +415,7 @@
   }
 
   @media (min-width: 1024px) {
-    .header-desktop { padding: 32px 48px; }
+    .header-desktop { padding: 16px 48px; }
     .header-desktop nav { gap: 52px; }
   }
 </style>
@@ -476,12 +478,13 @@
 <main id="main-content" class="hero" tabindex="-1">
   <div class="hero-bg" aria-hidden="true"></div>
   <h1 class="tagline fade-3" id="tagline" aria-live="polite">Naturally sweet. Nothing added.</h1>
-  <a href="/shop" class="cta-btn fade-4">Shop Now</a>
+  <a href="/what-is-carob" class="cta-btn fade-4" id="cta-btn">Learn Something New</a>
 </main>
 
 <!-- Mobile category strip -->
 <nav class="category-strip fade-6" aria-label="Product categories">
   <div class="inner">
+    <a href="/what-is-carob" class="active text-refined">What is Carob?</a><span class="dot" aria-hidden="true"></span>
     <a href="/shop/bars" class="text-refined">Bars</a><span class="dot" aria-hidden="true"></span>
     <a href="/shop/moons" class="text-refined">Moons</a><span class="dot" aria-hidden="true"></span>
     <a href="/shop/bananas" class="text-refined">Bananas</a><span class="dot" aria-hidden="true"></span>
@@ -494,6 +497,7 @@
 
 <!-- Desktop category bar -->
 <nav class="category-bar-desktop fade-6" aria-label="Product categories">
+  <a href="/what-is-carob" class="active text-refined">What is Carob?</a><span class="dot" aria-hidden="true"></span>
   <a href="/shop/bars" class="text-refined">Bars</a><span class="dot" aria-hidden="true"></span>
   <a href="/shop/moons" class="text-refined">Moons</a><span class="dot" aria-hidden="true"></span>
   <a href="/shop/bananas" class="text-refined">Bananas</a><span class="dot" aria-hidden="true"></span>
@@ -533,33 +537,39 @@
     hamburger.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
     if (!isOpen) hamburger.focus();  });
 
+  // Scroll-based header blur
+  window.addEventListener('scroll', function() {
+    var h = document.querySelector('.header-desktop');
+    if (h) h.classList.toggle('scrolled', window.scrollY > 60);
+  });
+
   // Time-of-day configuration
   var periods = {
     morning: {
       gradTop: '#D4A574',
       gradBottom: '#E8C9A0',
-      tagline: 'A gentle start. No caffeine, just carob.',
+      tagline: 'Naturally sweet. Nothing added.',
       greeting: 'Good morning',
       iconColor: '#E7E4CA'
     },
     afternoon: {
       gradTop: '#7B9DBF',
       gradBottom: '#A8BDD4',
-      tagline: 'Naturally sweet, nothing added.',
+      tagline: 'Naturally sweet. Nothing added.',
       greeting: 'Good afternoon',
       iconColor: '#E7E4CA'
     },
     evening: {
       gradTop: '#3D5A78',
       gradBottom: '#5B7A99',
-      tagline: 'Wind down with something pure.',
+      tagline: 'Naturally sweet. Nothing added.',
       greeting: 'Good evening',
       iconColor: '#E7E4CA'
     },
     night: {
       gradTop: '#1E4366',
       gradBottom: '#2C5578',
-      tagline: 'No caffeine. No regrets. Just carob.',
+      tagline: 'Naturally sweet. Nothing added.',
       greeting: 'Good night',
       iconColor: '#E7E4CA'
     }
@@ -592,6 +602,23 @@
   // Apply icon color (cream for all periods — all periods now have dark photo backgrounds)
   var svg = document.querySelector('.time-greeting svg');
   if (svg) { svg.style.stroke = '#E7E4CA'; }
+})();
+</script>
+<script>
+(function() {
+  var ctaBtn = document.getElementById('cta-btn');
+  var allCatLinks = document.querySelectorAll('.category-strip a, .category-bar-desktop a');
+  allCatLinks.forEach(function(link) {
+    link.addEventListener('click', function(e) {
+      e.preventDefault();
+      var href = this.getAttribute('href');
+      allCatLinks.forEach(function(l) { l.classList.toggle('active', l.getAttribute('href') === href); });
+      if (ctaBtn) {
+        if (href === '/what-is-carob') { ctaBtn.textContent = 'Learn Something New'; ctaBtn.href = '/what-is-carob'; }
+        else { ctaBtn.textContent = 'Shop Now'; ctaBtn.href = '/shop'; }
+      }
+    });
+  });
 })();
 </script>
 </body>

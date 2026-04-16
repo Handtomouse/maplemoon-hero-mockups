@@ -1,0 +1,21 @@
+{
+  "name": "Product",
+  "sections": {
+    "main": {
+      "type": "section-product-main",
+      "settings": {}
+    },
+    "testimonials": {
+      "type": "section-testimonials",
+      "disabled": true,
+      "settings": {
+        "headline": "What Others Think",
+        "subtitle": ""
+      }
+    }
+  },
+  "order": [
+    "main",
+    "testimonials"
+  ]
+}
