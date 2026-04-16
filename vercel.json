@@ -2,13 +2,11 @@
   "buildCommand": "",
   "outputDirectory": ".",
   "redirects": [
-    { "source": "/shop/:path*", "destination": "/index.html", "statusCode": 302 },
-    { "source": "/our-story", "destination": "/index.html", "statusCode": 302 },
-    { "source": "/stockists", "destination": "/index.html", "statusCode": 302 },
-    { "source": "/recipes", "destination": "/index.html", "statusCode": 302 },
-    { "source": "/contact", "destination": "/index.html", "statusCode": 302 },
-    { "source": "/ingredients", "destination": "/index.html", "statusCode": 302 },
-    { "source": "/our-story/:path*", "destination": "/index.html", "statusCode": 302 }
+    { "source": "/shop", "destination": "/collections/bars.html", "statusCode": 302 },
+    { "source": "/stockists", "destination": "/faq.html", "statusCode": 302 },
+    { "source": "/recipes", "destination": "/homepage.html", "statusCode": 302 },
+    { "source": "/contact", "destination": "/faq.html", "statusCode": 302 },
+    { "source": "/ingredients", "destination": "/homepage.html", "statusCode": 302 }
   ],
   "headers": [
     {
