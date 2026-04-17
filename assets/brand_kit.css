@@ -7,7 +7,10 @@
 
 /* ── Colors ── */
 :root {
-  --mm-dark-bg: #1a1a1a;
+  --mm-dark-bg: #1a1a1a; /* legacy — do not use on elixir sections; use --mm-elixir-bg */
+  --mm-elixir-bg: #1E2A1E;       /* Phase 1 / Task 1.8 — canonical elixir dark background */
+  --mm-elixir-surface: #2A2218;  /* card/surface on dark */
+  --mm-elixir-border: rgba(231, 228, 202, 0.15);
   --mm-cream: #E7E4CA;
   --mm-navy: #1E4366;
   --mm-blue-top: #7B9DBF;
@@ -71,6 +74,8 @@
   --ease-default: 0.3s ease;
   --ease-slow: 0.5s ease;
   --ease-spring: 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+  /* Phase 1 / Task 1.3 — refined ease for scroll reveals */
+  --ease-reveal: cubic-bezier(0.16, 1, 0.3, 1);
   /* ── Breakpoints (use in @media queries for consistency) ── */
   --bp-mobile: 480px;
   --bp-tablet: 768px;
@@ -272,4 +277,64 @@ body { overflow-x: hidden; }
 
 .gpu-animated {
   will-change: transform;
+}
+
+/* ══════════════════════════════════════
+   TYPE UTILITIES (Phase 1 / Task 1.2)
+   Fluid clamp() scale built on --fs-* tokens.
+   Pages should prefer these over hand-rolled font-size values.
+   ══════════════════════════════════════ */
+
+.type-eyebrow {
+  font-family: var(--mm-sans);
+  font-size: var(--fs-xs);
+  font-weight: 500;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  line-height: var(--lh-heading, 1.15);
+}
+
+.type-display {
+  font-family: var(--mm-serif);
+  font-size: clamp(2.8rem, 6vw, 5rem);
+  font-weight: 400;
+  line-height: var(--lh-display, 1.05);
+  letter-spacing: -0.01em;
+}
+
+.type-headline {
+  font-family: var(--mm-serif);
+  font-size: clamp(2rem, 4vw, 3.5rem);
+  font-weight: 400;
+  line-height: var(--lh-heading, 1.15);
+  letter-spacing: -0.005em;
+}
+
+.type-subhead {
+  font-family: var(--mm-serif);
+  font-size: clamp(1.25rem, 2vw, 1.75rem);
+  font-weight: 400;
+  line-height: var(--lh-heading, 1.15);
+}
+
+.type-body {
+  font-family: var(--mm-sans);
+  font-size: var(--fs-md);
+  font-weight: 300;
+  line-height: var(--lh-body, 1.6);
+}
+
+.type-body-lg {
+  font-family: var(--mm-sans);
+  font-size: var(--fs-lg);
+  font-weight: 300;
+  line-height: var(--lh-loose, 1.8);
+}
+
+.type-caption {
+  font-family: var(--mm-sans);
+  font-size: var(--fs-sm);
+  font-weight: 400;
+  line-height: var(--lh-body, 1.6);
+  color: var(--text-muted, #9B8A7A);
 }

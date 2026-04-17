@@ -263,14 +263,27 @@
 <section class="pdp-hero" aria-label="Pure Carob Bar">
   <div class="pdp-layout">
     <div class="pdp-gallery fade-up">
-      <img src="/assets/product_shots/bar_pure_carob.webp" alt="Pure Carob Bar - front view" class="pdp-main-image" width="400" height="600" loading="eager" decoding="async">
+      <!-- Phase 1 / Task 1.5 — atmospheric background slot, wired in Phase 2 -->
+      <!-- TODO Phase 2: wire mm_refined_r1_still_life_001.png as pdp-gallery-bg -->
+      <div class="pdp-gallery-bg" aria-hidden="true"></div>
+      <img src="/assets/product_shots/bar_pure_carob.webp" alt="Pure Carob Bar - front view" class="pdp-main-image" data-pdp-main width="400" height="600" loading="eager" decoding="async">
+      <!-- Thumbnail strip — 1 active + 2 coming-soon. Phase 2 wires real assets. -->
+      <div class="pdp-gallery-thumbs" role="group" aria-label="Product gallery">
+        <button type="button" class="pdp-gallery-thumb is-active" data-pdp-thumb data-src="/assets/product_shots/bar_pure_carob.webp" aria-label="Front view">
+          <img src="/assets/product_shots/bar_pure_carob.webp" alt="" loading="lazy">
+        </button>
+        <!-- TODO Phase 2: wire hero_carob_bar_hand.png -->
+        <button type="button" class="pdp-gallery-thumb" data-coming-soon aria-label="Coming soon — lifestyle"><span class="sr-only">Coming soon</span></button>
+        <!-- TODO Phase 2: wire mm_refined_hero_c4_ingred_a.png -->
+        <button type="button" class="pdp-gallery-thumb" data-coming-soon aria-label="Coming soon — ingredients"><span class="sr-only">Coming soon</span></button>
+      </div>
     </div>
     <div class="pdp-info fade-up">
       <span class="pdp-badge">Carob Bars</span>
       <h1 class="pdp-title">Pure Carob</h1>
       <p class="pdp-price">$12.95 <span class="pdp-weight">80g</span></p>
       <p class="pdp-short-desc">Australian carob and cacao butter, hand-tempered and set. Nothing else.</p>
-      <button class="pdp-cta" type="button">Add to Cart</button>
+      <button class="pdp-cta btn btn--primary" type="button">Add to Cart</button>
       <div class="pdp-trust">
         <img src="/assets/brand/icon_organic.svg" alt="Organic" width="24" height="24">
         <img src="/assets/brand/icon_vegan.svg" alt="Vegan" width="24" height="24">

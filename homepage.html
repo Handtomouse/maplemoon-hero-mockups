@@ -14,6 +14,7 @@
 <link rel="icon" href="assets/brand/maplemoon_logo.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="assets/brand/maplemoon_logo.svg">
 <link rel="stylesheet" href="brand_kit.css">
+<link rel="stylesheet" href="shared.css">
 <style>
 
 /* ══════════════════════════════════════
@@ -252,10 +253,10 @@ a.skip-link:focus { top: 16px; }
 
 .hero-badge {
   font-family: var(--mm-sans);
-  font-size: 0.65rem;
-  font-weight: 400;
-  text-transform: uppercase;
+  font-size: var(--fs-xs);
+  font-weight: 500;
   letter-spacing: 0.18em;
+  text-transform: uppercase;
   color: var(--text-muted);
   margin-bottom: 16px;
   transition: color 0.4s ease;
@@ -263,32 +264,35 @@ a.skip-link:focus { top: 16px; }
 
 .hero-headline {
   font-family: var(--mm-serif);
-  font-size: 2.2rem;
+  /* Phase 1 / Task 1.2 — fluid headline, 2.8rem @ 375px → 5rem @ 1440px */
+  font-size: clamp(2.8rem, 6vw, 5rem);
   font-weight: 400;
   color: var(--text-primary);
   text-align: center;
-  line-height: 1.15;
-  margin-bottom: 8px;
+  line-height: var(--lh-display, 1.05);
+  letter-spacing: -0.01em;
+  margin-bottom: 12px;
   transition: color 0.4s ease;
 }
 
 .hero-sub {
   font-family: var(--mm-sans);
-  font-size: 0.9rem;
+  font-size: var(--fs-md);
   font-weight: 300;
+  line-height: var(--lh-body, 1.6);
   color: var(--text-secondary);
   text-align: center;
   margin-bottom: 32px;
   transition: color 0.4s ease;
 }
 
-/* Product display */
+/* Product display — Phase 1 / Task 1.1: bumped to 320px for product-as-hero */
 .product-display {
   position: relative;
-  width: 55%;
-  max-width: 220px;
-  height: 280px;
-  margin-bottom: 20px;
+  width: 72%;
+  max-width: 320px;
+  height: 400px;
+  margin-bottom: 24px;
 }
 
 .product-display img {
@@ -312,8 +316,9 @@ a.skip-link:focus { top: 16px; }
 /* Tagline beneath product */
 .hero-tagline {
   font-family: var(--mm-sans);
-  font-size: 0.85rem;
+  font-size: var(--fs-md);
   font-weight: 300;
+  line-height: var(--lh-body, 1.6);
   color: var(--text-secondary);
   text-align: center;
   min-height: 1.3em;
@@ -1028,10 +1033,9 @@ a.skip-link:focus { top: 16px; }
 
   .site-header { padding: 20px 40px; }
 
-  /* Hero desktop */
+  /* Hero desktop — headline uses fluid clamp() now, just adjust spacing */
   .hero { padding: 120px 48px 80px; }
-  .hero-headline { font-size: 3rem; }
-  .hero-sub { font-size: 1rem; margin-bottom: 40px; }
+  .hero-sub { margin-bottom: 40px; }
 
   .product-display {
     width: auto;
@@ -1135,7 +1139,7 @@ a.skip-link:focus { top: 16px; }
 @media (min-width: 1024px) {
   .site-header { padding: 20px 56px; }
   .header-nav { gap: 48px; }
-  .hero-headline { font-size: 3.2rem; }
+  /* .hero-headline font-size now handled by fluid clamp() — no override needed */
 
   .range-grid {
     grid-template-columns: repeat(4, 1fr);
@@ -1252,9 +1256,20 @@ a.skip-link:focus { top: 16px; }
 </section>
 
 <!-- ═══════════════════════════════════
+     EDITORIAL INTRO — What is carob? (Phase 1 / Task 1.1)
+     Dark pullquote break. data-nav-dark triggers header dark-mode.
+     ═══════════════════════════════════ -->
+<section class="section--dark editorial-break" aria-label="What is carob" data-nav-dark="true">
+  <div class="editorial-break__inner reveal reveal--slow">
+    <span class="type-eyebrow reveal">What is carob?</span>
+    <p class="type-display" style="margin-top: 24px;">A pod, roasted and ground. Naturally sweet. No caffeine. No theobromine. Nothing you need to justify.</p>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════
      BENTO GRID (V11 fused)
      ═══════════════════════════════════ -->
-<section class="bento" aria-label="Explore">
+<section class="bento section--warm" aria-label="Explore">
 
   <!-- Full-width bar hero -->
   <a href="#range" class="bento-tile tile-bar-hero">
@@ -1293,8 +1308,8 @@ a.skip-link:focus { top: 16px; }
     </div>
   </a>
 
-  <!-- Elixirs tile -->
-  <a href="#range" class="bento-tile tile-elixirs">
+  <!-- Elixirs tile — data-nav-dark flips nav to dark when in viewport (Phase 1 / Task 1.4) -->
+  <a href="#range" class="bento-tile tile-elixirs" data-nav-dark="true">
     <div class="bento-overlay">
       <span class="bento-label" style="color: var(--mm-cream-50);">Carob Elixirs</span>
       <span class="bento-title" style="color: var(--mm-cream);">Warm Carob,<br>Nothing Extracted</span>
@@ -1324,7 +1339,7 @@ a.skip-link:focus { top: 16px; }
 <!-- ═══════════════════════════════════
      ORIGIN STORY
      ═══════════════════════════════════ -->
-<section class="origin" id="origin" aria-label="Our Story">
+<section class="origin section--warm" id="origin" aria-label="Our Story">
   <div class="origin-layout">
     <img src="assets/stock/stock_carob_pods_hand.jpg" alt="Hand holding Australian carob pods" class="origin-img fade-up" loading="lazy" decoding="async">
     <div class="origin-copy">
@@ -1340,7 +1355,7 @@ a.skip-link:focus { top: 16px; }
 <!-- ═══════════════════════════════════
      PRODUCT RANGE
      ═══════════════════════════════════ -->
-<section class="range" id="range" aria-label="Shop the Range">
+<section class="range section--cream" id="range" aria-label="Shop the Range">
   <div class="range-header">
     <span class="range-badge fade-up">The Range</span>
     <h2 class="range-headline fade-up">Bars, Moons, and Elixirs</h2>
@@ -1445,9 +1460,23 @@ a.skip-link:focus { top: 16px; }
 </section>
 
 <!-- ═══════════════════════════════════
+     FULL-BLEED EDITORIAL BREAK — Byron Bay atmosphere (Phase 1 / Task 1.1)
+     Phase 2 wires imagery. data-nav-dark triggers dark header on scroll-in.
+     ═══════════════════════════════════ -->
+<section class="section--dark editorial-break" aria-label="Byron Bay" data-nav-dark="true">
+  <!-- TODO Phase 2: wire mm_refined_hero_c2_byron_a.png as atmospheric bg here -->
+  <div class="editorial-break__inner reveal">
+    <span class="type-eyebrow">Byron Bay, Australia</span>
+    <p class="type-headline" style="margin-top: 20px; max-width: 760px; margin-left: auto; margin-right: auto;">
+      Carob grown down the road. Roasted in small batches. Pressed, tempered, packed by hand.
+    </p>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════
      TRUST BAR
      ═══════════════════════════════════ -->
-<section class="trust-bar" aria-label="Credentials">
+<section class="trust-bar section--cream" aria-label="Credentials">
   <div class="trust-item fade-up">
     <img src="assets/brand/icon_organic.svg" alt="" loading="lazy" decoding="async">
     <span>Certified Organic</span>
@@ -1467,6 +1496,23 @@ a.skip-link:focus { top: 16px; }
   <div class="trust-item fade-up">
     <img src="assets/brand/icon_made_in_aus.svg" alt="" loading="lazy" decoding="async">
     <span>Made in Australia</span>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════
+     NEWSLETTER CTA — cornflower accent (Phase 1 / Task 1.1)
+     BRAND BLUE GUARD: .section--accent background is #7B9DBF soft cornflower,
+     NOT deep navy (#1E4366), NOT teal, NOT dark blue.
+     ═══════════════════════════════════ -->
+<section class="section--accent" aria-label="Newsletter" style="padding: clamp(56px, 9vw, 112px) clamp(24px, 6vw, 64px); text-align: center;">
+  <div class="editorial-break__inner reveal">
+    <span class="type-eyebrow">Join the list</span>
+    <p class="type-headline" style="margin-top: 16px;">Slow-made carob, delivered to your inbox.</p>
+    <p class="type-body" style="margin-top: 12px; max-width: 520px; margin-left: auto; margin-right: auto; opacity: 0.85;">Early access to new flavours, origin stories, and small-batch drops.</p>
+    <form class="newsletter-form" onsubmit="return false;" style="margin: 32px auto 0;">
+      <input type="email" placeholder="Your email" aria-label="Email address">
+      <button type="submit" class="btn--ghost-dark" style="background: var(--mm-cream); color: var(--accent-blue);">Join</button>
+    </form>
   </div>
 </section>
 
@@ -1688,6 +1734,9 @@ a.skip-link:focus { top: 16px; }
 
 })();
 </script>
+
+<!-- Phase 1 / Task 1.3+1.4 — shared reveal observer, nav-dark observer, parallax -->
+<script src="shared.js" defer></script>
 
 </body>
 </html>
