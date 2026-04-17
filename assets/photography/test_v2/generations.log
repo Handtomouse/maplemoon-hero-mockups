@@ -1,0 +1,4 @@
+2026-04-16 17:47:07 | fal-ai/flux-pro/v1.1 | generate | 16:9 | $0.05 | Single carob pod silhouette against soft cornflower blue gradient sky, minimalist botanical photogra... | maplemoon_single_carob_pod_silhouette_generate_20260416_174704.png
+2026-04-16 17:47:48 | fal-ai/esrgan | upscale | 1:1 | $0.003 | [upscale: maplemoon_single_carob_pod_silhouette_generate_20260416_174704.png] | shoot_upscale_maplemoonsinglecarobpodsilhouettegenerate20260416174704png_upscale_20260416_174745.png
+2026-04-16 17:54:32 | fal-ai/flux-pro/v1.1/redux | refine | 1:1 | $0.05 | Recolor to cornflower blue periwinkle palette, silhouette lighting, editorial photography | maplemoon_recolor_to_cornflower_blue_refine_20260416_175429.png
+2026-04-16 17:54:49 | fal-ai/flux-pro/v1.1/redux | style | 16:9 | $0.05 | Byron Bay headland lighthouse at golden hour, dramatic coastline, sweeping ocean bay below, luxury e... | maplemoon_byron_bay_headland_lighthouse_style_20260416_175446.png
