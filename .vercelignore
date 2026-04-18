@@ -15,20 +15,33 @@ snippets/
 server.js
 package*.json
 node_modules/
+paper_screenshots/
+outputs/
+.superpowers/
+.planning/
+_archive/
+assets/hero_shots/v9_gen/
+assets/hero_shots/v9_source/
+assets/hero_shots/moodboard/*.png
+assets/hero_shots/*.png.bak
+assets/moodboard/
+.DS_Store
+
+# Prototype HTML — keep in repo, exclude from deploy
+index.html
+hero_v*.html
+hero_photo_*.html
+product_v*.html
+client_review.html
 mockup_maker.html
 presentation.html
 review.html
 triage.html
 triage_paper.html
-paper_screenshots/
-hero_v3.html
-hero_v12.html
-outputs/
-.superpowers/
-assets/hero_shots/v9_gen/
-assets/hero_shots/v9_source/
-assets/hero_shots/moodboard/*.png
-assets/hero_shots/*.png.bak
-_archive/
-assets/moodboard/
-.DS_Store
+
+# Design PDF backups at root — never deploy
+*.pdf
+
+# Edit/backup artefacts
+*.bak
+*.r20_*

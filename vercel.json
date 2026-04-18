@@ -2,6 +2,7 @@
   "buildCommand": "",
   "outputDirectory": ".",
   "redirects": [
+    { "source": "/", "destination": "/homepage.html", "statusCode": 308 },
     { "source": "/shop", "destination": "/collections/bars.html", "statusCode": 302 },
     { "source": "/stockists", "destination": "/faq.html", "statusCode": 302 },
     { "source": "/recipes", "destination": "/homepage.html", "statusCode": 302 },
