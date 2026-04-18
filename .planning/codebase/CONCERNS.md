@@ -1,202 +1,230 @@
-# Codebase Concerns
+# Codebase Concerns — Pre-Meeting Risk Audit
 
-**Analysis Date:** 2026-04-13
-
-## Tech Debt
-
-**CSS Duplication Across 37 HTML Prototype Files:**
-- Issue: All 37 HTML files in root contain `<style>` blocks with inline CSS. Many styles are duplicated across versions (keyframes like `@keyframes fadeIn`, `@keyframes productEntrance`, spacing patterns). No shared stylesheet between prototypes beyond `brand_kit.css` link.
-- Files: Root-level HTML files (`hero_v*.html`, `product_v*.html`, `hero_photo_*.html`, `index.html`, `client_review.html`, `mockup_maker.html`, etc.)
-- Impact: 22,153 total lines of HTML across 37 files; estimated 30-40% style duplication. Maintenance burden when brand changes (must update multiple files). Larger deployments to Vercel.
-- Fix approach: Extract common component styles (buttons, cards, animations, typography) into `brand_kit.css` or new component-specific stylesheets. Reduce inline styles to variant overrides only. Would need refactoring pass on each hero prototype.
-
-**Inconsistent Inline Styles vs CSS Variables:**
-- Issue: Prototypes mix CSS variable usage (`var(--mm-cream)`) with hard-coded hex values. Some files use brand_kit tokens correctly; others override with inline styles. E.g., `hero_v10.html` has inline `font-family` and `font-size` attributes instead of CSS classes. Also, some Liquid sections define variables inline (`--he-grad-top`, `--pg-bg`) instead of pulling from centralized brand_kit.
-- Files: `hero_v10.html`, `hero_v11.html`, `section-hero-evolved.liquid`, `section-product-grid.liquid`, `main-page.liquid`
-- Impact: Inconsistent brand application. If brand colors change, some files won't update (hard-coded values stay static). Complicates future Shopify theme deployment.
-- Fix approach: Audit all HTML files and Liquid sections; standardize to CSS variables from `brand_kit.css`. Create a "style audit" checklist verifying no hard-coded colors, fonts, or spacing exist. Enforce in code review.
-
-**Duplicate Backup and Pre-Edit Files:**
-- Issue: Untracked prototype versions cluttering root directory. Files like `hero_v10.html.bak`, `hero_v10.html.r20_pre_edit`, `hero_v10.html.r20_d20_2026-03-16.bak` are version history snapshots left in place.
-- Files: `hero_v10.html.bak`, `hero_v10.html.r20_pre_edit`, `hero_v10.html.r20_d20_2026-03-16.bak`, `hero_v12.html.r20_pre_edit`, `hero_v13.html.r20_pre_edit`, `hero_v14.html.bak`, `hero_v16.html.bak`, `hero_v13.html.bak`, plus backup files in `mockups/` directory
-- Impact: Confuses deployments (Vercel may serve backup files as public routes if not in `.vercelignore`). Takes up repo space. When viewing directory, unclear which is canonical version.
-- Fix approach: Delete all `.bak` and `.r20_*` files; rely on git history instead. Verify `.vercelignore` excludes these patterns. Consider naming convention (e.g., `[ARCHIVE]/hero_v10_old.html`) if historical versions need preservation.
-
-## Known Bugs
-
-**Missing `alt` Attributes on 48 Decorative Images:**
-- Symptoms: Empty or missing `alt=""` attributes on non-content images in hero files. Screen readers attempt to describe images or skip them silently. Accessibility violation.
-- Files: Concentrated in `hero_v15.html` (10 empty `alt`s), `hero_v16.html` (48 empty `alt`s). Scattered across others: `hero_v10.html`, `hero_v12.html`, `hero_v14.html`, etc.
-- Trigger: Viewing page with screen reader; attempting to navigate by image.
-- Workaround: Add `alt=""` (empty) for purely decorative images, or add descriptive `alt` text if image has semantic meaning. Verify with WAVE or aXe accessibility tools.
-- Recommended Fix: Audit all `hero_v*.html` files; categorize images as decorative (set `alt=""`) or content (add meaningful text). Document rationale in comments.
-
-**Incomplete Liquid Section Configurations:**
-- Symptoms: Many Liquid sections have minimal `{% schema %}` blocks. E.g., `main-page.liquid` has only `"name"`, `"tag"`, `"class"` fields—no `"settings"` array to customize colors, text, or images in Shopify admin UI.
-- Files: `main-page.liquid`, `section-404.liquid` (partial settings), `section-article.liquid`, `section-blog.liquid`, `section-search.liquid`, `section-password.liquid`, `section-list-collections.liquid`
-- Trigger: Attempting to customize section in Shopify admin Theme Editor; no settings controls appear.
-- Workaround: Edit files directly in Shopify editor or via Git; no GUI customization available.
-- Recommended Fix: Complete `{% schema %}` blocks with color, text, and image settings matching the HTML's design intent. Use `presets` for default layouts.
-
-**Content-Security-Policy Allows `unsafe-inline` for Styles and Scripts:**
-- Symptoms: CSP header in `vercel.json` permits `style-src 'unsafe-inline'` and `script-src 'unsafe-inline'`. Protects against basic XSS but allows attack vectors if any user input reaches `<style>` or `<script>` tags.
-- Files: `vercel.json` (line 19)
-- Impact: Weakened security posture. If form input or third-party service injects malicious CSS/JS, it executes unblocked.
-- Current mitigation: Static site (no user input processed on frontend). Shopify backend validates form data. No dynamic script generation.
-- Recommendations: (1) Move inline styles to external stylesheets to remove `style-src 'unsafe-inline'`. (2) Extract JavaScript to `.js` files and use nonce-based CSP for dynamic scripts. (3) Add `img-src 'https:' data:;` instead of pinimg-specific allowlist (currently restricted to `https://i.pinimg.com`). (4) Restrict `frame-src` to specific domains if embedding third-party iframes.
-
-## Performance Bottlenecks
-
-**Asset Directory Size (569 MB) with Large Unoptimized Product Images:**
-- Problem: `/assets/product_shots/` contains 208 MB of unoptimized PNG files. Individual product mockups exceed 8 MB (e.g., `moon_pure_carob.png` 8.2 MB, `moon_cayenne.png` 8.8 MB). Multiple large PNG files in `/assets/product_shots/moons/` and `/assets/product_shots/bars/` directories.
-- Files: `assets/product_shots/moon_*.png`, `assets/product_shots/bar_*.png`, `assets/product_shots/moons/*@2x.png` (7–9 MB each), `/assets/hero_shots/blue_fog_001.png` (15 MB)
-- Current capacity: Vercel has no bandwidth limits, but Lighthouse performance scores degrade with >5 MB images. Mobile users experience slow loads.
-- Scaling path: (1) Convert all PNG to WebP format with srcset fallbacks. (2) Implement lazy loading (`loading="lazy"`) on all product images. (3) Generate responsive image sets (600px, 1200px) instead of 2x mockups. (4) Move hero moodboard images to CDN with on-demand transformation (Cloudinary, Imgix). (5) Target product images <2 MB each, hero backgrounds <3 MB.
-
-**No Image Lazy Loading in Hero HTML Files:**
-- Problem: Hero files reference large background images and product shots without `loading="lazy"`. Main hero image loads synchronously, delaying LCP (Largest Contentful Paint).
-- Files: All `hero_v*.html` files, particularly `hero_v1.html` through `hero_v19.html`
-- Cause: Prototypes prioritized visual quality over Core Web Vitals.
-- Improvement path: Add `loading="lazy"` to `<img>` tags for below-fold images. Use `fetch-priority="high"` for hero product images. Add `decoding="async"` to prevent layout thrashing.
-
-**Large Uncompressed HTML Files (500–1200 lines per prototype):**
-- Problem: Each hero prototype is 500–1200 lines of HTML with embedded `<style>` blocks. No minification or bundling. Prototype discovery tools (presentation.html, review.html, mockup_maker.html) render all 37 hero previews client-side.
-- Files: `hero_v*.html` (659–973 lines each), `presentation.html` (955 lines), `review.html` (complex DOM generation)
-- Impact: Initial page load builds massive DOM; JavaScript DOM manipulation (innerHTML usage) on slow networks causes interaction delay.
-- Improvement path: (1) Split hero prototypes into smaller modules (e.g., hero base + variant overrides). (2) Lazy-load prototypes in gallery pages. (3) Extract common HTML patterns into templates. (4) Minify before Vercel deployment.
-
-## Fragile Areas
-
-**Prototype Gallery Pages Tightly Coupled to Hard-Coded Hero Lists:**
-- Files: `presentation.html`, `review.html`, `mockup_maker.html`, `triage.html`
-- Why fragile: These pages contain hand-coded JavaScript with hero file lists: `const HEROES = ['hero_v1.html', 'hero_v2.html', ...]`. Adding a new hero requires manual edits in 4 files. Easy to miss, causing broken links or missing previews.
-- Safe modification: Create a `config/heroes.json` file listing all hero metadata. Load it dynamically in gallery pages via fetch. Ensure it's version-controlled so git history tracks changes.
-- Test coverage gaps: No test confirming all listed heroes exist. No validation that hero files parse correctly.
-
-**Shopify Liquid Sections Depend on Adobe Fonts Not Being Loaded by Main Theme:**
-- Files: All sections in `sections/` reference P22 Mackinac Pro and Neue Haas Grotesk via `font-family` CSS but lack `@font-face` declarations. They assume `layout/theme.liquid` or Shopify admin loads Adobe Fonts globally.
-- Why fragile: If theme layout changes or Adobe Fonts fail to load, entire section typography breaks (falls back to Georgia/Helvetica). Current template has this commented out: `{%- comment -%} <link rel="stylesheet" href="https://use.typekit.net/XXXXXXX.css"> {%- endcomment -%}` in `layout/theme.liquid`.
-- Safe modification: Move font `@font-face` declarations into a shared snippet (`snippets/brand-fonts.liquid`), included in both `layout/theme.liquid` and all sections. Or embed font files locally with `font-face`.
-- Test coverage: No visual regression test verifying fonts load.
-
-**Product Image Paths Hard-Coded in Sections Without Asset_URL Filter:**
-- Files: Several Liquid sections reference images without proper Shopify asset path handling. E.g., `section-hero-evolved.liquid` references `{{ section.settings.watermark_image | image_url: width: 600 }}` but other hardcoded paths like `<img src="assets/hero_shots/...">` won't resolve on live store.
-- Why fragile: When theme installed on Shopify, paths like `assets/hero_shots/silhouette_closeup.webp` may not match theme asset file structure. Requires manual path remapping.
-- Safe modification: Audit all Liquid files; replace hardcoded asset paths with `{{ 'filename.webp' | asset_url }}` filter. Move all static assets into Shopify theme `assets/` folder structure.
-
-**Accessibility Attributes Inconsistently Applied Across Hero Variants:**
-- Files: Some heroes (`hero_v1.html`, `hero_v11.html`, `hero_v12.html`, `hero_v13.html`) implement ARIA labels and roles correctly; others don't. E.g., `hero_v16.html` has 48 empty `alt` attributes but no compensating ARIA.
-- Why fragile: When client requests new hero variant, developers might copy old prototype without accessibility attributes. Causes accessibility compliance drift.
-- Safe modification: Document accessibility checklist in `CONVENTIONS.md`. Include template with required ARIA attributes in hero boilerplate.
-- Test coverage: No automated accessibility testing (aXe, WAVE integration).
-
-## Scaling Limits
-
-**Repository Size and Deployment Performance:**
-- Current capacity: 1.4 GB repo; 569 MB assets. Vercel cold starts may slow with repo >1 GB.
-- Limit: Git operations (clone, pull, push) slow; CI/CD build times increase.
-- Scaling path: (1) Move assets to Shopify CDN once theme is live (don't store 569 MB in git). (2) Archive old prototype versions to separate branch or external storage. (3) Implement shallow clones (`git clone --depth 1`) for CI/CD.
-
-**Prototype Management (37 HTML Files):**
-- Current capacity: 37 standalone HTML files all in root.
-- Limit: Beyond ~20 variations, directory becomes unmanageable. Discovery/curation tools (presentation.html) must update manually.
-- Scaling path: (1) Organize prototypes into versioned folders (`prototypes/v1/`, `prototypes/v2/`) by iteration. (2) Use metadata file (`config/prototype-manifest.json`) instead of hard-coded arrays. (3) Build a static site generator (11ty, Hugo) to template prototypes from components.
-
-## Security Considerations
-
-**Shopify Form Submissions in Liquid Sections Without CSRF Tokens:**
-- Risk: Newsletter signup form in `section-footer.liquid` uses standard `{% form 'customer' %}`, which Shopify handles, but custom JavaScript dispatch events (`cart:updated`) could be spoofed if attacker injects custom events.
-- Files: `sections/section-footer.liquid`, `sections/section-header.liquid`
-- Current mitigation: Shopify theme form endpoints are protected by CSRF tokens handled server-side. AJAX `/cart/add.js` requires Shopify session.
-- Recommendations: (1) Verify all form handling uses Shopify's `form` tag syntax. (2) Never accept user input in JavaScript without validation. (3) Sanitize any user-generated content before rendering (currently none, but plan ahead).
-
-**Open Pinterest Iframe via CSP:**
-- Risk: CSP `img-src` allows `https://i.pinimg.com`. If application later embeds Pinterest pins via iframe, CSP must be updated.
-- Files: `vercel.json` line 19
-- Current mitigation: No Pinterest iframes currently embedded; restriction is cautious.
-- Recommendations: Remove Pinterest allowlist if not used. If Pinterest integration planned, add specific `frame-src` directive instead.
-
-**innerHTML Usage in Preview/Admin Pages:**
-- Risk: `presentation.html`, `review.html`, `mockup_maker.html` use `innerHTML` to dynamically build preview grids. If future versions accept user-named hero files or custom metadata, XSS vulnerability possible.
-- Files: `index.html`, `review.html`, `presentation.html`, `mockup_maker.html`
-- Current mitigation: These are static data; no user input processed.
-- Recommendations: (1) Replace innerHTML with textContent where possible. (2) If user input ever processed, use `createElement` + `appendChild` instead of innerHTML. (3) Add CSP `script-src` nonce to allow only verified scripts.
-
-## Test Coverage Gaps
-
-**No Automated Accessibility Testing:**
-- What's not tested: WCAG 2.1 AA compliance. Screen reader compatibility. Keyboard navigation. Color contrast.
-- Files: All HTML and Liquid section files
-- Risk: Accessibility issues (missing alt text, improper ARIA) shipped to production unnoticed. Barrier for disabled users.
-- Priority: High — MapleMoon brand emphasizes inclusivity; accessibility failures damage reputation.
-- Recommended Fix: Add axe-core integration in CI pipeline. Test hero variants for contrast, ARIA, alt attributes. Verify keyboard nav on interactive elements (category picker, menu toggle).
-
-**No Lighthouse / Core Web Vitals Testing:**
-- What's not tested: LCP, CLS, FID/INP on hero pages. Image optimization effectiveness. CSS/JS bundle sizes.
-- Files: `vercel.json` build config has no Lighthouse check
-- Risk: Performance regressions ship unnoticed. Large image updates degrade mobile experience.
-- Priority: Medium — Affects user experience and SEO ranking.
-- Recommended Fix: Integrate Lighthouse CI. Set performance budgets for hero pages (<3 sec LCP on 4G). Block PRs exceeding budgets.
-
-**No Visual Regression Testing for Hero Variants:**
-- What's not tested: CSS changes in `brand_kit.css` or Liquid sections don't break hero rendering. Font loading failures caught.
-- Files: No regression test suite
-- Risk: Brand color change applied to brand_kit.css; one hero doesn't update due to hard-coded value. Not caught until manual review.
-- Priority: Medium — Maintenance burden increases with more heroes.
-- Recommended Fix: Screenshot comparison tool (Percy, Chromatic) on each hero variant. Verify all visuals match expected output after CSS updates.
-
-**No Liquid Schema Validation:**
-- What's not tested: Section schemas are valid JSON. Settings referenced in Liquid template match schema definition.
-- Files: All `sections/*.liquid` files with `{% schema %}` blocks
-- Risk: Malformed schema breaks Shopify admin UI. Undefined settings referenced in templates cause silent failures.
-- Priority: Medium — Will surface immediately upon Shopify installation but wastes time debugging.
-- Recommended Fix: Add schema validation script in CI (e.g., `shopify theme check`). Verify all `section.settings.*` references exist in schema.
-
-## Dependencies at Risk
-
-**Adobe Fonts (P22 Mackinac Pro, Neue Haas Grotesk) Not Self-Hosted:**
-- Risk: Theme depends on external Adobe Fonts CDN. If service degrades or company discontinues fonts, site typography breaks. No local fallback fonts defined at adequate specificity.
-- Impact: Core brand identity (serif headlines, sans body) not guaranteed.
-- Current mitigation: Fallback fonts defined (`Georgia`, `Helvetica Neue`) but not visually equivalent.
-- Migration plan: (1) Download font files locally; host via Shopify CDN or self-hosted. (2) Update `@font-face` to reference local URLs. (3) Use `font-display: swap` (already in use) to prevent FOUT.
-
-**Vercel Static Hosting Dependency:**
-- Risk: Preview site (maplemoon-website.vercel.app) hosted on Vercel. If service becomes unavailable, preview URLs break. Client review links expire if Vercel project deleted.
-- Impact: Loss of shareable prototype links; client feedback history lost if not documented.
-- Current mitigation: Prototypes stored in Git; can be re-deployed to alternative CDN.
-- Migration plan: (1) Document all prototype URLs and Git commit hashes. (2) Keep backups of Vercel `vercel.json` and deployment logs. (3) Plan migration path to Shopify CDN once theme goes live.
-
-## Missing Critical Features
-
-**No Form Validation on Newsletter Signup:**
-- Problem: Footer form submits to Formspree without client-side email validation. Invalid emails fail silently at server.
-- Files: `section-footer.liquid` (form action to Formspree)
-- Blocks: Email validation flows can't offer immediate user feedback.
-- Recommended Fix: Add `<input type="email" required>` and client-side validation before submit. Display error states.
-
-**No Cart Drawer / Side Panel:**
-- Problem: Header cart icon increments count but doesn't show drawer preview. Customers must navigate to full cart page to review items.
-- Files: `section-header.liquid` (cart badge only)
-- Blocks: Impulse checkout flow. Users don't see what they added without page nav.
-- Recommended Fix: Build cart slide-out panel triggered by header icon. Display line items, totals, proceed-to-checkout button. Sync with `cart:updated` event.
-
-**No Product Recommendations / "You May Also Like":**
-- Problem: Single product page doesn't recommend complementary items. No upsell/cross-sell sections.
-- Files: `section-product-main.liquid` (ends with reviews)
-- Blocks: Lost revenue opportunity on PDP.
-- Recommended Fix: Add "Related Products" grid at bottom of `section-product-main.liquid` pulling from product collections or Shopify recommendations app.
-
-## Summary of Priority Fixes
-
-| Issue | Severity | Timeline | Effort |
-|-------|----------|----------|--------|
-| Image optimization (569 MB assets) | High | Before launch | 1–2 weeks |
-| Accessibility audit + fixes (48 missing alts, ARIA gaps) | High | Before launch | 1 week |
-| Liquid section schema completion | Medium | Before launch | 3–5 days |
-| CSS duplication extraction | Medium | Post-launch Phase 1 | 2 weeks |
-| Backup file cleanup | Low | Immediate | 30 mins |
-| Hero list configuration externalization | Low | Post-launch Phase 1 | 2 days |
+**Analysis Date:** 2026-04-18
+**Context:** Pre-review audit for Sun Apr 19 meeting with Carli + Dylan. Site shipped to `maplemoon-website.vercel.app` 2026-04-16 (V7+V11 fusion).
+**Priority legend:** **BLOCKER** = fix before Sunday / **FLAG** = disclose upfront / **NOTE** = backlog.
 
 ---
 
-*Concerns audit: [2026-04-13]*
+## BLOCKER — Fix before Sunday's meeting
+
+### BLOCKER 1 — Root URL serves the internal prototype gallery, not the homepage
+
+- **Problem:** Visiting `https://maplemoon-website.vercel.app/` (the URL most likely to be typed or copy-pasted) currently serves `index.html` — an internal "MapleMoon — Hero Concepts | HandToMouse Studio" gallery of 19 hero concept cards. First impression = a designer's internal mood board, not a brand site.
+- **Verified:** `curl -sL https://maplemoon-website.vercel.app/` returns `<title>MapleMoon — Hero Concepts | HandToMouse Studio</title>`.
+- **Files:** `/Users/handtomouse/maplemoon-website/index.html` (line 6 title), `/Users/handtomouse/maplemoon-website/vercel.json` (no root redirect)
+- **Why Carli will find this:** She will type the bare domain to show Dylan. She will also Command+click the Vercel link from the share email and land here.
+- **Fix approach:** Add a `{ "source": "/", "destination": "/homepage.html", "statusCode": 308 }` redirect to `vercel.json`, OR rename `index.html` to `_index_gallery.html` and rename `homepage.html` to `index.html`. Redirect is safer (keeps internal gallery at `/index.html` while root goes to brand). Test after deploy.
+
+### BLOCKER 2 — Internal design-process files are deployed to production
+
+- **Problem:** `.vercelignore` only excludes `hero_v3.html` and `hero_v12.html`. The other 35 prototype/admin HTML files at root **are live on prod**, reachable by URL-guessing or dev-tools sniffing.
+- **Verified:** `curl -sI https://maplemoon-website.vercel.app/hero_v15.html` → `HTTP/2 200`. Same for `/client_review.html`, `/index.html`, `/homepage_backup.pdf` (5.5 MB design snapshot).
+- **Files leaked to prod:**
+  - `hero_v1.html, hero_v2.html, hero_v4.html, hero_v6–v19.html, hero_v9_atmospheric.html, hero_v9_product.html` (20 hero iterations)
+  - `hero_photo_atmospherics.html, hero_photo_byron_bay.html, hero_photo_gift_boxes.html, hero_photo_products.html, hero_photo_silhouettes.html` (5 review boards)
+  - `product_v2b.html, product_v7a.html, product_v9.html, product_v13.html, product_v19.html` (5 PDP prototypes)
+  - `client_review.html, index.html, homepage_backup.pdf`
+- **Why Carli will find this:** Not likely via normal browsing, but any forwarded deck with a Vercel deploy log, the Network tab, or a Google indexing event will surface them. Competitors who sniff sitemaps could grab the full creative process.
+- **Fix approach:** Rewrite `.vercelignore` to exclude all prototype patterns in one pass:
+  ```
+  hero_v*.html
+  hero_photo_*.html
+  product_v*.html
+  index.html            # only if homepage.html becomes the canonical index
+  client_review.html
+  homepage_backup.pdf
+  *.bak
+  *.r20_*
+  apply_moods.py
+  place_stock.py
+  *.pdf                 # catch-all for design PDFs at root
+  ```
+  Redeploy. Verify with `curl -sI` on each pattern after deploy.
+
+### BLOCKER 3 — Copyright says "© 2024" on every shipped page in 2026
+
+- **Problem:** All 7 shipped pages footer reads `© 2024 Maple Moon. Handmade in Byron Bay, Australia.` It is 2026-04-18. A two-year-stale copyright reads as "dead/abandoned project."
+- **Files:** `homepage.html:1541`, `collections/bars.html:230`, `our-story.html:306`, `faq.html:280`, `products/pure-carob-bar.html:377`, `products/peppermint-moon.html:372`, `products/spiced-elixir.html:398`
+- **Fix approach:** Change all 7 footers to `© 2026 Maple Moon. Handmade in Byron Bay, Australia.` (or better: auto-inject year via a small `<script>` that writes `new Date().getFullYear()` into a `<span id="copy-year">` so this never rots again).
+
+### BLOCKER 4 — Mobile nav: "Moons" and "Elixirs" both link to `/collections/bars.html`
+
+- **Problem:** Every shipped page's mobile-menu `<div class="mobile-menu">` wires the "Moons" AND "Elixirs" nav items to `/collections/bars.html` (the Bars collection). Tap "Elixirs" on mobile → land on Bars. This will be the first thing tested when Dylan picks up his phone.
+- **Files (all 7 pages, identical block):** `homepage.html:1169-1170`, `collections/bars.html:108-109`, `our-story.html:179-180`, `faq.html:142-143`, `products/pure-carob-bar.html:235-236`, `products/peppermint-moon.html:242-243`, `products/spiced-elixir.html:271-272`
+- **Fix approach:** Either (a) decide these collections don't exist yet and remove the nav items, or (b) stub `/collections/moons.html` and `/collections/elixirs.html` as "Coming soon" placeholders and link them correctly, or (c) anchor-link them to `/homepage.html#range` which already has category tabs for Moons/Elixirs. Option (c) is the fastest honest fix.
+
+### BLOCKER 5 — `collections/bars.html` meta description lists non-existent flavours
+
+- **Problem:** Bars collection meta description says "seven flavours. Original, spiced pepperberry, coconut, coffee, peppermint, hazelnut, chilli" and title says "Seven Flavours". The page itself shows 6 bars: Pure Carob, Golden Coconut, Peppermint, Hazelnut, Chilli, Almond. "Spiced pepperberry" and "coffee" do not exist anywhere. "Almond" is missing from the meta list. Homepage bento tile also says "7 Flavours" but range grid has 6.
+- **Files:** `collections/bars.html:6-7,10,132` (title/meta/copy), `homepage.html:1278` (bento "7 Flavours"), `homepage.html:1393-1402` (6 bars in grid)
+- **Why Carli will find this:** She will read the meta on the social-share preview. Dylan may count products. The inconsistency makes the range feel unfinished.
+- **Fix approach:** Get Carli's confirmed bar SKU list on the call. Until then, change all occurrences to "Six flavours" and drop the bogus flavour names. Safer: update meta to "Six flavours. Pure Carob, Golden Coconut, Peppermint, Hazelnut, Chilli, Almond. From $12.95." Fix bento count to match.
+
+### BLOCKER 6 — Newsletter forms are non-functional (silent no-op on submit)
+
+- **Problem:** Every page's newsletter form has `<form onsubmit="return false;">` and no JS handler, no Formspree action, no Mailchimp webhook. Clicking "Join" does nothing. Worse: no user feedback either (no "Thanks" message, no error). 8 instances across 7 shipped pages (homepage has two newsletter blocks — one on `.section--accent` cornflower band, one in footer).
+- **Files:** `homepage.html:1512,1534`, `collections/bars.html:224`, `our-story.html:300`, `faq.html:274`, `products/pure-carob-bar.html:371`, `products/peppermint-moon.html:366`, `products/spiced-elixir.html:392`
+- **Why Carli will find this:** She will test it. Everyone tests a newsletter form. Submit → nothing happens = "the site's broken."
+- **Fix approach:** Two options. (a) **Disclose-and-disable** (fastest): add an inline note "Newsletter coming soon" and keep the form visually but disable the submit button. (b) **Wire Formspree** (~10 mins): create a Formspree endpoint for `info@maplemoon.com.au`, set `action="https://formspree.io/f/XXXX"` and `method="POST"`, drop `onsubmit` handler. CSP already allows `connect-src https://formspree.io` so this is ready. Recommend (b) — gets real signups for the coming shoot.
+
+### BLOCKER 7 — "Add to Cart" buttons are non-functional on all 3 PDPs
+
+- **Problem:** Every product page has `<button class="pdp-cta" type="button">Add to Cart</button>` with no click handler, no cart drawer, no Shopify wiring. Click → nothing happens visually.
+- **Files:** `products/pure-carob-bar.html:286`, `products/peppermint-moon.html:281`, `products/spiced-elixir.html:309`
+- **Why Carli will find this:** She will click it. Same reason as newsletter.
+- **Fix approach:** Same two-option pattern. (a) Disable button with text "Pre-order — opening soon" or "Notify me" (opens a mailto or Formspree dialog). (b) Wire to Shopify once theme is live. Recommend (a) for Sunday. Even swapping to a disabled state with `Coming Soon` is better than a dead button.
+
+### BLOCKER 8 — "Price TBD" showing on Spiced Elixir PDP
+
+- **Problem:** `products/spiced-elixir.html` has `<p class="pdp-price">Price TBD</p>` live on prod. Reads as "we haven't figured out our business yet."
+- **File:** `products/spiced-elixir.html:307`. Also referenced as `"Coming soon"` in related-products grids on both `pure-carob-bar.html:331` and `peppermint-moon.html:326`.
+- **Fix approach:** Either remove the Spiced Elixir from range entirely until priced, or put a specific placeholder like "$18.95 (launching May)". Do NOT ship with "Price TBD" as a visible string.
+
+### BLOCKER 9 — Duplicate stock image used for two different story sections
+
+- **Problem:** `our-story.html` uses `/assets/stock/stock_carob_pods_hand.jpg` **twice** — once for the "Origin" section (hand holding pods) and again for the "Process" section (which is meant to illustrate the Byron Bay kitchen / small-batch handmade workflow). Same image, same alt text. Reads as "we ran out of photography" (which is true per PHOTOGRAPHY_PIPELINE_REPORT.md, but shouldn't look that way).
+- **File:** `our-story.html:223,241` (both `<img src="/assets/stock/stock_carob_pods_hand.jpg">`)
+- **Why Carli will find this:** She is a founder. She will read the Story page top-to-bottom.
+- **Fix approach:** Swap the Process image to a different asset. Candidates on disk: `/Users/handtomouse/maplemoon-website/assets/hero_shots/hero_bar_carob_pods_studio.png` or a lifestyle shot from `assets/lifestyle/`. If nothing fits, crop a different detail of the same source and use that. Last resort: hide the second image entirely and keep the Process section text-only.
+
+### BLOCKER 10 — "$99 free shipping / $16.95 shipping / info@maplemoon.com.au" are unconfirmed facts
+
+- **Problem:** `faq.html` hardcodes shipping prices ($16.95, free over $99), 1-2 day dispatch, and `info@maplemoon.com.au` as the support/wholesale email in two places. If these numbers or the email address are not confirmed by Carli, shipping live is a commitment the brand may not be able to fulfil.
+- **Files:** `faq.html:209,215,221,227,236`
+- **Fix approach:** Confirm these with Carli before meeting OR pull the dollar figures and swap the placeholder email into "Contact us at our Instagram DMs" or similar until email is live.
+
+---
+
+## FLAG — Disclose upfront in the meeting
+
+### FLAG 1 — `hero_v12.html` visible in sources despite being in `.vercelignore`
+
+- **Problem:** `.vercelignore` lists `hero_v3.html` and `hero_v12.html` but most other prototype HTML files are NOT excluded. The inconsistency suggests the ignore was built ad-hoc and is incomplete. Depending on how Vercel resolves the ignore, specific files may still be reachable. Safer to rewrite top-to-bottom (see BLOCKER 2).
+- **Files:** `.vercelignore:24-25`
+- **Disclosure line:** "We have 19 design iterations in the repo as reference artifacts. We'll be sweeping them out of the deployed build in Phase 2 polish."
+
+### FLAG 2 — Product grid links: 5 of 6 bars route to `href="#"`
+
+- **Problem:** On `collections/bars.html` and `homepage.html` range grid, only the Pure Carob bar has a real PDP (`/products/pure-carob-bar.html`). The other five (Golden Coconut, Peppermint, Hazelnut, Chilli, Almond) all link to `href="#"` — click and the page just scrolls to top.
+- **Verified count:** `grep -c 'href="#"' collections/bars.html` = 5, `homepage.html` = 15 (includes moons/bites/elixirs grid placeholders too)
+- **Files:** `collections/bars.html:143,148,153,158,163`, `homepage.html:1378,1383,1388,1393,1398` (bars), plus moon/bite/elixir hidden cards
+- **Why Carli will find this:** She will click a bar that isn't Pure Carob. The dead link scroll-to-top is obvious.
+- **Disclosure line:** "Only Pure Carob, Peppermint Moon, and Spiced Elixir have live product pages today. The other variants will be built once we have confirmed photography and pricing for each SKU." This positions the scope honestly.
+
+### FLAG 3 — Real product photography is missing; all PDPs use one static WebP each
+
+- **Problem:** Pure Carob PDP has a thumbnail gallery with 2 "Coming soon" slots (deliberate TODO Phase 2 comment in markup). Peppermint Moon and Spiced Elixir PDPs have no gallery at all — just a single webp. Per `PHOTOGRAPHY_PIPELINE_REPORT.md`, real product photography has not happened yet.
+- **Files:** `products/pure-carob-bar.html:267,275,277` (three `TODO Phase 2:` comments in markup — these comments are visible in page source), `products/peppermint-moon.html`, `products/spiced-elixir.html`
+- **Disclosure line:** "Product photography is Phase 2. The current PDPs are scaffolded around single web-optimised shots — when your photographer delivers, we swap in the gallery strip, lifestyle shots, and ingredient close-ups already stubbed in the markup."
+
+### FLAG 4 — Homepage has a `<!-- TODO Phase 2: wire ... -->` comment live in production HTML
+
+- **Problem:** `homepage.html:1467` contains `<!-- TODO Phase 2: wire mm_refined_hero_c2_byron_a.png as atmospheric bg here -->`. It is an HTML comment so invisible on screen, but view-source or right-click → Inspect exposes it. Dylan specifically may View Source.
+- **Files:** `homepage.html:1467`, `products/pure-carob-bar.html:267,275,277`
+- **Fix approach:** Either delete the TODO comments before Sunday (5 min) or leave them and flag as roadmap notes in disclosure.
+
+### FLAG 5 — Sans-serif/serif depend on locally-installed Adobe Fonts
+
+- **Problem:** `brand_kit.css` declares fonts via `@font-face` with `src: local('P22 Mackinac Pro Book')...`. This works only if the user has the fonts installed locally (which Nate and the team do). External visitors fall back to `Georgia`/`Helvetica Neue` — which doesn't match the brand.
+- **Files:** `assets/brand_kit.css:99-106`
+- **Disclosure line:** "We're running on local font references right now. Phase 2 wires up the Adobe Fonts web CDN — you'll see typography look slightly different on this machine vs a clean browser until we hook that up."
+
+### FLAG 6 — "Handmade in Byron Bay" / "Australian-grown carob" are claims that need legal sign-off
+
+- **Problem:** Copy asserts "Australian-grown carob," "handmade in small batches in our Byron Bay kitchen," "organic Australian carob and cacao butter," "certified organic." These are trade claims. If any aren't literally true at launch (e.g., "certified organic" requires certifier paperwork), the site exposes the brand to ACCC/ASIC action.
+- **Files:** `homepage.html:1348-1349`, `our-story.html:219,236-238`, `faq.html:183-191`, every PDP detail tab
+- **Disclosure line:** "The copy claims certified organic, Australian-grown, and vegan. Before you go live publicly, double-check your organic certifier, sourcing paper trail, and kitchen location language with your lawyer. We can soften any claim to 'naturally grown' / 'small-batch' in one pass if needed."
+
+### FLAG 7 — `homepage_backup.pdf` (5.5 MB) is publicly accessible
+
+- **Problem:** `curl -sI https://maplemoon-website.vercel.app/homepage_backup.pdf` returns `HTTP/2 200`. Anyone who guesses the filename (or scrapes directory listings) gets a full PDF snapshot of the homepage design. If the PDF contains internal annotations, SPIN notes, or alternate hero options, those leak too.
+- **Files:** Root `/Users/handtomouse/maplemoon-website/homepage_backup.pdf`
+- **Fix:** Add `*.pdf` to `.vercelignore` and redeploy (same change as BLOCKER 2). Safe to delete from repo entirely — it's a backup, not a runtime asset.
+
+### FLAG 8 — All 11 hero product images use `loading="eager"`
+
+- **Problem:** The hero "flavour picker" loads all 11 product webps up-front (`bar_pure_carob.webp`, `bar_goji_coconut.webp`, ..., `elixir_spiced.webp`). Each is 60–130 KB, so ~1 MB of images before first paint on the homepage. LCP suffers on mobile 4G.
+- **Files:** `homepage.html:1207-1220`
+- **Fix:** Keep `bar_pure_carob.webp` as `loading="eager" fetchpriority="high"` (already set line 1207), swap the other 10 to `loading="lazy"`. They hide behind `opacity:0` until user picks a flavour — no visible lag from lazy-loading.
+
+---
+
+## NOTE — Backlog
+
+### NOTE 1 — 6-product grids collapse to 2-column on mobile
+
+- Collections/Bars: 6 bars, mobile = 3 rows of 2. Works. Desktop = 3 columns. Works. No action.
+
+### NOTE 2 — `vercel.json` CSP still permits `'unsafe-inline'` for style and script
+
+- `vercel.json:19` CSP header. Needed because every page has inline `<style>` and inline `<script>` blocks. Future hardening: extract all inline CSS/JS to `brand_kit.css`/`shared.js`, switch CSP to nonce-based. Effort: 1-2 days.
+
+### NOTE 3 — 37 HTML files in root is hard to navigate
+
+- Prototype files (`hero_v*.html`, `product_v*.html`, etc.) clutter root. Once BLOCKER 2 moves them out of the deployed build, consider also moving them into `_prototypes/` subfolder so they stop appearing in editor file-pickers. Git blame history is preserved via `git mv`.
+
+### NOTE 4 — `server.js` / `express` dependency appears unused in deployed build
+
+- `package.json:13` has `express: ^5.2.1` and `server.js` exists but Vercel serves static files directly (`outputDirectory: "."`). `server.js` is only used for local `npm start`. Not a risk, but clean up if repo gets audited.
+
+### NOTE 5 — 40 background backup files (`.bak`, `.r20_pre_edit`, `.r20_d20_*`)
+
+- Clean up once the prototype-to-production pass is done. Git history preserves them. Delete them to reduce Claude Code / editor file list noise.
+
+### NOTE 6 — Desktop layout: Elixir mode "dark nav" intersection observer fires on Elixir bento tile only
+
+- `shared.js:66-81` nav-dark observer is wired to `[data-nav-dark="true"]`. The homepage has 3 of these: the "What is carob" editorial break (line 1262), the Elixir bento tile (line 1312), and the "Byron Bay" editorial break (line 1466). Nav goes dark when any of them are >50% in viewport. Working as intended but the transition can feel jumpy on slow scroll. Tune `rootMargin` if Carli comments.
+
+### NOTE 7 — Source PNG directory (569 MB) is committed to git
+
+- `assets/product_shots/*.png` source files (avg 8 MB each) are in the repo. Only the `.webp` versions are served. Safe to move PNGs to a `_source/` dir excluded from `.vercelignore` AND `.gitignore` them (regenerate from design tools on demand). Reduces repo clone time from ~1.4 GB to ~100 MB.
+
+### NOTE 8 — `hero-cta` "Shop Pure Carob" button anchor-scrolls to `#range` not `/products/pure-carob-bar.html`
+
+- `homepage.html:1254` — CTA says "Shop Pure Carob" but goes to `#range` section on same page. Either change CTA text to "See the Range" or retarget the link to `/products/pure-carob-bar.html`. Small copy-vs-behaviour mismatch.
+
+### NOTE 9 — Keyboard nav works for category tabs but not flavour pills
+
+- `homepage.html:1675-1681` wires ArrowLeft/ArrowRight for `.hero-cat-btn` (Bars/Moons/Bites/Elixirs) but flavour pills (`.flavour-btn`) are plain buttons without arrow-key cycling. Not a WCAG failure (they're focusable and clickable) but tab order is long. Accessibility polish, not critical.
+
+### NOTE 10 — `Add to Cart` button on pure-carob-bar uses `.btn .btn--primary` utility classes; the other two PDPs don't
+
+- `products/pure-carob-bar.html:286` → `class="pdp-cta btn btn--primary"`. Other two PDPs → `class="pdp-cta"` only. Inconsistent. Pick one. `shared.css` doesn't seem to define `.btn.btn--primary` (verify).
+
+---
+
+## Test Coverage Gaps (unchanged from prior audit)
+
+**No automated accessibility, Lighthouse, or visual regression testing.** Playwright e2e suite exists for Pureairo but not MapleMoon. Consider porting Pureairo's viewport-matrix test pattern once V1 stabilises.
+
+---
+
+## Summary Priority Table
+
+| # | Finding | Priority | Fix Effort |
+|---|---------|----------|------------|
+| 1 | Root URL serves prototype gallery, not homepage | **BLOCKER** | 5 min (vercel.json redirect) |
+| 2 | 30+ internal HTML files deployed to prod | **BLOCKER** | 15 min (rewrite .vercelignore + redeploy) |
+| 3 | Copyright "© 2024" on every page in 2026 | **BLOCKER** | 5 min (sed replace) |
+| 4 | Mobile nav Moons/Elixirs both route to Bars | **BLOCKER** | 10 min (anchor-link to #range) |
+| 5 | Bars meta says 7 flavours with 2 bogus names; page has 6 | **BLOCKER** | 10 min (rewrite meta, fix bento count) |
+| 6 | Newsletter forms are silent no-ops (8 instances) | **BLOCKER** | 10 min disable OR 30 min Formspree wire |
+| 7 | Add to Cart buttons do nothing | **BLOCKER** | 10 min (disable + "Notify me" copy) |
+| 8 | "Price TBD" visible on Spiced Elixir PDP | **BLOCKER** | 2 min |
+| 9 | Our Story re-uses same stock image twice | **BLOCKER** | 10 min (swap one) |
+| 10 | Unconfirmed shipping $ and support email in FAQ | **BLOCKER** | Ask Carli on call |
+| F1 | `.vercelignore` incomplete even for listed files | FLAG | Covered by BLOCKER 2 |
+| F2 | 5 of 6 bars link to `href="#"` | FLAG | Disclose scope |
+| F3 | Real product photography missing | FLAG | Disclose Phase 2 |
+| F4 | TODO comments in production HTML | FLAG | 5 min strip, or disclose |
+| F5 | Adobe Fonts not web-loaded | FLAG | Disclose, backlog |
+| F6 | Trade claims ("certified organic") need legal sign-off | FLAG | Client homework |
+| F7 | `homepage_backup.pdf` public | FLAG | Covered by BLOCKER 2 |
+| F8 | All 11 hero images eager-loaded | FLAG | 5 min one-line fix post-meeting |
+
+---
+
+**Meeting recommendation:** Fix BLOCKERS 1-9 before Sunday 4pm (total effort ~90 min). BLOCKER 10 becomes a meeting agenda item. Open the call with a short "before we walk through, here's what's stubbed vs shipped" preamble covering FLAGS 2, 3, 5, 6. Everything else is backlog.
+
+*Concerns audit: 2026-04-18*
