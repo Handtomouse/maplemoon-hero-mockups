@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pure Carob Bar | MapleMoon</title>
+<meta name="description" content="Pure Carob Bar by Maple Moon. Australian carob and cacao butter, hand-tempered and set. Nothing else. Organic, vegan, caffeine-free. $12.95.">
+<meta name="theme-color" content="#7B9DBF">
+<meta property="og:title" content="Pure Carob Bar | MapleMoon">
+<meta property="og:description" content="Australian carob and cacao butter, hand-tempered and set. Nothing else.">
+<meta property="og:type" content="product">
+<meta property="og:image" content="/assets/product_shots/bar_pure_carob.webp">
+<meta property="og:site_name" content="Maple Moon">
+<link rel="icon" href="/assets/brand/maplemoon_logo.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/assets/brand/maplemoon_logo.svg">
+<link rel="stylesheet" href="/brand_kit.css">
+<link rel="stylesheet" href="/shared.css">
+<style>
+/* ── Breadcrumb ── */
+.breadcrumb {
+  padding: 80px 24px 0;
+  max-width: 1200px;
+  margin: 0 auto;
+  font-family: var(--mm-sans);
+  font-size: 0.75rem;
+  font-weight: 400;
+  letter-spacing: 0.04em;
+  color: var(--text-muted);
+}
+.breadcrumb a {
+  color: var(--text-muted);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+.breadcrumb a:hover { color: var(--text-primary); }
+.breadcrumb span[aria-hidden] { margin: 0 8px; opacity: 0.4; }
+
+/* ── PDP Hero ── */
+.pdp-hero {
+  padding: 24px 24px 48px;
+  background: var(--warm-bg);
+}
+.pdp-layout {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+.pdp-gallery {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--cream-warm);
+  border-radius: 12px;
+  padding: 40px 24px;
+}
+.pdp-main-image {
+  width: 100%;
+  max-width: 280px;
+  height: auto;
+  object-fit: contain;
+}
+.pdp-info {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.pdp-badge {
+  font-family: var(--mm-sans);
+  font-size: 0.7rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--accent-blue);
+}
+.pdp-title {
+  font-family: var(--mm-serif);
+  font-size: 2.2rem;
+  font-weight: 400;
+  color: var(--text-primary);
+  line-height: 1.1;
+  margin: 0;
+}
+.pdp-price {
+  font-family: var(--mm-sans);
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: var(--text-primary);
+  margin: 0;
+}
+.pdp-weight {
+  font-weight: 300;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  margin-left: 8px;
+}
+.pdp-short-desc {
+  font-family: var(--mm-sans);
+  font-size: 0.95rem;
+  font-weight: 300;
+  line-height: 1.65;
+  color: var(--text-secondary);
+  max-width: 480px;
+}
+.pdp-cta {
+  display: inline-block;
+  padding: 14px 40px;
+  background: var(--accent-blue);
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-family: var(--mm-sans);
+  font-size: 0.85rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: opacity 0.2s;
+  min-height: 44px;
+  align-self: flex-start;
+}
+.pdp-cta:hover { opacity: 0.85; }
+.pdp-trust {
+  display: flex;
+  gap: 16px;
+  margin-top: 8px;
+  opacity: 0.5;
+}
+.pdp-trust img { width: 24px; height: 24px; }
+
+/* Desktop: side-by-side */
+@media (min-width: 768px) {
+  .pdp-layout {
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 56px;
+  }
+  .pdp-gallery {
+    flex: 1;
+    max-width: 50%;
+    padding: 56px 40px;
+  }
+  .pdp-main-image { max-width: 360px; }
+  .pdp-info {
+    flex: 1;
+    padding-top: 24px;
+  }
+  .pdp-title { font-size: 2.8rem; }
+}
+
+/* ── Tabs ── */
+.pdp-tabs-section {
+  padding: 0 24px 64px;
+  background: var(--warm-bg);
+}
+.pdp-tabs-container {
+  max-width: 700px;
+  margin: 0 auto;
+}
+.pdp-tab-nav {
+  display: flex;
+  gap: 0;
+  border-bottom: 1px solid var(--border-light);
+  margin-bottom: 32px;
+}
+.pdp-tab {
+  padding: 12px 24px;
+  background: none;
+  border: none;
+  border-bottom: 2px solid transparent;
+  font-family: var(--mm-serif);
+  font-size: 0.95rem;
+  font-weight: 400;
+  color: var(--text-muted);
+  cursor: pointer;
+  transition: color 0.2s, border-color 0.2s;
+  min-height: 44px;
+}
+.pdp-tab.active {
+  color: var(--text-primary);
+  border-bottom-color: var(--accent-blue);
+}
+.pdp-tab:hover { color: var(--text-primary); }
+.pdp-tab-panel {
+  display: none;
+}
+.pdp-tab-panel.active { display: block; }
+.pdp-tab-panel p {
+  font-family: var(--mm-sans);
+  font-size: 0.92rem;
+  font-weight: 300;
+  line-height: 1.7;
+  color: var(--text-secondary);
+  margin-bottom: 16px;
+}
+
+/* ── Related Products ── */
+.pdp-related {
+  padding: 64px 24px;
+  background: var(--warm-bg-alt);
+}
+.pdp-related-container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+.pdp-related-title {
+  font-family: var(--mm-serif);
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: var(--text-primary);
+  text-align: center;
+  margin-bottom: 32px;
+}
+.pdp-related-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+@media (max-width: 767px) {
+  .pdp-related-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+</style>
+</head>
+<body>
+
+<a href="#main" class="skip-link">Skip to content</a>
+<input type="checkbox" id="menu-toggle" hidden>
+<div class="mobile-menu" role="dialog" aria-modal="true" aria-label="Navigation menu" aria-hidden="true" inert>
+  <button class="menu-close" aria-label="Close menu">&times;</button>
+  <a href="/collections/bars.html">Bars</a>
+  <a href="/homepage.html#range">Moons</a>
+  <a href="/homepage.html#range">Elixirs</a>
+  <div class="menu-divider"></div>
+  <a href="/our-story.html">Our Story</a>
+  <a href="/collections/bars.html">Shop</a>
+  <a href="/faq.html">FAQ</a>
+</div>
+<header class="site-header" id="site-header">
+  <a href="/homepage.html" class="header-logo-link"><img src="/assets/brand/maplemoon_logo.svg" alt="Maple Moon" class="header-logo" width="36" height="36" loading="eager" decoding="async"></a>
+  <nav class="header-nav">
+    <a href="/our-story.html">Our Story</a>
+    <a href="/collections/bars.html">Shop</a>
+    <a href="/faq.html">FAQ</a>
+  </nav>
+  <label for="menu-toggle" class="hamburger" role="button" aria-label="Menu" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </label>
+</header>
+
+<nav class="breadcrumb" aria-label="Breadcrumb">
+  <a href="/homepage.html">Home</a>
+  <span aria-hidden="true">/</span>
+  <a href="/collections/bars.html">Bars</a>
+  <span aria-hidden="true">/</span>
+  <span aria-current="page">Pure Carob</span>
+</nav>
+
+<main id="main" tabindex="-1">
+<section class="pdp-hero" aria-label="Pure Carob Bar">
+  <div class="pdp-layout">
+    <div class="pdp-gallery fade-up">
+      <div class="pdp-gallery-bg" aria-hidden="true"></div>
+      <img src="/assets/product_shots/bar_pure_carob.webp" alt="Pure Carob Bar - front view" class="pdp-main-image" data-pdp-main width="400" height="600" loading="eager" decoding="async">
+      <!-- Thumbnail strip — 1 active + 2 coming-soon. Phase 2 wires real assets. -->
+      <div class="pdp-gallery-thumbs" role="group" aria-label="Product gallery">
+        <button type="button" class="pdp-gallery-thumb is-active" data-pdp-thumb data-src="/assets/product_shots/bar_pure_carob.webp" aria-label="Front view">
+          <img src="/assets/product_shots/bar_pure_carob.webp" alt="" loading="lazy">
+        </button>
+        <button type="button" class="pdp-gallery-thumb" data-coming-soon aria-label="Coming soon — lifestyle"><span class="sr-only">Coming soon</span></button>
+        <button type="button" class="pdp-gallery-thumb" data-coming-soon aria-label="Coming soon — ingredients"><span class="sr-only">Coming soon</span></button>
+      </div>
+    </div>
+    <div class="pdp-info fade-up">
+      <span class="pdp-badge">Carob Bars</span>
+      <h1 class="pdp-title">Pure Carob</h1>
+      <p class="pdp-price">$12.95 <span class="pdp-weight">80g</span></p>
+      <p class="pdp-short-desc">Australian carob and cacao butter, hand-tempered and set. Nothing else.</p>
+      <button class="pdp-cta btn btn--primary" type="button" disabled style="opacity:0.7;cursor:not-allowed;">Notify me when available</button>
+      <div class="pdp-trust">
+        <img src="/assets/brand/icon_organic.svg" alt="Organic" width="24" height="24">
+        <img src="/assets/brand/icon_vegan.svg" alt="Vegan" width="24" height="24">
+        <img src="/assets/brand/icon_caffeine_free.svg" alt="Caffeine Free" width="24" height="24">
+        <img src="/assets/brand/icon_gluten_free.svg" alt="Gluten Free" width="24" height="24">
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="pdp-tabs-section" aria-label="Product details">
+  <div class="pdp-tabs-container">
+    <div class="pdp-tab-nav" role="tablist">
+      <button class="pdp-tab active" role="tab" aria-selected="true" data-tab="details">Details</button>
+      <button class="pdp-tab" role="tab" aria-selected="false" data-tab="ingredients">Ingredients</button>
+    </div>
+    <div class="pdp-tab-panel active" role="tabpanel" data-tab="details">
+      <p>The Original Pure Carob bar is MapleMoon in its simplest form. Australian-grown carob, slow-roasted and milled, combined with organic cacao butter and hand-tempered in our Byron Bay kitchen. There's nothing added because nothing needs to be. Carob is naturally sweet, rich in flavour, and entirely free from caffeine. Each 80g bar is wrapped by hand and made in small batches. If you've never tried carob before, start here.</p>
+    </div>
+    <div class="pdp-tab-panel" role="tabpanel" data-tab="ingredients">
+      <p><strong>Ingredients:</strong> Australian carob (60%), organic cacao butter (40%).</p>
+      <p><strong>Allergen info:</strong> Made in a facility that processes tree nuts (hazelnuts, coconut). Gluten-free, dairy-free, soy-free.</p>
+      <p><strong>Storage:</strong> Store in a cool, dry place away from direct sunlight. If bars arrive soft during summer, a few minutes in the fridge will restore the snap.</p>
+    </div>
+  </div>
+</section>
+
+<section class="pdp-related" aria-label="Related products">
+  <div class="pdp-related-container">
+    <h2 class="pdp-related-title fade-up">You Might Also Like</h2>
+    <div class="pdp-related-grid fade-up">
+      <a href="/products/peppermint-moon.html" class="product-card">
+        <img src="/assets/product_shots/moon_peppermint.webp" alt="Peppermint Moon" loading="lazy" decoding="async">
+        <span class="product-card-name">Peppermint Moon</span>
+        <span class="product-card-desc">$2.50</span>
+      </a>
+      <a href="/collections/bars.html" class="product-card">
+        <img src="/assets/product_shots/bar_goji_coconut.webp" alt="Golden Coconut Bar" loading="lazy" decoding="async">
+        <span class="product-card-name">Golden Coconut</span>
+        <span class="product-card-desc">$12.95</span>
+      </a>
+      <a href="/products/spiced-elixir.html" class="product-card">
+        <img src="/assets/product_shots/elixir_spiced.webp" alt="Spiced Elixir" loading="lazy" decoding="async">
+        <span class="product-card-name">Spiced Elixir</span>
+        <span class="product-card-desc">Coming soon</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="trust-bar" aria-label="Credentials">
+  <div class="trust-item fade-up">
+    <img src="/assets/brand/icon_organic.svg" alt="" loading="lazy" decoding="async">
+    <span>Certified Organic</span>
+  </div>
+  <div class="trust-item fade-up">
+    <img src="/assets/brand/icon_vegan.svg" alt="" loading="lazy" decoding="async">
+    <span>100% Vegan</span>
+  </div>
+  <div class="trust-item fade-up">
+    <img src="/assets/brand/icon_caffeine_free.svg" alt="" loading="lazy" decoding="async">
+    <span>Caffeine Free</span>
+  </div>
+  <div class="trust-item fade-up">
+    <img src="/assets/brand/icon_gluten_free.svg" alt="" loading="lazy" decoding="async">
+    <span>Gluten Free</span>
+  </div>
+  <div class="trust-item fade-up">
+    <img src="/assets/brand/icon_made_in_aus.svg" alt="" loading="lazy" decoding="async">
+    <span>Made in Australia</span>
+  </div>
+</section>
+
+<footer class="site-footer" id="footer">
+  <div class="footer-top">
+    <img src="/assets/brand/maplemoon_logo.svg" alt="Maple Moon" class="footer-logo" width="48" height="48" loading="lazy" decoding="async">
+    <nav class="footer-nav">
+      <a href="/our-story.html">Our Story</a>
+      <a href="/collections/bars.html">Shop</a>
+      <a href="/faq.html">FAQ</a>
+    </nav>
+  </div>
+  <div class="footer-newsletter">
+    <p>Stay in the loop</p>
+    <form class="newsletter-form" onsubmit="return false;">
+      <input type="email" placeholder="Your email" aria-label="Email address">
+      <button type="submit" disabled>Coming soon</button>
+    </form>
+    <p class="nl-note" style="font-size:0.8em;opacity:0.7;margin-top:0.5em;font-style:italic;">Newsletter launching soon — hello@maplemoon.com.au for early updates.</p>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2026 Maple Moon. Handmade in Byron Bay, Australia.</p>
+  </div>
+</footer>
+</main>
+
+<script src="/shared.js"></script>
+<script>
+/* Tab switching */
+var tabBtns = document.querySelectorAll('.pdp-tab');
+var tabPanels = document.querySelectorAll('.pdp-tab-panel');
+tabBtns.forEach(function(btn) {
+  btn.addEventListener('click', function() {
+    var target = this.dataset.tab;
+    tabBtns.forEach(function(b) {
+      b.classList.toggle('active', b.dataset.tab === target);
+      b.setAttribute('aria-selected', b.dataset.tab === target ? 'true' : 'false');
+    });
+    tabPanels.forEach(function(p) {
+      p.classList.toggle('active', p.dataset.tab === target);
+    });
+  });
+});
+</script>
+
+</body>
+</html>

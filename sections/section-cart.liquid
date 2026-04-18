@@ -1,0 +1,364 @@
+{%- comment -%}
+  MapleMoon Cart Section
+  Standard Shopify cart with line items, qty adjustment, subtotal, checkout.
+  Light palette, on-brand typography.
+{%- endcomment -%}
+
+<style>
+  .mm-cart {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 80px 24px 64px;
+    color: #1E4366;
+    font-family: 'Neue Haas Grotesk Display Pro', 'Inter', 'Helvetica Neue', sans-serif;
+    min-height: 60vh;
+  }
+  .mm-cart__title {
+    font-family: 'P22 Mackinac Pro', Georgia, serif;
+    font-size: 2rem;
+    font-weight: 400;
+    margin: 0 0 32px;
+    letter-spacing: 0.03em;
+  }
+
+  /* ── Empty state ── */
+  .mm-cart__empty {
+    text-align: center;
+    padding: 48px 0;
+  }
+  .mm-cart__empty p {
+    font-size: 1rem;
+    font-weight: 300;
+    opacity: 0.6;
+    margin: 0 0 24px;
+  }
+
+  /* ── Line items ── */
+  .mm-cart__items {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+  .mm-cart__item {
+    display: grid;
+    grid-template-columns: 80px 1fr auto;
+    gap: 16px;
+    align-items: center;
+    padding: 20px 0;
+    border-bottom: 1px solid rgba(30, 67, 102, 0.08);
+  }
+  .mm-cart__item:first-child {
+    border-top: 1px solid rgba(30, 67, 102, 0.08);
+  }
+  .mm-cart__item-img {
+    width: 80px;
+    height: 80px;
+    border-radius: 8px;
+    overflow: hidden;
+    background: #EDE8D4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .mm-cart__item-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    padding: 8px;
+  }
+  .mm-cart__item-info {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+  .mm-cart__item-title {
+    font-family: 'P22 Mackinac Pro', Georgia, serif;
+    font-size: 1rem;
+    font-weight: 500;
+    color: #1E4366;
+    text-decoration: none;
+  }
+  .mm-cart__item-title:hover { opacity: 0.7; }
+  .mm-cart__item-variant {
+    font-size: 0.75rem;
+    font-weight: 300;
+    opacity: 0.5;
+  }
+  .mm-cart__item-price {
+    font-size: 0.85rem;
+    font-weight: 300;
+    opacity: 0.7;
+  }
+
+  /* ── Quantity ── */
+  .mm-cart__qty {
+    display: flex;
+    align-items: center;
+    border: 1px solid rgba(30, 67, 102, 0.12);
+    border-radius: 50px;
+    overflow: hidden;
+  }
+  .mm-cart__qty-btn {
+    width: 32px;
+    height: 32px;
+    background: transparent;
+    border: none;
+    font-size: 0.9rem;
+    color: #1E4366;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.2s;
+  }
+  .mm-cart__qty-btn:hover { background: rgba(0,0,0,0.04); }
+  .mm-cart__qty-input {
+    width: 32px;
+    text-align: center;
+    font-family: inherit;
+    font-size: 0.8rem;
+    color: #1E4366;
+    border: none;
+    background: none;
+    -moz-appearance: textfield;
+  }
+  .mm-cart__qty-input::-webkit-outer-spin-button,
+  .mm-cart__qty-input::-webkit-inner-spin-button { -webkit-appearance: none; }
+
+  .mm-cart__item-remove {
+    font-size: 0.7rem;
+    font-weight: 300;
+    color: #1E4366;
+    opacity: 0.4;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 4px 0;
+    transition: opacity 0.2s;
+  }
+  .mm-cart__item-remove:hover { opacity: 0.7; }
+
+  /* ── Right column: price + actions ── */
+  .mm-cart__item-actions {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 8px;
+  }
+  .mm-cart__line-price {
+    font-family: 'P22 Mackinac Pro', Georgia, serif;
+    font-size: 1rem;
+    font-weight: 400;
+  }
+
+  /* ── Footer: subtotal + checkout ── */
+  .mm-cart__footer {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 16px;
+    padding: 24px 0 0;
+    margin-top: 8px;
+  }
+  .mm-cart__subtotal {
+    display: flex;
+    align-items: baseline;
+    gap: 12px;
+  }
+  .mm-cart__subtotal-label {
+    font-size: 0.85rem;
+    font-weight: 300;
+    opacity: 0.6;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+  }
+  .mm-cart__subtotal-price {
+    font-family: 'P22 Mackinac Pro', Georgia, serif;
+    font-size: 1.4rem;
+    font-weight: 400;
+  }
+  .mm-cart__shipping-note {
+    font-size: 0.75rem;
+    font-weight: 300;
+    opacity: 0.5;
+  }
+  .mm-cart__checkout {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: #1E4366;
+    color: #F0EDDF;
+    border: none;
+    border-radius: 50px;
+    padding: 16px 48px;
+    min-height: 52px;
+    font-family: inherit;
+    font-size: 0.9rem;
+    font-weight: 400;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: opacity 0.2s;
+    text-decoration: none;
+  }
+  .mm-cart__checkout:hover { opacity: 0.85; }
+  .mm-cart__checkout:focus-visible {
+    outline: 2px solid #1E4366;
+    outline-offset: 4px;
+  }
+  .mm-cart__continue {
+    font-size: 0.8rem;
+    font-weight: 300;
+    color: #1E4366;
+    opacity: 0.5;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    transition: opacity 0.2s;
+  }
+  .mm-cart__continue:hover { opacity: 0.8; }
+
+  /* ── Shared CTA style for empty state ── */
+  .mm-cart__shop-cta {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: 1.5px solid #1E4366;
+    color: #1E4366;
+    background: transparent;
+    border-radius: 50px;
+    padding: 14px 40px;
+    min-height: 48px;
+    font-family: inherit;
+    font-size: 0.85rem;
+    font-weight: 400;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: background 0.3s, color 0.3s;
+  }
+  .mm-cart__shop-cta:hover {
+    background: #1E4366;
+    color: #F0EDDF;
+  }
+
+  @media (min-width: 768px) {
+    .mm-cart { padding: 96px 48px 80px; }
+    .mm-cart__title { font-size: 2.5rem; }
+    .mm-cart__item {
+      grid-template-columns: 100px 1fr auto;
+      gap: 24px;
+    }
+    .mm-cart__item-img { width: 100px; height: 100px; }
+  }
+</style>
+
+<section class="mm-cart">
+  <h1 class="mm-cart__title">{{ section.settings.title | default: 'Your Cart' }}</h1>
+
+  {%- if cart.item_count > 0 -%}
+    {%- form 'cart', cart -%}
+      <div class="mm-cart__items">
+        {%- for item in cart.items -%}
+          <div class="mm-cart__item">
+            <a href="{{ item.url }}" class="mm-cart__item-img">
+              {%- if item.image -%}
+                <img src="{{ item.image | image_url: width: 200 }}" alt="{{ item.title | escape }}" width="100" height="100" loading="lazy" decoding="async">
+              {%- endif -%}
+            </a>
+            <div class="mm-cart__item-info">
+              <a href="{{ item.url }}" class="mm-cart__item-title">{{ item.product.title }}</a>
+              {%- if item.variant.title != 'Default Title' -%}
+                <span class="mm-cart__item-variant">{{ item.variant.title }}</span>
+              {%- endif -%}
+              <span class="mm-cart__item-price">{{ item.original_price | money }}</span>
+              <div class="mm-cart__qty">
+                <button class="mm-cart__qty-btn" type="button" aria-label="Decrease" data-qty-action="decrease">&#8722;</button>
+                <input class="mm-cart__qty-input" type="number" name="updates[]" value="{{ item.quantity }}" min="0" max="99" aria-label="Quantity for {{ item.title | escape }}">
+                <button class="mm-cart__qty-btn" type="button" aria-label="Increase" data-qty-action="increase">&#43;</button>
+              </div>
+              <button class="mm-cart__item-remove" type="button" data-qty-action="remove">Remove</button>
+            </div>
+            <div class="mm-cart__item-actions">
+              <span class="mm-cart__line-price">{{ item.final_line_price | money }}</span>
+            </div>
+          </div>
+        {%- endfor -%}
+      </div>
+
+      <div class="mm-cart__footer">
+        <div class="mm-cart__subtotal">
+          <span class="mm-cart__subtotal-label">Subtotal</span>
+          <span class="mm-cart__subtotal-price">{{ cart.total_price | money }}</span>
+        </div>
+        <p class="mm-cart__shipping-note">{{ section.settings.shipping_note | default: 'Shipping calculated at checkout. Free over $99.' }}</p>
+        <button type="submit" name="checkout" class="mm-cart__checkout">Checkout</button>
+        <a href="{{ routes.all_products_collection_url }}" class="mm-cart__continue">Continue Shopping</a>
+      </div>
+    {%- endform -%}
+  {%- else -%}
+    <div class="mm-cart__empty">
+      <p>{{ section.settings.empty_message | default: 'Your cart is empty. Time to fix that.' }}</p>
+      <a href="{{ routes.all_products_collection_url }}" class="mm-cart__shop-cta">{{ section.settings.empty_cta | default: 'Shop the Range' }}</a>
+    </div>
+  {%- endif -%}
+</section>
+
+<script>
+(function() {
+  'use strict';
+  var cart = document.querySelector('.mm-cart');
+  if (!cart) return;
+
+  cart.addEventListener('click', function(e) {
+    var btn = e.target.closest('[data-qty-action]');
+    if (!btn) return;
+
+    var action = btn.dataset.qtyAction;
+    var item = btn.closest('.mm-cart__item');
+    var input = item ? item.querySelector('.mm-cart__qty-input') : null;
+    var form = btn.closest('form');
+    if (!input || !form) return;
+
+    if (action === 'decrease') input.stepDown();
+    else if (action === 'increase') input.stepUp();
+    else if (action === 'remove') input.value = 0;
+
+    form.submit();
+  });
+})();
+</script>
+
+{% schema %}
+{
+  "name": "Cart",
+  "tag": "div",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Page title",
+      "default": "Your Cart"
+    },
+    {
+      "type": "text",
+      "id": "shipping_note",
+      "label": "Shipping note",
+      "default": "Shipping calculated at checkout. Free over $99."
+    },
+    {
+      "type": "text",
+      "id": "empty_message",
+      "label": "Empty cart message",
+      "default": "Your cart is empty. Time to fix that."
+    },
+    {
+      "type": "text",
+      "id": "empty_cta",
+      "label": "Empty cart CTA",
+      "default": "Shop the Range"
+    }
+  ]
+}
+{% endschema %}

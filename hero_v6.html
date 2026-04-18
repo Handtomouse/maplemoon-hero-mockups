@@ -135,7 +135,13 @@
     display: flex; justify-content: flex-end; align-items: flex-start;
     padding: 20px;
   }
-  .header-mobile .logo-img { width: 40px; height: auto; }
+  .header-mobile .logo-img { width: 72px; height: auto; }
+
+  /* -- CAROB watermark full-width override -- */
+  .carob-watermark-wrap img { width: 110%; max-width: none; }
+
+  /* -- Remove bottom category bars -- */
+  .category-strip, .category-bar-desktop { display: none !important; }
 
   /* -- Desktop nav -- */
   .header-desktop { display: none; }
@@ -165,22 +171,14 @@
     background: linear-gradient(180deg, rgba(20,30,60,0.15) 0%, rgba(10,15,40,0.40) 100%);
   }
   .split-left-text {
-    position: absolute; top: 50%; left: 50%;
-    transform: translate(-50%, -50%);
+    position: absolute; bottom: 32px; left: 24px;
+    transform: none;
     font-family: var(--mm-serif);
-    font-size: 1.6rem; font-weight: 400;
+    font-size: 5.5rem; font-weight: 400;
     letter-spacing: 0.03em; line-height: 1.15;
     color: var(--mm-cream); z-index: var(--z-product);
     text-shadow: 0 2px 12px var(--mm-black-35);
-    text-align: center; white-space: nowrap;
-  }
-  /* Mobile/tablet: opposite corners for visual flow */
-  @media (max-width: 767px) {
-    .split-left-text {
-      top: auto; left: 24px;
-      bottom: 24px; transform: none;
-      text-align: left;
-    }
+    text-align: left; white-space: nowrap;
   }
 
   .split-right {
@@ -197,64 +195,25 @@
     background: linear-gradient(180deg, rgba(30,40,70,0.25) 0%, rgba(20,30,60,0.50) 100%);
   }
   .split-right-text {
-    position: absolute; top: 50%; left: 50%;
-    transform: translate(-50%, -50%);
+    position: absolute; bottom: 32px; right: 24px;
+    transform: none;
     font-family: var(--mm-serif);
-    font-size: 1.6rem; font-weight: 400;
+    font-size: 5.5rem; font-weight: 400;
     letter-spacing: 0.03em; line-height: 1.15;
     color: var(--mm-cream); z-index: var(--z-product);
     text-shadow: 0 2px 12px var(--mm-black-35);
-    text-align: center; white-space: nowrap;
-  }
-  @media (max-width: 767px) {
-    .split-right-text {
-      top: auto; left: auto;
-      bottom: 24px; right: 24px; transform: none;
-      text-align: right;
-    }
+    text-align: right; white-space: nowrap;
+    left: auto;
   }
 
-  /* Brand voice tagline */
-  .split-brand-voice {
-    position: absolute;
-    bottom: 80px;
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: var(--z-sticky);
-    font-family: var(--mm-sans);
-    font-size: 0.7rem;
-    font-weight: 300;
-    letter-spacing: 0.2em;
-    text-transform: uppercase;
-    color: var(--mm-cream);
-    opacity: 0.55;
-    white-space: nowrap;
-    pointer-events: none;
-  }
+  /* Brand voice tagline — removed from DOM */
 
   /* Divider (hidden on mobile) */
   .split-divider {
     display: none;
   }
 
-  /* CTA */
-  .cta-container {
-    position: fixed; bottom: calc(112px + env(safe-area-inset-bottom)); left: 0; right: 0;
-    display: flex; justify-content: center; z-index: var(--z-sticky);
-  }
-  .cta-btn {
-    display: inline-block;
-    border: 1.5px solid var(--mm-cream); color: var(--mm-cream);
-    background: transparent; border-radius: var(--radius-pill);
-    padding: 12px 32px;
-    font-family: var(--mm-sans); font-size: 0.85rem;
-    font-weight: 400; letter-spacing: 0.08em; text-transform: uppercase;
-    text-decoration: none; cursor: pointer;
-    transition: background 0.3s, color 0.3s;
-  }
-  .cta-btn:hover {
-    background: var(--mm-cream); color: var(--mm-blue-top);
-  }
+  /* CTA — removed from DOM */
 
   /* -- Category strip (mobile) -- */
   .category-strip {
@@ -304,23 +263,28 @@
     .header-desktop {
       display: flex; align-items: center;
       position: fixed; top: 0; left: 0; right: 0; z-index: var(--z-fixed);
-      padding: 28px 40px;
-      background: var(--mm-navy-15);
-      backdrop-filter: blur(12px);
-      -webkit-backdrop-filter: blur(12px);
+      padding: 16px 40px;
+      transition: background 0.3s ease, backdrop-filter 0.3s ease;
+    }
+    .header-desktop.scrolled {
+      backdrop-filter: blur(8px) saturate(120%);
+      -webkit-backdrop-filter: blur(8px) saturate(120%);
+      background: rgba(123, 157, 191, 0.6);
+      border-bottom: 1px solid rgba(231,228,202,0.1);
     }
     .header-desktop nav {
       flex: 1; display: flex; align-items: center;
       justify-content: center; gap: 40px;
     }
     .header-desktop nav a {
-      font-family: var(--mm-sans); font-size: 1rem;
-      font-weight: 400; color: var(--mm-cream); text-decoration: none;
-      opacity: 0.9; transition: opacity 0.2s;
+      font-family: var(--mm-sans); font-size: 0.85rem;
+      font-weight: 400; letter-spacing: 0.07em;
+      color: var(--mm-cream); text-decoration: none;
+      opacity: 0.7; transition: opacity 0.2s;
     }
     .header-desktop nav a:hover { opacity: 0.6; }
     .header-desktop .logo-desktop {
-      width: 80px; height: auto; margin-left: auto; flex-shrink: 0;
+      width: 160px; height: auto; margin-left: auto; flex-shrink: 0;
     }
 
     /* Split layout: side-by-side */
@@ -336,7 +300,9 @@
       transition: width 0.05s linear;
     }
     .split-left-text {
-      font-size: 2.4rem;
+      font-size: 8rem;
+      bottom: 48px;
+      left: 48px;
     }
 
     .split-right {
@@ -346,7 +312,9 @@
       transition: width 0.05s linear;
     }
     .split-right-text {
-      font-size: 2.4rem;
+      font-size: 8rem;
+      bottom: 48px;
+      right: 48px;
     }
 
     /* Divider */
@@ -388,13 +356,7 @@
 
     /* Watermark */
 
-    /* CTA */
-    .cta-container {
-      bottom: 100px;
-    }
-    .cta-btn {
-      padding: 14px 40px; font-size: 0.95rem;
-    }
+    /* CTA — removed */
 
     /* Desktop category bar */
     .category-bar-desktop {
@@ -418,7 +380,7 @@
   }
 
   @media (min-width: 1024px) {
-    .header-desktop { padding: 32px 48px; }
+    .header-desktop { padding: 16px 48px; }
     .header-desktop nav { gap: 52px; }
   }
 </style>
@@ -471,7 +433,6 @@
 
 <main id="main-content" class="split-hero" tabindex="-1">
   <div class="carob-watermark-wrap wm-subtle" aria-hidden="true"><img src="assets/carob_wordmark.svg" alt="" aria-hidden="true" width="800" height="200"></div>
-  <p class="split-brand-voice">naturally sweet, nothing added.</p>
 
   <!-- Left: Lifestyle / Origin -->
   <div class="split-left fade-3">
@@ -492,10 +453,6 @@
     <a href="/shop" class="split-right-text" style="text-decoration:none">Shop.</a>
   </div>
 
-  <!-- CTA -->
-  <div class="cta-container fade-5">
-    <a href="/shop" class="cta-btn">Shop Now</a>
-  </div>
 </main>
 
 
@@ -617,6 +574,12 @@
 
   document.addEventListener('touchend', function() {
     isDragging = false;
+  });
+
+  // Scroll-based header blur
+  window.addEventListener('scroll', function() {
+    var h = document.querySelector('.header-desktop');
+    if (h) h.classList.toggle('scrolled', window.scrollY > 60);
   });
 
   // Keyboard support for slider

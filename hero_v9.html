@@ -16,10 +16,10 @@
 <meta name="twitter:description" content="Artisan carob and cacao butter, handmade in Byron Bay. Organic, vegan, caffeine-free.">
 <meta name="twitter:image" content="https://maplemoon-hero-mockups.vercel.app/assets/hero_shots/hero_carob_pods_macro.jpg">
 <link rel="canonical" href="https://maplemoon-hero-mockups.vercel.app/hero_v9.html">
-<link rel="preload" as="image" href="assets/hero_shots/hero_carob_pods_macro.jpg">
-<link rel="preload" as="image" href="assets/hero_shots/hero_byron_lighthouse.jpg">
-<link rel="preload" as="image" href="assets/hero_shots/hero_carob_bar_hand.png">
-<link rel="preload" as="image" href="assets/hero_shots/hero_moons_lifestyle.png">
+<link rel="preload" as="image" href="https://i.pinimg.com/736x/8a/da/a0/8adaa0d8238567aaa7fbb72ee005e107.jpg" crossorigin>
+<link rel="preload" as="image" href="assets/hero_shots/byron_bay_silhouette.webp">
+<link rel="preload" as="image" href="assets/hero_shots/hero_elixir_hand.jpg">
+<link rel="preload" as="image" href="assets/hero_shots/v9_card4_why_carob.png">
 <link rel="icon" href="assets/maplemoon_logo.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="assets/maplemoon_logo.svg">
 <link rel="stylesheet" href="brand_kit.css">
@@ -186,7 +186,7 @@
   }
   .card-pod .card-bg {
     position: absolute; inset: 0;
-    background: url('assets/hero_shots/hero_carob_pods_macro.jpg') center/cover no-repeat;
+    background: url('https://i.pinimg.com/736x/8a/da/a0/8adaa0d8238567aaa7fbb72ee005e107.jpg') center/cover no-repeat;
     z-index: 0;
   }
   .card-pod .card-overlay {
@@ -213,7 +213,7 @@
   }
   .card-craft .card-bg {
     position: absolute; inset: 0;
-    background: url('assets/hero_shots/hero_byron_lighthouse.jpg') center/cover no-repeat;
+    background: url('assets/hero_shots/byron_bay_silhouette.webp') center/cover no-repeat;
     z-index: 0;
   }
   .card-craft .card-overlay {
@@ -240,8 +240,7 @@
   }
   .card-bar .card-bg {
     position: absolute; inset: 0;
-    /* D3: changed background-position from center to center bottom */
-    background: url('assets/hero_shots/hero_carob_bar_hand.png') center bottom / cover no-repeat;
+    background: url('assets/hero_shots/hero_elixir_hand.jpg') center/cover no-repeat;
     z-index: 0;
   }
   .card-bar .card-overlay {
@@ -268,7 +267,7 @@
   }
   .card-shop .card-bg {
     position: absolute; inset: 0;
-    background: url('assets/hero_shots/hero_moons_lifestyle.png') center/cover no-repeat;
+    background: url('assets/hero_shots/v9_card4_why_carob.png') center/cover no-repeat;
     z-index: 0;
   }
   .card-shop .card-overlay {
@@ -406,19 +405,24 @@
     .header-desktop {
       display: flex; align-items: center;
       position: fixed; top: 0; left: 0; right: 0; z-index: var(--z-fixed);
-      padding: 28px 40px;
-      background: rgba(30,67,102,0.1);
-      backdrop-filter: blur(12px);
-      -webkit-backdrop-filter: blur(12px);
+      padding: 16px 40px;
+      transition: background 0.3s ease, backdrop-filter 0.3s ease;
+    }
+    .header-desktop.scrolled {
+      backdrop-filter: blur(8px) saturate(120%);
+      -webkit-backdrop-filter: blur(8px) saturate(120%);
+      background: rgba(123, 157, 191, 0.6);
+      border-bottom: 1px solid rgba(231,228,202,0.1);
     }
     .header-desktop nav {
       flex: 1; display: flex; align-items: center;
       justify-content: center; gap: 40px;
     }
     .header-desktop nav a {
-      font-family: var(--mm-sans); font-size: 1rem;
-      font-weight: 400; color: var(--mm-cream); text-decoration: none;
-      opacity: 0.9; transition: opacity 0.2s;
+      font-family: var(--mm-sans); font-size: 0.85rem;
+      font-weight: 400; letter-spacing: 0.07em;
+      color: var(--mm-cream); text-decoration: none;
+      opacity: 0.7; transition: opacity 0.2s;
     }
     .header-desktop nav a:hover { opacity: 0.6; }
     .header-desktop .logo-desktop {
@@ -484,7 +488,7 @@
       opacity: 0;
     }
 
-    .header-desktop { padding: 32px 48px; }
+    .header-desktop { padding: 16px 48px; }
     .header-desktop nav { gap: 52px; }
     .card-pod .card-title,
     .card-craft .card-title { font-size: 1.5rem; }
@@ -627,6 +631,12 @@
       toggle.dispatchEvent(new Event('change'));
     });
   }
+
+  // Scroll-based header blur
+  window.addEventListener('scroll', function() {
+    var h = document.querySelector('.header-desktop');
+    if (h) h.classList.toggle('scrolled', window.scrollY > 60);
+  });
 
   // Focus trap
   var menu = document.querySelector('.mobile-menu');

@@ -110,13 +110,15 @@
     color: var(--mm-navy); opacity: 0.6;
   }
 
-  /* ── Mobile header (logo) ── */
+  /* ── Mobile header (logo) — centered in top bar ── */
   .header-mobile {
-    position: fixed; top: 0; right: 0; z-index: var(--z-fixed);
-    display: flex; justify-content: flex-end; align-items: flex-start;
-    padding: 12px;
+    position: fixed; top: 0; left: 0; right: 0; z-index: var(--z-fixed);
+    display: flex; justify-content: center; align-items: center;
+    padding: 10px 12px;
+    background: linear-gradient(to bottom, rgba(8,16,30,0.6) 0%, transparent 100%);
+    pointer-events: none;
   }
-  .header-mobile .logo-img { width: 36px; height: auto; }
+  .header-mobile .logo-img { width: 32px; height: auto; opacity: 0.85; pointer-events: auto; }
 
   /* ── Desktop nav bar ── */
   .header-desktop { display: none; }
@@ -237,9 +239,12 @@
       padding: 28px 40px;
       background: linear-gradient(to bottom, var(--mm-navy-50) 0%, transparent 100%);
     }
+    .header-desktop .logo-desktop {
+      width: 40px; height: auto; flex-shrink: 0; margin-right: 32px;
+    }
     .header-desktop nav {
       flex: 1; display: flex; align-items: center;
-      justify-content: center; gap: 40px;
+      justify-content: flex-start; gap: 40px;
     }
     .header-desktop nav a {
       font-family: var(--mm-sans); font-size: 1rem;
@@ -247,9 +252,6 @@
       opacity: 0.9; transition: opacity 0.2s;
     }
     .header-desktop nav a:hover { opacity: 0.6; }
-    .header-desktop .logo-desktop {
-      width: 80px; height: auto; margin-left: auto; flex-shrink: 0;
-    }
 
     .grid-hero {
       grid-template-columns: 2fr 1fr 1fr 1fr;
@@ -358,8 +360,9 @@
   <img src="assets/maplemoon_logo.svg" alt="Maple Moon" class="logo-img" width="36" height="36" loading="eager" decoding="async">
 </header>
 
-<!-- Desktop header -->
+<!-- Desktop header — logo left-aligned with nav -->
 <header class="header-desktop">
+  <img src="assets/maplemoon_logo.svg" alt="Maple Moon" class="logo-desktop" width="40" height="40" loading="eager" decoding="async">
   <nav>
     <a href="/our-story">Our Story</a>
     <a href="/shop">Shop</a>
@@ -367,7 +370,6 @@
     <a href="/recipes">Recipes</a>
     <a href="/contact">Contact</a>
   </nav>
-  <img src="assets/maplemoon_logo.svg" alt="Maple Moon" class="logo-desktop" width="80" height="40" loading="eager" decoding="async">
 </header>
 
 <!-- ═══ THE GRID ═══ -->
@@ -377,36 +379,60 @@
   <!-- Tile 1: Bar Hero (spans 2 cols mobile / full left col desktop) -->
   <div class="tile tile-bar">
     <img src="assets/hero_shots/hero_bar_carob_pods_studio.png" alt="Maple Moon Carob Bar with carob pods" class="tile-bar-photo" width="1080" height="1080" loading="eager" fetchpriority="high" decoding="async">
+    <div style="position:absolute;bottom:12px;left:12px;right:12px;display:flex;justify-content:space-between;align-items:flex-end;"><span style="font-family:var(--mm-sans);font-size:0.6rem;font-weight:400;text-transform:uppercase;letter-spacing:0.12em;color:var(--mm-cream);opacity:0.6;">7 Flavours</span><a href="/shop/bars" style="font-family:var(--mm-sans);font-size:0.55rem;font-weight:400;text-transform:uppercase;letter-spacing:0.1em;color:var(--mm-cream);opacity:0.5;text-decoration:none;border:1px solid rgba(231,228,202,0.3);padding:4px 10px;border-radius:20px;">Shop</a></div>
   </div>
 
-  <!-- Tile 2: Moon -->
-  <div class="tile tile-moon">
-    <span class="tile-wire-label">Moon / Eclipse<em>Carob crescents, handmade</em></span>
+  <!-- Tile 2: Moon — with background image -->
+  <div class="tile tile-moon" style="position:relative;">
+    <img src="assets/hero_shots/silhouette_closeup.webp" alt="Carob moon silhouette" style="width:100%;height:100%;object-fit:cover;position:absolute;inset:0;opacity:0.4;" loading="lazy" decoding="async">
+    <span class="tile-wire-label" style="position:relative;z-index:1;">Moon / Eclipse<em>Carob crescents, handmade</em></span>
+    <div style="position:absolute;bottom:12px;left:12px;right:12px;display:flex;justify-content:space-between;align-items:flex-end;z-index:1;"><span style="font-family:var(--mm-sans);font-size:0.6rem;font-weight:400;text-transform:uppercase;letter-spacing:0.12em;color:var(--mm-cream);opacity:0.6;">Pure Carob Moons</span><a href="/shop/moons" style="font-family:var(--mm-sans);font-size:0.55rem;font-weight:400;text-transform:uppercase;letter-spacing:0.1em;color:var(--mm-cream);opacity:0.5;text-decoration:none;border:1px solid rgba(231,228,202,0.3);padding:4px 10px;border-radius:20px;">Shop Moons</a></div>
   </div>
 
   <!-- Tile 3: Craft / Origin -->
   <div class="tile tile-lifestyle">
     <img src="assets/hero_shots/hero_carob_pods_macro_dark.jpg" alt="Raw carob pods — the ingredient behind Maple Moon" class="tile-lifestyle-photo" width="1080" height="1080" loading="lazy" decoding="async">
+    <div style="position:absolute;bottom:12px;left:12px;right:12px;display:flex;justify-content:space-between;align-items:flex-end;"><span style="font-family:var(--mm-sans);font-size:0.6rem;font-weight:400;text-transform:uppercase;letter-spacing:0.12em;color:var(--mm-cream);opacity:0.6;">Byron Bay, Australia</span><a href="/our-story" style="font-family:var(--mm-sans);font-size:0.55rem;font-weight:400;text-transform:uppercase;letter-spacing:0.1em;color:var(--mm-cream);opacity:0.5;text-decoration:none;border:1px solid rgba(231,228,202,0.3);padding:4px 10px;border-radius:20px;">Our Story</a></div>
   </div>
 
-  <!-- Tile 4: CTA tile -->
-  <div class="tile tile-cta" style="cursor:default">
-    <a href="/shop" style="display:inline-flex;align-items:center;justify-content:center;border:1.5px solid var(--mm-cream);color:var(--mm-cream);background:transparent;border-radius:999px;padding:12px 28px;min-height:48px;font-family:var(--mm-sans);font-size:0.8rem;font-weight:400;letter-spacing:0.08em;text-transform:uppercase;text-decoration:none;transition:background 0.3s,color 0.3s">Shop Now</a>
+  <!-- Tile 4: Carob CTA tile -->
+  <div class="tile tile-cta" style="cursor:default;padding:24px 16px;">
+    <span style="font-family:var(--mm-sans);font-size:0.55rem;font-weight:400;text-transform:uppercase;letter-spacing:0.18em;color:var(--mm-cream);opacity:0.35;margin-bottom:8px;">The Ingredient</span>
+    <p style="font-family:var(--mm-serif);font-size:0.85rem;font-weight:400;color:var(--mm-cream);opacity:0.8;margin:0 0 4px;line-height:1.4;">Pure carob.</p>
+    <p style="font-family:var(--mm-serif);font-size:0.85rem;font-weight:400;color:var(--mm-cream);opacity:0.8;margin:0 0 16px;line-height:1.4;">No additives.</p>
+    <a href="/shop" style="display:inline-flex;align-items:center;justify-content:center;border:1.5px solid var(--mm-cream);color:var(--mm-cream);background:transparent;border-radius:999px;padding:10px 24px;min-height:44px;font-family:var(--mm-sans);font-size:0.75rem;font-weight:400;letter-spacing:0.08em;text-transform:uppercase;text-decoration:none;transition:background 0.3s,color 0.3s">Shop Now</a>
+    <span style="position:absolute;bottom:12px;left:12px;right:12px;text-align:center;font-family:var(--mm-sans);font-size:0.5rem;font-weight:300;color:var(--mm-cream);opacity:0.3;letter-spacing:0.08em;">Free shipping over $99</span>
   </div>
 
-  <!-- Tile 5: Provenance -->
-  <div class="tile tile-origin">
-    <span class="tile-wire-label">Provenance<em>Handmade in Byron Bay</em></span>
+  <!-- Tile 5: Provenance — with Byron Bay image -->
+  <div class="tile tile-origin" style="position:relative;overflow:hidden;">
+    <img src="assets/hero_shots/byron_bay_silhouette.webp" alt="Byron Bay silhouette" style="width:100%;height:100%;object-fit:cover;position:absolute;inset:0;opacity:0.15;" loading="lazy" decoding="async">
+    <div style="position:relative;z-index:1;text-align:center;padding:16px;">
+      <span style="font-family:var(--mm-sans);font-size:0.55rem;font-weight:400;text-transform:uppercase;letter-spacing:0.18em;color:var(--mm-navy);opacity:0.4;">Est. 2024</span>
+      <span class="tile-wire-label" style="display:block;margin-top:4px;">Provenance<em>Handmade in Byron Bay, Australia</em></span>
+    </div>
+    <div style="position:absolute;bottom:12px;left:12px;right:12px;display:flex;justify-content:space-between;align-items:flex-end;z-index:1;"><span style="font-family:var(--mm-sans);font-size:0.6rem;font-weight:400;text-transform:uppercase;letter-spacing:0.12em;color:var(--mm-navy);opacity:0.5;">Organic &middot; Vegan</span><a href="/our-story" style="font-family:var(--mm-sans);font-size:0.55rem;font-weight:400;text-transform:uppercase;letter-spacing:0.1em;color:var(--mm-navy);opacity:0.4;text-decoration:none;border:1px solid rgba(30,67,102,0.25);padding:4px 10px;border-radius:20px;">Our Story</a></div>
   </div>
 
-  <!-- Desktop: Certifications tile -->
-  <div class="tile tile-trust-desktop">
-    <span class="tile-wire-label">Certifications<em>icons only · no photo</em></span>
+  <!-- Desktop: Certifications tile — with blue fog image -->
+  <div class="tile tile-trust-desktop" style="position:relative;overflow:hidden;">
+    <img src="assets/hero_shots/blue_fog.webp" alt="Blue atmospheric fog" style="width:100%;height:100%;object-fit:cover;position:absolute;inset:0;opacity:0.5;" loading="lazy" decoding="async">
+    <div style="position:relative;z-index:1;display:flex;flex-direction:column;align-items:center;gap:12px;">
+      <div style="display:flex;gap:12px;align-items:center;">
+        <img src="assets/icon_organic.svg" alt="Organic" width="24" height="24" style="filter:brightness(0) invert(0.92);opacity:0.7;" loading="lazy" decoding="async">
+        <img src="assets/icon_vegan.svg" alt="Vegan" width="24" height="24" style="filter:brightness(0) invert(0.92);opacity:0.7;" loading="lazy" decoding="async">
+        <img src="assets/icon_caffeine_free.svg" alt="Caffeine Free" width="24" height="24" style="filter:brightness(0) invert(0.92);opacity:0.7;" loading="lazy" decoding="async">
+      </div>
+      <span class="tile-wire-label">Certified<em>Organic &middot; Vegan &middot; Caffeine Free</em></span>
+    </div>
+    <div style="position:absolute;bottom:12px;left:12px;right:12px;text-align:center;"><a href="/ingredients" style="font-family:var(--mm-sans);font-size:0.55rem;font-weight:400;text-transform:uppercase;letter-spacing:0.1em;color:var(--mm-cream);opacity:0.5;text-decoration:none;border:1px solid rgba(231,228,202,0.3);padding:4px 10px;border-radius:20px;">Shop Clean</a></div>
   </div>
 
-  <!-- Desktop: Second range tile -->
-  <div class="tile tile-powder-desktop">
-    <span class="tile-wire-label">Second range<em>elixir · powder · ingredient</em></span>
+  <!-- Desktop: Second range tile — with silhouette image -->
+  <div class="tile tile-powder-desktop" style="position:relative;overflow:hidden;">
+    <img src="assets/hero_shots/silhouette_closeup.webp" alt="Carob silhouette detail" style="width:100%;height:100%;object-fit:cover;position:absolute;inset:0;opacity:0.35;" loading="lazy" decoding="async">
+    <span class="tile-wire-label" style="position:relative;z-index:1;">Elixirs &amp; Powder<em>Beyond the bar</em></span>
+    <div style="position:absolute;bottom:12px;left:12px;right:12px;display:flex;justify-content:space-between;align-items:flex-end;z-index:1;"><span style="font-family:var(--mm-sans);font-size:0.6rem;font-weight:400;text-transform:uppercase;letter-spacing:0.12em;color:var(--mm-cream);opacity:0.6;">Raw Carob</span><a href="/shop/elixirs" style="font-family:var(--mm-sans);font-size:0.55rem;font-weight:400;text-transform:uppercase;letter-spacing:0.1em;color:var(--mm-cream);opacity:0.5;text-decoration:none;border:1px solid rgba(231,228,202,0.3);padding:4px 10px;border-radius:20px;">Shop Elixirs</a></div>
   </div>
 
 </main>

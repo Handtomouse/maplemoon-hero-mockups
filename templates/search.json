@@ -1,0 +1,1 @@
+{ "name": "Search", "sections": { "main": { "type": "section-search", "settings": {} } }, "order": ["main"] }

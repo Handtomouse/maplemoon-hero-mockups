@@ -1,0 +1,77 @@
+{%- comment -%} MapleMoon Search Results Section {%- endcomment -%}
+
+<style>
+  .mm-search { max-width: 1200px; margin: 0 auto; padding: 80px 24px 64px; color: var(--sr-text, #1E4366); font-family: 'Neue Haas Grotesk Display Pro', 'Inter', sans-serif; }
+  .mm-search__title { font-family: 'P22 Mackinac Pro', Georgia, serif; font-size: 2rem; font-weight: 400; margin: 0 0 8px; }
+  .mm-search__count { font-size: 0.85rem; font-weight: 300; opacity: 0.5; margin: 0 0 32px; }
+  .mm-search__form { display: flex; gap: 0; max-width: 480px; margin-bottom: 40px; }
+  .mm-search__input { flex: 1; padding: 12px 20px; border: 1.5px solid rgba(30,67,102,0.15); border-right: none; border-radius: 50px 0 0 50px; background: transparent; color: var(--sr-text, #1E4366); font-family: inherit; font-size: 0.9rem; min-height: 48px; outline: none; }
+  .mm-search__input:focus { border-color: var(--sr-text, #1E4366); }
+  .mm-search__btn { padding: 12px 24px; border: 1.5px solid rgba(30,67,102,0.15); border-radius: 0 50px 50px 0; background: var(--sr-text, #1E4366); color: var(--sr-bg, #F0EDDF); font-family: inherit; font-size: 0.8rem; font-weight: 500; letter-spacing: 0.06em; text-transform: uppercase; cursor: pointer; min-height: 48px; transition: opacity 0.2s; }
+  .mm-search__btn:hover { opacity: 0.85; }
+  .mm-search__grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
+  .mm-search__card { display: flex; flex-direction: column; text-decoration: none; color: inherit; }
+  .mm-search__card-img { aspect-ratio: 3/4; background: var(--sr-warm, #EDE8D4); border-radius: 12px; overflow: hidden; display: flex; align-items: center; justify-content: center; margin-bottom: 12px; }
+  .mm-search__card-img img { width: 80%; height: 80%; object-fit: contain; }
+  .mm-search__card-title { font-family: 'P22 Mackinac Pro', Georgia, serif; font-size: 1rem; font-weight: 500; }
+  .mm-search__card-type { font-size: 0.75rem; font-weight: 300; opacity: 0.5; margin-top: 2px; }
+  .mm-search__empty { text-align: center; padding: 48px 0; }
+  .mm-search__empty p { font-size: 1rem; font-weight: 300; opacity: 0.6; margin: 0 0 24px; }
+  .mm-search__shop-cta { display: inline-flex; align-items: center; border: 1.5px solid #1E4366; color: var(--sr-text, #1E4366); background: transparent; border-radius: 50px; padding: 14px 40px; min-height: 48px; font-family: inherit; font-size: 0.85rem; letter-spacing: 0.08em; text-transform: uppercase; text-decoration: none; transition: background 0.3s, color 0.3s; }
+  .mm-search__shop-cta:hover { background: var(--sr-text, #1E4366); color: var(--sr-bg, #F0EDDF); }
+  @media (prefers-reduced-motion: no-preference) { .mm-search__card { transition: transform 0.3s ease; } .mm-search__card:hover { transform: translateY(-4px); } }
+  @media (prefers-reduced-motion: reduce) { .mm-search__card { transition: none !important; } }
+  @media (min-width: 768px) { .mm-search { padding: 96px 48px 80px; } .mm-search__title { font-size: 2.5rem; } .mm-search__grid { grid-template-columns: repeat(3, 1fr); gap: 32px; } }
+  @media (min-width: 1024px) { .mm-search__grid { grid-template-columns: repeat(4, 1fr); gap: 40px; } }
+</style>
+
+<section class="mm-search" style="--sr-text: {{ section.settings.text_color | default: '#1E4366' }}; --sr-bg: {{ section.settings.background_color | default: '#F0EDDF' }}; --sr-warm: {{ section.settings.card_bg | default: '#EDE8D4' }}; background: var(--sr-bg);">
+  <h1 class="mm-search__title">{{ section.settings.title | default: 'Search' }}</h1>
+
+  <form class="mm-search__form" action="{{ routes.search_url }}" method="get" role="search">
+    <input class="mm-search__input" type="search" name="q" value="{{ search.terms | escape }}" placeholder="Search products, recipes..." aria-label="Search">
+    <button class="mm-search__btn" type="submit">Search</button>
+  </form>
+
+  {%- if search.performed -%}
+    <p class="mm-search__count">{{ search.results_count }} result{{ search.results_count | pluralize: '', 's' }} for "{{ search.terms }}"</p>
+
+    {%- if search.results.size > 0 -%}
+      <div class="mm-search__grid">
+        {%- for item in search.results -%}
+          <a href="{{ item.url }}" class="mm-search__card">
+            {%- if item.featured_image -%}
+              <div class="mm-search__card-img">
+                <img src="{{ item.featured_image | image_url: width: 400 }}" alt="{{ item.title | escape }}" width="400" height="600" loading="lazy" decoding="async">
+              </div>
+            {%- endif -%}
+            <span class="mm-search__card-title">{{ item.title }}</span>
+            <span class="mm-search__card-type">{{ item.object_type | capitalize }}</span>
+          </a>
+        {%- endfor -%}
+      </div>
+
+      {%- if paginate.pages > 1 -%}
+        <nav aria-label="Search pagination">{{ paginate | default_pagination }}</nav>
+      {%- endif -%}
+    {%- else -%}
+      <div class="mm-search__empty">
+        <p>No results found for "{{ search.terms }}". Try a different search or browse our range.</p>
+        <a href="{{ routes.all_products_collection_url }}" class="mm-search__shop-cta">Shop the Range</a>
+      </div>
+    {%- endif -%}
+  {%- endif -%}
+</section>
+
+{% schema %}
+{
+  "name": "Search Results",
+  "tag": "div",
+  "settings": [
+    { "type": "text", "id": "title", "label": "Page title", "default": "Search" },
+    { "type": "color", "id": "background_color", "label": "Background", "default": "#F0EDDF" },
+    { "type": "color", "id": "text_color", "label": "Text", "default": "#1E4366" },
+    { "type": "color", "id": "card_bg", "label": "Card background", "default": "#EDE8D4" }
+  ]
+}
+{% endschema %}

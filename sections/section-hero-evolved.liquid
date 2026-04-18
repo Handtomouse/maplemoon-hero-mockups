@@ -1,0 +1,1375 @@
+{%- comment -%}
+  MapleMoon V7 Alt A "Evolved" Hero Section
+  Steal list: V7 flavour picker + V3 education headline + V8 time greeting
+             + V3 trust badges + V12 per-product CTAs + V7 category gradients
+  Light palette: #F0EDDF bg, #1E4366 navy text, #E1D78E gold accent
+
+  Requirements:
+  - Adobe Fonts (P22 Mackinac Pro + Neue Haas Grotesk Display Pro) must be loaded by the theme <head>
+  - Section is self-contained: no external CSS/JS dependencies
+  - Vanilla JS only, no frameworks
+{%- endcomment -%}
+
+<style>
+  /* =============================================
+     HERO EVOLVED — Base
+     ============================================= */
+  .hero-evolved {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    min-height: 100dvh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    gap: 0;
+    padding: 64px 0 max(32px, env(safe-area-inset-bottom));
+    background: linear-gradient(180deg, var(--he-grad-top) 0%, var(--he-grad-bottom) 100%);
+    color: var(--he-text);
+    font-family: var(--he-sans, 'Neue Haas Grotesk Display Pro', 'Inter', 'Helvetica Neue', sans-serif);
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+  }
+  @media (prefers-reduced-motion: no-preference) {
+    .hero-evolved {
+      transition: background 0.5s ease;
+    }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .hero-evolved,
+    .hero-evolved * {
+      transition: none !important;
+      animation: none !important;
+    }
+  }
+
+  /* ── Fade-in animations ── */
+  @media (prefers-reduced-motion: no-preference) {
+    @keyframes heroEvolvedFadeIn {
+      from { opacity: 0; transform: translateY(8px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .he-fade-1 { animation: heroEvolvedFadeIn 0.6s ease both 0.1s; }
+    .he-fade-2 { animation: heroEvolvedFadeIn 0.6s ease both 0.25s; }
+    .he-fade-3 { animation: heroEvolvedFadeIn 0.6s ease both 0.4s; }
+    .he-fade-4 { animation: heroEvolvedFadeIn 0.6s ease both 0.55s; }
+    .he-fade-5 { animation: heroEvolvedFadeIn 0.6s ease both 0.7s; }
+    .he-fade-6 { animation: heroEvolvedFadeIn 0.6s ease both 0.85s; }
+    .he-fade-7 { animation: heroEvolvedFadeIn 0.6s ease both 1.0s; }
+  }
+
+  /* ── Watermark ── */
+  .hero-evolved__watermark {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    pointer-events: none;
+    z-index: 0;
+  }
+  .hero-evolved__watermark img {
+    width: 80%;
+    max-width: 800px;
+    height: auto;
+    filter: sepia(1) saturate(2) hue-rotate(-10deg) brightness(0.85);
+    opacity: 0.12;
+  }
+
+  /* ── Greeting ── */
+  .hero-evolved__greeting {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.75rem;
+    font-weight: 400;
+    color: var(--he-text);
+    opacity: 0.5;
+    position: relative;
+    z-index: 1;
+    margin-bottom: 12px;
+  }
+  .hero-evolved__greeting svg {
+    width: 14px;
+    height: 14px;
+    fill: none;
+    stroke: var(--he-text);
+    stroke-width: 1.5;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+  }
+
+  /* ── Headline ── */
+  .hero-evolved__headline {
+    font-family: var(--he-serif, 'P22 Mackinac Pro', Georgia, serif);
+    font-size: 2rem;
+    font-weight: 500;
+    text-align: center;
+    margin: 0 0 4px;
+    position: relative;
+    z-index: 1;
+    letter-spacing: -0.01em;
+    line-height: 1.2;
+  }
+  .hero-evolved__subtext {
+    font-family: var(--he-sans, 'Neue Haas Grotesk Display Pro', 'Inter', sans-serif);
+    font-size: 0.95rem;
+    font-weight: 300;
+    text-align: center;
+    opacity: 0.6;
+    margin: 0 0 24px;
+    position: relative;
+    z-index: 1;
+  }
+
+  /* ── Product image stack ── */
+  .hero-evolved__product-stack {
+    position: relative;
+    width: 62%;
+    max-width: 260px;
+    height: 280px;
+    z-index: 1;
+  }
+  .hero-evolved__product-img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    object-position: center;
+    filter: drop-shadow(0 12px 24px rgba(0,0,0,0.10))
+            drop-shadow(0 4px 8px rgba(0,0,0,0.06));
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    will-change: opacity;
+  }
+  .hero-evolved__product-img.active {
+    opacity: 1;
+    position: relative;
+  }
+  .hero-evolved__product-placeholder {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0.2;
+    font-size: 0.8rem;
+    text-align: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  /* ── Tagline ── */
+  .hero-evolved__tagline {
+    font-weight: 300;
+    font-size: 0.9rem;
+    color: var(--he-text);
+    opacity: 0.7;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+    min-height: 1.4em;
+    margin: 24px 0 0;
+  }
+
+  /* ── Category tabs ── */
+  .hero-evolved__cat-tabs {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0;
+    z-index: 1;
+    margin-top: 16px;
+    position: relative;
+  }
+  .hero-evolved__cat-tab {
+    font-family: var(--he-serif, 'P22 Mackinac Pro', Georgia, serif);
+    font-size: 0.82rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--he-text);
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 8px 4px;
+    min-height: 44px;
+    opacity: 0.35;
+    transition: opacity 0.2s, border-color 0.2s;
+    -webkit-tap-highlight-color: transparent;
+    white-space: nowrap;
+    border-bottom: 1.5px solid transparent;
+  }
+  .hero-evolved__cat-tab.active {
+    opacity: 1;
+    border-bottom-color: var(--he-text);
+    padding-bottom: 2px;
+  }
+  .hero-evolved__cat-tab:hover { opacity: 0.7; }
+  .hero-evolved__cat-tab.active:hover { opacity: 1; }
+  .hero-evolved__cat-tab:focus-visible {
+    outline: 2px solid var(--he-text);
+    outline-offset: 4px;
+    border-radius: 2px;
+  }
+  .hero-evolved__cat-dot {
+    display: inline-block;
+    width: 3px;
+    height: 3px;
+    background: var(--he-text);
+    border-radius: 50%;
+    margin: 0 12px;
+    opacity: 0.2;
+    flex-shrink: 0;
+  }
+
+  /* ── Flavour pills ── */
+  .hero-evolved__pills {
+    display: flex;
+    gap: 8px;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    padding: 4px 24px 4px 16px;
+    z-index: 1;
+    max-width: 100%;
+    scrollbar-width: none;
+    margin-top: 6px;
+    position: relative;
+  }
+  .hero-evolved__pills::-webkit-scrollbar { display: none; }
+
+  .hero-evolved__pill {
+    flex-shrink: 0;
+    padding: 12px 22px;
+    min-height: 48px;
+    border: 1.5px solid var(--he-text);
+    border-radius: 50px;
+    background: transparent;
+    color: var(--he-text);
+    opacity: 0.5;
+    font-family: var(--he-sans, 'Neue Haas Grotesk Display Pro', 'Inter', sans-serif);
+    font-size: 0.8rem;
+    font-weight: 500;
+    letter-spacing: 0.04em;
+    cursor: pointer;
+    transition: background 0.3s ease, color 0.3s ease, opacity 0.3s ease, border-color 0.3s ease;
+    white-space: nowrap;
+    -webkit-tap-highlight-color: transparent;
+  }
+  .hero-evolved__pill:hover { opacity: 0.8; }
+  .hero-evolved__pill.active {
+    background: var(--he-accent);
+    color: var(--he-text);
+    opacity: 1;
+    border-color: var(--he-accent);
+  }
+  .hero-evolved__pill:focus-visible {
+    outline: 2px solid var(--he-text);
+    outline-offset: 4px;
+  }
+
+  /* ── CTA ── */
+  .hero-evolved__cta {
+    display: inline-block;
+    border: 1.5px solid var(--he-text);
+    color: var(--he-text);
+    background: transparent;
+    border-radius: 50px;
+    padding: 12px 32px;
+    font-family: var(--he-sans, 'Neue Haas Grotesk Display Pro', 'Inter', sans-serif);
+    font-size: 0.85rem;
+    font-weight: 400;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background 0.3s, color 0.3s, border-color 0.3s;
+    position: relative;
+    z-index: 1;
+    margin-top: 20px;
+  }
+  .hero-evolved__cta:hover {
+    background: var(--he-accent);
+    color: var(--he-text);
+    border-color: var(--he-accent);
+  }
+  .hero-evolved__cta:focus-visible {
+    outline: 2px solid var(--he-text);
+    outline-offset: 4px;
+  }
+  .hero-evolved__cta--notify {
+    border-style: dashed;
+  }
+  .hero-evolved__cta--notify:hover {
+    border-style: solid;
+  }
+
+  /* ── Trust badges ── */
+  .hero-evolved__badges {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    position: relative;
+    z-index: 1;
+    margin-top: 24px;
+  }
+  .hero-evolved__badge {
+    position: relative;
+    display: inline-flex;
+    cursor: default;
+  }
+  .hero-evolved__badge:hover img,
+  .hero-evolved__badge:focus img {
+    opacity: 0.8;
+  }
+  .hero-evolved__badge:hover::after,
+  .hero-evolved__badge:focus::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--he-text);
+    color: var(--he-bg, #F0EDDF);
+    padding: 4px 10px;
+    border-radius: 4px;
+    font-size: 0.7rem;
+    white-space: nowrap;
+    pointer-events: none;
+    margin-bottom: 4px;
+  }
+  .hero-evolved__badge img {
+    width: 24px;
+    height: 24px;
+    transition: opacity 0.2s ease;
+    opacity: 0.5;
+    /* Badge SVGs are cream (#E7E4CA) for dark backgrounds.
+       brightness(0) converts to black for the light palette. */
+    filter: brightness(0);
+  }
+
+  /* ── Screen reader only ── */
+  .hero-evolved__sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0,0,0,0);
+    white-space: nowrap;
+    border: 0;
+  }
+
+  /* =============================================
+     TABLET / DESKTOP (768px+)
+     ============================================= */
+  @media (min-width: 768px) {
+    .hero-evolved {
+      padding: 96px 0 48px;
+    }
+    .hero-evolved__greeting {
+      font-size: 0.8rem;
+      margin-bottom: 16px;
+    }
+    .hero-evolved__headline {
+      font-size: 2.75rem;
+    }
+    .hero-evolved__subtext {
+      font-size: 1.05rem;
+      margin-bottom: 32px;
+    }
+    .hero-evolved__product-stack {
+      width: auto;
+      max-width: none;
+      height: 52vh;
+      max-height: 520px;
+    }
+    .hero-evolved__product-img {
+      width: auto;
+      height: 100%;
+      filter: drop-shadow(0 16px 32px rgba(0,0,0,0.10))
+              drop-shadow(0 6px 12px rgba(0,0,0,0.06));
+    }
+    .hero-evolved__tagline {
+      font-size: 1.1rem;
+      margin-top: 28px;
+    }
+    .hero-evolved__cat-tab {
+      font-size: 0.9rem;
+      padding: 8px 6px;
+    }
+    .hero-evolved__cat-dot {
+      margin: 0 16px;
+    }
+    .hero-evolved__pills {
+      justify-content: center;
+      overflow: visible;
+      padding: 4px 0;
+      gap: 10px;
+    }
+    .hero-evolved__pill {
+      padding: 10px 24px;
+      font-size: 0.85rem;
+    }
+    .hero-evolved__cta {
+      padding: 14px 40px;
+      font-size: 0.95rem;
+      margin-top: 24px;
+    }
+    .hero-evolved__badges {
+      gap: 20px;
+      margin-top: 28px;
+    }
+    .hero-evolved__badge img {
+      width: 28px;
+      height: 28px;
+    }
+  }
+
+  /* =============================================
+     LARGE DESKTOP (1024px+)
+     ============================================= */
+  @media (min-width: 1024px) {
+    .hero-evolved__headline {
+      font-size: 3.5rem;
+    }
+    .hero-evolved__cat-tab {
+      font-size: 1rem;
+    }
+  }
+</style>
+
+{%- comment -%} ── Liquid variable setup ── {%- endcomment -%}
+{%- liquid
+  assign cat_1_id = section.settings.cat_1_id | default: 'bars'
+  assign cat_2_id = section.settings.cat_2_id | default: 'moons'
+  assign cat_3_id = section.settings.cat_3_id | default: 'bites'
+  assign cat_4_id = section.settings.cat_4_id | default: 'elixirs'
+-%}
+
+<section
+  class="hero-evolved"
+  id="hero-evolved-{{ section.id }}"
+  tabindex="-1"
+  aria-label="Hero"
+  style="
+    --he-bg: {{ section.settings.background_color | default: '#F0EDDF' }};
+    --he-text: {{ section.settings.text_color | default: '#1E4366' }};
+    --he-accent: {{ section.settings.accent_color | default: '#E1D78E' }};
+    --he-grad-top: {{ section.settings.cat_1_grad_top | default: '#F0EDDF' }};
+    --he-grad-bottom: {{ section.settings.cat_1_grad_bottom | default: '#ECEEE8' }};
+    --he-serif: 'P22 Mackinac Pro', Georgia, serif;
+    --he-sans: 'Neue Haas Grotesk Display Pro', 'Inter', 'Helvetica Neue', sans-serif;
+  "
+>
+  {%- comment -%} ── Watermark ── {%- endcomment -%}
+  {%- if section.settings.watermark_image != blank -%}
+    <div class="hero-evolved__watermark" aria-hidden="true">
+      <img
+        src="{{ section.settings.watermark_image | image_url: width: 800 }}"
+        alt=""
+        aria-hidden="true"
+        width="800"
+        height="200"
+        loading="lazy"
+        decoding="async"
+      >
+    </div>
+  {%- endif -%}
+
+  {%- comment -%} ── Time-of-day greeting ── {%- endcomment -%}
+  {%- if section.settings.show_greeting -%}
+    <div class="hero-evolved__greeting he-fade-1">
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <circle cx="12" cy="12" r="10"/>
+        <polyline points="12 6 12 12 16 14"/>
+      </svg>
+      <span class="hero-evolved__greeting-text"></span>
+    </div>
+  {%- endif -%}
+
+  {%- comment -%} ── Headline ── {%- endcomment -%}
+  {%- if section.settings.headline != blank -%}
+    {%- assign heading_tag = section.settings.heading_tag | default: 'h2' -%}
+    <{{ heading_tag }} class="hero-evolved__headline he-fade-2">
+      {{ section.settings.headline }}
+    </{{ heading_tag }}>
+  {%- endif -%}
+  {%- if section.settings.headline_subtext != blank -%}
+    <p class="hero-evolved__subtext he-fade-2">
+      {{ section.settings.headline_subtext }}
+    </p>
+  {%- endif -%}
+
+  {%- comment -%} ── Product image stack ── {%- endcomment -%}
+  <div class="hero-evolved__product-stack he-fade-3" aria-label="Selected product" aria-live="polite">
+    {%- assign img_index = 0 -%}
+    {%- for block in section.blocks -%}
+      {%- if block.type == 'product' and block.settings.image != blank -%}
+        <img
+          src="{{ block.settings.image | image_url: width: 600 }}"
+          srcset="{{ block.settings.image | image_url: width: 300 }} 300w, {{ block.settings.image | image_url: width: 600 }} 600w"
+          sizes="(min-width: 768px) 520px, 260px"
+          class="hero-evolved__product-img{% if block.settings.is_default and block.settings.category == cat_1_id and img_index == 0 %} active{% endif %}"
+          data-product-key="{{ block.id }}"
+          data-category="{{ block.settings.category }}"
+          alt="{{ block.settings.image_alt | escape }}"
+          width="400"
+          height="600"
+          {%- if img_index == 0 %}
+            loading="eager"
+            fetchpriority="high"
+            decoding="sync"
+          {%- else %}
+            loading="lazy"
+            decoding="async"
+          {%- endif %}
+          {{ block.shopify_attributes }}
+        >
+        {%- assign img_index = img_index | plus: 1 -%}
+      {%- endif -%}
+    {%- endfor -%}
+  </div>
+
+  {%- comment -%} ── Tagline (SSR: first default product for SEO) ── {%- endcomment -%}
+  <p class="hero-evolved__tagline he-fade-4" aria-live="polite">
+    {%- for block in section.blocks -%}
+      {%- if block.type == 'product' and block.settings.is_default and block.settings.category == cat_1_id -%}
+        {{ block.settings.tagline }}
+        {%- break -%}
+      {%- endif -%}
+    {%- endfor -%}
+  </p>
+
+  {%- comment -%} ── Category tabs ── {%- endcomment -%}
+  <div class="hero-evolved__cat-tabs he-fade-5" role="tablist" aria-label="Product category">
+    {%- assign cat_rendered = 0 -%}
+    {%- for i in (1..4) -%}
+      {%- assign name_key = 'cat_' | append: i | append: '_name' -%}
+      {%- assign id_key = 'cat_' | append: i | append: '_id' -%}
+      {%- assign cat_name = section.settings[name_key] -%}
+      {%- assign cat_id_val = section.settings[id_key] -%}
+      {%- if cat_name != blank -%}
+        {%- if cat_rendered > 0 -%}
+          <span class="hero-evolved__cat-dot" aria-hidden="true"></span>
+        {%- endif -%}
+        <button
+          class="hero-evolved__cat-tab{% if cat_rendered == 0 %} active{% endif %}"
+          role="tab"
+          aria-selected="{% if cat_rendered == 0 %}true{% else %}false{% endif %}"
+          aria-controls="hero-evolved-panel-{{ section.id }}"
+          data-cat="{{ cat_id_val }}"
+        >
+          {{ cat_name }}
+        </button>
+        {%- assign cat_rendered = cat_rendered | plus: 1 -%}
+      {%- endif -%}
+    {%- endfor -%}
+  </div>
+
+  {%- comment -%} ── Tabpanel: flavour selector region controlled by category tabs ── {%- endcomment -%}
+  <div id="hero-evolved-panel-{{ section.id }}" role="tabpanel" aria-label="Selected category products">
+
+  {%- comment -%} ── Flavour pills (radiogroup within tabpanel) ── {%- endcomment -%}
+  <div class="hero-evolved__pills he-fade-6" role="radiogroup" aria-label="Flavour selector">
+    {%- for block in section.blocks -%}
+      {%- if block.type == 'product' -%}
+        {%- assign pill_is_first_cat = false -%}
+        {%- if block.settings.category == cat_1_id -%}
+          {%- assign pill_is_first_cat = true -%}
+        {%- endif -%}
+        <button
+          class="hero-evolved__pill{% if pill_is_first_cat and block.settings.is_default %} active{% endif %}"
+          role="radio"
+          aria-checked="{% if pill_is_first_cat and block.settings.is_default %}true{% else %}false{% endif %}"
+          data-product-key="{{ block.id }}"
+          data-category="{{ block.settings.category }}"
+          {% unless pill_is_first_cat %}style="display:none"{% endunless %}
+          {{ block.shopify_attributes }}
+        >
+          {{ block.settings.flavour_name }}
+        </button>
+      {%- endif -%}
+    {%- endfor -%}
+  </div>
+
+  {%- comment -%} ── CTA button (SSR: first default product for SEO) ── {%- endcomment -%}
+  {%- assign default_cta_label = 'Shop' -%}
+  {%- assign default_cta_url = '#' -%}
+  {%- assign default_is_prelaunch = false -%}
+  {%- for block in section.blocks -%}
+    {%- if block.type == 'product' and block.settings.is_default and block.settings.category == cat_1_id -%}
+      {%- assign default_cta_label = block.settings.cta_label -%}
+      {%- assign default_cta_url = block.settings.cta_url | default: '#' -%}
+      {%- assign default_is_prelaunch = block.settings.is_prelaunch -%}
+      {%- break -%}
+    {%- endif -%}
+  {%- endfor -%}
+  <a class="hero-evolved__cta he-fade-7{% if default_is_prelaunch %} hero-evolved__cta--notify{% endif %}" href="{{ default_cta_url }}">{{ default_cta_label }}</a>
+
+  <noscript>
+    <div style="text-align:center; padding:24px; position:relative; z-index:1;">
+      <p style="font-size:1rem; margin-bottom:16px;">Enable JavaScript to explore our full range of flavours.</p>
+      <a href="/shop" style="display:inline-block; border:1.5px solid currentColor; border-radius:50px; padding:12px 32px; text-decoration:none; color:inherit; font-size:0.85rem; letter-spacing:0.08em; text-transform:uppercase;">Shop Now</a>
+    </div>
+  </noscript>
+
+  </div>{%- comment -%} /tabpanel {%- endcomment -%}
+
+  {%- comment -%} ── Trust badges ── {%- endcomment -%}
+  {%- if section.settings.show_trust_badges -%}
+    {%- assign has_badges = false -%}
+    {%- for block in section.blocks -%}
+      {%- if block.type == 'trust_badge' -%}
+        {%- assign has_badges = true -%}
+        {%- break -%}
+      {%- endif -%}
+    {%- endfor -%}
+    {%- if has_badges -%}
+      <div class="hero-evolved__badges he-fade-7">
+        {%- for block in section.blocks -%}
+          {%- if block.type == 'trust_badge' -%}
+            <span
+              class="hero-evolved__badge"
+              tabindex="0"
+              role="img"
+              aria-label="{{ block.settings.label | escape }}"
+              data-tooltip="{{ block.settings.label | escape }}"
+              title="{{ block.settings.label | escape }}"
+              {{ block.shopify_attributes }}
+            >
+              {%- if block.settings.icon != blank -%}
+                <img
+                  src="{{ block.settings.icon | image_url: width: 64 }}"
+                  alt="{{ block.settings.label | escape }}"
+                  width="32"
+                  height="32"
+                  loading="eager"
+                  decoding="async"
+                >
+              {%- endif -%}
+            </span>
+          {%- endif -%}
+        {%- endfor -%}
+      </div>
+    {%- endif -%}
+  {%- endif -%}
+</section>
+
+{%- comment -%} ── JSON data island for JS ── {%- endcomment -%}
+<script type="application/json" data-hero-evolved-config="{{ section.id }}">
+{
+  "sectionId": {{ section.id | json }},
+  "showGreeting": {{ section.settings.show_greeting | default: true | json }},
+  "categories": [
+    {
+      "id": {{ section.settings.cat_1_id | default: 'bars' | json }},
+      "name": {{ section.settings.cat_1_name | default: 'Bars' | json }},
+      "gradTop": {{ section.settings.cat_1_grad_top | default: '#F0EDDF' | json }},
+      "gradBottom": {{ section.settings.cat_1_grad_bottom | default: '#ECEEE8' | json }}
+    },
+    {
+      "id": {{ section.settings.cat_2_id | default: 'moons' | json }},
+      "name": {{ section.settings.cat_2_name | default: 'Moons' | json }},
+      "gradTop": {{ section.settings.cat_2_grad_top | default: '#F0EDDF' | json }},
+      "gradBottom": {{ section.settings.cat_2_grad_bottom | default: '#EDE5D4' | json }}
+    },
+    {
+      "id": {{ section.settings.cat_3_id | default: 'bites' | json }},
+      "name": {{ section.settings.cat_3_name | default: 'Bites' | json }},
+      "gradTop": {{ section.settings.cat_3_grad_top | default: '#F0EDDF' | json }},
+      "gradBottom": {{ section.settings.cat_3_grad_bottom | default: '#F0EDDF' | json }}
+    },
+    {
+      "id": {{ section.settings.cat_4_id | default: 'elixirs' | json }},
+      "name": {{ section.settings.cat_4_name | default: 'Elixirs' | json }},
+      "gradTop": {{ section.settings.cat_4_grad_top | default: '#F2EDDB' | json }},
+      "gradBottom": {{ section.settings.cat_4_grad_bottom | default: '#EDE6CE' | json }}
+    }
+  ],
+  "products": [
+    {%- assign comma = '' -%}
+    {%- for block in section.blocks -%}
+      {%- if block.type == 'product' -%}
+        {{ comma }}
+        {
+          "key": {{ block.id | json }},
+          "category": {{ block.settings.category | json }},
+          "name": {{ block.settings.flavour_name | json }},
+          "tagline": {{ block.settings.tagline | json }},
+          "ctaLabel": {{ block.settings.cta_label | json }},
+          "ctaUrl": {{ block.settings.cta_url | default: '#' | json }},
+          "isDefault": {{ block.settings.is_default | json }},
+          "isPrelaunch": {{ block.settings.is_prelaunch | json }}
+        }
+        {%- assign comma = ',' -%}
+      {%- endif -%}
+    {%- endfor -%}
+  ]
+}
+</script>
+
+<script>
+(function() {
+  'use strict';
+
+  function initHeroEvolved() {
+
+  /* ── Fallback data for browser preview (outside Shopify) ── */
+  var FALLBACK = {
+    sectionId: 'preview',
+    showGreeting: true,
+    categories: [
+      { id: 'bars',    name: 'Bars',    gradTop: '#F0EDDF', gradBottom: '#ECEEE8' },
+      { id: 'moons',   name: 'Moons',   gradTop: '#F0EDDF', gradBottom: '#EDE5D4' },
+      { id: 'bites',   name: 'Bites',   gradTop: '#F0EDDF', gradBottom: '#F0EDDF' },
+      { id: 'elixirs', name: 'Elixirs', gradTop: '#F2EDDB', gradBottom: '#EDE6CE' }
+    ],
+    products: [
+      { key: 'p1',  category: 'bars',    name: 'Pure Carob',      tagline: 'Rich and smooth. Nothing added.',               ctaLabel: 'Shop Pure Carob',     ctaUrl: '/shop/bars/pure-carob',     isDefault: true,  isPrelaunch: false },
+      { key: 'p2',  category: 'bars',    name: 'Golden Coconut',  tagline: 'Toasted coconut, pure carob.',                  ctaLabel: 'Shop Golden Coconut', ctaUrl: '/shop/bars/golden-coconut', isDefault: false, isPrelaunch: false },
+      { key: 'p3',  category: 'bars',    name: 'Peppermint',      tagline: 'Clean, cool, naturally sweet.',                 ctaLabel: 'Shop Peppermint',     ctaUrl: '/shop/bars/peppermint',     isDefault: false, isPrelaunch: false },
+      { key: 'p4',  category: 'bars',    name: 'Hazelnut',        tagline: 'Roasted hazelnuts through pure carob.',         ctaLabel: 'Shop Hazelnut',       ctaUrl: '/shop/bars/hazelnut',       isDefault: false, isPrelaunch: false },
+      { key: 'p5',  category: 'moons',   name: 'Hazelnut',        tagline: 'Carob crescents. One is never enough.',         ctaLabel: 'Shop Hazelnut Moon',  ctaUrl: '/shop/moons/hazelnut',      isDefault: true,  isPrelaunch: false },
+      { key: 'p6',  category: 'bites',   name: 'Coconut',         tagline: 'Poppable. Pure. A bag full of good.',           ctaLabel: 'Shop Coconut Bite',   ctaUrl: '/shop/bites/coconut',       isDefault: true,  isPrelaunch: false },
+      { key: 'p7',  category: 'bites',   name: 'Gold',            tagline: 'Smooth and golden. No reason needed.',          ctaLabel: 'Shop Gold Bite',      ctaUrl: '/shop/bites/gold',          isDefault: false, isPrelaunch: false },
+      { key: 'p8',  category: 'elixirs', name: 'Pure',            tagline: 'Warm carob. Nothing extracted.',                ctaLabel: 'Shop Pure Elixir',    ctaUrl: '/shop/elixirs/pure',        isDefault: true,  isPrelaunch: false },
+      { key: 'p9',  category: 'elixirs', name: 'Spiced',          tagline: 'Spiced carob. Something for the cold months.',  ctaLabel: 'Shop Spiced Elixir',  ctaUrl: '/shop/elixirs/spiced',      isDefault: false, isPrelaunch: false }
+    ]
+  };
+
+  /* ── Fallback product images for browser preview ── */
+  var FALLBACK_IMAGES = {
+    p1: 'assets/product_shots/bar_pure_carob.webp',
+    p2: 'assets/product_shots/bar_goji_coconut.webp',
+    p3: 'assets/product_shots/bar_peppermint.webp',
+    p4: 'assets/product_shots/bar_hazelnut.webp',
+    p5: 'assets/product_shots/moon_hazelnut.webp',
+    p6: 'assets/product_shots/bite_coconut.webp',
+    p7: 'assets/product_shots/bite_gold.webp',
+    p8: 'assets/product_shots/elixir_plain.webp',
+    p9: 'assets/product_shots/elixir_spiced.webp'
+  };
+
+  /* ── Parse config ── */
+  var config;
+  var dataEl = document.querySelector('[data-hero-evolved-config]');
+  try {
+    config = JSON.parse(dataEl.textContent);
+    if (!config.products || !config.products.length) throw new Error('empty');
+  } catch(e) {
+    config = FALLBACK;
+  }
+
+  /* ── Find root section element ── */
+  var root = document.querySelector('.hero-evolved');
+  if (!root) return;
+
+  /* ── DOM references ── */
+  var productStack = root.querySelector('.hero-evolved__product-stack');
+  var taglineEl    = root.querySelector('.hero-evolved__tagline');
+  var ctaBtn       = root.querySelector('.hero-evolved__cta');
+  var tabsWrap     = root.querySelector('.hero-evolved__cat-tabs');
+  var pillsWrap    = root.querySelector('.hero-evolved__pills');
+  var greetingText = root.querySelector('.hero-evolved__greeting-text');
+
+  /* ── Build category lookup ── */
+  var catMap = {};
+  config.categories.forEach(function(c) { catMap[c.id] = c; });
+
+  /* ── Build product lookup + category defaults ── */
+  var productMap = {};
+  var categoryDefaults = {};
+  config.products.forEach(function(p) {
+    productMap[p.key] = p;
+    if (p.isDefault && !categoryDefaults[p.category]) {
+      categoryDefaults[p.category] = p.key;
+    }
+  });
+  config.categories.forEach(function(c) {
+    if (!categoryDefaults[c.id]) {
+      var first = config.products.filter(function(p) { return p.category === c.id; })[0];
+      if (first) categoryDefaults[c.id] = first.key;
+    }
+  });
+
+  /* ── Query server-rendered DOM ── */
+  var allImages = productStack.querySelectorAll('.hero-evolved__product-img');
+  var allPills  = pillsWrap.querySelectorAll('.hero-evolved__pill');
+  var allTabs   = tabsWrap.querySelectorAll('.hero-evolved__cat-tab');
+
+  /* ── Browser preview: build full DOM from fallback data ──
+     Only runs when Liquid didn't render (config === FALLBACK).
+     In Shopify, the server-rendered HTML is used directly. */
+  if (config === FALLBACK) {
+    if (allImages.length === 0) {
+      config.products.forEach(function(p) {
+        var img = document.createElement('img');
+        img.className = 'hero-evolved__product-img';
+        img.setAttribute('data-product-key', p.key);
+        img.setAttribute('data-category', p.category);
+        img.alt = 'Maple Moon ' + p.name;
+        img.loading = 'lazy';
+        img.decoding = 'async';
+        if (FALLBACK_IMAGES[p.key]) img.src = FALLBACK_IMAGES[p.key];
+        productStack.appendChild(img);
+      });
+      allImages = productStack.querySelectorAll('.hero-evolved__product-img');
+    }
+
+    if (allTabs.length === 0) {
+      config.categories.forEach(function(c, i) {
+        if (i > 0) {
+          var dot = document.createElement('span');
+          dot.className = 'hero-evolved__cat-dot';
+          dot.setAttribute('aria-hidden', 'true');
+          tabsWrap.appendChild(dot);
+        }
+        var btn = document.createElement('button');
+        btn.className = 'hero-evolved__cat-tab';
+        btn.setAttribute('role', 'tab');
+        btn.setAttribute('aria-selected', 'false');
+        btn.setAttribute('data-cat', c.id);
+        btn.textContent = c.name;
+        tabsWrap.appendChild(btn);
+      });
+      allTabs = tabsWrap.querySelectorAll('.hero-evolved__cat-tab');
+    }
+
+    if (allPills.length === 0) {
+      config.products.forEach(function(p) {
+        var btn = document.createElement('button');
+        btn.className = 'hero-evolved__pill';
+        btn.setAttribute('role', 'radio');
+        btn.setAttribute('aria-checked', 'false');
+        btn.setAttribute('data-product-key', p.key);
+        btn.setAttribute('data-category', p.category);
+        btn.style.display = 'none';
+        btn.textContent = p.name;
+        pillsWrap.appendChild(btn);
+      });
+      allPills = pillsWrap.querySelectorAll('.hero-evolved__pill');
+    }
+  }
+
+  /* ── Build fallback trust badges for browser preview ── */
+  if (config === FALLBACK) {
+    var badgesWrap = root.querySelector('.hero-evolved__badges');
+    if (badgesWrap) {
+      var existingBadges = badgesWrap.querySelectorAll('.hero-evolved__badge img');
+      if (existingBadges.length === 0) {
+        var badgeData = [
+          { icon: 'assets/icon_organic.svg',       label: 'Certified Organic' },
+          { icon: 'assets/icon_gluten_free.svg',    label: 'Gluten Free' },
+          { icon: 'assets/icon_no_artificial.svg',  label: 'No Artificial Additives' },
+          { icon: 'assets/icon_caffeine_free.svg',  label: 'Caffeine Free' },
+          { icon: 'assets/icon_made_in_aus.svg',    label: 'Made in Australia' }
+        ];
+        while (badgesWrap.firstChild) badgesWrap.removeChild(badgesWrap.firstChild);
+        badgeData.forEach(function(b) {
+          var span = document.createElement('span');
+          span.className = 'hero-evolved__badge';
+          span.setAttribute('tabindex', '0');
+          span.setAttribute('role', 'img');
+          span.setAttribute('aria-label', b.label);
+          span.setAttribute('data-tooltip', b.label);
+          span.setAttribute('title', b.label);
+          var img = document.createElement('img');
+          img.src = b.icon;
+          img.alt = b.label;
+          img.width = 32;
+          img.height = 32;
+          span.appendChild(img);
+          badgesWrap.appendChild(span);
+        });
+      }
+    }
+  }
+
+  /* ── Gradient (desktop only) ── */
+  var isDesktop = window.matchMedia('(min-width: 768px)');
+
+  /* ── Set flavour ── */
+  function setFlavour(key) {
+    var data = productMap[key];
+    if (!data) return;
+
+    allPills.forEach(function(p) {
+      var isActive = p.getAttribute('data-product-key') === key;
+      p.classList.toggle('active', isActive);
+      p.setAttribute('aria-checked', isActive ? 'true' : 'false');
+    });
+
+    allImages.forEach(function(img) {
+      img.classList.toggle('active', img.getAttribute('data-product-key') === key);
+    });
+
+    if (taglineEl) taglineEl.textContent = data.tagline;
+    if (ctaBtn) {
+      ctaBtn.textContent = data.ctaLabel;
+      ctaBtn.href = data.ctaUrl || '#';
+      if (data.isPrelaunch) {
+        ctaBtn.classList.add('hero-evolved__cta--notify');
+      } else {
+        ctaBtn.classList.remove('hero-evolved__cta--notify');
+      }
+    }
+  }
+
+  /* ── Set category ── */
+  function setCategory(catId) {
+    allTabs.forEach(function(tab) {
+      var isActive = tab.getAttribute('data-cat') === catId;
+      tab.classList.toggle('active', isActive);
+      tab.setAttribute('aria-selected', isActive ? 'true' : 'false');
+    });
+
+    allPills.forEach(function(pill) {
+      if (pill.getAttribute('data-category') === catId) {
+        pill.style.display = '';
+      } else {
+        pill.style.display = 'none';
+        pill.classList.remove('active');
+        pill.setAttribute('aria-checked', 'false');
+      }
+    });
+
+    var cat = catMap[catId];
+    if (cat && isDesktop.matches) {
+      root.style.setProperty('--he-grad-top', cat.gradTop);
+      root.style.setProperty('--he-grad-bottom', cat.gradBottom);
+    }
+
+    var panel = root.querySelector('[role="tabpanel"]');
+    if (panel && cat) panel.setAttribute('aria-label', cat.name + ' products');
+
+    if (categoryDefaults[catId]) {
+      setFlavour(categoryDefaults[catId]);
+    }
+  }
+
+  /* ── Category tab clicks ── */
+  allTabs.forEach(function(tab) {
+    tab.addEventListener('click', function() {
+      setCategory(this.getAttribute('data-cat'));
+    });
+  });
+
+  /* ── Flavour pill clicks ── */
+  allPills.forEach(function(pill) {
+    pill.addEventListener('click', function() {
+      setFlavour(this.getAttribute('data-product-key'));
+    });
+  });
+
+  /* ── Keyboard nav: category tabs ── */
+  tabsWrap.addEventListener('keydown', function(e) {
+    var tabs = Array.from(allTabs);
+    var idx = tabs.indexOf(document.activeElement);
+    if (idx === -1) return;
+    if (e.key === 'ArrowRight') {
+      e.preventDefault();
+      var next = (idx + 1) % tabs.length;
+      tabs[next].focus();
+      tabs[next].click();
+    } else if (e.key === 'ArrowLeft') {
+      e.preventDefault();
+      var prev = (idx - 1 + tabs.length) % tabs.length;
+      tabs[prev].focus();
+      tabs[prev].click();
+    }
+  });
+
+  /* ── Keyboard nav: flavour pills ── */
+  pillsWrap.addEventListener('keydown', function(e) {
+    var visible = Array.from(allPills).filter(function(p) {
+      return p.style.display !== 'none';
+    });
+    var idx = visible.indexOf(document.activeElement);
+    if (idx === -1) return;
+    if (e.key === 'ArrowRight' || e.key === 'ArrowDown') {
+      e.preventDefault();
+      var next = (idx + 1) % visible.length;
+      visible[next].focus();
+      visible[next].click();
+    } else if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') {
+      e.preventDefault();
+      var prev = (idx - 1 + visible.length) % visible.length;
+      visible[prev].focus();
+      visible[prev].click();
+    }
+  });
+
+  /* ── Time-of-day greeting ── */
+  if (config.showGreeting && greetingText) {
+    var hour = new Date().getHours();
+    var greeting;
+    if (hour >= 5 && hour <= 10)       greeting = 'Good morning';
+    else if (hour >= 11 && hour <= 16) greeting = 'Good afternoon';
+    else if (hour >= 17 && hour <= 20) greeting = 'Good evening';
+    else                               greeting = 'Good night';
+    greetingText.textContent = greeting;
+  }
+
+  /* ── Init: set fallback values if Liquid didn't render ── */
+  if (config === FALLBACK) {
+    root.style.setProperty('--he-bg', '#F0EDDF');
+    root.style.setProperty('--he-text', '#1E4366');
+    root.style.setProperty('--he-accent', '#E1D78E');
+    root.style.setProperty('--he-grad-top', '#F0EDDF');
+    root.style.setProperty('--he-grad-bottom', '#ECEEE8');
+    root.style.setProperty('--he-serif', "'P22 Mackinac Pro', Georgia, serif");
+    root.style.setProperty('--he-sans', "'Neue Haas Grotesk Display Pro', 'Inter', 'Helvetica Neue', sans-serif");
+    var hl = root.querySelector('.hero-evolved__headline');
+    if (hl && !hl.textContent.trim()) hl.textContent = 'What is Carob?';
+    var sub = root.querySelector('.hero-evolved__subtext');
+    if (sub && !sub.textContent.trim()) sub.textContent = 'Not chocolate. Its own thing.';
+  }
+
+  /* ── Init: activate first category ── */
+  var firstCat = config.categories[0];
+  if (firstCat) setCategory(firstCat.id);
+  }
+
+  /* ── Run on page load ── */
+  initHeroEvolved();
+
+  /* ── Re-run when Shopify theme editor re-renders this section ── */
+  document.addEventListener('shopify:section:load', function(e) {
+    if (e.target.querySelector('.hero-evolved')) initHeroEvolved();
+  });
+})();
+</script>
+
+{% schema %}
+{
+  "name": "Hero Evolved",
+  "tag": "div",
+  "class": "hero-evolved-wrapper",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Content"
+    },
+    {
+      "type": "text",
+      "id": "headline",
+      "label": "Headline",
+      "default": "What is Carob?"
+    },
+    {
+      "type": "text",
+      "id": "headline_subtext",
+      "label": "Subtext",
+      "default": "Not chocolate. Its own thing."
+    },
+    {
+      "type": "select",
+      "id": "heading_tag",
+      "label": "Heading level",
+      "options": [
+        { "value": "h1", "label": "H1" },
+        { "value": "h2", "label": "H2 (default)" },
+        { "value": "h3", "label": "H3" }
+      ],
+      "default": "h2",
+      "info": "Use H1 if this is the main heading on the page"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_greeting",
+      "label": "Show time-of-day greeting",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "show_trust_badges",
+      "label": "Show trust badges",
+      "default": true
+    },
+    {
+      "type": "image_picker",
+      "id": "watermark_image",
+      "label": "Background watermark"
+    },
+    {
+      "type": "header",
+      "content": "Colors"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background",
+      "default": "#F0EDDF"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text",
+      "default": "#1E4366"
+    },
+    {
+      "type": "color",
+      "id": "accent_color",
+      "label": "Accent (active pill / hover)",
+      "default": "#E1D78E"
+    },
+    {
+      "type": "header",
+      "content": "Category 1"
+    },
+    {
+      "type": "text",
+      "id": "cat_1_name",
+      "label": "Name",
+      "default": "Bars"
+    },
+    {
+      "type": "text",
+      "id": "cat_1_id",
+      "label": "ID (lowercase, no spaces)",
+      "default": "bars",
+      "info": "Machine-readable key. Must match the category selected on product blocks."
+    },
+    {
+      "type": "color",
+      "id": "cat_1_grad_top",
+      "label": "Gradient top",
+      "default": "#F0EDDF"
+    },
+    {
+      "type": "color",
+      "id": "cat_1_grad_bottom",
+      "label": "Gradient bottom",
+      "default": "#ECEEE8"
+    },
+    {
+      "type": "header",
+      "content": "Category 2"
+    },
+    {
+      "type": "text",
+      "id": "cat_2_name",
+      "label": "Name",
+      "default": "Moons"
+    },
+    {
+      "type": "text",
+      "id": "cat_2_id",
+      "label": "ID (lowercase, no spaces)",
+      "default": "moons"
+    },
+    {
+      "type": "color",
+      "id": "cat_2_grad_top",
+      "label": "Gradient top",
+      "default": "#F0EDDF"
+    },
+    {
+      "type": "color",
+      "id": "cat_2_grad_bottom",
+      "label": "Gradient bottom",
+      "default": "#EDE5D4"
+    },
+    {
+      "type": "header",
+      "content": "Category 3"
+    },
+    {
+      "type": "text",
+      "id": "cat_3_name",
+      "label": "Name",
+      "default": "Bites"
+    },
+    {
+      "type": "text",
+      "id": "cat_3_id",
+      "label": "ID (lowercase, no spaces)",
+      "default": "bites"
+    },
+    {
+      "type": "color",
+      "id": "cat_3_grad_top",
+      "label": "Gradient top",
+      "default": "#F0EDDF"
+    },
+    {
+      "type": "color",
+      "id": "cat_3_grad_bottom",
+      "label": "Gradient bottom",
+      "default": "#F0EDDF"
+    },
+    {
+      "type": "header",
+      "content": "Category 4"
+    },
+    {
+      "type": "text",
+      "id": "cat_4_name",
+      "label": "Name",
+      "default": "Elixirs"
+    },
+    {
+      "type": "text",
+      "id": "cat_4_id",
+      "label": "ID (lowercase, no spaces)",
+      "default": "elixirs"
+    },
+    {
+      "type": "color",
+      "id": "cat_4_grad_top",
+      "label": "Gradient top",
+      "default": "#F2EDDB"
+    },
+    {
+      "type": "color",
+      "id": "cat_4_grad_bottom",
+      "label": "Gradient bottom",
+      "default": "#EDE6CE"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "product",
+      "name": "Product",
+      "limit": 24,
+      "settings": [
+        {
+          "type": "select",
+          "id": "category",
+          "label": "Category",
+          "info": "These 4 categories are fixed. To add a 5th, a developer must update the schema.",
+          "options": [
+            { "value": "bars",    "label": "Bars" },
+            { "value": "moons",   "label": "Moons" },
+            { "value": "bites",   "label": "Bites" },
+            { "value": "elixirs", "label": "Elixirs" }
+          ],
+          "default": "bars"
+        },
+        {
+          "type": "text",
+          "id": "flavour_name",
+          "label": "Flavour name",
+          "default": "Pure Carob"
+        },
+        {
+          "type": "text",
+          "id": "tagline",
+          "label": "Tagline",
+          "default": "Rich and smooth. Nothing added."
+        },
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Product image"
+        },
+        {
+          "type": "text",
+          "id": "image_alt",
+          "label": "Image alt text",
+          "default": "Maple Moon product"
+        },
+        {
+          "type": "text",
+          "id": "cta_label",
+          "label": "CTA text",
+          "default": "Shop Pure Carob",
+          "info": "Use \"Notify Me\" for pre-launch products"
+        },
+        {
+          "type": "url",
+          "id": "cta_url",
+          "label": "CTA link"
+        },
+        {
+          "type": "checkbox",
+          "id": "is_default",
+          "label": "Default for this category",
+          "default": false,
+          "info": "Only one product per category should be marked as default"
+        },
+        {
+          "type": "checkbox",
+          "id": "is_prelaunch",
+          "label": "Pre-launch (Notify Me style)",
+          "default": false,
+          "info": "Renders CTA with dashed border for upcoming products"
+        }
+      ]
+    },
+    {
+      "type": "trust_badge",
+      "name": "Trust Badge",
+      "limit": 6,
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "icon",
+          "label": "Badge icon (SVG)"
+        },
+        {
+          "type": "text",
+          "id": "label",
+          "label": "Label",
+          "default": "Certified Organic"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Hero Evolved",
+      "settings": {
+        "headline": "What is Carob?",
+        "headline_subtext": "Not chocolate. Its own thing.",
+        "show_greeting": true,
+        "show_trust_badges": true,
+        "background_color": "#F0EDDF",
+        "text_color": "#1E4366",
+        "accent_color": "#E1D78E",
+        "cat_1_name": "Bars",
+        "cat_1_id": "bars",
+        "cat_1_grad_top": "#F0EDDF",
+        "cat_1_grad_bottom": "#ECEEE8",
+        "cat_2_name": "Moons",
+        "cat_2_id": "moons",
+        "cat_2_grad_top": "#F0EDDF",
+        "cat_2_grad_bottom": "#EDE5D4",
+        "cat_3_name": "Bites",
+        "cat_3_id": "bites",
+        "cat_3_grad_top": "#F0EDDF",
+        "cat_3_grad_bottom": "#F0EDDF",
+        "cat_4_name": "Elixirs",
+        "cat_4_id": "elixirs",
+        "cat_4_grad_top": "#F2EDDB",
+        "cat_4_grad_bottom": "#EDE6CE"
+      },
+      "blocks": [
+        { "type": "product", "settings": { "category": "bars", "flavour_name": "Pure Carob", "tagline": "Rich and smooth. Nothing added.", "cta_label": "Shop Pure Carob", "image_alt": "Maple Moon Pure Carob Bar", "is_default": true } },
+        { "type": "product", "settings": { "category": "bars", "flavour_name": "Golden Coconut", "tagline": "Toasted coconut, pure carob.", "cta_label": "Shop Golden Coconut", "image_alt": "Maple Moon Golden Coconut Bar" } },
+        { "type": "product", "settings": { "category": "bars", "flavour_name": "Peppermint", "tagline": "Clean, cool, naturally sweet.", "cta_label": "Shop Peppermint", "image_alt": "Maple Moon Peppermint Bar" } },
+        { "type": "product", "settings": { "category": "bars", "flavour_name": "Hazelnut", "tagline": "Roasted hazelnuts through pure carob.", "cta_label": "Shop Hazelnut", "image_alt": "Maple Moon Hazelnut Bar" } },
+        { "type": "product", "settings": { "category": "moons", "flavour_name": "Hazelnut", "tagline": "Carob crescents. One is never enough.", "cta_label": "Shop Hazelnut Moon", "image_alt": "Maple Moon Hazelnut Moon", "is_default": true } },
+        { "type": "product", "settings": { "category": "bites", "flavour_name": "Coconut", "tagline": "Poppable. Pure. A bag full of good.", "cta_label": "Shop Coconut Bite", "image_alt": "Maple Moon Coconut Bite", "is_default": true } },
+        { "type": "product", "settings": { "category": "bites", "flavour_name": "Gold", "tagline": "Smooth and golden. No reason needed.", "cta_label": "Shop Gold Bite", "image_alt": "Maple Moon Gold Bite" } },
+        { "type": "product", "settings": { "category": "elixirs", "flavour_name": "Pure", "tagline": "Warm carob. Nothing extracted.", "cta_label": "Shop Pure Elixir", "image_alt": "Maple Moon Pure Elixir", "is_default": true } },
+        { "type": "product", "settings": { "category": "elixirs", "flavour_name": "Spiced", "tagline": "Spiced carob. Something for the cold months.", "cta_label": "Shop Spiced Elixir", "image_alt": "Maple Moon Spiced Elixir" } },
+        { "type": "trust_badge", "settings": { "label": "Certified Organic" } },
+        { "type": "trust_badge", "settings": { "label": "Gluten Free" } },
+        { "type": "trust_badge", "settings": { "label": "No Artificial Additives" } },
+        { "type": "trust_badge", "settings": { "label": "Caffeine Free" } },
+        { "type": "trust_badge", "settings": { "label": "Made in Australia" } }
+      ]
+    }
+  ]
+}
+{% endschema %}

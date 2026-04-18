@@ -1,0 +1,215 @@
+{%- comment -%}
+  MapleMoon Collection Main Section
+  Renders products from a Shopify collection automatically.
+  Desktop: CSS grid. Mobile: 2-column grid (not carousel — collection pages are browse-heavy).
+  No prices in grid (brand rule). Per-product CTA links to product page.
+{%- endcomment -%}
+
+<style>
+  .coll-main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 80px 24px 64px;
+    color: var(--cm-text, #1E4366);
+    font-family: 'Neue Haas Grotesk Display Pro', 'Inter', 'Helvetica Neue', sans-serif;
+  }
+  .coll-main__header {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  .coll-main__title {
+    font-family: 'P22 Mackinac Pro', Georgia, serif;
+    font-size: 2.2rem;
+    font-weight: 400;
+    margin: 0 0 8px;
+    letter-spacing: 0.03em;
+  }
+  .coll-main__description {
+    font-size: 0.95rem;
+    font-weight: 300;
+    opacity: 0.6;
+    max-width: 500px;
+    margin: 0 auto;
+    line-height: 1.6;
+  }
+
+  .coll-main__grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  .coll-main__card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    text-decoration: none;
+    color: inherit;
+    padding: 16px;
+  }
+  .coll-main__card-img {
+    width: 100%;
+    aspect-ratio: 3/4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--cm-warm, #EDE8D4);
+    border-radius: 12px;
+    overflow: hidden;
+    margin-bottom: 12px;
+  }
+  .coll-main__card-img img {
+    width: 80%;
+    height: 80%;
+    object-fit: contain;
+    filter: drop-shadow(0 4px 8px rgba(0,0,0,0.06));
+  }
+  .coll-main__card-title {
+    font-family: 'P22 Mackinac Pro', Georgia, serif;
+    font-size: 1rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    text-decoration: underline;
+    text-decoration-color: var(--cm-accent, #E1D78E);
+    text-underline-offset: 4px;
+    text-decoration-thickness: 2px;
+  }
+  .coll-main__card-subtitle {
+    font-size: 0.8rem;
+    font-weight: 300;
+    opacity: 0.5;
+    margin-top: 2px;
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    .coll-main__card {
+      transition: transform 0.3s ease;
+    }
+    .coll-main__card:hover {
+      transform: translateY(-4px);
+    }
+    .coll-main__card-img img {
+      transition: transform 0.3s ease;
+    }
+    .coll-main__card:hover .coll-main__card-img img {
+      transform: scale(1.03);
+    }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .coll-main__card, .coll-main__card * {
+      transition: none !important;
+    }
+  }
+
+  .coll-main__empty {
+    text-align: center;
+    padding: 48px 0;
+    font-size: 0.95rem;
+    font-weight: 300;
+    opacity: 0.6;
+  }
+
+  @media (min-width: 768px) {
+    .coll-main { padding: 96px 48px 80px; }
+    .coll-main__title { font-size: 2.8rem; }
+    .coll-main__grid {
+      grid-template-columns: repeat(3, 1fr);
+      gap: 32px;
+    }
+    .coll-main__card-title { font-size: 1.15rem; }
+  }
+
+  @media (min-width: 1024px) {
+    .coll-main__grid {
+      grid-template-columns: repeat(4, 1fr);
+      gap: 40px;
+    }
+  }
+</style>
+
+<section
+  class="coll-main"
+  style="
+    --cm-text: {{ section.settings.text_color | default: '#1E4366' }};
+    --cm-accent: {{ section.settings.accent_color | default: '#E1D78E' }};
+    --cm-warm: {{ section.settings.card_bg_color | default: '#EDE8D4' }};
+  "
+>
+  <div class="coll-main__header">
+    <h1 class="coll-main__title">{{ collection.title | default: section.settings.fallback_title | default: 'Shop' }}</h1>
+    {%- if collection.description != blank -%}
+      <p class="coll-main__description">{{ collection.description }}</p>
+    {%- endif -%}
+  </div>
+
+  {%- if collection.products.size > 0 -%}
+    <div class="coll-main__grid">
+      {%- for product in collection.products -%}
+        <a href="{{ product.url }}" class="coll-main__card">
+          <div class="coll-main__card-img">
+            {%- if product.featured_image -%}
+              <img
+                src="{{ product.featured_image | image_url: width: 400 }}"
+                srcset="{{ product.featured_image | image_url: width: 200 }} 200w, {{ product.featured_image | image_url: width: 400 }} 400w"
+                sizes="(min-width: 1024px) 25vw, (min-width: 768px) 33vw, 50vw"
+                alt="{{ product.featured_image.alt | default: product.title | escape }}"
+                width="400" height="600"
+                loading="lazy" decoding="async"
+              >
+            {%- endif -%}
+          </div>
+          <span class="coll-main__card-title">{{ product.title }}</span>
+          {%- if product.metafields.custom.subtitle != blank -%}
+            <span class="coll-main__card-subtitle">{{ product.metafields.custom.subtitle }}</span>
+          {%- elsif product.type != blank -%}
+            <span class="coll-main__card-subtitle">{{ product.type }}</span>
+          {%- endif -%}
+        </a>
+      {%- endfor -%}
+    </div>
+
+    {%- comment -%} Pagination — requires {% paginate %} wrapper in template {%- endcomment -%}
+    {%- if paginate.pages > 1 -%}
+      <nav class="coll-main__pagination" aria-label="Pagination">
+        {{ paginate | default_pagination }}
+      </nav>
+    {%- endif -%}
+  {%- else -%}
+    <p class="coll-main__empty">No products in this collection yet.</p>
+  {%- endif -%}
+</section>
+
+{% schema %}
+{
+  "name": "Collection Grid",
+  "tag": "div",
+  "settings": [
+    {
+      "type": "text",
+      "id": "fallback_title",
+      "label": "Fallback title (if no collection)",
+      "default": "Shop"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text",
+      "default": "#1E4366"
+    },
+    {
+      "type": "color",
+      "id": "accent_color",
+      "label": "Accent (underline)",
+      "default": "#E1D78E"
+    },
+    {
+      "type": "color",
+      "id": "card_bg_color",
+      "label": "Card background",
+      "default": "#EDE8D4"
+    }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Our Story | MapleMoon</title>
+<meta name="description" content="MapleMoon makes handmade carob from Australian-grown pods in Byron Bay. Small batch, organic, vegan. Carob that stands on its own.">
+<meta name="theme-color" content="#7B9DBF">
+<meta property="og:title" content="Our Story — MapleMoon">
+<meta property="og:description" content="Australian carob, slow-roasted and hand-tempered in Byron Bay. We make bars, moons, bites, and elixirs from pure carob and cacao butter.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="/assets/hero_shots/byron_bay_silhouette.webp">
+<meta property="og:site_name" content="Maple Moon">
+<link rel="icon" href="/assets/brand/maplemoon_logo.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/assets/brand/maplemoon_logo.svg">
+<link rel="stylesheet" href="/brand_kit.css">
+<link rel="stylesheet" href="/shared.css">
+<style>
+/* ══════════════════════════════════════
+   OUR STORY — Page-specific styles
+   ══════════════════════════════════════ */
+
+body {
+  font-family: var(--mm-sans);
+  background: var(--warm-bg);
+}
+
+/* ── Hero ── */
+.story-hero {
+  position: relative;
+  min-height: 60vh;
+  display: flex;
+  align-items: flex-end;
+  overflow: hidden;
+}
+.story-hero-bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 60%;
+}
+.story-hero-overlay {
+  position: relative;
+  z-index: 1;
+  padding: 48px 24px;
+  background: linear-gradient(transparent, rgba(245, 240, 232, 0.95));
+  width: 100%;
+}
+.story-hero-badge {
+  font-family: var(--mm-sans);
+  font-size: 0.7rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--accent-blue);
+  display: block;
+  margin-bottom: 12px;
+}
+.story-hero-title {
+  font-family: var(--mm-serif);
+  font-size: 2.2rem;
+  font-weight: 400;
+  color: var(--text-primary);
+  line-height: 1.15;
+  margin: 0 0 16px;
+}
+.story-hero-sub {
+  font-family: var(--mm-sans);
+  font-size: 1rem;
+  font-weight: 300;
+  line-height: 1.6;
+  color: var(--text-secondary);
+  max-width: 520px;
+}
+
+/* ── Split sections ── */
+.story-section {
+  padding: 64px 24px;
+  background: var(--warm-bg);
+}
+.story-section:nth-child(even) { background: var(--warm-bg-alt); }
+.story-split {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+.story-text { flex: 1; }
+.story-label {
+  font-family: var(--mm-sans);
+  font-size: 0.7rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--accent-blue);
+  display: block;
+  margin-bottom: 12px;
+}
+.story-heading {
+  font-family: var(--mm-serif);
+  font-size: 1.8rem;
+  font-weight: 400;
+  color: var(--text-primary);
+  line-height: 1.2;
+  margin: 0 0 20px;
+}
+.story-section p {
+  font-family: var(--mm-sans);
+  font-size: 0.95rem;
+  font-weight: 300;
+  line-height: 1.7;
+  color: var(--text-secondary);
+  margin-bottom: 16px;
+}
+.story-image {
+  flex-shrink: 0;
+}
+.story-image img {
+  width: 100%;
+  border-radius: 12px;
+  object-fit: cover;
+  max-height: 400px;
+}
+
+/* ── Centred layout (Mission) ── */
+.story-centred {
+  max-width: 640px;
+  margin: 0 auto;
+  text-align: center;
+}
+.story-centred .story-label { margin-bottom: 16px; }
+.story-centred .story-heading { margin-bottom: 24px; }
+.story-cta {
+  display: inline-block;
+  margin-top: 16px;
+  padding: 14px 40px;
+  background: var(--accent-blue);
+  color: #fff;
+  text-decoration: none;
+  border-radius: 6px;
+  font-family: var(--mm-sans);
+  font-size: 0.85rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  transition: opacity 0.2s;
+  min-height: 44px;
+}
+.story-cta:hover { opacity: 0.85; }
+
+/* ── Desktop (768px+) ── */
+@media (min-width: 768px) {
+  .story-hero { min-height: 70vh; }
+  .story-hero-overlay { padding: 80px 56px; }
+  .story-hero-title { font-size: 3rem; }
+
+  .story-section { padding: 100px 48px; }
+  .story-split {
+    flex-direction: row;
+    align-items: center;
+    gap: 56px;
+  }
+  .story-split.reverse { flex-direction: row-reverse; }
+  .story-image { width: 45%; }
+  .story-heading { font-size: 2.2rem; }
+}
+</style>
+</head>
+<body>
+
+<a href="#main" class="skip-link">Skip to content</a>
+<input type="checkbox" id="menu-toggle" hidden>
+<div class="mobile-menu" role="dialog" aria-modal="true" aria-label="Navigation menu" aria-hidden="true" inert>
+  <button class="menu-close" aria-label="Close menu">&times;</button>
+  <a href="/collections/bars.html">Bars</a>
+  <a href="/homepage.html#range">Moons</a>
+  <a href="/homepage.html#range">Elixirs</a>
+  <div class="menu-divider"></div>
+  <a href="/our-story.html">Our Story</a>
+  <a href="/collections/bars.html">Shop</a>
+  <a href="/faq.html">FAQ</a>
+</div>
+<header class="site-header" id="site-header">
+  <a href="/homepage.html" class="header-logo-link"><img src="/assets/brand/maplemoon_logo.svg" alt="Maple Moon" class="header-logo" width="36" height="36" loading="eager" decoding="async"></a>
+  <nav class="header-nav">
+    <a href="/our-story.html">Our Story</a>
+    <a href="/collections/bars.html">Shop</a>
+    <a href="/faq.html">FAQ</a>
+  </nav>
+  <label for="menu-toggle" class="hamburger" role="button" aria-label="Menu" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </label>
+</header>
+
+<!-- ═══════════════════════════════════
+     HERO
+     ═══════════════════════════════════ -->
+<main id="main" tabindex="-1">
+<section class="story-hero" aria-label="Our Story">
+  <img src="/assets/hero_shots/byron_bay_silhouette.webp" alt="Byron Bay coastline at sunset" class="story-hero-bg" loading="eager" decoding="async">
+  <div class="story-hero-overlay">
+    <span class="story-hero-badge fade-up">Our Story</span>
+    <h1 class="story-hero-title fade-up">Carob Isn't Trying<br>to Be Chocolate</h1>
+    <p class="story-hero-sub fade-up">It's its own thing. Naturally sweet, caffeine-free, and grown right here in Australia.</p>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════
+     THE ORIGIN
+     ═══════════════════════════════════ -->
+<section class="story-section" aria-label="The Origin">
+  <div class="story-split">
+    <div class="story-text fade-up">
+      <span class="story-label">The Origin</span>
+      <h2 class="story-heading">Why Does Carob Get Treated as a Substitute?</h2>
+      <p>Carob isn't trying to be chocolate. It's its own thing. Naturally sweet, caffeine-free, and grown right here in Australia. We started MapleMoon in Byron Bay because we believed carob deserved better than the back shelf. Better ingredients, better craft, better packaging. Something you'd reach for because you wanted it, not because you were avoiding something else.</p>
+      <p>Australian-grown carob pods, sun-ripened and slow-roasted. That's the starting point. Everything we make comes back to the pod.</p>
+    </div>
+    <div class="story-image fade-up">
+      <img src="/assets/stock/stock_carob_pods_hand.jpg" alt="Hand holding Australian carob pods" loading="lazy" decoding="async">
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════
+     THE PROCESS
+     ═══════════════════════════════════ -->
+<section class="story-section" aria-label="The Process">
+  <div class="story-split reverse">
+    <div class="story-text fade-up">
+      <span class="story-label">The Process</span>
+      <h2 class="story-heading">Handmade in Small Batches</h2>
+      <p>Every MapleMoon product is handmade in small batches in our Byron Bay kitchen. We work with organic Australian carob and cacao butter. No compound, no fillers, no shortcuts.</p>
+      <p>The carob is roasted low and slow to bring out its natural sweetness, then milled and combined with cacao butter. Each batch is hand-tempered, hand-moulded, and hand-packed. The process is slower than it needs to be. We prefer it that way.</p>
+      <p>Our bars, crescent moons, eclipse bites, and elixirs are all organic, vegan, gluten-free, and caffeine-free. Not because we're chasing claims, because that's what happens when you use good ingredients and leave out everything else.</p>
+    </div>
+    <div class="story-image fade-up">
+      <img src="/assets/stock/stock_kitchen_morning.jpg" alt="Small-batch kitchen workspace, morning light" loading="lazy" decoding="async">
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════
+     THE MISSION
+     ═══════════════════════════════════ -->
+<section class="story-section" aria-label="The Mission">
+  <div class="story-centred fade-up">
+    <span class="story-label">The Mission</span>
+    <h2 class="story-heading">Carob That Stands on Its Own</h2>
+    <p>We want carob to stand on its own. Not as a substitute, not as an alternative, but as something worth choosing for what it is.</p>
+    <p>That means premium quality in everything. The ingredients, the craft, the packaging, the experience. It means staying small enough to make everything by hand. It means sourcing Australian carob and supporting local growers.</p>
+    <p>MapleMoon is a Byron Bay company. The coast is where we make, where we pack, and where we ship from. Every product that leaves here carries a bit of this place with it.</p>
+    <a href="/collections/bars.html" class="story-cta">Shop the Range</a>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════
+     TRUST BAR
+     ═══════════════════════════════════ -->
+<section class="trust-bar" aria-label="Credentials">
+  <div class="trust-item fade-up">
+    <img src="/assets/brand/icon_organic.svg" alt="" loading="lazy" decoding="async">
+    <span>Certified Organic</span>
+  </div>
+  <div class="trust-item fade-up">
+    <img src="/assets/brand/icon_vegan.svg" alt="" loading="lazy" decoding="async">
+    <span>100% Vegan</span>
+  </div>
+  <div class="trust-item fade-up">
+    <img src="/assets/brand/icon_caffeine_free.svg" alt="" loading="lazy" decoding="async">
+    <span>Caffeine Free</span>
+  </div>
+  <div class="trust-item fade-up">
+    <img src="/assets/brand/icon_gluten_free.svg" alt="" loading="lazy" decoding="async">
+    <span>Gluten Free</span>
+  </div>
+  <div class="trust-item fade-up">
+    <img src="/assets/brand/icon_made_in_aus.svg" alt="" loading="lazy" decoding="async">
+    <span>Made in Australia</span>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════
+     FOOTER
+     ═══════════════════════════════════ -->
+<footer class="site-footer" id="footer">
+  <div class="footer-top">
+    <img src="/assets/brand/maplemoon_logo.svg" alt="Maple Moon" class="footer-logo" width="48" height="48" loading="lazy" decoding="async">
+    <nav class="footer-nav">
+      <a href="/our-story.html">Our Story</a>
+      <a href="/collections/bars.html">Shop</a>
+      <a href="/faq.html">FAQ</a>
+    </nav>
+  </div>
+  <div class="footer-newsletter">
+    <p>Stay in the loop</p>
+    <form class="newsletter-form" onsubmit="return false;">
+      <input type="email" placeholder="Your email" aria-label="Email address">
+      <button type="submit" disabled>Coming soon</button>
+    </form>
+    <p class="nl-note" style="font-size:0.8em;opacity:0.7;margin-top:0.5em;font-style:italic;">Newsletter launching soon — hello@maplemoon.com.au for early updates.</p>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2026 Maple Moon. Handmade in Byron Bay, Australia.</p>
+  </div>
+</footer>
+
+</main>
+
+<script src="/shared.js"></script>
+
+</body>
+</html>

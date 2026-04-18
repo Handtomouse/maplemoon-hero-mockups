@@ -33,13 +33,24 @@
   html, body { height: 100%; overflow: hidden; }
 
   body {
-    background: var(--light-bg);
+    background: url('assets/hero_shots/bg_v19_light.png') center/cover no-repeat fixed;
     font-family: var(--mm-sans);
     color: var(--mm-navy);
     position: relative;
     min-height: 100vh;
     min-height: 100dvh;
     text-rendering: optimizeLegibility;
+  }
+
+  /* Soft cream overlay for depth */
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background: var(--light-bg);
+    opacity: 0.3;
+    z-index: 0;
+    pointer-events: none;
   }
 
   @media (prefers-reduced-motion: no-preference) {
@@ -142,7 +153,7 @@
     display: flex; justify-content: flex-end; align-items: flex-start;
     padding: 20px;
   }
-  .header-mobile .logo-img { width: 40px; height: auto; }
+  .header-mobile .logo-img { width: 72px; height: auto; }
 
   /* ── Desktop nav bar ── */
   .header-desktop { display: none; }
@@ -155,12 +166,15 @@
     overflow: hidden;
     gap: 14px;
     padding: 70px 0 28px;
+    z-index: 1;
   }
 
-  /* ── Watermark (gold-tinted) ── */
+  /* ── Watermark (gold-tinted, full-width darker beige) ── */
   .carob-watermark-wrap img {
-    filter: sepia(1) saturate(2) hue-rotate(-10deg) brightness(0.85);
-    opacity: 0.12;
+    width: 110%;
+    max-width: none;
+    filter: sepia(1) saturate(2.5) hue-rotate(-10deg) brightness(0.7);
+    opacity: 0.18;
   }
 
   /* ── Product card scroll (mobile) ── */
@@ -320,26 +334,29 @@
     .header-desktop {
       display: flex; align-items: center;
       position: fixed; top: 0; left: 0; right: 0; z-index: var(--z-fixed);
-      padding: 28px 40px;
-      background: rgba(240, 237, 223, 0.6);
-      backdrop-filter: blur(12px);
-      -webkit-backdrop-filter: blur(12px);
+      padding: 16px 40px;
+      background: transparent;
+      transition: background 0.3s ease, backdrop-filter 0.3s ease;
     }
-    @supports not (backdrop-filter: blur(1px)) {
-      .header-desktop { background: rgba(240, 237, 223, 0.9); }
+    .header-desktop.scrolled {
+      backdrop-filter: blur(8px) saturate(120%);
+      -webkit-backdrop-filter: blur(8px) saturate(120%);
+      background: rgba(240, 237, 223, 0.6);
+      border-bottom: 1px solid rgba(30,67,102,0.1);
     }
     .header-desktop nav {
       flex: 1; display: flex; align-items: center;
       justify-content: center; gap: 40px;
     }
     .header-desktop nav a {
-      font-family: var(--mm-sans); font-size: 1rem;
+      font-family: var(--mm-sans); font-size: 0.85rem;
       font-weight: 400; color: var(--mm-navy); text-decoration: none;
-      opacity: 0.9; transition: opacity 0.2s;
+      letter-spacing: 0.07em;
+      opacity: 0.7; transition: opacity 0.2s;
     }
     .header-desktop nav a:hover { opacity: 0.5; }
     .header-desktop .logo-desktop {
-      width: 80px; height: auto; margin-left: auto; flex-shrink: 0;
+      width: 160px; height: auto; margin-left: auto; flex-shrink: 0;
     }
 
     .range-headline { font-size: 3.12rem; }
@@ -349,12 +366,13 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      justify-content: center;
+      justify-content: flex-start;
       width: 100%; height: 100vh; height: 100dvh;
       position: relative;
       overflow: hidden;
-      padding-top: 40px;
+      padding-top: 100px;
       padding-bottom: 40px;
+      z-index: 1;
     }
 
     /* 3-column layout */
@@ -476,7 +494,7 @@
   }
 
   @media (min-width: 1024px) {
-    .header-desktop { padding: 32px 48px; }
+    .header-desktop { padding: 16px 48px; }
     .header-desktop nav { gap: 52px; }
     .range-col .col-image { height: 330px; }
     .range-col .col-image img { max-height: 330px; }
@@ -552,7 +570,7 @@
     <!-- Card 2: Moons -->
     <div class="product-card" data-index="1">
       <div class="card-image">
-        <img src="assets/product_shots/moon_hazelnut.webp" alt="Maple Moon Hazelnut Moon" width="400" height="400" loading="lazy" decoding="async">
+        <img src="assets/product_shots/moon_hazelnut.webp" alt="Maple Moon Hazelnut Moon" width="400" height="400" loading="eager" decoding="async">
       </div>
       <span class="card-label">Moons</span>
       <span class="card-subtitle">1 Flavour</span>
@@ -562,7 +580,7 @@
     <!-- Card 3: Elixirs -->
     <div class="product-card" data-index="2">
       <div class="card-image">
-        <img src="assets/product_shots/elixir_plain.webp" alt="Maple Moon Pure Elixir" width="400" height="600" loading="lazy" decoding="async">
+        <img src="assets/product_shots/elixir_plain.webp" alt="Maple Moon Pure Elixir" width="400" height="600" loading="eager" decoding="async">
       </div>
       <span class="card-label">Elixirs</span>
       <span class="card-subtitle">2 Flavours</span>
@@ -604,7 +622,7 @@
 
     <div class="range-col fade-4">
       <div class="col-image">
-        <img src="assets/product_shots/moon_hazelnut.webp" alt="Maple Moon Hazelnut Moon" width="400" height="400" loading="lazy" decoding="async">
+        <img src="assets/product_shots/moon_hazelnut.webp" alt="Maple Moon Hazelnut Moon" width="400" height="400" loading="eager" decoding="async">
       </div>
       <div class="col-label">Moons</div>
       <div class="col-subtitle">1 Flavour</div>
@@ -613,7 +631,7 @@
 
     <div class="range-col fade-5">
       <div class="col-image">
-        <img src="assets/product_shots/elixir_plain.webp" alt="Maple Moon Pure Elixir" width="400" height="600" loading="lazy" decoding="async">
+        <img src="assets/product_shots/elixir_plain.webp" alt="Maple Moon Pure Elixir" width="400" height="600" loading="eager" decoding="async">
       </div>
       <div class="col-label">Elixirs</div>
       <div class="col-subtitle">2 Flavours</div>
@@ -727,6 +745,13 @@
     cards.forEach(function(c) { c.classList.add('card-visible'); });
   }, 50);
 })();
+</script>
+
+<script>
+window.addEventListener('scroll', function() {
+  var h = document.querySelector('.header-desktop');
+  if (h) h.classList.toggle('scrolled', window.scrollY > 60);
+});
 </script>
 
 </body>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ 'Gift Card' }} | {{ shop.name }}</title>
+  {{ content_for_header }}
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      background: #F0EDDF;
+      color: #1E4366;
+      font-family: 'Neue Haas Grotesk Display Pro', 'Inter', 'Helvetica Neue', sans-serif;
+      -webkit-font-smoothing: antialiased;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .gift-card {
+      max-width: 480px;
+      width: 100%;
+      padding: 48px 24px;
+      text-align: center;
+    }
+    .gift-card__shop { font-size: 0.7rem; font-weight: 500; text-transform: uppercase; letter-spacing: 0.12em; opacity: 0.4; margin-bottom: 24px; }
+    .gift-card__title { font-family: 'P22 Mackinac Pro', Georgia, serif; font-size: 2rem; font-weight: 400; margin: 0 0 8px; }
+    .gift-card__amount { font-family: 'P22 Mackinac Pro', Georgia, serif; font-size: 3rem; font-weight: 400; margin: 24px 0; }
+    .gift-card__image { width: 100%; max-width: 320px; margin: 0 auto 24px; border-radius: 16px; overflow: hidden; }
+    .gift-card__image img { width: 100%; height: auto; display: block; }
+    .gift-card__code-wrap { margin: 24px 0; }
+    .gift-card__code-label { font-size: 0.75rem; font-weight: 400; opacity: 0.5; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 8px; }
+    .gift-card__code { font-family: 'Source Code Pro', monospace; font-size: 1.4rem; font-weight: 600; letter-spacing: 0.1em; padding: 16px 24px; border: 2px dashed rgba(30,67,102,0.2); border-radius: 12px; display: inline-block; user-select: all; }
+    .gift-card__instructions { font-size: 0.85rem; font-weight: 300; opacity: 0.6; line-height: 1.6; max-width: 360px; margin: 24px auto 0; }
+    .gift-card__qr { margin: 24px auto 0; }
+    .gift-card__shop-btn { display: inline-flex; align-items: center; justify-content: center; border: 1.5px solid #1E4366; color: #1E4366; background: transparent; border-radius: 50px; padding: 14px 40px; min-height: 48px; font-family: inherit; font-size: 0.85rem; font-weight: 400; letter-spacing: 0.08em; text-transform: uppercase; text-decoration: none; margin-top: 32px; transition: background 0.3s, color 0.3s; }
+    .gift-card__shop-btn:hover { background: #1E4366; color: #F0EDDF; }
+    @media (min-width: 768px) { .gift-card__title { font-size: 2.5rem; } .gift-card__amount { font-size: 3.5rem; } }
+  </style>
+</head>
+<body>
+  <div class="gift-card">
+    <p class="gift-card__shop">{{ shop.name }}</p>
+    <h1 class="gift-card__title">Gift Card</h1>
+    <p class="gift-card__amount">{{ gift_card.balance | money }}</p>
+
+    {%- if gift_card.image -%}
+      <div class="gift-card__image">
+        <img src="{{ gift_card.image | image_url: width: 640 }}" alt="Gift card" width="640" height="400" loading="eager">
+      </div>
+    {%- endif -%}
+
+    <div class="gift-card__code-wrap">
+      <p class="gift-card__code-label">Your gift card code</p>
+      <p class="gift-card__code" id="gift-card-code">{{ gift_card.code | format_code }}</p>
+    </div>
+
+    {%- if gift_card.pass_url -%}
+      <a href="{{ gift_card.pass_url }}">Add to Apple Wallet</a>
+    {%- endif -%}
+
+    {%- assign gift_card_expiry_date = gift_card.expires_on | date: '%B %d, %Y' -%}
+    {%- if gift_card.expired -%}
+      <p class="gift-card__instructions">This gift card expired on {{ gift_card_expiry_date }}.</p>
+    {%- elsif gift_card.expires_on -%}
+      <p class="gift-card__instructions">Use this code at checkout. Valid until {{ gift_card_expiry_date }}.</p>
+    {%- else -%}
+      <p class="gift-card__instructions">Use this code at checkout. This gift card has no expiry date.</p>
+    {%- endif -%}
+
+    {%- if gift_card.qr_identifier -%}
+      <div class="gift-card__qr">
+        <img src="shopify://shop_images/{{ gift_card.qr_identifier }}.png" alt="QR code" width="120" height="120" loading="lazy">
+      </div>
+    {%- endif -%}
+
+    <a href="{{ shop.url }}" class="gift-card__shop-btn">Shop Now</a>
+  </div>
+</body>
+</html>

@@ -1,0 +1,778 @@
+{%- comment -%}
+  MapleMoon Product Grid / Collection Showcase Section
+  Based on V19 (Light Grid) and V4 (The Range).
+  Mobile: horizontal scroll carousel with snap + scroll dots.
+  Desktop: responsive CSS grid with hover lift + scale.
+  No prices (brand rule).
+{%- endcomment -%}
+
+{%- assign heading_tag = section.settings.heading_tag | default: 'h2' -%}
+
+<style>
+  /* =============================================
+     PRODUCT GRID — Base (mobile-first)
+     ============================================= */
+  .prod-grid {
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    min-height: 100dvh;
+    padding: 64px 0 max(40px, env(safe-area-inset-bottom));
+    background: var(--pg-bg);
+    color: var(--pg-text);
+    font-family: var(--pg-sans, 'Neue Haas Grotesk Display Pro', 'Inter', 'Helvetica Neue', sans-serif);
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    overflow: hidden;
+    justify-content: center;
+    gap: 14px;
+  }
+
+  /* ── Fade-in ── */
+  @media (prefers-reduced-motion: no-preference) {
+    @keyframes pgFadeIn {
+      from { opacity: 0; transform: translateY(8px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .pg-fade-1 { animation: pgFadeIn 0.6s ease both 0.1s; }
+    .pg-fade-2 { animation: pgFadeIn 0.6s ease both 0.25s; }
+    .pg-fade-3 { animation: pgFadeIn 0.6s ease both 0.4s; }
+    .pg-fade-4 { animation: pgFadeIn 0.6s ease both 0.55s; }
+    .pg-fade-5 { animation: pgFadeIn 0.6s ease both 0.7s; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .prod-grid, .prod-grid * {
+      transition: none !important;
+      animation: none !important;
+    }
+  }
+
+  /* ── Watermark ── */
+  .prod-grid__watermark {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    pointer-events: none;
+    z-index: 0;
+  }
+  .prod-grid__watermark img {
+    width: 80%;
+    max-width: 800px;
+    height: auto;
+    filter: sepia(1) saturate(2) hue-rotate(-10deg) brightness(0.85);
+    opacity: 0.12;
+  }
+
+  /* ── Headline ── */
+  .prod-grid__headline {
+    font-family: var(--pg-serif, 'P22 Mackinac Pro', Georgia, serif);
+    font-weight: 400;
+    font-size: 2.64rem;
+    color: var(--pg-text);
+    text-align: center;
+    position: relative;
+    z-index: 1;
+    margin: 0 0 8px;
+    padding: 0 24px;
+  }
+
+  /* ── Subtitle ── */
+  .prod-grid__subtitle {
+    font-weight: 300;
+    font-size: 0.85rem;
+    color: var(--pg-text);
+    opacity: 0.6;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+    margin: 0;
+    padding: 0 24px;
+  }
+
+  /* ── Mobile carousel ── */
+  .prod-grid__carousel {
+    width: 100%;
+    overflow-x: auto;
+    overflow-y: hidden;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+    display: flex;
+    gap: 12px;
+    padding: 0 12.5vw;
+    position: relative;
+    z-index: 1;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    margin-top: 8px;
+  }
+  .prod-grid__carousel::-webkit-scrollbar { display: none; }
+
+  /* ── Product card ── */
+  .prod-grid__card {
+    flex-shrink: 0;
+    width: 68vw;
+    scroll-snap-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    text-decoration: none;
+    color: inherit;
+  }
+
+  .prod-grid__card-image {
+    height: 220px;
+    width: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .prod-grid__card-image img {
+    max-height: 220px;
+    width: auto;
+    object-fit: contain;
+    object-position: center;
+    filter: drop-shadow(0 4px 8px rgba(0,0,0,0.06))
+            drop-shadow(0 12px 24px rgba(0,0,0,0.08));
+  }
+
+  .prod-grid__card-label {
+    font-family: var(--pg-serif, 'P22 Mackinac Pro', Georgia, serif);
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: var(--pg-text);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    text-decoration: underline;
+    text-decoration-color: var(--pg-accent);
+    text-underline-offset: 4px;
+    text-decoration-thickness: 2px;
+    margin-top: 12px;
+  }
+  .prod-grid__card-subtitle {
+    font-size: 0.85rem;
+    font-weight: 300;
+    color: var(--pg-text);
+    opacity: 0.6;
+    margin-top: 2px;
+  }
+
+  .prod-grid__card-cta {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: 1.5px solid var(--pg-text);
+    color: var(--pg-text);
+    background: transparent;
+    border-radius: 50px;
+    padding: 10px 24px;
+    min-height: 44px;
+    font-family: var(--pg-sans, 'Neue Haas Grotesk Display Pro', 'Inter', sans-serif);
+    font-size: 0.75rem;
+    font-weight: 400;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background 0.3s, color 0.3s;
+    margin-top: 12px;
+  }
+  .prod-grid__card-cta:hover {
+    background: var(--pg-text);
+    color: var(--pg-bg, #F0EDDF);
+  }
+  .prod-grid__card-cta:focus-visible {
+    outline: 2px solid var(--pg-text);
+    outline-offset: 4px;
+  }
+
+  /* ── Scroll dots (mobile) ── */
+  .prod-grid__dots {
+    display: flex;
+    gap: 6px;
+    justify-content: center;
+    position: relative;
+    z-index: 1;
+    margin-top: 4px;
+  }
+  .prod-grid__dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: var(--pg-text);
+    opacity: 0.25;
+    transition: opacity 0.3s;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+  }
+  .prod-grid__dot.active { opacity: 0.7; }
+
+  /* ── Trust badges ── */
+  .prod-grid__badges {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    position: relative;
+    z-index: 1;
+    margin-top: 8px;
+  }
+  .prod-grid__badge {
+    position: relative;
+    display: inline-flex;
+    cursor: default;
+  }
+  .prod-grid__badge:hover img,
+  .prod-grid__badge:focus img {
+    opacity: 1;
+  }
+  .prod-grid__badge:hover::after,
+  .prod-grid__badge:focus::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--pg-text);
+    color: var(--pg-bg, #F0EDDF);
+    padding: 4px 10px;
+    border-radius: 4px;
+    font-size: 0.7rem;
+    white-space: nowrap;
+    pointer-events: none;
+    margin-bottom: 4px;
+  }
+  .prod-grid__badge img {
+    width: 24px;
+    height: 24px;
+    opacity: 0.75;
+    transition: opacity 0.2s ease;
+    filter: brightness(0.4);
+  }
+
+  /* ── Desktop grid (hidden on mobile) ── */
+  .prod-grid__desktop { display: none; }
+
+  /* ── Very small screens ── */
+  @media (max-width: 320px) {
+    .prod-grid__card { width: 85vw; }
+    .prod-grid__card-label { font-size: 1rem; }
+    .prod-grid__card-image { height: 192px; }
+    .prod-grid__card-image img { max-height: 192px; }
+  }
+
+  /* ── Intermediate ── */
+  @media (min-width: 480px) and (max-width: 767px) {
+    .prod-grid__card-label { font-size: 1.1rem; }
+    .prod-grid__carousel { padding: 0 24px; }
+  }
+
+  /* =============================================
+     TABLET / DESKTOP (768px+)
+     ============================================= */
+  @media (min-width: 768px) {
+    .prod-grid__mobile { display: none; }
+
+    .prod-grid {
+      padding: 80px 0 60px;
+      justify-content: center;
+    }
+
+    .prod-grid__headline {
+      font-size: 3.12rem;
+    }
+
+    .prod-grid__desktop {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+      position: relative;
+      z-index: 1;
+    }
+
+    .prod-grid__columns {
+      display: grid;
+      grid-template-columns: repeat(var(--pg-cols, 3), 1fr);
+      gap: 48px;
+      justify-content: center;
+      padding: 0 80px;
+      margin-top: 24px;
+      max-width: 1200px;
+      width: 100%;
+    }
+
+    .prod-grid__col {
+      text-align: center;
+      text-decoration: none;
+      color: inherit;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    @media (prefers-reduced-motion: no-preference) {
+      .prod-grid__col {
+        transition: transform 0.4s ease;
+      }
+      .prod-grid__col:hover {
+        transform: translateY(-8px);
+      }
+      .prod-grid__col .prod-grid__col-image img {
+        transition: transform 0.4s ease;
+      }
+      .prod-grid__col:hover .prod-grid__col-image img {
+        transform: scale(1.03);
+      }
+    }
+
+    .prod-grid__col-image {
+      height: 330px;
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+    }
+    .prod-grid__col-image img {
+      max-height: 330px;
+      width: auto;
+      object-fit: contain;
+      object-position: center;
+      filter: drop-shadow(0 4px 8px rgba(0,0,0,0.06))
+              drop-shadow(0 12px 24px rgba(0,0,0,0.08));
+    }
+
+    .prod-grid__col-label {
+      font-family: var(--pg-serif, 'P22 Mackinac Pro', Georgia, serif);
+      font-size: 1.4rem;
+      font-weight: 500;
+      color: var(--pg-text);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-top: 20px;
+      text-decoration: underline;
+      text-decoration-color: var(--pg-accent);
+      text-underline-offset: 6px;
+      text-decoration-thickness: 2px;
+    }
+    .prod-grid__col-subtitle {
+      font-size: 0.85rem;
+      font-weight: 300;
+      color: var(--pg-text);
+      opacity: 0.6;
+      margin-top: 6px;
+    }
+    .prod-grid__col-cta {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border: 1.5px solid var(--pg-text);
+      color: var(--pg-text);
+      background: transparent;
+      border-radius: 50px;
+      padding: 10px 28px;
+      min-height: 44px;
+      font-family: var(--pg-sans, 'Neue Haas Grotesk Display Pro', 'Inter', sans-serif);
+      font-size: 0.8rem;
+      font-weight: 400;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      text-decoration: none;
+      cursor: pointer;
+      transition: background 0.3s, color 0.3s;
+      margin-top: 16px;
+    }
+    .prod-grid__col-cta:hover {
+      background: var(--pg-text);
+      color: var(--pg-bg, #F0EDDF);
+    }
+    .prod-grid__col-cta:focus-visible {
+      outline: 2px solid var(--pg-text);
+      outline-offset: 4px;
+    }
+
+    .prod-grid__badges {
+      gap: 20px;
+      margin-top: 32px;
+    }
+    .prod-grid__badge img {
+      width: 28px;
+      height: 28px;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .prod-grid__col-image { height: 330px; }
+    .prod-grid__col-image img { max-height: 330px; }
+    .prod-grid__col-label { font-size: 1.6rem; }
+    .prod-grid__columns { padding: 0 80px; }
+  }
+</style>
+
+<section
+  class="prod-grid"
+  id="prod-grid-{{ section.id }}"
+  aria-label="Product collection"
+  style="
+    --pg-bg: {{ section.settings.background_color | default: '#F0EDDF' }};
+    --pg-text: {{ section.settings.text_color | default: '#1E4366' }};
+    --pg-accent: {{ section.settings.accent_color | default: '#E1D78E' }};
+    --pg-cols: {{ section.settings.columns_desktop | default: 3 }};
+    --pg-serif: 'P22 Mackinac Pro', Georgia, serif;
+    --pg-sans: 'Neue Haas Grotesk Display Pro', 'Inter', 'Helvetica Neue', sans-serif;
+  "
+>
+  {%- if section.settings.watermark_image != blank -%}
+    <div class="prod-grid__watermark" aria-hidden="true">
+      <img src="{{ section.settings.watermark_image | image_url: width: 800 }}" alt="" width="800" height="200" loading="lazy" decoding="async">
+    </div>
+  {%- endif -%}
+
+  {%- if section.settings.headline != blank -%}
+    <{{ heading_tag }} class="prod-grid__headline pg-fade-1">{{ section.settings.headline }}</{{ heading_tag }}>
+  {%- endif -%}
+  {%- if section.settings.subtitle != blank -%}
+    <p class="prod-grid__subtitle pg-fade-2">{{ section.settings.subtitle }}</p>
+  {%- endif -%}
+
+  {%- comment -%} ── MOBILE: horizontal scroll carousel ── {%- endcomment -%}
+  <div class="prod-grid__mobile">
+    <div class="prod-grid__carousel pg-fade-3" role="region" aria-label="Product carousel" tabindex="0">
+      {%- for block in section.blocks -%}
+        {%- if block.type == 'product_card' -%}
+          <div class="prod-grid__card" {{ block.shopify_attributes }}>
+            {%- if block.settings.image != blank -%}
+              <div class="prod-grid__card-image">
+                <img
+                  src="{{ block.settings.image | image_url: width: 400 }}"
+                  srcset="{{ block.settings.image | image_url: width: 200 }} 200w, {{ block.settings.image | image_url: width: 400 }} 400w"
+                  sizes="200px"
+                  alt="{{ block.settings.image_alt | escape }}"
+                  width="400" height="600"
+                  loading="lazy" decoding="async"
+                >
+              </div>
+            {%- endif -%}
+            {%- if block.settings.label != blank -%}
+              <span class="prod-grid__card-label">{{ block.settings.label }}</span>
+            {%- endif -%}
+            {%- if block.settings.subtitle != blank -%}
+              <span class="prod-grid__card-subtitle">{{ block.settings.subtitle }}</span>
+            {%- endif -%}
+            {%- if block.settings.cta_text != blank -%}
+              <a class="prod-grid__card-cta" href="{{ block.settings.cta_url | default: '#' }}">{{ block.settings.cta_text }}</a>
+            {%- endif -%}
+          </div>
+        {%- endif -%}
+      {%- endfor -%}
+    </div>
+
+    <div class="prod-grid__dots pg-fade-4" role="tablist" aria-label="Carousel position">
+      {%- assign card_index = 0 -%}
+      {%- for block in section.blocks -%}
+        {%- if block.type == 'product_card' -%}
+          <button class="prod-grid__dot{% if card_index == 0 %} active{% endif %}" role="tab" aria-label="Go to product {{ card_index | plus: 1 }}" data-index="{{ card_index }}"></button>
+          {%- assign card_index = card_index | plus: 1 -%}
+        {%- endif -%}
+      {%- endfor -%}
+    </div>
+  </div>
+
+  {%- comment -%} ── DESKTOP: CSS grid columns ── {%- endcomment -%}
+  <div class="prod-grid__desktop pg-fade-3">
+    <div class="prod-grid__columns">
+      {%- for block in section.blocks -%}
+        {%- if block.type == 'product_card' -%}
+          <div class="prod-grid__col" {{ block.shopify_attributes }}>
+            {%- if block.settings.image != blank -%}
+              <div class="prod-grid__col-image">
+                <img
+                  src="{{ block.settings.image | image_url: width: 600 }}"
+                  srcset="{{ block.settings.image | image_url: width: 300 }} 300w, {{ block.settings.image | image_url: width: 600 }} 600w"
+                  sizes="(min-width: 1024px) 380px, 260px"
+                  alt="{{ block.settings.image_alt | escape }}"
+                  width="400" height="600"
+                  loading="lazy" decoding="async"
+                >
+              </div>
+            {%- endif -%}
+            {%- if block.settings.label != blank -%}
+              <span class="prod-grid__col-label">{{ block.settings.label }}</span>
+            {%- endif -%}
+            {%- if block.settings.subtitle != blank -%}
+              <span class="prod-grid__col-subtitle">{{ block.settings.subtitle }}</span>
+            {%- endif -%}
+            {%- if block.settings.cta_text != blank -%}
+              <a class="prod-grid__col-cta" href="{{ block.settings.cta_url | default: '#' }}">{{ block.settings.cta_text }}</a>
+            {%- endif -%}
+          </div>
+        {%- endif -%}
+      {%- endfor -%}
+    </div>
+
+    {%- if section.settings.show_trust_badges -%}
+      {%- assign has_badges = false -%}
+      {%- for block in section.blocks -%}
+        {%- if block.type == 'trust_badge' -%}{%- assign has_badges = true -%}{%- break -%}{%- endif -%}
+      {%- endfor -%}
+      {%- if has_badges -%}
+        <div class="prod-grid__badges pg-fade-5">
+          {%- for block in section.blocks -%}
+            {%- if block.type == 'trust_badge' and block.settings.icon != blank -%}
+              <span class="prod-grid__badge" tabindex="0" role="img"
+                aria-label="{{ block.settings.label | escape }}"
+                data-tooltip="{{ block.settings.label | escape }}"
+                title="{{ block.settings.label | escape }}"
+                {{ block.shopify_attributes }}>
+                <img src="{{ block.settings.icon | image_url: width: 64 }}" alt="{{ block.settings.label | escape }}" width="28" height="28" loading="lazy" decoding="async">
+              </span>
+            {%- endif -%}
+          {%- endfor -%}
+        </div>
+      {%- endif -%}
+    {%- endif -%}
+  </div>
+
+  {%- comment -%} ── Mobile trust badges (below dots) ── {%- endcomment -%}
+  {%- if section.settings.show_trust_badges and has_badges -%}
+    <div class="prod-grid__mobile">
+      <div class="prod-grid__badges pg-fade-5">
+        {%- for block in section.blocks -%}
+          {%- if block.type == 'trust_badge' and block.settings.icon != blank -%}
+            <span class="prod-grid__badge" tabindex="0" role="img"
+              aria-label="{{ block.settings.label | escape }}"
+              data-tooltip="{{ block.settings.label | escape }}"
+              title="{{ block.settings.label | escape }}"
+              {{ block.shopify_attributes }}>
+              <img src="{{ block.settings.icon | image_url: width: 64 }}" alt="{{ block.settings.label | escape }}" width="24" height="24" loading="lazy" decoding="async">
+            </span>
+          {%- endif -%}
+        {%- endfor -%}
+      </div>
+    </div>
+  {%- endif -%}
+</section>
+
+<script>
+(function() {
+  'use strict';
+
+  function initProductGrid() {
+    var root = document.querySelector('.prod-grid');
+    if (!root) return;
+
+    var carousel = root.querySelector('.prod-grid__carousel');
+    var dots = root.querySelectorAll('.prod-grid__dot');
+    var cards = root.querySelectorAll('.prod-grid__card');
+
+    if (!carousel || !dots.length || !cards.length) return;
+
+    /* ── Scroll dot tracking via IntersectionObserver ── */
+    var observer = new IntersectionObserver(function(entries) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          var idx = Array.from(cards).indexOf(entry.target);
+          dots.forEach(function(d, i) {
+            d.classList.toggle('active', i === idx);
+          });
+        }
+      });
+    }, {
+      root: carousel,
+      threshold: 0.6
+    });
+
+    cards.forEach(function(card) { observer.observe(card); });
+
+    /* ── Dot click to scroll ── */
+    dots.forEach(function(dot) {
+      dot.addEventListener('click', function() {
+        var idx = parseInt(this.getAttribute('data-index'), 10);
+        if (cards[idx]) {
+          cards[idx].scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+        }
+      });
+    });
+  }
+
+  initProductGrid();
+
+  document.addEventListener('shopify:section:load', function(e) {
+    if (e.target.querySelector('.prod-grid')) initProductGrid();
+  });
+})();
+</script>
+
+{% schema %}
+{
+  "name": "Product Grid",
+  "tag": "div",
+  "class": "prod-grid-wrapper",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Content"
+    },
+    {
+      "type": "text",
+      "id": "headline",
+      "label": "Headline",
+      "default": "The Range"
+    },
+    {
+      "type": "select",
+      "id": "heading_tag",
+      "label": "Heading level",
+      "options": [
+        { "value": "h1", "label": "H1" },
+        { "value": "h2", "label": "H2 (default)" },
+        { "value": "h3", "label": "H3" }
+      ],
+      "default": "h2"
+    },
+    {
+      "type": "text",
+      "id": "subtitle",
+      "label": "Subtitle",
+      "default": "Organic. Vegan. Handmade in Byron Bay."
+    },
+    {
+      "type": "checkbox",
+      "id": "show_trust_badges",
+      "label": "Show trust badges",
+      "default": true
+    },
+    {
+      "type": "image_picker",
+      "id": "watermark_image",
+      "label": "Background watermark"
+    },
+    {
+      "type": "header",
+      "content": "Layout"
+    },
+    {
+      "type": "range",
+      "id": "columns_desktop",
+      "label": "Desktop columns",
+      "min": 2,
+      "max": 4,
+      "step": 1,
+      "default": 3
+    },
+    {
+      "type": "header",
+      "content": "Colors"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background",
+      "default": "#F0EDDF"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text",
+      "default": "#1E4366"
+    },
+    {
+      "type": "color",
+      "id": "accent_color",
+      "label": "Accent (underline)",
+      "default": "#E1D78E"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "product_card",
+      "name": "Product Card",
+      "limit": 8,
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Product image"
+        },
+        {
+          "type": "text",
+          "id": "image_alt",
+          "label": "Image alt text",
+          "default": "Maple Moon product"
+        },
+        {
+          "type": "text",
+          "id": "label",
+          "label": "Label",
+          "default": "Bars"
+        },
+        {
+          "type": "text",
+          "id": "subtitle",
+          "label": "Subtitle",
+          "default": "6 flavours. One obsession."
+        },
+        {
+          "type": "text",
+          "id": "cta_text",
+          "label": "CTA text",
+          "default": "Shop Bars"
+        },
+        {
+          "type": "url",
+          "id": "cta_url",
+          "label": "CTA link"
+        }
+      ]
+    },
+    {
+      "type": "trust_badge",
+      "name": "Trust Badge",
+      "limit": 6,
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "icon",
+          "label": "Badge icon (SVG)"
+        },
+        {
+          "type": "text",
+          "id": "label",
+          "label": "Label",
+          "default": "Certified Organic"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Product Grid",
+      "settings": {
+        "headline": "The Range",
+        "subtitle": "Organic. Vegan. Handmade in Byron Bay.",
+        "show_trust_badges": true,
+        "columns_desktop": 3,
+        "background_color": "#F0EDDF",
+        "text_color": "#1E4366",
+        "accent_color": "#E1D78E"
+      },
+      "blocks": [
+        { "type": "product_card", "settings": { "label": "Bars", "subtitle": "6 flavours. One obsession.", "cta_text": "Shop Bars", "image_alt": "Maple Moon Bars" } },
+        { "type": "product_card", "settings": { "label": "Moons", "subtitle": "Carob crescents with whole hazelnuts.", "cta_text": "Shop Moons", "image_alt": "Maple Moon Moons" } },
+        { "type": "product_card", "settings": { "label": "Elixirs", "subtitle": "Warm carob. Nothing extracted.", "cta_text": "Shop Elixirs", "image_alt": "Maple Moon Elixirs" } },
+        { "type": "trust_badge", "settings": { "label": "Certified Organic" } },
+        { "type": "trust_badge", "settings": { "label": "Gluten Free" } },
+        { "type": "trust_badge", "settings": { "label": "100% Vegan" } },
+        { "type": "trust_badge", "settings": { "label": "Caffeine Free" } },
+        { "type": "trust_badge", "settings": { "label": "Made in Australia" } }
+      ]
+    }
+  ]
+}
+{% endschema %}
