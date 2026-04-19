@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Maple Moon — Artisan Carob from Byron Bay</title>
+<title>Maple Moon — Carob Pods Silhouette Variant</title>
 <meta name="description" content="Handmade carob bars, moons, and elixirs. Certified organic, vegan, gluten-free, caffeine-free. Made in Byron Bay from Australian-grown carob.">
 <meta name="theme-color" content="#7B9DBF">
 <meta property="og:title" content="Maple Moon — Artisan Carob from Byron Bay">
@@ -58,6 +58,41 @@ a.skip-link:focus { top: 16px; }
 /* ══════════════════════════════════════
    HEADER / NAV
    ══════════════════════════════════════ */
+
+/* ══════════════════════════════════════
+   HEADER WORDMARK (Apr 19) — text next to logo icon
+   ══════════════════════════════════════ */
+.header-logo-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+}
+.header-wordmark {
+  font-family: var(--mm-serif);
+  font-size: 18px;
+  font-weight: 400;
+  letter-spacing: 0.01em;
+  color: var(--text-primary);
+  text-transform: lowercase;
+  line-height: 1;
+  transition: color 0.3s ease;
+  white-space: nowrap;
+}
+.site-header.header-dark .header-wordmark { color: var(--mm-cream); }
+
+/* Atmospheric hero pages — pre-scroll header goes light over cornflower */
+body.has-atmospheric-hero .site-header:not(.scrolled) .header-wordmark,
+body.has-atmospheric-hero .site-header:not(.scrolled) .header-nav a {
+  color: #FAF7F0;
+  text-shadow: 0 1px 12px rgba(30, 67, 102, 0.35);
+}
+body.has-atmospheric-hero .site-header:not(.scrolled) .hamburger span {
+  background: #FAF7F0;
+}
+body.has-atmospheric-hero .site-header:not(.scrolled) .header-logo {
+  filter: brightness(0) invert(1);
+}
 
 .site-header {
   position: fixed;
@@ -195,6 +230,133 @@ a.skip-link:focus { top: 16px; }
 }
 
 .menu-close:hover { opacity: 0.8; }
+
+
+/* ══════════════════════════════════════
+   HERO VARIANTS (Apr 19 review) — cornflower atmosphere
+   ══════════════════════════════════════ */
+.hero.hero--fog,
+.hero.hero--byron,
+.hero.hero--pods {
+  background: #7B9DBF;
+}
+
+.hero-bg-video,
+.hero-bg-still {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* Soft darken + cornflower wash so text passes WCAG */
+.hero.hero--fog::before,
+.hero.hero--byron::before,
+.hero.hero--pods::before {
+  background:
+    linear-gradient(180deg, rgba(30, 67, 102, 0.15) 0%, rgba(30, 67, 102, 0.40) 100%),
+    radial-gradient(ellipse 60% 70% at 50% 30%, rgba(123, 157, 191, 0.0) 0%, rgba(30, 67, 102, 0.20) 100%);
+  z-index: 1;
+}
+
+.hero.hero--fog .hero-content,
+.hero.hero--byron .hero-content,
+.hero.hero--pods .hero-content {
+  z-index: 2;
+}
+
+.hero.hero--fog .hero-headline,
+.hero.hero--byron .hero-headline,
+.hero.hero--pods .hero-headline {
+  color: #FAF7F0;
+  text-shadow: 0 2px 24px rgba(30, 67, 102, 0.45);
+}
+
+.hero.hero--fog .hero-badge,
+.hero.hero--byron .hero-badge,
+.hero.hero--pods .hero-badge {
+  color: rgba(255, 255, 255, 0.92);
+}
+
+.hero.hero--fog .hero-sub,
+.hero.hero--byron .hero-sub,
+.hero.hero--pods .hero-sub {
+  color: rgba(255, 255, 255, 0.86);
+}
+
+.hero.hero--fog .hero-tagline,
+.hero.hero--byron .hero-tagline,
+.hero.hero--pods .hero-tagline {
+  color: rgba(255, 255, 255, 0.78);
+}
+
+.hero.hero--fog .hero-watermark,
+.hero.hero--byron .hero-watermark,
+.hero.hero--pods .hero-watermark {
+  opacity: 0.07;
+  filter: invert(1) brightness(2);
+  z-index: 1;
+}
+
+.hero.hero--fog .product-display img,
+.hero.hero--byron .product-display img,
+.hero.hero--pods .product-display img {
+  filter: drop-shadow(0 22px 48px rgba(30, 67, 102, 0.55));
+}
+
+.hero.hero--fog .hero-cat-btn,
+.hero.hero--byron .hero-cat-btn,
+.hero.hero--pods .hero-cat-btn {
+  color: rgba(255, 255, 255, 0.85);
+}
+.hero.hero--fog .hero-cat-btn.active,
+.hero.hero--byron .hero-cat-btn.active,
+.hero.hero--pods .hero-cat-btn.active {
+  color: #FAF7F0;
+  border-bottom-color: #FAF7F0;
+}
+.hero.hero--fog .cat-separator,
+.hero.hero--byron .cat-separator,
+.hero.hero--pods .cat-separator {
+  background: rgba(255, 255, 255, 0.5);
+}
+
+.hero.hero--fog .flavour-btn,
+.hero.hero--byron .flavour-btn,
+.hero.hero--pods .flavour-btn {
+  color: rgba(255, 255, 255, 0.85);
+  border-color: rgba(255, 255, 255, 0.35);
+}
+.hero.hero--fog .flavour-btn.active,
+.hero.hero--byron .flavour-btn.active,
+.hero.hero--pods .flavour-btn.active {
+  background: #FAF7F0;
+  color: var(--text-primary);
+  border-color: #FAF7F0;
+}
+
+.hero.hero--fog .hero-cta,
+.hero.hero--byron .hero-cta,
+.hero.hero--pods .hero-cta {
+  background: #FAF7F0;
+  color: var(--text-primary);
+  border: 1px solid #FAF7F0;
+}
+.hero.hero--fog .hero-cta:hover,
+.hero.hero--byron .hero-cta:hover,
+.hero.hero--pods .hero-cta:hover {
+  background: transparent;
+  color: #FAF7F0;
+  border-color: #FAF7F0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-bg-video { display: none; }
+  .hero.hero--fog { background-image: url('assets/hero_shots/blue_fog.png'); background-size: cover; background-position: center; }
+}
 
 /* ══════════════════════════════════════
    HERO — FLAVOUR PICKER (warm palette)
@@ -1465,7 +1627,7 @@ a.skip-link:focus { top: 16px; }
 
 </style>
 </head>
-<body>
+<body class="has-atmospheric-hero">
 
 <a href="#main" class="skip-link">Skip to content</a>
 
@@ -1485,7 +1647,7 @@ a.skip-link:focus { top: 16px; }
 
 <!-- Site header -->
 <header class="site-header" id="site-header">
-  <a href="/homepage.html" class="header-logo-link"><img src="assets/brand/maplemoon_logo.svg" alt="Maple Moon" class="header-logo" width="36" height="36" loading="eager" decoding="async"></a>
+  <a href="/homepage.html" class="header-logo-link"><img src="assets/brand/maplemoon_logo.svg" alt="" class="header-logo" width="36" height="36" loading="eager" decoding="async"><span class="header-wordmark">maple moon</span></a>
   <nav class="header-nav">
     <a href="/our-story.html">Our Story</a>
     <a href="/collections/bars.html">Shop</a>
@@ -1500,7 +1662,9 @@ a.skip-link:focus { top: 16px; }
      HERO — Flavour Picker (V7 fused)
      ═══════════════════════════════════ -->
 <main id="main" tabindex="-1">
-<section class="hero" id="hero" aria-label="Hero">
+<section class="hero hero--pods" id="hero" aria-label="Hero">
+
+  <img class="hero-bg-still" src="assets/photography/refined/mm_refined_r2_fb1_wide_a.png" alt="" aria-hidden="true" loading="eager" decoding="async">
 
   <img src="assets/brand/carob_wordmark.svg" alt="" class="hero-watermark" aria-hidden="true" width="800" height="200">
 
@@ -1513,20 +1677,20 @@ a.skip-link:focus { top: 16px; }
     <!-- Product image stack -->
     <div class="product-display fade-up" aria-live="polite" aria-label="Selected product">
       <!-- Bars -->
-      <img src="assets/product_shots/bar_pure_carob.webp" alt="Pure Carob Bar" class="active" data-flavour="original" data-cat="bars" width="400" height="600" fetchpriority="high" loading="eager" decoding="async">
-      <img src="assets/product_shots/bar_goji_coconut.webp" alt="Golden Coconut Bar" data-flavour="coconut" data-cat="bars" width="400" height="600" loading="lazy" decoding="async">
-      <img src="assets/product_shots/bar_peppermint.webp" alt="Peppermint Bar" data-flavour="mint" data-cat="bars" width="400" height="600" loading="lazy" decoding="async">
-      <img src="assets/product_shots/bar_hazelnut.webp" alt="Hazelnut Bar" data-flavour="hazelnut" data-cat="bars" width="400" height="600" loading="lazy" decoding="async">
+      <img src="assets/product_shots/bars/MM_BAR_Web-Mockups_PCAR_90G_02-FEB-2026.png" alt="Pure Carob Bar" class="active" data-flavour="original" data-cat="bars" width="400" height="600" fetchpriority="high" loading="eager" decoding="async">
+      <img src="assets/product_shots/bars/MM_BAR_Web-Mockups_GCOC_90G_02-FEB-2026.png" alt="Golden Coconut Bar" data-flavour="coconut" data-cat="bars" width="400" height="600" loading="lazy" decoding="async">
+      <img src="assets/product_shots/bars/MM_BAR_Web-Mockups_PMIN_90G_02-FEB-2026.png" alt="Peppermint Bar" data-flavour="mint" data-cat="bars" width="400" height="600" loading="lazy" decoding="async">
+      <img src="assets/product_shots/bars/MM_BAR_Web-Mockups_HNUT_90G_02-FEB-2026.png" alt="Hazelnut Bar" data-flavour="hazelnut" data-cat="bars" width="400" height="600" loading="lazy" decoding="async">
       <!-- Moons -->
-      <img src="assets/product_shots/moon_hazelnut.webp" alt="Hazelnut Moon" data-flavour="moon_hazelnut" data-cat="moons" width="400" height="400" loading="lazy" decoding="async">
-      <img src="assets/product_shots/moon_pure_carob.webp" alt="Pure Carob Moon" data-flavour="moon_pure_carob" data-cat="moons" width="400" height="400" loading="lazy" decoding="async">
-      <img src="assets/product_shots/moon_peppermint.webp" alt="Peppermint Moon" data-flavour="moon_peppermint" data-cat="moons" width="400" height="400" loading="lazy" decoding="async">
+      <img src="assets/product_shots/moons/MM_MOONS_Web-Mockups_HNUT_35G_02-FEB-2026@2x.png" alt="Hazelnut Moon" data-flavour="moon_hazelnut" data-cat="moons" width="400" height="400" loading="lazy" decoding="async">
+      <img src="assets/product_shots/moons/MM_MOONS_Web-Mockups_PCAR_35G_02-FEB-2026@2x.png" alt="Pure Carob Moon" data-flavour="moon_pure_carob" data-cat="moons" width="400" height="400" loading="lazy" decoding="async">
+      <img src="assets/product_shots/moons/MM_MOONS_Web-Mockups_PMIN_35G_02-FEB-2026@2x.png" alt="Peppermint Moon" data-flavour="moon_peppermint" data-cat="moons" width="400" height="400" loading="lazy" decoding="async">
       <!-- Bites -->
-      <img src="assets/product_shots/bite_coconut.webp" alt="Coconut Bite" data-flavour="bite_coconut" data-cat="bites" width="400" height="400" loading="lazy" decoding="async">
-      <img src="assets/product_shots/bite_goji.webp" alt="Goji Bite" data-flavour="bite_goji" data-cat="bites" width="400" height="400" loading="lazy" decoding="async">
+      <img src="assets/product_shots/eclipse_bites/eclipse-bite_coconut.png" alt="Coconut Bite" data-flavour="bite_coconut" data-cat="bites" width="400" height="400" loading="lazy" decoding="async">
+      <img src="assets/product_shots/eclipse_bites/eclipse-bite_goji.png" alt="Goji Bite" data-flavour="bite_goji" data-cat="bites" width="400" height="400" loading="lazy" decoding="async">
       <!-- Elixirs -->
-      <img src="assets/product_shots/elixir_plain.webp" alt="Pure Elixir" data-flavour="elixir_pure" data-cat="elixirs" width="400" height="600" loading="lazy" decoding="async">
-      <img src="assets/product_shots/elixir_spiced.webp" alt="Spiced Elixir" data-flavour="elixir_spiced" data-cat="elixirs" width="400" height="600" loading="lazy" decoding="async">
+      <img src="assets/products_clean/elixir_plain.png" alt="Pure Elixir" data-flavour="elixir_pure" data-cat="elixirs" width="400" height="600" loading="lazy" decoding="async">
+      <img src="assets/products_clean/elixir_spiced.png" alt="Spiced Elixir" data-flavour="elixir_spiced" data-cat="elixirs" width="400" height="600" loading="lazy" decoding="async">
     </div>
 
     <p class="hero-tagline fade-up" id="hero-tagline">Just clean, delicious indulgence that honours your insides every bite.</p>
@@ -1751,88 +1915,88 @@ a.skip-link:focus { top: 16px; }
   <div class="range-grid" id="range-grid">
     <!-- Bars (default) -->
     <a href="/products/pure-carob-bar.html" class="product-card" data-range="bars">
-      <img src="assets/product_shots/bar_pure_carob.webp" alt="Pure Carob Bar" loading="lazy" decoding="async">
+      <img src="assets/product_shots/bars/MM_BAR_Web-Mockups_PCAR_90G_02-FEB-2026.png" alt="Pure Carob Bar" loading="lazy" decoding="async">
       <span class="product-card-name">Pure Carob</span>
       <span class="product-card-desc">Nothing added</span>
     </a>
     <a href="#" class="product-card" data-range="bars">
-      <img src="assets/product_shots/bar_goji_coconut.webp" alt="Golden Coconut Bar" loading="lazy" decoding="async">
+      <img src="assets/product_shots/bars/MM_BAR_Web-Mockups_GCOC_90G_02-FEB-2026.png" alt="Golden Coconut Bar" loading="lazy" decoding="async">
       <span class="product-card-name">Golden Coconut</span>
       <span class="product-card-desc">Toasted coconut</span>
     </a>
     <a href="#" class="product-card" data-range="bars">
-      <img src="assets/product_shots/bar_peppermint.webp" alt="Peppermint Bar" loading="lazy" decoding="async">
+      <img src="assets/product_shots/bars/MM_BAR_Web-Mockups_PMIN_90G_02-FEB-2026.png" alt="Peppermint Bar" loading="lazy" decoding="async">
       <span class="product-card-name">Peppermint</span>
       <span class="product-card-desc">Cool and clean</span>
     </a>
     <a href="#" class="product-card" data-range="bars">
-      <img src="assets/product_shots/bar_hazelnut.webp" alt="Hazelnut Bar" loading="lazy" decoding="async">
+      <img src="assets/product_shots/bars/MM_BAR_Web-Mockups_HNUT_90G_02-FEB-2026.png" alt="Hazelnut Bar" loading="lazy" decoding="async">
       <span class="product-card-name">Hazelnut</span>
       <span class="product-card-desc">Roasted hazelnuts</span>
     </a>
     <a href="#" class="product-card" data-range="bars">
-      <img src="assets/product_shots/bar_cayenne.webp" alt="Chilli Bar" loading="lazy" decoding="async">
+      <img src="assets/product_shots/bars/MM_BAR_Web-Mockups_CHIL_90G_02-FEB-2026.png" alt="Chilli Bar" loading="lazy" decoding="async">
       <span class="product-card-name">Chilli</span>
       <span class="product-card-desc">Slow warmth</span>
     </a>
     <a href="#" class="product-card" data-range="bars">
-      <img src="assets/product_shots/bar_almond.webp" alt="Almond Bar" loading="lazy" decoding="async">
+      <img src="assets/product_shots/bars/MM_BAR_Web-Mockups_ASAL_90G_02-FEB-2026.png" alt="Almond Bar" loading="lazy" decoding="async">
       <span class="product-card-name">Almond</span>
       <span class="product-card-desc">Whole roasted almonds</span>
     </a>
 
     <!-- Moons (hidden) -->
     <a href="#" class="product-card" data-range="moons" style="display:none">
-      <img src="assets/product_shots/moon_pure_carob.webp" alt="Pure Carob Moon" loading="lazy" decoding="async">
+      <img src="assets/product_shots/moons/MM_MOONS_Web-Mockups_PCAR_35G_02-FEB-2026@2x.png" alt="Pure Carob Moon" loading="lazy" decoding="async">
       <span class="product-card-name">Pure Carob</span>
       <span class="product-card-desc">Carob crescents</span>
     </a>
     <a href="#" class="product-card" data-range="moons" style="display:none">
-      <img src="assets/product_shots/moon_hazelnut.webp" alt="Hazelnut Moon" loading="lazy" decoding="async">
+      <img src="assets/product_shots/moons/MM_MOONS_Web-Mockups_HNUT_35G_02-FEB-2026@2x.png" alt="Hazelnut Moon" loading="lazy" decoding="async">
       <span class="product-card-name">Hazelnut</span>
       <span class="product-card-desc">Roasted hazelnut</span>
     </a>
     <a href="#" class="product-card" data-range="moons" style="display:none">
-      <img src="assets/product_shots/moon_peppermint.webp" alt="Peppermint Moon" loading="lazy" decoding="async">
+      <img src="assets/product_shots/moons/MM_MOONS_Web-Mockups_PMIN_35G_02-FEB-2026@2x.png" alt="Peppermint Moon" loading="lazy" decoding="async">
       <span class="product-card-name">Peppermint</span>
       <span class="product-card-desc">Cool mint</span>
     </a>
     <a href="#" class="product-card" data-range="moons" style="display:none">
-      <img src="assets/product_shots/moon_goji_coconut.webp" alt="Goji Coconut Moon" loading="lazy" decoding="async">
+      <img src="assets/product_shots/moons/MM_MOONS_Web-Mockups_GCOC_35G_02-FEB-2026@2x.png" alt="Goji Coconut Moon" loading="lazy" decoding="async">
       <span class="product-card-name">Goji Coconut</span>
       <span class="product-card-desc">Tropical</span>
     </a>
     <a href="#" class="product-card" data-range="moons" style="display:none">
-      <img src="assets/product_shots/moon_cayenne.webp" alt="Cayenne Moon" loading="lazy" decoding="async">
+      <img src="assets/product_shots/moons/MM_MOONS_Web-Mockups_CHIL_35G_02-FEB-2026@2x.png" alt="Cayenne Moon" loading="lazy" decoding="async">
       <span class="product-card-name">Cayenne</span>
       <span class="product-card-desc">Gentle heat</span>
     </a>
     <a href="#" class="product-card" data-range="moons" style="display:none">
-      <img src="assets/product_shots/moon_almond.webp" alt="Almond Moon" loading="lazy" decoding="async">
+      <img src="assets/product_shots/moons/MM_MOONS_Web-Mockups_ASAL_35G_02-FEB-2026@2x.png" alt="Almond Moon" loading="lazy" decoding="async">
       <span class="product-card-name">Almond</span>
       <span class="product-card-desc">Whole roasted</span>
     </a>
 
     <!-- Bites (hidden) -->
     <a href="#" class="product-card" data-range="bites" style="display:none">
-      <img src="assets/product_shots/bite_coconut.webp" alt="Coconut Bite" loading="lazy" decoding="async">
+      <img src="assets/product_shots/eclipse_bites/eclipse-bite_coconut.png" alt="Coconut Bite" loading="lazy" decoding="async">
       <span class="product-card-name">Coconut</span>
       <span class="product-card-desc">Poppable, pure</span>
     </a>
     <a href="#" class="product-card" data-range="bites" style="display:none">
-      <img src="assets/product_shots/bite_goji.webp" alt="Goji Bite" loading="lazy" decoding="async">
+      <img src="assets/product_shots/eclipse_bites/eclipse-bite_goji.png" alt="Goji Bite" loading="lazy" decoding="async">
       <span class="product-card-name">Goji</span>
       <span class="product-card-desc">Golden goji</span>
     </a>
 
     <!-- Elixirs (hidden, dark cards) -->
     <a href="#" class="product-card dark-card" data-range="elixirs" style="display:none">
-      <img src="assets/product_shots/elixir_plain.webp" alt="Pure Elixir" loading="lazy" decoding="async">
+      <img src="assets/products_clean/elixir_plain.png" alt="Pure Elixir" loading="lazy" decoding="async">
       <span class="product-card-name">Pure Elixir</span>
       <span class="product-card-desc">Warm carob, nothing extracted</span>
     </a>
     <a href="#" class="product-card dark-card" data-range="elixirs" style="display:none">
-      <img src="assets/product_shots/elixir_spiced.webp" alt="Spiced Elixir" loading="lazy" decoding="async">
+      <img src="assets/products_clean/elixir_spiced.png" alt="Spiced Elixir" loading="lazy" decoding="async">
       <span class="product-card-name">Spiced Elixir</span>
       <span class="product-card-desc">For the cold months</span>
     </a>

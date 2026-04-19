@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Maple Moon — Artisan Carob from Byron Bay</title>
+<title>Maple Moon — Walkthrough (Apr 19)</title>
 <meta name="description" content="Handmade carob bars, moons, and elixirs. Certified organic, vegan, gluten-free, caffeine-free. Made in Byron Bay from Australian-grown carob.">
 <meta name="theme-color" content="#7B9DBF">
 <meta property="og:title" content="Maple Moon — Artisan Carob from Byron Bay">
@@ -58,6 +58,41 @@ a.skip-link:focus { top: 16px; }
 /* ══════════════════════════════════════
    HEADER / NAV
    ══════════════════════════════════════ */
+
+/* ══════════════════════════════════════
+   HEADER WORDMARK (Apr 19) — text next to logo icon
+   ══════════════════════════════════════ */
+.header-logo-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+}
+.header-wordmark {
+  font-family: var(--mm-serif);
+  font-size: 18px;
+  font-weight: 400;
+  letter-spacing: 0.01em;
+  color: var(--text-primary);
+  text-transform: lowercase;
+  line-height: 1;
+  transition: color 0.3s ease;
+  white-space: nowrap;
+}
+.site-header.header-dark .header-wordmark { color: var(--mm-cream); }
+
+/* Atmospheric hero pages — pre-scroll header goes light over cornflower */
+body.has-atmospheric-hero .site-header:not(.scrolled) .header-wordmark,
+body.has-atmospheric-hero .site-header:not(.scrolled) .header-nav a {
+  color: #FAF7F0;
+  text-shadow: 0 1px 12px rgba(30, 67, 102, 0.35);
+}
+body.has-atmospheric-hero .site-header:not(.scrolled) .hamburger span {
+  background: #FAF7F0;
+}
+body.has-atmospheric-hero .site-header:not(.scrolled) .header-logo {
+  filter: brightness(0) invert(1);
+}
 
 .site-header {
   position: fixed;
@@ -195,6 +230,440 @@ a.skip-link:focus { top: 16px; }
 }
 
 .menu-close:hover { opacity: 0.8; }
+
+
+/* ══════════════════════════════════════
+   HERO VARIANTS (Apr 19 review) — cornflower atmosphere
+   ══════════════════════════════════════ */
+.hero.hero--fog,
+.hero.hero--byron,
+.hero.hero--pods {
+  background: #7B9DBF;
+}
+
+.hero-bg-video,
+.hero-bg-still {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* Soft darken + cornflower wash so text passes WCAG */
+.hero.hero--fog::before,
+.hero.hero--byron::before,
+.hero.hero--pods::before {
+  background:
+    linear-gradient(180deg, rgba(30, 67, 102, 0.15) 0%, rgba(30, 67, 102, 0.40) 100%),
+    radial-gradient(ellipse 60% 70% at 50% 30%, rgba(123, 157, 191, 0.0) 0%, rgba(30, 67, 102, 0.20) 100%);
+  z-index: 1;
+}
+
+.hero.hero--fog .hero-content,
+.hero.hero--byron .hero-content,
+.hero.hero--pods .hero-content {
+  z-index: 2;
+}
+
+.hero.hero--fog .hero-headline,
+.hero.hero--byron .hero-headline,
+.hero.hero--pods .hero-headline {
+  color: #FAF7F0;
+  text-shadow: 0 2px 24px rgba(30, 67, 102, 0.45);
+}
+
+.hero.hero--fog .hero-badge,
+.hero.hero--byron .hero-badge,
+.hero.hero--pods .hero-badge {
+  color: rgba(255, 255, 255, 0.92);
+}
+
+.hero.hero--fog .hero-sub,
+.hero.hero--byron .hero-sub,
+.hero.hero--pods .hero-sub {
+  color: rgba(255, 255, 255, 0.86);
+}
+
+.hero.hero--fog .hero-tagline,
+.hero.hero--byron .hero-tagline,
+.hero.hero--pods .hero-tagline {
+  color: rgba(255, 255, 255, 0.78);
+}
+
+.hero.hero--fog .hero-watermark,
+.hero.hero--byron .hero-watermark,
+.hero.hero--pods .hero-watermark {
+  opacity: 0.07;
+  filter: invert(1) brightness(2);
+  z-index: 1;
+}
+
+.hero.hero--fog .product-display img,
+.hero.hero--byron .product-display img,
+.hero.hero--pods .product-display img {
+  filter: drop-shadow(0 22px 48px rgba(30, 67, 102, 0.55));
+}
+
+.hero.hero--fog .hero-cat-btn,
+.hero.hero--byron .hero-cat-btn,
+.hero.hero--pods .hero-cat-btn {
+  color: rgba(255, 255, 255, 0.85);
+}
+.hero.hero--fog .hero-cat-btn.active,
+.hero.hero--byron .hero-cat-btn.active,
+.hero.hero--pods .hero-cat-btn.active {
+  color: #FAF7F0;
+  border-bottom-color: #FAF7F0;
+}
+.hero.hero--fog .cat-separator,
+.hero.hero--byron .cat-separator,
+.hero.hero--pods .cat-separator {
+  background: rgba(255, 255, 255, 0.5);
+}
+
+.hero.hero--fog .flavour-btn,
+.hero.hero--byron .flavour-btn,
+.hero.hero--pods .flavour-btn {
+  color: rgba(255, 255, 255, 0.85);
+  border-color: rgba(255, 255, 255, 0.35);
+}
+.hero.hero--fog .flavour-btn.active,
+.hero.hero--byron .flavour-btn.active,
+.hero.hero--pods .flavour-btn.active {
+  background: #FAF7F0;
+  color: var(--text-primary);
+  border-color: #FAF7F0;
+}
+
+.hero.hero--fog .hero-cta,
+.hero.hero--byron .hero-cta,
+.hero.hero--pods .hero-cta {
+  background: #FAF7F0;
+  color: var(--text-primary);
+  border: 1px solid #FAF7F0;
+}
+.hero.hero--fog .hero-cta:hover,
+.hero.hero--byron .hero-cta:hover,
+.hero.hero--pods .hero-cta:hover {
+  background: transparent;
+  color: #FAF7F0;
+  border-color: #FAF7F0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-bg-video { display: none; }
+  .hero.hero--fog { background-image: url('assets/hero_shots/blue_fog.png'); background-size: cover; background-position: center; }
+}
+
+
+/* ══════════════════════════════════════
+   HERO REVIEW PICKER (Apr 19)
+   ══════════════════════════════════════ */
+.hero--review .hero-bg-video,
+.hero--review .hero-bg-still {
+  opacity: 0;
+  transition: opacity 0.6s ease;
+}
+.hero--review.hero--fog .hero-bg-video[data-bg="fog"] { opacity: 1; }
+.hero--review.hero--byron .hero-bg-still[data-bg="byron"] { opacity: 1; }
+.hero--review.hero--pods .hero-bg-still[data-bg="pods"] { opacity: 1; }
+
+.hero-picker {
+  position: fixed;
+  top: 84px;
+  right: 24px;
+  z-index: 100;
+  display: flex;
+  gap: 4px;
+  padding: 6px;
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(30, 67, 102, 0.12);
+  border-radius: 999px;
+  box-shadow: 0 8px 24px rgba(30, 67, 102, 0.15);
+  font-family: var(--mm-sans);
+}
+
+.hero-picker-label {
+  display: none;
+  align-items: center;
+  padding: 0 12px 0 8px;
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  font-weight: 500;
+}
+
+.hero-picker-btn {
+  appearance: none;
+  border: 0;
+  background: transparent;
+  padding: 8px 16px;
+  border-radius: 999px;
+  font-family: var(--mm-sans);
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--text-secondary);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+.hero-picker-btn:hover {
+  color: var(--text-primary);
+  background: rgba(123, 157, 191, 0.1);
+}
+.hero-picker-btn.active {
+  background: var(--text-primary);
+  color: #FFFFFF;
+}
+
+@media (min-width: 640px) {
+  .hero-picker-label { display: inline-flex; }
+}
+
+@media (max-width: 560px) {
+  .hero-picker {
+    top: auto;
+    bottom: 16px;
+    right: 50%;
+    transform: translateX(50%);
+  }
+}
+
+
+/* ══════════════════════════════════════
+   WALKTHROUGH PANEL v2 (Apr 19 review mode)
+   cream/sand palette, cornflower accents
+   ══════════════════════════════════════ */
+body:not(.walkthrough-on) .walkthrough-panel,
+body:not(.walkthrough-on) .wt-toast { display: none !important; }
+body.walkthrough-on { padding-left: 300px; }
+body.walkthrough-on .site-header { padding-left: 320px; }
+
+.walkthrough-panel {
+  position: fixed;
+  top: 0; left: 0; bottom: 0;
+  width: 300px;
+  background: #FAF7F0;
+  color: #3A2A1C;
+  z-index: 200;
+  display: flex;
+  flex-direction: column;
+  font-family: var(--mm-sans);
+  font-size: 13px;
+  border-right: 1px solid rgba(90, 60, 40, 0.12);
+  box-shadow: 2px 0 24px rgba(90, 60, 40, 0.06);
+}
+
+.wt-head { padding: 18px 20px 12px; border-bottom: 1px solid rgba(90, 60, 40, 0.08); }
+.wt-head h2 { font-family: var(--mm-serif); font-size: 19px; font-weight: 400; margin: 0 0 2px; color: #3A2A1C; }
+.wt-head-row { display: flex; justify-content: space-between; align-items: baseline; margin-top: 6px; }
+.wt-head p { margin: 0; opacity: 0.55; font-size: 10px; letter-spacing: 0.08em; text-transform: uppercase; }
+.wt-progress-label { font-size: 10px; letter-spacing: 0.08em; text-transform: uppercase; color: #6B5A4A; font-weight: 500; }
+.wt-progress-bar { height: 2px; background: rgba(90, 60, 40, 0.08); margin-top: 8px; border-radius: 1px; overflow: hidden; }
+.wt-progress-fill { height: 100%; background: #7B9DBF; width: 0%; transition: width 0.3s ease; }
+
+.wt-list { overflow-y: auto; flex: 1; padding: 6px 0; }
+
+.wt-item {
+  display: grid;
+  grid-template-columns: 22px 1fr auto;
+  column-gap: 8px;
+  row-gap: 2px;
+  align-items: center;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-left: 3px solid transparent;
+  transition: background 0.15s ease, border-left-color 0.15s ease;
+}
+.wt-item:hover { background: rgba(123, 157, 191, 0.08); }
+.wt-item.active { background: rgba(123, 157, 191, 0.12); border-left-color: #7B9DBF; }
+.wt-item.in-view { box-shadow: inset 3px 0 0 rgba(123, 157, 191, 0.35); }
+
+.wt-num { font-size: 11px; opacity: 0.45; font-variant-numeric: tabular-nums; }
+.wt-title { color: #3A2A1C; font-weight: 500; }
+.wt-desc { grid-column: 2 / -1; font-size: 11px; opacity: 0.55; line-height: 1.35; }
+.wt-verdict-chip {
+  grid-row: 1;
+  font-size: 10px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 2px 8px;
+  border-radius: 999px;
+  background: rgba(90, 60, 40, 0.06);
+  color: rgba(58, 42, 28, 0.38);
+  font-weight: 500;
+  min-width: 28px;
+  text-align: center;
+}
+.wt-verdict-chip[data-verdict="keep"]  { background: rgba(91, 140, 86, 0.18);  color: #3F6B3A; }
+.wt-verdict-chip[data-verdict="fix"]   { background: rgba(217, 154, 30, 0.18); color: #9C6C0A; }
+.wt-verdict-chip[data-verdict="regen"] { background: rgba(201, 90, 90, 0.18);  color: #9C3030; }
+.wt-verdict-chip[data-verdict="skip"]  { background: rgba(120, 120, 120, 0.18); color: #5A5A5A; }
+
+.wt-detail {
+  padding: 14px 20px 16px;
+  border-top: 1px solid rgba(90, 60, 40, 0.08);
+  background: rgba(255, 255, 255, 0.5);
+}
+.wt-detail h3 { margin: 0 0 8px; font-family: var(--mm-serif); font-size: 16px; font-weight: 400; color: #3A2A1C; }
+.wt-detail p  { margin: 0 0 12px; opacity: 0.65; font-size: 12px; line-height: 1.45; }
+
+.wt-verdicts {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 4px;
+  margin-bottom: 10px;
+}
+.wt-verdict-btn {
+  appearance: none;
+  border: 1px solid rgba(90, 60, 40, 0.15);
+  background: rgba(255, 255, 255, 0.7);
+  color: #6B5A4A;
+  padding: 8px 2px;
+  font-size: 10px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-family: var(--mm-sans);
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  position: relative;
+}
+.wt-verdict-btn .kbd { display: block; font-size: 9px; opacity: 0.5; margin-top: 1px; }
+.wt-verdict-btn:hover { background: rgba(123, 157, 191, 0.08); color: #3A2A1C; }
+.wt-verdict-btn.active[data-verdict="keep"]  { background: #5B8C56; color: #FFFFFF; border-color: #5B8C56; }
+.wt-verdict-btn.active[data-verdict="fix"]   { background: #D99A1E; color: #FFFFFF; border-color: #D99A1E; }
+.wt-verdict-btn.active[data-verdict="regen"] { background: #C95A5A; color: #FFFFFF; border-color: #C95A5A; }
+.wt-verdict-btn.active[data-verdict="skip"]  { background: #7A7A7A; color: #FFFFFF; border-color: #7A7A7A; }
+.wt-verdict-btn.active .kbd { opacity: 0.75; }
+
+.wt-notes {
+  width: 100%;
+  min-height: 90px;
+  padding: 10px;
+  background: #FFFFFF;
+  border: 1px solid rgba(90, 60, 40, 0.15);
+  border-radius: 4px;
+  color: #3A2A1C;
+  font-family: var(--mm-sans);
+  font-size: 12px;
+  line-height: 1.45;
+  resize: vertical;
+}
+.wt-notes:focus { outline: none; border-color: #7B9DBF; box-shadow: 0 0 0 2px rgba(123, 157, 191, 0.18); }
+
+.wt-nav {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 6px;
+  margin-top: 10px;
+}
+.wt-nav button {
+  appearance: none;
+  border: 1px solid rgba(90, 60, 40, 0.15);
+  background: rgba(255, 255, 255, 0.7);
+  color: #6B5A4A;
+  padding: 8px 4px;
+  font-size: 10px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  font-family: var(--mm-sans);
+  border-radius: 4px;
+  cursor: pointer;
+}
+.wt-nav button:hover { background: rgba(123, 157, 191, 0.08); color: #3A2A1C; }
+.wt-nav button:disabled { opacity: 0.3; cursor: not-allowed; }
+.wt-nav .wt-undecided {
+  border-color: rgba(123, 157, 191, 0.35);
+  color: #4A6A85;
+  background: rgba(123, 157, 191, 0.08);
+}
+.wt-nav .wt-undecided:hover { background: rgba(123, 157, 191, 0.18); }
+
+.wt-footer {
+  padding: 10px 20px;
+  border-top: 1px solid rgba(90, 60, 40, 0.08);
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 6px;
+  align-items: center;
+}
+.wt-footer button.wt-copy {
+  appearance: none;
+  border: 1px solid #7B9DBF;
+  background: #7B9DBF;
+  color: #FFFFFF;
+  padding: 10px;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-family: var(--mm-sans);
+  border-radius: 4px;
+  cursor: pointer;
+}
+.wt-footer button.wt-copy:hover { background: #6C8DAE; }
+.wt-footer button.wt-reset {
+  appearance: none;
+  border: 1px solid rgba(90, 60, 40, 0.15);
+  background: transparent;
+  color: #9B8A7A;
+  padding: 10px 12px;
+  font-size: 11px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  font-family: var(--mm-sans);
+  border-radius: 4px;
+  cursor: pointer;
+}
+.wt-footer button.wt-reset:hover { color: #3A2A1C; }
+
+.wt-shortcuts {
+  padding: 8px 20px 12px;
+  font-size: 10px;
+  color: #9B8A7A;
+  border-top: 1px solid rgba(90, 60, 40, 0.06);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  line-height: 1.4;
+}
+.wt-shortcuts kbd {
+  display: inline-block;
+  padding: 1px 5px;
+  border: 1px solid rgba(90, 60, 40, 0.18);
+  border-radius: 3px;
+  background: #FFFFFF;
+  font-family: var(--mm-mono, ui-monospace, monospace);
+  font-size: 10px;
+  color: #3A2A1C;
+  margin-right: 2px;
+}
+
+.wt-toast {
+  position: fixed;
+  bottom: 24px;
+  left: 320px;
+  background: #3A2A1C;
+  color: #FFFFFF;
+  padding: 10px 18px;
+  border-radius: 8px;
+  box-shadow: 0 8px 24px rgba(90, 60, 40, 0.2);
+  font-family: var(--mm-sans);
+  font-size: 12px;
+  z-index: 300;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.25s ease;
+}
+.wt-toast.show { opacity: 1; }
 
 /* ══════════════════════════════════════
    HERO — FLAVOUR PICKER (warm palette)
@@ -1465,7 +1934,53 @@ a.skip-link:focus { top: 16px; }
 
 </style>
 </head>
-<body>
+<body class="has-atmospheric-hero">
+<nav class="hero-picker" aria-label="Hero variant" data-hero-picker>
+  <span class="hero-picker-label">Hero:</span>
+  <button class="hero-picker-btn active" data-variant="fog" type="button">Fog</button>
+  <button class="hero-picker-btn" data-variant="byron" type="button">Byron</button>
+  <button class="hero-picker-btn" data-variant="pods" type="button">Pods</button>
+</nav>
+<aside class="walkthrough-panel" aria-label="Section review">
+  <div class="wt-head">
+    <h2>Section Review</h2>
+    <div class="wt-head-row">
+      <p>Apr 19 · Carli + Dylan</p>
+      <span class="wt-progress-label" data-wt-progress-label>0 of 8 decided</span>
+    </div>
+    <div class="wt-progress-bar"><div class="wt-progress-fill" data-wt-progress-fill></div></div>
+  </div>
+  <div class="wt-list" data-wt-list></div>
+  <div class="wt-detail" data-wt-detail>
+    <h3 data-wt-title>Hero</h3>
+    <p data-wt-desc>Flavour picker + atmospheric BG (3 variants via picker)</p>
+    <div class="wt-verdicts">
+      <button class="wt-verdict-btn" data-verdict="keep" type="button">Keep<span class="kbd">1</span></button>
+      <button class="wt-verdict-btn" data-verdict="fix" type="button">Fix<span class="kbd">2</span></button>
+      <button class="wt-verdict-btn" data-verdict="regen" type="button">Regen<span class="kbd">3</span></button>
+      <button class="wt-verdict-btn" data-verdict="skip" type="button">Skip<span class="kbd">4</span></button>
+    </div>
+    <textarea class="wt-notes" data-wt-notes placeholder="Notes for this section..."></textarea>
+    <div class="wt-nav">
+      <button data-wt-prev type="button">&larr; Prev</button>
+      <button data-wt-next type="button">Next &rarr;</button>
+      <button data-wt-undecided class="wt-undecided" type="button" title="Jump to next undecided (u)">Next undecided</button>
+    </div>
+  </div>
+  <div class="wt-footer">
+    <button class="wt-copy" data-wt-copy type="button">Copy punch list</button>
+    <button class="wt-reset" data-wt-reset type="button">Reset</button>
+  </div>
+  <div class="wt-shortcuts">
+    <span><kbd>j</kbd>/<kbd>k</kbd> prev/next</span>
+    <span><kbd>1-4</kbd> verdict</span>
+    <span><kbd>n</kbd> notes</span>
+    <span><kbd>u</kbd> next undecided</span>
+    <span><kbd>c</kbd> copy list</span>
+  </div>
+</aside>
+<div class="wt-toast" data-wt-toast>Copied</div>
+
 
 <a href="#main" class="skip-link">Skip to content</a>
 
@@ -1485,7 +2000,7 @@ a.skip-link:focus { top: 16px; }
 
 <!-- Site header -->
 <header class="site-header" id="site-header">
-  <a href="/homepage.html" class="header-logo-link"><img src="assets/brand/maplemoon_logo.svg" alt="Maple Moon" class="header-logo" width="36" height="36" loading="eager" decoding="async"></a>
+  <a href="/homepage.html" class="header-logo-link"><img src="assets/brand/maplemoon_logo.svg" alt="" class="header-logo" width="36" height="36" loading="eager" decoding="async"><span class="header-wordmark">maple moon</span></a>
   <nav class="header-nav">
     <a href="/our-story.html">Our Story</a>
     <a href="/collections/bars.html">Shop</a>
@@ -1500,7 +2015,15 @@ a.skip-link:focus { top: 16px; }
      HERO — Flavour Picker (V7 fused)
      ═══════════════════════════════════ -->
 <main id="main" tabindex="-1">
-<section class="hero" id="hero" aria-label="Hero">
+<section class="hero hero--review hero--fog" id="hero" aria-label="Hero">
+
+
+  <video class="hero-bg-video" data-bg="fog" autoplay muted loop playsinline poster="assets/hero_shots/blue_fog.png" aria-hidden="true">
+    <source src="assets/hero_shots/blue_fog_animated_pingpong.mp4" type="video/mp4">
+    <img src="assets/hero_shots/blue_fog.png" alt="" aria-hidden="true">
+  </video>
+  <img class="hero-bg-still" data-bg="byron" src="assets/hero_shots/moodboard/maplemoon_minimalist_silhouette_photograph_byron_gen_001_20260331_190545.webp" alt="" aria-hidden="true" loading="eager" decoding="async">
+  <img class="hero-bg-still" data-bg="pods" src="assets/photography/refined/mm_refined_r2_fb1_wide_a.png" alt="" aria-hidden="true" loading="eager" decoding="async">
 
   <img src="assets/brand/carob_wordmark.svg" alt="" class="hero-watermark" aria-hidden="true" width="800" height="200">
 
@@ -1513,20 +2036,20 @@ a.skip-link:focus { top: 16px; }
     <!-- Product image stack -->
     <div class="product-display fade-up" aria-live="polite" aria-label="Selected product">
       <!-- Bars -->
-      <img src="assets/product_shots/bar_pure_carob.webp" alt="Pure Carob Bar" class="active" data-flavour="original" data-cat="bars" width="400" height="600" fetchpriority="high" loading="eager" decoding="async">
-      <img src="assets/product_shots/bar_goji_coconut.webp" alt="Golden Coconut Bar" data-flavour="coconut" data-cat="bars" width="400" height="600" loading="lazy" decoding="async">
-      <img src="assets/product_shots/bar_peppermint.webp" alt="Peppermint Bar" data-flavour="mint" data-cat="bars" width="400" height="600" loading="lazy" decoding="async">
-      <img src="assets/product_shots/bar_hazelnut.webp" alt="Hazelnut Bar" data-flavour="hazelnut" data-cat="bars" width="400" height="600" loading="lazy" decoding="async">
+      <img src="assets/product_shots/bars/MM_BAR_Web-Mockups_PCAR_90G_02-FEB-2026.png" alt="Pure Carob Bar" class="active" data-flavour="original" data-cat="bars" width="400" height="600" fetchpriority="high" loading="eager" decoding="async">
+      <img src="assets/product_shots/bars/MM_BAR_Web-Mockups_GCOC_90G_02-FEB-2026.png" alt="Golden Coconut Bar" data-flavour="coconut" data-cat="bars" width="400" height="600" loading="lazy" decoding="async">
+      <img src="assets/product_shots/bars/MM_BAR_Web-Mockups_PMIN_90G_02-FEB-2026.png" alt="Peppermint Bar" data-flavour="mint" data-cat="bars" width="400" height="600" loading="lazy" decoding="async">
+      <img src="assets/product_shots/bars/MM_BAR_Web-Mockups_HNUT_90G_02-FEB-2026.png" alt="Hazelnut Bar" data-flavour="hazelnut" data-cat="bars" width="400" height="600" loading="lazy" decoding="async">
       <!-- Moons -->
-      <img src="assets/product_shots/moon_hazelnut.webp" alt="Hazelnut Moon" data-flavour="moon_hazelnut" data-cat="moons" width="400" height="400" loading="lazy" decoding="async">
-      <img src="assets/product_shots/moon_pure_carob.webp" alt="Pure Carob Moon" data-flavour="moon_pure_carob" data-cat="moons" width="400" height="400" loading="lazy" decoding="async">
-      <img src="assets/product_shots/moon_peppermint.webp" alt="Peppermint Moon" data-flavour="moon_peppermint" data-cat="moons" width="400" height="400" loading="lazy" decoding="async">
+      <img src="assets/product_shots/moons/MM_MOONS_Web-Mockups_HNUT_35G_02-FEB-2026@2x.png" alt="Hazelnut Moon" data-flavour="moon_hazelnut" data-cat="moons" width="400" height="400" loading="lazy" decoding="async">
+      <img src="assets/product_shots/moons/MM_MOONS_Web-Mockups_PCAR_35G_02-FEB-2026@2x.png" alt="Pure Carob Moon" data-flavour="moon_pure_carob" data-cat="moons" width="400" height="400" loading="lazy" decoding="async">
+      <img src="assets/product_shots/moons/MM_MOONS_Web-Mockups_PMIN_35G_02-FEB-2026@2x.png" alt="Peppermint Moon" data-flavour="moon_peppermint" data-cat="moons" width="400" height="400" loading="lazy" decoding="async">
       <!-- Bites -->
-      <img src="assets/product_shots/bite_coconut.webp" alt="Coconut Bite" data-flavour="bite_coconut" data-cat="bites" width="400" height="400" loading="lazy" decoding="async">
-      <img src="assets/product_shots/bite_goji.webp" alt="Goji Bite" data-flavour="bite_goji" data-cat="bites" width="400" height="400" loading="lazy" decoding="async">
+      <img src="assets/product_shots/eclipse_bites/eclipse-bite_coconut.png" alt="Coconut Bite" data-flavour="bite_coconut" data-cat="bites" width="400" height="400" loading="lazy" decoding="async">
+      <img src="assets/product_shots/eclipse_bites/eclipse-bite_goji.png" alt="Goji Bite" data-flavour="bite_goji" data-cat="bites" width="400" height="400" loading="lazy" decoding="async">
       <!-- Elixirs -->
-      <img src="assets/product_shots/elixir_plain.webp" alt="Pure Elixir" data-flavour="elixir_pure" data-cat="elixirs" width="400" height="600" loading="lazy" decoding="async">
-      <img src="assets/product_shots/elixir_spiced.webp" alt="Spiced Elixir" data-flavour="elixir_spiced" data-cat="elixirs" width="400" height="600" loading="lazy" decoding="async">
+      <img src="assets/products_clean/elixir_plain.png" alt="Pure Elixir" data-flavour="elixir_pure" data-cat="elixirs" width="400" height="600" loading="lazy" decoding="async">
+      <img src="assets/products_clean/elixir_spiced.png" alt="Spiced Elixir" data-flavour="elixir_spiced" data-cat="elixirs" width="400" height="600" loading="lazy" decoding="async">
     </div>
 
     <p class="hero-tagline fade-up" id="hero-tagline">Just clean, delicious indulgence that honours your insides every bite.</p>
@@ -1751,88 +2274,88 @@ a.skip-link:focus { top: 16px; }
   <div class="range-grid" id="range-grid">
     <!-- Bars (default) -->
     <a href="/products/pure-carob-bar.html" class="product-card" data-range="bars">
-      <img src="assets/product_shots/bar_pure_carob.webp" alt="Pure Carob Bar" loading="lazy" decoding="async">
+      <img src="assets/product_shots/bars/MM_BAR_Web-Mockups_PCAR_90G_02-FEB-2026.png" alt="Pure Carob Bar" loading="lazy" decoding="async">
       <span class="product-card-name">Pure Carob</span>
       <span class="product-card-desc">Nothing added</span>
     </a>
     <a href="#" class="product-card" data-range="bars">
-      <img src="assets/product_shots/bar_goji_coconut.webp" alt="Golden Coconut Bar" loading="lazy" decoding="async">
+      <img src="assets/product_shots/bars/MM_BAR_Web-Mockups_GCOC_90G_02-FEB-2026.png" alt="Golden Coconut Bar" loading="lazy" decoding="async">
       <span class="product-card-name">Golden Coconut</span>
       <span class="product-card-desc">Toasted coconut</span>
     </a>
     <a href="#" class="product-card" data-range="bars">
-      <img src="assets/product_shots/bar_peppermint.webp" alt="Peppermint Bar" loading="lazy" decoding="async">
+      <img src="assets/product_shots/bars/MM_BAR_Web-Mockups_PMIN_90G_02-FEB-2026.png" alt="Peppermint Bar" loading="lazy" decoding="async">
       <span class="product-card-name">Peppermint</span>
       <span class="product-card-desc">Cool and clean</span>
     </a>
     <a href="#" class="product-card" data-range="bars">
-      <img src="assets/product_shots/bar_hazelnut.webp" alt="Hazelnut Bar" loading="lazy" decoding="async">
+      <img src="assets/product_shots/bars/MM_BAR_Web-Mockups_HNUT_90G_02-FEB-2026.png" alt="Hazelnut Bar" loading="lazy" decoding="async">
       <span class="product-card-name">Hazelnut</span>
       <span class="product-card-desc">Roasted hazelnuts</span>
     </a>
     <a href="#" class="product-card" data-range="bars">
-      <img src="assets/product_shots/bar_cayenne.webp" alt="Chilli Bar" loading="lazy" decoding="async">
+      <img src="assets/product_shots/bars/MM_BAR_Web-Mockups_CHIL_90G_02-FEB-2026.png" alt="Chilli Bar" loading="lazy" decoding="async">
       <span class="product-card-name">Chilli</span>
       <span class="product-card-desc">Slow warmth</span>
     </a>
     <a href="#" class="product-card" data-range="bars">
-      <img src="assets/product_shots/bar_almond.webp" alt="Almond Bar" loading="lazy" decoding="async">
+      <img src="assets/product_shots/bars/MM_BAR_Web-Mockups_ASAL_90G_02-FEB-2026.png" alt="Almond Bar" loading="lazy" decoding="async">
       <span class="product-card-name">Almond</span>
       <span class="product-card-desc">Whole roasted almonds</span>
     </a>
 
     <!-- Moons (hidden) -->
     <a href="#" class="product-card" data-range="moons" style="display:none">
-      <img src="assets/product_shots/moon_pure_carob.webp" alt="Pure Carob Moon" loading="lazy" decoding="async">
+      <img src="assets/product_shots/moons/MM_MOONS_Web-Mockups_PCAR_35G_02-FEB-2026@2x.png" alt="Pure Carob Moon" loading="lazy" decoding="async">
       <span class="product-card-name">Pure Carob</span>
       <span class="product-card-desc">Carob crescents</span>
     </a>
     <a href="#" class="product-card" data-range="moons" style="display:none">
-      <img src="assets/product_shots/moon_hazelnut.webp" alt="Hazelnut Moon" loading="lazy" decoding="async">
+      <img src="assets/product_shots/moons/MM_MOONS_Web-Mockups_HNUT_35G_02-FEB-2026@2x.png" alt="Hazelnut Moon" loading="lazy" decoding="async">
       <span class="product-card-name">Hazelnut</span>
       <span class="product-card-desc">Roasted hazelnut</span>
     </a>
     <a href="#" class="product-card" data-range="moons" style="display:none">
-      <img src="assets/product_shots/moon_peppermint.webp" alt="Peppermint Moon" loading="lazy" decoding="async">
+      <img src="assets/product_shots/moons/MM_MOONS_Web-Mockups_PMIN_35G_02-FEB-2026@2x.png" alt="Peppermint Moon" loading="lazy" decoding="async">
       <span class="product-card-name">Peppermint</span>
       <span class="product-card-desc">Cool mint</span>
     </a>
     <a href="#" class="product-card" data-range="moons" style="display:none">
-      <img src="assets/product_shots/moon_goji_coconut.webp" alt="Goji Coconut Moon" loading="lazy" decoding="async">
+      <img src="assets/product_shots/moons/MM_MOONS_Web-Mockups_GCOC_35G_02-FEB-2026@2x.png" alt="Goji Coconut Moon" loading="lazy" decoding="async">
       <span class="product-card-name">Goji Coconut</span>
       <span class="product-card-desc">Tropical</span>
     </a>
     <a href="#" class="product-card" data-range="moons" style="display:none">
-      <img src="assets/product_shots/moon_cayenne.webp" alt="Cayenne Moon" loading="lazy" decoding="async">
+      <img src="assets/product_shots/moons/MM_MOONS_Web-Mockups_CHIL_35G_02-FEB-2026@2x.png" alt="Cayenne Moon" loading="lazy" decoding="async">
       <span class="product-card-name">Cayenne</span>
       <span class="product-card-desc">Gentle heat</span>
     </a>
     <a href="#" class="product-card" data-range="moons" style="display:none">
-      <img src="assets/product_shots/moon_almond.webp" alt="Almond Moon" loading="lazy" decoding="async">
+      <img src="assets/product_shots/moons/MM_MOONS_Web-Mockups_ASAL_35G_02-FEB-2026@2x.png" alt="Almond Moon" loading="lazy" decoding="async">
       <span class="product-card-name">Almond</span>
       <span class="product-card-desc">Whole roasted</span>
     </a>
 
     <!-- Bites (hidden) -->
     <a href="#" class="product-card" data-range="bites" style="display:none">
-      <img src="assets/product_shots/bite_coconut.webp" alt="Coconut Bite" loading="lazy" decoding="async">
+      <img src="assets/product_shots/eclipse_bites/eclipse-bite_coconut.png" alt="Coconut Bite" loading="lazy" decoding="async">
       <span class="product-card-name">Coconut</span>
       <span class="product-card-desc">Poppable, pure</span>
     </a>
     <a href="#" class="product-card" data-range="bites" style="display:none">
-      <img src="assets/product_shots/bite_goji.webp" alt="Goji Bite" loading="lazy" decoding="async">
+      <img src="assets/product_shots/eclipse_bites/eclipse-bite_goji.png" alt="Goji Bite" loading="lazy" decoding="async">
       <span class="product-card-name">Goji</span>
       <span class="product-card-desc">Golden goji</span>
     </a>
 
     <!-- Elixirs (hidden, dark cards) -->
     <a href="#" class="product-card dark-card" data-range="elixirs" style="display:none">
-      <img src="assets/product_shots/elixir_plain.webp" alt="Pure Elixir" loading="lazy" decoding="async">
+      <img src="assets/products_clean/elixir_plain.png" alt="Pure Elixir" loading="lazy" decoding="async">
       <span class="product-card-name">Pure Elixir</span>
       <span class="product-card-desc">Warm carob, nothing extracted</span>
     </a>
     <a href="#" class="product-card dark-card" data-range="elixirs" style="display:none">
-      <img src="assets/product_shots/elixir_spiced.webp" alt="Spiced Elixir" loading="lazy" decoding="async">
+      <img src="assets/products_clean/elixir_spiced.png" alt="Spiced Elixir" loading="lazy" decoding="async">
       <span class="product-card-name">Spiced Elixir</span>
       <span class="product-card-desc">For the cold months</span>
     </a>
@@ -2151,6 +2674,292 @@ a.skip-link:focus { top: 16px; }
       });
     });
   });
+})();
+</script>
+
+
+<script>
+(function () {
+  var hero = document.getElementById('hero');
+  var picker = document.querySelector('[data-hero-picker]');
+  if (!hero || !picker) return;
+
+  var validModes = ['fog', 'byron', 'pods'];
+
+  function apply(mode) {
+    if (validModes.indexOf(mode) === -1) mode = 'fog';
+    hero.classList.remove('hero--fog', 'hero--byron', 'hero--pods');
+    hero.classList.add('hero--' + mode);
+    picker.querySelectorAll('.hero-picker-btn').forEach(function (b) {
+      b.classList.toggle('active', b.dataset.variant === mode);
+      b.setAttribute('aria-pressed', String(b.dataset.variant === mode));
+    });
+    if (window.location.hash !== '#' + mode) {
+      history.replaceState(null, '', '#' + mode);
+    }
+  }
+
+  picker.addEventListener('click', function (e) {
+    var btn = e.target.closest('.hero-picker-btn');
+    if (btn) apply(btn.dataset.variant);
+  });
+
+  window.addEventListener('hashchange', function () {
+    apply(location.hash.replace('#', ''));
+  });
+
+  var initial = location.hash.replace('#', '') || 'fog';
+  apply(initial);
+})();
+</script>
+
+
+<script>
+(function () {
+  var params = new URLSearchParams(window.location.search);
+  if (params.get('review') !== '1') return;
+  document.body.classList.add('walkthrough-on');
+
+  var sections = [{"id": "hero", "anchor": "#hero", "title": "Hero", "desc": "Flavour picker + atmospheric BG (3 variants via picker top-right)"}, {"id": "carob", "anchor": "[aria-label='What is carob']", "title": "What is carob", "desc": "Dark editorial pullquote band"}, {"id": "bento", "anchor": "[aria-label='Explore']", "title": "Bento (Explore)", "desc": "3 image tiles + trust icons"}, {"id": "origin", "anchor": "#origin", "title": "Our Story", "desc": "Origin copy + carob pods stock image"}, {"id": "range", "anchor": "#range", "title": "Shop the Range", "desc": "16 product grid \u2014 all canonical MM mockups"}, {"id": "byron", "anchor": "[aria-label='Byron Bay']", "title": "Byron Bay", "desc": "Dark editorial band"}, {"id": "trust", "anchor": "[aria-label='Credentials']", "title": "Trust Bar", "desc": "5 credential icons"}, {"id": "newsletter", "anchor": "[aria-label='Newsletter']", "title": "Newsletter", "desc": "CTA section"}];
+  var STORE_KEY = 'mm_walkthrough_apr19_v2';
+  var state = {};
+  try { state = JSON.parse(localStorage.getItem(STORE_KEY) || '{}') || {}; } catch (e) {}
+
+  var listEl         = document.querySelector('[data-wt-list]');
+  var titleEl        = document.querySelector('[data-wt-title]');
+  var descEl         = document.querySelector('[data-wt-desc]');
+  var notesEl        = document.querySelector('[data-wt-notes]');
+  var prevBtn        = document.querySelector('[data-wt-prev]');
+  var nextBtn        = document.querySelector('[data-wt-next]');
+  var undecidedBtn   = document.querySelector('[data-wt-undecided]');
+  var copyBtn        = document.querySelector('[data-wt-copy]');
+  var resetBtn       = document.querySelector('[data-wt-reset]');
+  var toastEl        = document.querySelector('[data-wt-toast]');
+  var progressLabel  = document.querySelector('[data-wt-progress-label]');
+  var progressFill   = document.querySelector('[data-wt-progress-fill]');
+
+  var currentIdx = 0;
+  var inViewIdx = -1;
+  var sectionEls = [];
+
+  function save() { localStorage.setItem(STORE_KEY, JSON.stringify(state)); }
+
+  function toast(msg) {
+    toastEl.textContent = msg;
+    toastEl.classList.add('show');
+    setTimeout(function () { toastEl.classList.remove('show'); }, 1400);
+  }
+
+  function makeEl(tag, className, text) {
+    var el = document.createElement(tag);
+    if (className) el.className = className;
+    if (text != null) el.textContent = text;
+    return el;
+  }
+
+  function clearChildren(node) {
+    while (node.firstChild) node.removeChild(node.firstChild);
+  }
+
+  function decidedCount() {
+    return sections.reduce(function (acc, s) {
+      return acc + ((state[s.id] && state[s.id].verdict) ? 1 : 0);
+    }, 0);
+  }
+
+  function updateProgress() {
+    var n = decidedCount();
+    var total = sections.length;
+    progressLabel.textContent = n + ' of ' + total + ' decided';
+    progressFill.style.width = (n / total * 100).toFixed(1) + '%';
+  }
+
+  function renderList() {
+    clearChildren(listEl);
+    sections.forEach(function (s, i) {
+      var v = (state[s.id] && state[s.id].verdict) || '';
+      var classes = 'wt-item';
+      if (i === currentIdx) classes += ' active';
+      if (i === inViewIdx && i !== currentIdx) classes += ' in-view';
+      var item = makeEl('div', classes);
+      item.dataset.idx = String(i);
+
+      item.appendChild(makeEl('span', 'wt-num', String(i + 1).padStart(2, '0')));
+      item.appendChild(makeEl('span', 'wt-title', s.title));
+
+      var chipText = v ? v.toUpperCase() : '—';
+      var chip = makeEl('span', 'wt-verdict-chip', chipText);
+      if (v) chip.dataset.verdict = v;
+      item.appendChild(chip);
+
+      item.appendChild(makeEl('span', 'wt-desc', s.desc));
+
+      item.addEventListener('click', function () { goto(i, true); });
+      listEl.appendChild(item);
+    });
+  }
+
+  function renderDetail() {
+    var s = sections[currentIdx];
+    titleEl.textContent = (currentIdx + 1) + '. ' + s.title;
+    descEl.textContent = s.desc;
+    var entry = state[s.id] || {};
+    notesEl.value = entry.notes || '';
+    document.querySelectorAll('.wt-verdict-btn').forEach(function (b) {
+      b.classList.toggle('active', b.dataset.verdict === entry.verdict);
+    });
+    prevBtn.disabled = currentIdx === 0;
+    nextBtn.disabled = currentIdx === sections.length - 1;
+    undecidedBtn.disabled = decidedCount() === sections.length;
+  }
+
+  function goto(idx, scroll) {
+    if (idx < 0 || idx >= sections.length) return;
+    currentIdx = idx;
+    renderList();
+    renderDetail();
+    if (scroll) {
+      var target = sectionEls[idx];
+      if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  }
+
+  function gotoFirstUndecided() {
+    for (var i = 0; i < sections.length; i++) {
+      var e = state[sections[i].id] || {};
+      if (!e.verdict) { goto(i, true); return; }
+    }
+    toast('All sections decided');
+  }
+
+  function setVerdict(v) {
+    var s = sections[currentIdx];
+    var entry = state[s.id] || {};
+    entry.verdict = entry.verdict === v ? '' : v;
+    state[s.id] = entry;
+    save();
+    updateProgress();
+    renderList();
+    renderDetail();
+  }
+
+  document.querySelectorAll('.wt-verdict-btn').forEach(function (b) {
+    b.addEventListener('click', function () { setVerdict(b.dataset.verdict); });
+  });
+
+  notesEl.addEventListener('input', function () {
+    var s = sections[currentIdx];
+    var entry = state[s.id] || {};
+    entry.notes = notesEl.value;
+    state[s.id] = entry;
+    save();
+  });
+
+  prevBtn.addEventListener('click', function () { goto(currentIdx - 1, true); });
+  nextBtn.addEventListener('click', function () { goto(currentIdx + 1, true); });
+  undecidedBtn.addEventListener('click', gotoFirstUndecided);
+
+  copyBtn.addEventListener('click', copyPunchlist);
+
+  resetBtn.addEventListener('click', function () {
+    if (!confirm('Clear all walkthrough notes?')) return;
+    state = {};
+    save();
+    updateProgress();
+    renderList();
+    renderDetail();
+    toast('Cleared');
+  });
+
+  function copyPunchlist() {
+    var now = new Date();
+    var ts = now.toISOString().slice(0, 19).replace('T', ' ');
+    var heroMode = (document.querySelector('.hero-picker-btn.active') || {}).dataset;
+    var heroLabel = heroMode && heroMode.variant ? heroMode.variant : 'unknown';
+    var lines = [
+      '# MM Homepage Walkthrough — Apr 19 review',
+      '',
+      '- Timestamp: ' + ts,
+      '- Hero variant shown: ' + heroLabel,
+      '- Progress: ' + decidedCount() + ' of ' + sections.length + ' decided',
+      '- URL: ' + window.location.href
+    ];
+    sections.forEach(function (s, i) {
+      var entry = state[s.id] || {};
+      var verdict = entry.verdict ? entry.verdict.toUpperCase() : '—';
+      lines.push('');
+      lines.push('## ' + (i + 1) + '. ' + s.title + '  [' + verdict + ']');
+      if (entry.notes && entry.notes.trim()) lines.push(entry.notes.trim());
+    });
+    var out = lines.join('\n');
+    navigator.clipboard.writeText(out).then(
+      function () { toast('Punch list copied'); },
+      function () {
+        var ta = document.createElement('textarea');
+        ta.value = out; document.body.appendChild(ta); ta.select();
+        document.execCommand('copy'); document.body.removeChild(ta);
+        toast('Punch list copied (fallback)');
+      }
+    );
+  }
+
+  // Keyboard shortcuts — don't fire when typing in the notes textarea
+  document.addEventListener('keydown', function (e) {
+    if (e.target === notesEl) return;
+    if (e.metaKey || e.ctrlKey || e.altKey) return;
+    switch (e.key) {
+      case 'j':
+      case 'ArrowDown':
+        e.preventDefault(); goto(currentIdx + 1, true); break;
+      case 'k':
+      case 'ArrowUp':
+        e.preventDefault(); goto(currentIdx - 1, true); break;
+      case '1': e.preventDefault(); setVerdict('keep'); break;
+      case '2': e.preventDefault(); setVerdict('fix'); break;
+      case '3': e.preventDefault(); setVerdict('regen'); break;
+      case '4': e.preventDefault(); setVerdict('skip'); break;
+      case 'n': e.preventDefault(); notesEl.focus(); break;
+      case 'u': e.preventDefault(); gotoFirstUndecided(); break;
+      case 'c': e.preventDefault(); copyPunchlist(); break;
+    }
+  });
+
+  // Intersection observer — highlight the section currently in view
+  function resolveSectionEls() {
+    sectionEls = sections.map(function (s) {
+      try { return document.querySelector(s.anchor); } catch (e) { return null; }
+    });
+  }
+
+  function setupObserver() {
+    resolveSectionEls();
+    if (!window.IntersectionObserver) return;
+    var observer = new IntersectionObserver(function (entries) {
+      // Pick the section with the largest intersection ratio among those visible.
+      var best = null;
+      entries.forEach(function (ent) {
+        if (!ent.isIntersecting) return;
+        if (!best || ent.intersectionRatio > best.intersectionRatio) best = ent;
+      });
+      if (!best) return;
+      var idx = sectionEls.indexOf(best.target);
+      if (idx >= 0 && idx !== inViewIdx) {
+        inViewIdx = idx;
+        renderList();
+      }
+    }, { rootMargin: '-30% 0px -50% 0px', threshold: [0, 0.1, 0.5] });
+
+    sectionEls.forEach(function (el) { if (el) observer.observe(el); });
+  }
+
+  renderList();
+  renderDetail();
+  updateProgress();
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', setupObserver);
+  } else {
+    setupObserver();
+  }
 })();
 </script>
 
