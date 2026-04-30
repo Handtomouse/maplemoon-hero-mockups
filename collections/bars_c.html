@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Maple Moon: Carob bars (six flavours)</title>
+  <link rel="stylesheet" href="../brand_kit.css">
+  <style>
+    /* ── Direction C — Collection / Catalogue ── */
+    :root {
+      --paper:   #FAF6EC;
+      --ink:     #1A1612;
+      --warm:    #6B4928;
+      --muted:   #8E7E68;
+      --rule:    rgba(26,22,18,0.14);
+      --rule-soft: rgba(26,22,18,0.06);
+      --tile-bg: #ECE4D2;
+    }
+    html { scroll-behavior: smooth; }
+    body {
+      background: var(--paper);
+      color: var(--ink);
+      font-family: var(--mm-sans);
+      font-weight: 300;
+      -webkit-font-smoothing: antialiased;
+    }
+    .skip-link { position: absolute; left: -9999px; top: 0; padding: 8px 12px; background: var(--ink); color: var(--paper); }
+    .skip-link:focus { left: 12px; top: 12px; z-index: 9999; }
+
+    .nav {
+      position: sticky; top: 0; z-index: var(--z-fixed);
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 18px clamp(20px, 5vw, 48px);
+      background: var(--paper);
+      border-bottom: 1px solid var(--rule-soft);
+    }
+    .nav-logo {
+      display: flex; align-items: center; gap: 10px;
+      font-family: var(--mm-serif); font-size: 0.95rem; font-weight: 400;
+      letter-spacing: 0.12em; text-transform: uppercase;
+      color: var(--ink); text-decoration: none;
+    }
+    .nav-logo-glyph { width: 24px; height: 24px; display: block; }
+    .nav-links { display: flex; gap: 24px; list-style: none; }
+    .nav-links a {
+      font-family: var(--mm-sans); font-size: 0.78rem; font-weight: 400;
+      letter-spacing: 0.16em; text-transform: uppercase;
+      color: var(--muted); text-decoration: none; transition: color 0.2s;
+    }
+    .nav-links a[aria-current], .nav-links a:hover { color: var(--ink); }
+
+    main { max-width: 1240px; margin: 0 auto; padding: 0 clamp(20px, 5vw, 48px); }
+
+    /* ── Title block ── */
+    .header {
+      padding: clamp(72px, 10vw, 130px) 0 clamp(40px, 6vw, 70px);
+      display: grid;
+      grid-template-columns: 1.4fr 1fr;
+      gap: clamp(32px, 5vw, 80px);
+      align-items: end;
+      border-bottom: 1px solid var(--rule);
+    }
+    .header-eyebrow {
+      font-family: var(--mm-sans); font-size: 0.78rem; font-weight: 500;
+      letter-spacing: 0.18em; text-transform: uppercase;
+      color: var(--muted); margin-bottom: 14px;
+    }
+    .header-title {
+      font-family: var(--mm-serif);
+      font-size: clamp(2.6rem, 6.5vw, 4.6rem);
+      font-weight: 400; line-height: 0.96;
+      letter-spacing: -0.025em; color: var(--ink);
+      max-width: 14ch;
+    }
+    .header-meta {
+      display: flex; flex-direction: column; gap: 10px;
+    }
+    .header-meta-row {
+      display: grid; grid-template-columns: 110px 1fr;
+      gap: 16px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid var(--rule-soft);
+    }
+    .header-meta-label {
+      font-family: var(--mm-sans); font-size: 0.74rem; font-weight: 500;
+      letter-spacing: 0.18em; text-transform: uppercase;
+      color: var(--muted);
+    }
+    .header-meta-value {
+      font-family: var(--mm-serif); font-size: 1rem; font-weight: 400;
+      color: var(--ink); line-height: 1.4;
+    }
+
+    /* ── Bars list ── */
+    .bars-section { padding: clamp(48px, 7vw, 80px) 0 clamp(56px, 8vw, 100px); border-bottom: 1px solid var(--rule); }
+    .bars-list { list-style: none; }
+    .bar-row {
+      display: grid;
+      grid-template-columns: 56px 1.2fr 2fr 0.8fr 96px 0.5fr;
+      gap: clamp(16px, 2vw, 32px);
+      align-items: center;
+      padding: 24px 0;
+      border-top: 1px solid var(--rule-soft);
+      text-decoration: none;
+      color: inherit;
+      transition: background 0.2s;
+    }
+    .bar-row:last-child { border-bottom: 1px solid var(--rule-soft); }
+    .bar-row:hover { background: rgba(0,0,0,0.018); }
+    .bar-row-no {
+      font-family: var(--mm-serif); font-size: 0.85rem; font-weight: 400;
+      color: var(--muted); letter-spacing: 0.04em;
+    }
+    .bar-row-name {
+      font-family: var(--mm-serif);
+      font-size: clamp(1.1rem, 2vw, 1.35rem);
+      font-weight: 400; color: var(--ink); line-height: 1.15;
+    }
+    .bar-row-tasting {
+      font-family: var(--mm-sans); font-size: 0.92rem; font-weight: 300;
+      color: var(--muted); line-height: 1.5;
+    }
+    .bar-row-spec {
+      font-family: var(--mm-sans); font-size: 0.85rem; font-weight: 400;
+      color: var(--muted); letter-spacing: 0.02em;
+    }
+    .bar-row-thumb {
+      aspect-ratio: 1 / 1; overflow: hidden; background: var(--tile-bg);
+    }
+    .bar-row-thumb img { width: 100%; height: 100%; object-fit: cover; display: block; }
+    .bar-row-price {
+      font-family: var(--mm-serif); font-size: 1.05rem; font-weight: 400;
+      color: var(--ink); text-align: right;
+    }
+
+    /* ── Notes / standards ── */
+    .notes {
+      padding: clamp(48px, 7vw, 80px) 0;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: clamp(28px, 4vw, 56px);
+    }
+    .note-block {
+      display: flex; flex-direction: column;
+    }
+    .note-label {
+      font-family: var(--mm-sans); font-size: 0.74rem; font-weight: 500;
+      letter-spacing: 0.2em; text-transform: uppercase;
+      color: var(--warm); margin-bottom: 12px;
+    }
+    .note-head {
+      font-family: var(--mm-serif); font-size: 1.15rem; font-weight: 400;
+      color: var(--ink); margin-bottom: 10px; line-height: 1.25;
+    }
+    .note-body {
+      font-family: var(--mm-sans); font-size: 0.92rem; font-weight: 300;
+      color: var(--muted); line-height: 1.6;
+    }
+
+    .footer {
+      padding: 24px clamp(20px, 5vw, 48px);
+      border-top: 1px solid var(--rule-soft);
+      display: flex; align-items: center; justify-content: space-between;
+      gap: 24px; flex-wrap: wrap;
+      max-width: 1240px; margin: 0 auto;
+    }
+    .footer-logo {
+      font-family: var(--mm-serif); font-size: 0.85rem; font-weight: 400;
+      letter-spacing: 0.12em; text-transform: uppercase;
+      color: var(--muted); text-decoration: none;
+    }
+    .footer-links { display: flex; gap: 22px; list-style: none; }
+    .footer-links a {
+      font-family: var(--mm-sans); font-size: 0.74rem; font-weight: 400;
+      letter-spacing: 0.12em; text-transform: uppercase;
+      color: var(--muted); text-decoration: none;
+    }
+    .footer-links a:hover { color: var(--ink); }
+    .footer-copy {
+      font-family: var(--mm-sans); font-size: 0.74rem; font-weight: 300;
+      color: var(--muted);
+    }
+
+    @media (max-width: 900px) {
+      .bar-row { grid-template-columns: 36px 1fr 60px 60px; gap: 12px; padding: 18px 0; }
+      .bar-row-tasting { display: none; }
+      .bar-row-spec { display: none; }
+      .notes { grid-template-columns: 1fr; gap: 24px; }
+    }
+    @media (max-width: 640px) {
+      .nav { padding: 14px 18px; }
+      .nav-links { gap: 16px; }
+      .header { grid-template-columns: 1fr; gap: 24px; padding-top: 56px; }
+      .footer { flex-direction: column; align-items: flex-start; gap: 12px; }
+    }
+  </style>
+</head>
+<body>
+
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="nav" id="nav" role="banner">
+    <a class="nav-logo" href="/homepage_c.html">
+      <img class="nav-logo-glyph" src="../assets/brand/maplemoon_logo.svg" alt="" aria-hidden="true">Maple Moon
+    </a>
+    <nav aria-label="Site navigation">
+      <ul class="nav-links">
+        <li><a href="/collections/bars_c.html" aria-current="page">Bars</a></li>
+        <li><a href="/our-story.html">About</a></li>
+        <li><a href="/faq.html">FAQ</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main">
+
+    <section class="header" aria-label="Carob bars index">
+      <div>
+        <p class="header-eyebrow">Range / 01</p>
+        <h1 class="header-title">Carob bars.<br>Six flavours.</h1>
+      </div>
+      <div class="header-meta">
+        <div class="header-meta-row">
+          <span class="header-meta-label">Format</span>
+          <span class="header-meta-value">65g pressed bar, hand-scored</span>
+        </div>
+        <div class="header-meta-row">
+          <span class="header-meta-label">Of</span>
+          <span class="header-meta-value">Australian carob, cacao butter</span>
+        </div>
+        <div class="header-meta-row">
+          <span class="header-meta-label">Made</span>
+          <span class="header-meta-value">Byron Bay, small batch</span>
+        </div>
+        <div class="header-meta-row">
+          <span class="header-meta-label">Allergens</span>
+          <span class="header-meta-value">See per-flavour notes</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="bars-section" aria-label="All bars">
+      <ul class="bars-list">
+        <li>
+          <a class="bar-row" href="/products/pure-carob-bar_c.html">
+            <span class="bar-row-no">01</span>
+            <span class="bar-row-name">Pure Carob</span>
+            <span class="bar-row-tasting">Roasted carob, cacao butter. Three ingredients. The flagship and the most pod-forward of the six.</span>
+            <span class="bar-row-spec">3 ingredients · 65g</span>
+            <span class="bar-row-thumb"><img src="../assets/hero/bar_pcar_hero.png" alt="" loading="lazy"></span>
+            <span class="bar-row-price">$10</span>
+          </a>
+        </li>
+        <li>
+          <a class="bar-row" href="/products/pure-carob-bar_c.html">
+            <span class="bar-row-no">02</span>
+            <span class="bar-row-name">Golden Coconut</span>
+            <span class="bar-row-tasting">Toasted coconut folded through carob. Warm, mellow, sweet without sugar. Sells out fastest.</span>
+            <span class="bar-row-spec">4 ingredients · 65g</span>
+            <span class="bar-row-thumb"><img src="../assets/hero/bar_pcar_hero.png" alt="" loading="lazy"></span>
+            <span class="bar-row-price">$11</span>
+          </a>
+        </li>
+        <li>
+          <a class="bar-row" href="/products/peppermint-moon.html">
+            <span class="bar-row-no">03</span>
+            <span class="bar-row-name">Peppermint</span>
+            <span class="bar-row-tasting">Cold-pressed Australian peppermint oil. Sharp finish, no aftertaste. The reset bar.</span>
+            <span class="bar-row-spec">4 ingredients · 65g</span>
+            <span class="bar-row-thumb"><img src="../assets/hero_shots/hero_carob_bar_smoke_wide.jpg" alt="" loading="lazy"></span>
+            <span class="bar-row-price">$11</span>
+          </a>
+        </li>
+        <li>
+          <a class="bar-row" href="/products/pure-carob-bar_c.html">
+            <span class="bar-row-no">04</span>
+            <span class="bar-row-name">Hazelnut</span>
+            <span class="bar-row-tasting">Roasted hazelnut paste, generous. The familiar flavour, done without the sugar.</span>
+            <span class="bar-row-spec">4 ingredients · 65g · contains tree nuts</span>
+            <span class="bar-row-thumb"><img src="../assets/hero/bar_pcar_hero.png" alt="" loading="lazy"></span>
+            <span class="bar-row-price">$12</span>
+          </a>
+        </li>
+        <li>
+          <a class="bar-row" href="/products/pure-carob-bar_c.html">
+            <span class="bar-row-no">05</span>
+            <span class="bar-row-name">Chilli</span>
+            <span class="bar-row-tasting">Slow chilli warmth, finishes hot. For a sweet that has something to say after the first bite.</span>
+            <span class="bar-row-spec">4 ingredients · 65g</span>
+            <span class="bar-row-thumb"><img src="../assets/photography/refined/mm_refined_r1_product_campaign_001.png" alt="" loading="lazy"></span>
+            <span class="bar-row-price">$12</span>
+          </a>
+        </li>
+        <li>
+          <a class="bar-row" href="/products/pure-carob-bar_c.html">
+            <span class="bar-row-no">06</span>
+            <span class="bar-row-name">Almond</span>
+            <span class="bar-row-tasting">Roasted almond, whole inclusions. Quietly the most popular. The repeat-buy bar.</span>
+            <span class="bar-row-spec">4 ingredients · 65g · contains tree nuts</span>
+            <span class="bar-row-thumb"><img src="../assets/photography/refined/mm_refined_r1_still_life_001.png" alt="" loading="lazy"></span>
+            <span class="bar-row-price">$12</span>
+          </a>
+        </li>
+      </ul>
+    </section>
+
+    <section class="notes" aria-label="Standards and notes">
+      <div class="note-block">
+        <p class="note-label">Standards</p>
+        <p class="note-head">Naturally sweet. No added sugar.</p>
+        <p class="note-body">Carob is sweet because it's a legume pod. We don't add cane, coconut, rice malt, or any other sugar. The sweetness is the pod.</p>
+      </div>
+      <div class="note-block">
+        <p class="note-label">No</p>
+        <p class="note-head">Caffeine, theobromine, emulsifier, vegetable oil.</p>
+        <p class="note-body">Carob has none of the alkaloids cacao does. We don't compound, we don't extend with oil, we don't smooth the texture with lecithin.</p>
+      </div>
+      <div class="note-block">
+        <p class="note-label">Certifications</p>
+        <p class="note-head">Organic. Vegan. Gluten free.</p>
+        <p class="note-body">Certified across the range. Hazelnut and Almond are made in a facility that handles tree nuts.</p>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer" role="contentinfo">
+    <a class="footer-logo" href="/homepage_c.html">Maple Moon</a>
+    <nav aria-label="Footer navigation">
+      <ul class="footer-links">
+        <li><a href="/our-story.html">About</a></li>
+        <li><a href="/faq.html">FAQ</a></li>
+        <li><a href="mailto:hello@maplemoon.com.au">Contact</a></li>
+      </ul>
+    </nav>
+    <p class="footer-copy">© 2026 Maple Moon. Made in Byron Bay.</p>
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pure Carob Bar — Maple Moon</title>
+  <link rel="stylesheet" href="../brand_kit.css">
+  <style>
+    /* ── Direction A — PDP / Editorial ── */
+    :root {
+      --ink:     #1C1814;
+      --field:   #F2EFE6;
+      --warm:    #5C3D1E;
+      --muted:   #9A8A78;
+      --rule:    rgba(92,61,30,0.18);
+      --rule-soft: rgba(92,61,30,0.08);
+    }
+    html { scroll-behavior: smooth; }
+    body {
+      background: var(--field); color: var(--ink);
+      font-family: var(--mm-sans); font-weight: 300;
+      -webkit-font-smoothing: antialiased;
+    }
+    .skip-link { position: absolute; left: -9999px; top: 0; padding: 8px 12px; background: var(--ink); color: var(--field); }
+    .skip-link:focus { left: 12px; top: 12px; z-index: 9999; }
+
+    .nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: var(--z-fixed);
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 18px clamp(20px, 5vw, 40px);
+      background: var(--field);
+      border-bottom: 1px solid transparent;
+      transition: border-color 0.3s ease;
+    }
+    .nav.scrolled { border-color: var(--rule); }
+    .nav-logo {
+      display: flex; align-items: center; gap: 10px;
+      font-family: var(--mm-serif); font-size: 1rem; font-weight: 400;
+      letter-spacing: 0.08em; color: var(--ink); text-decoration: none;
+    }
+    .nav-logo-glyph { width: 24px; height: 24px; display: block; }
+    .nav-links { display: flex; gap: 28px; list-style: none; }
+    .nav-links a {
+      font-family: var(--mm-sans); font-size: 0.78rem; font-weight: 500;
+      letter-spacing: 0.14em; text-transform: uppercase;
+      color: var(--muted); text-decoration: none; transition: color 0.2s;
+    }
+    .nav-links a:hover { color: var(--ink); }
+
+    main { max-width: 1320px; margin: 0 auto; padding: 0 clamp(20px, 5vw, 48px); }
+
+    .breadcrumb {
+      padding: clamp(110px, 12vw, 140px) 0 24px;
+      font-family: var(--mm-sans); font-size: 0.78rem; font-weight: 500;
+      letter-spacing: 0.14em; text-transform: uppercase;
+      color: var(--muted);
+    }
+    .breadcrumb a { color: var(--muted); text-decoration: none; }
+    .breadcrumb a:hover { color: var(--ink); }
+    .breadcrumb-sep { margin: 0 10px; }
+
+    /* ── Hero / buy box ── */
+    .hero {
+      display: grid;
+      grid-template-columns: 1.1fr 1fr;
+      gap: clamp(32px, 5vw, 80px);
+      padding-bottom: clamp(56px, 8vw, 100px);
+      border-bottom: 1px solid var(--rule);
+      align-items: start;
+    }
+    .hero-image {
+      aspect-ratio: 4 / 5;
+      overflow: hidden;
+      background: var(--rule-soft);
+    }
+    .hero-image img { width: 100%; height: 100%; object-fit: cover; display: block; }
+    .hero-info { padding-top: 24px; }
+    .hero-eyebrow {
+      font-family: var(--mm-sans); font-size: 0.78rem; font-weight: 500;
+      letter-spacing: 0.2em; text-transform: uppercase;
+      color: var(--muted); margin-bottom: 14px;
+    }
+    .hero-title {
+      font-family: var(--mm-serif);
+      font-size: clamp(2.4rem, 5vw, 3.8rem);
+      font-weight: 400; line-height: 1; letter-spacing: -0.02em;
+      color: var(--ink); margin-bottom: 18px;
+    }
+    .hero-tasting {
+      font-family: var(--mm-serif);
+      font-size: clamp(1.05rem, 1.6vw, 1.25rem);
+      font-weight: 400; color: var(--warm);
+      line-height: 1.45;
+      max-width: 36ch;
+      margin-bottom: 32px;
+    }
+    .hero-meta {
+      display: flex; gap: 28px; flex-wrap: wrap;
+      padding: 18px 0;
+      border-top: 1px solid var(--rule-soft);
+      border-bottom: 1px solid var(--rule-soft);
+      margin-bottom: 28px;
+    }
+    .hero-meta-item {
+      display: flex; flex-direction: column; gap: 4px;
+    }
+    .hero-meta-label {
+      font-family: var(--mm-sans); font-size: 0.72rem; font-weight: 500;
+      letter-spacing: 0.16em; text-transform: uppercase;
+      color: var(--muted);
+    }
+    .hero-meta-value {
+      font-family: var(--mm-serif); font-size: 0.95rem; font-weight: 400;
+      color: var(--ink);
+    }
+    .buy {
+      display: flex; align-items: center; justify-content: space-between;
+      gap: 18px; flex-wrap: wrap;
+    }
+    .buy-price {
+      font-family: var(--mm-serif); font-size: 1.6rem; font-weight: 400;
+      color: var(--ink);
+    }
+    .buy-price-note {
+      font-family: var(--mm-sans); font-size: 0.78rem; font-weight: 400;
+      color: var(--muted); margin-left: 8px;
+    }
+    .buy-btn {
+      flex: 1; min-width: 220px;
+      padding: 16px 28px;
+      background: var(--ink); color: var(--field);
+      border: 1px solid var(--ink);
+      font-family: var(--mm-sans); font-size: 0.85rem; font-weight: 500;
+      letter-spacing: 0.18em; text-transform: uppercase;
+      text-decoration: none; text-align: center;
+      cursor: pointer; transition: opacity 0.2s;
+    }
+    .buy-btn:hover { opacity: 0.85; }
+    .stock-line {
+      margin-top: 14px;
+      font-family: var(--mm-sans); font-size: 0.85rem; font-weight: 300;
+      color: var(--muted);
+    }
+
+    /* ── Detail sections ── */
+    .section {
+      padding: clamp(56px, 8vw, 100px) 0;
+      border-bottom: 1px solid var(--rule);
+    }
+    .section-eyebrow {
+      font-family: var(--mm-sans); font-size: 0.78rem; font-weight: 500;
+      letter-spacing: 0.2em; text-transform: uppercase;
+      color: var(--muted); margin-bottom: 18px;
+    }
+    .section-head {
+      font-family: var(--mm-serif);
+      font-size: clamp(1.6rem, 3vw, 2.2rem);
+      font-weight: 400; line-height: 1.1;
+      letter-spacing: -0.01em; color: var(--ink);
+      margin-bottom: 28px;
+      max-width: 28ch;
+    }
+    .section-body {
+      font-family: var(--mm-sans);
+      font-size: 1rem; font-weight: 300;
+      color: var(--muted); line-height: 1.7;
+      max-width: 50ch;
+    }
+    .section-body p + p { margin-top: 1em; }
+
+    .ingredients {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: clamp(32px, 5vw, 80px);
+      align-items: start;
+    }
+    .ingredients-list {
+      list-style: none;
+      display: flex; flex-direction: column;
+    }
+    .ingredient {
+      display: flex; align-items: baseline; justify-content: space-between;
+      gap: 16px;
+      padding: 14px 0;
+      border-top: 1px solid var(--rule-soft);
+    }
+    .ingredient:last-child { border-bottom: 1px solid var(--rule-soft); }
+    .ingredient-name {
+      font-family: var(--mm-serif); font-size: 1.05rem; font-weight: 400;
+      color: var(--ink);
+    }
+    .ingredient-note {
+      font-family: var(--mm-sans); font-size: 0.85rem; font-weight: 300;
+      color: var(--muted); text-align: right;
+    }
+
+    .editorial-image-full {
+      width: 100%;
+      height: clamp(360px, 50vw, 600px);
+      background-size: cover; background-position: center;
+      background-color: var(--rule);
+    }
+
+    .related {
+      padding: clamp(56px, 8vw, 100px) 0;
+    }
+    .related-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: clamp(20px, 3vw, 40px);
+      margin-top: 36px;
+    }
+    .related-tile {
+      display: flex; flex-direction: column;
+      text-decoration: none; color: inherit;
+      transition: opacity 0.2s;
+    }
+    .related-tile:hover { opacity: 0.85; }
+    .related-tile-img {
+      aspect-ratio: 4 / 5; overflow: hidden; background: var(--rule-soft);
+      margin-bottom: 14px;
+    }
+    .related-tile-img img { width: 100%; height: 100%; object-fit: cover; display: block; }
+    .related-tile-name {
+      font-family: var(--mm-serif); font-size: 1.1rem; font-weight: 400;
+      color: var(--ink);
+    }
+    .related-tile-price {
+      font-family: var(--mm-sans); font-size: 0.92rem; font-weight: 400;
+      color: var(--muted); margin-top: 4px;
+    }
+
+    .footer {
+      padding: 32px clamp(20px, 5vw, 48px);
+      border-top: 1px solid var(--rule);
+      display: flex; align-items: center; justify-content: space-between;
+      gap: 24px; flex-wrap: wrap;
+      max-width: 1320px; margin: 0 auto;
+    }
+    .footer-logo {
+      font-family: var(--mm-serif); font-size: 0.85rem; font-weight: 400;
+      letter-spacing: 0.08em; color: var(--muted); text-decoration: none;
+    }
+    .footer-links { display: flex; gap: 22px; list-style: none; }
+    .footer-links a {
+      font-family: var(--mm-sans); font-size: 0.74rem; font-weight: 400;
+      letter-spacing: 0.12em; text-transform: uppercase;
+      color: var(--muted); text-decoration: none;
+    }
+    .footer-links a:hover { color: var(--ink); }
+    .footer-copy { font-family: var(--mm-sans); font-size: 0.74rem; font-weight: 300; color: var(--muted); }
+
+    @media (max-width: 900px) {
+      .hero { grid-template-columns: 1fr; gap: 24px; }
+      .ingredients { grid-template-columns: 1fr; gap: 24px; }
+      .related-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 640px) {
+      .breadcrumb { padding-top: 88px; }
+      .footer { flex-direction: column; align-items: flex-start; gap: 14px; }
+      .related-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="nav" id="nav" role="banner">
+    <a class="nav-logo" href="/homepage_a.html">
+      <img class="nav-logo-glyph" src="../assets/brand/maplemoon_logo.svg" alt="" aria-hidden="true">Maple Moon
+    </a>
+    <nav aria-label="Site navigation">
+      <ul class="nav-links">
+        <li><a href="/collections/bars_a.html">Bars</a></li>
+        <li><a href="/our-story.html">About</a></li>
+        <li><a href="/faq.html">FAQ</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main">
+
+    <p class="breadcrumb">
+      <a href="/homepage_a.html">Maple Moon</a><span class="breadcrumb-sep">/</span>
+      <a href="/collections/bars_a.html">Bars</a><span class="breadcrumb-sep">/</span>
+      Pure Carob
+    </p>
+
+    <section class="hero" aria-label="Pure Carob Bar">
+      <div class="hero-image">
+        <img src="../assets/hero/bar_pcar_hero.png" alt="Pure Carob Bar by Maple Moon" loading="eager">
+      </div>
+      <div class="hero-info">
+        <p class="hero-eyebrow">Bars / 01</p>
+        <h1 class="hero-title">Pure Carob Bar</h1>
+        <p class="hero-tasting">Three ingredients. Naturally sweet. The bar that shows you what carob tastes like before anything else gets in the way.</p>
+
+        <div class="hero-meta">
+          <div class="hero-meta-item">
+            <span class="hero-meta-label">Weight</span>
+            <span class="hero-meta-value">65g</span>
+          </div>
+          <div class="hero-meta-item">
+            <span class="hero-meta-label">Of</span>
+            <span class="hero-meta-value">Carob, cacao butter</span>
+          </div>
+          <div class="hero-meta-item">
+            <span class="hero-meta-label">Ingredients</span>
+            <span class="hero-meta-value">3</span>
+          </div>
+          <div class="hero-meta-item">
+            <span class="hero-meta-label">Made in</span>
+            <span class="hero-meta-value">Byron Bay</span>
+          </div>
+        </div>
+
+        <div class="buy">
+          <span>
+            <span class="buy-price">$10</span>
+            <span class="buy-price-note">+ free shipping over $40</span>
+          </span>
+          <a class="buy-btn" href="#cart">Add to cart</a>
+        </div>
+        <p class="stock-line">In stock. Ships from Byron Bay within two business days.</p>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="taste-head">
+      <p class="section-eyebrow">Tasting</p>
+      <h2 class="section-head" id="taste-head">Honey-roasted, malt, the faintest dark fruit.</h2>
+      <div class="section-body">
+        <p>Carob roasted to the second crack reads like burnt honey on the front of the palate, with a malt note in the middle and a finish that turns slightly raisin. The cacao butter rounds the texture without softening the flavour.</p>
+        <p>It is sweet without sugar, structured without bitterness. If you have only had carob compounded with cocoa or sugar, this bar will reset what you thought it could do.</p>
+      </div>
+    </section>
+
+    <section class="editorial-image-full" style="background-image: url('../assets/lifestyle/botanical_closeup_001.png');" aria-label="Carob pods, botanical detail"></section>
+
+    <section class="section ingredients" aria-labelledby="materials-head">
+      <div>
+        <p class="section-eyebrow">Materials</p>
+        <h2 class="section-head" id="materials-head">Three ingredients.<br>That's the whole list.</h2>
+        <div class="section-body">
+          <p>No emulsifier, no compound, no vegetable oil. The carob and cacao butter do the structure work; salt brings the rest into focus.</p>
+        </div>
+      </div>
+      <ul class="ingredients-list">
+        <li class="ingredient"><span class="ingredient-name">Carob (78%)</span><span class="ingredient-note">Australian, organic</span></li>
+        <li class="ingredient"><span class="ingredient-name">Cacao butter (21%)</span><span class="ingredient-note">Pressed, single-origin</span></li>
+        <li class="ingredient"><span class="ingredient-name">Sea salt (1%)</span><span class="ingredient-note">Murray River flake</span></li>
+      </ul>
+    </section>
+
+    <section class="section" aria-labelledby="story-head">
+      <p class="section-eyebrow">Why this bar</p>
+      <h2 class="section-head" id="story-head">We wanted the bar that didn't exist.</h2>
+      <div class="section-body">
+        <p>Most carob you find at health-food shops is compounded — bulked with milk solids, sugar, vegetable fat, and additives that are there to make carob behave like cheap chocolate. We started Maple Moon because that bar wasn't a real category.</p>
+        <p>This is the one with the lowest ingredient count we ship. Everything else in the range is built on top of it.</p>
+      </div>
+    </section>
+
+    <section class="related">
+      <p class="section-eyebrow">More from the range</p>
+      <h2 class="section-head">Other bars in this kitchen</h2>
+      <div class="related-grid">
+        <a class="related-tile" href="/products/pure-carob-bar_a.html">
+          <span class="related-tile-img"><img src="../assets/hero/bar_pcar_hero.png" alt="Golden Coconut bar" loading="lazy"></span>
+          <span class="related-tile-name">Golden Coconut</span>
+          <span class="related-tile-price">$11</span>
+        </a>
+        <a class="related-tile" href="/products/peppermint-moon.html">
+          <span class="related-tile-img"><img src="../assets/hero_shots/hero_carob_bar_smoke_wide.jpg" alt="Peppermint bar" loading="lazy"></span>
+          <span class="related-tile-name">Peppermint</span>
+          <span class="related-tile-price">$11</span>
+        </a>
+        <a class="related-tile" href="/products/pure-carob-bar_a.html">
+          <span class="related-tile-img"><img src="../assets/photography/refined/mm_refined_r1_still_life_001.png" alt="Almond bar" loading="lazy"></span>
+          <span class="related-tile-name">Almond</span>
+          <span class="related-tile-price">$12</span>
+        </a>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer" role="contentinfo">
+    <a class="footer-logo" href="/homepage_a.html">Maple Moon</a>
+    <nav aria-label="Footer navigation">
+      <ul class="footer-links">
+        <li><a href="/our-story.html">About</a></li>
+        <li><a href="/collections/bars_a.html">Bars</a></li>
+        <li><a href="/faq.html">FAQ</a></li>
+      </ul>
+    </nav>
+    <p class="footer-copy">© 2026 Maple Moon. Handmade in Byron Bay.</p>
+  </footer>
+
+  <script>
+    const navEl = document.getElementById('nav');
+    window.addEventListener('scroll', () => {
+      navEl.classList.toggle('scrolled', window.scrollY > 20);
+    }, { passive: true });
+  </script>
+
+</body>
+</html>

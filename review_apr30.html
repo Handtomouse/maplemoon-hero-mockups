@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Maple Moon — Review (Thu 30 Apr 2026)</title>
+  <link rel="stylesheet" href="brand_kit.css">
+  <style>
+    :root {
+      --bg: #FAF6EC;
+      --ink: #1A1612;
+      --warm: #6B4928;
+      --muted: #8E7E68;
+      --rule: rgba(26,22,18,0.14);
+      --rule-soft: rgba(26,22,18,0.06);
+      --tile-bg: #ECE4D2;
+    }
+    body {
+      background: var(--bg); color: var(--ink);
+      font-family: var(--mm-sans); font-weight: 300;
+      -webkit-font-smoothing: antialiased;
+    }
+    main { max-width: 1100px; margin: 0 auto; padding: clamp(40px, 6vw, 80px) clamp(20px, 5vw, 48px); }
+
+    .header { padding-bottom: 32px; border-bottom: 1px solid var(--rule); margin-bottom: 48px; }
+    .header-eyebrow {
+      font-family: var(--mm-sans); font-size: 0.78rem; font-weight: 500;
+      letter-spacing: 0.2em; text-transform: uppercase;
+      color: var(--muted); margin-bottom: 12px;
+    }
+    .header-title {
+      font-family: var(--mm-serif);
+      font-size: clamp(1.8rem, 4vw, 2.8rem);
+      font-weight: 400; line-height: 1.1; letter-spacing: -0.02em;
+      color: var(--ink); margin-bottom: 16px;
+    }
+    .header-note {
+      font-family: var(--mm-sans); font-size: 1rem; font-weight: 300;
+      color: var(--muted); line-height: 1.65; max-width: 60ch;
+    }
+
+    .group {
+      padding: 32px 0;
+      border-bottom: 1px solid var(--rule-soft);
+    }
+    .group-head {
+      display: flex; align-items: baseline; justify-content: space-between;
+      gap: 16px; flex-wrap: wrap; margin-bottom: 20px;
+    }
+    .group-title {
+      font-family: var(--mm-serif); font-size: 1.35rem; font-weight: 400;
+      color: var(--ink);
+    }
+    .group-meta {
+      font-family: var(--mm-sans); font-size: 0.78rem; font-weight: 500;
+      letter-spacing: 0.16em; text-transform: uppercase;
+      color: var(--muted);
+    }
+    .options { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
+    .option {
+      display: flex; flex-direction: column; gap: 6px;
+      padding: 18px;
+      background: var(--tile-bg);
+      border: 1px solid var(--rule-soft);
+      text-decoration: none;
+      color: inherit;
+      transition: background 0.2s;
+    }
+    .option:hover { background: rgba(26,22,18,0.06); }
+    .option-tag {
+      font-family: var(--mm-sans); font-size: 0.72rem; font-weight: 500;
+      letter-spacing: 0.18em; text-transform: uppercase;
+      color: var(--warm);
+    }
+    .option-name {
+      font-family: var(--mm-serif); font-size: 1.1rem; font-weight: 400;
+      color: var(--ink); line-height: 1.2;
+    }
+    .option-blurb {
+      font-family: var(--mm-sans); font-size: 0.88rem; font-weight: 300;
+      color: var(--muted); line-height: 1.55;
+    }
+
+    .legend {
+      margin-top: 56px;
+      padding: 24px;
+      background: rgba(107,73,40,0.06);
+      border-left: 3px solid var(--warm);
+    }
+    .legend-head {
+      font-family: var(--mm-sans); font-size: 0.78rem; font-weight: 500;
+      letter-spacing: 0.18em; text-transform: uppercase;
+      color: var(--warm); margin-bottom: 10px;
+    }
+    .legend-body {
+      font-family: var(--mm-sans); font-size: 0.95rem; font-weight: 300;
+      color: var(--ink); line-height: 1.65;
+    }
+    .legend-body p + p { margin-top: 0.7em; }
+
+    @media (max-width: 760px) {
+      .options { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <header class="header">
+      <p class="header-eyebrow">Maple Moon · Review · Thu 30 Apr 2026</p>
+      <h1 class="header-title">Three directions, three pages each.</h1>
+      <p class="header-note">Each direction (A, B, C) carries a distinct visual language across homepage, collection, and product page. Click any tile to walk through that direction in full. Read the legend below before you start so you know what you're looking at.</p>
+    </header>
+
+    <section class="group">
+      <div class="group-head">
+        <h2 class="group-title">Direction A — Editorial / object-led</h2>
+        <span class="group-meta">Cream / ink / warm muted</span>
+      </div>
+      <div class="options">
+        <a class="option" href="/homepage_a.html">
+          <span class="option-tag">Homepage</span>
+          <span class="option-name">Homepage A</span>
+          <span class="option-blurb">"Carob. Made properly." Hero is one statement. Page reads like an editorial spread.</span>
+        </a>
+        <a class="option" href="/collections/bars_a.html">
+          <span class="option-tag">Collection</span>
+          <span class="option-name">Bars A</span>
+          <span class="option-blurb">3-up grid of bars on cream. Editorial dark inset midway.</span>
+        </a>
+        <a class="option" href="/products/pure-carob-bar_a.html">
+          <span class="option-tag">Product</span>
+          <span class="option-name">Pure Carob A</span>
+          <span class="option-blurb">Big hero image, tasting notes, full-bleed editorial break, story.</span>
+        </a>
+      </div>
+    </section>
+
+    <section class="group">
+      <div class="group-head">
+        <h2 class="group-title">Direction B — Process / craft-led</h2>
+        <span class="group-meta">Dark carob / paper / warm accent</span>
+      </div>
+      <div class="options">
+        <a class="option" href="/homepage_b.html">
+          <span class="option-tag">Homepage</span>
+          <span class="option-name">Homepage B</span>
+          <span class="option-blurb">"Pod to bar. Four steps." Hero on dark, process numbered, makers panel.</span>
+        </a>
+        <a class="option" href="/collections/bars_a.html">
+          <span class="option-tag">Collection</span>
+          <span class="option-name">Bars (shared with A)</span>
+          <span class="option-blurb">Per scope: 2 collection options total, not 3. B uses A's grid.</span>
+        </a>
+        <a class="option" href="/products/pure-carob-bar_a.html">
+          <span class="option-tag">Product</span>
+          <span class="option-name">Pure Carob (shared with A)</span>
+          <span class="option-blurb">Per scope: 2 product options total, not 3. B uses A's PDP.</span>
+        </a>
+      </div>
+    </section>
+
+    <section class="group">
+      <div class="group-head">
+        <h2 class="group-title">Direction C — Range / catalogue-led</h2>
+        <span class="group-meta">Paper / ink / warm / catalogue</span>
+      </div>
+      <div class="options">
+        <a class="option" href="/homepage_c.html">
+          <span class="option-tag">Homepage</span>
+          <span class="option-name">Homepage C</span>
+          <span class="option-blurb">"Six bars. Six moons." No hero theatre. Index-block + range-list flow.</span>
+        </a>
+        <a class="option" href="/collections/bars_c.html">
+          <span class="option-tag">Collection</span>
+          <span class="option-name">Bars C</span>
+          <span class="option-blurb">List-driven catalogue. Spec rows, tasting notes, weights, prices.</span>
+        </a>
+        <a class="option" href="/products/pure-carob-bar_c.html">
+          <span class="option-tag">Product</span>
+          <span class="option-name">Pure Carob C</span>
+          <span class="option-blurb">Image-left / spec-table-right. Strict, factual. Nutrition + storage included.</span>
+        </a>
+      </div>
+    </section>
+
+    <div class="legend">
+      <p class="legend-head">How to read these</p>
+      <div class="legend-body">
+        <p>These are static high-fidelity comps, not the live site. Each direction is internally consistent in colour, type, and rhythm — different directions on the same page mean we ship a different brand voice.</p>
+        <p>Per scope: 3 homepage variants (A, B, C), 2 collection variants (A, C), 2 product variants (A, C). Direction B inherits A's collection and product pages so we are not asking you to choose between three flavours of every page; we are asking which voice is right.</p>
+        <p>What's still placeholder: real product photography (booked for May), real Brunswick Heads landscape, real Carli + Dylan portraits. The current photos are repo placeholders so the layout is honest about what goes there. The text is final-tone draft, not literal copy lock.</p>
+      </div>
+    </div>
+
+  </main>
+</body>
+</html>
