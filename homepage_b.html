@@ -1,0 +1,702 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Maple Moon: Pod to bar. Made by hand in Byron Bay.</title>
+  <link rel="stylesheet" href="brand_kit.css">
+  <style>
+    /* ── Direction B: Process / Material ── */
+    :root {
+      --paper:   #F0EBE0;
+      --carob:   #2C1A0E;
+      --carob-2: #3D2410;
+      --carob-3: #1F120A;
+      --warm:    #8B5E35;
+      --rule-c:  rgba(240,235,224,0.12);
+      --rule-c-strong: rgba(240,235,224,0.24);
+      --text-on-dark: rgba(240,235,224,0.72);
+      --text-on-dark-muted: rgba(240,235,224,0.5);
+      --lh-display: 0.92;
+      --lh-heading: 1.06;
+      --lh-body:    1.7;
+    }
+
+    html { scroll-behavior: smooth; }
+    body {
+      background: var(--carob);
+      color: var(--paper);
+      font-family: var(--mm-sans);
+      font-weight: 300;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .skip-link { position: absolute; left: -9999px; top: 0; padding: 8px 12px; background: var(--paper); color: var(--carob); }
+    .skip-link:focus { left: 12px; top: 12px; z-index: 9999; }
+
+    /* ── Nav ── */
+    .nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: var(--z-fixed);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 18px clamp(20px, 5vw, 40px);
+      background: rgba(44, 26, 14, 0.92);
+      backdrop-filter: blur(8px);
+      border-bottom: 1px solid var(--rule-c);
+    }
+    .nav-logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-family: var(--mm-serif);
+      font-size: 0.95rem;
+      font-weight: 400;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--paper);
+      text-decoration: none;
+    }
+    .nav-logo-glyph { width: 24px; height: 24px; display: block; filter: brightness(2); }
+    .nav-links { display: flex; gap: 28px; list-style: none; }
+    .nav-links a {
+      font-family: var(--mm-sans);
+      font-size: 0.78rem;
+      font-weight: 400;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--text-on-dark);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    .nav-links a:hover { color: var(--paper); }
+
+    /* ── Hero ── */
+    .hero {
+      position: relative;
+      min-height: 100svh;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      overflow: hidden;
+    }
+    .hero-bg {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(160deg, var(--carob-2) 0%, var(--carob) 60%);
+      z-index: 0;
+    }
+    .hero-bg-img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0.32;
+      z-index: 1;
+    }
+    .hero-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, var(--carob) 0%, transparent 55%);
+      z-index: 2;
+    }
+    .hero-content {
+      position: relative;
+      z-index: 3;
+      padding: 0 clamp(20px, 5vw, 48px) clamp(56px, 8vw, 100px);
+      padding-top: 100px;
+      max-width: 1100px;
+    }
+    .hero-label {
+      font-family: var(--mm-sans);
+      font-size: 0.78rem;
+      font-weight: 500;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--warm);
+      margin-bottom: 16px;
+    }
+    .hero-headline {
+      font-family: var(--mm-serif);
+      font-size: clamp(2.6rem, 8vw, 6.2rem);
+      font-weight: 400;
+      line-height: 0.95;
+      letter-spacing: -0.025em;
+      color: var(--paper);
+      margin-bottom: 28px;
+      max-width: 16ch;
+    }
+    .hero-sub {
+      font-family: var(--mm-sans);
+      font-size: 1.05rem;
+      font-weight: 300;
+      color: var(--text-on-dark);
+      max-width: 44ch;
+      line-height: 1.65;
+      margin-bottom: 36px;
+    }
+    .btn-primary {
+      display: inline-block;
+      padding: 13px 28px;
+      background: var(--paper);
+      color: var(--carob);
+      font-family: var(--mm-sans);
+      font-size: 0.78rem;
+      font-weight: 500;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      text-decoration: none;
+      transition: opacity 0.2s;
+    }
+    .btn-primary:hover { opacity: 0.85; }
+    .btn-ghost {
+      display: inline-block;
+      padding: 13px 28px;
+      border: 1px solid var(--rule-c-strong);
+      color: var(--paper);
+      font-family: var(--mm-sans);
+      font-size: 0.78rem;
+      font-weight: 400;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      text-decoration: none;
+      transition: border-color 0.2s;
+    }
+    .btn-ghost:hover { border-color: var(--paper); }
+    .hero-actions { display: flex; gap: 12px; flex-wrap: wrap; }
+
+    .divider { border: none; border-top: 1px solid var(--rule-c); margin: 0; }
+
+    /* ── Editorial break ── */
+    .editorial-image {
+      width: 100%;
+      height: clamp(320px, 48vw, 580px);
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-color: var(--carob-3);
+    }
+
+    /* ── Process ── */
+    .process {
+      padding: clamp(64px, 9vw, 120px) clamp(20px, 5vw, 40px);
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+    .process-eyebrow {
+      font-family: var(--mm-sans);
+      font-size: 0.78rem;
+      font-weight: 500;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--warm);
+      margin-bottom: 14px;
+    }
+    .process-head {
+      font-family: var(--mm-serif);
+      font-size: clamp(1.8rem, 3.4vw, 2.6rem);
+      font-weight: 400;
+      line-height: 1.1;
+      letter-spacing: -0.01em;
+      color: var(--paper);
+      max-width: 28ch;
+      margin-bottom: 56px;
+    }
+    .process-steps { display: flex; flex-direction: column; gap: 0; }
+    .process-step {
+      display: grid;
+      grid-template-columns: 64px 1fr 1.2fr;
+      gap: 32px;
+      align-items: start;
+      padding: 36px 0;
+      border-top: 1px solid var(--rule-c);
+    }
+    .process-step:last-child { border-bottom: 1px solid var(--rule-c); }
+    .process-num {
+      font-family: var(--mm-serif);
+      font-size: 0.85rem;
+      font-weight: 400;
+      color: var(--warm);
+      letter-spacing: 0.06em;
+      padding-top: 4px;
+    }
+    .process-name {
+      font-family: var(--mm-serif);
+      font-size: clamp(1.25rem, 2.2vw, 1.6rem);
+      font-weight: 400;
+      color: var(--paper);
+      line-height: 1.1;
+    }
+    .process-desc {
+      font-family: var(--mm-sans);
+      font-size: 1rem;
+      font-weight: 300;
+      color: var(--text-on-dark);
+      line-height: 1.65;
+    }
+
+    /* ── Range ── */
+    .range {
+      padding: clamp(64px, 9vw, 120px) clamp(20px, 5vw, 40px);
+      background: var(--carob-2);
+    }
+    .range-inner { max-width: 1240px; margin: 0 auto; }
+    .range-eyebrow {
+      font-family: var(--mm-sans);
+      font-size: 0.78rem;
+      font-weight: 500;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--warm);
+      margin-bottom: 12px;
+    }
+    .range-head {
+      font-family: var(--mm-serif);
+      font-size: clamp(1.8rem, 3.6vw, 2.6rem);
+      font-weight: 400;
+      color: var(--paper);
+      line-height: 1.05;
+      letter-spacing: -0.01em;
+      margin-bottom: 56px;
+      max-width: 28ch;
+    }
+    .range-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: 1px;
+      background: var(--rule-c);
+      border: 1px solid var(--rule-c);
+    }
+    .range-card {
+      display: flex;
+      flex-direction: column;
+      padding: 32px 28px;
+      background: var(--carob-2);
+      text-decoration: none;
+      color: inherit;
+      transition: background 0.25s;
+      min-height: 240px;
+    }
+    .range-card:hover { background: var(--carob); }
+    .range-card-type {
+      font-family: var(--mm-sans);
+      font-size: 0.78rem;
+      font-weight: 500;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--warm);
+      margin-bottom: 8px;
+    }
+    .range-card-name {
+      font-family: var(--mm-serif);
+      font-size: 1.25rem;
+      font-weight: 400;
+      color: var(--paper);
+      margin-bottom: 8px;
+    }
+    .range-card-desc {
+      font-family: var(--mm-sans);
+      font-size: 0.92rem;
+      font-weight: 300;
+      color: var(--text-on-dark);
+      line-height: 1.55;
+      flex: 1;
+      margin-bottom: 20px;
+    }
+    .range-card-arrow {
+      font-family: var(--mm-sans);
+      font-size: 0.78rem;
+      font-weight: 500;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--warm);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .range-card:hover .range-card-arrow { color: var(--paper); }
+
+    /* ── Makers panel ── */
+    .makers {
+      padding: clamp(64px, 9vw, 120px) clamp(20px, 5vw, 40px);
+      background: var(--carob-3);
+    }
+    .makers-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: clamp(32px, 5vw, 80px);
+      align-items: center;
+    }
+    .makers-eyebrow {
+      font-family: var(--mm-sans);
+      font-size: 0.78rem;
+      font-weight: 500;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--warm);
+      margin-bottom: 14px;
+    }
+    .makers-head {
+      font-family: var(--mm-serif);
+      font-size: clamp(1.6rem, 3vw, 2.2rem);
+      font-weight: 400;
+      line-height: 1.1;
+      color: var(--paper);
+      margin-bottom: 24px;
+    }
+    .makers-body {
+      font-family: var(--mm-sans);
+      font-size: 1rem;
+      font-weight: 300;
+      color: var(--text-on-dark);
+      line-height: 1.65;
+    }
+    .makers-body p + p { margin-top: 1em; }
+    .makers-image {
+      aspect-ratio: 4 / 5;
+      overflow: hidden;
+      background: var(--carob-2);
+      border: 1px solid var(--rule-c);
+    }
+    .makers-image img {
+      width: 100%; height: 100%; object-fit: cover; display: block;
+    }
+
+    /* ── Lookbook ── */
+    .lookbook {
+      padding: clamp(64px, 9vw, 120px) clamp(20px, 5vw, 40px);
+      background: var(--carob);
+    }
+    .lookbook-eyebrow {
+      font-family: var(--mm-sans);
+      font-size: 0.78rem;
+      font-weight: 500;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--warm);
+      margin-bottom: 12px;
+    }
+    .lookbook-head {
+      font-family: var(--mm-serif);
+      font-size: clamp(1.6rem, 3vw, 2.2rem);
+      font-weight: 400;
+      color: var(--paper);
+      line-height: 1.1;
+      max-width: 32ch;
+      margin-bottom: 48px;
+    }
+    .lookbook-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+    }
+    .lookbook-tile { display: flex; flex-direction: column; gap: 10px; }
+    .lookbook-tile-img {
+      aspect-ratio: 4 / 5;
+      overflow: hidden;
+      background: var(--carob-2);
+      border: 1px solid var(--rule-c);
+    }
+    .lookbook-tile-img img { width: 100%; height: 100%; object-fit: cover; display: block; }
+    .lookbook-caption {
+      font-family: var(--mm-sans);
+      font-size: 0.74rem;
+      font-weight: 400;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--text-on-dark-muted);
+    }
+
+    /* ── Newsletter ── */
+    .newsletter {
+      padding: clamp(64px, 9vw, 120px) clamp(20px, 5vw, 40px);
+      background: var(--carob-2);
+      border-top: 1px solid var(--rule-c);
+    }
+    .newsletter-inner {
+      max-width: 720px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 22px;
+      align-items: flex-start;
+    }
+    .newsletter-head {
+      font-family: var(--mm-serif);
+      font-size: clamp(1.5rem, 2.8vw, 2rem);
+      font-weight: 400;
+      color: var(--paper);
+      max-width: 26ch;
+      line-height: 1.15;
+    }
+    .newsletter-form {
+      display: flex;
+      gap: 0;
+      width: 100%;
+      max-width: 480px;
+    }
+    .newsletter-input {
+      flex: 1;
+      padding: 14px 16px;
+      border: 1px solid var(--rule-c-strong);
+      border-right: none;
+      background: transparent;
+      font-family: var(--mm-sans);
+      font-size: 0.95rem;
+      font-weight: 300;
+      color: var(--paper);
+      outline: none;
+    }
+    .newsletter-input::placeholder { color: var(--text-on-dark-muted); }
+    .newsletter-btn {
+      padding: 14px 24px;
+      background: var(--paper);
+      color: var(--carob);
+      border: 1px solid var(--paper);
+      font-family: var(--mm-sans);
+      font-size: 0.78rem;
+      font-weight: 500;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: opacity 0.2s;
+    }
+    .newsletter-btn:hover { opacity: 0.85; }
+    .newsletter-note {
+      font-family: var(--mm-sans);
+      font-size: 0.85rem;
+      font-weight: 300;
+      color: var(--text-on-dark-muted);
+    }
+
+    /* ── Footer ── */
+    .footer {
+      padding: 32px clamp(20px, 5vw, 40px);
+      border-top: 1px solid var(--rule-c);
+      background: var(--carob-3);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+      flex-wrap: wrap;
+    }
+    .footer-logo {
+      font-family: var(--mm-serif);
+      font-size: 0.85rem;
+      font-weight: 400;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--text-on-dark-muted);
+      text-decoration: none;
+    }
+    .footer-links { display: flex; gap: 24px; list-style: none; }
+    .footer-links a {
+      font-family: var(--mm-sans);
+      font-size: 0.74rem;
+      font-weight: 400;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--text-on-dark-muted);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    .footer-links a:hover { color: var(--paper); }
+    .footer-copy {
+      font-family: var(--mm-sans);
+      font-size: 0.74rem;
+      font-weight: 300;
+      color: var(--text-on-dark-muted);
+    }
+
+    /* ── Mobile ── */
+    @media (max-width: 767px) {
+      .nav { padding: 16px 20px; }
+      .nav-links { gap: 18px; }
+      .hero-content { padding-top: 88px; }
+      .process-step { grid-template-columns: 1fr; gap: 12px; padding: 28px 0; }
+      .process-num { padding-top: 0; }
+      .makers-inner { grid-template-columns: 1fr; gap: 28px; }
+      .lookbook-grid { grid-template-columns: repeat(2, 1fr); gap: 10px; }
+      .footer { flex-direction: column; align-items: flex-start; gap: 16px; }
+    }
+  </style>
+</head>
+<body>
+
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="nav" id="nav" role="banner">
+    <a class="nav-logo" href="/homepage_b.html">
+      <img class="nav-logo-glyph" src="assets/brand/maplemoon_logo.svg" alt="" aria-hidden="true">Maple Moon
+    </a>
+    <nav aria-label="Site navigation">
+      <ul class="nav-links">
+        <li><a href="/collections/bars_b.html">Range</a></li>
+        <li><a href="#process">Process</a></li>
+        <li><a href="/our-story.html">About</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main">
+
+    <!-- Hero: process-led, dark carob, atmospheric -->
+    <section class="hero" aria-label="Introduction">
+      <div class="hero-bg" aria-hidden="true"></div>
+      <img class="hero-bg-img" src="assets/lifestyle/botanical_closeup_001.png" alt="" aria-hidden="true">
+      <div class="hero-overlay" aria-hidden="true"></div>
+      <div class="hero-content">
+        <p class="hero-label">Made by hand. Byron Bay.</p>
+        <h1 class="hero-headline">Pod to bar.<br>Four steps.<br>One kitchen.</h1>
+        <p class="hero-sub">No vat. No factory. No shortcuts. Carob pods sourced down the road, roasted slow, pressed with cacao butter, packed by hand. The whole process fits in a 60-square-metre room.</p>
+        <div class="hero-actions">
+          <a class="btn-primary" href="#process">See the process</a>
+          <a class="btn-ghost" href="/collections/bars_b.html">Shop the range</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Editorial break -->
+    <section class="editorial-image" style="background-image: url('assets/hero_shots/hero_carob_bar_smoke_wide.jpg');" aria-label="Carob bar, atmospheric"></section>
+
+    <!-- Process -->
+    <section class="process" id="process" aria-labelledby="process-head">
+      <p class="process-eyebrow">The process</p>
+      <h2 class="process-head" id="process-head">Four steps. Nothing in between.</h2>
+      <ol class="process-steps">
+        <li class="process-step">
+          <span class="process-num">01</span>
+          <span class="process-name">Source</span>
+          <span class="process-desc">Carob pods grown 20 minutes from our kitchen, in northern New South Wales. Same farmer every season. We pick when the pods are leather-dark and snap when bent.</span>
+        </li>
+        <li class="process-step">
+          <span class="process-num">02</span>
+          <span class="process-name">Roast</span>
+          <span class="process-desc">Pods are roasted low and slow until the natural sugars caramelise. We taste at three points and stop when the carob smells like burnt honey, before any bitterness develops.</span>
+        </li>
+        <li class="process-step">
+          <span class="process-num">03</span>
+          <span class="process-name">Press</span>
+          <span class="process-desc">Roasted carob is ground fine and pressed with cacao butter. Three or four ingredients per bar, no emulsifier, no vegetable oil, no rounding the corners on flavour.</span>
+        </li>
+        <li class="process-step">
+          <span class="process-num">04</span>
+          <span class="process-name">Pack</span>
+          <span class="process-desc">Tempered, scored, packed by hand. Every bar is touched by one of us before it leaves the room. Small batch is a description, not a marketing line.</span>
+        </li>
+      </ol>
+    </section>
+
+    <!-- Range cards -->
+    <section class="range" aria-labelledby="range-head">
+      <div class="range-inner">
+        <p class="range-eyebrow">The range</p>
+        <h2 class="range-head" id="range-head">Bars first. Moons, bites, and elixirs from the same kitchen.</h2>
+        <div class="range-grid">
+          <a class="range-card" href="/collections/bars_b.html">
+            <span class="range-card-type">Bars</span>
+            <span class="range-card-name">Carob bars, six</span>
+            <span class="range-card-desc">Pure, Golden Coconut, Peppermint, Hazelnut, Chilli, Almond. The flagship. Where the process shows up most.</span>
+            <span class="range-card-arrow">View bars  →</span>
+          </a>
+          <a class="range-card" href="/homepage_b.html#range">
+            <span class="range-card-type">Moons</span>
+            <span class="range-card-name">Crescent moons</span>
+            <span class="range-card-desc">Individually wrapped crescents in six flavours. Same recipe as the bars. Sized for a single bite.</span>
+            <span class="range-card-arrow">View moons  →</span>
+          </a>
+          <a class="range-card" href="/homepage_b.html#range">
+            <span class="range-card-type">Bites</span>
+            <span class="range-card-name">Coconut and Goji bites</span>
+            <span class="range-card-desc">Poppable rounds. Two flavours, both finished with whole inclusions you can see when you bite them.</span>
+            <span class="range-card-arrow">View bites  →</span>
+          </a>
+          <a class="range-card" href="/products/spiced-elixir.html">
+            <span class="range-card-type">Elixirs</span>
+            <span class="range-card-name">Carob elixirs</span>
+            <span class="range-card-desc">Warm carob, nothing extracted. Pure and Spiced. A drink that uses the same pods we press into bars.</span>
+            <span class="range-card-arrow">View elixirs  →</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Makers -->
+    <section class="makers" aria-labelledby="makers-head">
+      <div class="makers-inner">
+        <div>
+          <p class="makers-eyebrow">The makers</p>
+          <h2 class="makers-head" id="makers-head">Two of us. One kitchen. Same recipe since 2024.</h2>
+          <div class="makers-body">
+            <p>Carli runs the creative, the formulation, the family. Dylan runs the production, the equipment, the manufacturing relationships. Between us we taste every batch before it ships.</p>
+            <p>We started Maple Moon because we wanted the carob bar that didn't exist: one that takes the pod seriously instead of pretending to be chocolate.</p>
+          </div>
+        </div>
+        <div class="makers-image">
+          <img src="assets/hero_shots/hero_moons_lifestyle.png" alt="Maple Moon kitchen, Byron Bay" loading="lazy">
+        </div>
+      </div>
+    </section>
+
+    <!-- Lookbook -->
+    <section class="lookbook" aria-labelledby="lookbook-head">
+      <p class="lookbook-eyebrow">From the kitchen</p>
+      <h2 class="lookbook-head" id="lookbook-head">Photography next round. Real product. Real hands. Real Byron.</h2>
+      <div class="lookbook-grid">
+        <figure class="lookbook-tile">
+          <div class="lookbook-tile-img"><img src="assets/photography/refined/mm_refined_r2_fb1_wide_a.png" alt="Carob pods, editorial wide" loading="lazy"></div>
+          <figcaption class="lookbook-caption">Pods on linen</figcaption>
+        </figure>
+        <figure class="lookbook-tile">
+          <div class="lookbook-tile-img"><img src="assets/photography/refined/mm_refined_r1_still_life_001.png" alt="Carob bar still life" loading="lazy"></div>
+          <figcaption class="lookbook-caption">Bar, halved</figcaption>
+        </figure>
+        <figure class="lookbook-tile">
+          <div class="lookbook-tile-img"><img src="assets/hero_shots/byron_bay_silhouette.png" alt="Byron Bay landscape" loading="lazy"></div>
+          <figcaption class="lookbook-caption">Place</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="newsletter" aria-labelledby="newsletter-head">
+      <div class="newsletter-inner">
+        <h2 class="newsletter-head" id="newsletter-head">New flavours drop in small batches. Get the message before the run sells out.</h2>
+        <form class="newsletter-form" action="#" method="post">
+          <label class="sr-only" for="email-b">Email address</label>
+          <input class="newsletter-input" type="email" id="email-b" name="email" placeholder="your@email.com" autocomplete="email" required>
+          <button class="newsletter-btn" type="submit">Notify me</button>
+        </form>
+        <p class="newsletter-note">Roughly six emails a year. hello@maplemoon.com.au</p>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer" role="contentinfo">
+    <a class="footer-logo" href="/homepage_b.html">Maple Moon</a>
+    <nav aria-label="Footer navigation">
+      <ul class="footer-links">
+        <li><a href="/our-story.html">About</a></li>
+        <li><a href="/collections/bars_b.html">Range</a></li>
+        <li><a href="/faq.html">FAQ</a></li>
+      </ul>
+    </nav>
+    <p class="footer-copy">© 2026 Maple Moon. Made by hand in Byron Bay.</p>
+  </footer>
+
+  <style>.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);border:0}</style>
+  <script>
+    const navEl = document.getElementById('nav');
+    window.addEventListener('scroll', () => {
+      navEl.style.borderBottomColor = window.scrollY > 20 ? 'rgba(240,235,224,0.18)' : 'rgba(240,235,224,0.12)';
+    }, { passive: true });
+  </script>
+
+</body>
+</html>
