@@ -559,6 +559,121 @@
       .lookbook-grid { grid-template-columns: repeat(2, 1fr); gap: 14px; }
       .footer { flex-direction: column; align-items: flex-start; gap: 16px; }
     }
+
+    /* ── Hero video swap + flavour picker (post-hero block) ── */
+    .picker-block {
+      padding: clamp(48px, 7vw, 96px) clamp(24px, 6vw, 80px) clamp(64px, 8vw, 120px);
+      background: var(--field);
+      border-top: 1px solid var(--rule);
+    }
+    .picker-eyebrow {
+      font-family: var(--mm-sans);
+      font-size: var(--fs-xs);
+      font-weight: 500;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 18px;
+    }
+    .video-frame {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      overflow: hidden;
+      background: #0d0a08;
+      margin-bottom: 22px;
+    }
+    .video-frame video { width: 100%; height: 100%; object-fit: cover; display: block; }
+    .video-chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 36px;
+    }
+    .video-chip {
+      font-family: var(--mm-sans);
+      font-size: var(--fs-xs);
+      font-weight: 500;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--ink);
+      background: transparent;
+      border: 1px solid var(--rule);
+      padding: 10px 18px;
+      border-radius: 999px;
+      cursor: pointer;
+      transition: background 0.2s, border-color 0.2s, color 0.2s;
+    }
+    .video-chip:hover { border-color: var(--ink); }
+    .video-chip[aria-selected="true"] {
+      background: var(--ink);
+      color: var(--field);
+      border-color: var(--ink);
+    }
+    .picker-tabs {
+      display: flex;
+      gap: 28px;
+      margin-bottom: 18px;
+      padding-bottom: 14px;
+      border-bottom: 1px solid var(--rule);
+    }
+    .picker-tab {
+      font-family: var(--mm-serif);
+      font-size: clamp(1.1rem, 2vw, 1.4rem);
+      font-weight: 400;
+      color: var(--muted);
+      background: transparent;
+      border: none;
+      padding: 0 0 6px;
+      cursor: pointer;
+      transition: color 0.2s, border-color 0.2s;
+      border-bottom: 1px solid transparent;
+      margin-bottom: -1px;
+    }
+    .picker-tab[aria-selected="true"] { color: var(--ink); border-bottom-color: var(--ink); }
+    .picker-tab:hover { color: var(--ink); }
+    .picker-chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 28px;
+    }
+    .picker-chip {
+      font-family: var(--mm-sans);
+      font-size: var(--fs-xs);
+      font-weight: 500;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--ink);
+      background: transparent;
+      border: 1px solid var(--rule);
+      padding: 12px 22px;
+      border-radius: 999px;
+      cursor: pointer;
+      transition: background 0.2s, border-color 0.2s, color 0.2s;
+    }
+    .picker-chip[hidden] { display: none; }
+    .picker-chip[aria-selected="true"] {
+      background: var(--warm);
+      color: var(--field);
+      border-color: var(--warm);
+    }
+    .picker-cta {
+      display: inline-block;
+      font-family: var(--mm-sans);
+      font-size: var(--fs-xs);
+      font-weight: 500;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--ink);
+      background: transparent;
+      border: 1px solid var(--ink);
+      border-radius: 999px;
+      padding: 14px 32px;
+      text-decoration: none;
+      transition: background 0.2s, color 0.2s;
+    }
+    .picker-cta:hover { background: var(--ink); color: var(--field); }
   </style>
 </head>
 <body>
@@ -587,6 +702,103 @@
         <a class="hero-cta" href="/collections/bars_a.html">Shop the range</a>
       </div>
     </section>
+
+    <!-- Hero video swap + flavour picker -->
+    <section class="picker-block" aria-label="Choose hero atmosphere and flavour">
+      <p class="picker-eyebrow">Atmosphere</p>
+      <div class="video-frame">
+        <video id="heroVideo" autoplay loop muted playsinline preload="metadata">
+          <source src="assets/hero_videos/moon_hero_v3c.mp4" type="video/mp4">
+        </video>
+      </div>
+      <div class="video-chips" role="tablist" aria-label="Hero video">
+        <button type="button" class="video-chip" role="tab" aria-selected="true" data-vid="moon_hero_v3c.mp4">Moonlit mist</button>
+        <button type="button" class="video-chip" role="tab" aria-selected="false" data-vid="moon_hero_v6c.mp4">Honey moon</button>
+        <button type="button" class="video-chip" role="tab" aria-selected="false" data-vid="moon_hero_v1bc.mp4">Brunswick coast</button>
+        <button type="button" class="video-chip" role="tab" aria-selected="false" data-vid="moon_hero_v4.mp4">Dune silhouette</button>
+      </div>
+
+      <p class="picker-eyebrow">Range</p>
+      <div class="picker-tabs" role="tablist" aria-label="Product category">
+        <button type="button" class="picker-tab" role="tab" aria-selected="true" data-cat="bars">Bars</button>
+        <button type="button" class="picker-tab" role="tab" aria-selected="false" data-cat="moons">Moons</button>
+        <button type="button" class="picker-tab" role="tab" aria-selected="false" data-cat="bites">Bites</button>
+        <button type="button" class="picker-tab" role="tab" aria-selected="false" data-cat="elixirs">Elixirs</button>
+      </div>
+      <div class="picker-chips" role="tablist" aria-label="Flavour">
+        <button type="button" class="picker-chip" role="tab" aria-selected="true" data-cat="bars" data-flavour="Pure Carob">Pure Carob</button>
+        <button type="button" class="picker-chip" role="tab" aria-selected="false" data-cat="bars" data-flavour="Golden Coconut">Golden Coconut</button>
+        <button type="button" class="picker-chip" role="tab" aria-selected="false" data-cat="bars" data-flavour="Peppermint">Peppermint</button>
+        <button type="button" class="picker-chip" role="tab" aria-selected="false" data-cat="bars" data-flavour="Hazelnut">Hazelnut</button>
+        <button type="button" class="picker-chip" role="tab" aria-selected="false" data-cat="bars" data-flavour="Chilli" hidden>Chilli</button>
+        <button type="button" class="picker-chip" role="tab" aria-selected="false" data-cat="bars" data-flavour="Almond" hidden>Almond</button>
+        <button type="button" class="picker-chip" role="tab" aria-selected="false" data-cat="moons" data-flavour="Pure Moon" hidden>Pure Moon</button>
+        <button type="button" class="picker-chip" role="tab" aria-selected="false" data-cat="moons" data-flavour="Coconut Moon" hidden>Coconut Moon</button>
+        <button type="button" class="picker-chip" role="tab" aria-selected="false" data-cat="moons" data-flavour="Peppermint Moon" hidden>Peppermint Moon</button>
+        <button type="button" class="picker-chip" role="tab" aria-selected="false" data-cat="moons" data-flavour="Hazelnut Moon" hidden>Hazelnut Moon</button>
+        <button type="button" class="picker-chip" role="tab" aria-selected="false" data-cat="bites" data-flavour="Coconut Bite" hidden>Coconut Bite</button>
+        <button type="button" class="picker-chip" role="tab" aria-selected="false" data-cat="bites" data-flavour="Goji Bite" hidden>Goji Bite</button>
+        <button type="button" class="picker-chip" role="tab" aria-selected="false" data-cat="elixirs" data-flavour="Pure Elixir" hidden>Pure Elixir</button>
+        <button type="button" class="picker-chip" role="tab" aria-selected="false" data-cat="elixirs" data-flavour="Spiced Elixir" hidden>Spiced Elixir</button>
+      </div>
+      <a class="picker-cta" id="pickerCta" href="/collections/bars_a.html">Shop Pure Carob</a>
+    </section>
+
+    <script>
+      (function() {
+        var video = document.getElementById('heroVideo');
+        var videoSource = video ? video.querySelector('source') : null;
+        var videoChips = document.querySelectorAll('.video-chip');
+        videoChips.forEach(function(chip) {
+          chip.addEventListener('click', function() {
+            videoChips.forEach(function(c) { c.setAttribute('aria-selected', 'false'); });
+            chip.setAttribute('aria-selected', 'true');
+            if (videoSource && video) {
+              videoSource.src = 'assets/hero_videos/' + chip.dataset.vid;
+              video.load();
+              video.play().catch(function() {});
+            }
+          });
+        });
+
+        var tabs = document.querySelectorAll('.picker-tab');
+        var chips = document.querySelectorAll('.picker-chip');
+        var cta = document.getElementById('pickerCta');
+        var collectionMap = {
+          bars: '/collections/bars_a.html',
+          moons: '/collections/moons.html',
+          bites: '/collections/bars_a.html',
+          elixirs: '/collections/bars_a.html'
+        };
+        function selectFlavour(flavour, category) {
+          chips.forEach(function(c) {
+            c.setAttribute('aria-selected', c.dataset.flavour === flavour && c.dataset.cat === category ? 'true' : 'false');
+          });
+          if (cta) {
+            cta.textContent = 'Shop ' + flavour;
+            cta.setAttribute('href', collectionMap[category] || '/collections/bars_a.html');
+          }
+        }
+        tabs.forEach(function(tab) {
+          tab.addEventListener('click', function() {
+            var cat = tab.dataset.cat;
+            tabs.forEach(function(t) { t.setAttribute('aria-selected', t === tab ? 'true' : 'false'); });
+            var firstChip = null;
+            chips.forEach(function(c) {
+              var match = c.dataset.cat === cat;
+              c.hidden = !match;
+              if (match && !firstChip) firstChip = c;
+            });
+            if (firstChip) selectFlavour(firstChip.dataset.flavour, cat);
+          });
+        });
+        chips.forEach(function(chip) {
+          chip.addEventListener('click', function() {
+            selectFlavour(chip.dataset.flavour, chip.dataset.cat);
+          });
+        });
+      })();
+    </script>
 
     <!-- Editorial break: botanical -->
     <section class="editorial-image" style="background-image: url('assets/lifestyle/botanical_closeup_001.png');" aria-label="Carob pods, botanical detail"></section>
