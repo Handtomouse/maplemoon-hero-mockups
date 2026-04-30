@@ -83,12 +83,59 @@
 
     /* ── Hero ── */
     .hero {
+      position: relative;
       min-height: 100svh;
       display: flex;
       flex-direction: column;
       justify-content: flex-end;
       padding: 0 clamp(24px, 6vw, 80px) clamp(48px, 8vw, 96px);
       padding-top: 96px;
+      overflow: hidden;
+      isolation: isolate;
+    }
+    .hero-bg-video {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: -2;
+    }
+    .hero-bg-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(242,239,230,0.35) 0%, rgba(242,239,230,0.55) 60%, rgba(242,239,230,0.85) 100%);
+      z-index: -1;
+    }
+    .hero-content { position: relative; z-index: 1; }
+    .hero-video-chips {
+      position: absolute;
+      top: clamp(96px, 12vw, 140px);
+      right: clamp(24px, 6vw, 80px);
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      z-index: 2;
+    }
+    .hero-video-chip {
+      font-family: var(--mm-sans);
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--ink);
+      background: rgba(242,239,230,0.85);
+      backdrop-filter: blur(6px);
+      border: 1px solid rgba(28,24,20,0.18);
+      padding: 8px 14px;
+      border-radius: 999px;
+      cursor: pointer;
+      transition: background 0.2s, color 0.2s;
+    }
+    .hero-video-chip[aria-selected="true"] {
+      background: var(--ink);
+      color: var(--field);
+      border-color: var(--ink);
     }
     .hero-eyebrow {
       font-family: var(--mm-sans);
@@ -96,8 +143,9 @@
       font-weight: 500;
       letter-spacing: 0.2em;
       text-transform: uppercase;
-      color: var(--muted);
+      color: var(--ink);
       margin-bottom: 20px;
+      mix-blend-mode: multiply;
     }
     .hero-headline {
       font-family: var(--mm-serif);
@@ -560,7 +608,7 @@
       .footer { flex-direction: column; align-items: flex-start; gap: 16px; }
     }
 
-    /* ── Hero video swap + flavour picker (post-hero block) ── */
+    /* ── Flavour picker with product image (post-hero block) ── */
     .picker-block {
       padding: clamp(48px, 7vw, 96px) clamp(24px, 6vw, 80px) clamp(64px, 8vw, 120px);
       background: var(--field);
@@ -573,8 +621,32 @@
       letter-spacing: 0.2em;
       text-transform: uppercase;
       color: var(--muted);
-      margin-bottom: 18px;
+      margin-bottom: 32px;
     }
+    .picker-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: clamp(40px, 6vw, 96px);
+      align-items: center;
+    }
+    @media (max-width: 767px) {
+      .picker-grid { grid-template-columns: 1fr; gap: 40px; }
+    }
+    .picker-product {
+      aspect-ratio: 4 / 5;
+      background: rgba(28,24,20,0.04);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+    .picker-product-img {
+      width: 70%;
+      height: auto;
+      object-fit: contain;
+      transition: opacity 0.3s ease;
+    }
+    .picker-controls { display: flex; flex-direction: column; }
     .video-frame {
       position: relative;
       width: 100%;
@@ -693,62 +765,68 @@
 
   <main id="main">
 
-    <!-- Hero -->
+    <!-- Hero with video background -->
     <section class="hero" aria-label="Introduction">
-      <p class="hero-eyebrow">Byron Bay, Australia. Est. 2024</p>
-      <h1 class="hero-headline">Carob.<br>Made properly.</h1>
-      <div class="hero-line">
-        <p class="hero-note">Not a chocolate alternative. Not a health product. A pod, roasted slow, pressed into something you want to keep on the bench.</p>
-        <a class="hero-cta" href="/collections/bars_a.html">Shop the range</a>
+      <video class="hero-bg-video" id="heroVideo" autoplay loop muted playsinline preload="metadata">
+        <source src="assets/hero_videos/moon_hero_v3c.mp4" type="video/mp4">
+      </video>
+      <div class="hero-bg-overlay"></div>
+      <div class="hero-video-chips" role="tablist" aria-label="Hero atmosphere">
+        <button type="button" class="hero-video-chip" role="tab" aria-selected="true" data-vid="moon_hero_v3c.mp4">Moonlit mist</button>
+        <button type="button" class="hero-video-chip" role="tab" aria-selected="false" data-vid="moon_hero_v6c.mp4">Honey moon</button>
+        <button type="button" class="hero-video-chip" role="tab" aria-selected="false" data-vid="moon_hero_v1bc.mp4">Brunswick coast</button>
+        <button type="button" class="hero-video-chip" role="tab" aria-selected="false" data-vid="moon_hero_v4.mp4">Dune silhouette</button>
+      </div>
+      <div class="hero-content">
+        <p class="hero-eyebrow">Byron Bay, Australia. Est. 2024</p>
+        <h1 class="hero-headline">Carob.<br>Made properly.</h1>
+        <div class="hero-line">
+          <p class="hero-note">Not a chocolate alternative. Not a health product. A pod, roasted slow, pressed into something you want to keep on the bench.</p>
+          <a class="hero-cta" href="#picker">Shop the range</a>
+        </div>
       </div>
     </section>
 
-    <!-- Hero video swap + flavour picker -->
-    <section class="picker-block" aria-label="Choose hero atmosphere and flavour">
-      <p class="picker-eyebrow">Atmosphere</p>
-      <div class="video-frame">
-        <video id="heroVideo" autoplay loop muted playsinline preload="metadata">
-          <source src="assets/hero_videos/moon_hero_v3c.mp4" type="video/mp4">
-        </video>
-      </div>
-      <div class="video-chips" role="tablist" aria-label="Hero video">
-        <button type="button" class="video-chip" role="tab" aria-selected="true" data-vid="moon_hero_v3c.mp4">Moonlit mist</button>
-        <button type="button" class="video-chip" role="tab" aria-selected="false" data-vid="moon_hero_v6c.mp4">Honey moon</button>
-        <button type="button" class="video-chip" role="tab" aria-selected="false" data-vid="moon_hero_v1bc.mp4">Brunswick coast</button>
-        <button type="button" class="video-chip" role="tab" aria-selected="false" data-vid="moon_hero_v4.mp4">Dune silhouette</button>
-      </div>
-
+    <!-- Product picker with image swap -->
+    <section class="picker-block" id="picker" aria-label="Choose your flavour">
       <p class="picker-eyebrow">Range</p>
-      <div class="picker-tabs" role="tablist" aria-label="Product category">
-        <button type="button" class="picker-tab" role="tab" aria-selected="true" data-cat="bars">Bars</button>
-        <button type="button" class="picker-tab" role="tab" aria-selected="false" data-cat="moons">Moons</button>
-        <button type="button" class="picker-tab" role="tab" aria-selected="false" data-cat="bites">Bites</button>
-        <button type="button" class="picker-tab" role="tab" aria-selected="false" data-cat="elixirs">Elixirs</button>
+      <div class="picker-grid">
+        <div class="picker-product">
+          <img id="pickerProductImg" class="picker-product-img" src="assets/hero/bar_pcar_hero.png" alt="Pure Carob Bar by Maple Moon" loading="lazy">
+        </div>
+        <div class="picker-controls">
+          <div class="picker-tabs" role="tablist" aria-label="Product category">
+            <button type="button" class="picker-tab" role="tab" aria-selected="true" data-cat="bars">Bars</button>
+            <button type="button" class="picker-tab" role="tab" aria-selected="false" data-cat="moons">Moons</button>
+            <button type="button" class="picker-tab" role="tab" aria-selected="false" data-cat="bites">Bites</button>
+            <button type="button" class="picker-tab" role="tab" aria-selected="false" data-cat="elixirs">Elixirs</button>
+          </div>
+          <div class="picker-chips" role="tablist" aria-label="Flavour">
+            <button type="button" class="picker-chip" role="tab" aria-selected="true" data-cat="bars" data-flavour="Pure Carob" data-img="assets/hero/bar_pcar_hero.png">Pure Carob</button>
+            <button type="button" class="picker-chip" role="tab" aria-selected="false" data-cat="bars" data-flavour="Golden Coconut" data-img="assets/hero/eclipse_coconut_hero.png">Golden Coconut</button>
+            <button type="button" class="picker-chip" role="tab" aria-selected="false" data-cat="bars" data-flavour="Peppermint" data-img="assets/hero/bar_peppermint_hero.png">Peppermint</button>
+            <button type="button" class="picker-chip" role="tab" aria-selected="false" data-cat="bars" data-flavour="Hazelnut" data-img="assets/hero/bar_pcar_hero_b.png">Hazelnut</button>
+            <button type="button" class="picker-chip" role="tab" aria-selected="false" data-cat="bars" data-flavour="Chilli" data-img="assets/hero/bar_chilli_hero.png" hidden>Chilli</button>
+            <button type="button" class="picker-chip" role="tab" aria-selected="false" data-cat="bars" data-flavour="Almond" data-img="assets/hero/bar_pcar_hero_b.png" hidden>Almond</button>
+            <button type="button" class="picker-chip" role="tab" aria-selected="false" data-cat="moons" data-flavour="Pure Moon" data-img="assets/hero/moon_pcar_hero_a.png" hidden>Pure Moon</button>
+            <button type="button" class="picker-chip" role="tab" aria-selected="false" data-cat="moons" data-flavour="Coconut Moon" data-img="assets/hero/moon_pcar_hero_b.png" hidden>Coconut Moon</button>
+            <button type="button" class="picker-chip" role="tab" aria-selected="false" data-cat="moons" data-flavour="Peppermint Moon" data-img="assets/hero/moon_pcar_hero_c.png" hidden>Peppermint Moon</button>
+            <button type="button" class="picker-chip" role="tab" aria-selected="false" data-cat="moons" data-flavour="Hazelnut Moon" data-img="assets/hero/moon_pcar_hero_a.png" hidden>Hazelnut Moon</button>
+            <button type="button" class="picker-chip" role="tab" aria-selected="false" data-cat="bites" data-flavour="Coconut Bite" data-img="assets/hero/eclipse_coconut_hero.png" hidden>Coconut Bite</button>
+            <button type="button" class="picker-chip" role="tab" aria-selected="false" data-cat="bites" data-flavour="Goji Bite" data-img="assets/hero/eclipse_coconut_hero.png" hidden>Goji Bite</button>
+            <button type="button" class="picker-chip" role="tab" aria-selected="false" data-cat="elixirs" data-flavour="Pure Elixir" data-img="assets/hero/bar_pcar_hero.png" hidden>Pure Elixir</button>
+            <button type="button" class="picker-chip" role="tab" aria-selected="false" data-cat="elixirs" data-flavour="Spiced Elixir" data-img="assets/hero/bar_chilli_hero.png" hidden>Spiced Elixir</button>
+          </div>
+          <a class="picker-cta" id="pickerCta" href="/collections/bars_a.html">Shop Pure Carob</a>
+        </div>
       </div>
-      <div class="picker-chips" role="tablist" aria-label="Flavour">
-        <button type="button" class="picker-chip" role="tab" aria-selected="true" data-cat="bars" data-flavour="Pure Carob">Pure Carob</button>
-        <button type="button" class="picker-chip" role="tab" aria-selected="false" data-cat="bars" data-flavour="Golden Coconut">Golden Coconut</button>
-        <button type="button" class="picker-chip" role="tab" aria-selected="false" data-cat="bars" data-flavour="Peppermint">Peppermint</button>
-        <button type="button" class="picker-chip" role="tab" aria-selected="false" data-cat="bars" data-flavour="Hazelnut">Hazelnut</button>
-        <button type="button" class="picker-chip" role="tab" aria-selected="false" data-cat="bars" data-flavour="Chilli" hidden>Chilli</button>
-        <button type="button" class="picker-chip" role="tab" aria-selected="false" data-cat="bars" data-flavour="Almond" hidden>Almond</button>
-        <button type="button" class="picker-chip" role="tab" aria-selected="false" data-cat="moons" data-flavour="Pure Moon" hidden>Pure Moon</button>
-        <button type="button" class="picker-chip" role="tab" aria-selected="false" data-cat="moons" data-flavour="Coconut Moon" hidden>Coconut Moon</button>
-        <button type="button" class="picker-chip" role="tab" aria-selected="false" data-cat="moons" data-flavour="Peppermint Moon" hidden>Peppermint Moon</button>
-        <button type="button" class="picker-chip" role="tab" aria-selected="false" data-cat="moons" data-flavour="Hazelnut Moon" hidden>Hazelnut Moon</button>
-        <button type="button" class="picker-chip" role="tab" aria-selected="false" data-cat="bites" data-flavour="Coconut Bite" hidden>Coconut Bite</button>
-        <button type="button" class="picker-chip" role="tab" aria-selected="false" data-cat="bites" data-flavour="Goji Bite" hidden>Goji Bite</button>
-        <button type="button" class="picker-chip" role="tab" aria-selected="false" data-cat="elixirs" data-flavour="Pure Elixir" hidden>Pure Elixir</button>
-        <button type="button" class="picker-chip" role="tab" aria-selected="false" data-cat="elixirs" data-flavour="Spiced Elixir" hidden>Spiced Elixir</button>
-      </div>
-      <a class="picker-cta" id="pickerCta" href="/collections/bars_a.html">Shop Pure Carob</a>
     </section>
 
     <script>
       (function() {
         var video = document.getElementById('heroVideo');
         var videoSource = video ? video.querySelector('source') : null;
-        var videoChips = document.querySelectorAll('.video-chip');
+        var videoChips = document.querySelectorAll('.hero-video-chip');
         videoChips.forEach(function(chip) {
           chip.addEventListener('click', function() {
             videoChips.forEach(function(c) { c.setAttribute('aria-selected', 'false'); });
@@ -764,19 +842,31 @@
         var tabs = document.querySelectorAll('.picker-tab');
         var chips = document.querySelectorAll('.picker-chip');
         var cta = document.getElementById('pickerCta');
+        var productImg = document.getElementById('pickerProductImg');
         var collectionMap = {
           bars: '/collections/bars_a.html',
           moons: '/collections/moons.html',
           bites: '/collections/bars_a.html',
           elixirs: '/collections/bars_a.html'
         };
-        function selectFlavour(flavour, category) {
+        function selectFlavour(chipEl) {
+          var flavour = chipEl.dataset.flavour;
+          var category = chipEl.dataset.cat;
+          var img = chipEl.dataset.img;
           chips.forEach(function(c) {
-            c.setAttribute('aria-selected', c.dataset.flavour === flavour && c.dataset.cat === category ? 'true' : 'false');
+            c.setAttribute('aria-selected', c === chipEl ? 'true' : 'false');
           });
           if (cta) {
             cta.textContent = 'Shop ' + flavour;
             cta.setAttribute('href', collectionMap[category] || '/collections/bars_a.html');
+          }
+          if (productImg && img) {
+            productImg.style.opacity = '0';
+            setTimeout(function() {
+              productImg.src = img;
+              productImg.alt = flavour + ' by Maple Moon';
+              productImg.style.opacity = '1';
+            }, 150);
           }
         }
         tabs.forEach(function(tab) {
@@ -789,13 +879,11 @@
               c.hidden = !match;
               if (match && !firstChip) firstChip = c;
             });
-            if (firstChip) selectFlavour(firstChip.dataset.flavour, cat);
+            if (firstChip) selectFlavour(firstChip);
           });
         });
         chips.forEach(function(chip) {
-          chip.addEventListener('click', function() {
-            selectFlavour(chip.dataset.flavour, chip.dataset.cat);
-          });
+          chip.addEventListener('click', function() { selectFlavour(chip); });
         });
       })();
     </script>
