@@ -53,3 +53,7 @@ checkpoints/
 # Edit/backup artefacts
 *.bak
 *.r20_*
+
+# WIP working copies + scaffolding (never deploy)
+_wip/
+variants/

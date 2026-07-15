@@ -2,9 +2,15 @@
 <html lang="en-AU">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Maple Moon: Carob from Brunswick Heads (PHOTO VARIANT dev)</title>
-<meta name="description" content="Handmade carob bars, moons, bites and elixirs. Organic, vegan, gluten free, caffeine free. Made by hand in Brunswick Heads, on the far north coast of NSW.">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<link rel="icon" type="image/svg+xml" href="assets/mm_logo_icon_blk.svg">
+<!-- WIP: Adobe Fonts kit dvz0xjs replaces local() demo cuts (renders off-machine) -->
+<link rel="preconnect" href="https://use.typekit.net">
+<link rel="stylesheet" href="https://use.typekit.net/dvz0xjs.css">
+<link rel="preload" as="image" href="assets/hero_shots/moonlit_ocean_night.webp" type="image/webp" fetchpriority="high">
+<style>:root{--mm-serif:'p22-mackinac-pro','P22 Mackinac Pro',Georgia,serif!important;--mm-sans:'neue-haas-grotesk-display','Neue Haas Grotesk Display Pro','Inter','Helvetica Neue',sans-serif!important;}</style>
+<title>Maple Moon: Australian Organic Carob</title>
+<meta name="description" content="Australian organic carob bars, moons, bites and elixirs. Vegan, gluten free, caffeine free. Slow-made on the far north coast of NSW.">
 <link rel="stylesheet" href="brand_kit.css">
 <style>
 /* HOMEPAGE - REAL 1 "EDITORIAL NIGHT" (LEAD): real moonlit photo hero -> warm-paper editorial body. */
@@ -302,7 +308,7 @@ html{scroll-behavior:smooth;}
 .sbox-lid{display:block;text-align:center;font-size:.6rem;letter-spacing:.28em;text-transform:uppercase;color:#8a7a58;border-bottom:1px solid rgba(58,42,26,.16);padding-bottom:13px;margin-bottom:18px;}
 .sbox-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;}
 .sbox-grid .well{background:rgba(244,240,224,.55);border:1px solid rgba(58,42,26,.10);border-radius:6px;padding:10px 9px 4px;display:grid;place-items:end center;}
-.sbox-grid img{width:100%;height:auto;filter:drop-shadow(0 8px 10px rgba(44,42,38,.18));}
+.sbox-grid img{width:100%;height:auto;aspect-ratio:9/14;filter:drop-shadow(0 8px 10px rgba(44,42,38,.18));}
 .sbox-info .lid-k{margin-bottom:14px;}
 .sbox-list{list-style:none;margin:0 0 18px;padding:0;}
 .sbox-list li{display:flex;align-items:center;gap:11px;font-size:.92rem;color:var(--ink-soft);padding:8px 0;border-top:1px solid var(--line-soft);}
@@ -434,6 +440,65 @@ html{scroll-behavior:smooth;}
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto;}.wf *{transition:none!important;animation:none!important;scroll-behavior:auto!important;}}
 
 </style>
+
+<style>/* WIP iOS-safe (non-drifting) */html{-webkit-text-size-adjust:100%;text-size-adjust:100%}*{-webkit-tap-highlight-color:transparent}input,select,textarea{font-size:16px}</style>
+
+<!-- MM-SEO-BLOCK (og-image paths are PLACEHOLDERS: assets/social/*.jpg 1200x630 need producing) -->
+<link rel="canonical" href="https://maplemoon.com.au/">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta name="theme-color" content="#457798">
+<meta property="og:site_name" content="Maple Moon">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://maplemoon.com.au/">
+<meta property="og:title" content="Maple Moon: Australian Organic Carob">
+<meta property="og:description" content="Carob bars, moons, bites and elixirs made from Australian organic carob. Naturally sweet, caffeine free, 100% vegan. Slow-made on the far north coast of NSW.">
+<meta property="og:image" content="https://maplemoon.com.au/assets/social/og-homepage.jpg">
+<meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
+<meta property="og:locale" content="en_AU">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Maple Moon: Australian Organic Carob">
+<meta name="twitter:description" content="Carob bars, moons, bites and elixirs made from Australian organic carob. Naturally sweet, caffeine free, 100% vegan. Slow-made on the far north coast of NSW.">
+<meta name="twitter:image" content="https://maplemoon.com.au/assets/social/og-homepage.jpg">
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "Organization",
+ "@id": "https://maplemoon.com.au/#organization",
+ "name": "Maple Moon",
+ "url": "https://maplemoon.com.au",
+ "logo": {
+  "@type": "ImageObject",
+  "url": "https://maplemoon.com.au/assets/social/mm_logo_social.jpg",
+  "width": 512,
+  "height": 512
+ },
+ "description": "Maple Moon makes Australian organic carob bars, moons, bites and elixirs. Vegan, gluten free, caffeine free. Far north coast of NSW.",
+ "email": "info@maplemoon.com.au",
+ "areaServed": {
+  "@type": "Country",
+  "name": "Australia"
+ },
+ "foundingLocation": {
+  "@type": "Place",
+  "name": "Far North Coast, New South Wales, Australia"
+ }
+}
+</script>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "WebSite",
+ "@id": "https://maplemoon.com.au/#website",
+ "url": "https://maplemoon.com.au",
+ "name": "Maple Moon",
+ "description": "Australian organic carob bars, moons, bites and elixirs. Vegan, gluten free, caffeine free.",
+ "publisher": {
+  "@id": "https://maplemoon.com.au/#organization"
+ },
+ "inLanguage": "en-AU"
+}
+</script>
+<!--MM-A11Y-SAFE-->
 </head>
 <body>
 <div class="wf">
@@ -451,15 +516,15 @@ html{scroll-behavior:smooth;}
     <div class="fog"></div>
 
     <header class="top wf-ptop"><div class="wrap bar">
-      <nav class="wf-pnav"><a href="shop.html">Shop</a><a href="our-story.html">Our Story</a><a href="#">Rituals</a><a href="#">Journal</a></nav>
+      <nav class="wf-pnav" aria-label="Primary navigation"><a href="shop.html">Shop</a><a href="our-story.html">Our Story</a></nav>
       <a class="wf-plogo" href="#top">maple moon</a>
-      <nav class="wf-pnav r"><a href="stockists.html">Stockists</a><a href="#">AUD $</a>
-        <span class="wf-pcart"><svg viewBox="0 0 24 24"><path d="M6 8h12l-1 12H7L6 8z"/><path d="M9 8a3 3 0 0 1 6 0"/></svg><b>0</b></span></nav>
+      <nav class="wf-pnav r" aria-label="Utility navigation"><a href="stockists.html">Stockists</a><a href="#">AUD $</a>
+        <span class="wf-pcart" role="button" tabindex="0" aria-label="Cart, 0 items"><svg viewBox="0 0 24 24"><path d="M6 8h12l-1 12H7L6 8z"/><path d="M9 8a3 3 0 0 1 6 0"/></svg><b>0</b></span></nav>
     </div></header>
 
     <div class="center wf-pcenter wrap">
-      <p class="wf-peyebrow">Artisan carob &middot; Brunswick Heads</p>
-      <h1 class="wf-pwm" aria-label="Carob"><img src="assets/carob_wordmark.svg" alt="Carob" width="1886" height="447"></h1>
+      <p class="wf-peyebrow">Australian organic carob</p>
+      <h1 class="wf-pwm"><img src="assets/carob_wordmark.svg" alt="Carob" width="1886" height="447" decoding="async"></h1>
       <p class="wf-ptag">Naturally Sweet, Nothing Added.</p>
       <a class="wf-ppill" href="#range">Shop the Range</a>
       <div class="wf-pcreds"><span>Naturally sweet</span><span>No caffeine</span><span>Nothing added</span><span>Organic <span class="amp">&amp;</span> vegan</span></div>
@@ -505,7 +570,7 @@ html{scroll-behavior:smooth;}
 
   <!-- WHAT: the annotated pod (full-bleed diagram band) -->
   <section class="wf-what1" id="carob">
-    <div class="pic"><img src="assets/hero_shots/carob_branch_dusk.jpg" alt="Carob pods hanging from a branch against a dusk blue sky"></div>
+    <div class="pic"><img src="assets/hero_shots/carob_branch_dusk.jpg" alt="Carob pods hanging from a branch against a dusk blue sky" loading="lazy" decoding="async"></div>
     <div class="wrap inner">
       <div class="col">
         <span class="qkick">First things first</span>
@@ -577,7 +642,7 @@ html{scroll-behavior:smooth;}
     <div class="wrap inner">
       <div class="col">
         <span class="qkick">Where it happens</span>
-        <h2 class="lux-hd">Handmade in<br>Brunswick Heads.</h2>
+        <h2 class="lux-hd">From Brunswick<br>Heads.</h2>
         <div class="lux-rule"></div>
         <p style="color:#57534b;font-size:1.05rem;max-width:40ch;line-height:1.7;margin:0 0 24px;">Every Maple Moon bar is made by hand, in small batches, on the far north coast of New South Wales. Australian-grown carob pods, sun-ripened and slow-roasted, then milled with cacao butter and nothing else.</p>
         <a class="wf-more" href="our-story.html">Read our story <svg viewBox="0 0 24 24" width="14" height="14" style="stroke:currentColor;fill:none;stroke-width:1.6"><line x1="4" y1="12" x2="20" y2="12"/><polyline points="14 6 20 12 14 18"/></svg></a>
@@ -610,7 +675,7 @@ html{scroll-behavior:smooth;}
   <section class="wrap wf-quote" id="reviews">
     <div class="qslider">
       <button class="qarw l" type="button" aria-label="Previous quote"><svg viewBox="0 0 24 24"><polyline points="15 6 9 12 15 18"/></svg></button>
-      <div class="qtrack">
+      <div class="qtrack" aria-live="polite" aria-atomic="true">
         <div class="qslide on"><p class="q serif">A quote from a real Maple Moon customer will live here.</p><p class="who">Verified reviews &middot; pending real data</p></div>
         <div class="qslide"><p class="q serif">Real words from real customers, once the review source is confirmed.</p><p class="who">Google &middot; Instagram &middot; markets &middot; to be confirmed</p></div>
         <div class="qslide"><p class="q serif">No invented praise on this site. Ever.</p><p class="who">The maple moon promise</p></div>
@@ -673,7 +738,7 @@ html{scroll-behavior:smooth;}
     </div>
     <div class="row">
       <a class="wf-logo" href="#top" style="font-size:1.15rem">maple moon</a>
-      <nav class="fnav"><a href="shop.html">Shop</a><a href="our-story.html">Our Story</a><a href="#">Rituals</a><a href="#">Journal</a><a href="stockists.html">Stockists</a><a href="#">Contact</a></nav>
+      <nav class="fnav" aria-label="Footer navigation"><a href="shop.html">Shop</a><a href="our-story.html">Our Story</a><a href="stockists.html">Stockists</a><a href="mailto:info@maplemoon.com.au">Contact</a></nav>
       <div class="soc">
         <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" rx="4.5"/><circle cx="12" cy="12" r="3.5"/></svg></a>
         <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24"><path d="M14 9h2.5V6H14c-2 0-3.5 1.4-3.5 3.5V11H8v3h2.5v6h3v-6H16l.5-3h-3V9.5c0-.3.2-.5.5-.5z"/></svg></a>
@@ -924,6 +989,30 @@ html{scroll-behavior:smooth;}
   var v3=S3[q.get('s3')];if(v3)swap('#carob .pic img',v3[0],v3[1],v3[2]);
   var v4=S4[q.get('s4')];if(v4)swap('#story .ill img',v4[0],v4[1],v4[2]);
   var v5=S5[q.get('s5')];if(v5)swap('#ritual .q-tile img',v5[0],v5[1],v5[2]);
+})();
+</script>
+
+<style>
+/* B3 scroll-reveal (toggleable) — ported from motion demo 15 Jul */
+body.motion-on [data-reveal]{opacity:0;transform:translateY(24px);transition:opacity .7s cubic-bezier(.22,.61,.36,1),transform .7s cubic-bezier(.22,.61,.36,1);}
+body.motion-on [data-reveal].is-visible{opacity:1;transform:none;}
+@media (prefers-reduced-motion:reduce){body.motion-on [data-reveal]{opacity:1!important;transform:none!important;transition:none!important;}}
+#motionToggle{position:fixed;right:16px;bottom:16px;z-index:9999;font:600 12px/1 -apple-system,Helvetica,sans-serif;letter-spacing:.08em;text-transform:uppercase;background:#2c4d63;color:#f1ede3;border:0;border-radius:40px;padding:12px 17px;box-shadow:0 6px 20px rgba(10,12,20,.32);cursor:pointer;}
+#motionToggle b{color:#8fd0a0;}
+</style>
+<button id="motionToggle" type="button">Motion: <b id="motionState">on</b></button>
+<script>
+(function(){
+  var reduce=window.matchMedia('(prefers-reduced-motion:reduce)').matches;
+  var targets=document.querySelectorAll('section:not(#top), footer:not(.wf-ptop)');
+  if(!targets.length)return;
+  targets.forEach(function(el){el.setAttribute('data-reveal','');});
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('is-visible');io.unobserve(e.target);}});},{threshold:0.12,rootMargin:'0px 0px -40px 0px'});
+  var st=document.getElementById('motionState');
+  function enable(){document.body.classList.add('motion-on');targets.forEach(function(el){el.classList.remove('is-visible');io.observe(el);});st.textContent=reduce?'reduced':'on';}
+  function disable(){document.body.classList.remove('motion-on');targets.forEach(function(el){io.unobserve(el);el.classList.add('is-visible');});st.textContent='off';}
+  var on=!reduce;(on?enable:disable)();
+  document.getElementById('motionToggle').addEventListener('click',function(){on=!on;(on?enable:disable)();});
 })();
 </script>
 </body>

@@ -2,10 +2,14 @@
 <html lang="en-AU">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<link rel="icon" type="image/svg+xml" href="assets/mm_logo_icon_blk.svg">
+<!-- WIP: Adobe Fonts kit dvz0xjs replaces local() demo cuts (renders off-machine) -->
+<link rel="preconnect" href="https://use.typekit.net">
+<link rel="stylesheet" href="https://use.typekit.net/dvz0xjs.css">
+<style>:root{--mm-serif:'p22-mackinac-pro','P22 Mackinac Pro',Georgia,serif!important;--mm-sans:'neue-haas-grotesk-display','Neue Haas Grotesk Display Pro','Inter','Helvetica Neue',sans-serif!important;}</style>
 <title>Stockists | Maple Moon</title>
 <meta name="description" content="Where to find Maple Moon carob. The stockist lineup is being confirmed as we launch. Wholesale and stocking enquiries welcome.">
-<link rel="icon" href="assets/brand/maplemoon_logo.svg" type="image/svg+xml">
 <link rel="stylesheet" href="brand_kit.css">
 <style>
 /* STOCKISTS: warm-paper editorial continuation of the shop page. */
@@ -115,6 +119,85 @@ html{scroll-behavior:smooth;}
 
 @media (prefers-reduced-motion:reduce){.sp *{transition:none!important;animation:none!important;}}
 </style>
+
+<style>/* WIP iOS-safe (non-drifting) */html{-webkit-text-size-adjust:100%;text-size-adjust:100%}*{-webkit-tap-highlight-color:transparent}input,select,textarea{font-size:16px}</style>
+
+<!-- MM-SEO-BLOCK (og-image paths are PLACEHOLDERS: assets/social/*.jpg 1200x630 need producing) -->
+<link rel="canonical" href="https://maplemoon.com.au/pages/stockists">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta name="theme-color" content="#457798">
+<meta property="og:site_name" content="Maple Moon">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://maplemoon.com.au/pages/stockists">
+<meta property="og:title" content="Stockists | Maple Moon">
+<meta property="og:description" content="Find Maple Moon Australian organic carob at a stockist near you. Cafes, health food stores and retailers across Australia. Wholesale enquiries welcome.">
+<meta property="og:image" content="https://maplemoon.com.au/assets/social/og-stockists.jpg">
+<meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
+<meta property="og:locale" content="en_AU">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Stockists | Maple Moon">
+<meta name="twitter:description" content="Find Maple Moon Australian organic carob at a stockist near you. Cafes, health food stores and retailers across Australia. Wholesale enquiries welcome.">
+<meta name="twitter:image" content="https://maplemoon.com.au/assets/social/og-stockists.jpg">
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "Organization",
+ "@id": "https://maplemoon.com.au/#organization",
+ "name": "Maple Moon",
+ "url": "https://maplemoon.com.au",
+ "logo": {
+  "@type": "ImageObject",
+  "url": "https://maplemoon.com.au/assets/social/mm_logo_social.jpg",
+  "width": 512,
+  "height": 512
+ },
+ "description": "Maple Moon makes Australian organic carob bars, moons, bites and elixirs. Vegan, gluten free, caffeine free. Far north coast of NSW.",
+ "email": "info@maplemoon.com.au",
+ "areaServed": {
+  "@type": "Country",
+  "name": "Australia"
+ },
+ "foundingLocation": {
+  "@type": "Place",
+  "name": "Far North Coast, New South Wales, Australia"
+ }
+}
+</script>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "WebSite",
+ "@id": "https://maplemoon.com.au/#website",
+ "url": "https://maplemoon.com.au",
+ "name": "Maple Moon",
+ "description": "Australian organic carob bars, moons, bites and elixirs. Vegan, gluten free, caffeine free.",
+ "publisher": {
+  "@id": "https://maplemoon.com.au/#organization"
+ },
+ "inLanguage": "en-AU"
+}
+</script>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "BreadcrumbList",
+ "itemListElement": [
+  {
+   "@type": "ListItem",
+   "position": 1,
+   "name": "Home",
+   "item": "https://maplemoon.com.au/"
+  },
+  {
+   "@type": "ListItem",
+   "position": 2,
+   "name": "Stockists",
+   "item": "https://maplemoon.com.au/pages/stockists"
+  }
+ ]
+}
+</script>
+<!--MM-A11Y-SAFE-->
 </head>
 <body>
 <div class="sp">
@@ -123,16 +206,16 @@ html{scroll-behavior:smooth;}
   <div class="sp-moonwash" aria-hidden="true"></div>
 
   <header class="sp-top"><div class="wrap bar">
-    <nav class="sp-nav"><a href="shop.html">Shop</a><a href="our-story.html">Our Story</a><a href="homepage_real_1_lead_photo.html#carob">What is Carob</a></nav>
+    <nav class="sp-nav" aria-label="Primary navigation"><a href="shop.html">Shop</a><a href="our-story.html">Our Story</a><a href="homepage_real_1_lead_photo.html#carob">What is Carob</a></nav>
     <a class="sp-logo" href="homepage_real_1_lead_photo.html">maple moon</a>
-    <nav class="sp-nav r"><a href="stockists.html" class="on">Stockists</a><a href="faq.html">FAQ</a>
-      <span class="sp-cart"><svg viewBox="0 0 24 24"><path d="M6 8h12l-1 12H7L6 8z"/><path d="M9 8a3 3 0 0 1 6 0"/></svg><b>0</b></span></nav>
+    <nav class="sp-nav r" aria-label="Utility navigation"><a href="stockists.html" class="on">Stockists</a><a href="faq.html">FAQ</a>
+      <span class="sp-cart" role="button" tabindex="0" aria-label="Cart, 0 items"><svg viewBox="0 0 24 24"><path d="M6 8h12l-1 12H7L6 8z"/><path d="M9 8a3 3 0 0 1 6 0"/></svg><b>0</b></span></nav>
   </div></header>
 
   <div class="wrap sp-head">
     <span class="sp-kick">Stockists</span>
     <h1>Find maple <em>moon.</em></h1>
-    <p>The lineup is being confirmed as we launch. Until the first shelves are stocked, everything is handmade to order from our kitchen in Brunswick Heads.</p>
+    <p>The lineup is being confirmed as we launch. Until the first shelves are stocked, everything is made to order from Australian organic carob.</p>
     <div class="sp-flag">Launching soon &middot; stockist list to be confirmed</div>
   </div>
 
@@ -167,8 +250,8 @@ html{scroll-behavior:smooth;}
     <div class="inner">
       <span class="sp-kick">For retailers &amp; cafes</span>
       <h2>Stock maple <em>moon.</em></h2>
-      <p>We supply selected retailers, cafes and grocers with the full carob range: bars, moons, bites and elixirs, all handmade in Brunswick Heads. If your shelves would suit a quieter kind of treat, we would love to hear from you.</p>
-      <a class="pill solid" href="#">Enquire about stocking</a>
+      <p>We supply selected retailers, cafes and grocers with the full carob range: bars, moons, bites and elixirs, all made from Australian organic carob. If your shelves would suit a quieter kind of treat, we would love to hear from you.</p>
+      <a class="pill solid" href="mailto:info@maplemoon.com.au?subject=Stocking%20enquiry">Enquire about stocking</a>
       <p class="note">Wholesale pricing &amp; minimums shared on enquiry</p>
     </div>
   </section>
@@ -186,7 +269,7 @@ html{scroll-behavior:smooth;}
   <footer class="sp-ft"><div class="wrap">
     <div class="row">
       <a class="serif" href="homepage_real_1_lead_photo.html" style="font-size:1.15rem">maple moon</a>
-      <nav class="fnav"><a href="shop.html">Shop</a><a href="our-story.html">Our Story</a><a href="stockists.html">Stockists</a><a href="faq.html">FAQ</a></nav>
+      <nav class="fnav" aria-label="Footer navigation"><a href="shop.html">Shop</a><a href="our-story.html">Our Story</a><a href="stockists.html">Stockists</a><a href="faq.html">FAQ</a></nav>
     </div>
   </div></footer>
 
