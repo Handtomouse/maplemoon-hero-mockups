@@ -19,3 +19,8 @@ assets/hero_shots/moodboard/*.png
 .superpowers/
 tools/__pycache__/
 homepage_backup.pdf
+
+# --- baseline-commit hygiene (added 15 Jul) ---
+_wip/checkpoints/
+checkpoints/_theme_bak.*/
+lewis_round2_contact_*.png

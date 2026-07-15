@@ -1,0 +1,132 @@
+<!DOCTYPE html><html lang=en-AU><head><meta charset=UTF-8>
+<meta name=viewport content="width=device-width,initial-scale=1">
+<title>MapleMoon Website - Morning Checklist - 15 Jul 2026</title>
+<style>
+:root{--ink:#1a2530;--soft:#5c6873;--faint:#95a0aa;--line:#dfe3e6;--paper:#f6f7f5;--card:#fff;--blue:#457798;--warn:#b0722a;--ok:#2e7d4f;--stop:#b85450;}
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.55 -apple-system,Helvetica,Arial,sans-serif}
+.wrap{max-width:1040px;margin:0 auto;padding:40px 26px 100px}
+h1{font:600 2rem/1.1 Georgia,serif;margin:0 0 4px}
+h2{font:600 1.3rem/1.2 Georgia,serif;margin:40px 0 12px;border-top:2px solid var(--line);padding-top:22px}
+h3{font:600 1.05rem/1.2 Georgia,serif;margin:20px 0 8px}
+.meta{color:var(--soft);font-size:.9rem;margin-bottom:20px}
+.dec{background:var(--card);border:1px solid var(--line);border-left:4px solid var(--blue);border-radius:8px;padding:16px 20px;margin:12px 0}
+.dec.stop{border-left-color:var(--stop)} .dec.warn{border-left-color:var(--warn)}
+.dec h3{margin:0 0 6px} .dec p{margin:6px 0;color:var(--soft)}
+.pill{display:inline-block;font-size:.66rem;letter-spacing:.1em;text-transform:uppercase;padding:3px 9px;border-radius:40px;font-weight:700;vertical-align:middle}
+.p-do{background:#e7f0f7;color:var(--blue)} .p-ok{background:#e4f2ea;color:var(--ok)} .p-stop{background:#f7e7e6;color:var(--stop)} .p-warn{background:#f7efe0;color:var(--warn)}
+.choice{display:flex;gap:10px;margin:8px 0;align-items:flex-start}
+.choice input{margin-top:5px;width:18px;height:18px}
+table{border-collapse:collapse;width:100%;font-size:.82rem;margin:10px 0}
+th,td{border:1px solid var(--line);padding:7px 9px;text-align:left;vertical-align:top}
+th{background:var(--card);font-size:.7rem;letter-spacing:.06em;text-transform:uppercase}
+td.f{white-space:nowrap;color:var(--faint);font-size:.72rem} td.b{color:var(--stop)} td.a{color:var(--ok)}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:14px;margin:14px 0}
+figure{margin:0;background:var(--card);border:1px solid var(--line);border-radius:8px;overflow:hidden}
+figure img{width:100%;display:block;background:#eee}
+figcaption{font-size:.66rem;color:var(--faint);padding:6px 8px;word-break:break-all}
+code{background:#eef1f2;border-radius:3px;padding:1px 5px;font-size:.85em}
+ul{margin:8px 0;padding-left:20px} li{margin:5px 0}
+.lead{background:#fbfaf7;border:1px solid var(--line);border-radius:10px;padding:18px 22px;margin:18px 0}
+</style></head><body><div class=wrap>
+
+<h1>MapleMoon website - morning checklist</h1>
+<p class=meta>Overnight run 14 Jul -> your review 15 Jul &middot; work is on WIP copies, originals untouched &middot; nothing sent to anyone</p>
+
+<div class=lead>
+<strong>The big picture I found:</strong> the 13 Jul call <b>approved the design</b> ("I'm so happy with it") and the agreed next step is backend/upload. That next step is mostly <b>externally blocked</b> (Shopify access, retail pricing, real reviews, farm photos - all pending from you/C&amp;D). So overnight I did the unblocked design polish: applied the unapplied 13 Jul call decisions + fixed a stale copy bug, on WIP copies. I did <b>not</b> redesign anything - you approved it and the walkthrough is Mon 20 Jul.
+</div>
+
+<h2>1 &middot; Decisions I need from you <span class="pill p-do">tap through these</span></h2>
+
+<div class=dec><h3>1. Confirm the base file I built on</h3>
+<p>I iterated <code>homepage_real_1_lead_photo.html</code> (the 13 Jul "Editorial Night" photo variant - the run sheet's "final demo page", structural superset with the who/why/sampler/stockists sections). The decisions pack was self-contradictory about this, so please confirm it was what C&amp;D actually saw and loved.</p>
+<div class=choice><input type=checkbox> Yes, that's the approved base - proceed</div>
+<div class=choice><input type=checkbox> No, it was a different file (tell me which)</div></div>
+
+<div class="dec warn"><h3>2. Ratify how I isolated the work (git)</h3>
+<p>The whole approved site is <b>99 untracked files</b> (your workflow is copy-based HTML, not commits). A git worktree would have checked out an empty site, so I did <b>not</b> worktree and did <b>not</b> disable any guard. Instead I worked additively on <code>_wip/*.WIP.html</code> copies - originals never touched. Promotion of WIP -&gt; real pages is your call.</p>
+<div class=choice><input type=checkbox> Fine - keep working on WIP copies, I'll promote when happy</div>
+<div class=choice><input type=checkbox> Let's commit the approved baseline so tooling behaves</div></div>
+
+<div class="dec stop"><h3>3. Approve the copy reversal wording (13 Jul call: "handmade in Brunswick Heads" is dead)</h3>
+<p>I removed production/location claims -&gt; "Australian organic carob" / locally-sourced, and kept Brunswick as origin-story flavour on our-story only. I also fixed a <b>stale bug</b>: faq/stockists still said "Byron Bay" (June already flagged this). 20 edits below - flag any wording you'd change:</p>
+<table><thead><tr><th>Page</th><th>Before</th><th>After</th></tr></thead><tbody><tr><td class=f>homepage_real_1_lead_photo.WIP.html</td><td class=b>&lt;title&gt;Maple Moon: Carob from Brunswick Heads (PHOTO VARIANT dev)&lt;/title&gt;</td><td class=a>&lt;title&gt;Maple Moon: Australian Organic Carob&lt;/title&gt;</td></tr><tr><td class=f>homepage_real_1_lead_photo.WIP.html</td><td class=b>content=&quot;Handmade carob bars, moons, bites and elixirs. Organic, vegan, gluten free, caffeine free. Made by hand in Brunswick Heads, on the far north coast of NSW.&quot;&gt;</td><td class=a>content=&quot;Australian organic carob bars, moons, bites and elixirs. Vegan, gluten free, caffeine free. Slow-made on the far north coast of NSW.&quot;&gt;</td></tr><tr><td class=f>homepage_real_1_lead_photo.WIP.html</td><td class=b>&lt;p class=&quot;wf-peyebrow&quot;&gt;Artisan carob &amp;middot; Brunswick Heads&lt;/p&gt;</td><td class=a>&lt;p class=&quot;wf-peyebrow&quot;&gt;Australian organic carob&lt;/p&gt;</td></tr><tr><td class=f>homepage_real_1_lead_photo.WIP.html</td><td class=b>&lt;h2 class=&quot;lux-hd&quot;&gt;Handmade in&lt;br&gt;Brunswick Heads.&lt;/h2&gt;</td><td class=a>&lt;h2 class=&quot;lux-hd&quot;&gt;From Brunswick&lt;br&gt;Heads.&lt;/h2&gt;</td></tr><tr><td class=f>carob-story.WIP.html</td><td class=b>content=&quot;Carob is a naturally sweet pod, caffeine free by nature. Maple Moon slow-roasts and mills it with cacao butter, handmade in Brunswick Heads NSW.&quot;&gt;</td><td class=a>content=&quot;Carob is a naturally sweet pod, caffeine free by nature. Maple Moon slow-roasts and mills it with cacao butter, on the NSW far north coast.&quot;&gt;</td></tr><tr><td class=f>carob-story.WIP.html</td><td class=b>&lt;span class=&quot;d&quot;&gt;Hand-poured in Brunswick Heads.&lt;/span&gt;</td><td class=a>&lt;span class=&quot;d&quot;&gt;Poured in small batches.&lt;/span&gt;</td></tr><tr><td class=f>carob-story.WIP.html</td><td class=b>Every bar is handmade in small batches in Brunswick Heads, on the far north coast of New South Wales, from Australian-grown carob.</td><td class=a>Every bar is made in small batches from Australian-grown carob, on the far north coast of New South Wales.</td></tr><tr><td class=f>carob-story.WIP.html</td><td class=b>Bars, moons, bites, elixirs and carob bananas. All handmade in Brunswick Heads, naturally sweet with nothing added.</td><td class=a>Bars, moons, bites, elixirs and carob bananas. All made from Australian organic carob, naturally sweet with nothing added.</td></tr><tr><td class=f>shop.WIP.html</td><td class=b>content=&quot;Handmade carob bars, moons, bites, elixirs and carob bananas. Organic, vegan, gluten free, caffeine free. Made by hand in Brunswick Heads.&quot;&gt;</td><td class=a>content=&quot;Australian organic carob bars, moons, bites, elixirs and carob bananas. Vegan, gluten free, caffeine free. Made from Australian organic carob.&quot;&gt;</td></tr><tr><td class=f>shop.WIP.html</td><td class=b>Bars, moons, bites, elixirs and carob bananas. All handmade in Brunswick Heads from Australian-grown carob, naturally sweet with nothing added.</td><td class=a>Bars, moons, bites, elixirs and carob bananas. All made from Australian organic carob, naturally sweet with nothing added.</td></tr><tr><td class=f>faq.WIP.html</td><td class=b>content=&quot;What is carob? Is it vegan? How should you store it? Answers to common questions about MapleMoon&#x27;s artisan carob range from Byron Bay.&quot;&gt;</td><td class=a>content=&quot;What is carob? Is it vegan? How should you store it? Answers to common questions about MapleMoon&#x27;s Australian organic carob range.&quot;&gt;</td></tr><tr><td class=f>faq.WIP.html</td><td class=b>We use organic cacao butter as our fat base, never dairy, never compound. Our kitchen in Byron Bay is entirely plant-based.</td><td class=a>We use organic cacao butter as our fat base, never dairy, never compound. Our kitchen is entirely plant-based.</td></tr><tr><td class=f>faq.WIP.html</td><td class=b>We use Australian-grown carob that&#x27;s sun-ripened and harvested locally. The pods are slow-roasted and milled in our Byron Bay facility.</td><td class=a>We use Australian-grown carob that&#x27;s sun-ripened and harvested locally. The pods are slow-roasted and milled in small batches.</td></tr><tr><td class=f>faq.WIP.html</td><td class=b>Orders are packed and dispatched from Byron Bay within 1-2 business days.</td><td class=a>Orders are packed and dispatched within 1-2 business days.</td></tr><tr><td class=f>stockists.WIP.html</td><td class=b>everything is handmade to order from our kitchen in Brunswick Heads.</td><td class=a>everything is made to order from Australian organic carob.</td></tr><tr><td class=f>stockists.WIP.html</td><td class=b>We supply selected retailers, cafes and grocers with the full carob range: bars, moons, bites and elixirs, all handmade in Brunswick Heads.</td><td class=a>We supply selected retailers, cafes and grocers with the full carob range: bars, moons, bites and elixirs, all made from Australian organic carob.</td></tr><tr><td class=f>our-story.WIP.html</td><td class=b>content=&quot;Carli and Dylan hand-make carob bars in small batches in Brunswick Heads, far north coast NSW, from Australian-grown carob milled with cacao butter.&quot;&gt;</td><td class=a>content=&quot;Carli and Dylan make carob bars in small batches from Australian-grown carob, milled with cacao butter, on the far north coast of NSW.&quot;&gt;</td></tr><tr><td class=f>our-story.WIP.html</td><td class=b>Maple Moon is made in Brunswick Heads, a small river town on the far north coast of New South Wales. This is where we make, where we pack, and where we ship from. Every bar that leaves here carries a bit of this place with it.</td><td class=a>Maple Moon began in Brunswick Heads, a small river town on the far north coast of New South Wales. It is the home our carob range grew from, and a bit of this place travels with every bar.</td></tr><tr><td class=f>our-story.WIP.html</td><td class=b>Together they hand-make every carob bar in small batches in Brunswick Heads, from Australian-grown carob milled with cacao butter.</td><td class=a>Together they make every carob bar in small batches from Australian-grown carob, milled with cacao butter.</td></tr><tr><td class=f>our-story.WIP.html</td><td class=b>Bars, moons, bites, elixirs and carob bananas. All handmade from Australian-grown carob, naturally sweet with nothing added.</td><td class=a>Bars, moons, bites, elixirs and carob bananas. All made from Australian organic carob, naturally sweet with nothing added.</td></tr></tbody></table>
+<div class=choice><input type=checkbox> Wording's good</div>
+<div class=choice><input type=checkbox> Change some (note on the row)</div></div>
+
+<div class=dec><h3>4. Pick the 3 still-open June design choices</h3>
+<p>These were flagged "choice needed" in June and never resolved. I'll build the variants you pick as screenshots next round (didn't auto-pick). CAROB wordmark stays protected in all.</p>
+<h3 style="font-size:.95rem">4a. Hero brand-surfacing</h3>
+<div class=choice><input type=checkbox> Three stacked lines (maple moon / eyebrow / CAROB)</div>
+<div class=choice><input type=checkbox> Drop small "maple moon" (already in nav)</div>
+<div class=choice><input type=checkbox> Merge to one line</div>
+<h3 style="font-size:.95rem">4b. Category packshot cohesion</h3>
+<div class=choice><input type=checkbox> Unify card treatment across categories</div>
+<div class=choice><input type=checkbox> Accept per-category texture</div>
+<h3 style="font-size:.95rem">4c. Motion</h3>
+<div class=choice><input type=checkbox> Restrained scroll-reveal</div>
+<div class=choice><input type=checkbox> Keep static editorial</div></div>
+
+
+<div class=dec><h3>B - variants I built for you to compare <span class="pill p-ok">screenshots ready</span></h3>
+<p><b>B1 hero brand-surfacing</b> - three real options, CAROB wordmark protected in all. Files in <code>_wip/variants/</code>. Pick one on decision 4a:</p>
+<div class=grid><figure><img src="checkpoints/2026-07-14_B1_hero_A_current_1440.png" loading="lazy"><figcaption>A - current: eyebrow + CAROB (desktop)</figcaption></figure><figure><img src="checkpoints/2026-07-14_B1_hero_B_brandline_1440.png" loading="lazy"><figcaption>B - add 'maple moon' line (desktop)</figcaption></figure><figure><img src="checkpoints/2026-07-14_B1_hero_C_minimal_1440.png" loading="lazy"><figcaption>C - drop eyebrow, wordmark only (desktop)</figcaption></figure><figure><img src="checkpoints/2026-07-14_B1_hero_A_current_390.png" loading="lazy"><figcaption>A - current (iPhone)</figcaption></figure><figure><img src="checkpoints/2026-07-14_B1_hero_B_brandline_390.png" loading="lazy"><figcaption>B - brand line (iPhone)</figcaption></figure><figure><img src="checkpoints/2026-07-14_B1_hero_C_minimal_390.png" loading="lazy"><figcaption>C - minimal (iPhone)</figcaption></figure></div>
+<p style="margin-top:14px"><b>B2 packshot cohesion</b> - can't show meaningfully yet: the packshots are still placeholder slots (real product photos pending). Once finals drop in, I'll render unify-vs-per-category side by side. Parked with the photo integration.</p>
+<p><b>B3 motion (scroll-reveal vs static)</b> - motion doesn't show in a still. Best decided live in the browser. I have a tasteful, performance-safe scroll-reveal ready (IntersectionObserver, 24px rise, prefers-reduced-motion guard, editorial-calm) - say the word and I'll wire it as a toggle you can flip on the page.</p>
+</div>
+<div class="dec warn"><h3>5. Fonts - licensing call (not blocking preview)</h3>
+<p>I switched type from the unlicensed <code>local()</code> demo cuts to the Adobe Fonts kit <code>dvz0xjs</code> (verified it serves p22-mackinac-pro + neue-haas-grotesk-display), so the site now renders correctly <b>off your machine</b> - previously it only looked right on your laptop. For public deploy you still need the Adobe CC web-embed entitlement confirmed (or buy the Fontspring/Monotype webfonts).</p>
+<div class=choice><input type=checkbox> Adobe CC web embed is fine - proceed</div>
+<div class=choice><input type=checkbox> Budget for Fontspring/Monotype webfonts instead</div></div>
+
+<div class="dec warn"><h3>6. Design calls the audits surfaced (need your nod)</h3>
+<p><b>Contrast:</b> the faint label colour (used on small kickers like "First things first") fails WCAG AA on the cream. Safe fix darkens it slightly - approve the tonal shift?</p>
+<p><b>Dead links:</b> Rituals / Journal / AUD $ currently link to nothing (9 on the homepage). Disable them until those pages exist, or point them somewhere?</p>
+<p><b>SEO needs 3 inputs from you:</b> social handles (Instagram/Facebook URLs), a named shop collection URL, and six 1200x630 social share images (can be cropped from existing photos - no new shoot).</p>
+<div class=choice><input type=checkbox> Darken faint labels for contrast</div>
+<div class=choice><input type=checkbox> Disable the dead nav links for now</div>
+<div class=choice><input type=checkbox> I'll supply social handles + share images</div>
+</div>
+<h2>2 &middot; What I applied overnight <span class="pill p-ok">done + verified</span></h2>
+<ul>
+<li><b>A1 copy reversal</b> - 20 edits across 6 pages, every one asserted to match exactly once, no em dashes. Verified in screenshots (hero now reads "From Brunswick Heads").</li>
+<li><b>Fonts</b> - Adobe kit dvz0xjs injected into all 6 WIP pages (renders off-machine).</li>
+<li><b>Round 2 (overnight marathon) - applied + tested:</b> fixed a viewport-meta bug, unified favicon (was 404), fixed a broken carob-story image, a11y wins (removed duplicate h1 label, carousel aria-live), and homepage perf (preload hero, lazy/decoding images, aspect-ratio to stop layout shift). Built an automated test harness (<code>_wip/audit.js</code>): zero horizontal overflow at 375/390/430, all images have alt, clean heading order. It flagged sub-44px tap targets and 9 dead <code>#</code> links on the homepage (queued below).</li>
+<li><b>Queued spec library</b> (researched + written, ready to apply next waves): full WCAG audit, SEO/OpenGraph/JSON-LD pack, subscribe pop-up component (A3), Meet Carli &amp; Dylan layout+draft copy (A2), and mobile-hardening patches. All saved so nothing is lost. Preview the pop-up + scroll-motion on the demo page already open in Chrome.</li>
+<li><b>iOS-safe tweaks</b> - viewport-fit=cover (enables safe-area), text-size-adjust:100% (no font-boost), tap-highlight removed, 16px inputs (no zoom on focus). Non-drifting, verified no regression. Fuller mobile hardening (svh/safe-area/44px) speced for device QA - see RESEARCH_NOTES.</li>
+<li><b>Screenshot harness</b> - reusable, captured all pages at 390 (iPhone) + 1440 (desktop).</li>
+</ul>
+<h3>Homepage - iPhone 390 + desktop 1440</h3>
+<div class=grid><figure><img src="checkpoints/2026-07-14_wipA1fonts_home_1440.png" loading="lazy"><figcaption>2026-07-14_wipA1fonts_home_1440.png</figcaption></figure><figure><img src="checkpoints/2026-07-14_wipA1fonts_home_390.png" loading="lazy"><figcaption>2026-07-14_wipA1fonts_home_390.png</figcaption></figure></div>
+<h3>Other pages</h3>
+<div class=grid><figure><img src="checkpoints/2026-07-14_wipA1fonts_carob-story_1440.png" loading="lazy"><figcaption>2026-07-14_wipA1fonts_carob-story_1440.png</figcaption></figure><figure><img src="checkpoints/2026-07-14_wipA1fonts_carob-story_390.png" loading="lazy"><figcaption>2026-07-14_wipA1fonts_carob-story_390.png</figcaption></figure><figure><img src="checkpoints/2026-07-14_wipA1fonts_faq_1440.png" loading="lazy"><figcaption>2026-07-14_wipA1fonts_faq_1440.png</figcaption></figure><figure><img src="checkpoints/2026-07-14_wipA1fonts_faq_390.png" loading="lazy"><figcaption>2026-07-14_wipA1fonts_faq_390.png</figcaption></figure><figure><img src="checkpoints/2026-07-14_wipA1fonts_our-story_1440.png" loading="lazy"><figcaption>2026-07-14_wipA1fonts_our-story_1440.png</figcaption></figure><figure><img src="checkpoints/2026-07-14_wipA1fonts_our-story_390.png" loading="lazy"><figcaption>2026-07-14_wipA1fonts_our-story_390.png</figcaption></figure><figure><img src="checkpoints/2026-07-14_wipA1fonts_shop_1440.png" loading="lazy"><figcaption>2026-07-14_wipA1fonts_shop_1440.png</figcaption></figure><figure><img src="checkpoints/2026-07-14_wipA1fonts_shop_390.png" loading="lazy"><figcaption>2026-07-14_wipA1fonts_shop_390.png</figcaption></figure><figure><img src="checkpoints/2026-07-14_wipA1fonts_stockists_1440.png" loading="lazy"><figcaption>2026-07-14_wipA1fonts_stockists_1440.png</figcaption></figure><figure><img src="checkpoints/2026-07-14_wipA1fonts_stockists_390.png" loading="lazy"><figcaption>2026-07-14_wipA1fonts_stockists_390.png</figcaption></figure></div>
+
+<h2>3 &middot; Prepared / next round <span class="pill p-do">queued</span></h2>
+<p>Researched + speced, ready to apply on your go (some can't be fully QA'd headless - iOS Safari behaviours need a real device):</p>
+<ul>
+<li><b>A2 Meet Carli &amp; Dylan</b> (our-story) - split couple shot into individual profiles + role blurb + "favourite way to enjoy" each.</li>
+<li><b>A3 delayed subscribe pop-up</b> - scroll-triggered, side "10% off" tab, clean close (offer value pending your ok).</li>
+<li><b>A4 "coming soon"</b> states for not-launch-ready SKUs.</li>
+<li><b>A5 quote carousel</b> - the carousel structure already exists (3-slide). I checked your live maplemoon.com.au for the "existing reviews" source and found NONE (no review app, no reviews page, zero testimonials - verified via headless render). I did not invent any. See blocked item below.</li>
+<li><b>Mobile/iPhone hardening</b> - svh viewport, safe-area insets, 44px targets, LCP hero markup (spec ready).</li>
+<li><b>Shopify shaping (D)</b> - your liquid scaffold is already well-formed; gaps identified (block.shopify_attributes, block-ify testimonials/FAQ, @app review slots, image_tag filter, Adobe kit in theme.liquid).</li>
+</ul>
+
+<h2>4 &middot; Blocked - waiting on you / C&amp;D <span class="pill p-stop">do not proceed</span></h2>
+<ul>
+<li><b>Retail pricing</b> - all placeholders. I did NOT scrape the current site (that's wholesale). Need the C&amp;D retail spreadsheet.</li>
+<li><b>Shopify/Liquid port</b> - needs collaborator access to the store (Themes + Products) for hello@handtomouse.org.</li>
+<li><b>Real reviews (A5)</b> - the 13 Jul note said "feed from the current site's existing reviews", but your live site has NO reviews on it (verified: no Judge.me/Okendo/Loox, /pages/reviews is 404). Where should real customer words come from - Google, Instagram, market-stall feedback? Point me and I'll wire the existing carousel immediately.</li>
+<li><b>Carob-farm imagery</b> - Australian Carob Co (SA) permission. Slot kept as placeholder.</li>
+</ul>
+
+<h2>5 &middot; QA flags to eyeball</h2>
+<ul>
+<li>Packshots render as grey boxes = product photos still pending (expected, per decisions pack).</li>
+<li>Confirm the moonlit hero image loads on your machine (looked pale in headless capture - may be a headless quirk).</li>
+<li>Fixed: WIP pages now symlink <code>assets/</code> + css so the hero photo, CAROB wordmark and packshots render correctly (screenshots above are accurate).</li>
+<li>Everything is on <code>~/maplemoon-website/_wip/</code>. Preview: <code>node server.js</code> then <code>localhost:3005/_wip/homepage_real_1_lead_photo.WIP.html</code>.</li>
+</ul>
+
+</div></body></html>

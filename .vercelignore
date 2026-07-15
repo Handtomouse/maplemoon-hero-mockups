@@ -39,6 +39,14 @@ review.html
 triage.html
 triage_paper.html
 
+# Dev scratch — design-comparison frames, mobile test harnesses, tuning playground (local only)
+_compare*.html
+_test*.html
+_playground.html
+
+# Internal session docs + backups (never deploy)
+checkpoints/
+
 # Design PDF backups at root — never deploy
 *.pdf
 
