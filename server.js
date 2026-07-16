@@ -57,5 +57,43 @@ app.get('/sections/:file.liquid', (req, res) => {
     res.type('html').send('<!DOCTYPE html><html lang="en-AU"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0"><title>MapleMoon — Hero Evolved Preview</title><link rel="stylesheet" href="/brand_kit.css"></head><body style="margin:0;padding:0">' + html + '</body></html>');
   });
 });
+// --- Dev feedback overlay: click-to-tag; logs to _wip/_feedback/log.jsonl; injected into every served HTML page ---
+const FB_DIR = path.join(__dirname, '_wip', '_feedback');
+try { fs.mkdirSync(FB_DIR, { recursive: true }); } catch (e) {}
+const FB_LOG = path.join(FB_DIR, 'log.jsonl');
+app.post('/__feedback', (req, res) => {
+  if (!isLocal(req.socket.remoteAddress || '')) return res.status(403).json({ ok: false });
+  const e = req.body || {};
+  const rec = { id: Date.now().toString(36)+Math.random().toString(36).slice(2,6), t: new Date().toISOString(), url: String(e.url||'').slice(0,300), sel: String(e.sel||'').slice(0,500),
+    text: String(e.text||'').slice(0,200), cat: String(e.cat||'').slice(0,28), note: String(e.note||'').slice(0,1200),
+    rect: e.rect||null, vw: e.vw||null, region: !!e.region };
+  fs.appendFile(FB_LOG, JSON.stringify(rec) + '\n', () => {});
+  res.json({ ok: true, id: rec.id });
+});
+app.get('/__feedback/log', (req, res) => { fs.readFile(FB_LOG, 'utf8', (err, d) => res.type('text/plain').send(err ? '' : d)); });
+app.post('/__feedback/clear', (req, res) => { if (!isLocal(req.socket.remoteAddress || '')) return res.status(403).json({ ok:false }); fs.writeFile(FB_LOG, '', () => {}); res.json({ ok: true }); });
+app.post('/__feedback/delete', (req, res) => {
+  if (!isLocal(req.socket.remoteAddress || '')) return res.status(403).json({ ok:false });
+  const id = String((req.body||{}).id||'');
+  fs.readFile(FB_LOG, 'utf8', (err, d) => {
+    if (err) return res.json({ ok:false });
+    const kept = (d||'').split('\n').filter(Boolean).filter(l => { try { return JSON.parse(l).id !== id; } catch(e){ return true; } });
+    fs.writeFile(FB_LOG, kept.length ? kept.join('\n')+'\n' : '', () => res.json({ ok:true }));
+  });
+});
+app.get('/__feedback.js', (req, res) => { res.set('Cache-Control','no-store'); res.type('application/javascript').sendFile(path.join(FB_DIR, 'feedback.js')); });
+// Inject the overlay into HTML responses (before static serves them raw)
+app.use((req, res, next) => {
+  if (req.method !== 'GET') return next();
+  let p = req.path; if (p.endsWith('/')) p += 'index.html';
+  if (!p.endsWith('.html')) return next();
+  let file; try { file = path.join(__dirname, decodeURIComponent(p)); } catch (e) { return next(); }
+  if (!file.startsWith(__dirname) || !fs.existsSync(file)) return next();
+  fs.readFile(file, 'utf8', (err, data) => {
+    if (err) return next();
+    const tag = '<script src="/__feedback.js"></script>';
+    res.type('html').send(data.includes('</body>') ? data.replace('</body>', tag + '</body>') : data + tag);
+  });
+});
 app.use(express.static(__dirname));
 app.listen(3005, '127.0.0.1', () => console.log('MapleMoon Hero Mockups → http://localhost:3005 (localhost-only)'));
