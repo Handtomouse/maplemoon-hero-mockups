@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Maple Moon - Meeting Index</title>
+  <style>
+    :root{--ink:#222b32;--blue:#315d74;--blue-soft:#dfeaf0;--paper:#f5f0e4;--line:#cbd0c8;--gold:#9b8352;--muted:#59636b;}
+    *{box-sizing:border-box} body{margin:0;background:var(--paper);color:var(--ink);font-family:Arial,sans-serif;line-height:1.5}
+    main{width:min(1120px,calc(100% - 32px));margin:auto;padding:34px 0 64px}.eyebrow{margin:0 0 8px;color:var(--gold);font-size:.72rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase}
+    h1,h2,h3{font-family:Georgia,serif;font-weight:500;letter-spacing:0}h1{font-size:clamp(2.2rem,5vw,4.4rem);line-height:1;margin:0 0 12px}h2{font-size:clamp(1.45rem,3vw,2.1rem);margin:0 0 14px}h3{font-size:1.35rem;margin:0 0 8px}
+    .intro{max-width:66ch;color:var(--muted);margin:0}.band{border-top:1px solid var(--line);padding:34px 0}.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}.card{padding:20px;border:1px solid var(--line);background:rgba(255,255,255,.34);border-radius:6px}.card p{margin:0 0 12px;color:var(--muted)}
+    .status{display:inline-flex;align-items:center;gap:7px;margin-bottom:10px;font-size:.7rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase}.status::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--gold)}.status.ready::before{background:#356b57}.status.moving::before{background:#b66b34}.status.pending::before{background:#8b6b50}
+    a{color:var(--blue);font-weight:700;text-underline-offset:3px}.actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:14px}.button{display:inline-flex;align-items:center;justify-content:center;min-height:44px;padding:10px 15px;border:1px solid var(--blue);border-radius:4px;text-decoration:none}.button.primary{background:var(--blue);color:#fff}.button:hover{background:var(--blue-soft)}.button.primary:hover{background:#24495d}
+    ol{margin:0;padding-left:22px}.agenda li{padding:10px 0;border-bottom:1px solid var(--line)}.agenda li:last-child{border-bottom:0}.agenda strong{display:block}.agenda span{color:var(--muted);font-size:.93rem}.note{padding:18px 20px;border-left:3px solid var(--gold);background:rgba(155,131,82,.09)}.note p{margin:0}.shot-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px}.shot{display:block;border:1px solid var(--line);background:#fff;text-decoration:none}.shot img{display:block;width:100%;aspect-ratio:9/16;object-fit:cover}.shot span{display:block;padding:9px;font-size:.78rem;color:var(--ink)}
+    .facts{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}.facts .card{min-height:150px}.small{font-size:.86rem;color:var(--muted)}
+    @media(max-width:720px){main{width:min(100% - 24px,1120px);padding-top:24px}.grid,.facts{grid-template-columns:1fr}.shot-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.card{padding:16px}}
+  </style>
+</head>
+<body>
+  <main>
+    <p class="eyebrow">Local review only · 23 July 2026</p>
+    <h1>Maple Moon meeting index</h1>
+    <p class="intro">One place to open the current pages, review the latest evidence, and separate design choices from the client inputs still required. Nothing here is published, sent, or connected to Shopify.</p>
+
+    <section class="band" aria-labelledby="start-title">
+      <h2 id="start-title">Start here</h2>
+      <div class="note"><p><strong>Meeting framing:</strong> review the visual direction and page flow first. Treat pricing, policies, founder imagery, testimonials, stockist detail, social links, and Shopify routing as explicit pending inputs rather than gaps to fill during the meeting.</p></div>
+      <div class="actions">
+        <a class="button primary" href="_WEBSITE_ORCHESTRATOR_20260728.html">Open website orchestrator</a>
+        <a class="button primary" href="homepage_real_1_lead_photo.WIP.html">Open current homepage</a>
+        <a class="button" href="_CARLI_DYLAN_WALKTHROUGH_20260723.html">Open Carli + Dylan walkthrough</a>
+        <a class="button" href="_LIVE_TRACKER_20260723.md">Open live tracker</a>
+        <a class="button" href="_REVIEW_PACK_20260723.md">Read existing review pack</a>
+        <a class="button" href="_UNSENT_QUESTIONS_20260723.md">Open client-input draft</a>
+      </div>
+    </section>
+
+    <section class="band" aria-labelledby="pages-title">
+      <h2 id="pages-title">Pages</h2>
+      <div class="grid">
+        <article class="card"><span class="status moving">Visual pass in progress</span><h3>Homepage</h3><p>Current review focuses on the Horizon Wash/mist system, product fan, branch callouts, comparison calm, ritual treatment, and orchard story image.</p><a href="homepage_real_1_lead_photo.WIP.html">Open homepage WIP</a></article>
+        <article class="card"><span class="status moving">Refinement in progress</span><h3>Shop</h3><p>Review focuses on opening hierarchy and sampler balance. Product names, prices, purchase wiring, navigation, and cart behaviour remain out of scope.</p><a href="shop.WIP.html">Open Shop WIP</a></article>
+        <article class="card"><span class="status pending">Next decision needed</span><h3>Our Story</h3><p>Makers-first structure is in place using existing imagery. The next optional review is the founders-dossier direction; a real joint founder portrait is still required.</p><a href="our-story.WIP.html">Open Our Story WIP</a></article>
+        <article class="card"><span class="status moving">Approved refinement in progress</span><h3>Carob Story</h3><p>Editorial field-guide direction: quieter hero, clearer comparison, manual pod-to-bar stepper, and more deliberate proof-to-CTA flow.</p><a href="carob-story.WIP.html">Open Carob Story WIP</a></article>
+        <article class="card"><span class="status moving">Review in progress</span><h3>FAQ</h3><p>Current work is testing hierarchy and page integration while retaining factual and policy-safe copy.</p><a href="faq.WIP.html">Open FAQ WIP</a></article>
+        <article class="card"><span class="status ready">Ready for review</span><h3>Stockists</h3><p>Selected tight carob silhouette is implemented in the header. Finder and map remain explicitly non-live until verified source data is supplied.</p><a href="stockists.WIP.html">Open Stockists WIP</a></article>
+      </div>
+    </section>
+
+    <section class="band" aria-labelledby="photos-title">
+      <h2 id="photos-title">Photos and candidates</h2>
+      <div class="grid">
+        <article class="card"><span class="status pending">Candidate review only</span><h3>Round 01 colour options</h3><p>Nine non-destructive colour candidates across images 4, 23, and 55. These are separate review assets, not yet website source replacements.</p><div class="actions"><a class="button" href="file:///Users/handtomouse/UFC/spins/maplemoon_recovered_round01_20260723/round_01/review/index.html">Open photo review</a><a class="button" href="file:///Users/handtomouse/UFC/spins/maplemoon_recovered_round01_20260723/round_01/review/decision_contact_sheet.png">Open contact sheet</a></div></article>
+        <article class="card"><span class="status pending">Still required</span><h3>Client imagery</h3><p>Approved joint Carli/Dylan portrait, approved social/OG imagery, and confirmation of any colour candidate selected for website use.</p><p class="small">Do not overwrite existing website assets until an approved source is chosen.</p></article>
+      </div>
+    </section>
+
+    <section class="band" aria-labelledby="evidence-title">
+      <h2 id="evidence-title">Current checkpoint evidence</h2>
+      <div class="shot-grid">
+        <a class="shot" href="checkpoints/20260723_7pm_review/home-desktop.jpg"><img src="checkpoints/20260723_7pm_review/home-desktop.jpg" alt="Homepage desktop checkpoint"><span>Homepage desktop</span></a>
+        <a class="shot" href="checkpoints/20260723_7pm_review/home-mobile.jpg"><img src="checkpoints/20260723_7pm_review/home-mobile.jpg" alt="Homepage mobile checkpoint"><span>Homepage mobile</span></a>
+        <a class="shot" href="checkpoints/20260723_7pm_review/carob-story-mobile.jpg"><img src="checkpoints/20260723_7pm_review/carob-story-mobile.jpg" alt="Carob Story mobile checkpoint"><span>Carob Story mobile</span></a>
+        <a class="shot" href="checkpoints/20260723_7pm_review/stockists-mobile.jpg"><img src="checkpoints/20260723_7pm_review/stockists-mobile.jpg" alt="Stockists mobile checkpoint"><span>Stockists mobile</span></a>
+      </div>
+    </section>
+
+    <section class="band" aria-labelledby="agenda-title">
+      <h2 id="agenda-title">Suggested meeting run</h2>
+      <ol class="agenda">
+        <li><strong>1. Set scope</strong><span>Local WIP review, not a launch or Shopify handover. Confirm the purpose is visual direction and page flow.</span></li>
+        <li><strong>2. Homepage</strong><span>Hero atmosphere, range fan, key scroll transitions, and what the page should make a first-time visitor understand.</span></li>
+        <li><strong>3. Shop + Our Story</strong><span>Commerce hierarchy, sampler balance, brand story pacing, and what founder image direction feels right.</span></li>
+        <li><strong>4. Carob Story + FAQ</strong><span>Does the education feel clear and credible? Are the support answers easy to scan without unsupported policy claims?</span></li>
+        <li><strong>5. Stockists</strong><span>Approve the finder experience as an honest preview and agree what verified data belongs in the eventual live version.</span></li>
+        <li><strong>6. Photo candidates</strong><span>Review the colour contact sheet. Select candidates only; do not overwrite original assets in the meeting.</span></li>
+        <li><strong>7. Close with inputs</strong><span>Confirm owners and due dates for product details, testimonials, policies, stockists, founder photos, social links, and Shopify access/routing.</span></li>
+      </ol>
+    </section>
+
+    <section class="band" aria-labelledby="inputs-title">
+      <h2 id="inputs-title">Inputs to leave with</h2>
+      <div class="facts">
+        <article class="card"><h3>Commerce</h3><p>Exact range, names, availability, pricing, purchase links, and public shipping/returns/allergen/wholesale wording.</p></article>
+        <article class="card"><h3>Trust and imagery</h3><p>Approved customer testimonials with permission, founder photos, social URLs, and social/OG imagery.</p></article>
+        <article class="card"><h3>Stockists and platform</h3><p>Verified public store dataset, approved logo/detail fields, Shopify collaborator access, and final URL mapping.</p></article>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

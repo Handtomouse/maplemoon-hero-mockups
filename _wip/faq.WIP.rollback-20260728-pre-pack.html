@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<link rel="icon" type="image/svg+xml" href="../assets/mm_logo_icon_blk.svg">
+<!-- WIP: Adobe Fonts kit dvz0xjs replaces local() demo cuts (renders off-machine) -->
+<link rel="preconnect" href="https://use.typekit.net">
+<link rel="stylesheet" href="https://use.typekit.net/dvz0xjs.css">
+<style>:root{--mm-serif:'p22-mackinac-pro','P22 Mackinac Pro',Georgia,serif!important;--mm-sans:'neue-haas-grotesk-display','Neue Haas Grotesk Display Pro','Inter','Helvetica Neue',sans-serif!important;}</style>
+<title>FAQ | Maple Moon</title>
+<meta name="description" content="Answers to common questions about carob, Maple Moon ingredients, sourcing, ordering and stockists.">
+<meta property="og:title" content="Frequently Asked Questions | Maple Moon">
+<meta property="og:description" content="Everything you need to know about carob, our ingredients, shipping, allergens, and wholesale enquiries.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Maple Moon">
+<link rel="stylesheet" href="brand_kit.css">
+<style>
+/* FAQ: warm-paper editorial continuation of the shop page. */
+html{scroll-behavior:smooth;}
+.sp{
+  --mm-serif:'p22-mackinac-pro','P22 Mackinac Pro',Georgia,serif;
+  --ink:#2c2a26;--ink-soft:#6f6a62;--ink-faint:#a39d92;
+  --paper:#f4f2ed;--card:#fbfaf7;--line:rgba(44,42,38,.14);--line-soft:rgba(44,42,38,.08);
+  --cream:#f1ede3;--acc:#4074b6;--beige:#c9ba96;
+  background:linear-gradient(180deg,#c5d5e5 0%,#dde6ee 22%,#eef2f5 55%,var(--paper) 100%);
+  color:var(--ink);font-family:var(--mm-sans,'Neue Haas Grotesk Display Pro',Helvetica,sans-serif);line-height:1.5;-webkit-font-smoothing:antialiased;min-height:100vh;
+}
+.sp *,.sp *::before,.sp *::after{box-sizing:border-box;}
+.sp img{max-width:100%;display:block;}
+.sp a{color:inherit;text-decoration:none;}
+.sp .wrap{max-width:1180px;margin:0 auto;padding:0 28px;}
+.sp .serif{font-family:var(--mm-serif);}
+
+/* nav (mirrors shop) */
+.sp-top{padding-top:8px;}
+.sp-top .bar{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;height:62px;}
+.sp-nav{display:flex;gap:28px;}.sp-nav.r{justify-content:flex-end;gap:22px;align-items:center;}
+.sp-nav a{font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-soft);transition:color .25s;}
+.sp-nav a:hover,.sp-nav a.on{color:var(--ink);}
+.sp-logo{font-family:var(--mm-serif);font-size:1.3rem;text-align:center;color:var(--ink);}
+.sp-cart{display:inline-flex;align-items:center;justify-content:center;width:32px;height:32px;border:1px solid var(--line);border-radius:50%;position:relative;}
+.sp-cart svg{width:15px;height:15px;stroke:var(--ink);fill:none;stroke-width:1.4;}
+.sp-cart b{position:absolute;top:-4px;right:-4px;width:15px;height:15px;border-radius:50%;background:var(--ink);color:var(--cream);font-size:.55rem;display:grid;place-items:center;}
+
+/* page head */
+.sp-head{text-align:center;padding:48px 0 8px;}
+.sp-kick{font-size:.64rem;letter-spacing:.22em;text-transform:uppercase;color:var(--ink-soft);display:block;margin-bottom:14px;}
+.sp-head h1{font-family:var(--mm-serif);font-weight:500;font-size:clamp(2rem,3.4vw,2.9rem);line-height:1.1;margin:0 0 14px;letter-spacing:.005em;}
+.sp-head h1 em{font-style:italic;font-weight:400;}
+.sp-head p{color:var(--ink-soft);max-width:48ch;margin:0 auto;}
+
+/* faq (asymmetric: sticky heading left, accordion right) */
+.faq{padding:30px 0 30px;}
+.faq .grid{display:grid;grid-template-columns:0.85fr 1.4fr;gap:70px;align-items:start;}
+.faq .side{position:sticky;top:40px;}
+.faq .side .hd{font-family:var(--mm-serif);font-weight:500;font-size:clamp(1.7rem,2.8vw,2.4rem);line-height:1.12;margin:0 0 14px;letter-spacing:.005em;}
+.faq .side .hd em{font-style:italic;font-weight:400;}
+.faq .side p{color:var(--ink-soft);font-size:.95rem;max-width:34ch;margin:0;}
+.faq-topic-rail{display:none;}
+.faq-index{display:grid;gap:0;margin-top:30px;}
+.faq-index a{display:flex;align-items:center;justify-content:space-between;min-height:44px;border-bottom:1px solid var(--line-soft);font-family:var(--mm-serif);font-size:.98rem;color:var(--ink-soft);transition:color .2s,border-color .2s;}
+.faq-index a::after{content:"";width:6px;height:6px;border-top:1px solid currentColor;border-right:1px solid currentColor;transform:rotate(45deg);opacity:.55;}
+.faq-index a:hover,.faq-index a[aria-current="location"]{color:#1e4366;border-color:rgba(64,116,182,.42);}
+.faq-index a:focus-visible,.faq-topic-rail a:focus-visible{outline:2px solid rgba(64,116,182,.7);outline-offset:3px;}
+.faq details{border-top:1px solid var(--line);}
+.faq details:last-child{border-bottom:1px solid var(--line);}
+.faq summary{list-style:none;cursor:pointer;display:flex;align-items:center;justify-content:space-between;gap:20px;padding:22px 4px;font-family:var(--mm-serif);font-weight:500;font-size:1.15rem;color:var(--ink);transition:color .25s;}
+.faq summary::-webkit-details-marker{display:none;}
+.faq summary .ic{flex:0 0 auto;width:26px;height:26px;border:1px solid var(--line);border-radius:50%;display:grid;place-items:center;transition:transform .3s;}
+.faq summary .ic svg{width:11px;height:11px;stroke:var(--ink);stroke-width:1.6;fill:none;}
+.faq details[open] summary .ic{transform:rotate(45deg);}
+.faq .a{padding:0 4px 24px;color:var(--ink-soft);font-size:.96rem;line-height:1.65;max-width:58ch;margin:0;}
+
+/* contact band */
+.fq-cta{margin:46px 0 0;}
+.fq-cta .inner{border:1px solid var(--line);border-radius:12px;background:var(--card);box-shadow:0 14px 34px rgba(44,42,38,.08);padding:48px 34px;text-align:center;}
+.fq-cta h2{font-family:var(--mm-serif);font-weight:500;font-size:clamp(1.5rem,2.4vw,2rem);line-height:1.12;margin:0 0 12px;}
+.fq-cta h2 em{font-style:italic;font-weight:400;}
+.fq-cta p{color:var(--ink-soft);max-width:48ch;margin:0 auto 22px;}
+.pill{display:inline-flex;align-items:center;gap:9px;font-size:.66rem;letter-spacing:.16em;text-transform:uppercase;font-weight:500;padding:13px 26px;border:1px solid var(--ink);border-radius:50px;background:transparent;color:var(--ink);cursor:pointer;transition:all .28s;}
+.pill:hover{background:var(--ink);color:var(--paper);}
+.pill.solid{background:var(--ink);color:var(--paper);}.pill.solid:hover{opacity:.85;}
+
+/* footer (mirrors shop) */
+.sp-ft{border-top:1px solid var(--line);margin-top:60px;}
+.sp-ft .row{display:flex;align-items:center;justify-content:space-between;gap:24px;padding:26px 0;flex-wrap:wrap;}
+.sp-ft .fnav{display:flex;gap:22px;flex-wrap:wrap;}
+.sp-ft .fnav a{font-size:.66rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-soft);}
+.sp-ft .fnav a:hover{color:var(--ink);}
+
+@media (max-width:900px){
+  .sp-nav a{display:none;}
+  .faq .grid{grid-template-columns:1fr;gap:28px;}
+  .faq .side{position:static;}
+  .faq{padding-top:18px;}
+  .faq-index{display:none;}
+  .faq-topic-rail{display:flex;gap:7px;overflow:auto;margin:0 auto 0;padding-top:16px;padding-bottom:2px;scrollbar-width:none;}
+  .faq-topic-rail::-webkit-scrollbar{display:none;}
+  .faq-topic-rail a{flex:0 0 auto;min-height:36px;display:inline-flex;align-items:center;border:1px solid var(--line);border-radius:50px;padding:8px 11px;color:var(--ink-soft);font-size:.62rem;letter-spacing:.12em;text-transform:uppercase;transition:color .2s,border-color .2s,background .2s;}
+  .faq-topic-rail a[aria-current="location"]{color:#1e4366;border-color:rgba(64,116,182,.54);background:rgba(221,230,238,.52);}
+}
+
+/* homepage atmosphere layers (mist wisps + film grain + moon-glow pulse) */
+.sp{position:relative;}
+.sp-mist{position:absolute;inset:0;z-index:0;pointer-events:none;
+  background:
+    radial-gradient(48% 15% at 15% 18%, rgba(255,255,255,.26), transparent 68%),
+    radial-gradient(44% 15% at 88% 34%, rgba(150,178,208,.20), transparent 70%),
+    radial-gradient(50% 16% at 12% 55%, rgba(255,255,255,.22), transparent 70%),
+    radial-gradient(44% 15% at 87% 76%, rgba(150,178,208,.16), transparent 70%);}
+.sp-grain{position:absolute;inset:0;z-index:0;pointer-events:none;opacity:.07;mix-blend-mode:soft-light;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='g'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23g)'/%3E%3C/svg%3E");background-size:200px 200px;}
+.sp-moonwash{position:absolute;top:0;left:0;right:0;height:520px;z-index:0;pointer-events:none;mix-blend-mode:screen;
+  background:radial-gradient(ellipse at 50% 12%,rgba(241,237,227,.15),rgba(136,165,190,.09) 16%,transparent 38%);
+  animation:spMoonPulse 7.5s ease-in-out infinite;}
+@keyframes spMoonPulse{0%,100%{opacity:.5;transform:scale(.985);}50%{opacity:.85;transform:scale(1.04);}}
+.sp>header,.sp>div,.sp>section,.sp>footer{position:relative;z-index:1;}.sp>[class$="-mist"],.sp>[class$="-grain"],.sp>[class$="-moonwash"]{position:absolute;z-index:0;}
+
+@media (prefers-reduced-motion:reduce){.sp *{transition:none!important;animation:none!important;}}
+</style>
+
+<style>/* WIP iOS-safe (non-drifting) */html{-webkit-text-size-adjust:100%;text-size-adjust:100%}*{-webkit-tap-highlight-color:transparent}input,select,textarea{font-size:16px}</style>
+<link rel="stylesheet" href="a11y_inner.css?v=20260723">
+<link rel="stylesheet" href="design_refinement_20260723.css">
+
+<!-- MM-SEO-BLOCK (og-image paths are PLACEHOLDERS: assets/social/*.jpg 1200x630 need producing) -->
+<link rel="canonical" href="https://maplemoon.com.au/pages/faq">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta name="theme-color" content="#457798">
+<meta property="og:site_name" content="Maple Moon">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://maplemoon.com.au/pages/faq">
+<meta property="og:title" content="Frequently Asked Questions | Maple Moon">
+<meta property="og:description" content="Everything you need to know about carob, our ingredients, allergens, storage, shipping and wholesale enquiries.">
+<meta property="og:image" content="https://maplemoon.com.au/assets/social/og-faq.jpg">
+<meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
+<meta property="og:locale" content="en_AU">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Frequently Asked Questions | Maple Moon">
+<meta name="twitter:description" content="Everything you need to know about carob, our ingredients, allergens, storage, shipping and wholesale enquiries.">
+<meta name="twitter:image" content="https://maplemoon.com.au/assets/social/og-faq.jpg">
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "Organization",
+ "@id": "https://maplemoon.com.au/#organization",
+ "name": "Maple Moon",
+ "url": "https://maplemoon.com.au",
+ "logo": {
+  "@type": "ImageObject",
+  "url": "https://maplemoon.com.au/assets/social/mm_logo_social.jpg",
+  "width": 512,
+  "height": 512
+ },
+ "description": "Maple Moon makes Australian organic carob bars, moons, bites and elixirs. Vegan, gluten free, caffeine free. Far north coast of NSW.",
+ "email": "info@maplemoon.com.au",
+ "areaServed": {
+  "@type": "Country",
+  "name": "Australia"
+ },
+ "foundingLocation": {
+  "@type": "Place",
+  "name": "Far North Coast, New South Wales, Australia"
+ }
+}
+</script>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "WebSite",
+ "@id": "https://maplemoon.com.au/#website",
+ "url": "https://maplemoon.com.au",
+ "name": "Maple Moon",
+ "description": "Australian organic carob bars, moons, bites and elixirs. Vegan, gluten free, caffeine free.",
+ "publisher": {
+  "@id": "https://maplemoon.com.au/#organization"
+ },
+ "inLanguage": "en-AU"
+}
+</script>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "BreadcrumbList",
+ "itemListElement": [
+  {
+   "@type": "ListItem",
+   "position": 1,
+   "name": "Home",
+   "item": "https://maplemoon.com.au/"
+  },
+  {
+   "@type": "ListItem",
+   "position": 2,
+   "name": "FAQ",
+   "item": "https://maplemoon.com.au/pages/faq"
+  }
+ ]
+}
+</script>
+<!--MM-A11Y-SAFE-->
+</head>
+<body>
+<a class="skip-link" href="#main-content">Skip to main content</a>
+<div class="sp">
+  <div class="sp-mist" aria-hidden="true"></div>
+  <div class="sp-grain" aria-hidden="true"></div>
+  <div class="sp-moonwash" aria-hidden="true"></div>
+
+  <header class="sp-top"><div class="wrap bar">
+    <nav class="sp-nav" aria-label="Primary navigation"><a href="shop.WIP.html">Shop</a><a href="our-story.WIP.html">Our Story</a><a href="homepage_real_1_lead_photo.WIP.html#carob">What is Carob</a></nav>
+    <a class="sp-logo" href="homepage_real_1_lead_photo.WIP.html">maple moon</a>
+    <nav class="sp-nav r" aria-label="Utility navigation"><a href="stockists.WIP.html">Stockists</a><a href="faq.WIP.html" class="on">FAQ</a>
+      <button class="sp-cart" type="button" aria-label="Cart, 0 items"><svg viewBox="0 0 24 24"><path d="M6 8h12l-1 12H7L6 8z"/><path d="M9 8a3 3 0 0 1 6 0"/></svg><b>0</b></button></nav>
+  </div></header>
+
+  <main id="main-content">
+  <div class="wrap sp-head">
+    <span class="sp-kick">Good questions</span>
+    <h1>Asked, <em>answered.</em></h1>
+    <p>Everything you need to know about carob, our products, and ordering.</p>
+  </div>
+
+  <section class="faq" aria-label="Questions and answers">
+    <nav class="wrap faq-topic-rail" aria-label="FAQ topics"><a href="#carob" data-faq-topic-link aria-current="location">Carob</a><a href="#products" data-faq-topic-link>Products</a><a href="#support" data-faq-topic-link>Support</a><a href="#pending" data-faq-topic-link>Pending</a></nav>
+    <div class="wrap grid">
+      <div class="side">
+        <span class="sp-kick">Help</span>
+        <h2 class="hd">The things everyone <em>asks.</em></h2>
+        <p>From the pod itself to shipping, storage and stocking. If yours is not here, we are one email away.</p>
+        <nav class="faq-index" aria-label="FAQ topics"><a href="#carob" data-faq-topic-link aria-current="location">Carob</a><a href="#products" data-faq-topic-link>Products</a><a href="#support" data-faq-topic-link>Support</a><a href="#pending" data-faq-topic-link>Pending details</a></nav>
+      </div>
+      <div class="list">
+        <h2 class="faq-group" id="carob">Carob</h2>
+        <details id="what-is-carob" open>
+          <summary>What is carob?<span class="ic"><svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span></summary>
+          <p class="a">Carob comes from a tree-grown pod, not a bean. Maple Moon uses Australian-grown carob, slow-roasted and milled with cacao butter.</p>
+        </details>
+        <details>
+          <summary>Does it taste like chocolate?<span class="ic"><svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span></summary>
+          <p class="a">Carob has its own naturally sweet, roasted character. It is not cacao, and the best way to know it is to taste it on its own terms.</p>
+        </details>
+        <details>
+          <summary>Is carob caffeine free?<span class="ic"><svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span></summary>
+          <p class="a">Carob itself is naturally caffeine free.</p>
+        </details>
+        <details>
+          <summary>Why does Maple Moon use cacao butter?<span class="ic"><svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span></summary>
+          <p class="a">Maple Moon mills its slow-roasted carob with cacao butter. Refer to the individual product page and label for its full ingredient list.</p>
+        </details>
+        <details>
+          <summary>Where do you source your carob?<span class="ic"><svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span></summary>
+          <p class="a">Maple Moon uses Australian-grown carob. The pods are slow-roasted and milled in small batches on the NSW far north coast.</p>
+        </details>
+        <h2 class="faq-group" id="products">Products</h2>
+        <details>
+          <summary>How should I store Maple Moon products?<span class="ic"><svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span></summary>
+          <p class="a">Store each product as directed on its packaging and product page. A cool, dry place away from direct sunlight is a good starting point.</p>
+        </details>
+        <details id="where-can-i-buy">
+          <summary>Where can I buy Maple Moon?<span class="ic"><svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span></summary>
+          <p class="a"><a class="faq-inline-link" href="shop.WIP.html">Shop the available range</a> online or use the <a class="faq-inline-link" href="stockists.WIP.html">Stockists finder</a>. Store details are being confirmed and will be added as they are verified.</p>
+        </details>
+        <h2 class="faq-group" id="support">Support</h2>
+        <details>
+          <summary>What if I have an allergy question?<span class="ic"><svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span></summary>
+          <p class="a">Check the individual product label for ingredients and allergen information. Contact us before ordering if you need help choosing a product.</p>
+        </details>
+        <details id="order-help">
+          <summary>Can I get help with an order?<span class="ic"><svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span></summary>
+          <p class="a">Email <a class="faq-inline-link" href="mailto:info@maplemoon.com.au">info@maplemoon.com.au</a> with your order details and the team can help.</p>
+        </details>
+        <details>
+          <summary>Do you offer wholesale?<span class="ic"><svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span></summary>
+          <p class="a">For wholesale enquiries, email <a class="faq-inline-link" href="mailto:info@maplemoon.com.au">info@maplemoon.com.au</a> with your business details.</p>
+        </details>
+        <h2 class="faq-group" id="pending">Pending details</h2>
+        <details class="faq-pending">
+          <summary>What shipping, returns and policy details are confirmed?<span class="ic"><svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span></summary>
+          <p class="a">Shipping, returns, policy wording and any related pricing details are still pending approved source copy. This WIP keeps those answers visible as pending rather than inventing final terms.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <section class="wrap fq-cta" aria-label="Contact">
+    <div class="fq-cta-grid"><div aria-hidden="true"></div><div class="inner">
+      <span class="sp-kick">Still wondering</span>
+      <h2>Still have <em>questions?</em></h2>
+      <p>Email us at info@maplemoon.com.au and we'll get back to you.</p>
+      <a class="pill solid" href="mailto:info@maplemoon.com.au">Email us</a>
+    </div></div>
+  </section>
+  </main>
+
+  <footer class="sp-ft"><div class="wrap">
+    <div class="row">
+      <a class="serif" href="homepage_real_1_lead_photo.WIP.html" style="font-size:1.15rem">maple moon</a>
+      <nav class="fnav" aria-label="Footer navigation"><a href="shop.WIP.html">Shop</a><a href="our-story.WIP.html">Our Story</a><a href="stockists.WIP.html">Stockists</a><a href="faq.WIP.html">FAQ</a></nav>
+    </div>
+  </div></footer>
+
+</div>
+<style>
+/* FAQ LANE: keep the long answer list calm, readable, and easy to re-enter. */
+.sp .sp-head{text-align:left;padding-top:84px;padding-bottom:52px;position:relative;isolation:isolate;}
+.sp .sp-head::before{content:"";position:absolute;left:40%;top:18px;width:min(960px,calc(100% - 88px));height:250px;transform:translateX(-50%);z-index:-1;pointer-events:none;background:radial-gradient(ellipse at 48% 24%,rgba(239,249,249,.5) 0%,rgba(69,119,152,.18) 38%,rgba(123,157,191,.09) 60%,rgba(231,228,202,0) 78%);filter:blur(10px);opacity:.82;-webkit-mask-image:radial-gradient(ellipse at center,#000 0 54%,rgba(0,0,0,.6) 66%,transparent 82%);mask-image:radial-gradient(ellipse at center,#000 0 54%,rgba(0,0,0,.6) 66%,transparent 82%);}
+.sp .sp-head h1{font-size:clamp(2.34rem,4.55vw,4.1rem);line-height:1.04;max-width:9.4em;margin:0 0 22px;}
+.sp .sp-head p{max-width:43ch;margin:0;font-size:1.08rem;line-height:1.62;}
+.faq .side::after{content:"";display:block;width:48px;height:1px;margin-top:24px;background:linear-gradient(90deg,rgba(44,42,38,.62),rgba(44,42,38,.10));}
+.faq .list{counter-reset:faq;}
+.faq .faq-group{display:flex;align-items:center;gap:12px;margin:0 0 10px;color:var(--ink-soft);font-family:var(--mm-sans);font-weight:500;font-size:.68rem;letter-spacing:.2em;text-transform:uppercase;scroll-margin-top:52px;}
+.faq .faq-group::after{content:"";height:1px;flex:1;background:var(--line-soft);}
+.faq .list details{counter-increment:faq;}
+.faq .list summary::before{content:counter(faq, decimal-leading-zero);flex:0 0 auto;color:var(--ink-soft);font-family:var(--mm-serif);font-size:.78rem;font-style:italic;}
+.faq .list summary::before{width:26px;}
+.faq .list summary{padding-left:0;transition:color .25s,background .25s;}
+.faq .list summary:hover{color:#1e4366;}
+.faq .list summary:focus-visible{outline:2px solid rgba(64,116,182,.7);outline-offset:3px;border-radius:2px;}
+.faq .list details[open]{margin:2px 0;padding:0 14px;border-left:3px solid rgba(64,116,182,.72);border-radius:0;background:rgba(221,230,238,.32);box-shadow:none;}
+.faq .list details[open] summary{color:#1e4366;}
+.faq .list details[open] .ic{background:rgba(255,255,255,.42);}
+.faq .list #what-is-carob[open] summary::before{color:#1e4366;}
+.faq .list .faq-pending{border-color:rgba(183,139,61,.32);}
+.faq .list .faq-pending summary{color:#6f6047;}
+.faq .list .faq-pending[open]{border-left-color:rgba(183,139,61,.72);background:rgba(201,186,150,.16);}
+.faq .list .faq-pending .a{color:#756b5b;}
+.faq .faq-inline-link{color:#1e4366;text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:3px;}
+.faq .faq-inline-link:hover{color:var(--ink);}
+.faq .faq-inline-link:focus-visible{outline:2px solid rgba(64,116,182,.7);outline-offset:3px;}
+.faq .faq-group:not(:first-child){margin-top:32px;padding-top:2px;}
+.fq-cta{margin-top:42px;}
+.fq-cta-grid{display:grid;grid-template-columns:.85fr 1.4fr;gap:70px;}
+.fq-cta .inner{position:relative;grid-column:2;border:0;border-top:1px solid var(--line);border-radius:0;background:transparent;box-shadow:none;padding:36px 0 10px;text-align:left;}
+.fq-cta .inner::before{content:"";display:block;width:36px;height:1px;margin:0 0 16px;background:#4074b6;}
+.fq-cta p{margin:0 0 22px;}
+.pill:focus-visible{outline:2px solid rgba(64,116,182,.78);outline-offset:4px;}
+@media(max-width:900px){
+  .sp .sp-head{text-align:center;padding-top:64px;padding-bottom:46px;}
+  .sp .sp-head::before{left:50%;}
+  .sp .sp-head h1{max-width:none;margin-left:auto;margin-right:auto;}
+  .sp .sp-head p{margin-left:auto;margin-right:auto;}
+  .faq .side::after{margin-top:18px;}
+  .faq .faq-group:not(:first-child){margin-top:28px;}
+  .faq .list summary{gap:12px;}
+  .faq .side .hd{font-size:clamp(1.55rem,7vw,2rem);}
+  .faq .side p{max-width:38ch;}
+  .fq-cta-grid{grid-template-columns:1fr;}
+  .fq-cta .inner{grid-column:1;text-align:center;padding:34px 0 8px;}
+  .fq-cta .inner::before{margin-left:auto;margin-right:auto;}
+}
+@media(max-width:560px){
+  .sp .sp-head{padding-top:42px;padding-bottom:34px;}
+  .sp .sp-head::before{top:12px;width:calc(100% - 24px);height:124px;background:radial-gradient(ellipse at 50% 18%,rgba(69,119,152,.2),rgba(123,157,191,.12) 50%,rgba(231,228,202,0) 78%);}
+  .sp .sp-head::after{display:none;}
+  .sp .sp-head h1{font-size:2rem;margin-bottom:12px;}
+  .sp .sp-head p{font-size:.9rem;line-height:1.42;max-width:31ch;}
+  .faq{padding-top:24px;}
+  .faq .list summary{min-height:52px;padding-top:18px;padding-bottom:18px;font-size:1.06rem;}
+  .faq .a{padding-bottom:20px;font-size:.94rem;}
+  .fq-cta{margin-top:32px;}
+  .fq-cta .inner{padding:32px 0 6px;}
+}
+</style>
+<script>
+  (() => {
+    const links = [...document.querySelectorAll('[data-faq-topic-link]')];
+    const groups = [...document.querySelectorAll('.faq-group[id]')];
+    const setCurrent = (id) => links.forEach((link) => {
+      if (link.hash === `#${id}`) link.setAttribute('aria-current', 'location');
+      else link.removeAttribute('aria-current');
+    });
+
+    const updateCurrent = () => {
+      const readingLine = window.innerHeight * .25;
+      const current = groups.reduce((active, group) => (
+        group.getBoundingClientRect().top <= readingLine ? group : active
+      ), groups[0]);
+      if (current) setCurrent(current.id);
+    };
+
+    links.forEach((link) => link.addEventListener('click', () => setCurrent(link.hash.slice(1))));
+    window.addEventListener('scroll', updateCurrent, { passive:true });
+    window.addEventListener('resize', updateCurrent);
+    updateCurrent();
+  })();
+</script>
+</body>
+</html>

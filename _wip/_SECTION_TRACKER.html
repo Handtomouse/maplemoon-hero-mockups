@@ -1,0 +1,51 @@
+<!doctype html><meta charset=utf-8><title>MapleMoon - Section Tracker</title>
+<style>
+:root{--g:#3f9d5b;--a:#d99a2b;--p:#6b7580}
+body{margin:0;background:#181b20;color:#eee7d8;font:14px/1.5 -apple-system,Helvetica,sans-serif}
+header{padding:22px 28px 8px}h1{margin:0;font-size:20px;letter-spacing:.02em}
+.proto{margin:10px 28px 6px;background:#20262d;border-left:3px solid #8fd0a0;border-radius:6px;padding:12px 16px;font-size:13px;color:#cdd8cf}
+.proto b{color:#8fd0a0}
+.note{margin:8px 28px 6px;background:#1d232a;border:1px solid #303944;border-radius:6px;padding:10px 16px;font-size:12px;color:#abb8c3}
+.note b{color:#e6d19a}
+.bar{margin:14px 28px 0;height:8px;border-radius:5px;background:#2a3038;overflow:hidden}
+.bar>i{display:block;height:100%;background:var(--g);width:3%}
+.count{margin:6px 28px 18px;font-size:12px;color:#97a0a8}
+.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;padding:0 28px 30px}
+.pg{background:#20262d;border-radius:10px;padding:14px 16px}
+.pg h2{margin:0 0 10px;font-size:15px;display:flex;justify-content:space-between}
+.pg h2 small{color:#97a0a8;font-weight:400}
+.s{display:flex;align-items:center;gap:9px;padding:5px 0;border-top:1px solid #2b323a;font-size:13px}
+.s:first-of-type{border-top:0}
+.n{width:20px;color:#8b949c;font-size:11px;text-align:right}
+.dot{width:9px;height:9px;border-radius:50%;background:var(--p);flex:none}
+.cleared .dot{background:var(--g)} .tweak .dot,.content-pending .dot{background:var(--a)}
+.cleared .lbl{color:#bfe6c8} .content-pending .lbl{color:#f0d19e} .st{margin-left:auto;font-size:10px;text-transform:uppercase;letter-spacing:.08em;color:var(--p)}
+.cleared .st{color:var(--g)} .tweak .st,.content-pending .st{color:var(--a)}
+</style>
+<header><h1>MapleMoon - Section Review Tracker</h1></header>
+<div class=proto><b>Loop:</b> one page top-to-bottom · I state change + show before/after (1440 + 390) · you say <b>keep / tweak / next</b> · edits stay in <code>_wip</code>, promote+redeploy once per finished page. Order: homepage → shop → our-story → carob-story → faq → stockists.</div>
+<div class=note><b>Stockists wiring:</b> homepage marquee, nav/footer links, trust bar link and the stockists WIP page point to <code>stockists.WIP.html</code>. Final Shopify URL mapping and logo assets are still pending.</div>
+<div class=note><b>Technical audit:</b> home, our-story, shop, carob-story, faq and stockists passed the 21 Jul inner-page audit refresh with zero console errors, bad requests, missing image alts, sub-44px targets, heading skips or mobile overflow at 375/390/430. Pending section statuses below mean content-review approval is still pending, not a11y failure.</div>
+<div class=bar><i id=pct></i></div><div class=count id=cnt></div>
+<div class=grid id=grid></div>
+<script>
+const D={
+"Homepage":["Hero|cleared","Product lineup carousel|cleared","Selected bar (PDP block)|cleared","Product detail|cleared","What is Carob|cleared","Why not cacao|cleared","When do you moon|cleared","From Brunswick Heads|cleared","Who: Carli & Dylan|cleared","Stockists marquee|cleared","Reviews / quote|content-pending","Try every flavour (sampler)|cleared","Trust bar|cleared"],
+"Shop":["Bars|cleared","Moons|content-pending","Bites & Eclipses|content-pending","Elixirs|cleared","Bananas|content-pending"],
+"Our Story":["Hero: on its own terms|cleared","The question|cleared","Pull quote|cleared","Made by hand band|cleared","From Brunswick Heads|cleared","Founders: Carli & Dylan|cleared","Gallery|cleared","CTA: taste it|cleared"],
+"Carob Story":["Hero: what is carob","Pod to bar","Gallery: pod up close","Carob & cacao compare","FAQ: asked, answered","CTA: taste it"],
+"FAQ":["FAQ list","Still have questions CTA"],
+"Stockists":["Coming soon to|cleared","Trade: stock maple moon|cleared","Newsletter: be first|cleared"]
+};
+let tot=0,done=0;const g=document.getElementById('grid');
+for(const[pg,secs]of Object.entries(D)){
+ const box=document.createElement('div');box.className='pg';
+ let cl=secs.filter(s=>s.includes('|cleared')).length;
+ box.innerHTML=`<h2>${pg}<small>${cl}/${secs.length}</small></h2>`;
+ secs.forEach((s,i)=>{const[lbl,st]=s.split('|');tot++;if(st==='cleared')done++;
+  box.innerHTML+=`<div class="s ${st||''}"><span class=n>${i+1}</span><span class=dot></span><span class=lbl>${lbl}</span><span class=st>${st==='cleared'?'cleared':st==='tweak'?'tweak':st==='content-pending'?'content-pending':'pending'}</span></div>`;});
+ g.appendChild(box);
+}
+document.getElementById('pct').style.width=Math.max(3,Math.round(done/tot*100))+'%';
+document.getElementById('cnt').textContent=`${done} / ${tot} sections cleared`;
+</script>
