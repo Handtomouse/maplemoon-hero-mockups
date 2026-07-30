@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MapleMoon brand-led hero variants B</title>
+  <style>
+    @font-face{font-family:Mackinac;src:local('FONTSPRING DEMO - P22 Mackinac Pro Book'),local('P22 Mackinac Pro');font-weight:400;font-display:swap}
+    :root{--cream:#f1ede3;--soft:rgba(241,237,227,.78);--carob-blue:#88a5be}
+    *{box-sizing:border-box}
+    body{margin:0;background:#dce6ee;color:var(--cream);font-family:"Neue Haas Grotesk Display Pro",Helvetica,sans-serif}
+    .board{min-height:100vh;padding:34px;background:linear-gradient(180deg,#263848,#dce6ee 86%)}
+    .intro{max-width:1220px;margin:0 auto 26px;display:flex;align-items:end;justify-content:space-between;gap:24px}
+    h1{font-family:Mackinac,Georgia,serif;font-size:clamp(2rem,4vw,4rem);font-weight:400;line-height:.96;margin:0}
+    .intro p{max-width:62ch;margin:0;color:rgba(241,237,227,.76);font-size:.9rem;line-height:1.5}
+    .option{max-width:1220px;margin:0 auto 42px;border:1px solid rgba(241,237,227,.24);box-shadow:0 34px 100px rgba(0,0,0,.28);overflow:hidden;background:rgba(244,242,237,.05)}
+    .label{height:46px;padding:0 18px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid rgba(241,237,227,.16);background:rgba(8,12,19,.32);font-size:.63rem;letter-spacing:.18em;text-transform:uppercase;color:rgba(241,237,227,.72)}
+    .label strong{font-size:.72rem;color:var(--cream);font-weight:500}
+    .stage{position:relative;min-height:750px;overflow:hidden;background:var(--base)}
+    .photo{position:absolute;inset:-2%;z-index:0;background:url("assets/hero_shots/moonlit_ocean_night.webp") var(--photo-pos)/cover no-repeat;opacity:var(--photo-o);filter:var(--photo-filter);transform:scale(var(--photo-scale))}
+    .stage:before{content:"";position:absolute;inset:0;z-index:1;pointer-events:none;background:var(--plate)}
+    .stage:after{content:"";position:absolute;left:0;right:0;bottom:0;height:118px;background:linear-gradient(180deg,transparent 4%,rgba(218,229,237,.1) 58%,rgba(223,232,239,.4));pointer-events:none;z-index:8}
+    .moon{position:absolute;left:50%;top:var(--moon-top);z-index:2;width:var(--moon-size);height:var(--moon-size);border-radius:50%;transform:translateX(-50%);opacity:var(--moon-o);background:radial-gradient(circle at 38% 32%,#fbf7df,#efe9c5 48%,rgba(239,233,197,.5) 62%,transparent 70%);box-shadow:0 0 24px rgba(241,237,227,.32),0 0 90px rgba(241,237,227,.16);filter:blur(var(--moon-blur))}
+    .nav{position:absolute;inset:0 0 auto;height:78px;padding:0 clamp(22px,3vw,38px);display:grid;grid-template-columns:minmax(0,1fr) auto minmax(0,1fr);align-items:center;z-index:6}
+    .nav:before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(2,5,10,.4),rgba(2,5,10,.08) 62%,transparent);z-index:-1}
+    .links{display:flex;align-items:center;gap:clamp(20px,2.2vw,28px);white-space:nowrap}
+    .links.r{justify-content:flex-end;gap:clamp(19px,2vw,26px)}
+    a,.cart{color:var(--soft);font-size:.52rem;letter-spacing:.18em;text-transform:uppercase;text-decoration:none;text-shadow:0 1px 14px rgba(0,0,0,.54)}
+    .logo{font-family:Mackinac,Georgia,serif;color:var(--cream);font-size:1.24rem;text-shadow:0 1px 20px rgba(0,0,0,.56)}
+    .active{display:inline-flex;align-items:center;justify-content:center;height:28px;padding:0 13px;border:1px solid rgba(241,237,227,.44);border-radius:999px;background:rgba(241,237,227,.035);box-shadow:inset 0 0 18px rgba(241,237,227,.045);color:var(--cream)}
+    .cart{width:31px;height:31px;border:1px solid rgba(241,237,227,.27);border-radius:50%;display:grid;place-items:center;position:relative}
+    .cart:after{content:"0";position:absolute;top:-6px;right:-5px;width:15px;height:15px;border-radius:50%;background:var(--cream);color:#171b22;display:grid;place-items:center;font-size:.52rem;letter-spacing:0;text-shadow:none}
+    .copy{position:relative;z-index:5;text-align:center;margin:0 auto;padding-top:var(--copy-top)}
+    .top-creds{display:flex;justify-content:center;gap:28px;flex-wrap:wrap;margin:0 0 12px;color:rgba(241,237,227,.78);font-size:.53rem;letter-spacing:.2em;text-transform:uppercase;text-shadow:0 1px 2px rgba(0,0,0,.75),0 1px 18px rgba(0,0,0,.46)}
+    .top-creds span:not(:last-child)::after{content:"";display:inline-block;width:1px;height:9px;background:rgba(241,237,227,.32);margin-left:28px;vertical-align:-1px}
+    .word{margin:0 auto;line-height:0}
+    .word img{display:block;margin:0 auto;width:var(--word-w);height:auto;filter:drop-shadow(0 8px 42px rgba(0,0,0,.28))}
+    .tag{font-family:'P22 Mackinac Pro',Mackinac,Georgia,serif;font-weight:400;font-size:var(--tag-size);color:rgba(241,237,227,.86);text-shadow:0 1px 2px rgba(0,0,0,.54),0 1px 16px rgba(0,0,0,.36);margin:8px auto 0;width:var(--tag-w);height:32px;display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:18px}
+    .tag:before,.tag:after{content:"";height:1px;background:linear-gradient(90deg,transparent,rgba(241,237,227,.34))}
+    .tag:after{background:linear-gradient(90deg,rgba(241,237,227,.34),transparent)}
+    .tag span{white-space:nowrap}
+    .hero-mark{display:grid;place-items:center;margin:9px auto 0;width:26px;height:26px;opacity:.62;filter:drop-shadow(0 1px 12px rgba(0,0,0,.42))}
+    .hero-mark img{display:block;width:100%;height:100%;object-fit:contain;filter:invert(94%) sepia(10%) saturate(376%) hue-rotate(344deg) brightness(102%) contrast(91%)}
+    .mist{position:absolute;left:50%;bottom:0;width:min(910px,97%);height:var(--mist-h);z-index:5;transform:translateX(-50%);opacity:var(--mist-o);background:
+      radial-gradient(ellipse at 18% 66%,rgba(226,235,241,.36),rgba(226,235,241,.14) 32%,transparent 67%),
+      radial-gradient(ellipse at 82% 66%,rgba(226,235,241,.36),rgba(226,235,241,.14) 32%,transparent 67%),
+      linear-gradient(180deg,transparent 16%,rgba(218,229,237,.12) 54%,rgba(223,232,239,.32));filter:blur(7px);pointer-events:none}
+    .bars{position:absolute;left:50%;bottom:var(--bars-bottom);z-index:3;width:min(950px,97%);height:420px;transform:translateX(-50%)}
+    .bars img{position:absolute;left:50%;bottom:0;width:auto;object-fit:contain}
+    .bars img:nth-child(1){height:var(--edge-h);opacity:var(--edge-o);filter:blur(.5px) saturate(.74) brightness(.99);transform:translateX(calc(-50% - var(--edge-x))) translateY(var(--bar-y))}
+    .bars img:nth-child(2){height:var(--inner-h);opacity:var(--inner-o);filter:blur(.06px) saturate(.99) brightness(1.02) drop-shadow(0 28px 28px rgba(48,60,72,.18));transform:translateX(calc(-50% - var(--inner-x))) translateY(var(--bar-y))}
+    .bars img:nth-child(3){height:var(--center-h);opacity:1;filter:contrast(1.06) saturate(1.02) brightness(1.04) drop-shadow(0 42px 32px rgba(42,52,64,.26));transform:translateX(-50%) translateY(var(--bar-y));z-index:2}
+    .bars img:nth-child(4){height:var(--inner-h);opacity:var(--inner-o);filter:blur(.06px) saturate(.99) brightness(1.02) drop-shadow(0 28px 28px rgba(48,60,72,.18));transform:translateX(calc(-50% + var(--inner-x))) translateY(var(--bar-y))}
+    .bars img:nth-child(5){height:var(--edge-h);opacity:var(--edge-o);filter:blur(.5px) saturate(.74) brightness(.99);transform:translateX(calc(-50% + var(--edge-x))) translateY(var(--bar-y))}
+    .d{--base:linear-gradient(180deg,#334b62 0%,#88a5be 50%,#dfe8ef 100%);--photo-pos:center 48%;--photo-o:.18;--photo-filter:saturate(.5) contrast(.74) brightness(1.12) blur(.1px);--photo-scale:1.02;--plate:radial-gradient(ellipse at 50% 34%,rgba(48,72,94,.5),rgba(63,91,112,.22) 29%,transparent 55%),linear-gradient(180deg,rgba(14,27,40,.18),rgba(136,165,190,.12) 48%,rgba(223,232,239,.2) 72%);--moon-top:54px;--moon-size:74px;--moon-o:0;--moon-blur:12px;--copy-top:82px;--word-w:clamp(610px,53vw,716px);--tag-w:clamp(450px,40vw,528px);--tag-size:1.02rem;--mist-h:166px;--mist-o:.72;--bars-bottom:40px;--bar-y:50px;--edge-x:398px;--inner-x:230px;--edge-h:256px;--inner-h:334px;--center-h:392px;--edge-o:.34;--inner-o:.74}
+    .e{--base:linear-gradient(180deg,#2d4258 0%,#7c9db7 54%,#dfe8ef 100%);--photo-pos:center 42%;--photo-o:.2;--photo-filter:saturate(.54) contrast(.78) brightness(1.08) blur(.08px);--photo-scale:1.03;--plate:radial-gradient(circle at 50% 12%,rgba(241,237,227,.16),rgba(241,237,227,.06) 13%,transparent 31%),radial-gradient(ellipse at 50% 36%,rgba(44,66,86,.5),rgba(55,81,103,.24) 30%,transparent 56%),linear-gradient(180deg,rgba(10,20,32,.2),rgba(136,165,190,.1) 50%,rgba(223,232,239,.21) 75%);--moon-top:62px;--moon-size:52px;--moon-o:.38;--moon-blur:.5px;--copy-top:108px;--word-w:clamp(595px,52vw,704px);--tag-w:clamp(440px,40vw,520px);--tag-size:1.01rem;--mist-h:162px;--mist-o:.7;--bars-bottom:38px;--bar-y:54px;--edge-x:394px;--inner-x:228px;--edge-h:254px;--inner-h:332px;--center-h:388px;--edge-o:.33;--inner-o:.72}
+    .f{--base:linear-gradient(180deg,#3a5369 0%,#91adc1 50%,#dfe8ef 100%);--photo-pos:center 54%;--photo-o:.28;--photo-filter:saturate(.46) contrast(.72) brightness(1.17) blur(.05px);--photo-scale:1.01;--plate:radial-gradient(ellipse at 50% 32%,rgba(55,80,100,.42),rgba(70,99,118,.2) 31%,transparent 58%),linear-gradient(180deg,rgba(18,34,48,.16),rgba(136,165,190,.04) 46%,rgba(223,232,239,.14) 76%);--moon-top:54px;--moon-size:76px;--moon-o:0;--moon-blur:12px;--copy-top:76px;--word-w:clamp(580px,50vw,682px);--tag-w:clamp(430px,38vw,508px);--tag-size:.99rem;--mist-h:178px;--mist-o:.78;--bars-bottom:50px;--bar-y:38px;--edge-x:406px;--inner-x:236px;--edge-h:264px;--inner-h:344px;--center-h:402px;--edge-o:.36;--inner-o:.76}
+    .notes{padding:16px 20px 18px;background:rgba(9,12,18,.44);color:rgba(241,237,227,.76);font-size:.86rem;line-height:1.5}
+    .notes b{color:var(--cream);font-weight:500}
+    @media(max-width:900px){
+      .board{padding:22px 14px 40px}.intro{display:block}.intro p{margin-top:12px}.stage{min-height:620px}.links a{display:none}.copy{padding-top:82px}
+      .word img{width:clamp(300px,78vw,620px)}.tag{width:min(86vw,410px);height:30px;gap:12px;font-size:.95rem}.top-creds{gap:12px}.top-creds span:not(:last-child)::after{display:none}
+      .bars{width:100%;height:280px;bottom:8px}.bars img:nth-child(1){height:182px;transform:translateX(calc(-50% - clamp(190px,33vw,300px))) translateY(52px)}.bars img:nth-child(2){height:234px;transform:translateX(calc(-50% - clamp(112px,18vw,160px))) translateY(52px)}.bars img:nth-child(3){height:276px;transform:translateX(-50%) translateY(52px)}.bars img:nth-child(4){height:234px;transform:translateX(calc(-50% + clamp(112px,18vw,160px))) translateY(52px)}.bars img:nth-child(5){height:182px;transform:translateX(calc(-50% + clamp(190px,33vw,300px))) translateY(52px)}
+    }
+  </style>
+</head>
+<body>
+  <main class="board">
+    <div class="intro">
+      <h1>Brand-led hero variants</h1>
+      <p>Set 2. These build from C: more product shelf, more blue-ocean balance, and better bar visibility.</p>
+    </div>
+
+    <article class="option d">
+      <div class="label"><strong>D. Blue Shelf Refined</strong><span>cleaner version of C</span></div>
+      <section class="stage">
+        <div class="photo"></div><div class="moon"></div>
+        <header class="nav"><nav class="links"><a class="active">Shop</a><a>Our Story</a><a>Rituals</a></nav><div class="logo">maple moon</div><nav class="links r"><a>Journal</a><a>Stockists</a><span class="cart">⌑</span></nav></header>
+        <div class="copy"><div class="top-creds"><span>Organic</span><span>No caffeine</span><span>Nothing added</span><span>Vegan</span></div><h2 class="word"><img src="assets/carob_wordmark.svg" alt="CAROB"></h2><p class="tag"><span>Naturally Sweet, Nothing Added.</span></p><div class="hero-mark"><img src="assets/mm_logo_icon_blk.svg" alt="Maple Moon"></div></div>
+        <div class="mist"></div><div class="bars"><img src="assets/product_shots/bar_peppermint.webp" alt=""><img src="assets/product_shots/bar_goji_coconut.webp" alt=""><img src="assets/product_shots/bar_pure_carob.webp" alt=""><img src="assets/product_shots/bar_cayenne.webp" alt=""><img src="assets/product_shots/bar_almond.webp" alt=""></div>
+      </section>
+      <div class="notes"><b>D:</b> Closest to C, but calmer behind CAROB and slightly clearer around the bars.</div>
+    </article>
+
+    <article class="option e">
+      <div class="label"><strong>E. Shelf With Moon</strong><span>C direction plus visible moon</span></div>
+      <section class="stage">
+        <div class="photo"></div><div class="moon"></div>
+        <header class="nav"><nav class="links"><a class="active">Shop</a><a>Our Story</a><a>Rituals</a></nav><div class="logo">maple moon</div><nav class="links r"><a>Journal</a><a>Stockists</a><span class="cart">⌑</span></nav></header>
+        <div class="copy"><div class="top-creds"><span>Organic</span><span>No caffeine</span><span>Nothing added</span><span>Vegan</span></div><h2 class="word"><img src="assets/carob_wordmark.svg" alt="CAROB"></h2><p class="tag"><span>Naturally Sweet, Nothing Added.</span></p><div class="hero-mark"><img src="assets/mm_logo_icon_blk.svg" alt="Maple Moon"></div></div>
+        <div class="mist"></div><div class="bars"><img src="assets/product_shots/bar_peppermint.webp" alt=""><img src="assets/product_shots/bar_goji_coconut.webp" alt=""><img src="assets/product_shots/bar_pure_carob.webp" alt=""><img src="assets/product_shots/bar_cayenne.webp" alt=""><img src="assets/product_shots/bar_almond.webp" alt=""></div>
+      </section>
+      <div class="notes"><b>E:</b> Keeps the visible moon, but keeps the product shelf as the strongest lower anchor.</div>
+    </article>
+
+    <article class="option f">
+      <div class="label"><strong>F. Product Forward Shelf</strong><span>largest bars, softest moon</span></div>
+      <section class="stage">
+        <div class="photo"></div><div class="moon"></div>
+        <header class="nav"><nav class="links"><a class="active">Shop</a><a>Our Story</a><a>Rituals</a></nav><div class="logo">maple moon</div><nav class="links r"><a>Journal</a><a>Stockists</a><span class="cart">⌑</span></nav></header>
+        <div class="copy"><div class="top-creds"><span>Organic</span><span>No caffeine</span><span>Nothing added</span><span>Vegan</span></div><h2 class="word"><img src="assets/carob_wordmark.svg" alt="CAROB"></h2><p class="tag"><span>Naturally Sweet, Nothing Added.</span></p><div class="hero-mark"><img src="assets/mm_logo_icon_blk.svg" alt="Maple Moon"></div></div>
+        <div class="mist"></div><div class="bars"><img src="assets/product_shots/bar_peppermint.webp" alt=""><img src="assets/product_shots/bar_goji_coconut.webp" alt=""><img src="assets/product_shots/bar_pure_carob.webp" alt=""><img src="assets/product_shots/bar_cayenne.webp" alt=""><img src="assets/product_shots/bar_almond.webp" alt=""></div>
+      </section>
+      <div class="notes"><b>F:</b> Most product-forward. CAROB is still heroic, but the shelf and bars have the most commercial clarity.</div>
+    </article>
+  </main>
+</body>
+</html>

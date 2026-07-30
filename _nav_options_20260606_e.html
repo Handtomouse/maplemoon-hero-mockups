@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MapleMoon invisible editorial nav options</title>
+  <style>
+    @font-face{font-family:Mackinac;src:local('FONTSPRING DEMO - P22 Mackinac Pro Book'),local('P22 Mackinac Pro');font-weight:400;font-display:swap}
+    :root{--cream:#f1ede3;--soft:rgba(241,237,227,.8);--dim:rgba(241,237,227,.54);--line:rgba(241,237,227,.28)}
+    *{box-sizing:border-box}
+    body{margin:0;background:#0d121b;color:var(--cream);font-family:"Neue Haas Grotesk Display Pro",Helvetica,sans-serif}
+    .board{min-height:100vh;padding:28px;background:
+      radial-gradient(circle at 50% 7%,rgba(241,237,227,.16),transparent 25%),
+      linear-gradient(180deg,rgba(12,17,27,.04),rgba(12,17,27,.92)),
+      url("assets/hero_shots/moonlit_ocean_night.webp") center 24%/cover fixed no-repeat}
+    .intro{display:flex;align-items:end;justify-content:space-between;gap:24px;margin:0 auto 22px;max-width:1280px}
+    h1{font-family:Mackinac,Georgia,serif;font-size:clamp(2rem,4vw,4.2rem);font-weight:400;line-height:.95;margin:0}
+    .intro p{max-width:54ch;color:rgba(241,237,227,.78);font-size:.92rem;line-height:1.55;margin:0}
+    .grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;max-width:1280px;margin:0 auto}
+    .option{border:1px solid rgba(241,237,227,.2);background:rgba(244,242,237,.045);box-shadow:0 34px 100px rgba(0,0,0,.32);overflow:hidden}
+    .label{display:flex;align-items:center;justify-content:space-between;padding:12px 14px;border-bottom:1px solid rgba(241,237,227,.16);color:rgba(241,237,227,.72);font-size:.66rem;letter-spacing:.18em;text-transform:uppercase}
+    .label strong{color:var(--cream);font-weight:500}
+    .stage{position:relative;min-height:392px;background:
+      linear-gradient(180deg,rgba(8,12,20,.03),rgba(8,12,20,.50)),
+      url("assets/hero_shots/moonlit_ocean_night.webp") center 22%/cover no-repeat}
+    .nav{position:absolute;inset:0 0 auto;height:78px;padding:0 30px;display:grid;grid-template-columns:1fr auto 1fr;align-items:center}
+    .links{display:flex;gap:22px;align-items:center;white-space:nowrap}
+    .links.r{justify-content:flex-end}
+    a,.cart{color:var(--soft);font-size:.53rem;letter-spacing:.16em;text-transform:uppercase;text-decoration:none;text-shadow:0 1px 14px rgba(0,0,0,.58)}
+    .logo{font-family:Mackinac,Georgia,serif;font-size:1.22rem;color:var(--cream);text-shadow:0 1px 20px rgba(0,0,0,.58)}
+    .cart{width:31px;height:31px;border:1px solid rgba(241,237,227,.28);border-radius:50%;display:grid;place-items:center;position:relative}
+    .cart:after{content:"0";position:absolute;top:-6px;right:-5px;width:15px;height:15px;border-radius:50%;background:var(--cream);color:#171b22;display:grid;place-items:center;font-size:.52rem;letter-spacing:0;text-shadow:none}
+    .hero-copy{position:absolute;left:0;right:0;top:116px;text-align:center}
+    .eyebrow{font-size:.55rem;letter-spacing:.24em;text-transform:uppercase;color:rgba(241,237,227,.78);margin-bottom:6px}
+    .word{font-family:Mackinac,Georgia,serif;font-size:clamp(4.2rem,8vw,7rem);line-height:.82;color:#eee9d9;text-shadow:0 8px 40px rgba(0,0,0,.34)}
+    .tag{font-family:Mackinac,Georgia,serif;font-size:1.08rem;color:rgba(241,237,227,.88);margin-top:6px}
+    .notes{padding:14px 15px 16px;color:rgba(241,237,227,.76);font-size:.82rem;line-height:1.45;background:rgba(9,12,18,.4)}
+    .notes b{color:var(--cream)}
+
+    .m .nav{height:76px}
+    .m .nav:before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(4,7,12,.46),rgba(4,7,12,.10) 55%,transparent);z-index:-1}
+    .m .logo{font-size:1.25rem}
+    .m .links a:first-child{color:var(--cream)}
+    .m .links a:first-child:after{content:"";display:block;width:18px;height:1px;background:rgba(241,237,227,.78);margin-top:7px}
+
+    .n .nav{height:84px;grid-template-columns:auto 1fr auto}
+    .n .logo{justify-self:start;margin-right:34px;font-size:1.27rem}
+    .n .left{display:flex;align-items:center;gap:34px}
+    .n .nav:before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(4,7,12,.42),rgba(4,7,12,.06) 58%,transparent);z-index:-1}
+    .n .links a:first-child{color:var(--cream)}
+    .n .links a:first-child:before{content:"";display:inline-block;width:5px;height:5px;border-radius:50%;background:rgba(241,237,227,.76);margin-right:9px;vertical-align:1px}
+
+    .o .nav{height:88px;padding:0 34px;align-items:end;padding-bottom:24px}
+    .o .nav:before{content:"";position:absolute;inset:0;background:
+      radial-gradient(circle at 50% 10px,rgba(241,237,227,.22),transparent 16%),
+      linear-gradient(180deg,rgba(3,6,10,.50),rgba(3,6,10,.10) 58%,transparent);z-index:-1}
+    .o .logo{font-size:1.18rem;align-self:start;margin-top:22px}
+    .o .links{align-self:end}
+    .o a{font-size:.51rem;letter-spacing:.18em;color:rgba(241,237,227,.72)}
+    .o .links a:first-child{color:var(--cream)}
+    .o .links a:first-child:after{content:"";display:block;width:100%;height:1px;background:linear-gradient(90deg,transparent,rgba(241,237,227,.8),transparent);margin-top:6px}
+    .o .cart{align-self:end}
+    .o .hero-copy{top:124px}
+    @media (max-width:1000px){.grid{grid-template-columns:1fr}.intro{display:block}.intro p{margin-top:12px}.n .nav{grid-template-columns:1fr auto 1fr}.n .left{display:contents}.n .logo{justify-self:center;margin:0}}
+  </style>
+</head>
+<body>
+  <main class="board">
+    <div class="intro">
+      <h1>Invisible editorial options</h1>
+      <p>Three quieter A-style directions. The nav should almost disappear, but the details still need to feel premium and intentional.</p>
+    </div>
+    <section class="grid">
+      <article class="option m">
+        <div class="label"><strong>M</strong><span>Pure veil</span></div>
+        <div class="stage">
+          <header class="nav">
+            <nav class="links"><a>Shop</a><a>Our Story</a><a>Rituals</a><a>Journal</a></nav>
+            <div class="logo">maple moon</div>
+            <nav class="links r"><a>Stockists</a><a>AUD $</a><span class="cart">⌑</span></nav>
+          </header>
+          <div class="hero-copy"><div class="eyebrow">Artisan carob · Brunswick Heads</div><div class="word">CAROB</div><div class="tag">Naturally Sweet, Nothing Added.</div></div>
+        </div>
+        <div class="notes"><b>Closest to A.</b> Basically the current idea, but cleaner: stronger centre mark, controlled veil, precise active underline.</div>
+      </article>
+      <article class="option n">
+        <div class="label"><strong>N</strong><span>Editorial mastline</span></div>
+        <div class="stage">
+          <header class="nav">
+            <div class="left"><div class="logo">maple moon</div><nav class="links"><a>Shop</a><a>Our Story</a><a>Rituals</a><a>Journal</a></nav></div>
+            <nav class="links r"><a>Stockists</a><a>AUD $</a><span class="cart">⌑</span></nav>
+          </header>
+          <div class="hero-copy"><div class="eyebrow">Artisan carob · Brunswick Heads</div><div class="word">CAROB</div><div class="tag">Naturally Sweet, Nothing Added.</div></div>
+        </div>
+        <div class="notes"><b>Most editorial A.</b> Still invisible, but the brand behaves like a magazine masthead. Sophisticated if we accept asymmetry.</div>
+      </article>
+      <article class="option o">
+        <div class="label"><strong>O</strong><span>Moonlight only</span></div>
+        <div class="stage">
+          <header class="nav">
+            <nav class="links"><a>Shop</a><a>Our Story</a><a>Rituals</a><a>Journal</a></nav>
+            <div class="logo">maple moon</div>
+            <nav class="links r"><a>Stockists</a><a>AUD $</a><span class="cart">⌑</span></nav>
+          </header>
+          <div class="hero-copy"><div class="eyebrow">Artisan carob · Brunswick Heads</div><div class="word">CAROB</div><div class="tag">Naturally Sweet, Nothing Added.</div></div>
+        </div>
+        <div class="notes"><b>Most atmospheric.</b> No rule, no container. Just a top darkening and a soft moon glow behind the logo. Beautiful, but least structured.</div>
+      </article>
+    </section>
+  </main>
+</body>
+</html>

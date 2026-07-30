@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MapleMoon centred tagline options</title>
+  <style>
+    @font-face{font-family:Mackinac;src:local('FONTSPRING DEMO - P22 Mackinac Pro Book'),local('P22 Mackinac Pro');font-weight:400;font-display:swap}
+    :root{--cream:#f1ede3}
+    *{box-sizing:border-box}
+    body{margin:0;background:#dce6ee;color:var(--cream);font-family:"Neue Haas Grotesk Display Pro",Helvetica,sans-serif}
+    .board{min-height:100vh;padding:40px 34px 64px;background:linear-gradient(180deg,rgba(13,18,27,.25),rgba(220,230,238,.96) 78%),url("assets/hero_shots/moonlit_ocean_night.webp") center 18%/cover fixed no-repeat}
+    .intro{display:flex;align-items:end;justify-content:space-between;gap:24px;margin:0 auto 34px;max-width:1180px}
+    h1{font-family:Mackinac,Georgia,serif;font-size:clamp(2rem,4vw,4.2rem);font-weight:400;line-height:.95;margin:0}
+    .intro p{max-width:62ch;color:rgba(241,237,227,.78);font-size:.92rem;line-height:1.55;margin:0}
+    .grid{display:grid;grid-template-columns:1fr;gap:34px;max-width:1180px;margin:0 auto}
+    .option{border:1px solid rgba(241,237,227,.24);background:rgba(244,242,237,.05);box-shadow:0 34px 100px rgba(0,0,0,.28);overflow:hidden}
+    .label{display:flex;align-items:center;justify-content:space-between;padding:14px 18px;border-bottom:1px solid rgba(241,237,227,.16);color:rgba(241,237,227,.74);font-size:.66rem;letter-spacing:.18em;text-transform:uppercase}
+    .label strong{color:var(--cream);font-weight:500}
+    .stage{position:relative;min-height:650px;overflow:hidden;background:linear-gradient(180deg,rgba(7,12,21,.08),rgba(7,12,21,.12) 32%,rgba(205,219,229,.68) 67%,#dfe8ef 100%),url("assets/hero_shots/moonlit_ocean_night.webp") center 20%/cover no-repeat}
+    .stage:after{content:"";position:absolute;left:0;right:0;bottom:0;height:220px;background:linear-gradient(180deg,transparent,#dfe8ef 76%);pointer-events:none}
+    .axis{position:absolute;top:0;bottom:0;left:50%;width:1px;background:linear-gradient(180deg,transparent,rgba(241,237,227,.22) 34%,rgba(241,237,227,.16) 62%,transparent);z-index:1;pointer-events:none}
+    .copy{position:relative;z-index:2;text-align:center;margin:0 auto;padding-top:68px}
+    .top-creds{display:flex;justify-content:center;gap:28px;flex-wrap:wrap;margin:8px 0 12px;color:rgba(241,237,227,.78);font-size:.53rem;letter-spacing:.2em;text-transform:uppercase;text-shadow:0 1px 2px rgba(0,0,0,.85),0 1px 18px rgba(0,0,0,.62)}
+    .top-creds span:not(:last-child)::after{content:"";display:inline-block;width:1px;height:9px;background:rgba(241,237,227,.32);margin-left:28px;vertical-align:-1px}
+    .word{margin:0 auto;line-height:0}
+    .word img{display:block;margin:0 auto;width:min(760px,58vw);height:auto;filter:drop-shadow(0 8px 42px rgba(0,0,0,.35))}
+    .tag{font-family:Mackinac,Georgia,serif;color:rgba(241,237,227,.86);text-shadow:0 1px 2px rgba(0,0,0,.62),0 1px 16px rgba(0,0,0,.45);margin:8px auto 0;position:relative}
+    .bars{position:absolute;left:50%;bottom:52px;z-index:3;transform:translateX(-50%);display:flex;align-items:flex-end;justify-content:center;gap:28px;width:min(760px,84%)}
+    .bars img{height:150px;width:auto;object-fit:contain;filter:drop-shadow(0 28px 28px rgba(50,58,68,.22))}
+    .bars img:nth-child(1),.bars img:nth-child(5){height:118px;opacity:.72}
+    .bars img:nth-child(2),.bars img:nth-child(4){height:150px}
+    .bars img:nth-child(3){height:220px}
+    .notes{padding:18px 20px 20px;color:rgba(241,237,227,.78);font-size:.88rem;line-height:1.55;background:rgba(9,12,18,.44)}
+    .notes b{color:var(--cream)}
+    .d .tag{font-size:1.13rem;width:min(540px,44vw);display:flex;justify-content:center;gap:32px}
+    .d .tag span{white-space:nowrap}
+    .e .tag{font-size:1.13rem;width:min(620px,50vw);display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:20px}
+    .e .tag:before,.e .tag:after{content:"";height:1px;background:linear-gradient(90deg,transparent,rgba(241,237,227,.34))}
+    .e .tag:after{background:linear-gradient(90deg,rgba(241,237,227,.34),transparent)}
+    .f .tag{font-size:1.08rem;width:min(500px,40vw);display:grid;grid-template-columns:1fr;gap:2px;line-height:1.08}
+    @media(max-width:900px){.intro{display:block}.intro p{margin-top:12px}.stage{min-height:600px}.bars{gap:14px}.bars img:nth-child(3){height:190px}.word img{width:78vw}.tag{width:78vw!important}.top-creds span:not(:last-child)::after{display:none}}
+  </style>
+</head>
+<body>
+  <main class="board">
+    <div class="intro">
+      <h1>Centred tagline options</h1>
+      <p>The centre axis is moon -> reflection -> blue bar. These keep the tagline visually subordinate to that axis instead of pulling left/right.</p>
+    </div>
+    <section class="grid">
+      <article class="option d">
+        <div class="label"><strong>D</strong><span>Centred pair</span></div>
+        <div class="stage"><div class="axis"></div>
+          <div class="copy"><div class="top-creds"><span>Organic</span><span>No caffeine</span><span>Nothing added</span><span>Vegan</span></div><h2 class="word"><img src="assets/carob_wordmark.svg" alt="CAROB"></h2><p class="tag"><span>Naturally Sweet,</span><span>Nothing Added.</span></p></div>
+          <div class="bars"><img src="assets/product_shots/bar_peppermint.webp" alt=""><img src="assets/product_shots/bar_goji_coconut.webp" alt=""><img src="assets/product_shots/bar_pure_carob.webp" alt=""><img src="assets/product_shots/bar_cayenne.webp" alt=""><img src="assets/product_shots/bar_almond.webp" alt=""></div>
+        </div>
+        <div class="notes"><b>Best balance.</b> Keeps the two-phrase idea, but treats it as one centred unit under the wordmark.</div>
+      </article>
+      <article class="option e">
+        <div class="label"><strong>E</strong><span>Centred with horizon rule</span></div>
+        <div class="stage"><div class="axis"></div>
+          <div class="copy"><div class="top-creds"><span>Organic</span><span>No caffeine</span><span>Nothing added</span><span>Vegan</span></div><h2 class="word"><img src="assets/carob_wordmark.svg" alt="CAROB"></h2><p class="tag"><span>Naturally Sweet, Nothing Added.</span></p></div>
+          <div class="bars"><img src="assets/product_shots/bar_peppermint.webp" alt=""><img src="assets/product_shots/bar_goji_coconut.webp" alt=""><img src="assets/product_shots/bar_pure_carob.webp" alt=""><img src="assets/product_shots/bar_cayenne.webp" alt=""><img src="assets/product_shots/bar_almond.webp" alt=""></div>
+        </div>
+        <div class="notes"><b>Most composed.</b> Returns to one centred phrase and uses fine horizon rules to make it feel intentionally placed.</div>
+      </article>
+      <article class="option f">
+        <div class="label"><strong>F</strong><span>Stacked centre</span></div>
+        <div class="stage"><div class="axis"></div>
+          <div class="copy"><div class="top-creds"><span>Organic</span><span>No caffeine</span><span>Nothing added</span><span>Vegan</span></div><h2 class="word"><img src="assets/carob_wordmark.svg" alt="CAROB"></h2><p class="tag"><span>Naturally Sweet,</span><span>Nothing Added.</span></p></div>
+          <div class="bars"><img src="assets/product_shots/bar_peppermint.webp" alt=""><img src="assets/product_shots/bar_goji_coconut.webp" alt=""><img src="assets/product_shots/bar_pure_carob.webp" alt=""><img src="assets/product_shots/bar_cayenne.webp" alt=""><img src="assets/product_shots/bar_almond.webp" alt=""></div>
+        </div>
+        <div class="notes"><b>Most centred.</b> Perfectly respects the axis, but feels more formal and less like a natural tagline.</div>
+      </article>
+    </section>
+  </main>
+</body>
+</html>

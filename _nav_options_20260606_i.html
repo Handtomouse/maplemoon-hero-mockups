@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MapleMoon W nav refinements</title>
+  <style>
+    @font-face{font-family:Mackinac;src:local('FONTSPRING DEMO - P22 Mackinac Pro Book'),local('P22 Mackinac Pro');font-weight:400;font-display:swap}
+    :root{--cream:#f1ede3;--soft:rgba(241,237,227,.80);--quiet:rgba(241,237,227,.62);--line:rgba(241,237,227,.30)}
+    *{box-sizing:border-box}
+    body{margin:0;background:#0d121b;color:var(--cream);font-family:"Neue Haas Grotesk Display Pro",Helvetica,sans-serif}
+    .board{min-height:100vh;padding:40px 34px 64px;background:
+      radial-gradient(circle at 50% 7%,rgba(241,237,227,.15),transparent 25%),
+      linear-gradient(180deg,rgba(12,17,27,.04),rgba(12,17,27,.92)),
+      url("assets/hero_shots/moonlit_ocean_night.webp") center 24%/cover fixed no-repeat}
+    .intro{display:flex;align-items:end;justify-content:space-between;gap:24px;margin:0 auto 34px;max-width:1180px}
+    h1{font-family:Mackinac,Georgia,serif;font-size:clamp(2rem,4vw,4.2rem);font-weight:400;line-height:.95;margin:0}
+    .intro p{max-width:58ch;color:rgba(241,237,227,.78);font-size:.92rem;line-height:1.55;margin:0}
+    .grid{display:grid;grid-template-columns:1fr;gap:34px;max-width:1180px;margin:0 auto}
+    .option{border:1px solid rgba(241,237,227,.2);background:rgba(244,242,237,.045);box-shadow:0 34px 100px rgba(0,0,0,.32);overflow:hidden}
+    .label{display:flex;align-items:center;justify-content:space-between;padding:14px 18px;border-bottom:1px solid rgba(241,237,227,.16);color:rgba(241,237,227,.72);font-size:.66rem;letter-spacing:.18em;text-transform:uppercase}
+    .label strong{color:var(--cream);font-weight:500}
+    .stage{position:relative;min-height:540px;background:
+      linear-gradient(180deg,rgba(8,12,20,.02),rgba(8,12,20,.49)),
+      url("assets/hero_shots/moonlit_ocean_night.webp") center 22%/cover no-repeat}
+    .nav{position:absolute;inset:0 0 auto;height:82px;padding:0 38px;display:grid;grid-template-columns:minmax(0,1fr) auto minmax(0,1fr);align-items:center}
+    .nav:before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(2,5,10,.48),rgba(2,5,10,.10) 62%,transparent);z-index:-1}
+    .links{display:flex;align-items:center;white-space:nowrap}
+    .links.r{justify-content:flex-end}
+    a,.cart{color:var(--soft);font-size:.52rem;letter-spacing:.165em;text-transform:uppercase;text-decoration:none;text-shadow:0 1px 14px rgba(0,0,0,.6)}
+    .logo{font-family:Mackinac,Georgia,serif;color:var(--cream);text-shadow:0 1px 20px rgba(0,0,0,.6)}
+    .active{display:inline-flex;align-items:center;justify-content:center;border:1px solid rgba(241,237,227,.54);border-radius:999px;color:var(--cream);box-shadow:0 0 16px rgba(241,237,227,.13), inset 0 0 18px rgba(241,237,227,.055)}
+    .cart{width:31px;height:31px;border:1px solid rgba(241,237,227,.27);border-radius:50%;display:grid;place-items:center;position:relative}
+    .cart:after{content:"0";position:absolute;top:-6px;right:-5px;width:15px;height:15px;border-radius:50%;background:var(--cream);color:#171b22;display:grid;place-items:center;font-size:.52rem;letter-spacing:0;text-shadow:none}
+    .hero-copy{position:absolute;left:0;right:0;top:122px;text-align:center}
+    .eyebrow{font-size:.55rem;letter-spacing:.24em;text-transform:uppercase;color:rgba(241,237,227,.78);margin-bottom:6px}
+    .word{font-family:Mackinac,Georgia,serif;font-size:clamp(4.2rem,8vw,7rem);line-height:.82;color:#eee9d9;text-shadow:0 8px 40px rgba(0,0,0,.34)}
+    .tag{font-family:Mackinac,Georgia,serif;font-size:1.08rem;color:rgba(241,237,227,.88);margin-top:6px}
+    .notes{padding:18px 20px 20px;color:rgba(241,237,227,.76);font-size:.88rem;line-height:1.55;background:rgba(9,12,18,.4)}
+    .notes b{color:var(--cream)}
+
+    .w1 .links{gap:26px}.w1 .links.r{gap:24px}
+    .w1 .logo{font-size:1.28rem}
+    .w1 .active{width:46px;height:28px}
+
+    .w2 .links{gap:28px}.w2 .links.r{gap:26px}
+    .w2 .logo{font-size:1.24rem}
+    .w2 .active{height:28px;padding:0 13px;border-color:rgba(241,237,227,.44);background:rgba(241,237,227,.035);box-shadow:inset 0 0 18px rgba(241,237,227,.045)}
+    .w2 a{letter-spacing:.18em}
+
+    .w3 .nav{padding:0 44px}
+    .w3 .links{gap:25px}.w3 .links.r{gap:25px}
+    .w3 .logo{font-size:1.26rem;position:relative}
+    .w3 .logo:after{content:"";display:block;width:32px;height:1px;background:linear-gradient(90deg,transparent,rgba(241,237,227,.42),transparent);margin:8px auto 0}
+    .w3 .active{height:27px;padding:0 12px;border-color:rgba(241,237,227,.50)}
+    @media (max-width:1000px){.grid{grid-template-columns:1fr}.intro{display:block}.intro p{margin-top:12px}}
+  </style>
+</head>
+<body>
+  <main class="board">
+    <div class="intro">
+      <h1>W, improved</h1>
+      <p>Same structure: Shop / Our Story / Rituals on the left, maple moon centred, Journal / Stockists / Cart on the right. No AUD. These tune the balance and premium feel.</p>
+    </div>
+    <section class="grid">
+      <article class="option w1">
+        <div class="label"><strong>W1</strong><span>Clean balanced</span></div>
+        <div class="stage">
+          <header class="nav">
+            <nav class="links"><a class="active">Shop</a><a>Our Story</a><a>Rituals</a></nav>
+            <div class="logo">maple moon</div>
+            <nav class="links r"><a>Journal</a><a>Stockists</a><span class="cart">⌑</span></nav>
+          </header>
+          <div class="hero-copy"><div class="eyebrow">Artisan carob · Brunswick Heads</div><div class="word">CAROB</div><div class="tag">Naturally Sweet, Nothing Added.</div></div>
+        </div>
+        <div class="notes"><b>Closest to W, cleaned up.</b> More side padding, calmer gaps, slightly stronger logo. Good default if we want the current W idea without extra ceremony.</div>
+      </article>
+      <article class="option w2">
+        <div class="label"><strong>W2</strong><span>Luxury quiet</span></div>
+        <div class="stage">
+          <header class="nav">
+            <nav class="links"><a class="active">Shop</a><a>Our Story</a><a>Rituals</a></nav>
+            <div class="logo">maple moon</div>
+            <nav class="links r"><a>Journal</a><a>Stockists</a><span class="cart">⌑</span></nav>
+          </header>
+          <div class="hero-copy"><div class="eyebrow">Artisan carob · Brunswick Heads</div><div class="word">CAROB</div><div class="tag">Naturally Sweet, Nothing Added.</div></div>
+        </div>
+        <div class="notes"><b>Most premium restraint.</b> Wider tracking, quieter active circle, slightly smaller logo. More expensive and less clickable-looking, but still usable.</div>
+      </article>
+      <article class="option w3">
+        <div class="label"><strong>W3</strong><span>Brand-centred</span></div>
+        <div class="stage">
+          <header class="nav">
+            <nav class="links"><a class="active">Shop</a><a>Our Story</a><a>Rituals</a></nav>
+            <div class="logo">maple moon</div>
+            <nav class="links r"><a>Journal</a><a>Stockists</a><span class="cart">⌑</span></nav>
+          </header>
+          <div class="hero-copy"><div class="eyebrow">Artisan carob · Brunswick Heads</div><div class="word">CAROB</div><div class="tag">Naturally Sweet, Nothing Added.</div></div>
+        </div>
+        <div class="notes"><b>Best brand anchor.</b> Adds one very fine line under the logo so the centre feels intentional. Premium, but a touch less invisible than W1/W2.</div>
+      </article>
+    </section>
+  </main>
+</body>
+</html>

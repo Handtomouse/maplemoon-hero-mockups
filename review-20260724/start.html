@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Maple Moon Website Walkthrough</title>
+  <style>
+    :root{--ink:#1f2a31;--blue:#315d74;--blue-soft:#e4edf1;--paper:#f5f0e4;--line:#ccd0c8;--gold:#9b8352;--muted:#59636b;--white:#fffdf8}*{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font-family:Arial,sans-serif;line-height:1.55}main{width:min(1040px,calc(100% - 32px));margin:auto;padding:38px 0 72px}.eyebrow{margin:0 0 8px;color:var(--gold);font-size:.72rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase}h1,h2,h3{font-family:Georgia,serif;font-weight:500;letter-spacing:0}h1{max-width:11ch;margin:0 0 16px;font-size:clamp(2.6rem,7vw,5.8rem);line-height:.95}h2{margin:0 0 15px;font-size:clamp(1.5rem,3vw,2.35rem)}h3{margin:0 0 6px;font-size:1.45rem}.lead{max-width:62ch;margin:0;color:var(--muted);font-size:1.05rem}.band{border-top:1px solid var(--line);padding:36px 0}.intro{display:grid;grid-template-columns:1.1fr .9fr;gap:20px}.card{padding:22px;border:1px solid var(--line);border-radius:6px;background:rgba(255,255,255,.38)}.card p{margin:0;color:var(--muted)}.card strong{color:var(--ink)}.number{display:inline-flex;align-items:center;justify-content:center;width:32px;height:32px;margin-bottom:14px;border:1px solid var(--gold);border-radius:50%;color:var(--gold);font-size:.78rem;font-weight:700}.status{display:block;margin-bottom:8px;color:var(--gold);font-size:.69rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase}.walk{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}.step{padding:22px;border:1px solid var(--line);background:var(--white);border-radius:6px}.step.full{grid-column:1/-1}.step ul{margin:13px 0 0;padding-left:19px;color:var(--muted)}.step li+li{margin-top:6px}a{color:var(--blue);font-weight:700;text-underline-offset:3px}.button{display:inline-flex;align-items:center;justify-content:center;min-height:44px;margin-top:17px;padding:10px 15px;border:1px solid var(--blue);border-radius:4px;text-decoration:none}.button.primary{background:var(--blue);color:#fff}.button:hover{background:var(--blue-soft)}.button.primary:hover{background:#24495d}.note{padding:20px 22px;border-left:3px solid var(--gold);background:rgba(155,131,82,.09)}.note p{margin:0}.closeout{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}.small{font-size:.88rem;color:var(--muted)}@media(max-width:700px){main{width:min(100% - 24px,1040px);padding-top:25px}.intro,.walk,.closeout{grid-template-columns:1fr}.step.full{grid-column:auto}.card,.step{padding:18px}}
+  </style>
+</head>
+<body>
+  <main>
+    <p class="eyebrow">Maple Moon · Local design review</p>
+    <h1>Website walkthrough</h1>
+    <p class="lead">A guided look through the current website direction. The aim is to agree on what feels right visually and capture the remaining information needed to finish the site accurately.</p>
+
+    <section class="band intro" aria-label="How we will use the review">
+      <article class="card"><h2>What we are reviewing</h2><p>The page flow, imagery, tone, hierarchy, and how the product range and story feel together. This is a working local version, not the final live store.</p></article>
+      <article class="card"><h2>What we will park</h2><p>Pricing and purchase links, policies, testimonials, final founder photos, verified stockist details, social links, and Shopify setup are kept separate until confirmed.</p></article>
+    </section>
+
+    <section class="band" aria-labelledby="walk-title">
+      <h2 id="walk-title">Walk through the pages</h2>
+      <div class="walk">
+        <article class="step"><span class="number">01</span><span class="status">First impression</span><h3>Homepage</h3><p>Start with the brand atmosphere, product range, and the rhythm of the page as it unfolds.</p><ul><li>Does this feel like Maple Moon from the first screen?</li><li>Is the product range easy to understand without feeling too busy?</li><li>Which visual moments should stay, soften, or change?</li></ul><p class="small"><strong>Waiting on you:</strong> customer testimonials, with the names we are allowed to publish.</p><a class="button primary" href="homepage_real_1_lead_photo.WIP.html">Open homepage</a></article>
+        <article class="step"><span class="number">02</span><span class="status">Range and shopping</span><h3>Shop</h3><p>Look at how the range is scanned, how the sampler reads, and whether the hierarchy makes sense before final purchase wiring.</p><ul><li>Does the product range feel easy to browse?</li><li>Are the featured products and pending formats communicated clearly?</li><li>What should feel most prominent here?</li></ul><p class="small"><strong>Waiting on you:</strong> confirm the retail prices shown are correct and current.</p><a class="button primary" href="shop.WIP.html">Open Shop</a></article>
+        <article class="step"><span class="number">03</span><span class="status">People and place</span><h3>Our Story</h3><p>Review the tone of the makers story, the imagery, and the balance of personal history with the product story.</p><ul><li>Does this sound and feel like your story?</li><li>Does the current imagery point in the right direction for founder photos?</li><li>Is there anything essential we have not made room for?</li></ul><p class="small"><strong>Waiting on you:</strong> founder photos, a short bio each, and your favourite way to enjoy.</p><a class="button" href="our-story.WIP.html">Open Our Story</a></article>
+        <article class="step"><span class="number">04</span><span class="status">Education</span><h3>What is Carob?</h3><p>Review how clearly the page explains the ingredient and how the pod-to-bar process is shown.</p><ul><li>Is the explanation clear to someone new to carob?</li><li>Does the comparison feel calm, readable, and true to your product?</li><li>Does the making process feel credible and interesting?</li></ul><a class="button" href="carob-story.WIP.html">Open Carob Story</a></article>
+        <article class="step"><span class="number">05</span><span class="status">Finding Maple Moon</span><h3>Stockists</h3><p>Review the finder experience and map-style visual treatment. It is deliberately a non-live preview until verified store data is supplied.</p><ul><li>Does this feel useful and on-brand?</li><li>Which store information matters most when the final data is ready?</li><li>Should the map remain a supporting visual, or become more prominent?</li></ul><p class="small"><strong>Waiting on you:</strong> the verified stockist list, and which details we may publish.</p><a class="button" href="stockists.WIP.html">Open Stockists</a></article>
+        <article class="step"><span class="number">06</span><span class="status">Support</span><h3>FAQ</h3><p>Review the order and clarity of the questions, while public policy details remain pending confirmation.</p><ul><li>Are the first questions the ones customers will actually ask?</li><li>Does the page feel reassuring and easy to scan?</li><li>What support topics should be added once wording is confirmed?</li></ul><p class="small"><strong>Waiting on you:</strong> approved shipping, returns and help wording.</p><a class="button" href="faq.WIP.html">Open FAQ</a></article>
+        <article class="step full"><span class="number">07</span><span class="status">Image candidates</span><h3>Colour and photo options</h3><p>Review the separate local contact sheet only to nominate preferred image directions. No candidate replaces an original website asset until a final source is selected.</p><p class="small">The photo options are shared separately, they are not part of this preview.</p></article>
+      </div>
+    </section>
+
+    <section class="band" aria-labelledby="close-title">
+      <h2 id="close-title">Leave the meeting with</h2>
+      <div class="closeout">
+        <article class="card"><h3>Design decisions</h3><p>What is approved, what needs another pass, and which photo direction should move forward.</p></article>
+        <article class="card"><h3>Content inputs</h3><p>Products and pricing, testimonials, policies, founder images, social links, and stockist source data.</p></article>
+        <article class="card"><h3>Next owners</h3><p>A clear person and timing for each input, then a practical route to final website and Shopify work.</p></article>
+      </div>
+    </section>
+
+    <section class="band"><div class="note"><p><strong>Live work status:</strong> this walkthrough is paired with the local <a href="_LIVE_TRACKER_20260723.md">meeting tracker</a>. It records what has changed while the review is underway without turning active work into a promise of launch readiness.</p></div></section>
+  </main>
+</body>
+</html>

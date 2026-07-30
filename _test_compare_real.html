@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>MapleMoon — 3 variants side by side</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { height: 100%; background: #1a1a1a; font-family: -apple-system, "Helvetica Neue", sans-serif; }
+  .cols { display: flex; height: 100vh; }
+  .col { flex: 1 1 0; min-width: 0; display: flex; flex-direction: column; border-right: 2px solid #000; }
+  .col:last-child { border-right: 0; }
+  .label { flex: 0 0 auto; padding: 10px 14px; background: #111; color: #f4efe7; }
+  .label .name { font-size: 14px; font-weight: 600; letter-spacing: .04em; }
+  .label .sub { font-size: 11px; color: #9a958c; margin-top: 2px; }
+  .label .file { font-size: 10px; color: #6a655d; margin-top: 2px; font-family: monospace; }
+  .scroller { flex: 1 1 auto; overflow: auto; background: #fff; position: relative; }
+  .wrap { transform-origin: top left; }
+  iframe { width: 1280px; border: 0; display: block; }
+</style>
+</head>
+<body>
+<div class="cols">
+  <div class="col">
+    <div class="label"><div class="name">real_1 · Editorial Night</div><div class="sub">Quiet · gallery · one signature bar</div><div class="file">homepage_real_1.html</div></div>
+    <div class="scroller"><div class="wrap"><iframe src="http://localhost:3005/homepage_real_1.html" scrolling="no"></iframe></div></div>
+  </div>
+  <div class="col">
+    <div class="label"><div class="name">real_2 · Light Retail</div><div class="sub">Bright · shoppable · bestsellers grid</div><div class="file">homepage_real_2.html</div></div>
+    <div class="scroller"><div class="wrap"><iframe src="http://localhost:3005/homepage_real_2.html" scrolling="no"></iframe></div></div>
+  </div>
+  <div class="col">
+    <div class="label"><div class="name">real_3 · Immersive Editorial</div><div class="sub">Photography-led · magazine · most Byron</div><div class="file">homepage_real_3.html</div></div>
+    <div class="scroller"><div class="wrap"><iframe src="http://localhost:3005/homepage_real_3.html" scrolling="no"></iframe></div></div>
+  </div>
+</div>
+<script>
+  var BASE = 1280;
+  function fit() {
+    document.querySelectorAll('.col').forEach(function(col){
+      var scroller = col.querySelector('.scroller');
+      var wrap = col.querySelector('.wrap');
+      var iframe = col.querySelector('iframe');
+      var scale = scroller.clientWidth / BASE;
+      wrap.style.transform = 'scale(' + scale + ')';
+      // size the iframe tall enough for the full page, then size wrap to scaled height
+      function sync() {
+        try {
+          var doc = iframe.contentWindow.document;
+          var h = Math.max(doc.body.scrollHeight, doc.documentElement.scrollHeight);
+          if (h > 100) { iframe.style.height = h + 'px'; wrap.style.height = (h * scale) + 'px'; }
+        } catch (e) {
+          iframe.style.height = '6000px';
+          wrap.style.height = (6000 * scale) + 'px';
+        }
+      }
+      sync();
+      setTimeout(sync, 600);
+      setTimeout(sync, 1500);
+    });
+  }
+  window.addEventListener('resize', fit);
+  window.addEventListener('load', function(){ setTimeout(fit, 300); });
+  fit();
+</script>
+</body>
+</html>

@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Maple Moon: Carob from Byron Bay</title>
+<meta name="description" content="Handmade carob bars, moons and elixirs. Organic, vegan, gluten free, caffeine free. Made in Byron Bay from Australian carob.">
+<link rel="stylesheet" href="brand_kit.css">
+<style>
+/* HOMEPAGE - RECOMMENDED BLEND
+   H1 editorial hero (left) + H2 above-fold product/price/Add (right) + H3 proof strip.
+   Built on the wf editorial brand skin + research-backed Shopify CRO patterns. */
+@font-face{font-family:'Mackinac';src:local('FONTSPRING DEMO - P22 Mackinac Pro Book'),local('FONTSPRINGDEMO-P22MackinacProBookRegular'),local('P22 Mackinac Pro');font-weight:400;font-display:swap;}
+@font-face{font-family:'Mackinac';src:local('FONTSPRING DEMO - P22 Mackinac Pro Medium'),local('FONTSPRINGDEMO-P22MackinacProMediumRegular');font-weight:500;font-display:swap;}
+.wf{
+  --mm-serif:'Mackinac','P22 Mackinac Pro',Georgia,serif;
+  --ink:#2c2a26;--ink-soft:#6f6a62;--ink-faint:#a39d92;
+  --paper:#f4f2ed;--paper2:#eceae4;--card:#fbfaf7;--line:rgba(44,42,38,.14);--line-soft:rgba(44,42,38,.08);
+  background:var(--paper);color:var(--ink);
+  font-family:var(--mm-sans,'Neue Haas Grotesk Display Pro',Helvetica,sans-serif);font-weight:400;line-height:1.5;-webkit-font-smoothing:antialiased;
+}
+.wf *,.wf *::before,.wf *::after{box-sizing:border-box;}
+.wf img{max-width:100%;display:block;}
+.wf a{color:inherit;text-decoration:none;}
+.wf .wrap{max-width:1180px;margin:0 auto;padding:0 28px;}
+.wf .serif{font-family:var(--mm-serif);}
+.amp{font-family:Georgia,'Times New Roman',serif;}
+
+.wf-ann{background:var(--ink);color:var(--paper);text-align:center;font-size:.68rem;letter-spacing:.14em;text-transform:uppercase;padding:9px 16px;}
+.wf-hd{position:sticky;top:0;z-index:100;background:rgba(244,242,237,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line-soft);}
+.wf-hd .bar{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;height:58px;}
+.wf-nav{display:flex;gap:28px;}.wf-nav.r{justify-content:flex-end;align-items:center;gap:24px;}
+.wf-nav a{font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;transition:opacity .25s;}.wf-nav a:hover{opacity:.55;}
+.wf-logo{font-family:var(--mm-serif);font-size:1.3rem;text-align:center;}
+.wf-cart{display:inline-flex;align-items:center;justify-content:center;width:32px;height:32px;border:1px solid var(--line);border-radius:50%;position:relative;cursor:pointer;}
+.wf-cart svg{width:15px;height:15px;stroke:var(--ink);fill:none;stroke-width:1.4;}
+.wf-cart b{position:absolute;top:-4px;right:-4px;width:15px;height:15px;border-radius:50%;background:var(--ink);color:var(--paper);font-size:.55rem;display:grid;place-items:center;}
+
+/* SPLIT HERO */
+.wf-hero{position:relative;overflow:hidden;padding:34px 0 38px;}
+.wf-waves{position:absolute;left:0;right:0;bottom:0;width:100%;height:50%;z-index:0;opacity:.4;}
+.wf-herogrid{position:relative;z-index:2;display:grid;grid-template-columns:1.02fr .98fr;gap:48px;align-items:center;}
+.wf-hleft .wf-moon{width:66px;height:66px;margin:0 0 2px;}
+.wf-hleft .wf-moon svg{width:100%;height:100%;}
+.wf-wm{font-family:var(--mm-serif);font-weight:400;font-size:clamp(3.4rem,8vw,7rem);line-height:.84;letter-spacing:.05em;margin:0;color:var(--ink);}
+.wf-tag{font-family:var(--mm-serif);font-size:clamp(1.05rem,1.8vw,1.4rem);color:var(--ink);margin:8px 0 20px;}
+.wf-cta-row{display:flex;align-items:center;gap:20px;flex-wrap:wrap;}
+.wf-pill{display:inline-flex;align-items:center;justify-content:center;gap:9px;font-size:.66rem;letter-spacing:.16em;text-transform:uppercase;font-weight:500;padding:14px 30px;border:1px solid var(--ink);border-radius:50px;background:transparent;color:var(--ink);cursor:pointer;transition:all .28s;}
+.wf-pill:hover{background:var(--ink);color:var(--paper);}.wf-pill.solid{background:var(--ink);color:var(--paper);}.wf-pill.solid:hover{opacity:.85;}
+.wf-proof{display:inline-flex;align-items:center;gap:8px;font-size:.74rem;color:var(--ink-soft);}
+.wf-proof .stars{color:var(--ink);letter-spacing:1px;font-size:.82rem;}
+
+/* HERO PRODUCT SPOTLIGHT (H2: product + price + Add above fold) */
+.wf-spot{background:var(--card);border:1px solid var(--line);border-radius:16px;overflow:hidden;display:grid;grid-template-columns:.82fr 1fr;box-shadow:0 18px 36px rgba(44,42,38,.08);}
+.wf-spot .media{position:relative;background:#fff;overflow:hidden;}
+.wf-spot .media img{width:100%;height:100%;object-fit:contain;object-position:center;}
+.wf-spot .media .tag{position:absolute;top:12px;left:12px;font-size:.55rem;letter-spacing:.12em;text-transform:uppercase;background:var(--ink);color:var(--paper);padding:5px 10px;border-radius:50px;}
+.wf-spot .body{padding:22px 24px;display:flex;flex-direction:column;}
+.wf-spot .rate{display:flex;align-items:center;gap:6px;font-size:.66rem;color:var(--ink-soft);margin-bottom:6px;}
+.wf-spot .rate .stars{color:var(--ink);letter-spacing:.5px;}
+.wf-spot h2{font-family:var(--mm-serif);font-weight:500;font-size:1.4rem;line-height:1.08;margin:0 0 6px;}
+.wf-spot .desc{font-size:.78rem;color:var(--ink-soft);margin:0 0 14px;}
+.wf-spot .sizes{display:flex;gap:7px;margin-bottom:14px;flex-wrap:wrap;}
+.wf-spot .sz{font-size:.62rem;border:1px solid var(--line);border-radius:50px;padding:6px 13px;color:var(--ink-soft);cursor:pointer;}
+.wf-spot .sz.on{background:var(--paper2);color:var(--ink);}
+.wf-spot .price{font-weight:500;font-size:1.15rem;margin-bottom:14px;}
+.wf-spot .price .from{font-size:.6rem;color:var(--ink-faint);text-transform:uppercase;letter-spacing:.1em;margin-right:6px;}
+.wf-spot .wf-pill{width:100%;}
+.wf-spot .subline{font-size:.68rem;color:var(--ink-soft);text-align:center;margin-top:10px;}
+.wf-spot .subline a{border-bottom:1px solid var(--ink-soft);}
+
+/* AS FEATURED IN / badges strip (H3 proof) */
+.wf-feat{display:flex;align-items:center;justify-content:space-between;gap:24px;border-top:1px solid var(--line-soft);border-bottom:1px solid var(--line-soft);padding:18px 0;flex-wrap:wrap;}
+.wf-feat .press{display:flex;align-items:center;gap:22px;flex-wrap:wrap;}
+.wf-feat .press .l{font-size:.58rem;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-faint);}
+.wf-feat .press .pub{font-family:var(--mm-serif);font-size:.95rem;color:var(--ink-soft);}
+.wf-feat .badges{display:flex;gap:18px;flex-wrap:wrap;}
+.wf-feat .bdg{display:flex;align-items:center;gap:7px;font-size:.62rem;letter-spacing:.06em;text-transform:uppercase;color:var(--ink);}
+.wf-feat .bdg svg{width:18px;height:18px;stroke:var(--ink);fill:none;stroke-width:1.2;}
+
+.wf-shead{display:flex;align-items:baseline;justify-content:space-between;gap:16px;flex-wrap:wrap;margin:0 0 22px;}
+.wf-shead h2{font-family:var(--mm-serif);font-weight:500;font-size:1.7rem;margin:0;}
+.wf-shead a{font-size:.66rem;letter-spacing:.12em;text-transform:uppercase;border-bottom:1px solid var(--ink);padding-bottom:2px;}
+
+.wf-best{padding:46px 0 10px;}
+.wf-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;}
+.wf-pcard{background:var(--card);border:1px solid var(--line-soft);border-radius:8px;overflow:hidden;display:flex;flex-direction:column;transition:box-shadow .28s,transform .28s;}
+.wf-pcard:hover{box-shadow:0 16px 30px rgba(44,42,38,.09);transform:translateY(-3px);}
+.wf-pmedia{position:relative;background:#fff;aspect-ratio:4/5;overflow:hidden;}
+.wf-pmedia img{width:100%;height:100%;object-fit:contain;object-position:center;}
+.wf-pmedia .pc-bestseller{position:absolute;top:12px;left:12px;font-size:.55rem;letter-spacing:.12em;text-transform:uppercase;background:var(--ink);color:var(--paper);padding:5px 10px;border-radius:50px;}
+.wf-pbody{padding:16px 18px 18px;display:flex;flex-direction:column;flex:1;}
+.wf-prate{display:flex;align-items:center;gap:6px;font-size:.66rem;color:var(--ink-soft);margin-bottom:6px;}
+.wf-prate .stars{color:var(--ink);letter-spacing:.5px;}
+.wf-pname{font-family:var(--mm-serif);font-weight:500;font-size:1.12rem;line-height:1.12;margin:0 0 4px;}
+.wf-pdesc{font-size:.74rem;color:var(--ink-soft);margin:0 0 14px;}
+.wf-prow{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-top:auto;}
+.wf-pprice{font-weight:500;font-size:.95rem;letter-spacing:.01em;}
+.wf-pprice .from{font-size:.62rem;color:var(--ink-faint);text-transform:uppercase;letter-spacing:.1em;display:block;margin-bottom:1px;}
+.wf-add{font-size:.62rem;letter-spacing:.12em;text-transform:uppercase;font-weight:500;padding:10px 18px;border:1px solid var(--ink);border-radius:50px;background:transparent;color:var(--ink);cursor:pointer;transition:all .25s;}
+.wf-add:hover{background:var(--ink);color:var(--paper);}
+
+.wf-edu{display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:center;padding:54px 0;}
+.wf-edu .ill{border:1px solid var(--line);border-radius:6px;background:var(--card);aspect-ratio:16/10;display:grid;place-items:center;position:relative;overflow:hidden;}
+.wf-edu .ill::before,.wf-edu .ill::after{content:"";position:absolute;inset:0;}
+.wf-edu .ill::before{background:linear-gradient(to bottom right,transparent calc(50% - .5px),var(--line-soft) calc(50% - .5px),var(--line-soft) calc(50% + .5px),transparent calc(50% + .5px));}
+.wf-edu .ill::after{background:linear-gradient(to top right,transparent calc(50% - .5px),var(--line-soft) calc(50% - .5px),var(--line-soft) calc(50% + .5px),transparent calc(50% + .5px));}
+.wf-edu .ill svg{width:64%;height:64%;position:relative;z-index:1;}
+.wf-edu h2{font-family:var(--mm-serif);font-weight:500;font-size:1.8rem;margin:0 0 16px;}
+.wf-edu p{color:var(--ink-soft);font-size:.92rem;max-width:38ch;margin:0 0 20px;}
+.wf-more{font-size:.66rem;letter-spacing:.12em;text-transform:uppercase;display:inline-flex;gap:8px;align-items:center;border-bottom:1px solid var(--ink);padding-bottom:3px;}
+
+.wf-strip{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--line-soft);border-bottom:1px solid var(--line-soft);}
+.wf-si{display:flex;gap:12px;align-items:center;padding:22px;border-right:1px solid var(--line-soft);}
+.wf-si:last-child{border-right:0;}
+.wf-si svg{width:26px;height:26px;stroke:var(--ink);fill:none;stroke-width:1.2;flex:0 0 auto;}
+.wf-si strong{display:block;font-size:.66rem;letter-spacing:.08em;text-transform:uppercase;}
+.wf-si span{font-size:.74rem;color:var(--ink-soft);}
+
+.wf-rit{display:grid;grid-template-columns:1fr 1fr;gap:30px;align-items:center;padding:54px 0 40px;position:relative;}
+.wf-rit h2{font-family:var(--mm-serif);font-weight:500;font-size:1.8rem;margin:0 0 24px;}
+.wf-rlist{display:flex;flex-direction:column;gap:18px;}
+.wf-rl{display:flex;align-items:center;gap:16px;}
+.wf-rl svg{width:24px;height:24px;stroke:var(--ink);fill:none;stroke-width:1.2;flex:0 0 auto;}
+.wf-rl span{font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;}
+.wf-still{justify-self:end;width:100%;max-width:460px;}
+
+.wf-rev{border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:48px 0;}
+.wf-rev .top{text-align:center;margin-bottom:34px;}
+.wf-rev .top .stars{color:var(--ink);letter-spacing:2px;font-size:1.1rem;}
+.wf-rev .top p{font-size:.8rem;color:var(--ink-soft);margin-top:6px;letter-spacing:.04em;}
+.wf-revgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;}
+.wf-rc{background:var(--card);border:1px solid var(--line-soft);border-radius:8px;padding:24px;}
+.wf-rc .s{color:var(--ink);letter-spacing:1px;font-size:.78rem;margin-bottom:10px;}
+.wf-rc blockquote{font-family:var(--mm-serif);font-size:1.02rem;line-height:1.4;margin:0 0 14px;color:var(--ink);}
+.wf-rc cite{font-style:normal;font-size:.68rem;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-soft);}
+.wf-rc cite b{font-weight:500;color:var(--ink);}
+
+.wf-sub{display:grid;grid-template-columns:1.1fr 1fr;gap:44px;align-items:center;padding:54px 0;}
+.wf-sub .copy h2{font-family:var(--mm-serif);font-weight:500;font-size:1.9rem;margin:0 0 10px;}
+.wf-sub .copy p{color:var(--ink-soft);font-size:.92rem;max-width:42ch;margin:0 0 22px;}
+.wf-sublist{display:flex;flex-direction:column;gap:14px;margin:0 0 26px;}
+.wf-subi{display:flex;gap:12px;align-items:center;font-size:.78rem;color:var(--ink);}
+.wf-subi svg{width:20px;height:20px;stroke:var(--ink);fill:none;stroke-width:1.4;flex:0 0 auto;}
+.wf-subcard{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:28px;}
+.wf-subcard .lbl{font-size:.62rem;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-soft);margin-bottom:14px;}
+.wf-subopt{display:flex;align-items:center;gap:12px;border:1px solid var(--line);border-radius:10px;padding:14px 16px;margin-bottom:12px;cursor:pointer;background:var(--paper);transition:border-color .2s;}
+.wf-subopt.on{border-color:var(--ink);background:var(--paper2);}
+.wf-subopt .dot{width:16px;height:16px;border-radius:50%;border:1px solid var(--ink);flex:0 0 auto;position:relative;}
+.wf-subopt.on .dot::after{content:"";position:absolute;inset:3px;border-radius:50%;background:var(--ink);}
+.wf-subopt .t{flex:1;}
+.wf-subopt .t strong{display:block;font-size:.82rem;font-weight:500;}
+.wf-subopt .t span{font-size:.68rem;color:var(--ink-soft);}
+.wf-subopt .save{font-size:.6rem;letter-spacing:.1em;text-transform:uppercase;background:var(--ink);color:var(--paper);padding:4px 9px;border-radius:50px;}
+.wf-subcard .wf-pill{width:100%;justify-content:center;margin-top:6px;}
+
+.wf-trust{display:grid;grid-template-columns:repeat(4,1fr);gap:22px;padding:34px 0;border-top:1px solid var(--line);}
+.wf-ti{display:flex;gap:12px;align-items:center;}
+.wf-ti svg{width:22px;height:22px;stroke:var(--ink);fill:none;stroke-width:1.3;flex:0 0 auto;}
+.wf-ti strong{display:block;font-size:.64rem;letter-spacing:.08em;text-transform:uppercase;}
+.wf-ti span{font-size:.72rem;color:var(--ink-soft);}
+
+.wf-ft{border-top:1px solid var(--line);}
+.wf-ft .row{display:flex;align-items:center;justify-content:space-between;gap:24px;padding:24px 0;flex-wrap:wrap;}
+.wf-ft .fnav{display:flex;gap:22px;flex-wrap:wrap;}
+.wf-ft .fnav a{font-size:.66rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-soft);}
+.wf-ft .fnav a:hover{color:var(--ink);}
+.wf-ft .soc{display:flex;gap:12px;}
+.wf-ft .soc a{width:30px;height:30px;border:1px solid var(--line);border-radius:50%;display:grid;place-items:center;}
+.wf-ft .soc svg{width:14px;height:14px;stroke:var(--ink-soft);fill:none;stroke-width:1.3;}
+
+.wf-matc{display:none;position:fixed;left:0;right:0;bottom:0;z-index:120;background:rgba(244,242,237,.96);backdrop-filter:blur(8px);border-top:1px solid var(--line);padding:10px 16px calc(10px + env(safe-area-inset-bottom));align-items:center;gap:12px;}
+.wf-matc .info{flex:1;min-width:0;}
+.wf-matc .info strong{display:block;font-family:var(--mm-serif);font-weight:500;font-size:.92rem;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+.wf-matc .info span{font-size:.7rem;color:var(--ink-soft);}
+.wf-matc button{flex:0 0 auto;font-size:.66rem;letter-spacing:.14em;text-transform:uppercase;font-weight:500;padding:13px 24px;border:0;border-radius:50px;background:var(--ink);color:var(--paper);cursor:pointer;}
+
+@media (max-width:900px){
+  .wf-nav{display:none;}
+  .wf-herogrid{grid-template-columns:1fr;gap:30px;}
+  .wf-hleft{text-align:center;}.wf-hleft .wf-moon{margin:0 auto 2px;}.wf-cta-row{justify-content:center;}
+  .wf-grid,.wf-revgrid{grid-template-columns:1fr 1fr;}
+  .wf-edu,.wf-rit,.wf-sub{grid-template-columns:1fr;}
+  .wf-strip,.wf-trust{grid-template-columns:1fr 1fr;}
+  .wf-still{display:none;}
+  .wf-matc{display:flex;}
+  body{padding-bottom:74px;}
+}
+@media (max-width:560px){
+  .wf-grid,.wf-revgrid{grid-template-columns:1fr;}
+  .wf-spot{grid-template-columns:1fr;}
+  .wf-spot .media{aspect-ratio:4/3;}
+}
+@media (prefers-reduced-motion:reduce){.wf *{transition:none!important;animation:none!important;}}
+</style>
+</head>
+<body>
+<div class="wf">
+
+  <div class="wf-ann">Free shipping on orders over &euro;30</div>
+
+  <header class="wf-hd"><div class="wrap bar">
+    <nav class="wf-nav"><a href="#bestsellers">Shop</a><a href="our-story.html">Our Story</a><a href="#ritual">Rituals</a><a href="#">Journal</a></nav>
+    <a class="wf-logo" href="#">maple moon</a>
+    <nav class="wf-nav r"><a href="#">Stockists</a><a href="#">EUR &euro;</a>
+      <span class="wf-cart" role="button" aria-label="Cart, 0 items"><svg viewBox="0 0 24 24"><path d="M6 8h12l-1 12H7L6 8z"/><path d="M9 8a3 3 0 0 1 6 0"/></svg><b>0</b></span></nav>
+  </div></header>
+
+  <!-- SPLIT HERO: editorial left + product/price/Add right (both above fold) -->
+  <section class="wf-hero">
+    <svg class="wf-waves" viewBox="0 0 1400 360" preserveAspectRatio="none" aria-hidden="true">
+      <g fill="none" stroke="#2c2a26" stroke-width="0.9" stroke-linecap="round">
+        <path d="M40 70 q 22 -10 44 0 M120 64 q 22 -10 44 0 M210 72 q 22 -10 44 0 M320 66 q 22 -10 44 0 M430 72 q 22 -10 44 0 M540 66 q 22 -9 44 0 M650 72 q 22 -10 44 0 M780 66 q 22 -10 44 0 M900 72 q 22 -10 44 0 M1020 66 q 22 -10 44 0 M1140 72 q 22 -10 44 0 M1260 66 q 22 -10 44 0"/>
+        <path d="M0 156 q 34 -14 68 0 M120 148 q 34 -14 68 0 M260 158 q 34 -14 68 0 M420 150 q 34 -14 68 0 M580 158 q 34 -14 68 0 M760 150 q 34 -14 68 0 M940 158 q 34 -14 68 0 M1120 150 q 34 -14 68 0 M1300 158 q 34 -14 68 0"/>
+        <path d="M0 240 q 52 -22 104 0 M180 228 q 52 -22 104 0 M400 242 q 52 -22 104 0 M640 230 q 52 -22 104 0 M900 242 q 52 -22 104 0 M1180 230 q 52 -22 104 0"/>
+        <path d="M0 320 q 64 -26 128 0 M240 306 q 64 -26 128 0 M520 322 q 64 -26 128 0 M820 308 q 64 -26 128 0 M1140 322 q 64 -24 128 0"/>
+      </g>
+    </svg>
+    <div class="wrap wf-herogrid">
+      <div class="wf-hleft">
+        <div class="wf-moon"><svg viewBox="0 0 110 110" aria-hidden="true">
+          <defs><radialGradient id="mn" cx="42%" cy="38%" r="68%"><stop offset="0%" stop-color="#fdfdfb"/><stop offset="55%" stop-color="#e7e3d9"/><stop offset="100%" stop-color="#c9c4b6"/></radialGradient></defs>
+          <circle cx="55" cy="55" r="50" fill="url(#mn)"/>
+          <g fill="#c4bfb0" opacity=".55"><circle cx="40" cy="42" r="9"/><circle cx="66" cy="60" r="7"/><circle cx="58" cy="35" r="4"/><circle cx="46" cy="68" r="5.5"/><circle cx="74" cy="46" r="3"/><circle cx="36" cy="60" r="3.5"/><circle cx="68" cy="74" r="3"/></g>
+          <circle cx="55" cy="55" r="50" fill="none" stroke="#c4bfb0" stroke-width=".5"/>
+        </svg></div>
+        <h1 class="wf-wm" aria-label="Carob">CAROB</h1>
+        <p class="wf-tag">Naturally Sweet, Nothing Added.</p>
+        <div class="wf-cta-row">
+          <a class="wf-pill solid" href="#bestsellers">Shop Bars</a>
+          <span class="wf-proof"><span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>4.9 from 2,000+ reviews</span>
+        </div>
+      </div>
+      <div class="wf-hleft wf-spotwrap">
+        <div class="wf-spot">
+          <div class="media"><span class="tag">Bestseller</span><img src="assets/product_shots/bar_pure_carob.webp" alt="Maple Moon Pure Carob and Cacao Butter bar, 90g"></div>
+          <div class="body">
+            <div class="rate"><span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span><span>4.9 (412)</span></div>
+            <h2 class="serif">Pure Carob <span class="amp">&amp;</span> Cacao Butter</h2>
+            <p class="desc">Deep, smooth and naturally sweet. Made with just real ingredients.</p>
+            <div class="sizes"><span class="sz on">90g</span><span class="sz">15 Pack</span><span class="sz">30 Pack</span><span class="sz">60 Pack</span></div>
+            <div class="price"><span class="from">From</span>&euro;3,40</div>
+            <button class="wf-pill solid" type="button">Add to Cart</button>
+            <p class="subline">or <a href="#subscribe">Subscribe &amp; save 15%</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROOF STRIP (as featured in + badges) -->
+  <section class="wrap"><div class="wf-feat">
+    <div class="press">
+      <span class="l">As featured in</span>
+      <span class="pub">Coastal Living Co.</span><span class="pub">The Wholefoods Edit</span><span class="pub">Byron Pantry</span><span class="pub">Slow Mornings</span>
+    </div>
+    <div class="badges">
+      <span class="bdg"><svg viewBox="0 0 24 24"><path d="M12 3c4 5 6 8 6 11a6 6 0 0 1-12 0c0-3 2-6 6-11z"/></svg>Organic</span>
+      <span class="bdg"><svg viewBox="0 0 24 24"><path d="M4 14c6-1 10-5 16-10-2 7-5 12-12 13-2 .3-4-1-4-3z"/></svg>Vegan</span>
+      <span class="bdg"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M9 12h6"/></svg>Gluten Free</span>
+      <span class="bdg"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><line x1="5.6" y1="5.6" x2="18.4" y2="18.4"/></svg>Caffeine Free</span>
+    </div>
+  </div></section>
+
+  <!-- BESTSELLERS -->
+  <section class="wrap wf-best" id="bestsellers">
+    <div class="wf-shead"><h2 class="serif">Bestselling bars</h2><a href="#">Shop all bars</a></div>
+    <div class="wf-grid">
+      <article class="wf-pcard"><div class="wf-pmedia"><span class="pc-bestseller">Bestseller</span><img src="assets/product_shots/bar_pure_carob.webp" alt="Maple Moon Pure Carob and Cacao Butter bar, 90g" loading="lazy"></div><div class="wf-pbody"><div class="wf-prate"><span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span><span>4.9 (412)</span></div><h3 class="wf-pname">Pure Carob <span class="amp">&amp;</span> Cacao Butter</h3><p class="wf-pdesc">Deep, smooth and naturally sweet.</p><div class="wf-prow"><div class="wf-pprice"><span class="from">From</span>&euro;3,40</div><button class="wf-add" type="button">Add</button></div></div></article>
+      <article class="wf-pcard"><div class="wf-pmedia"><span class="pc-bestseller">Bestseller</span><img src="assets/product_shots/bar_hazelnut.webp" alt="Maple Moon Roasted Hazelnut carob bar, 90g" loading="lazy"></div><div class="wf-pbody"><div class="wf-prate"><span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span><span>4.9 (286)</span></div><h3 class="wf-pname">Roasted Hazelnut</h3><p class="wf-pdesc">Toasty, rounded and rich.</p><div class="wf-prow"><div class="wf-pprice"><span class="from">From</span>&euro;3,60</div><button class="wf-add" type="button">Add</button></div></div></article>
+      <article class="wf-pcard"><div class="wf-pmedia"><img src="assets/product_shots/bar_goji_coconut.webp" alt="Maple Moon Coconut and Goji carob bar, 90g" loading="lazy"></div><div class="wf-pbody"><div class="wf-prate"><span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span><span>4.8 (174)</span></div><h3 class="wf-pname">Coconut <span class="amp">&amp;</span> Goji</h3><p class="wf-pdesc">Bright, chewy and full of texture.</p><div class="wf-prow"><div class="wf-pprice"><span class="from">From</span>&euro;3,60</div><button class="wf-add" type="button">Add</button></div></div></article>
+      <article class="wf-pcard"><div class="wf-pmedia"><img src="assets/product_shots/bar_peppermint.webp" alt="Maple Moon Peppermint and Buckwheat carob bar, 90g" loading="lazy"></div><div class="wf-pbody"><div class="wf-prate"><span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span><span>4.9 (231)</span></div><h3 class="wf-pname">Peppermint <span class="amp">&amp;</span> Buckwheat</h3><p class="wf-pdesc">Cool, crisp and refreshing.</p><div class="wf-prow"><div class="wf-pprice"><span class="from">From</span>&euro;3,60</div><button class="wf-add" type="button">Add</button></div></div></article>
+      <article class="wf-pcard"><div class="wf-pmedia"><img src="assets/product_shots/bar_almond.webp" alt="Maple Moon Almond and Celtic Salt carob bar, 90g" loading="lazy"></div><div class="wf-pbody"><div class="wf-prate"><span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span><span>4.8 (158)</span></div><h3 class="wf-pname">Almond <span class="amp">&amp;</span> Celtic Salt</h3><p class="wf-pdesc">Sweet, salty and moreish.</p><div class="wf-prow"><div class="wf-pprice"><span class="from">From</span>&euro;3,60</div><button class="wf-add" type="button">Add</button></div></div></article>
+      <article class="wf-pcard"><div class="wf-pmedia"><img src="assets/product_shots/bar_cayenne.webp" alt="Maple Moon Cayenne Chilli carob bar, 90g" loading="lazy"></div><div class="wf-pbody"><div class="wf-prate"><span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span><span>4.7 (96)</span></div><h3 class="wf-pname">Cayenne Chilli</h3><p class="wf-pdesc">Warm, gentle heat with a sweet finish.</p><div class="wf-prow"><div class="wf-pprice"><span class="from">From</span>&euro;3,60</div><button class="wf-add" type="button">Add</button></div></div></article>
+    </div>
+  </section>
+
+  <!-- WHAT IS CAROB -->
+  <section class="wrap"><div class="wf-edu">
+    <div class="ill"><svg viewBox="0 0 320 200" fill="none" stroke="#2c2a26" stroke-width="1.1" aria-hidden="true"><path d="M118 56 C 150 66, 198 122, 208 166 C 210 174, 202 178, 196 172 C 160 136, 126 96, 110 68 C 106 60, 112 52, 118 56 Z"/><path d="M132 74 q 40 38 66 88"/><path d="M150 44 C 186 54, 230 104, 240 152 C 242 160, 234 164, 228 158 C 192 122, 162 84, 144 58 C 140 50, 144 42, 150 44 Z"/><path d="M164 62 q 38 40 64 90"/><rect x="76" y="92" width="14" height="14" rx="2" transform="rotate(18 83 99)"/><rect x="252" y="74" width="11" height="11" rx="2" transform="rotate(-14 257 79)"/><rect x="262" y="126" width="15" height="15" rx="2" transform="rotate(22 269 133)"/><circle cx="100" cy="72" r="2"/><circle cx="248" cy="160" r="2.4"/><circle cx="86" cy="118" r="1.8"/></svg></div>
+    <div><h2 class="serif">What is carob?</h2><p>Carob is a naturally sweet pod from the Mediterranean. We turn it into delicious bars with simple, real ingredients. No chocolate, no cacao, no caffeine.</p><a class="wf-more" href="#">Learn More <svg viewBox="0 0 24 24" width="14" height="14" style="stroke:currentColor;fill:none;stroke-width:1.6"><line x1="4" y1="12" x2="20" y2="12"/><polyline points="14 6 20 12 14 18"/></svg></a></div>
+  </div></section>
+
+  <!-- CREDENTIALS -->
+  <section class="wrap"><div class="wf-strip">
+    <div class="wf-si"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><line x1="12" y1="3" x2="12" y2="5"/><line x1="12" y1="19" x2="12" y2="21"/><line x1="3" y1="12" x2="5" y2="12"/><line x1="19" y1="12" x2="21" y2="12"/></svg><div><strong>Naturally Sweet</strong><span>From the carob pod</span></div></div>
+    <div class="wf-si"><svg viewBox="0 0 24 24"><path d="M4 14c6-1 10-5 16-10-2 7-5 12-12 13-2 .3-4-1-4-3z"/></svg><div><strong>No Caffeine</strong><span>Gentle on your body</span></div></div>
+    <div class="wf-si"><svg viewBox="0 0 24 24"><path d="M12 21s-7-4.5-7-10a7 7 0 0 1 14 0c0 5.5-7 10-7 10z"/></svg><div><strong>Nothing Added</strong><span>Just real ingredients</span></div></div>
+    <div class="wf-si"><svg viewBox="0 0 24 24"><path d="M12 3c4 5 6 8 6 11a6 6 0 0 1-12 0c0-3 2-6 6-11z"/></svg><div><strong>Organic <span class="amp">&amp;</span> Vegan</strong><span>Made with care</span></div></div>
+  </div></section>
+
+  <!-- RITUAL -->
+  <section class="wrap wf-rit" id="ritual">
+    <div><h2 class="serif">A sweeter kind of ritual.</h2><div class="wf-rlist">
+      <div class="wf-rl"><svg viewBox="0 0 24 24"><path d="M4 14c6-1 10-5 16-10-2 7-5 12-12 13-2 .3-4-1-4-3z"/></svg><span>After Dinner</span></div>
+      <div class="wf-rl"><svg viewBox="0 0 24 24"><path d="M17 3a9 9 0 1 0 4 12 7 7 0 0 1-4-12z"/></svg><span>In the Evening</span></div>
+      <div class="wf-rl"><svg viewBox="0 0 24 24"><rect x="5" y="7" width="14" height="13" rx="2"/><path d="M9 7a3 3 0 0 1 6 0"/></svg><span>On the Go</span></div>
+      <div class="wf-rl"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><line x1="12" y1="3" x2="12" y2="5"/><line x1="12" y1="19" x2="12" y2="21"/><line x1="3" y1="12" x2="5" y2="12"/><line x1="19" y1="12" x2="21" y2="12"/></svg><span>Anytime</span></div>
+    </div></div>
+    <svg class="wf-still" viewBox="0 0 460 280" fill="none" stroke="#2c2a26" stroke-width="1" aria-hidden="true">
+      <ellipse cx="200" cy="244" rx="150" ry="22" fill="#eceae3"/><path d="M120 244 h170 v-30 a4 4 0 0 0 -4 -4 H124 a4 4 0 0 0 -4 4 Z" fill="#f3f1ec"/>
+      <rect x="220" y="118" width="74" height="124" rx="3" fill="#fbfaf7"/><path d="M220 132 h74 M240 152 h34" opacity=".5"/>
+      <text x="257" y="186" text-anchor="middle" font-family="Georgia,serif" font-size="13" fill="#2c2a26">CAROB</text><text x="257" y="200" text-anchor="middle" font-family="Georgia,serif" font-size="13" fill="#2c2a26">BAR</text>
+      <path d="M170 230 a30 30 0 1 0 -4 -52 a23 23 0 0 1 4 52 Z" fill="#f3f1ec"/><path d="M300 240 C 360 232, 410 250, 452 224 C 430 252, 380 264, 318 258 Z" fill="#f3f1ec"/>
+    </svg>
+  </section>
+
+  <!-- REVIEWS -->
+  <section class="wf-rev"><div class="wrap">
+    <div class="top"><span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span><p>4.9 from 2,000+ verified reviews</p></div>
+    <div class="wf-revgrid">
+      <div class="wf-rc"><div class="s">&#9733;&#9733;&#9733;&#9733;&#9733;</div><blockquote>Finally a sweet treat I can have at night without the caffeine jitters. So smooth.</blockquote><cite><b>Sophie M.</b> &middot; Verified Buyer</cite></div>
+      <div class="wf-rc"><div class="s">&#9733;&#9733;&#9733;&#9733;&#9733;</div><blockquote>The hazelnut is my evening ritual now. Clean ingredients and genuinely delicious.</blockquote><cite><b>James T.</b> &middot; Verified Buyer</cite></div>
+      <div class="wf-rc"><div class="s">&#9733;&#9733;&#9733;&#9733;&#9733;</div><blockquote>Organic, vegan and gluten free that actually tastes great. The whole family loves them.</blockquote><cite><b>Anika R.</b> &middot; Verified Buyer</cite></div>
+    </div>
+  </div></section>
+
+  <!-- SUBSCRIBE & SAVE -->
+  <section class="wrap" id="subscribe"><div class="wf-sub">
+    <div class="copy">
+      <h2 class="serif">Subscribe <span class="amp">&amp;</span> save</h2>
+      <p>Keep your favourite bars topped up and save on every delivery. Pause, skip or cancel anytime.</p>
+      <div class="wf-sublist">
+        <div class="wf-subi"><svg viewBox="0 0 24 24"><path d="M4 12a8 8 0 0 1 14-5M20 12a8 8 0 0 1-14 5"/><polyline points="18 3 18 7 14 7"/><polyline points="6 21 6 17 10 17"/></svg>Save 15% on every recurring order</div>
+        <div class="wf-subi"><svg viewBox="0 0 24 24"><rect x="2" y="7" width="13" height="10" rx="1"/><path d="M15 10h4l3 3v4h-7z"/><circle cx="7" cy="18" r="1.6"/><circle cx="18" cy="18" r="1.6"/></svg>Free shipping on every subscription</div>
+        <div class="wf-subi"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 15 14"/></svg>Pause, skip or cancel anytime</div>
+      </div>
+    </div>
+    <div class="wf-subcard">
+      <div class="lbl">Choose your plan</div>
+      <div class="wf-subopt on" role="button" aria-pressed="true"><span class="dot"></span><span class="t"><strong>Subscribe &amp; Save</strong><span>Delivered every 4 weeks</span></span><span class="save">Save 15%</span></div>
+      <div class="wf-subopt" role="button" aria-pressed="false"><span class="dot"></span><span class="t"><strong>One time purchase</strong><span>No commitment</span></span></div>
+      <button class="wf-pill solid" type="button">Start Subscription</button>
+    </div>
+  </div></section>
+
+  <!-- TRUST -->
+  <section class="wrap wf-trust">
+    <div class="wf-ti"><svg viewBox="0 0 24 24"><rect x="2" y="7" width="13" height="10" rx="1"/><path d="M15 10h4l3 3v4h-7z"/><circle cx="7" cy="18" r="1.6"/><circle cx="18" cy="18" r="1.6"/></svg><div><strong>Free Shipping</strong><span>On orders over &euro;30</span></div></div>
+    <div class="wf-ti"><svg viewBox="0 0 24 24"><rect x="5" y="11" width="14" height="9" rx="1.5"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg><div><strong>Secure Payments</strong><span>Safe <span class="amp">&amp;</span> easy checkout</span></div></div>
+    <div class="wf-ti"><svg viewBox="0 0 24 24"><path d="M12 3c4 5 6 8 6 11a6 6 0 0 1-12 0c0-3 2-6 6-11z"/></svg><div><strong>Organic <span class="amp">&amp;</span> Vegan</strong><span>Gluten <span class="amp">&amp;</span> caffeine free</span></div></div>
+    <div class="wf-ti"><svg viewBox="0 0 24 24"><path d="M12 21s-7-4.5-7-10a7 7 0 0 1 14 0c0 5.5-7 10-7 10z"/><polyline points="9 11 11 13 15 9"/></svg><div><strong>Satisfaction</strong><span>30 day happiness promise</span></div></div>
+  </section>
+
+  <footer class="wf-ft"><div class="wrap row">
+    <a class="wf-logo" href="#" style="font-size:1.15rem">maple moon</a>
+    <nav class="fnav"><a href="#bestsellers">Shop</a><a href="our-story.html">Our Story</a><a href="#ritual">Rituals</a><a href="#">Journal</a><a href="#">Stockists</a><a href="#">Contact</a></nav>
+    <div class="soc">
+      <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" rx="4.5"/><circle cx="12" cy="12" r="3.5"/></svg></a>
+      <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24"><path d="M14 9h2.5V6H14c-2 0-3.5 1.4-3.5 3.5V11H8v3h2.5v6h3v-6H16l.5-3h-3V9.5c0-.3.2-.5.5-.5z"/></svg></a>
+      <a href="#" aria-label="Email"><svg viewBox="0 0 24 24"><rect x="3" y="6" width="18" height="13" rx="2"/><path d="M4 7l8 6 8-6"/></svg></a>
+    </div>
+  </div></footer>
+
+  <div class="wf-matc" aria-hidden="true">
+    <div class="info"><strong>Pure Carob &amp; Cacao Butter</strong><span>From &euro;3,40 &middot; 90g</span></div>
+    <button type="button">Add to Cart</button>
+  </div>
+
+</div>
+</body>
+</html>

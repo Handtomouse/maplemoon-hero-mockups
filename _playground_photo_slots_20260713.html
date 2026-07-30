@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MapleMoon — Homepage Photo Picker (internal)</title>
+<style>
+  :root{--bg:#16181d;--panel:#1e2128;--card:#262a33;--line:#333845;--ink:#e8e6e1;--soft:#9aa0ac;--acc:#7cbad8;--good:#5fb98a;}
+  *{box-sizing:border-box;}
+  body{margin:0;background:var(--bg);color:var(--ink);font:14px/1.45 -apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;height:100vh;display:flex;flex-direction:column;overflow:hidden;}
+  header{padding:12px 18px;border-bottom:1px solid var(--line);display:flex;align-items:center;gap:14px;flex:0 0 auto;}
+  header h1{font-size:15px;margin:0;font-weight:600;}
+  header .sub{color:var(--soft);font-size:12px;}
+  .presets{margin-left:auto;display:flex;gap:6px;}
+  .presets button{background:var(--card);border:1px solid var(--line);color:var(--ink);border-radius:6px;padding:5px 10px;font-size:12px;cursor:pointer;}
+  .presets button:hover{border-color:var(--acc);}
+  main{flex:1;display:flex;min-height:0;}
+  .controls{width:360px;flex:0 0 360px;overflow-y:auto;padding:14px;border-right:1px solid var(--line);background:var(--panel);}
+  .grp{margin-bottom:20px;}
+  .grp h2{font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--soft);margin:0 0 4px;}
+  .grp .why{font-size:11.5px;color:var(--soft);margin:0 0 8px;}
+  .opts{display:grid;grid-template-columns:1fr 1fr;gap:8px;}
+  .opt{background:var(--card);border:1.5px solid var(--line);border-radius:8px;padding:6px;cursor:pointer;transition:border-color .15s;}
+  .opt:hover{border-color:#4a5264;}
+  .opt.on{border-color:var(--acc);box-shadow:0 0 0 1px var(--acc);}
+  .opt img{width:100%;height:74px;object-fit:cover;border-radius:5px;display:block;background:#0e1013;}
+  .opt .ph{width:100%;height:74px;border-radius:5px;display:grid;place-items:center;background:#0e1013;color:var(--soft);font-size:11px;}
+  .opt b{display:block;font-size:11.5px;font-weight:600;margin:6px 2px 1px;}
+  .opt span{display:block;font-size:10.5px;color:var(--soft);margin:0 2px;}
+  .opt .rec{color:var(--good);font-size:10px;font-weight:600;}
+  .tgl{display:flex;align-items:flex-start;gap:10px;background:var(--card);border:1px solid var(--line);border-radius:8px;padding:10px;margin-bottom:8px;cursor:pointer;}
+  .tgl input{margin-top:2px;accent-color:var(--acc);}
+  .tgl b{font-size:12.5px;display:block;}
+  .tgl span{font-size:11px;color:var(--soft);}
+  .stage{flex:1;display:flex;flex-direction:column;min-width:0;}
+  .stagebar{padding:8px 14px;display:flex;gap:8px;align-items:center;border-bottom:1px solid var(--line);flex:0 0 auto;}
+  .stagebar button{background:var(--card);border:1px solid var(--line);color:var(--ink);border-radius:6px;padding:4px 10px;font-size:12px;cursor:pointer;}
+  .stagebar button.on{border-color:var(--acc);color:var(--acc);}
+  .stagebar .url{margin-left:auto;font-family:ui-monospace,Menlo,monospace;font-size:11px;color:var(--soft);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:46%;}
+  .frame{flex:1;display:grid;place-items:center;background:#0e1013;overflow:auto;padding:10px;}
+  .frame .shell{background:#fff;box-shadow:0 8px 40px rgba(0,0,0,.5);border-radius:4px;overflow:hidden;transform-origin:top center;}
+  iframe{border:0;display:block;}
+  .out{flex:0 0 auto;border-top:1px solid var(--line);padding:10px 14px;background:var(--panel);display:flex;gap:12px;align-items:flex-start;}
+  .out pre{flex:1;margin:0;white-space:pre-wrap;font:12px/1.5 ui-monospace,Menlo,monospace;color:var(--ink);max-height:110px;overflow-y:auto;}
+  .out button{background:var(--acc);border:0;color:#10131a;font-weight:600;border-radius:6px;padding:8px 16px;font-size:12.5px;cursor:pointer;flex:0 0 auto;}
+  .out button.done{background:var(--good);}
+</style>
+</head>
+<body>
+
+<header>
+  <h1>MapleMoon homepage photo picker</h1>
+  <span class="sub">click a card per slot · preview updates live · copy answers when happy</span>
+  <div class="presets">
+    <button data-preset="rec">Recommended</button>
+    <button data-preset="demo">Keep current demo</button>
+    <button data-preset="moody">Full moody</button>
+    <button data-preset="light">Light &amp; airy</button>
+  </div>
+</header>
+
+<main>
+  <div class="controls" id="controls"></div>
+  <div class="stage">
+    <div class="stagebar">
+      <button id="vwDesk" class="on">Desktop</button>
+      <button id="vwMob">Mobile 390</button>
+      <span class="url" id="urlOut"></span>
+    </div>
+    <div class="frame"><div class="shell" id="shell"><iframe id="pv" title="homepage preview"></iframe></div></div>
+    <div class="out">
+      <pre id="prompt"></pre>
+      <button id="copy">Copy answers</button>
+    </div>
+  </div>
+</main>
+
+<script>
+const PF='assets/photo_finals/', HS='assets/hero_shots/';
+const SLOTS=[
+  {key:'s1',title:'S1 · Hero (top of page)',why:'The moonlit backdrop the whole page dissolves out of. Shortlist walk on 13 Jun locked #1 for this.',
+   opts:[
+    {v:'moontrail',img:PF+'maplemoon_heros1_brandmatched.webp',b:'#1 Moon-trail',s:'moons trail to the standing blue bar, moody navy',rec:true},
+    {v:'duo23',img:PF+'mm23_xmp_blue_hero_2400.webp',b:'#23 Duo on rock',s:'XMP-BLUE campaign winner, dramatic'},
+    {v:'ocean',img:HS+'moonlit_ocean_night.webp',b:'Ocean (current)',s:'the stock moonlit seascape in the demo'}
+   ]},
+  {key:'s3',title:'S3 · What is carob',why:'Currently an AI pods image. #66 is the real minimal pod shot from the studio session.',
+   opts:[
+    {v:'pod66',img:PF+'maplemoon_heros66_brandmatched.webp',b:'#66 Single pod',s:'real pod, soft blue fog',rec:true},
+    {v:'ai',img:HS+'chatgpt_carob_pods.jpg',b:'AI pods (current)',s:'keep placeholder for now'}
+   ]},
+  {key:'s4',title:'S4 · Our story (Brunswick band)',why:'Currently an AI coastline. No real Brunswick location shot exists yet, so the honest photo options are studio.',
+   opts:[
+    {v:'eco55',img:PF+'maplemoon_heros55_brandmatched_atmospheric.webp',b:'#55 Range, moody',s:'full handmade range, atmospheric',rec:true},
+    {v:'barstack21',img:PF+'maplemoon_heros21_brandmatched.webp',b:'#21 Bar on stones',s:'single bar, sculptural'},
+    {v:'ai',img:HS+'mm_falai_brunswick.webp',b:'AI coast (current)',s:'keep until a real location shot exists'}
+   ]},
+  {key:'s5',title:'S5 · Ritual (evening section)',why:'Currently an AI dusk table scene. Real options below; a true "cup + moons at dusk" shot was never taken.',
+   opts:[
+    {v:'duo23',img:PF+'mm23_xmp_blue_hero_2400.webp',b:'#23 Duo on rock',s:'campaign winner, moody',rec:true},
+    {v:'trio43',img:PF+'maplemoon_heros43_brandmatched.webp',b:'#43 Trio',s:'blue/pink/tan trio, moody'},
+    {v:'eco55light',img:PF+'maplemoon_heros55_brandmatched.webp',b:'#55 Range, light',s:'full range in daylight blue'},
+    {v:'ai',img:HS+'hero_moons_lifestyle.webp',b:'AI dusk (current)',s:'keep placeholder for now'}
+   ]}
+];
+const NAMES={ // for prompt text
+  s1:{moontrail:'#1 moon-trail (locked shortlist pick)',duo23:'#23 XMP-BLUE duo',ocean:'the current moonlit-ocean stock image'},
+  s3:{pod66:'#66 single-pod',ai:'the current AI pods placeholder'},
+  s4:{eco55:'#55 atmospheric range',barstack21:'#21 bar-on-stones',ai:'the current AI coastline placeholder'},
+  s5:{duo23:'#23 XMP-BLUE duo',trio43:'#43 trio (moody)',eco55light:'#55 range (light)',ai:'the current AI dusk placeholder'}
+};
+const TRIMS=[
+  {key:'buryNav',b:'Bury Rituals + Journal nav links for launch',s:'from the 6 Jul call: bury features for an easy end-of-July launch; pages do not exist yet',def:true},
+  {key:'hideQuote',b:'Hide the testimonial section until real reviews land',s:'slot is an empty placeholder gated on a real review source',def:true}
+];
+const PRESETS={
+  rec:{s1:'moontrail',s3:'pod66',s4:'eco55',s5:'duo23',buryNav:true,hideQuote:true},
+  demo:{s1:'ocean',s3:'ai',s4:'ai',s5:'ai',buryNav:false,hideQuote:false},
+  moody:{s1:'duo23',s3:'pod66',s4:'eco55',s5:'trio43',buryNav:true,hideQuote:true},
+  light:{s1:'ocean',s3:'pod66',s4:'barstack21',s5:'eco55light',buryNav:true,hideQuote:true}
+};
+const state=Object.assign({},PRESETS.rec);
+const DEF=PRESETS.rec;
+
+// build controls
+const ctr=document.getElementById('controls');
+SLOTS.forEach(g=>{
+  const d=document.createElement('div');d.className='grp';
+  d.innerHTML='<h2>'+g.title+'</h2><p class="why">'+g.why+'</p>';
+  const grid=document.createElement('div');grid.className='opts';
+  g.opts.forEach(o=>{
+    const c=document.createElement('div');c.className='opt';c.dataset.slot=g.key;c.dataset.v=o.v;
+    c.innerHTML='<img src="'+o.img+'" loading="lazy" alt="">'+'<b>'+o.b+(o.rec?' <span class="rec">· rec</span>':'')+'</b><span>'+o.s+'</span>';
+    c.onclick=()=>{state[g.key]=o.v;updateAll();};
+    grid.appendChild(c);
+  });
+  d.appendChild(grid);ctr.appendChild(d);
+});
+const td=document.createElement('div');td.className='grp';
+td.innerHTML='<h2>Launch trim (answers only, not previewed)</h2>';
+TRIMS.forEach(t=>{
+  const l=document.createElement('label');l.className='tgl';
+  l.innerHTML='<input type="checkbox" data-k="'+t.key+'"'+(state[t.key]?' checked':'')+'><div><b>'+t.b+'</b><span>'+t.s+'</span></div>';
+  l.querySelector('input').onchange=e=>{state[t.key]=e.target.checked;updateAll();};
+  td.appendChild(l);
+});
+ctr.appendChild(td);
+
+document.querySelectorAll('.presets button').forEach(b=>b.onclick=()=>{Object.assign(state,PRESETS[b.dataset.preset]);
+  document.querySelectorAll('.tgl input').forEach(i=>i.checked=state[i.dataset.k]);updateAll();});
+
+// viewport
+let mobile=false;
+document.getElementById('vwDesk').onclick=()=>{mobile=false;vwBtns();renderPreview();};
+document.getElementById('vwMob').onclick=()=>{mobile=true;vwBtns();renderPreview();};
+function vwBtns(){document.getElementById('vwDesk').classList.toggle('on',!mobile);document.getElementById('vwMob').classList.toggle('on',mobile);}
+
+function pvUrl(){return 'homepage_real_1_lead_photo.html?s1='+state.s1+'&s3='+state.s3+'&s4='+state.s4+'&s5='+state.s5;}
+let lastUrl='';
+function renderPreview(){
+  document.querySelectorAll('.opt').forEach(c=>c.classList.toggle('on',state[c.dataset.slot]===c.dataset.v));
+  const shell=document.getElementById('shell'),f=document.getElementById('pv');
+  const availW=document.querySelector('.frame').clientWidth-20, availH=document.querySelector('.frame').clientHeight-20;
+  const w=mobile?390:1440,h=mobile?844:900,sc=Math.min(availW/w,availH/h,1);
+  f.width=w;f.height=h;shell.style.transform='scale('+sc+')';shell.style.width=w+'px';shell.style.height=h+'px';
+  const u=pvUrl();document.getElementById('urlOut').textContent=u;
+  if(u!==lastUrl){f.src=u;lastUrl=u;}
+}
+function updatePrompt(){
+  const p=[];
+  p.push('Homepage photo slots, my picks:');
+  p.push('- Hero: '+NAMES.s1[state.s1]+(state.s1===DEF.s1?'':' (changed from the recommended #1 moon-trail)'));
+  p.push('- What is carob: '+NAMES.s3[state.s3]);
+  p.push('- Our story: '+NAMES.s4[state.s4]);
+  p.push('- Ritual: '+NAMES.s5[state.s5]);
+  p.push('Launch trim: '+(state.buryNav?'bury Rituals + Journal nav links for launch':'keep Rituals + Journal nav links visible')+
+        '; '+(state.hideQuote?'hide the testimonial section until real reviews land':'keep the testimonial placeholder visible')+'.');
+  p.push('Apply these to homepage_real_1_lead_photo.html, then fold the result into the lead homepage as the new baseline.');
+  document.getElementById('prompt').textContent=p.join('\n');
+}
+function updateAll(){renderPreview();updatePrompt();}
+window.addEventListener('resize',()=>renderPreview());
+
+document.getElementById('copy').onclick=async()=>{
+  const b=document.getElementById('copy');
+  try{await navigator.clipboard.writeText(document.getElementById('prompt').textContent);}
+  catch(e){const r=document.createRange();r.selectNode(document.getElementById('prompt'));getSelection().removeAllRanges();getSelection().addRange(r);document.execCommand('copy');getSelection().removeAllRanges();}
+  b.textContent='Copied!';b.classList.add('done');setTimeout(()=>{b.textContent='Copy answers';b.classList.remove('done');},1400);
+};
+
+updateAll();
+</script>
+</body>
+</html>

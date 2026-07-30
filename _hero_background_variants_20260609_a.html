@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MapleMoon background variants</title>
+  <style>
+    @font-face{font-family:Mackinac;src:local('FONTSPRING DEMO - P22 Mackinac Pro Book'),local('P22 Mackinac Pro');font-weight:400;font-display:swap}
+    :root{--cream:#f1ede3;--soft:rgba(241,237,227,.78)}
+    *{box-sizing:border-box}
+    body{margin:0;background:#dce6ee;color:var(--cream);font-family:"Neue Haas Grotesk Display Pro",Helvetica,sans-serif}
+    .board{min-height:100vh;padding:34px;background:
+      linear-gradient(180deg,rgba(13,18,27,.3),rgba(220,230,238,.97) 82%),
+      url("assets/hero_shots/moonlit_ocean_night.webp") center 14%/cover fixed no-repeat}
+    .intro{max-width:1220px;margin:0 auto 26px;display:flex;align-items:end;justify-content:space-between;gap:24px}
+    h1{font-family:Mackinac,Georgia,serif;font-size:clamp(2rem,4vw,4rem);font-weight:400;line-height:.96;margin:0}
+    .intro p{max-width:60ch;margin:0;color:rgba(241,237,227,.76);font-size:.9rem;line-height:1.5}
+    .option{max-width:1220px;margin:0 auto 42px;border:1px solid rgba(241,237,227,.24);box-shadow:0 34px 100px rgba(0,0,0,.28);overflow:hidden;background:rgba(244,242,237,.05)}
+    .label{height:46px;padding:0 18px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid rgba(241,237,227,.16);background:rgba(8,12,19,.32);font-size:.63rem;letter-spacing:.18em;text-transform:uppercase;color:rgba(241,237,227,.72)}
+    .label strong{font-size:.72rem;color:var(--cream);font-weight:500}
+    .stage{position:relative;min-height:750px;overflow:hidden;background:#111927}
+    .bg{position:absolute;inset:0;z-index:0;background-image:url("assets/hero_shots/moonlit_ocean_night.webp");background-size:cover;background-position:var(--bg-pos);filter:var(--bg-filter)}
+    .stage:before{content:"";position:absolute;inset:0;z-index:1;pointer-events:none;background:var(--plate)}
+    .stage:after{content:"";position:absolute;left:0;right:0;bottom:0;height:112px;background:linear-gradient(180deg,transparent 4%,rgba(223,232,239,.08) 60%,rgba(223,232,239,.36));pointer-events:none;z-index:8}
+    .nav{position:absolute;inset:0 0 auto;height:78px;padding:0 clamp(22px,3vw,38px);display:grid;grid-template-columns:minmax(0,1fr) auto minmax(0,1fr);align-items:center;z-index:6}
+    .nav:before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(2,5,10,.54),rgba(2,5,10,.1) 62%,transparent);z-index:-1}
+    .links{display:flex;align-items:center;gap:clamp(20px,2.2vw,28px);white-space:nowrap}
+    .links.r{justify-content:flex-end;gap:clamp(19px,2vw,26px)}
+    a,.cart{color:var(--soft);font-size:.52rem;letter-spacing:.18em;text-transform:uppercase;text-decoration:none;text-shadow:0 1px 14px rgba(0,0,0,.6)}
+    .logo{font-family:Mackinac,Georgia,serif;color:var(--cream);font-size:1.24rem;text-shadow:0 1px 20px rgba(0,0,0,.6)}
+    .active{display:inline-flex;align-items:center;justify-content:center;height:28px;padding:0 13px;border:1px solid rgba(241,237,227,.44);border-radius:999px;background:rgba(241,237,227,.035);box-shadow:inset 0 0 18px rgba(241,237,227,.045);color:var(--cream)}
+    .cart{width:31px;height:31px;border:1px solid rgba(241,237,227,.27);border-radius:50%;display:grid;place-items:center;position:relative}
+    .cart:after{content:"0";position:absolute;top:-6px;right:-5px;width:15px;height:15px;border-radius:50%;background:var(--cream);color:#171b22;display:grid;place-items:center;font-size:.52rem;letter-spacing:0;text-shadow:none}
+    .copy{position:relative;z-index:5;text-align:center;margin:0 auto;padding-top:88px}
+    .top-creds{display:flex;justify-content:center;gap:28px;flex-wrap:wrap;margin:0 0 12px;color:rgba(241,237,227,.76);font-size:.53rem;letter-spacing:.2em;text-transform:uppercase;text-shadow:0 1px 2px rgba(0,0,0,.85),0 1px 18px rgba(0,0,0,.62)}
+    .top-creds span:not(:last-child)::after{content:"";display:inline-block;width:1px;height:9px;background:rgba(241,237,227,.32);margin-left:28px;vertical-align:-1px}
+    .word{margin:0 auto;line-height:0}
+    .word img{display:block;margin:0 auto;width:clamp(620px,56vw,760px);height:auto;filter:drop-shadow(0 8px 42px rgba(0,0,0,.35))}
+    .tag{font-family:'P22 Mackinac Pro',Mackinac,Georgia,serif;font-weight:400;font-size:1.1rem;color:rgba(241,237,227,.86);text-shadow:0 1px 2px rgba(0,0,0,.62),0 1px 16px rgba(0,0,0,.45);margin:8px auto 0;width:clamp(470px,43vw,560px);height:32px;display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:18px}
+    .tag:before,.tag:after{content:"";height:1px;background:linear-gradient(90deg,transparent,rgba(241,237,227,.32))}
+    .tag:after{background:linear-gradient(90deg,rgba(241,237,227,.32),transparent)}
+    .tag span{white-space:nowrap}
+    .hero-mark{display:grid;place-items:center;margin:9px auto 0;width:26px;height:26px;opacity:.64;filter:drop-shadow(0 1px 12px rgba(0,0,0,.46))}
+    .hero-mark img{display:block;width:100%;height:100%;object-fit:contain;filter:invert(94%) sepia(10%) saturate(376%) hue-rotate(344deg) brightness(102%) contrast(91%)}
+    .mist{position:absolute;left:50%;bottom:0;width:min(850px,94%);height:138px;z-index:5;transform:translateX(-50%);opacity:.58;background:
+      radial-gradient(ellipse at 14% 72%,rgba(223,232,239,.34),rgba(223,232,239,.14) 32%,transparent 66%),
+      radial-gradient(ellipse at 86% 72%,rgba(223,232,239,.34),rgba(223,232,239,.14) 32%,transparent 66%),
+      linear-gradient(180deg,transparent 18%,rgba(223,232,239,.08) 58%,rgba(223,232,239,.24));filter:blur(7px);pointer-events:none}
+    .bars{position:absolute;left:50%;bottom:18px;z-index:3;width:min(920px,95%);height:400px;transform:translateX(-50%)}
+    .bars img{position:absolute;left:50%;bottom:0;width:auto;object-fit:contain}
+    .bars img:nth-child(1){height:240px;opacity:.25;filter:blur(.65px) saturate(.66) brightness(.94);transform:translateX(calc(-50% - 376px)) translateY(88px)}
+    .bars img:nth-child(2){height:314px;opacity:.64;filter:blur(.12px) saturate(.96) brightness(.99) drop-shadow(0 28px 28px rgba(50,58,68,.2));transform:translateX(calc(-50% - 218px)) translateY(88px)}
+    .bars img:nth-child(3){height:364px;opacity:1;filter:contrast(1.08) saturate(1.03) brightness(1.05) drop-shadow(0 42px 32px rgba(42,50,61,.3));transform:translateX(-50%) translateY(88px);z-index:2}
+    .bars img:nth-child(4){height:314px;opacity:.64;filter:blur(.12px) saturate(.96) brightness(.99) drop-shadow(0 28px 28px rgba(50,58,68,.2));transform:translateX(calc(-50% + 218px)) translateY(88px)}
+    .bars img:nth-child(5){height:240px;opacity:.25;filter:blur(.65px) saturate(.66) brightness(.94);transform:translateX(calc(-50% + 376px)) translateY(88px)}
+    .recrop{--bg-pos:center 0%;--bg-filter:contrast(1.02) saturate(.96) brightness(.98);--plate:linear-gradient(180deg,rgba(2,6,14,.18),rgba(2,6,14,.04) 34%,transparent 58%)}
+    .type-zone{--bg-pos:center 8%;--bg-filter:contrast(.98) saturate(.9) brightness(.96);--plate:radial-gradient(ellipse at 50% 36%,rgba(5,10,19,.48),rgba(6,11,21,.28) 22%,rgba(6,11,21,.08) 38%,transparent 58%),radial-gradient(circle at 50% 10%,rgba(4,8,16,.42),rgba(4,8,16,.12) 22%,transparent 46%),linear-gradient(180deg,rgba(2,6,14,.12),transparent 52%)}
+    .clean-plate{--bg-pos:center 15%;--bg-filter:contrast(.9) saturate(.74) brightness(1.05) blur(.2px);--plate:radial-gradient(circle at 50% 11%,rgba(245,241,220,.08),rgba(4,8,16,.34) 13%,transparent 36%),linear-gradient(180deg,rgba(7,13,25,.18),rgba(28,43,61,.12) 34%,rgba(206,219,229,.34) 70%,rgba(223,232,239,.18)),radial-gradient(ellipse at 50% 76%,rgba(230,237,242,.3),rgba(230,237,242,.08) 28%,transparent 58%)}
+    .clean-plate .bg{transform:scale(1.04)}
+    .clean-plate .mist{opacity:.68;height:158px}
+    .notes{padding:16px 20px 18px;background:rgba(9,12,18,.44);color:rgba(241,237,227,.76);font-size:.86rem;line-height:1.5}
+    .notes b{color:var(--cream);font-weight:500}
+    @media(max-width:900px){
+      .board{padding:22px 14px 40px}.intro{display:block}.intro p{margin-top:12px}.stage{min-height:620px}.links a{display:none}.copy{padding-top:82px}
+      .word img{width:clamp(300px,78vw,620px)}.tag{width:min(86vw,410px);height:30px;gap:12px;font-size:.95rem}.top-creds{gap:12px}.top-creds span:not(:last-child)::after{display:none}
+      .bars{width:100%;height:280px;bottom:8px}.bars img:nth-child(1){height:182px;transform:translateX(calc(-50% - clamp(190px,33vw,300px))) translateY(52px)}.bars img:nth-child(2){height:234px;transform:translateX(calc(-50% - clamp(112px,18vw,160px))) translateY(52px)}.bars img:nth-child(3){height:276px;transform:translateX(-50%) translateY(52px)}.bars img:nth-child(4){height:234px;transform:translateX(calc(-50% + clamp(112px,18vw,160px))) translateY(52px)}.bars img:nth-child(5){height:182px;transform:translateX(calc(-50% + clamp(190px,33vw,300px))) translateY(52px)}
+    }
+  </style>
+</head>
+<body>
+  <main class="board">
+    <div class="intro">
+      <h1>Background-first variants</h1>
+      <p>Same hero placement in all three. Only the background crop, mask, and plate treatment changes.</p>
+    </div>
+
+    <article class="option recrop">
+      <div class="label"><strong>A. Re-crop Existing Image</strong><span>least intervention</span></div>
+      <section class="stage">
+        <div class="bg"></div>
+        <header class="nav"><nav class="links"><a class="active">Shop</a><a>Our Story</a><a>Rituals</a></nav><div class="logo">maple moon</div><nav class="links r"><a>Journal</a><a>Stockists</a><span class="cart">⌑</span></nav></header>
+        <div class="copy"><div class="top-creds"><span>Organic</span><span>No caffeine</span><span>Nothing added</span><span>Vegan</span></div><h2 class="word"><img src="assets/carob_wordmark.svg" alt="CAROB"></h2><p class="tag"><span>Naturally Sweet, Nothing Added.</span></p><div class="hero-mark"><img src="assets/mm_logo_icon_blk.svg" alt="Maple Moon"></div></div>
+        <div class="mist"></div><div class="bars"><img src="assets/product_shots/bar_peppermint.webp" alt=""><img src="assets/product_shots/bar_goji_coconut.webp" alt=""><img src="assets/product_shots/bar_pure_carob.webp" alt=""><img src="assets/product_shots/bar_cayenne.webp" alt=""><img src="assets/product_shots/bar_almond.webp" alt=""></div>
+      </section>
+      <div class="notes"><b>A:</b> Uses only crop and tiny tonal correction. Good if we want to keep the raw image almost untouched.</div>
+    </article>
+
+    <article class="option type-zone">
+      <div class="label"><strong>B. Typography Zone</strong><span>controlled calm behind CAROB</span></div>
+      <section class="stage">
+        <div class="bg"></div>
+        <header class="nav"><nav class="links"><a class="active">Shop</a><a>Our Story</a><a>Rituals</a></nav><div class="logo">maple moon</div><nav class="links r"><a>Journal</a><a>Stockists</a><span class="cart">⌑</span></nav></header>
+        <div class="copy"><div class="top-creds"><span>Organic</span><span>No caffeine</span><span>Nothing added</span><span>Vegan</span></div><h2 class="word"><img src="assets/carob_wordmark.svg" alt="CAROB"></h2><p class="tag"><span>Naturally Sweet, Nothing Added.</span></p><div class="hero-mark"><img src="assets/mm_logo_icon_blk.svg" alt="Maple Moon"></div></div>
+        <div class="mist"></div><div class="bars"><img src="assets/product_shots/bar_peppermint.webp" alt=""><img src="assets/product_shots/bar_goji_coconut.webp" alt=""><img src="assets/product_shots/bar_pure_carob.webp" alt=""><img src="assets/product_shots/bar_cayenne.webp" alt=""><img src="assets/product_shots/bar_almond.webp" alt=""></div>
+      </section>
+      <div class="notes"><b>B:</b> Keeps the same image, but creates a soft designed pocket for CAROB and dims the moon enough that it stops competing.</div>
+    </article>
+
+    <article class="option clean-plate">
+      <div class="label"><strong>C. Cleaner Hero Plate</strong><span>simulated edited asset direction</span></div>
+      <section class="stage">
+        <div class="bg"></div>
+        <header class="nav"><nav class="links"><a class="active">Shop</a><a>Our Story</a><a>Rituals</a></nav><div class="logo">maple moon</div><nav class="links r"><a>Journal</a><a>Stockists</a><span class="cart">⌑</span></nav></header>
+        <div class="copy"><div class="top-creds"><span>Organic</span><span>No caffeine</span><span>Nothing added</span><span>Vegan</span></div><h2 class="word"><img src="assets/carob_wordmark.svg" alt="CAROB"></h2><p class="tag"><span>Naturally Sweet, Nothing Added.</span></p><div class="hero-mark"><img src="assets/mm_logo_icon_blk.svg" alt="Maple Moon"></div></div>
+        <div class="mist"></div><div class="bars"><img src="assets/product_shots/bar_peppermint.webp" alt=""><img src="assets/product_shots/bar_goji_coconut.webp" alt=""><img src="assets/product_shots/bar_pure_carob.webp" alt=""><img src="assets/product_shots/bar_cayenne.webp" alt=""><img src="assets/product_shots/bar_almond.webp" alt=""></div>
+      </section>
+      <div class="notes"><b>C:</b> Simulates the direction for a cleaned/edited background plate: calmer clouds, softer moon, clearer water, better product integration.</div>
+    </article>
+  </main>
+</body>
+</html>

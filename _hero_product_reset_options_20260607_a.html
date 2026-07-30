@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MapleMoon product reset options</title>
+  <style>
+    @font-face{font-family:Mackinac;src:local('FONTSPRING DEMO - P22 Mackinac Pro Book'),local('P22 Mackinac Pro');font-weight:400;font-display:swap}
+    @font-face{font-family:NeueHaas;src:local('Neue Haas Grotesk Display Pro 55 Roman'),local('NeueHaasDisplay-Roman');font-weight:400;font-display:swap}
+    :root{--cream:#f1ede3;--blue:#dfe8ef;--sans:NeueHaas,Helvetica,sans-serif;--serif:Mackinac,Georgia,serif}
+    *{box-sizing:border-box}
+    body{margin:0;background:#dfe8ef;color:var(--cream);font-family:var(--sans)}
+    .board{min-height:100vh;padding:40px 34px 64px;background:linear-gradient(180deg,rgba(9,14,22,.22),rgba(223,232,239,.95) 78%),url("assets/hero_shots/moonlit_ocean_night.webp") center 18%/cover fixed no-repeat}
+    .intro{display:flex;align-items:end;justify-content:space-between;gap:24px;margin:0 auto 34px;max-width:1180px}
+    h1{font-family:var(--serif);font-size:clamp(2rem,4vw,4.1rem);font-weight:400;line-height:.95;margin:0}
+    .intro p{max-width:70ch;color:rgba(241,237,227,.78);font-size:.92rem;line-height:1.55;margin:0}
+    .grid{display:grid;gap:38px;max-width:1180px;margin:0 auto}
+    .option{border:1px solid rgba(241,237,227,.24);background:rgba(244,242,237,.05);box-shadow:0 34px 100px rgba(0,0,0,.28);overflow:hidden}
+    .label{display:flex;align-items:center;justify-content:space-between;padding:14px 18px;border-bottom:1px solid rgba(241,237,227,.16);color:rgba(241,237,227,.74);font-size:.66rem;letter-spacing:.18em;text-transform:uppercase}
+    .label strong{color:var(--cream);font-weight:500}
+    .stage{position:relative;min-height:750px;overflow:hidden;background:linear-gradient(180deg,rgba(7,12,21,.04),rgba(7,12,21,.04) 32%,rgba(205,219,229,.71) 67%,#dfe8ef 100%),url("assets/hero_shots/moonlit_ocean_night.webp") center 20%/cover no-repeat}
+    .stage:after{content:"";position:absolute;left:0;right:0;bottom:0;height:250px;background:linear-gradient(180deg,transparent,#dfe8ef 76%);pointer-events:none;z-index:6}
+    .nav{position:absolute;inset:0 0 auto;height:82px;padding:0 38px;display:grid;grid-template-columns:minmax(0,1fr) auto minmax(0,1fr);align-items:center;z-index:8}
+    .nav:before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(2,5,10,.48),rgba(2,5,10,.1) 62%,transparent);z-index:-1}
+    .links{display:flex;align-items:center;gap:28px;white-space:nowrap}
+    .links.r{justify-content:flex-end;gap:26px}
+    a,.cart{color:rgba(241,237,227,.8);font-size:.52rem;letter-spacing:.18em;text-transform:uppercase;text-decoration:none;text-shadow:0 1px 14px rgba(0,0,0,.6)}
+    .logo{font-family:var(--serif);color:var(--cream);font-size:1.24rem;text-shadow:0 1px 20px rgba(0,0,0,.6)}
+    .active{display:inline-flex;align-items:center;justify-content:center;height:28px;padding:0 13px;border:1px solid rgba(241,237,227,.44);border-radius:999px;background:rgba(241,237,227,.035)}
+    .cart{width:31px;height:31px;border:1px solid rgba(241,237,227,.27);border-radius:50%;display:grid;place-items:center;position:relative}
+    .cart:after{content:"0";position:absolute;top:-6px;right:-5px;width:15px;height:15px;border-radius:50%;background:var(--cream);color:#171b22;display:grid;place-items:center;font-size:.52rem;letter-spacing:0;text-shadow:none}
+    .copy{position:relative;z-index:5;text-align:center;padding-top:112px}
+    .top-creds{display:flex;justify-content:center;gap:28px;margin:1px 0 12px;color:rgba(241,237,227,.78);font-size:.53rem;letter-spacing:.2em;text-transform:uppercase;text-shadow:0 1px 2px rgba(0,0,0,.85),0 1px 18px rgba(0,0,0,.62)}
+    .top-creds span:not(:last-child)::after{content:"";display:inline-block;width:1px;height:9px;background:rgba(241,237,227,.32);margin-left:28px;vertical-align:-1px}
+    .word{margin:0;line-height:0}
+    .word img{display:block;margin:0 auto;width:min(760px,56vw);height:auto;filter:drop-shadow(0 8px 42px rgba(0,0,0,.35))}
+    .tag{font:400 1.15rem/1 var(--serif);color:rgba(241,237,227,.86);text-shadow:0 1px 2px rgba(0,0,0,.62),0 1px 16px rgba(0,0,0,.45);margin:8px auto 0;width:min(560px,44vw);height:30px;display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:18px}
+    .tag:before,.tag:after{content:"";height:1px;background:linear-gradient(90deg,transparent,rgba(241,237,227,.32))}
+    .tag:after{background:linear-gradient(90deg,rgba(241,237,227,.32),transparent)}
+    .tag span{white-space:nowrap}
+    .moonbeam{position:absolute;z-index:1;left:50%;top:240px;bottom:38px;width:260px;transform:translateX(-50%);background:linear-gradient(180deg,rgba(241,237,227,.16),rgba(241,237,227,.035) 45%,rgba(241,237,227,.2));filter:blur(22px);mix-blend-mode:screen}
+    .pool{position:absolute;z-index:1;left:50%;bottom:60px;width:760px;height:290px;transform:translateX(-50%);background:radial-gradient(ellipse at 50% 42%,rgba(241,237,227,.54),rgba(190,211,225,.27) 34%,rgba(190,211,225,.07) 62%,transparent 80%);filter:blur(10px);mix-blend-mode:screen;opacity:.72}
+    .mist{position:absolute;left:-8%;right:-8%;bottom:34px;height:250px;z-index:4;opacity:.54;background:radial-gradient(ellipse at 24% 68%,rgba(241,237,227,.32),transparent 34%),radial-gradient(ellipse at 78% 74%,rgba(241,237,227,.28),transparent 32%),linear-gradient(180deg,transparent,rgba(223,232,239,.64))}
+    .products{position:absolute;z-index:3;left:50%;bottom:58px;width:min(860px,92%);height:330px;transform:translateX(-50%)}
+    .bar{position:absolute;left:50%;bottom:0;display:grid;place-items:end center}
+    .bar img{display:block;width:auto;object-fit:contain}
+    .bar:before{content:"";position:absolute;left:50%;bottom:-16px;width:130px;height:30px;transform:translateX(-50%);border-radius:50%;background:radial-gradient(ellipse,rgba(34,42,52,.22),transparent 70%);filter:blur(5px)}
+    .bar.main{z-index:5;transform:translateX(-50%) translateY(-20px)}
+    .bar.main img{height:302px;filter:drop-shadow(0 48px 34px rgba(42,50,61,.3))}
+    .ghost{z-index:2}
+    .ghost img{height:284px;opacity:.13;filter:blur(2px) saturate(.56) brightness(.82)}
+    .notes{padding:18px 20px 20px;color:rgba(241,237,227,.78);font-size:.88rem;line-height:1.55;background:rgba(9,12,18,.44)}
+    .notes b{color:var(--cream)}
+
+    .a .g1{transform:translateX(calc(-50% - 245px)) translateY(28px)}
+    .a .g2{transform:translateX(calc(-50% + 245px)) translateY(28px)}
+    .a .g3{transform:translateX(calc(-50% - 390px)) translateY(42px)}
+    .a .g4{transform:translateX(calc(-50% + 390px)) translateY(42px)}
+    .a .g3 img,.a .g4 img{opacity:.07;filter:blur(3px) saturate(.45) brightness(.78)}
+
+    .b .products{width:min(720px,88%);height:350px}
+    .b .bar.main{transform:translateX(-50%) translateY(-18px) rotateZ(-1.5deg)}
+    .b .bar.main img{height:310px}
+    .b .g1{z-index:4;transform:translateX(calc(-50% - 92px)) translateY(12px) rotateZ(-7deg)}
+    .b .g2{z-index:3;transform:translateX(calc(-50% + 116px)) translateY(18px) rotateZ(6deg)}
+    .b .g3{z-index:2;transform:translateX(calc(-50% + 210px)) translateY(38px) rotateZ(9deg)}
+    .b .ghost img{height:292px;opacity:.25;filter:blur(1.15px) saturate(.62) brightness(.82)}
+    .b .g3 img{opacity:.12;filter:blur(2px) saturate(.52) brightness(.8)}
+    .b .pool{width:560px}
+
+    .c .products{height:320px}
+    .c .bar.main{transform:translateX(-50%) translateY(-28px)}
+    .c .bar.main img{height:330px}
+    .c .moonbeam{width:170px;filter:blur(18px);opacity:1}
+    .c .pool{width:470px;height:300px;opacity:.82}
+    .marks{position:absolute;z-index:5;left:50%;bottom:58px;transform:translateX(-50%);display:flex;gap:13px;align-items:center;justify-content:center}
+    .mark{width:13px;height:13px;border-radius:50%;border:1px solid rgba(241,237,227,.44);background:rgba(241,237,227,.12);box-shadow:0 0 18px rgba(241,237,227,.08)}
+    .mark:nth-child(1){background:rgba(164,194,169,.34)}.mark:nth-child(2){background:rgba(207,145,158,.38)}.mark:nth-child(3){width:29px;border-radius:999px;background:rgba(98,139,164,.62)}.mark:nth-child(4){background:rgba(170,94,79,.4)}.mark:nth-child(5){background:rgba(224,211,184,.38)}
+
+    @media(max-width:900px){
+      .board{padding:24px 14px 42px}.intro{display:block}.intro p{margin-top:14px}.stage{min-height:650px}.links a{display:none}.word img{width:78vw}.tag{width:74vw}.top-creds{gap:12px;font-size:.47rem}.top-creds span:not(:last-child)::after{display:none}.products{width:100%;height:265px}.bar.main img,.b .bar.main img,.c .bar.main img{height:235px}.ghost img,.b .ghost img{height:218px}.a .g1{transform:translateX(calc(-50% - 140px)) translateY(22px)}.a .g2{transform:translateX(calc(-50% + 140px)) translateY(22px)}.a .g3,.a .g4{display:none}.b .g1{transform:translateX(calc(-50% - 76px)) translateY(20px) rotateZ(-6deg)}.b .g2{transform:translateX(calc(-50% + 82px)) translateY(24px) rotateZ(6deg)}.b .g3{display:none}
+    }
+  </style>
+</head>
+<body>
+  <main class="board">
+    <div class="intro">
+      <h1>Product reset directions</h1>
+      <p>No more carousel. These treat the bar like a campaign object: cropped, singular, or monolithic, with the range reduced to atmosphere or flavour cues.</p>
+    </div>
+    <section class="grid">
+      <article class="option a">
+        <div class="label"><strong>A</strong><span>Single hero + ghost range</span></div>
+        <div class="stage">
+          <header class="nav"><nav class="links"><a class="active">Shop</a><a>Our Story</a><a>Rituals</a></nav><div class="logo">maple moon</div><nav class="links r"><a>Journal</a><a>Stockists</a><span class="cart">⌑</span></nav></header>
+          <div class="copy"><div class="top-creds"><span>Organic</span><span>No caffeine</span><span>Nothing added</span><span>Vegan</span></div><h2 class="word"><img src="assets/carob_wordmark.svg" alt="CAROB"></h2><p class="tag"><span>Naturally Sweet, Nothing Added.</span></p></div>
+          <div class="moonbeam"></div><div class="pool"></div><div class="mist"></div>
+          <div class="products">
+            <div class="bar ghost g3"><img src="assets/product_shots/bar_peppermint.webp" alt=""></div>
+            <div class="bar ghost g1"><img src="assets/product_shots/bar_goji_coconut.webp" alt=""></div>
+            <div class="bar main"><img src="assets/product_shots/bar_pure_carob.webp" alt=""></div>
+            <div class="bar ghost g2"><img src="assets/product_shots/bar_cayenne.webp" alt=""></div>
+            <div class="bar ghost g4"><img src="assets/product_shots/bar_almond.webp" alt=""></div>
+          </div>
+        </div>
+        <div class="notes"><b>Most direct fix.</b> One real product owns the hero. The range is present, but only as misty memory behind it.</div>
+      </article>
+      <article class="option b">
+        <div class="label"><strong>B</strong><span>Editorial cropped still life</span></div>
+        <div class="stage">
+          <header class="nav"><nav class="links"><a class="active">Shop</a><a>Our Story</a><a>Rituals</a></nav><div class="logo">maple moon</div><nav class="links r"><a>Journal</a><a>Stockists</a><span class="cart">⌑</span></nav></header>
+          <div class="copy"><div class="top-creds"><span>Organic</span><span>No caffeine</span><span>Nothing added</span><span>Vegan</span></div><h2 class="word"><img src="assets/carob_wordmark.svg" alt="CAROB"></h2><p class="tag"><span>Naturally Sweet, Nothing Added.</span></p></div>
+          <div class="moonbeam"></div><div class="pool"></div><div class="mist"></div>
+          <div class="products">
+            <div class="bar ghost g1"><img src="assets/product_shots/bar_goji_coconut.webp" alt=""></div>
+            <div class="bar main"><img src="assets/product_shots/bar_pure_carob.webp" alt=""></div>
+            <div class="bar ghost g2"><img src="assets/product_shots/bar_cayenne.webp" alt=""></div>
+            <div class="bar ghost g3"><img src="assets/product_shots/bar_almond.webp" alt=""></div>
+          </div>
+        </div>
+        <div class="notes"><b>Most campaign-like.</b> The other flavours are intentionally cropped behind the hero bar, so they feel art-directed instead of secondary.</div>
+      </article>
+      <article class="option c">
+        <div class="label"><strong>C</strong><span>Moonlit product monolith</span></div>
+        <div class="stage">
+          <header class="nav"><nav class="links"><a class="active">Shop</a><a>Our Story</a><a>Rituals</a></nav><div class="logo">maple moon</div><nav class="links r"><a>Journal</a><a>Stockists</a><span class="cart">⌑</span></nav></header>
+          <div class="copy"><div class="top-creds"><span>Organic</span><span>No caffeine</span><span>Nothing added</span><span>Vegan</span></div><h2 class="word"><img src="assets/carob_wordmark.svg" alt="CAROB"></h2><p class="tag"><span>Naturally Sweet, Nothing Added.</span></p></div>
+          <div class="moonbeam"></div><div class="pool"></div><div class="mist"></div>
+          <div class="products"><div class="bar main"><img src="assets/product_shots/bar_pure_carob.webp" alt=""></div></div>
+          <div class="marks"><span class="mark"></span><span class="mark"></span><span class="mark"></span><span class="mark"></span><span class="mark"></span></div>
+        </div>
+        <div class="notes"><b>Most premium/minimal.</b> One bar only. The range becomes small flavour marks below, like a luxury colourway system.</div>
+      </article>
+    </section>
+  </main>
+</body>
+</html>

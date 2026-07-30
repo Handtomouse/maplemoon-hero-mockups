@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>WHAT IS CAROB — luxury variants (dev)</title>
+<link rel="stylesheet" href="brand_kit.css">
+<style>
+@font-face{font-family:'Mackinac';src:local('FONTSPRING DEMO - P22 Mackinac Pro Book'),local('FONTSPRINGDEMO-P22MackinacProBookRegular'),local('P22 Mackinac Pro');font-weight:400;font-display:swap;}
+@font-face{font-family:'Mackinac';src:local('FONTSPRING DEMO - P22 Mackinac Pro Medium'),local('FONTSPRINGDEMO-P22MackinacProMediumRegular');font-weight:500;font-display:swap;}
+html{scroll-behavior:smooth;}
+body{margin:0;}
+.wf{
+  --mm-serif:'Mackinac','P22 Mackinac Pro',Georgia,serif;
+  --ink:#2c2a26;--ink-soft:#6f6a62;--ink-faint:#a39d92;
+  --paper:#f4f2ed;--card:#fbfaf7;--line:rgba(44,42,38,.14);--line-soft:rgba(44,42,38,.08);
+  --cream:#f1ede3;--cream-soft:rgba(241,237,227,.88);--cream-faint:rgba(241,237,227,.55);
+  background:linear-gradient(180deg,#c5d5e5 0%,#d6e1ec 30%,#e6edf3 62%,#eef2f5 100%);
+  color:var(--ink);font-family:var(--mm-sans,'Neue Haas Grotesk Display Pro',Helvetica,sans-serif);line-height:1.5;-webkit-font-smoothing:antialiased;
+}
+.wf *,.wf *::before,.wf *::after{box-sizing:border-box;}
+.wf img{max-width:100%;display:block;}
+.wf a{color:inherit;text-decoration:none;}
+.wrap{max-width:1180px;margin:0 auto;padding:0 28px;}
+.serif{font-family:var(--mm-serif);}
+
+/* dev picker bar */
+.devbar{position:fixed;top:0;left:0;right:0;z-index:99;display:flex;gap:8px;align-items:center;padding:10px 16px;background:rgba(22,24,29,.92);color:#e8e6e1;font:12px -apple-system,sans-serif;backdrop-filter:blur(6px);}
+.devbar b{margin-right:6px;}
+.devbar a{color:#e8e6e1;border:1px solid #444;border-radius:6px;padding:4px 12px;text-decoration:none;}
+.devbar a:hover{border-color:#7cbad8;color:#7cbad8;}
+.spacer{height:46px;}
+.vlabel{max-width:1180px;margin:60px auto 6px;padding:0 28px;font:11px -apple-system,sans-serif;letter-spacing:.14em;text-transform:uppercase;color:#8a8478;}
+
+/* shared type */
+.kick{font-size:.66rem;letter-spacing:.2em;text-transform:uppercase;color:var(--ink-faint);display:block;margin-bottom:16px;}
+.hd{font-family:var(--mm-serif);font-weight:500;font-size:clamp(2rem,3.4vw,3rem);line-height:1.12;margin:0 0 18px;letter-spacing:.005em;}
+.hd em{font-style:italic;font-weight:400;}
+.bodycopy{color:var(--ink-soft);font-size:1.02rem;max-width:44ch;line-height:1.65;margin:0 0 20px;}
+.more{font-size:.66rem;letter-spacing:.12em;text-transform:uppercase;display:inline-flex;gap:8px;align-items:center;border-bottom:1px solid var(--ink);padding-bottom:3px;color:var(--ink);}
+.credrow{display:flex;gap:20px;flex-wrap:wrap;margin:0 0 26px;}
+.credrow span{font-size:.66rem;letter-spacing:.08em;text-transform:uppercase;color:var(--ink);}
+.credrow span+span{position:relative;padding-left:20px;}
+.credrow span+span::before{content:"";position:absolute;left:0;top:50%;width:1px;height:11px;background:var(--line);transform:translateY(-50%);}
+
+/* ============ V1: ANNOTATED POD (full-bleed diagram) ============ */
+.v1{position:relative;height:700px;display:flex;align-items:center;overflow:hidden;}
+/* right-anchored image element: pod positions stay stable in px-from-right; left edge fades under the copy */
+.v1 .pic{position:absolute;top:0;right:0;height:100%;width:min(1400px,86%);pointer-events:none;}
+.v1 .pic img{position:absolute;top:0;right:0;height:100%;width:100%;object-fit:cover;object-position:right 30%;
+  -webkit-mask-image:linear-gradient(90deg,transparent 0,#000 26%),linear-gradient(180deg,transparent 0,#000 70px,#000 calc(100% - 90px),transparent 100%);
+  mask-image:linear-gradient(90deg,transparent 0,#000 26%),linear-gradient(180deg,transparent 0,#000 70px,#000 calc(100% - 90px),transparent 100%);
+  -webkit-mask-composite:source-in;mask-composite:intersect;}
+.v1 .grain{position:absolute;inset:0;pointer-events:none;opacity:.06;mix-blend-mode:overlay;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");background-size:160px 160px;}
+.v1 .inner{position:relative;z-index:2;width:100%;}
+.v1 .col{max-width:420px;}
+.v1 .hd{color:var(--ink);}
+.v1 .kick{color:var(--ink-faint);}
+.v1 .bodycopy{color:var(--ink-soft);}
+.v1 .more{color:var(--ink);border-color:var(--ink);}
+/* callouts: glass pills (hero .wf-ppill language), anchored in px from the right edge */
+.co{position:absolute;z-index:3;display:flex;align-items:center;gap:12px;}
+.co .dot{width:15px;height:15px;border-radius:50%;flex:0 0 auto;background:rgba(241,237,227,.18);border:1px solid var(--cream);position:relative;cursor:pointer;transition:background .3s;box-shadow:0 1px 10px rgba(10,14,24,.35);}
+.co .dot::after{content:"";position:absolute;inset:3.5px;border-radius:50%;background:var(--cream);transform:scale(.45);opacity:.7;transition:all .3s;}
+.co:hover .dot,.co.on .dot{background:rgba(241,237,227,.34);}
+.co:hover .dot::after,.co.on .dot::after{transform:scale(1);opacity:1;}
+.co .line{width:30px;height:1px;background:rgba(241,237,227,.55);flex:0 0 auto;}
+.co .lab{background:rgba(16,22,32,.42);-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px);border:1px solid rgba(241,237,227,.16);border-radius:10px;padding:11px 15px 12px;width:196px;opacity:.92;transition:opacity .3s,transform .3s;}
+.co:hover .lab,.co.on .lab{opacity:1;transform:translateY(-1px);}
+.co .top{display:flex;align-items:baseline;gap:9px;margin-bottom:3px;}
+.co .n{font-family:var(--mm-serif);font-size:.9rem;color:rgba(241,237,227,.65);}
+.co .t{font-size:.7rem;letter-spacing:.13em;text-transform:uppercase;color:var(--cream);font-weight:500;}
+.co .d{display:block;font-size:.8rem;line-height:1.45;color:rgba(241,237,227,.8);}
+.co.flip{flex-direction:row-reverse;}
+.co.flip .lab{text-align:left;}
+
+/* ============ V2: FROM POD TO BAR (interactive steps) ============ */
+.v2{padding:90px 0;}
+.v2 .grid{display:grid;grid-template-columns:0.9fr 1.25fr;gap:60px;align-items:center;}
+.steps{display:flex;flex-direction:column;margin-top:8px;}
+.step{display:flex;gap:18px;align-items:baseline;padding:16px 4px;border-top:1px solid var(--line-soft);cursor:pointer;transition:padding-left .3s;}
+.step:last-child{border-bottom:1px solid var(--line-soft);}
+.step .n{font-family:var(--mm-serif);font-size:1rem;color:var(--ink-faint);min-width:30px;transition:color .3s;}
+.step .t{font-family:var(--mm-serif);font-weight:500;font-size:1.3rem;transition:color .3s;color:var(--ink-faint);}
+.step .d{font-size:.85rem;color:var(--ink-faint);margin-left:auto;text-align:right;max-width:20ch;opacity:0;transition:opacity .3s;}
+.step.on{padding-left:14px;}
+.step.on .n,.step.on .t{color:var(--ink);}
+.step.on .d{opacity:1;color:var(--ink-soft);}
+.stage2{position:relative;aspect-ratio:4/3.4;border-radius:8px;overflow:hidden;box-shadow:0 24px 60px rgba(44,42,38,.18);}
+.stage2 img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity .7s ease;}
+.stage2 img.on{opacity:1;}
+.stage2 .cap{position:absolute;left:0;right:0;bottom:0;z-index:2;padding:40px 26px 18px;color:var(--cream);font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;background:linear-gradient(180deg,transparent,rgba(16,22,32,.55));text-shadow:0 1px 10px rgba(10,14,24,.6);}
+
+/* ============ V3: REFINED EDITORIAL SPLIT ============ */
+.v3{padding:90px 0;}
+.v3 .grid{display:grid;grid-template-columns:1.05fr 1fr;gap:60px;align-items:center;}
+.v3 .ill{position:relative;border-radius:8px;overflow:hidden;aspect-ratio:4/5;box-shadow:0 24px 60px rgba(44,42,38,.16);}
+.v3 .ill img{width:100%;height:100%;object-fit:cover;transform:scale(1.02);transition:transform 6s ease;}
+.v3:hover .ill img{transform:scale(1.08);}
+.v3 .ill::after{content:"";position:absolute;inset:0;opacity:.08;mix-blend-mode:overlay;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");background-size:160px 160px;}
+.v3 .rule{width:56px;height:1px;background:var(--ink);margin:26px 0 22px;}
+
+@media (max-width:900px){
+  .v1{height:auto;padding:70px 0 300px;}
+  .v1 .pic{width:100%;-webkit-mask-image:none;}
+  .co .lab{width:150px;padding:9px 12px;}
+  .co .d{display:none;}
+  .co .line{width:16px;}
+  .v2 .grid,.v3 .grid{grid-template-columns:1fr;gap:30px;}
+  .v3 .ill{aspect-ratio:16/11;}
+  .step .d{display:none;}
+}
+</style>
+</head>
+<body>
+<div class="wf">
+<div class="devbar"><b>WHAT IS CAROB — luxury variants</b><a href="#v1">V1 Annotated pod</a><a href="#v2">V2 Pod to bar</a><a href="#v3">V3 Refined editorial</a></div>
+<div class="spacer"></div>
+
+<div class="vlabel">V1 — the annotated pod (full-bleed diagram, hero language)</div>
+<section class="v1" id="v1">
+  <div class="pic"><img src="assets/hero_shots/carob_branch_dusk.jpg" alt="Carob pods hanging from a branch against a dusk blue sky"></div>
+  <div class="grain"></div>
+  <div class="wrap inner">
+    <div class="col">
+      <span class="kick">First things first</span>
+      <h2 class="hd">What is carob, <em>actually?</em></h2>
+      <p class="bodycopy">A sweet pod that grows in the warm Australian sun. Not a bean, no roasting tricks, no bitterness to hide. We slow-roast and mill it with cacao butter, and that is the whole recipe.</p>
+      <a class="more" href="#">The full carob story <svg viewBox="0 0 24 24" width="14" height="14" style="stroke:currentColor;fill:none;stroke-width:1.6"><line x1="4" y1="12" x2="20" y2="12"/><polyline points="14 6 20 12 14 18"/></svg></a>
+    </div>
+  </div>
+  <div class="co" style="right:560px;top:16%"><span class="dot"></span><span class="line"></span><div class="lab"><div class="top"><span class="n">01</span><span class="t">The pod</span></div><span class="d">Sun-ripened, naturally sweet pulp.</span></div></div>
+  <div class="co flip" style="right:60px;top:34%"><span class="dot"></span><span class="line"></span><div class="lab"><div class="top"><span class="n">02</span><span class="t">Zero caffeine</span></div><span class="d">Gentle by nature, any hour.</span></div></div>
+  <div class="co" style="right:470px;top:58%"><span class="dot"></span><span class="line"></span><div class="lab"><div class="top"><span class="n">03</span><span class="t">Slow-roasted</span></div><span class="d">Then milled with cacao butter.</span></div></div>
+  <div class="co flip" style="right:150px;top:76%"><span class="dot"></span><span class="line"></span><div class="lab"><div class="top"><span class="n">04</span><span class="t">Nothing added</span></div><span class="d">That is the whole recipe.</span></div></div>
+</section>
+
+<div class="vlabel">V2 — from pod to bar (interactive steps, gallery stage)</div>
+<section class="v2" id="v2">
+  <div class="wrap grid">
+    <div>
+      <span class="kick">First things first</span>
+      <h2 class="hd">From pod<br>to bar.</h2>
+      <p class="bodycopy">Carob is a sweet pod from the warm Australian sun. Four steps, no shortcuts, nothing added.</p>
+      <div class="steps" id="steps">
+        <div class="step on" data-i="0"><span class="n">01</span><span class="t">The pod</span><span class="d">Sun-ripened and naturally sweet.</span></div>
+        <div class="step" data-i="1"><span class="n">02</span><span class="t">The roast</span><span class="d">Slow, low and deep.</span></div>
+        <div class="step" data-i="2"><span class="n">03</span><span class="t">The blend</span><span class="d">Milled with cacao butter, nothing else.</span></div>
+        <div class="step" data-i="3"><span class="n">04</span><span class="t">The bar</span><span class="d">Hand-poured in Brunswick Heads.</span></div>
+      </div>
+    </div>
+    <div class="stage2" id="stage2">
+      <img src="assets/hero_shots/carob_branch_dusk.jpg" alt="Carob pods on the branch at dusk" class="on">
+      <img src="assets/photo_finals/maplemoon_heros66_brandmatched.webp" alt="A roasted carob pod in soft fog">
+      <img src="assets/photo_finals/maplemoon_heros55_brandmatched.webp" alt="The range, milled and made">
+      <img src="assets/photo_finals/maplemoon_heros21_brandmatched.webp" alt="A finished carob bar on stone">
+      <div class="cap" id="cap2">01 · The pod</div>
+    </div>
+  </div>
+</section>
+
+<div class="vlabel">V3 — refined editorial split (current layout, luxury type + pod photo)</div>
+<section class="v3" id="v3">
+  <div class="wrap grid">
+    <div>
+      <span class="kick">First things first</span>
+      <h2 class="hd">What is carob, <em>actually?</em></h2>
+      <div class="rule"></div>
+      <p class="bodycopy">A sweet pod that grows in the warm Australian sun. Not a bean, no roasting tricks, no bitterness to hide. We slow-roast and mill it with cacao butter, and that is the whole recipe.</p>
+      <div class="credrow"><span>A pod, not a bean</span><span>Naturally sweet</span><span>Zero caffeine</span><span>Nothing added</span></div>
+      <a class="more" href="#">The full carob story <svg viewBox="0 0 24 24" width="14" height="14" style="stroke:currentColor;fill:none;stroke-width:1.6"><line x1="4" y1="12" x2="20" y2="12"/><polyline points="14 6 20 12 14 18"/></svg></a>
+    </div>
+    <div class="ill"><img src="assets/hero_shots/carob_pods_cluster.jpg" alt="Carob pods hanging against a dusk blue sky"></div>
+  </div>
+</section>
+
+<div style="height:80px"></div>
+</div>
+<script>
+(function(){
+  // V2 steps
+  var steps=document.querySelectorAll('#steps .step');
+  var imgs=document.querySelectorAll('#stage2 img');
+  var cap=document.getElementById('cap2');
+  var caps=['01 · The pod','02 · The roast','03 · The blend','04 · The bar'];
+  var cur=0,timer=null;
+  function go(i){
+    cur=i;
+    steps.forEach(function(s,j){s.classList.toggle('on',j===i);});
+    imgs.forEach(function(im,j){im.classList.toggle('on',j===i);});
+    cap.textContent=caps[i];
+  }
+  steps.forEach(function(s){
+    s.addEventListener('mouseenter',function(){go(+s.dataset.i);hold();});
+    s.addEventListener('click',function(){go(+s.dataset.i);hold();});
+  });
+  function auto(){timer=setInterval(function(){go((cur+1)%4);},3200);}
+  function hold(){clearInterval(timer);setTimeout(auto,9000);}
+  auto();
+  // V1 callouts: cycle highlight
+  var cos=document.querySelectorAll('.v1 .co');var ci=0;
+  setInterval(function(){cos.forEach(function(c,j){c.classList.toggle('on',j===ci);});ci=(ci+1)%cos.length;},2600);
+})();
+</script>
+</body>
+</html>

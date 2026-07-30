@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>real_1 amends — examples</title>
+<link rel="stylesheet" href="brand_kit.css">
+<style>
+@font-face{font-family:'Mackinac';src:local('FONTSPRING DEMO - P22 Mackinac Pro Book'),local('FONTSPRINGDEMO-P22MackinacProBookRegular'),local('P22 Mackinac Pro');font-weight:400;font-display:swap;}
+@font-face{font-family:'Mackinac';src:local('FONTSPRING DEMO - P22 Mackinac Pro Medium'),local('FONTSPRINGDEMO-P22MackinacProMediumRegular');font-weight:500;font-display:swap;}
+
+/* ---- shared brand shell (lifted from homepage_real_1.html) ---- */
+body{margin:0;background:#1a1a1a;}
+.wf{
+  --mm-serif:'Mackinac','P22 Mackinac Pro',Georgia,serif;
+  --ink:#2c2a26;--ink-soft:#6f6a62;--ink-faint:#a39d92;
+  --paper:#f4f2ed;--paper2:#eceae4;--card:#fbfaf7;--line:rgba(44,42,38,.14);--line-soft:rgba(44,42,38,.08);
+  --cream:#f1ede3;--cream-soft:rgba(241,237,227,.82);--cream-faint:rgba(241,237,227,.55);
+  background:var(--paper);color:var(--ink);
+  font-family:var(--mm-sans,'Neue Haas Grotesk Display Pro',Helvetica,sans-serif);font-weight:400;line-height:1.5;-webkit-font-smoothing:antialiased;
+}
+.wf *,.wf *::before,.wf *::after{box-sizing:border-box;}
+.wf img{max-width:100%;display:block;}
+.wf a{color:inherit;text-decoration:none;}
+.wf .wrap{max-width:1180px;margin:0 auto;padding:0 28px;}
+.wf .serif{font-family:var(--mm-serif);}
+.amp{font-family:Georgia,'Times New Roman',serif;}
+.wf-more{font-size:.66rem;letter-spacing:.12em;text-transform:uppercase;display:inline-flex;gap:8px;align-items:center;border-bottom:1px solid currentColor;padding-bottom:3px;}
+
+/* ritual (base, from real_1) */
+.wf-rit{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center;padding:64px 0;position:relative;}
+.wf-rit h2{font-family:var(--mm-serif);font-weight:500;font-size:1.9rem;margin:0 0 24px;}
+.wf-rlist{display:flex;flex-direction:column;gap:18px;}
+.wf-rl{display:flex;align-items:center;gap:16px;}
+.wf-rl svg{width:24px;height:24px;stroke:var(--ink);fill:none;stroke-width:1.2;flex:0 0 auto;}
+.wf-rl span{font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;}
+
+/* ==== AMEND: ritual B — real hand-held lifestyle photo (replaces the CSS plinth) ==== */
+.wf-still{justify-self:end;width:100%;max-width:480px;border-radius:6px;overflow:hidden;}
+.wf-still img{width:100%;height:100%;object-fit:cover;aspect-ratio:4/5;display:block;}
+
+/* ==== AMEND: Brunswick origin band (NEW) ==== */
+.wf-origin{position:relative;min-height:60vh;display:flex;align-items:flex-end;overflow:hidden;color:var(--cream);}
+.wf-origin .bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 60%;z-index:0;}
+.wf-origin .scrim{position:absolute;inset:0;z-index:1;background:linear-gradient(90deg,rgba(18,21,30,.74) 0%,rgba(18,21,30,.42) 42%,rgba(18,21,30,.04) 72%,transparent 100%);}
+.wf-origin .copy{position:relative;z-index:2;padding:56px 28px;max-width:1180px;}
+.wf-origin .eyebrow{font-size:.64rem;letter-spacing:.2em;text-transform:uppercase;color:var(--cream-soft);display:block;margin-bottom:14px;}
+.wf-origin h2{font-family:var(--mm-serif);font-weight:500;font-size:clamp(1.9rem,3.4vw,2.6rem);line-height:1.08;margin:0 0 16px;max-width:14ch;text-shadow:0 2px 30px rgba(10,12,20,.4);}
+.wf-origin p{font-size:.96rem;line-height:1.7;color:var(--cream-soft);max-width:46ch;margin:0 0 22px;text-shadow:0 1px 18px rgba(10,12,20,.45);}
+.wf-origin .wf-more{color:var(--cream);}
+
+/* ==== AMEND: ritual C — reworked full-bleed editorial concept ==== */
+.wf-rit-c{position:relative;min-height:78vh;display:flex;align-items:flex-end;justify-content:center;text-align:center;overflow:hidden;color:var(--cream);}
+.wf-rit-c .bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center;z-index:0;}
+.wf-rit-c .scrim{position:absolute;inset:0;z-index:1;background:linear-gradient(0deg,rgba(12,14,22,.72) 0%,rgba(12,14,22,.30) 40%,rgba(12,14,22,.10) 70%,rgba(12,14,22,.28) 100%);}
+.wf-rit-c .inner{position:relative;z-index:2;padding:0 28px 64px;max-width:760px;}
+.wf-rit-c h2{font-family:var(--mm-serif);font-weight:500;font-size:clamp(2rem,4vw,2.9rem);line-height:1.05;margin:0 0 18px;text-shadow:0 2px 34px rgba(8,10,18,.5);}
+.wf-rit-c .lede{font-family:var(--mm-serif);font-size:clamp(1.05rem,1.8vw,1.3rem);line-height:1.5;color:var(--cream);margin:0 auto 28px;max-width:40ch;text-shadow:0 1px 24px rgba(8,10,18,.55);}
+.wf-rit-c .moments{display:inline-flex;flex-wrap:wrap;justify-content:center;gap:0;}
+.wf-rit-c .moments span{font-size:.66rem;letter-spacing:.16em;text-transform:uppercase;color:var(--cream-soft);padding:0 18px;position:relative;}
+.wf-rit-c .moments span+span::before{content:"";position:absolute;left:0;top:50%;width:1px;height:11px;background:var(--cream-faint);transform:translateY(-50%);}
+
+/* example-page chrome (NOT part of the design) */
+.exlabel{background:#111;color:#f4efe7;font-family:-apple-system,Helvetica,sans-serif;padding:12px 20px;}
+.exlabel .n{font-size:13px;font-weight:600;letter-spacing:.04em;}
+.exlabel .s{font-size:11px;color:#9a958c;margin-top:2px;}
+.exspacer{height:14px;background:#1a1a1a;}
+
+@media (max-width:900px){
+  .wf-rit{grid-template-columns:1fr;}
+  /* AMEND: ritual image now SHOWS on mobile (was display:none in real_1) */
+  .wf-still{display:block;max-width:none;margin-top:8px;}
+  .wf-origin .scrim{background:linear-gradient(0deg,rgba(18,21,30,.82) 0%,rgba(18,21,30,.30) 60%,rgba(18,21,30,.1) 100%);}
+}
+@media (prefers-reduced-motion:reduce){.wf *{transition:none!important;animation:none!important;}}
+</style>
+</head>
+<body>
+<div class="wf">
+
+  <!-- ========== EXAMPLE 1: Brunswick origin band (NEW) ========== -->
+  <div class="exlabel"><div class="n">EXAMPLE 1 — Brunswick origin band (NEW section)</div><div class="s">Real photo (mm_falai_brunswick.png) · copy place-corrected to Brunswick Heads · facts from about_page.md</div></div>
+  <section class="wf-origin">
+    <img class="bg" src="assets/hero_shots/mm_falai_brunswick.png" alt="The far north coast at golden hour, mist over the water">
+    <div class="scrim"></div>
+    <div class="copy">
+      <span class="eyebrow">Our Story</span>
+      <h2 class="serif">Handmade in Brunswick Heads.</h2>
+      <p>Every Maple Moon bar is made by hand, in small batches, on the far north coast of New South Wales. Australian-grown carob pods, sun-ripened and slow-roasted, then milled with cacao butter and nothing else. The coast is where we make, where we pack, and where we ship from.</p>
+      <a class="wf-more" href="our-story.html">Read our story <svg viewBox="0 0 24 24" width="14" height="14" style="stroke:currentColor;fill:none;stroke-width:1.6"><line x1="4" y1="12" x2="20" y2="12"/><polyline points="14 6 20 12 14 18"/></svg></a>
+    </div>
+  </section>
+
+  <div class="exspacer"></div>
+
+  <!-- ========== EXAMPLE 2: ritual VARIANT B — hand-held lifestyle ========== -->
+  <div class="exlabel"><div class="n">EXAMPLE 2 — Ritual variant B · hand-held lifestyle</div><div class="s">Split layout + feature list, CSS plinth replaced with real photo (hero_carob_bar_hand.png) · mobile bug fixed</div></div>
+  <section class="wrap wf-rit">
+    <div>
+      <h2 class="serif">A sweeter kind of ritual.</h2>
+      <div class="wf-rlist">
+        <div class="wf-rl"><svg viewBox="0 0 24 24"><path d="M4 14c6-1 10-5 16-10-2 7-5 12-12 13-2 .3-4-1-4-3z"/></svg><span>After Dinner</span></div>
+        <div class="wf-rl"><svg viewBox="0 0 24 24"><path d="M17 3a9 9 0 1 0 4 12 7 7 0 0 1-4-12z"/></svg><span>In the Evening</span></div>
+        <div class="wf-rl"><svg viewBox="0 0 24 24"><rect x="5" y="7" width="14" height="13" rx="2"/><path d="M9 7a3 3 0 0 1 6 0"/></svg><span>On the Go</span></div>
+        <div class="wf-rl"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><line x1="12" y1="3" x2="12" y2="5"/><line x1="12" y1="19" x2="12" y2="21"/><line x1="3" y1="12" x2="5" y2="12"/><line x1="19" y1="12" x2="21" y2="12"/></svg><span>Anytime</span></div>
+      </div>
+    </div>
+    <div class="wf-still">
+      <img src="assets/hero_shots/hero_carob_bar_hand.png" alt="A hand holding a Pure Carob and Cacao Butter bar in low light">
+    </div>
+  </section>
+
+  <div class="exspacer"></div>
+
+  <!-- ========== EXAMPLE 3: ritual VARIANT C — reworked full-bleed concept ========== -->
+  <div class="exlabel"><div class="n">EXAMPLE 3 — Ritual variant C · reworked editorial concept</div><div class="s">Full-bleed evening scene (hero_moons_lifestyle.png), copy overlaid, icon-list dropped for an inline moments row</div></div>
+  <section class="wf-rit-c">
+    <img class="bg" src="assets/hero_shots/hero_moons_lifestyle.png" alt="Carob moons and a warm cup on a table at dusk, the ocean behind">
+    <div class="scrim"></div>
+    <div class="inner">
+      <h2 class="serif">A sweeter kind of ritual.</h2>
+      <p class="lede">For the slow part of the evening, when the light goes soft and there is nothing left to do but enjoy it.</p>
+      <div class="moments"><span>After dinner</span><span>In the evening</span><span>On the go</span><span>Anytime</span></div>
+    </div>
+  </section>
+
+</div>
+</body>
+</html>

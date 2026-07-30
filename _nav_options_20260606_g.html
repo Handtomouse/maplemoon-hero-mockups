@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MapleMoon balanced invisible nav options</title>
+  <style>
+    @font-face{font-family:Mackinac;src:local('FONTSPRING DEMO - P22 Mackinac Pro Book'),local('P22 Mackinac Pro');font-weight:400;font-display:swap}
+    :root{--cream:#f1ede3;--soft:rgba(241,237,227,.79);--quiet:rgba(241,237,227,.62);--line:rgba(241,237,227,.28);--ink:#101722}
+    *{box-sizing:border-box}
+    body{margin:0;background:#0d121b;color:var(--cream);font-family:"Neue Haas Grotesk Display Pro",Helvetica,sans-serif}
+    .board{min-height:100vh;padding:40px 34px 64px;background:
+      radial-gradient(circle at 50% 7%,rgba(241,237,227,.15),transparent 25%),
+      linear-gradient(180deg,rgba(12,17,27,.04),rgba(12,17,27,.92)),
+      url("assets/hero_shots/moonlit_ocean_night.webp") center 24%/cover fixed no-repeat}
+    .intro{display:flex;align-items:end;justify-content:space-between;gap:24px;margin:0 auto 34px;max-width:1180px}
+    h1{font-family:Mackinac,Georgia,serif;font-size:clamp(2rem,4vw,4.2rem);font-weight:400;line-height:.95;margin:0}
+    .intro p{max-width:56ch;color:rgba(241,237,227,.78);font-size:.92rem;line-height:1.55;margin:0}
+    .grid{display:grid;grid-template-columns:1fr;gap:34px;max-width:1180px;margin:0 auto}
+    .option{border:1px solid rgba(241,237,227,.2);background:rgba(244,242,237,.045);box-shadow:0 34px 100px rgba(0,0,0,.32);overflow:hidden}
+    .label{display:flex;align-items:center;justify-content:space-between;padding:14px 18px;border-bottom:1px solid rgba(241,237,227,.16);color:rgba(241,237,227,.72);font-size:.66rem;letter-spacing:.18em;text-transform:uppercase}
+    .label strong{color:var(--cream);font-weight:500}
+    .stage{position:relative;min-height:520px;background:
+      linear-gradient(180deg,rgba(8,12,20,.02),rgba(8,12,20,.49)),
+      url("assets/hero_shots/moonlit_ocean_night.webp") center 22%/cover no-repeat}
+    .nav{position:absolute;inset:0 0 auto;height:80px;padding:0 32px;display:grid;grid-template-columns:1fr auto 1fr;align-items:center}
+    .nav:before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(2,5,10,.48),rgba(2,5,10,.10) 62%,transparent);z-index:-1}
+    .links{display:flex;gap:22px;align-items:center;white-space:nowrap}
+    .links.r{justify-content:flex-end;gap:20px}
+    a,.cart{color:var(--soft);font-size:.52rem;letter-spacing:.165em;text-transform:uppercase;text-decoration:none;text-shadow:0 1px 14px rgba(0,0,0,.6)}
+    .logo{font-family:Mackinac,Georgia,serif;font-size:1.25rem;color:var(--cream);text-shadow:0 1px 20px rgba(0,0,0,.6)}
+    .cart{width:31px;height:31px;border:1px solid rgba(241,237,227,.27);border-radius:50%;display:grid;place-items:center;position:relative}
+    .cart:after{content:"0";position:absolute;top:-6px;right:-5px;width:15px;height:15px;border-radius:50%;background:var(--cream);color:#171b22;display:grid;place-items:center;font-size:.52rem;letter-spacing:0;text-shadow:none}
+    .hero-copy{position:absolute;left:0;right:0;top:119px;text-align:center}
+    .eyebrow{font-size:.55rem;letter-spacing:.24em;text-transform:uppercase;color:rgba(241,237,227,.78);margin-bottom:6px}
+    .word{font-family:Mackinac,Georgia,serif;font-size:clamp(4.2rem,8vw,7rem);line-height:.82;color:#eee9d9;text-shadow:0 8px 40px rgba(0,0,0,.34)}
+    .tag{font-family:Mackinac,Georgia,serif;font-size:1.08rem;color:rgba(241,237,227,.88);margin-top:6px}
+    .notes{padding:18px 20px 20px;color:rgba(241,237,227,.76);font-size:.88rem;line-height:1.55;background:rgba(9,12,18,.4)}
+    .notes b{color:var(--cream)}
+
+    .s .links a:first-child{color:var(--cream)}
+    .s .links a:first-child:before{content:"";display:inline-block;width:5px;height:5px;border-radius:50%;border:1px solid rgba(241,237,227,.68);margin-right:8px;vertical-align:1px;box-shadow:0 0 8px rgba(241,237,227,.28)}
+    .s .links.r a:first-child:before{display:none}
+
+    .t .logo{font-size:1.28rem}
+    .t .logo:after{content:"";display:block;width:34px;height:1px;background:linear-gradient(90deg,transparent,rgba(241,237,227,.46),transparent);margin:8px auto 0}
+    .t .links a:first-child{color:var(--cream)}
+    .t .links a:first-child:after{content:"";display:block;width:18px;height:1px;background:rgba(241,237,227,.66);margin-top:7px}
+
+    .u .nav{padding-left:36px;padding-right:36px}
+    .u .links{gap:24px}
+    .u .links.r{gap:22px}
+    .u a{font-size:.505rem;letter-spacing:.19em;color:rgba(241,237,227,.72)}
+    .u .logo{font-size:1.22rem}
+    .u .links a:first-child{color:var(--cream)}
+    .u .links a:first-child:after{content:"";display:block;width:100%;height:1px;background:linear-gradient(90deg,transparent,rgba(241,237,227,.7),transparent);margin-top:7px}
+    @media (max-width:1000px){.grid{grid-template-columns:1fr}.intro{display:block}.intro p{margin-top:12px}}
+  </style>
+</head>
+<body>
+  <main class="board">
+    <div class="intro">
+      <h1>Balanced invisible editorial</h1>
+      <p>Three calmer versions: still immersive, but with the hierarchy corrected so the nav feels premium without shouting.</p>
+    </div>
+    <section class="grid">
+      <article class="option s">
+        <div class="label"><strong>S</strong><span>Balanced moon-dot</span></div>
+        <div class="stage">
+          <header class="nav">
+            <nav class="links"><a>Shop</a><a>Our Story</a><a>Rituals</a><a>Journal</a></nav>
+            <div class="logo">maple moon</div>
+            <nav class="links r"><a>Stockists</a><a>AUD $</a><span class="cart">⌑</span></nav>
+          </header>
+          <div class="hero-copy"><div class="eyebrow">Artisan carob · Brunswick Heads</div><div class="word">CAROB</div><div class="tag">Naturally Sweet, Nothing Added.</div></div>
+        </div>
+        <div class="notes"><b>Most balanced brand detail.</b> Keeps the moon-dot idea from P, but reduces the glow and uses calmer spacing so it does not feel cute or busy.</div>
+      </article>
+      <article class="option t">
+        <div class="label"><strong>T</strong><span>Balanced masthead</span></div>
+        <div class="stage">
+          <header class="nav">
+            <nav class="links"><a>Shop</a><a>Our Story</a><a>Rituals</a><a>Journal</a></nav>
+            <div class="logo">maple moon</div>
+            <nav class="links r"><a>Stockists</a><a>AUD $</a><span class="cart">⌑</span></nav>
+          </header>
+          <div class="hero-copy"><div class="eyebrow">Artisan carob · Brunswick Heads</div><div class="word">CAROB</div><div class="tag">Naturally Sweet, Nothing Added.</div></div>
+        </div>
+        <div class="notes"><b>Most balanced logo presence.</b> Slight ceremony under the centre mark, but smaller than Q. Reads premium without becoming a separate header object.</div>
+      </article>
+      <article class="option u">
+        <div class="label"><strong>U</strong><span>Balanced wide set</span></div>
+        <div class="stage">
+          <header class="nav">
+            <nav class="links"><a>Shop</a><a>Our Story</a><a>Rituals</a><a>Journal</a></nav>
+            <div class="logo">maple moon</div>
+            <nav class="links r"><a>Stockists</a><a>AUD $</a><span class="cart">⌑</span></nav>
+          </header>
+          <div class="hero-copy"><div class="eyebrow">Artisan carob · Brunswick Heads</div><div class="word">CAROB</div><div class="tag">Naturally Sweet, Nothing Added.</div></div>
+        </div>
+        <div class="notes"><b>Most balanced restraint.</b> Wider and quieter like R, but not as thin. Premium through spacing; safest if we want almost no signature ornament.</div>
+      </article>
+    </section>
+  </main>
+</body>
+</html>

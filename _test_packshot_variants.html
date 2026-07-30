@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en-AU"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>#8 Packshot cohesion variants</title>
+<link rel="stylesheet" href="brand_kit.css">
+<style>
+@font-face{font-family:'Mackinac';src:local('FONTSPRING DEMO - P22 Mackinac Pro Book'),local('P22 Mackinac Pro');font-weight:400;font-display:swap;}
+body{margin:0;background:#1a1a1a;}
+.wf{--mm-serif:'Mackinac','P22 Mackinac Pro',Georgia,serif;--ink:#2c2a26;--paper:#f4f2ed;--line:rgba(44,42,38,.14);
+  background:var(--paper);font-family:var(--mm-sans,'Neue Haas Grotesk Display Pro',Helvetica,sans-serif);}
+.wf *{box-sizing:border-box;}
+.exlabel{background:#111;color:#f4efe7;font-family:-apple-system,Helvetica,sans-serif;padding:11px 18px;}
+.exlabel .n{font-size:13px;font-weight:600;}.exlabel .s{font-size:11px;color:#9a958c;margin-top:2px;}
+.row{display:flex;gap:26px;justify-content:center;padding:36px 24px 44px;flex-wrap:wrap;}
+.item{display:flex;flex-direction:column;align-items:center;gap:12px;}
+.bp{width:178px;height:276px;border:1px solid var(--line);border-radius:6px;overflow:hidden;box-shadow:0 14px 24px rgba(44,42,38,.07);position:relative;}
+.bp img{width:100%;height:100%;display:block;}
+.cap{font-family:var(--mm-serif);font-size:.9rem;color:var(--ink);}
+/* T1 current: cover, cream gradient behind */
+.t1 .bp{background:linear-gradient(168deg,#fff,#f1ede5);}
+.t1 .bp img{object-fit:cover;object-position:center;}
+/* T2 uniform cream mat + contain: every product centered on the same cream field */
+.t2 .bp{background:#f1ede3;}
+.t2 .bp img{object-fit:contain;padding:16px;}
+/* T3 cover + tonal tie: hairline frame + soft bottom gradient unifies mixed sources as a gallery set */
+.t3 .bp{background:#efe9df;}
+.t3 .bp img{object-fit:cover;object-position:center;}
+.t3 .bp::after{content:"";position:absolute;inset:0;border-radius:6px;border:1px solid rgba(44,42,38,.14);background:linear-gradient(180deg,transparent 58%,rgba(18,20,28,.12));pointer-events:none;}
+</style></head>
+<body><div class="wf">
+
+  <div class="exlabel"><div class="n">T1 &mdash; Current (cover)</div><div class="s">image fills the card. Bars read isolated-on-cream; moons/bites/elixirs fill with their own coloured photo bg &rarr; mixed.</div></div>
+  <div class="row t1">
+    <div class="item"><div class="bp"><img src="assets/product_shots/bar_pure_carob.webp" alt="bar"></div><div class="cap">Bar</div></div>
+    <div class="item"><div class="bp"><img src="assets/product_shots/moon_pure_carob.webp" alt="moon"></div><div class="cap">Moon</div></div>
+    <div class="item"><div class="bp"><img src="assets/product_shots/bite_coconut.webp" alt="bite"></div><div class="cap">Bite</div></div>
+    <div class="item"><div class="bp"><img src="assets/product_shots/elixir_plain.webp" alt="elixir"></div><div class="cap">Elixir</div></div>
+  </div>
+
+  <div class="exlabel"><div class="n">T2 &mdash; Uniform cream mat (contain)</div><div class="s">every product centered on the same cream field. Most consistent frame; photo-bg items show their colour as an inset.</div></div>
+  <div class="row t2">
+    <div class="item"><div class="bp"><img src="assets/product_shots/bar_pure_carob.webp" alt="bar"></div><div class="cap">Bar</div></div>
+    <div class="item"><div class="bp"><img src="assets/product_shots/moon_pure_carob.webp" alt="moon"></div><div class="cap">Moon</div></div>
+    <div class="item"><div class="bp"><img src="assets/product_shots/bite_coconut.webp" alt="bite"></div><div class="cap">Bite</div></div>
+    <div class="item"><div class="bp"><img src="assets/product_shots/elixir_plain.webp" alt="elixir"></div><div class="cap">Elixir</div></div>
+  </div>
+
+  <div class="exlabel"><div class="n">T3 &mdash; Cover + tonal tie (frame + soft gradient)</div><div class="s">keeps full-bleed but adds a hairline frame and a soft bottom gradient so mixed sources read as one gallery set.</div></div>
+  <div class="row t3">
+    <div class="item"><div class="bp"><img src="assets/product_shots/bar_pure_carob.webp" alt="bar"></div><div class="cap">Bar</div></div>
+    <div class="item"><div class="bp"><img src="assets/product_shots/moon_pure_carob.webp" alt="moon"></div><div class="cap">Moon</div></div>
+    <div class="item"><div class="bp"><img src="assets/product_shots/bite_coconut.webp" alt="bite"></div><div class="cap">Bite</div></div>
+    <div class="item"><div class="bp"><img src="assets/product_shots/elixir_plain.webp" alt="elixir"></div><div class="cap">Elixir</div></div>
+  </div>
+
+</div></body></html>

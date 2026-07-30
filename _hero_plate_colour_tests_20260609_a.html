@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MapleMoon plate colour tests</title>
+  <style>
+    @font-face{font-family:Mackinac;src:local('FONTSPRING DEMO - P22 Mackinac Pro Book'),local('P22 Mackinac Pro');font-weight:400;font-display:swap}
+    :root{--cream:#f1ede3;--soft:rgba(241,237,227,.78);--carob-blue:#88a5be}
+    *{box-sizing:border-box}
+    body{margin:0;background:#dce6ee;color:var(--cream);font-family:"Neue Haas Grotesk Display Pro",Helvetica,sans-serif}
+    .board{min-height:100vh;padding:34px;background:linear-gradient(180deg,#263848,#dce6ee 86%)}
+    .intro{max-width:1220px;margin:0 auto 26px;display:flex;align-items:end;justify-content:space-between;gap:24px}
+    h1{font-family:Mackinac,Georgia,serif;font-size:clamp(2rem,4vw,4rem);font-weight:400;line-height:.96;margin:0}
+    .intro p{max-width:64ch;margin:0;color:rgba(241,237,227,.76);font-size:.9rem;line-height:1.5}
+    .option{max-width:1220px;margin:0 auto 42px;border:1px solid rgba(241,237,227,.24);box-shadow:0 34px 100px rgba(0,0,0,.28);overflow:hidden;background:rgba(244,242,237,.05)}
+    .label{height:46px;padding:0 18px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid rgba(241,237,227,.16);background:rgba(8,12,19,.32);font-size:.63rem;letter-spacing:.18em;text-transform:uppercase;color:rgba(241,237,227,.72)}
+    .label strong{font-size:.72rem;color:var(--cream);font-weight:500}
+    .stage{position:relative;min-height:750px;overflow:hidden;background:linear-gradient(180deg,#334b62 0%,#88a5be 50%,#dfe8ef 100%)}
+    .photo{position:absolute;inset:-2%;z-index:0;background:var(--img) var(--pos)/cover no-repeat;opacity:var(--photo-o,.56);filter:saturate(.58) contrast(.84) brightness(1.06);transform:scale(var(--scale,1.02))}
+    .stage:before{content:"";position:absolute;inset:0;z-index:1;pointer-events:none;background:
+      radial-gradient(ellipse at 50% 34%,rgba(49,72,94,.38),rgba(69,96,116,.18) 30%,transparent 58%),
+      linear-gradient(180deg,rgba(14,27,40,.16),rgba(136,165,190,.08) 48%,rgba(223,232,239,.16) 73%),
+      linear-gradient(90deg,rgba(25,38,52,.18),transparent 22%,transparent 78%,rgba(25,38,52,.18))}
+    .stage:after{content:"";position:absolute;left:0;right:0;bottom:0;height:118px;background:linear-gradient(180deg,transparent 4%,rgba(218,229,237,.1) 58%,rgba(223,232,239,.4));pointer-events:none;z-index:8}
+    .nav{position:absolute;inset:0 0 auto;height:78px;padding:0 clamp(22px,3vw,38px);display:grid;grid-template-columns:minmax(0,1fr) auto minmax(0,1fr);align-items:center;z-index:6}
+    .nav:before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(2,5,10,.4),rgba(2,5,10,.08) 62%,transparent);z-index:-1}
+    .links{display:flex;align-items:center;gap:clamp(20px,2.2vw,28px);white-space:nowrap}
+    .links.r{justify-content:flex-end;gap:clamp(19px,2vw,26px)}
+    a,.cart{color:var(--soft);font-size:.52rem;letter-spacing:.18em;text-transform:uppercase;text-decoration:none;text-shadow:0 1px 14px rgba(0,0,0,.54)}
+    .logo{font-family:Mackinac,Georgia,serif;color:var(--cream);font-size:1.24rem;text-shadow:0 1px 20px rgba(0,0,0,.56)}
+    .active{display:inline-flex;align-items:center;justify-content:center;height:28px;padding:0 13px;border:1px solid rgba(241,237,227,.44);border-radius:999px;background:rgba(241,237,227,.035);box-shadow:inset 0 0 18px rgba(241,237,227,.045);color:var(--cream)}
+    .cart{width:31px;height:31px;border:1px solid rgba(241,237,227,.27);border-radius:50%;display:grid;place-items:center;position:relative}
+    .cart:after{content:"0";position:absolute;top:-6px;right:-5px;width:15px;height:15px;border-radius:50%;background:var(--cream);color:#171b22;display:grid;place-items:center;font-size:.52rem;letter-spacing:0;text-shadow:none}
+    .copy{position:relative;z-index:5;text-align:center;margin:0 auto;padding-top:82px}
+    .top-creds{display:flex;justify-content:center;gap:28px;flex-wrap:wrap;margin:0 0 12px;color:rgba(241,237,227,.78);font-size:.53rem;letter-spacing:.2em;text-transform:uppercase;text-shadow:0 1px 2px rgba(0,0,0,.75),0 1px 18px rgba(0,0,0,.46)}
+    .top-creds span:not(:last-child)::after{content:"";display:inline-block;width:1px;height:9px;background:rgba(241,237,227,.32);margin-left:28px;vertical-align:-1px}
+    .word{margin:0 auto;line-height:0}
+    .word img{display:block;margin:0 auto;width:clamp(610px,53vw,716px);height:auto;filter:drop-shadow(0 8px 42px rgba(0,0,0,.28))}
+    .tag{font-family:'P22 Mackinac Pro',Mackinac,Georgia,serif;font-weight:400;font-size:1.02rem;color:rgba(241,237,227,.86);text-shadow:0 1px 2px rgba(0,0,0,.54),0 1px 16px rgba(0,0,0,.36);margin:8px auto 0;width:clamp(450px,40vw,528px);height:32px;display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:18px}
+    .tag:before,.tag:after{content:"";height:1px;background:linear-gradient(90deg,transparent,rgba(241,237,227,.34))}
+    .tag:after{background:linear-gradient(90deg,rgba(241,237,227,.34),transparent)}
+    .tag span{white-space:nowrap}
+    .hero-mark{display:grid;place-items:center;margin:9px auto 0;width:26px;height:26px;opacity:.62;filter:drop-shadow(0 1px 12px rgba(0,0,0,.42))}
+    .hero-mark img{display:block;width:100%;height:100%;object-fit:contain;filter:invert(94%) sepia(10%) saturate(376%) hue-rotate(344deg) brightness(102%) contrast(91%)}
+    .mist{position:absolute;left:50%;bottom:0;width:min(910px,97%);height:166px;z-index:5;transform:translateX(-50%);opacity:.72;background:
+      radial-gradient(ellipse at 18% 66%,rgba(226,235,241,.36),rgba(226,235,241,.14) 32%,transparent 67%),
+      radial-gradient(ellipse at 82% 66%,rgba(226,235,241,.36),rgba(226,235,241,.14) 32%,transparent 67%),
+      linear-gradient(180deg,transparent 16%,rgba(218,229,237,.12) 54%,rgba(223,232,239,.32));filter:blur(7px);pointer-events:none}
+    .bars{position:absolute;left:50%;bottom:40px;z-index:3;width:min(950px,97%);height:420px;transform:translateX(-50%)}
+    .bars img{position:absolute;left:50%;bottom:0;width:auto;object-fit:contain}
+    .bars img:nth-child(1){height:256px;opacity:.34;filter:blur(.5px) saturate(.74) brightness(.99);transform:translateX(calc(-50% - 398px)) translateY(50px)}
+    .bars img:nth-child(2){height:334px;opacity:.74;filter:blur(.06px) saturate(.99) brightness(1.02) drop-shadow(0 28px 28px rgba(48,60,72,.18));transform:translateX(calc(-50% - 230px)) translateY(50px)}
+    .bars img:nth-child(3){height:392px;opacity:1;filter:contrast(1.06) saturate(1.02) brightness(1.04) drop-shadow(0 42px 32px rgba(42,52,64,.26));transform:translateX(-50%) translateY(50px);z-index:2}
+    .bars img:nth-child(4){height:334px;opacity:.74;filter:blur(.06px) saturate(.99) brightness(1.02) drop-shadow(0 28px 28px rgba(48,60,72,.18));transform:translateX(calc(-50% + 230px)) translateY(50px)}
+    .bars img:nth-child(5){height:256px;opacity:.34;filter:blur(.5px) saturate(.74) brightness(.99);transform:translateX(calc(-50% + 398px)) translateY(50px)}
+    .p1{--img:url("assets/hero_shots/mm_plate_moon_ocean_01.png");--pos:center 39%;--photo-o:.52}
+    .p2{--img:url("assets/hero_shots/mm_plate_moon_ocean_02.png");--pos:center 35%;--photo-o:.52}
+    .p3{--img:url("assets/hero_shots/mm_plate_moon_ocean_03.png");--pos:center 39%;--photo-o:.58}
+    .p4{--img:url("assets/hero_shots/mm_plate_moon_ocean_04.png");--pos:center 43%;--photo-o:.58}
+    .p5{--img:url("assets/hero_shots/mm_plate_moon_ocean_05.png");--pos:center 45%;--photo-o:.58}
+    .notes{padding:16px 20px 18px;background:rgba(9,12,18,.44);color:rgba(241,237,227,.76);font-size:.86rem;line-height:1.5}
+    .notes b{color:var(--cream);font-weight:500}
+    @media(max-width:900px){
+      .board{padding:22px 14px 40px}.intro{display:block}.intro p{margin-top:12px}.stage{min-height:620px}.links a{display:none}.copy{padding-top:82px}
+      .word img{width:clamp(300px,78vw,620px)}.tag{width:min(86vw,410px);height:30px;gap:12px;font-size:.95rem}.top-creds{gap:12px}.top-creds span:not(:last-child)::after{display:none}
+      .bars{width:100%;height:280px;bottom:8px}.bars img:nth-child(1){height:182px;transform:translateX(calc(-50% - clamp(190px,33vw,300px))) translateY(52px)}.bars img:nth-child(2){height:234px;transform:translateX(calc(-50% - clamp(112px,18vw,160px))) translateY(52px)}.bars img:nth-child(3){height:276px;transform:translateX(-50%) translateY(52px)}.bars img:nth-child(4){height:234px;transform:translateX(calc(-50% + clamp(112px,18vw,160px))) translateY(52px)}.bars img:nth-child(5){height:182px;transform:translateX(calc(-50% + clamp(190px,33vw,300px))) translateY(52px)}
+    }
+  </style>
+</head>
+<body>
+  <main class="board">
+    <div class="intro">
+      <h1>Plate colour tests</h1>
+      <p>Five supplied moon-ocean plates, all forced through the same D colour treatment so the hero stays in the pure carob blue world.</p>
+    </div>
+
+    <article class="option p1">
+      <div class="label"><strong>P1. Wide Moon Reflection</strong><span>current colour grade applied</span></div>
+      <section class="stage"><div class="photo"></div><header class="nav"><nav class="links"><a class="active">Shop</a><a>Our Story</a><a>Rituals</a></nav><div class="logo">maple moon</div><nav class="links r"><a>Journal</a><a>Stockists</a><span class="cart">⌑</span></nav></header><div class="copy"><div class="top-creds"><span>Organic</span><span>No caffeine</span><span>Nothing added</span><span>Vegan</span></div><h2 class="word"><img src="assets/carob_wordmark.svg" alt="CAROB"></h2><p class="tag"><span>Naturally Sweet, Nothing Added.</span></p><div class="hero-mark"><img src="assets/mm_logo_icon_blk.svg" alt="Maple Moon"></div></div><div class="mist"></div><div class="bars"><img src="assets/product_shots/bar_peppermint.webp" alt=""><img src="assets/product_shots/bar_goji_coconut.webp" alt=""><img src="assets/product_shots/bar_pure_carob.webp" alt=""><img src="assets/product_shots/bar_cayenne.webp" alt=""><img src="assets/product_shots/bar_almond.webp" alt=""></div></section>
+      <div class="notes"><b>P1:</b> Strong moon and reflection. Good if we want the scene to feel broad and cinematic.</div>
+    </article>
+
+    <article class="option p2">
+      <div class="label"><strong>P2. Clouded Moon Beam</strong><span>current colour grade applied</span></div>
+      <section class="stage"><div class="photo"></div><header class="nav"><nav class="links"><a class="active">Shop</a><a>Our Story</a><a>Rituals</a></nav><div class="logo">maple moon</div><nav class="links r"><a>Journal</a><a>Stockists</a><span class="cart">⌑</span></nav></header><div class="copy"><div class="top-creds"><span>Organic</span><span>No caffeine</span><span>Nothing added</span><span>Vegan</span></div><h2 class="word"><img src="assets/carob_wordmark.svg" alt="CAROB"></h2><p class="tag"><span>Naturally Sweet, Nothing Added.</span></p><div class="hero-mark"><img src="assets/mm_logo_icon_blk.svg" alt="Maple Moon"></div></div><div class="mist"></div><div class="bars"><img src="assets/product_shots/bar_peppermint.webp" alt=""><img src="assets/product_shots/bar_goji_coconut.webp" alt=""><img src="assets/product_shots/bar_pure_carob.webp" alt=""><img src="assets/product_shots/bar_cayenne.webp" alt=""><img src="assets/product_shots/bar_almond.webp" alt=""></div></section>
+      <div class="notes"><b>P2:</b> Strongest moon column. More dramatic, but may compete with CAROB if we do not mask it further.</div>
+    </article>
+
+    <article class="option p3">
+      <div class="label"><strong>P3. Dark Horizon</strong><span>current colour grade applied</span></div>
+      <section class="stage"><div class="photo"></div><header class="nav"><nav class="links"><a class="active">Shop</a><a>Our Story</a><a>Rituals</a></nav><div class="logo">maple moon</div><nav class="links r"><a>Journal</a><a>Stockists</a><span class="cart">⌑</span></nav></header><div class="copy"><div class="top-creds"><span>Organic</span><span>No caffeine</span><span>Nothing added</span><span>Vegan</span></div><h2 class="word"><img src="assets/carob_wordmark.svg" alt="CAROB"></h2><p class="tag"><span>Naturally Sweet, Nothing Added.</span></p><div class="hero-mark"><img src="assets/mm_logo_icon_blk.svg" alt="Maple Moon"></div></div><div class="mist"></div><div class="bars"><img src="assets/product_shots/bar_peppermint.webp" alt=""><img src="assets/product_shots/bar_goji_coconut.webp" alt=""><img src="assets/product_shots/bar_pure_carob.webp" alt=""><img src="assets/product_shots/bar_cayenne.webp" alt=""><img src="assets/product_shots/bar_almond.webp" alt=""></div></section>
+      <div class="notes"><b>P3:</b> Quietest and moodiest. Good if we want ocean presence without too much sky noise.</div>
+    </article>
+
+    <article class="option p4">
+      <div class="label"><strong>P4. Low Moon Path</strong><span>current colour grade applied</span></div>
+      <section class="stage"><div class="photo"></div><header class="nav"><nav class="links"><a class="active">Shop</a><a>Our Story</a><a>Rituals</a></nav><div class="logo">maple moon</div><nav class="links r"><a>Journal</a><a>Stockists</a><span class="cart">⌑</span></nav></header><div class="copy"><div class="top-creds"><span>Organic</span><span>No caffeine</span><span>Nothing added</span><span>Vegan</span></div><h2 class="word"><img src="assets/carob_wordmark.svg" alt="CAROB"></h2><p class="tag"><span>Naturally Sweet, Nothing Added.</span></p><div class="hero-mark"><img src="assets/mm_logo_icon_blk.svg" alt="Maple Moon"></div></div><div class="mist"></div><div class="bars"><img src="assets/product_shots/bar_peppermint.webp" alt=""><img src="assets/product_shots/bar_goji_coconut.webp" alt=""><img src="assets/product_shots/bar_pure_carob.webp" alt=""><img src="assets/product_shots/bar_cayenne.webp" alt=""><img src="assets/product_shots/bar_almond.webp" alt=""></div></section>
+      <div class="notes"><b>P4:</b> A calmer visible moon with strong reflection. Good candidate for premium without heavy cloud drama.</div>
+    </article>
+
+    <article class="option p5">
+      <div class="label"><strong>P5. Blue Calm Shore</strong><span>current colour grade applied</span></div>
+      <section class="stage"><div class="photo"></div><header class="nav"><nav class="links"><a class="active">Shop</a><a>Our Story</a><a>Rituals</a></nav><div class="logo">maple moon</div><nav class="links r"><a>Journal</a><a>Stockists</a><span class="cart">⌑</span></nav></header><div class="copy"><div class="top-creds"><span>Organic</span><span>No caffeine</span><span>Nothing added</span><span>Vegan</span></div><h2 class="word"><img src="assets/carob_wordmark.svg" alt="CAROB"></h2><p class="tag"><span>Naturally Sweet, Nothing Added.</span></p><div class="hero-mark"><img src="assets/mm_logo_icon_blk.svg" alt="Maple Moon"></div></div><div class="mist"></div><div class="bars"><img src="assets/product_shots/bar_peppermint.webp" alt=""><img src="assets/product_shots/bar_goji_coconut.webp" alt=""><img src="assets/product_shots/bar_pure_carob.webp" alt=""><img src="assets/product_shots/bar_cayenne.webp" alt=""><img src="assets/product_shots/bar_almond.webp" alt=""></div></section>
+      <div class="notes"><b>P5:</b> Cleanest ocean shelf. This may be the most usable plate if we want visible ocean while keeping the product row premium.</div>
+    </article>
+  </main>
+</body>
+</html>

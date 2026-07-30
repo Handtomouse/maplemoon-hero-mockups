@@ -1,0 +1,725 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Maple Moon - Carob Bars</title>
+  <!-- Skin sources: brand_kit.css (tokens/type) then shared.css. All page styles scoped under .wfpg. -->
+  <link rel="stylesheet" href="brand_kit.css">
+  <link rel="stylesheet" href="shared.css">
+  <style>
+    /* ============================================================
+       WF-PRODUCTGRID: faithful skin of the LEFT-CAROB + PRODUCT
+       row wireframe. Layout = wireframe; type/colour = brand kit.
+       Commerce chrome is display-only / inert.
+       ============================================================ */
+    .wfpg {
+      font-family: var(--mm-sans);
+      color: var(--text-primary);
+      background: var(--cream-warm);
+      -webkit-font-smoothing: antialiased;
+      line-height: var(--lh-body);
+    }
+    .wfpg *, .wfpg *::before, .wfpg *::after { box-sizing: border-box; }
+    .wfpg img { display: block; max-width: 100%; }
+    .wfpg .wrap { width: 100%; max-width: 1240px; margin: 0 auto; padding: 0 28px; }
+    .wfpg .serif { font-family: var(--mm-serif); }
+    .wfpg .muted { color: var(--text-secondary); }
+
+    /* ── Header / nav ── */
+    .wfpg .wf-header {
+      display: grid;
+      grid-template-columns: 1fr auto 1fr;
+      align-items: center;
+      padding: 20px 28px;
+      border-bottom: 1px solid var(--border-light);
+      background: var(--cream-warm);
+    }
+    .wfpg .wf-nav-left, .wfpg .wf-nav-right {
+      display: flex;
+      gap: 28px;
+      align-items: center;
+    }
+    .wfpg .wf-nav-right { justify-content: flex-end; }
+    .wfpg .wf-nav-left a, .wfpg .wf-nav-right a, .wfpg .wf-nav-right span {
+      font-family: var(--mm-sans);
+      font-size: var(--fs-sm);
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--text-secondary);
+      text-decoration: none;
+    }
+    .wfpg .wf-nav-left a:hover { color: var(--text-primary); }
+    .wfpg .wf-logo {
+      font-family: var(--mm-serif);
+      font-weight: 400;
+      font-size: 1.6rem;
+      letter-spacing: 0.04em;
+      color: var(--text-primary);
+      text-align: center;
+      white-space: nowrap;
+    }
+    .wfpg .wf-currency, .wfpg .wf-cart {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      cursor: default;
+    }
+    .wfpg .wf-cart-badge {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 18px; height: 18px;
+      border-radius: var(--radius-full);
+      background: var(--carob-warm);
+      color: var(--cream-warm);
+      font-size: 0.6rem;
+      font-family: var(--mm-sans);
+    }
+    .wfpg .wf-cart svg { width: 20px; height: 20px; stroke: var(--text-primary); }
+
+    /* ── Hero ── */
+    .wfpg .wf-hero {
+      position: relative;
+      overflow: hidden;
+      background:
+        linear-gradient(180deg, rgba(250,247,240,0.35), rgba(250,247,240,0.65)),
+        url("assets/hero_shots/blue_fog.png") center top / cover no-repeat;
+      padding: 84px 0 56px;
+    }
+    .wfpg .wf-hero .wrap { text-align: left; }
+    .wfpg .wf-hero h1 {
+      font-family: var(--mm-serif);
+      font-weight: 400;
+      font-size: clamp(4rem, 16vw, 13rem);
+      line-height: 0.92;
+      letter-spacing: 0.01em;
+      color: var(--carob-warm);
+      margin: 0;
+    }
+    .wfpg .wf-hero .tagline {
+      font-family: var(--mm-serif);
+      font-size: clamp(1.2rem, 2.6vw, 1.9rem);
+      color: var(--text-primary);
+      text-align: center;
+      margin: 18px 0 0;
+    }
+    .wfpg .wf-hero .hero-cta-row { text-align: center; margin-top: 22px; }
+
+    /* ── Pills / buttons (inert) ── */
+    .wfpg .pill-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      font-family: var(--mm-sans);
+      font-size: var(--fs-sm);
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--text-primary);
+      background: transparent;
+      border: 1px solid var(--carob-mid);
+      border-radius: var(--radius-pill);
+      padding: 13px 28px;
+      cursor: default;
+      transition: background var(--ease-default), color var(--ease-default);
+    }
+    .wfpg .pill-btn:hover { background: var(--carob-warm); color: var(--cream-warm); border-color: var(--carob-warm); }
+    .wfpg .pill-btn.solid { background: var(--carob-warm); color: var(--cream-warm); border-color: var(--carob-warm); }
+    .wfpg .pill-btn.solid:hover { background: var(--carob-mid); border-color: var(--carob-mid); }
+
+    /* ── Category tabs ── */
+    .wfpg .wf-tabs-section { padding: 30px 0 8px; }
+    .wfpg .wf-tabs {
+      display: flex;
+      justify-content: space-between;
+      gap: 8px;
+      max-width: 880px;
+      margin: 0 auto;
+      padding: 14px 22px;
+      border: 1px solid var(--border-light);
+      border-radius: var(--radius-pill);
+      background: var(--cream-warm);
+    }
+    .wfpg .wf-tab {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 6px;
+      border-radius: var(--radius-md);
+      background: transparent;
+      border: 0;
+      cursor: default;
+      font-family: var(--mm-sans);
+      font-size: var(--fs-sm);
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--text-secondary);
+    }
+    .wfpg .wf-tab.active { background: var(--warm-bg-alt); color: var(--text-primary); }
+    .wfpg .wf-tab svg { width: 22px; height: 22px; stroke: currentColor; fill: none; }
+
+    /* ── Product row (carousel as drawn) ── */
+    .wfpg .wf-products { padding: 26px 0 18px; }
+    .wfpg .wf-carousel {
+      display: flex;
+      align-items: stretch;
+      gap: 10px;
+    }
+    .wfpg .wf-arrow {
+      flex: 0 0 auto;
+      align-self: center;
+      width: 40px; height: 40px;
+      border-radius: var(--radius-full);
+      border: 1px solid var(--border-light);
+      background: var(--cream-warm);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: default;
+      color: var(--text-secondary);
+    }
+    .wfpg .wf-arrow svg { width: 16px; height: 16px; stroke: currentColor; fill: none; }
+    .wfpg .wf-track {
+      flex: 1;
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      gap: 12px;
+      align-items: end;
+    }
+    .wfpg .wf-card {
+      background: var(--cream-warm);
+      border: 1px solid var(--border-light);
+      border-radius: var(--radius-sm);
+      padding: 16px 12px 18px;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .wfpg .wf-card.featured {
+      transform: scale(1.06);
+      box-shadow: 0 18px 36px rgba(90,60,40,0.12);
+      border-color: var(--carob-light);
+      z-index: 2;
+    }
+    .wfpg .wf-card .packshot {
+      width: auto;
+      height: 96px;
+      object-fit: contain;
+      margin-bottom: 12px;
+    }
+    .wfpg .wf-card.featured .packshot { height: 124px; }
+    .wfpg .wf-card .flavour {
+      font-family: var(--mm-sans);
+      font-size: var(--fs-xs);
+      line-height: 1.3;
+      color: var(--text-secondary);
+      min-height: 2.6em;
+    }
+    .wfpg .wf-card .brandline {
+      font-family: var(--mm-sans);
+      font-size: 0.55rem;
+      letter-spacing: 0.08em;
+      color: var(--text-muted);
+      margin-top: 4px;
+    }
+    .wfpg .wf-card .title {
+      font-family: var(--mm-serif);
+      font-weight: 400;
+      font-size: 1.05rem;
+      line-height: 1.05;
+      color: var(--text-primary);
+      margin-top: 12px;
+    }
+    .wfpg .wf-card.featured .title { font-size: 1.5rem; }
+    .wfpg .wf-card .subnote {
+      font-family: var(--mm-sans);
+      font-size: 0.55rem;
+      color: var(--text-muted);
+      margin-top: 8px;
+    }
+    .wfpg .wf-card .weight {
+      font-family: var(--mm-sans);
+      font-size: var(--fs-xs);
+      color: var(--text-secondary);
+      margin-top: 6px;
+    }
+
+    /* ── Flavour pills ── */
+    .wfpg .wf-flavours {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 0;
+      margin: 22px auto 0;
+      max-width: 880px;
+      border: 1px solid var(--border-light);
+      border-radius: var(--radius-pill);
+      overflow: hidden;
+    }
+    .wfpg .wf-flavour {
+      flex: 1;
+      text-align: center;
+      padding: 13px 14px;
+      font-family: var(--mm-sans);
+      font-size: var(--fs-xs);
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--text-secondary);
+      cursor: default;
+      line-height: 1.3;
+      border-right: 1px solid var(--border-light);
+    }
+    .wfpg .wf-flavour:last-child { border-right: 0; }
+    .wfpg .wf-flavour.active {
+      background: var(--warm-bg-alt);
+      color: var(--text-primary);
+      border-radius: var(--radius-pill);
+    }
+
+    /* ── What is carob? ── */
+    .wfpg .wf-edu { padding: 56px 0; }
+    .wfpg .wf-edu .grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 48px;
+      align-items: center;
+    }
+    .wfpg .wf-edu .edu-img {
+      width: 100%;
+      height: 320px;
+      object-fit: cover;
+      border-radius: var(--radius-sm);
+      border: 1px solid var(--border-light);
+    }
+    .wfpg .wf-edu h2 {
+      font-family: var(--mm-serif);
+      font-weight: 400;
+      font-size: var(--fs-2xl);
+      color: var(--text-primary);
+      margin-bottom: 18px;
+    }
+    .wfpg .wf-edu p {
+      font-family: var(--mm-sans);
+      font-size: var(--fs-md);
+      color: var(--text-secondary);
+      max-width: 38ch;
+      margin-bottom: 22px;
+    }
+    .wfpg .link-arrow {
+      font-family: var(--mm-sans);
+      font-size: var(--fs-sm);
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--text-primary);
+      text-decoration: none;
+      display: inline-flex;
+      gap: 8px;
+      align-items: center;
+    }
+    .wfpg .link-arrow:hover { color: var(--carob-warm); }
+
+    /* ── Credential strip ── */
+    .wfpg .wf-creds {
+      border-top: 1px solid var(--border-light);
+      border-bottom: 1px solid var(--border-light);
+      padding: 30px 0;
+    }
+    .wfpg .wf-creds .grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 24px;
+    }
+    .wfpg .wf-cred {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      padding: 0 8px;
+      border-left: 1px solid var(--border-light);
+    }
+    .wfpg .wf-cred:first-child { border-left: 0; }
+    .wfpg .wf-cred svg { width: 26px; height: 26px; stroke: var(--carob-mid); fill: none; flex: 0 0 auto; }
+    .wfpg .wf-cred .ctitle {
+      font-family: var(--mm-sans);
+      font-size: var(--fs-sm);
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--text-primary);
+    }
+    .wfpg .wf-cred .csub {
+      font-family: var(--mm-sans);
+      font-size: var(--fs-xs);
+      color: var(--text-secondary);
+    }
+
+    /* ── Ritual band ── */
+    .wfpg .wf-ritual { padding: 60px 0; }
+    .wfpg .wf-ritual .grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+      align-items: center;
+    }
+    .wfpg .wf-ritual h2 {
+      font-family: var(--mm-serif);
+      font-weight: 400;
+      font-size: var(--fs-2xl);
+      color: var(--text-primary);
+      margin-bottom: 28px;
+    }
+    .wfpg .wf-ritual ul { list-style: none; }
+    .wfpg .wf-ritual li {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      padding: 12px 0;
+      border-bottom: 1px solid var(--border-light);
+      font-family: var(--mm-sans);
+      font-size: var(--fs-sm);
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--text-primary);
+    }
+    .wfpg .wf-ritual li svg { width: 20px; height: 20px; stroke: var(--carob-mid); fill: none; }
+    .wfpg .wf-ritual .ritual-img {
+      width: 100%;
+      height: 360px;
+      object-fit: contain;
+      object-position: center;
+    }
+
+    /* ── CTA band ── */
+    .wfpg .wf-cta {
+      background: var(--warm-bg);
+      text-align: center;
+      padding: 60px 0;
+    }
+    .wfpg .wf-cta h2 {
+      font-family: var(--mm-serif);
+      font-weight: 400;
+      font-size: var(--fs-2xl);
+      color: var(--text-primary);
+      margin-bottom: 12px;
+    }
+    .wfpg .wf-cta p {
+      font-family: var(--mm-sans);
+      font-size: var(--fs-md);
+      color: var(--text-secondary);
+      margin-bottom: 26px;
+    }
+
+    /* ── Footer trust row ── */
+    .wfpg .wf-foot {
+      border-top: 1px solid var(--border-light);
+      padding: 30px 0;
+      background: var(--cream-warm);
+    }
+    .wfpg .wf-foot .grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 24px;
+    }
+    .wfpg .wf-foot-item {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      padding: 0 8px;
+      border-left: 1px solid var(--border-light);
+    }
+    .wfpg .wf-foot-item:first-child { border-left: 0; }
+    .wfpg .wf-foot-item svg { width: 24px; height: 24px; stroke: var(--carob-mid); fill: none; flex: 0 0 auto; }
+    .wfpg .wf-foot-item .ftitle {
+      font-family: var(--mm-sans);
+      font-size: var(--fs-sm);
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--text-primary);
+    }
+    .wfpg .wf-foot-item .fsub {
+      font-family: var(--mm-sans);
+      font-size: var(--fs-xs);
+      color: var(--text-secondary);
+    }
+
+    /* ── Responsive ── */
+    @media (max-width: 900px) {
+      .wfpg .wf-header { grid-template-columns: auto 1fr; gap: 16px; }
+      .wfpg .wf-nav-left { display: none; }
+      .wfpg .wf-track { grid-template-columns: repeat(3, 1fr); }
+      .wfpg .wf-card.featured { transform: none; }
+      .wfpg .wf-edu .grid, .wfpg .wf-ritual .grid { grid-template-columns: 1fr; }
+      .wfpg .wf-creds .grid, .wfpg .wf-foot .grid { grid-template-columns: repeat(2, 1fr); }
+      .wfpg .wf-cred:nth-child(3), .wfpg .wf-foot-item:nth-child(3) { border-left: 0; }
+      .wfpg .wf-tabs { flex-wrap: wrap; }
+      .wfpg .wf-flavours { flex-wrap: wrap; }
+      .wfpg .wf-flavour { flex: 1 1 33%; }
+    }
+    @media (max-width: 560px) {
+      .wfpg .wf-track { grid-template-columns: repeat(2, 1fr); }
+      .wfpg .wf-creds .grid, .wfpg .wf-foot .grid { grid-template-columns: 1fr; }
+      .wfpg .wf-cred, .wfpg .wf-foot-item { border-left: 0; }
+    }
+  </style>
+</head>
+<body>
+<div class="wfpg">
+
+  <!-- ============ HEADER / NAV (commerce chrome, inert) ============ -->
+  <header class="wf-header">
+    <nav class="wf-nav-left" aria-label="Primary">
+      <a href="#" aria-disabled="true">Shop</a>
+      <a href="#" aria-disabled="true">Our Story</a>
+      <a href="#" aria-disabled="true">Rituals</a>
+      <a href="#" aria-disabled="true">Journal</a>
+    </nav>
+    <div class="wf-logo serif">maple moon</div>
+    <div class="wf-nav-right">
+      <a href="#" aria-disabled="true">Stockists</a>
+      <span class="wf-currency" aria-disabled="true">EUR &euro; &#9662;</span>
+      <span class="wf-cart" aria-disabled="true" aria-label="Cart, 0 items">
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="1.5"><path d="M6 8h12l-1 11H7L6 8z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg>
+        <span class="wf-cart-badge">0</span>
+      </span>
+    </div>
+  </header>
+
+  <!-- ============ HERO ============ -->
+  <section class="wf-hero" aria-label="Carob">
+    <div class="wrap">
+      <h1 class="serif">CAROB</h1>
+      <p class="tagline">Naturally Sweet, Nothing Added.</p>
+      <div class="hero-cta-row">
+        <a href="#products" class="pill-btn">Explore Our Bars</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CATEGORY TABS (inert) ============ -->
+  <section class="wf-tabs-section">
+    <div class="wrap">
+      <div class="wf-tabs" role="tablist" aria-label="Product categories">
+        <button class="wf-tab" role="tab" aria-disabled="true">
+          <svg viewBox="0 0 24 24" stroke-width="1.5"><path d="M3 7l9-4 9 4v10l-9 4-9-4V7z"/><path d="M3 7l9 4 9-4M12 11v10"/></svg>
+          Packs
+        </button>
+        <button class="wf-tab" role="tab" aria-disabled="true">
+          <svg viewBox="0 0 24 24" stroke-width="1.5"><path d="M18 14a8 8 0 1 1-7-11 6 6 0 0 0 7 11z"/></svg>
+          Moons
+        </button>
+        <button class="wf-tab active" role="tab" aria-selected="true" aria-disabled="true">
+          <svg viewBox="0 0 24 24" stroke-width="1.5"><rect x="3.5" y="3.5" width="7" height="7"/><rect x="13.5" y="3.5" width="7" height="7"/><rect x="3.5" y="13.5" width="7" height="7"/><rect x="13.5" y="13.5" width="7" height="7"/></svg>
+          Bars
+        </button>
+        <button class="wf-tab" role="tab" aria-disabled="true">
+          <svg viewBox="0 0 24 24" stroke-width="1.5"><circle cx="6" cy="6" r="1.4"/><circle cx="12" cy="6" r="1.4"/><circle cx="18" cy="6" r="1.4"/><circle cx="6" cy="12" r="1.4"/><circle cx="12" cy="12" r="1.4"/><circle cx="18" cy="12" r="1.4"/><circle cx="6" cy="18" r="1.4"/><circle cx="12" cy="18" r="1.4"/><circle cx="18" cy="18" r="1.4"/></svg>
+          Bites
+        </button>
+        <button class="wf-tab" role="tab" aria-disabled="true">
+          <svg viewBox="0 0 24 24" stroke-width="1.5"><path d="M9 3h6M10 3v3M14 3v3M9 6c-1 2-3 4-3 9a4 4 0 0 0 4 4h4a4 4 0 0 0 4-4c0-5-2-7-3-9"/></svg>
+          Elixirs
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PRODUCT CAROUSEL + FLAVOUR PILLS ============ -->
+  <!-- Wireframe draws a single 6-card row (carousel, centre card enlarged, L/R arrows).
+       The brief calls this a "product grid"; reproduced as the wireframe shows it. Inert. -->
+  <section class="wf-products" id="products" aria-label="Carob bars">
+    <div class="wrap">
+      <div class="wf-carousel">
+        <button class="wf-arrow" aria-label="Previous" aria-disabled="true">
+          <svg viewBox="0 0 24 24" stroke-width="1.8"><path d="M15 5l-7 7 7 7"/></svg>
+        </button>
+        <div class="wf-track">
+
+          <article class="wf-card">
+            <img class="packshot" src="assets/hero/bar_peppermint_hero.png" alt="Peppermint and buckwheat crisp carob bar">
+            <div class="flavour">peppermint<br>&amp; buckwheat<br>crisp</div>
+            <div class="brandline">maple moon</div>
+            <div class="title serif">CAROB BAR</div>
+            <div class="subnote">naturally sweet, nothing added.</div>
+            <div class="weight">90g</div>
+          </article>
+
+          <article class="wf-card">
+            <img class="packshot" src="assets/hero/moon_pcar_hero_a.png" alt="Roasted hazelnut carob bar">
+            <div class="flavour">roasted<br>hazelnut</div>
+            <div class="brandline">maple moon</div>
+            <div class="title serif">CAROB BAR</div>
+            <div class="subnote">naturally sweet, nothing added.</div>
+            <div class="weight">90g</div>
+          </article>
+
+          <article class="wf-card featured">
+            <img class="packshot" src="assets/hero/bar_pcar_hero.png" alt="Pure carob and cacao butter carob bar">
+            <div class="flavour">pure carob<br>&amp; cacao<br>butter</div>
+            <div class="brandline">maple moon</div>
+            <div class="title serif">CAROB BAR</div>
+            <div class="subnote">naturally sweet, nothing added.</div>
+            <div class="weight">90g e</div>
+          </article>
+
+          <article class="wf-card">
+            <img class="packshot" src="assets/hero/eclipse_coconut_hero.png" alt="Coconut and goji carob bar">
+            <div class="flavour">coconut<br>&amp; goji</div>
+            <div class="brandline">maple moon</div>
+            <div class="title serif">CAROB BAR</div>
+            <div class="subnote">naturally sweet, nothing added.</div>
+            <div class="weight">90g</div>
+          </article>
+
+          <article class="wf-card">
+            <img class="packshot" src="assets/hero/bar_chilli_hero.png" alt="Cayenne chilli carob bar">
+            <div class="flavour">cayenne<br>chilli</div>
+            <div class="brandline">maple moon</div>
+            <div class="title serif">CAROB BAR</div>
+            <div class="subnote">naturally sweet, nothing added.</div>
+            <div class="weight">90g</div>
+          </article>
+
+          <article class="wf-card">
+            <img class="packshot" src="assets/hero/bar_pcar_hero_b.png" alt="Almond and celtic salt carob bar">
+            <div class="flavour">almond &amp;<br>celtic salt</div>
+            <div class="brandline">maple moon</div>
+            <div class="title serif">CAROB BAR</div>
+            <div class="subnote">naturally sweet, nothing added.</div>
+            <div class="weight">90g</div>
+          </article>
+
+        </div>
+        <button class="wf-arrow" aria-label="Next" aria-disabled="true">
+          <svg viewBox="0 0 24 24" stroke-width="1.8"><path d="M9 5l7 7-7 7"/></svg>
+        </button>
+      </div>
+
+      <div class="wf-flavours" role="tablist" aria-label="Flavours">
+        <div class="wf-flavour active" aria-disabled="true">Pure</div>
+        <div class="wf-flavour" aria-disabled="true">Peppermint &amp; Buckwheat</div>
+        <div class="wf-flavour" aria-disabled="true">Roasted Hazelnut</div>
+        <div class="wf-flavour" aria-disabled="true">Coconut &amp; Goji</div>
+        <div class="wf-flavour" aria-disabled="true">Cayenne Chilli</div>
+        <div class="wf-flavour" aria-disabled="true">Almond &amp; Celtic Salt</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ WHAT IS CAROB? ============ -->
+  <section class="wf-edu" aria-label="What is carob?">
+    <div class="wrap">
+      <div class="grid">
+        <img class="edu-img" src="assets/stock/stock_carob_pods_hand.jpg" alt="Carob pods held in hand">
+        <div>
+          <h2 class="serif">What is carob?</h2>
+          <p>Carob is a naturally sweet pod from the Mediterranean. We turn it into delicious bars with simple, real ingredients.</p>
+          <a class="link-arrow" href="products/pure-carob-bar.html">Learn More <span aria-hidden="true">&rarr;</span></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CREDENTIAL STRIP ============ -->
+  <section class="wf-creds" aria-label="Why carob">
+    <div class="wrap">
+      <div class="grid">
+        <div class="wf-cred">
+          <svg viewBox="0 0 24 24" stroke-width="1.5"><circle cx="12" cy="12" r="4"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M5 5l2 2M17 17l2 2M19 5l-2 2M7 17l-2 2"/></svg>
+          <div>
+            <div class="ctitle">Naturally Sweet</div>
+            <div class="csub">From the carob pod</div>
+          </div>
+        </div>
+        <div class="wf-cred">
+          <svg viewBox="0 0 24 24" stroke-width="1.5"><path d="M20 4C9 5 4 11 4 18c4-1 8-4 11-9"/><path d="M4 20c2-4 6-8 11-10"/></svg>
+          <div>
+            <div class="ctitle">No Caffeine</div>
+            <div class="csub">Gentle on your body</div>
+          </div>
+        </div>
+        <div class="wf-cred">
+          <svg viewBox="0 0 24 24" stroke-width="1.5"><path d="M12 20s-7-4.5-7-9.5A3.5 3.5 0 0 1 12 7a3.5 3.5 0 0 1 7 3.5C19 15.5 12 20 12 20z"/></svg>
+          <div>
+            <div class="ctitle">Nothing Added</div>
+            <div class="csub">Just real ingredients</div>
+          </div>
+        </div>
+        <div class="wf-cred">
+          <svg viewBox="0 0 24 24" stroke-width="1.5"><path d="M12 3c4 5 6 8 6 11a6 6 0 0 1-12 0c0-3 2-6 6-11z"/></svg>
+          <div>
+            <div class="ctitle">Organic &amp; Vegan</div>
+            <div class="csub">Made with care</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ A SWEETER KIND OF RITUAL ============ -->
+  <section class="wf-ritual" aria-label="A sweeter kind of ritual">
+    <div class="wrap">
+      <div class="grid">
+        <div>
+          <h2 class="serif">A sweeter kind of ritual.</h2>
+          <ul>
+            <li><svg viewBox="0 0 24 24" stroke-width="1.5"><path d="M12 20c0-6 3-9 8-10-1 6-4 9-8 10z"/><path d="M12 20c0-4-2-6-6-7 1 4 3 6 6 7z"/></svg> After Dinner</li>
+            <li><svg viewBox="0 0 24 24" stroke-width="1.5"><path d="M18 14a8 8 0 1 1-7-11 6 6 0 0 0 7 11z"/></svg> In The Evening</li>
+            <li><svg viewBox="0 0 24 24" stroke-width="1.5"><rect x="5" y="8" width="14" height="12" rx="1.5"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg> On The Go</li>
+            <li><svg viewBox="0 0 24 24" stroke-width="1.5"><circle cx="12" cy="12" r="4"/><path d="M12 3v2M12 19v2M3 12h2M19 12h2M5.6 5.6l1.4 1.4M17 17l1.4 1.4M18.4 5.6L17 7M7 17l-1.4 1.4"/></svg> Anytime</li>
+          </ul>
+        </div>
+        <img class="ritual-img" src="assets/hero/bar_pcar_hero.png" alt="Pure carob and cacao butter carob bar">
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CTA BAND ============ -->
+  <section class="wf-cta" aria-label="Ready to feel the difference">
+    <div class="wrap">
+      <h2 class="serif">Ready to feel the difference?</h2>
+      <p>Simple ingredients. Real nourishment. Naturally sweet.</p>
+      <a href="#products" class="pill-btn solid">Shop Carob Bars</a>
+    </div>
+  </section>
+
+  <!-- ============ FOOTER TRUST ROW ============ -->
+  <footer class="wf-foot">
+    <div class="wrap">
+      <div class="grid">
+        <div class="wf-foot-item">
+          <svg viewBox="0 0 24 24" stroke-width="1.5"><path d="M2 7h11v9H2zM13 10h5l3 3v3h-8z"/><circle cx="6" cy="18" r="1.6"/><circle cx="17" cy="18" r="1.6"/></svg>
+          <div>
+            <div class="ftitle">Free Shipping</div>
+            <div class="fsub">On orders over &euro;30</div>
+          </div>
+        </div>
+        <div class="wf-foot-item">
+          <svg viewBox="0 0 24 24" stroke-width="1.5"><rect x="5" y="10" width="14" height="10" rx="1.5"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/><circle cx="12" cy="15" r="1.2"/></svg>
+          <div>
+            <div class="ftitle">Secure Payments</div>
+            <div class="fsub">Safe &amp; easy checkout</div>
+          </div>
+        </div>
+        <div class="wf-foot-item">
+          <svg viewBox="0 0 24 24" stroke-width="1.5"><path d="M12 21s-7-6-7-11a7 7 0 0 1 14 0c0 5-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>
+          <div>
+            <div class="ftitle">Find Us In</div>
+            <div class="fsub">Selected stockists</div>
+          </div>
+        </div>
+        <div class="wf-foot-item">
+          <svg viewBox="0 0 24 24" stroke-width="1.5"><path d="M12 6c-2-1.5-5-1.5-7-1v13c2-.5 5-.5 7 1 2-1.5 5-1.5 7-1V5c-2-.5-5-.5-7 1z"/><path d="M12 6v13"/></svg>
+          <div>
+            <div class="ftitle">Journal</div>
+            <div class="fsub">Stories &amp; inspiration</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</div>
+</body>
+</html>

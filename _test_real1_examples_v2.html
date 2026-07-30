@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>real_1 amends v2 (native language)</title>
+<link rel="stylesheet" href="brand_kit.css">
+<style>
+@font-face{font-family:'Mackinac';src:local('FONTSPRING DEMO - P22 Mackinac Pro Book'),local('FONTSPRINGDEMO-P22MackinacProBookRegular'),local('P22 Mackinac Pro');font-weight:400;font-display:swap;}
+@font-face{font-family:'Mackinac';src:local('FONTSPRING DEMO - P22 Mackinac Pro Medium'),local('FONTSPRINGDEMO-P22MackinacProMediumRegular');font-weight:500;font-display:swap;}
+
+body{margin:0;background:#1a1a1a;}
+.wf{
+  --mm-serif:'Mackinac','P22 Mackinac Pro',Georgia,serif;
+  --ink:#2c2a26;--ink-soft:#6f6a62;--ink-faint:#a39d92;
+  --paper:#f4f2ed;--paper2:#eceae4;--card:#fbfaf7;--line:rgba(44,42,38,.14);--line-soft:rgba(44,42,38,.08);
+  background:var(--paper);color:var(--ink);
+  font-family:var(--mm-sans,'Neue Haas Grotesk Display Pro',Helvetica,sans-serif);font-weight:400;line-height:1.5;-webkit-font-smoothing:antialiased;
+}
+.wf *,.wf *::before,.wf *::after{box-sizing:border-box;}
+.wf img{max-width:100%;display:block;}
+.wf a{color:inherit;text-decoration:none;}
+.wf .wrap{max-width:1180px;margin:0 auto;padding:0 28px;}
+.wf .serif{font-family:var(--mm-serif);}
+.amp{font-family:Georgia,'Times New Roman',serif;}
+
+/* contained editorial split — real_1's native body language (from .wf-edu) */
+.wf-edu{display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:center;padding:56px 0;}
+.wf-edu .ill{border-radius:6px;overflow:hidden;aspect-ratio:16/10;background:var(--card);}
+.wf-edu .ill img{width:100%;height:100%;object-fit:cover;}
+.wf-edu h2{font-family:var(--mm-serif);font-weight:500;font-size:1.8rem;margin:0 0 16px;}
+.wf-edu p{color:var(--ink-soft);font-size:.92rem;max-width:40ch;margin:0 0 20px;line-height:1.65;}
+/* layout variation: image-dominant, taller card (breaks the repeating 50/50 rhythm) */
+.wf-edu.img-lead{grid-template-columns:1.35fr 1fr;gap:56px;padding:64px 0;}
+.wf-edu.img-lead .ill{aspect-ratio:4/5;}
+.wf-more{font-size:.66rem;letter-spacing:.12em;text-transform:uppercase;display:inline-flex;gap:8px;align-items:center;border-bottom:1px solid var(--ink);padding-bottom:3px;color:var(--ink);}
+.kicker{font-size:.62rem;letter-spacing:.18em;text-transform:uppercase;color:var(--ink-faint);display:block;margin-bottom:12px;}
+
+/* inline moments row (ink) — replaces the icon checklist */
+.moments-inline{display:flex;flex-wrap:wrap;gap:0;margin-top:4px;}
+.moments-inline span{font-size:.64rem;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-soft);padding:0 14px;position:relative;}
+.moments-inline span:first-child{padding-left:0;}
+.moments-inline span+span::before{content:"";position:absolute;left:0;top:50%;width:1px;height:10px;background:var(--line);transform:translateY(-50%);}
+
+/* divider to echo the section rhythm */
+.hr{border:0;border-top:1px solid var(--line-soft);max-width:1180px;margin:0 auto;}
+
+/* example-page chrome (NOT design) */
+.exlabel{background:#111;color:#f4efe7;font-family:-apple-system,Helvetica,sans-serif;padding:12px 20px;}
+.exlabel.bench{background:#3a4a2f;}
+.exlabel .n{font-size:13px;font-weight:600;letter-spacing:.04em;}
+.exlabel .s{font-size:11px;color:#b8b3a8;margin-top:2px;}
+.exspacer{height:12px;background:#1a1a1a;}
+
+@media (max-width:900px){
+  /* include .img-lead explicitly — its 2-class specificity (0,2,0) would otherwise beat a bare .wf-edu in the media query and refuse to stack */
+  .wf-edu,.wf-edu.img-lead{grid-template-columns:1fr;gap:24px;padding:40px 0;}
+  .wf-edu.img-lead .ill{aspect-ratio:16/10;}
+}
+</style>
+</head>
+<body>
+<div class="wf">
+
+  <!-- ===== BENCHMARK: real_1's existing "What is carob" (the language to match) ===== -->
+  <div class="exlabel bench"><div class="n">BENCHMARK · real_1's existing "What is carob" section (this is the look to match)</div><div class="s">Contained rounded card · ink text on paper · calm 56px rhythm</div></div>
+  <section class="wrap"><div class="wf-edu">
+    <div class="ill"><img src="assets/hero_shots/chatgpt_carob_pods.jpg" alt="Whole carob pods on a cornflower background" loading="lazy"></div>
+    <div>
+      <h2 class="serif">What is carob?</h2>
+      <p>Carob is a naturally sweet pod that grows in the warm Australian sun. We slow-roast it and turn it into bars with simple, real ingredients. No caffeine, no cacao, nothing added.</p>
+      <a class="wf-more" href="#">Learn More</a>
+    </div>
+  </div></section>
+
+  <hr class="hr">
+  <div class="exspacer"></div>
+
+  <!-- ===== v2 EXAMPLE 1: Brunswick origin band, native language ===== -->
+  <div class="exlabel"><div class="n">v2 · Brunswick origin band (rebuilt to match)</div><div class="s">Same contained card + ink-on-paper as the benchmark · image right, copy left · place-true copy</div></div>
+  <section class="wrap"><div class="wf-edu">
+    <div>
+      <span class="kicker">Our Story</span>
+      <h2 class="serif">Handmade in Brunswick Heads.</h2>
+      <p>Every Maple Moon bar is made by hand, in small batches, on the far north coast of New South Wales. Australian-grown carob pods, sun-ripened and slow-roasted, then milled with cacao butter and nothing else.</p>
+      <a class="wf-more" href="our-story.html">Read our story</a>
+    </div>
+    <div class="ill"><img src="assets/hero_shots/mm_falai_brunswick.png" alt="The far north coast at golden hour, mist over the water" loading="lazy"></div>
+  </div></section>
+
+  <hr class="hr">
+  <div class="exspacer"></div>
+
+  <!-- ===== v2 EXAMPLE 2: ritual, native language, concept rethought ===== -->
+  <div class="exlabel"><div class="n">v3 · Ritual section (on-theme image + varied layout)</div><div class="s">Image-dominant + taller card (breaks the 50/50 rhythm) · on-theme moons-lifestyle evening scene · icon checklist + plinth dropped for an editorial lede + inline moments</div></div>
+  <section class="wrap"><div class="wf-edu img-lead">
+    <div class="ill"><img src="assets/hero_shots/hero_moons_lifestyle.png" alt="Carob moons and a warm cup on a table at dusk, the ocean behind" loading="lazy"></div>
+    <div>
+      <h2 class="serif">A sweeter kind of ritual.</h2>
+      <p>For the slow part of the evening, when the light goes soft. Naturally sweet, with no caffeine and nothing it does not need.</p>
+      <div class="moments-inline"><span>After dinner</span><span>In the evening</span><span>On the go</span><span>Anytime</span></div>
+    </div>
+  </div></section>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>real_1 — before / after</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { height: 100%; background: #1a1a1a; font-family: -apple-system, "Helvetica Neue", sans-serif; }
+  .cols { display: flex; height: 100vh; }
+  .col { flex: 1 1 0; min-width: 0; display: flex; flex-direction: column; border-right: 2px solid #000; }
+  .col:last-child { border-right: 0; }
+  .label { flex: 0 0 auto; padding: 10px 16px; background: #111; color: #f4efe7; }
+  .label.after { background: #25351f; }
+  .label .name { font-size: 13px; font-weight: 600; letter-spacing: .03em; }
+  .label .sub { font-size: 11px; color: #9a958c; margin-top: 2px; }
+  .scroller { flex: 1 1 auto; overflow: auto; background: #fff; position: relative; }
+  .wrap { transform-origin: top left; }
+  iframe { width: 1280px; border: 0; display: block; }
+</style>
+</head>
+<body>
+<div class="cols">
+  <div class="col">
+    <div class="label"><div class="name">BEFORE — real_1 original</div><div class="sub">homepage_real_1.html (the picked variant, untouched)</div></div>
+    <div class="scroller"><div class="wrap"><iframe src="/homepage_real_1.html" scrolling="no"></iframe></div></div>
+  </div>
+  <div class="col">
+    <div class="label after"><div class="name">AFTER — real_1 lead (refined)</div><div class="sub">homepage_real_1_lead.html (all 9 amends)</div></div>
+    <div class="scroller"><div class="wrap"><iframe src="/homepage_real_1_lead.html" scrolling="no"></iframe></div></div>
+  </div>
+</div>
+<script>
+  var BASE = 1280;
+  function fit() {
+    document.querySelectorAll('.col').forEach(function(col){
+      var scroller = col.querySelector('.scroller');
+      var wrap = col.querySelector('.wrap');
+      var iframe = col.querySelector('iframe');
+      var scale = scroller.clientWidth / BASE;
+      wrap.style.transform = 'scale(' + scale + ')';
+      function sync() {
+        try {
+          var doc = iframe.contentWindow.document;
+          var h = Math.max(doc.body.scrollHeight, doc.documentElement.scrollHeight);
+          if (h > 100) { iframe.style.height = h + 'px'; wrap.style.height = (h * scale) + 'px'; }
+        } catch (e) {
+          iframe.style.height = '5600px';
+          wrap.style.height = (5600 * scale) + 'px';
+        }
+      }
+      sync(); setTimeout(sync, 700); setTimeout(sync, 1800);
+    });
+  }
+  window.addEventListener('resize', fit);
+  window.addEventListener('load', function(){ setTimeout(fit, 300); });
+  fit();
+</script>
+</body>
+</html>

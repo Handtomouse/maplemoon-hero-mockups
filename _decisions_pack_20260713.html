@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MapleMoon — Decisions Pack — 13 Jul 2026 (INTERNAL)</title>
+<style>
+  :root{--ink:#2c2a26;--soft:#6f6a62;--faint:#a39d92;--paper:#f4f2ed;--card:#fbfaf7;--line:rgba(44,42,38,.14);--accent:#4074b6;}
+  *{box-sizing:border-box;}
+  body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.55 Helvetica,Arial,sans-serif;-webkit-font-smoothing:antialiased;}
+  .wrap{max-width:920px;margin:0 auto;padding:48px 28px 80px;}
+  h1,h2,h3{font-family:Georgia,'Times New Roman',serif;font-weight:500;}
+  h1{font-size:2rem;margin:0 0 4px;}
+  h2{font-size:1.35rem;margin:44px 0 14px;border-top:1px solid var(--line);padding-top:28px;}
+  h3{font-size:1.05rem;margin:22px 0 8px;}
+  .meta{color:var(--soft);font-size:.85rem;margin-bottom:6px;}
+  .internal{display:inline-block;font-size:.66rem;letter-spacing:.14em;text-transform:uppercase;border:1px solid var(--ink);border-radius:50px;padding:4px 12px;margin-bottom:18px;}
+  .ask{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:20px 24px;margin:14px 0;}
+  .ask .n{display:inline-grid;place-items:center;width:26px;height:26px;border-radius:50%;background:var(--ink);color:var(--paper);font-size:.8rem;margin-right:10px;}
+  .ask h3{display:flex;align-items:center;margin:0 0 10px;}
+  .ask p{margin:6px 0;color:var(--soft);}
+  .ask .need{color:var(--ink);font-weight:600;}
+  table{border-collapse:collapse;width:100%;font-size:.85rem;margin:12px 0;}
+  th,td{border:1px solid var(--line);padding:8px 10px;text-align:left;vertical-align:top;}
+  th{background:var(--card);font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;}
+  code{background:var(--card);border:1px solid var(--line);border-radius:4px;padding:1px 5px;font-size:.82em;}
+  .note{background:#f7efe3;border:1px solid #e3d3b4;border-radius:10px;padding:18px 22px;margin:14px 0;}
+  .note strong{color:#7a5a1e;}
+  .ok{color:#2e7d4f;font-weight:600;}
+  .pending{color:#b0722a;font-weight:600;}
+  ul{margin:8px 0;padding-left:22px;}
+  li{margin:4px 0;}
+  .small{font-size:.8rem;color:var(--faint);}
+</style>
+</head>
+<body><div class="wrap">
+
+  <p class="meta">MapleMoon website · prepared for the Zoom with Carli and Dylan · Sunday 13 July 2026, 7pm AEST</p>
+  <h1>Decisions pack: three asks + integration map</h1>
+  <span class="internal">Internal — not for sending</span>
+
+  <p>The homepage demo (<code>homepage_real_1_lead.html</code>, "Editorial Night") is walkthrough-ready on <code>http://localhost:3005</code>. Everything below is what we need from Carli and Dylan tonight to move from demo to build.</p>
+
+  <h2>The three asks</h2>
+
+  <div class="ask">
+    <h3><span class="n">1</span>Real AUD pricing per SKU</h3>
+    <p>Every price on the demo is a <span class="pending">placeholder</span>, flagged on-page as "Indicative pricing". Current stand-ins: bars $5.50 (90g), moons $4.50 (40g), bites $6.50 (pack), elixirs $12.00 (jar).</p>
+    <p>Pack-size options shown (15 Pack / 30 Pack / 60 Pack etc.) are also placeholders.</p>
+    <p class="need">Need: confirmed price + pack configurations for all 20 SKUs (6 bars, 6 moons, 6 bites, 2 elixirs).</p>
+  </div>
+
+  <div class="ask">
+    <h3><span class="n">2</span>A real review source</h3>
+    <p>The testimonial slot is deliberately empty ("A quote from a real Maple Moon customer will live here"). We will not fabricate reviews.</p>
+    <p class="need">Need: where real customer words come from — Google reviews, Instagram messages, market-stall feedback, or a Shopify review app (Judge.me / Okendo) once the store is live. One named source is enough to start.</p>
+  </div>
+
+  <div class="ask">
+    <h3><span class="n">3</span>Shopify store access for the Liquid port</h3>
+    <p>The theme sections are already drafted as Liquid (<code>sections/*.liquid</code> in the repo). To port the approved homepage into the real store we need collaborator access.</p>
+    <p class="need">Need: a collaborator invite to the Shopify store (Store admin → Users and permissions → Collaborators) for hello@handtomouse.org, with Themes + Products permissions.</p>
+  </div>
+
+  <h2>Internal note: font licensing (blocker before any deploy)</h2>
+  <div class="note">
+    <p><strong>The demo runs on unlicensed demo cuts. Both families must be licensed or swapped before anything goes public.</strong></p>
+    <ul>
+      <li><strong>P22 Mackinac Pro</strong> (serif, headings): loaded via <code>local()</code> against the installed "FONTSPRING DEMO" cuts. Demo licence does not cover web use. Buy the webfont from Fontspring, or swap.</li>
+      <li><strong>Neue Haas Grotesk Display Pro</strong> (sans, body): also resolved via <code>local()</code> from the machine. Web use needs a Monotype webfont licence, or it is available through Adobe Fonts with a CC subscription (check web-project embed terms), or swap to a licensed near-match.</li>
+      <li>Because both load via <code>local()</code>, the demo only renders correctly on this machine. Fallbacks are Georgia / Helvetica. This is fine for tonight's local walkthrough, and one more reason the demo must not be deployed as-is.</li>
+    </ul>
+    <p class="small">Not a Carli/Dylan decision tonight; it is our pre-deploy checklist item and a cost line to budget for.</p>
+  </div>
+
+  <h2>Photo slot map: where the edited finals land</h2>
+  <p>Filenames are the contract. Export each edited final to the exact path below (same name, same format) and the homepage picks it up with <strong>zero code changes</strong>. Only S1 needs a one-line CSS edit if the filename changes.</p>
+
+  <table>
+    <thead><tr><th>Slot</th><th>Where it appears</th><th>Target file (drop-in path)</th><th>How it is referenced</th><th>Spec / crop</th><th>Status</th></tr></thead>
+    <tbody>
+      <tr>
+        <td><strong>S1 Hero</strong></td>
+        <td>Full-bleed moonlit hero, dissolves into the page gradient</td>
+        <td><code>assets/hero_shots/moonlit_ocean_night.webp</code></td>
+        <td>CSS background on <code>.wf-phero .bg</code> (<code>homepage_real_1_lead.html</code> line 57)</td>
+        <td>Wide landscape, cover-cropped at <code>center 30%</code> desktop / <code>center 24%</code> mobile. Keep horizon in upper third; base of frame dissolves.</td>
+        <td class="pending">Awaiting photos SPIN final</td>
+      </tr>
+      <tr>
+        <td><strong>S2 Packshots ×20</strong></td>
+        <td>Coverflow product arc + selected product, all four category tabs</td>
+        <td><code>assets/product_shots/{key}.webp</code> — keys below</td>
+        <td>JS catalog <code>CAT</code> in the inline script (line ~389, prefix <code>PS='assets/product_shots/'</code>)</td>
+        <td>Bars are 800×1200, transparent-style packshot, rendered <code>object-fit:contain</code>, bottom-aligned. Match existing framing per category.</td>
+        <td class="pending">Awaiting photos SPIN finals</td>
+      </tr>
+      <tr>
+        <td><strong>S3 What is carob</strong></td>
+        <td>Editorial split, left image</td>
+        <td><code>assets/hero_shots/chatgpt_carob_pods.jpg</code></td>
+        <td><code>&lt;img&gt;</code> in <code>#carob</code> (line 309)</td>
+        <td>16:10 crop, <code>object-fit:cover</code>. Real carob pods to replace the AI placeholder.</td>
+        <td class="pending">AI placeholder in slot</td>
+      </tr>
+      <tr>
+        <td><strong>S4 Our story</strong></td>
+        <td>Brunswick origin band, right image</td>
+        <td><code>assets/hero_shots/mm_falai_brunswick.webp</code></td>
+        <td><code>&lt;img&gt;</code> in <code>#story</code> (line 325)</td>
+        <td>16:10 crop, <code>object-fit:cover</code>. Real Brunswick Heads shot to replace the AI placeholder.</td>
+        <td class="pending">AI placeholder in slot</td>
+      </tr>
+      <tr>
+        <td><strong>S5 Ritual</strong></td>
+        <td>Image-dominant lifestyle section</td>
+        <td><code>assets/hero_shots/hero_moons_lifestyle.webp</code></td>
+        <td><code>&lt;img&gt;</code> in <code>#ritual</code> (line 338)</td>
+        <td>4:5 portrait crop desktop, falls back to 16:10 on mobile. Evening table scene with product.</td>
+        <td class="pending">Awaiting photos SPIN final</td>
+      </tr>
+      <tr>
+        <td><strong>S6 PDP page</strong></td>
+        <td><code>products/pure-carob-bar.html</code> (baseline page, no edits planned)</td>
+        <td><code>assets/product_shots/bar_pure_carob.webp</code> + cross-sells <code>bar_goji_coconut / moon_peppermint / elixir_spiced</code>.webp</td>
+        <td><code>&lt;img&gt;</code> tags on the PDP</td>
+        <td>Same drop-in-by-filename rule as S2; PDP inherits automatically.</td>
+        <td class="pending">Inherits S2 finals</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h3>S2 packshot keys (all 20)</h3>
+  <table>
+    <thead><tr><th>Bars (6)</th><th>Moons (6)</th><th>Bites + Eclipses (6)</th><th>Elixirs (2)</th></tr></thead>
+    <tbody><tr>
+      <td><code>bar_pure_carob</code><br><code>bar_peppermint</code><br><code>bar_hazelnut</code><br><code>bar_goji_coconut</code><br><code>bar_cayenne</code><br><code>bar_almond</code></td>
+      <td><code>moon_pure_carob</code><br><code>moon_peppermint</code><br><code>moon_hazelnut</code><br><code>moon_goji_coconut</code><br><code>moon_cayenne</code><br><code>moon_almond</code></td>
+      <td><code>bite_coconut</code><br><code>bite_goji</code><br><code>bite_gold</code><br><code>eclipse_almond</code><br><code>eclipse_hazelnut</code><br><code>eclipse_pecan</code></td>
+      <td><code>elixir_plain</code><br><code>elixir_spiced</code></td>
+    </tr></tbody>
+  </table>
+  <p class="small">All keys append <code>.webp</code> under <code>assets/product_shots/</code>. Integration after sign-off = overwrite files, hard-refresh, done.</p>
+
+  <h2>Demo run sheet (tonight)</h2>
+  <ul>
+    <li><strong>Demo pages (final):</strong> homepage <code>homepage_real_1_lead_photo.html</code> &middot; <code>shop.html</code> &middot; <code>our-story.html</code> &middot; <code>carob-story.html</code> (all on :3005, walkthrough: home &rarr; selector &rarr; sections &rarr; Shop nav &rarr; carob story via "The full Carob story" &rarr; our story).</li>
+<li><strong>Freeze fallback screenshots:</strong> <code>checkpoints/2026-07-13_v4_01&hellip;06</code> (latest) plus v2/v3 history.</li>
+<li><strong>Live flips during the call:</strong> <code>?s1=moontrail</code> (studio hero) &middot; <code>?s4=dusk</code> (lighthouse story image).</li>
+<li><strong>After-call queue:</strong> real Brunswick bridge photo (current is AI placeholder), real customer quotes into the new carousel, confirmed stockist logos into the marquee.</li>
+<li><strong>Old note, superseded:</strong> <code>http://localhost:3005/homepage_real_1_lead_photo.html</code> — real photography in every slot, question-led WHAT/WHY/WHEN/WHERE/WHO sections, 5-category selector incl. Carob Bananas, Shop nav goes to the new <code>shop.html</code> range page.</li><li><strong>Safe fallback (this morning's verified build):</strong> <code>http://localhost:3005/homepage_real_1_lead.html</code> + screenshots <code>checkpoints/2026-07-13_demo_01…08</code>. New-build screenshots: <code>checkpoints/2026-07-13_v2_01…05</code>.</li><li>Start: <code>node server.js</code> in <code>~/maplemoon-website</code></li>
+    <li>Walkthrough: hero → coverflow arrows → category tabs (Bars / Moons / Bites / Elixirs) → PDP block → What is carob → Our story → Ritual → footer.</li>
+    <li>Mobile view: resize to 390px or use device toolbar; layout verified clean at 390×844.</li>
+    <li>Fallback screenshots (if live demo hiccups): <code>checkpoints/2026-07-13_demo_01</code> … <code>_08</code> (hero, tabs+PDP, moons filter, ritual, footer, mobile hero, mobile range, mobile full page).</li>
+  </ul>
+
+</div></body>
+</html>

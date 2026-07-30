@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en-AU"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>#7 Hero brand-surfacing variants</title>
+<link rel="stylesheet" href="brand_kit.css">
+<style>
+@font-face{font-family:'Mackinac';src:local('FONTSPRING DEMO - P22 Mackinac Pro Book'),local('FONTSPRINGDEMO-P22MackinacProBookRegular'),local('P22 Mackinac Pro');font-weight:400;font-display:swap;}
+@font-face{font-family:'Mackinac';src:local('FONTSPRING DEMO - P22 Mackinac Pro Medium'),local('FONTSPRINGDEMO-P22MackinacProMediumRegular');font-weight:500;font-display:swap;}
+body{margin:0;background:#1a1a1a;}
+.wf{--mm-serif:'Mackinac','P22 Mackinac Pro',Georgia,serif;--cream:#f1ede3;--cream-soft:rgba(241,237,227,.88);--cream-faint:rgba(241,237,227,.55);
+  font-family:var(--mm-sans,'Neue Haas Grotesk Display Pro',Helvetica,sans-serif);}
+.wf *{box-sizing:border-box;}
+.amp{font-family:Georgia,serif;}
+.exlabel{background:#111;color:#f4efe7;font-family:-apple-system,Helvetica,sans-serif;padding:11px 18px;}
+.exlabel .n{font-size:13px;font-weight:600;}.exlabel .s{font-size:11px;color:#9a958c;margin-top:2px;}
+.vband{position:relative;height:600px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;color:var(--cream);overflow:hidden;}
+.vband .bg{position:absolute;inset:0;background:url('assets/hero_shots/moonlit_ocean_night.png') center 30%/cover no-repeat;z-index:0;}
+.vband .scrim{position:absolute;inset:0;z-index:1;background:linear-gradient(180deg,rgba(18,21,30,.5),rgba(18,21,30,.15) 45%,rgba(18,21,30,.45));}
+.vband .c{position:relative;z-index:2;padding:0 24px;}
+.pbrand{font-family:var(--mm-serif);font-size:1rem;letter-spacing:.34em;text-transform:lowercase;color:var(--cream-soft);margin-bottom:10px;text-shadow:0 1px 18px rgba(10,12,20,.6);}
+.peyebrow{font-size:.66rem;letter-spacing:.2em;text-transform:uppercase;color:var(--cream-soft);text-shadow:0 1px 18px rgba(10,12,20,.7);margin-bottom:14px;}
+.pwm{font-family:var(--mm-serif);font-weight:400;font-size:clamp(4rem,12vw,8rem);line-height:.84;letter-spacing:.08em;margin:0;color:var(--cream);text-shadow:0 2px 40px rgba(10,12,20,.45);}
+.ptag{font-family:var(--mm-serif);font-size:1.4rem;color:var(--cream);margin:12px 0 0;text-shadow:0 1px 24px rgba(10,12,20,.5);}
+</style></head>
+<body><div class="wf">
+
+  <div class="exlabel"><div class="n">V7a &mdash; Keep both (current)</div><div class="s">brand line "maple moon" + eyebrow place + CAROB. Three stacked lines above the wordmark.</div></div>
+  <section class="vband"><div class="bg"></div><div class="scrim"></div><div class="c">
+    <p class="pbrand">maple moon</p>
+    <p class="peyebrow">Artisan carob &middot; Brunswick Heads</p>
+    <h1 class="pwm">CAROB</h1>
+    <p class="ptag">Naturally Sweet, Nothing Added.</p>
+  </div></section>
+
+  <div class="exlabel"><div class="n">V7b &mdash; Drop the small "maple moon"</div><div class="s">eyebrow place + CAROB only. Brand still lives in the nav. Quietest, least redundant.</div></div>
+  <section class="vband"><div class="bg"></div><div class="scrim"></div><div class="c">
+    <p class="peyebrow">Artisan carob &middot; Brunswick Heads</p>
+    <h1 class="pwm">CAROB</h1>
+    <p class="ptag">Naturally Sweet, Nothing Added.</p>
+  </div></section>
+
+  <div class="exlabel"><div class="n">V7c &mdash; Merge brand + place into one eyebrow</div><div class="s">"maple moon &middot; Brunswick Heads" as a single eyebrow, then CAROB. One line carries both.</div></div>
+  <section class="vband"><div class="bg"></div><div class="scrim"></div><div class="c">
+    <p class="peyebrow">maple moon &middot; Brunswick Heads</p>
+    <h1 class="pwm">CAROB</h1>
+    <p class="ptag">Naturally Sweet, Nothing Added.</p>
+  </div></section>
+
+</div></body></html>
