@@ -13,11 +13,9 @@
 <link rel="stylesheet" href="brand_kit.css">
 <style>
 /* SHOP (working copy, flavour-funnel wireframe): warm-paper editorial continuation of the homepage. */
-@font-face{font-family:'Mackinac';src:local('FONTSPRING DEMO - P22 Mackinac Pro Book'),local('FONTSPRINGDEMO-P22MackinacProBookRegular'),local('P22 Mackinac Pro');font-weight:400;font-display:swap;}
-@font-face{font-family:'Mackinac';src:local('FONTSPRING DEMO - P22 Mackinac Pro Medium'),local('FONTSPRINGDEMO-P22MackinacProMediumRegular');font-weight:500;font-display:swap;}
 html{scroll-behavior:smooth;}
 .sp{
-  --mm-serif:'Mackinac','P22 Mackinac Pro',Georgia,serif;
+  --mm-serif:'p22-mackinac-pro','P22 Mackinac Pro',Georgia,serif;
   --ink:#2c2a26;--ink-soft:#6f6a62;--ink-faint:#a39d92;
   --paper:#f4f2ed;--card:#fbfaf7;--line:rgba(44,42,38,.14);--line-soft:rgba(44,42,38,.08);
   --cream:#f1ede3;--acc:#4074b6;
@@ -29,6 +27,9 @@ html{scroll-behavior:smooth;}
 .sp a{color:inherit;text-decoration:none;}
 .sp .wrap{max-width:1180px;margin:0 auto;padding:0 28px;}
 .sp .serif{font-family:var(--mm-serif);}
+.skip-link{position:absolute;z-index:20;top:10px;left:10px;padding:10px 14px;border-radius:4px;background:var(--blue-night,#101923);color:var(--cream);font-size:.75rem;letter-spacing:.06em;transform:translateY(-160%);transition:transform .2s ease;}
+.skip-link:focus{transform:translateY(0);outline:2px solid var(--cream);outline-offset:3px;}
+.sr-only{position:absolute!important;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0;}
 
 /* nav (mirrors homepage) */
 .sp-top{padding-top:8px;}
@@ -222,6 +223,7 @@ html{scroll-behavior:smooth;}
   <div class="sp-mist" aria-hidden="true"></div>
   <div class="sp-grain" aria-hidden="true"></div>
   <div class="sp-moonwash" aria-hidden="true"></div>
+  <a class="skip-link" href="#catalogue-title">Skip to the catalogue</a>
 
   <header class="sp-top"><div class="wrap bar">
     <nav class="sp-nav" aria-label="Primary navigation"><a href="shop.WIP.html" class="on">Shop</a><a href="our-story.WIP.html">Our Story</a><a href="homepage_real_1_lead_photo.WIP.html#carob">What is Carob</a></nav>
@@ -230,14 +232,15 @@ html{scroll-behavior:smooth;}
       <button class="sp-cart" type="button" aria-label="Cart, 0 items"><svg viewBox="0 0 24 24"><path d="M6 8h12l-1 12H7L6 8z"/><path d="M9 8a3 3 0 0 1 6 0"/></svg><b>0</b></button></nav>
   </div></header>
 
+  <main class="sp-main" id="shop-main">
   <div class="wrap sp-opening">
     <div class="sp-head">
       <span class="sp-kick">The full range</span>
       <h1 class="serif" style="font-weight:500;font-size:clamp(2rem,3.4vw,2.9rem);line-height:1.1;margin:0 0 14px;">Shop the <em style="font-weight:400">range.</em></h1>
       <p>Bars, moons, bites, elixirs and carob bananas. All made from Australian organic carob, naturally sweet with nothing added.</p>
-      <div class="sp-flag">Bars, elixirs <span class="amp">&amp;</span> bananas priced &middot; some moons <span class="amp">&amp;</span> bites pricing to follow</div>
+      <div class="sp-flag">Bars, bites, elixirs, powder <span class="amp">&amp;</span> bananas priced &middot; some moons pricing to follow</div>
     </div>
-    <div class="sp-sampler">
+    <div class="sp-sampler" id="packs">
       <div class="minirow" aria-hidden="true">
         <img src="assets/products_new/bar_pure_carob.png" alt=""><img src="assets/products_new/bar_peppermint.png" alt=""><img src="assets/products_new/bar_hazelnut.png" alt=""><img src="assets/products_new/bar_goji_coconut.png" alt=""><img src="assets/products_new/bar_cayenne.png" alt=""><img src="assets/products_new/bar_almond.png" alt="">
       </div>
@@ -249,9 +252,40 @@ html{scroll-behavior:smooth;}
 
   </div>
 
-  <div class="sp-range-nav">
+  <section class="wrap sp-tools" aria-labelledby="catalogue-controls-title" aria-describedby="catalogue-status">
+    <div class="catalogue-toolbar-heading">
+      <h2 id="catalogue-controls-title">Find your flavour</h2>
+      <button class="reset-tool" id="catalogue-reset" type="button" hidden>Reset filters</button>
+    </div>
+    <div class="tool-group flavour-tools" aria-label="Flavour filter">
+      <span>Flavour</span>
+      <button type="button" class="swatch is-active" data-flavour="all" aria-pressed="true"><i style="--sw:#f8f6ef"></i><b>All</b></button>
+      <button type="button" class="swatch" data-flavour="pure" aria-pressed="false"><i style="--sw:#bfd4e6"></i><b>Pure</b></button>
+      <button type="button" class="swatch" data-flavour="peppermint" aria-pressed="false"><i style="--sw:#b9d5ca"></i><b>Peppermint</b></button>
+      <button type="button" class="swatch" data-flavour="hazelnut" aria-pressed="false"><i style="--sw:#c89a60"></i><b>Hazelnut</b></button>
+      <button type="button" class="swatch" data-flavour="goji" aria-pressed="false"><i style="--sw:#d85d80"></i><b>Coconut &amp; Goji</b></button>
+      <button type="button" class="swatch" data-flavour="cayenne" aria-pressed="false"><i style="--sw:#c84d2f"></i><b>Cayenne</b></button>
+      <button type="button" class="swatch" data-flavour="almond" aria-pressed="false"><i style="--sw:#c7a36d"></i><b>Almond</b></button>
+    </div>
+    <label class="tool-group sort-tool">Sort by
+      <select id="shop-sort" aria-label="Sort products">
+        <option value="featured">Featured</option>
+        <option value="name">Name</option>
+        <option value="priced">Priced first</option>
+      </select>
+    </label>
+    <div class="tool-group view-tools" aria-label="Catalogue view">
+      <span>View</span>
+      <button type="button" class="view-btn is-active" data-view="grid" aria-pressed="true" aria-label="Grid view">Grid</button>
+      <button type="button" class="view-btn" data-view="list" aria-pressed="false" aria-label="List view">List</button>
+    </div>
+    <p class="catalogue-status" id="catalogue-status" aria-live="polite"></p>
+  </section>
+
+  <div class="sp-range-nav" id="catalogue">
+    <h2 id="catalogue-title" class="sr-only" tabindex="-1">Shop all products</h2>
     <nav class="wrap sp-cats" aria-label="Categories">
-      <a href="#bars" aria-current="location">Bars</a><a href="#moons">Moons</a><a href="#bites">Bites</a><a href="#elixirs">Elixirs</a><a href="#bananas">Bananas</a>
+      <a href="#bars" aria-current="location">Bars</a><a href="#moons">Moons</a><a href="#bananas">Bananas</a><a href="#bites">Bites <span class="amp">&amp;</span> Eclipse</a><a href="#elixirs">Elixirs</a><a href="#powder">Powder</a>
     </nav>
   </div>
 
@@ -267,9 +301,9 @@ html{scroll-behavior:smooth;}
     <div class="grid" data-cat="moons"></div>
   </section>
 
-  <section class="wrap sp-sec is-pending" id="bites">
+  <section class="wrap sp-sec" id="bites">
     <h2 class="serif">Bites <span class="amp">&amp;</span> Eclipses</h2>
-    <p class="sub">Bite-sized carob for the bowl on the counter. Coconut, goji, golden, and the nut eclipses.</p>
+    <p class="sub">Bite-sized carob for the bowl on the counter. Five Eclipse Bites and the bundle.</p>
     <div class="grid" data-cat="bites"></div>
   </section>
 
@@ -284,6 +318,13 @@ html{scroll-behavior:smooth;}
     <p class="sub">Dehydrated banana coated in smooth carob. The newest moon in the sky.</p>
     <div class="grid" data-cat="bananas"></div>
   </section>
+
+  <section class="wrap sp-sec" id="powder">
+    <h2 class="serif">Carob Powder</h2>
+    <p class="sub">Roasted organic carob powder. Caffeine free and naturally sweet, for baking, drinks and raw treats.</p>
+    <div class="grid" data-cat="powder"></div>
+  </section>
+  </main>
 
   <footer class="sp-ft"><div class="wrap">
     <div class="row">
@@ -315,12 +356,12 @@ html{scroll-behavior:smooth;}
       {n:'Almond Moon',img:'moon_almond',d:'Toasted almond in a smooth carob crescent.',price:'1 $2.50 / 5 $12.19 / 10 $23.75 / 20 $44.99',size:'12g'}
     ],
     bites:[
-      {n:'Coconut Bites',img:'bite_coconut',d:'Bite-sized carob with shredded coconut.',size:'pack'},
-      {n:'Goji Bites',img:'bite_goji',d:'Bite-sized carob with goji berries.',size:'pack'},
-      {n:'Golden Bites',img:'bite_gold',d:'Bite-sized carob, naturally sweet.',size:'pack'},
-      {n:'Almond Eclipse',img:'eclipse_almond',d:'Carob eclipse bite with toasted almond.',size:'pack'},
-      {n:'Hazelnut Eclipse',img:'eclipse_hazelnut',d:'Carob eclipse bite with roasted hazelnut.',size:'pack'},
-      {n:'Pecan Eclipse',img:'eclipse_pecan',d:'Carob eclipse bite with pecan.',size:'pack'}
+      {n:'Pecan Nut Eclipse Bite',img:'eclipse_pecan',d:'Carob-dipped Medjool dates and pecans.',price:'$5.99–$59.99',size:'50g'},
+      {n:'Salted Almond Eclipse Bite',img:'eclipse_almond',d:'Medjool dates, almonds and a pinch of Celtic salt in carob.',price:'$5.99–$59.99',size:'50g'},
+      {n:'Hazelnut Eclipse Bite',img:'eclipse_hazelnut',d:'Roasted hazelnut and Medjool dates in smooth carob.',price:'$5.99–$59.99',size:'50g'},
+      {n:'Goji Ripe Eclipse Bite',img:'eclipse_goji',d:'Medjool dates, almonds, cashews, coconut and goji berries in carob.',price:'$5.99–$59.99',size:'50g'},
+      {n:'Salted Caramel Fudge',img:'eclipse_fudge',d:'Medjool dates, almonds, coconut and Celtic salt, carob-dipped.',price:'$5.99–$59.99',size:'50g'},
+      {n:'Eclipse Bite Bundle',img:'eclipse_bundle',d:'All five Eclipse Bites together.',price:'$24.99',size:'5 x 50g'}
     ],
     elixirs:[
       {n:'Pure Carob Elixir',img:'elixir_plain',d:'A warm carob drink, naturally sweet and caffeine free.',price:'$23.95',size:'150g'},
@@ -328,23 +369,93 @@ html{scroll-behavior:smooth;}
     ],
     bananas:[
       {n:'Carob Bananas',img:'bananas',d:'Dehydrated banana, coated in naturally sweet carob.',price:'1 $2.99 / 5 $14.25 / 10 $26.99 / 20 $50.99',size:'20g'}
+    ],
+    powder:[
+      {n:'Carob Powder',img:'powder_roasted',d:'Roasted organic carob powder. Caffeine free and naturally sweet, for baking, drinks and raw treats.',price:'$14.95',size:'300g'}
     ]
   };
   var DIET=['Vegan','GF','No Caffeine'];
-  var PRICED={bars:true,elixirs:true,moons:true,bites:false,bananas:true};
+  var PRICED={bars:true,elixirs:true,moons:true,bites:true,bananas:true,powder:true};
   function amp(s){return s.replace(/&/g,'<span class="amp">&amp;</span>');}
+  function flavourOf(p){
+    var hay=(p.n+' '+p.d).toLowerCase();
+    if(hay.indexOf('peppermint')>-1)return 'peppermint';
+    if(hay.indexOf('hazelnut')>-1)return 'hazelnut';
+    if(hay.indexOf('goji')>-1||hay.indexOf('coconut')>-1)return 'goji';
+    if(hay.indexOf('cayenne')>-1||hay.indexOf('chilli')>-1)return 'cayenne';
+    if(hay.indexOf('almond')>-1||hay.indexOf('salt')>-1)return 'almond';
+    return 'pure';
+  }
   Object.keys(CAT).forEach(function(cat){
     var grid=document.querySelector('.grid[data-cat="'+cat+'"]');if(!grid)return;
-    CAT[cat].forEach(function(p){
+    CAT[cat].forEach(function(p,index){
       var priced=!!PRICED[cat] && !p.pending;
-      var el=document.createElement('article');el.className='pcard';
-      el.innerHTML='<div class="ph"><img src="'+PS+p.img+'.webp" alt="'+p.n.replace(/"/g,'')+'" loading="lazy"></div>'+
-        '<div class="tx"><h3>'+amp(p.n)+'</h3><div class="chips">'+DIET.map(function(c){return '<span>'+c+'</span>';}).join('')+'</div>'+
+      var cardId='product-'+cat+'-'+index;
+      var cleanName=p.n.replace(/"/g,'');
+      var imageAttrs=cat==='bites'?' loading="eager" decoding="sync"':' loading="lazy" decoding="async"';
+      var el=document.createElement('article');el.className='pcard';el.setAttribute('aria-labelledby',cardId);
+      el.dataset.cat=cat;el.dataset.flavour=flavourOf(p);el.dataset.name=p.n.toLowerCase();el.dataset.priced=priced?'1':'0';el.dataset.order=String(index);
+      el.innerHTML='<div class="ph"><img src="'+PS+p.img+'.webp" alt="'+cleanName+'"'+imageAttrs+'></div>'+
+        '<div class="tx"><h3 id="'+cardId+'">'+amp(p.n)+'</h3><div class="chips">'+DIET.map(function(c){return '<span>'+c+'</span>';}).join('')+'</div>'+
         '<p class="d">'+p.d+'</p>'+
-        '<div class="row"><span class="pr'+(priced?'':' pending')+'">'+(priced?p.price:'Pricing to follow')+'<span class="g">('+p.size+')</span></span>'+(priced?'<a class="add" href="mailto:info@maplemoon.com.au?subject=Enquiry%20about%20'+encodeURIComponent(p.n)+'">Ask about this item</a>':'<button class="add" type="button" disabled>Pricing to follow</button>')+'</div></div>';
+        '<div class="row"><span class="pr'+(priced?'':' pending')+'">'+(priced?p.price:'Pricing to follow')+'<span class="g">('+p.size+')</span></span>'+(priced?'<a class="add" aria-label="Ask about '+cleanName+'" href="mailto:info@maplemoon.com.au?subject=Enquiry%20about%20'+encodeURIComponent(p.n)+'">Ask about this item</a>':'<button class="add" type="button" disabled aria-label="Pricing to follow for '+cleanName+'">Pricing to follow</button>')+'</div></div>';
       grid.appendChild(el);
     });
   });
+
+  var state={flavour:'all',sort:'featured',view:'grid'};
+  var cards=Array.prototype.slice.call(document.querySelectorAll('.pcard'));
+  var status=document.getElementById('catalogue-status');
+  var reset=document.getElementById('catalogue-reset');
+  var flavourLabels={all:'all flavours',pure:'Pure',peppermint:'Peppermint',hazelnut:'Hazelnut',goji:'Coconut and Goji',cayenne:'Cayenne',almond:'Almond'};
+  var sortLabels={featured:'featured order',name:'name',priced:'priced items first'};
+  function syncQuery(){
+    var url=new URL(window.location.href);
+    if(state.flavour==='all')url.searchParams.delete('flavour');else url.searchParams.set('flavour',state.flavour);
+    if(state.sort==='featured')url.searchParams.delete('sort');else url.searchParams.set('sort',state.sort);
+    if(state.view==='grid')url.searchParams.delete('view');else url.searchParams.set('view',state.view);
+    history.replaceState(null,'',url);
+  }
+  function applyState(){
+    document.body.classList.toggle('shop-list-view',state.view==='list');
+    cards.forEach(function(card){card.hidden=state.flavour!=='all'&&card.dataset.flavour!==state.flavour;});
+    document.querySelectorAll('.grid').forEach(function(grid){
+      var sorted=Array.prototype.slice.call(grid.children).sort(function(a,b){
+        if(state.sort==='name')return a.dataset.name.localeCompare(b.dataset.name);
+        if(state.sort==='priced')return b.dataset.priced.localeCompare(a.dataset.priced)||a.dataset.name.localeCompare(b.dataset.name);
+        return Number(a.dataset.order)-Number(b.dataset.order);
+      });
+      sorted.forEach(function(card){grid.appendChild(card);});
+    });
+    document.querySelectorAll('.swatch').forEach(function(btn){var on=btn.dataset.flavour===state.flavour;btn.classList.toggle('is-active',on);btn.setAttribute('aria-pressed',on?'true':'false');});
+    document.querySelectorAll('.view-btn').forEach(function(btn){var on=btn.dataset.view===state.view;btn.classList.toggle('is-active',on);btn.setAttribute('aria-pressed',on?'true':'false');});
+    var select=document.getElementById('shop-sort');if(select)select.value=state.sort;
+    var visible=cards.filter(function(card){return !card.hidden;});
+    document.querySelectorAll('.sp-sec[id]').forEach(function(section){
+      var hasMatch=Array.prototype.some.call(section.querySelectorAll('.pcard'),function(card){return !card.hidden;});
+      section.hidden=state.flavour!=='all'&&!hasMatch;
+      var navLink=document.querySelector('.sp-range-nav .sp-cats a[href="#'+section.id+'"]');
+      if(navLink)navLink.hidden=state.flavour!=='all'&&!hasMatch;
+    });
+    var catNav=document.querySelector('.sp-range-nav .sp-cats');
+    if(catNav)catNav.classList.toggle('is-filtered',state.flavour!=='all');
+    if(status){
+      var productWord=visible.length===1?'product':'products';
+      var filterCopy=state.flavour==='all'?'across the full range':'for '+flavourLabels[state.flavour];
+      status.textContent='Showing '+visible.length+' '+productWord+' '+filterCopy+', sorted by '+sortLabels[state.sort]+'.';
+    }
+    if(reset)reset.hidden=state.flavour==='all'&&state.sort==='featured'&&state.view==='grid';
+    syncQuery();
+  }
+  var params=new URLSearchParams(window.location.search);
+  if(['all','pure','peppermint','hazelnut','goji','cayenne','almond'].indexOf(params.get('flavour'))>-1)state.flavour=params.get('flavour');
+  if(['featured','name','priced'].indexOf(params.get('sort'))>-1)state.sort=params.get('sort');
+  if(['grid','list'].indexOf(params.get('view'))>-1)state.view=params.get('view');
+  document.querySelectorAll('.swatch').forEach(function(btn){btn.addEventListener('click',function(){state.flavour=btn.dataset.flavour;applyState();});});
+  document.querySelectorAll('.view-btn').forEach(function(btn){btn.addEventListener('click',function(){state.view=btn.dataset.view;applyState();});});
+  var sort=document.getElementById('shop-sort');if(sort)sort.addEventListener('change',function(){state.sort=sort.value;applyState();});
+  if(reset)reset.addEventListener('click',function(){state.flavour='all';state.sort='featured';state.view='grid';applyState();});
+  applyState();
 
   var catLinks=Array.prototype.slice.call(document.querySelectorAll('.sp-range-nav .sp-cats a'));
   if('IntersectionObserver' in window){
@@ -358,20 +469,40 @@ html{scroll-behavior:smooth;}
       var current=entries.filter(function(entry){return entry.isIntersecting;}).sort(function(a,b){return Math.abs(a.boundingClientRect.top)-Math.abs(b.boundingClientRect.top);})[0];
       if(current){setCurrent(current.target.id);}
     },{rootMargin:'-18% 0px -66% 0px',threshold:.01});
-    document.querySelectorAll('.sp-sec[id]').forEach(function(section){sectionObserver.observe(section);});
+    document.querySelectorAll('.sp-sec[id], .sp-sampler[id], .sp-range-nav[id]').forEach(function(section){sectionObserver.observe(section);});
   }
 })();
 </script>
 <style>
 /* SHOP LANE: catalogue chapters stay navigable while purchase wiring remains pending. */
 .sp .sp-range-nav{position:sticky;top:8px;z-index:4;padding:6px 0;background:transparent;border:0;}
-.sp .sp-range-nav .sp-cats{position:static;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:0;width:min(760px,calc(100% - 56px));min-height:58px;margin:0 auto;padding:0;overflow:hidden;border:1px solid rgba(58,42,26,.12);border-radius:999px;background:rgba(238,248,249,.42);box-shadow:0 8px 20px rgba(41,57,64,.06);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);}
-.sp .sp-range-nav .sp-cats a{position:relative;display:flex;align-items:center;justify-content:center;min-height:58px;padding:8px 10px;border:0;border-left:1px solid rgba(58,42,26,.12);border-radius:0;background:transparent;color:rgba(44,42,38,.52);font-size:.64rem;letter-spacing:.095em;text-transform:uppercase;text-align:center;}
+.sp .sp-range-nav .sp-cats{position:static;display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:0;width:min(880px,calc(100% - 56px));min-height:52px;margin:0 auto;padding:0;overflow:hidden;border:1px solid rgba(58,42,26,.10);border-radius:999px;background:rgba(238,248,249,.20);box-shadow:none;-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);}
+.sp .sp-range-nav .sp-cats a{position:relative;display:flex;align-items:center;justify-content:center;min-height:52px;padding:8px 10px;border:0;border-left:1px solid rgba(58,42,26,.10);border-radius:0;background:transparent;color:rgba(44,42,38,.48);font-size:.6rem;letter-spacing:.08em;text-transform:uppercase;text-align:center;}
 .sp .sp-range-nav .sp-cats a:first-child{border-left:0;}
 .sp .sp-range-nav .sp-cats a[aria-current="location"]{color:var(--ink);font-weight:500;background:rgba(247,253,250,.50);box-shadow:none;}
-.sp .sp-range-nav .sp-cats a[aria-current="location"]::after{content:"";position:absolute;bottom:12px;width:24px;height:2px;background:#9b8352;}
+.sp .sp-range-nav .sp-cats a[aria-current="location"]::after{content:"";position:absolute;bottom:10px;width:24px;height:2px;background:#9b8352;}
 .sp .sp-range-nav .sp-cats a:hover{color:rgba(44,42,38,.82);background:rgba(247,253,250,.34);}
+.sp .sp-range-nav .sp-cats.is-filtered{grid-template-columns:repeat(auto-fit,minmax(110px,1fr));}
 .sp{--blue-flow:#b7c9d9;--blue-bridge:#c8d5df;--blue-haze:#d7e2ea;--blue-deep:#457798;--blue-night:#101923;--beige:#c9ba96;--acc:#4074b6;background:linear-gradient(180deg,var(--blue-flow) 0%,#c7d6e3 18%,var(--blue-haze) 44%,#e2e5df 70%,var(--paper) 100%);}
+.sp-main{min-width:0;}
+.sp-tools{display:grid;grid-template-columns:minmax(0,1fr) minmax(170px,220px) auto;gap:14px;align-items:center;margin:12px auto 10px;padding:16px 18px;border:1px solid rgba(69,119,152,.14);border-radius:8px;background:rgba(251,250,247,.68);box-shadow:0 8px 18px rgba(41,57,64,.045);}
+.catalogue-toolbar-heading{grid-column:1/-1;display:flex;align-items:baseline;justify-content:space-between;gap:16px;padding-bottom:12px;border-bottom:1px solid rgba(69,119,152,.14);}
+.catalogue-toolbar-heading h2{margin:0;font:500 1.04rem/1.2 var(--mm-serif);color:var(--ink);}
+.reset-tool{min-height:36px;padding:6px 11px;border:0;border-bottom:1px solid currentColor;background:transparent;color:var(--ink-soft);font:500 .63rem/1 var(--mm-sans);letter-spacing:.12em;text-transform:uppercase;cursor:pointer;}
+.reset-tool:hover{color:var(--ink);}
+.tool-group{display:flex;align-items:center;gap:10px;min-width:0;color:rgba(44,42,38,.66);font-size:.62rem;letter-spacing:.13em;text-transform:uppercase;}
+.flavour-tools{flex-wrap:wrap;}
+.swatch,.view-btn{min-width:44px;min-height:44px;border:1px solid rgba(44,42,38,.14);border-radius:8px;background:rgba(255,255,255,.42);color:var(--ink);font:inherit;cursor:pointer;touch-action:manipulation;}
+.swatch{position:relative;display:grid;place-items:center;padding:5px;}
+.swatch i{display:block;width:24px;height:24px;border-radius:5px;background:var(--sw);border:1px solid rgba(44,42,38,.10);}
+.swatch b{position:absolute;inline-size:1px;block-size:1px;overflow:hidden;clip-path:inset(50%);}
+.swatch.is-active,.view-btn.is-active{border-color:var(--blue-night);box-shadow:inset 0 -2px 0 rgba(201,186,150,.62);background:rgba(255,255,255,.76);}
+.sort-tool{justify-content:flex-end;}
+.sort-tool select{min-height:44px;width:150px;padding:0 36px 0 14px;border:1px solid rgba(44,42,38,.16);border-radius:8px;background:rgba(255,255,255,.48);color:var(--ink);font:500 .78rem var(--mm-sans);}
+.view-tools{justify-content:flex-end;}
+.view-btn{padding:0 12px;font-size:.62rem;}
+.catalogue-status{grid-column:1/-1;margin:0;padding-top:2px;color:var(--ink-soft);font-size:.78rem;line-height:1.35;}
+.sp-tools :is(.swatch,.view-btn,.sort-tool select,.reset-tool):focus-visible{outline:2px solid var(--acc);outline-offset:3px;}
 .sp-sec{scroll-margin-top:94px;padding:46px 0 10px;}
 .sp-range-nav + .sp-sec{padding-top:28px;}
 .sp-sec:not(#bars){border-top:1px solid rgba(69,119,152,.22);margin-top:34px;}
@@ -379,12 +510,18 @@ html{scroll-behavior:smooth;}
 .sp-sec .sub{margin-bottom:20px;}
 .sp-sec.is-pending h2{color:rgba(44,42,38,.68);}
 .sp-sec.is-pending .sub{color:rgba(111,106,98,.78);}
-.grid{gap:20px;}
+.grid{grid-template-columns:repeat(4,minmax(0,1fr));gap:20px;}
+@media(min-width:1051px){#bars .grid,#bites .grid{grid-template-columns:repeat(3,minmax(0,1fr));}}
+.shop-list-view .grid{grid-template-columns:1fr;}
+.shop-list-view .pcard{display:grid;grid-template-columns:minmax(120px,190px) minmax(0,1fr);}
+.shop-list-view .pcard .ph{aspect-ratio:4/3;}
+.pcard[hidden]{display:none!important;}
 .pcard{border-color:rgba(69,119,152,.13);border-radius:8px;background:rgba(251,250,247,.86);}
 .pcard .ph{padding:24px;}
 .pcard .ph img{height:76%;max-width:80%;object-fit:contain;}
 .pcard .tx{padding:17px 18px 18px;gap:8px;}
 .pcard h3{font-size:1.1rem;line-height:1.2;}
+.pcard .d{display:-webkit-box;overflow:hidden;-webkit-box-orient:vertical;-webkit-line-clamp:3;}
 .chips{gap:5px;}
 .chips span{font-size:.5rem;color:rgba(111,106,98,.64);border-color:rgba(44,42,38,.08);padding:3px 6px;}
 .pcard .row{min-height:54px;margin-top:auto;padding-top:10px;border-top:1px solid rgba(44,42,38,.09);}
@@ -394,8 +531,9 @@ html{scroll-behavior:smooth;}
 .pcard .add:not([disabled]):hover{background:var(--blue-deep);border-color:var(--blue-deep);color:var(--cream);}
 .pcard .pr.pending{color:var(--ink-faint);font-size:.74rem;letter-spacing:.08em;text-transform:uppercase;}
 .pcard .add[disabled]{border-style:dashed;background:rgba(251,250,247,.44);box-shadow:none;}
-.pcard:hover{box-shadow:0 12px 28px rgba(41,57,64,.10);transform:translateY(-1px);}
-.pcard:hover .ph img{transform:scale(1.015);}
+.pcard:hover,.pcard:focus-within{box-shadow:0 12px 28px rgba(41,57,64,.10);transform:translateY(-1px);}
+.pcard:hover .ph img,.pcard:focus-within .ph img{transform:scale(1.015);}
+.sp-sec[hidden],.sp-range-nav .sp-cats a[hidden]{display:none!important;}
 .sp-ft{margin-top:82px;background:linear-gradient(180deg,rgba(226,229,223,.34),rgba(244,242,237,.72));border-top-color:rgba(69,119,152,.16);}
 .sp-ft .row{padding-top:34px;padding-bottom:34px;}
 .sp-opening{display:grid;grid-template-columns:minmax(0,1fr);gap:16px;padding:38px 0 8px;}
@@ -418,6 +556,10 @@ html{scroll-behavior:smooth;}
   .sp-opening{gap:14px;padding-top:36px;}
   .sp-opening .sp-sampler{grid-template-columns:minmax(220px,.8fr) minmax(0,1fr);grid-template-areas:"packs details" "packs action";gap:14px 20px;padding:18px 20px;}
   .sp-opening .sp-sampler .pill{justify-self:start;}
+  .grid{grid-template-columns:repeat(3,minmax(0,1fr));}
+  .sp-tools{grid-template-columns:1fr 1fr;grid-template-areas:"heading heading" "flavour flavour" "sort view" "status status";}
+  .catalogue-toolbar-heading{grid-area:heading;}.catalogue-status{grid-area:status;}
+  .flavour-tools{grid-area:flavour;}.sort-tool{grid-area:sort;justify-content:flex-start;}.view-tools{grid-area:view;}
 }
 @media(max-width:560px){
   .sp .sp-range-nav .sp-cats{width:calc(100% - 32px);}
@@ -432,11 +574,19 @@ html{scroll-behavior:smooth;}
   .sp-opening .sp-sampler .minirow img{max-width:48px;}
   .sp-opening .sp-sampler .pill{justify-self:center;width:min(100%,280px);}
   .sp .sp-range-nav{top:6px;padding:6px 0;}
-  .sp .sp-range-nav .sp-cats{width:calc(100% - 32px);min-height:58px;border-radius:18px;}
-  .sp .sp-range-nav .sp-cats a{min-width:0;min-height:58px;padding:6px 2px;font-size:.56rem;letter-spacing:.02em;line-height:1.08;}
+  .sp .sp-range-nav .sp-cats{display:flex;flex-wrap:nowrap;width:calc(100% - 32px);min-height:54px;border-radius:18px;overflow-x:auto;scrollbar-width:none;-webkit-overflow-scrolling:touch;}
+  .sp .sp-range-nav .sp-cats::-webkit-scrollbar{display:none;}
+  .sp .sp-range-nav .sp-cats a{flex:0 0 auto;min-width:96px;min-height:54px;padding:6px 12px;font-size:.56rem;letter-spacing:.02em;line-height:1.08;}
   .sp .sp-range-nav .sp-cats a[aria-current="location"]::after{bottom:10px;width:20px;}
   .sp-sec{padding-top:38px;}
   .sp-range-nav + .sp-sec{padding-top:26px;}
+  .sp-tools{grid-template-columns:1fr;margin-top:10px;padding:14px 16px;}
+  .catalogue-toolbar-heading{align-items:center;}
+  .sort-tool,.view-tools{justify-content:flex-start;}
+  .grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;}
+  .pcard .row{align-items:stretch;flex-direction:column;}
+  .pcard .add{width:100%;}
+  .shop-list-view .pcard{grid-template-columns:1fr;}
 }
 @media(max-width:560px){
   .sp-opening{gap:14px;padding:30px 0 10px;}
@@ -444,6 +594,7 @@ html{scroll-behavior:smooth;}
   .sp-opening .sp-sampler{padding:18px 16px;}
   .sp-opening .sp-sampler .minirow{gap:5px;}
   .sp-opening .sp-sampler .minirow img{width:calc((100% - 25px)/6);}
+  .grid{grid-template-columns:1fr;}
 }
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto;}}
 </style>
