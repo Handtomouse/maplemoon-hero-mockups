@@ -1,0 +1,80 @@
+{
+  "manifest_version": 1,
+  "status": "active-governance-only",
+  "coordinator": "Codex",
+  "final_owner": "Nate",
+  "base_commit": "b15c070e4ff0cd0cf45fc18a08cf08fb12cfbed1",
+  "updated": "2026-07-29",
+  "locks": [
+    {
+      "packet_id": "MM-CARLI-REVIEW-20260729-CTA",
+      "path": "_wip/homepage_real_1_lead_photo.WIP.html",
+      "owner": "Codex",
+      "status": "released",
+      "approval_class": "local-review-only",
+      "base_hash": "94bd03e51f38642619c19f2ed5d772b720f6254b",
+      "acquired_at": "2026-07-29T03:51:55Z",
+      "lease_expires_at": "2026-07-29T04:51:55Z",
+      "release_condition": "remove only the approved secondary hero CTA, verify diff/hash/HTML, then release before client-send review",
+      "released_by": "Codex",
+      "notes": "CTA removed and verified: resulting git hash-object 31efa20b68a7927a4f558fb8af4f9d38026008fd; HTML and diff checks passed. No external send, upload, deploy, commit, or production change is authorized."
+    }
+  ],
+  "lock_schema": {
+    "required_fields": [
+      "packet_id",
+      "path",
+      "owner",
+      "status",
+      "approval_class",
+      "base_hash",
+      "acquired_at",
+      "lease_expires_at",
+      "release_condition",
+      "released_by",
+      "notes"
+    ],
+    "base_hash_authority": "git hash-object of the file at reservation time"
+  },
+  "lease_policy": {
+    "held_requires_lease_expires_at": true,
+    "on_expiry": "auto-revert to blocked pending coordinator review",
+    "coordinator_reclaim_only": true
+  },
+  "rules": {
+    "granularity": "one row per claimed file path",
+    "one_writer_per_path": true,
+    "workers_may_write_manifest": false,
+    "readonly_packets_take_locks": false,
+    "default_wip_policy": "Codex-owned and Claude-readonly",
+    "write_requires": [
+      "matching packet_id",
+      "owner is the admitted worker",
+      "status is held",
+      "fresh git hash-object equals base_hash",
+      "approval_class permits the requested action"
+    ],
+    "lifecycle": ["free", "reserved", "held", "released", "blocked"],
+    "release": "coordinator receipt plus post-work hash/diff verification",
+    "conflict_policy": "fail closed and escalate",
+    "base_commit_caveat": "base_commit identifies the reviewed branch point; it does not describe the dirty working tree. Per-file base_hash is authoritative for writes."
+  },
+  "protected_paths": [
+    "_wip/**",
+    "_wip/_feedback/**",
+    "AGENTS.md",
+    "_wip/AGENTS.md",
+    "docs/orchestration/**",
+    "docs/plans/**",
+    ".planning/**",
+    "PLAN.md"
+  ],
+  "coordinator_exempt_paths": [
+    "docs/orchestration/LOCK_MANIFEST.json"
+  ],
+  "notes": [
+    "No mutating packet is currently admitted.",
+    "No WooCommerce export is available locally.",
+    "A coordinator may add a lock row only after an admitted packet exists."
+  ]
+}
