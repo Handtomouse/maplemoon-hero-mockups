@@ -205,7 +205,7 @@ The named testimonials remain local WIP evidence only and are not cleared for an
 
 Stop and return to Codex/Sol on scope expansion, source conflict, secrets/PII, unclear ownership, lock mismatch, failed verification, new integration, external access, payment/DNS/email action, or any request to send/publish/deploy/commit.
 
-## Current gates
+## Current gates — snapshot as of 2026-07-29; superseded by the 2026-07-30 reconciliation amendment
 
 | Gate | Status | Evidence / blocker |
 |---|---|---|
@@ -220,6 +220,57 @@ Stop and return to Codex/Sol on scope expansion, source conflict, secrets/PII, u
 | Shopify security/access gate | open | Least-privilege access, 2FA, revocation unverified |
 | External testimonial exposure | blocked | Consent receipt absent |
 
-## Next admissible packet
+## Next admissible packet — snapshot as of 2026-07-29; superseded by the 2026-07-30 reconciliation amendment
 
 No further MapleMoon packet is required before the WooCommerce export arrives. On receipt, admit `CAT-01A` as read-only provenance extraction. It may write only to a newly named CAT-01 ledger output path with a coordinator-granted held lock; it may not edit WIP, theme, feedback, or external systems. Until then, no mutating packet is authorized and the lock manifest remains empty.
+
+## Amendment — 2026-07-30 governance reconciliation
+
+<!-- GOV-01-AMENDMENT: 20260730-RECONCILIATION -->
+
+This dated amendment is appended to preserve the earlier ratified history. It reconciles the local governance record only. It does not edit `LOCK_MANIFEST.json`, WIP, theme files, assets, pricing specifications, client-review material, `.planning`, `docs/plans`, external systems, or Git history.
+
+### Local acceptance and ratification status
+
+On 2026-07-30, Nate accepted the local governance reconciliation execution route. This is local acceptance of this bounded reconciliation only; it is not production approval, external approval, client approval, Shopify/WooCommerce approval, or authorization to contact, publish, deploy, commit, push, reset, revert, or mutate external systems. The older master plan remains a draft/historical candidate pending a formal successor plan.
+
+### Authority and product data
+
+- Intended retail products, prices, and sell options require the client-approved retail catalogue as the catalogue authority. WooCommerce remains the live/export comparator and operational authority until controlled cutover. Where client approval is absent, the value is `unknown` / `approval-required`; WIP layout or product-card text is not catalogue truth.
+- Carli-approved content and claims are the content authority. `_wip` is layout-only review evidence. Founder assets and approved founder inputs are required before theme or page implementation.
+- Stockist information remains provisional until a verified client dataset is received. Testimonials remain held as placeholders until written wording, attribution, and permission are recorded.
+- A marketing email may be prepared as a draft, but it is omitted from the first launch. Analytics waits for consent, privacy, event, and retention controls.
+
+### Roles and access gates
+
+| Role | Authority / boundary |
+|---|---|
+| Nate | Coordinator; external authority; launch approval owner |
+| Carli | Client/business facts and content/claims approval |
+| Codex | Evidence, locks, packet admission, verification, and replanning |
+| Sol | Advisory synthesis and replanning |
+| Claude | Bounded worker only for files admitted in an approved packet |
+
+The Shopify gate is `OPEN/UNVERIFIED`, not permission to act. Any future access requires an isolated environment, no live mutation, named least privilege, 2FA, expiry and revocation, no credentials in the repository, and Nate approval before external access.
+
+### CAT-01 and future export receipt
+
+`CAT-01` remains `BLOCKED` until both a fresh WooCommerce export and an approved retail catalogue are available. A future export receipt must record, at minimum: receipt ID and timestamp; source system and exact file/path; file hash; exporter/authority; row count; schema and field mapping; product/SKU/handle/variant identifiers; product names, sizes/weights, prices/currency, sell options, availability, and stock fields; comparator/reconciliation result; approval reference; and evidence paths. The receipt must explicitly record the PII scan result, exclude customer/order/contact/payment fields, and retain no raw PII in the catalogue ledger.
+
+### Communication and historical register
+
+The existing `MESSAGE_DRAFT.md` and `CONFIDENCE_AUDIT_20260729.md` are evidence of the historical sent/read-back state recorded for the 29 July review. `SEND_GATE_REPORT_20260729.md` is historically inconsistent with that state because it records no message or upload; the contradiction remains unresolved in this local record. No person is to be contacted as part of this reconciliation.
+
+The legacy `.planning` records, root `PLAN.md`, older WIP handoffs and pricing specifications, and the current draft are evidence/historical candidates only. They are not execution authority; this amendment and future explicitly admitted packets are the controlling local governance record.
+
+### 2026-07-30 commit incident
+
+`_wip/_HANDOFF_CODEX_20260730_COMMIT_NOTICE.md` records six commits after `b15c070`, with current HEAD reported as `a9ffe00`, a clean worktree, push held, no complete pre-commit hash manifest, and no reset, revert, or push. The current read-only ancestry check resolves HEAD to `a9ffe00783a71051178b866762952086bc581153` and counts seven descendants after `b15c070`; this count difference is recorded as an evidence discrepancy, not corrected by this amendment. No reset, revert, push, or commit is authorised here.
+
+### Reconciled lock wording, forbidden actions, blockers, and next gate
+
+The current lock state is **one released historical row; no held lock**. This corrects the stale “empty manifest” wording in the ledger only; `LOCK_MANIFEST.json` remains unchanged.
+
+Forbidden until separately approved and admitted: Shopify, WooCommerce, Vercel, DNS/MX, email sends, analytics, payments, webhooks, customer data, client contact, deployment, WIP/theme/assets/pricing/content edits, `.planning`/`docs/plans`/legacy edits, lock-manifest edits, commit, push, reset, revert, or cleanup.
+
+Current blockers are the absent fresh WooCommerce export, absent approved retail catalogue, unverified Shopify security/access controls, founder assets/inputs, provisional stockist data, testimonial permission, analytics controls, and the historical communication/count discrepancies noted above. The next gate is receipt and validation of the fresh export plus approved retail catalogue; then, and only then, a read-only `CAT-01A` provenance packet may be admitted with an explicitly named output path and held lock. Until that gate passes, no mutating packet is authorised.
