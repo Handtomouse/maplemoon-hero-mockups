@@ -24,3 +24,11 @@ homepage_backup.pdf
 _wip/checkpoints/
 checkpoints/_theme_bak.*/
 lewis_round2_contact_*.png
+
+# --- section-review stabilisation (30 Jul): regenerable review/render output ---
+checkpoints/
+explorations/
+_wip/_section_variants/
+_wip/reviews/
+assets/hero_videos/gen/
+docs/client-review/*/staging-v1/

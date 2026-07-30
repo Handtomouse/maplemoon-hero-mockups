@@ -64,9 +64,9 @@ const FB_LOG = path.join(FB_DIR, 'log.jsonl');
 app.post('/__feedback', (req, res) => {
   if (!isLocal(req.socket.remoteAddress || '')) return res.status(403).json({ ok: false });
   const e = req.body || {};
-  const rec = { id: Date.now().toString(36)+Math.random().toString(36).slice(2,6), t: new Date().toISOString(), url: String(e.url||'').slice(0,300), sel: String(e.sel||'').slice(0,500),
-    text: String(e.text||'').slice(0,200), cat: String(e.cat||'').slice(0,28), note: String(e.note||'').slice(0,1200),
-    rect: e.rect||null, vw: e.vw||null, region: !!e.region };
+  const rec = { id: Date.now().toString(36)+Math.random().toString(36).slice(2,6), t: new Date().toISOString(), session: String(e.session||'legacy').slice(0,120), url: String(e.url||'').slice(0,300), sel: String(e.sel||'').slice(0,500),
+    text: String(e.text||'').slice(0,200), cat: String(e.cat||'').slice(0,28), priority: String(e.priority||'P2 · polish').slice(0,32), status: String(e.status||'Observed').slice(0,24), note: String(e.note||'').slice(0,1200),
+    rect: e.rect||null, vw: e.vw||null, viewport: String(e.viewport||'desktop').slice(0,12), region: !!e.region };
   fs.appendFile(FB_LOG, JSON.stringify(rec) + '\n', () => {});
   res.json({ ok: true, id: rec.id });
 });
@@ -97,3 +97,5 @@ app.use((req, res, next) => {
 });
 app.use(express.static(__dirname));
 app.listen(3005, '127.0.0.1', () => console.log('MapleMoon Hero Mockups → http://localhost:3005 (localhost-only)'));
+// Keep the localhost-only preview process attached when launched via npm on this Mac.
+setInterval(() => {}, 2147483647);
