@@ -1,0 +1,1109 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="robots" content="noindex,nofollow">
+  <title>Maple Moon — Mock Cart &amp; Checkout Prototype</title>
+  <style>
+    :root {
+      --ink: #272a2b;
+      --ink-soft: #686b6b;
+      --ink-faint: #929493;
+      --navy: #1e4366;
+      --blue: #7b9dbf;
+      --sky: #c9dbea;
+      --cream: #e7e4ca;
+      --paper: #f3f1eb;
+      --card: #fbfaf6;
+      --line: rgba(39, 42, 43, .14);
+      --line-dark: rgba(39, 42, 43, .24);
+      --success: #486c59;
+      --serif: "P22 Mackinac Pro", Georgia, serif;
+      --sans: "Neue Haas Grotesk Display Pro", Inter, "Helvetica Neue", Arial, sans-serif;
+      --shadow-soft: 0 18px 50px rgba(27, 47, 66, .12);
+      --shadow-deep: 0 30px 80px rgba(16, 28, 39, .24);
+    }
+
+    * { box-sizing: border-box; }
+    html { color-scheme: light; background: var(--paper); }
+    body {
+      margin: 0;
+      min-height: 100vh;
+      overflow-x: hidden;
+      color: var(--ink);
+      font-family: var(--sans);
+      line-height: 1.5;
+      -webkit-font-smoothing: antialiased;
+      background:
+        radial-gradient(70% 32% at 50% 0%, rgba(255, 255, 255, .64), transparent 68%),
+        linear-gradient(180deg, #aec6da 0%, #d8e3ec 36%, var(--paper) 78%);
+    }
+    body.cart-open { overflow: hidden; }
+    button, input { font: inherit; }
+    button { color: inherit; }
+    img { display: block; max-width: 100%; }
+    :focus-visible { outline: 3px solid var(--navy); outline-offset: 3px; }
+    [hidden] { display: none !important; }
+
+    .skip-link {
+      position: fixed;
+      z-index: 1000;
+      top: 12px;
+      left: 12px;
+      padding: 10px 14px;
+      border-radius: 999px;
+      color: var(--cream);
+      background: var(--navy);
+      transform: translateY(-180%);
+      transition: transform .2s ease;
+    }
+    .skip-link:focus { transform: translateY(0); }
+
+    .prototype-bar {
+      position: relative;
+      z-index: 3;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      min-height: 38px;
+      padding: 8px 18px;
+      border-bottom: 1px solid rgba(30, 67, 102, .12);
+      color: var(--navy);
+      background: rgba(231, 228, 202, .86);
+      backdrop-filter: blur(14px);
+      font-size: .72rem;
+      letter-spacing: .08em;
+      text-align: center;
+      text-transform: uppercase;
+    }
+    .prototype-bar button {
+      min-height: 28px;
+      padding: 4px 11px;
+      border: 1px solid rgba(30, 67, 102, .25);
+      border-radius: 999px;
+      background: transparent;
+      cursor: pointer;
+      font-size: .64rem;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+    }
+
+    .site-header {
+      position: relative;
+      z-index: 2;
+      width: min(1180px, calc(100% - 48px));
+      margin: 0 auto;
+      min-height: 74px;
+      display: grid;
+      grid-template-columns: 1fr auto 1fr;
+      align-items: center;
+    }
+    .site-nav {
+      display: flex;
+      align-items: center;
+      gap: 26px;
+    }
+    .site-nav:last-child { justify-content: flex-end; }
+    .site-nav a {
+      color: var(--ink);
+      font-size: .69rem;
+      letter-spacing: .12em;
+      text-decoration: none;
+      text-transform: uppercase;
+    }
+    .wordmark {
+      color: var(--ink);
+      font-family: var(--serif);
+      font-size: 1.35rem;
+      text-decoration: none;
+    }
+    .cart-trigger {
+      position: relative;
+      display: grid;
+      width: 46px;
+      height: 46px;
+      place-items: center;
+      padding: 0;
+      border: 1px solid var(--line-dark);
+      border-radius: 50%;
+      background: rgba(251, 250, 246, .48);
+      cursor: pointer;
+    }
+    .cart-trigger svg {
+      width: 18px;
+      fill: none;
+      stroke: currentColor;
+      stroke-width: 1.5;
+    }
+    .cart-count {
+      position: absolute;
+      top: -3px;
+      right: -3px;
+      display: grid;
+      min-width: 19px;
+      height: 19px;
+      place-items: center;
+      padding: 0 5px;
+      border-radius: 999px;
+      color: var(--cream);
+      background: var(--navy);
+      font-size: .62rem;
+      font-weight: 600;
+    }
+
+    main {
+      position: relative;
+      z-index: 1;
+      width: min(1180px, calc(100% - 48px));
+      margin: 0 auto;
+      padding: 60px 0 96px;
+    }
+    .intro {
+      max-width: 760px;
+      margin: 0 auto 52px;
+      text-align: center;
+    }
+    .eyebrow {
+      display: block;
+      margin-bottom: 14px;
+      color: var(--navy);
+      font-size: .67rem;
+      letter-spacing: .22em;
+      text-transform: uppercase;
+    }
+    h1, h2, h3, p { margin-top: 0; }
+    h1 {
+      max-width: 15ch;
+      margin-right: auto;
+      margin-bottom: 18px;
+      margin-left: auto;
+      font-family: var(--serif);
+      font-size: clamp(2.6rem, 6vw, 5.25rem);
+      font-weight: 400;
+      letter-spacing: -.045em;
+      line-height: .98;
+    }
+    .intro p {
+      max-width: 56ch;
+      margin: 0 auto;
+      color: var(--ink-soft);
+      font-size: 1rem;
+    }
+
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+    }
+    .product-card {
+      display: flex;
+      min-width: 0;
+      overflow: hidden;
+      flex-direction: column;
+      border: 1px solid rgba(39, 42, 43, .09);
+      border-radius: 18px;
+      background: rgba(251, 250, 246, .9);
+      box-shadow: var(--shadow-soft);
+    }
+    .product-visual {
+      display: grid;
+      min-height: 330px;
+      place-items: center;
+      padding: 32px;
+      background:
+        radial-gradient(circle at 50% 40%, rgba(255, 255, 255, .9), transparent 42%),
+        linear-gradient(155deg, #d6e3ee, #eef1f0);
+    }
+    .product-visual img {
+      max-width: 76%;
+      max-height: 276px;
+      filter: drop-shadow(0 22px 24px rgba(24, 35, 44, .19));
+      transition: transform .35s ease;
+    }
+    .product-card:hover .product-visual img { transform: translateY(-5px) rotate(-1deg); }
+    .product-copy {
+      display: flex;
+      flex: 1;
+      flex-direction: column;
+      gap: 13px;
+      padding: 24px;
+    }
+    .product-format {
+      color: var(--ink-faint);
+      font-size: .62rem;
+      letter-spacing: .16em;
+      text-transform: uppercase;
+    }
+    .product-copy h2 {
+      margin-bottom: 0;
+      font-family: var(--serif);
+      font-size: 1.26rem;
+      font-weight: 500;
+      line-height: 1.2;
+    }
+    .product-meta {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 12px;
+      margin-top: auto;
+    }
+    .product-price {
+      font-family: var(--serif);
+      font-size: 1.18rem;
+      font-weight: 500;
+    }
+    .product-price small {
+      margin-left: 4px;
+      color: var(--ink-faint);
+      font-family: var(--sans);
+      font-size: .68rem;
+      font-weight: 400;
+    }
+    .add-button, .primary-button, .secondary-button {
+      display: inline-flex;
+      min-height: 46px;
+      align-items: center;
+      justify-content: center;
+      padding: 12px 19px;
+      border: 1px solid var(--ink);
+      border-radius: 999px;
+      cursor: pointer;
+      font-size: .66rem;
+      font-weight: 600;
+      letter-spacing: .13em;
+      text-transform: uppercase;
+      transition: color .2s ease, background .2s ease, transform .2s ease;
+    }
+    .add-button {
+      color: var(--paper);
+      background: var(--ink);
+    }
+    .add-button:hover, .primary-button:hover { transform: translateY(-2px); }
+
+    .prototype-note {
+      max-width: 760px;
+      margin: 30px auto 0;
+      color: var(--ink-soft);
+      font-size: .78rem;
+      text-align: center;
+    }
+
+    .cart-overlay {
+      position: fixed;
+      z-index: 20;
+      inset: 0;
+      border: 0;
+      opacity: 0;
+      background: rgba(11, 23, 34, .46);
+      backdrop-filter: blur(3px);
+      cursor: pointer;
+      transition: opacity .28s ease;
+      pointer-events: none;
+    }
+    .cart-overlay.is-open {
+      opacity: 1;
+      pointer-events: auto;
+    }
+    .cart-dialog {
+      position: fixed;
+      z-index: 21;
+      top: 0;
+      right: 0;
+      display: flex;
+      width: min(520px, 100%);
+      height: 100dvh;
+      overflow: hidden;
+      flex-direction: column;
+      background: var(--card);
+      box-shadow: var(--shadow-deep);
+      transform: translateX(104%);
+      transition: transform .36s cubic-bezier(.22, 1, .36, 1);
+    }
+    .cart-dialog.is-open { transform: translateX(0); }
+    .dialog-header {
+      display: flex;
+      min-height: 80px;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      padding: 18px 24px;
+      border-bottom: 1px solid var(--line);
+    }
+    .dialog-header h2 {
+      margin: 0;
+      font-family: var(--serif);
+      font-size: 1.55rem;
+      font-weight: 500;
+    }
+    .dialog-step {
+      display: block;
+      margin-bottom: 2px;
+      color: var(--ink-faint);
+      font-size: .61rem;
+      letter-spacing: .13em;
+      text-transform: uppercase;
+    }
+    .icon-button {
+      display: grid;
+      width: 46px;
+      height: 46px;
+      flex: 0 0 46px;
+      place-items: center;
+      padding: 0;
+      border: 1px solid var(--line);
+      border-radius: 50%;
+      background: transparent;
+      cursor: pointer;
+      font-size: 1.35rem;
+    }
+    .dialog-body {
+      flex: 1;
+      overflow-y: auto;
+      overscroll-behavior: contain;
+      padding: 24px;
+    }
+    .preview-notice {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      margin-bottom: 22px;
+      padding: 12px 14px;
+      border: 1px solid rgba(30, 67, 102, .14);
+      border-radius: 12px;
+      color: var(--navy);
+      background: rgba(174, 198, 218, .22);
+      font-size: .77rem;
+    }
+    .preview-notice i {
+      display: block;
+      width: 8px;
+      height: 8px;
+      flex: 0 0 8px;
+      margin-top: 5px;
+      border-radius: 50%;
+      background: var(--blue);
+    }
+    .empty-cart {
+      display: grid;
+      min-height: 48vh;
+      place-items: center;
+      text-align: center;
+    }
+    .empty-cart h3 {
+      margin-bottom: 8px;
+      font-family: var(--serif);
+      font-size: 1.45rem;
+      font-weight: 500;
+    }
+    .empty-cart p { max-width: 28ch; color: var(--ink-soft); }
+    .cart-list { display: grid; gap: 6px; }
+    .cart-item {
+      display: grid;
+      grid-template-columns: 92px minmax(0, 1fr) auto;
+      gap: 14px;
+      align-items: center;
+      padding: 14px 0;
+      border-bottom: 1px solid var(--line);
+    }
+    .cart-item-image {
+      display: grid;
+      width: 92px;
+      height: 100px;
+      place-items: center;
+      padding: 11px;
+      border-radius: 12px;
+      background: linear-gradient(155deg, #dae5ed, #f0f1ee);
+    }
+    .cart-item-image img { max-height: 82px; filter: drop-shadow(0 8px 9px rgba(24, 35, 44, .14)); }
+    .cart-item h3 {
+      margin-bottom: 4px;
+      font-family: var(--serif);
+      font-size: 1rem;
+      font-weight: 500;
+      line-height: 1.25;
+    }
+    .cart-item-meta { color: var(--ink-soft); font-size: .74rem; }
+    .quantity {
+      display: inline-grid;
+      grid-template-columns: 40px 34px 40px;
+      align-items: center;
+      margin-top: 10px;
+      overflow: hidden;
+      border: 1px solid var(--line-dark);
+      border-radius: 999px;
+    }
+    .quantity button {
+      width: 40px;
+      height: 40px;
+      padding: 0;
+      border: 0;
+      background: transparent;
+      cursor: pointer;
+      font-size: 1.05rem;
+    }
+    .quantity span { text-align: center; font-size: .8rem; }
+    .cart-item-price {
+      align-self: start;
+      padding-top: 8px;
+      font-family: var(--serif);
+      font-size: .95rem;
+      white-space: nowrap;
+    }
+    .remove-item {
+      display: block;
+      min-height: 32px;
+      margin-top: 6px;
+      padding: 0;
+      border: 0;
+      color: var(--ink-soft);
+      background: transparent;
+      cursor: pointer;
+      font-size: .68rem;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+    .summary {
+      display: grid;
+      gap: 10px;
+      margin-top: 24px;
+      padding-top: 18px;
+      border-top: 1px solid var(--line-dark);
+    }
+    .summary-row {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 18px;
+      color: var(--ink-soft);
+      font-size: .86rem;
+    }
+    .summary-row strong {
+      color: var(--ink);
+      font-family: var(--serif);
+      font-size: 1.2rem;
+      font-weight: 500;
+    }
+    .summary-caption {
+      margin: 8px 0 0;
+      color: var(--ink-faint);
+      font-size: .72rem;
+    }
+    .dialog-footer {
+      display: grid;
+      gap: 10px;
+      padding: 18px 24px calc(18px + env(safe-area-inset-bottom));
+      border-top: 1px solid var(--line);
+      background: rgba(251, 250, 246, .96);
+    }
+    .primary-button {
+      width: 100%;
+      color: var(--cream);
+      background: var(--navy);
+      border-color: var(--navy);
+    }
+    .secondary-button {
+      width: 100%;
+      color: var(--ink);
+      background: transparent;
+      border-color: var(--line-dark);
+    }
+
+    .checkout-section {
+      margin-bottom: 24px;
+      padding-bottom: 24px;
+      border-bottom: 1px solid var(--line);
+    }
+    .checkout-section h3 {
+      margin-bottom: 13px;
+      font-family: var(--serif);
+      font-size: 1.06rem;
+      font-weight: 500;
+    }
+    .demo-field-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+    .demo-field {
+      min-height: 68px;
+      padding: 11px 13px;
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      background: #f7f5f0;
+    }
+    .demo-field.wide { grid-column: 1 / -1; }
+    .demo-field span {
+      display: block;
+      margin-bottom: 2px;
+      color: var(--ink-faint);
+      font-size: .58rem;
+      letter-spacing: .11em;
+      text-transform: uppercase;
+    }
+    .demo-field strong { font-size: .82rem; font-weight: 500; }
+    .payment-demo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 15px;
+      border: 1px solid var(--line-dark);
+      border-radius: 12px;
+    }
+    .payment-demo i {
+      display: grid;
+      width: 38px;
+      height: 30px;
+      place-items: center;
+      border-radius: 6px;
+      color: var(--cream);
+      background: var(--navy);
+      font-size: .62rem;
+      font-style: normal;
+      letter-spacing: .08em;
+    }
+    .payment-demo strong { display: block; font-size: .84rem; }
+    .payment-demo span { color: var(--ink-soft); font-size: .72rem; }
+
+    .complete-state {
+      display: grid;
+      min-height: 66vh;
+      place-items: center;
+      text-align: center;
+    }
+    .complete-state > div { max-width: 340px; }
+    .complete-mark {
+      display: grid;
+      width: 68px;
+      height: 68px;
+      margin: 0 auto 20px;
+      place-items: center;
+      border-radius: 50%;
+      color: var(--cream);
+      background: var(--success);
+      font-size: 1.8rem;
+    }
+    .complete-state h3 {
+      margin-bottom: 10px;
+      font-family: var(--serif);
+      font-size: 1.8rem;
+      font-weight: 500;
+      line-height: 1.15;
+    }
+    .complete-state p { color: var(--ink-soft); }
+
+    .sr-only {
+      position: absolute !important;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border: 0;
+    }
+
+    @media (max-width: 860px) {
+      .site-nav a, .currency { display: none; }
+      .product-grid { grid-template-columns: 1fr 1fr; }
+      .product-grid .product-card:last-child { display: none; }
+    }
+
+    @media (max-width: 620px) {
+      .prototype-bar { justify-content: space-between; font-size: .61rem; }
+      .site-header, main { width: min(100% - 28px, 1180px); }
+      .site-header { min-height: 66px; }
+      .site-nav:first-child::before {
+        content: "Menu";
+        font-size: .68rem;
+        letter-spacing: .12em;
+        text-transform: uppercase;
+      }
+      .wordmark { font-size: 1.15rem; }
+      main { padding-top: 42px; }
+      .intro { margin-bottom: 34px; }
+      .intro p { font-size: .92rem; }
+      .product-grid { grid-template-columns: 1fr; gap: 16px; }
+      .product-grid .product-card:last-child { display: flex; }
+      .product-card { display: grid; grid-template-columns: 42% 58%; }
+      .product-visual { min-height: 235px; padding: 18px; }
+      .product-visual img { max-width: 82%; max-height: 195px; }
+      .product-copy { padding: 18px 16px; }
+      .product-meta { align-items: stretch; flex-direction: column; }
+      .add-button { width: 100%; }
+      .cart-overlay { background: rgba(11, 23, 34, .36); }
+      .cart-dialog {
+        top: auto;
+        bottom: 0;
+        width: 100%;
+        height: min(88dvh, 780px);
+        border-radius: 22px 22px 0 0;
+        transform: translateY(104%);
+      }
+      .cart-dialog.is-open { transform: translateY(0); }
+      .dialog-header { min-height: 72px; }
+      .dialog-body { padding: 20px 18px; }
+      .dialog-footer { padding-right: 18px; padding-left: 18px; }
+      .cart-item { grid-template-columns: 72px minmax(0, 1fr) auto; gap: 10px; }
+      .cart-item-image { width: 72px; height: 84px; }
+      .cart-item-image img { max-height: 66px; }
+      .demo-field-grid { grid-template-columns: 1fr; }
+      .demo-field.wide { grid-column: auto; }
+    }
+
+    @media (max-width: 420px) {
+      h1 { font-size: 2.65rem; }
+      .product-card { grid-template-columns: 40% 60%; }
+      .product-copy h2 { font-size: 1.05rem; }
+      .product-format { font-size: .56rem; }
+      .cart-item {
+        grid-template-columns: 64px minmax(0, 1fr);
+        align-items: start;
+      }
+      .cart-item-image { width: 64px; height: 78px; }
+      .cart-item-price { grid-column: 2; padding-top: 0; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        scroll-behavior: auto !important;
+        transition-duration: .01ms !important;
+        animation-duration: .01ms !important;
+        animation-iteration-count: 1 !important;
+      }
+    }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#products">Skip to products</a>
+
+  <aside class="prototype-bar" aria-label="Prototype status">
+    <span>Local design prototype · no real orders</span>
+    <button type="button" id="resetDemo">Reset demo</button>
+  </aside>
+
+  <header class="site-header">
+    <nav class="site-nav" aria-label="Primary navigation">
+      <a href="#products">Shop</a>
+      <a href="#prototypeNotes">Our Story</a>
+    </nav>
+    <a class="wordmark" href="#" aria-label="Maple Moon home">maple moon</a>
+    <nav class="site-nav" aria-label="Utility navigation">
+      <span class="currency">AUD $</span>
+      <button class="cart-trigger" id="cartTrigger" type="button" aria-haspopup="dialog" aria-controls="cartDialog" aria-expanded="false">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 8h12l-1 12H7L6 8z"></path><path d="M9 8a3 3 0 0 1 6 0"></path></svg>
+        <span class="cart-count" id="cartCount">0</span>
+        <span class="sr-only">Open demo cart</span>
+      </button>
+    </nav>
+  </header>
+
+  <main id="products">
+    <section class="intro" aria-labelledby="pageTitle">
+      <span class="eyebrow">Mock cart direction · V1</span>
+      <h1 id="pageTitle">A gentle path from discovery to purchase.</h1>
+      <p>Try adding a product, adjusting its quantity, and continuing through the local checkout preview. Nothing leaves this browser tab.</p>
+    </section>
+
+    <section class="product-grid" aria-label="Prototype products">
+      <article class="product-card">
+        <div class="product-visual">
+          <img src="../staging-v1/clean/assets/product_shots/bar_pure_carob.webp" alt="Pure Carob and Cacao Butter bar">
+        </div>
+        <div class="product-copy">
+          <span class="product-format">Bar · 90g</span>
+          <h2>Pure Carob &amp; Cacao Butter</h2>
+          <div class="product-meta">
+            <span class="product-price">$12.95 <small>AUD</small></span>
+            <button class="add-button" type="button" data-product="pure-bar">Add to cart</button>
+          </div>
+        </div>
+      </article>
+
+      <article class="product-card">
+        <div class="product-visual">
+          <img src="../staging-v1/clean/assets/product_shots/bar_peppermint.webp" alt="Peppermint and Buckwheat bar">
+        </div>
+        <div class="product-copy">
+          <span class="product-format">Bar · 90g</span>
+          <h2>Peppermint &amp; Buckwheat</h2>
+          <div class="product-meta">
+            <span class="product-price">$12.95 <small>AUD</small></span>
+            <button class="add-button" type="button" data-product="peppermint-bar">Add to cart</button>
+          </div>
+        </div>
+      </article>
+
+      <article class="product-card">
+        <div class="product-visual">
+          <img src="../staging-v1/clean/assets/product_shots/elixir_plain.webp" alt="Pure Carob Elixir pouch">
+        </div>
+        <div class="product-copy">
+          <span class="product-format">Elixir · 150g</span>
+          <h2>Pure Carob Elixir</h2>
+          <div class="product-meta">
+            <span class="product-price">$23.95 <small>AUD</small></span>
+            <button class="add-button" type="button" data-product="pure-elixir">Add to cart</button>
+          </div>
+        </div>
+      </article>
+    </section>
+
+    <p class="prototype-note" id="prototypeNotes">
+      Product names and prices mirror the current local Saturday-review catalogue and require provenance verification before any six-page rollout.
+    </p>
+  </main>
+
+  <button class="cart-overlay" id="cartOverlay" type="button" tabindex="-1" aria-label="Close cart"></button>
+  <section class="cart-dialog" id="cartDialog" role="dialog" aria-modal="true" aria-labelledby="dialogTitle" aria-describedby="dialogDescription" aria-hidden="true">
+    <header class="dialog-header">
+      <div>
+        <span class="dialog-step" id="dialogStep">Your selection</span>
+        <h2 id="dialogTitle">Your cart</h2>
+      </div>
+      <button class="icon-button" id="closeDialog" type="button" aria-label="Close cart">&times;</button>
+    </header>
+
+    <div class="dialog-body" id="dialogBody">
+      <p class="sr-only" id="dialogDescription">A local prototype cart. No order or personal information is submitted.</p>
+      <div class="preview-notice" id="previewNotice"><i aria-hidden="true"></i><span><strong>Website preview.</strong> No real order will be placed and no personal or payment information is collected.</span></div>
+
+      <div id="cartStage">
+        <div class="empty-cart" id="emptyCart">
+          <div>
+            <h3>Your cart is waiting.</h3>
+            <p>Add something from the range to begin the purchase preview.</p>
+          </div>
+        </div>
+        <div id="cartContent" hidden>
+          <div class="cart-list" id="cartList"></div>
+          <div class="summary">
+            <div class="summary-row"><span>Subtotal</span><strong id="cartSubtotal">$0.00 AUD</strong></div>
+            <div class="summary-row"><span>Shipping &amp; tax</span><span>Calculated in the live store</span></div>
+          </div>
+          <p class="summary-caption">Only the verified product subtotal is calculated in this prototype.</p>
+        </div>
+      </div>
+
+      <div id="checkoutStage" hidden>
+        <section class="checkout-section" aria-labelledby="demoDetailsTitle">
+          <h3 id="demoDetailsTitle">Demo delivery details</h3>
+          <div class="demo-field-grid">
+            <div class="demo-field"><span>Name</span><strong>Review mode customer</strong></div>
+            <div class="demo-field"><span>Email</span><strong>Not collected</strong></div>
+            <div class="demo-field wide"><span>Address</span><strong>Demo address · Australia</strong></div>
+          </div>
+        </section>
+
+        <section class="checkout-section" aria-labelledby="demoPaymentTitle">
+          <h3 id="demoPaymentTitle">Payment preview</h3>
+          <div class="payment-demo">
+            <i aria-hidden="true">DEMO</i>
+            <div><strong>No payment method required</strong><span>This screen cannot collect or transmit card details.</span></div>
+          </div>
+        </section>
+
+        <div class="summary">
+          <div class="summary-row"><span>Verified product subtotal</span><strong id="checkoutSubtotal">$0.00 AUD</strong></div>
+          <div class="summary-row"><span>Shipping &amp; tax</span><span>Calculated in the live store</span></div>
+        </div>
+      </div>
+
+      <div class="complete-state" id="completeStage" hidden>
+        <div>
+          <span class="complete-mark" aria-hidden="true">&#10003;</span>
+          <h3>Purchase simulation complete.</h3>
+          <p>No order was created, no email was sent, and no payment or personal information was collected.</p>
+        </div>
+      </div>
+    </div>
+
+    <footer class="dialog-footer" id="dialogFooter">
+      <button class="primary-button" id="primaryAction" type="button">Continue to checkout preview</button>
+      <button class="secondary-button" id="secondaryAction" type="button">Continue browsing</button>
+    </footer>
+  </section>
+
+  <div class="sr-only" id="cartStatus" aria-live="polite" aria-atomic="true"></div>
+
+  <script>
+    (() => {
+      "use strict";
+
+      const STORAGE_KEY = "maplemoon_mock_cart_v1";
+      const PRODUCTS = {
+        "pure-bar": {
+          name: "Pure Carob & Cacao Butter",
+          format: "90g bar",
+          price: 12.95,
+          image: "../staging-v1/clean/assets/product_shots/bar_pure_carob.webp"
+        },
+        "peppermint-bar": {
+          name: "Peppermint & Buckwheat",
+          format: "90g bar",
+          price: 12.95,
+          image: "../staging-v1/clean/assets/product_shots/bar_peppermint.webp"
+        },
+        "pure-elixir": {
+          name: "Pure Carob Elixir",
+          format: "150g pouch",
+          price: 23.95,
+          image: "../staging-v1/clean/assets/product_shots/elixir_plain.webp"
+        }
+      };
+
+      const elements = {
+        trigger: document.getElementById("cartTrigger"),
+        count: document.getElementById("cartCount"),
+        overlay: document.getElementById("cartOverlay"),
+        dialog: document.getElementById("cartDialog"),
+        close: document.getElementById("closeDialog"),
+        title: document.getElementById("dialogTitle"),
+        step: document.getElementById("dialogStep"),
+        body: document.getElementById("dialogBody"),
+        notice: document.getElementById("previewNotice"),
+        cartStage: document.getElementById("cartStage"),
+        checkoutStage: document.getElementById("checkoutStage"),
+        completeStage: document.getElementById("completeStage"),
+        empty: document.getElementById("emptyCart"),
+        content: document.getElementById("cartContent"),
+        list: document.getElementById("cartList"),
+        cartSubtotal: document.getElementById("cartSubtotal"),
+        checkoutSubtotal: document.getElementById("checkoutSubtotal"),
+        footer: document.getElementById("dialogFooter"),
+        primary: document.getElementById("primaryAction"),
+        secondary: document.getElementById("secondaryAction"),
+        reset: document.getElementById("resetDemo"),
+        status: document.getElementById("cartStatus")
+      };
+
+      let cart = loadCart();
+      let stage = "cart";
+      let returnFocus = null;
+
+      function loadCart() {
+        try {
+          const parsed = JSON.parse(sessionStorage.getItem(STORAGE_KEY) || "{}");
+          return Object.keys(parsed).reduce((safe, id) => {
+            const quantity = Number(parsed[id]);
+            if (PRODUCTS[id] && Number.isInteger(quantity) && quantity > 0 && quantity <= 99) safe[id] = quantity;
+            return safe;
+          }, {});
+        } catch (_) {
+          return {};
+        }
+      }
+
+      function saveCart() {
+        try {
+          sessionStorage.setItem(STORAGE_KEY, JSON.stringify(cart));
+        } catch (_) {
+          elements.status.textContent = "Cart updated for this page. Temporary storage is unavailable.";
+        }
+      }
+
+      function money(value) {
+        return new Intl.NumberFormat("en-AU", {
+          style: "currency",
+          currency: "AUD",
+          minimumFractionDigits: 2
+        }).format(value) + " AUD";
+      }
+
+      function itemCount() {
+        return Object.values(cart).reduce((total, quantity) => total + quantity, 0);
+      }
+
+      function subtotal() {
+        return Object.entries(cart).reduce((total, [id, quantity]) => total + PRODUCTS[id].price * quantity, 0);
+      }
+
+      function announce(message) {
+        elements.status.textContent = "";
+        window.setTimeout(() => { elements.status.textContent = message; }, 20);
+      }
+
+      function renderCart() {
+        const count = itemCount();
+        elements.count.textContent = String(count);
+        elements.trigger.setAttribute("aria-label", `Cart, ${count} ${count === 1 ? "item" : "items"}`);
+        elements.empty.hidden = count !== 0;
+        elements.content.hidden = count === 0;
+        elements.primary.disabled = count === 0;
+        elements.primary.setAttribute("aria-disabled", count === 0 ? "true" : "false");
+
+        elements.list.replaceChildren();
+        Object.entries(cart).forEach(([id, quantity]) => {
+          const product = PRODUCTS[id];
+          const article = document.createElement("article");
+          article.className = "cart-item";
+          article.innerHTML = `
+            <div class="cart-item-image"><img src="${product.image}" alt=""></div>
+            <div>
+              <h3>${product.name}</h3>
+              <div class="cart-item-meta">${product.format} · ${money(product.price)}</div>
+              <div class="quantity" aria-label="Quantity for ${product.name}">
+                <button type="button" data-quantity="${id}" data-delta="-1" aria-label="Decrease ${product.name} quantity">&minus;</button>
+                <span aria-live="polite">${quantity}</span>
+                <button type="button" data-quantity="${id}" data-delta="1" aria-label="Increase ${product.name} quantity">+</button>
+              </div>
+              <button class="remove-item" type="button" data-remove="${id}">Remove</button>
+            </div>
+            <div class="cart-item-price">${money(product.price * quantity)}</div>
+          `;
+          elements.list.appendChild(article);
+        });
+
+        const total = money(subtotal());
+        elements.cartSubtotal.textContent = total;
+        elements.checkoutSubtotal.textContent = total;
+      }
+
+      function setStage(nextStage) {
+        stage = nextStage;
+        const isCart = stage === "cart";
+        const isCheckout = stage === "checkout";
+        const isComplete = stage === "complete";
+
+        elements.cartStage.hidden = !isCart;
+        elements.checkoutStage.hidden = !isCheckout;
+        elements.completeStage.hidden = !isComplete;
+        elements.notice.hidden = isComplete;
+        elements.footer.hidden = false;
+
+        if (isCart) {
+          elements.step.textContent = "Your selection";
+          elements.title.textContent = "Your cart";
+          elements.primary.textContent = "Continue to checkout preview";
+          elements.secondary.textContent = "Continue browsing";
+        } else if (isCheckout) {
+          elements.step.textContent = "Step 2 of 2";
+          elements.title.textContent = "Checkout preview";
+          elements.primary.textContent = "Complete purchase simulation";
+          elements.secondary.textContent = "Back to cart";
+        } else {
+          elements.step.textContent = "Demo complete";
+          elements.title.textContent = "Thank you";
+          elements.primary.textContent = "Start over";
+          elements.secondary.textContent = "Close";
+        }
+
+        elements.body.scrollTop = 0;
+        window.setTimeout(() => elements.primary.focus(), 40);
+      }
+
+      function openCart(source) {
+        returnFocus = source || document.activeElement;
+        document.body.classList.add("cart-open");
+        elements.overlay.classList.add("is-open");
+        elements.dialog.classList.add("is-open");
+        elements.dialog.setAttribute("aria-hidden", "false");
+        elements.trigger.setAttribute("aria-expanded", "true");
+        window.setTimeout(() => elements.close.focus(), 60);
+      }
+
+      function closeCart() {
+        document.body.classList.remove("cart-open");
+        elements.overlay.classList.remove("is-open");
+        elements.dialog.classList.remove("is-open");
+        elements.dialog.setAttribute("aria-hidden", "true");
+        elements.trigger.setAttribute("aria-expanded", "false");
+        if (returnFocus && typeof returnFocus.focus === "function") returnFocus.focus();
+      }
+
+      function addProduct(id, source) {
+        if (!PRODUCTS[id]) return;
+        cart[id] = Math.min((cart[id] || 0) + 1, 99);
+        saveCart();
+        renderCart();
+        setStage("cart");
+        announce(`${PRODUCTS[id].name} added to the demo cart.`);
+        openCart(source);
+      }
+
+      function updateQuantity(id, delta) {
+        if (!PRODUCTS[id] || !cart[id]) return;
+        const next = cart[id] + delta;
+        if (next <= 0) delete cart[id];
+        else cart[id] = Math.min(next, 99);
+        saveCart();
+        renderCart();
+        announce(next <= 0 ? `${PRODUCTS[id].name} removed from the demo cart.` : `${PRODUCTS[id].name} quantity updated.`);
+      }
+
+      function resetDemo() {
+        cart = {};
+        saveCart();
+        renderCart();
+        setStage("cart");
+        announce("Demo cart reset.");
+      }
+
+      function focusableElements() {
+        return Array.from(elements.dialog.querySelectorAll(
+          'button:not([disabled]):not([hidden]), [href]:not([hidden]), input:not([disabled]):not([hidden]), [tabindex]:not([tabindex="-1"]):not([hidden])'
+        )).filter((element) => element.getClientRects().length);
+      }
+
+      document.querySelectorAll("[data-product]").forEach((button) => {
+        button.addEventListener("click", () => addProduct(button.dataset.product, button));
+      });
+
+      elements.trigger.addEventListener("click", () => {
+        setStage("cart");
+        openCart(elements.trigger);
+      });
+      elements.close.addEventListener("click", closeCart);
+      elements.overlay.addEventListener("click", closeCart);
+      elements.reset.addEventListener("click", resetDemo);
+
+      elements.list.addEventListener("click", (event) => {
+        const quantityButton = event.target.closest("[data-quantity]");
+        const removeButton = event.target.closest("[data-remove]");
+        if (quantityButton) updateQuantity(quantityButton.dataset.quantity, Number(quantityButton.dataset.delta));
+        if (removeButton) {
+          const id = removeButton.dataset.remove;
+          if (!PRODUCTS[id]) return;
+          delete cart[id];
+          saveCart();
+          renderCart();
+          announce(`${PRODUCTS[id].name} removed from the demo cart.`);
+        }
+      });
+
+      elements.primary.addEventListener("click", () => {
+        if (stage === "cart" && itemCount()) setStage("checkout");
+        else if (stage === "checkout") setStage("complete");
+        else if (stage === "complete") resetDemo();
+      });
+
+      elements.secondary.addEventListener("click", () => {
+        if (stage === "checkout") setStage("cart");
+        else closeCart();
+      });
+
+      document.addEventListener("keydown", (event) => {
+        if (!elements.dialog.classList.contains("is-open")) return;
+        if (event.key === "Escape") {
+          event.preventDefault();
+          closeCart();
+          return;
+        }
+        if (event.key !== "Tab") return;
+        const focusable = focusableElements();
+        if (!focusable.length) return;
+        const first = focusable[0];
+        const last = focusable[focusable.length - 1];
+        if (event.shiftKey && document.activeElement === first) {
+          event.preventDefault();
+          last.focus();
+        } else if (!event.shiftKey && document.activeElement === last) {
+          event.preventDefault();
+          first.focus();
+        }
+      });
+
+      renderCart();
+    })();
+  </script>
+</body>
+</html>
