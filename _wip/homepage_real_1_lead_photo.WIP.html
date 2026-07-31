@@ -673,9 +673,26 @@ a.wf-ti:focus-visible{outline:2px solid rgba(44,42,38,.55);outline-offset:6px;bo
            finalist_moody.mp4    (most atmospheric)
          Azure grade (bright 1.12 / sat 0.95 / contrast 0.92 / blue 0.70) is BAKED into every clip —
          do not add a CSS filter on top, it will double-grade. -->
-    <video class="hero-vid" autoplay muted loop playsinline poster="assets/hero_shots/moonlit_ocean_night.webp" aria-hidden="true">
+    <video class="hero-vid" muted loop playsinline poster="assets/hero_shots/moonlit_ocean_night.webp" aria-hidden="true">
       <source src="assets/hero_videos/gen/finalists/graded_blue/finalist_wetsand2.mp4" type="video/mp4">
     </video>
+    <script id="homepage-hero-motion-controller">
+    (function(){
+      var video=document.currentScript.previousElementSibling;
+      var motion=window.matchMedia('(prefers-reduced-motion: reduce)');
+      function syncHeroMotion(){
+        if(motion.matches){
+          video.pause();
+          return;
+        }
+        var playRequest=video.play();
+        if(playRequest&&typeof playRequest.catch==='function')playRequest.catch(function(){});
+      }
+      syncHeroMotion();
+      if(typeof motion.addEventListener==='function')motion.addEventListener('change',syncHeroMotion);
+      else if(typeof motion.addListener==='function')motion.addListener(syncHeroMotion);
+    })();
+    </script>
     <div class="scrim"></div>
     <div class="wf-moonwash" aria-hidden="true"></div>
     <div class="fog"></div>
@@ -879,7 +896,7 @@ a.wf-ti:focus-visible{outline:2px solid rgba(44,42,38,.55);outline-offset:6px;bo
   </section>
 
   <!-- STOCKISTS (directory framing; dataset/count remains provisional) -->
-  <section class="wrap mm-stockists" id="stockists" aria-labelledby="stockists-title"><span class="qkick">Stockists</span><h2 id="stockists-title" class="lux-hd">180+ stockists across Australia</h2><p>Browse the directory while individual store details continue through final verification.</p><div class="mm-stock-controls"><input type="search" placeholder="Search suburb or postcode" aria-label="Search suburb or postcode" disabled><button type="button" disabled>List</button><button type="button" disabled>Map</button></div><div class="mm-filter-row"><span>All states</span><span>NSW</span><span>VIC</span><span>QLD</span><span>WA</span><span>SA</span></div><div class="mm-stock-cards"><div>Representative stockist<br><small>Details pending verification</small></div><div>Representative stockist<br><small>Details pending verification</small></div><div>Representative stockist<br><small>Details pending verification</small></div><div>+ more<br><small>Verified directory pending</small></div></div><a class="wf-pill" href="stockists.WIP.html">View full stockist list <span aria-hidden="true">→</span></a></section>
+  <section class="wrap mm-stockists" id="stockists" aria-labelledby="stockists-title"><span class="qkick">Stockists</span><h2 id="stockists-title" class="lux-hd">200+ stockists across Australia</h2><p>Browse the directory while individual store details continue through final verification.</p><div class="mm-stock-controls"><input type="search" placeholder="Search suburb or postcode" aria-label="Search suburb or postcode" disabled><button type="button" disabled>List</button><button type="button" disabled>Map</button></div><div class="mm-filter-row"><span>All states</span><span>NSW</span><span>VIC</span><span>QLD</span><span>WA</span><span>SA</span></div><div class="mm-stock-cards"><div>Representative stockist<br><small>Details pending verification</small></div><div>Representative stockist<br><small>Details pending verification</small></div><div>Representative stockist<br><small>Details pending verification</small></div><div>+ more<br><small>Verified directory pending</small></div></div><a class="wf-pill" href="stockists.WIP.html">View full stockist list <span aria-hidden="true">→</span></a></section>
 
   <!-- REVIEWS (structure only; approved testimonials pending) -->
   <section class="wrap mm-reviews" id="reviews" aria-labelledby="reviews-title"><span class="qkick">Reviews · consent pending</span><h2 id="reviews-title" class="lux-hd">Customer reviews</h2><p>Real experiences, shared with care. These WIP quotes remain noindexed until Carli confirms consent.</p><div class="mm-review-grid"><div>“<br><span>With a huge reaction to high histamine food + being dairy &amp; gluten free, your two carob bars (almond/mint) are life saving for me!”<br><b>Natasha, Sydney</b></span></div><div>“<br><span>Already given my daughter, loves it and we love it because it's nut free, dairy free!!<br><b>Janice</b></span></div><div>“<br><span>I'm absolutely LOVING everything you are doing with your carob. I personally am OBSESSED with carob. I far prefer it over cacao... in fact in most of my recipes I use it... even when I say 'add dark chocolate' I stir carob through it myself.<br><b>Acacia</b></span></div></div><div class="mm-review-note">Consent and final testimonial selection pending before go-live.</div></section>
@@ -921,7 +938,7 @@ a.wf-ti:focus-visible{outline:2px solid rgba(44,42,38,.55);outline-offset:6px;bo
   <section class="wrap wf-trust" id="trust" aria-label="Shopping reassurance">
     <div class="wf-ti"><svg viewBox="0 0 24 24"><rect x="2" y="7" width="13" height="10" rx="1"/><path d="M15 10h4l3 3v4h-7z"/><circle cx="7" cy="18" r="1.6"/><circle cx="18" cy="18" r="1.6"/></svg><div><strong>Shipping</strong><span>Final delivery terms pending</span></div></div>
     <div class="wf-ti"><svg viewBox="0 0 24 24"><rect x="5" y="11" width="14" height="9" rx="1.5"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg><div><strong>Checkout</strong><span>Final payment details pending</span></div></div>
-    <a class="wf-ti" href="stockists.WIP.html"><svg viewBox="0 0 24 24"><path d="M12 21s-7-4.5-7-10a7 7 0 0 1 14 0c0 5.5-7 10-7 10z"/><circle cx="12" cy="11" r="2.5"/></svg><div><strong>Stockists</strong><span>180+ locations across Australia</span></div></a>
+    <a class="wf-ti" href="stockists.WIP.html"><svg viewBox="0 0 24 24"><path d="M12 21s-7-4.5-7-10a7 7 0 0 1 14 0c0 5.5-7 10-7 10z"/><circle cx="12" cy="11" r="2.5"/></svg><div><strong>Stockists</strong><span>200+ locations across Australia</span></div></a>
   </section>
 
   </main>
@@ -2128,7 +2145,7 @@ body.motion-on [data-reveal].is-visible{opacity:1;transform:none;}
 .mm-stockists{text-align:center;display:block}.mm-stockists>p{color:#5a6b74}.mm-stock-controls{display:flex;max-width:760px;margin:32px auto 18px}.mm-stock-controls input{flex:1;padding:16px 20px;border:1px solid #aabcc5;border-radius:8px 0 0 8px;background:#edf4f6}.mm-stock-controls button{padding:0 22px;border:1px solid #aabcc5;border-left:0;background:#e4eef1;color:#60717a}.mm-filter-row{display:flex;justify-content:center;gap:10px;flex-wrap:wrap;margin:14px 0 32px}.mm-filter-row span{border:1px solid #9eb1bb;border-radius:999px;padding:9px 16px;color:#5e7079;font-size:.75rem;text-transform:uppercase;letter-spacing:.1em}.mm-stock-cards{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;text-align:left;margin-bottom:28px}.mm-stock-cards>div{min-height:150px;border:1px solid rgba(57,73,80,.2);padding:22px;display:grid;place-content:center;text-align:center;color:#53656e;background:rgba(255,255,255,.22)}.mm-stock-cards small{color:#82919a;margin-top:8px}
 .mm-reviews{text-align:center;display:block}.mm-reviews>p{color:#61727a}.mm-review-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin:36px auto 24px;max-width:940px}.mm-review-grid>div{min-height:190px;border:1px solid rgba(57,73,80,.2);padding:24px;text-align:left;font:3rem var(--mm-serif);color:#8799a2;background:rgba(255,255,255,.2)}.mm-review-grid span{display:block;margin-top:26px;font: .78rem var(--mm-sans);letter-spacing:.1em;text-transform:uppercase;color:#74848b}.mm-review-note{font-size:.78rem;letter-spacing:.08em;text-transform:uppercase;color:#7b8b92}
 #sampler{background:#dceaf0;border-top:1px solid rgba(57,73,80,.16)}#sampler .sbox{max-width:1200px}.sbox-gift{color:#66767e}.wf-trust{background:#dceaf0;border-top:1px solid rgba(57,73,80,.16);border-bottom:1px solid rgba(57,73,80,.16)}
-@media(max-width:900px){.mm-founder{grid-template-columns:1fr;padding:56px 20px}.mm-founder-copy{padding:0}.mm-pending-media{min-height:190px}.mm-stockists,.mm-reviews{padding:56px 20px}.mm-stock-controls{display:grid;grid-template-columns:1fr 1fr}.mm-stock-controls input{grid-column:1/-1;border-radius:8px}.mm-stock-controls button{border:1px solid #aabcc5;padding:12px;border-radius:6px}.mm-stock-cards{grid-template-columns:1fr 1fr}.mm-review-grid{grid-template-columns:1fr}.mm-review-grid>div{min-height:130px}}
+@media(max-width:900px){.mm-founder{grid-template-columns:1fr;padding:56px 20px}.mm-founder-copy{padding:0}.mm-pending-media{min-height:190px}.mm-stockists,.mm-reviews{padding:56px 20px}.mm-stock-controls{display:grid;grid-template-columns:1fr 1fr}.mm-stock-controls input{grid-column:1/-1;border-radius:8px}.mm-stock-controls button{min-height:44px;border:1px solid #aabcc5;padding:12px;border-radius:6px}.mm-stock-cards{grid-template-columns:1fr 1fr}.mm-review-grid{grid-template-columns:1fr}.mm-review-grid>div{min-height:130px}}
 /* Continuous pale-blue page wash: section changes dissolve instead of producing horizontal bands. */
 .wf-line-dark{background:linear-gradient(180deg,rgba(213,231,239,0) 0%,rgba(211,229,237,.22) 38%,rgba(211,229,237,.54) 100%)!important;border:0!important;position:relative;isolation:isolate}
 .wf-line-dark::after{content:"";position:absolute;z-index:-1;left:0;right:0;bottom:-100px;height:180px;background:linear-gradient(180deg,rgba(211,229,237,.54),rgba(216,232,239,.82) 62%,rgba(220,234,240,0));pointer-events:none}

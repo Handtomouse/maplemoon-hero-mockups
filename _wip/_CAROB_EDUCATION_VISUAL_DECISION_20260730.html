@@ -1,0 +1,337 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="robots" content="noindex,nofollow">
+  <title>Maple Moon — Carob education direction chooser</title>
+  <link rel="stylesheet" href="https://use.typekit.net/dvz0xjs.css">
+  <style>
+    :root{
+      --blue-hour:#183448;
+      --blue-deep:#102636;
+      --fog:#cfe2e9;
+      --fog-pale:#e9f2f3;
+      --cream:#f3ecd6;
+      --cream-soft:#faf6e8;
+      --carob:#2a1914;
+      --carob-soft:#684b3e;
+      --gold:#b79a5c;
+      --ink:#252724;
+      --muted:#6c716c;
+      --line:rgba(37,39,36,.16);
+      --serif:"p22-mackinac-pro",Georgia,serif;
+      --sans:"neue-haas-grotesk-display",Helvetica,Arial,sans-serif;
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;background:#dfe8e8;color:var(--ink);font-family:var(--sans);-webkit-font-smoothing:antialiased}
+    button,a{font:inherit}
+    button:focus-visible,a:focus-visible{outline:3px solid #d1af65;outline-offset:3px}
+    .review-bar{
+      position:sticky;top:0;z-index:30;display:flex;align-items:center;justify-content:space-between;
+      gap:20px;padding:12px 18px;background:rgba(16,38,54,.96);color:var(--cream);
+      border-bottom:1px solid rgba(243,236,214,.2);backdrop-filter:blur(14px)
+    }
+    .review-title{display:flex;align-items:center;gap:12px;min-width:0}
+    .review-title b{font-family:var(--serif);font-weight:500;white-space:nowrap}
+    .review-title span{font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:rgba(243,236,214,.64)}
+    .controls{display:flex;align-items:center;gap:8px;flex-wrap:wrap;justify-content:flex-end}
+    .seg{display:flex;padding:3px;border:1px solid rgba(243,236,214,.22);border-radius:999px}
+    .seg button{
+      min-height:38px;padding:7px 13px;border:0;border-radius:999px;background:transparent;color:rgba(243,236,214,.7);
+      cursor:pointer;transition:.2s ease
+    }
+    .seg button[aria-pressed="true"]{background:var(--cream);color:var(--blue-deep)}
+    .choice-note{padding:14px 20px;background:#fff;color:#3c403c;border-bottom:1px solid rgba(16,38,54,.12);font-size:13px;text-align:center}
+    .choice-note b{color:var(--blue-deep)}
+    .stage-shell{padding:26px}
+    .stage{
+      width:min(1440px,100%);margin:0 auto;background:var(--cream-soft);overflow:hidden;
+      box-shadow:0 28px 80px rgba(16,38,54,.16);transition:width .35s ease,border-radius .35s ease
+    }
+    .stage.is-mobile{width:390px;max-width:100%;border-radius:26px}
+    .mock{display:none}
+    .mock.is-active{display:block}
+    .eyebrow{font-size:11px;letter-spacing:.19em;text-transform:uppercase;font-weight:600}
+    .display{font-family:var(--serif);font-weight:500;letter-spacing:-.035em;line-height:.96}
+    .display em{font-weight:400}
+    .copy{font-size:clamp(15px,1.35vw,18px);line-height:1.65}
+    .pill{
+      display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:12px 20px;border:1px solid currentColor;
+      border-radius:999px;color:inherit;text-decoration:none;font-size:13px;letter-spacing:.04em
+    }
+
+    /* A — editorial */
+    .a-hero{position:relative;min-height:720px;background:var(--blue-hour);color:var(--cream);overflow:hidden}
+    .a-hero img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 38%;filter:saturate(.78) contrast(1.02)}
+    .a-hero::after{
+      content:"";position:absolute;inset:0;background:
+        linear-gradient(90deg,rgba(10,28,42,.8) 0%,rgba(10,28,42,.48) 38%,rgba(10,28,42,.04) 72%),
+        linear-gradient(0deg,rgba(10,28,42,.56),transparent 44%)
+    }
+    .a-copy{position:relative;z-index:2;width:min(620px,52%);padding:clamp(72px,9vw,130px) clamp(30px,7vw,110px)}
+    .a-copy .eyebrow{color:#d5b979}
+    .a-copy h1{font-size:clamp(56px,7vw,108px);margin:22px 0 30px}
+    .a-copy p{max-width:38ch;color:rgba(243,236,214,.82)}
+    .a-facts{display:flex;gap:8px;margin:30px 0 40px;flex-wrap:wrap}
+    .a-facts span{padding:9px 13px;border:1px solid rgba(243,236,214,.3);border-radius:999px;font-size:12px}
+    .a-mark{position:absolute;z-index:3;right:18%;top:34%;display:flex;align-items:center;gap:10px;color:var(--cream);font-size:12px;letter-spacing:.1em;text-transform:uppercase}
+    .a-mark::before{content:"";width:74px;height:1px;background:rgba(243,236,214,.65)}
+    .a-mark::after{content:"";position:absolute;left:-5px;width:8px;height:8px;border:1px solid var(--cream);border-radius:50%}
+    .a-compare{display:grid;grid-template-columns:1.08fr .92fr;background:var(--fog-pale)}
+    .a-photo{min-height:500px;background:url("assets/photo_finals/maplemoon_heros66_brandmatched.webp") center 73%/cover no-repeat}
+    .a-panel{padding:clamp(52px,7vw,104px);display:flex;flex-direction:column;justify-content:center}
+    .a-panel h2{font-size:clamp(42px,5vw,72px);margin:12px 0 30px;color:var(--blue-deep)}
+    .compare-line{display:grid;grid-template-columns:1fr 1fr;gap:18px;padding:17px 0;border-top:1px solid rgba(24,52,72,.15)}
+    .compare-line b{font-family:var(--serif);font-size:17px;font-weight:500}
+    .compare-line span{color:#657079;line-height:1.4}
+    .a-panel .pill{align-self:flex-start;margin-top:30px;color:var(--blue-deep)}
+
+    /* B — functional */
+    .b-wrap{padding:clamp(58px,7vw,100px);background:var(--cream-soft)}
+    .b-head{display:grid;grid-template-columns:1fr .8fr;align-items:end;gap:40px;margin-bottom:52px}
+    .b-head h1{font-size:clamp(58px,7vw,104px);margin:14px 0 0;color:var(--carob)}
+    .b-head p{max-width:48ch;margin:0;color:var(--muted)}
+    .b-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+    .b-card{position:relative;min-height:430px;padding:32px;border:1px solid var(--line);background:#fff;border-radius:22px;overflow:hidden}
+    .b-card.photo{padding:0;background:var(--blue-hour)}
+    .b-card.photo img{width:100%;height:100%;object-fit:cover;object-position:center}
+    .b-card h2{font-size:clamp(36px,4vw,58px);margin:12px 0 24px;color:var(--blue-deep)}
+    .b-points{display:grid;gap:0}
+    .b-point{display:grid;grid-template-columns:42px 1fr;gap:12px;padding:16px 0;border-top:1px solid var(--line)}
+    .b-point i{width:34px;height:34px;display:grid;place-items:center;border-radius:50%;background:var(--fog-pale);color:var(--blue-deep);font-style:normal}
+    .b-point b{display:block;margin:1px 0 4px}
+    .b-point small{color:var(--muted);line-height:1.45}
+    .b-table{grid-column:1/-1;min-height:0}
+    .b-table h2{margin-bottom:12px}
+    .b-row{display:grid;grid-template-columns:1.2fr 1fr 1fr;gap:18px;padding:16px 0;border-top:1px solid var(--line)}
+    .b-row.head{color:var(--muted);font-size:11px;letter-spacing:.13em;text-transform:uppercase}
+    .b-row strong{font-family:var(--serif);font-weight:500}
+    .b-foot{display:flex;justify-content:space-between;gap:20px;align-items:center;margin-top:30px}
+
+    /* C — interactive */
+    .c-wrap{min-height:820px;padding:clamp(58px,7vw,108px);background:linear-gradient(135deg,var(--blue-deep),#244e64 58%,#7194a2);color:var(--cream)}
+    .c-head{text-align:center;max-width:850px;margin:0 auto 50px}
+    .c-head h1{font-size:clamp(58px,7.5vw,110px);margin:14px 0 24px}
+    .c-head p{max-width:56ch;margin:0 auto;color:rgba(243,236,214,.74)}
+    .c-lab{display:grid;grid-template-columns:1fr auto 1fr;gap:20px;align-items:center}
+    .c-side{min-height:460px;padding:34px;border:1px solid rgba(243,236,214,.2);border-radius:28px;background:rgba(243,236,214,.07);backdrop-filter:blur(10px)}
+    .c-side.carob{background:rgba(243,236,214,.92);color:var(--ink)}
+    .c-side h2{font-family:var(--serif);font-size:clamp(40px,4vw,62px);font-weight:500;margin:10px 0 18px}
+    .c-side p{line-height:1.6;color:inherit;opacity:.75}
+    .c-pod{width:100%;height:190px;object-fit:contain;filter:drop-shadow(0 22px 25px rgba(0,0,0,.2))}
+    .c-cacao{height:190px;display:grid;place-items:center}
+    .c-cacao span{width:132px;height:132px;display:grid;place-items:center;border:1px solid rgba(243,236,214,.42);border-radius:50%;font-family:var(--serif);font-size:34px}
+    .c-toggle{display:flex;flex-direction:column;align-items:center;gap:12px}
+    .c-toggle span{font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:rgba(243,236,214,.6);writing-mode:vertical-rl}
+    .c-toggle button{width:54px;height:108px;padding:5px;border:1px solid rgba(243,236,214,.36);border-radius:999px;background:rgba(16,38,54,.35);cursor:pointer}
+    .c-toggle button i{display:block;width:42px;height:42px;border-radius:50%;background:var(--cream);transition:transform .35s ease}
+    .c-toggle button.is-cacao i{transform:translateY(54px);background:#8a5a43}
+    .c-facts{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:22px}
+    .c-facts span{padding:12px 9px;border:1px solid currentColor;border-radius:13px;text-align:center;font-size:12px;opacity:.7}
+    .c-foot{text-align:center;margin-top:34px}
+    .c-foot .pill{color:var(--cream)}
+
+    .stage.is-mobile .a-hero{min-height:760px}
+    .stage.is-mobile .a-hero img{object-position:64% center}
+    .stage.is-mobile .a-hero::after{background:linear-gradient(0deg,rgba(10,28,42,.9),rgba(10,28,42,.18) 70%)}
+    .stage.is-mobile .a-copy{width:100%;padding:390px 24px 58px}
+    .stage.is-mobile .a-copy h1{font-size:54px}
+    .stage.is-mobile .a-mark{display:none}
+    .stage.is-mobile .a-compare{grid-template-columns:1fr}
+    .stage.is-mobile .a-photo{min-height:360px;background-position:center 78%}
+    .stage.is-mobile .a-panel{padding:52px 24px}
+    .stage.is-mobile .compare-line{grid-template-columns:1fr;gap:7px}
+    .stage.is-mobile .b-wrap{padding:54px 18px}
+    .stage.is-mobile .b-head{grid-template-columns:1fr;gap:20px}
+    .stage.is-mobile .b-head h1{font-size:54px}
+    .stage.is-mobile .b-grid{grid-template-columns:1fr}
+    .stage.is-mobile .b-card{min-height:0;padding:24px}
+    .stage.is-mobile .b-card.photo{height:340px;padding:0}
+    .stage.is-mobile .b-table{grid-column:auto}
+    .stage.is-mobile .b-row{grid-template-columns:1fr;gap:6px}
+    .stage.is-mobile .b-row.head{display:none}
+    .stage.is-mobile .b-foot{align-items:flex-start;flex-direction:column}
+    .stage.is-mobile .c-wrap{padding:54px 18px}
+    .stage.is-mobile .c-head h1{font-size:56px}
+    .stage.is-mobile .c-lab{grid-template-columns:1fr}
+    .stage.is-mobile .c-toggle{flex-direction:row}
+    .stage.is-mobile .c-toggle span{writing-mode:initial}
+    .stage.is-mobile .c-toggle button{width:108px;height:54px}
+    .stage.is-mobile .c-toggle button.is-cacao i{transform:translateX(54px)}
+    .stage.is-mobile .c-side{min-height:0;padding:24px}
+    .stage.is-mobile .c-facts{grid-template-columns:1fr}
+
+    @media(max-width:760px){
+      .review-bar{position:relative;align-items:flex-start;flex-direction:column}
+      .controls{justify-content:flex-start}
+      .stage-shell{padding:12px}
+      .stage:not(.is-mobile){width:100%}
+    }
+    @media(prefers-reduced-motion:reduce){
+      html{scroll-behavior:auto}
+      *,*::before,*::after{scroll-behavior:auto!important;transition-duration:.01ms!important;animation-duration:.01ms!important;animation-iteration-count:1!important}
+    }
+  </style>
+</head>
+<body>
+  <header class="review-bar">
+    <div class="review-title">
+      <b>Maple Moon</b>
+      <span>Carob education direction</span>
+    </div>
+    <div class="controls">
+      <div class="seg" aria-label="Choose direction">
+        <button type="button" data-dir="a" aria-pressed="true">A Editorial</button>
+        <button type="button" data-dir="b" aria-pressed="false">B Functional</button>
+        <button type="button" data-dir="c" aria-pressed="false">C Interactive</button>
+      </div>
+      <div class="seg" aria-label="Choose preview width">
+        <button type="button" data-view="desktop" aria-pressed="true">Desktop</button>
+        <button type="button" data-view="mobile" aria-pressed="false">Mobile</button>
+      </div>
+    </div>
+  </header>
+  <div class="choice-note" id="choiceNote"><b>A — Blue-hour editorial.</b> Photography and atmosphere do the teaching; detail stays quiet.</div>
+
+  <main class="stage-shell">
+    <div class="stage" id="stage">
+      <article class="mock is-active" data-mock="a">
+        <section class="a-hero">
+          <img src="assets/hero_shots/carob_branch_dusk.jpg" alt="">
+          <div class="a-copy">
+            <span class="eyebrow">The ingredient</span>
+            <h1 class="display">What is carob, <em>actually?</em></h1>
+            <p class="copy">A pod with its own quiet sweetness. We choose carob for what it is, not for what it replaces.</p>
+            <div class="a-facts" aria-label="Current WIP proof points">
+              <span>Naturally sweet</span><span>Caffeine free</span><span>Australian grown</span>
+            </div>
+            <a class="pill" href="#a-compare">Carob and cacao</a>
+          </div>
+          <span class="a-mark">The ripe pod</span>
+        </section>
+        <section class="a-compare" id="a-compare">
+          <div class="a-photo" role="img" aria-label="Single carob pod in blue-hour light"></div>
+          <div class="a-panel">
+            <span class="eyebrow">An honest comparison</span>
+            <h2 class="display">Carob and cacao, <em>honestly.</em></h2>
+            <div class="compare-line"><b>Character</b><span>Mellow carob sweetness alongside cacao’s familiar depth.</span></div>
+            <div class="compare-line"><b>Ritual</b><span>Designed for the slow part of the evening.</span></div>
+            <div class="compare-line"><b>Learn more</b><span>Keep the detailed claims and sourcing story on the full Carob page.</span></div>
+            <a class="pill" href="carob-story.WIP.html">The full carob story</a>
+          </div>
+        </section>
+      </article>
+
+      <article class="mock" data-mock="b">
+        <section class="b-wrap">
+          <header class="b-head">
+            <div><span class="eyebrow">Carob 101</span><h1 class="display">What is carob, <em>actually?</em></h1></div>
+            <p class="copy">A clearer, more useful orientation for someone who has never met carob before. Current wording remains review-only.</p>
+          </header>
+          <div class="b-grid">
+            <div class="b-card photo"><img src="assets/hero_shots/carob_branch_dusk.jpg" alt=""></div>
+            <div class="b-card">
+              <span class="eyebrow">The short answer</span>
+              <h2 class="display">A pod with its own point of view.</h2>
+              <div class="b-points">
+                <div class="b-point"><i>01</i><div><b>The pod</b><small>Grows on the carob tree and darkens as it ripens.</small></div></div>
+                <div class="b-point"><i>02</i><div><b>The flavour</b><small>Roasted, mellow and naturally sweet in character.</small></div></div>
+                <div class="b-point"><i>03</i><div><b>The ritual</b><small>A calm alternative for evening cravings.</small></div></div>
+              </div>
+            </div>
+            <div class="b-card b-table">
+              <span class="eyebrow">At a glance</span>
+              <h2 class="display">Carob and cacao.</h2>
+              <div class="b-row head"><span>Question</span><span>Carob</span><span>Cacao</span></div>
+              <div class="b-row"><strong>What does it taste like?</strong><span>Mellow, roasted, naturally sweet</span><span>Deep, bitter, familiar</span></div>
+              <div class="b-row"><strong>Where do I learn more?</strong><span>The full Maple Moon carob story</span><span>Comparison wording pending approval</span></div>
+              <div class="b-foot"><small>Visual direction preview. Factual claims remain subject to client approval.</small><a class="pill" href="carob-story.WIP.html">Read the carob story</a></div>
+            </div>
+          </div>
+        </section>
+      </article>
+
+      <article class="mock" data-mock="c">
+        <section class="c-wrap">
+          <header class="c-head">
+            <span class="eyebrow">Move between the ingredients</span>
+            <h1 class="display">Carob, on its <em>own terms.</em></h1>
+            <p class="copy">A tactile comparison moment. The interaction changes emphasis, never invents facts or turns the section into a quiz.</p>
+          </header>
+          <div class="c-lab">
+            <article class="c-side carob" id="carobSide">
+              <span class="eyebrow">Maple Moon chooses</span>
+              <h2>Carob</h2>
+              <img class="c-pod" src="assets/photo_finals/maplemoon_heros66_brandmatched.webp" alt="">
+              <p>A softly roasted pod with a character all its own.</p>
+              <div class="c-facts"><span>Pod grown</span><span>Quiet sweetness</span><span>Evening ritual</span></div>
+            </article>
+            <div class="c-toggle">
+              <span>Shift the view</span>
+              <button type="button" id="ingredientToggle" aria-label="Shift emphasis between carob and cacao" aria-pressed="false"><i></i></button>
+            </div>
+            <article class="c-side" id="cacaoSide">
+              <span class="eyebrow">The familiar reference</span>
+              <h2>Cacao</h2>
+              <div class="c-cacao"><span>cacao</span></div>
+              <p>Useful as a comparison, but not the definition of carob.</p>
+              <div class="c-facts"><span>Reference</span><span>Familiar depth</span><span>Claims pending</span></div>
+            </article>
+          </div>
+          <div class="c-foot"><a class="pill" href="carob-story.WIP.html">Explore the full story</a></div>
+        </section>
+      </article>
+    </div>
+  </main>
+
+  <script>
+    (function(){
+      var notes={
+        a:"<b>A — Blue-hour editorial.</b> Photography and atmosphere do the teaching; detail stays quiet.",
+        b:"<b>B — Clear and functional.</b> A first-time carob visitor gets fast answers and a structured comparison.",
+        c:"<b>C — Tactile comparison.</b> A restrained interaction lets the visitor shift attention between carob and cacao."
+      };
+      var stage=document.getElementById("stage");
+      var note=document.getElementById("choiceNote");
+      function syncUrl(){
+        var active=document.querySelector('[data-dir][aria-pressed="true"]');
+        var dir=active?active.dataset.dir:"a";
+        history.replaceState(null,"","?direction="+dir+(stage.classList.contains("is-mobile")?"&view=mobile":""));
+      }
+      document.querySelectorAll("[data-dir]").forEach(function(button){
+        button.addEventListener("click",function(){
+          var dir=button.dataset.dir;
+          document.querySelectorAll("[data-dir]").forEach(function(item){item.setAttribute("aria-pressed",item===button?"true":"false")});
+          document.querySelectorAll("[data-mock]").forEach(function(mock){mock.classList.toggle("is-active",mock.dataset.mock===dir)});
+          note.innerHTML=notes[dir];
+          syncUrl();
+        });
+      });
+      document.querySelectorAll("[data-view]").forEach(function(button){
+        button.addEventListener("click",function(){
+          var mobile=button.dataset.view==="mobile";
+          document.querySelectorAll("[data-view]").forEach(function(item){item.setAttribute("aria-pressed",item===button?"true":"false")});
+          stage.classList.toggle("is-mobile",mobile);
+          syncUrl();
+        });
+      });
+      var toggle=document.getElementById("ingredientToggle");
+      if(toggle){
+        toggle.addEventListener("click",function(){
+          var cacao=toggle.getAttribute("aria-pressed")!=="true";
+          toggle.setAttribute("aria-pressed",cacao?"true":"false");
+          toggle.classList.toggle("is-cacao",cacao);
+          document.getElementById("carobSide").style.opacity=cacao?".56":"1";
+          document.getElementById("cacaoSide").style.opacity=cacao?"1":".7";
+        });
+      }
+      var params=new URLSearchParams(location.search);
+      var initial=params.get("direction");
+      if(/^[abc]$/.test(initial)){document.querySelector('[data-dir="'+initial+'"]').click()}
+      if(params.get("view")==="mobile"){document.querySelector('[data-view="mobile"]').click()}
+    })();
+  </script>
+</body>
+</html>
