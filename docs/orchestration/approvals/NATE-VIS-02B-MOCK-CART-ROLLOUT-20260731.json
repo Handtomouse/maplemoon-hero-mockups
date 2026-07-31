@@ -1,0 +1,41 @@
+{
+  "schema": "maplemoon-approval/v2",
+  "approval_id": "NATE-VIS-02B-MOCK-CART-ROLLOUT-20260731",
+  "approver": "Nate",
+  "authority_basis": "executive owner",
+  "candidate_or_packet": "VIS-02B-MOCK-CART-ROLLOUT",
+  "action_class": "mutating-local-design-approval",
+  "exact_scope": [
+    "Use mock-cart-checkout-v1.html raw SHA-256 efc59be4e5612b77a7f1c0493d6cf3a3789448217a7b953acfeba946ab082d14 as the approved visual and interaction direction.",
+    "Provide Add to cart controls on the derived Homepage and Shop review pages only, while keeping the derived cart accessible from all six review pages.",
+    "Persist the derived cart across the six review pages with per-tab session storage and reset it when the browser tab closes.",
+    "Use only product, price, availability and selling-option data verified against the accepted WooCommerce and retail-catalogue evidence; exclude unverified products from the purchasable demo.",
+    "Collect no real name, email, address, payment or order data and make no analytics, API, Shopify or WooCommerce request.",
+    "Render a right-side cart drawer on desktop and a bottom-sheet cart on mobile.",
+    "Keep verified unavailable products visible as Sold out with purchasing disabled.",
+    "Show verified shipping and tax only; otherwise state that they are calculated in the live store without inventing an amount.",
+    "End with Purchase simulation complete and create no realistic order number or confirmation email.",
+    "Use MapleMoon styling and require keyboard operation, focus trapping and restoration, Escape close, visible status, 44px targets and reduced-motion support.",
+    "Keep the clean surface presentation-ready and expose reset and state explanation controls only in the annotated surface.",
+    "Verify the derived journey at 1440, 1024, 430 and 390 pixels before review; the wider Saturday acceptance matrix remains a later gate."
+  ],
+  "source_prototype": {
+    "path": "docs/client-review/2026-08-01-saturday-review/prototypes/mock-cart-checkout-v1.html",
+    "sha256_raw": "efc59be4e5612b77a7f1c0493d6cf3a3789448217a7b953acfeba946ab082d14",
+    "qa_result": "desktop and mobile visual and interaction checks passed; no external request or browser error observed"
+  },
+  "not_authorized": [
+    "unverified product, price, availability, shipping, tax or selling-option data",
+    "canonical WIP, theme, catalogue source or production storefront edits",
+    "customer, order, contact, address or payment-data collection",
+    "Shopify, WooCommerce, analytics, API, Vercel or production action",
+    "client contact, send, upload, publication or deployment",
+    "commit or push"
+  ],
+  "single_use": true,
+  "issued_at": "2026-07-30T15:30:05Z",
+  "expires_at": "2026-08-02T13:59:59Z",
+  "revoked": false,
+  "consumed_by_receipt": null,
+  "source": "Nate explicitly replied approved for rollout after reviewing the interactive local mock-cart prototype and its twenty-question decision contract."
+}

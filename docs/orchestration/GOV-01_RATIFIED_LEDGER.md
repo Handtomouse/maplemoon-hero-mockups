@@ -274,3 +274,39 @@ The current lock state is **one released historical row; no held lock**. This co
 Forbidden until separately approved and admitted: Shopify, WooCommerce, Vercel, DNS/MX, email sends, analytics, payments, webhooks, customer data, client contact, deployment, WIP/theme/assets/pricing/content edits, `.planning`/`docs/plans`/legacy edits, lock-manifest edits, commit, push, reset, revert, or cleanup.
 
 Current blockers are the absent fresh WooCommerce export, absent approved retail catalogue, unverified Shopify security/access controls, founder assets/inputs, provisional stockist data, testimonial permission, analytics controls, and the historical communication/count discrepancies noted above. The next gate is receipt and validation of the fresh export plus approved retail catalogue; then, and only then, a read-only `CAT-01A` provenance packet may be admitted with an explicitly named output path and held lock. Until that gate passes, no mutating packet is authorised.
+
+## Amendment — 2026-07-30 CTRL-V2-P04 ratification
+
+<!-- GOV-01-AMENDMENT: CTRL-V2-P04-RATIFICATION-20260730 -->
+
+Nate explicitly ratified `CTRL-V2-CANDIDATE-20260730-001` and authorized `CTRL-V2-P04` to record ratification only. The admission receipt is `NATE-LOCAL-AUTH-20260730-CTRL-V2-P04`, received at `2026-07-30T08:31:25Z`.
+
+### Frozen candidate binding
+
+| Candidate artifact | SHA-256 of raw bytes |
+|---|---|
+| `docs/plans/2026-07-30-maplemoon-master-orchestration-plan-v2.md` | `3c453aa0e3bb60a894ad2a9d506da61930cadb482e961a7c227becb50d2a694e` |
+| `docs/orchestration/MASTER_PACKET_REGISTER.md` | `300a0d5ac87bf27570df0e3de00a5f88da5a5efc043b57d37d7831d8d2029d7e` |
+| `docs/orchestration/CONTROL_PLANE_INTERFACES.md` | `8c73f6bb37564a56b3d599ad74237f472393d911d6c57484cdb648229bf881e8` |
+| `docs/orchestration/packets/CTRL-V2-P03.md` | `e579671bcff15bdec6b51cb110e2d73575938002f5444d679821f434b8f2ad02` |
+| `docs/orchestration/packets/VIS-01A.md` | `1b507b1e76a9409cae903006ef33b3330f762b9f5026d981570923cf80b1013b` |
+| `docs/orchestration/packets/CAT-01A-READ.md` | `4e2c218472066e605d3e85c90e20d06cdf0aab383cb44cc3a4363fa422b43f8a` |
+| `scripts/validate-maplemoon-control-plane.py` | `55d19976be77be180fa9071accf2c7f3fcdcedcae956d1435f2e3d24b6dbf469` |
+| `docs/orchestration/reviews/CTRL-V2-REVIEW_CHAIN.md` | `29b782011ab29e4e9ac0bc9abee324a936cee6372178a0e26fd305ea10e2a437` |
+
+The frozen candidate artifacts and review chain are unchanged by P04. The durable receipt is `docs/orchestration/ratifications/CTRL-V2-P04_RATIFICATION_20260730.md`.
+
+### Authority and supersession effects
+
+- The exact frozen V2 candidate above is now the canonical local MapleMoon orchestration authority.
+- This GOV-01 ledger remains historical evidence and a ratification bridge. Where earlier execution wording conflicts with the ratified V2 candidate, V2 controls.
+- `docs/plans/2026-07-29-maplemoon-master-orchestration-plan-draft.md` remains unchanged and historical; it is not execution authority.
+- The earlier GOV-01 wording that allowed `CAT-01A` to persist a new ledger output is superseded. Under V2, `CAT-01A-READ` is zero-write and inline only. A future `CAT-01B-LEDGER` may persist output only under a separately admitted mutating-local packet and fresh locks.
+- Ratification does not admit a page, theme, catalogue, integration, external-access or production packet.
+
+### Retained blocks
+
+- **VIS Typekit rendered-review block retained:** the current Carob chooser remains source-inspection evidence only while it can request Adobe Typekit. Rendered review requires a separately admitted sanitization or an independently verified zero-network route.
+- **CAT input block retained:** CAT-01 remains blocked until both a fresh WooCommerce export and the approved retail catalogue are available and pass the required provenance, schema and PII preflight.
+
+P04 authorizes no WIP, theme, content, asset, Shopify, WooCommerce, Vercel, deployment, client contact, send, commit, push or production action.

@@ -1,0 +1,27 @@
+{
+  "schema": "maplemoon-approval/v2",
+  "approval_id": "NATE-VIS-01C-TYPEKIT-20260730",
+  "approver": "Nate",
+  "authority_basis": "executive owner",
+  "candidate_or_packet": "VIS-01C-SATURDAY-SHELL",
+  "action_class": "approved-external-render-dependency",
+  "exact_scope": [
+    "Adobe Typekit CSS at https://use.typekit.net/dvz0xjs.css",
+    "font resources requested by that approved Typekit CSS from use.typekit.net and p.typekit.net",
+    "local clean and annotated VIS-01C pre-dispatch review rendering only"
+  ],
+  "classification": "networked-local-review",
+  "prohibited_claim": "zero-external-request local-only review",
+  "not_authorized": [
+    "analytics, forms, APIs or any other external request",
+    "upload, client contact, send, deployment, Vercel, Shopify, WooCommerce or production action",
+    "font download, extraction, redistribution or self-hosting",
+    "commit or push"
+  ],
+  "single_use": true,
+  "issued_at": "2026-07-30T12:50:02Z",
+  "expires_at": "2026-08-02T13:59:59Z",
+  "revoked": false,
+  "consumed_by_receipt": null,
+  "source": "Nate replied agreed after being asked whether to preserve Adobe Typekit for correct MapleMoon typography while accepting the Adobe request."
+}

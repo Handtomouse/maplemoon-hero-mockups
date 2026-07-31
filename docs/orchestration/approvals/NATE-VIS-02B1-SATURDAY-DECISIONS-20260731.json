@@ -1,0 +1,34 @@
+{
+  "schema": "maplemoon-approval/v2",
+  "approval_id": "NATE-VIS-02B1-SATURDAY-DECISIONS-20260731",
+  "candidate_id": "CTRL-V2-CANDIDATE-20260730-001",
+  "received_at": "2026-07-30T15:59:02Z",
+  "decision_owner": "Nate",
+  "approval_class": "mutating-local-derived-review",
+  "source": "Nate approved the recommended decisions one at a time in the current grill-me review, then said execute.",
+  "approved": [
+    "accept VIS-02A Homepage Technical Hardening",
+    "split VIS-02B into B1 internal shell now and B2 verified catalogue binding later",
+    "keep B1 hidden behind cart-qa=1 across all six derived pages",
+    "allow Adobe Typekit only and describe the package as a networked review",
+    "use a fresh WooCommerce admin export reconciled with Carli's approved retail catalogue as commerce authority",
+    "exclude any WooCommerce and Carli conflict until a human decision",
+    "hide unresolved, placeholder, unsupported, missing-asset and consent-held content from the ordinary clean review",
+    "retain unresolved evidence in the annotated review",
+    "draft claim replacement options but apply no wording without exact Nate approval",
+    "hide testimonials from clean until Carli confirms permission and attribution",
+    "keep newsletter forms visible as local fake submissions that discard the address",
+    "show a normal thank-you plus a discreet notice that the email was not saved",
+    "use neutral clean stockist wording without a count"
+  ],
+  "not_authorized": [
+    "canonical WIP edits",
+    "unverified product, price, availability, shipping, tax or selling-option claims",
+    "public copy replacement",
+    "catalogue-source mutation",
+    "client contact or sends",
+    "commit or push",
+    "upload, publication or deployment",
+    "Shopify, WooCommerce, Vercel or production action"
+  ]
+}

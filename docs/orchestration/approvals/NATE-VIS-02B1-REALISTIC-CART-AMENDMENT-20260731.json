@@ -1,0 +1,30 @@
+{
+  "schema": "maplemoon-approval/v2",
+  "approval_id": "NATE-VIS-02B1-REALISTIC-CART-AMENDMENT-20260731",
+  "candidate_id": "CTRL-V2-CANDIDATE-20260730-001",
+  "received_at": "2026-07-30T16:24:02Z",
+  "decision_owner": "Nate",
+  "approval_class": "mutating-local-derived-review",
+  "source": "Nate rejected enquiry-only product actions, directed that products should say Add to cart and look and feel real, approved ordinary clean and annotated rollout, accepted the recommended treatment of the two pending Moon products, and said execute.",
+  "supersedes": [
+    "the cart-qa=1-only visibility decision in NATE-VIS-02B1-SATURDAY-DECISIONS-20260731"
+  ],
+  "approved": [
+    "activate the review cart on ordinary clean and annotated review pages",
+    "replace enquiry actions on the 20 currently non-pending product cards with Add to cart",
+    "derive cart item name, image, size and displayed price from the existing rendered review card",
+    "hide Pure Carob Moon and Cayenne Moon from clean review",
+    "show Pure Carob Moon and Cayenne Moon as unavailable in annotated review",
+    "use the existing header cart across all six pages",
+    "show the review-only disclosure inside the cart and checkout journey",
+    "retain quantity controls, per-tab cross-page persistence, fake checkout and a fake order-received thank-you"
+  ],
+  "not_authorized": [
+    "accepting the displayed catalogue as authoritative CAT-01 evidence",
+    "creating or changing product names, prices, availability, tax, shipping or selling options",
+    "canonical WIP, theme, catalogue source, content, claim or asset edits",
+    "Shopify, WooCommerce, analytics, API, Vercel or production action",
+    "client contact, send, upload, publication or deployment",
+    "commit or push"
+  ]
+}
