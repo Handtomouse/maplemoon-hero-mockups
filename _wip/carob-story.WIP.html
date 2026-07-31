@@ -613,6 +613,18 @@ body{margin:0;}
 .faq{padding:0 0 56px;}
 .faq .grid{box-shadow:0 12px 30px rgba(35,67,91,.022);}
 @media(max-width:900px){.cmp{padding-top:10px;padding-bottom:28px;}.v2{padding-bottom:28px;}.gal{padding-bottom:26px;}.gal .wrap{padding-top:23px;padding-bottom:22px;}.cta{margin-bottom:28px;}.faq{padding-bottom:42px;}}
+
+/* Narrow-viewport header fix. `.sp-top .bar` uses `1fr auto 1fr`, which forces
+   the (empty, links hidden <=900px) left column to mirror the right column's
+   width. The right column still carries the currency label and the cart button,
+   so at 320px the three tracks exceeded the viewport and pushed the cart button
+   past the right edge (measured: right edge at 362px in a 320px viewport on
+   carob-story, 374px on shop, 364px on stockists). Dropping the forced symmetry
+   lets the empty track collapse. No content is hidden. */
+@media (max-width:400px){
+  .sp-top .bar{grid-template-columns:auto minmax(0,1fr) auto;column-gap:10px;}
+  .sp-nav.r{gap:12px;}
+}
 </style>
 </body>
 </html>
