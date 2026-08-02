@@ -26,8 +26,17 @@ breaks the freeze).
 
 1. **Copy, never deploy in place:**
 
+   **Preserve `.vercel/` across the rebuild.** `vercel deploy` created
+   `_wip/deploy/site/.vercel/project.json`, which links this directory to the existing
+   `maplemoon-preview-carli` project. A plain `rm -rf` drops that link, and the next
+   deploy either prompts for setup or **creates a second project with a second URL while
+   the alias still serves the old build.** Move it aside and back:
+
+       mv _wip/deploy/site/.vercel /tmp/mm-vercel-link 2>/dev/null
        rm -rf _wip/deploy/site && mkdir -p _wip/deploy/site
        cp -R docs/client-review/2026-08-01-saturday-review/staging-v1/clean/. _wip/deploy/site/
+       mv /tmp/mm-vercel-link _wip/deploy/site/.vercel 2>/dev/null
+       cat _wip/deploy/site/.vercel/project.json   # confirm the link survived
 
    **Strip `_comment` when copying the config.** Vercel hard-fails with
    `Invalid vercel.json - should NOT have additional property _comment`. The comment
@@ -123,7 +132,13 @@ Verify after every deploy that a `.html` link resolves in **one** hop:
 `staging-v1/clean/` is a snapshot taken *before* W1-F. It carries the full-res camera
 originals for the licensed stock — `carob_pods_macro.jpg` is 7360x4912 / 9.8MB there.
 W1-F did land, but it landed in the working tree at `assets/licensed/`, at the **same
-paths**, as 1600px web derivatives. Verified same images, not different crops.
+paths**, as 1600px web derivatives.
+
+**Verified as the same images, not re-crops** — two ways, because matching dimensions alone
+would not prove it (a downscale and a re-crop both land on 1600x1067). Aspect ratios match
+across all four, and `carob_pods_macro` and `scene_afternoon` were **visually compared**
+against the `clean/` originals at thumbnail size on 2026-08-03: identical framing, identical
+subject placement, nothing cropped out.
 
 Deploying `clean/` bytes unchanged gave **homepage 22MB, carob-story 11MB** — matching
 the runbook's own "before compression" figures at step 6, which is what made it look
