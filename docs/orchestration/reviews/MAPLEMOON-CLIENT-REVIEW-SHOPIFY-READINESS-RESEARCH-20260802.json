@@ -1,0 +1,89 @@
+{
+  "schema": "maplemoon-readiness-research/v1",
+  "recorded_at": "2026-08-02T01:50:27+10:00",
+  "authority": {
+    "overnight_sha256": "12689434a7c46c323b27d1c8a099cb9703bf910b8c6dbbac2cfca193a0c6b599",
+    "addendum_sha256": "7c541b6ff97f2ffdc1b6fe888cdba4f1795caadb947cfb7642d8ee54bfe2b712"
+  },
+  "verdict": {
+    "local_preparation": "PASS",
+    "external_action": "HOLD",
+    "share_ready": false
+  },
+  "recommended_architecture": {
+    "review_now": "local manual review hub with mock feedback and no data collection",
+    "soft_launch_later": "privacy-reviewed pseudonymous first-party measurement only if separately approved",
+    "shopify_later": "native Online Store 2.0 theme, catalogue, cart, checkout and customer-event surfaces",
+    "not_selected": [
+      "headless commerce",
+      "custom synchronization",
+      "webhooks",
+      "third-party analytics",
+      "session replay"
+    ]
+  },
+  "local_inventory": {
+    "clean_html_pages": 6,
+    "clean_review_hub_present": false,
+    "favicon_reference_pages": 6,
+    "noindex_pages": 6,
+    "title_pages": 6,
+    "description_pages": 4,
+    "open_graph_pages_found": 0,
+    "canonical_pages_found": 0,
+    "inventory_is_share_approval": false
+  },
+  "minimum_event_set_if_approved": [
+    "page_section_view",
+    "navigation_click",
+    "cta_product_interest_click",
+    "mock_cart_step",
+    "feedback_open",
+    "feedback_submit",
+    "feedback_abandon",
+    "technical_failure"
+  ],
+  "default_exclusions": [
+    "names",
+    "email",
+    "payment data",
+    "precise location",
+    "full IP",
+    "session replay",
+    "sensitive free text"
+  ],
+  "source_groups": {
+    "shopify": [
+      "https://shopify.dev/docs/storefronts/themes/architecture/templates/json-templates",
+      "https://shopify.dev/docs/storefronts/themes/architecture/sections",
+      "https://help.shopify.com/en/manual/migrating-to-shopify/migrating-from-woocommerce",
+      "https://help.shopify.com/en/manual/checkout-settings/customize-checkout-configurations",
+      "https://help.shopify.com/en/manual/online-store/themes/adding-themes",
+      "https://help.shopify.com/en/manual/products/import-export/import-products",
+      "https://shopify.dev/docs/api/web-pixels-api/emitting-data",
+      "https://shopify.dev/docs/api/web-pixels-api/pixel-privacy",
+      "https://help.shopify.com/en/manual/online-store/menus-and-links/url-redirect",
+      "https://help.shopify.com/en/manual/your-account/users/security/two-step-authentication",
+      "https://help.shopify.com/en/manual/your-account/users/roles/permissions/sensitive-permissions",
+      "https://shopify.dev/docs/storefronts/themes/tools/cli"
+    ],
+    "accessibility_privacy": [
+      "https://www.w3.org/WAI/tutorials/forms/",
+      "https://www.w3.org/TR/WCAG22/",
+      "https://www.oaic.gov.au/privacy/australian-privacy-principles/australian-privacy-principles-guidelines/chapter-3-app-3-collection-of-solicited-personal-information",
+      "https://www.oaic.gov.au/privacy/australian-privacy-principles/australian-privacy-principles-guidelines/chapter-5-app-5-notification-of-the-collection-of-personal-information",
+      "https://www.oaic.gov.au/privacy/australian-privacy-principles/australian-privacy-principles-guidelines/chapter-11-app-11-security-of-personal-information"
+    ]
+  },
+  "unresolved_owners": [
+    "review audience and access owner",
+    "feedback/data owner",
+    "Shopify store and role owner",
+    "catalogue truth owner",
+    "domain and SEO owner",
+    "analytics and consent owner",
+    "cutover and rollback owner"
+  ],
+  "next_local_packet": "prepare a bounded review-hub specification and metadata/send checklist; do not implement or share without a separate packet",
+  "external_actions_authorized": false
+}

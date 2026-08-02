@@ -238,7 +238,7 @@ html{scroll-behavior:smooth;}
       <span class="sp-kick">The full range</span>
       <h1 class="serif" style="font-weight:500;font-size:clamp(2rem,3.4vw,2.9rem);line-height:1.1;margin:0 0 14px;">Shop the <em style="font-weight:400">range.</em></h1>
       <p>Bars, moons, bites, elixirs and carob bananas. All made from Australian organic carob, naturally sweet with nothing added.</p>
-      <div class="sp-flag">Bars, bites, elixirs, powder <span class="amp">&amp;</span> bananas priced &middot; some moons pricing to follow</div>
+      <div class="sp-flag">Bars, bites, elixirs, powder <span class="amp">&amp;</span> bananas priced &middot; selected moon products by enquiry</div>
     </div>
     <div class="sp-sampler" id="packs">
       <div class="minirow" aria-hidden="true">
@@ -398,7 +398,7 @@ html{scroll-behavior:smooth;}
       el.innerHTML='<div class="ph"><img src="'+PS+p.img+'.webp" alt="'+cleanName+'"'+imageAttrs+'></div>'+
         '<div class="tx"><h3 id="'+cardId+'">'+amp(p.n)+'</h3><div class="chips">'+DIET.map(function(c){return '<span>'+c+'</span>';}).join('')+'</div>'+
         '<p class="d">'+p.d+'</p>'+
-        '<div class="row"><span class="pr'+(priced?'':' pending')+'">'+(priced?p.price:'Pricing to follow')+'<span class="g">('+p.size+')</span></span>'+(priced?'<a class="add" aria-label="Ask about '+cleanName+'" href="mailto:info@maplemoon.com.au?subject=Enquiry%20about%20'+encodeURIComponent(p.n)+'">Ask about this item</a>':'<button class="add" type="button" disabled aria-label="Pricing to follow for '+cleanName+'">Pricing to follow</button>')+'</div></div>';
+        '<div class="row"><span class="pr'+(priced?'':' pending')+'">'+(priced?p.price:'Enquire for details')+'<span class="g">('+p.size+')</span></span><a class="add" aria-label="'+(priced?'Ask about ':'Enquire about ')+cleanName+'" href="mailto:info@maplemoon.com.au?subject=Enquiry%20about%20'+encodeURIComponent(p.n)+'">'+(priced?'Ask about this item':'Enquire')+'</a></div></div>';
       grid.appendChild(el);
     });
   });

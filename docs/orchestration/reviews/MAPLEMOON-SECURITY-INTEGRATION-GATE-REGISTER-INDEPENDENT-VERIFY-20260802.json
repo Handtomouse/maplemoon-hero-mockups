@@ -1,0 +1,89 @@
+{
+  "schema": "maplemoon-receipt/v2",
+  "receipt_id": "MAPLEMOON-SECURITY-INTEGRATION-GATE-REGISTER-INDEPENDENT-VERIFY-20260802-RECEIPT-001",
+  "packet_id": "MAPLEMOON-SECURITY-INTEGRATION-GATE-REGISTER-INDEPENDENT-VERIFY-20260802",
+  "worker_thread_id": "019fbedd-80b3-7b62-9e8e-921b24f01630",
+  "worker": "independent low-cost read-only security verifier",
+  "started_at": "2026-08-02T05:48:33+10:00",
+  "completed_at": "2026-08-02T05:50:07+10:00",
+  "outcome": "PASS",
+  "confidence": "high for bounded local planning review; no evidence about live systems",
+  "phase": "complete",
+  "status": "PASS",
+  "ready_to_promote": false,
+  "checkpoint_path": "_wip/checkpoints/MAPLEMOON-SECURITY-INTEGRATION-GATE-REGISTER-INDEPENDENT-VERIFY-20260802_20260802_054833_AEST",
+  "authority": {
+    "path": "/Users/handtomouse/maplemoon-website/docs/orchestration/packets/MAPLEMOON-CLIENT-REVIEW-SOFT-LAUNCH-SHOPIFY-READINESS-ADDENDUM-20260802.md",
+    "sha256": "7c541b6ff97f2ffdc1b6fe888cdba4f1795caadb947cfb7642d8ee54bfe2b712"
+  },
+  "files_changed": [
+    "docs/orchestration/reviews/MAPLEMOON-SECURITY-INTEGRATION-GATE-REGISTER-INDEPENDENT-VERIFY-20260802.json"
+  ],
+  "files_read": [
+    "verification packet and checkpoint",
+    "security and integration packet and receipt",
+    "security and integration gate register",
+    "prospective data-flow inventory",
+    "security-readiness checklist",
+    "overnight authority and client-review readiness addendum"
+  ],
+  "pre_sha256": {
+    "docs/orchestration/packets/MAPLEMOON-SECURITY-INTEGRATION-GATE-REGISTER-INDEPENDENT-VERIFY-20260802.md": "2f3002c0e558675087333f78d93f8b2955cdbe08c1137851d1c92806bc280dab",
+    "docs/orchestration/reviews/MAPLEMOON-SECURITY-INTEGRATION-GATE-REGISTER-INDEPENDENT-VERIFY-20260802.json": null
+  },
+  "post_sha256": {
+    "docs/orchestration/packets/MAPLEMOON-SECURITY-INTEGRATION-GATE-REGISTER-INDEPENDENT-VERIFY-20260802.md": "2f3002c0e558675087333f78d93f8b2955cdbe08c1137851d1c92806bc280dab"
+  },
+  "verified_subject_sha256": {
+    "docs/orchestration/packets/MAPLEMOON-SECURITY-INTEGRATION-GATE-REGISTER-20260802.md": "f760305faa32dd2c5af57e982e9389869a90cd5b0fbaec6773b99fcc02a31646",
+    "docs/orchestration/reviews/MAPLEMOON-SECURITY-INTEGRATION-GATE-REGISTER-20260802.json": "0a30adc69ba1e2f5064a40ada306ca5e7d9f02207dbf6ff520bcf6ce762055f7",
+    "docs/client-review/2026-08-01-saturday-review/SECURITY-INTEGRATION-GATE-REGISTER-20260802.md": "f0473ce2880c1a473e8046ee4b36a580a9335cd0c93e2085531918240710fd43",
+    "docs/client-review/2026-08-01-saturday-review/SECURITY-INTEGRATION-DATA-FLOW-INVENTORY-20260802.json": "484d9424c84bdbe77398a94552e8398758677d315fac5cb1dde54187efc51ed1",
+    "docs/client-review/2026-08-01-saturday-review/SECURITY-READINESS-CHECKLIST-20260802.md": "70429df454bafb063779bb21ed7e409303445b2a9023459f08cf9a7f8659d807"
+  },
+  "screenshots_or_urls": [],
+  "failures": [],
+  "unknowns": [
+    "Live hosting, account, credential, network, vendor and production configuration remain unverified and out of scope."
+  ],
+  "residual_risk": [
+    "All eight prospective data flows remain HOLD or BLOCKED_INPUTS until their named owners and evidence gates are satisfied.",
+    "Exact-host security-header testing and any legal or compliance conclusion remain explicitly held.",
+    "Unrelated dirty WIP remains present but was not attributed to or modified by this verification."
+  ],
+  "forbidden_path_changes": [],
+  "proposed_next_state": "accepted_local_planning_specification",
+  "next_reviewer": "019fa858-05c9-7631-b26e-8f5cbbf1387a",
+  "checks": [
+    {
+      "command": "authority, checkpoint and subject SHA-256 verification",
+      "exit_code": 0,
+      "result": "PASS"
+    },
+    {
+      "command": "threat-category and owner/evidence-gate coverage review",
+      "exit_code": 0,
+      "result": "PASS: 19 material risk categories covered"
+    },
+    {
+      "command": "prospective data-flow state and control review",
+      "exit_code": 0,
+      "result": "PASS: 8 of 8 remain HOLD or BLOCKED_INPUTS with concrete controls"
+    },
+    {
+      "command": "verified-current versus unknown-live-state separation review",
+      "exit_code": 0,
+      "result": "PASS"
+    },
+    {
+      "command": "unsupported security, legal, vendor and architecture-authorization review",
+      "exit_code": 0,
+      "result": "PASS"
+    }
+  ],
+  "blockers": [
+    "No implementation, account access, integration, collection, deployment, sharing or production action is authorized by this planning PASS."
+  ],
+  "ownership": "Independent verification records only; no website, integration, account or external-system ownership.",
+  "next_action": "Keep the independently verified register local and fail-closed until Nate separately authorizes a bounded implementation or evidence-acquisition phase."
+}

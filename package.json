@@ -8,7 +8,8 @@
     "start": "node server.js",
     "review:saturday:build": "python3 scripts/build-maplemoon-saturday-review.py --output docs/client-review/2026-08-01-saturday-review/staging-v1",
     "review:saturday:check": "python3 scripts/check-maplemoon-review.py --staging docs/client-review/2026-08-01-saturday-review/staging-v1 --profile saturday-all",
-    "review:saturday:cart": "node scripts/check-maplemoon-cart.mjs"
+    "review:saturday:cart": "node scripts/check-maplemoon-cart.mjs",
+    "review:saturday:responsive:probe": "node scripts/check-maplemoon-responsive-overflow.mjs --self-test"
   },
   "keywords": [],
   "author": "",

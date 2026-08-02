@@ -1,0 +1,99 @@
+{
+  "schema": "maplemoon-receipt/v2",
+  "receipt_id": "PHOTO-08-MANUAL-RETOUCH-20260801-RECEIPT-002",
+  "packet_id": "PHOTO-08-MANUAL-RETOUCH-20260801",
+  "worker_thread_id": "019fa858-05c9-7631-b26e-8f5cbbf1387a",
+  "worker": "Codex",
+  "started_at": "2026-07-31T20:31:00Z",
+  "completed_at": "2026-07-31T21:07:16Z",
+  "outcome": "PASS",
+  "confidence": "medium",
+  "files_read": [
+    "Downloads/wetransfer_website-hero-raws_2026-06-03_1315/Heros-9.jpg",
+    "maplemoon-website/_wip/reviews/photoshoot_repair_batch1_20260801/08_manual_v02/08_manual_v02.psd",
+    "maplemoon-website/docs/orchestration/packets/PHOTO-08-MANUAL-RETOUCH-20260801.md",
+    "maplemoon-website/docs/orchestration/SIDECHAT_RECEIPT_GATE.md",
+    "maplemoon-website/_wip/checkpoints/PHOTO-08-MANUAL-RETOUCH-20260801_20260801_070000_AEST/RECOVERY_MANIFEST.json"
+  ],
+  "files_changed": [
+    "maplemoon-website/_wip/reviews/photoshoot_repair_batch1_20260801/08_manual_v02/08_manual_v02.png",
+    "maplemoon-website/_wip/reviews/photoshoot_repair_batch1_20260801/08_manual_v02/qa/08_manual_v02-full-frame.png",
+    "maplemoon-website/_wip/reviews/photoshoot_repair_batch1_20260801/08_manual_v02/qa/08_manual_v02-native-100pct.png",
+    "maplemoon-website/_wip/reviews/photoshoot_repair_batch1_20260801/08_manual_v02/photo-08-v02-local-preview.html",
+    "maplemoon-website/docs/orchestration/reviews/PHOTO-08-MANUAL-RETOUCH-20260801.json"
+  ],
+  "files_confirmed_untouched": [
+    "Downloads/wetransfer_website-hero-raws_2026-06-03_1315/Heros-9.jpg",
+    "maplemoon-website/_wip/reviews/photoshoot_repair_batch1_20260801/08_manual_v02/08_manual_v02.psd"
+  ],
+  "pre_sha256": {
+    "maplemoon-website/_wip/reviews/photoshoot_repair_batch1_20260801/08_manual_v02/08_manual_v02.psd": "7e8b70f0674552be2922ebf92d1c35e1da608d476fa8eb157296900d14ab336c",
+    "maplemoon-website/_wip/reviews/photoshoot_repair_batch1_20260801/08_manual_v02/08_manual_v02.png": null,
+    "maplemoon-website/_wip/reviews/photoshoot_repair_batch1_20260801/08_manual_v02/qa/08_manual_v02-full-frame.png": null,
+    "maplemoon-website/_wip/reviews/photoshoot_repair_batch1_20260801/08_manual_v02/qa/08_manual_v02-native-100pct.png": null,
+    "maplemoon-website/_wip/reviews/photoshoot_repair_batch1_20260801/08_manual_v02/photo-08-v02-local-preview.html": null,
+    "maplemoon-website/docs/orchestration/reviews/PHOTO-08-MANUAL-RETOUCH-20260801.json": "8d91cd75c6959f8fafdacd73cd5411fbebbc4e43a1d9e0e2673ba0521379fdea"
+  },
+  "post_sha256": {
+    "maplemoon-website/_wip/reviews/photoshoot_repair_batch1_20260801/08_manual_v02/08_manual_v02.psd": "7e8b70f0674552be2922ebf92d1c35e1da608d476fa8eb157296900d14ab336c",
+    "maplemoon-website/_wip/reviews/photoshoot_repair_batch1_20260801/08_manual_v02/08_manual_v02.png": "e2ab4b187968f5edff8c6929a8c16a458b9a29ab3679f26b9e1f1bd374eaed09",
+    "maplemoon-website/_wip/reviews/photoshoot_repair_batch1_20260801/08_manual_v02/qa/08_manual_v02-full-frame.png": "b8597a099ffa0dede16a3067b1bf4bd664cc05a91841c5444512075550bff684",
+    "maplemoon-website/_wip/reviews/photoshoot_repair_batch1_20260801/08_manual_v02/qa/08_manual_v02-native-100pct.png": "e9663e6cc21436b5e5cf0ffc2927ec86de4c46e76fe162b8dcdfd0d6565c86e0",
+    "maplemoon-website/_wip/reviews/photoshoot_repair_batch1_20260801/08_manual_v02/photo-08-v02-local-preview.html": "57eb6c915436afc266bda1ab7f810c71b02afca47d34ba138d1f072c3f270c7f",
+    "maplemoon-website/docs/orchestration/reviews/PHOTO-08-MANUAL-RETOUCH-20260801.json": null
+  },
+  "checkpoint_path": "maplemoon-website/_wip/checkpoints/PHOTO-08-MANUAL-RETOUCH-20260801_20260801_070000_AEST",
+  "checks": [
+    {
+      "command": "shasum -a 256 verified raw source",
+      "exit_code": 0,
+      "result": "PASS: Heros-9.jpg remains 73a847fb710e864167e682a171122b55d4093267afd8cab9041cca490ef47170."
+    },
+    {
+      "command": "scripts/check-maplemoon-receipt.py checkpoint and phase-start verify",
+      "exit_code": 0,
+      "result": "PASS: fresh non-overwriting recovery checkpoint captured the user-saved PSD and all previously absent outputs; phase-start scope=6 passed."
+    },
+    {
+      "command": "Read-only raw-versus-PSD full-frame and native 100 percent contact comparison",
+      "exit_code": 0,
+      "result": "PASS: Blu Tack visible in raw is absent in the PSD; moon contour, rock texture, grain, and a narrow contact shadow remain visually credible."
+    },
+    {
+      "command": "compare -metric AE PSD composite to admitted PNG",
+      "exit_code": 0,
+      "result": "PASS: 0 differing pixels."
+    },
+    {
+      "command": "compare -metric AE candidate contact crop to native QA output",
+      "exit_code": 0,
+      "result": "PASS: 0 differing pixels."
+    },
+    {
+      "command": "identify and local file URL checks",
+      "exit_code": 0,
+      "result": "PASS: candidate is 3399x5098, full-frame QA is 1200x1800, native contact QA is 1200x1200; preview and its candidate image resolve as local files."
+    },
+    {
+      "command": "git diff --check on admitted text outputs",
+      "exit_code": 0,
+      "result": "PASS."
+    }
+  ],
+  "screenshots_or_urls": [
+    "file:///Users/handtomouse/maplemoon-website/_wip/reviews/photoshoot_repair_batch1_20260801/08_manual_v02/qa/08_manual_v02-full-frame.png",
+    "file:///Users/handtomouse/maplemoon-website/_wip/reviews/photoshoot_repair_batch1_20260801/08_manual_v02/qa/08_manual_v02-native-100pct.png",
+    "file:///Users/handtomouse/maplemoon-website/_wip/reviews/photoshoot_repair_batch1_20260801/08_manual_v02/photo-08-v02-local-preview.html"
+  ],
+  "failures": [],
+  "unknowns": [
+    "Interactive Photoshop state reads still timed out after Nate saved the PSD, so the final visual classification used read-only local raster inspection of that existing PSD."
+  ],
+  "residual_risk": [
+    "Nate should make the final aesthetic call on the very narrow moon-rock contact shadow before any later website-reference swap."
+  ],
+  "forbidden_path_changes": [],
+  "proposed_next_state": "needs_review",
+  "next_reviewer": "Nate",
+  "next_action": "Nate Confirm/Fix: review the full-frame and native contact QA; do not start #24 until this candidate is accepted or a #8-only correction is admitted."
+}

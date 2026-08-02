@@ -1,0 +1,126 @@
+{
+  "schema": "maplemoon-receipt/v2",
+  "receipt_id": "SAT-SHOP-FROZEN-RESTORE-01-RECEIPT-001",
+  "packet_id": "SAT-SHOP-FROZEN-RESTORE-01",
+  "candidate_id": "SAT-SHOP-FROZEN-RESTORE-CANDIDATE-20260801-001",
+  "worker_thread_id": "019fa858-05c9-7631-b26e-8f5cbbf1387a",
+  "worker": "Codex coordinator",
+  "started_at": "2026-08-01T12:40:56Z",
+  "completed_at": "2026-08-01T13:10:41Z",
+  "outcome": "PASS",
+  "confidence": "high",
+  "files_read": [
+    "docs/orchestration/SIDECHAT_RECEIPT_GATE.md",
+    "docs/orchestration/reviews/SAT-SHOP-F-RECONCILE-01-20260801.json",
+    "_wip/checkpoints/SAT-SHOP-POLISH-R1-STRUCTURE-20260801_20260801_221213_AEST/RECOVERY_MANIFEST.json"
+  ],
+  "files_changed": [
+    "docs/orchestration/reviews/SAT-SHOP-FROZEN-RESTORE-01-20260801.json",
+    "docs/client-review/2026-08-01-saturday-review/staging-v1/clean/shop.html",
+    "docs/client-review/2026-08-01-saturday-review/staging-v1/annotated/shop.html",
+    "docs/client-review/2026-08-01-saturday-review/staging-v1/MANIFEST.json",
+    "docs/client-review/2026-08-01-saturday-review/staging-v1/clean/MANIFEST.json",
+    "docs/client-review/2026-08-01-saturday-review/staging-v1/annotated/MANIFEST.json",
+    "_wip/reviews/sat_shop_frozen_restore_20260801/qa/browser-evidence.json"
+  ],
+  "files_confirmed_untouched": [
+    "_wip/shop.WIP.html",
+    "docs/client-review/2026-08-01-saturday-review/shared/mock-cart.js",
+    "docs/client-review/2026-08-01-saturday-review/staging-v1/clean/homepage.html",
+    "docs/client-review/2026-08-01-saturday-review/staging-v1/clean/our-story.html",
+    "docs/client-review/2026-08-01-saturday-review/staging-v1/clean/carob-story.html",
+    "docs/client-review/2026-08-01-saturday-review/staging-v1/clean/stockists.html",
+    "docs/client-review/2026-08-01-saturday-review/staging-v1/clean/faq.html",
+    "docs/client-review/2026-08-01-saturday-review/staging-v1/annotated/homepage.html",
+    "docs/client-review/2026-08-01-saturday-review/staging-v1/annotated/our-story.html",
+    "docs/client-review/2026-08-01-saturday-review/staging-v1/annotated/carob-story.html",
+    "docs/client-review/2026-08-01-saturday-review/staging-v1/annotated/stockists.html",
+    "docs/client-review/2026-08-01-saturday-review/staging-v1/annotated/faq.html",
+    "_wip/reviews/photoshoot_repair_batch1_20260801/73_reuse_g_v03"
+  ],
+  "pre_sha256": {
+    "docs/orchestration/packets/SAT-SHOP-FROZEN-RESTORE-01.md": "da91d3787df912fa0af9251351bd362e816e76a1b67a07572acea0b730c2a1ae",
+    "docs/orchestration/reviews/SAT-SHOP-FROZEN-RESTORE-01-20260801.json": null,
+    "docs/client-review/2026-08-01-saturday-review/staging-v1/clean/shop.html": "c9dc5ccfd60faeead1010289741c399cdc5b474ce3fe479fd707e50a176720fa",
+    "docs/client-review/2026-08-01-saturday-review/staging-v1/annotated/shop.html": "dd71b536bad8f6ac6432878d66ac9c1611d5b9b768a009f5b29cae6e1cc7da97",
+    "docs/client-review/2026-08-01-saturday-review/staging-v1/MANIFEST.json": "f3c943b6c70e02e6d1e9b160e3ddc98f7d172cf4b43d02582e0b8ff1ddfc85c6",
+    "docs/client-review/2026-08-01-saturday-review/staging-v1/clean/MANIFEST.json": "e0ebf6a84420255dc76bfb31d21c67781ab5ee3a832692423a67e99d371650c3",
+    "docs/client-review/2026-08-01-saturday-review/staging-v1/annotated/MANIFEST.json": "627c202a3fa3fe3b24e89c4b9cdf926f46f9c74cabaa4b3a78aaaee3c66d1cdc",
+    "_wip/reviews/sat_shop_frozen_restore_20260801/qa/browser-evidence.json": null
+  },
+  "post_sha256": {
+    "docs/orchestration/packets/SAT-SHOP-FROZEN-RESTORE-01.md": "da91d3787df912fa0af9251351bd362e816e76a1b67a07572acea0b730c2a1ae",
+    "docs/orchestration/reviews/SAT-SHOP-FROZEN-RESTORE-01-20260801.json": null,
+    "docs/client-review/2026-08-01-saturday-review/staging-v1/clean/shop.html": "43cad154be945d34006013808f2eca5eeb9676ae3e28cedafbb75faccb914abb",
+    "docs/client-review/2026-08-01-saturday-review/staging-v1/annotated/shop.html": "333bc4f0b7452a6df6db799fa365be748df660797f1dff4d025d168e012dac10",
+    "docs/client-review/2026-08-01-saturday-review/staging-v1/MANIFEST.json": "f2d24cbed1068f17d7989010a08354006f59e8dfe575346cd268f149d2b9b5e4",
+    "docs/client-review/2026-08-01-saturday-review/staging-v1/clean/MANIFEST.json": "87de0ddafdf21d8190e740f726dc51a10d4d8aefd5141c57fa7fd91df9ce3211",
+    "docs/client-review/2026-08-01-saturday-review/staging-v1/annotated/MANIFEST.json": "c4d9c678e89a7f1af5c7d3405056ff56dde246d81f624de77de3491abbaa7ec1",
+    "_wip/reviews/sat_shop_frozen_restore_20260801/qa/browser-evidence.json": "163eb627d2b0cf085a9bf902995e6340f9937d8d47e5b26a28a165ae5e449025"
+  },
+  "checkpoint_path": "_wip/checkpoints/SAT-SHOP-FROZEN-RESTORE-01_20260801_224048_AEST",
+  "checks": [
+    {
+      "command": "scripts/check-maplemoon-receipt.py checkpoint and phase-start verify",
+      "exit_code": 0,
+      "result": "PASS: all eight writable paths were captured and the current pre-restore hashes matched."
+    },
+    {
+      "command": "SHA-256 target verification",
+      "exit_code": 0,
+      "result": "PASS: both Shop pages and all three manifests exactly match the accepted frozen target hashes."
+    },
+    {
+      "command": "python3 -B scripts/check-maplemoon-review.py --profile saturday-all --staging docs/client-review/2026-08-01-saturday-review/staging-v1",
+      "exit_code": 0,
+      "result": "PASS: zero failures and zero warnings; aggregate/child manifests, metadata, references, forbidden content and clean/annotated parity passed."
+    },
+    {
+      "command": "npm run review:saturday:cart",
+      "exit_code": 0,
+      "result": "PASS: ordinary Add to cart, neutral enquiry, fake checkout, local form, accessibility and no-network checks passed."
+    },
+    {
+      "command": "node scripts/check-maplemoon-responsive-overflow.mjs --self-test",
+      "exit_code": 0,
+      "result": "PASS: rect overflow and deliberate positive-control reachability test passed."
+    },
+    {
+      "command": "git diff --check",
+      "exit_code": 0,
+      "result": "PASS."
+    },
+    {
+      "command": "in-app Browser 1280x900 frozen Shop inspection",
+      "exit_code": 0,
+      "result": "PASS: exact clean Shop loaded, readyState complete, document scrollWidth equalled 1280 and no horizontal overflow was present."
+    },
+    {
+      "command": "Chrome native literal 200 percent zoom inspection",
+      "exit_code": 0,
+      "result": "PASS for the Shop surface: devicePixelRatio 3.5, CSS viewport 823x413, document scrollWidth 823, no horizontal overflow, and a viewport screenshot was captured."
+    },
+    {
+      "command": "non-Shop, canonical WIP and shared-cart hash comparison",
+      "exit_code": 0,
+      "result": "PASS: canonical Shop WIP, shared cart and all ten other clean/annotated page files retained their admitted hashes."
+    }
+  ],
+  "screenshots_or_urls": [
+    "file:///Users/handtomouse/maplemoon-website/_wip/reviews/sat_shop_frozen_restore_20260801/qa/browser-evidence.json",
+    "http://127.0.0.1:3011/docs/client-review/2026-08-01-saturday-review/staging-v1/clean/shop.html?compact-variant=f"
+  ],
+  "failures": [],
+  "unknowns": [
+    "Nate has not yet accepted the exact six-page frozen artifact as an ordinary viewer or supplied the final audience, channel and feedback route."
+  ],
+  "residual_risk": [
+    "Chrome automation proves literal 200 percent rendering for the Shop surface, but final six-page ordinary-viewer and keyboard acceptance remains a Nate-owned human gate.",
+    "The interrupted Round 1 Shop-polish bytes remain recoverable in the restoration checkpoint and are not part of the frozen candidate."
+  ],
+  "forbidden_path_changes": [],
+  "proposed_next_state": "needs_review",
+  "next_reviewer": "Nate",
+  "next_action": "Nate reviews the exact frozen six-page clean package at literal 200 percent with keyboard navigation and supplies the approved audience, channel and feedback route.",
+  "ready_to_promote": false
+}

@@ -150,9 +150,6 @@
         ".q-compare-held",
         ".wf-cat-dock .cat-prev",
         ".wf-cat-dock .cat-next",
-        '.wf-tab[data-cat="bananas"]',
-        '.wf-tab[data-cat="crescents"]',
-        '.wf-tab[data-cat="eclipseBites"]',
         ".soc > span"
       );
 
@@ -354,13 +351,11 @@
       const id = `${category}-${order}`;
 
       if (card.dataset.priced !== "1") {
-        card.dataset.mmAvailability = "pending";
-        if (!annotated) card.classList.add("mm-hide-clean");
+        card.dataset.mmAvailability = "enquiry";
         if (action) {
-          action.textContent = "Unavailable";
-          action.setAttribute("aria-label", `${name} is currently unavailable`);
-          action.setAttribute("disabled", "");
-          action.removeAttribute("href");
+          action.textContent = "Enquire";
+          action.setAttribute("aria-label", `Enquire about ${name}`);
+          action.removeAttribute("disabled");
         }
         return;
       }
@@ -457,7 +452,7 @@
           : ""
       }
       <button class="mm-cart-overlay" type="button" tabindex="-1" aria-label="Close cart" data-mm-cart-overlay></button>
-      <section class="mm-cart-dialog" id="mmCartDialog" role="dialog" aria-modal="true" aria-labelledby="mmCartTitle" aria-describedby="mmCartDescription" aria-hidden="true">
+      <section class="mm-cart-dialog" id="mmCartDialog" role="dialog" aria-modal="true" aria-labelledby="mmCartTitle" aria-describedby="mmCartDescription" aria-hidden="true" inert>
         <header class="mm-cart-dialog-header">
           <div>
             <span class="mm-cart-dialog-kicker" data-mm-cart-step>Your selection</span>
@@ -665,6 +660,7 @@
       elements.overlay.classList.add("is-open");
       elements.dialog.classList.add("is-open");
       elements.dialog.setAttribute("aria-hidden", "false");
+      elements.dialog.removeAttribute("inert");
       elements.triggers.forEach((trigger) => trigger.setAttribute("aria-expanded", "true"));
       window.setTimeout(() => elements.close.focus(), 40);
     };
@@ -674,6 +670,7 @@
       elements.overlay.classList.remove("is-open");
       elements.dialog.classList.remove("is-open");
       elements.dialog.setAttribute("aria-hidden", "true");
+      elements.dialog.setAttribute("inert", "");
       elements.triggers.forEach((trigger) => trigger.setAttribute("aria-expanded", "false"));
       if (returnFocus && typeof returnFocus.focus === "function") returnFocus.focus();
     };

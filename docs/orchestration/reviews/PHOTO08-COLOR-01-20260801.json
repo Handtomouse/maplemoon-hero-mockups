@@ -1,0 +1,123 @@
+{
+  "schema": "maplemoon-receipt/v2",
+  "receipt_id": "PHOTO08-COLOR-01-RECEIPT-001",
+  "packet_id": "PHOTO08-COLOR-01",
+  "worker_thread_id": "019fa858-05c9-7631-b26e-8f5cbbf1387a",
+  "worker": "Codex",
+  "started_at": "2026-08-01T01:50:56Z",
+  "completed_at": "2026-08-01T02:05:55Z",
+  "outcome": "PASS",
+  "confidence": "high",
+  "files_read": [
+    "_wip/reviews/photoshoot_repair_batch1_20260801/08_manual_v02/08_manual_v02.png",
+    "_wip/reviews/photoshoot_repair_batch1_20260801/08_manual_v02/qa/08_manual_v02-native-100pct.png",
+    "_wip/assets/our_story/studio_moons_trail.webp",
+    "_wip/assets/our_story/studio_bar_rock.webp",
+    "_wip/assets/our_story/studio_bar_almond.webp",
+    "_wip/assets/our_story/studio_moons_brick.webp",
+    "_wip/assets/photo_finals/maplemoon_heros55_brandmatched.webp",
+    "docs/orchestration/SIDECHAT_RECEIPT_GATE.md",
+    "_wip/checkpoints/PHOTO08-COLOR-01_20260801_115016_AEST/RECOVERY_MANIFEST.json"
+  ],
+  "files_changed": [
+    "_wip/reviews/photoshoot_repair_batch1_20260801/08_color_v03/08_color_v03.psd",
+    "_wip/reviews/photoshoot_repair_batch1_20260801/08_color_v03/08_color_v03.png",
+    "_wip/reviews/photoshoot_repair_batch1_20260801/08_color_v03/qa/08_color_v03-full-frame.png",
+    "_wip/reviews/photoshoot_repair_batch1_20260801/08_color_v03/qa/08_color_v03-native-100pct.png",
+    "_wip/reviews/photoshoot_repair_batch1_20260801/08_color_v03/qa/08_color_v03-our-story-context.png",
+    "docs/orchestration/packets/PHOTO08-COLOR-01.md",
+    "docs/orchestration/reviews/PHOTO08-COLOR-01-20260801.json"
+  ],
+  "files_confirmed_untouched": [
+    "_wip/reviews/photoshoot_repair_batch1_20260801/08_manual_v02/08_manual_v02.png",
+    "_wip/reviews/photoshoot_repair_batch1_20260801/08_manual_v02/08_manual_v02.psd",
+    "_wip/our-story.WIP.html",
+    "docs/client-review/2026-08-01-saturday-review/staging-v1/clean/our-story.html",
+    "docs/client-review/2026-08-01-saturday-review/staging-v1/annotated/our-story.html"
+  ],
+  "pre_sha256": {
+    "_wip/reviews/photoshoot_repair_batch1_20260801/08_color_v03/08_color_v03.psd": null,
+    "_wip/reviews/photoshoot_repair_batch1_20260801/08_color_v03/08_color_v03.png": null,
+    "_wip/reviews/photoshoot_repair_batch1_20260801/08_color_v03/qa/08_color_v03-full-frame.png": null,
+    "_wip/reviews/photoshoot_repair_batch1_20260801/08_color_v03/qa/08_color_v03-native-100pct.png": null,
+    "_wip/reviews/photoshoot_repair_batch1_20260801/08_color_v03/qa/08_color_v03-our-story-context.png": null,
+    "docs/orchestration/packets/PHOTO08-COLOR-01.md": "d15393c41c3a514fb68ac4a47ad067439b7e6f628f75e473ca407a193c47b58e",
+    "docs/orchestration/reviews/PHOTO08-COLOR-01-20260801.json": null
+  },
+  "post_sha256": {
+    "_wip/reviews/photoshoot_repair_batch1_20260801/08_color_v03/08_color_v03.psd": "9845ce46983d3bcf69e9b9dab058c389b84059fa2b48aa38279ff94f56a3d123",
+    "_wip/reviews/photoshoot_repair_batch1_20260801/08_color_v03/08_color_v03.png": "81146f8cc4aa98a5730d5450dc99ad7a62368de252c5e431c92fc87ad664ad94",
+    "_wip/reviews/photoshoot_repair_batch1_20260801/08_color_v03/qa/08_color_v03-full-frame.png": "d3060961dc8aad150556a0e28189a8500aa5988df596a7df3484232c3eb33587",
+    "_wip/reviews/photoshoot_repair_batch1_20260801/08_color_v03/qa/08_color_v03-native-100pct.png": "ea2153e4aee5dc32a4597bc8f93c77cb62370cf203872a1040ae3619bf454266",
+    "_wip/reviews/photoshoot_repair_batch1_20260801/08_color_v03/qa/08_color_v03-our-story-context.png": "0a5bffe4de0a06f1d6705c53710f9522a400a451ecb7c5abd941b2b5142fc6a2",
+    "docs/orchestration/packets/PHOTO08-COLOR-01.md": "ccf68b5311c523f174d05cad79f22932443396cee2b860b74111d36cefc39e02",
+    "docs/orchestration/reviews/PHOTO08-COLOR-01-20260801.json": null
+  },
+  "checkpoint_path": "_wip/checkpoints/PHOTO08-COLOR-01_20260801_115016_AEST",
+  "checks": [
+    {
+      "command": "shasum -a 256 approved Photo 08 source",
+      "exit_code": 0,
+      "result": "PASS: source remained e2ab4b187968f5edff8c6929a8c16a458b9a29ab3679f26b9e1f1bd374eaed09."
+    },
+    {
+      "command": "scripts/check-maplemoon-receipt.py checkpoint and phase-start verify",
+      "exit_code": 0,
+      "result": "PASS: non-overwriting recovery checkpoint captured all seven writable paths before mutation; scope=7."
+    },
+    {
+      "command": "ImageMagick global colour/exposure transform",
+      "exit_code": 0,
+      "result": "PASS: one global sRGB grade only (R x1.02, G x1.01, B x0.99, brightness +4, contrast +1); no crop, remask, retouch, geometry, blur or sharpen operation was applied to the candidate."
+    },
+    {
+      "command": "compare -metric AE PSD composite to candidate PNG",
+      "exit_code": 0,
+      "result": "PASS: 0 differing pixels."
+    },
+    {
+      "command": "compare -metric AE candidate contact crop to native 100 percent QA",
+      "exit_code": 0,
+      "result": "PASS: 0 differing pixels at 1200x1200+200+1400."
+    },
+    {
+      "command": "identify dimensions, depth and colourspace",
+      "exit_code": 0,
+      "result": "PASS: PSD and PNG are 3399x5098, 8-bit sRGB; QA views are 1200x1800, 1200x1200 and 1648x528."
+    },
+    {
+      "command": "read-only clipping and product-region colour statistics",
+      "exit_code": 0,
+      "result": "PASS: near-black pixels reduced from 0.120365% to 0%; near-white pixels remain 0.005448%; product-region hue changed by less than one OpenCV hue unit while brightness lifted modestly."
+    },
+    {
+      "command": "full-frame, native 100 percent and From the Studio context visual review",
+      "exit_code": 0,
+      "result": "PASS: gallery match is natural; packaging blue remains truthful; repaired contact, shadow, texture and grain are intact; no blue cast, clipped highlight, crushed shadow or obvious retouching is visible."
+    },
+    {
+      "command": "git diff --check -- docs/orchestration/packets/PHOTO08-COLOR-01.md docs/orchestration/reviews/PHOTO08-COLOR-01-20260801.json",
+      "exit_code": 0,
+      "result": "PASS."
+    },
+    {
+      "command": "scripts/check-maplemoon-receipt.py verify --phase complete and --phase promote",
+      "exit_code": 0,
+      "result": "PASS: exact worker, scope, recovery, hashes, checks and rendered evidence validate."
+    }
+  ],
+  "screenshots_or_urls": [
+    "file:///Users/handtomouse/maplemoon-website/_wip/reviews/photoshoot_repair_batch1_20260801/08_color_v03/qa/08_color_v03-full-frame.png",
+    "file:///Users/handtomouse/maplemoon-website/_wip/reviews/photoshoot_repair_batch1_20260801/08_color_v03/qa/08_color_v03-native-100pct.png",
+    "file:///Users/handtomouse/maplemoon-website/_wip/reviews/photoshoot_repair_batch1_20260801/08_color_v03/qa/08_color_v03-our-story-context.png"
+  ],
+  "failures": [],
+  "unknowns": [],
+  "residual_risk": [
+    "Nate retains the final candidate-only aesthetic decision; no website placement is admitted."
+  ],
+  "forbidden_path_changes": [],
+  "proposed_next_state": "needs_review",
+  "next_reviewer": "Nate",
+  "next_action": "Nate reviews MM-PHOTO8-01 and, only if it passes the four locked visual questions, replies exactly BLUE MOON APPROVE MM-PHOTO8-01; website placement remains a separate recovery-gated packet."
+}

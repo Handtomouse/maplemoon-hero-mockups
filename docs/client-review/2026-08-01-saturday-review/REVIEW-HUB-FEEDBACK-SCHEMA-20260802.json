@@ -1,0 +1,91 @@
+{
+  "schema": "maplemoon-review-feedback-spec/v1",
+  "status": "local_specification_only",
+  "implementation_mode": "mock_only",
+  "network_requests_allowed": false,
+  "storage_allowed": false,
+  "analytics_allowed": false,
+  "personal_information_requested": false,
+  "fields": [
+    {
+      "id": "page",
+      "label": "Which page are you reviewing?",
+      "required": true,
+      "type": "select",
+      "options": [
+        "Homepage",
+        "Shop",
+        "Our Story",
+        "Carob Story",
+        "Stockists",
+        "FAQ"
+      ]
+    },
+    {
+      "id": "section",
+      "label": "Which visible section is this about?",
+      "required": true,
+      "type": "short_text",
+      "guidance": "Use the heading or a few visible words; no technical ID is needed."
+    },
+    {
+      "id": "device_family",
+      "label": "What are you viewing on?",
+      "required": true,
+      "type": "select",
+      "options": [
+        "Phone",
+        "Tablet",
+        "Laptop or desktop",
+        "Not sure"
+      ]
+    },
+    {
+      "id": "comment_type",
+      "label": "What kind of feedback is this?",
+      "required": true,
+      "type": "select",
+      "options": [
+        "Factual or content correction",
+        "Design preference",
+        "Missing asset",
+        "Broken interaction",
+        "Accessibility issue"
+      ]
+    },
+    {
+      "id": "comment",
+      "label": "What would you like us to know?",
+      "required": false,
+      "type": "long_text",
+      "guidance": "Keep it concise and do not include personal or sensitive information."
+    }
+  ],
+  "mock_submission": {
+    "behaviour": "validate_required_fields_locally_then_show_confirmation",
+    "confirmation": "Thanks — this review prototype has demonstrated the submission step. No feedback has been sent or stored.",
+    "creates_order": false,
+    "sends_feedback": false,
+    "stores_feedback": false
+  },
+  "privacy": {
+    "current_collection": "none",
+    "current_retention": "not_applicable",
+    "current_data_owner": "none_until_separately_approved",
+    "prohibited_fields": [
+      "name",
+      "email",
+      "phone",
+      "payment_information",
+      "precise_location",
+      "full_ip_address",
+      "sensitive_personal_information"
+    ],
+    "real_service_gate": "HOLD until Nate approves the destination and a privacy/security owner approves notice, consent if applicable, access, retention and deletion."
+  },
+  "test_flags": {
+    "review_only": true,
+    "test_data": true,
+    "production": false
+  }
+}

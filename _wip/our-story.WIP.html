@@ -761,6 +761,15 @@ body{margin:0;background:#f4f2ed;}
   .os .os-cta{padding:74px 20px;}
 }
 
+/* VIS-03C-05: measured responsive containment only. */
+.os .os-story-hero__grid,.os .os-story-hero__copy,.os .os-story-hero__portrait{min-width:0;}
+.os .os-story-hero__portrait{inset:auto;width:100%;max-width:100%;}
+.os .os-fig-float{display:none;}
+@media(max-width:400px){
+  .os-top .bar{grid-template-columns:auto minmax(0,1fr) auto;column-gap:10px;}
+  .os-nav.r{gap:12px;}
+}
+
 @media(prefers-reduced-motion:reduce){.os *{scroll-behavior:auto!important;transition-duration:.01ms!important;animation-duration:.01ms!important;}}
 </style>
 </body>

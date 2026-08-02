@@ -1,0 +1,71 @@
+{
+  "schema": "maplemoon-receipt/v2",
+  "receipt_id": "GOV-RECEIPT-SELF-HASH-01-RECEIPT-001",
+  "packet_id": "GOV-RECEIPT-SELF-HASH-01",
+  "worker_thread_id": "019fa858-05c9-7631-b26e-8f5cbbf1387a",
+  "worker": "Codex",
+  "started_at": "2026-08-01T00:16:47Z",
+  "completed_at": "2026-08-01T00:18:35Z",
+  "outcome": "PASS",
+  "confidence": "high",
+  "files_read": [
+    "docs/orchestration/SIDECHAT_RECEIPT_GATE.md",
+    "scripts/check-maplemoon-receipt.py"
+  ],
+  "files_changed": [
+    "scripts/check-maplemoon-receipt.py",
+    "docs/orchestration/packets/GOV-RECEIPT-SELF-HASH-01.md",
+    "docs/orchestration/reviews/GOV-RECEIPT-SELF-HASH-01-20260801.json"
+  ],
+  "files_confirmed_untouched": [
+    "_wip/homepage_real_1_lead_photo.WIP.html",
+    "_wip/shop.WIP.html",
+    "docs/client-review/2026-08-01-saturday-review/staging-v1"
+  ],
+  "pre_sha256": {
+    "scripts/check-maplemoon-receipt.py": "60ac89f6d8ebe162772a3c168e0e3f14562857848b9d22a45a03cf2202043fcb",
+    "docs/orchestration/packets/GOV-RECEIPT-SELF-HASH-01.md": "6307be60767b0efaac6c3d2cc3472d06f3681c1cf8bba0eea571e6dedc8f2b68",
+    "docs/orchestration/reviews/GOV-RECEIPT-SELF-HASH-01-20260801.json": null
+  },
+  "post_sha256": {
+    "scripts/check-maplemoon-receipt.py": "c5a221971d73bb5dbe129055f4c9deffeb6e95041195796d43f0fd0cef1f5e48",
+    "docs/orchestration/packets/GOV-RECEIPT-SELF-HASH-01.md": "82342f63d72d4dd01797d8023271464fc01ef2d3c52f2db154704d7d6f24fce1",
+    "docs/orchestration/reviews/GOV-RECEIPT-SELF-HASH-01-20260801.json": null
+  },
+  "checkpoint_path": "_wip/checkpoints/GOV-RECEIPT-SELF-HASH-01_20260801_101647_AEST",
+  "checks": [
+    {
+      "command": "scripts/check-maplemoon-receipt.py checkpoint and phase-start verify",
+      "exit_code": 0,
+      "result": "PASS: non-overwriting recovery captured all three writable paths."
+    },
+    {
+      "command": "python3 -B -m py_compile scripts/check-maplemoon-receipt.py",
+      "exit_code": 0,
+      "result": "PASS."
+    },
+    {
+      "command": "python3 -B scripts/check-maplemoon-receipt.py --self-test",
+      "exit_code": 0,
+      "result": "PASS: checkpoint, scope, exact non-self hashes, receipt self-reference, and missing-receipt HOLD behavior passed."
+    },
+    {
+      "command": "SAT-PRODUCT-NEUTRAL-01 complete and promote verification",
+      "exit_code": 0,
+      "result": "PASS: the previously held receipt now passes without changing the product packet or weakening non-receipt hash checks."
+    },
+    {
+      "command": "git diff --check",
+      "exit_code": 0,
+      "result": "PASS."
+    }
+  ],
+  "screenshots_or_urls": [],
+  "failures": [],
+  "unknowns": [],
+  "residual_risk": [],
+  "forbidden_path_changes": [],
+  "proposed_next_state": "needs_review",
+  "next_reviewer": "independent deterministic verifier",
+  "next_action": "Run the governance packet completion and promotion gates, then return to Nate's final six-page human QA."
+}

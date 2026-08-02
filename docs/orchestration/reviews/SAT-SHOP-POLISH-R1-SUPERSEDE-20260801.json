@@ -1,0 +1,155 @@
+{
+  "schema": "maplemoon-receipt/v2",
+  "receipt_id": "SAT-SHOP-POLISH-R1-SUPERSEDE-20260801-RECEIPT-001",
+  "packet_id": "SAT-SHOP-POLISH-R1-SUPERSEDE-20260801",
+  "candidate_id": "SAT-SHOP-POLISH-R1-SUPERSEDE-CANDIDATE-20260801-001",
+  "worker_thread_id": "019fa858-05c9-7631-b26e-8f5cbbf1387a",
+  "worker": "Codex coordinator",
+  "started_at": "2026-08-01T14:01:57Z",
+  "completed_at": "2026-08-01T14:41:12Z",
+  "outcome": "PASS",
+  "confidence": "high",
+  "files_read": [
+    "docs/orchestration/SIDECHAT_RECEIPT_GATE.md",
+    "docs/orchestration/packets/SAT-SHOP-POLISH-20X2-HANDOFF-20260801.md",
+    "docs/orchestration/packets/SAT-SHOP-FROZEN-RESTORE-01.md",
+    "docs/orchestration/reviews/SAT-SHOP-FROZEN-RESTORE-01-20260801.json",
+    "_wip/checkpoints/SAT-SHOP-FROZEN-RESTORE-01_20260801_224048_AEST/RECOVERY_MANIFEST.json"
+  ],
+  "files_changed": [
+    "docs/orchestration/reviews/SAT-SHOP-POLISH-R1-SUPERSEDE-20260801.json",
+    "_wip/reviews/sat_shop_polish_r1_20260801/candidate/clean/shop.html",
+    "_wip/reviews/sat_shop_polish_r1_20260801/candidate/annotated/shop.html",
+    "_wip/reviews/sat_shop_polish_r1_20260801/candidate/MANIFEST.json",
+    "_wip/reviews/sat_shop_polish_r1_20260801/candidate/clean/MANIFEST.json",
+    "_wip/reviews/sat_shop_polish_r1_20260801/candidate/annotated/MANIFEST.json",
+    "_wip/reviews/sat_shop_polish_r1_20260801/qa/browser-evidence-r1-supersede.json"
+  ],
+  "files_confirmed_untouched": [
+    "docs/orchestration/packets/SAT-SHOP-POLISH-R1-SUPERSEDE-20260801.md",
+    "docs/client-review/2026-08-01-saturday-review/staging-v1/clean/shop.html",
+    "docs/client-review/2026-08-01-saturday-review/staging-v1/annotated/shop.html",
+    "docs/client-review/2026-08-01-saturday-review/staging-v1/MANIFEST.json",
+    "docs/client-review/2026-08-01-saturday-review/staging-v1/clean/MANIFEST.json",
+    "docs/client-review/2026-08-01-saturday-review/staging-v1/annotated/MANIFEST.json",
+    "_wip/shop.WIP.html",
+    "docs/client-review/2026-08-01-saturday-review/shared/mock-cart.js",
+    "docs/client-review/2026-08-01-saturday-review/staging-v1/clean/homepage.html",
+    "docs/client-review/2026-08-01-saturday-review/staging-v1/clean/our-story.html",
+    "docs/client-review/2026-08-01-saturday-review/staging-v1/clean/carob-story.html",
+    "docs/client-review/2026-08-01-saturday-review/staging-v1/clean/stockists.html",
+    "docs/client-review/2026-08-01-saturday-review/staging-v1/clean/faq.html",
+    "docs/client-review/2026-08-01-saturday-review/staging-v1/annotated/homepage.html",
+    "docs/client-review/2026-08-01-saturday-review/staging-v1/annotated/our-story.html",
+    "docs/client-review/2026-08-01-saturday-review/staging-v1/annotated/carob-story.html",
+    "docs/client-review/2026-08-01-saturday-review/staging-v1/annotated/stockists.html",
+    "docs/client-review/2026-08-01-saturday-review/staging-v1/annotated/faq.html"
+  ],
+  "pre_sha256": {
+    "docs/orchestration/packets/SAT-SHOP-POLISH-R1-SUPERSEDE-20260801.md": "e81e0194c851350092d914578723e3007f3a34e3dfccaa33d86fdb9c5adc3c5f",
+    "docs/orchestration/reviews/SAT-SHOP-POLISH-R1-SUPERSEDE-20260801.json": null,
+    "_wip/reviews/sat_shop_polish_r1_20260801/candidate/clean/shop.html": null,
+    "_wip/reviews/sat_shop_polish_r1_20260801/candidate/annotated/shop.html": null,
+    "_wip/reviews/sat_shop_polish_r1_20260801/candidate/MANIFEST.json": null,
+    "_wip/reviews/sat_shop_polish_r1_20260801/candidate/clean/MANIFEST.json": null,
+    "_wip/reviews/sat_shop_polish_r1_20260801/candidate/annotated/MANIFEST.json": null,
+    "_wip/reviews/sat_shop_polish_r1_20260801/qa/browser-evidence-r1-supersede.json": null
+  },
+  "post_sha256": {
+    "docs/orchestration/packets/SAT-SHOP-POLISH-R1-SUPERSEDE-20260801.md": "e81e0194c851350092d914578723e3007f3a34e3dfccaa33d86fdb9c5adc3c5f",
+    "docs/orchestration/reviews/SAT-SHOP-POLISH-R1-SUPERSEDE-20260801.json": null,
+    "_wip/reviews/sat_shop_polish_r1_20260801/candidate/clean/shop.html": "8ede667680fb278fc8cb6ca3af440b04c875a4eea82f162127cf373a0fe4dc02",
+    "_wip/reviews/sat_shop_polish_r1_20260801/candidate/annotated/shop.html": "232d57095386f0b43aba37a8ab351483454778069ea840405ba77030fe3bd333",
+    "_wip/reviews/sat_shop_polish_r1_20260801/candidate/MANIFEST.json": "01fffaf95dd7945a900abeab5dc11c796f8fdfe55354a5b93621969c3076614c",
+    "_wip/reviews/sat_shop_polish_r1_20260801/candidate/clean/MANIFEST.json": "ef4789ccc070071e3a10a4eea9eac90d0da17b87e01d8ccfada114312738400b",
+    "_wip/reviews/sat_shop_polish_r1_20260801/candidate/annotated/MANIFEST.json": "6d3d458baa3e5a696d77e33a0487b7456043b46ad227410657521cd505501318",
+    "_wip/reviews/sat_shop_polish_r1_20260801/qa/browser-evidence-r1-supersede.json": "f463c9f194f92327405dbd76618ad20c6c141fe5ca60e8d8380d53d42a884ecb"
+  },
+  "checkpoint_path": "_wip/checkpoints/SAT-SHOP-POLISH-R1-SUPERSEDE-20260801_20260802_000145_AEST",
+  "checks": [
+    {
+      "command": "scripts/check-maplemoon-receipt.py checkpoint and phase-start verify",
+      "exit_code": 0,
+      "result": "PASS: all eight writable paths were captured; the packet hash and all absent candidate paths matched before mutation."
+    },
+    {
+      "command": "candidate identity, child-manifest and QA-evidence hash verification",
+      "exit_code": 0,
+      "result": "PASS: the new candidate binds the restored frozen parent, both surface manifests and exact browser evidence while remaining non-promotable."
+    },
+    {
+      "command": "complete-document clean and annotated candidate parity",
+      "exit_code": 0,
+      "result": "PASS after normalizing the surface base path and annotated review hooks."
+    },
+    {
+      "command": "in-app Browser responsive inspection at 1440, 1024, 430, 390, 375 and 320 CSS pixels",
+      "exit_code": 0,
+      "result": "PASS: no document overflow, one global header, one category rail, four lower-range cards and zero controls below 44 CSS pixels at all six clean widths."
+    },
+    {
+      "command": "in-app Browser annotated inspection at 390 and 1440 CSS pixels",
+      "exit_code": 0,
+      "result": "PASS: clean/annotated structural parity, no overflow and zero visible image failures."
+    },
+    {
+      "command": "Google Chrome real-keyboard and mock-cart inspection",
+      "exit_code": 0,
+      "result": "PASS: closed-cart controls were excluded, Enter opened the cart, Shift+Tab stayed trapped, Escape closed it and focus returned to the triggering Add button; zero console errors or warnings."
+    },
+    {
+      "command": "candidate network-origin scan",
+      "exit_code": 0,
+      "result": "PASS: Adobe Typekit is the only remote dependency; all candidate content and behavior otherwise resolve locally."
+    },
+    {
+      "command": "python3 -B scripts/check-maplemoon-review.py --profile saturday-all --staging docs/client-review/2026-08-01-saturday-review/staging-v1",
+      "exit_code": 0,
+      "result": "PASS: the frozen package retained zero failures and zero warnings."
+    },
+    {
+      "command": "npm run review:saturday:cart",
+      "exit_code": 0,
+      "result": "PASS: ordinary Add to cart, neutral enquiry, fake checkout, local form, accessibility and no-network checks passed."
+    },
+    {
+      "command": "node scripts/check-maplemoon-responsive-overflow.mjs --self-test",
+      "exit_code": 0,
+      "result": "PASS: rect-overflow and deliberate positive-control reachability test passed."
+    },
+    {
+      "command": "frozen and forbidden-path SHA-256 sweep",
+      "exit_code": 0,
+      "result": "PASS: the five frozen Shop artifacts, canonical Shop WIP, shared cart and all ten other clean/annotated pages retained their admitted hashes; the independent reviewer also recomputed all 151 frozen manifest entries."
+    },
+    {
+      "command": "git diff --check",
+      "exit_code": 0,
+      "result": "PASS."
+    },
+    {
+      "command": "independent read-only review by agent 019fbdbe-c6f1-7ae3-9138-050b22e590c9",
+      "exit_code": 0,
+      "result": "PASS with high confidence: no material Round 1 defect; candidate acceptable only in isolation and no promotion or sharing authorized."
+    }
+  ],
+  "screenshots_or_urls": [
+    "file:///Users/handtomouse/maplemoon-website/_wip/reviews/sat_shop_polish_r1_20260801/qa/browser-evidence-r1-supersede.json",
+    "http://127.0.0.1:3014/_wip/reviews/sat_shop_polish_r1_20260801/candidate/clean/shop.html",
+    "http://127.0.0.1:3014/_wip/reviews/sat_shop_polish_r1_20260801/candidate/annotated/shop.html?review=1"
+  ],
+  "failures": [],
+  "unknowns": [
+    "Round 2 has not yet proved truthful, distortion-safe imagery for Bananas, Powder, Goji Ripe Eclipse Bite or Eclipse Bundle."
+  ],
+  "residual_risk": [
+    "The isolated candidate is not part of the frozen six-page package and is not approved for sharing.",
+    "Bananas and Powder imagery remain Round 2 concerns; Goji Ripe Eclipse Bite and Eclipse Bundle must be omitted from clean review if no truthful imagery passes provenance and distortion QA.",
+    "Inherited blocked claim evidence remains annotated-only and is not present on the clean candidate surface."
+  ],
+  "forbidden_path_changes": [],
+  "proposed_next_state": "accepted",
+  "next_reviewer": "Nate for Round 2 admission; any promotion still requires a separate exact-hash packet",
+  "next_action": "Admit one read-only Round 2 imagery provenance and distortion audit for Bananas, Powder, Goji Ripe Eclipse Bite and Eclipse Bundle before any image replacement or promotion decision.",
+  "ready_to_promote": false
+}

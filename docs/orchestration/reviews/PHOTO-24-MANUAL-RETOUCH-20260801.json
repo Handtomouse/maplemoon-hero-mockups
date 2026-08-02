@@ -1,0 +1,77 @@
+{
+  "schema": "maplemoon-receipt/v2",
+  "receipt_id": "PHOTO-24-MANUAL-RETOUCH-20260801-RECEIPT-001",
+  "packet_id": "PHOTO-24-MANUAL-RETOUCH-20260801",
+  "worker_thread_id": "019fa858-05c9-7631-b26e-8f5cbbf1387a",
+  "worker": "Codex side-chat manager with Nate manual Photoshop repair",
+  "started_at": "2026-08-01T00:29:57Z",
+  "completed_at": "2026-08-01T00:51:31Z",
+  "files_read": [
+    "Downloads/wetransfer_website-hero-raws_2026-06-03_1315/Heros-24.jpg",
+    "Downloads/wetransfer_website-hero-raws_2026-06-03_1315/Heros-24.psd",
+    "maplemoon-website/_wip/checkpoints/PHOTO-24-MANUAL-RETOUCH-20260801_20260801_102957_AEST/RECOVERY_MANIFEST.json"
+  ],
+  "files_changed": [
+    "maplemoon-website/_wip/reviews/photoshoot_repair_batch1_20260801/24_manual_v01/24_manual_v01.psd",
+    "maplemoon-website/_wip/reviews/photoshoot_repair_batch1_20260801/24_manual_v01/24_manual_v01.png",
+    "maplemoon-website/_wip/reviews/photoshoot_repair_batch1_20260801/24_manual_v01/qa/24_manual_v01-full-frame.png",
+    "maplemoon-website/_wip/reviews/photoshoot_repair_batch1_20260801/24_manual_v01/qa/24_manual_v01-native-100pct.png",
+    "maplemoon-website/_wip/reviews/photoshoot_repair_batch1_20260801/24_manual_v01/photo-24-v01-website-section-preview.html",
+    "maplemoon-website/docs/orchestration/reviews/PHOTO-24-MANUAL-RETOUCH-20260801.json"
+  ],
+  "pre_sha256": {
+    "maplemoon-website/_wip/reviews/photoshoot_repair_batch1_20260801/24_manual_v01/24_manual_v01.psd": null,
+    "maplemoon-website/_wip/reviews/photoshoot_repair_batch1_20260801/24_manual_v01/24_manual_v01.png": null,
+    "maplemoon-website/_wip/reviews/photoshoot_repair_batch1_20260801/24_manual_v01/qa/24_manual_v01-full-frame.png": null,
+    "maplemoon-website/_wip/reviews/photoshoot_repair_batch1_20260801/24_manual_v01/qa/24_manual_v01-native-100pct.png": null,
+    "maplemoon-website/_wip/reviews/photoshoot_repair_batch1_20260801/24_manual_v01/photo-24-v01-website-section-preview.html": null,
+    "maplemoon-website/docs/orchestration/reviews/PHOTO-24-MANUAL-RETOUCH-20260801.json": null
+  },
+  "post_sha256": {
+    "maplemoon-website/_wip/reviews/photoshoot_repair_batch1_20260801/24_manual_v01/24_manual_v01.psd": "884ef6db0bdce5a024afd56bfe0ae39bb77d89e34be05569fa1fdb19d71573ff",
+    "maplemoon-website/_wip/reviews/photoshoot_repair_batch1_20260801/24_manual_v01/24_manual_v01.png": "9130068b504ab1e4f5d2c85b7f6e48b325b659a37242d8e3cc4803c311f44aba",
+    "maplemoon-website/_wip/reviews/photoshoot_repair_batch1_20260801/24_manual_v01/qa/24_manual_v01-full-frame.png": "054313782fdb392a238698b458e0bb85943e149055cf7099e91d69cff7e9c187",
+    "maplemoon-website/_wip/reviews/photoshoot_repair_batch1_20260801/24_manual_v01/qa/24_manual_v01-native-100pct.png": "25606ed85667b9a14a0f745f76d1b82ae8df99b85c01c6d9bdeb1372492d7738",
+    "maplemoon-website/_wip/reviews/photoshoot_repair_batch1_20260801/24_manual_v01/photo-24-v01-website-section-preview.html": "721630118ba4e2013a82aa49b040f6c30b2dcbc594799a233382d728974741b7",
+    "maplemoon-website/docs/orchestration/reviews/PHOTO-24-MANUAL-RETOUCH-20260801.json": null
+  },
+  "checkpoint_path": "maplemoon-website/_wip/checkpoints/PHOTO-24-MANUAL-RETOUCH-20260801_20260801_102957_AEST",
+  "checkpoint_sha256": {},
+  "checks": [
+    {
+      "command": "shasum -a 256 restored source",
+      "exit_code": 0,
+      "result": "source remains at required SHA-256 6b0373e490e1270d6b327e5f505aff2b2453c57c20884c741da2fe17afedc86e"
+    },
+    {
+      "command": "identify PSD/PNG/QA outputs",
+      "exit_code": 0,
+      "result": "PSD and candidate are 4000 x 6000 sRGB; native QA is a full-resolution 3200 x 2400 contact crop"
+    },
+    {
+      "command": "compare -metric AE PSD composite against candidate PNG",
+      "exit_code": 0,
+      "result": "0 differing pixels"
+    },
+    {
+      "command": "native and full-frame visual inspection",
+      "exit_code": 0,
+      "result": "all five visible supports are removed; contact shadows, chocolate silhouettes, concrete texture and grain remain credible"
+    }
+  ],
+  "screenshots_or_urls": [
+    "maplemoon-website/_wip/reviews/photoshoot_repair_batch1_20260801/24_manual_v01/qa/24_manual_v01-our-story-desktop.png",
+    "maplemoon-website/_wip/reviews/photoshoot_repair_batch1_20260801/24_manual_v01/qa/24_manual_v01-our-story-mobile.png",
+    "http://127.0.0.1:3127/_wip/reviews/photoshoot_repair_batch1_20260801/24_manual_v01/photo-24-v01-website-section-preview.html"
+  ],
+  "failures": [],
+  "unknowns": [
+    "Completion may HOLD solely on the newly created receipt self-hash."
+  ],
+  "residual_risk": [
+    "Final visual acceptance remains Nate's Confirm/Fix gate."
+  ],
+  "forbidden_path_changes": [],
+  "proposed_next_state": "needs_review",
+  "next_reviewer": "Nate"
+}

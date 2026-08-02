@@ -1,0 +1,80 @@
+{
+  "schema": "maplemoon-receipt/v2",
+  "receipt_id": "MAPLEMOON-UAT-ROLLBACK-CUTOVER-PLAN-20260802-RECEIPT-001",
+  "packet_id": "MAPLEMOON-UAT-ROLLBACK-CUTOVER-PLAN-20260802",
+  "worker_thread_id": "019fa858-05c9-7631-b26e-8f5cbbf1387a",
+  "worker": "persistent Main Boss local planning writer",
+  "started_at": "2026-08-02T06:28:01+10:00",
+  "completed_at": "2026-08-02T06:31:10+10:00",
+  "outcome": "PASS",
+  "confidence": "high for local planning structure; live systems remain unverified",
+  "phase": "complete",
+  "status": "PASS",
+  "ready_to_promote": false,
+  "checkpoint_path": "_wip/checkpoints/MAPLEMOON-UAT-ROLLBACK-CUTOVER-PLAN-20260802_20260802_062801_AEST",
+  "authority": {
+    "path": "/Users/handtomouse/maplemoon-website/docs/orchestration/packets/MAPLEMOON-CLIENT-REVIEW-SOFT-LAUNCH-SHOPIFY-READINESS-ADDENDUM-20260802.md",
+    "sha256": "7c541b6ff97f2ffdc1b6fe888cdba4f1795caadb947cfb7642d8ee54bfe2b712"
+  },
+  "files_changed": [
+    "docs/orchestration/reviews/MAPLEMOON-UAT-ROLLBACK-CUTOVER-PLAN-20260802.json",
+    "docs/client-review/2026-08-01-saturday-review/UAT-ROLLBACK-CUTOVER-PLAN-20260802.md",
+    "docs/client-review/2026-08-01-saturday-review/UAT-CASE-MATRIX-20260802.json",
+    "docs/client-review/2026-08-01-saturday-review/GO-NO-GO-AND-STABILIZATION-TEMPLATE-20260802.md"
+  ],
+  "files_read": [
+    "client-review soft-launch and Shopify readiness addendum",
+    "current official-source readiness research synthesis",
+    "Shopify OS2 migration gates and translation map",
+    "security readiness checklist and security gate register"
+  ],
+  "pre_sha256": {
+    "docs/orchestration/packets/MAPLEMOON-UAT-ROLLBACK-CUTOVER-PLAN-20260802.md": "a3f9effbc2efac60b5ee06b8c253628beb5dce041b9f0e8f444d8c6712c20c4f",
+    "docs/orchestration/reviews/MAPLEMOON-UAT-ROLLBACK-CUTOVER-PLAN-20260802.json": null,
+    "docs/client-review/2026-08-01-saturday-review/UAT-ROLLBACK-CUTOVER-PLAN-20260802.md": null,
+    "docs/client-review/2026-08-01-saturday-review/UAT-CASE-MATRIX-20260802.json": null,
+    "docs/client-review/2026-08-01-saturday-review/GO-NO-GO-AND-STABILIZATION-TEMPLATE-20260802.md": null
+  },
+  "post_sha256": {
+    "docs/orchestration/packets/MAPLEMOON-UAT-ROLLBACK-CUTOVER-PLAN-20260802.md": "a3f9effbc2efac60b5ee06b8c253628beb5dce041b9f0e8f444d8c6712c20c4f",
+    "docs/client-review/2026-08-01-saturday-review/UAT-ROLLBACK-CUTOVER-PLAN-20260802.md": "b8c4052d7cb2198aad3fb59c23cf6cdf49b0d380b0b49e46ada3d044704adeb6",
+    "docs/client-review/2026-08-01-saturday-review/UAT-CASE-MATRIX-20260802.json": "f26f77746b1c2ad51ad536074a2e2f0566c4e1dafe8c45208a8396027926fd07",
+    "docs/client-review/2026-08-01-saturday-review/GO-NO-GO-AND-STABILIZATION-TEMPLATE-20260802.md": "07b20be0e6a4a44627052bebf912cd5ab577a3c943a5ee1a9f1f48137aee6720"
+  },
+  "verified_source_sha256": {
+    "docs/orchestration/reviews/MAPLEMOON-CLIENT-REVIEW-SHOPIFY-READINESS-RESEARCH-20260802.md": "e3158786218a7f8be8fcbc4e1d7ac9de1b8035fd6c2ff6ceeb2ede0d87f5116c",
+    "docs/client-review/2026-08-01-saturday-review/SHOPIFY-OS2-MIGRATION-GATES-20260802.md": "68cded348b2011579608ef468841f88dda0f40802fbb014b728ad8a0c6901e92",
+    "docs/client-review/2026-08-01-saturday-review/SECURITY-READINESS-CHECKLIST-20260802.md": "70429df454bafb063779bb21ed7e409303445b2a9023459f08cf9a7f8659d807",
+    "docs/client-review/2026-08-01-saturday-review/SHOPIFY-OS2-TRANSLATION-MAP-20260802.md": "ee182b1baaedd91aad5f3d7586cac356789df73abff1ee487c5bcf4fdeb92101",
+    "docs/client-review/2026-08-01-saturday-review/SECURITY-INTEGRATION-GATE-REGISTER-20260802.md": "f0473ce2880c1a473e8046ee4b36a580a9335cd0c93e2085531918240710fd43"
+  },
+  "screenshots_or_urls": [],
+  "failures": [],
+  "unknowns": [
+    "Shopify store, plan, accounts, roles and development-theme route.",
+    "Fresh WooCommerce export and approved catalogue truth.",
+    "Payments, shipping, tax, policies, notifications, forms, analytics, consent, apps, domain and production configuration.",
+    "Named incident owner, rollback owner, stabilization window and production go/no-go approvers."
+  ],
+  "residual_risk": [
+    "The plan cannot prove live-system behavior and keeps every external phase HOLD.",
+    "Human literal 200 percent browser zoom and exact-artifact approvals cannot be replaced by this planning work.",
+    "Unrelated dirty WIP remains present but was not attributed to or modified by this phase."
+  ],
+  "forbidden_path_changes": [],
+  "proposed_next_state": "needs_independent_review",
+  "next_reviewer": "independent low-cost read-only verifier",
+  "checks": [
+    {"command":"authority and source SHA-256 verification","exit_code":0,"result":"PASS"},
+    {"command":"UAT matrix JSON validation and unique-ID check","exit_code":0,"result":"PASS: 28 unique cases across local review, development theme, cutover and stabilization"},
+    {"command":"phase separation and external-action boundary review","exit_code":0,"result":"PASS"},
+    {"command":"severity, abort, recovery custody, go/no-go and monitoring coverage review","exit_code":0,"result":"PASS"},
+    {"command":"unsupported live-system and legal-certification scan","exit_code":0,"result":"PASS"}
+  ],
+  "blockers": [
+    "Independent bounded review is required before accepting these local planning records.",
+    "Every Shopify, commerce, sharing, deployment and production gate remains HOLD."
+  ],
+  "ownership": "Local UAT planning records only; no website, store, account, catalogue or production ownership.",
+  "next_action": "Run one independent read-only verification of the plan, 28-case matrix and go/no-go template against current accepted readiness records."
+}

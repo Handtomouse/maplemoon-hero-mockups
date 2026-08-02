@@ -1,0 +1,82 @@
+{
+  "schema": "maplemoon-receipt/v2",
+  "receipt_id": "IMAGERY-PROGRAMME-20260802-RECEIPT-001",
+  "packet_id": "IMAGERY-PROGRAMME-20260802",
+  "worker_thread_id": "019fb5b5-de62-7862-a5fe-06bc59395c21",
+  "worker": "Codex Wave 1D imagery programme worker",
+  "started_at": "2026-08-02T13:23:21Z",
+  "completed_at": "2026-08-02T13:44:33Z",
+  "files_read": [
+    "_wip/GOAL-IMAGERY-PROGRAMME-20260802.md",
+    "_wip/evidence/IMAGERY-PROGRAMME-20260802/CANDIDATE-MANIFEST.sha256",
+    "docs/client-review/2026-08-01-saturday-review/staging-v1/clean/MANIFEST.json",
+    "docs/client-review/2026-08-01-saturday-review/staging-v1/clean/homepage.html",
+    "docs/client-review/2026-08-01-saturday-review/generated-candidates",
+    "docs/client-review/2026-08-01-saturday-review/LINK-PREVIEW-METADATA-AUDIT-20260802.md",
+    "docs/client-review/2026-08-01-saturday-review/LINK-PREVIEW-VALIDATION-MATRIX-20260802.json",
+    "/Users/handtomouse/.codex/visualizations/2026/08/02/019fc056-cd9a-7333-ab33-bd1c9f985cb4/maplemoon_ritual_ac_comparison",
+    "/Users/handtomouse/.codex/visualizations/2026/07/31/019fb5b5-de62-7862-a5fe-06bc59395c21/maplemoon_ritual_family_a_exploration_20260802_v1"
+  ],
+  "files_changed": [
+    "_wip/evidence/IMAGERY-PROGRAMME-20260802/CLASSIFICATION.md",
+    "_wip/evidence/IMAGERY-PROGRAMME-20260802/PLAN.md",
+    "_wip/evidence/IMAGERY-PROGRAMME-20260802/ritual-decision-board.html",
+    "_wip/evidence/IMAGERY-PROGRAMME-20260802/ritual-decision-board.json",
+    "_wip/evidence/IMAGERY-PROGRAMME-20260802/ritual-decision-board-desktop-1440.png",
+    "_wip/evidence/IMAGERY-PROGRAMME-20260802/ritual-decision-board-mobile-390.png",
+    "_wip/evidence/IMAGERY-PROGRAMME-20260802/IMAGERY-PROGRAMME-RECEIPT-20260802.json"
+  ],
+  "pre_sha256": {
+    "_wip/evidence/IMAGERY-PROGRAMME-20260802/CLASSIFICATION.md": null,
+    "_wip/evidence/IMAGERY-PROGRAMME-20260802/PLAN.md": null,
+    "_wip/evidence/IMAGERY-PROGRAMME-20260802/ritual-decision-board.html": null,
+    "_wip/evidence/IMAGERY-PROGRAMME-20260802/ritual-decision-board.json": null,
+    "_wip/evidence/IMAGERY-PROGRAMME-20260802/ritual-decision-board-desktop-1440.png": null,
+    "_wip/evidence/IMAGERY-PROGRAMME-20260802/ritual-decision-board-mobile-390.png": null,
+    "_wip/evidence/IMAGERY-PROGRAMME-20260802/IMAGERY-PROGRAMME-RECEIPT-20260802.json": null
+  },
+  "post_sha256": {
+    "_wip/evidence/IMAGERY-PROGRAMME-20260802/CLASSIFICATION.md": "6c0f2dea4b98ba219cc88a2b26fb17c0bcb3b656ba94b2d584c0f41df01de915",
+    "_wip/evidence/IMAGERY-PROGRAMME-20260802/PLAN.md": "f4abc7acb42ca8e75c6a63b38025c9225f802442ea339c232c342f06adb8de4b",
+    "_wip/evidence/IMAGERY-PROGRAMME-20260802/ritual-decision-board.html": "c587be4fa4d5f0beca4d0f8b58c35432384d6eed26ec1834634aa86cc7f8e160",
+    "_wip/evidence/IMAGERY-PROGRAMME-20260802/ritual-decision-board.json": "4703b7c316cda4566f7235f03d4100e7fa89065ee919cb33cab50eeb483b3ee1",
+    "_wip/evidence/IMAGERY-PROGRAMME-20260802/ritual-decision-board-desktop-1440.png": "945df4b536819c7e434b8f706d1227a25baef773eee57e935c00aab6bda071ee",
+    "_wip/evidence/IMAGERY-PROGRAMME-20260802/ritual-decision-board-mobile-390.png": "c01a775385e94b8382668222e02a07fcfbdc9d3f317a4d47f9949277dd475c06",
+    "_wip/evidence/IMAGERY-PROGRAMME-20260802/IMAGERY-PROGRAMME-RECEIPT-20260802.json": null
+  },
+  "checkpoint_path": "_wip/checkpoints/IMAGERY-PROGRAMME-20260802_20260802_232321_AEST",
+  "checkpoint_sha256": {
+    "_wip/evidence/IMAGERY-PROGRAMME-20260802/IMAGERY-PROGRAMME-PACKET-20260802.md": "40fabde55396cfab5fdd7991a66e11f0e86a2292465b7dfe9f4ce3a4f7bf1696"
+  },
+  "checks": [
+    {"command":"python3 -B scripts/check-maplemoon-receipt.py verify --phase start","exit_code":0,"result":"PASS packet=IMAGERY-PROGRAMME-20260802 phase=start scope=8"},
+    {"command":"shasum -a 256 -c CANDIDATE-MANIFEST.sha256 from generated-candidates cwd","exit_code":0,"result":"51 of 51 pre-existing live-repo candidate files OK after board creation"},
+    {"command":"jq source manifest to shasum -a 256 -c -","exit_code":0,"result":"3 current ritual sources and all 15 proposed candidate sources OK"},
+    {"command":"shasum -a 256 authority, six frozen clean pages and clean/MANIFEST.json","exit_code":0,"result":"authority e1e17f…, Homepage 0d1020…, Shop 43cad1…, Our Story 587a00…, Carob Story d93dc0…, Stockists c54892…, FAQ f4acfb… and clean manifest d1c66b… exact"},
+    {"command":"Chrome local-only render at 1440 CSS pixels","exit_code":0,"result":"1440/1440/1440 width metrics; 18 images loaded; 0 failures; saved 1440x5966 proof visually inspected"},
+    {"command":"Chrome local-only render at 390 CSS pixels","exit_code":0,"result":"innerWidth/clientWidth/scrollWidth 390/390/390; 358px cards; no overflow elements; no clipped text; 18 images loaded; saved 390x10894 proof visually inspected"},
+    {"command":"Chrome request-origin and console check","exit_code":0,"result":"all image origins were http://127.0.0.1:8766; no external links; no console errors; local preview stopped after QA"},
+    {"command":"python3 -m json.tool ritual-decision-board.json and git diff --check","exit_code":0,"result":"JSON valid and no whitespace errors in text outputs"},
+    {"command":"df -h /System/Volumes/Data","exit_code":0,"result":"48 GiB available, above the 20 GiB HOLD threshold"}
+  ],
+  "screenshots_or_urls": [
+    "_wip/evidence/IMAGERY-PROGRAMME-20260802/ritual-decision-board-desktop-1440.png",
+    "_wip/evidence/IMAGERY-PROGRAMME-20260802/ritual-decision-board-mobile-390.png",
+    "_wip/evidence/IMAGERY-PROGRAMME-20260802/ritual-decision-board.html"
+  ],
+  "failures": [],
+  "unknowns": [
+    "Nate has not selected A, C, R1, R2, R3, D, a mixed trio or HOLD.",
+    "Nate has not decided whether approved imagery should enter the frozen package before send.",
+    "Commit-versus-gitignore treatment for the 51 untracked live-repo candidate files remains Nate's decision."
+  ],
+  "residual_risk": [
+    "The HTML board intentionally resolves existing candidate sources from their local absolute custody paths; the two PNG proofs remain durable visual evidence if those paths later move.",
+    "Any before-send integration changes frozen bytes and requires a separate re-freeze and full CR-0 re-proof."
+  ],
+  "forbidden_path_changes": [],
+  "proposed_next_state": "needs_review",
+  "next_reviewer": "Nate",
+  "ready_to_promote": false,
+  "ownership": "released after receipt gate; no page or candidate cluster retained"
+}

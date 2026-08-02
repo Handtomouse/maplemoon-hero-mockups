@@ -1,0 +1,102 @@
+{
+  "schema": "maplemoon-receipt/v2",
+  "receipt_id": "SAT-OUR-STORY-FOUNDER-V03-CONTEXT-CANDIDATE-20260802-RECEIPT-001",
+  "packet_id": "SAT-OUR-STORY-FOUNDER-V03-CONTEXT-CANDIDATE-20260802",
+  "candidate_id": "SAT-OUR-STORY-FOUNDER-V03-CONTEXT-CANDIDATE-001",
+  "worker_thread_id": "019fc04b-9525-7002-814a-f19095ada4d7",
+  "worker": "Codex side conversation, isolated candidate owner",
+  "started_at": "2026-08-02T07:47:57Z",
+  "completed_at": "2026-08-02T08:05:00Z",
+  "outcome": "PASS",
+  "confidence": "high",
+  "files_read": [
+    "_wip/reviews/photoshoot_repair_batch1_20260801/73_reuse_g_v03/73_reuse_g_v03.psd",
+    "docs/client-review/2026-08-01-saturday-review/staging-v1/clean/our-story.html",
+    "docs/client-review/2026-08-01-saturday-review/staging-v1/clean/stockists.html",
+    "docs/orchestration/reviews/PHOTO-73-REUSE-G-V03-MANUAL-EDGE-20260801.json",
+    "docs/orchestration/handoffs/MAPLEMOON-CLAUDE-CONFLICT1-WITHDRAWAL-20260802-1745-AEST.md"
+  ],
+  "files_changed": [
+    "docs/orchestration/reviews/SAT-OUR-STORY-FOUNDER-V03-CONTEXT-CANDIDATE-20260802.json",
+    "_wip/reviews/founder_photo_v03_context_20260802/assets/founders_portrait_v03_preview.webp",
+    "_wip/reviews/founder_photo_v03_context_20260802/our_story_founder_v03.html",
+    "_wip/reviews/founder_photo_v03_context_20260802/qa/desktop_1440.png",
+    "_wip/reviews/founder_photo_v03_context_20260802/qa/mobile_390.png"
+  ],
+  "files_confirmed_untouched": [
+    "docs/orchestration/packets/SAT-OUR-STORY-FOUNDER-V03-CONTEXT-CANDIDATE-20260802.md",
+    "_wip/reviews/photoshoot_repair_batch1_20260801/73_reuse_g_v03/73_reuse_g_v03.psd",
+    "_wip/our-story.WIP.html",
+    "docs/client-review/2026-08-01-saturday-review/staging-v1/clean/our-story.html",
+    "docs/client-review/2026-08-01-saturday-review/staging-v1/annotated/our-story.html",
+    "docs/client-review/2026-08-01-saturday-review/staging-v1/MANIFEST.json",
+    "docs/client-review/2026-08-01-saturday-review/staging-v1/clean/MANIFEST.json",
+    "docs/client-review/2026-08-01-saturday-review/staging-v1/annotated/MANIFEST.json",
+    "scripts/build-maplemoon-saturday-review.py"
+  ],
+  "pre_sha256": {
+    "docs/orchestration/packets/SAT-OUR-STORY-FOUNDER-V03-CONTEXT-CANDIDATE-20260802.md": "eb48897856f65469b62fc009915877caf2399611aee2114be4e62de6fd349d4d",
+    "docs/orchestration/reviews/SAT-OUR-STORY-FOUNDER-V03-CONTEXT-CANDIDATE-20260802.json": null,
+    "_wip/reviews/founder_photo_v03_context_20260802/assets/founders_portrait_v03_preview.webp": null,
+    "_wip/reviews/founder_photo_v03_context_20260802/our_story_founder_v03.html": null,
+    "_wip/reviews/founder_photo_v03_context_20260802/qa/desktop_1440.png": null,
+    "_wip/reviews/founder_photo_v03_context_20260802/qa/mobile_390.png": null
+  },
+  "post_sha256": {
+    "docs/orchestration/packets/SAT-OUR-STORY-FOUNDER-V03-CONTEXT-CANDIDATE-20260802.md": "eb48897856f65469b62fc009915877caf2399611aee2114be4e62de6fd349d4d",
+    "docs/orchestration/reviews/SAT-OUR-STORY-FOUNDER-V03-CONTEXT-CANDIDATE-20260802.json": null,
+    "_wip/reviews/founder_photo_v03_context_20260802/assets/founders_portrait_v03_preview.webp": "21b97ead09c4e7eaa32e709dcb9f03d485f7249112f125b47d9ef463a6ca7959",
+    "_wip/reviews/founder_photo_v03_context_20260802/our_story_founder_v03.html": "5f6790a656b8e4fb284a22aba8d96726d5c0e5cef8a32364d2e869fe3f277ee2",
+    "_wip/reviews/founder_photo_v03_context_20260802/qa/desktop_1440.png": "9829522acdd47afd5cf929508b79ddd71b5c9552587f691f5562aa453631ba9e",
+    "_wip/reviews/founder_photo_v03_context_20260802/qa/mobile_390.png": "538f68b36ca5f9112af4e1f8b50b1bf4a03f0240c479c9e9a0c79357642aa742"
+  },
+  "checkpoint_path": "_wip/checkpoints/SAT-OUR-STORY-FOUNDER-V03-CONTEXT-CANDIDATE-20260802_20260802_174701_AEST",
+  "checks": [
+    {
+      "command": "scripts/check-maplemoon-receipt.py phase-start verify",
+      "exit_code": 0,
+      "result": "PASS: exact six-path scope and non-overwriting checkpoint admitted before candidate output creation."
+    },
+    {
+      "command": "SHA-256 source-lineage check",
+      "exit_code": 0,
+      "result": "PASS: candidate preview asset is derived from the exact manually cleaned v03 PSD base abcc2f13400e313f6dacfafebefe3b1736e2e962aebeda12e4e76424a037ab3c."
+    },
+    {
+      "command": "rendered 1440x900 visual review",
+      "exit_code": 0,
+      "result": "PASS: both founders are fully visible; portrait field blends continuously into the pale-blue hero; copy remains legible and unobscured."
+    },
+    {
+      "command": "Chrome CDP exact 390x844 visual and geometry review",
+      "exit_code": 0,
+      "result": "PASS: innerWidth/clientWidth/scrollWidth are 390/390/390; both founders remain visible; actions stack; no document overflow or hard image edge is present."
+    },
+    {
+      "command": "in-app browser console review on static candidate",
+      "exit_code": 0,
+      "result": "PASS: no candidate error or warning was recorded after replacing the temporary iframe proof shell with a static clean-page candidate."
+    },
+    {
+      "command": "canonical/source/generated integrity hashes",
+      "exit_code": 0,
+      "result": "PASS: canonical Our Story WIP, clean and annotated pages, three manifests, builder and v03 PSD remain byte-identical."
+    }
+  ],
+  "screenshots_or_urls": [
+    "http://127.0.0.1:3016/_wip/reviews/founder_photo_v03_context_20260802/our_story_founder_v03.html",
+    "file:///Users/handtomouse/maplemoon-website/_wip/reviews/founder_photo_v03_context_20260802/qa/desktop_1440.png",
+    "file:///Users/handtomouse/maplemoon-website/_wip/reviews/founder_photo_v03_context_20260802/qa/mobile_390.png"
+  ],
+  "failures": [],
+  "unknowns": [],
+  "residual_risk": [
+    "This is an isolated local context candidate only; no current website or generated-package reference uses it.",
+    "Promotion requires a separate Main-owned packet and independent verification against then-current hashes."
+  ],
+  "forbidden_path_changes": [],
+  "proposed_next_state": "needs_review",
+  "next_reviewer": "Nate visual confirmation, then Main Boss for a separately admitted promotion packet",
+  "next_action": "Nate reviews the isolated desktop/mobile candidate and tells Main whether to admit the founder-v03 promotion packet.",
+  "ready_to_promote": false
+}

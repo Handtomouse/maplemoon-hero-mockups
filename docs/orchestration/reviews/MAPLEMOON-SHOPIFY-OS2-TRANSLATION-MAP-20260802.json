@@ -1,0 +1,101 @@
+{
+  "schema": "maplemoon-receipt/v2",
+  "receipt_id": "MAPLEMOON-SHOPIFY-OS2-TRANSLATION-MAP-20260802-RECEIPT-001",
+  "packet_id": "MAPLEMOON-SHOPIFY-OS2-TRANSLATION-MAP-20260802",
+  "worker_thread_id": "019fa858-05c9-7631-b26e-8f5cbbf1387a",
+  "worker": "Main Boss coordinator",
+  "started_at": "2026-08-02T04:47:24+10:00",
+  "completed_at": "2026-08-02T04:50:22+10:00",
+  "outcome": "PASS",
+  "confidence": "high",
+  "phase": "complete",
+  "status": "PASS",
+  "ready_to_promote": false,
+  "checkpoint_path": "_wip/checkpoints/MAPLEMOON-SHOPIFY-OS2-TRANSLATION-MAP-20260802_20260802_044724_AEST",
+  "authority": {
+    "path": "/Users/handtomouse/maplemoon-website/docs/orchestration/packets/MAPLEMOON-CLIENT-REVIEW-SOFT-LAUNCH-SHOPIFY-READINESS-ADDENDUM-20260802.md",
+    "sha256": "7c541b6ff97f2ffdc1b6fe888cdba4f1795caadb947cfb7642d8ee54bfe2b712",
+    "frozen_overnight_sha256": "12689434a7c46c323b27d1c8a099cb9703bf910b8c6dbbac2cfca193a0c6b599",
+    "context_policy_sha256": "31fc8f26797a15f66a5406ec112365da24d958811a9efbbd7aa6d7392cec1a78",
+    "sleep_comms_sha256": "4268d4e99c7ecae38816099cfbf14520af1b9531a450d0436501e57d8cd92ed9"
+  },
+  "files_changed": [
+    "docs/orchestration/reviews/MAPLEMOON-SHOPIFY-OS2-TRANSLATION-MAP-20260802.json",
+    "docs/client-review/2026-08-01-saturday-review/SHOPIFY-OS2-TRANSLATION-MAP-20260802.md",
+    "docs/client-review/2026-08-01-saturday-review/SHOPIFY-OS2-EVENT-MAPPING-20260802.json",
+    "docs/client-review/2026-08-01-saturday-review/SHOPIFY-OS2-MIGRATION-GATES-20260802.md"
+  ],
+  "files_read": [
+    "frozen overnight authority",
+    "client-review and Shopify readiness addendum",
+    "completed readiness research synthesis",
+    "current six clean page structures",
+    "verified soft-launch event specification"
+  ],
+  "pre_sha256": {
+    "docs/orchestration/packets/MAPLEMOON-SHOPIFY-OS2-TRANSLATION-MAP-20260802.md": "be4ebba1aa8bbe0f9963d4e2316a39c8cea3a36fa5db6304976f8c388d6d99bc",
+    "docs/orchestration/reviews/MAPLEMOON-SHOPIFY-OS2-TRANSLATION-MAP-20260802.json": null,
+    "docs/client-review/2026-08-01-saturday-review/SHOPIFY-OS2-TRANSLATION-MAP-20260802.md": null,
+    "docs/client-review/2026-08-01-saturday-review/SHOPIFY-OS2-EVENT-MAPPING-20260802.json": null,
+    "docs/client-review/2026-08-01-saturday-review/SHOPIFY-OS2-MIGRATION-GATES-20260802.md": null
+  },
+  "post_sha256": {
+    "docs/orchestration/packets/MAPLEMOON-SHOPIFY-OS2-TRANSLATION-MAP-20260802.md": "be4ebba1aa8bbe0f9963d4e2316a39c8cea3a36fa5db6304976f8c388d6d99bc",
+    "docs/client-review/2026-08-01-saturday-review/SHOPIFY-OS2-TRANSLATION-MAP-20260802.md": "ee182b1baaedd91aad5f3d7586cac356789df73abff1ee487c5bcf4fdeb92101",
+    "docs/client-review/2026-08-01-saturday-review/SHOPIFY-OS2-EVENT-MAPPING-20260802.json": "704df5d3075b90963a9cdae3d183c9cf0f1475f516dd4ed306ecb3c1cc4c7ac2",
+    "docs/client-review/2026-08-01-saturday-review/SHOPIFY-OS2-MIGRATION-GATES-20260802.md": "68cded348b2011579608ef468841f88dda0f40802fbb014b728ad8a0c6901e92"
+  },
+  "screenshots_or_urls": [],
+  "failures": [],
+  "unknowns": [
+    "Shopify store, plan, roles, base theme, apps and development-theme route are not approved.",
+    "Fresh WooCommerce export and approved retail catalogue are still required for product/variant/price/availability truth.",
+    "Stockist production data model, forms, email, analytics, consent, domain and cutover owners are unresolved."
+  ],
+  "residual_risk": [
+    "This architecture has not been independently reviewed or tested in a Shopify development theme.",
+    "Shopify standard event names and properties must be revalidated against current official documentation at implementation time.",
+    "Current prototype sections may contain blocked evidence and are not themselves production content authority."
+  ],
+  "forbidden_path_changes": [],
+  "proposed_next_state": "needs_review",
+  "next_reviewer": "independent read-only verifier",
+  "checks": [
+    {
+      "command": "receipt checker phase=start",
+      "exit_code": 0,
+      "result": "PASS"
+    },
+    {
+      "command": "event-mapping JSON validation",
+      "exit_code": 0,
+      "result": "PASS"
+    },
+    {
+      "command": "six-page and shared-surface mapping occurrence check",
+      "exit_code": 0,
+      "result": "PASS"
+    },
+    {
+      "command": "native OS2, no-activation and external-HOLD boundary scan",
+      "exit_code": 0,
+      "result": "PASS"
+    },
+    {
+      "command": "git diff --check for exact specification paths",
+      "exit_code": 0,
+      "result": "PASS"
+    },
+    {
+      "command": "authority SHA-256 revalidation",
+      "exit_code": 0,
+      "result": "PASS"
+    }
+  ],
+  "blockers": [
+    "No Shopify access, theme work, catalogue import, app selection, analytics activation, deployment or production action is authorized.",
+    "Implementation remains blocked on exact owners, inputs and approvals listed in the migration gates."
+  ],
+  "ownership": "Shopify translation planning records only; no store, theme, catalogue, website, package or external-system ownership.",
+  "next_action": "Run one independent read-only architecture and evidence review of this translation map before admitting any Shopify preparation implementation."
+}

@@ -1,0 +1,102 @@
+{
+  "schema": "maplemoon-receipt/v2",
+  "receipt_id": "MAPLEMOON-SOFT-LAUNCH-TEST-SPEC-20260802-RECEIPT-001",
+  "packet_id": "MAPLEMOON-SOFT-LAUNCH-TEST-SPEC-20260802",
+  "worker_thread_id": "019fa858-05c9-7631-b26e-8f5cbbf1387a",
+  "worker": "Main Boss coordinator",
+  "started_at": "2026-08-02T04:07:34+10:00",
+  "completed_at": "2026-08-02T04:15:31+10:00",
+  "outcome": "PASS",
+  "confidence": "high",
+  "phase": "complete",
+  "status": "PASS",
+  "ready_to_promote": false,
+  "checkpoint_path": "_wip/checkpoints/MAPLEMOON-SOFT-LAUNCH-TEST-SPEC-20260802_20260802_040734_AEST",
+  "authority": {
+    "path": "/Users/handtomouse/maplemoon-website/docs/orchestration/packets/MAPLEMOON-CLIENT-REVIEW-SOFT-LAUNCH-SHOPIFY-READINESS-ADDENDUM-20260802.md",
+    "sha256": "7c541b6ff97f2ffdc1b6fe888cdba4f1795caadb947cfb7642d8ee54bfe2b712",
+    "frozen_overnight_sha256": "12689434a7c46c323b27d1c8a099cb9703bf910b8c6dbbac2cfca193a0c6b599",
+    "context_policy_sha256": "31fc8f26797a15f66a5406ec112365da24d958811a9efbbd7aa6d7392cec1a78",
+    "sleep_comms_sha256": "4268d4e99c7ecae38816099cfbf14520af1b9531a450d0436501e57d8cd92ed9"
+  },
+  "files_changed": [
+    "docs/orchestration/reviews/MAPLEMOON-SOFT-LAUNCH-TEST-SPEC-20260802.json",
+    "docs/client-review/2026-08-01-saturday-review/SOFT-LAUNCH-TEST-PLAN-20260802.md",
+    "docs/client-review/2026-08-01-saturday-review/SOFT-LAUNCH-EVENT-SCHEMA-20260802.json",
+    "docs/client-review/2026-08-01-saturday-review/SOFT-LAUNCH-ANALYSIS-TEMPLATE-20260802.md"
+  ],
+  "files_read": [
+    "frozen overnight authority",
+    "client-review and Shopify readiness addendum",
+    "context/session-capacity policy",
+    "sleep-comms authority",
+    "completed readiness research synthesis",
+    "review-hub feedback schema"
+  ],
+  "pre_sha256": {
+    "docs/orchestration/packets/MAPLEMOON-SOFT-LAUNCH-TEST-SPEC-20260802.md": "ba22148bbc86bebe224d60e2ab6c262799e7c8d27c579ff35765f7c560e1021a",
+    "docs/orchestration/reviews/MAPLEMOON-SOFT-LAUNCH-TEST-SPEC-20260802.json": null,
+    "docs/client-review/2026-08-01-saturday-review/SOFT-LAUNCH-TEST-PLAN-20260802.md": null,
+    "docs/client-review/2026-08-01-saturday-review/SOFT-LAUNCH-EVENT-SCHEMA-20260802.json": null,
+    "docs/client-review/2026-08-01-saturday-review/SOFT-LAUNCH-ANALYSIS-TEMPLATE-20260802.md": null
+  },
+  "post_sha256": {
+    "docs/orchestration/packets/MAPLEMOON-SOFT-LAUNCH-TEST-SPEC-20260802.md": "ba22148bbc86bebe224d60e2ab6c262799e7c8d27c579ff35765f7c560e1021a",
+    "docs/client-review/2026-08-01-saturday-review/SOFT-LAUNCH-TEST-PLAN-20260802.md": "56c23823e117003353307532c4514f19cd071241f880a3134c124840d059c0ec",
+    "docs/client-review/2026-08-01-saturday-review/SOFT-LAUNCH-EVENT-SCHEMA-20260802.json": "e20ebdb7eae2c8d9e4bc6da1253673dd26ebd8bb478d185ed95857e61892eea6",
+    "docs/client-review/2026-08-01-saturday-review/SOFT-LAUNCH-ANALYSIS-TEMPLATE-20260802.md": "6fe8a0be561bf118985ba083523feb8f65136f91ea084a9bc0396b5bbadf501f"
+  },
+  "screenshots_or_urls": [],
+  "failures": [],
+  "unknowns": [
+    "The exact frozen artifact, named participants, cohort sizes, test window, invitation wording and access route require Nate approval.",
+    "No data owner, endpoint, notice, consent disposition, retention period, deletion process or analysis owner is approved.",
+    "No quantitative success threshold or session timeout is approved."
+  ],
+  "residual_risk": [
+    "The plan has not been independently reviewed and does not authorize activation.",
+    "Small family-and-friends cohorts provide directional observations rather than representative or statistically conclusive evidence.",
+    "An analytics implementation could create privacy or fingerprinting risk if it departs from the schema."
+  ],
+  "forbidden_path_changes": [],
+  "proposed_next_state": "needs_review",
+  "next_reviewer": "independent read-only verifier",
+  "checks": [
+    {
+      "command": "receipt checker phase=start",
+      "exit_code": 0,
+      "result": "PASS"
+    },
+    {
+      "command": "event-schema JSON validation",
+      "exit_code": 0,
+      "result": "PASS"
+    },
+    {
+      "command": "event count, named-question mapping and no-activation assertions",
+      "exit_code": 0,
+      "result": "PASS"
+    },
+    {
+      "command": "no-collection and HOLD boundary scan",
+      "exit_code": 0,
+      "result": "PASS"
+    },
+    {
+      "command": "git diff --check for exact specification paths",
+      "exit_code": 0,
+      "result": "PASS"
+    },
+    {
+      "command": "authority SHA-256 revalidation",
+      "exit_code": 0,
+      "result": "PASS"
+    }
+  ],
+  "blockers": [
+    "No test, invitation, tracking, feedback collection or external action may occur until the listed Nate and privacy/security approvals exist.",
+    "Absolute site-sharing HOLD remains in force while Nate sleeps."
+  ],
+  "ownership": "Soft-launch planning records only; no website, package, analytics, Shop, photo, Wave 1D or external-system ownership.",
+  "next_action": "Run one independent read-only review of this test specification and receipt; do not implement or activate tracking."
+}

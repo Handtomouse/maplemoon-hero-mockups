@@ -1,0 +1,76 @@
+{
+  "schema": "maplemoon-receipt/v2",
+  "receipt_id": "MAPLEMOON-SLEEP-COMMS-20260802-1052-AEST-RECEIPT-001",
+  "packet_id": "MAPLEMOON-SLEEP-COMMS-20260802-1052-AEST",
+  "worker_thread_id": "019fa858-05c9-7631-b26e-8f5cbbf1387a",
+  "worker": "persistent Main Boss hourly comms monitor",
+  "started_at": "2026-08-02T10:52:00+10:00",
+  "completed_at": "2026-08-02T10:53:08+10:00",
+  "outcome": "PASS",
+  "confidence": "high for the bounded cross-channel closeout",
+  "phase": "complete",
+  "status": "PASS",
+  "ready_to_promote": false,
+  "checkpoint_path": "_wip/checkpoints/MAPLEMOON-SLEEP-COMMS-20260802-1052-AEST_20260802_105308_AEST",
+  "authority": {
+    "path": "/Users/handtomouse/maplemoon-website/docs/orchestration/packets/MAPLEMOON-SLEEP-COMMS-MONITOR-AUTHORITY-20260802.md",
+    "sha256": "4268d4e99c7ecae38816099cfbf14520af1b9531a450d0436501e57d8cd92ed9",
+    "eligible_after": "2026-08-02T01:26:07+10:00"
+  },
+  "files_changed": [
+    "docs/orchestration/reviews/MAPLEMOON-SLEEP-COMMS-20260802/MAPLEMOON-SLEEP-COMMS-20260802-1052-AEST.json"
+  ],
+  "files_read": [
+    "sleep-comms authority and prior 09:49 hourly receipt",
+    "read-only MapleMoon comms-check result for Carli and Dylan across Gmail, iMessage and WhatsApp"
+  ],
+  "pre_sha256": {
+    "docs/orchestration/packets/MAPLEMOON-SLEEP-COMMS-20260802-1052-AEST.md": "595ea90c48646ceea5945b829f85f3f603ece81d8b8a5f19d60ba923faeec208",
+    "docs/orchestration/reviews/MAPLEMOON-SLEEP-COMMS-20260802/MAPLEMOON-SLEEP-COMMS-20260802-1052-AEST.json": null
+  },
+  "post_sha256": {
+    "docs/orchestration/packets/MAPLEMOON-SLEEP-COMMS-20260802-1052-AEST.md": "595ea90c48646ceea5945b829f85f3f603ece81d8b8a5f19d60ba923faeec208"
+  },
+  "run_time_aest": "2026-08-02T10:52:00+10:00",
+  "channels_checked": {
+    "gmail": {"status":"available","errors":[]},
+    "imessage": {"status":"available","errors":[]},
+    "whatsapp": {"status":"available","errors":[]}
+  },
+  "contacts_reconciled": ["Carli Saber", "Dylan Bernad"],
+  "new_inbound_events": [
+    {
+      "event_key": "imessage:dylan:1785631306.0757568",
+      "sender": "Dylan Bernad",
+      "channel": "imessage",
+      "timestamp_aest": "2026-08-02T10:41:46+10:00",
+      "classification": "substantive status question resolved by Nate's later direct reply"
+    }
+  ],
+  "classification": "nate_resumed_direct_client_communication",
+  "acknowledgement": {
+    "status": "not_sent",
+    "outbound_id": null,
+    "reason": "Nate replied directly in the same conversation at 10:46 AEST before the monitor acted."
+  },
+  "ingested_finding": "Nate is awake and has resumed direct MapleMoon communication; the eligible inbound is no longer waiting on the sleep monitor.",
+  "route": "close_sleep_monitor_and_return_control_to_nate",
+  "screenshots_or_urls": [],
+  "failures": [],
+  "unknowns": [],
+  "residual_risk": [
+    "The monitor records timing and classification only; it does not assess or reproduce Nate's private outbound message body."
+  ],
+  "forbidden_path_changes": [],
+  "proposed_next_state": "sleep_monitor_complete",
+  "next_reviewer": "019fa858-05c9-7631-b26e-8f5cbbf1387a",
+  "checks": [
+    {"command":"prior hourly receipt deduplication","exit_code":0,"result":"PASS: no prior acknowledgement exists for the new event"},
+    {"command":"permission-routed comms-check maplemoon --days 21","exit_code":0,"result":"PASS: Gmail, iMessage and WhatsApp available for both contacts; no errors"},
+    {"command":"new-inbound and outbound ordering","exit_code":0,"result":"PASS: Nate's direct outbound followed the eligible inbound before monitor action"},
+    {"command":"sleep-authority closeout rule","exit_code":0,"result":"PASS: Nate resumed control; no assistant message sent"}
+  ],
+  "blockers": [],
+  "ownership": "Final sleep-monitor receipt only; no client conversation, website or external-system ownership.",
+  "next_action": "Stop the overnight heartbeat and let Nate run Boss check for the verified morning handoff and CR-0 gate."
+}

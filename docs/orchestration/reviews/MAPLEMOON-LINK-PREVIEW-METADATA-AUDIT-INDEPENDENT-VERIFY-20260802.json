@@ -1,0 +1,65 @@
+{
+  "schema": "maplemoon-receipt/v2",
+  "receipt_id": "MAPLEMOON-LINK-PREVIEW-METADATA-AUDIT-INDEPENDENT-VERIFY-20260802-RECEIPT-001",
+  "packet_id": "MAPLEMOON-LINK-PREVIEW-METADATA-AUDIT-INDEPENDENT-VERIFY-20260802",
+  "worker_thread_id": "019fbf17-2a07-7263-b96e-9e026144ce15",
+  "worker": "independent low-cost read-only verifier",
+  "started_at": "2026-08-02T06:50:27+10:00",
+  "completed_at": "2026-08-02T06:52:00+10:00",
+  "outcome": "PASS",
+  "confidence": "high for static local metadata inventory; external preview behavior remains untested",
+  "phase": "complete",
+  "status": "PASS",
+  "ready_to_promote": false,
+  "checkpoint_path": "_wip/checkpoints/MAPLEMOON-LINK-PREVIEW-METADATA-AUDIT-INDEPENDENT-VERIFY-20260802_20260802_065027_AEST",
+  "authority": {
+    "path": "/Users/handtomouse/maplemoon-website/docs/orchestration/packets/MAPLEMOON-CLIENT-REVIEW-SOFT-LAUNCH-SHOPIFY-READINESS-ADDENDUM-20260802.md",
+    "sha256": "7c541b6ff97f2ffdc1b6fe888cdba4f1795caadb947cfb7642d8ee54bfe2b712"
+  },
+  "files_changed": [
+    "docs/orchestration/reviews/MAPLEMOON-LINK-PREVIEW-METADATA-AUDIT-INDEPENDENT-VERIFY-20260802.json"
+  ],
+  "files_read": [
+    "independent-verification packet and checkpoint",
+    "metadata audit packet and receipt",
+    "metadata audit and validation matrix",
+    "six frozen clean HTML pages and shared SVG favicon"
+  ],
+  "pre_sha256": {
+    "docs/orchestration/packets/MAPLEMOON-LINK-PREVIEW-METADATA-AUDIT-INDEPENDENT-VERIFY-20260802.md": "9a3642cf4300a74c760483e4c750c3aa82f06fd9146e696850fd6357b036a41b",
+    "docs/orchestration/reviews/MAPLEMOON-LINK-PREVIEW-METADATA-AUDIT-INDEPENDENT-VERIFY-20260802.json": null
+  },
+  "post_sha256": {
+    "docs/orchestration/packets/MAPLEMOON-LINK-PREVIEW-METADATA-AUDIT-INDEPENDENT-VERIFY-20260802.md": "9a3642cf4300a74c760483e4c750c3aa82f06fd9146e696850fd6357b036a41b"
+  },
+  "verified_subject_sha256": {
+    "docs/orchestration/reviews/MAPLEMOON-LINK-PREVIEW-METADATA-AUDIT-20260802.json": "3069d46f1f1480dee2410cc4e19a32c2ae1583149db3ae58fcbc2946e13189bc",
+    "docs/client-review/2026-08-01-saturday-review/LINK-PREVIEW-METADATA-AUDIT-20260802.md": "f97f57e92d2e5bb36f30bc2add5fcf5b1eb0520afbd7c7b862fecb03415c0f20",
+    "docs/client-review/2026-08-01-saturday-review/LINK-PREVIEW-VALIDATION-MATRIX-20260802.json": "a04b8704aafe3c3189eeeb1fd4849b58bfd2c57f38a326636c6dcd5ebc87db09"
+  },
+  "screenshots_or_urls": [],
+  "failures": [],
+  "unknowns": [
+    "Rendered favicon legibility, factual copy approval, final URL, deployment and external message-surface behavior."
+  ],
+  "residual_risk": [
+    "Forwardable-link readiness remains HOLD despite the static-audit PASS.",
+    "Unrelated dirty WIP remains present but was not attributed to or modified by this verification."
+  ],
+  "forbidden_path_changes": [],
+  "proposed_next_state": "accepted_local_audit",
+  "next_reviewer": "019fa858-05c9-7631-b26e-8f5cbbf1387a",
+  "checks": [
+    {"command":"authority, checkpoint and subject hash verification","exit_code":0,"result":"PASS"},
+    {"command":"six-page metadata occurrence verification","exit_code":0,"result":"PASS: 6 titles, favicons, theme colours and noindex directives"},
+    {"command":"description, canonical, Open Graph and Twitter verification","exit_code":0,"result":"PASS: 4 descriptions present, 2 missing; canonical/OG/Twitter absent on all 6"},
+    {"command":"favicon source and fallback inventory","exit_code":0,"result":"PASS: SVG exists; no raster fallback, apple-touch icon or manifest"},
+    {"command":"validation-matrix JSON and gate-count verification","exit_code":0,"result":"PASS: 6 pages and 6 future gates"}
+  ],
+  "blockers": [
+    "Nate has not approved factual preview copy, Open Graph image direction, exact URL, artifact, audience or channel.",
+    "No page mutation, external preview test, deployment or sharing is authorized."
+  ],
+  "ownership": "Independent audit verification only; no page, asset, host, domain or message ownership.",
+  "next_action": "Keep link-preview readiness HOLD until Nate approves the factual copy and Open Graph image direction after waking."
+}

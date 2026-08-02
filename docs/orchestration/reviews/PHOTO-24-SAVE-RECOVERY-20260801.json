@@ -1,0 +1,58 @@
+{
+  "schema": "maplemoon-receipt/v2",
+  "receipt_id": "PHOTO-24-SAVE-RECOVERY-20260801-RECEIPT-001",
+  "packet_id": "PHOTO-24-SAVE-RECOVERY-20260801",
+  "worker_thread_id": "019fa858-05c9-7631-b26e-8f5cbbf1387a",
+  "worker": "Codex side-chat manager",
+  "started_at": "2026-08-01T00:26:35Z",
+  "completed_at": "2026-08-01T00:29:30Z",
+  "files_read": [
+    "Downloads/wetransfer_website-hero-raws_2026-06-03_1315.zip",
+    "maplemoon-website/_wip/checkpoints/PHOTO-24-SAVE-RECOVERY-20260801_20260801_102635_AEST/RECOVERY_MANIFEST.json"
+  ],
+  "files_changed": [
+    "Downloads/wetransfer_website-hero-raws_2026-06-03_1315/Heros-24.jpg",
+    "maplemoon-website/_wip/reviews/photoshoot_repair_batch1_20260801/24_manual_v01/24_manual_v01_recovered_from_source.jpg",
+    "maplemoon-website/docs/orchestration/reviews/PHOTO-24-SAVE-RECOVERY-20260801.json"
+  ],
+  "pre_sha256": {
+    "Downloads/wetransfer_website-hero-raws_2026-06-03_1315/Heros-24.jpg": "6e1a3c198ad34392fe4f745382348b06c4ad0f0458bb7d1f240679db8e7bb809",
+    "maplemoon-website/_wip/reviews/photoshoot_repair_batch1_20260801/24_manual_v01/24_manual_v01_recovered_from_source.jpg": null,
+    "maplemoon-website/docs/orchestration/reviews/PHOTO-24-SAVE-RECOVERY-20260801.json": null
+  },
+  "post_sha256": {
+    "Downloads/wetransfer_website-hero-raws_2026-06-03_1315/Heros-24.jpg": "6b0373e490e1270d6b327e5f505aff2b2453c57c20884c741da2fe17afedc86e",
+    "maplemoon-website/_wip/reviews/photoshoot_repair_batch1_20260801/24_manual_v01/24_manual_v01_recovered_from_source.jpg": "6e1a3c198ad34392fe4f745382348b06c4ad0f0458bb7d1f240679db8e7bb809",
+    "maplemoon-website/docs/orchestration/reviews/PHOTO-24-SAVE-RECOVERY-20260801.json": null
+  },
+  "checkpoint_path": "maplemoon-website/_wip/checkpoints/PHOTO-24-SAVE-RECOVERY-20260801_20260801_102635_AEST",
+  "checkpoint_sha256": {
+    "Downloads/wetransfer_website-hero-raws_2026-06-03_1315/Heros-24.jpg": "6e1a3c198ad34392fe4f745382348b06c4ad0f0458bb7d1f240679db8e7bb809"
+  },
+  "checks": [
+    {
+      "command": "copy altered source to separate review JPEG, then shasum -a 256",
+      "exit_code": 0,
+      "result": "recovery copy is byte-identical to the accidentally source-saved edit"
+    },
+    {
+      "command": "unzip -p original ZIP Heros-24.jpg to source path; unzip -t; shasum -a 256",
+      "exit_code": 0,
+      "result": "untouched source restored exactly; archive entry tested OK"
+    },
+    {
+      "command": "sips dimensions and profile",
+      "exit_code": 0,
+      "result": "both files are 4000 x 6000 sRGB"
+    }
+  ],
+  "screenshots_or_urls": [],
+  "failures": [],
+  "unknowns": [
+    "Completion may HOLD solely on the newly created receipt self-hash."
+  ],
+  "residual_risk": [],
+  "forbidden_path_changes": [],
+  "proposed_next_state": "recovered",
+  "next_reviewer": "coordinator"
+}

@@ -1,0 +1,75 @@
+{
+  "schema": "maplemoon-receipt/v2",
+  "receipt_id": "PHOTO-RAW-RECOVERY-08-24-20260801-RECEIPT-001",
+  "packet_id": "PHOTO-RAW-RECOVERY-08-24-20260801",
+  "worker_thread_id": "019f9c36-83e1-7941-92e5-a3b134212288",
+  "worker": "Codex",
+  "started_at": "2026-07-31T19:11:16Z",
+  "completed_at": "2026-07-31T19:13:59Z",
+  "files_read": [
+    "Downloads/wetransfer_website-hero-raws_2026-06-03_1315.zip",
+    "Downloads/wetransfer_website-hero-raws_2026-06-03_1315/Heros-9.jpg",
+    "Downloads/wetransfer_website-hero-raws_2026-06-03_1315/Heros-24.jpg",
+    "maplemoon-website/docs/orchestration/packets/PHOTO-RAW-RECOVERY-08-24-20260801.md",
+    "maplemoon-website/scripts/check-maplemoon-receipt.py",
+    "maplemoon-website/_wip/checkpoints/PHOTO-RAW-RECOVERY-08-24-20260801_20260801_051116_AEST/RECOVERY_MANIFEST.json"
+  ],
+  "files_changed": [
+    "Downloads/wetransfer_website-hero-raws_2026-06-03_1315/Heros-9.jpg",
+    "Downloads/wetransfer_website-hero-raws_2026-06-03_1315/Heros-24.jpg",
+    "maplemoon-website/docs/orchestration/reviews/PHOTO-RAW-RECOVERY-08-24-20260801.json"
+  ],
+  "pre_sha256": {
+    "Downloads/wetransfer_website-hero-raws_2026-06-03_1315/Heros-9.jpg": "380a92ddda3823bbc85faba7b802d17cb5c5c1f8af7620c65d124ff630b7a51f",
+    "Downloads/wetransfer_website-hero-raws_2026-06-03_1315/Heros-24.jpg": "fcc6d0a7776c32e92d391327826e90bd17710324b1e497f1adb40c39425a82b3",
+    "maplemoon-website/docs/orchestration/reviews/PHOTO-RAW-RECOVERY-08-24-20260801.json": null
+  },
+  "post_sha256": {
+    "Downloads/wetransfer_website-hero-raws_2026-06-03_1315/Heros-9.jpg": "73a847fb710e864167e682a171122b55d4093267afd8cab9041cca490ef47170",
+    "Downloads/wetransfer_website-hero-raws_2026-06-03_1315/Heros-24.jpg": "6b0373e490e1270d6b327e5f505aff2b2453c57c20884c741da2fe17afedc86e",
+    "maplemoon-website/docs/orchestration/reviews/PHOTO-RAW-RECOVERY-08-24-20260801.json": null
+  },
+  "checkpoint_path": "maplemoon-website/_wip/checkpoints/PHOTO-RAW-RECOVERY-08-24-20260801_20260801_051116_AEST",
+  "checkpoint_sha256": {
+    "Downloads/wetransfer_website-hero-raws_2026-06-03_1315/Heros-9.jpg": "380a92ddda3823bbc85faba7b802d17cb5c5c1f8af7620c65d124ff630b7a51f",
+    "Downloads/wetransfer_website-hero-raws_2026-06-03_1315/Heros-24.jpg": "fcc6d0a7776c32e92d391327826e90bd17710324b1e497f1adb40c39425a82b3"
+  },
+  "checks": [
+    {
+      "command": "shasum -a 256 current sources; unzip -p exact ZIP entries | shasum -a 256",
+      "exit_code": 0,
+      "result": "current altered hashes and archive-original hashes matched the packet before mutation"
+    },
+    {
+      "command": "python3 -B scripts/check-maplemoon-receipt.py checkpoint --packet docs/orchestration/packets/PHOTO-RAW-RECOVERY-08-24-20260801.md --root /Users/handtomouse --destination /Users/handtomouse/maplemoon-website/_wip/checkpoints/PHOTO-RAW-RECOVERY-08-24-20260801_20260801_051116_AEST",
+      "exit_code": 0,
+      "result": "PASS checkpoint packet=PHOTO-RAW-RECOVERY-08-24-20260801 files=3"
+    },
+    {
+      "command": "python3 -B scripts/check-maplemoon-receipt.py verify --packet docs/orchestration/packets/PHOTO-RAW-RECOVERY-08-24-20260801.md --root /Users/handtomouse --checkpoint /Users/handtomouse/maplemoon-website/_wip/checkpoints/PHOTO-RAW-RECOVERY-08-24-20260801_20260801_051116_AEST --phase start",
+      "exit_code": 0,
+      "result": "PASS phase=start scope=3"
+    },
+    {
+      "command": "unzip -o /Users/handtomouse/Downloads/wetransfer_website-hero-raws_2026-06-03_1315.zip Heros-9.jpg Heros-24.jpg -d /Users/handtomouse/Downloads/wetransfer_website-hero-raws_2026-06-03_1315",
+      "exit_code": 0,
+      "result": "only Heros-9.jpg and Heros-24.jpg extracted"
+    },
+    {
+      "command": "shasum -a 256 restored sources and checkpoint copies",
+      "exit_code": 0,
+      "result": "restored sources match archive originals; checkpoint copies retain both altered pre-write hashes"
+    }
+  ],
+  "screenshots_or_urls": [],
+  "failures": [],
+  "unknowns": [
+    "The gate requires a post hash for this newly created receipt because its path is admitted and checkpointed as absent; a receipt cannot embed its own stable SHA-256."
+  ],
+  "residual_risk": [
+    "Completion may HOLD solely on receipt self-hash evidence even though both source and checkpoint hashes are verified."
+  ],
+  "forbidden_path_changes": [],
+  "proposed_next_state": "recovered",
+  "next_reviewer": "coordinator"
+}

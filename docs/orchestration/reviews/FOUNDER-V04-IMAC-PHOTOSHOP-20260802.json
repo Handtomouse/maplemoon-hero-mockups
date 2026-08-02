@@ -1,0 +1,111 @@
+{
+  "schema": "maplemoon-receipt/v2",
+  "receipt_id": "FOUNDER-V04-IMAC-PHOTOSHOP-20260802-RECEIPT-001",
+  "packet_id": "FOUNDER-V04-IMAC-PHOTOSHOP-20260802",
+  "candidate_id": "FOUNDER-V04-IMAC-PHOTOSHOP-CANDIDATE-20260802-001",
+  "worker_thread_id": "019f9c36-83e1-7941-92e5-a3b134212288",
+  "worker": "Codex photo task",
+  "started_at": "2026-08-02T12:49:37Z",
+  "completed_at": "2026-08-02T13:20:29Z",
+  "outcome": "FAIL",
+  "confidence": "high",
+  "files_read": [
+    "/Users/handtomouse/MapleMoon-Photoshop-Work/FOUNDER-V04-IMAC-STAGE-20260802/inputs/founders_portrait_v04.psd",
+    "/Users/handtomouse/MapleMoon-Photoshop-Work/FOUNDER-V04-IMAC-STAGE-20260802/inputs/Heros-73.jpg"
+  ],
+  "files_changed": [
+    "receipt.json",
+    "work/founders_portrait_v04.psd",
+    "qa/founders_full_frame_before.png",
+    "work/founders_portrait_v04.png"
+  ],
+  "files_confirmed_untouched": [
+    "staged v04 PSD",
+    "staged Heros-73 source",
+    "MacBook v04 and protected v03",
+    "website and live references"
+  ],
+  "pre_sha256": {
+    "packet.md": "938be32b18b249b2ccfbeb109ac4d79bcfc9f4cda6ec3dc3420838c3fa30f8da",
+    "receipt.json": null,
+    "scripts/check-maplemoon-receipt.py": "c5a221971d73bb5dbe129055f4c9deffeb6e95041195796d43f0fd0cef1f5e48",
+    "work/founders_portrait_v04.psd": null,
+    "work/carli_bio_v01.psd": null,
+    "work/dylan_bio_v01.psd": null,
+    "outputs/founders_portrait_v04.png": null,
+    "outputs/carli_bio_v01.png": null,
+    "outputs/dylan_bio_v01.png": null,
+    "qa/founders_full_frame_before.png": null,
+    "qa/founders_edges_100pct_before.png": null,
+    "qa/founders_full_frame_after.png": null,
+    "qa/founders_edges_100pct_after.png": null,
+    "qa/carli_bio_full_frame.png": null,
+    "qa/dylan_bio_full_frame.png": null,
+    "work/founders_portrait_v04.png": null
+  },
+  "post_sha256": {
+    "packet.md": "938be32b18b249b2ccfbeb109ac4d79bcfc9f4cda6ec3dc3420838c3fa30f8da",
+    "receipt.json": null,
+    "scripts/check-maplemoon-receipt.py": "c5a221971d73bb5dbe129055f4c9deffeb6e95041195796d43f0fd0cef1f5e48",
+    "work/founders_portrait_v04.psd": "53a9fe71d00bad379cf50a78688bc95f9606aea37afa2e848fa7b02041954333",
+    "work/carli_bio_v01.psd": null,
+    "work/dylan_bio_v01.psd": null,
+    "outputs/founders_portrait_v04.png": null,
+    "outputs/carli_bio_v01.png": null,
+    "outputs/dylan_bio_v01.png": null,
+    "qa/founders_full_frame_before.png": "c8b2ee1a051c769263d98fd2ffe87442cf85be8bf326c0fbee4732b20dde4920",
+    "qa/founders_edges_100pct_before.png": null,
+    "qa/founders_full_frame_after.png": null,
+    "qa/founders_edges_100pct_after.png": null,
+    "qa/carli_bio_full_frame.png": null,
+    "qa/dylan_bio_full_frame.png": null,
+    "work/founders_portrait_v04.png": "5dc5bd1b795c35742030c602bb4c2502f72061ee480bd0bf42bf556cb9deb607"
+  },
+  "checkpoint_path": "/Users/handtomouse/MapleMoon-Photoshop-Work/FOUNDER-V04-IMAC-PHOTOSHOP-20260802/checkpoint_20260802_224937_AEST",
+  "checks": [
+    {
+      "command": "python3 scripts/check-maplemoon-receipt.py checkpoint --packet packet.md --root $PWD --destination checkpoint_20260802_224937_AEST",
+      "exit_code": 0,
+      "result": "PASS checkpoint packet=FOUNDER-V04-IMAC-PHOTOSHOP-20260802 files=15 path=checkpoint_20260802_224937_AEST"
+    },
+    {
+      "command": "python3 scripts/check-maplemoon-receipt.py verify --packet packet.md --root $PWD --checkpoint checkpoint_20260802_224937_AEST --phase start",
+      "exit_code": 0,
+      "result": "PASS packet=FOUNDER-V04-IMAC-PHOTOSHOP-20260802 phase=start scope=15"
+    },
+    {
+      "command": "iMac Photoshop and screenshot-control preflight",
+      "exit_code": 0,
+      "result": "PASS input control and 5120x2880 screen capture; Photoshop work window existed at 2560x1415 and the v04 document was open at 63.7 percent"
+    },
+    {
+      "command": "Photoshop Quick Export as PNG path check",
+      "exit_code": 0,
+      "result": "DIAGNOSED: Photoshop created work/founders_portrait_v04.png (6000x4000, 22505309 bytes) beside the PSD rather than the admitted outputs path"
+    },
+    {
+      "command": "staged input rehash after stop",
+      "exit_code": 0,
+      "result": "PASS: staged v04 remained 53a9fe71d00bad379cf50a78688bc95f9606aea37afa2e848fa7b02041954333 and staged Heros-73 remained b31b11b0aec41cb9461a74e906a84979162d34b691a27fcef72a3b153e1e6d93"
+    }
+  ],
+  "screenshots_or_urls": [],
+  "failures": [
+    "Photoshop wrote work/founders_portrait_v04.png outside the packet writable paths.",
+    "Ordinary iMac screenshots captured only the wallpaper because Photoshop windows reported kCGWindowSharingState 0; no reliable visual pixel inspection was completed."
+  ],
+  "unknowns": [
+    "Whether the exported PNG proves a visually acceptable native v04 candidate; it has not yet been reviewed."
+  ],
+  "residual_risk": [
+    "The unexpected PNG is preserved and must not be treated as approved or promoted.",
+    "No pixel edit, crop or website-context proof was completed."
+  ],
+  "forbidden_path_changes": [
+    "work/founders_portrait_v04.png"
+  ],
+  "proposed_next_state": "failed",
+  "next_reviewer": "Codex photo task",
+  "next_action": "Admit a correction packet that treats the unexpected PNG as read-only evidence, copies it to an exact review path, and determines whether a terminal-driven iMac route can provide reliable native visual QA before any manual edit.",
+  "ready_to_promote": false
+}

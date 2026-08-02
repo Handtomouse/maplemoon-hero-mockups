@@ -1,0 +1,105 @@
+{
+  "schema": "maplemoon-receipt/v2",
+  "receipt_id": "PHOTO-73-REUSE-G-V03-MANUAL-EDGE-20260801-RECEIPT-001",
+  "packet_id": "PHOTO-73-REUSE-G-V03-MANUAL-EDGE-20260801",
+  "candidate_id": "PHOTO-73-REUSE-G-V03-MANUAL-EDGE-CANDIDATE-20260801-001",
+  "worker_thread_id": "019fa858-05c9-7631-b26e-8f5cbbf1387a",
+  "worker": "Codex coordinator",
+  "started_at": "2026-08-01T07:38:45Z",
+  "completed_at": "2026-08-01T07:57:10Z",
+  "outcome": "HOLD",
+  "confidence": "high",
+  "files_read": [
+    "docs/orchestration/packets/PHOTO-73-REUSE-G-20260801.md",
+    "docs/orchestration/reviews/PHOTO-73-REUSE-G-20260801.json",
+    "_wip/reviews/photoshoot_repair_batch1_20260801/73_reuse_g_v02/73_reuse_g_v02.psd",
+    "_wip/reviews/photoshoot_repair_batch1_20260801/73_reuse_g_v02/73_reuse_g_v02.png",
+    "_wip/reviews/photoshoot_repair_batch1_20260801/73_reuse_g_v02/qa/73_reuse_g_v02-full-frame.png",
+    "_wip/reviews/photoshoot_repair_batch1_20260801/73_reuse_g_v02/qa/73_reuse_g_v02-hair-hand-armgap-100pct.png",
+    "_wip/reviews/photoshoot_repair_batch1_20260801/73_reuse_g_v02/qa/73_reuse_g_v02-mask-white-black.png",
+    "docs/orchestration/SIDECHAT_RECEIPT_GATE.md",
+    "scripts/check-maplemoon-receipt.py"
+  ],
+  "files_changed": [
+    "_wip/reviews/photoshoot_repair_batch1_20260801/73_reuse_g_v03/73_reuse_g_v03.psd",
+    "docs/orchestration/reviews/PHOTO-73-REUSE-G-V03-MANUAL-EDGE-20260801.json"
+  ],
+  "files_confirmed_untouched": [
+    "_wip/reviews/photoshoot_repair_batch1_20260801/73_reuse_g_v02/73_reuse_g_v02.psd",
+    "_wip/reviews/photoshoot_repair_batch1_20260801/73_reuse_g_v02/73_reuse_g_v02.png",
+    "_wip/reviews/photoshoot_repair_batch1_20260801/73_reuse_g_v02/qa/73_reuse_g_v02-full-frame.png",
+    "_wip/reviews/photoshoot_repair_batch1_20260801/73_reuse_g_v02/qa/73_reuse_g_v02-hair-hand-armgap-100pct.png",
+    "_wip/reviews/photoshoot_repair_batch1_20260801/73_reuse_g_v02/qa/73_reuse_g_v02-mask-white-black.png",
+    "_wip/our-story.WIP.html",
+    "assets/our_story/founders_portrait_h212.webp"
+  ],
+  "pre_sha256": {
+    "docs/orchestration/packets/PHOTO-73-REUSE-G-V03-MANUAL-EDGE-20260801.md": "7202be4ffaf853e9e970886e566379ad945eea66c4c9d8e01180f5441109a5af",
+    "_wip/reviews/photoshoot_repair_batch1_20260801/73_reuse_g_v03/73_reuse_g_v03.psd": null,
+    "_wip/reviews/photoshoot_repair_batch1_20260801/73_reuse_g_v03/73_reuse_g_v03.png": null,
+    "_wip/reviews/photoshoot_repair_batch1_20260801/73_reuse_g_v03/qa/73_reuse_g_v03-full-frame.png": null,
+    "_wip/reviews/photoshoot_repair_batch1_20260801/73_reuse_g_v03/qa/73_reuse_g_v03-hair-hand-armgap-100pct.png": null,
+    "_wip/reviews/photoshoot_repair_batch1_20260801/73_reuse_g_v03/qa/73_reuse_g_v03-mask-white-black.png": null,
+    "docs/orchestration/reviews/PHOTO-73-REUSE-G-V03-MANUAL-EDGE-20260801.json": null
+  },
+  "post_sha256": {
+    "docs/orchestration/packets/PHOTO-73-REUSE-G-V03-MANUAL-EDGE-20260801.md": "7202be4ffaf853e9e970886e566379ad945eea66c4c9d8e01180f5441109a5af",
+    "_wip/reviews/photoshoot_repair_batch1_20260801/73_reuse_g_v03/73_reuse_g_v03.psd": "b98dcb233245af4838b6d7648897284b25e8c5669eb0235b2038d90d787babd3",
+    "_wip/reviews/photoshoot_repair_batch1_20260801/73_reuse_g_v03/73_reuse_g_v03.png": null,
+    "_wip/reviews/photoshoot_repair_batch1_20260801/73_reuse_g_v03/qa/73_reuse_g_v03-full-frame.png": null,
+    "_wip/reviews/photoshoot_repair_batch1_20260801/73_reuse_g_v03/qa/73_reuse_g_v03-hair-hand-armgap-100pct.png": null,
+    "_wip/reviews/photoshoot_repair_batch1_20260801/73_reuse_g_v03/qa/73_reuse_g_v03-mask-white-black.png": null,
+    "docs/orchestration/reviews/PHOTO-73-REUSE-G-V03-MANUAL-EDGE-20260801.json": null
+  },
+  "checkpoint_path": "_wip/checkpoints/PHOTO-73-REUSE-G-V03-MANUAL-EDGE-20260801_20260801_173845_AEST",
+  "checks": [
+    {
+      "command": "scripts/check-maplemoon-receipt.py checkpoint and phase-start verify",
+      "exit_code": 0,
+      "result": "PASS: the timestamped non-overwriting checkpoint captured all seven admitted writable paths and phase-start verification passed."
+    },
+    {
+      "command": "SHA-256 base verification before and after the attempted phase",
+      "exit_code": 0,
+      "result": "PASS: the v02 layered base remained exactly 86343f18a1524a5b49acb1f94e6ba1f9357f9c6569ff2cc499587d7be565c600."
+    },
+    {
+      "command": "Photoshop non-overwriting Save As and layered-state inspection",
+      "exit_code": 0,
+      "result": "PASS: Photoshop created the admitted separate v03 PSD, retained the existing layered v02 structure, and opened it at native 100 percent without overwriting v02."
+    },
+    {
+      "command": "native 100 percent visual diagnosis",
+      "exit_code": 0,
+      "result": "PASS diagnosis only: large teal source-wall remnants are visibly confirmed behind the loose hair and around the wrist and hand; the overall silhouette and arm-gap geometry remain present."
+    },
+    {
+      "command": "localized manual Photoshop mask stroke through the desktop-control service",
+      "exit_code": 0,
+      "result": "HOLD: keyboard and menu control worked, but every coordinate brush stroke was rejected with Computer Use server error -10005 noWindowsAvailable. The temporary empty mask setup was undone, leaving the saved v03 PSD unmodified by cleanup."
+    },
+    {
+      "command": "review PNG and QA proof export",
+      "exit_code": 0,
+      "result": "NOT RUN: the packet requires the native edge gate to pass before PNG or QA export."
+    }
+  ],
+  "screenshots_or_urls": [
+    "_wip/reviews/photoshoot_repair_batch1_20260801/73_reuse_g_v02/qa/73_reuse_g_v02-hair-hand-armgap-100pct.png",
+    "_wip/reviews/photoshoot_repair_batch1_20260801/73_reuse_g_v02/qa/73_reuse_g_v02-mask-white-black.png"
+  ],
+  "failures": [
+    "The approved manual edge cleanup could not be performed because coordinate brush strokes in Photoshop were unavailable through the current desktop-control service."
+  ],
+  "unknowns": [],
+  "residual_risk": [
+    "The v03 PSD is only a non-overwriting layered starting copy and still contains the v02 teal edge contamination.",
+    "No PNG, native QA proof, matte proof or website proof was exported or approved.",
+    "An algorithmic or generative substitute was deliberately not used."
+  ],
+  "forbidden_path_changes": [],
+  "proposed_next_state": "hold",
+  "next_reviewer": "Nate",
+  "next_action": "Resume this same v03 packet in a coordinate-capable Photoshop session and perform only the admitted localized mask cleanup before rerunning native QA.",
+  "ready_to_promote": false
+}

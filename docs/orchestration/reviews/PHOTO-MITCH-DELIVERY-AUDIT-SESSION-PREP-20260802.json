@@ -1,0 +1,175 @@
+{
+  "schema": "maplemoon-receipt/v2",
+  "receipt_id": "PHOTO-MITCH-DELIVERY-AUDIT-SESSION-PREP-20260802-RECEIPT-001",
+  "packet_id": "PHOTO-MITCH-DELIVERY-AUDIT-SESSION-PREP-20260802",
+  "candidate_id": "PHOTO-MITCH-DELIVERY-AUDIT-SESSION-PREP-20260802-001",
+  "worker_thread_id": "019f9c36-83e1-7941-92e5-a3b134212288",
+  "worker": "MapleMoon photo worker",
+  "started_at": "2026-08-01T16:43:29Z",
+  "completed_at": "2026-08-01T17:05:56Z",
+  "outcome": "HOLD",
+  "confidence": "high",
+  "files_read": [
+    "docs/orchestration/packets/PHOTO-MITCH-DELIVERY-AUDIT-SESSION-PREP-20260802.md",
+    "_wip/checkpoints/PHOTO-MITCH-DELIVERY-AUDIT-SESSION-PREP-20260802_20260802_024329_AEST/RECOVERY_MANIFEST.json",
+    "/Users/handtomouse/Downloads/wetransfer_website-hero-raws_2026-06-03_1315.zip",
+    "/Users/handtomouse/Downloads/wetransfer_website-hero-raws_2026-06-03_1315/",
+    "_wip/reviews/photoshoot_repair_batch1_20260801/73_reuse_g_v03/73_reuse_g_v03.psd",
+    "docs/orchestration/packets/PHOTO-74-GRADE-INTEGRATION-20260801.md",
+    "docs/orchestration/reviews/PHOTO-08-MANUAL-RETOUCH-20260801.json",
+    "docs/orchestration/reviews/PHOTO-24-MANUAL-RETOUCH-20260801.json",
+    "docs/orchestration/reviews/PHOTO-24-WEBSITE-CONTEXT-QA-20260801.json",
+    "docs/orchestration/reviews/PHOTO-73-REUSE-G-V03-MANUAL-EDGE-20260801.json",
+    "_wip/reviews/photoshoot_repair_batch1_20260731/PHASE3_PREFLIGHT.md",
+    "_wip/reviews/photoshoot_repair_batch1_20260731/PHOTOSHOP_PREP_PACKET_20260731.md"
+  ],
+  "files_changed": [
+    "docs/orchestration/reviews/PHOTO-MITCH-DELIVERY-AUDIT-SESSION-PREP-20260802.json",
+    "_wip/reviews/photoshoot_delivery_audit_20260802/MITCH_DELIVERY_INVENTORY_20260802.json",
+    "_wip/reviews/photoshoot_delivery_audit_20260802/MITCH_DELIVERY_INVENTORY_20260802.csv",
+    "_wip/reviews/photoshoot_delivery_audit_20260802/MITCH_DUPLICATE_DERIVATIVE_MAP_20260802.json",
+    "_wip/reviews/photoshoot_delivery_audit_20260802/MITCH_CONTACT_SHEET_20260802.html",
+    "_wip/reviews/photoshoot_delivery_audit_20260802/contact-sheets/MITCH_CONTACT_SHEET_01_HEROS_2_16.png",
+    "_wip/reviews/photoshoot_delivery_audit_20260802/contact-sheets/MITCH_CONTACT_SHEET_02_HEROS_17_31.png",
+    "_wip/reviews/photoshoot_delivery_audit_20260802/contact-sheets/MITCH_CONTACT_SHEET_03_HEROS_32_46.png",
+    "_wip/reviews/photoshoot_delivery_audit_20260802/contact-sheets/MITCH_CONTACT_SHEET_04_HEROS_47_61.png",
+    "_wip/reviews/photoshoot_delivery_audit_20260802/contact-sheets/MITCH_CONTACT_SHEET_05_HEROS_62_75_AND_HEROS.png"
+  ],
+  "files_confirmed_untouched": [
+    "/Users/handtomouse/Downloads/wetransfer_website-hero-raws_2026-06-03_1315.zip",
+    "_wip/reviews/photoshoot_repair_batch1_20260801/73_reuse_g_v03/73_reuse_g_v03.psd",
+    "_wip/our-story.WIP.html",
+    "assets/our_story/founders_portrait_h212.webp"
+  ],
+  "pre_sha256": {
+    "docs/orchestration/packets/PHOTO-MITCH-DELIVERY-AUDIT-SESSION-PREP-20260802.md": "9227abd3d8f16f8a680e714fb8d08690d3a343f161f94b585dba329f8d1c6b68",
+    "docs/orchestration/reviews/PHOTO-MITCH-DELIVERY-AUDIT-SESSION-PREP-20260802.json": null,
+    "_wip/reviews/photoshoot_delivery_audit_20260802/MITCH_DELIVERY_INVENTORY_20260802.json": null,
+    "_wip/reviews/photoshoot_delivery_audit_20260802/MITCH_DELIVERY_INVENTORY_20260802.csv": null,
+    "_wip/reviews/photoshoot_delivery_audit_20260802/MITCH_DUPLICATE_DERIVATIVE_MAP_20260802.json": null,
+    "_wip/reviews/photoshoot_delivery_audit_20260802/MITCH_OVERLOOKED_SHOT_SHORTLIST_20260802.md": null,
+    "_wip/reviews/photoshoot_delivery_audit_20260802/MITCH_WEBSITE_PLACEMENT_MAP_20260802.md": null,
+    "_wip/reviews/photoshoot_delivery_audit_20260802/MITCH_CONTACT_SHEET_20260802.html": null,
+    "_wip/reviews/photoshoot_delivery_audit_20260802/contact-sheets/MITCH_CONTACT_SHEET_01_HEROS_2_16.png": null,
+    "_wip/reviews/photoshoot_delivery_audit_20260802/contact-sheets/MITCH_CONTACT_SHEET_02_HEROS_17_31.png": null,
+    "_wip/reviews/photoshoot_delivery_audit_20260802/contact-sheets/MITCH_CONTACT_SHEET_03_HEROS_32_46.png": null,
+    "_wip/reviews/photoshoot_delivery_audit_20260802/contact-sheets/MITCH_CONTACT_SHEET_04_HEROS_47_61.png": null,
+    "_wip/reviews/photoshoot_delivery_audit_20260802/contact-sheets/MITCH_CONTACT_SHEET_05_HEROS_62_75_AND_HEROS.png": null,
+    "_wip/reviews/photoshoot_delivery_audit_20260802/PHOTOSHOP_SESSION_PACK_INDEX_20260802.md": null,
+    "_wip/reviews/photoshoot_delivery_audit_20260802/PHOTOSHOP_SESSION_QUEUE_20260802.json": null,
+    "_wip/reviews/photoshoot_delivery_audit_20260802/PHOTOSHOP_SESSION_REPAIR_GUIDES_20260802.html": null,
+    "_wip/reviews/photoshoot_delivery_audit_20260802/PHOTOSHOP_SESSION_REPAIR_GUIDES_20260802.json": null,
+    "_wip/reviews/photoshoot_delivery_audit_20260802/MITCH_MORNING_PHOTO_HANDOFF_20260802.md": null
+  },
+  "post_sha256": {
+    "docs/orchestration/packets/PHOTO-MITCH-DELIVERY-AUDIT-SESSION-PREP-20260802.md": "9227abd3d8f16f8a680e714fb8d08690d3a343f161f94b585dba329f8d1c6b68",
+    "docs/orchestration/reviews/PHOTO-MITCH-DELIVERY-AUDIT-SESSION-PREP-20260802.json": null,
+    "_wip/reviews/photoshoot_delivery_audit_20260802/MITCH_DELIVERY_INVENTORY_20260802.json": "58f2ed469c51363b9e11c0c215f014a4b46e45f54f24af69f460816c3e78dba5",
+    "_wip/reviews/photoshoot_delivery_audit_20260802/MITCH_DELIVERY_INVENTORY_20260802.csv": "d7086efdec5f167372c33797b20c7d8dedf95569370460091c09025cbe7d665d",
+    "_wip/reviews/photoshoot_delivery_audit_20260802/MITCH_DUPLICATE_DERIVATIVE_MAP_20260802.json": "48df2ba8b68b5195bfad0de045ad5f66c6dece11a099b20a447b647d87efc54b",
+    "_wip/reviews/photoshoot_delivery_audit_20260802/MITCH_OVERLOOKED_SHOT_SHORTLIST_20260802.md": null,
+    "_wip/reviews/photoshoot_delivery_audit_20260802/MITCH_WEBSITE_PLACEMENT_MAP_20260802.md": null,
+    "_wip/reviews/photoshoot_delivery_audit_20260802/MITCH_CONTACT_SHEET_20260802.html": "1e3920eeb247e6e6626df40e00d7b21e6c9799a7ee2f76c0f66d36025b8b7d64",
+    "_wip/reviews/photoshoot_delivery_audit_20260802/contact-sheets/MITCH_CONTACT_SHEET_01_HEROS_2_16.png": "2e3f726b40e36cd0734155580796c7e9e567bd4aed3997f54dc2f7eaa750085a",
+    "_wip/reviews/photoshoot_delivery_audit_20260802/contact-sheets/MITCH_CONTACT_SHEET_02_HEROS_17_31.png": "872dd40c1df329bcd0c7bab2692944ad1e92797e1b41efe6209b2418a9ac72f2",
+    "_wip/reviews/photoshoot_delivery_audit_20260802/contact-sheets/MITCH_CONTACT_SHEET_03_HEROS_32_46.png": "6557c454766c0149d51c2a68b7b1573016ae78731b3d37d2366acf7bef9bff7f",
+    "_wip/reviews/photoshoot_delivery_audit_20260802/contact-sheets/MITCH_CONTACT_SHEET_04_HEROS_47_61.png": "3388b19e1daa98183ba2f3c569adec6d16955a2ce9316d4a5046c9e1c37757e3",
+    "_wip/reviews/photoshoot_delivery_audit_20260802/contact-sheets/MITCH_CONTACT_SHEET_05_HEROS_62_75_AND_HEROS.png": "5538f7f6a1077ee0c1bd21b7fe1356b017c460c0e2b0e1352d0127254c47255e",
+    "_wip/reviews/photoshoot_delivery_audit_20260802/PHOTOSHOP_SESSION_PACK_INDEX_20260802.md": null,
+    "_wip/reviews/photoshoot_delivery_audit_20260802/PHOTOSHOP_SESSION_QUEUE_20260802.json": null,
+    "_wip/reviews/photoshoot_delivery_audit_20260802/PHOTOSHOP_SESSION_REPAIR_GUIDES_20260802.html": null,
+    "_wip/reviews/photoshoot_delivery_audit_20260802/PHOTOSHOP_SESSION_REPAIR_GUIDES_20260802.json": null,
+    "_wip/reviews/photoshoot_delivery_audit_20260802/MITCH_MORNING_PHOTO_HANDOFF_20260802.md": null
+  },
+  "output_sizes_bytes": {
+    "docs/orchestration/packets/PHOTO-MITCH-DELIVERY-AUDIT-SESSION-PREP-20260802.md": 6193,
+    "docs/orchestration/reviews/PHOTO-MITCH-DELIVERY-AUDIT-SESSION-PREP-20260802.json": null,
+    "_wip/reviews/photoshoot_delivery_audit_20260802/MITCH_DELIVERY_INVENTORY_20260802.json": 145959,
+    "_wip/reviews/photoshoot_delivery_audit_20260802/MITCH_DELIVERY_INVENTORY_20260802.csv": 36521,
+    "_wip/reviews/photoshoot_delivery_audit_20260802/MITCH_DUPLICATE_DERIVATIVE_MAP_20260802.json": 18748,
+    "_wip/reviews/photoshoot_delivery_audit_20260802/MITCH_OVERLOOKED_SHOT_SHORTLIST_20260802.md": null,
+    "_wip/reviews/photoshoot_delivery_audit_20260802/MITCH_WEBSITE_PLACEMENT_MAP_20260802.md": null,
+    "_wip/reviews/photoshoot_delivery_audit_20260802/MITCH_CONTACT_SHEET_20260802.html": 3929,
+    "_wip/reviews/photoshoot_delivery_audit_20260802/contact-sheets/MITCH_CONTACT_SHEET_01_HEROS_2_16.png": 2303773,
+    "_wip/reviews/photoshoot_delivery_audit_20260802/contact-sheets/MITCH_CONTACT_SHEET_02_HEROS_17_31.png": 3396963,
+    "_wip/reviews/photoshoot_delivery_audit_20260802/contact-sheets/MITCH_CONTACT_SHEET_03_HEROS_32_46.png": 5709002,
+    "_wip/reviews/photoshoot_delivery_audit_20260802/contact-sheets/MITCH_CONTACT_SHEET_04_HEROS_47_61.png": 4829521,
+    "_wip/reviews/photoshoot_delivery_audit_20260802/contact-sheets/MITCH_CONTACT_SHEET_05_HEROS_62_75_AND_HEROS.png": 2871810,
+    "_wip/reviews/photoshoot_delivery_audit_20260802/PHOTOSHOP_SESSION_PACK_INDEX_20260802.md": null,
+    "_wip/reviews/photoshoot_delivery_audit_20260802/PHOTOSHOP_SESSION_QUEUE_20260802.json": null,
+    "_wip/reviews/photoshoot_delivery_audit_20260802/PHOTOSHOP_SESSION_REPAIR_GUIDES_20260802.html": null,
+    "_wip/reviews/photoshoot_delivery_audit_20260802/PHOTOSHOP_SESSION_REPAIR_GUIDES_20260802.json": null,
+    "_wip/reviews/photoshoot_delivery_audit_20260802/MITCH_MORNING_PHOTO_HANDOFF_20260802.md": null
+  },
+  "checkpoint_path": "_wip/checkpoints/PHOTO-MITCH-DELIVERY-AUDIT-SESSION-PREP-20260802_20260802_024329_AEST",
+  "checks": [
+    {
+      "command": "receipt phase-start verification",
+      "exit_code": 0,
+      "result": "PASS: packet scope 18 and checkpoint independently verified by Main and worker."
+    },
+    {
+      "command": "source hashes and unzip -t",
+      "exit_code": 0,
+      "result": "PASS: ZIP 6dae04ef4d06f02ae9e222057df40875235978a74a0022b6424c67c9d0acd841; #73 PSD abcc2f13400e313f6dacfafebefe3b1736e2e962aebeda12e4e76424a037ab3c; all 75 JPEG members tested good."
+    },
+    {
+      "command": "75-member metadata, SHA-256 and extracted audit",
+      "exit_code": 0,
+      "result": "PASS: 75 unique IDs; zero exact source duplicates; 70 extracted exact, five missing, zero altered and one extra PSD."
+    },
+    {
+      "command": "five-sheet source visual review and H074/H075 native comparison",
+      "exit_code": 0,
+      "result": "HOLD: the #74 packet nominates Heros-75.jpg, but Heros-74.jpg is correctly exposed while Heros-75.jpg is highlight-clipped. This admitted source-identity conflict changes the shortlist."
+    },
+    {
+      "command": "H074/H075 clipping measurement",
+      "exit_code": 0,
+      "result": "PASS evidence: H074 has 0.001 percent clipped skin-like pixels and no pixels with any channel at 250; H075 has 6.96 percent clipped skin-like pixels and 2.859 percent of all pixels with a channel at 250 or above."
+    },
+    {
+      "command": "inventory and contact-sheet coverage",
+      "exit_code": 0,
+      "result": "PASS: 75 unique IDs with required fields; five 2400x3000 sheets cover all five required 15-image groups."
+    },
+    {
+      "command": "contact-sheet size cap",
+      "exit_code": 0,
+      "result": "PASS: total 19111069 bytes (18.226 MiB), below 250 MB."
+    },
+    {
+      "command": "df -h after partial evidence output",
+      "exit_code": 0,
+      "result": "PASS: 34 GiB available, above the 20 GiB guard."
+    },
+    {
+      "command": "bounded path and protected-source review",
+      "exit_code": 0,
+      "result": "PASS: only admitted preparation paths changed; no source, PSD, WIP page, package, website reference or external system changed."
+    }
+  ],
+  "screenshots_or_urls": [
+    "_wip/reviews/photoshoot_delivery_audit_20260802/MITCH_CONTACT_SHEET_20260802.html",
+    "_wip/reviews/photoshoot_delivery_audit_20260802/contact-sheets/MITCH_CONTACT_SHEET_01_HEROS_2_16.png",
+    "_wip/reviews/photoshoot_delivery_audit_20260802/contact-sheets/MITCH_CONTACT_SHEET_02_HEROS_17_31.png",
+    "_wip/reviews/photoshoot_delivery_audit_20260802/contact-sheets/MITCH_CONTACT_SHEET_03_HEROS_32_46.png",
+    "_wip/reviews/photoshoot_delivery_audit_20260802/contact-sheets/MITCH_CONTACT_SHEET_04_HEROS_47_61.png",
+    "_wip/reviews/photoshoot_delivery_audit_20260802/contact-sheets/MITCH_CONTACT_SHEET_05_HEROS_62_75_AND_HEROS.png"
+  ],
+  "failures": [
+    "Source identity conflict: PHOTO-74-GRADE-INTEGRATION-20260801 nominates Heros-75.jpg, but the complete delivery proves Heros-74.jpg is the stronger correctly exposed hands frame and Heros-75.jpg is highlight-clipped."
+  ],
+  "unknowns": [
+    "Main has not yet recorded whether Heros-74.jpg supersedes Heros-75.jpg as the canonical future #74 hands source."
+  ],
+  "residual_risk": [
+    "Derivative lineage, overlooked shortlist, placement map and Photoshop Session Pack were deliberately not completed after the admitted stop condition.",
+    "Inventory treatment, placement and session fields remain pending until the source ruling."
+  ],
+  "forbidden_path_changes": [],
+  "proposed_next_state": "hold",
+  "next_reviewer": "Main Boss 019fa858-05c9-7631-b26e-8f5cbbf1387a",
+  "next_action": "Main records the hands-source ruling, recommended Heros-74.jpg superseding Heros-75.jpg, then issues one corrected resume packet for the unfinished audit outputs.",
+  "ready_to_promote": false
+}

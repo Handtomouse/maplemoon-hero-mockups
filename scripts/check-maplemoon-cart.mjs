@@ -4,10 +4,9 @@ import { readFileSync } from "node:fs";
 import { resolve } from "node:path";
 
 const repo = resolve(import.meta.dirname, "..");
-const staging = resolve(
-  repo,
-  "docs/client-review/2026-08-01-saturday-review/staging-v1"
-);
+const staging = process.argv[2]
+  ? resolve(process.argv[2])
+  : resolve(repo, "docs/client-review/2026-08-01-saturday-review/staging-v1");
 const aliases = [
   "homepage.html",
   "carob-story.html",
@@ -47,13 +46,20 @@ expect(
   "visible product cards are not bound to Add to cart with their displayed prices"
 );
 expect(
-  /card\.classList\.add\("mm-hide-clean"\)/.test(sourceScript) &&
-    /action\.textContent = "Unavailable"/.test(sourceScript),
-  "pending product treatment is missing"
+  /card\.dataset\.mmAvailability = "enquiry"/.test(sourceScript) &&
+    /action\.textContent = "Enquire"/.test(sourceScript) &&
+    /action\.setAttribute\("aria-label", `Enquire about \$\{name\}`\)/.test(sourceScript),
+  "neutral enquiry treatment is missing for unconfirmed-price products"
 );
 expect(
   /Thanks, your demo order was received\./.test(sourceScript),
   "fake order completion state is missing"
+);
+expect(
+  /aria-hidden="true" inert>/.test(sourceScript) &&
+    /elements\.dialog\.removeAttribute\("inert"\)/.test(sourceScript) &&
+    /elements\.dialog\.setAttribute\("inert", ""\)/.test(sourceScript),
+  "closed cart dialog is not excluded from sequential keyboard focus"
 );
 expect(
   /normalizeReviewNavigation\(\)/.test(sourceScript) &&
@@ -62,10 +68,10 @@ expect(
   "shared review navigation and purchase-route normalization are missing"
 );
 expect(
-  /wf-tab\[data-cat="bananas"\]/.test(sourceScript) &&
-    /wf-tab\[data-cat="crescents"\]/.test(sourceScript) &&
-    /wf-tab\[data-cat="eclipseBites"\]/.test(sourceScript),
-  "clean Homepage pending-format exclusions are missing"
+  !/wf-tab\[data-cat="bananas"\]/.test(sourceScript) &&
+    !/wf-tab\[data-cat="crescents"\]/.test(sourceScript) &&
+    !/wf-tab\[data-cat="eclipseBites"\]/.test(sourceScript),
+  "proven Homepage product formats are still excluded from clean review"
 );
 expect(
   /Review preview: your email was not saved\./.test(sourceScript),
@@ -171,5 +177,5 @@ if (failures.length) {
 }
 
 console.log(
-  "PASS ordinary Add to cart binding, pending-product treatment, fake checkout, local form, accessibility and no-network checks"
+  "PASS ordinary Add to cart binding, neutral enquiry treatment, fake checkout, local form, accessibility and no-network checks"
 );

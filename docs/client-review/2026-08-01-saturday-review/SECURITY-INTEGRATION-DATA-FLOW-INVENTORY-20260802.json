@@ -1,0 +1,101 @@
+{
+  "schema": "maplemoon-prospective-data-flows/v1",
+  "status": "planning_only",
+  "live_probe_performed": false,
+  "credentials_used": false,
+  "current_verified": {
+    "feedback_destination_active": false,
+    "analytics_collector_authorized": false,
+    "real_data_collection_authorized": false,
+    "shopify_access_authorized": false,
+    "external_site_sharing_authorized": false
+  },
+  "current_unknowns": [
+    "Exact runtime network requests, response headers, access logs and third-party font behaviour require testing against the separately approved final host and artifact.",
+    "No current-host or account configuration was inspected by this packet."
+  ],
+  "prospective_flows": [
+    {
+      "id": "FLOW-REVIEW-HOST",
+      "source": "approved reviewer browser",
+      "destination": "future approved review host",
+      "data_categories": ["page requests", "coarse operational access logs if the host cannot disable them"],
+      "purpose": "deliver the clean review artifact",
+      "state": "HOLD",
+      "required_controls": ["exact audience", "HTTPS", "access and expiry", "route allowlist", "log minimisation", "revocation", "forwardability test"]
+    },
+    {
+      "id": "FLOW-FEEDBACK",
+      "source": "review feedback form",
+      "destination": "future approved feedback service and owner",
+      "data_categories": ["page", "visible section", "coarse device family", "feedback type", "optional concise comment"],
+      "purpose": "collect separately approved review feedback",
+      "state": "HOLD",
+      "required_controls": ["notice and consent disposition", "minimum fields", "spam/abuse control", "access list", "retention", "deletion", "export", "no sensitive-text request"]
+    },
+    {
+      "id": "FLOW-SOFT-LAUNCH-EVENTS",
+      "source": "future approved first-party test instrumentation",
+      "destination": "future approved test-data store",
+      "data_categories": ["approved event allowlist", "coarse cohort/device/browser", "test_run_id", "test_data=true"],
+      "purpose": "answer named Q1-Q5 soft-launch questions",
+      "state": "HOLD",
+      "required_controls": ["event/property allowlist", "no production mixing", "no full IP/user agent/fingerprint", "notice", "access", "short retention", "disable/delete test"]
+    },
+    {
+      "id": "FLOW-WOO-IMPORT",
+      "source": "fresh WooCommerce export plus approved retail catalogue",
+      "destination": "future approved Shopify test import",
+      "data_categories": ["products", "variants", "prices", "weights", "availability", "media references", "approved product facts"],
+      "purpose": "establish catalogue truth in a test environment",
+      "state": "BLOCKED_INPUTS",
+      "required_controls": ["hash/provenance", "PII exclusion", "formula/markup safety", "conflict report", "dry run", "backup", "rollback"]
+    },
+    {
+      "id": "FLOW-SHOPIFY-STOREFRONT",
+      "source": "customer browser",
+      "destination": "future Shopify storefront",
+      "data_categories": ["storefront requests", "native cart state", "approved customer events if enabled"],
+      "purpose": "serve the production storefront and native cart",
+      "state": "HOLD",
+      "required_controls": ["named roles and 2FA", "development-theme UAT", "privacy/consent", "minimal scripts/apps", "security headers", "monitoring", "rollback"]
+    },
+    {
+      "id": "FLOW-SHOPIFY-CHECKOUT",
+      "source": "native Shopify cart",
+      "destination": "native Shopify checkout and approved payment/shipping/tax services",
+      "data_categories": ["order and customer data required by native checkout"],
+      "purpose": "complete real commerce",
+      "state": "HOLD",
+      "required_controls": ["store owner approval", "payments/shipping/tax/policy configuration", "test-mode UAT", "least privilege", "notifications", "incident and rollback plan"]
+    },
+    {
+      "id": "FLOW-CONTACT-EMAIL",
+      "source": "future approved contact/newsletter form",
+      "destination": "future approved Shopify/email/CRM recipient",
+      "data_categories": ["minimum approved contact or subscription fields"],
+      "purpose": "answer enquiries or manage separately consented subscriptions",
+      "state": "HOLD",
+      "required_controls": ["provider/recipient approval", "consent", "double opt-in decision", "spam control", "suppression", "retention", "export/deletion"]
+    },
+    {
+      "id": "FLOW-STOCKISTS",
+      "source": "approved stockist directory owner",
+      "destination": "future approved structured storefront source",
+      "data_categories": ["minimum verified business listing fields"],
+      "purpose": "power the stockist finder",
+      "state": "HOLD",
+      "required_controls": ["provenance", "business-only fields", "update cadence", "access", "correction/removal route", "rendered QA"]
+    }
+  ],
+  "globally_prohibited_without_separate_replan": [
+    "shared credentials",
+    "secrets in source or prompts",
+    "session replay",
+    "device fingerprinting",
+    "unapproved third-party pixels",
+    "raw payment data outside native approved checkout",
+    "custom synchronization or webhooks by default",
+    "headless commerce by default"
+  ]
+}

@@ -21,7 +21,7 @@ from PIL import Image
 REPO = Path(__file__).resolve().parents[1]
 DEFAULT_STAGING = REPO / "docs/client-review/2026-07-29-carli-review/staging-v1"
 SATURDAY_STAGING = REPO / "docs/client-review/2026-08-01-saturday-review/staging-v1"
-SATURDAY_PACKET_ID = "VIS-03C-03-CURRENT-WIP-SOURCE-LINEAGE"
+SATURDAY_PACKET_ID = "SAT-HOME-CLEAN-CLOSURE-01"
 PAGE_ALIASES = {
     "homepage.html",
     "carob-story.html",
@@ -84,6 +84,52 @@ HOMEPAGE_DISABLED_COMPARISON_RE = re.compile(
     r".*?<button\b[^>]*\bdisabled\b",
     re.I | re.S,
 )
+HOMEPAGE_COMPARISON_RE = re.compile(
+    r"<section\b(?=[^>]*\bid=[\"']why[\"'])[^>]*>.*?</section>",
+    re.I | re.S,
+)
+HOMEPAGE_BENEFIT_STRIP = (
+    '<div class="wf-pcreds"><span>No Caffeine</span><span>Organic Ingredients</span>'
+    '<span>Vegan Friendly</span></div>'
+)
+HOMEPAGE_COMPARISON_HOLD = "mm-comparison-evidence-hold"
+HOMEPAGE_SAMPLER_ASSETS = (
+    "assets/product_shots/bar_pure_carob.webp",
+    "assets/product_shots/bar_peppermint.webp",
+    "assets/product_shots/bar_hazelnut.webp",
+    "assets/product_shots/bar_goji_coconut.webp",
+    "assets/product_shots/bar_cayenne.webp",
+    "assets/product_shots/bar_almond.webp",
+)
+HOMEPAGE_HERO_SUBTITLE = "Naturally Sweet, Nothing Added."
+HOMEPAGE_NEUTRAL_PRODUCT_DESCRIPTION = (
+    "View this product or enquire with Maple Moon."
+)
+HOMEPAGE_CLEAN_CAROB_FORBIDDEN = (
+    "warm Australian sun",
+    "sun-ripened",
+    "naturally sweet pulp",
+    "slow-roasted",
+    "milled with cacao butter",
+    "mellow, velvety finish",
+)
+HOMEPAGE_CLEAN_STORY_FORBIDDEN = (
+    "Born from Nighttime Cravings",
+    "Australian-grown carob pods",
+    "small batches",
+    "hand-poured",
+    "far north coast",
+    "slow evenings",
+)
+HOMEPAGE_CLEAN_SAMPLER_FORBIDDEN = (
+    "starter box",
+    "inside the box",
+    "six bars, one box",
+    "the whole range",
+    "made to be given",
+    "box does the wrapping",
+    "gift",
+)
 REVIEW_LINK = '<link rel="stylesheet" href="review-mode.css">\n'
 REVIEW_SCRIPT = '<script src="review-mode.js"></script>\n'
 MOCK_CART_LINK = '<link rel="stylesheet" href="mock-cart.css">\n'
@@ -100,6 +146,12 @@ CLEAN_UNSUPPORTED_CLAIMS = (
     "handcrafted",
     "small batches",
     "hand-poured, hand-packed",
+    "mellow roast",
+)
+PRODUCT_UNFINISHED_SIGNALS = (
+    "pricing to follow",
+    "product details to follow",
+    "notify me",
 )
 
 
@@ -275,6 +327,16 @@ def check_embedded_metadata(root: Path, failures: list[str]) -> None:
             )
 
 
+def page_section(text: str, section_id: str) -> str:
+    match = re.search(
+        rf"<section\b(?=[^>]*\bid=[\"']{re.escape(section_id)}[\"'])"
+        r"[^>]*>.*?</section>",
+        text,
+        re.I | re.S,
+    )
+    return match.group(0) if match else ""
+
+
 def check_saturday_root(root: Path, profile: str) -> list[str]:
     failures: list[str] = []
     if not root.is_dir():
@@ -316,6 +378,13 @@ def check_saturday_root(root: Path, profile: str) -> list[str]:
             failures.append(f"{alias}: mock-cart stylesheet missing")
         if MOCK_CART_SCRIPT.strip() not in text:
             failures.append(f"{alias}: mock-cart script missing")
+        if alias in {"homepage.html", "shop.html"}:
+            product_lower = text.lower()
+            for signal in PRODUCT_UNFINISHED_SIGNALS:
+                if signal in product_lower:
+                    failures.append(
+                        f"{alias}: unfinished product signal remains: {signal}"
+                    )
         if profile == "saturday-clean":
             lower = text.lower()
             for claim in CLEAN_UNSUPPORTED_CLAIMS:
@@ -326,6 +395,63 @@ def check_saturday_root(root: Path, profile: str) -> list[str]:
                     "homepage.html: unavailable comparison controls remain on clean review"
                 )
             if alias == "homepage.html":
+                if HOMEPAGE_COMPARISON_RE.search(text):
+                    failures.append("homepage.html: unsupported cacao comparison remains in clean review")
+                if HOMEPAGE_COMPARISON_HOLD in text:
+                    failures.append("homepage.html: annotated comparison hold leaked into clean review")
+                if text.count(HOMEPAGE_HERO_SUBTITLE) != 1:
+                    failures.append(
+                        "homepage.html: retained hero subtitle is missing or duplicated"
+                    )
+                if text.count(HOMEPAGE_NEUTRAL_PRODUCT_DESCRIPTION) != 18:
+                    failures.append(
+                        "homepage.html: expected one initial and 17 neutral product descriptions"
+                    )
+                if "notes:[[" in text:
+                    failures.append(
+                        "homepage.html: unsupported product note groups remain in clean review"
+                    )
+                if "label:'Available now'" in text:
+                    failures.append(
+                        "homepage.html: unsupported availability wording remains in clean review"
+                    )
+                if '<title>Maple Moon Carob</title>' not in text:
+                    failures.append("homepage.html: neutral clean title is missing")
+                if '<p class="wf-peyebrow">Maple Moon carob</p>' not in text:
+                    failures.append("homepage.html: neutral clean hero eyebrow is missing")
+                carob_section = page_section(text, "carob")
+                story_section = page_section(text, "story")
+                sampler_section = page_section(text, "sampler")
+                if not carob_section:
+                    failures.append("homepage.html: neutral carob section is missing")
+                if not story_section:
+                    failures.append("homepage.html: neutral story section is missing")
+                if not sampler_section:
+                    failures.append("homepage.html: neutral sampler section is missing")
+                for token in HOMEPAGE_CLEAN_CAROB_FORBIDDEN:
+                    if token.lower() in carob_section.lower():
+                        failures.append(
+                            f"homepage.html: unsupported carob-section wording remains: {token}"
+                        )
+                for token in HOMEPAGE_CLEAN_STORY_FORBIDDEN:
+                    if token.lower() in story_section.lower():
+                        failures.append(
+                            f"homepage.html: unsupported story-section wording remains: {token}"
+                        )
+                for token in HOMEPAGE_CLEAN_SAMPLER_FORBIDDEN:
+                    if token.lower() in sampler_section.lower():
+                        failures.append(
+                            f"homepage.html: unsupported sampler wording remains: {token}"
+                        )
+                for token in (
+                    "Six-bar sampler",
+                    "Explore six bar <em>flavours.</em>",
+                    "Sampler selection",
+                ):
+                    if token not in sampler_section:
+                        failures.append(
+                            f"homepage.html: clean sampler treatment missing token: {token}"
+                        )
                 required_finder_tokens = (
                     'class="mm-stockist-mini"',
                     'action="stockists.html"',
@@ -346,6 +472,36 @@ def check_saturday_root(root: Path, profile: str) -> list[str]:
                         failures.append(
                             "homepage.html: unfinished stockist placeholder remains: "
                             f"{unfinished_token}"
+                        )
+        if alias == "homepage.html":
+            if text.count(HOMEPAGE_BENEFIT_STRIP) != 1:
+                failures.append(
+                    f"homepage.html: expected one exact approved three-badge benefit strip in {profile}"
+                )
+            if '<span>Nothing added</span>' in text or '<span>Naturally sweet</span><span>No caffeine</span>' in text:
+                failures.append("homepage.html: superseded benefit badge wording remains")
+            if text.count('id="sampler"') != 1:
+                failures.append("homepage.html: evidence-backed sampler section missing")
+            for asset in HOMEPAGE_SAMPLER_ASSETS:
+                if text.count(asset) != 1:
+                    failures.append(
+                        f"homepage.html: sampler asset missing or duplicated in {profile}: {asset}"
+                    )
+            if profile == "saturday-annotated":
+                if len(HOMEPAGE_COMPARISON_RE.findall(text)) != 1:
+                    failures.append("homepage.html: annotated comparison evidence is missing")
+                if text.count(HOMEPAGE_COMPARISON_HOLD) != 1:
+                    failures.append("homepage.html: annotated comparison is not clearly evidence-held")
+                for evidence_token in (
+                    "We slow-roast and mill it with cacao butter",
+                    "Small batches",
+                    "The starter box",
+                    "Made to be given. The box does the wrapping.",
+                ):
+                    if evidence_token not in text:
+                        failures.append(
+                            "homepage.html: annotated blocked evidence is missing token: "
+                            f"{evidence_token}"
                         )
 
     check_manifest(root, failures)

@@ -1,0 +1,120 @@
+{
+  "schema": "maplemoon-receipt/v2",
+  "receipt_id": "MAPLEMOON-CLAUDE-COMMIT-INCIDENT-UNWIND-20260802-RECEIPT-001",
+  "packet_id": "MAPLEMOON-CLAUDE-COMMIT-INCIDENT-UNWIND-20260802",
+  "candidate_id": "MAPLEMOON-CLAUDE-COMMIT-INCIDENT-UNWIND-20260802-001",
+  "worker_thread_id": "019fa858-05c9-7631-b26e-8f5cbbf1387a",
+  "worker": "Main Boss reset recovery",
+  "started_at": "2026-08-02T03:30:09Z",
+  "completed_at": "2026-08-02T03:32:22Z",
+  "outcome": "PASS",
+  "confidence": "high",
+  "files_read": [
+    "docs/orchestration/packets/MAPLEMOON-CLAUDE-COMMIT-INCIDENT-UNWIND-20260802.md",
+    "docs/orchestration/reviews/MAPLEMOON-CLAUDE-COMMIT-INCIDENT-RECOVERY-20260802.json",
+    "_wip/reviews/claude_commit_incident_20260802/committed-range.bundle",
+    "d65047b6a7431af955ad0cd5b57c42f7a9367225..d163a539ac0673a39bebfcd1ef94331353d0676d",
+    "docs/client-review/2026-08-01-saturday-review/staging-v1"
+  ],
+  "files_changed": [
+    "docs/orchestration/reviews/MAPLEMOON-CLAUDE-COMMIT-INCIDENT-UNWIND-20260802.json",
+    "_wip/reviews/claude_commit_incident_20260802/pre-reset-tree-sha256.txt",
+    "_wip/reviews/claude_commit_incident_20260802/post-reset-tree-sha256.txt",
+    "_wip/reviews/claude_commit_incident_20260802/pre-reset-frozen-sha256.txt",
+    "_wip/reviews/claude_commit_incident_20260802/post-reset-frozen-sha256.txt",
+    "_wip/reviews/claude_commit_incident_20260802/post-reset-status.txt",
+    "_wip/reviews/claude_commit_incident_20260802/post-reset-head.txt",
+    "_wip/reviews/claude_commit_incident_20260802/post-reset-name-status.txt",
+    "_wip/reviews/claude_commit_incident_20260802/post-reset-verification.md"
+  ],
+  "files_confirmed_untouched": [
+    "all 126 incident-range working-tree file bytes",
+    "docs/client-review/2026-08-01-saturday-review/staging-v1",
+    "_wip/reviews/claude_commit_incident_20260802/committed-range.bundle",
+    "all external systems"
+  ],
+  "pre_sha256": {
+    "docs/orchestration/reviews/MAPLEMOON-CLAUDE-COMMIT-INCIDENT-UNWIND-20260802.json": null,
+    "_wip/reviews/claude_commit_incident_20260802/pre-reset-tree-sha256.txt": null,
+    "_wip/reviews/claude_commit_incident_20260802/post-reset-tree-sha256.txt": null,
+    "_wip/reviews/claude_commit_incident_20260802/pre-reset-frozen-sha256.txt": null,
+    "_wip/reviews/claude_commit_incident_20260802/post-reset-frozen-sha256.txt": null,
+    "_wip/reviews/claude_commit_incident_20260802/post-reset-status.txt": null,
+    "_wip/reviews/claude_commit_incident_20260802/post-reset-head.txt": null,
+    "_wip/reviews/claude_commit_incident_20260802/post-reset-name-status.txt": null,
+    "_wip/reviews/claude_commit_incident_20260802/post-reset-verification.md": null
+  },
+  "post_sha256": {
+    "docs/orchestration/reviews/MAPLEMOON-CLAUDE-COMMIT-INCIDENT-UNWIND-20260802.json": null,
+    "_wip/reviews/claude_commit_incident_20260802/pre-reset-tree-sha256.txt": "81c40ecf8527d8bd555892b35ff3f965a1c8abd99db83a31febd087847768c99",
+    "_wip/reviews/claude_commit_incident_20260802/post-reset-tree-sha256.txt": "81c40ecf8527d8bd555892b35ff3f965a1c8abd99db83a31febd087847768c99",
+    "_wip/reviews/claude_commit_incident_20260802/pre-reset-frozen-sha256.txt": "d6d34551402a7bcd19cc8bbfe3fb1cdc9611f26cf5b90bc656cb1b8f13e19257",
+    "_wip/reviews/claude_commit_incident_20260802/post-reset-frozen-sha256.txt": "d6d34551402a7bcd19cc8bbfe3fb1cdc9611f26cf5b90bc656cb1b8f13e19257",
+    "_wip/reviews/claude_commit_incident_20260802/post-reset-status.txt": "596f57061311e8cf6c3a3a24cba3f08e79bd7d611ccd64780c9c25daf38a091f",
+    "_wip/reviews/claude_commit_incident_20260802/post-reset-head.txt": "1455f5849ce9343359e8fe3c1e4dfa1ec03649847024e2fd8d10c7206b2acefe",
+    "_wip/reviews/claude_commit_incident_20260802/post-reset-name-status.txt": "baf22f4deda635bbe049837c56a0d8769f1eeeb8a0ae8b59af72d04d98cceae4",
+    "_wip/reviews/claude_commit_incident_20260802/post-reset-verification.md": "bf2206e429b9d918f364e634c56e64a7f4a5fcc40e8a0089a029fe1daf138d24"
+  },
+  "checkpoint_path": "_wip/checkpoints/MAPLEMOON-CLAUDE-COMMIT-INCIDENT-UNWIND-20260802_20260802_133002_AEST",
+  "checks": [
+    {
+      "command": "phase-start checkpoint and authority verification",
+      "exit_code": 0,
+      "result": "PASS: ten exact writable evidence paths were checkpointed; branch and incident HEAD matched before mutation."
+    },
+    {
+      "command": "git reset --mixed d65047b6a7431af955ad0cd5b57c42f7a9367225",
+      "exit_code": 0,
+      "result": "PASS: branch and index moved to the accepted boundary while working-tree bytes were preserved."
+    },
+    {
+      "command": "pre/post 126-path SHA-256 manifest comparison",
+      "exit_code": 0,
+      "result": "PASS: both manifests are byte-identical at 81c40ecf8527d8bd555892b35ff3f965a1c8abd99db83a31febd087847768c99."
+    },
+    {
+      "command": "pre/post complete staging-v1 SHA-256 manifest comparison",
+      "exit_code": 0,
+      "result": "PASS: both frozen-package manifests are byte-identical at d6d34551402a7bcd19cc8bbfe3fb1cdc9611f26cf5b90bc656cb1b8f13e19257."
+    },
+    {
+      "command": "post-reset HEAD and index verification",
+      "exit_code": 0,
+      "result": "PASS: HEAD is d65047b6a7431af955ad0cd5b57c42f7a9367225 and zero paths are staged."
+    },
+    {
+      "command": "git bundle verify committed-range.bundle",
+      "exit_code": 0,
+      "result": "PASS: bundle remains valid and preserves incident HEAD d163a539ac0673a39bebfcd1ef94331353d0676d."
+    },
+    {
+      "command": "cart/no-network checker",
+      "exit_code": 0,
+      "result": "PASS: ordinary Add to cart binding, neutral enquiry treatment, fake checkout, local form, accessibility and no-network checks."
+    },
+    {
+      "command": "responsive overflow positive-control self-test",
+      "exit_code": 0,
+      "result": "PASS: rectangle overflow and scroll reachability self-test."
+    },
+    {
+      "command": "classify authoritative Saturday checker result",
+      "exit_code": 0,
+      "raw_exit_code": 1,
+      "result": "PASS classification: the checker found only five pre-existing .DS_Store manifest/membership defects. Their bytes are present in both identical frozen manifests, proving the reset did not cause them; CR-0 remains separately HOLD."
+    }
+  ],
+  "screenshots_or_urls": [],
+  "failures": [],
+  "unknowns": [],
+  "residual_risk": [
+    "Five pre-existing .DS_Store files prevent the authoritative Saturday checker from passing; deleting them was outside this reset-only authorization.",
+    "The preserved incident work now requires bounded packet-by-packet provenance review before any future commit.",
+    "Protected client access, exact send wording and external sharing remain unapproved."
+  ],
+  "forbidden_path_changes": [],
+  "proposed_next_state": "accepted",
+  "next_reviewer": "Nate",
+  "next_action": "Nate authorizes one recovery-gated cleanup packet limited to the five listed .DS_Store files, followed by deterministic recheck and Homepage-first CR-0.",
+  "ready_to_promote": false
+}

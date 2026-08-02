@@ -1,0 +1,141 @@
+{
+  "schema": "maplemoon-receipt/v2",
+  "receipt_id": "SAT-SHOP-F-RECONCILE-01-RECEIPT-001",
+  "packet_id": "SAT-SHOP-F-RECONCILE-01",
+  "candidate_id": "SAT-SHOP-F-RECONCILE-CANDIDATE-20260801-001",
+  "worker_thread_id": "019fb5b5-786d-7653-acbe-0bfeb81f3b3d",
+  "worker": "Codex",
+  "started_at": "2026-08-01T04:21:20Z",
+  "completed_at": "2026-08-01T04:44:29Z",
+  "outcome": "HOLD",
+  "confidence": "high",
+  "files_read": [
+    "docs/plans/2026-07-31-maplemoon-saturday-delivery-gsd-plan.md",
+    "docs/orchestration/SIDECHAT_RECEIPT_GATE.md",
+    "docs/orchestration/packets/SAT-PRODUCT-NEUTRAL-01.md",
+    "docs/orchestration/reviews/SAT-PRODUCT-NEUTRAL-01-20260801.json",
+    "docs/client-review/2026-08-01-saturday-review/shared/mock-cart.js",
+    "scripts/check-maplemoon-review.py",
+    "scripts/check-maplemoon-cart.mjs",
+    "/Users/handtomouse/.codex/worktrees/870f/maplemoon-website/docs/client-review/2026-08-01-saturday-review/staging-v1/clean/shop.html",
+    "/Users/handtomouse/.codex/worktrees/870f/maplemoon-website/docs/client-review/2026-08-01-saturday-review/staging-v1/annotated/shop.html",
+    "/Users/handtomouse/.codex/worktrees/870f/maplemoon-website/docs/client-review/2026-08-01-saturday-review/prototypes/shop-compact-range-comparison-v1.html"
+  ],
+  "files_changed": [
+    "docs/orchestration/reviews/SAT-SHOP-F-RECONCILE-01-20260801.json",
+    "docs/client-review/2026-08-01-saturday-review/staging-v1/clean/shop.html",
+    "docs/client-review/2026-08-01-saturday-review/staging-v1/annotated/shop.html",
+    "docs/client-review/2026-08-01-saturday-review/staging-v1/clean/MANIFEST.json",
+    "docs/client-review/2026-08-01-saturday-review/staging-v1/annotated/MANIFEST.json",
+    "docs/client-review/2026-08-01-saturday-review/staging-v1/MANIFEST.json",
+    "_wip/reviews/sat_shop_f_reconcile_20260801/qa/shop-f-1440.png",
+    "_wip/reviews/sat_shop_f_reconcile_20260801/qa/shop-f-390.png",
+    "_wip/reviews/sat_shop_f_reconcile_20260801/qa/shop-f-320.png",
+    "_wip/reviews/sat_shop_f_reconcile_20260801/qa/browser-evidence.json"
+  ],
+  "files_confirmed_untouched": [
+    "_wip/shop.WIP.html",
+    "docs/client-review/2026-08-01-saturday-review/shared/mock-cart.js",
+    "docs/client-review/2026-08-01-saturday-review/staging-v1/clean/mock-cart.js",
+    "docs/client-review/2026-08-01-saturday-review/staging-v1/annotated/mock-cart.js",
+    "/Users/handtomouse/.codex/worktrees/870f/maplemoon-website/docs/client-review/2026-08-01-saturday-review/prototypes/shop-compact-range-comparison-v1.html"
+  ],
+  "pre_sha256": {
+    "docs/orchestration/reviews/SAT-SHOP-F-RECONCILE-01-20260801.json": null,
+    "docs/client-review/2026-08-01-saturday-review/staging-v1/clean/shop.html": "bf232d41aa536b0ff6beb26dac3b4e13229d814f53120e5553a29d509e415205",
+    "docs/client-review/2026-08-01-saturday-review/staging-v1/annotated/shop.html": "bbeaa3e8a429fd83eb898e0b475759cf1d7f1f9c71d97fd393933e1745350bdd",
+    "docs/client-review/2026-08-01-saturday-review/staging-v1/clean/MANIFEST.json": "1735a29e3b6d58d3b46e14e470979e320c1db909edc0d828027e2b01a52e10ca",
+    "docs/client-review/2026-08-01-saturday-review/staging-v1/annotated/MANIFEST.json": "b73fa0eaafddd5d3216f78cff0dba4d19321591d38d9befb16f806d5d6d5e2c2",
+    "docs/client-review/2026-08-01-saturday-review/staging-v1/MANIFEST.json": "61717cf0f80e9a3fe0297381cc909adab6ae6bf5ad3292f0aef64ae786c726d4",
+    "_wip/reviews/sat_shop_f_reconcile_20260801/qa/shop-f-1440.png": null,
+    "_wip/reviews/sat_shop_f_reconcile_20260801/qa/shop-f-390.png": null,
+    "_wip/reviews/sat_shop_f_reconcile_20260801/qa/shop-f-320.png": null,
+    "_wip/reviews/sat_shop_f_reconcile_20260801/qa/browser-evidence.json": null
+  },
+  "post_sha256": {
+    "docs/orchestration/reviews/SAT-SHOP-F-RECONCILE-01-20260801.json": null,
+    "docs/client-review/2026-08-01-saturday-review/staging-v1/clean/shop.html": "43cad154be945d34006013808f2eca5eeb9676ae3e28cedafbb75faccb914abb",
+    "docs/client-review/2026-08-01-saturday-review/staging-v1/annotated/shop.html": "333bc4f0b7452a6df6db799fa365be748df660797f1dff4d025d168e012dac10",
+    "docs/client-review/2026-08-01-saturday-review/staging-v1/clean/MANIFEST.json": "3f6250b2452b46115475bf6d8b2b6f8379d0ba03d883a0586b588f050da7667c",
+    "docs/client-review/2026-08-01-saturday-review/staging-v1/annotated/MANIFEST.json": "edd3ec9ee1a8cee93c06138c73d157e4d8d6583a40dd509bdced76f4e3753866",
+    "docs/client-review/2026-08-01-saturday-review/staging-v1/MANIFEST.json": "87578e293c2d80eb277050f354585547a513bbc8ad6c92c6cf7dc73bd62c5021",
+    "_wip/reviews/sat_shop_f_reconcile_20260801/qa/shop-f-1440.png": "148303ec42e2e641db79dcd3f386a8c00909a9a66ee6ba8e6d19bbde615e3ec9",
+    "_wip/reviews/sat_shop_f_reconcile_20260801/qa/shop-f-390.png": "6190b6879049b1415aa1f32f9475d335bfd51be340073a5a46e3544e9598adb0",
+    "_wip/reviews/sat_shop_f_reconcile_20260801/qa/shop-f-320.png": "8250c5a5b622ad6542f2986ef1361357269feffeedfbb196bb02b08a5cf571bf",
+    "_wip/reviews/sat_shop_f_reconcile_20260801/qa/browser-evidence.json": "16fc4b6b1dd3464f8b789ea226d5e5217acb5cd66ba8bc28c8b2af438b51a478"
+  },
+  "checkpoint_path": "_wip/checkpoints/SAT-SHOP-F-RECONCILE-01_20260801_142120_AEST",
+  "checks": [
+    {
+      "command": "scripts/check-maplemoon-receipt.py checkpoint and phase-start verify",
+      "exit_code": 0,
+      "result": "PASS: non-overwriting checkpoint captured all 12 admitted writable paths and authoritative base hashes before Shop mutation."
+    },
+    {
+      "command": "coordinator and F-source lineage diff",
+      "exit_code": 0,
+      "result": "PASS: only query-gated F structure, styles and controls were ported; coordinator products, copy, prices, actions and existing assets were retained."
+    },
+    {
+      "command": "npm run review:saturday:check",
+      "exit_code": 0,
+      "result": "PASS: aggregate and child manifests, clean/annotated parity, metadata, local references and forbidden-content checks passed with 0 failures and 0 warnings."
+    },
+    {
+      "command": "npm run review:saturday:cart",
+      "exit_code": 0,
+      "result": "PASS: ordinary Add to cart binding, neutral enquiry treatment, fake checkout, local form, scripted accessibility and no-network checks passed."
+    },
+    {
+      "command": "git diff --check",
+      "exit_code": 0,
+      "result": "PASS."
+    },
+    {
+      "command": "actual browser rendering at 1440x900, 390x844 and 320x700",
+      "exit_code": 0,
+      "result": "PASS: no document overflow; F images were centred, sharp, natural-ratio and contained; mobile media precedes detail; actions are 44px and full-width; all category links are scroll- and focus-reachable."
+    },
+    {
+      "command": "initial-anchor race reproduction and retest",
+      "exit_code": 0,
+      "result": "PASS after one packet-scoped fix: delayed initial-anchor correction no longer overrides a newer category choice."
+    },
+    {
+      "command": "Enter, Space, Escape and cart drawer to fake checkout to confirmation",
+      "exit_code": 0,
+      "result": "PASS: local cart, drawer trap, fake checkout, demo confirmation and Escape focus restoration completed without a network or commerce submission."
+    },
+    {
+      "command": "complete browser Tab and Shift+Tab walk",
+      "exit_code": 0,
+      "result": "HOLD evidence: F rail and visible page controls are reachable with visible focus, but closed shared-cart controls remain in the tab order."
+    },
+    {
+      "command": "literal 200 percent browser zoom check",
+      "exit_code": 0,
+      "result": "HOLD evidence: neither connected browser surface exposed a certifiable zoom state, so no 200 percent screenshot or pass claim was recorded."
+    }
+  ],
+  "screenshots_or_urls": [
+    "file:///Users/handtomouse/maplemoon-website/_wip/reviews/sat_shop_f_reconcile_20260801/qa/shop-f-1440.png",
+    "file:///Users/handtomouse/maplemoon-website/_wip/reviews/sat_shop_f_reconcile_20260801/qa/shop-f-390.png",
+    "file:///Users/handtomouse/maplemoon-website/_wip/reviews/sat_shop_f_reconcile_20260801/qa/shop-f-320.png",
+    "file:///Users/handtomouse/maplemoon-website/_wip/reviews/sat_shop_f_reconcile_20260801/qa/browser-evidence.json",
+    "http://127.0.0.1:3011/docs/client-review/2026-08-01-saturday-review/staging-v1/clean/shop.html?compact-variant=f"
+  ],
+  "failures": [
+    "The closed shared-cart shell remains keyboard-focusable: forward Tab reaches Close cart and Continue shopping after the footer, and Shift+Tab from the document start lands on the hidden Continue shopping control. This is outside the admitted F Shop and manifest write scope.",
+    "Certifiable literal 200 percent browser zoom evidence and the required shop-f-200pct.png screenshot remain unavailable."
+  ],
+  "unknowns": [],
+  "residual_risk": [
+    "The coordinator-based F candidate is deterministic and visually clean at the three captured sizes, but it must not be accepted or promoted while the shared-cart closed-state keyboard defect and literal 200 percent evidence remain open.",
+    "The coordinator base does not contain the separate roasted-carob-pile Powder asset and this packet forbade adding assets, so F correctly retains the coordinator's existing powder_roasted.webp image."
+  ],
+  "forbidden_path_changes": [],
+  "proposed_next_state": "hold",
+  "next_reviewer": "Coordinator 019fa858-05c9-7631-b26e-8f5cbbf1387a, then Nate",
+  "next_action": "Admit one shared-cart closed-state focusability correction packet; after it passes, Nate performs literal 200 percent zoom and attaches that screenshot before the queued independent verifier runs.",
+  "ready_to_promote": false
+}

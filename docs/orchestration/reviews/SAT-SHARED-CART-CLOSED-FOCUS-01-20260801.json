@@ -1,0 +1,131 @@
+{
+  "schema": "maplemoon-receipt/v2",
+  "receipt_id": "SAT-SHARED-CART-CLOSED-FOCUS-01-RECEIPT-001",
+  "packet_id": "SAT-SHARED-CART-CLOSED-FOCUS-01",
+  "candidate_id": "SAT-SHARED-CART-CLOSED-FOCUS-CANDIDATE-20260801-001",
+  "worker_thread_id": "019fb5b5-786d-7653-acbe-0bfeb81f3b3d",
+  "worker": "Codex",
+  "started_at": "2026-08-01T05:01:24Z",
+  "completed_at": "2026-08-01T05:12:56Z",
+  "outcome": "PASS",
+  "confidence": "high",
+  "files_read": [
+    "docs/plans/2026-07-31-maplemoon-saturday-delivery-gsd-plan.md",
+    "docs/orchestration/SIDECHAT_RECEIPT_GATE.md",
+    "docs/orchestration/LOCK_MANIFEST.json",
+    "docs/orchestration/packets/SAT-SHOP-F-RECONCILE-01.md",
+    "docs/orchestration/reviews/SAT-SHOP-F-RECONCILE-01-20260801.json",
+    "docs/client-review/2026-08-01-saturday-review/staging-v1/clean/shop.html",
+    "docs/client-review/2026-08-01-saturday-review/staging-v1/annotated/shop.html",
+    "/Users/handtomouse/.codex/worktrees/870f/maplemoon-website/docs/client-review/2026-08-01-saturday-review/prototypes/shop-compact-range-comparison-v1.html"
+  ],
+  "files_changed": [
+    "docs/orchestration/reviews/SAT-SHARED-CART-CLOSED-FOCUS-01-20260801.json",
+    "docs/client-review/2026-08-01-saturday-review/shared/mock-cart.js",
+    "docs/client-review/2026-08-01-saturday-review/staging-v1/clean/mock-cart.js",
+    "docs/client-review/2026-08-01-saturday-review/staging-v1/annotated/mock-cart.js",
+    "scripts/check-maplemoon-cart.mjs",
+    "docs/client-review/2026-08-01-saturday-review/staging-v1/MANIFEST.json",
+    "docs/client-review/2026-08-01-saturday-review/staging-v1/clean/MANIFEST.json",
+    "docs/client-review/2026-08-01-saturday-review/staging-v1/annotated/MANIFEST.json",
+    "_wip/reviews/sat_shared_cart_closed_focus_20260801/qa/browser-evidence.json"
+  ],
+  "files_confirmed_untouched": [
+    "docs/client-review/2026-08-01-saturday-review/staging-v1/clean/shop.html",
+    "docs/client-review/2026-08-01-saturday-review/staging-v1/annotated/shop.html",
+    "_wip/shop.WIP.html",
+    "/Users/handtomouse/.codex/worktrees/870f/maplemoon-website/docs/client-review/2026-08-01-saturday-review/prototypes/shop-compact-range-comparison-v1.html"
+  ],
+  "pre_sha256": {
+    "docs/orchestration/packets/SAT-SHARED-CART-CLOSED-FOCUS-01.md": "0f778f97f2ba5feffe6aed2cddbd17ca19006bfb9afdf7cfb8daff98c66e5e12",
+    "docs/orchestration/reviews/SAT-SHARED-CART-CLOSED-FOCUS-01-20260801.json": null,
+    "docs/client-review/2026-08-01-saturday-review/shared/mock-cart.js": "8f9de9995402679957bdbcaba3041e00c5fca6d24c523bf7bb666046a86259f9",
+    "docs/client-review/2026-08-01-saturday-review/staging-v1/clean/mock-cart.js": "8f9de9995402679957bdbcaba3041e00c5fca6d24c523bf7bb666046a86259f9",
+    "docs/client-review/2026-08-01-saturday-review/staging-v1/annotated/mock-cart.js": "8f9de9995402679957bdbcaba3041e00c5fca6d24c523bf7bb666046a86259f9",
+    "scripts/check-maplemoon-cart.mjs": "db3cc2e6b16224124e4f53880a7d8910e31a196ae49cac2a2def814463b39cab",
+    "docs/client-review/2026-08-01-saturday-review/staging-v1/MANIFEST.json": "87578e293c2d80eb277050f354585547a513bbc8ad6c92c6cf7dc73bd62c5021",
+    "docs/client-review/2026-08-01-saturday-review/staging-v1/clean/MANIFEST.json": "3f6250b2452b46115475bf6d8b2b6f8379d0ba03d883a0586b588f050da7667c",
+    "docs/client-review/2026-08-01-saturday-review/staging-v1/annotated/MANIFEST.json": "edd3ec9ee1a8cee93c06138c73d157e4d8d6583a40dd509bdced76f4e3753866",
+    "_wip/reviews/sat_shared_cart_closed_focus_20260801/qa/browser-evidence.json": null
+  },
+  "post_sha256": {
+    "docs/orchestration/packets/SAT-SHARED-CART-CLOSED-FOCUS-01.md": "0f778f97f2ba5feffe6aed2cddbd17ca19006bfb9afdf7cfb8daff98c66e5e12",
+    "docs/orchestration/reviews/SAT-SHARED-CART-CLOSED-FOCUS-01-20260801.json": null,
+    "docs/client-review/2026-08-01-saturday-review/shared/mock-cart.js": "b298ed1d025f1d8a1a3c6952ca3313eb229733fd83d56db24fecaf695106fbe1",
+    "docs/client-review/2026-08-01-saturday-review/staging-v1/clean/mock-cart.js": "b298ed1d025f1d8a1a3c6952ca3313eb229733fd83d56db24fecaf695106fbe1",
+    "docs/client-review/2026-08-01-saturday-review/staging-v1/annotated/mock-cart.js": "b298ed1d025f1d8a1a3c6952ca3313eb229733fd83d56db24fecaf695106fbe1",
+    "scripts/check-maplemoon-cart.mjs": "5c5bed022799bac367362e736769f000c9cb6e36288d52592df265cae59c50cb",
+    "docs/client-review/2026-08-01-saturday-review/staging-v1/MANIFEST.json": "f2d24cbed1068f17d7989010a08354006f59e8dfe575346cd268f149d2b9b5e4",
+    "docs/client-review/2026-08-01-saturday-review/staging-v1/clean/MANIFEST.json": "87de0ddafdf21d8190e740f726dc51a10d4d8aefd5141c57fa7fd91df9ce3211",
+    "docs/client-review/2026-08-01-saturday-review/staging-v1/annotated/MANIFEST.json": "c4d9c678e89a7f1af5c7d3405056ff56dde246d81f624de77de3491abbaa7ec1",
+    "_wip/reviews/sat_shared_cart_closed_focus_20260801/qa/browser-evidence.json": "298c5a5b604a0ea850bc6898137e115f15436a0caa3c9773ea50f11ab8f8b75f"
+  },
+  "checkpoint_path": "_wip/checkpoints/SAT-SHARED-CART-CLOSED-FOCUS-01_20260801_150016_AEST",
+  "checks": [
+    {
+      "command": "scripts/check-maplemoon-receipt.py checkpoint and phase-start verify",
+      "exit_code": 0,
+      "result": "PASS: the ten exact writable paths were captured and the current base hashes matched before cart behavior changed."
+    },
+    {
+      "command": "packet-scoped source review",
+      "exit_code": 0,
+      "result": "PASS: the closed dialog starts inert, opening removes inert before focus enters, and closing restores inert before focus returns. Existing cart actions, copy and commerce behavior are unchanged."
+    },
+    {
+      "command": "npm run review:saturday:check",
+      "exit_code": 0,
+      "result": "PASS: aggregate and child manifests, parity, metadata, local references and forbidden-content checks passed with zero failures and warnings."
+    },
+    {
+      "command": "npm run review:saturday:cart",
+      "exit_code": 0,
+      "result": "PASS: generated cart copies, closed-state inert regression, fake checkout, local forms and no-network checks passed."
+    },
+    {
+      "command": "git diff --check",
+      "exit_code": 0,
+      "result": "PASS."
+    },
+    {
+      "command": "actual-browser closed-cart Tab and Shift+Tab inspection",
+      "exit_code": 0,
+      "result": "PASS: zero closed-cart descendants were sequentially focusable; 80 forward Tab steps produced zero cart hits and the reverse page edge did not enter the cart."
+    },
+    {
+      "command": "actual-browser open focus trap and Escape restoration",
+      "exit_code": 0,
+      "result": "PASS: opening focused Close cart; Shift+Tab wrapped to Continue shopping; Escape closed the drawer, restored inert and returned focus to the originating product action."
+    },
+    {
+      "command": "actual-browser cart drawer to fake checkout to confirmation",
+      "exit_code": 0,
+      "result": "PASS: the URL stayed local; the journey ended with explicit no-order, no-email, no-payment and no-personal-information confirmation; the cart reset to zero."
+    },
+    {
+      "command": "actual-browser 390x844 and 320x700 responsive inspection",
+      "exit_code": 0,
+      "result": "PASS: no document overflow; the category rail remains horizontally reachable; the closed cart remains inert."
+    },
+    {
+      "command": "Variant F and A-G evidence hash comparison",
+      "exit_code": 0,
+      "result": "PASS: clean and annotated Shop, canonical Shop WIP and the external A-G comparison retained their prior hashes."
+    }
+  ],
+  "screenshots_or_urls": [
+    "file:///Users/handtomouse/maplemoon-website/_wip/reviews/sat_shared_cart_closed_focus_20260801/qa/browser-evidence.json",
+    "http://127.0.0.1:3011/docs/client-review/2026-08-01-saturday-review/staging-v1/clean/shop.html?compact-variant=f"
+  ],
+  "failures": [],
+  "unknowns": [],
+  "residual_risk": [
+    "Literal 200 percent browser zoom evidence remains a separate Nate-owned acceptance gate.",
+    "The current in-app browser key injector did not synthesize Enter or Space button activation; the prior actual-browser PASS remains applicable because this packet did not change any activation handler."
+  ],
+  "forbidden_path_changes": [],
+  "proposed_next_state": "needs_review",
+  "next_reviewer": "Coordinator 019fa858-05c9-7631-b26e-8f5cbbf1387a, then Nate",
+  "next_action": "Nate performs literal 200 percent zoom on the exact F URL and attaches one screenshot; then the queued independent verifier returns the final acceptance recommendation.",
+  "ready_to_promote": false
+}

@@ -1,0 +1,164 @@
+{
+  "schema": "maplemoon-receipt/v2",
+  "receipt_id": "SAT-HOME-CLEAN-CLOSURE-01-RECEIPT-001",
+  "packet_id": "SAT-HOME-CLEAN-CLOSURE-01",
+  "candidate_id": "SAT-HOME-CLEAN-CLOSURE-CANDIDATE-20260802-001",
+  "worker_thread_id": "019fa858-05c9-7631-b26e-8f5cbbf1387a",
+  "worker": "Codex Main Boss",
+  "started_at": "2026-08-02T06:22:40Z",
+  "completed_at": "2026-08-02T07:03:07Z",
+  "outcome": "HOLD",
+  "confidence": "high",
+  "files_read": [
+    "docs/orchestration/SIDECHAT_RECEIPT_GATE.md",
+    "docs/orchestration/LOCK_MANIFEST.json",
+    "docs/orchestration/SATURDAY_REVIEW_ACCEPTANCE_20260801.md",
+    "docs/orchestration/SATURDAY_FEEDBACK_REGISTER_20260801.md",
+    "docs/orchestration/reviews/CARLI-CANVA-NOTE-REGISTER-20260731.md",
+    "docs/orchestration/reviews/CARLI-CLAIMS-REPLACEMENT-OPTIONS-20260731.md",
+    "docs/orchestration/packets/SAT-HOME-01-HOMEPAGE-CLAIM-SAFE-FREEZE.md",
+    "docs/orchestration/packets/SAT-HOME-HERO-SUBTITLE-RULING-20260802.md",
+    "docs/orchestration/packets/SAT-PRODUCT-NEUTRAL-01.md",
+    "_wip/homepage_real_1_lead_photo.WIP.html",
+    "scripts/check-maplemoon-cart.mjs",
+    "scripts/check-maplemoon-responsive-overflow.mjs",
+    "docs/client-review/2026-08-01-saturday-review/staging-v1"
+  ],
+  "files_changed": [
+    "docs/orchestration/packets/SAT-HOME-CLEAN-CLOSURE-01.md",
+    "docs/orchestration/reviews/SAT-HOME-CLEAN-CLOSURE-01-20260802.json",
+    "scripts/build-maplemoon-saturday-review.py",
+    "scripts/check-maplemoon-review.py",
+    "_wip/reviews/saturday_home_clean_closure_20260802/qa/clean-homepage-390.png",
+    "_wip/reviews/saturday_home_clean_closure_20260802/qa/clean-homepage-1280.png",
+    "_wip/reviews/saturday_home_clean_closure_20260802/qa/homepage-keyboard.json",
+    "_wip/reviews/saturday_home_clean_closure_20260802/qa/check-results.txt"
+  ],
+  "files_confirmed_untouched": [
+    "_wip/homepage_real_1_lead_photo.WIP.html",
+    "_wip/shop.WIP.html",
+    "_wip/our-story.WIP.html",
+    "_wip/carob-story.WIP.html",
+    "_wip/stockists.WIP.html",
+    "_wip/faq.WIP.html",
+    "docs/client-review/2026-08-01-saturday-review/staging-v1/MANIFEST.json",
+    "docs/client-review/2026-08-01-saturday-review/staging-v1/clean/MANIFEST.json",
+    "docs/client-review/2026-08-01-saturday-review/staging-v1/annotated/MANIFEST.json",
+    "docs/client-review/2026-08-01-saturday-review/staging-v1/clean/homepage.html",
+    "docs/client-review/2026-08-01-saturday-review/staging-v1/annotated/homepage.html",
+    "docs/client-review/2026-08-01-saturday-review/staging-v1/clean/shop.html",
+    "docs/client-review/2026-08-01-saturday-review/staging-v1/annotated/shop.html",
+    "docs/client-review/2026-08-01-saturday-review/staging-v1/clean/our-story.html",
+    "docs/client-review/2026-08-01-saturday-review/staging-v1/annotated/our-story.html",
+    "docs/client-review/2026-08-01-saturday-review/staging-v1/clean/carob-story.html",
+    "docs/client-review/2026-08-01-saturday-review/staging-v1/annotated/carob-story.html",
+    "docs/client-review/2026-08-01-saturday-review/staging-v1/clean/stockists.html",
+    "docs/client-review/2026-08-01-saturday-review/staging-v1/annotated/stockists.html",
+    "docs/client-review/2026-08-01-saturday-review/staging-v1/clean/faq.html",
+    "docs/client-review/2026-08-01-saturday-review/staging-v1/annotated/faq.html"
+  ],
+  "pre_sha256": {
+    "docs/orchestration/packets/SAT-HOME-CLEAN-CLOSURE-01.md": "23f1adb9fb50fd794831615b974acbcf2395b1cc7eea3750d9af929c5587de9c",
+    "docs/orchestration/reviews/SAT-HOME-CLEAN-CLOSURE-01-20260802.json": null,
+    "scripts/build-maplemoon-saturday-review.py": "be084959cd6d771d8505a8dd3cba96533a42864b71a3ab749d4eb4b3e40cafbd",
+    "scripts/check-maplemoon-review.py": "aa66c7f0398b4dbbae95fb2603442e29a82f4e2b79fe5d646a2f42dd06e7a16b",
+    "docs/client-review/2026-08-01-saturday-review/staging-v1/MANIFEST.json": "d0d834b9b9173a497d0b03e39e4c282a7d5247f51484ebfd7ba3a64e8416bf7c",
+    "docs/client-review/2026-08-01-saturday-review/staging-v1/clean/MANIFEST.json": "d1c66b1d5937e9956d1806dbbbff4faf4f950def046aa642ae52f809c3d52d20",
+    "docs/client-review/2026-08-01-saturday-review/staging-v1/annotated/MANIFEST.json": "3be3c0f2df4658558c667b3e9cc6d55966d6a1d7ce9fa9874c46a0afc44244c7",
+    "docs/client-review/2026-08-01-saturday-review/staging-v1/clean/homepage.html": "0d102050395b79f4add5d9ddb7f75e962d7e41e11a78cd7f88c35ce4a947ef0c",
+    "_wip/reviews/saturday_home_clean_closure_20260802/qa/clean-homepage-390.png": null,
+    "_wip/reviews/saturday_home_clean_closure_20260802/qa/clean-homepage-1280.png": null,
+    "_wip/reviews/saturday_home_clean_closure_20260802/qa/homepage-keyboard.json": null,
+    "_wip/reviews/saturday_home_clean_closure_20260802/qa/check-results.txt": null
+  },
+  "post_sha256": {
+    "docs/orchestration/packets/SAT-HOME-CLEAN-CLOSURE-01.md": "bfbdaacaf33f1a154c0770c10b1570f803d2584f8de8492d8eaf55fe30ca6be4",
+    "docs/orchestration/reviews/SAT-HOME-CLEAN-CLOSURE-01-20260802.json": null,
+    "scripts/build-maplemoon-saturday-review.py": "0d4ee20d6c934013ec6ea482cfde89adf2d01ed84666b9dfd376ce2a722906d8",
+    "scripts/check-maplemoon-review.py": "90fc9e7ae47d2e49e355ee7b18b8374b0681c01cabc1fb4c3ceff1a49eed5f6d",
+    "docs/client-review/2026-08-01-saturday-review/staging-v1/MANIFEST.json": "d0d834b9b9173a497d0b03e39e4c282a7d5247f51484ebfd7ba3a64e8416bf7c",
+    "docs/client-review/2026-08-01-saturday-review/staging-v1/clean/MANIFEST.json": "d1c66b1d5937e9956d1806dbbbff4faf4f950def046aa642ae52f809c3d52d20",
+    "docs/client-review/2026-08-01-saturday-review/staging-v1/annotated/MANIFEST.json": "3be3c0f2df4658558c667b3e9cc6d55966d6a1d7ce9fa9874c46a0afc44244c7",
+    "docs/client-review/2026-08-01-saturday-review/staging-v1/clean/homepage.html": "0d102050395b79f4add5d9ddb7f75e962d7e41e11a78cd7f88c35ce4a947ef0c",
+    "_wip/reviews/saturday_home_clean_closure_20260802/qa/clean-homepage-390.png": "6c164996e3bf3f0d234608fe462adf671d2d7b8ff226e0baff3998e4867320a8",
+    "_wip/reviews/saturday_home_clean_closure_20260802/qa/clean-homepage-1280.png": "b2804af6498db1fc7a80c19055b9538877cc743a4ada94fdf6e754e97e360bcc",
+    "_wip/reviews/saturday_home_clean_closure_20260802/qa/homepage-keyboard.json": "2255761633a3bd7e5064c51f8c1ca094d290533c9c924c5fd12db78e9b86c7d3",
+    "_wip/reviews/saturday_home_clean_closure_20260802/qa/check-results.txt": "812d07dff8f7c90bcb60eeddd0524d2935b15b96b91ce685cbcb58c58ff68fdd"
+  },
+  "candidate_sha256": {
+    "MANIFEST.json": "96b42b1cb63370a4f617224188c9df28c262a9c4ace899cba43ea1399898fefc",
+    "clean/MANIFEST.json": "97921b7bf369b3c199470e024ecff250bdb4c5112ffdd17a9867e291839a2e6c",
+    "annotated/MANIFEST.json": "d0610cccc93570a8310b5c8e5e1e85ca7f05fa2a4d391ee1141e756ed2e0b7fa",
+    "clean/homepage.html": "b914be8ceda74ef89bf0e96b8a99f7adc77853dc76b1210c7e431707ef8a76c1"
+  },
+  "checkpoint_path": "_wip/checkpoints/SAT-HOME-CLEAN-CLOSURE-01_20260802_162240_AEST",
+  "additional_checkpoints": [
+    "_wip/checkpoints/SAT-HOME-CLEAN-CLOSURE-01-CORRECTION_20260802_162732_AEST"
+  ],
+  "checks": [
+    {
+      "command": "scripts/check-maplemoon-receipt.py phase-start verify against original checkpoint",
+      "exit_code": 0,
+      "result": "PASS: exact writable scope and pre-mutation bytes were captured."
+    },
+    {
+      "command": "scripts/check-maplemoon-receipt.py phase-start verify against correction checkpoint",
+      "exit_code": 0,
+      "result": "PASS: existing frozen Shop hash pins were added without broadening writable scope."
+    },
+    {
+      "command": "two temporary builds plus diff -qr",
+      "exit_code": 0,
+      "result": "PASS: candidates A and B are byte-identical."
+    },
+    {
+      "command": "candidate A versus current staging diff -qr",
+      "exit_code": 0,
+      "result": "PASS: exact delta is clean Homepage plus the aggregate, clean and annotated manifests."
+    },
+    {
+      "command": "Saturday checker, cart/no-network checker, responsive-overflow positive control, motion checker and git diff check",
+      "exit_code": 0,
+      "result": "PASS: all admitted deterministic checks passed."
+    },
+    {
+      "command": "390px and 1280px rendered Homepage review",
+      "exit_code": 0,
+      "result": "PASS: no document overflow, broken image, console warning/error or material layout regression; retained copy, badges and sampler were present."
+    },
+    {
+      "command": "live sequential keyboard and focus proof",
+      "exit_code": 0,
+      "result": "HOLD: Chrome automation timed out or became unavailable, and in-app Tab injection remained BODY to BODY."
+    },
+    {
+      "command": "independent verification by 019fc13c-02cc-7b22-a15d-58c4e83b6407",
+      "exit_code": 0,
+      "result": "HOLD: integrity, determinism, scope, content and rendered evidence passed, but the required live sequential keyboard proof is missing."
+    },
+    {
+      "command": "scripts/check-maplemoon-receipt.py completion verify against original checkpoint",
+      "exit_code": 0,
+      "result": "PASS: exactly eight admitted project paths changed and the frozen generated package remained untouched."
+    }
+  ],
+  "screenshots_or_urls": [
+    "file:///Users/handtomouse/maplemoon-website/_wip/reviews/saturday_home_clean_closure_20260802/qa/clean-homepage-390.png",
+    "file:///Users/handtomouse/maplemoon-website/_wip/reviews/saturday_home_clean_closure_20260802/qa/clean-homepage-1280.png",
+    "file:///Users/handtomouse/maplemoon-website/_wip/reviews/saturday_home_clean_closure_20260802/qa/homepage-keyboard.json"
+  ],
+  "failures": [],
+  "unknowns": [
+    "Sequential Tab focus, Enter activation of the skip link and the complete live Homepage keyboard path are not proved on this exact candidate."
+  ],
+  "residual_risk": [
+    "DOM structure and static accessibility checks cannot substitute for the required live sequential keyboard proof.",
+    "The generated staging package remains on the prior accepted hashes; the candidate is preserved only in the two temporary build roots and is not promoted.",
+    "The package remains share_ready false and no external action is authorized."
+  ],
+  "forbidden_path_changes": [],
+  "proposed_next_state": "needs_review",
+  "next_reviewer": "Main Boss after a fresh supported live-browser keyboard proof",
+  "next_action": "Obtain one fresh supported live-browser evidence record proving sequential Tab reaches the skip link, Enter moves focus to main content, and the complete Homepage focus path remains usable.",
+  "ready_to_promote": false
+}

@@ -1,0 +1,36 @@
+{
+  "schema": "maplemoon-link-preview-matrix/v1",
+  "audited_at_aest": "2026-08-02T06:48:00+10:00",
+  "artifact": "docs/client-review/2026-08-01-saturday-review/staging-v1/clean/",
+  "status": "HOLD",
+  "external_validation_authorized": false,
+  "favicon": {
+    "reference": "assets/mm_logo_icon_blk.svg",
+    "exists": true,
+    "sha256": "aaffe3fbc7f38fb73f04e09d8b248e9c12184f79308dd17139ede6f26540a988",
+    "viewBox": "0 0 252.4 415.8",
+    "all_pages_reference_same_asset": true,
+    "raster_fallback_found": false,
+    "apple_touch_icon_found": false,
+    "web_manifest_found": false,
+    "rendered_small_size_qa": "NOT_RUN"
+  },
+  "pages": [
+    {"page":"Homepage","file":"homepage.html","sha256":"0d102050395b79f4add5d9ddb7f75e962d7e41e11a78cd7f88c35ce4a947ef0c","title":true,"description":"present_requires_factual_review","theme_color":true,"robots":"noindex,nofollow","canonical":false,"open_graph":false,"twitter_card":false},
+    {"page":"Shop","file":"shop.html","sha256":"43cad154be945d34006013808f2eca5eeb9676ae3e28cedafbb75faccb914abb","title":true,"description":"present_requires_product_evidence_review","theme_color":true,"robots":"noindex,nofollow","canonical":false,"open_graph":false,"twitter_card":false},
+    {"page":"Our Story","file":"our-story.html","sha256":"e270a5016260eed726f2bdcbb27447cea6066cc19a866d524fd47cff24cef7d1","title":true,"description":"missing","theme_color":true,"robots":"noindex,nofollow","canonical":false,"open_graph":false,"twitter_card":false},
+    {"page":"Carob Story","file":"carob-story.html","sha256":"d93dc036603ae7772e365573de1f89f066556d922d8b99c5e3fc7f2dada62762","title":true,"description":"missing","theme_color":true,"robots":"noindex,nofollow","canonical":false,"open_graph":false,"twitter_card":false},
+    {"page":"Stockists","file":"stockists.html","sha256":"046a1fe649d75814804b921ac258fca135fa11b9447ca9c54eb28859df3d5af6","title":true,"description":"present_requires_stockist_evidence_review","theme_color":true,"robots":"noindex,nofollow","canonical":false,"open_graph":false,"twitter_card":false},
+    {"page":"FAQ","file":"faq.html","sha256":"f4acfb51c6e353828a432285f2a37f69ca39154b18d78ef41e337dc29fb35dcf","title":true,"description":"present","theme_color":true,"robots":"noindex,nofollow","canonical":false,"open_graph":false,"twitter_card":false}
+  ],
+  "future_gates": [
+    {"id":"LP-01","gate":"exact artifact, final HTTPS URL, audience, access and expiry model approved","owner":"Nate","state":"HOLD"},
+    {"id":"LP-02","gate":"all title and description copy factually approved","owner":"Nate plus client content owner","state":"HOLD"},
+    {"id":"LP-03","gate":"Open Graph image provenance, crop and claim safety approved","owner":"Nate plus client asset owner","state":"HOLD"},
+    {"id":"LP-04","gate":"canonical and robots disposition approved","owner":"Nate plus SEO owner","state":"HOLD"},
+    {"id":"LP-05","gate":"favicon rendered at target sizes and fallbacks supplied where required","owner":"design and frontend owner","state":"HOLD"},
+    {"id":"LP-06","gate":"exact link preview tested in every intended message surface","owner":"review coordinator","state":"HOLD"}
+  ],
+  "blocked_asset_decision": "No Open Graph image selected because repository presence does not prove provenance, approval or crop suitability.",
+  "next_action": "Obtain Nate's post-wake decision on the approved preview-image direction and factual copy source before any page mutation or external test."
+}

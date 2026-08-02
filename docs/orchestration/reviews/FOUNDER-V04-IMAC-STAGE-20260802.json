@@ -1,0 +1,73 @@
+{
+  "schema": "maplemoon-receipt/v2",
+  "receipt_id": "FOUNDER-V04-IMAC-STAGE-20260802-RECEIPT-001",
+  "packet_id": "FOUNDER-V04-IMAC-STAGE-20260802",
+  "candidate_id": "FOUNDER-V04-IMAC-STAGE-20260802-001",
+  "worker_thread_id": "019f9c36-83e1-7941-92e5-a3b134212288",
+  "worker": "Codex photo task",
+  "started_at": "2026-08-02T12:42:43Z",
+  "completed_at": "2026-08-02T12:46:27Z",
+  "outcome": "PASS",
+  "confidence": "high",
+  "files_read": [
+    "MacBook: /Users/handtomouse/maplemoon-website/_wip/reviews/founder_photo_v04_bios_20260802/founders_portrait_v04.psd",
+    "MacBook: /Users/handtomouse/maplemoon-website/_wip/source_recovery/photoshoot_raws_20260801/Heros-73.jpg"
+  ],
+  "files_changed": [
+    "receipt.json",
+    "inputs/founders_portrait_v04.psd",
+    "inputs/Heros-73.jpg"
+  ],
+  "files_confirmed_untouched": [
+    "MacBook v04 PSD",
+    "MacBook protected v03 PSD",
+    "MacBook verified Heros-73 source",
+    "website and live references"
+  ],
+  "pre_sha256": {
+    "packet.md": "94eda486ba4ff946e87e2baf70beb5b9b7c7f9ab1f0e8122f64eb8219495148d",
+    "receipt.json": null,
+    "scripts/check-maplemoon-receipt.py": "c5a221971d73bb5dbe129055f4c9deffeb6e95041195796d43f0fd0cef1f5e48",
+    "inputs/founders_portrait_v04.psd": null,
+    "inputs/Heros-73.jpg": null
+  },
+  "post_sha256": {
+    "packet.md": "94eda486ba4ff946e87e2baf70beb5b9b7c7f9ab1f0e8122f64eb8219495148d",
+    "receipt.json": null,
+    "scripts/check-maplemoon-receipt.py": "c5a221971d73bb5dbe129055f4c9deffeb6e95041195796d43f0fd0cef1f5e48",
+    "inputs/founders_portrait_v04.psd": "53a9fe71d00bad379cf50a78688bc95f9606aea37afa2e848fa7b02041954333",
+    "inputs/Heros-73.jpg": "b31b11b0aec41cb9461a74e906a84979162d34b691a27fcef72a3b153e1e6d93"
+  },
+  "checkpoint_path": "/Users/handtomouse/MapleMoon-Photoshop-Work/FOUNDER-V04-IMAC-STAGE-20260802/checkpoint_20260802_224243_AEST",
+  "checks": [
+    {
+      "command": "python3 scripts/check-maplemoon-receipt.py checkpoint --packet packet.md --root $PWD --destination checkpoint_20260802_224243_AEST",
+      "exit_code": 0,
+      "result": "PASS checkpoint packet=FOUNDER-V04-IMAC-STAGE-20260802 files=5 path=checkpoint_20260802_224243_AEST"
+    },
+    {
+      "command": "python3 scripts/check-maplemoon-receipt.py verify --packet packet.md --root $PWD --checkpoint checkpoint_20260802_224243_AEST --phase start",
+      "exit_code": 0,
+      "result": "PASS packet=FOUNDER-V04-IMAC-STAGE-20260802 phase=start scope=5"
+    },
+    {
+      "command": "shasum -a 256 inputs/founders_portrait_v04.psd inputs/Heros-73.jpg",
+      "exit_code": 0,
+      "result": "PASS: iMac v04 53a9fe71d00bad379cf50a78688bc95f9606aea37afa2e848fa7b02041954333; iMac Heros-73 b31b11b0aec41cb9461a74e906a84979162d34b691a27fcef72a3b153e1e6d93"
+    },
+    {
+      "command": "MacBook source rehash after transfer",
+      "exit_code": 0,
+      "result": "PASS: MacBook v04 and Heros-73 hashes remained byte-identical to the iMac copies"
+    }
+  ],
+  "screenshots_or_urls": [],
+  "failures": [],
+  "unknowns": [],
+  "residual_risk": [],
+  "forbidden_path_changes": [],
+  "proposed_next_state": "accepted",
+  "next_reviewer": "Codex photo task",
+  "next_action": "Create and gate one isolated iMac Photoshop execution packet using these frozen staged inputs; do not edit the staged copies.",
+  "ready_to_promote": true
+}

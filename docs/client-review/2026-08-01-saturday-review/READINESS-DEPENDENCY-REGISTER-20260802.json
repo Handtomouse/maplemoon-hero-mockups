@@ -1,0 +1,38 @@
+{
+  "schema": "maplemoon-readiness-dependencies/v1",
+  "version": "2026-08-02",
+  "share_ready": false,
+  "external_actions_authorized": false,
+  "coordinator_thread_id": "019fa858-05c9-7631-b26e-8f5cbbf1387a",
+  "states": ["ACCEPTED_LOCAL", "HOLD", "BLOCKED", "BLOCKED_INPUTS", "READY_AFTER"],
+  "nodes": [
+    {"id":"CR-0","lane":"client_review","title":"Exact frozen package human QA","state":"HOLD","depends_on":[],"owner":"Nate","gate":"literal 200 percent, keyboard/focus and ordinary-viewer review of exact frozen hashes","external_action":false},
+    {"id":"CR-1","lane":"client_review","title":"Review identity and audience decision","state":"BLOCKED","depends_on":["CR-0"],"owner":"Nate","gate":"artifact, audience, channel, wording, access/expiry and feedback route approved","external_action":false},
+    {"id":"CR-2","lane":"client_review","title":"Local review-hub implementation","state":"READY_AFTER","depends_on":["CR-1"],"owner":"future bounded local worker","gate":"recovery, temporary build, rendered QA and independent verification","external_action":false},
+    {"id":"CR-3","lane":"client_review","title":"Metadata and link-preview implementation","state":"BLOCKED","depends_on":["CR-1"],"owner":"future bounded local worker","gate":"factual copy, approved OG image, URL, canonical/robots and favicon evidence","external_action":false},
+    {"id":"CR-4","lane":"client_review","title":"Client send gate","state":"HOLD","depends_on":["CR-0","CR-1","CR-2","CR-3"],"owner":"Nate","gate":"exact HTTPS artifact and fresh audience/channel/wording/send approval","external_action":true},
+    {"id":"SL-0","lane":"soft_launch","title":"Soft-launch test design","state":"ACCEPTED_LOCAL","depends_on":[],"owner":"coordinator","gate":"independent local specification PASS","external_action":false},
+    {"id":"SL-1","lane":"soft_launch","title":"Privacy and data-owner decisions","state":"HOLD","depends_on":["SL-0"],"owner":"Nate plus privacy owner","gate":"notice, consent, provider, owner, access, retention, deletion and incident route","external_action":false},
+    {"id":"SL-2","lane":"soft_launch","title":"Isolated test implementation","state":"BLOCKED","depends_on":["SL-1","CR-4"],"owner":"future bounded worker","gate":"security-reviewed implementation packet","external_action":false},
+    {"id":"SL-3","lane":"soft_launch","title":"Bounded test and analysis","state":"BLOCKED","depends_on":["SL-2"],"owner":"Nate plus test owner","gate":"cohorts, window, invitation, event proof and stop criteria","external_action":true},
+    {"id":"SH-0","lane":"shopify","title":"Authority and source intake","state":"HOLD","depends_on":[],"owner":"Nate plus store owner","gate":"store, plan, roles, 2FA, development theme, accepted hashes and recovery custody","external_action":true},
+    {"id":"SH-1","lane":"shopify","title":"Catalogue intake","state":"BLOCKED_INPUTS","depends_on":[],"owner":"client plus catalogue coordinator","gate":"fresh WooCommerce export and approved catalogue with provenance","external_action":false},
+    {"id":"SH-2","lane":"shopify","title":"Unpublished theme foundation","state":"BLOCKED","depends_on":["SH-0","SH-1"],"owner":"future theme worker","gate":"bounded unpublished theme packet and Theme Check","external_action":true},
+    {"id":"SH-3","lane":"shopify","title":"Page and commerce translation","state":"BLOCKED","depends_on":["SH-2"],"owner":"future page and commerce workers","gate":"verified product truth, native cart/checkout and test-order authority","external_action":true},
+    {"id":"SH-4","lane":"shopify","title":"Integrations privacy SEO and performance","state":"BLOCKED","depends_on":["SH-3"],"owner":"named specialist owners","gate":"approved vendors, data flows, metadata, redirects and budgets","external_action":true},
+    {"id":"SH-5","lane":"shopify","title":"UAT and rollback rehearsal","state":"BLOCKED","depends_on":["SH-4"],"owner":"UAT lead plus named approvers","gate":"28-case evidence, backups, rehearsal and written go/no-go","external_action":true},
+    {"id":"SH-6","lane":"shopify","title":"Cutover and stabilization","state":"HOLD","depends_on":["SH-5"],"owner":"Nate, store owner and incident owner","gate":"separate publish, payment, catalogue, domain, redirect and launch authority","external_action":true},
+    {"id":"VIS-PHOTO","lane":"parked_visual","title":"Mitch photoshoot session pack","state":"HOLD","depends_on":[],"owner":"released","gate":"Nate decides Heros-74 versus prior Heros-75 direction","external_action":false},
+    {"id":"VIS-W1D","lane":"parked_visual","title":"Wave 1D ritual imagery","state":"HOLD","depends_on":[],"owner":"released","gate":"Nate selects a review-only direction; no integration","external_action":false},
+    {"id":"VIS-FOUNDERS","lane":"parked_visual","title":"Individual founder portraits","state":"BLOCKED_INPUTS","depends_on":[],"owner":"client asset source","gate":"missing individual founder-photo delivery","external_action":false}
+  ],
+  "accepted_local_receipts": [
+    "MAPLEMOON-CLIENT-REVIEW-HUB-SPEC-INDEPENDENT-VERIFY-20260802",
+    "MAPLEMOON-SOFT-LAUNCH-TEST-SPEC-INDEPENDENT-VERIFY-20260802",
+    "MAPLEMOON-LINK-PREVIEW-METADATA-AUDIT-INDEPENDENT-VERIFY-20260802",
+    "MAPLEMOON-SHOPIFY-OS2-TRANSLATION-MAP-INDEPENDENT-VERIFY-20260802",
+    "MAPLEMOON-SECURITY-INTEGRATION-GATE-REGISTER-INDEPENDENT-VERIFY-20260802",
+    "MAPLEMOON-UAT-ROLLBACK-CUTOVER-PLAN-INDEPENDENT-VERIFY-20260802"
+  ],
+  "next_action": "Nate completes CR-0 on the exact frozen six-page clean package and returns PASS or the first material correction."
+}

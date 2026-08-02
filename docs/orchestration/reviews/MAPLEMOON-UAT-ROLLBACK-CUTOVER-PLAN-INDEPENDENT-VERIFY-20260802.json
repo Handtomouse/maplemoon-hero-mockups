@@ -1,0 +1,66 @@
+{
+  "schema": "maplemoon-receipt/v2",
+  "receipt_id": "MAPLEMOON-UAT-ROLLBACK-CUTOVER-PLAN-INDEPENDENT-VERIFY-20260802-RECEIPT-001",
+  "packet_id": "MAPLEMOON-UAT-ROLLBACK-CUTOVER-PLAN-INDEPENDENT-VERIFY-20260802",
+  "worker_thread_id": "019fbf09-e064-7050-aa6d-667adcbfeaa1",
+  "worker": "independent low-cost read-only verifier",
+  "started_at": "2026-08-02T06:35:56+10:00",
+  "completed_at": "2026-08-02T06:37:17+10:00",
+  "outcome": "PASS",
+  "confidence": "high for local planning structure; no claim about live readiness",
+  "phase": "complete",
+  "status": "PASS",
+  "ready_to_promote": false,
+  "checkpoint_path": "_wip/checkpoints/MAPLEMOON-UAT-ROLLBACK-CUTOVER-PLAN-INDEPENDENT-VERIFY-20260802_20260802_063556_AEST",
+  "authority": {
+    "path": "/Users/handtomouse/maplemoon-website/docs/orchestration/packets/MAPLEMOON-CLIENT-REVIEW-SOFT-LAUNCH-SHOPIFY-READINESS-ADDENDUM-20260802.md",
+    "sha256": "7c541b6ff97f2ffdc1b6fe888cdba4f1795caadb947cfb7642d8ee54bfe2b712"
+  },
+  "files_changed": [
+    "docs/orchestration/reviews/MAPLEMOON-UAT-ROLLBACK-CUTOVER-PLAN-INDEPENDENT-VERIFY-20260802.json"
+  ],
+  "files_read": [
+    "independent-verification packet and checkpoint",
+    "UAT planning packet and receipt",
+    "UAT plan, 28-case matrix and go/no-go template",
+    "Shopify migration gates, security checklist and security gate register"
+  ],
+  "pre_sha256": {
+    "docs/orchestration/packets/MAPLEMOON-UAT-ROLLBACK-CUTOVER-PLAN-INDEPENDENT-VERIFY-20260802.md": "6b4ffd37a23d1066430816c4c9ee904fb2b582cea55901aabe14d0f7fe29942e",
+    "docs/orchestration/reviews/MAPLEMOON-UAT-ROLLBACK-CUTOVER-PLAN-INDEPENDENT-VERIFY-20260802.json": null
+  },
+  "post_sha256": {
+    "docs/orchestration/packets/MAPLEMOON-UAT-ROLLBACK-CUTOVER-PLAN-INDEPENDENT-VERIFY-20260802.md": "6b4ffd37a23d1066430816c4c9ee904fb2b582cea55901aabe14d0f7fe29942e"
+  },
+  "verified_subject_sha256": {
+    "docs/orchestration/reviews/MAPLEMOON-UAT-ROLLBACK-CUTOVER-PLAN-20260802.json": "efa2f7c63c3015c246c33f99f763374adff979e763f5dca8a55855017dd3d188",
+    "docs/client-review/2026-08-01-saturday-review/UAT-ROLLBACK-CUTOVER-PLAN-20260802.md": "b8c4052d7cb2198aad3fb59c23cf6cdf49b0d380b0b49e46ada3d044704adeb6",
+    "docs/client-review/2026-08-01-saturday-review/UAT-CASE-MATRIX-20260802.json": "f26f77746b1c2ad51ad536074a2e2f0566c4e1dafe8c45208a8396027926fd07",
+    "docs/client-review/2026-08-01-saturday-review/GO-NO-GO-AND-STABILIZATION-TEMPLATE-20260802.md": "07b20be0e6a4a44627052bebf912cd5ab577a3c943a5ee1a9f1f48137aee6720"
+  },
+  "screenshots_or_urls": [],
+  "failures": [],
+  "unknowns": [
+    "All 28 UAT cases remain NOT_RUN.",
+    "Live systems, recovery artifacts, named production owners and external approvals remain unverified and HOLD."
+  ],
+  "residual_risk": [
+    "This PASS verifies planning structure only and cannot support a readiness, deployment or launch claim.",
+    "Unrelated dirty WIP remains present but was not attributed to or modified by this verification."
+  ],
+  "forbidden_path_changes": [],
+  "proposed_next_state": "accepted_local_planning_specification",
+  "next_reviewer": "019fa858-05c9-7631-b26e-8f5cbbf1387a",
+  "checks": [
+    {"command":"authority, checkpoint, subject and source hash verification","exit_code":0,"result":"PASS"},
+    {"command":"UAT matrix JSON and unique-ID verification","exit_code":0,"result":"PASS: 28 unique cases"},
+    {"command":"phase-separation and evidence-identity review","exit_code":0,"result":"PASS"},
+    {"command":"S0/S1, recovery, rollback, stabilization and go/no-go coverage review","exit_code":0,"result":"PASS"},
+    {"command":"external-authority and unsupported-claim review","exit_code":0,"result":"PASS: all live-system gates remain HOLD"}
+  ],
+  "blockers": [
+    "No Phase D intake may be admitted until store authority, exact accepted hashes, catalogue inputs, access model and recovery custody exist."
+  ],
+  "ownership": "Independent verification records only; no website, store, account, catalogue or production ownership.",
+  "next_action": "Keep the accepted planning records local and wait for the missing Phase D authority and inputs before admitting implementation."
+}

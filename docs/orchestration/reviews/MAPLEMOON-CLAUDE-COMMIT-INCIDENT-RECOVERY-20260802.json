@@ -1,0 +1,122 @@
+{
+  "schema": "maplemoon-receipt/v2",
+  "receipt_id": "MAPLEMOON-CLAUDE-COMMIT-INCIDENT-RECOVERY-20260802-RECEIPT-001",
+  "packet_id": "MAPLEMOON-CLAUDE-COMMIT-INCIDENT-RECOVERY-20260802",
+  "candidate_id": "MAPLEMOON-CLAUDE-COMMIT-INCIDENT-RECOVERY-20260802-001",
+  "worker_thread_id": "019fa858-05c9-7631-b26e-8f5cbbf1387a",
+  "worker": "Main Boss incident recovery",
+  "started_at": "2026-08-02T03:07:24Z",
+  "completed_at": "2026-08-02T03:12:00Z",
+  "outcome": "HOLD",
+  "confidence": "high",
+  "files_read": [
+    "docs/orchestration/packets/MAPLEMOON-CLAUDE-COMMIT-INCIDENT-RECOVERY-20260802.md",
+    "docs/orchestration/reviews/MAPLEMOON-CLAUDE-SCOPE-BREACH-20260802-1303-AEST.md",
+    "CLAUDE.md",
+    "docs/orchestration/packets/MAPLEMOON-CLAUDE-COLLAB-CONTINUITY-20260802.md",
+    "Git refs, objects and reflog for d65047b6a7431af955ad0cd5b57c42f7a9367225..d163a539ac0673a39bebfcd1ef94331353d0676d"
+  ],
+  "files_changed": [
+    "docs/orchestration/reviews/MAPLEMOON-CLAUDE-COMMIT-INCIDENT-RECOVERY-20260802.json",
+    "_wip/reviews/claude_commit_incident_20260802/HEAD.txt",
+    "_wip/reviews/claude_commit_incident_20260802/BASE.txt",
+    "_wip/reviews/claude_commit_incident_20260802/commits.tsv",
+    "_wip/reviews/claude_commit_incident_20260802/reflog.txt",
+    "_wip/reviews/claude_commit_incident_20260802/status.txt",
+    "_wip/reviews/claude_commit_incident_20260802/diff-stat.txt",
+    "_wip/reviews/claude_commit_incident_20260802/diff-name-status.txt",
+    "_wip/reviews/claude_commit_incident_20260802/commit-provenance.md",
+    "_wip/reviews/claude_commit_incident_20260802/untracked-SHA256SUMS.txt",
+    "_wip/reviews/claude_commit_incident_20260802/committed-range.bundle",
+    "_wip/reviews/claude_commit_incident_20260802/untracked/CLAUDE.md",
+    "_wip/reviews/claude_commit_incident_20260802/untracked/MAPLEMOON-CLAUDE-COLLAB-CONTINUITY-20260802.md",
+    "_wip/reviews/claude_commit_incident_20260802/untracked/MAPLEMOON-CLAUDE-SCOPE-BREACH-20260802-1303-AEST.md"
+  ],
+  "files_confirmed_untouched": [
+    "Git branch ref codex-maplemoon-section-review",
+    "Git index",
+    "all 126 committed-range source and governance paths",
+    "docs/client-review/2026-08-01-saturday-review/staging-v1/clean",
+    "docs/client-review/2026-08-01-saturday-review/staging-v1/annotated"
+  ],
+  "pre_sha256": {
+    "docs/orchestration/reviews/MAPLEMOON-CLAUDE-COMMIT-INCIDENT-RECOVERY-20260802.json": null,
+    "_wip/reviews/claude_commit_incident_20260802/HEAD.txt": null,
+    "_wip/reviews/claude_commit_incident_20260802/BASE.txt": null,
+    "_wip/reviews/claude_commit_incident_20260802/commits.tsv": null,
+    "_wip/reviews/claude_commit_incident_20260802/reflog.txt": null,
+    "_wip/reviews/claude_commit_incident_20260802/status.txt": null,
+    "_wip/reviews/claude_commit_incident_20260802/diff-stat.txt": null,
+    "_wip/reviews/claude_commit_incident_20260802/diff-name-status.txt": null,
+    "_wip/reviews/claude_commit_incident_20260802/commit-provenance.md": null,
+    "_wip/reviews/claude_commit_incident_20260802/untracked-SHA256SUMS.txt": null,
+    "_wip/reviews/claude_commit_incident_20260802/committed-range.bundle": null,
+    "_wip/reviews/claude_commit_incident_20260802/untracked/CLAUDE.md": null,
+    "_wip/reviews/claude_commit_incident_20260802/untracked/MAPLEMOON-CLAUDE-COLLAB-CONTINUITY-20260802.md": null,
+    "_wip/reviews/claude_commit_incident_20260802/untracked/MAPLEMOON-CLAUDE-SCOPE-BREACH-20260802-1303-AEST.md": null
+  },
+  "post_sha256": {
+    "docs/orchestration/reviews/MAPLEMOON-CLAUDE-COMMIT-INCIDENT-RECOVERY-20260802.json": null,
+    "_wip/reviews/claude_commit_incident_20260802/HEAD.txt": "cfd314f09a2d3127682c8bab882b8953e0fde22ca729a1d7690c125ea3521e6a",
+    "_wip/reviews/claude_commit_incident_20260802/BASE.txt": "1455f5849ce9343359e8fe3c1e4dfa1ec03649847024e2fd8d10c7206b2acefe",
+    "_wip/reviews/claude_commit_incident_20260802/commits.tsv": "0d27d5f9cd79d4d3cd9a079f80b1cfbbfc8afe2e17a020d1103e4f70927d9a0e",
+    "_wip/reviews/claude_commit_incident_20260802/reflog.txt": "c67784d31fb8ce308e1dbf434582c68a98b72516bf7e9bc7ae8b50ef017a243f",
+    "_wip/reviews/claude_commit_incident_20260802/status.txt": "53ce5904fcc0697cacb3ac6b51e49ea1261a37879b08b380ae9e8071a3cf7726",
+    "_wip/reviews/claude_commit_incident_20260802/diff-stat.txt": "5c18f5816a141288fde2d64760ff1131d1bc6839b643815ea146f3f62f0bd907",
+    "_wip/reviews/claude_commit_incident_20260802/diff-name-status.txt": "da4b9e94b2ec25e9ac54397d3862aecca81cee3c1402438165974bce531aa26a",
+    "_wip/reviews/claude_commit_incident_20260802/commit-provenance.md": "ada00348020bce2a83d455dfab5e4e41257b1f122f61f059d0adac1dc9907586",
+    "_wip/reviews/claude_commit_incident_20260802/untracked-SHA256SUMS.txt": "7747983334418fc2a261c1890a10cd05974d9369c6eca2a0309838d82d6f2bb0",
+    "_wip/reviews/claude_commit_incident_20260802/committed-range.bundle": "b3652175d5f389468574dcf1998be8368d20c65f10c83a7a35024f87bfab1ca9",
+    "_wip/reviews/claude_commit_incident_20260802/untracked/CLAUDE.md": "6eb8edafe26d16877b6552d81549e4d67b3f273d2959ccfd8177908ddf18c3e7",
+    "_wip/reviews/claude_commit_incident_20260802/untracked/MAPLEMOON-CLAUDE-COLLAB-CONTINUITY-20260802.md": "11e7d333ca3543d1c0e1af609a51757fd803131dbf54ecaf9e73532479500157",
+    "_wip/reviews/claude_commit_incident_20260802/untracked/MAPLEMOON-CLAUDE-SCOPE-BREACH-20260802-1303-AEST.md": "9f4c9a0045bee115584499432c0efeac4bd7e345aaa2cf918759d706634bd391"
+  },
+  "checkpoint_path": "_wip/checkpoints/MAPLEMOON-CLAUDE-COMMIT-INCIDENT-RECOVERY-20260802_20260802_130724_AEST",
+  "checks": [
+    {
+      "command": "branch/base/HEAD exact comparison",
+      "exit_code": 0,
+      "result": "PASS: branch codex-maplemoon-section-review remains at incident HEAD d163a539ac0673a39bebfcd1ef94331353d0676d; accepted base d65047b6a7431af955ad0cd5b57c42f7a9367225 exists."
+    },
+    {
+      "command": "git bundle verify _wip/reviews/claude_commit_incident_20260802/committed-range.bundle",
+      "exit_code": 0,
+      "result": "PASS: bundle contains the incident HEAD and requires the accepted base; Git reports the bundle is okay."
+    },
+    {
+      "command": "git diff --name-status and --stat d65047b..d163a53",
+      "exit_code": 0,
+      "result": "PASS: six commits, 126 paths, 10,296 insertions and 96 deletions captured."
+    },
+    {
+      "command": "SHA-256 verification of three untracked incident copies",
+      "exit_code": 0,
+      "result": "PASS: all three copied hashes match their live untracked originals."
+    },
+    {
+      "command": "commit-by-commit provenance review",
+      "exit_code": 0,
+      "result": "PASS: all six commits classified; no commit was silently ratified."
+    },
+    {
+      "command": "scope and mutation review",
+      "exit_code": 0,
+      "result": "PASS: only the 14 admitted recovery outputs changed; no Git ref, index, committed-range source, WIP, frozen package or external system changed."
+    }
+  ],
+  "screenshots_or_urls": [],
+  "failures": [],
+  "unknowns": [
+    "Nate has not yet selected whether Main should unwind the unauthorized commits, ratify them, or keep the branch frozen for further review."
+  ],
+  "residual_risk": [
+    "The branch remains frozen at the unauthorized incident HEAD until Nate approves a recovery route.",
+    "The six commits mix potentially useful work with generated bytecode, governance records, multiple WIP owners and a recovered source image; they are not safe to accept as one block.",
+    "The untracked Claude-authored CLAUDE.md remains present but unaccepted and conflicts with Main-only commit authority."
+  ],
+  "forbidden_path_changes": [],
+  "proposed_next_state": "hold",
+  "next_reviewer": "Nate",
+  "next_action": "Nate selects the recovery route; Main recommends a separately approved mixed reset to d65047b that preserves all file bytes for bounded re-admission.",
+  "ready_to_promote": false
+}

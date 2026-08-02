@@ -1,0 +1,104 @@
+{
+  "schema": "maplemoon-shopify-event-portability/v1",
+  "status": "specification_only",
+  "activation_authorized": false,
+  "architecture": "native_shopify_os2_default",
+  "validation_rule": "Revalidate every Shopify standard event and property against current official documentation before implementation.",
+  "mappings": [
+    {
+      "review_event": "page_section_view",
+      "shopify_target": "page_viewed plus optional first-party mm_section_view",
+      "disposition": "optional_custom_event",
+      "purpose": "retain section-level usability evidence only if separately approved",
+      "gate": "consent/privacy review and minimal-property definition"
+    },
+    {
+      "review_event": "navigation_click",
+      "shopify_target": "optional first-party mm_navigation_click",
+      "disposition": "do_not_carry_by_default",
+      "purpose": "navigation research rather than required commerce telemetry",
+      "gate": "named production question proves necessity"
+    },
+    {
+      "review_event": "cta_product_interest_click",
+      "shopify_target": "product_viewed or collection_viewed where the native event accurately represents the action",
+      "disposition": "prefer_native_standard_event",
+      "purpose": "avoid duplicating native product/collection view evidence",
+      "gate": "catalogue and event-property validation"
+    },
+    {
+      "review_event": "mock_cart_step:add",
+      "shopify_target": "product_added_to_cart",
+      "disposition": "replace_mock_with_native",
+      "purpose": "use native cart truth",
+      "gate": "native cart implementation and consent/privacy review"
+    },
+    {
+      "review_event": "mock_cart_step:open",
+      "shopify_target": "cart_viewed",
+      "disposition": "replace_mock_with_native",
+      "purpose": "use native cart truth",
+      "gate": "native cart implementation"
+    },
+    {
+      "review_event": "mock_cart_step:checkout_start",
+      "shopify_target": "checkout_started",
+      "disposition": "replace_mock_with_native",
+      "purpose": "use native checkout truth",
+      "gate": "checkout configuration and privacy review"
+    },
+    {
+      "review_event": "mock_cart_step:fake_confirmation",
+      "shopify_target": "checkout_completed",
+      "disposition": "never_translate_fake_event",
+      "purpose": "production completion must come only from native Shopify checkout",
+      "gate": "payment/test-order UAT in an approved environment"
+    },
+    {
+      "review_event": "feedback_open",
+      "shopify_target": "none by default",
+      "disposition": "separate_feedback_system",
+      "purpose": "review feedback is not commerce telemetry",
+      "gate": "approved form owner, endpoint, notice, consent, retention and deletion"
+    },
+    {
+      "review_event": "feedback_submit",
+      "shopify_target": "none by default",
+      "disposition": "separate_feedback_system",
+      "purpose": "do not copy free text or review workflow into customer events",
+      "gate": "approved feedback system and data policy"
+    },
+    {
+      "review_event": "feedback_abandon",
+      "shopify_target": "none by default",
+      "disposition": "do_not_carry_by_default",
+      "purpose": "soft-launch research only",
+      "gate": "new production question proves necessity"
+    },
+    {
+      "review_event": "technical_failure",
+      "shopify_target": "approved first-party observability/error channel, not customer event by default",
+      "disposition": "separate_observability",
+      "purpose": "route operational defects without collecting unnecessary behavioural data",
+      "gate": "security, redaction, retention and incident-owner review"
+    }
+  ],
+  "common_rules": {
+    "test_data_separation": "soft-launch test records never mix with production analytics",
+    "data_minimisation": "collect only properties required for an approved question",
+    "prohibited": [
+      "payment_data",
+      "raw_feedback_text_in_customer_events",
+      "precise_location",
+      "full_ip_address",
+      "full_user_agent",
+      "device_fingerprint",
+      "cross_site_identifier",
+      "session_replay_without_separate_approval",
+      "health_or_lifestyle_inference"
+    ],
+    "consent": "no customer-event or third-party pixel activation before approved privacy and consent disposition",
+    "custom_pixels": "not selected by this specification",
+    "third_party_analytics": "not selected by this specification"
+  }
+}

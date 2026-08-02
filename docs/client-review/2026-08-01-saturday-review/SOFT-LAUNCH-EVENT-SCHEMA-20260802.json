@@ -1,0 +1,114 @@
+{
+  "schema": "maplemoon-soft-launch-events/v1",
+  "status": "specification_only",
+  "activation_authorized": false,
+  "collection_active": false,
+  "transport": null,
+  "storage": null,
+  "common_properties": {
+    "required": [
+      "schema_version",
+      "event_name",
+      "event_id",
+      "occurred_at",
+      "test_run_id",
+      "cohort_code",
+      "page_key",
+      "viewport_family",
+      "browser_family",
+      "test_data"
+    ],
+    "rules": {
+      "event_id": "random per event; not derived from a person or device",
+      "occurred_at": "rounded to the minimum precision approved for funnel ordering",
+      "test_run_id": "identifies the approved test window, not a participant",
+      "cohort_code": "coarse approved cohort only",
+      "page_key": "one of homepage, shop, our_story, carob_story, stockists, faq, review_hub",
+      "viewport_family": "phone, tablet, or desktop; never exact dimensions",
+      "browser_family": "coarse family only; never full user agent",
+      "test_data": "always true"
+    }
+  },
+  "optional_funnel_link": {
+    "property": "ephemeral_session_token",
+    "status": "HOLD",
+    "rule": "random first-party token limited to one approved test session; no account, cross-site use, identity binding or reuse; activate only after privacy approval"
+  },
+  "events": [
+    {
+      "name": "page_section_view",
+      "questions": ["Q1", "Q3", "Q5"],
+      "properties": ["section_key", "view_sequence"],
+      "purpose": "identify which meaningful page sections were reached"
+    },
+    {
+      "name": "navigation_click",
+      "questions": ["Q1", "Q5"],
+      "properties": ["navigation_area", "destination_page_key"],
+      "purpose": "test whether visitors can move through the six-page experience"
+    },
+    {
+      "name": "cta_product_interest_click",
+      "questions": ["Q2"],
+      "properties": ["product_key", "action_key"],
+      "purpose": "measure evidence-backed product exploration without inferring purchase intent"
+    },
+    {
+      "name": "mock_cart_step",
+      "questions": ["Q2", "Q5"],
+      "properties": ["step", "product_key", "quantity_bucket", "result"],
+      "allowed_steps": ["add", "open", "quantity_change", "remove", "checkout_start", "fake_confirmation"],
+      "purpose": "test the explicitly mocked cart journey; never create an order"
+    },
+    {
+      "name": "feedback_open",
+      "questions": ["Q3", "Q5"],
+      "properties": ["source_page_key"],
+      "purpose": "measure entry into the approved review feedback flow"
+    },
+    {
+      "name": "feedback_submit",
+      "questions": ["Q3", "Q5"],
+      "properties": ["comment_type", "has_optional_comment", "result"],
+      "purpose": "record a separately approved test submission without copying comment text into analytics"
+    },
+    {
+      "name": "feedback_abandon",
+      "questions": ["Q5"],
+      "properties": ["last_completed_field", "reason_category"],
+      "purpose": "identify friction without capturing typed text"
+    },
+    {
+      "name": "technical_failure",
+      "questions": ["Q4", "Q5"],
+      "properties": ["failure_category", "page_key", "section_key", "interaction_key"],
+      "allowed_categories": ["broken_link", "missing_image", "layout_overflow", "interaction_error", "asset_error", "other_non_sensitive"],
+      "purpose": "identify broken journeys and rendering defects"
+    }
+  ],
+  "explicitly_prohibited": [
+    "name",
+    "email",
+    "phone",
+    "payment_data",
+    "real_order_data",
+    "precise_location",
+    "full_ip_address",
+    "full_user_agent",
+    "exact_viewport",
+    "device_fingerprint",
+    "advertising_identifier",
+    "cross_site_identifier",
+    "session_replay",
+    "keystrokes",
+    "raw_feedback_text_in_analytics",
+    "health_or_lifestyle_inference"
+  ],
+  "activation_gates": [
+    "Nate approves exact artifact, participants, window, invitation, access and event subset",
+    "privacy/security owner approves notice, consent disposition, endpoint, access, retention and deletion",
+    "internal synthetic dry run passes with test_data=true",
+    "event validation proves no prohibited property, cookie, third-party request or production mixing",
+    "rollback and immediate deactivation are tested"
+  ]
+}

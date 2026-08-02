@@ -1,0 +1,192 @@
+{
+  "schema": "maplemoon-receipt/v2",
+  "receipt_id": "SAT-SHARED-MOBILE-HEADER-01-RECEIPT-001",
+  "packet_id": "SAT-SHARED-MOBILE-HEADER-01",
+  "candidate_id": "SAT-SHARED-MOBILE-HEADER-CANDIDATE-20260802-001",
+  "worker_thread_id": "019fa858-05c9-7631-b26e-8f5cbbf1387a",
+  "worker": "Codex Main Boss",
+  "started_at": "2026-08-02T04:56:34Z",
+  "completed_at": "2026-08-02T05:42:28Z",
+  "outcome": "PASS",
+  "confidence": "high",
+  "files_read": [
+    "docs/orchestration/SIDECHAT_RECEIPT_GATE.md",
+    "docs/orchestration/LOCK_MANIFEST.json",
+    "docs/orchestration/SATURDAY_REVIEW_ACCEPTANCE_20260801.md",
+    "docs/orchestration/SATURDAY_FEEDBACK_REGISTER_20260801.md",
+    "docs/orchestration/packets/SAT-SHARED-MOBILE-HEADER-01.md",
+    "_wip/our-story.WIP.html",
+    "_wip/stockists.WIP.html",
+    "scripts/build-maplemoon-saturday-review.py",
+    "scripts/check-maplemoon-review.py",
+    "scripts/check-maplemoon-cart.mjs",
+    "scripts/check-maplemoon-responsive-overflow.mjs",
+    "docs/client-review/2026-08-01-saturday-review/staging-v1"
+  ],
+  "files_changed": [
+    "docs/orchestration/packets/SAT-SHARED-MOBILE-HEADER-01.md",
+    "docs/orchestration/reviews/SAT-SHARED-MOBILE-HEADER-01-20260802.json",
+    "scripts/build-maplemoon-saturday-review.py",
+    "scripts/check-maplemoon-review.py",
+    "docs/client-review/2026-08-01-saturday-review/staging-v1/clean/our-story.html",
+    "docs/client-review/2026-08-01-saturday-review/staging-v1/annotated/our-story.html",
+    "docs/client-review/2026-08-01-saturday-review/staging-v1/clean/stockists.html",
+    "docs/client-review/2026-08-01-saturday-review/staging-v1/annotated/stockists.html",
+    "docs/client-review/2026-08-01-saturday-review/staging-v1/MANIFEST.json",
+    "docs/client-review/2026-08-01-saturday-review/staging-v1/clean/MANIFEST.json",
+    "docs/client-review/2026-08-01-saturday-review/staging-v1/annotated/MANIFEST.json",
+    "_wip/reviews/saturday_shared_mobile_header_20260802/qa/clean-our-story-390.png",
+    "_wip/reviews/saturday_shared_mobile_header_20260802/qa/annotated-our-story-390.png",
+    "_wip/reviews/saturday_shared_mobile_header_20260802/qa/clean-stockists-390.png",
+    "_wip/reviews/saturday_shared_mobile_header_20260802/qa/annotated-stockists-390.png",
+    "_wip/reviews/saturday_shared_mobile_header_20260802/qa/clean-our-story-1280.png",
+    "_wip/reviews/saturday_shared_mobile_header_20260802/qa/annotated-our-story-1280.png",
+    "_wip/reviews/saturday_shared_mobile_header_20260802/qa/clean-stockists-1280.png",
+    "_wip/reviews/saturday_shared_mobile_header_20260802/qa/annotated-stockists-1280.png",
+    "_wip/reviews/saturday_shared_mobile_header_20260802/qa/mobile-header-keyboard.json",
+    "_wip/reviews/saturday_shared_mobile_header_20260802/qa/check-results.txt"
+  ],
+  "files_confirmed_untouched": [
+    "_wip/homepage_real_1_lead_photo.WIP.html",
+    "_wip/shop.WIP.html",
+    "_wip/our-story.WIP.html",
+    "_wip/carob-story.WIP.html",
+    "_wip/stockists.WIP.html",
+    "_wip/faq.WIP.html",
+    "docs/client-review/2026-08-01-saturday-review/staging-v1/clean/homepage.html",
+    "docs/client-review/2026-08-01-saturday-review/staging-v1/annotated/homepage.html",
+    "docs/client-review/2026-08-01-saturday-review/staging-v1/clean/shop.html",
+    "docs/client-review/2026-08-01-saturday-review/staging-v1/annotated/shop.html",
+    "docs/client-review/2026-08-01-saturday-review/staging-v1/clean/carob-story.html",
+    "docs/client-review/2026-08-01-saturday-review/staging-v1/annotated/carob-story.html",
+    "docs/client-review/2026-08-01-saturday-review/staging-v1/clean/faq.html",
+    "docs/client-review/2026-08-01-saturday-review/staging-v1/annotated/faq.html"
+  ],
+  "pre_sha256": {
+    "docs/orchestration/packets/SAT-SHARED-MOBILE-HEADER-01.md": "c0e8a44610265bcae6e7dc8818836485465d4d641942cd9f0fe6ff7c6534945c",
+    "docs/orchestration/reviews/SAT-SHARED-MOBILE-HEADER-01-20260802.json": null,
+    "_wip/our-story.WIP.html": "a823f0f7291ee3b66acfefd0a718227c47717cf7811747db9216a1e17612fb1d",
+    "_wip/stockists.WIP.html": "6e92382ccec4874aac79c32e644d0ed130d03400c7d23682623b0e4154a6fa36",
+    "scripts/build-maplemoon-saturday-review.py": "f003bb7ff414c58baf7637eae9835e83f9bc1d41ecff981bfdb944b3a935da86",
+    "scripts/check-maplemoon-review.py": "35075047ea6c59250b3c904ebfe8feb1e493eab4ddaaff68886d5d54d2888be9",
+    "docs/client-review/2026-08-01-saturday-review/staging-v1/clean/our-story.html": "e270a5016260eed726f2bdcbb27447cea6066cc19a866d524fd47cff24cef7d1",
+    "docs/client-review/2026-08-01-saturday-review/staging-v1/annotated/our-story.html": "25faa2eb9a47f92a4b517901c13a3ff14bfe49f52ec367e55addadf1d1880535",
+    "docs/client-review/2026-08-01-saturday-review/staging-v1/clean/stockists.html": "046a1fe649d75814804b921ac258fca135fa11b9447ca9c54eb28859df3d5af6",
+    "docs/client-review/2026-08-01-saturday-review/staging-v1/annotated/stockists.html": "4b5454a3d6638f50a628e945cb57837b6248eefeabae7923f4e890afb1ede07d",
+    "docs/client-review/2026-08-01-saturday-review/staging-v1/MANIFEST.json": "f2d24cbed1068f17d7989010a08354006f59e8dfe575346cd268f149d2b9b5e4",
+    "docs/client-review/2026-08-01-saturday-review/staging-v1/clean/MANIFEST.json": "87de0ddafdf21d8190e740f726dc51a10d4d8aefd5141c57fa7fd91df9ce3211",
+    "docs/client-review/2026-08-01-saturday-review/staging-v1/annotated/MANIFEST.json": "c4d9c678e89a7f1af5c7d3405056ff56dde246d81f624de77de3491abbaa7ec1",
+    "_wip/reviews/saturday_shared_mobile_header_20260802/qa/clean-our-story-390.png": null,
+    "_wip/reviews/saturday_shared_mobile_header_20260802/qa/annotated-our-story-390.png": null,
+    "_wip/reviews/saturday_shared_mobile_header_20260802/qa/clean-stockists-390.png": null,
+    "_wip/reviews/saturday_shared_mobile_header_20260802/qa/annotated-stockists-390.png": null,
+    "_wip/reviews/saturday_shared_mobile_header_20260802/qa/clean-our-story-1280.png": null,
+    "_wip/reviews/saturday_shared_mobile_header_20260802/qa/annotated-our-story-1280.png": null,
+    "_wip/reviews/saturday_shared_mobile_header_20260802/qa/clean-stockists-1280.png": null,
+    "_wip/reviews/saturday_shared_mobile_header_20260802/qa/annotated-stockists-1280.png": null,
+    "_wip/reviews/saturday_shared_mobile_header_20260802/qa/mobile-header-keyboard.json": null,
+    "_wip/reviews/saturday_shared_mobile_header_20260802/qa/check-results.txt": null
+  },
+  "post_sha256": {
+    "docs/orchestration/packets/SAT-SHARED-MOBILE-HEADER-01.md": "9fd0cfd0741706b4e3be8303eb32340b15e799f70130d23ebc3ee326e1236567",
+    "docs/orchestration/reviews/SAT-SHARED-MOBILE-HEADER-01-20260802.json": null,
+    "_wip/our-story.WIP.html": "a823f0f7291ee3b66acfefd0a718227c47717cf7811747db9216a1e17612fb1d",
+    "_wip/stockists.WIP.html": "6e92382ccec4874aac79c32e644d0ed130d03400c7d23682623b0e4154a6fa36",
+    "scripts/build-maplemoon-saturday-review.py": "be084959cd6d771d8505a8dd3cba96533a42864b71a3ab749d4eb4b3e40cafbd",
+    "scripts/check-maplemoon-review.py": "aa66c7f0398b4dbbae95fb2603442e29a82f4e2b79fe5d646a2f42dd06e7a16b",
+    "docs/client-review/2026-08-01-saturday-review/staging-v1/clean/our-story.html": "587a0042d27f74a4ee6d6a4c3488d226a5feab1f4531f26b697082432630fe75",
+    "docs/client-review/2026-08-01-saturday-review/staging-v1/annotated/our-story.html": "b4ebc822be7f73f8eed689a730ac914c116539f10c39e0662e8b6b2550952e96",
+    "docs/client-review/2026-08-01-saturday-review/staging-v1/clean/stockists.html": "c54892a85c15165de448f68cab211979695bcabe066ecab987342c368dfca21b",
+    "docs/client-review/2026-08-01-saturday-review/staging-v1/annotated/stockists.html": "b029124cf8fe4d6b4658b6dfb25d2f61eede0ba3e0d76d1be657b0f44fe52cb0",
+    "docs/client-review/2026-08-01-saturday-review/staging-v1/MANIFEST.json": "d0d834b9b9173a497d0b03e39e4c282a7d5247f51484ebfd7ba3a64e8416bf7c",
+    "docs/client-review/2026-08-01-saturday-review/staging-v1/clean/MANIFEST.json": "d1c66b1d5937e9956d1806dbbbff4faf4f950def046aa642ae52f809c3d52d20",
+    "docs/client-review/2026-08-01-saturday-review/staging-v1/annotated/MANIFEST.json": "3be3c0f2df4658558c667b3e9cc6d55966d6a1d7ce9fa9874c46a0afc44244c7",
+    "_wip/reviews/saturday_shared_mobile_header_20260802/qa/clean-our-story-390.png": "bc48951a7a29db26753a842ba8f0e95dab615fc5111b339aad58d6c62c6bae72",
+    "_wip/reviews/saturday_shared_mobile_header_20260802/qa/annotated-our-story-390.png": "b9b6d1def14c62419f89a04699c9b7c553a32fbccb159190a8b0ae8cc5fe99b0",
+    "_wip/reviews/saturday_shared_mobile_header_20260802/qa/clean-stockists-390.png": "790d0dc0e57fb567c9a07d4ce7e61a5eb1acafa2e706212393f88c8ea39b98f6",
+    "_wip/reviews/saturday_shared_mobile_header_20260802/qa/annotated-stockists-390.png": "d7f75414909f33cd83766d2f240fe4b035a28b925ddd6bf5d3ec69e9135a504e",
+    "_wip/reviews/saturday_shared_mobile_header_20260802/qa/clean-our-story-1280.png": "4495922de772b1259424634f58ba614dd37bbc6856fdf36e6d2a01e1ac8443d1",
+    "_wip/reviews/saturday_shared_mobile_header_20260802/qa/annotated-our-story-1280.png": "6b57319916df11a7ca550e7ef002f20e29d5c3f2c5c2004efac441c5fd2e050a",
+    "_wip/reviews/saturday_shared_mobile_header_20260802/qa/clean-stockists-1280.png": "e9935599fd721d2e15f10707039de90f768dd0cffa9580f90018c01b6c117cc8",
+    "_wip/reviews/saturday_shared_mobile_header_20260802/qa/annotated-stockists-1280.png": "4f97143a9f5c2600f3072d186e5af3cb88ba1afcab14f14f38f0d5d024b48437",
+    "_wip/reviews/saturday_shared_mobile_header_20260802/qa/mobile-header-keyboard.json": "bcf8926256f3bc09c17f08f6b75a26d53c26a80713cc0d94265963d47791c184",
+    "_wip/reviews/saturday_shared_mobile_header_20260802/qa/check-results.txt": "26378ffc142df4c207b91007b56f32e196d43ceb183338a25f22ed8e6c4ddbc1"
+  },
+  "checkpoint_path": "_wip/checkpoints/SAT-SHARED-MOBILE-HEADER-01_20260802_145630_AEST",
+  "checks": [
+    {
+      "command": "scripts/check-maplemoon-receipt.py phase-start verify",
+      "exit_code": 0,
+      "result": "PASS: the exact 23-path writable scope was checkpointed and all base hashes matched before mutation."
+    },
+    {
+      "command": "two temporary deterministic full builds and diff -qr",
+      "exit_code": 0,
+      "result": "PASS: both 154-file trees were byte-identical with tree hash fed9460db90f4a086181ffa17af8d7f8ccfd0af910bba8093911ed656b6a51fc."
+    },
+    {
+      "command": "temporary candidate to promoted staging diff -qr",
+      "exit_code": 0,
+      "result": "PASS: promoted staging is byte-identical to the independently verified temporary candidate."
+    },
+    {
+      "command": "python3 -B scripts/check-maplemoon-review.py --staging docs/client-review/2026-08-01-saturday-review/staging-v1 --profile saturday-all",
+      "exit_code": 0,
+      "result": "PASS: clean and annotated checks, aggregate binding and complete-document parity passed with zero failures and warnings."
+    },
+    {
+      "command": "node scripts/check-maplemoon-cart.mjs docs/client-review/2026-08-01-saturday-review/staging-v1",
+      "exit_code": 0,
+      "result": "PASS: cart binding, neutral enquiry treatment, local fake checkout, accessibility and no-network checks passed."
+    },
+    {
+      "command": "node scripts/check-maplemoon-responsive-overflow.mjs --self-test",
+      "exit_code": 0,
+      "result": "PASS: per-element rectangle overflow checks and deliberate positive control passed."
+    },
+    {
+      "command": "git diff --check",
+      "exit_code": 0,
+      "result": "PASS."
+    },
+    {
+      "command": "390px and 1280px rendered review of clean and annotated Our Story and Stockists",
+      "exit_code": 0,
+      "result": "PASS: at 390px each home link measured 116 by 44 CSS pixels, was centered with no sibling overlap, and the document width remained 390px; desktop remained unchanged and all four pages had no console warnings or errors."
+    },
+    {
+      "command": "fresh real-Chrome Tab, focus-ring and Enter activation across four target variants",
+      "exit_code": 0,
+      "result": "PASS: the Maple Moon home link was sequentially reachable with visible focus and Enter navigated to the matching clean or annotated Homepage in all four cases."
+    },
+    {
+      "command": "independent verification by 019fc0f5-276c-7651-b982-a64950b85433",
+      "exit_code": 0,
+      "result": "PASS: checkpoint, ownership, hashes, deterministic delta, rendered geometry, keyboard evidence and non-target preservation were independently reconciled before promotion."
+    }
+  ],
+  "screenshots_or_urls": [
+    "file:///Users/handtomouse/maplemoon-website/_wip/reviews/saturday_shared_mobile_header_20260802/qa/clean-our-story-390.png",
+    "file:///Users/handtomouse/maplemoon-website/_wip/reviews/saturday_shared_mobile_header_20260802/qa/annotated-our-story-390.png",
+    "file:///Users/handtomouse/maplemoon-website/_wip/reviews/saturday_shared_mobile_header_20260802/qa/clean-stockists-390.png",
+    "file:///Users/handtomouse/maplemoon-website/_wip/reviews/saturday_shared_mobile_header_20260802/qa/annotated-stockists-390.png",
+    "file:///Users/handtomouse/maplemoon-website/_wip/reviews/saturday_shared_mobile_header_20260802/qa/clean-our-story-1280.png",
+    "file:///Users/handtomouse/maplemoon-website/_wip/reviews/saturday_shared_mobile_header_20260802/qa/annotated-our-story-1280.png",
+    "file:///Users/handtomouse/maplemoon-website/_wip/reviews/saturday_shared_mobile_header_20260802/qa/clean-stockists-1280.png",
+    "file:///Users/handtomouse/maplemoon-website/_wip/reviews/saturday_shared_mobile_header_20260802/qa/annotated-stockists-1280.png",
+    "file:///Users/handtomouse/maplemoon-website/_wip/reviews/saturday_shared_mobile_header_20260802/qa/mobile-header-keyboard.json"
+  ],
+  "failures": [],
+  "unknowns": [],
+  "residual_risk": [
+    "Literal 390px key injection was unavailable, so 390px rendered geometry and actual real-Chrome keyboard semantics were proven separately; the independent verifier accepted the combined evidence for this header-only change.",
+    "The wrong founder photo on Our Story is a separately locked shipping-critical asset blocker for the later page-local closure packet and was not changed or approved here.",
+    "The pre-existing Stockists hero and skip-link overlap remains quarantined for its later page-local closure packet.",
+    "The six-page package remains share_ready false; this receipt authorizes only the promoted local header candidate."
+  ],
+  "forbidden_path_changes": [],
+  "proposed_next_state": "promoted_local_candidate",
+  "next_reviewer": "Main Boss for the next separately checkpointed closure packet; Nate retains final human and sharing approval",
+  "next_action": "Begin the approved Homepage closure phase with a fresh exact-hash admission and non-overwriting recovery gate.",
+  "ready_to_promote": true
+}

@@ -1,0 +1,67 @@
+{
+  "schema": "maplemoon-receipt/v2",
+  "receipt_id": "MAPLEMOON-CLIENT-REVIEW-HUB-SPEC-INDEPENDENT-VERIFY-20260802-RECEIPT-001",
+  "packet_id": "MAPLEMOON-CLIENT-REVIEW-HUB-SPEC-INDEPENDENT-VERIFY-20260802",
+  "worker_thread_id": "019fbf27-106e-7620-8974-eb371799a45c",
+  "worker": "independent low-cost read-only verifier",
+  "started_at": "2026-08-02T07:07:44+10:00",
+  "completed_at": "2026-08-02T07:08:49+10:00",
+  "outcome": "PASS",
+  "confidence": "high for local planning structure; no rendered hub or external behavior was tested",
+  "phase": "complete",
+  "status": "PASS",
+  "ready_to_promote": false,
+  "checkpoint_path": "_wip/checkpoints/MAPLEMOON-CLIENT-REVIEW-HUB-SPEC-INDEPENDENT-VERIFY-20260802_20260802_070744_AEST",
+  "authority": {
+    "path": "/Users/handtomouse/maplemoon-website/docs/orchestration/packets/MAPLEMOON-CLIENT-REVIEW-SOFT-LAUNCH-SHOPIFY-READINESS-ADDENDUM-20260802.md",
+    "sha256": "7c541b6ff97f2ffdc1b6fe888cdba4f1795caadb947cfb7642d8ee54bfe2b712"
+  },
+  "files_changed": [
+    "docs/orchestration/reviews/MAPLEMOON-CLIENT-REVIEW-HUB-SPEC-INDEPENDENT-VERIFY-20260802.json"
+  ],
+  "files_read": [
+    "independent-verification packet and checkpoint",
+    "review-hub specification packet and receipt",
+    "review-hub specification, feedback schema and send checklist",
+    "sleep-comms authority and six clean route inventory"
+  ],
+  "pre_sha256": {
+    "docs/orchestration/packets/MAPLEMOON-CLIENT-REVIEW-HUB-SPEC-INDEPENDENT-VERIFY-20260802.md": "45d07523b20f0468b8c9f78432647b8c4e4126e98e6e6de21b7387615ef7693b",
+    "docs/orchestration/reviews/MAPLEMOON-CLIENT-REVIEW-HUB-SPEC-INDEPENDENT-VERIFY-20260802.json": null
+  },
+  "post_sha256": {
+    "docs/orchestration/packets/MAPLEMOON-CLIENT-REVIEW-HUB-SPEC-INDEPENDENT-VERIFY-20260802.md": "45d07523b20f0468b8c9f78432647b8c4e4126e98e6e6de21b7387615ef7693b"
+  },
+  "verified_subject_sha256": {
+    "docs/orchestration/reviews/MAPLEMOON-CLIENT-REVIEW-HUB-SPEC-20260802.json": "37c1df4c0f93f0450332fc3498185e24282671bdc9a76028d812632dac2e6fce",
+    "docs/client-review/2026-08-01-saturday-review/REVIEW-HUB-SPEC-20260802.md": "140ea2b165c2ca4d37909d207b751edb3e168742688cd1b2c0f7515730c992ab",
+    "docs/client-review/2026-08-01-saturday-review/REVIEW-HUB-FEEDBACK-SCHEMA-20260802.json": "f87b015c7b5af0008e6a822ffabb321cb79e6546cce920e7b5911c0ed75f96d4",
+    "docs/client-review/2026-08-01-saturday-review/REVIEW-HUB-SEND-CHECKLIST-20260802.md": "b237d45d8eb05b09e5b0859e93a46eb6e19621270308f386d2b469b8a7d28122"
+  },
+  "screenshots_or_urls": [],
+  "failures": [],
+  "unknowns": [
+    "No rendered hub exists, so visual, browser, responsive and keyboard behavior is intentionally unverified.",
+    "Exact artifact, audience, channel, access route and feedback destination remain unapproved."
+  ],
+  "residual_risk": [
+    "Implementation, external sharing and real feedback collection remain HOLD.",
+    "Unrelated dirty WIP remains present but was not attributed to or modified by this verification."
+  ],
+  "forbidden_path_changes": [],
+  "proposed_next_state": "accepted_local_specification",
+  "next_reviewer": "019fa858-05c9-7631-b26e-8f5cbbf1387a",
+  "checks": [
+    {"command":"authority, checkpoint and subject hash verification","exit_code":0,"result":"PASS"},
+    {"command":"JSON validation for hub receipt and feedback schema","exit_code":0,"result":"PASS"},
+    {"command":"six-route, reviewer-flow and feedback-field coverage review","exit_code":0,"result":"PASS"},
+    {"command":"mock-only, no-network, privacy and clean-annotated boundary review","exit_code":0,"result":"PASS"},
+    {"command":"absolute site-sharing and external-authority review","exit_code":0,"result":"PASS"}
+  ],
+  "blockers": [
+    "Nate has not approved the exact frozen artifact, audience, channel, access route or feedback route.",
+    "No review-hub implementation, feedback service, analytics, deployment or sharing is authorized."
+  ],
+  "ownership": "Independent specification verification only; no review hub, page, service, host or message ownership.",
+  "next_action": "Keep the accepted review-hub specification local until Nate separately approves the exact review and external-action gates after waking."
+}

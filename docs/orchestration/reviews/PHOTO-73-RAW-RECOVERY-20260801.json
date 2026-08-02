@@ -1,0 +1,68 @@
+{
+  "schema": "maplemoon-receipt/v2",
+  "receipt_id": "PHOTO-73-RAW-RECOVERY-20260801-RECEIPT-001",
+  "packet_id": "PHOTO-73-RAW-RECOVERY-20260801",
+  "worker_thread_id": "019fa858-05c9-7631-b26e-8f5cbbf1387a",
+  "worker": "Codex side-chat manager",
+  "started_at": "2026-07-31T23:21:19Z",
+  "completed_at": "2026-07-31T23:23:08Z",
+  "files_read": [
+    "Downloads/wetransfer_website-hero-raws_2026-06-03_1315.zip",
+    "UFC/spins/maplemoon_three_round_blue_warm_20260723/round_01/warm_review/maplemoon_heros73_photoshop_reference.jpg",
+    "maplemoon-website/docs/orchestration/packets/PHOTO-73-RAW-RECOVERY-20260801.md",
+    "maplemoon-website/scripts/check-maplemoon-receipt.py",
+    "maplemoon-website/_wip/checkpoints/PHOTO-73-RAW-RECOVERY-20260801_20260801_092119_AEST/RECOVERY_MANIFEST.json"
+  ],
+  "files_changed": [
+    "maplemoon-website/_wip/source_recovery/photoshoot_raws_20260801/Heros-73.jpg",
+    "maplemoon-website/_wip/reviews/photoshoot_repair_batch1_20260731/RAW_MASTER_REGISTER.md",
+    "maplemoon-website/docs/orchestration/reviews/PHOTO-73-RAW-RECOVERY-20260801.json"
+  ],
+  "pre_sha256": {
+    "maplemoon-website/_wip/source_recovery/photoshoot_raws_20260801/Heros-73.jpg": null,
+    "maplemoon-website/_wip/reviews/photoshoot_repair_batch1_20260731/RAW_MASTER_REGISTER.md": "fe82051ef8661cf3ae189ef2e8b063a6db977e90aba72e8f684b4bc13765bbe5",
+    "maplemoon-website/docs/orchestration/reviews/PHOTO-73-RAW-RECOVERY-20260801.json": null
+  },
+  "post_sha256": {
+    "maplemoon-website/_wip/source_recovery/photoshoot_raws_20260801/Heros-73.jpg": "b31b11b0aec41cb9461a74e906a84979162d34b691a27fcef72a3b153e1e6d93",
+    "maplemoon-website/_wip/reviews/photoshoot_repair_batch1_20260731/RAW_MASTER_REGISTER.md": "b22740fc9330fa9b12db5c4f84850e594a56a771033228fd7df74473a9e85758",
+    "maplemoon-website/docs/orchestration/reviews/PHOTO-73-RAW-RECOVERY-20260801.json": null
+  },
+  "checkpoint_path": "maplemoon-website/_wip/checkpoints/PHOTO-73-RAW-RECOVERY-20260801_20260801_092119_AEST",
+  "checkpoint_sha256": {
+    "maplemoon-website/_wip/reviews/photoshoot_repair_batch1_20260731/RAW_MASTER_REGISTER.md": "fe82051ef8661cf3ae189ef2e8b063a6db977e90aba72e8f684b4bc13765bbe5"
+  },
+  "checks": [
+    {
+      "command": "unzip -t original WeTransfer ZIP Heros-73.jpg",
+      "exit_code": 0,
+      "result": "Heros-73.jpg archive entry tested OK with no errors"
+    },
+    {
+      "command": "python3 -B scripts/check-maplemoon-receipt.py checkpoint/verify with --root /Users/handtomouse",
+      "exit_code": 0,
+      "result": "PASS checkpoint files=3 and PASS phase=start scope=3"
+    },
+    {
+      "command": "shasum -a 256 recovered source and high-resolution reference; cmp -s",
+      "exit_code": 0,
+      "result": "both files are byte-identical with SHA-256 b31b11b0aec41cb9461a74e906a84979162d34b691a27fcef72a3b153e1e6d93"
+    },
+    {
+      "command": "sips -g pixelWidth -g pixelHeight -g profile recovered source",
+      "exit_code": 0,
+      "result": "6000 x 4000, sRGB IEC61966-2.1"
+    }
+  ],
+  "screenshots_or_urls": [],
+  "failures": [],
+  "unknowns": [
+    "The completion gate may require a post hash for this newly created receipt even though a receipt cannot embed its own stable SHA-256."
+  ],
+  "residual_risk": [
+    "The recovered file is the original delivered JPEG entry, not a camera RAW file; all later work must remain non-destructive and source-preserving."
+  ],
+  "forbidden_path_changes": [],
+  "proposed_next_state": "confirmed_source",
+  "next_reviewer": "coordinator"
+}

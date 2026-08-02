@@ -1,0 +1,100 @@
+{
+  "schema": "maplemoon-receipt/v2",
+  "receipt_id": "MAPLEMOON-SECURITY-INTEGRATION-GATE-REGISTER-20260802-RECEIPT-001",
+  "packet_id": "MAPLEMOON-SECURITY-INTEGRATION-GATE-REGISTER-20260802",
+  "worker_thread_id": "019fa858-05c9-7631-b26e-8f5cbbf1387a",
+  "worker": "Main Boss coordinator",
+  "started_at": "2026-08-02T05:27:17+10:00",
+  "completed_at": "2026-08-02T05:29:11+10:00",
+  "outcome": "PASS",
+  "confidence": "high",
+  "phase": "complete",
+  "status": "PASS",
+  "ready_to_promote": false,
+  "checkpoint_path": "_wip/checkpoints/MAPLEMOON-SECURITY-INTEGRATION-GATE-REGISTER-20260802_20260802_052717_AEST",
+  "authority": {
+    "path": "/Users/handtomouse/maplemoon-website/docs/orchestration/packets/MAPLEMOON-CLIENT-REVIEW-SOFT-LAUNCH-SHOPIFY-READINESS-ADDENDUM-20260802.md",
+    "sha256": "7c541b6ff97f2ffdc1b6fe888cdba4f1795caadb947cfb7642d8ee54bfe2b712",
+    "frozen_overnight_sha256": "12689434a7c46c323b27d1c8a099cb9703bf910b8c6dbbac2cfca193a0c6b599",
+    "sleep_comms_sha256": "4268d4e99c7ecae38816099cfbf14520af1b9531a450d0436501e57d8cd92ed9"
+  },
+  "files_changed": [
+    "docs/orchestration/reviews/MAPLEMOON-SECURITY-INTEGRATION-GATE-REGISTER-20260802.json",
+    "docs/client-review/2026-08-01-saturday-review/SECURITY-INTEGRATION-GATE-REGISTER-20260802.md",
+    "docs/client-review/2026-08-01-saturday-review/SECURITY-INTEGRATION-DATA-FLOW-INVENTORY-20260802.json",
+    "docs/client-review/2026-08-01-saturday-review/SECURITY-READINESS-CHECKLIST-20260802.md"
+  ],
+  "files_read": [
+    "frozen overnight authority",
+    "client-review and Shopify readiness addendum",
+    "sleep-comms authority",
+    "completed readiness research synthesis",
+    "accepted review-hub, soft-launch and Shopify translation specifications"
+  ],
+  "pre_sha256": {
+    "docs/orchestration/packets/MAPLEMOON-SECURITY-INTEGRATION-GATE-REGISTER-20260802.md": "f760305faa32dd2c5af57e982e9389869a90cd5b0fbaec6773b99fcc02a31646",
+    "docs/orchestration/reviews/MAPLEMOON-SECURITY-INTEGRATION-GATE-REGISTER-20260802.json": null,
+    "docs/client-review/2026-08-01-saturday-review/SECURITY-INTEGRATION-GATE-REGISTER-20260802.md": null,
+    "docs/client-review/2026-08-01-saturday-review/SECURITY-INTEGRATION-DATA-FLOW-INVENTORY-20260802.json": null,
+    "docs/client-review/2026-08-01-saturday-review/SECURITY-READINESS-CHECKLIST-20260802.md": null
+  },
+  "post_sha256": {
+    "docs/orchestration/packets/MAPLEMOON-SECURITY-INTEGRATION-GATE-REGISTER-20260802.md": "f760305faa32dd2c5af57e982e9389869a90cd5b0fbaec6773b99fcc02a31646",
+    "docs/client-review/2026-08-01-saturday-review/SECURITY-INTEGRATION-GATE-REGISTER-20260802.md": "f0473ce2880c1a473e8046ee4b36a580a9335cd0c93e2085531918240710fd43",
+    "docs/client-review/2026-08-01-saturday-review/SECURITY-INTEGRATION-DATA-FLOW-INVENTORY-20260802.json": "484d9424c84bdbe77398a94552e8398758677d315fac5cb1dde54187efc51ed1",
+    "docs/client-review/2026-08-01-saturday-review/SECURITY-READINESS-CHECKLIST-20260802.md": "70429df454bafb063779bb21ed7e409303445b2a9023459f08cf9a7f8659d807"
+  },
+  "screenshots_or_urls": [],
+  "failures": [],
+  "unknowns": [
+    "No live host, store, domain, account, role, secret store, app, form, analytics, email or stockist integration was inspected.",
+    "Applicable legal obligations and professional-advice needs remain for the actual systems, audience, data and jurisdiction.",
+    "Final security headers, CSP, network calls, access logs and vendor data flows require testing after exact systems are selected."
+  ],
+  "residual_risk": [
+    "This is a prospective threat model, not a penetration test, configuration audit, legal opinion or certification.",
+    "Implementation could create new flows and threats that require an updated register.",
+    "The register has not yet received independent security review."
+  ],
+  "forbidden_path_changes": [],
+  "proposed_next_state": "needs_review",
+  "next_reviewer": "independent read-only security verifier",
+  "checks": [
+    {
+      "command": "receipt checker phase=start",
+      "exit_code": 0,
+      "result": "PASS"
+    },
+    {
+      "command": "prospective data-flow JSON validation",
+      "exit_code": 0,
+      "result": "PASS"
+    },
+    {
+      "command": "eight-flow HOLD/BLOCKED and required-control assertions",
+      "exit_code": 0,
+      "result": "PASS"
+    },
+    {
+      "command": "nineteen-risk category and fail-closed boundary scan",
+      "exit_code": 0,
+      "result": "PASS"
+    },
+    {
+      "command": "git diff --check for exact specification paths",
+      "exit_code": 0,
+      "result": "PASS"
+    },
+    {
+      "command": "authority SHA-256 revalidation",
+      "exit_code": 0,
+      "result": "PASS"
+    }
+  ],
+  "blockers": [
+    "Every credential, live-system, vendor, collection, integration, deployment and production gate remains HOLD.",
+    "No external site sharing is authorized while Nate sleeps."
+  ],
+  "ownership": "Security and integration planning records only; no credential, store, host, website, data or external-system ownership.",
+  "next_action": "Run one independent read-only security review of this register before using it to admit any integration or implementation packet."
+}

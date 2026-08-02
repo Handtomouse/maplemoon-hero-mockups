@@ -1,0 +1,121 @@
+{
+  "schema": "maplemoon-receipt/v2",
+  "receipt_id": "PHOTO-73-REUSE-G-20260801-RECEIPT-001",
+  "packet_id": "PHOTO-73-REUSE-G-20260801",
+  "candidate_id": "PHOTO-73-REUSE-G-CANDIDATE-20260801-001",
+  "worker_thread_id": "019fbb6e-c971-7443-a291-3024f446e559",
+  "worker": "Codex side conversation",
+  "started_at": "2026-08-01T05:39:00Z",
+  "completed_at": "2026-08-01T06:33:01Z",
+  "outcome": "HOLD",
+  "confidence": "high",
+  "files_read": [
+    "_wip/reviews/photoshoot_repair_batch1_20260801/73_manual_v01/73_manual_v01.psd",
+    "_wip/reviews/photoshoot_repair_batch1_20260801/73_manual_v01/73_manual_v01.png",
+    "_wip/reviews/founders_portrait_h073_playground/assets/photoshop-h073-review-v03/subject_original_pixels_full_alpha.psd",
+    "_wip/reviews/founders_portrait_h073_playground/assets/v4/e-refinement-24.webp",
+    "_wip/reviews/founders_portrait_h073_playground/assets/manual-integrated-v11/integrated-g-background.webp",
+    "_wip/reviews/founders_portrait_h073_playground/assets/integration-proof-v12/integration-proof-v12.png",
+    "_wip/our-story.WIP.html",
+    "docs/orchestration/SIDECHAT_RECEIPT_GATE.md",
+    "scripts/check-maplemoon-receipt.py"
+  ],
+  "files_changed": [
+    "docs/orchestration/packets/PHOTO-73-REUSE-G-20260801.md",
+    "_wip/reviews/photoshoot_repair_batch1_20260801/73_reuse_g_v02/73_reuse_g_v02.psd",
+    "_wip/reviews/photoshoot_repair_batch1_20260801/73_reuse_g_v02/73_reuse_g_v02.png",
+    "_wip/reviews/photoshoot_repair_batch1_20260801/73_reuse_g_v02/qa/73_reuse_g_v02-full-frame.png",
+    "_wip/reviews/photoshoot_repair_batch1_20260801/73_reuse_g_v02/qa/73_reuse_g_v02-hair-hand-armgap-100pct.png",
+    "_wip/reviews/photoshoot_repair_batch1_20260801/73_reuse_g_v02/qa/73_reuse_g_v02-mask-white-black.png",
+    "docs/orchestration/reviews/PHOTO-73-REUSE-G-20260801.json"
+  ],
+  "files_confirmed_untouched": [
+    "_wip/reviews/photoshoot_repair_batch1_20260801/73_manual_v01/73_manual_v01.psd",
+    "_wip/reviews/photoshoot_repair_batch1_20260801/73_manual_v01/73_manual_v01.png",
+    "_wip/reviews/founders_portrait_h073_playground/assets/photoshop-h073-review-v03/subject_original_pixels_full_alpha.psd",
+    "_wip/reviews/founders_portrait_h073_playground/assets/v4/e-refinement-24.webp",
+    "_wip/reviews/founders_portrait_h073_playground/assets/manual-integrated-v11/integrated-g-background.webp",
+    "_wip/reviews/founders_portrait_h073_playground/assets/integration-proof-v12/integration-proof-v12.png",
+    "_wip/our-story.WIP.html",
+    "assets/our_story/founders_portrait_h212.webp"
+  ],
+  "pre_sha256": {
+    "docs/orchestration/packets/PHOTO-73-REUSE-G-20260801.md": null,
+    "_wip/reviews/photoshoot_repair_batch1_20260801/73_reuse_g_v02/73_reuse_g_v02.psd": null,
+    "_wip/reviews/photoshoot_repair_batch1_20260801/73_reuse_g_v02/73_reuse_g_v02.png": null,
+    "_wip/reviews/photoshoot_repair_batch1_20260801/73_reuse_g_v02/qa/73_reuse_g_v02-full-frame.png": null,
+    "_wip/reviews/photoshoot_repair_batch1_20260801/73_reuse_g_v02/qa/73_reuse_g_v02-hair-hand-armgap-100pct.png": null,
+    "_wip/reviews/photoshoot_repair_batch1_20260801/73_reuse_g_v02/qa/73_reuse_g_v02-mask-white-black.png": null,
+    "_wip/reviews/photoshoot_repair_batch1_20260801/73_reuse_g_v02/qa/73_reuse_g_v02-our-story-desktop.png": null,
+    "_wip/reviews/photoshoot_repair_batch1_20260801/73_reuse_g_v02/qa/73_reuse_g_v02-our-story-mobile.png": null,
+    "docs/orchestration/reviews/PHOTO-73-REUSE-G-20260801.json": null
+  },
+  "post_sha256": {
+    "docs/orchestration/packets/PHOTO-73-REUSE-G-20260801.md": "8e035cb27ca810c110613a1520e6f896b536a751b3b8e307ceaa1054f023129f",
+    "_wip/reviews/photoshoot_repair_batch1_20260801/73_reuse_g_v02/73_reuse_g_v02.psd": "86343f18a1524a5b49acb1f94e6ba1f9357f9c6569ff2cc499587d7be565c600",
+    "_wip/reviews/photoshoot_repair_batch1_20260801/73_reuse_g_v02/73_reuse_g_v02.png": "a5d5926631f91511c12405d516e24fa4d6a299d91879c3420835f02594bdc0d7",
+    "_wip/reviews/photoshoot_repair_batch1_20260801/73_reuse_g_v02/qa/73_reuse_g_v02-full-frame.png": "431ea8cdf656909355057940b35f7b06a1a6157141569a499f5a49d639c522bb",
+    "_wip/reviews/photoshoot_repair_batch1_20260801/73_reuse_g_v02/qa/73_reuse_g_v02-hair-hand-armgap-100pct.png": "8f9d94a5f915d99bed6080146095175b7d70c0f17ae9a025b7a8f31705018fd4",
+    "_wip/reviews/photoshoot_repair_batch1_20260801/73_reuse_g_v02/qa/73_reuse_g_v02-mask-white-black.png": "780ab9b0037da1bca4da600efdac5b21c72388e3e5d28da52c89ecb80d3c9513",
+    "_wip/reviews/photoshoot_repair_batch1_20260801/73_reuse_g_v02/qa/73_reuse_g_v02-our-story-desktop.png": null,
+    "_wip/reviews/photoshoot_repair_batch1_20260801/73_reuse_g_v02/qa/73_reuse_g_v02-our-story-mobile.png": null,
+    "docs/orchestration/reviews/PHOTO-73-REUSE-G-20260801.json": null
+  },
+  "checkpoint_path": "_wip/checkpoints/PHOTO-73-REUSE-G-20260801_20260801_153859_AEST",
+  "checks": [
+    {
+      "command": "scripts/check-maplemoon-receipt.py checkpoint and phase-start verify",
+      "exit_code": 0,
+      "result": "PASS: a timestamped non-overwriting checkpoint captured all nine admitted writable paths as absent before the first write, and phase-start verification passed."
+    },
+    {
+      "command": "SHA-256 authority verification",
+      "exit_code": 0,
+      "result": "PASS: latest subject PSD remained 0878127fba7f712765291efa30c0d33c871187d7cd555b071f7615623ead89e0; selected G remained 5e5ed602fc403083513fabcf355f882314f6ee37124e1b724ab6a67910b18422; integration v12 remained 88b2373d41ea0a8b925ca53173e67f3c3c65bc42ecd7e62f4a930ccc0b46db21."
+    },
+    {
+      "command": "Photoshop layered candidate inspection",
+      "exit_code": 0,
+      "result": "PASS: 6000 by 4000 saved PSD with 13 layers; the latest subject, editable recovered matte, selected G v11 wall, and 2 px, 6 px and 14 px Defringe trials remain separate."
+    },
+    {
+      "command": "approved G background reconstruction and full-frame visual review",
+      "exit_code": 0,
+      "result": "PASS after two correction loops: the erroneous two-sided QA wall sample was rejected; the existing v11 integrated G background removed the seam and restored the selected pale-blue light-centre falloff with subtle shadow depth."
+    },
+    {
+      "command": "Photoshop Defringe trials at 2 px, 6 px and 14 px",
+      "exit_code": 0,
+      "result": "HOLD visual result: all three native Photoshop trials completed and were preserved as separate layers, but teal source-wall colour remains visibly embedded around Carli's loose hair, wrist and hand."
+    },
+    {
+      "command": "native 100 percent hair, hand and arm-gap proof plus white/black matte proof",
+      "exit_code": 0,
+      "result": "HOLD: arm-gap negative space and overall silhouette are present, but the visible edge colour fails final acceptance; further global Defringe risks damaging real hair and finger detail."
+    },
+    {
+      "command": "desktop and mobile Our Story context review",
+      "exit_code": 0,
+      "result": "NOT RUN: stopped at the required mask gate, so no website-fit approval is claimed and the two context screenshots remain absent."
+    }
+  ],
+  "screenshots_or_urls": [
+    "_wip/reviews/photoshoot_repair_batch1_20260801/73_reuse_g_v02/qa/73_reuse_g_v02-full-frame.png",
+    "_wip/reviews/photoshoot_repair_batch1_20260801/73_reuse_g_v02/qa/73_reuse_g_v02-hair-hand-armgap-100pct.png",
+    "_wip/reviews/photoshoot_repair_batch1_20260801/73_reuse_g_v02/qa/73_reuse_g_v02-mask-white-black.png"
+  ],
+  "failures": [
+    "Teal source-wall contamination remains visible around Carli's loose hair, wrist and hand after 2 px, 6 px and 14 px native Photoshop Defringe trials.",
+    "Desktop and mobile website proofs were intentionally not created because the candidate did not pass the earlier native mask and edge-colour gate."
+  ],
+  "unknowns": [],
+  "residual_risk": [
+    "The v02 PSD and PNG are review-only and must not replace the live asset while teal edge colour remains visible.",
+    "The latest subject pixels and recovered matte are preserved separately, so a future localized edge-colour repair can proceed without repeating the selected G background work."
+  ],
+  "forbidden_path_changes": [],
+  "proposed_next_state": "hold",
+  "next_reviewer": "Nate",
+  "next_action": "Create one bounded manual edge-colour decontamination pass limited to Carli's hair, wrist and hand using the preserved editable matte, then rerun the native crops before any desktop or mobile website proof.",
+  "ready_to_promote": false
+}

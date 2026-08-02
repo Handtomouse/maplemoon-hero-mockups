@@ -1,0 +1,78 @@
+{
+  "schema": "maplemoon-receipt/v2",
+  "receipt_id": "MAPLEMOON-LINK-PREVIEW-METADATA-AUDIT-20260802-RECEIPT-001",
+  "packet_id": "MAPLEMOON-LINK-PREVIEW-METADATA-AUDIT-20260802",
+  "worker_thread_id": "019fa858-05c9-7631-b26e-8f5cbbf1387a",
+  "worker": "persistent Main Boss static metadata auditor",
+  "started_at": "2026-08-02T06:47:47+10:00",
+  "completed_at": "2026-08-02T06:51:00+10:00",
+  "outcome": "PASS",
+  "confidence": "high for local static metadata inventory; no external preview was tested",
+  "phase": "complete",
+  "status": "PASS",
+  "ready_to_promote": false,
+  "checkpoint_path": "_wip/checkpoints/MAPLEMOON-LINK-PREVIEW-METADATA-AUDIT-20260802_20260802_064747_AEST",
+  "authority": {
+    "path": "/Users/handtomouse/maplemoon-website/docs/orchestration/packets/MAPLEMOON-CLIENT-REVIEW-SOFT-LAUNCH-SHOPIFY-READINESS-ADDENDUM-20260802.md",
+    "sha256": "7c541b6ff97f2ffdc1b6fe888cdba4f1795caadb947cfb7642d8ee54bfe2b712"
+  },
+  "files_changed": [
+    "docs/orchestration/reviews/MAPLEMOON-LINK-PREVIEW-METADATA-AUDIT-20260802.json",
+    "docs/client-review/2026-08-01-saturday-review/LINK-PREVIEW-METADATA-AUDIT-20260802.md",
+    "docs/client-review/2026-08-01-saturday-review/LINK-PREVIEW-VALIDATION-MATRIX-20260802.json"
+  ],
+  "files_read": [
+    "six frozen clean HTML pages",
+    "shared clean-package SVG favicon",
+    "review-hub specification and send checklist",
+    "local candidate imagery filenames for evidence classification only"
+  ],
+  "pre_sha256": {
+    "docs/orchestration/packets/MAPLEMOON-LINK-PREVIEW-METADATA-AUDIT-20260802.md": "e562d578130cb4849e23691ec6b46dd55695b8684c35288074264ec9190914c2",
+    "docs/orchestration/reviews/MAPLEMOON-LINK-PREVIEW-METADATA-AUDIT-20260802.json": null,
+    "docs/client-review/2026-08-01-saturday-review/LINK-PREVIEW-METADATA-AUDIT-20260802.md": null,
+    "docs/client-review/2026-08-01-saturday-review/LINK-PREVIEW-VALIDATION-MATRIX-20260802.json": null
+  },
+  "post_sha256": {
+    "docs/orchestration/packets/MAPLEMOON-LINK-PREVIEW-METADATA-AUDIT-20260802.md": "e562d578130cb4849e23691ec6b46dd55695b8684c35288074264ec9190914c2",
+    "docs/client-review/2026-08-01-saturday-review/LINK-PREVIEW-METADATA-AUDIT-20260802.md": "f97f57e92d2e5bb36f30bc2add5fcf5b1eb0520afbd7c7b862fecb03415c0f20",
+    "docs/client-review/2026-08-01-saturday-review/LINK-PREVIEW-VALIDATION-MATRIX-20260802.json": "a04b8704aafe3c3189eeeb1fd4849b58bfd2c57f38a326636c6dcd5ebc87db09"
+  },
+  "verified_source_sha256": {
+    "docs/client-review/2026-08-01-saturday-review/staging-v1/clean/homepage.html": "0d102050395b79f4add5d9ddb7f75e962d7e41e11a78cd7f88c35ce4a947ef0c",
+    "docs/client-review/2026-08-01-saturday-review/staging-v1/clean/shop.html": "43cad154be945d34006013808f2eca5eeb9676ae3e28cedafbb75faccb914abb",
+    "docs/client-review/2026-08-01-saturday-review/staging-v1/clean/our-story.html": "e270a5016260eed726f2bdcbb27447cea6066cc19a866d524fd47cff24cef7d1",
+    "docs/client-review/2026-08-01-saturday-review/staging-v1/clean/carob-story.html": "d93dc036603ae7772e365573de1f89f066556d922d8b99c5e3fc7f2dada62762",
+    "docs/client-review/2026-08-01-saturday-review/staging-v1/clean/stockists.html": "046a1fe649d75814804b921ac258fca135fa11b9447ca9c54eb28859df3d5af6",
+    "docs/client-review/2026-08-01-saturday-review/staging-v1/clean/faq.html": "f4acfb51c6e353828a432285f2a37f69ca39154b18d78ef41e337dc29fb35dcf",
+    "docs/client-review/2026-08-01-saturday-review/staging-v1/clean/assets/mm_logo_icon_blk.svg": "aaffe3fbc7f38fb73f04e09d8b248e9c12184f79308dd17139ede6f26540a988"
+  },
+  "screenshots_or_urls": [],
+  "failures": [],
+  "unknowns": [
+    "Exact final HTTPS URL, access and expiry model, intended message surfaces and robots/canonical policy.",
+    "Approved Open Graph image and evidence-safe social-preview copy.",
+    "Rendered favicon crop and legibility at target sizes."
+  ],
+  "residual_risk": [
+    "Static markup does not prove how a future host or message surface will fetch and display metadata.",
+    "Existing page descriptions require factual review before external preview reuse.",
+    "Unrelated dirty WIP remains present but was not attributed to or modified by this audit."
+  ],
+  "forbidden_path_changes": [],
+  "proposed_next_state": "needs_independent_review",
+  "next_reviewer": "independent low-cost read-only verifier",
+  "checks": [
+    {"command":"six-page metadata occurrence scan","exit_code":0,"result":"PASS: six titles, six favicons, six theme colours and six noindex directives"},
+    {"command":"description inventory","exit_code":0,"result":"PASS: four present, two missing; three present descriptions require evidence review"},
+    {"command":"canonical, Open Graph and Twitter-card scan","exit_code":0,"result":"PASS: none found on the six pages"},
+    {"command":"favicon asset existence, hash and icon-fallback inventory","exit_code":0,"result":"PASS: SVG resolves; raster fallback, apple-touch icon and manifest absent"},
+    {"command":"validation-matrix JSON check","exit_code":0,"result":"PASS: six pages and six future gates"}
+  ],
+  "blockers": [
+    "No forwardable-link mutation or external preview test is authorized.",
+    "Nate must approve factual preview copy, image direction, exact artifact, URL, audience and channel after waking."
+  ],
+  "ownership": "Local metadata audit records only; no page, asset, host, domain or message ownership.",
+  "next_action": "Run one independent read-only verification of the static findings and fail-closed recommendation."
+}

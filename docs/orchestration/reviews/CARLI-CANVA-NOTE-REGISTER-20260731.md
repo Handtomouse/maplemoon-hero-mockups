@@ -33,7 +33,7 @@ No source item may be called complete from capture alone.
 
 | ID | Capture | Delivery | Canva direction | Target | Disposition |
 |---|---|---|---|---|---|
-| CV-001 | [x] | [ ] | Change small text to `No Caffeine, Organic Ingredients & Vegan Friendly` | Homepage benefit strip | `needs-Nate`; mapped to `SAT-020` |
+| CV-001 | [x] | [x] | Change small text to `No Caffeine, Organic Ingredients & Vegan Friendly` | Homepage benefit strip | `accepted`; delivered as three exact badges under `SAT-HOME-01` / `SAT-020` |
 
 ## Page 2 - Bar descriptions
 

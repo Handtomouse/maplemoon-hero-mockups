@@ -1,0 +1,111 @@
+{
+  "schema": "maplemoon-receipt/v2",
+  "receipt_id": "FOUNDER-V04-PHOTO-WORKER-PHOTOSHOP-20260802-RECEIPT-001",
+  "packet_id": "FOUNDER-V04-PHOTO-WORKER-PHOTOSHOP-20260802",
+  "candidate_id": "FOUNDER-V04-PHOTO-WORKER-CANDIDATE-20260802-001",
+  "worker_thread_id": "019f9c36-83e1-7941-92e5-a3b134212288",
+  "worker": "Codex photo task",
+  "started_at": "2026-08-02T12:09:02Z",
+  "completed_at": "2026-08-02T12:17:57Z",
+  "outcome": "HOLD",
+  "confidence": "high",
+  "files_read": [
+    "docs/orchestration/packets/FOUNDER-V04-BIOS-20260802.md",
+    "docs/orchestration/packets/FOUNDER-V04-MAIN-PHOTOSHOP-20260802.md",
+    "docs/orchestration/SIDECHAT_RECEIPT_GATE.md",
+    "scripts/check-maplemoon-receipt.py",
+    "_wip/reviews/photoshoot_repair_batch1_20260801/73_reuse_g_v03/73_reuse_g_v03.psd",
+    "_wip/source_recovery/photoshoot_raws_20260801/Heros-73.jpg",
+    "_wip/reviews/founder_photo_v04_bios_20260802/founders_portrait_v04.psd"
+  ],
+  "files_changed": [
+    "docs/orchestration/reviews/FOUNDER-V04-PHOTO-WORKER-PHOTOSHOP-20260802.json"
+  ],
+  "files_confirmed_untouched": [
+    "_wip/reviews/photoshoot_repair_batch1_20260801/73_reuse_g_v03/73_reuse_g_v03.psd",
+    "_wip/source_recovery/photoshoot_raws_20260801/Heros-73.jpg",
+    "_wip/reviews/founder_photo_v04_bios_20260802/founders_portrait_v04.psd",
+    "assets/our_story/founders_portrait_h212.webp",
+    "_wip/our-story.WIP.html",
+    "docs/client-review/2026-08-01-saturday-review/staging-v1/clean/our-story.html",
+    "docs/client-review/2026-08-01-saturday-review/staging-v1/annotated/our-story.html"
+  ],
+  "pre_sha256": {
+    "docs/orchestration/packets/FOUNDER-V04-PHOTO-WORKER-PHOTOSHOP-20260802.md": "acccc6197a714a4b243892079d70a7477d89989b40fcc72eba218871ee4bb3d4",
+    "docs/orchestration/reviews/FOUNDER-V04-PHOTO-WORKER-PHOTOSHOP-20260802.json": null,
+    "_wip/reviews/founder_photo_v04_bios_20260802/founders_portrait_v04.psd": "53a9fe71d00bad379cf50a78688bc95f9606aea37afa2e848fa7b02041954333",
+    "_wip/reviews/founder_photo_v04_bios_20260802/founders_portrait_v04.png": null,
+    "_wip/reviews/founder_photo_v04_bios_20260802/carli_bio_v01.psd": null,
+    "_wip/reviews/founder_photo_v04_bios_20260802/carli_bio_v01.png": null,
+    "_wip/reviews/founder_photo_v04_bios_20260802/dylan_bio_v01.psd": null,
+    "_wip/reviews/founder_photo_v04_bios_20260802/dylan_bio_v01.png": null,
+    "_wip/reviews/founder_photo_v04_bios_20260802/source-selection.md": null,
+    "_wip/reviews/founder_photo_v04_bios_20260802/our_story_v04_review.html": null,
+    "_wip/reviews/founder_photo_v04_bios_20260802/qa/founders_portrait_v04_edges_100pct.png": null,
+    "_wip/reviews/founder_photo_v04_bios_20260802/qa/carli_bio_v01_edges_100pct.png": null,
+    "_wip/reviews/founder_photo_v04_bios_20260802/qa/dylan_bio_v01_edges_100pct.png": null,
+    "_wip/reviews/founder_photo_v04_bios_20260802/qa/our_story_v04_desktop_1440.png": null,
+    "_wip/reviews/founder_photo_v04_bios_20260802/qa/our_story_v04_mobile_390.png": null
+  },
+  "post_sha256": {
+    "docs/orchestration/packets/FOUNDER-V04-PHOTO-WORKER-PHOTOSHOP-20260802.md": "acccc6197a714a4b243892079d70a7477d89989b40fcc72eba218871ee4bb3d4",
+    "docs/orchestration/reviews/FOUNDER-V04-PHOTO-WORKER-PHOTOSHOP-20260802.json": null,
+    "_wip/reviews/founder_photo_v04_bios_20260802/founders_portrait_v04.psd": "53a9fe71d00bad379cf50a78688bc95f9606aea37afa2e848fa7b02041954333",
+    "_wip/reviews/founder_photo_v04_bios_20260802/founders_portrait_v04.png": null,
+    "_wip/reviews/founder_photo_v04_bios_20260802/carli_bio_v01.psd": null,
+    "_wip/reviews/founder_photo_v04_bios_20260802/carli_bio_v01.png": null,
+    "_wip/reviews/founder_photo_v04_bios_20260802/dylan_bio_v01.psd": null,
+    "_wip/reviews/founder_photo_v04_bios_20260802/dylan_bio_v01.png": null,
+    "_wip/reviews/founder_photo_v04_bios_20260802/source-selection.md": null,
+    "_wip/reviews/founder_photo_v04_bios_20260802/our_story_v04_review.html": null,
+    "_wip/reviews/founder_photo_v04_bios_20260802/qa/founders_portrait_v04_edges_100pct.png": null,
+    "_wip/reviews/founder_photo_v04_bios_20260802/qa/carli_bio_v01_edges_100pct.png": null,
+    "_wip/reviews/founder_photo_v04_bios_20260802/qa/dylan_bio_v01_edges_100pct.png": null,
+    "_wip/reviews/founder_photo_v04_bios_20260802/qa/our_story_v04_desktop_1440.png": null,
+    "_wip/reviews/founder_photo_v04_bios_20260802/qa/our_story_v04_mobile_390.png": null
+  },
+  "checkpoint_path": "_wip/checkpoints/FOUNDER-V04-PHOTO-WORKER-PHOTOSHOP-20260802_20260802_220846_AEST",
+  "checks": [
+    {
+      "command": "python3 scripts/check-maplemoon-receipt.py checkpoint --packet docs/orchestration/packets/FOUNDER-V04-PHOTO-WORKER-PHOTOSHOP-20260802.md --root /Users/handtomouse/maplemoon-website --destination _wip/checkpoints/FOUNDER-V04-PHOTO-WORKER-PHOTOSHOP-20260802_20260802_220846_AEST",
+      "exit_code": 0,
+      "result": "PASS checkpoint packet=FOUNDER-V04-PHOTO-WORKER-PHOTOSHOP-20260802 files=15 path=_wip/checkpoints/FOUNDER-V04-PHOTO-WORKER-PHOTOSHOP-20260802_20260802_220846_AEST"
+    },
+    {
+      "command": "python3 scripts/check-maplemoon-receipt.py verify --packet docs/orchestration/packets/FOUNDER-V04-PHOTO-WORKER-PHOTOSHOP-20260802.md --root /Users/handtomouse/maplemoon-website --checkpoint _wip/checkpoints/FOUNDER-V04-PHOTO-WORKER-PHOTOSHOP-20260802_20260802_220846_AEST --phase start",
+      "exit_code": 0,
+      "result": "PASS packet=FOUNDER-V04-PHOTO-WORKER-PHOTOSHOP-20260802 phase=start scope=15"
+    },
+    {
+      "command": "SHA-256 verification before and after Photoshop inspection attempts",
+      "exit_code": 0,
+      "result": "PASS: HEAD remained 5df674a3bd7bcd0fe738fbe8929320c89b29b89c; v03 remained abcc2f13400e313f6dacfafebefe3b1736e2e962aebeda12e4e76424a037ab3c; Heros-73 remained b31b11b0aec41cb9461a74e906a84979162d34b691a27fcef72a3b153e1e6d93; v04 remained 53a9fe71d00bad379cf50a78688bc95f9606aea37afa2e848fa7b02041954333."
+    },
+    {
+      "command": "Photoshop native 100 percent read-only inspection through Computer Use",
+      "exit_code": 0,
+      "result": "HOLD: the first state confirmed founders_portrait_v04.psd open at 100 percent, but only the far-right background strip was visible. After fitting the canvas, screenshot capture degraded to a 116 by 116 thumbnail; Raise, list-apps and a fresh bundle-ID reconnect then timed out. No reliable native visual inspection was possible."
+    },
+    {
+      "command": "Photoshop pixel edits, review exports, individual crops and Our Story proofs",
+      "exit_code": 0,
+      "result": "NOT RUN: the packet requires interactive Photoshop control and native inspection to pass first."
+    }
+  ],
+  "screenshots_or_urls": [],
+  "failures": [
+    "Interactive Photoshop control became unavailable before a reliable native 100 percent visual inspection could be completed."
+  ],
+  "unknowns": [
+    "Whether v04 contains any remaining native-scale edge defect requiring a manual correction."
+  ],
+  "residual_risk": [
+    "No v04 PNG, Carli crop, Dylan crop, native QA proof or isolated Our Story proof exists.",
+    "The v04 PSD is recovery-safe and byte-unchanged, but has not passed this packet's native visual gate."
+  ],
+  "forbidden_path_changes": [],
+  "proposed_next_state": "hold",
+  "next_reviewer": "Nate",
+  "next_action": "Resume this exact photo-worker packet when Photoshop Computer Use returns a usable full-frame and native 100 percent view; do not create a replacement packet or algorithmic substitute.",
+  "ready_to_promote": false
+}

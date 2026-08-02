@@ -1,0 +1,172 @@
+{
+  "schema": "maplemoon-receipt/v2",
+  "receipt_id": "SAT-PRODUCT-NEUTRAL-01-RECEIPT-001",
+  "packet_id": "SAT-PRODUCT-NEUTRAL-01",
+  "candidate_id": "SAT-PRODUCT-NEUTRAL-CANDIDATE-20260801-001",
+  "worker_thread_id": "019fa858-05c9-7631-b26e-8f5cbbf1387a",
+  "worker": "Codex",
+  "started_at": "2026-07-31T23:41:23Z",
+  "completed_at": "2026-08-01T00:14:03Z",
+  "outcome": "PASS",
+  "confidence": "high",
+  "files_read": [
+    "docs/plans/2026-07-31-maplemoon-saturday-delivery-gsd-plan.md",
+    "docs/orchestration/SATURDAY_REVIEW_ACCEPTANCE_20260801.md",
+    "docs/orchestration/SIDECHAT_RECEIPT_GATE.md",
+    "docs/orchestration/packets/SAT-HOME-01-HOMEPAGE-CLAIM-SAFE-FREEZE.md",
+    "docs/orchestration/reviews/SAT-HOME-01-HOMEPAGE-CLAIM-SAFE-FREEZE-20260801.md"
+  ],
+  "files_changed": [
+    "_wip/homepage_real_1_lead_photo.WIP.html",
+    "_wip/shop.WIP.html",
+    "scripts/build-maplemoon-saturday-review.py",
+    "scripts/check-maplemoon-review.py",
+    "scripts/check-maplemoon-cart.mjs",
+    "docs/client-review/2026-08-01-saturday-review/shared/mock-cart.js",
+    "docs/orchestration/packets/SAT-PRODUCT-NEUTRAL-01.md",
+    "docs/orchestration/reviews/SAT-PRODUCT-NEUTRAL-01-20260801.json",
+    "_wip/reviews/saturday_product_neutral_20260801/qa/clean-homepage-product-390.png",
+    "_wip/reviews/saturday_product_neutral_20260801/qa/clean-homepage-product-1440.png",
+    "_wip/reviews/saturday_product_neutral_20260801/qa/clean-shop-390.png",
+    "_wip/reviews/saturday_product_neutral_20260801/qa/clean-shop-1440.png",
+    "docs/client-review/2026-08-01-saturday-review/staging-v1/MANIFEST.json",
+    "docs/client-review/2026-08-01-saturday-review/staging-v1/clean/MANIFEST.json",
+    "docs/client-review/2026-08-01-saturday-review/staging-v1/clean/homepage.html",
+    "docs/client-review/2026-08-01-saturday-review/staging-v1/clean/shop.html",
+    "docs/client-review/2026-08-01-saturday-review/staging-v1/clean/mock-cart.js",
+    "docs/client-review/2026-08-01-saturday-review/staging-v1/annotated/MANIFEST.json",
+    "docs/client-review/2026-08-01-saturday-review/staging-v1/annotated/homepage.html",
+    "docs/client-review/2026-08-01-saturday-review/staging-v1/annotated/shop.html",
+    "docs/client-review/2026-08-01-saturday-review/staging-v1/annotated/mock-cart.js"
+  ],
+  "files_confirmed_untouched": [
+    "_wip/carob-story.WIP.html",
+    "_wip/our-story.WIP.html",
+    "_wip/stockists.WIP.html",
+    "_wip/faq.WIP.html",
+    "docs/client-review/2026-08-01-saturday-review/staging-v1/clean/carob-story.html",
+    "docs/client-review/2026-08-01-saturday-review/staging-v1/clean/our-story.html",
+    "docs/client-review/2026-08-01-saturday-review/staging-v1/clean/stockists.html",
+    "docs/client-review/2026-08-01-saturday-review/staging-v1/clean/faq.html",
+    "docs/client-review/2026-08-01-saturday-review/staging-v1/annotated/carob-story.html",
+    "docs/client-review/2026-08-01-saturday-review/staging-v1/annotated/our-story.html",
+    "docs/client-review/2026-08-01-saturday-review/staging-v1/annotated/stockists.html",
+    "docs/client-review/2026-08-01-saturday-review/staging-v1/annotated/faq.html"
+  ],
+  "pre_sha256": {
+    "_wip/homepage_real_1_lead_photo.WIP.html": "787ccb5cb3b1a94023ed4c7405c6248e64dad7bc4d412f50061996347a481a6d",
+    "_wip/shop.WIP.html": "d976b0b8df1edc845eae10fa03a272f96dae7ff9fad6711f1dfb6eed80ff5a09",
+    "scripts/build-maplemoon-saturday-review.py": "faed4e94ebd3366950dcc8fd7184369c4c8bbe2648a2cc5bfe60ef900ac623d9",
+    "scripts/check-maplemoon-review.py": "27aeae02b4f09afe0c78a4d8c68b05c2eaf8fd8e84a17b042ea7dd34dc015c19",
+    "scripts/check-maplemoon-cart.mjs": "30ceedfdcc2e8af53ce46d21e31ed18705209df3b25d63ca74e2af51e4512134",
+    "docs/client-review/2026-08-01-saturday-review/shared/mock-cart.js": "83871208f4bcb9e51d37f9c9f54dd1f6fa4cfa75fe73b22a0ce6b502d7f88317",
+    "docs/orchestration/packets/SAT-PRODUCT-NEUTRAL-01.md": "3d698f7a422ac42fcf84d9c55476ffb79dc88c23be2b28ad9e2d9fa45fcbc840",
+    "docs/orchestration/reviews/SAT-PRODUCT-NEUTRAL-01-20260801.json": null,
+    "_wip/reviews/saturday_product_neutral_20260801/qa/clean-homepage-product-390.png": null,
+    "_wip/reviews/saturday_product_neutral_20260801/qa/clean-homepage-product-1440.png": null,
+    "_wip/reviews/saturday_product_neutral_20260801/qa/clean-shop-390.png": null,
+    "_wip/reviews/saturday_product_neutral_20260801/qa/clean-shop-1440.png": null,
+    "docs/client-review/2026-08-01-saturday-review/staging-v1/MANIFEST.json": "25fe57e0ca43e563cc3b1e4c9060ee1b1751083f779b44cb5c77ed91dd6812b2",
+    "docs/client-review/2026-08-01-saturday-review/staging-v1/clean/MANIFEST.json": "cb4bf5d44567c716cf8f2414e66ffc3482d49ca50fbe98444ab6a10983bad8b1",
+    "docs/client-review/2026-08-01-saturday-review/staging-v1/clean/homepage.html": "34b7aed30db3776dba1c6d282eaed6cfa9922388fd988c9aacb9383bc40b5b1c",
+    "docs/client-review/2026-08-01-saturday-review/staging-v1/clean/shop.html": "0e0cf7244398f9950fa8dc87aff08afefa2baa530615bbfef64d106f2bc3d1f6",
+    "docs/client-review/2026-08-01-saturday-review/staging-v1/clean/mock-cart.js": "83871208f4bcb9e51d37f9c9f54dd1f6fa4cfa75fe73b22a0ce6b502d7f88317",
+    "docs/client-review/2026-08-01-saturday-review/staging-v1/annotated/MANIFEST.json": "c23b060afef19cc99c522a63d6f32acd8942189cab7c8b880d582f244873452c",
+    "docs/client-review/2026-08-01-saturday-review/staging-v1/annotated/homepage.html": "5e6002baa248dc057980a208db5eed832f20e0d96c94d35f35e0b538e977d629",
+    "docs/client-review/2026-08-01-saturday-review/staging-v1/annotated/shop.html": "9810415cf460b30ba23ac8bdd0aa6b37d0f0f22bf7f62a05167e015b98bd0bdc",
+    "docs/client-review/2026-08-01-saturday-review/staging-v1/annotated/mock-cart.js": "83871208f4bcb9e51d37f9c9f54dd1f6fa4cfa75fe73b22a0ce6b502d7f88317"
+  },
+  "post_sha256": {
+    "_wip/homepage_real_1_lead_photo.WIP.html": "2117f3364e61af5272178ec7bee6068afc03c5181ecee3b9fc8c67526acde4d4",
+    "_wip/shop.WIP.html": "9f5a2093728df88d2d2ccf1a4138d282092192cb96b2e485f237cf23b3fa0875",
+    "scripts/build-maplemoon-saturday-review.py": "f003bb7ff414c58baf7637eae9835e83f9bc1d41ecff981bfdb944b3a935da86",
+    "scripts/check-maplemoon-review.py": "35075047ea6c59250b3c904ebfe8feb1e493eab4ddaaff68886d5d54d2888be9",
+    "scripts/check-maplemoon-cart.mjs": "db3cc2e6b16224124e4f53880a7d8910e31a196ae49cac2a2def814463b39cab",
+    "docs/client-review/2026-08-01-saturday-review/shared/mock-cart.js": "8f9de9995402679957bdbcaba3041e00c5fca6d24c523bf7bb666046a86259f9",
+    "docs/orchestration/packets/SAT-PRODUCT-NEUTRAL-01.md": "b83a02d7762bad2917aeea1e5cf0c80d67c95125cb414dba0b60f006a1102dbe",
+    "docs/orchestration/reviews/SAT-PRODUCT-NEUTRAL-01-20260801.json": null,
+    "_wip/reviews/saturday_product_neutral_20260801/qa/clean-homepage-product-390.png": "54bd6700556874c98c6600b58684111bee157963481400cb9d9af71559bc6ac0",
+    "_wip/reviews/saturday_product_neutral_20260801/qa/clean-homepage-product-1440.png": "d4492b43a9b377fff103afe4adcfdfe3e9e9e06a41b5919858e09be1e8ab509f",
+    "_wip/reviews/saturday_product_neutral_20260801/qa/clean-shop-390.png": "33752e8542fcef66d0e541d49a1c3c2c8206f6a46ec10f97e4afd18e5e1f44ca",
+    "_wip/reviews/saturday_product_neutral_20260801/qa/clean-shop-1440.png": "f3c561654f48d63978ce71af3c7f08a3809942089e4c834cbe2a1abcd48a1cc9",
+    "docs/client-review/2026-08-01-saturday-review/staging-v1/MANIFEST.json": "61717cf0f80e9a3fe0297381cc909adab6ae6bf5ad3292f0aef64ae786c726d4",
+    "docs/client-review/2026-08-01-saturday-review/staging-v1/clean/MANIFEST.json": "1735a29e3b6d58d3b46e14e470979e320c1db909edc0d828027e2b01a52e10ca",
+    "docs/client-review/2026-08-01-saturday-review/staging-v1/clean/homepage.html": "0d102050395b79f4add5d9ddb7f75e962d7e41e11a78cd7f88c35ce4a947ef0c",
+    "docs/client-review/2026-08-01-saturday-review/staging-v1/clean/shop.html": "bf232d41aa536b0ff6beb26dac3b4e13229d814f53120e5553a29d509e415205",
+    "docs/client-review/2026-08-01-saturday-review/staging-v1/clean/mock-cart.js": "8f9de9995402679957bdbcaba3041e00c5fca6d24c523bf7bb666046a86259f9",
+    "docs/client-review/2026-08-01-saturday-review/staging-v1/annotated/MANIFEST.json": "b73fa0eaafddd5d3216f78cff0dba4d19321591d38d9befb16f806d5d6d5e2c2",
+    "docs/client-review/2026-08-01-saturday-review/staging-v1/annotated/homepage.html": "85e2593623d9e604577386e188cb00c09e69325f05170936849f8c1f66e33654",
+    "docs/client-review/2026-08-01-saturday-review/staging-v1/annotated/shop.html": "bbeaa3e8a429fd83eb898e0b475759cf1d7f1f9c71d97fd393933e1745350bdd",
+    "docs/client-review/2026-08-01-saturday-review/staging-v1/annotated/mock-cart.js": "8f9de9995402679957bdbcaba3041e00c5fca6d24c523bf7bb666046a86259f9"
+  },
+  "checkpoint_path": "_wip/checkpoints/SAT-PRODUCT-NEUTRAL-01_20260801_094059_AEST",
+  "checks": [
+    {
+      "command": "scripts/check-maplemoon-receipt.py checkpoint and phase-start verify",
+      "exit_code": 0,
+      "result": "PASS: non-overwriting recovery captured all 21 admitted writable paths before source mutation."
+    },
+    {
+      "command": "two independent temporary builds plus diff -qr",
+      "exit_code": 0,
+      "result": "PASS: temporary builds A and B were byte-identical."
+    },
+    {
+      "command": "scripts/check-maplemoon-review.py --profile saturday-all",
+      "exit_code": 0,
+      "result": "PASS on temporary and promoted staging roots: 0 failures and 0 warnings; clean and annotated parity passed."
+    },
+    {
+      "command": "scripts/check-maplemoon-cart.mjs",
+      "exit_code": 0,
+      "result": "PASS on temporary and promoted staging roots: ordinary Add to cart binding, neutral enquiry treatment, fake checkout, accessibility and no-network checks passed."
+    },
+    {
+      "command": "scripts/check-maplemoon-homepage-motion.mjs",
+      "exit_code": 0,
+      "result": "PASS: no autoplay attribute and reduced-motion pause behavior passed."
+    },
+    {
+      "command": "scripts/check-maplemoon-responsive-overflow.mjs --self-test",
+      "exit_code": 0,
+      "result": "PASS: rectangle overflow and deliberate scroll-reachability positive control passed."
+    },
+    {
+      "command": "literal unfinished-signal scan",
+      "exit_code": 0,
+      "result": "PASS: Pricing to follow, Product details to follow and Notify Me are absent from clean and annotated Homepage and Shop."
+    },
+    {
+      "command": "in-app Browser QA at 390 and 1440",
+      "exit_code": 0,
+      "result": "PASS: no document overflow or console warnings/errors; Shop shows 20 confirmed-price Add to cart actions and two visible unpriced Enquire actions; Homepage neutral enquiry treatment is visible."
+    },
+    {
+      "command": "diff -qr promoted staging against verified temporary build",
+      "exit_code": 0,
+      "result": "PASS: promoted package is byte-identical to the verified temporary build."
+    },
+    {
+      "command": "git diff --check",
+      "exit_code": 0,
+      "result": "PASS."
+    }
+  ],
+  "screenshots_or_urls": [
+    "file:///Users/handtomouse/maplemoon-website/_wip/reviews/saturday_product_neutral_20260801/qa/clean-homepage-product-390.png",
+    "file:///Users/handtomouse/maplemoon-website/_wip/reviews/saturday_product_neutral_20260801/qa/clean-homepage-product-1440.png",
+    "file:///Users/handtomouse/maplemoon-website/_wip/reviews/saturday_product_neutral_20260801/qa/clean-shop-390.png",
+    "file:///Users/handtomouse/maplemoon-website/_wip/reviews/saturday_product_neutral_20260801/qa/clean-shop-1440.png",
+    "http://127.0.0.1:3011/docs/client-review/2026-08-01-saturday-review/staging-v1/clean/homepage.html",
+    "http://127.0.0.1:3011/docs/client-review/2026-08-01-saturday-review/staging-v1/clean/shop.html"
+  ],
+  "failures": [],
+  "unknowns": [],
+  "residual_risk": [
+    "The six-page package still requires Nate's final ordinary-viewer, keyboard/focus and literal 200 percent review before the 11:30am AEST cutoff."
+  ],
+  "forbidden_path_changes": [],
+  "proposed_next_state": "needs_review",
+  "next_reviewer": "Nate",
+  "next_action": "Nate performs the final clean six-page ordinary-viewer, keyboard/focus and literal 200 percent QA and reports either PASS or the first material correction."
+}

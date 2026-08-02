@@ -1,0 +1,90 @@
+{
+  "schema": "maplemoon-receipt/v2",
+  "receipt_id": "MAPLEMOON-READINESS-RESEARCH-SYNTHESIS-20260802-RECEIPT-001",
+  "packet_id": "MAPLEMOON-READINESS-RESEARCH-SYNTHESIS-20260802",
+  "worker_thread_id": "019fa858-05c9-7631-b26e-8f5cbbf1387a",
+  "worker": "Main Boss coordinator",
+  "started_at": "2026-08-02T01:50:27+10:00",
+  "completed_at": "2026-08-02T01:52:45+10:00",
+  "outcome": "PASS",
+  "confidence": "high",
+  "phase": "complete",
+  "status": "PASS",
+  "ready_to_promote": false,
+  "checkpoint_path": "_wip/checkpoints/MAPLEMOON-READINESS-RESEARCH-SYNTHESIS-20260802_20260802_015027_AEST",
+  "authority": {
+    "path": "/Users/handtomouse/maplemoon-website/docs/orchestration/packets/MAPLEMOON-CLIENT-REVIEW-SOFT-LAUNCH-SHOPIFY-READINESS-ADDENDUM-20260802.md",
+    "sha256": "7c541b6ff97f2ffdc1b6fe888cdba4f1795caadb947cfb7642d8ee54bfe2b712",
+    "frozen_overnight_sha256": "12689434a7c46c323b27d1c8a099cb9703bf910b8c6dbbac2cfca193a0c6b599"
+  },
+  "research_lanes": [
+    "019fbdf2-31c7-7bb1-801d-73c7cb746299",
+    "019fbdf2-3464-79f1-9664-d05e9d6341d1",
+    "019fbdf2-32c9-7f81-beda-70a9cc1cc4dc"
+  ],
+  "files_changed": [
+    "docs/orchestration/reviews/MAPLEMOON-READINESS-RESEARCH-SYNTHESIS-20260802.json",
+    "docs/orchestration/reviews/MAPLEMOON-CLIENT-REVIEW-SHOPIFY-READINESS-RESEARCH-20260802.md",
+    "docs/orchestration/reviews/MAPLEMOON-CLIENT-REVIEW-SHOPIFY-READINESS-RESEARCH-20260802.json"
+  ],
+  "files_read": [
+    "frozen overnight authority",
+    "client-review and Shopify readiness addendum",
+    "three completed read-only research-lane outputs",
+    "targeted metadata scan of the clean six-page local package"
+  ],
+  "pre_sha256": {
+    "docs/orchestration/packets/MAPLEMOON-READINESS-RESEARCH-SYNTHESIS-20260802.md": "d5d2c825d0d15d77cdf8ec29cb7db3b3b0006dbaf932c32d5709495ff177f4f0",
+    "docs/orchestration/reviews/MAPLEMOON-READINESS-RESEARCH-SYNTHESIS-20260802.json": null,
+    "docs/orchestration/reviews/MAPLEMOON-CLIENT-REVIEW-SHOPIFY-READINESS-RESEARCH-20260802.md": null,
+    "docs/orchestration/reviews/MAPLEMOON-CLIENT-REVIEW-SHOPIFY-READINESS-RESEARCH-20260802.json": null
+  },
+  "post_sha256": {
+    "docs/orchestration/packets/MAPLEMOON-READINESS-RESEARCH-SYNTHESIS-20260802.md": "d5d2c825d0d15d77cdf8ec29cb7db3b3b0006dbaf932c32d5709495ff177f4f0",
+    "docs/orchestration/reviews/MAPLEMOON-CLIENT-REVIEW-SHOPIFY-READINESS-RESEARCH-20260802.md": "e3158786218a7f8be8fcbc4e1d7ac9de1b8035fd6c2ff6ceeb2ede0d87f5116c",
+    "docs/orchestration/reviews/MAPLEMOON-CLIENT-REVIEW-SHOPIFY-READINESS-RESEARCH-20260802.json": "37e3aa8490e3eacd671ad16859857332457fdd3360c231c0cbc0757585332343"
+  },
+  "screenshots_or_urls": [],
+  "failures": [],
+  "unknowns": [
+    "Final review audience, access model, wording and feedback destination are not approved.",
+    "Data owner, consent notice, retention and deletion responsibilities are unresolved.",
+    "Shopify plan, theme base, apps, roles, catalogue truth, domain and cutover owners are unresolved."
+  ],
+  "residual_risk": [
+    "Primary-source research does not authorize or prove any live integration.",
+    "Targeted static metadata inventory is not a rendered ordinary-viewer acceptance test.",
+    "Legal applicability of specific Australian Privacy Principles was not determined."
+  ],
+  "forbidden_path_changes": [],
+  "proposed_next_state": "needs_review",
+  "next_reviewer": "019fa858-05c9-7631-b26e-8f5cbbf1387a",
+  "checks": [
+    {
+      "command": "receipt checker phase=start",
+      "exit_code": 0,
+      "result": "PASS"
+    },
+    {
+      "command": "JSON validation",
+      "exit_code": 0,
+      "result": "PASS"
+    },
+    {
+      "command": "git diff --check for exact synthesis paths",
+      "exit_code": 0,
+      "result": "PASS"
+    },
+    {
+      "command": "targeted clean-package metadata inventory",
+      "exit_code": 0,
+      "result": "PASS with documented gaps"
+    }
+  ],
+  "blockers": [
+    "Absolute site-sharing HOLD applies until Nate approves the exact artifact, audience, channel, wording, access and feedback route after waking.",
+    "No analytics, form, cookie, Shopify, credential or production action is authorized."
+  ],
+  "ownership": "Research synthesis records only; no website, Shop, Wave 1D, external or production ownership.",
+  "next_action": "Independently verify this synthesis receipt, then admit at most one bounded local review-hub specification packet; do not implement or share it."
+}

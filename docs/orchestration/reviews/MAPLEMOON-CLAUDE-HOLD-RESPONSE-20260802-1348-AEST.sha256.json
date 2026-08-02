@@ -1,0 +1,47 @@
+{
+  "schema": "maplemoon-receipt-self-hash/v1",
+  "record_id": "MAPLEMOON-CLAUDE-HOLD-RESPONSE-20260802-1348-AEST-SELFHASH",
+  "convention": "GOV-RECEIPT-SELF-HASH-01",
+  "purpose": "External tamper-detection for a receipt that cannot carry its own hash. GOV-RECEIPT-SELF-HASH-01 established that a receipt's self pre/post hash is deliberately null because the value cannot exist inside the file it describes. This sidecar carries that value outside the file instead, so Main Boss can confirm the receipt has not been altered since it was filed.",
+
+  "target": "docs/orchestration/reviews/MAPLEMOON-CLAUDE-HOLD-RESPONSE-20260802-1348-AEST.json",
+  "hash_algorithm": "sha256-raw",
+  "sha256": "244f70c156753cc021aa0d3cca084c4e1b439b1eaa777d09c33f11d7aa77a748",
+  "bytes": 12204,
+  "recorded_at": "2026-08-02T07:29:06Z",
+  "recorded_by": "Claude Code side chat",
+
+  "verify_command": "shasum -a 256 docs/orchestration/reviews/MAPLEMOON-CLAUDE-HOLD-RESPONSE-20260802-1348-AEST.json",
+  "expected_output": "244f70c156753cc021aa0d3cca084c4e1b439b1eaa777d09c33f11d7aa77a748",
+  "mismatch_means": "The receipt was altered after filing. Treat its contents as unverified and request a fresh receipt rather than acting on it.",
+
+  "superseded_hashes": [
+    {
+      "sha256": "56b6ed574154c547b71753a258226480ab2a35ee6726320135c7e0a37214e588",
+      "valid_until": "2026-08-02T07:29:06Z",
+      "reason": "Superseded by a substantive correction, not a formatting change. CONFLICT-1-PASSCODE was WITHDRAWN as a Claude error: REVIEW-HUB-SPEC line 88 excludes a password system from THAT SPECIFICATION's scope, which I misread as a prohibition. REVIEW-HUB-SEND-CHECKLIST line 42 explicitly anticipates 'passcode if any' as a Nate approval, and SPEC line 81 defers access method and expiry to Nate. There was never a contradiction and nothing was blocked by it. Original claim retained in the receipt for audit."
+    },
+    {
+      "sha256": "44bbb907414441661e1ccc653c9ed0332e56a9a94be0e52c09b21ae131141b7e",
+      "valid_until": "2026-08-02T05:02:24Z",
+      "reason": "Original filing at 13:48 AEST. Superseded by two disclosed in-place corrections: (1) post_sha256 gained the explicit null self-reference required by the GOV-RECEIPT-SELF-HASH-01 convention, which the original omitted; (2) CONFLICT-2-EXPOSED-SURFACE was marked RESOLVED after port 3011 stopped listening. If Main Boss recorded 44bbb907 from an earlier relay, that value is stale and expected to mismatch."
+    }
+  ],
+
+  "self_reference_note": "This sidecar does not and cannot hash itself. It is a leaf record. Its own integrity rests on Main Boss reading it directly from the repository rather than via relay.",
+  "corrections_are_additive": "Neither correction removed, softened or reversed any finding, failure or admission in the receipt. The two self-reported failures and the acceptance of the scope-breach record are unchanged. The CONFLICT-2 original text was retained in place and annotated rather than deleted.",
+
+  "files_changed": [
+    "docs/orchestration/reviews/MAPLEMOON-CLAUDE-HOLD-RESPONSE-20260802-1348-AEST.json",
+    "docs/orchestration/reviews/MAPLEMOON-CLAUDE-HOLD-RESPONSE-20260802-1348-AEST.sha256.json"
+  ],
+  "files_confirmed_untouched": [
+    "docs/client-review/2026-08-01-saturday-review/staging-v1",
+    "docs/orchestration/LOCK_MANIFEST.json",
+    "docs/orchestration/packets",
+    "all git refs — HEAD remains d65047b6a7431af955ad0cd5b57c42f7a9367225, 0 staged, nothing pushed"
+  ],
+
+  "proposed_next_state": "needs_review",
+  "next_reviewer": "Main Boss"
+}

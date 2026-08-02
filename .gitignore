@@ -37,3 +37,12 @@ docs/client-review/*/staging-v1/
 # their receipts/manifests/boards stay in. Durable copies: locked worktree 27ab
 # + iMac replica. Integrity: _wip/evidence/IMAGERY-PROGRAMME-20260802/CANDIDATE-MANIFEST.sha256
 docs/client-review/*/generated-candidates/**/*.png
+
+# --- Founder v04 master custody (3 Aug): full-res Photoshop exports stay out of git,
+# their sha256 receipts and downscaled review derivatives stay in. Masters are exported
+# from the iMac PSD via Photoshop document scripting, never screen capture.
+# Integrity: _wip/evidence/IMAGERY-PROGRAMME-20260802/FOUNDER-V04-MASTER.sha256
+_wip/masters/
+
+# Regenerable bytecode: tools/ was already covered, scripts/ was not.
+scripts/__pycache__/

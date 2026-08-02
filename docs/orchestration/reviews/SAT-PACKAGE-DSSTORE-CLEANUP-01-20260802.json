@@ -1,0 +1,109 @@
+{
+  "schema": "maplemoon-receipt/v2",
+  "receipt_id": "SAT-PACKAGE-DSSTORE-CLEANUP-01-20260802-RECEIPT-001",
+  "packet_id": "SAT-PACKAGE-DSSTORE-CLEANUP-01",
+  "candidate_id": "SAT-PACKAGE-DSSTORE-CLEANUP-01-001",
+  "worker_thread_id": "019fa858-05c9-7631-b26e-8f5cbbf1387a",
+  "worker": "Main Boss package cleanup",
+  "started_at": "2026-08-02T03:44:32Z",
+  "completed_at": "2026-08-02T03:45:42Z",
+  "outcome": "PASS",
+  "confidence": "high",
+  "files_read": [
+    "docs/orchestration/packets/SAT-PACKAGE-DSSTORE-CLEANUP-01.md",
+    "docs/orchestration/reviews/MAPLEMOON-CLAUDE-COMMIT-INCIDENT-UNWIND-20260802.json",
+    "docs/client-review/2026-08-01-saturday-review/staging-v1",
+    "scripts/check-maplemoon-review.py",
+    "scripts/check-maplemoon-cart.mjs",
+    "scripts/check-maplemoon-responsive-overflow.mjs"
+  ],
+  "files_changed": [
+    "docs/orchestration/reviews/SAT-PACKAGE-DSSTORE-CLEANUP-01-20260802.json",
+    "docs/client-review/2026-08-01-saturday-review/staging-v1/.DS_Store",
+    "docs/client-review/2026-08-01-saturday-review/staging-v1/clean/.DS_Store",
+    "docs/client-review/2026-08-01-saturday-review/staging-v1/clean/assets/.DS_Store",
+    "docs/client-review/2026-08-01-saturday-review/staging-v1/annotated/.DS_Store",
+    "docs/client-review/2026-08-01-saturday-review/staging-v1/annotated/assets/.DS_Store",
+    "_wip/reviews/package_dsstore_cleanup_20260802/pre-delete-sha256.txt",
+    "_wip/reviews/package_dsstore_cleanup_20260802/post-clean-package-sha256.txt",
+    "_wip/reviews/package_dsstore_cleanup_20260802/check-results.txt"
+  ],
+  "files_confirmed_untouched": [
+    "all 154 remaining staging-v1 files",
+    "all clean and annotated HTML, CSS, JavaScript, image and manifest content",
+    "Git HEAD and index",
+    "all external systems"
+  ],
+  "pre_sha256": {
+    "docs/orchestration/reviews/SAT-PACKAGE-DSSTORE-CLEANUP-01-20260802.json": null,
+    "docs/client-review/2026-08-01-saturday-review/staging-v1/.DS_Store": "3f62e9ceb5e5a677eaddc0490fd3d40a1ccd32d6fd6b987a2adf95cd2c2e7a40",
+    "docs/client-review/2026-08-01-saturday-review/staging-v1/clean/.DS_Store": "55a13f1ed86279c53a22fcd3bf5f888d4259afc20f5af0979bff989e179ade40",
+    "docs/client-review/2026-08-01-saturday-review/staging-v1/clean/assets/.DS_Store": "98a40530bb3215e08de90b661ef735f25ebb5625146f0769b9dd548ed8ac823f",
+    "docs/client-review/2026-08-01-saturday-review/staging-v1/annotated/.DS_Store": "51c1c27901233678569f247f2282cef8a49fafbd8f228f766f2c1afb884d4cd7",
+    "docs/client-review/2026-08-01-saturday-review/staging-v1/annotated/assets/.DS_Store": "8efd36743376b0e1758ac5594bb64560b2ff5d90764b7f3d0cfcf2375608d236",
+    "_wip/reviews/package_dsstore_cleanup_20260802/pre-delete-sha256.txt": null,
+    "_wip/reviews/package_dsstore_cleanup_20260802/post-clean-package-sha256.txt": null,
+    "_wip/reviews/package_dsstore_cleanup_20260802/check-results.txt": null
+  },
+  "post_sha256": {
+    "docs/orchestration/reviews/SAT-PACKAGE-DSSTORE-CLEANUP-01-20260802.json": null,
+    "docs/client-review/2026-08-01-saturday-review/staging-v1/.DS_Store": null,
+    "docs/client-review/2026-08-01-saturday-review/staging-v1/clean/.DS_Store": null,
+    "docs/client-review/2026-08-01-saturday-review/staging-v1/clean/assets/.DS_Store": null,
+    "docs/client-review/2026-08-01-saturday-review/staging-v1/annotated/.DS_Store": null,
+    "docs/client-review/2026-08-01-saturday-review/staging-v1/annotated/assets/.DS_Store": null,
+    "_wip/reviews/package_dsstore_cleanup_20260802/pre-delete-sha256.txt": "574d85989694b945f0e38f124964d755741e942e07713d5482e0e06286bc24ed",
+    "_wip/reviews/package_dsstore_cleanup_20260802/post-clean-package-sha256.txt": "574d85989694b945f0e38f124964d755741e942e07713d5482e0e06286bc24ed",
+    "_wip/reviews/package_dsstore_cleanup_20260802/check-results.txt": "2bd3e11aa454b60daeb7a96785b5ccb5044bb4e73f314149b0d0b9a385070ee5"
+  },
+  "checkpoint_path": "_wip/checkpoints/SAT-PACKAGE-DSSTORE-CLEANUP-01_20260802_134432_AEST",
+  "checks": [
+    {
+      "command": "five-path SHA-256 admission check",
+      "exit_code": 0,
+      "result": "PASS: all five files existed and matched the packet hashes before deletion."
+    },
+    {
+      "command": "exact deletion and absence check",
+      "exit_code": 0,
+      "result": "PASS: only the five admitted .DS_Store files were deleted; none remains under staging-v1."
+    },
+    {
+      "command": "pre/post remaining-package SHA-256 manifest comparison",
+      "exit_code": 0,
+      "result": "PASS: all 154 remaining files are byte-identical; both manifests hash to 574d85989694b945f0e38f124964d755741e942e07713d5482e0e06286bc24ed."
+    },
+    {
+      "command": "python3 -B scripts/check-maplemoon-review.py --staging docs/client-review/2026-08-01-saturday-review/staging-v1 --profile saturday-all",
+      "exit_code": 0,
+      "result": "PASS: clean, annotated and aggregate checks complete with 0 failures and 0 warnings."
+    },
+    {
+      "command": "node scripts/check-maplemoon-cart.mjs",
+      "exit_code": 0,
+      "result": "PASS: cart binding, neutral enquiry, fake checkout, local form, accessibility and no-network checks."
+    },
+    {
+      "command": "node scripts/check-maplemoon-responsive-overflow.mjs --self-test",
+      "exit_code": 0,
+      "result": "PASS: rectangle overflow and scroll reachability positive control."
+    },
+    {
+      "command": "Git boundary check",
+      "exit_code": 0,
+      "result": "PASS: HEAD remains d65047b6a7431af955ad0cd5b57c42f7a9367225 and zero paths are staged."
+    }
+  ],
+  "screenshots_or_urls": [],
+  "failures": [],
+  "unknowns": [],
+  "residual_risk": [
+    "Nate's guided six-page CR-0 is still required before sharing.",
+    "The protected-access mechanism, exact frozen artifact, wording and access details remain separately gated."
+  ],
+  "forbidden_path_changes": [],
+  "proposed_next_state": "accepted",
+  "next_reviewer": "Nate",
+  "next_action": "Begin the exact clean Homepage guided CR-0 and ask Nate for the first material PASS or correction.",
+  "ready_to_promote": false
+}

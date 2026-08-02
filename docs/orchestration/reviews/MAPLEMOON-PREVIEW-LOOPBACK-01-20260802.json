@@ -1,0 +1,108 @@
+{
+  "schema": "maplemoon-receipt/v2",
+  "receipt_id": "MAPLEMOON-PREVIEW-LOOPBACK-01-RECEIPT-001",
+  "packet_id": "MAPLEMOON-PREVIEW-LOOPBACK-01",
+  "candidate_id": "MAPLEMOON-PREVIEW-LOOPBACK-20260802-001",
+  "worker_thread_id": "019fa858-05c9-7631-b26e-8f5cbbf1387a",
+  "worker": "Codex Main Boss",
+  "started_at": "2026-08-02T07:57:05Z",
+  "completed_at": "2026-08-02T07:59:57Z",
+  "outcome": "PASS",
+  "confidence": "high",
+  "files_read": [
+    "docs/orchestration/SIDECHAT_RECEIPT_GATE.md"
+  ],
+  "external_files_read": [
+    "/Users/handtomouse/Library/LaunchAgents/com.maplemoon.preview.plist",
+    "/Users/handtomouse/Projects/maplemoon/site"
+  ],
+  "files_changed": [
+    "docs/orchestration/reviews/MAPLEMOON-PREVIEW-LOOPBACK-01-20260802.json"
+  ],
+  "external_files_changed": [
+    "/Users/handtomouse/Library/LaunchAgents/com.maplemoon.preview.plist"
+  ],
+  "files_confirmed_untouched": [
+    "docs/orchestration/packets/MAPLEMOON-PREVIEW-LOOPBACK-01.md",
+    "_wip/homepage_real_1_lead_photo.WIP.html",
+    "_wip/shop.WIP.html",
+    "_wip/our-story.WIP.html",
+    "_wip/carob-story.WIP.html",
+    "_wip/stockists.WIP.html",
+    "_wip/faq.WIP.html",
+    "docs/client-review/2026-08-01-saturday-review/staging-v1"
+  ],
+  "external_files_confirmed_untouched": [
+    "/Users/handtomouse/Projects/maplemoon/site"
+  ],
+  "pre_sha256": {
+    "docs/orchestration/packets/MAPLEMOON-PREVIEW-LOOPBACK-01.md": "5f677dec5716aba84e9faa4da5f577e497cf9177941d322a7dc70294324fe78b",
+    "docs/orchestration/reviews/MAPLEMOON-PREVIEW-LOOPBACK-01-20260802.json": null
+  },
+  "external_pre_sha256": {
+    "/Users/handtomouse/Library/LaunchAgents/com.maplemoon.preview.plist": "fe5d00f3d394dd15c1563f26421c7996b448a5097e0025575bf5a2176943ff38"
+  },
+  "post_sha256": {
+    "docs/orchestration/packets/MAPLEMOON-PREVIEW-LOOPBACK-01.md": "5f677dec5716aba84e9faa4da5f577e497cf9177941d322a7dc70294324fe78b",
+    "docs/orchestration/reviews/MAPLEMOON-PREVIEW-LOOPBACK-01-20260802.json": null
+  },
+  "external_post_sha256": {
+    "/Users/handtomouse/Library/LaunchAgents/com.maplemoon.preview.plist": "e15e761c72e879a7ca0a31eed1dcedc220e0af82aa394436d3bd8e72187d8850"
+  },
+  "checkpoint_path": "_wip/checkpoints/MAPLEMOON-PREVIEW-LOOPBACK-01_20260802_175814_AEST",
+  "external_recovery": {
+    "path": "_wip/checkpoints/MAPLEMOON-PREVIEW-LOOPBACK-01_20260802_175814_AEST/external/com.maplemoon.preview.plist",
+    "manifest": "_wip/checkpoints/MAPLEMOON-PREVIEW-LOOPBACK-01_20260802_175814_AEST/EXTERNAL_RECOVERY.json",
+    "sha256": "fe5d00f3d394dd15c1563f26421c7996b448a5097e0025575bf5a2176943ff38"
+  },
+  "checks": [
+    {
+      "command": "standard receipt phase-start gate plus external plist recovery comparison",
+      "exit_code": 0,
+      "result": "PASS: repository governance paths and the exact external plist received non-overwriting recovery evidence before mutation."
+    },
+    {
+      "command": "plutil validation and candidate diff",
+      "exit_code": 0,
+      "result": "PASS: only --bind and 127.0.0.1 were added to ProgramArguments; all other keys and values remained unchanged."
+    },
+    {
+      "command": "launchctl bootout and bootstrap gui/501/com.maplemoon.preview",
+      "exit_code": 0,
+      "result": "PASS: only the approved LaunchAgent was restarted and is running as PID 92477."
+    },
+    {
+      "command": "launchctl print gui/501/com.maplemoon.preview",
+      "exit_code": 0,
+      "result": "PASS: active arguments include --bind 127.0.0.1; working directory, port, RunAtLoad and KeepAlive remain unchanged."
+    },
+    {
+      "command": "lsof -nP -iTCP:8788 -sTCP:LISTEN",
+      "exit_code": 0,
+      "result": "PASS: the only listener is IPv4 TCP 127.0.0.1:8788."
+    },
+    {
+      "command": "loopback and LAN HTTP probes",
+      "exit_code": 0,
+      "result": "PASS: http://127.0.0.1:8788 returned 200; http://192.168.1.104:8788 was refused with curl exit 7 and HTTP 000 as expected."
+    },
+    {
+      "command": "plist metadata and rollback hash verification",
+      "exit_code": 0,
+      "result": "PASS: live plist remains mode 0644 owned by handtomouse:staff; rollback copy retains the exact pre-change hash."
+    }
+  ],
+  "screenshots_or_urls": [],
+  "failures": [],
+  "unknowns": [],
+  "residual_risk": [
+    "The server remains intentionally available on this Mac at localhost:8788; it is no longer reachable through the Mac's LAN address.",
+    "The rollback plist restores wildcard listening and therefore must not be applied without an explicit rollback decision.",
+    "The six-page review package remains share_ready false; this local security fix authorizes no sharing or deployment."
+  ],
+  "forbidden_path_changes": [],
+  "proposed_next_state": "complete",
+  "next_reviewer": "Main Boss",
+  "next_action": "Resume the held Homepage live-keyboard proof only after the Chrome environment is stable enough to record sequential focus evidence.",
+  "ready_to_promote": true
+}

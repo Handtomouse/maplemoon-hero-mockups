@@ -1,0 +1,61 @@
+{
+  "schema": "maplemoon-receipt/v2",
+  "receipt_id": "SAT-HOME-HERO-SUBTITLE-RULING-20260802-RECEIPT-001",
+  "packet_id": "SAT-HOME-HERO-SUBTITLE-RULING-20260802",
+  "candidate_id": "SAT-HOME-HERO-SUBTITLE-RULING-20260802-001",
+  "worker_thread_id": "019fa858-05c9-7631-b26e-8f5cbbf1387a",
+  "worker": "Main Boss decision recorder",
+  "started_at": "2026-08-02T03:54:00Z",
+  "completed_at": "2026-08-02T03:54:23Z",
+  "outcome": "PASS",
+  "confidence": "high",
+  "files_read": [
+    "docs/orchestration/reviews/CARLI-CANVA-NOTE-REGISTER-20260731.md",
+    "docs/orchestration/SATURDAY_FEEDBACK_REGISTER_20260801.md",
+    "docs/orchestration/packets/SAT-HOME-01-HOMEPAGE-CLAIM-SAFE-FREEZE.md",
+    "docs/client-review/2026-08-01-saturday-review/staging-v1/clean/homepage.html"
+  ],
+  "files_changed": [
+    "docs/orchestration/reviews/SAT-HOME-HERO-SUBTITLE-RULING-20260802.md",
+    "docs/orchestration/reviews/SAT-HOME-HERO-SUBTITLE-RULING-20260802.json"
+  ],
+  "files_confirmed_untouched": [
+    "docs/client-review/2026-08-01-saturday-review/staging-v1/clean/homepage.html",
+    "docs/client-review/2026-08-01-saturday-review/staging-v1/annotated/homepage.html",
+    "_wip/homepage_real_1_lead_photo.WIP.html",
+    "docs/orchestration/SATURDAY_FEEDBACK_REGISTER_20260801.md",
+    "docs/orchestration/reviews/CARLI-CANVA-NOTE-REGISTER-20260731.md"
+  ],
+  "pre_sha256": {
+    "docs/orchestration/reviews/SAT-HOME-HERO-SUBTITLE-RULING-20260802.md": null,
+    "docs/orchestration/reviews/SAT-HOME-HERO-SUBTITLE-RULING-20260802.json": null
+  },
+  "post_sha256": {
+    "docs/orchestration/reviews/SAT-HOME-HERO-SUBTITLE-RULING-20260802.md": "850e797efe2792d666e7f379808221ca5d3ce4478be5acf4935dbf55d65a12c0",
+    "docs/orchestration/reviews/SAT-HOME-HERO-SUBTITLE-RULING-20260802.json": null
+  },
+  "checkpoint_path": "_wip/checkpoints/SAT-HOME-HERO-SUBTITLE-RULING-20260802_20260802_135400_AEST",
+  "checks": [
+    {
+      "command": "decision-boundary review",
+      "exit_code": 0,
+      "result": "PASS: the hero subtitle is retained exactly, the exact-three-badge ruling is preserved, and no product-wide claim was authorized."
+    },
+    {
+      "command": "bounded path review",
+      "exit_code": 0,
+      "result": "PASS: only the additive ruling and receipt changed; Homepage, WIP, registers and generated package remain untouched."
+    }
+  ],
+  "screenshots_or_urls": [],
+  "failures": [],
+  "unknowns": [],
+  "residual_risk": [
+    "Product-wide Nothing Added and no-added-sugar claims remain fact-check gated outside the hero brand-copy ruling."
+  ],
+  "forbidden_path_changes": [],
+  "proposed_next_state": "accepted",
+  "next_reviewer": "Nate",
+  "next_action": "Continue the clean Homepage CR-0 to the next material issue.",
+  "ready_to_promote": false
+}

@@ -1,0 +1,80 @@
+{
+  "schema": "maplemoon-receipt/v2",
+  "receipt_id": "MAPLEMOON-READINESS-DEPENDENCY-ROADMAP-20260802-RECEIPT-001",
+  "packet_id": "MAPLEMOON-READINESS-DEPENDENCY-ROADMAP-20260802",
+  "worker_thread_id": "019fa858-05c9-7631-b26e-8f5cbbf1387a",
+  "worker": "persistent Main Boss dependency-roadmap writer",
+  "started_at": "2026-08-02T07:50:32+10:00",
+  "completed_at": "2026-08-02T07:55:00+10:00",
+  "outcome": "PASS",
+  "confidence": "high for local dependency ordering; external inputs and approvals remain unverified",
+  "phase": "complete",
+  "status": "PASS",
+  "ready_to_promote": false,
+  "checkpoint_path": "_wip/checkpoints/MAPLEMOON-READINESS-DEPENDENCY-ROADMAP-20260802_20260802_075032_AEST",
+  "authority": {
+    "path": "/Users/handtomouse/maplemoon-website/docs/orchestration/packets/MAPLEMOON-CLIENT-REVIEW-SOFT-LAUNCH-SHOPIFY-READINESS-ADDENDUM-20260802.md",
+    "sha256": "7c541b6ff97f2ffdc1b6fe888cdba4f1795caadb947cfb7642d8ee54bfe2b712"
+  },
+  "files_changed": [
+    "docs/orchestration/reviews/MAPLEMOON-READINESS-DEPENDENCY-ROADMAP-20260802.json",
+    "docs/client-review/2026-08-01-saturday-review/READINESS-DEPENDENCY-ROADMAP-20260802.md",
+    "docs/client-review/2026-08-01-saturday-review/READINESS-DEPENDENCY-REGISTER-20260802.json"
+  ],
+  "files_read": [
+    "six accepted independent local-preparation receipts",
+    "frozen Shop restore receipt",
+    "photoshoot audit HOLD receipt",
+    "current Wave 1D and founder-source HOLD evidence"
+  ],
+  "pre_sha256": {
+    "docs/orchestration/packets/MAPLEMOON-READINESS-DEPENDENCY-ROADMAP-20260802.md": "82079b55777f81ae7e5a367b4005f0119b224e99977850a3611a78a3afab124e",
+    "docs/orchestration/reviews/MAPLEMOON-READINESS-DEPENDENCY-ROADMAP-20260802.json": null,
+    "docs/client-review/2026-08-01-saturday-review/READINESS-DEPENDENCY-ROADMAP-20260802.md": null,
+    "docs/client-review/2026-08-01-saturday-review/READINESS-DEPENDENCY-REGISTER-20260802.json": null
+  },
+  "post_sha256": {
+    "docs/orchestration/packets/MAPLEMOON-READINESS-DEPENDENCY-ROADMAP-20260802.md": "82079b55777f81ae7e5a367b4005f0119b224e99977850a3611a78a3afab124e",
+    "docs/client-review/2026-08-01-saturday-review/READINESS-DEPENDENCY-ROADMAP-20260802.md": "940fba937026d01c522077188e0d2e75db33ba461d033014a9475265613f14c4",
+    "docs/client-review/2026-08-01-saturday-review/READINESS-DEPENDENCY-REGISTER-20260802.json": "842ff9ca50d6a6ba3de3013abbdca1405a2f8f2f3a3243eb1509672cb8efe894"
+  },
+  "verified_source_sha256": {
+    "docs/orchestration/reviews/MAPLEMOON-CLIENT-REVIEW-HUB-SPEC-INDEPENDENT-VERIFY-20260802.json": "8e13d7fac3eaba82b9ce4fd993a74817a339652422e66a5c3804313a04ac39ae",
+    "docs/orchestration/reviews/MAPLEMOON-SOFT-LAUNCH-TEST-SPEC-INDEPENDENT-VERIFY-20260802.json": "8ae0240dcc10d673e45ad3c26f7dc01c4a13a7184caf9b68ca2a19df651231ef",
+    "docs/orchestration/reviews/MAPLEMOON-LINK-PREVIEW-METADATA-AUDIT-INDEPENDENT-VERIFY-20260802.json": "eef3c675dd69a1d8222eb5d3f43895fb997355865203d13726c18bae7d12adb5",
+    "docs/orchestration/reviews/MAPLEMOON-SHOPIFY-OS2-TRANSLATION-MAP-INDEPENDENT-VERIFY-20260802.json": "3ec062a044e9fe985554f701168837816c4e4225fef244a3f803d68c30e97df4",
+    "docs/orchestration/reviews/MAPLEMOON-SECURITY-INTEGRATION-GATE-REGISTER-INDEPENDENT-VERIFY-20260802.json": "4ab5c89f57a33b2dfa55e5617c3a5ef647fa346b9ea53c1192934e2916b77b0b",
+    "docs/orchestration/reviews/MAPLEMOON-UAT-ROLLBACK-CUTOVER-PLAN-INDEPENDENT-VERIFY-20260802.json": "5ccf9768994064b491113fed484f7ff88389ce7984c922f9b4ffde9fb26138cb",
+    "docs/orchestration/reviews/SAT-SHOP-FROZEN-RESTORE-01-20260801.json": "a2fb8948f726d07ef8ec5f9233decd769ac5328416323e57987740e4b38a424f",
+    "docs/orchestration/reviews/PHOTO-MITCH-DELIVERY-AUDIT-SESSION-PREP-20260802.json": "65a3e6e38d230fe6e2bc2267fc166ae850cba3445ea2a83c70c2839e5c958693"
+  },
+  "screenshots_or_urls": [],
+  "failures": [],
+  "unknowns": [
+    "Nate's exact six-page human QA result, audience, channel, wording, access and feedback-route decisions.",
+    "Approved preview copy and Open Graph image direction.",
+    "Store, catalogue, privacy, integration, domain, incident and production owners and inputs.",
+    "Photoshoot hands-source ruling and Wave 1D direction."
+  ],
+  "residual_risk": [
+    "A dependency map does not prove any blocked implementation or external action.",
+    "Unrelated dirty WIP remains present but was not attributed to or modified by this phase."
+  ],
+  "forbidden_path_changes": [],
+  "proposed_next_state": "needs_independent_review",
+  "next_reviewer": "independent low-cost read-only verifier",
+  "checks": [
+    {"command":"accepted source-receipt hash verification","exit_code":0,"result":"PASS"},
+    {"command":"dependency-register JSON validation","exit_code":0,"result":"PASS: 19 unique nodes"},
+    {"command":"dependency referential-integrity check","exit_code":0,"result":"PASS: zero missing dependencies"},
+    {"command":"external-action state review","exit_code":0,"result":"PASS: every external node is HOLD or BLOCKED"},
+    {"command":"critical-path, parked-lane and decision-order review","exit_code":0,"result":"PASS"}
+  ],
+  "blockers": [
+    "Independent bounded review is required before accepting the roadmap.",
+    "CR-0 exact frozen-package human QA remains the first user gate.",
+    "share_ready remains false and no external action is authorized."
+  ],
+  "ownership": "Local roadmap records only; no website, image, store, account or external-system ownership.",
+  "next_action": "Run one independent read-only verification of dependency integrity, status accuracy and the first-gate recommendation."
+}

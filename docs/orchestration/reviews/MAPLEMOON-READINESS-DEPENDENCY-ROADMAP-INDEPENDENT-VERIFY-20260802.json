@@ -1,0 +1,78 @@
+{
+  "schema": "maplemoon-receipt/v2",
+  "receipt_id": "MAPLEMOON-READINESS-DEPENDENCY-ROADMAP-INDEPENDENT-VERIFY-20260802-RECEIPT-001",
+  "packet_id": "MAPLEMOON-READINESS-DEPENDENCY-ROADMAP-INDEPENDENT-VERIFY-20260802",
+  "worker_thread_id": "019fbf51-0cf8-7df2-b5ef-fba2ad273574",
+  "worker": "independent low-cost read-only verifier",
+  "started_at": "2026-08-02T07:54:49+10:00",
+  "completed_at": "2026-08-02T07:56:17+10:00",
+  "outcome": "PASS",
+  "confidence": "high for local integrity, dependency ordering and fail-closed boundaries; human and external gates remain unverified",
+  "phase": "complete",
+  "status": "PASS",
+  "ready_to_promote": false,
+  "checkpoint_path": "_wip/checkpoints/MAPLEMOON-READINESS-DEPENDENCY-ROADMAP-INDEPENDENT-VERIFY-20260802_20260802_075449_AEST",
+  "authority": {
+    "path": "/Users/handtomouse/maplemoon-website/docs/orchestration/packets/MAPLEMOON-CLIENT-REVIEW-SOFT-LAUNCH-SHOPIFY-READINESS-ADDENDUM-20260802.md",
+    "sha256": "7c541b6ff97f2ffdc1b6fe888cdba4f1795caadb947cfb7642d8ee54bfe2b712"
+  },
+  "files_changed": [
+    "docs/orchestration/reviews/MAPLEMOON-READINESS-DEPENDENCY-ROADMAP-INDEPENDENT-VERIFY-20260802.json"
+  ],
+  "files_read": [
+    "independent-verification packet and checkpoint",
+    "readiness roadmap packet and main receipt",
+    "readiness roadmap and 19-node dependency register",
+    "the eight pinned source receipts",
+    "current overnight and absolute sharing authorities"
+  ],
+  "pre_sha256": {
+    "docs/orchestration/packets/MAPLEMOON-READINESS-DEPENDENCY-ROADMAP-INDEPENDENT-VERIFY-20260802.md": "343157e98137fb8733a5d4fa5f41312d714644476764733534aa2a5905802736",
+    "docs/orchestration/reviews/MAPLEMOON-READINESS-DEPENDENCY-ROADMAP-INDEPENDENT-VERIFY-20260802.json": null
+  },
+  "post_sha256": {
+    "docs/orchestration/packets/MAPLEMOON-READINESS-DEPENDENCY-ROADMAP-INDEPENDENT-VERIFY-20260802.md": "343157e98137fb8733a5d4fa5f41312d714644476764733534aa2a5905802736"
+  },
+  "verified_subject_sha256": {
+    "docs/orchestration/reviews/MAPLEMOON-READINESS-DEPENDENCY-ROADMAP-20260802.json": "c55bb8a932dbeca7cd277b858ba04fc44d28fc35ec2f8b102645ff2edbd1f5ef",
+    "docs/client-review/2026-08-01-saturday-review/READINESS-DEPENDENCY-ROADMAP-20260802.md": "940fba937026d01c522077188e0d2e75db33ba461d033014a9475265613f14c4",
+    "docs/client-review/2026-08-01-saturday-review/READINESS-DEPENDENCY-REGISTER-20260802.json": "842ff9ca50d6a6ba3de3013abbdca1405a2f8f2f3a3243eb1509672cb8efe894"
+  },
+  "verified_source_sha256": {
+    "docs/orchestration/reviews/MAPLEMOON-CLIENT-REVIEW-HUB-SPEC-INDEPENDENT-VERIFY-20260802.json": "8e13d7fac3eaba82b9ce4fd993a74817a339652422e66a5c3804313a04ac39ae",
+    "docs/orchestration/reviews/MAPLEMOON-SOFT-LAUNCH-TEST-SPEC-INDEPENDENT-VERIFY-20260802.json": "8ae0240dcc10d673e45ad3c26f7dc01c4a13a7184caf9b68ca2a19df651231ef",
+    "docs/orchestration/reviews/MAPLEMOON-LINK-PREVIEW-METADATA-AUDIT-INDEPENDENT-VERIFY-20260802.json": "eef3c675dd69a1d8222eb5d3f43895fb997355865203d13726c18bae7d12adb5",
+    "docs/orchestration/reviews/MAPLEMOON-SHOPIFY-OS2-TRANSLATION-MAP-INDEPENDENT-VERIFY-20260802.json": "3ec062a044e9fe985554f701168837816c4e4225fef244a3f803d68c30e97df4",
+    "docs/orchestration/reviews/MAPLEMOON-SECURITY-INTEGRATION-GATE-REGISTER-INDEPENDENT-VERIFY-20260802.json": "4ab5c89f57a33b2dfa55e5617c3a5ef647fa346b9ea53c1192934e2916b77b0b",
+    "docs/orchestration/reviews/MAPLEMOON-UAT-ROLLBACK-CUTOVER-PLAN-INDEPENDENT-VERIFY-20260802.json": "5ccf9768994064b491113fed484f7ff88389ce7984c922f9b4ffde9fb26138cb",
+    "docs/orchestration/reviews/SAT-SHOP-FROZEN-RESTORE-01-20260801.json": "a2fb8948f726d07ef8ec5f9233decd769ac5328416323e57987740e4b38a424f",
+    "docs/orchestration/reviews/PHOTO-MITCH-DELIVERY-AUDIT-SESSION-PREP-20260802.json": "65a3e6e38d230fe6e2bc2267fc166ae850cba3445ea2a83c70c2839e5c958693"
+  },
+  "screenshots_or_urls": [],
+  "failures": [],
+  "unknowns": [
+    "The exact frozen six-page ordinary-viewer, literal 200 percent zoom and keyboard/focus human QA remains unverified.",
+    "Audience, channel, wording, access route and feedback-route approvals remain absent.",
+    "Blocked implementation, production, commerce, privacy and image decisions remain unresolved by design."
+  ],
+  "residual_risk": [
+    "This PASS accepts the local dependency roadmap only; it does not support sharing, implementation, deployment or production readiness.",
+    "Unrelated dirty WIP remains present but was not attributed to or modified by this verification."
+  ],
+  "forbidden_path_changes": [],
+  "proposed_next_state": "accepted_local_dependency_roadmap",
+  "next_reviewer": "019fa858-05c9-7631-b26e-8f5cbbf1387a",
+  "checks": [
+    {"command":"packet, checkpoint, authority, subject and eight source-receipt hash verification","exit_code":0,"result":"PASS"},
+    {"command":"dependency-register JSON, unique-ID and referential-integrity verification","exit_code":0,"result":"PASS: 19 unique nodes, zero missing dependencies"},
+    {"command":"dependency cycle review","exit_code":0,"result":"PASS: acyclic"},
+    {"command":"external-action boundary review","exit_code":0,"result":"PASS: all 8 external-action nodes are HOLD or BLOCKED"},
+    {"command":"status, parked-lane and first-gate reconciliation","exit_code":0,"result":"PASS: Shop evidence PASS; photoshoot HOLD; Wave 1D and founder imagery parked; CR-0 remains first Nate gate"}
+  ],
+  "blockers": [
+    "CR-0 exact frozen-package human QA remains the first Nate gate.",
+    "share_ready remains false and no external action is authorized."
+  ],
+  "ownership": "Independent verification records only; no website, image, store, account or external-system ownership.",
+  "next_action": "Nate performs CR-0 on the exact frozen six-page package at literal 200 percent with keyboard/focus review and returns PASS or the first material correction."
+}

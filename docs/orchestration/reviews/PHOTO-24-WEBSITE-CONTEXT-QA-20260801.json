@@ -1,0 +1,61 @@
+{
+  "schema": "maplemoon-receipt/v2",
+  "receipt_id": "PHOTO-24-WEBSITE-CONTEXT-QA-20260801-RECEIPT-001",
+  "packet_id": "PHOTO-24-WEBSITE-CONTEXT-QA-20260801",
+  "worker_thread_id": "019fa858-05c9-7631-b26e-8f5cbbf1387a",
+  "worker": "Codex side-chat manager",
+  "started_at": "2026-08-01T00:49:22Z",
+  "completed_at": "2026-08-01T00:51:31Z",
+  "files_read": [
+    "maplemoon-website/_wip/reviews/photoshoot_repair_batch1_20260801/24_manual_v01/24_manual_v01.png",
+    "maplemoon-website/_wip/reviews/photoshoot_repair_batch1_20260801/24_manual_v01/photo-24-v01-website-section-preview.html",
+    "maplemoon-website/_wip/our-story.WIP.html"
+  ],
+  "files_changed": [
+    "maplemoon-website/_wip/reviews/photoshoot_repair_batch1_20260801/24_manual_v01/qa/24_manual_v01-our-story-desktop.png",
+    "maplemoon-website/_wip/reviews/photoshoot_repair_batch1_20260801/24_manual_v01/qa/24_manual_v01-our-story-mobile.png",
+    "maplemoon-website/docs/orchestration/reviews/PHOTO-24-WEBSITE-CONTEXT-QA-20260801.json"
+  ],
+  "pre_sha256": {
+    "maplemoon-website/_wip/reviews/photoshoot_repair_batch1_20260801/24_manual_v01/qa/24_manual_v01-our-story-desktop.png": null,
+    "maplemoon-website/_wip/reviews/photoshoot_repair_batch1_20260801/24_manual_v01/qa/24_manual_v01-our-story-mobile.png": null,
+    "maplemoon-website/docs/orchestration/reviews/PHOTO-24-WEBSITE-CONTEXT-QA-20260801.json": null
+  },
+  "post_sha256": {
+    "maplemoon-website/_wip/reviews/photoshoot_repair_batch1_20260801/24_manual_v01/qa/24_manual_v01-our-story-desktop.png": "489250dfaaa6c9b74271ff436ba58563337bd0e6e5c4b6705103aec708ec1dc9",
+    "maplemoon-website/_wip/reviews/photoshoot_repair_batch1_20260801/24_manual_v01/qa/24_manual_v01-our-story-mobile.png": "ee0cf9f607bc2520b8c07188b73c5d8a46588c9cc6b084aeaa04bb2ca868859e",
+    "maplemoon-website/docs/orchestration/reviews/PHOTO-24-WEBSITE-CONTEXT-QA-20260801.json": null
+  },
+  "checkpoint_path": "maplemoon-website/_wip/checkpoints/PHOTO-24-WEBSITE-CONTEXT-QA-20260801_20260801_104922_AEST",
+  "checkpoint_sha256": {},
+  "checks": [
+    {
+      "command": "localhost real Our Story page-copy review at 1440-pixel desktop width",
+      "exit_code": 0,
+      "result": "candidate loads in the existing studio grid without layout overlap or crop failure"
+    },
+    {
+      "command": "localhost real Our Story page-copy review at 390-pixel mobile width",
+      "exit_code": 0,
+      "result": "candidate remains legible and balanced in the mobile grid"
+    },
+    {
+      "command": "source reference audit",
+      "exit_code": 0,
+      "result": "_wip/our-story.WIP.html and assets/our_story/studio_moons_brick.webp remain unchanged"
+    }
+  ],
+  "screenshots_or_urls": [
+    "maplemoon-website/_wip/reviews/photoshoot_repair_batch1_20260801/24_manual_v01/qa/24_manual_v01-our-story-desktop.png",
+    "maplemoon-website/_wip/reviews/photoshoot_repair_batch1_20260801/24_manual_v01/qa/24_manual_v01-our-story-mobile.png",
+    "http://127.0.0.1:3127/_wip/reviews/photoshoot_repair_batch1_20260801/24_manual_v01/photo-24-v01-website-section-preview.html"
+  ],
+  "failures": [],
+  "unknowns": [
+    "Completion may HOLD solely on the newly created receipt self-hash."
+  ],
+  "residual_risk": [],
+  "forbidden_path_changes": [],
+  "proposed_next_state": "needs_review",
+  "next_reviewer": "Nate"
+}

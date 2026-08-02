@@ -1,0 +1,68 @@
+{
+  "schema": "maplemoon-ritual-decision-board/v1",
+  "created_at": "2026-08-02T23:30:00+10:00",
+  "status": "pending_human_review",
+  "wired": false,
+  "ready_to_promote": false,
+  "authority": {
+    "path": "_wip/GOAL-IMAGERY-PROGRAMME-20260802.md",
+    "sha256": "e1e17f919bd616a80908fdd5bc353de7eb9f409108c71fa33fc1c5718c249ef0"
+  },
+  "frozen_homepage": {
+    "path": "docs/client-review/2026-08-01-saturday-review/staging-v1/clean/homepage.html",
+    "sha256": "0d102050395b79f4add5d9ddb7f75e962d7e41e11a78cd7f88c35ce4a947ef0c",
+    "treatment": {
+      "desktop_min_height_css_px": 432,
+      "mobile_min_height_css_px": 330,
+      "object_positions": ["center 58%", "center 44%", "center 62%"],
+      "filter": "saturate(.72) contrast(.91) brightness(.82)",
+      "overlay": "linear-gradient(180deg,rgba(24,51,68,.04) 12%,rgba(25,51,66,.06) 42%,rgba(15,36,49,.70) 100%)",
+      "text_padding": "24px 22px 26px"
+    }
+  },
+  "current": [
+    {"id":"NOW1","slot":"after_dinner","path":"/Users/handtomouse/maplemoon-website/assets/licensed/scene_after_dinner.jpg","sha256":"99380ed5986b0859706c37a3a94102e42b0e094d0aa55a419b72f1ec7a2a8b50","dimensions":"6431x4287","classification":"wrong"},
+    {"id":"NOW2","slot":"afternoon","path":"/Users/handtomouse/maplemoon-website/assets/licensed/scene_afternoon.jpg","sha256":"bfa86e30b1f82d9836c977df8b5caa160468dc1e4bc7d51b61749278ae695c84","dimensions":"6720x4480","classification":"wrong"},
+    {"id":"NOW3","slot":"tea_night","path":"/Users/handtomouse/maplemoon-website/assets/licensed/scene_tea_night.jpg","sha256":"3133f5623bfaa110ba662f9fcbe5330bf88c956f4cfc9e62680c53cf7f9c18d8","dimensions":"5760x3840","classification":"wrong"}
+  ],
+  "candidate_sets": [
+    {"id":"A","label":"three distinct moments","status":"pending_human_review","items":[
+      {"id":"A1","path":"/Users/handtomouse/.codex/visualizations/2026/08/02/019fc056-cd9a-7333-ab33-bd1c9f985cb4/maplemoon_ritual_ac_comparison/a1_abundant_after_dinner.png","sha256":"a3962266e0416751c0ccb007f578ea307150c5a1fb71737604d74e84ad453e3a","dimensions":"1672x941","limitation":null},
+      {"id":"A2","path":"/Users/handtomouse/.codex/visualizations/2026/08/02/019fc056-cd9a-7333-ab33-bd1c9f985cb4/maplemoon_ritual_ac_comparison/a2_sparse_afternoon.png","sha256":"73032ee51891c6d8bc8efcafd23b6e7414f4bb659e0e0dcdb031d182c030932d","dimensions":"1672x941","limitation":null},
+      {"id":"A3","path":"/Users/handtomouse/.codex/visualizations/2026/08/02/019fc056-cd9a-7333-ab33-bd1c9f985cb4/maplemoon_ritual_ac_comparison/a3_ritual_tea_night.png","sha256":"91ddf1b8c982d6c5bfcbd9ff34e7114102474175de6526ade2bdf393c80fc63d","dimensions":"1672x941","limitation":"slightly more pod sheen than desired"}
+    ]},
+    {"id":"C","label":"scale-contrast range","status":"pending_human_review","items":[
+      {"id":"C1","path":"/Users/handtomouse/.codex/visualizations/2026/08/02/019fc056-cd9a-7333-ab33-bd1c9f985cb4/maplemoon_ritual_ac_comparison/c1_extreme_macro.png","sha256":"5bf7f5db445f98331ad4e763fcb9943003160349e4fb2305386b1adbed0c9727","dimensions":"1672x941","limitation":null},
+      {"id":"C2","path":"/Users/handtomouse/.codex/visualizations/2026/08/02/019fc056-cd9a-7333-ab33-bd1c9f985cb4/maplemoon_ritual_ac_comparison/c2_small_object.png","sha256":"6bbb9220dec503a3568c1bf7722f8e7be7dcf7dee136c928eb2ca183510c8488","dimensions":"1672x941","limitation":"larger than ideal tiny-object target"},
+      {"id":"C3","path":"/Users/handtomouse/.codex/visualizations/2026/08/02/019fc056-cd9a-7333-ab33-bd1c9f985cb4/maplemoon_ritual_ac_comparison/c3_human_scale.png","sha256":"897ad8c534a9f25bf73c1d6286101a6ab65b48d370b43715fadb43f2a46ca1dd","dimensions":"1672x941","limitation":null}
+    ]},
+    {"id":"R1","label":"richer tactile narrative","status":"pending_human_review","items":[
+      {"id":"R1.1","path":"/Users/handtomouse/.codex/visualizations/2026/07/31/019fb5b5-de62-7862-a5fe-06bc59395c21/maplemoon_ritual_family_a_exploration_20260802_v1/r1_after_dinner_richer_v1.png","sha256":"c800333b58686781c25a21607186e556292cae8de30f36e054d1567a8ed4edc4","dimensions":"1672x941","limitation":"abundant foreground fills tighter crop"},
+      {"id":"R1.2","path":"/Users/handtomouse/.codex/visualizations/2026/07/31/019fb5b5-de62-7862-a5fe-06bc59395c21/maplemoon_ritual_family_a_exploration_20260802_v1/r1_afternoon_richer_v1.png","sha256":"8b8c0c5939e9907c85ec9fa3f3e616ecf935becccc1e1f19e4fcbd9b88e6c775","dimensions":"1672x941","limitation":"bold single-pod composition; generic fragments"},
+      {"id":"R1.3","path":"/Users/handtomouse/.codex/visualizations/2026/07/31/019fb5b5-de62-7862-a5fe-06bc59395c21/maplemoon_ritual_family_a_exploration_20260802_v1/r1_tea_night_richer_v1.png","sha256":"b44e26826ad258c79c263ac0d2c6219445280d32154a85e86b77a0b0da19c026","dimensions":"1672x941","limitation":"open pod ends prominent; generic cup and spoon"}
+    ]},
+    {"id":"R2","label":"clean editorial","status":"pending_human_review","items":[
+      {"id":"R2.1","path":"/Users/handtomouse/.codex/visualizations/2026/07/31/019fb5b5-de62-7862-a5fe-06bc59395c21/maplemoon_ritual_family_a_exploration_20260802_v1/r2_after_dinner_editorial_v1.png","sha256":"b439faaf48e760c40c86a4244afea083fa6005a1bff6e0dbdedcab9aeffc0e67","dimensions":"1536x1024","limitation":"overhead geometry is less intimate"},
+      {"id":"R2.2","path":"/Users/handtomouse/.codex/visualizations/2026/07/31/019fb5b5-de62-7862-a5fe-06bc59395c21/maplemoon_ritual_family_a_exploration_20260802_v1/r2_afternoon_editorial_v1.png","sha256":"5cb171691bdc91893631d1f67ebea55efc31b15d7b851ec5c866b6e96f1600df","dimensions":"1536x1024","limitation":"small ridge highlight"},
+      {"id":"R2.3","path":"/Users/handtomouse/.codex/visualizations/2026/07/31/019fb5b5-de62-7862-a5fe-06bc59395c21/maplemoon_ritual_family_a_exploration_20260802_v1/r2_tea_night_editorial_v1.png","sha256":"cf6078983d33640b51f83b0aa7ba9898a60018ad4bf37e2f2afb7f57a7fee319","dimensions":"1536x1024","limitation":"foreground pod reads larger; generic cup and spoon"}
+    ]},
+    {"id":"R3","label":"wildcard narrative range","status":"pending_human_review","items":[
+      {"id":"R3.1","path":"/Users/handtomouse/.codex/visualizations/2026/07/31/019fb5b5-de62-7862-a5fe-06bc59395c21/maplemoon_ritual_family_a_exploration_20260802_v1/r3_first_light_stillness_v1.png","sha256":"a726b4f11064ae1a8a8742af48bfdc4c8c19f611ccc87474e73a136fcbc29609","dimensions":"1536x1024","limitation":"new visual moment; no approved replacement copy"},
+      {"id":"R3.2","path":"/Users/handtomouse/.codex/visualizations/2026/07/31/019fb5b5-de62-7862-a5fe-06bc59395c21/maplemoon_ritual_family_a_exploration_20260802_v1/r3_cloudbreak_pause_v1.png","sha256":"9f7e0a7e4407fc6bbc88c306a7b27f521256f06c3f865d123822195cf841c318","dimensions":"1536x1024","limitation":"crop-sensitive wide arrangement; no approved replacement copy"},
+      {"id":"R3.3","path":"/Users/handtomouse/.codex/visualizations/2026/07/31/019fb5b5-de62-7862-a5fe-06bc59395c21/maplemoon_ritual_family_a_exploration_20260802_v1/r3_midnight_hush_v1.png","sha256":"1908b1b2f682b5b2d2ba45fae1142563c1d0a0dbca6e27e9f2a0d0b6d4b0885f","dimensions":"1536x1024","limitation":"subtle night cue; no approved replacement copy"}
+    ]},
+    {"id":"D","label":"asymmetric editorial range","status":"hold_unrendered","items":[],"limitation":"preserved schematic direction only; requires Nate selection before a separate generation packet"}
+  ],
+  "historical": {"v5":"rejected_too_similar","E_to_H":"exploratory_secondary","original_v5_low_fidelity":"exploratory_secondary"},
+  "non_binding_shortlist": ["R1.1", "R2.2", "R3.3"],
+  "selection": null,
+  "generation_route_if_later_authorized": "Codex built-in image generation via image_gen.imagegen with verified local references",
+  "proofs": {
+    "desktop": {"path":"_wip/evidence/IMAGERY-PROGRAMME-20260802/ritual-decision-board-desktop-1440.png","sha256":"945df4b536819c7e434b8f706d1227a25baef773eee57e935c00aab6bda071ee","dimensions":"1440x5966","viewport":{"innerWidth":1440,"clientWidth":1440,"scrollWidth":1440,"scrollHeight":5966},"image_count":18,"image_failures":[],"visually_inspected":true},
+    "mobile": {"path":"_wip/evidence/IMAGERY-PROGRAMME-20260802/ritual-decision-board-mobile-390.png","sha256":"c01a775385e94b8382668222e02a07fcfbdc9d3f317a4d47f9949277dd475c06","dimensions":"390x10894","viewport":{"innerWidth":390,"clientWidth":390,"scrollWidth":390,"scrollHeight":10894},"card_widths":[358,358,358],"image_count":18,"image_failures":[],"visually_inspected":true}
+  },
+  "decisions_required": [
+    "Choose ritual direction or HOLD",
+    "Choose whether approved imagery enters the frozen package before send; yes requires re-freeze and full CR-0 re-proof"
+  ]
+}

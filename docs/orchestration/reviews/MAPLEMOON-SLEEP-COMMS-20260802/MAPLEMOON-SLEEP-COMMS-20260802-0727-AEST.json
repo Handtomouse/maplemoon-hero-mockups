@@ -1,0 +1,67 @@
+{
+  "schema": "maplemoon-receipt/v2",
+  "receipt_id": "MAPLEMOON-SLEEP-COMMS-20260802-0727-AEST-RECEIPT-001",
+  "packet_id": "MAPLEMOON-SLEEP-COMMS-20260802-0727-AEST",
+  "worker_thread_id": "019fa858-05c9-7631-b26e-8f5cbbf1387a",
+  "worker": "persistent Main Boss hourly comms monitor",
+  "started_at": "2026-08-02T07:26:23+10:00",
+  "completed_at": "2026-08-02T07:27:53+10:00",
+  "outcome": "PASS",
+  "confidence": "high for the bounded cross-channel check",
+  "phase": "complete",
+  "status": "PASS",
+  "ready_to_promote": false,
+  "checkpoint_path": "_wip/checkpoints/MAPLEMOON-SLEEP-COMMS-20260802-0727-AEST_20260802_072753_AEST",
+  "authority": {
+    "path": "/Users/handtomouse/maplemoon-website/docs/orchestration/packets/MAPLEMOON-SLEEP-COMMS-MONITOR-AUTHORITY-20260802.md",
+    "sha256": "4268d4e99c7ecae38816099cfbf14520af1b9531a450d0436501e57d8cd92ed9",
+    "eligible_after": "2026-08-02T01:26:07+10:00"
+  },
+  "files_changed": [
+    "docs/orchestration/reviews/MAPLEMOON-SLEEP-COMMS-20260802/MAPLEMOON-SLEEP-COMMS-20260802-0727-AEST.json"
+  ],
+  "files_read": [
+    "sleep-comms authority and prior 06:07 hourly receipt",
+    "read-only MapleMoon comms-check result for Carli and Dylan across Gmail, iMessage and WhatsApp"
+  ],
+  "pre_sha256": {
+    "docs/orchestration/packets/MAPLEMOON-SLEEP-COMMS-20260802-0727-AEST.md": "b52073abe0c756f44df8db6357860ae40504946791ac1f728dab7977bd8bcc23",
+    "docs/orchestration/reviews/MAPLEMOON-SLEEP-COMMS-20260802/MAPLEMOON-SLEEP-COMMS-20260802-0727-AEST.json": null
+  },
+  "post_sha256": {
+    "docs/orchestration/packets/MAPLEMOON-SLEEP-COMMS-20260802-0727-AEST.md": "b52073abe0c756f44df8db6357860ae40504946791ac1f728dab7977bd8bcc23"
+  },
+  "run_time_aest": "2026-08-02T07:27:00+10:00",
+  "channels_checked": {
+    "gmail": {"status":"available","errors":[]},
+    "imessage": {"status":"available","errors":[]},
+    "whatsapp": {"status":"available","errors":[]}
+  },
+  "contacts_reconciled": ["Carli Saber", "Dylan Bernad"],
+  "new_inbound_events": [],
+  "classification": "no_new_substantive_inbound_after_cutoff",
+  "acknowledgement": {
+    "status": "not_sent",
+    "outbound_id": null,
+    "reason": "No eligible substantive inbound was found."
+  },
+  "ingested_finding": "No new MapleMoon client input requires acknowledgement, local routing or a Nate-morning HOLD.",
+  "route": "no_action",
+  "screenshots_or_urls": [],
+  "failures": [],
+  "unknowns": [],
+  "residual_risk": [
+    "The monitor cannot prove a separate group-chat identity beyond the verified MapleMoon contact/channel reconciliation; no eligible inbound was observed in the reconciled traffic."
+  ],
+  "forbidden_path_changes": [],
+  "proposed_next_state": "hourly_monitor_wait",
+  "next_reviewer": "019fa858-05c9-7631-b26e-8f5cbbf1387a",
+  "checks": [
+    {"command":"prior hourly receipt deduplication","exit_code":0,"result":"PASS: prior run had zero eligible inbound and no outbound acknowledgement"},
+    {"command":"comms-check maplemoon --days 21","exit_code":0,"result":"PASS: Gmail, iMessage and WhatsApp available for both contacts; no errors"},
+    {"command":"authority cutoff and acknowledgement classification","exit_code":0,"result":"PASS: no inbound after cutoff; no message sent"}
+  ],
+  "blockers": [],
+  "ownership": "Hourly monitor receipt only; no client conversation, website or external-system ownership.",
+  "next_action": "Do not repeat comms reconciliation before the first heartbeat at or after 08:27 AEST."
+}

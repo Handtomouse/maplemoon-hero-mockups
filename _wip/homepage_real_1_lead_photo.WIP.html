@@ -716,7 +716,7 @@ a.wf-ti:focus-visible{outline:2px solid rgba(44,42,38,.55);outline-offset:6px;bo
         <div class="wf-pactions">
           <a class="wf-ppill primary" href="#range">Shop the Range <svg class="wf-cta-arrow" viewBox="0 0 24 24" aria-hidden="true"><line x1="4" y1="12" x2="20" y2="12"/><polyline points="14 6 20 12 14 18"/></svg></a>
         </div>
-        <div class="wf-pcreds"><span>Naturally sweet</span><span>No caffeine</span><span>Nothing added</span><span>Organic <span class="amp">&amp;</span> vegan</span></div>
+        <div class="wf-pcreds"><span>No Caffeine</span><span>Organic Ingredients</span><span>Vegan Friendly</span></div>
       </div>
     </div>
 
@@ -984,10 +984,10 @@ a.wf-ti:focus-visible{outline:2px solid rgba(44,42,38,.55);outline-offset:6px;bo
     ],
     crescents:[
       {n:'Pure Carob Crescent',img:'moon_pure_carob',d:'A crescent-shaped carob bite for slower snacking.',price:null,size:'',sel:true},
-      {n:'Peppermint Crescent',img:'moon_peppermint',d:'Cool peppermint in a small crescent format.',price:null,size:'',notes:[['Texture','Small snap'],['Sweetness','Gentle carob'],['Finish','Cool mint'],['Status','Pricing to follow']]},
-      {n:'Coconut & Goji Crescent',img:'moon_goji_coconut',d:'A compact coconut and goji carob crescent.',price:null,size:'',notes:[['Texture','Small snap'],['Sweetness','Fruit lift'],['Finish','Coconut carob'],['Status','Pricing to follow']]},
-      {n:'Roasted Hazelnut Crescent',img:'moon_hazelnut',d:'Hazelnut comfort in a crescent bite.',price:null,size:'',notes:[['Texture','Small snap'],['Sweetness','Gentle carob'],['Finish','Hazelnut'],['Status','Pricing to follow']]},
-      {n:'Almond Crescent',img:'moon_almond',d:'Almond carob in a small, shareable shape.',price:null,size:'',notes:[['Texture','Small snap'],['Sweetness','Gentle carob'],['Finish','Almond'],['Status','Pricing to follow']]}
+      {n:'Peppermint Crescent',img:'moon_peppermint',d:'Cool peppermint in a small crescent format.',price:null,size:'',notes:[['Texture','Small snap'],['Sweetness','Gentle carob'],['Finish','Cool mint'],['Details','Enquire']]},
+      {n:'Coconut & Goji Crescent',img:'moon_goji_coconut',d:'A compact coconut and goji carob crescent.',price:null,size:'',notes:[['Texture','Small snap'],['Sweetness','Fruit lift'],['Finish','Coconut carob'],['Details','Enquire']]},
+      {n:'Roasted Hazelnut Crescent',img:'moon_hazelnut',d:'Hazelnut comfort in a crescent bite.',price:null,size:'',notes:[['Texture','Small snap'],['Sweetness','Gentle carob'],['Finish','Hazelnut'],['Details','Enquire']]},
+      {n:'Almond Crescent',img:'moon_almond',d:'Almond carob in a small, shareable shape.',price:null,size:'',notes:[['Texture','Small snap'],['Sweetness','Gentle carob'],['Finish','Almond'],['Details','Enquire']]}
     ],
     elixirs:[
       {n:'Pure Carob Elixir',img:'elixir_plain',d:'A warm carob drink, naturally sweet and caffeine free.',size:'(150g)',sel:true},
@@ -995,8 +995,8 @@ a.wf-ti:focus-visible{outline:2px solid rgba(44,42,38,.55);outline-offset:6px;bo
     ],
     eclipseBites:[
       {n:'Goji Eclipse Bites',img:'bite_goji',d:'Small carob bites with a bright goji finish.',price:null,size:'',sel:true},
-      {n:'Coconut Eclipse Bites',img:'bite_coconut',d:'Coconut carob bites made for grazing.',price:null,size:'',notes:[['Texture','Tiny bite'],['Sweetness','Coconut lift'],['Finish','Soft carob'],['Status','Pricing to follow']]},
-      {n:'Golden Eclipse Bites',img:'bite_gold',d:'A small-format carob bite for gifting or sharing.',price:null,size:'',notes:[['Texture','Tiny bite'],['Sweetness','Gentle carob'],['Finish','Golden finish'],['Status','Pricing to follow']]}
+      {n:'Coconut Eclipse Bites',img:'bite_coconut',d:'Coconut carob bites made for grazing.',price:null,size:'',notes:[['Texture','Tiny bite'],['Sweetness','Coconut lift'],['Finish','Soft carob'],['Details','Enquire']]},
+      {n:'Golden Eclipse Bites',img:'bite_gold',d:'A small-format carob bite for gifting or sharing.',price:null,size:'',notes:[['Texture','Tiny bite'],['Sweetness','Gentle carob'],['Finish','Golden finish'],['Details','Enquire']]}
     ],
     bananas:[
       {n:'Carob Bananas',img:'bananas',d:'Dehydrated banana pieces coated in naturally sweet carob.',price:null,size:'',sel:true}
@@ -1005,9 +1005,9 @@ a.wf-ti:focus-visible{outline:2px solid rgba(44,42,38,.55);outline-offset:6px;bo
   var PRICE_STATE={
     bars:{priced:true,label:'Available now'},
     elixirs:{priced:true,label:'Available now'},
-    crescents:{priced:false,label:'Pricing to follow'},
-    eclipseBites:{priced:false,label:'Pricing to follow'},
-    bananas:{priced:false,label:'Pricing to follow'}
+    crescents:{priced:false,label:'Enquire for details'},
+    eclipseBites:{priced:false,label:'Enquire for details'},
+    bananas:{priced:false,label:'Enquire for details'}
   };
   var SIZES={
     bars:[],
@@ -1042,10 +1042,10 @@ a.wf-ti:focus-visible{outline:2px solid rgba(44,42,38,.55);outline-offset:6px;bo
   var CAT_SHOP_TARGET={bars:'shop.WIP.html#bars',crescents:'shop.WIP.html#moons',elixirs:'shop.WIP.html#elixirs',eclipseBites:'shop.WIP.html#bites',bananas:'shop.WIP.html#bananas'};
   var NOTE_FALLBACK={
     bars:[['Texture','Smooth melt'],['Sweetness','Naturally sweet'],['Finish','Buttery carob'],['Proof','No caffeine']],
-    crescents:[['Texture','Small snap'],['Sweetness','Gentle carob'],['Finish','Clean finish'],['Status','Pricing to follow']],
+    crescents:[['Texture','Small snap'],['Sweetness','Gentle carob'],['Finish','Clean finish'],['Details','Enquire']],
     elixirs:[['Texture','Silky drink'],['Sweetness','Naturally sweet'],['Finish','Mellow roast'],['Proof','Caffeine free']],
-    eclipseBites:[['Texture','Tiny bite'],['Sweetness','Fruit lift'],['Finish','Carob finish'],['Status','Pricing to follow']],
-    bananas:[['Texture','Chewy fruit'],['Sweetness','Banana sweet'],['Finish','Soft carob'],['Status','Pricing to follow']]
+    eclipseBites:[['Texture','Tiny bite'],['Sweetness','Fruit lift'],['Finish','Carob finish'],['Details','Enquire']],
+    bananas:[['Texture','Chewy fruit'],['Sweetness','Banana sweet'],['Finish','Soft carob'],['Details','Enquire']]
   };
   function shopTarget(cat){return CAT_SHOP_TARGET[cat]||'shop.WIP.html';}
   function catIndex(cat){var i=CAT_ORDER.indexOf(cat);return i<0?0:i;}
@@ -1076,14 +1076,13 @@ a.wf-ti:focus-visible{outline:2px solid rgba(44,42,38,.55);outline-offset:6px;bo
   function renderProof(item,state){
     if(!pdpProof)return;
     var pack=activePack();
-    var price=(pack&&pack.price)||item.price||'Pricing to follow';
     var size=(pack&&pack.size)||item.size||'';
-    var rows=state.priced?['Shop page pricing',size,'Naturally sweet',state.label||'Available now']:['Pricing to follow','Range preview','Not purchasable yet','Notify me'];
+    var rows=state.priced?['Shop page pricing',size,'Naturally sweet',state.label||'Available now']:['Range preview','View product','Enquire for details'];
     pdpProof.innerHTML=rows.map(function(row){return '<span>'+row+'</span>';}).join('');
     pdpProof.classList.toggle('pending',!state.priced);
   }
   function setPdp(item){
-    var state=PRICE_STATE[currentCat]||{priced:false,label:'Pricing to follow'};
+    var state=PRICE_STATE[currentCat]||{priced:false,label:'Enquire for details'};
     if(pdpEyebrow)pdpEyebrow.textContent=CAT_LABEL[currentCat]||'Selected flavour';
     if(pdpName)pdpName.innerHTML=amp(item.n);
     if(pdpDesc)pdpDesc.textContent=item.d;
@@ -1098,9 +1097,8 @@ a.wf-ti:focus-visible{outline:2px solid rgba(44,42,38,.55);outline-offset:6px;bo
         pdpPrice.textContent='';
       }
     }else if(pdpPrice){
-      pdpPrice.hidden=false;
-      pdpPrice.classList.add('pending');
-      pdpPrice.textContent='Pricing to follow';
+      pdpPrice.hidden=true;
+      pdpPrice.textContent='';
     }
     if(pdpFlag){
       pdpFlag.hidden=false;
@@ -1110,7 +1108,7 @@ a.wf-ti:focus-visible{outline:2px solid rgba(44,42,38,.55);outline-offset:6px;bo
     if(pdpAdd){
       pdpAdd.hidden=false;
       pdpAdd.disabled=false;
-      pdpAdd.textContent=state.priced?'Shop Now':'Notify Me';
+      pdpAdd.textContent=state.priced?'Shop Now':'Enquire';
       pdpAdd.classList.toggle('notify',!state.priced);
     }
     if(pdpView){
@@ -1120,15 +1118,15 @@ a.wf-ti:focus-visible{outline:2px solid rgba(44,42,38,.55);outline-offset:6px;bo
   }
   function setPending(cat){
     var label=CAT_FORMAT[cat]||'Featured format';
-    var state=PRICE_STATE[cat]||{priced:false,label:'Pricing to follow'};
+    var state=PRICE_STATE[cat]||{priced:false,label:'Enquire for details'};
     if(pdpEyebrow)pdpEyebrow.textContent=label;
     if(pdpName)pdpName.textContent=label;
-    if(pdpDesc)pdpDesc.textContent='Product details to follow.';
-    if(pdpProof){pdpProof.classList.add('pending');pdpProof.innerHTML='<span>Pricing to follow</span><span>Range preview</span><span>Not purchasable yet</span><span>Notify me</span>';}
+    if(pdpDesc)pdpDesc.textContent='View this range or enquire with Maple Moon.';
+    if(pdpProof){pdpProof.classList.add('pending');pdpProof.innerHTML='<span>Range preview</span><span>View product</span><span>Enquire for details</span>';}
     if(pdpNotes){pdpNotes.innerHTML=(NOTE_FALLBACK[cat]||NOTE_FALLBACK.bars).map(function(n){return '<span><b>'+n[0]+'</b>'+n[1]+'</span>';}).join('');}
-    if(pdpPrice){pdpPrice.hidden=false;pdpPrice.classList.add('pending');pdpPrice.textContent='Pricing to follow';}
+    if(pdpPrice){pdpPrice.hidden=true;pdpPrice.textContent='';}
     if(pdpFlag){pdpFlag.hidden=false;pdpFlag.textContent=state.label;pdpFlag.classList.add('pending');}
-    if(pdpAdd){pdpAdd.hidden=false;pdpAdd.disabled=false;pdpAdd.textContent='Notify Me';pdpAdd.classList.add('notify');}
+    if(pdpAdd){pdpAdd.hidden=false;pdpAdd.disabled=false;pdpAdd.textContent='Enquire';pdpAdd.classList.add('notify');}
     if(pdpView){pdpView.href=shopTarget(cat);pdpView.textContent='View Range';}
   }
   function renderSizes(cat){
@@ -1203,7 +1201,7 @@ a.wf-ti:focus-visible{outline:2px solid rgba(44,42,38,.55);outline-offset:6px;bo
     layout();if(data[center])setPdp(data[center]);
   }
   function renderPending(cat){
-    stage.innerHTML='<div class="wf-range-pending"><p>Product details to follow.</p><a class="wf-pill" href="#range">View Range</a></div>';
+    stage.innerHTML='<div class="wf-range-pending"><p>Enquire about this range.</p><a class="wf-pill" href="#range">View Range</a></div>';
     els=[];center=0;setPending(cat);
   }
   function render(cat){
@@ -1252,7 +1250,7 @@ a.wf-ti:focus-visible{outline:2px solid rgba(44,42,38,.55);outline-offset:6px;bo
       return;
     }
     var item=data[center];
-    window.location.href='mailto:info@maplemoon.com.au?subject=Notify%20me%20about%20'+encodeURIComponent(item?item.n:CAT_FORMAT[currentCat]);
+    window.location.href='mailto:info@maplemoon.com.au?subject=Enquiry%20about%20'+encodeURIComponent(item?item.n:CAT_FORMAT[currentCat]);
   });
 
   var line=document.querySelector('.wf-line');

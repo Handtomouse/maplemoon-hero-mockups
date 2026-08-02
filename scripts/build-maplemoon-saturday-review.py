@@ -20,7 +20,7 @@ REPO = Path(__file__).resolve().parents[1]
 BASE_PACKET = REPO / "docs/orchestration/packets/VIS-01C-SATURDAY-REVIEW-SHELL.md"
 UPDATE_PACKET = REPO / "docs/orchestration/packets/VIS-02A-HOMEPAGE-TECHNICAL-HARDENING.md"
 CURRENT_PACKET = (
-    REPO / "docs/orchestration/packets/VIS-03C-03-CURRENT-WIP-SOURCE-LINEAGE.md"
+    REPO / "docs/orchestration/packets/SAT-HOME-CLEAN-CLOSURE-01.md"
 )
 SOURCE_ROOT = REPO / "docs/client-review/2026-07-29-carli-review/staging-v1"
 DEFAULT_OUTPUT = REPO / "docs/client-review/2026-08-01-saturday-review/staging-v1"
@@ -45,7 +45,7 @@ ROUTE_REPLACEMENTS = {
 }
 REVIEW_FILES = {"review-mode.css", "review-mode.js"}
 SHARED_FILES = {"mock-cart.css", "mock-cart.js"}
-CURRENT_PACKET_ID = "VIS-03C-03-CURRENT-WIP-SOURCE-LINEAGE"
+CURRENT_PACKET_ID = "SAT-HOME-CLEAN-CLOSURE-01"
 
 CONTROL_RE = re.compile(
     r"<!-- CONTROL-PLANE:BEGIN -->\s*(\{.*?\})\s*<!-- CONTROL-PLANE:END -->",
@@ -76,7 +76,7 @@ HOMEPAGE_CLEAN_EXCLUSION_RE = re.compile(
     re.I | re.S,
 )
 CLEAN_SECTION_EXCLUSIONS = {
-    "homepage.html": ("who", "reviews"),
+    "homepage.html": ("who", "reviews", "why"),
     "carob-story.html": ("pod-to-bar",),
     "our-story.html": ("founders", "source", "craft"),
 }
@@ -95,9 +95,8 @@ APPROVED_DELTA_FILES = frozenset(
     {
         "MANIFEST.json",
         "clean/MANIFEST.json",
-        "clean/stockists.html",
+        "clean/homepage.html",
         "annotated/MANIFEST.json",
-        "annotated/stockists.html",
     }
 )
 HOMEPAGE_RITUAL_IMAGE_PATHS = (
@@ -189,10 +188,12 @@ def verify_inputs(control: dict, update_control: dict, current_control: dict) ->
         "frozen_authority_sha256",
     ):
         for relative, expected in pins[group].items():
-            if (
-                group == "canonical_wip_sha256"
-                and relative == "_wip/homepage_real_1_lead_photo.WIP.html"
-            ):
+            # The historical VIS-01C source pins remain evidence, but the
+            # superseding CURRENT_PACKET owns all six live WIP source hashes.
+            # Enforcing both sets would make an approved source repin
+            # impossible. current_source_lineage() below still fails closed on
+            # every current WIP page before any output is written.
+            if group == "canonical_wip_sha256":
                 continue
             assert_hash(REPO / relative, expected, group)
     for relative, expected in pins["copied_support_sha256"].items():
@@ -200,11 +201,9 @@ def verify_inputs(control: dict, update_control: dict, current_control: dict) ->
     update_pins = update_control["implementation_pins"]
     if update_pins["homepage_source"] != "_wip/homepage_real_1_lead_photo.WIP.html":
         raise BuildError("VIS-02A Homepage source path changed")
-    assert_hash(
-        HOMEPAGE_SOURCE,
-        update_pins["homepage_sha256"],
-        "VIS-02A Homepage source",
-    )
+    # VIS-02A remains historical implementation evidence. The current packet
+    # owns the live six-page source lineage and is asserted below, so its
+    # approved Homepage repin supersedes the historical VIS-02A byte hash.
     lineage = current_source_lineage(current_control)
     for alias, source in PAGE_SOURCES.items():
         assert_hash(
@@ -305,11 +304,16 @@ def assert_page_regressions(text: str, alias: str) -> None:
     if alias == "carob-story.html" and CAROB_STORY_NUTRITION_COMPARISON_RE.search(text):
         raise BuildError("Carob Story admitted a nutrition comparison")
     if alias == "stockists.html" and (
-        "left:-9999px;top:8px;z-index:8;transform:none;" not in text
-        or ".st-skip-finder:focus{left:18px;transform:translateY(0);" not in text
+        "left:18px;top:8px;z-index:8;transform:translateY(-160%);" not in text
+        or ".st-skip-finder:focus{transform:translateY(0);" not in text
+        or "left:-9999px" in text
         or "if(!map||!mapSummary||!mapTextSummary)return;" not in text
     ):
         raise BuildError("Stockists derived interaction guards are incomplete")
+    if alias == "our-story.html" and "data-mm-mobile-logo-target=\"our-story\"" not in text:
+        raise BuildError("Our Story mobile logo target correction is missing")
+    if alias == "stockists.html" and "data-mm-mobile-logo-target=\"stockists\"" not in text:
+        raise BuildError("Stockists mobile logo target correction is missing")
 
 
 def apply_vis03c_delta(text: str, alias: str) -> str:
@@ -398,18 +402,6 @@ def transform_page(text: str, alias: str) -> str:
     if alias == "stockists.html":
         text = required_replace(
             text,
-            "left:18px;top:8px;z-index:8;transform:translateY(-160%);",
-            "left:-9999px;top:8px;z-index:8;transform:none;",
-            "Stockists derived skip-control rest position",
-        )
-        text = required_replace(
-            text,
-            ".st-skip-finder:focus{transform:translateY(0);",
-            ".st-skip-finder:focus{left:18px;transform:translateY(0);",
-            "Stockists derived skip-control focus position",
-        )
-        text = required_replace(
-            text,
             "  function renderMapMarkers(matched,visible){\n"
             "    var preview=visible.slice(0,4);",
             "  function renderMapMarkers(matched,visible){\n"
@@ -463,6 +455,26 @@ def transform_page(text: str, alias: str) -> str:
 </head>""",
         1,
     )
+    if alias == "our-story.html":
+        text = required_replace(
+            text,
+            "</head>",
+            """<style data-mm-mobile-logo-target="our-story">
+@media(max-width:400px){.os-top .wrap.bar{grid-template-columns:44px minmax(0,1fr) 44px}.os-top .bar>.os-nav:not(.r){display:none}.os-top .os-logo{display:inline-flex;grid-column:2;align-items:center;justify-content:center;justify-self:center;min-width:116px;min-height:44px;white-space:nowrap}.os-top .os-nav.r{grid-column:3}}
+</style>
+</head>""",
+            "Our Story measured mobile logo target",
+        )
+    if alias == "stockists.html":
+        text = required_replace(
+            text,
+            "</head>",
+            """<style data-mm-mobile-logo-target="stockists">
+@media(max-width:400px){.sp-top .wrap.bar{grid-template-columns:44px minmax(0,1fr) 44px}.sp-top .bar>.sp-nav:not(.r){display:none}.sp-top .sp-logo{display:inline-flex;grid-column:2;align-items:center;justify-content:center;justify-self:center;min-width:116px;min-height:44px;white-space:nowrap}.sp-top .sp-nav.r{grid-column:3}}
+</style>
+</head>""",
+            "Stockists measured mobile logo target",
+        )
     text = text.replace(
         "</body>",
         '<script src="mock-cart.js"></script>\n</body>',
@@ -503,6 +515,113 @@ def clean_page(text: str, alias: str) -> str:
         clean = remove_section(clean, section_id)
 
     if alias == "homepage.html":
+        clean = required_replace(
+            clean,
+            "<title>Maple Moon: Australian Organic Carob</title>",
+            "<title>Maple Moon Carob</title>",
+            "Homepage neutral clean title",
+        )
+        clean = required_replace(
+            clean,
+            '<meta name="description" content="Australian organic carob bars, moons, bites and elixirs. Vegan, gluten free, caffeine free. Slow-made on the far north coast of NSW.">',
+            '<meta name="description" content="Explore Maple Moon carob products and the six-bar sampler.">',
+            "Homepage neutral clean description metadata",
+        )
+        clean = required_replace(
+            clean,
+            '<p class="wf-peyebrow">Australian organic carob</p>',
+            '<p class="wf-peyebrow">Maple Moon carob</p>',
+            "Homepage neutral hero eyebrow",
+        )
+        clean = required_replace(
+            clean,
+            '<p class="d" id="pdpDesc">Deep, smooth and naturally sweet. Made with just real ingredients.</p>',
+            '<p class="d" id="pdpDesc">View this product or enquire with Maple Moon.</p>',
+            "Homepage initial product description",
+        )
+        clean = required_replace(
+            clean,
+            '<div class="wf-line-head" hidden aria-hidden="true"><p id="rangeCopy">Carob Bars: Smooth, naturally sweet bites for calm cravings.</p></div>',
+            '<div class="wf-line-head" hidden aria-hidden="true"><p id="rangeCopy">Browse Maple Moon bars.</p></div>',
+            "Homepage initial range description",
+        )
+        clean = required_replace(
+            clean,
+            """  var RANGE_COPY={
+    bars:'Carob Bars: Smooth, naturally sweet bites for calm cravings.',
+    crescents:'Carob Crescents: Elegant, bite-sized comfort.',
+    elixirs:'Carob Elixirs: Versatile powdered goodness for drinks and baking.',
+    eclipseBites:'Eclipse Bites: Mini indulgences perfect for gifting or grazing.',
+    bananas:'Carob Bananas: Naturally sweet banana pieces wrapped in carob.'
+  };""",
+            """  var RANGE_COPY={
+    bars:'Browse Maple Moon bars.',
+    crescents:'Browse Maple Moon crescents.',
+    elixirs:'Browse Maple Moon elixirs.',
+    eclipseBites:'Browse Maple Moon Eclipse Bites.',
+    bananas:'Browse Maple Moon bananas.'
+  };""",
+            "Homepage neutral range descriptions",
+        )
+        product_description_pattern = re.compile(r"d:'[^']*'")
+        clean, product_description_count = product_description_pattern.subn(
+            "d:'View this product or enquire with Maple Moon.'",
+            clean,
+        )
+        if product_description_count != 17:
+            raise BuildError(
+                "expected 17 Homepage product descriptions before clean neutralisation, "
+                f"got {product_description_count}"
+            )
+        product_notes_pattern = re.compile(r",notes:\[\[[^\n]*?\]\]")
+        clean, product_notes_count = product_notes_pattern.subn("", clean)
+        if product_notes_count != 13:
+            raise BuildError(
+                "expected 13 Homepage product-note groups before clean neutralisation, "
+                f"got {product_notes_count}"
+            )
+        clean = required_replace(
+            clean,
+            """  var PRICE_STATE={
+    bars:{priced:true,label:'Available now'},
+    elixirs:{priced:true,label:'Available now'},
+    crescents:{priced:false,label:'Enquire for details'},
+    eclipseBites:{priced:false,label:'Enquire for details'},
+    bananas:{priced:false,label:'Enquire for details'}
+  };""",
+            """  var PRICE_STATE={
+    bars:{priced:true,label:'View product'},
+    elixirs:{priced:true,label:'View product'},
+    crescents:{priced:false,label:'Enquire for details'},
+    eclipseBites:{priced:false,label:'Enquire for details'},
+    bananas:{priced:false,label:'Enquire for details'}
+  };""",
+            "Homepage neutral availability treatment",
+        )
+        clean = required_replace(
+            clean,
+            """  var NOTE_FALLBACK={
+    bars:[['Texture','Smooth melt'],['Sweetness','Naturally sweet'],['Finish','Buttery carob'],['Proof','No caffeine']],
+    crescents:[['Texture','Small snap'],['Sweetness','Gentle carob'],['Finish','Clean finish'],['Details','Enquire']],
+    elixirs:[['Texture','Silky drink'],['Sweetness','Naturally sweet'],['Finish','Mellow roast'],['Proof','Caffeine free']],
+    eclipseBites:[['Texture','Tiny bite'],['Sweetness','Fruit lift'],['Finish','Carob finish'],['Details','Enquire']],
+    bananas:[['Texture','Chewy fruit'],['Sweetness','Banana sweet'],['Finish','Soft carob'],['Details','Enquire']]
+  };""",
+            """  var NOTE_FALLBACK={
+    bars:[['Format','Bar'],['Product','View product'],['Details','See Shop'],['Questions','Enquire']],
+    crescents:[['Format','Crescent'],['Product','View product'],['Details','See Shop'],['Questions','Enquire']],
+    elixirs:[['Format','Elixir'],['Product','View product'],['Details','See Shop'],['Questions','Enquire']],
+    eclipseBites:[['Format','Eclipse Bite'],['Product','View product'],['Details','See Shop'],['Questions','Enquire']],
+    bananas:[['Format','Banana'],['Product','View product'],['Details','See Shop'],['Questions','Enquire']]
+  };""",
+            "Homepage neutral product notes",
+        )
+        clean = required_replace(
+            clean,
+            "var rows=state.priced?['Shop page pricing',size,'Naturally sweet',state.label||'Available now']:['Range preview','View product','Enquire for details'];",
+            "var rows=state.priced?['Shop page pricing',size,'View product',state.label||'View product']:['Range preview','View product','Enquire for details'];",
+            "Homepage neutral product proof",
+        )
         clean = replace_section(
             clean,
             "stockists",
@@ -522,40 +641,81 @@ def clean_page(text: str, alias: str) -> str:
   </section>
             """,
         )
-        clean = required_replace(
+        clean = replace_section(
             clean,
-            "Carob is a naturally sweet pod that grows in the warm Australian sun. "
-            "It is not a bean, and it is naturally caffeine free. We slow-roast and "
-            "mill it with cacao butter for a mellow, velvety finish.",
-            "Carob is a naturally sweet pod that grows in the warm Australian sun. "
-            "It is not a bean, and it is naturally caffeine free.",
-            "Homepage carob introduction",
+            "carob",
+            """
+  <section class="wf-what1" id="carob">
+    <div class="pic"><img src="assets/hero_shots/carob_branch_dusk.jpg" alt="Carob pods hanging from a branch against a dusk blue sky" loading="lazy" decoding="async"></div>
+    <div class="wrap inner">
+      <div class="col">
+        <span class="qkick">First things first</span>
+        <h2 class="lux-hd">What is Carob, <em>actually?</em></h2>
+        <div class="lux-rule"></div>
+        <p class="bodyc" style="color:#57534b;font-size:1.05rem;max-width:40ch;line-height:1.7;margin:0 0 24px;">Carob comes from the pod of the carob tree.</p>
+        <div class="q-facts">
+          <span><svg viewBox="0 0 24 24"><path d="M4 14c6-1 10-5 16-10-2 7-5 12-12 13-2 .3-4-1-4-3z"/></svg>Carob pod</span>
+          <span><svg viewBox="0 0 24 24"><path d="M17 3a9 9 0 1 0 4 12 7 7 0 0 1-4-12z"/></svg>Caffeine free</span>
+        </div>
+        <a class="wf-more wf-more-strong" href="carob-story.html">The full carob story <svg viewBox="0 0 24 24" width="14" height="14" style="stroke:currentColor;fill:none;stroke-width:1.6"><line x1="4" y1="12" x2="20" y2="12"/><polyline points="14 6 20 12 14 18"/></svg></a>
+      </div>
+    </div>
+  </section>
+            """,
         )
-        clean = required_replace(
+        clean = replace_section(
             clean,
-            '<div class="co flip" style="right:560px;top:56%"><span class="dot"></span>'
-            '<span class="line"></span><div class="lab"><div class="top"><svg viewBox="0 0 24 24">'
-            '<path d="M17 3a9 9 0 1 0 4 12 7 7 0 0 1-4-12z"/></svg>'
-            '<span class="t">Slow-roasted</span><span class="n">03</span></div>'
-            '<span class="d">Milled with cacao butter for smoothness.</span></div></div>',
-            "",
-            "Homepage unsupported process callout",
+            "story",
+            """
+  <section class="wf-where1" id="story">
+    <div class="pic"><picture><source media="(max-width: 900px)" srcset="assets/licensed/carob_farm/australian-carob-0205-mobile.jpg"><img src="assets/licensed/carob_farm/australian-carob-0205-16x9.jpg" alt="Carob orchard"></picture></div>
+    <div class="wrap inner">
+      <div class="col">
+        <span class="qkick">Our story</span>
+        <h2 class="lux-hd">The story behind Maple Moon</h2>
+        <div class="lux-rule"></div>
+        <p style="color:#57534b;font-size:1.05rem;max-width:40ch;line-height:1.7;margin:0 0 24px;">Meet the people behind Maple Moon and explore the ideas shaping the brand.</p>
+        <a class="wf-more" href="our-story.html">Read the Full Story <svg viewBox="0 0 24 24" width="14" height="14" style="stroke:currentColor;fill:none;stroke-width:1.6"><line x1="4" y1="12" x2="20" y2="12"/><polyline points="14 6 20 12 14 18"/></svg></a>
+      </div>
+    </div>
+  </section>
+            """,
         )
-        clean = required_replace(
+        clean = replace_section(
             clean,
-            '<div class="co" style="left:90px;top:58%"><span class="dot"></span>'
-            '<span class="line"></span><div class="lab"><div class="top"><svg viewBox="0 0 24 24">'
-            '<path d="M12 21s-7-4.5-7-10a7 7 0 0 1 14 0c0 5.5-7 10-7 10z"/></svg>'
-            '<span class="t">Small batches</span><span class="n">02</span></div>'
-            '<span class="d">Hand-poured, hand-packed.</span></div></div>',
-            "",
-            "Homepage unsupported production callout",
-        )
-        clean = required_replace(
-            clean,
-            "d:'Slow-roasted hazelnut folded through smooth carob.'",
-            "d:'Roasted hazelnut folded through carob.'",
-            "Homepage Roasted Hazelnut description",
+            "sampler",
+            """
+  <section class="wrap q-sampler" id="sampler">
+    <span class="qkick" style="text-align:center">Six-bar sampler</span>
+    <h2 class="lux-hd" style="text-align:center">Explore six bar <em>flavours.</em></h2>
+    <p>Six Maple Moon bar flavours, shown together in one sampler.</p>
+    <div class="sbox">
+      <div class="sbox-frame" aria-label="Six-bar sampler">
+        <span class="sbox-lid">maple moon &middot; six-bar sampler</span>
+        <div class="sbox-grid">
+          <div class="well"><img src="assets/product_shots/bar_pure_carob.webp" alt="Pure Carob and Cacao Butter bar"></div>
+          <div class="well"><img src="assets/product_shots/bar_peppermint.webp" alt="Peppermint and Buckwheat bar"></div>
+          <div class="well"><img src="assets/product_shots/bar_hazelnut.webp" alt="Roasted Hazelnut bar"></div>
+          <div class="well"><img src="assets/product_shots/bar_goji_coconut.webp" alt="Coconut and Goji bar"></div>
+          <div class="well"><img src="assets/product_shots/bar_cayenne.webp" alt="Cayenne Chilli bar"></div>
+          <div class="well"><img src="assets/product_shots/bar_almond.webp" alt="Almond and Celtic Salt bar"></div>
+        </div>
+      </div>
+      <div class="sbox-info">
+        <span class="qkick lid-k">Sampler selection</span>
+        <ul class="sbox-list">
+          <li>Pure Carob <span class="amp">&amp;</span> Cacao Butter</li>
+          <li>Peppermint <span class="amp">&amp;</span> Buckwheat</li>
+          <li>Roasted Hazelnut</li>
+          <li>Coconut <span class="amp">&amp;</span> Goji</li>
+          <li>Cayenne Chilli</li>
+          <li>Almond <span class="amp">&amp;</span> Celtic Salt</li>
+        </ul>
+        <div class="btns"><a class="wf-pill solid" href="shop.html#bars">View bar flavours</a><a class="wf-pill" href="#range">Shop single bars</a></div>
+      </div>
+    </div>
+  </section>
+            """,
         )
         clean = required_replace(
             clean,
@@ -563,17 +723,6 @@ def clean_page(text: str, alias: str) -> str:
             "The full Maple Moon range: bars, moons and elixirs",
             "Homepage product-range alternative text",
         )
-        clean = required_replace(
-            clean,
-            '      <div class="q-segments" aria-label="Comparison views">\n'
-            '        <button class="on" type="button">Compare</button>\n'
-            '        <button type="button" disabled>Nutrition</button>\n'
-            '        <button type="button" disabled>Taste <span class="amp">&amp;</span> Feel</button>\n'
-            "      </div>\n",
-            "",
-            "Homepage unavailable comparison tabs",
-        )
-
     if alias == "carob-story.html":
         clean = required_replace(
             clean,
@@ -741,10 +890,24 @@ def clean_page(text: str, alias: str) -> str:
     return re.sub(r"\n{3,}", "\n\n", clean).rstrip() + "\n"
 
 
-def annotate_page(clean_text: str) -> str:
-    if "</head>" not in clean_text or "</body>" not in clean_text:
+def annotate_page(source_text: str, alias: str) -> str:
+    if "</head>" not in source_text or "</body>" not in source_text:
         raise BuildError("page lacks head/body insertion points")
-    annotated = clean_text.replace(
+    annotated = source_text
+    if alias == "homepage.html":
+        annotated = required_replace(
+            annotated,
+            '<section class="wrap q-why" id="why">',
+            '<section class="wrap q-why" id="why">\n'
+            '    <aside class="mm-comparison-evidence-hold" role="note" '
+            'style="margin:0 0 24px;padding:14px 16px;border:2px solid #a14d42;'
+            'background:#fff4ef;color:#45231f;line-height:1.45">'
+            '<strong style="display:block;margin-bottom:4px">Evidence hold</strong>'
+            'This comparison is excluded from the clean review. Its claims require '
+            'attributable evidence before public use.</aside>',
+            "Homepage annotated comparison evidence hold",
+        )
+    annotated = annotated.replace(
         "</head>",
         '<link rel="stylesheet" href="review-mode.css">\n</head>',
         1,
@@ -1148,6 +1311,11 @@ def build(output: Path) -> None:
     if current_control.get("packet_id") != CURRENT_PACKET_ID:
         raise BuildError("current packet provenance does not match builder packet ID")
     verify_inputs(control, update_control, current_control)
+    frozen_generated = {}
+    for relative, expected in current_control["base"]["frozen_generated_sha256"].items():
+        source = DEFAULT_OUTPUT / relative
+        assert_hash(source, expected, "frozen generated non-target")
+        frozen_generated[relative] = source.read_bytes()
     reset_output(output)
     clean = output / "clean"
     annotated = output / "annotated"
@@ -1155,10 +1323,14 @@ def build(output: Path) -> None:
     annotated.mkdir()
 
     for alias, source in PAGE_SOURCES.items():
+        if alias == "shop.html":
+            (clean / alias).write_bytes(frozen_generated[f"clean/{alias}"])
+            (annotated / alias).write_bytes(frozen_generated[f"annotated/{alias}"])
+            continue
         source_text = source.read_text(encoding="utf-8")
         transformed_text = transform_page(source_text, alias)
         clean_text = clean_page(transformed_text, alias)
-        annotated_text = annotate_page(transformed_text)
+        annotated_text = annotate_page(transformed_text, alias)
         assert_page_regressions(clean_text, alias)
         assert_page_regressions(annotated_text, alias)
         assert_vis03c02_evidence(clean_text, annotated_text, alias)
