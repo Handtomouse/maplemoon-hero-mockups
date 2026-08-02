@@ -55,6 +55,28 @@ decided by two processes that cannot see each other.
 The page still references `assets/our_story/founders_portrait_h212.webp`. No v04 derivative
 is wired into any page, manifest or template. This can be fixed before anything ships.
 
+## CONFIRMED 2026-08-03 02:55. This is no longer a predicted risk.
+
+`_wip/evidence/founder_v04_main_imac_qa_export_20260803/` contains QA proofs at 1440 and
+390, which is the right instinct. But they are rendered against
+`our_story_v04_review.html`, an isolated review surface that:
+
+- contains `mask-image` **zero times**, so stage 3 is absent entirely
+- carries no `object-position`, so stage 2 does not match production either
+
+The proofs therefore show a rendering that does not exist on the real page. They cannot
+support a pass on Carli framing. **Any receipt written against them is void.**
+
+Remedy: render the proofs against the real `.os`-scoped rules from `_wip/our-story.WIP.html`
+(line 543 mask, line 603 object-position), or copy those rules into the review surface.
+Then re-check that hair, hand, fingers and elbow sit inside the opaque region.
+
+Confirms a matching finding from Codex's own receipt: `founders_portrait_v04_review.png`
+is pixel-identical to the custody master. Two independent paths agree the pixels are sound.
+The defect is in what the proofs were rendered against, not in the image.
+
+Enforced by `scripts/check-maplemoon-portrait-crop.mjs`.
+
 ## Independently verified while raising this
 
 Against `_wip/masters/founder-v04-master.png`, pixel hash `517683f0`:
