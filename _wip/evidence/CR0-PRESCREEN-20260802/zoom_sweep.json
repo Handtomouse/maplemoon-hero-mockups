@@ -1,0 +1,182 @@
+{
+ "pages": {
+  "homepage": {
+   "loadedUrl": "http://127.0.0.1:3011/homepage.html",
+   "title": "Maple Moon: Australian Organic Carob",
+   "viewportCss": 720,
+   "viewportH": 450,
+   "scrollWidth": 720,
+   "horizontalScroll": false,
+   "controls": 40,
+   "outsideViewport": [],
+   "outsideCount": 0,
+   "clippedText": [],
+   "clippedCount": 0,
+   "smallTargets": [],
+   "smallCount": 0,
+   "fixedChromeHeight": 450,
+   "fixedChromePct": 100,
+   "fixedChrome": [
+    {
+     "tag": "BUTTON",
+     "cls": "mm-cart-overlay",
+     "h": 450
+    }
+   ]
+  },
+  "shop": {
+   "loadedUrl": "http://127.0.0.1:3011/shop.html",
+   "title": "Shop the Range | Maple Moon",
+   "viewportCss": 720,
+   "viewportH": 450,
+   "scrollWidth": 720,
+   "horizontalScroll": false,
+   "controls": 60,
+   "outsideViewport": [],
+   "outsideCount": 0,
+   "clippedText": [
+    {
+     "tag": "H2",
+     "cls": "sr-only",
+     "sw": 160,
+     "cw": 1,
+     "sh": 36,
+     "ch": 1,
+     "txt": "Shop all products"
+    }
+   ],
+   "clippedCount": 1,
+   "smallTargets": [],
+   "smallCount": 0,
+   "fixedChromeHeight": 450,
+   "fixedChromePct": 100,
+   "fixedChrome": [
+    {
+     "tag": "BUTTON",
+     "cls": "mm-cart-overlay",
+     "h": 450
+    }
+   ]
+  },
+  "our-story": {
+   "loadedUrl": "http://127.0.0.1:3011/our-story.html",
+   "title": "Our Story | Maple Moon",
+   "viewportCss": 720,
+   "viewportH": 450,
+   "scrollWidth": 720,
+   "horizontalScroll": false,
+   "controls": 29,
+   "outsideViewport": [],
+   "outsideCount": 0,
+   "clippedText": [],
+   "clippedCount": 0,
+   "smallTargets": [],
+   "smallCount": 0,
+   "fixedChromeHeight": 450,
+   "fixedChromePct": 100,
+   "fixedChrome": [
+    {
+     "tag": "BUTTON",
+     "cls": "mm-cart-overlay",
+     "h": 450
+    }
+   ]
+  },
+  "carob-story": {
+   "loadedUrl": "http://127.0.0.1:3011/carob-story.html",
+   "title": "What is Carob? | Maple Moon",
+   "viewportCss": 720,
+   "viewportH": 450,
+   "scrollWidth": 720,
+   "horizontalScroll": false,
+   "controls": 25,
+   "outsideViewport": [],
+   "outsideCount": 0,
+   "clippedText": [],
+   "clippedCount": 0,
+   "smallTargets": [],
+   "smallCount": 0,
+   "fixedChromeHeight": 450,
+   "fixedChromePct": 100,
+   "fixedChrome": [
+    {
+     "tag": "BUTTON",
+     "cls": "mm-cart-overlay",
+     "h": 450
+    }
+   ]
+  },
+  "stockists": {
+   "loadedUrl": "http://127.0.0.1:3011/stockists.html",
+   "title": "Stockists | Maple Moon",
+   "viewportCss": 720,
+   "viewportH": 450,
+   "scrollWidth": 720,
+   "horizontalScroll": false,
+   "controls": 49,
+   "outsideViewport": [
+    {
+     "tag": "BUTTON",
+     "cls": "st-filter",
+     "left": 688,
+     "right": 766,
+     "txt": "NT"
+    }
+   ],
+   "outsideCount": 1,
+   "clippedText": [],
+   "clippedCount": 0,
+   "smallTargets": [],
+   "smallCount": 0,
+   "fixedChromeHeight": 450,
+   "fixedChromePct": 100,
+   "fixedChrome": [
+    {
+     "tag": "BUTTON",
+     "cls": "mm-cart-overlay",
+     "h": 450
+    }
+   ]
+  },
+  "faq": {
+   "loadedUrl": "http://127.0.0.1:3011/faq.html",
+   "title": "FAQ | Maple Moon",
+   "viewportCss": 720,
+   "viewportH": 450,
+   "scrollWidth": 720,
+   "horizontalScroll": false,
+   "controls": 37,
+   "outsideViewport": [
+    {
+     "tag": "BUTTON",
+     "cls": "popular-chip",
+     "left": 558,
+     "right": 747,
+     "txt": "Can I get help with an order?"
+    }
+   ],
+   "outsideCount": 1,
+   "clippedText": [],
+   "clippedCount": 0,
+   "smallTargets": [
+    {
+     "tag": "A",
+     "w": 183,
+     "h": 18,
+     "label": "Email the Maple Moon team"
+    }
+   ],
+   "smallCount": 1,
+   "fixedChromeHeight": 450,
+   "fixedChromePct": 100,
+   "fixedChrome": [
+    {
+     "tag": "BUTTON",
+     "cls": "mm-cart-overlay",
+     "h": 450
+    }
+   ]
+  }
+ },
+ "load_failures": []
+}
