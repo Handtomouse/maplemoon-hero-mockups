@@ -75,3 +75,22 @@ without an in-page receipt.
 before use:** the source is RAW, so a develop stage in Camera Raw or Lightroom comes before
 any Photoshop retouch, and that develop stage is where the look actually lives. Selects go in
 `~/MapleMoon-Photoshop-Work/_INBOX/` on the iMac, deliberately not Drive-synced.
+
+## RAW source, resolved 2026-08-03 03:40
+
+Shortcut added, synced. Path on the iMac, via the Terminal bridge only, plain SSH cannot
+read `CloudStorage`:
+
+```
+~/Library/CloudStorage/GoogleDrive-hello@handtomouse.org/My Drive/Maple Moon RAWs - Photography Shoot
+```
+
+**160 Sony ARW files**, "20260524 Maple Moon - Studio Session", ~49 MB each, roughly 7.8 GB.
+Drive streams rather than downloads, so reading each frame pulls it.
+
+**macOS develops ARW natively.** Verified: `sips -s format jpeg -Z 1400 <file>.arw --out x.jpg`
+produced 1400x933. No Adobe needed for proxies or contact sheets, only for the real develop.
+
+This is a whole shoot, not selects. Phase 0 of the loop brief should therefore begin with a
+contact sheet so Nate can choose, not with staging all 160. Generating 160 proxies is bulk
+execution and belongs to Codex, not to a Claude session.
