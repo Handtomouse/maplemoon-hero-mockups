@@ -1,0 +1,39 @@
+{
+  "_comment": "PREVIEW deploy config for the Carli work-in-progress link. Copy this into the deploy staging directory as vercel.json at deploy time. Do NOT place it inside staging-v1/clean/ - that is the frozen, hash-verified artifact and adding files to it breaks the freeze. Do NOT edit the repo-root vercel.json, which serves the main site and has outputDirectory '.' - deploying that would publish _wip/, docs/orchestration/ and every internal evidence file to a URL the client can browse.",
+  "buildCommand": "",
+  "outputDirectory": ".",
+  "cleanUrls": true,
+  "redirects": [
+    { "source": "/", "destination": "/homepage.html", "statusCode": 302 },
+    { "source": "/shop", "destination": "/shop.html", "statusCode": 302 },
+    { "source": "/our-story", "destination": "/our-story.html", "statusCode": 302 },
+    { "source": "/carob-story", "destination": "/carob-story.html", "statusCode": 302 },
+    { "source": "/stockists", "destination": "/stockists.html", "statusCode": 302 },
+    { "source": "/faq", "destination": "/faq.html", "statusCode": 302 }
+  ],
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        { "key": "X-Robots-Tag", "value": "noindex, nofollow, noarchive, nosnippet" },
+        { "key": "X-Content-Type-Options", "value": "nosniff" },
+        { "key": "X-Frame-Options", "value": "SAMEORIGIN" },
+        { "key": "Referrer-Policy", "value": "strict-origin-when-cross-origin" },
+        { "key": "Permissions-Policy", "value": "camera=(), microphone=(), geolocation=()" },
+        { "key": "Content-Security-Policy", "value": "default-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://use.typekit.net; font-src 'self' https://fonts.gstatic.com https://use.typekit.net https://p.typekit.net; img-src 'self' data:; media-src 'self'; script-src 'self' 'unsafe-inline'; connect-src 'self'; frame-ancestors 'self'" }
+      ]
+    },
+    {
+      "source": "/assets/(.*)",
+      "headers": [
+        { "key": "Cache-Control", "value": "public, max-age=86400, stale-while-revalidate=604800" }
+      ]
+    },
+    {
+      "source": "/(.*\\.(css|js))",
+      "headers": [
+        { "key": "Cache-Control", "value": "public, max-age=86400, stale-while-revalidate=604800" }
+      ]
+    }
+  ]
+}
