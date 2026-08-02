@@ -64,7 +64,17 @@ connection.
 
 ---
 
-## 3. DISPROVED
+## 3. ~~DISPROVED~~ — **WITHDRAWN 2026-08-03, THE DISPROOF WAS WRONG**
+
+> **⚠️ The capture `05-stockists--tablet-834.png` shows `SKIP FILTERS TO RESULTS` rendered as a
+> visible white pill in the page body with nothing focused.** The audit's core claim —
+> permanently visible — is **correct**. My static reading of the authored CSS missed what the
+> review-build tooling does at runtime, the same error as the injected nav.
+>
+> Still not reproduced: the claimed overlap with the hero paragraph. At 834 the button sits
+> clear of it, below the stat row. So: **visible when it should be hidden — real; overlapping —
+> not shown.** See `VISUAL-VERIFICATION-20260803.md` §3. The static analysis below is retained
+> only to show how the error was made.
 
 **`stockists #1` (P0) — "skip-link permanently visible, overlapping the hero paragraph at
 every breakpoint."**
