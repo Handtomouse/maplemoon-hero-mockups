@@ -1,0 +1,693 @@
+{
+ "widths": [
+  [
+   1440,
+   900
+  ],
+  [
+   390,
+   667
+  ]
+ ],
+ "threshold": 24,
+ "results": {
+  "1440": {
+   "homepage": {
+    "LOAD_FAILED": {
+     "u": "http://127.0.0.1:3011/homepage.html",
+     "t": "Maple Moon: Australian Organic Carob",
+     "n": 0
+    }
+   },
+   "shop": {
+    "vw": 1440,
+    "sections": [
+     {
+      "id": "",
+      "cls": "wrap",
+      "sectionLeft": 130,
+      "sectionWidth": 1180,
+      "textLeft": 159,
+      "sample": "Find your flavour",
+      "innerPaddingLeft": null
+     },
+     {
+      "id": "bars",
+      "cls": "wrap",
+      "sectionLeft": 130,
+      "sectionWidth": 1180,
+      "textLeft": 158,
+      "sample": "Bars",
+      "innerPaddingLeft": null
+     },
+     {
+      "id": "moons",
+      "cls": "wrap",
+      "sectionLeft": 130,
+      "sectionWidth": 1180,
+      "textLeft": 158,
+      "sample": "Moons",
+      "innerPaddingLeft": null
+     },
+     {
+      "id": "bites",
+      "cls": "wrap",
+      "sectionLeft": 130,
+      "sectionWidth": 1180,
+      "textLeft": 158,
+      "sample": "Bites & Eclipses",
+      "innerPaddingLeft": null
+     },
+     {
+      "id": "elixirs",
+      "cls": "wrap",
+      "sectionLeft": 130,
+      "sectionWidth": 1180,
+      "textLeft": 158,
+      "sample": "Elixirs",
+      "innerPaddingLeft": null
+     },
+     {
+      "id": "bananas",
+      "cls": "wrap",
+      "sectionLeft": 130,
+      "sectionWidth": 1180,
+      "textLeft": 158,
+      "sample": "Bananas",
+      "innerPaddingLeft": null
+     },
+     {
+      "id": "powder",
+      "cls": "wrap",
+      "sectionLeft": 130,
+      "sectionWidth": 1180,
+      "textLeft": 158,
+      "sample": "Carob Powder",
+      "innerPaddingLeft": null
+     }
+    ]
+   },
+   "our-story": {
+    "vw": 1440,
+    "sections": [
+     {
+      "id": "",
+      "cls": "os-story-hero",
+      "sectionLeft": 0,
+      "sectionWidth": 1440,
+      "textLeft": 158,
+      "sample": "The makers",
+      "innerPaddingLeft": null
+     },
+     {
+      "id": "story",
+      "cls": "wrap",
+      "sectionLeft": 130,
+      "sectionWidth": 1180,
+      "textLeft": 158,
+      "sample": "Our beginning",
+      "innerPaddingLeft": null
+     },
+     {
+      "id": "ingredient",
+      "cls": "wrap",
+      "sectionLeft": 0,
+      "sectionWidth": 1440,
+      "textLeft": 555,
+      "sample": "The ingredient",
+      "innerPaddingLeft": null
+     },
+     {
+      "id": "carob",
+      "cls": "wrap",
+      "sectionLeft": 0,
+      "sectionWidth": 1440,
+      "textLeft": 158,
+      "sample": "01",
+      "innerPaddingLeft": null
+     },
+     {
+      "id": "",
+      "cls": "os-quote",
+      "sectionLeft": 0,
+      "sectionWidth": 1440,
+      "textLeft": 432,
+      "sample": "So she asked a different question: Why shoul",
+      "innerPaddingLeft": null
+     },
+     {
+      "id": "place",
+      "cls": "wrap",
+      "sectionLeft": 0,
+      "sectionWidth": 1440,
+      "textLeft": 830,
+      "sample": "03",
+      "innerPaddingLeft": null
+     },
+     {
+      "id": "range",
+      "cls": "wrap",
+      "sectionLeft": 130,
+      "sectionWidth": 1180,
+      "textLeft": 158,
+      "sample": "Photographed at the Maple Moon studio sessio",
+      "innerPaddingLeft": null
+     },
+     {
+      "id": "shop",
+      "cls": "os-cta",
+      "sectionLeft": 0,
+      "sectionWidth": 1440,
+      "textLeft": 28,
+      "sample": "The range",
+      "innerPaddingLeft": null
+     }
+    ]
+   },
+   "carob-story": {
+    "vw": 1440,
+    "sections": [
+     {
+      "id": "top",
+      "cls": "hero",
+      "sectionLeft": 0,
+      "sectionWidth": 1440,
+      "textLeft": 140,
+      "sample": "First things first",
+      "innerPaddingLeft": "30px"
+     },
+     {
+      "id": "carob-and-cacao",
+      "cls": "cmp",
+      "sectionLeft": 0,
+      "sectionWidth": 1440,
+      "textLeft": 170,
+      "sample": "A naturally sweet pod.",
+      "innerPaddingLeft": null
+     },
+     {
+      "id": "gallery",
+      "cls": "gal",
+      "sectionLeft": 0,
+      "sectionWidth": 1440,
+      "textLeft": 141,
+      "sample": "From the grove",
+      "innerPaddingLeft": null
+     },
+     {
+      "id": "",
+      "cls": "cta",
+      "sectionLeft": 140,
+      "sectionWidth": 1160,
+      "textLeft": 175,
+      "sample": "Taste it for yourself",
+      "innerPaddingLeft": "34px"
+     },
+     {
+      "id": "faq",
+      "cls": "faq",
+      "sectionLeft": 0,
+      "sectionWidth": 1440,
+      "textLeft": 139,
+      "sample": "Good questions",
+      "innerPaddingLeft": null
+     }
+    ]
+   },
+   "stockists": {
+    "vw": 1440,
+    "sections": [
+     {
+      "id": "",
+      "cls": "wrap",
+      "sectionLeft": 130,
+      "sectionWidth": 1180,
+      "textLeft": 148,
+      "sample": "Skip filters to results",
+      "innerPaddingLeft": null
+     },
+     {
+      "id": "",
+      "cls": "wrap",
+      "sectionLeft": 130,
+      "sectionWidth": 1180,
+      "textLeft": 197,
+      "sample": "For retailers & cafes",
+      "innerPaddingLeft": "28px"
+     },
+     {
+      "id": "",
+      "cls": "wrap",
+      "sectionLeft": 130,
+      "sectionWidth": 1180,
+      "textLeft": 158,
+      "sample": "Be first to the shelf.",
+      "innerPaddingLeft": null
+     }
+    ]
+   },
+   "faq": {
+    "vw": 1440,
+    "sections": [
+     {
+      "id": "",
+      "cls": "wrap",
+      "sectionLeft": 120,
+      "sectionWidth": 1200,
+      "textLeft": 120,
+      "sample": "Good questions",
+      "innerPaddingLeft": null
+     },
+     {
+      "id": "",
+      "cls": "wrap",
+      "sectionLeft": 120,
+      "sectionWidth": 1200,
+      "textLeft": 120,
+      "sample": "Popular questions",
+      "innerPaddingLeft": null
+     },
+     {
+      "id": "",
+      "cls": "wrap",
+      "sectionLeft": 120,
+      "sectionWidth": 1200,
+      "textLeft": 120,
+      "sample": "Browse",
+      "innerPaddingLeft": null
+     },
+     {
+      "id": "carob",
+      "cls": "faq-section",
+      "sectionLeft": 462,
+      "sectionWidth": 858,
+      "textLeft": 462,
+      "sample": "Carob",
+      "innerPaddingLeft": null
+     },
+     {
+      "id": "products",
+      "cls": "faq-section",
+      "sectionLeft": 462,
+      "sectionWidth": 858,
+      "textLeft": 462,
+      "sample": "Products",
+      "innerPaddingLeft": null
+     },
+     {
+      "id": "support",
+      "cls": "faq-section",
+      "sectionLeft": 462,
+      "sectionWidth": 858,
+      "textLeft": 462,
+      "sample": "Support",
+      "innerPaddingLeft": null
+     },
+     {
+      "id": "",
+      "cls": "wrap",
+      "sectionLeft": 0,
+      "sectionWidth": 1200,
+      "textLeft": 181,
+      "sample": "Still wondering",
+      "innerPaddingLeft": null
+     }
+    ]
+   }
+  },
+  "390": {
+   "homepage": {
+    "vw": 390,
+    "sections": [
+     {
+      "id": "top",
+      "cls": "wf-phero",
+      "sectionLeft": 0,
+      "sectionWidth": 390,
+      "textLeft": 8,
+      "sample": "Shop",
+      "innerPaddingLeft": null
+     },
+     {
+      "id": "range",
+      "cls": "wrap",
+      "sectionLeft": 0,
+      "sectionWidth": 390,
+      "textLeft": 28,
+      "sample": "Choose your carob moment",
+      "innerPaddingLeft": null
+     },
+     {
+      "id": "carob",
+      "cls": "wf-what1",
+      "sectionLeft": 0,
+      "sectionWidth": 390,
+      "textLeft": 20,
+      "sample": "First things first",
+      "innerPaddingLeft": "20px"
+     },
+     {
+      "id": "ritual",
+      "cls": "wrap",
+      "sectionLeft": 0,
+      "sectionWidth": 390,
+      "textLeft": 28,
+      "sample": "A sweeter kind of ritual",
+      "innerPaddingLeft": null
+     },
+     {
+      "id": "story",
+      "cls": "wf-where1",
+      "sectionLeft": 0,
+      "sectionWidth": 390,
+      "textLeft": 27,
+      "sample": "Our story",
+      "innerPaddingLeft": "0px"
+     },
+     {
+      "id": "stockists",
+      "cls": "wrap",
+      "sectionLeft": 0,
+      "sectionWidth": 390,
+      "textLeft": 28,
+      "sample": "Stockists",
+      "innerPaddingLeft": null
+     },
+     {
+      "id": "sampler",
+      "cls": "wrap",
+      "sectionLeft": 0,
+      "sectionWidth": 390,
+      "textLeft": 28,
+      "sample": "The starter box",
+      "innerPaddingLeft": null
+     },
+     {
+      "id": "trust",
+      "cls": "wrap",
+      "sectionLeft": 0,
+      "sectionWidth": 390,
+      "textLeft": 28,
+      "sample": "Stockists200+ locations across Australia",
+      "innerPaddingLeft": null
+     }
+    ]
+   },
+   "shop": {
+    "vw": 390,
+    "sections": [
+     {
+      "id": "",
+      "cls": "wrap",
+      "sectionLeft": 0,
+      "sectionWidth": 390,
+      "textLeft": 29,
+      "sample": "Find your flavour",
+      "innerPaddingLeft": null
+     },
+     {
+      "id": "bars",
+      "cls": "wrap",
+      "sectionLeft": 0,
+      "sectionWidth": 390,
+      "textLeft": 28,
+      "sample": "Bars",
+      "innerPaddingLeft": null
+     },
+     {
+      "id": "moons",
+      "cls": "wrap",
+      "sectionLeft": 0,
+      "sectionWidth": 390,
+      "textLeft": 28,
+      "sample": "Moons",
+      "innerPaddingLeft": null
+     },
+     {
+      "id": "bites",
+      "cls": "wrap",
+      "sectionLeft": 0,
+      "sectionWidth": 390,
+      "textLeft": 28,
+      "sample": "Bites & Eclipses",
+      "innerPaddingLeft": null
+     },
+     {
+      "id": "elixirs",
+      "cls": "wrap",
+      "sectionLeft": 0,
+      "sectionWidth": 390,
+      "textLeft": 28,
+      "sample": "Elixirs",
+      "innerPaddingLeft": null
+     },
+     {
+      "id": "bananas",
+      "cls": "wrap",
+      "sectionLeft": 0,
+      "sectionWidth": 390,
+      "textLeft": 28,
+      "sample": "Bananas",
+      "innerPaddingLeft": null
+     },
+     {
+      "id": "powder",
+      "cls": "wrap",
+      "sectionLeft": 0,
+      "sectionWidth": 390,
+      "textLeft": 28,
+      "sample": "Carob Powder",
+      "innerPaddingLeft": null
+     }
+    ]
+   },
+   "our-story": {
+    "vw": 390,
+    "sections": [
+     {
+      "id": "",
+      "cls": "os-story-hero",
+      "sectionLeft": 0,
+      "sectionWidth": 390,
+      "textLeft": 28,
+      "sample": "The makers",
+      "innerPaddingLeft": null
+     },
+     {
+      "id": "story",
+      "cls": "wrap",
+      "sectionLeft": 0,
+      "sectionWidth": 390,
+      "textLeft": 28,
+      "sample": "Our beginning",
+      "innerPaddingLeft": null
+     },
+     {
+      "id": "ingredient",
+      "cls": "wrap",
+      "sectionLeft": 0,
+      "sectionWidth": 390,
+      "textLeft": 20,
+      "sample": "The ingredient",
+      "innerPaddingLeft": null
+     },
+     {
+      "id": "carob",
+      "cls": "wrap",
+      "sectionLeft": 0,
+      "sectionWidth": 390,
+      "textLeft": 20,
+      "sample": "01",
+      "innerPaddingLeft": null
+     },
+     {
+      "id": "",
+      "cls": "os-quote",
+      "sectionLeft": 0,
+      "sectionWidth": 390,
+      "textLeft": 28,
+      "sample": "So she asked a different question: Why shoul",
+      "innerPaddingLeft": null
+     },
+     {
+      "id": "place",
+      "cls": "wrap",
+      "sectionLeft": 0,
+      "sectionWidth": 390,
+      "textLeft": 0,
+      "sample": "03",
+      "innerPaddingLeft": null
+     },
+     {
+      "id": "range",
+      "cls": "wrap",
+      "sectionLeft": 0,
+      "sectionWidth": 390,
+      "textLeft": 28,
+      "sample": "From the studio",
+      "innerPaddingLeft": null
+     },
+     {
+      "id": "shop",
+      "cls": "os-cta",
+      "sectionLeft": 0,
+      "sectionWidth": 390,
+      "textLeft": 20,
+      "sample": "The range",
+      "innerPaddingLeft": null
+     }
+    ]
+   },
+   "carob-story": {
+    "vw": 390,
+    "sections": [
+     {
+      "id": "top",
+      "cls": "hero",
+      "sectionLeft": 0,
+      "sectionWidth": 390,
+      "textLeft": 16,
+      "sample": "First things first",
+      "innerPaddingLeft": "16px"
+     },
+     {
+      "id": "carob-and-cacao",
+      "cls": "cmp",
+      "sectionLeft": 0,
+      "sectionWidth": 390,
+      "textLeft": 37,
+      "sample": "An honest comparison",
+      "innerPaddingLeft": null
+     },
+     {
+      "id": "gallery",
+      "cls": "gal",
+      "sectionLeft": 0,
+      "sectionWidth": 390,
+      "textLeft": 15,
+      "sample": "From the grove",
+      "innerPaddingLeft": null
+     },
+     {
+      "id": "",
+      "cls": "cta",
+      "sectionLeft": 16,
+      "sectionWidth": 358,
+      "textLeft": 33,
+      "sample": "Taste it for yourself",
+      "innerPaddingLeft": "16px"
+     },
+     {
+      "id": "faq",
+      "cls": "faq",
+      "sectionLeft": 0,
+      "sectionWidth": 390,
+      "textLeft": 17,
+      "sample": "Good questions",
+      "innerPaddingLeft": null
+     }
+    ]
+   },
+   "stockists": {
+    "vw": 390,
+    "sections": [
+     {
+      "id": "",
+      "cls": "wrap",
+      "sectionLeft": 0,
+      "sectionWidth": 390,
+      "textLeft": 18,
+      "sample": "Skip filters to results",
+      "innerPaddingLeft": null
+     },
+     {
+      "id": "",
+      "cls": "wrap",
+      "sectionLeft": 0,
+      "sectionWidth": 390,
+      "textLeft": 37,
+      "sample": "We supply selected retailers, cafes and groc",
+      "innerPaddingLeft": "18px"
+     },
+     {
+      "id": "",
+      "cls": "wrap",
+      "sectionLeft": 0,
+      "sectionWidth": 390,
+      "textLeft": 18,
+      "sample": "Be first to the shelf.",
+      "innerPaddingLeft": null
+     }
+    ]
+   },
+   "faq": {
+    "vw": 390,
+    "sections": [
+     {
+      "id": "",
+      "cls": "wrap",
+      "sectionLeft": 16,
+      "sectionWidth": 358,
+      "textLeft": 16,
+      "sample": "Good questions",
+      "innerPaddingLeft": null
+     },
+     {
+      "id": "",
+      "cls": "wrap",
+      "sectionLeft": 16,
+      "sectionWidth": 358,
+      "textLeft": 16,
+      "sample": "Popular questions",
+      "innerPaddingLeft": null
+     },
+     {
+      "id": "",
+      "cls": "wrap",
+      "sectionLeft": 16,
+      "sectionWidth": 358,
+      "textLeft": 16,
+      "sample": "Browse",
+      "innerPaddingLeft": null
+     },
+     {
+      "id": "carob",
+      "cls": "faq-section",
+      "sectionLeft": 16,
+      "sectionWidth": 358,
+      "textLeft": 16,
+      "sample": "Carob",
+      "innerPaddingLeft": null
+     },
+     {
+      "id": "products",
+      "cls": "faq-section",
+      "sectionLeft": 16,
+      "sectionWidth": 358,
+      "textLeft": 16,
+      "sample": "Products",
+      "innerPaddingLeft": null
+     },
+     {
+      "id": "support",
+      "cls": "faq-section",
+      "sectionLeft": 16,
+      "sectionWidth": 358,
+      "textLeft": 16,
+      "sample": "Support",
+      "innerPaddingLeft": null
+     },
+     {
+      "id": "",
+      "cls": "wrap",
+      "sectionLeft": 0,
+      "sectionWidth": 358,
+      "textLeft": 23,
+      "sample": "Still wondering",
+      "innerPaddingLeft": null
+     }
+    ]
+   }
+  }
+ }
+}
