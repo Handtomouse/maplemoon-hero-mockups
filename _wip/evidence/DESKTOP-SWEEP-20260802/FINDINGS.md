@@ -37,19 +37,42 @@ alignment" is a different fix from "add padding".
 The original feedback record's `rect: {x:0, w:1158}` is the **section** bounding box, which
 legitimately spans the full viewport. It is not evidence that the text sits at x=0.
 
-## Two further candidates the sweep surfaced
+## Two further candidates — RAISED, THEN DISPROVED
 
-Neither is confirmed as a defect. Both are alignment outliers against their own page grid
-and need Nate's eyes.
+The first pass flagged two more sections as outliers. **Both were false positives of my own
+detector** and are recorded here so the mistake is not repeated.
 
-| page | section | textLeft | page median | deviation |
-|---|---|---|---|---|
-| our-story | `#shop` "The range" | 28px | 158px | **−130px** |
-| faq | `.wrap` ×3 ("Good questions", "Popular questions", "Browse") | 120px | 181px | −61px |
+The detector took the minimum left edge of each section's text and compared it to the page
+median. That silently assumes every section is left-aligned. It is not: a **centred** block
+legitimately starts further left than a left-aligned grid, and gets flagged for doing exactly
+what it was designed to do.
 
-**`our-story #shop` deviates nearly five times as far as the carob section does.** If the
-carob misalignment is worth a P0, this one warrants a look before the send. It may equally be
-an intentional full-bleed treatment — that is a judgement call, not a measurement.
+Re-measured with `text-align` and left/right gap symmetry:
+
+| page | section | align | gap left | gap right | verdict |
+|---|---|---|---|---|---|
+| our-story | `#shop` | `center` | 28px | 28px | **symmetric — centred by design, NOT a defect** |
+| faq | `.wrap` ×3 | mixed | 120px | 120px / 319px | **on their own grid, NOT a defect** |
+
+`our-story #shop` uses a wider centred container than its siblings (28px margins versus
+`#range`'s 158px), but it is perfectly symmetric. That is a design choice, not a misalignment.
+
+**Lesson for any future sweep: compare like with like.** Deviation from a page median is only
+meaningful within one alignment mode. Segment by `text-align` and check gap symmetry before
+flagging anything.
+
+## The carob defect is the only genuine misalignment found
+
+Re-measured at 1440 with alignment mode included:
+
+| homepage section | align | gap left |
+|---|---|---|
+| `#top` | start | 158px |
+| `#ritual` | start | 158px |
+| **`#carob`** | **start** | **130px** |
+
+`#carob` is left-aligned exactly like its siblings, and is the **only** left-aligned section on
+the page that misses their shared 158px grid. Isolated, consistent, and real.
 
 ## Clean at desktop
 
