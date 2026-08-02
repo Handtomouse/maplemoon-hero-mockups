@@ -104,6 +104,15 @@ markup, outside any script.
 > flags things for doing exactly what they were designed to do. **Strip scripts before
 > scanning markup.**
 
+> **⚠️ CORRECTION, 2026-08-03 — that lesson is half-right and I misapplied it.**
+> Stripping `<script>` is correct for *"does this literal href target exist?"*. It is **wrong**
+> for *"what does a viewer actually see?"* — because `mock-cart.js` **injects a five-route nav
+> at runtime on every page** (`normalizeReviewNavigation()`, `mock-cart.js:22-31`). By
+> stripping scripts I made myself blind to it, and wrongly declared homepage audit #3
+> fabricated and `faq.html` unreachable. Both withdrawn; see
+> `HOMEPAGE-QA-AUDIT-CLASSIFIED-20260803.md`. Codex's render pass caught the real defect
+> (`VIS-001`, all 18 captures). **Static analysis cannot answer visual questions. Full stop.**
+
 Consequence: **`shop #19`** ("all in-page anchor links fail to jump") is **UNVERIFIED**, not
 confirmed. Its targets all exist. Whatever the audit saw needs runtime reproduction.
 

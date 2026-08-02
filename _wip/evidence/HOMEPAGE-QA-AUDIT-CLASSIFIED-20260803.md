@@ -4,6 +4,48 @@
 #         Nothing fixed, edited, rebuilt or promoted. CR-0..CR-4 remain Nate's alone.
 # Frame:  see HOMEPAGE-DESKTOP-REVIEW-INTAKE-20260803.md
 
+---
+
+# ⚠️ CORRECTION — 2026-08-03, after Codex's render-based visual pass
+
+**Two findings below are WRONG. Both errors are mine, both from the same cause.**
+
+`mock-cart.js` — a **shared** script loaded by all six pages — contains
+`normalizeReviewNavigation()`, which **injects a five-route nav at runtime**:
+
+    ["Shop","shop.html"] ["Our Story","our-story.html"]
+    ["What is Carob","carob-story.html"] ["Stockists","stockists.html"] ["FAQ","faq.html"]
+    — mock-cart.js:22-31, and appendRoute() at :70
+
+I scanned the HTML and never executed the JS, so I saw only the three static header links.
+
+**Corrections:**
+
+1. **§2(a) is WITHDRAWN.** I called audit #3 "fabricated" and "OUT-OF-ARTIFACT" because the
+   nav it described did not exist. **It does exist** — injected at runtime, on every page.
+   Audit #2 and #3 were correct. Restore them as live findings.
+
+2. **§3 is WITHDRAWN.** I reported "`faq.html` is unreachable from the homepage" as a defect
+   nobody else caught. **It is reachable** — via the injected nav. There is no such defect.
+
+3. **§4's "strip scripts before scanning markup" lesson is half-right and was misapplied.**
+   Stripping `<script>` is correct for *"does this literal href target exist"*. It is wrong for
+   *"what does a viewer see"*. The second question cannot be answered without executing the
+   page. I used a technique valid for one question to answer the other.
+
+**Codex's render pass (`_wip/reviews/maplemoon-six-page-qa-20260803/visual/findings.json`)
+found the real defect** — `VIS-001`, major, on **all 18 captures**: that injected nav renders
+as an unstyled concatenated string (`ShopOurStoryWhat is CarobStockistsFAQ`) directly beneath
+the header on every page and every viewport.
+
+**Standing lesson, now paid for twice in one session:** this project's own instructions say
+never to substitute static analysis for real execution. I quoted that rule and then broke it.
+Everything below marked CONFIRMED by file inspection is safe; everything I marked DISPROVED or
+OUT-OF-ARTIFACT on static grounds alone should be re-checked against a render before anyone
+acts on it.
+
+---
+
 ## Source
 
 `~/Desktop/Archive.zip`, 10 files, written 2026-08-03 00:29–00:48. Machine-generated QA
@@ -52,7 +94,10 @@ wrong for product images: a screen reader skips them in silence. Same fix, accur
 
 ## 2. Two audit errors — do not carry these forward
 
-**(a) The nav described does not exist, in either file.**
+**(a) ~~The nav described does not exist, in either file.~~ — WITHDRAWN, SEE CORRECTION ABOVE.**
+
+> **This subsection is wrong.** The nav is injected at runtime by `mock-cart.js`. Audit #2 and
+> #3 stand. The static reading below is retained only to show how the error was made.
 
 Finding #2 describes the nav as `SHOP / OUR STORY / WHAT IS CAROB / STOCKISTS / FAQ` cramming
 into the header, and #3 (P0) is entirely about `WHAT IS CAROB` wrapping to two lines.
@@ -85,7 +130,10 @@ tooling, not something a real user would see."*
 
 ---
 
-## 3. One real defect the audit missed
+## 3. ~~One real defect the audit missed~~ — WITHDRAWN, SEE CORRECTION ABOVE
+
+> **This section is wrong.** `faq.html` **is** reachable — `mock-cart.js` injects an FAQ link
+> into the nav on every page. There is no such defect. Retained only to show the error.
 
 **`faq.html` is unreachable from the homepage.** Zero links to it, in both the frozen artifact
 and the WIP. `carob-story.html` is reachable exactly once, via the `#carob` CTA.
@@ -124,7 +172,8 @@ nothing Carli and Dylan can see.
 | **#33** | Moons photo 1:1 stretched by `object-fit:fill` into a 2:3 frame | defect · **bounded** · visibly distorted product shot |
 | **#18** | hero credential pill unreadable over sun-glare (= `ms48tuprlfwf`) | defect · **bounded** · first thing seen |
 | **#9** | Elixirs product shot visually smaller than sibling tabs | defect · bounded · needs eyes on the render |
-| **NEW** | `faq.html` unreachable from homepage | defect · bounded · a review page they cannot reach |
+| ~~NEW~~ | ~~`faq.html` unreachable from homepage~~ | **WITHDRAWN — not a defect, see correction** |
+| **#2 / #3** | injected nav renders as unstyled concatenated text on all 6 pages | defect · **bounded** · **restored; confirmed by Codex as `VIS-001`, all 18 captures** |
 | **#2** | no mobile nav toggle (severity re-judge, not P0) | defect · bounded · confirm at 390 |
 | **#32** | dead vertical gaps at two section joins, mobile | defect · bounded · confirm at 390 |
 | **#8** | newsletter form has no action / handler | defect · bounded · a visible CTA that does nothing |
@@ -165,7 +214,10 @@ at line 472 *(touches the carob cascade — must not be done outside the carob p
 
 ### Discard
 
-`#1` — retracted by its own document (§2b). `#3` — out-of-artifact (§2a).
+`#1` — retracted by its own document (§2b). **This one still stands.**
+
+~~`#3` — out-of-artifact (§2a).~~ **WITHDRAWN. #3 is a real finding — see the correction at
+the top of this file. It is confirmed by Codex's render pass as part of `VIS-001`.**
 
 ---
 
