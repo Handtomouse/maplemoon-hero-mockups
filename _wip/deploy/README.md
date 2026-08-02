@@ -205,6 +205,48 @@ column with two-thirds of the width empty, and the feature labels (SOURCE, CAFFE
 *between* the two values they describe, scrambling the reading order. Not an overflow
 (`scrollWidth` equals `clientWidth`). How it should stack is Nate's call, not an agent's.
 
+## THE THIRD TRAP — `clean/` is a claim-stripped review artifact, not the site
+
+**Found 2026-08-03, after Carli said "it looks the same and my edits aren't in".** She was right,
+and this is why.
+
+`build-maplemoon-saturday-review.py` does not copy the WIP sources. It **replaces whole sections
+with reduced stubs** via `replace_section()`, to de-risk unverified public claims for a formal
+review. On the homepage it swaps `#carob`, `#story`, `#stockists` and `#sampler`. The `#carob`
+section becomes the single sentence "Carob comes from the pod of the carob tree."
+
+Measured, WIP source vs what was deployed from `clean/`:
+
+| page | WIP source | deployed | delta |
+|---|---|---|---|
+| homepage | 731 | 426 | **-305** |
+| our-story | 615 | 511 | -104 |
+| carob-story | 348 | 243 | -105 |
+| stockists | 357 | 275 | -82 |
+| shop | 243 | 210 | -33 |
+| faq | 121 | 124 | +3 |
+
+**~630 words missing, 42% of the homepage.** An entire "Why not cacao?" comparison section is
+absent. And the build rewrites the shop's **working add-to-cart into a mailto "Ask about this
+item"** — so the artifact looks like a shop you cannot buy from, while the real source has a
+functioning cart with a running subtotal.
+
+`clean/` is correct for a CR-4 formal review. It is the **wrong artifact for a client preview**,
+and sending it is what produced Carli's reaction.
+
+### `site-full/` — preview built from the WIP sources
+
+`_wip/deploy/site-full/` is built from `_wip/*.WIP.html` directly: rename per the build script's
+page map, rewrite `*.WIP.html` internal links, copy only referenced assets **plus** the
+JS-constructed catalogue images (`img:'…'` + `.webp`, which a static href scan misses — that gap
+left 15 broken images on shop the first time).
+
+Verified: all six pages load with **0 broken images and no horizontal overflow**. Product PNGs in
+the bundle strip converted to WebP, so shop dropped **4.27MB to 0.19MB**. Whole build is 8.7MB.
+
+**Do not confuse the two directories.** `site/` = frozen review artifact. `site-full/` = the real
+current site. Deploy whichever the moment calls for, and say which one you deployed.
+
 ## Why `noindex` stays
 
 Correct and deliberate for a private preview. Three separate QA audits recommend removing it;
