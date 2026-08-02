@@ -74,6 +74,29 @@ if (wiredV04) {
   notes.push('no v04-derived portrait wired yet, gate not armed');
 }
 
+// 4. Bio slot. Per DECISION-FOUNDER-BIO-SLOT-GEOMETRY-20260803.md the slot is 4:5 using
+//    aspect-ratio, not a height clamp, so a face does not reframe between breakpoints.
+const bioWired = /class="[^"]*os-founder-bio/.test(html);
+if (bioWired) {
+  if (!/\.os-founder-bio\{[^}]*aspect-ratio:\s*4\s*\/\s*5/.test(html)) {
+    failures.push(
+      `a founder bio slot is present but is not aspect-ratio 4/5. A height clamp makes the ` +
+      `container go landscape at desktop and portrait at mobile, which reframes the face and ` +
+      `clips Dylan. See _wip/evidence/DECISION-FOUNDER-BIO-SLOT-GEOMETRY-20260803.md.`
+    );
+  } else {
+    notes.push('bio slot present and is aspect-ratio 4/5');
+  }
+  if (/\.os-founder-bio img\{[^}]*linear-gradient\(90deg/.test(html)) {
+    failures.push(
+      `the founder bio slot applies a horizontal mask. The decision is vertical-only at both ` +
+      `breakpoints, so the edge treatment does not switch between fade and hard cut on a face.`
+    );
+  }
+} else {
+  notes.push('no founder bio slot wired yet, bio gate not armed');
+}
+
 for (const n of notes) console.log(`ok    ${n}`);
 for (const f of failures) console.error(`FAIL  ${f}`);
 process.exit(failures.length ? 1 : 0);
