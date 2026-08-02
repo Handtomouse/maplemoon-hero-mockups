@@ -28,7 +28,23 @@ breaks the freeze).
 
        rm -rf _wip/deploy/site && mkdir -p _wip/deploy/site
        cp -R docs/client-review/2026-08-01-saturday-review/staging-v1/clean/. _wip/deploy/site/
-       cp _wip/deploy/vercel-preview.json _wip/deploy/site/vercel.json
+
+   **Strip `_comment` when copying the config.** Vercel hard-fails with
+   `Invalid vercel.json - should NOT have additional property _comment`. The comment
+   stays in the template (which is never deployed); only the copy is stripped:
+
+       python3 -c "import json;d=json.load(open('_wip/deploy/vercel-preview.json'));d.pop('_comment',None);json.dump(d,open('_wip/deploy/site/vercel.json','w'),indent=2)"
+
+   **Then swap in the compressed licensed derivatives** — without this the preview is
+   22MB. See the divergence section below for why:
+
+       for f in carob_pods_macro.jpg scene_after_dinner.jpg scene_afternoon.jpg \
+                scene_tea_night.jpg carob_farm/australian-carob-0205.jpg \
+                carob_farm/australian-carob-0205-16x9.jpg \
+                carob_farm/australian-carob-0205-mobile.jpg; do
+         cp "assets/licensed/$f" "_wip/deploy/site/assets/licensed/$f"
+       done
+       du -sh _wip/deploy/site/assets/licensed   # expect ~1.2M, NOT 33M
 
 2. **Prove no internal content came along** before deploying:
 
