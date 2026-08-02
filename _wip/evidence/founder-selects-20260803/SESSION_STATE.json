@@ -1,0 +1,22 @@
+{
+  "schema": "maplemoon-photo-session-state/v1",
+  "branch": "codex/founder-selects-20260803",
+  "authority_commit": "4214f48a8f683f70598d23f2a6c78f0a1c82531f",
+  "current_select": 55,
+  "source_hash": "dc47d544e61028b36aafdca370896b1a27ca6f0cd0b4eccc36f1f5fcba2b3f66",
+  "output_paths": {
+    "psd": "/Users/handtomouse/MapleMoon-Photoshop-Work/SELECT-55-pair-hero/work/select-55-pair-hero-v01.psd",
+    "png": "_wip/evidence/founder-selects-20260803/select-55-pair-hero-v01.png"
+  },
+  "rounds": 0,
+  "defects": [],
+  "checks": [],
+  "queue": [
+    {"select": 55, "role": "pair hero", "state": "in_progress"},
+    {"select": 70, "role": "hands passing carob pod", "state": "pending"},
+    {"select": 87, "role": "Carli bio", "state": "ready_for_nate", "note": "v01 reconciled: source receipt, objective checks, 1440/390 proof and crop guard recorded."},
+    {"select": 94, "role": "Dylan bio", "state": "pending", "note": "TIFF-derived v01 is provisional only; final must be RAW-derived v02."},
+    {"select": 97, "role": "editorial standing", "state": "pending"}
+  ],
+  "next_action": "Verify iMac disk/output readiness, copy and rehash RAW select 55 through the Terminal GUI bridge, then begin its Camera Raw develop."
+}
