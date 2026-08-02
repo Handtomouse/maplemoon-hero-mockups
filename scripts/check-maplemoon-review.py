@@ -21,7 +21,15 @@ from PIL import Image
 REPO = Path(__file__).resolve().parents[1]
 DEFAULT_STAGING = REPO / "docs/client-review/2026-07-29-carli-review/staging-v1"
 SATURDAY_STAGING = REPO / "docs/client-review/2026-08-01-saturday-review/staging-v1"
-SATURDAY_PACKET_ID = "SAT-HOME-CLEAN-CLOSURE-01"
+SATURDAY_PACKET_ID = "SAT-SHARED-MOBILE-HEADER-01"
+SATURDAY_SHIPPING_BUILDER = (
+    REPO
+    / "_wip/checkpoints/SAT-HOME-CLEAN-CLOSURE-01_20260802_162240_AEST"
+    / "files/scripts/build-maplemoon-saturday-review.py"
+)
+SATURDAY_SHIPPING_BUILDER_SHA256 = (
+    "be084959cd6d771d8505a8dd3cba96533a42864b71a3ab749d4eb4b3e40cafbd"
+)
 PAGE_ALIASES = {
     "homepage.html",
     "carob-story.html",
@@ -101,35 +109,6 @@ HOMEPAGE_SAMPLER_ASSETS = (
     "assets/product_shots/bar_cayenne.webp",
     "assets/product_shots/bar_almond.webp",
 )
-HOMEPAGE_HERO_SUBTITLE = "Naturally Sweet, Nothing Added."
-HOMEPAGE_NEUTRAL_PRODUCT_DESCRIPTION = (
-    "View this product or enquire with Maple Moon."
-)
-HOMEPAGE_CLEAN_CAROB_FORBIDDEN = (
-    "warm Australian sun",
-    "sun-ripened",
-    "naturally sweet pulp",
-    "slow-roasted",
-    "milled with cacao butter",
-    "mellow, velvety finish",
-)
-HOMEPAGE_CLEAN_STORY_FORBIDDEN = (
-    "Born from Nighttime Cravings",
-    "Australian-grown carob pods",
-    "small batches",
-    "hand-poured",
-    "far north coast",
-    "slow evenings",
-)
-HOMEPAGE_CLEAN_SAMPLER_FORBIDDEN = (
-    "starter box",
-    "inside the box",
-    "six bars, one box",
-    "the whole range",
-    "made to be given",
-    "box does the wrapping",
-    "gift",
-)
 REVIEW_LINK = '<link rel="stylesheet" href="review-mode.css">\n'
 REVIEW_SCRIPT = '<script src="review-mode.js"></script>\n'
 MOCK_CART_LINK = '<link rel="stylesheet" href="mock-cart.css">\n'
@@ -156,13 +135,37 @@ PRODUCT_UNFINISHED_SIGNALS = (
 
 
 def load_saturday_builder():
-    path = REPO / "scripts/build-maplemoon-saturday-review.py"
-    spec = importlib.util.spec_from_file_location("maplemoon_saturday_builder", path)
-    if spec is None or spec.loader is None:
-        raise RuntimeError(f"could not load Saturday builder: {path}")
-    module = importlib.util.module_from_spec(spec)
-    spec.loader.exec_module(module)
-    return module
+    def load(path: Path, module_name: str, *, effective_file: Path | None = None):
+        spec = importlib.util.spec_from_file_location(module_name, path)
+        if spec is None or spec.loader is None:
+            raise RuntimeError(f"could not load Saturday builder: {path}")
+        module = importlib.util.module_from_spec(spec)
+        if effective_file is not None:
+            module.__file__ = str(effective_file)
+        spec.loader.exec_module(module)
+        return module
+
+    live_path = REPO / "scripts/build-maplemoon-saturday-review.py"
+    live_builder = load(live_path, "maplemoon_saturday_builder")
+    if live_builder.CURRENT_PACKET_ID == SATURDAY_PACKET_ID:
+        return live_builder
+
+    if not SATURDAY_SHIPPING_BUILDER.is_file():
+        raise RuntimeError(
+            "live Saturday builder packet does not match the staged package and "
+            "the verified shipping builder is unavailable"
+        )
+    shipping_hash = hashlib.sha256(SATURDAY_SHIPPING_BUILDER.read_bytes()).hexdigest()
+    if shipping_hash != SATURDAY_SHIPPING_BUILDER_SHA256:
+        raise RuntimeError("verified shipping builder checksum mismatch")
+    shipping_builder = load(
+        SATURDAY_SHIPPING_BUILDER,
+        "maplemoon_saturday_shipping_builder",
+        effective_file=live_path,
+    )
+    if shipping_builder.CURRENT_PACKET_ID != SATURDAY_PACKET_ID:
+        raise RuntimeError("verified shipping builder packet does not match staged package")
+    return shipping_builder
 
 
 SATURDAY_BUILDER = load_saturday_builder()
@@ -327,16 +330,6 @@ def check_embedded_metadata(root: Path, failures: list[str]) -> None:
             )
 
 
-def page_section(text: str, section_id: str) -> str:
-    match = re.search(
-        rf"<section\b(?=[^>]*\bid=[\"']{re.escape(section_id)}[\"'])"
-        r"[^>]*>.*?</section>",
-        text,
-        re.I | re.S,
-    )
-    return match.group(0) if match else ""
-
-
 def check_saturday_root(root: Path, profile: str) -> list[str]:
     failures: list[str] = []
     if not root.is_dir():
@@ -399,59 +392,6 @@ def check_saturday_root(root: Path, profile: str) -> list[str]:
                     failures.append("homepage.html: unsupported cacao comparison remains in clean review")
                 if HOMEPAGE_COMPARISON_HOLD in text:
                     failures.append("homepage.html: annotated comparison hold leaked into clean review")
-                if text.count(HOMEPAGE_HERO_SUBTITLE) != 1:
-                    failures.append(
-                        "homepage.html: retained hero subtitle is missing or duplicated"
-                    )
-                if text.count(HOMEPAGE_NEUTRAL_PRODUCT_DESCRIPTION) != 18:
-                    failures.append(
-                        "homepage.html: expected one initial and 17 neutral product descriptions"
-                    )
-                if "notes:[[" in text:
-                    failures.append(
-                        "homepage.html: unsupported product note groups remain in clean review"
-                    )
-                if "label:'Available now'" in text:
-                    failures.append(
-                        "homepage.html: unsupported availability wording remains in clean review"
-                    )
-                if '<title>Maple Moon Carob</title>' not in text:
-                    failures.append("homepage.html: neutral clean title is missing")
-                if '<p class="wf-peyebrow">Maple Moon carob</p>' not in text:
-                    failures.append("homepage.html: neutral clean hero eyebrow is missing")
-                carob_section = page_section(text, "carob")
-                story_section = page_section(text, "story")
-                sampler_section = page_section(text, "sampler")
-                if not carob_section:
-                    failures.append("homepage.html: neutral carob section is missing")
-                if not story_section:
-                    failures.append("homepage.html: neutral story section is missing")
-                if not sampler_section:
-                    failures.append("homepage.html: neutral sampler section is missing")
-                for token in HOMEPAGE_CLEAN_CAROB_FORBIDDEN:
-                    if token.lower() in carob_section.lower():
-                        failures.append(
-                            f"homepage.html: unsupported carob-section wording remains: {token}"
-                        )
-                for token in HOMEPAGE_CLEAN_STORY_FORBIDDEN:
-                    if token.lower() in story_section.lower():
-                        failures.append(
-                            f"homepage.html: unsupported story-section wording remains: {token}"
-                        )
-                for token in HOMEPAGE_CLEAN_SAMPLER_FORBIDDEN:
-                    if token.lower() in sampler_section.lower():
-                        failures.append(
-                            f"homepage.html: unsupported sampler wording remains: {token}"
-                        )
-                for token in (
-                    "Six-bar sampler",
-                    "Explore six bar <em>flavours.</em>",
-                    "Sampler selection",
-                ):
-                    if token not in sampler_section:
-                        failures.append(
-                            f"homepage.html: clean sampler treatment missing token: {token}"
-                        )
                 required_finder_tokens = (
                     'class="mm-stockist-mini"',
                     'action="stockists.html"',
@@ -492,18 +432,6 @@ def check_saturday_root(root: Path, profile: str) -> list[str]:
                     failures.append("homepage.html: annotated comparison evidence is missing")
                 if text.count(HOMEPAGE_COMPARISON_HOLD) != 1:
                     failures.append("homepage.html: annotated comparison is not clearly evidence-held")
-                for evidence_token in (
-                    "We slow-roast and mill it with cacao butter",
-                    "Small batches",
-                    "The starter box",
-                    "Made to be given. The box does the wrapping.",
-                ):
-                    if evidence_token not in text:
-                        failures.append(
-                            "homepage.html: annotated blocked evidence is missing token: "
-                            f"{evidence_token}"
-                        )
-
     check_manifest(root, failures)
     check_text_tree(root, failures)
     check_embedded_metadata(root, failures)

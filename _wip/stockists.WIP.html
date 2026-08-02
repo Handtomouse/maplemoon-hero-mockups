@@ -1175,5 +1175,59 @@ html{scroll-behavior:smooth;}
   .sp-nav.r{gap:12px;}
 }
 </style>
+<style id="stockists-seams-fades-20260803">
+/* W2-H: canonical homepage fade pattern, using this page wash's #e2e5df stop. */
+.sp .st-trade .inner{
+  position:relative;
+  isolation:isolate;
+  overflow:visible;
+  z-index:6;
+  background:transparent;
+  border:0;
+  box-shadow:none;
+}
+.sp .st-trade-copy,.sp .st-trade-art{position:relative;z-index:2;}
+.sp .st-trade-art{overflow:visible;background:transparent;box-shadow:none;}
+.sp .st-trade-art img{
+  -webkit-mask-image:
+    linear-gradient(90deg, transparent 0, #000 18%, #000 100%),
+    linear-gradient(180deg, transparent 0, #000 22%, #000 74%, transparent 100%);
+  mask-image:
+    linear-gradient(90deg, transparent 0, #000 18%, #000 100%),
+    linear-gradient(180deg, transparent 0, #000 22%, #000 74%, transparent 100%);
+  -webkit-mask-composite:source-in;
+  mask-composite:intersect;
+}
+.sp .st-trade .inner::before,
+.sp .st-trade .inner::after{
+  content:"";
+  position:absolute;
+  z-index:1;
+  height:340px;
+  pointer-events:none;
+  background:linear-gradient(
+    180deg,
+    rgba(226,229,223,0) 0%,
+    rgba(226,229,223,.64) 24%,
+    rgba(226,229,223,.82) 44%,
+    rgba(226,229,223,.28) 76%,
+    rgba(226,229,223,0) 100%
+  );
+  filter:blur(18px);
+  transform:scaleY(1.08);
+}
+.sp .st-trade .inner::before{inset:-120px 0 auto;}
+.sp .st-trade .inner::after{inset:auto 0 -120px;}
+@media(max-width:900px){
+  .sp .st-skip-finder{display:none;}
+  .sp .st-trade .inner::before,.sp .st-trade .inner::after{height:220px;filter:blur(13px);}
+  .sp .st-trade .inner::before{inset:-72px 0 auto;}
+  .sp .st-trade .inner::after{inset:auto 0 -72px;}
+  .sp .st-trade-art img{
+    -webkit-mask-image:linear-gradient(180deg, transparent 0, #000 20%, #000 82%, transparent 100%);
+    mask-image:linear-gradient(180deg, transparent 0, #000 20%, #000 82%, transparent 100%);
+  }
+}
+</style>
 </body>
 </html>
