@@ -1,0 +1,102 @@
+{
+  "schema": "maplemoon-claude-keyboard-evidence/v1",
+  "record_id": "CLAUDE-KEYBOARD-PROOF-20260802",
+  "worker": "Claude Code side chat",
+  "captured_at": "2026-08-02T06:15:00Z",
+  "authority_note": "Nate authorised this run directly. No packet was admitted. Evidence only — nothing promoted, no verdict recorded, no write outside this directory.",
+
+  "environment": {
+    "browser": "real Google Chrome via Claude browser extension",
+    "viewport_css_px": [500, 667],
+    "server": "python -m http.server 3011 bound to 127.0.0.1 only",
+    "target": "docs/client-review/2026-08-01-saturday-review/staging-v1/clean/",
+    "keystrokes": "genuine OS-level Tab keypresses, not synthesized KeyboardEvents"
+  },
+
+  "headline": "Real-Chrome keyboard traversal is achievable from this side. Literal 390 CSS px is NOT, for either toolset. Two of six pages completed a valid traversal; four did not and are recorded as UNVERIFIED rather than clean.",
+
+  "viewport_390_finding": {
+    "achievable": false,
+    "evidence": [
+      "resize_window to 700 -> innerWidth 700 (resize mechanism works)",
+      "resize_window to 390 -> innerWidth clamped to 500 (macOS Chrome minimum window width)",
+      "at 500 CSS px the max-width:480px mobile breakpoint does NOT engage",
+      "document.documentElement.style.zoom does not move clientWidth or matchMedia",
+      "DevTools shortcut cmd+alt+i does not reach browser chrome from the extension"
+    ],
+    "conclusion": "Window resize cannot reach 390. Only DevTools device emulation can, and that requires a human hand. Codex's split (390 geometry via in-app browser, real keyboard at desktop) is a rational response to the same limit, not an oversight. Recommend recording the 390-keyboard gap as an ACCEPTED TOOLING LIMIT rather than an open defect."
+  },
+
+  "pages": {
+    "homepage": {
+      "traversal": "VALID",
+      "tab_presses": 60,
+      "focus_stops": 59,
+      "unique_controls": 33,
+      "focus_leak_into_closed_cart_dialog": 0,
+      "zero_size_focus_stops": 0,
+      "closed_dialog_inert": true,
+      "closed_dialog_aria_hidden": "true"
+    },
+    "shop": {
+      "traversal": "VALID",
+      "tab_presses": 60,
+      "focus_stops": 59,
+      "unique_controls": 28,
+      "focus_leak_into_closed_cart_dialog": 0,
+      "zero_size_focus_stops": 0,
+      "closed_dialog_inert": true,
+      "closed_dialog_aria_hidden": "true",
+      "first_stop": "Skip to the catalogue"
+    },
+    "our-story": {
+      "traversal": "UNVERIFIED",
+      "focus_stops": 0,
+      "reason": "Chrome lost OS-level window focus; keypresses did not reach the page. Zero stops is an INVALID measurement, not a clean result.",
+      "closed_dialog_inert": true
+    },
+    "carob-story": {
+      "traversal": "UNVERIFIED",
+      "focus_stops": 0,
+      "reason": "same OS focus loss; retried once with a verified non-interactive click at (190,120) and still recorded 0 stops",
+      "closed_dialog_inert": true
+    },
+    "stockists": { "traversal": "NOT ATTEMPTED" },
+    "faq": { "traversal": "NOT ATTEMPTED" }
+  },
+
+  "established": [
+    "Real OS-level Tab keypresses do move focus in-page once Chrome holds window focus — the capability Codex's in-app injector lacks.",
+    "On homepage and shop, 60 Tab presses produced 59 focus stops with ZERO leaks into the closed cart dialog. Focus containment holds under real keyboard.",
+    "The closed cart dialog carries inert (attribute AND property) plus aria-hidden=true on all four pages loaded. This is applied at RUNTIME by mock-cart.js and is absent from the static HTML, so no static analysis can confirm it — this run does.",
+    "No zero-size or offscreen focus stops on either validly traversed page."
+  ],
+
+  "NOT_established": [
+    {
+      "claim": "5 homepage controls focus without a visible focus ring",
+      "status": "WITHDRAWN — measurement artifact, do not act on it",
+      "why": "The initial reading came from computed style sampled inside a focusin handler, which may precede style recalculation. The deterministic cross-check was also inconclusive: programmatic .focus() reported changedOnFocus:[] for ALL 19 controls including ones observed to show rings under real Tab, because these pages use :focus-visible, which programmatic focus cannot trigger. Neither method can reliably detect the indicator. Requires visual confirmation by screenshot while a control holds real keyboard focus.",
+      "recommended_next": "Screenshot each focus stop under real Tab and inspect visually. Not done here."
+    },
+    "Keyboard traversal at literal 390 CSS px — impossible with available tooling, see viewport_390_finding.",
+    "Escape-to-close and focus-return-to-trigger on the cart dialog — not exercised.",
+    "Shift+Tab reverse traversal — not exercised."
+  ],
+
+  "residual_risk": [
+    "Four of six pages are unverified. Any six-page keyboard claim must not rely on this record.",
+    "Traversal was at 500 CSS px, which is DESKTOP layout — the 480px mobile breakpoint does not engage. This does not substitute for mobile keyboard verification.",
+    "Chrome window focus proved intermittent across navigations, so a full six-page sweep needs the window kept frontmost throughout."
+  ],
+
+  "files_changed": ["_wip/evidence/CLAUDE-KEYBOARD-PROOF-20260802/RESULTS.json"],
+  "files_confirmed_untouched": [
+    "docs/client-review/2026-08-01-saturday-review/staging-v1 (all 74 clean files)",
+    "docs/orchestration/LOCK_MANIFEST.json",
+    "docs/orchestration/packets",
+    "_wip/reviews/saturday_shared_mobile_header_20260802 (Codex lease — not written)"
+  ],
+  "proposed_next_state": "needs_review",
+  "next_reviewer": "Main Boss"
+}

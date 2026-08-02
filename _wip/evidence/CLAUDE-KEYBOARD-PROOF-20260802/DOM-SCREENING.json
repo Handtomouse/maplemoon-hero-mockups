@@ -1,0 +1,147 @@
+{
+  "schema": "maplemoon-claude-keyboard-evidence/v1-screening",
+  "record_id": "CLAUDE-DOM-SCREENING-20260802",
+  "sibling_of": "RESULTS.json",
+  "worker": "Claude Code side chat (resumed session)",
+  "captured_at": "2026-08-02T09:05:00Z",
+
+  "authority_note": "Evidence only. No verdict recorded, no gate passed, nothing promoted. Written only inside _wip/evidence/. RESULTS.json was NOT modified. CR-0 remains reserved to Nate.",
+
+  "METHOD_IS_NOT_TRAVERSAL": {
+    "what_this_is": "Static DOM analysis of the tabbable set. Elements are enumerated by selector and filtered for rendering, disabled state, negative tabindex, and inert/aria-hidden ancestry.",
+    "what_this_is_NOT": "A keyboard traversal. No OS-level Tab keypresses were sent. Per the parent schema's authority note, synthesized focus does not satisfy the keyboard-proof requirement.",
+    "why_it_was_run": "OS-level keypresses could not be delivered: document.hasFocus() === false, and the osascript call to activate Chrome is blocked by a takeover gate requiring human approval."
+  },
+
+  "METHOD_VALIDATION": {
+    "verdict": "NOT VALIDATED AS A SUBSTITUTE",
+    "homepage": {
+      "real_traversal_unique_controls": 33,
+      "dom_screening_unique_controls": 33,
+      "agreement": "EXACT — also matched closed_dialog_inert, closed_dialog_aria_hidden, focus_leak (0), zero_size_focus_stops (0)"
+    },
+    "shop": {
+      "real_traversal_unique_controls": 28,
+      "dom_screening_unique_controls": 48,
+      "agreement": "DIVERGENT — first_stop matched exactly ('Skip to the catalogue') but the control count did not"
+    },
+    "shop_divergence_analysis": {
+      "arithmetic_constraint": "59 focus stops yielding 28 unique controls REQUIRES approximately 31 revisits. Simple under-coverage cannot produce this: a press-budget shortfall caps unique at roughly the stop count (up to 48 here) with few repeats. Therefore the real run's effective tab cycle was approximately 28 controls, against 54 live tabbable controls in the DOM.",
+      "ruled_out_signature_granularity": {
+        "test": "Recomputed unique counts on the live shop DOM under five progressively coarser signatures.",
+        "results": {
+          "tag+text60": 48,
+          "text_normalized": 48,
+          "tag+text_normalized": 48,
+          "href_or_label": 47,
+          "tag_only": 3
+        },
+        "product_section_repeated_labels": 0,
+        "product_section_controls": 22,
+        "distinct_product_labels": 22,
+        "conclusion": "RULED OUT. No reasonable coarsening approaches 28. All 22 product-section controls carry distinct labels (e.g. 'Add Pure Carob & Cacao Butter to cart'), so there is no repeated-label grid for a coarser signature to collapse."
+      },
+      "leading_hypothesis_unconfirmed": {
+        "claim": "The real run's cycle excluded the product grid.",
+        "supporting": "Excluding the six product sections leaves 32 tabbable / 26 unique controls — close to the recorded 28.",
+        "against": "26 is not 28. The match is near but inexact, and tab order is linear, so a run cannot traverse header and footer while skipping a contiguous middle region without an explanation this session did not find.",
+        "status": "UNCONFIRMED"
+      },
+      "why_not_settled": "RESULTS.json retains only aggregates (tab_presses, focus_stops, unique_controls). No per-stop list was preserved, so the real run's actual cycle cannot be reconstructed. Settling this requires re-running the real traversal on shop with the stop sequence retained.",
+      "what_this_does_and_does_not_impugn": {
+        "not_impugned": "Shop's structural findings — closed cart dialog inert and aria-hidden='true', zero focus leak, zero zero-size stops, skip link first — are independently reproduced by this screening and stand.",
+        "impugned": "Shop's recorded unique_controls (28) is not reconcilable with the live DOM (48). The COVERAGE of shop's traversal is in question, even though its verdict is recorded VALID.",
+        "recommended_action": "Re-run shop's real traversal with a retained stop list and a press budget above 54. Flag for Nate/Codex. Do NOT restate shop's verdict on the strength of this screening."
+      }
+    },
+    "consequence": "The figures below MUST NOT be promoted into RESULTS.json as traversal results, and MUST NOT be used to move any page from UNVERIFIED to VALID. This holds regardless of the shop analysis: static analysis cannot observe tab ORDER, wrap behaviour, or focus traps, which is precisely the class of defect a keyboard proof exists to catch."
+  },
+
+  "environment": {
+    "browser": "real Google Chrome via Claude browser extension",
+    "viewport_css_px": [500, 667],
+    "server": "python3 -m http.server 3011 --bind 127.0.0.1",
+    "target": "docs/client-review/2026-08-01-saturday-review/staging-v1/clean/",
+    "artifact_integrity": "VERIFIED — clean/MANIFEST.json and annotated/MANIFEST.json sha256 both match aggregate MANIFEST.json; staging-v1 is byte-identical to commit d65047b"
+  },
+
+  "pages_screened": {
+    "our-story": {
+      "prior_traversal_state": "UNVERIFIED (0 stops, OS focus loss)",
+      "tabbable_count": 23,
+      "unique_controls_dom": 16,
+      "first_stop": "SKIP TO MAIN CONTENT",
+      "skip_link_first": true,
+      "zero_size_focus_stops": 0,
+      "focus_leak_into_closed_cart_dialog": 0,
+      "closed_dialog_inert": true,
+      "closed_dialog_aria_hidden": "true"
+    },
+    "carob-story": {
+      "prior_traversal_state": "UNVERIFIED (0 stops, OS focus loss)",
+      "tabbable_count": 19,
+      "unique_controls_dom": 13,
+      "first_stop": "SKIP TO THE CAROB STORY",
+      "skip_link_first": true,
+      "zero_size_focus_stops": 0,
+      "focus_leak_into_closed_cart_dialog": 0,
+      "closed_dialog_inert": true,
+      "closed_dialog_aria_hidden": "true"
+    },
+    "stockists": {
+      "prior_traversal_state": "NOT ATTEMPTED",
+      "tabbable_count": 37,
+      "unique_controls_dom": 31,
+      "first_stop": "SKIP TO MAIN CONTENT",
+      "skip_link_first": true,
+      "zero_size_focus_stops": 0,
+      "focus_leak_into_closed_cart_dialog": 0,
+      "closed_dialog_inert": true,
+      "closed_dialog_aria_hidden": "true"
+    },
+    "faq": {
+      "prior_traversal_state": "NOT ATTEMPTED",
+      "tabbable_count": 36,
+      "unique_controls_dom": 30,
+      "first_stop": "SKIP TO MAIN CONTENT",
+      "skip_link_first": true,
+      "zero_size_focus_stops": 0,
+      "focus_leak_into_closed_cart_dialog": 0,
+      "closed_dialog_inert": true,
+      "closed_dialog_aria_hidden": "true",
+      "details_elements": 0
+    }
+  },
+
+  "screening_findings": {
+    "no_defects_surfaced": true,
+    "detail": "Across all four pages: the cart dialog (#mmCartDialog) is present, closed, aria-hidden='true' AND inert; zero focusable elements leak into it; zero zero-size tabbable stops; a skip link is the first tabbable control on every page. This is consistent with the two pages that passed real traversal.",
+    "interpretation": "This lowers the prior probability that a real traversal will find a defect on these four pages. It does not establish that it won't. Structural checks (inertness, leak, skip link) are exactly what static analysis is good at; ordering, traps and wrap behaviour are what it cannot see — and the shop divergence is likely in precisely that blind spot."
+  },
+
+  "blocked_on": {
+    "action": "osascript -e 'tell application \"Google Chrome\" to activate'",
+    "blocker": "takeover gate — requires Nate to approve in chat",
+    "unblocks": "real OS-level Tab traversal for our-story, carob-story, stockists, faq without Nate needing to hold the window frontmost by hand"
+  },
+
+  "key_delivery_diagnostic_20260802": {
+    "summary": "On this laptop the browser extension cannot advance focus with Tab, even with document.hasFocus() === true.",
+    "observations": [
+      "After the extension's key action, document.hasFocus() flipped false -> true, so the key action does reach the browser window.",
+      "8 Tab presses from a programmatically focused BODY produced no focus advance (activeElement stayed BODY).",
+      "Focus was then set directly onto the first control (A|SKIP TO MAIN CONTENT) and 2 further Tab presses were sent; activeElement did NOT move off that link.",
+      "Focus staying exactly in place — rather than jumping to a form control or out to browser chrome — indicates the keypress is not reaching the renderer's focus manager at all."
+    ],
+    "ruled_out": {
+      "macos_full_keyboard_access": "RULED OUT. `defaults read -g AppleKeyboardUIMode` returns 2, i.e. Full Keyboard Access is ENABLED. Tab-between-links is permitted by the OS; this is not the cause."
+    },
+    "remaining_cause": "Chrome is not OS-frontmost. Making it frontmost requires the gated osascript activate.",
+    "significance": "This is the same wall that produced the four UNVERIFIED/NOT ATTEMPTED pages in RESULTS.json. It is an environment limitation on this machine, NOT a defect in any reviewed page. No page may be marked UNVERIFIED-for-cause on the strength of it.",
+    "consequence": "Real traversal for the four outstanding pages should be produced on a machine where Chrome can be brought frontmost (iMac worker session), or on this laptop after the takeover gate is approved."
+  },
+
+  "carried_forward_from_RESULTS.json": {
+    "viewport_390_limit": "Window resize clamps at 500 CSS px (macOS Chrome minimum). Literal 390 requires DevTools device emulation and a human hand. Recommendation stands: record as ACCEPTED TOOLING LIMIT, not an open defect."
+  }
+}
