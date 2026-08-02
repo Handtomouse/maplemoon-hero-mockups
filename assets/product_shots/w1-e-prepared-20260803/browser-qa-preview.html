@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>W1-E centered product-asset QA</title>
+  <style>
+    :root {
+      color-scheme: light;
+      font-family: ui-sans-serif, system-ui, sans-serif;
+      background: #e7e4ca;
+      color: #1d1815;
+      --card-image-size: 140px;
+    }
+    * { box-sizing: border-box; }
+    body { margin: 0; }
+    header { padding: 32px clamp(20px, 6vw, 96px); background: #244b61; color: #f7f3e2; }
+    h1 { margin: 0 0 8px; font-size: clamp(24px, 4vw, 48px); }
+    p { margin: 0; line-height: 1.5; }
+    main { padding: clamp(20px, 5vw, 72px); }
+    h2 { margin: 0 0 12px; font-size: 1rem; letter-spacing: .04em; text-transform: uppercase; }
+    .note { max-width: 74ch; margin-bottom: 28px; color: #514a43; }
+    .strip { overflow-x: auto; padding: 6px 6px 18px; }
+    .cards { display: grid; grid-template-columns: repeat(11, 164px); gap: 14px; width: max-content; }
+    figure { display: grid; justify-items: center; gap: 10px; margin: 0; min-width: 0; padding: 12px; background: #fff; border-radius: 16px; box-shadow: 0 8px 24px rgb(29 24 21 / 10%); }
+    img { display: block; width: var(--card-image-size); height: var(--card-image-size); object-fit: contain; background: #fff; }
+    figcaption { overflow-wrap: anywhere; font-size: 12px; font-weight: 700; text-align: center; }
+    .evidence { margin-top: 48px; overflow-x: auto; }
+    table { width: 100%; min-width: 780px; border-collapse: collapse; background: rgb(255 255 255 / 72%); }
+    caption { padding: 12px; text-align: left; font-size: 13px; font-weight: 650; }
+    th, td { padding: 10px 12px; border-top: 1px solid rgb(29 24 21 / 14%); text-align: left; font-size: 13px; white-space: nowrap; }
+    th { color: #514a43; font-size: 11px; letter-spacing: .05em; text-transform: uppercase; }
+    td:last-child, th:last-child { text-align: right; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>W1-E — centered product-asset QA</h1>
+    <p>Unwired local review only. Each asset below is shown at the 140 × 140 px product-card image size.</p>
+  </header>
+  <main>
+    <p class="note">All eleven cards stay on one horizontal strip so differences in visual weight and centring are reviewable at the real rendered image size. A product fails if it reads materially smaller or off-centre against its neighbours.</p>
+    <section aria-labelledby="contact-heading">
+      <h2 id="contact-heading">11-up contact strip</h2>
+      <div class="strip">
+        <div class="cards">
+          <figure><img src="bananas.webp" alt="Centered bananas product photograph"><figcaption>bananas</figcaption></figure>
+          <figure><img src="moon_almond.webp" alt="Centered almond Moon product photograph"><figcaption>moon_almond</figcaption></figure>
+          <figure><img src="moon_cayenne.webp" alt="Centered cayenne Moon product photograph"><figcaption>moon_cayenne</figcaption></figure>
+          <figure><img src="moon_goji_coconut.webp" alt="Centered coconut and goji Moon product photograph"><figcaption>moon_goji_coconut</figcaption></figure>
+          <figure><img src="moon_hazelnut.webp" alt="Centered hazelnut Moon product photograph"><figcaption>moon_hazelnut</figcaption></figure>
+          <figure><img src="moon_peppermint.webp" alt="Centered peppermint Moon product photograph"><figcaption>moon_peppermint</figcaption></figure>
+          <figure><img src="moon_pure_carob.webp" alt="Centered pure carob Moon product photograph"><figcaption>moon_pure_carob</figcaption></figure>
+          <figure><img src="eclipse_almond.webp" alt="Centered almond Eclipse Bite product photograph"><figcaption>eclipse_almond</figcaption></figure>
+          <figure><img src="eclipse_fudge.webp" alt="Centered salted caramel fudge Eclipse Bite product photograph"><figcaption>eclipse_fudge</figcaption></figure>
+          <figure><img src="eclipse_hazelnut.webp" alt="Centered hazelnut Eclipse Bite product photograph"><figcaption>eclipse_hazelnut</figcaption></figure>
+          <figure><img src="eclipse_pecan.webp" alt="Centered pecan Eclipse Bite product photograph"><figcaption>eclipse_pecan</figcaption></figure>
+        </div>
+      </div>
+    </section>
+    <section class="evidence" aria-labelledby="evidence-heading">
+      <h2 id="evidence-heading">Post-encode foreground evidence</h2>
+      <table>
+        <caption>White-background foreground bounds at ImageMagick 5% fuzz. All longest axes pass the 63.5%–64.5% gate; all centres pass the ±2 px gate.</caption>
+        <thead><tr><th>Product</th><th>Bbox</th><th>W × H frame share</th><th>Area</th><th>Longest</th><th>Centre Δ</th></tr></thead>
+        <tbody>
+          <tr><td>bananas</td><td>511 × 286 px</td><td>63.88% × 35.75%</td><td>22.84%</td><td>63.88%</td><td>−0.5, 0.0 px</td></tr>
+          <tr><td>moon_almond</td><td>443 × 512 px</td><td>55.38% × 64.00%</td><td>35.44%</td><td>64.00%</td><td>−0.5, −1.0 px</td></tr>
+          <tr><td>moon_cayenne</td><td>464 × 512 px</td><td>58.00% × 64.00%</td><td>37.12%</td><td>64.00%</td><td>−2.0, −1.0 px</td></tr>
+          <tr><td>moon_goji_coconut</td><td>467 × 512 px</td><td>58.38% × 64.00%</td><td>37.36%</td><td>64.00%</td><td>−1.5, −1.0 px</td></tr>
+          <tr><td>moon_hazelnut</td><td>425 × 512 px</td><td>53.13% × 64.00%</td><td>34.00%</td><td>64.00%</td><td>−0.5, −1.0 px</td></tr>
+          <tr><td>moon_peppermint</td><td>459 × 511 px</td><td>57.38% × 63.88%</td><td>36.65%</td><td>63.88%</td><td>0.5, −1.5 px</td></tr>
+          <tr><td>moon_pure_carob</td><td>459 × 512 px</td><td>57.38% × 64.00%</td><td>36.72%</td><td>64.00%</td><td>−1.5, 0.0 px</td></tr>
+          <tr><td>eclipse_almond</td><td>511 × 369 px</td><td>63.88% × 46.13%</td><td>29.46%</td><td>63.88%</td><td>0.5, −1.5 px</td></tr>
+          <tr><td>eclipse_fudge</td><td>511 × 283 px</td><td>63.88% × 35.38%</td><td>22.60%</td><td>63.88%</td><td>−0.5, −0.5 px</td></tr>
+          <tr><td>eclipse_hazelnut</td><td>513 × 351 px</td><td>64.13% × 43.88%</td><td>28.14%</td><td>64.13%</td><td>0.5, −1.5 px</td></tr>
+          <tr><td>eclipse_pecan</td><td>511 × 365 px</td><td>63.88% × 45.63%</td><td>29.14%</td><td>63.88%</td><td>−1.5, −0.5 px</td></tr>
+        </tbody>
+      </table>
+    </section>
+  </main>
+</body>
+</html>
