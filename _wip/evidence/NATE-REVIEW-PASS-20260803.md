@@ -216,6 +216,92 @@ Nate selected **all four**:
 
 ---
 
+## CAROB-STORY
+
+| # | observation | class |
+|---|---|---|
+| CS1 | Same treatment as our-story — brand-style pass with section and large image fades, to reach homepage standard | **D** (join `RT1`/`OS3`) |
+| CS2 | *"the imagery needs fixing and updating"* | **B** |
+| CS3 | **"The four things everyone asks at the market stall"** over **3** items → **change the wording to three.** Decided | **B, decided** |
+
+`CS2` note: `carob_pods_macro.jpg` is **9.8MB and referenced twice on this page**. Whatever
+replaces it, the weight problem is separate and confirmed.
+
+## STOCKISTS
+
+| # | observation | class |
+|---|---|---|
+| ST1 | Same treatment as our-story — brand-style pass with fades | **D** (join `RT1`/`OS3`) |
+
+## FAQ
+
+| # | observation | class |
+|---|---|---|
+| FQ1 | *"the bottom section is off centre and needs attention"* | **B, MEASURED AND CONFIRMED** |
+
+**Measured live at 1440, gap left vs gap right per block:**
+
+| block | gap L | gap R | skew |
+|---|---|---|---|
+| `.wrap.bar` | 120 | 120 | 0 |
+| `.wrap.faq-hero` | 120 | 120 | 0 |
+| `.wrap.popular` | 120 | 120 | 0 |
+| `.wrap.faq-workspace` | 120 | 120 | 0 |
+| `.faq-section` ×3 (Carob/Products/Support) | 462 | 120 | 342 — **two-column answer grid, by design** |
+| **`.wrap.support-panel`** ("Still have questions?") | **0** | **240** | **−240 ← DEFECT** |
+
+> **`support-panel` is flush to the left viewport edge** while every other `.wrap` on the page
+> sits at a clean 120/120. This is a real, large misalignment.
+>
+> **The earlier desktop sweep missed it.** `DESKTOP-SWEEP-20260802/FINDINGS.md` disproved a
+> "faq `.wrap`" flag — but it examined the three `.faq-section` blocks, which genuinely are on
+> their own two-column grid. It never measured `.wrap.support-panel`, a fourth block.
+> **Nate's eye caught a real defect that three machine passes did not.**
+
+---
+
+# PASS COMPLETE — all six pages
+
+**24 observations across 6 pages.** This closes the review pass that was the project's only
+bottleneck. It is **not** CR-0 — that remains Nate's to record separately.
+
+## The one thing that dominates
+
+**`RT1` + `OS3` + `CS1` + `ST1` are a single problem:** section seams and large image fades.
+Nate's words, on homepage: *"its the biggest visual throw off of the whole site."* On our-story:
+*"bring it up to the brand style of the homepage."*
+
+**Four pages, one design language, one packet.** Homepage is the reference standard. Split this
+across four packets and the pages drift apart again.
+
+## Bounded — buildable, rides the fix batch
+
+`H1` wordmark plate edges · `H2` pill above CTA · `H3` larger pill text, same footprint ·
+`C1` carob 158px inset · `C2` callout pods *(remove or restyle — undecided)* ·
+`S1` story eyebrow contrast *(measure first)* · `S2` story bottom fade · `S3` story CTA *(copy)* ·
+`SA1` sampler bars in a line · `RT2` softer ritual cards · `SH3` lighter filters ·
+`CS2` carob-story imagery · `CS3` "four things" → three · `FQ1` faq `support-panel` centring ·
+plus `R1` icons, `R4/R5/R6` product photos.
+
+## Deeper — own packets
+
+| packet | scope |
+|---|---|
+| **Seams and fades** | `RT1` + `OS3` + `CS1` + `ST1` — four pages, one language |
+| **Commerce presentation** | `SH2a–d` — size selector, Enquire vs Add To Cart, bulk tiers, cart subtotal |
+| **Range carousel** | `R2`/`R3` fog and blur — **blocked: Nate must pick which of five variants** |
+
+## Already in flight — do not duplicate
+
+`OS1` founder portrait — Codex, six commits today (`62ddcd6` … `a01665f`).
+
+## Still gated
+
+`S4` origin copy — **conflict resolved** (Brunswick Heads = home, SA = farm) but
+**`CV-046`/`CV-063` unsubstantiated**. Confirm with Carli before it ships.
+
+---
+
 ## Lane compliance
 
 Written inside `_wip/evidence/` only. Nothing fixed, edited, built or recorded as a gate.
