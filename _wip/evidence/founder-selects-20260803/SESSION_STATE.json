@@ -2,12 +2,9 @@
   "schema": "maplemoon-photo-session-state/v1",
   "branch": "codex/founder-selects-20260803",
   "authority_commit": "4214f48a8f683f70598d23f2a6c78f0a1c82531f",
-  "current_select": 97,
-  "source_hash": "ebdef6a00ee4213cada329efad3efaa4d20ac56206ecebf0d9b0019fb01cfbae",
-  "output_paths": {
-    "psd": "/Users/handtomouse/MapleMoon-Photoshop-Work/SELECT-97-editorial-standing/work/select-97-editorial-standing-v01.psd",
-    "png": "_wip/evidence/founder-selects-20260803/select-97-editorial-standing-v01.png"
-  },
+  "current_select": 50,
+  "source_hash": null,
+  "output_paths": {},
   "rounds": 0,
   "defects": [],
   "checks": [],
@@ -16,7 +13,7 @@
     {"select": 70, "role": "hands passing carob pod", "state": "ready_for_nate", "note": "Full-frame output, source hash, clipping and native hands/pod/background QA recorded."},
     {"select": 87, "role": "Carli bio", "state": "ready_for_nate", "note": "v01 reconciled: source receipt, objective checks, 1440/390 proof and crop guard recorded."},
     {"select": 94, "role": "Dylan bio", "state": "ready_for_nate", "note": "v01 reconciled: source receipt, objective checks, 1440/390 proof and crop guard recorded."},
-    {"select": 97, "role": "editorial standing", "state": "in_progress"}
+    {"select": 97, "role": "editorial standing", "state": "ready_for_nate", "note": "Full-frame output, source hash, clipping and native face/hair/hand/edge QA recorded."}
   ],
-  "next_action": "Stage and rehash RAW select 97, develop full frame, then inspect faces, hair, hands and frame edges at native scale."
+  "next_action": "Resolve frame 50's sorted RAW identity from existing proxy/source evidence, then process the remaining portrait sequence without reordering."
 }
