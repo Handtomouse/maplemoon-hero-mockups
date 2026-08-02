@@ -92,9 +92,26 @@ Verify after every deploy that a `.html` link resolves in **one** hop:
        curl -s -o /dev/null -w "%{http_code}\n" https://<url>/               # expect 200/302
        curl -sI https://<url>/homepage.html | grep -i x-robots-tag           # expect noindex
 
-5. **Open it in a private window with no Vercel session.** If it asks for a login, deployment
-   protection is on and Carli cannot see it. Turn protection off for this deployment, or use a
-   shareable bypass link.
+5. **Deploy to production, not preview — on this account they behave differently.**
+
+   Verified 2026-08-03: **preview deployments are SSO-walled.** Every path on a preview URL
+   302s to `vercel.com/sso-api`, so Carli sees a Vercel login, not the site. Production
+   deployments on this project are public.
+
+       vercel deploy --prod --yes     # aliases to maplemoon-preview-carli.vercel.app
+
+   **A preview URL cannot be verified at all** — and it fails in a way that looks like a
+   pass. `curl -L` follows the SSO hop and returns **200 from Vercel's login page**, so a
+   naive "final status 200" check reports success on a site the client cannot open. Always
+   assert the redirect target does not contain `sso-api` before trusting any status code:
+
+       curl -s -o /dev/null -w '%{redirect_url}\n' https://<url>/homepage.html | grep -q sso-api \
+         && echo "SSO-WALLED - result meaningless" || echo "public"
+
+   Confirm real content came back, not a login page:
+
+       curl -s https://<url>/shop | grep -oiE '<title>[^<]*</title>'
+       # expect: <title>Shop the Range | Maple Moon</title>
 
 6. **Check weight before sending.** If homepage is still over ~3MB, W1-F has not landed and the
    link will feel broken. **Measured before compression: homepage 25.0MB, carob-story 11.5MB.**
