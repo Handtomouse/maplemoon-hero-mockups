@@ -141,7 +141,7 @@ html{scroll-behavior:smooth;}
 <link rel="stylesheet" href="a11y_inner.css?v=20260723">
 <link rel="stylesheet" href="design_refinement_20260723.css">
 
-<!-- MM-SEO-BLOCK (og-image paths are PLACEHOLDERS: assets/social/*.jpg 1200x630 need producing) -->
+<!-- MM-SEO-BLOCK (social share imagery stays withheld until an approved 1200x630 asset exists) -->
 <link rel="canonical" href="https://maplemoon.com.au/collections/all">
 <meta name="robots" content="index, follow, max-image-preview:large">
 <meta name="theme-color" content="#457798">
@@ -150,13 +150,10 @@ html{scroll-behavior:smooth;}
 <meta property="og:url" content="https://maplemoon.com.au/collections/all">
 <meta property="og:title" content="Shop the Range | Maple Moon">
 <meta property="og:description" content="Browse carob bars, moons, bites, elixirs and carob bananas. Australian organic carob, vegan, gluten free and caffeine free. Free shipping over $99.">
-<meta property="og:image" content="https://maplemoon.com.au/assets/social/og-shop.jpg">
-<meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
 <meta property="og:locale" content="en_AU">
-<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Shop the Range | Maple Moon">
 <meta name="twitter:description" content="Browse carob bars, moons, bites, elixirs and carob bananas. Australian organic carob, vegan, gluten free and caffeine free. Free shipping over $99.">
-<meta name="twitter:image" content="https://maplemoon.com.au/assets/social/og-shop.jpg">
 <script type="application/ld+json">
 {
  "@context": "https://schema.org",
@@ -166,9 +163,9 @@ html{scroll-behavior:smooth;}
  "url": "https://maplemoon.com.au",
  "logo": {
   "@type": "ImageObject",
-  "url": "https://maplemoon.com.au/assets/social/mm_logo_social.jpg",
-  "width": 512,
-  "height": 512
+  "url": "https://maplemoon.com.au/assets/mm_logo_icon_blk.svg",
+  "width": 252,
+  "height": 416
  },
  "description": "Maple Moon makes Australian organic carob bars, moons, bites and elixirs. Vegan, gluten free, caffeine free. Far north coast of NSW.",
  "email": "info@maplemoon.com.au",
@@ -229,7 +226,7 @@ html{scroll-behavior:smooth;}
     <nav class="sp-nav" aria-label="Primary navigation"><a href="shop.WIP.html" class="on">Shop</a><a href="our-story.WIP.html">Our Story</a><a href="homepage_real_1_lead_photo.WIP.html#carob">What is Carob</a></nav>
     <a class="sp-logo" href="homepage_real_1_lead_photo.WIP.html">maple moon</a>
     <nav class="sp-nav r" aria-label="Utility navigation"><a href="stockists.WIP.html">Stockists</a><span class="sp-currency" aria-label="Currency, Australian dollars">AUD $</span>
-      <button class="sp-cart" type="button" aria-label="Cart, 0 items"><svg viewBox="0 0 24 24"><path d="M6 8h12l-1 12H7L6 8z"/><path d="M9 8a3 3 0 0 1 6 0"/></svg><b>0</b></button></nav>
+      <button class="sp-cart" data-cart-toggle type="button" aria-label="Cart, 0 items, subtotal $0.00"><svg viewBox="0 0 24 24"><path d="M6 8h12l-1 12H7L6 8z"/><path d="M9 8a3 3 0 0 1 6 0"/></svg><b data-cart-count>0</b></button></nav>
   </div></header>
 
   <main class="sp-main" id="shop-main">
@@ -252,7 +249,7 @@ html{scroll-behavior:smooth;}
 
   </div>
 
-  <section class="wrap sp-tools" aria-labelledby="catalogue-controls-title" aria-describedby="catalogue-status">
+  <section class="wrap sp-tools is-quiet" aria-labelledby="catalogue-controls-title" aria-describedby="catalogue-status">
     <div class="catalogue-toolbar-heading">
       <h2 id="catalogue-controls-title">Find your flavour</h2>
       <button class="reset-tool" id="catalogue-reset" type="button" hidden>Reset filters</button>
@@ -279,6 +276,12 @@ html{scroll-behavior:smooth;}
       <button type="button" class="view-btn is-active" data-view="grid" aria-pressed="true" aria-label="Grid view">Grid</button>
       <button type="button" class="view-btn" data-view="list" aria-pressed="false" aria-label="List view">List</button>
     </div>
+    <aside class="purchase-guide" data-purchase-legend aria-label="Choosing an action">
+      <strong>Choose your next step</strong>
+      <span><b>Add to cart</b> keeps a local subtotal while you browse.</span>
+      <span><b>Enquire</b> opens an email for availability or unpriced items.</span>
+    </aside>
+    <p class="cart-summary" id="cart-summary" data-cart-subtotal role="status" aria-live="polite"><span>Cart subtotal</span><strong>$0.00</strong><small>0 items</small></p>
     <p class="catalogue-status" id="catalogue-status" aria-live="polite"></p>
   </section>
 
@@ -337,6 +340,8 @@ html{scroll-behavior:smooth;}
 <script>
 (function(){
   var PS='assets/product_shots/';
+  var ECLIPSE_SIZES=[{label:'50g',price:5.99},{label:'Value pack',price:59.99}];
+  var MOON_TIERS=[{label:'1 moon',price:2.50,quantity:1},{label:'5 moons',price:12.19,quantity:5},{label:'10 moons',price:23.75,quantity:10},{label:'20 moons',price:44.99,quantity:20}];
   // same trusted catalog as the homepage; bars and elixirs priced from Carli's doc
   var CAT={
     bars:[
@@ -348,19 +353,19 @@ html{scroll-behavior:smooth;}
       {n:'Almond & Celtic Salt',img:'bar_almond',d:'Toasted almond and a pinch of Celtic salt.',price:'$12.95',size:'90g'}
     ],
     moons:[
-      {n:'Pure Carob Moon',img:'moon_pure_carob',d:'A hand-moulded crescent of pure carob and cacao butter.',price:'1 $2.50 / 5 $12.19 / 10 $23.75 / 20 $44.99',pending:true,size:'12g'},
-      {n:'Peppermint Moon',img:'moon_peppermint',d:'Cool peppermint in a hand-moulded crescent.',price:'1 $2.50 / 5 $12.19 / 10 $23.75 / 20 $44.99',size:'12g'},
-      {n:'Roasted Hazelnut Moon',img:'moon_hazelnut',d:'Roasted hazelnut in a smooth carob crescent.',price:'1 $2.50 / 5 $12.19 / 10 $23.75 / 20 $44.99',size:'12g'},
-      {n:'Coconut & Goji Moon',img:'moon_goji_coconut',d:'Coconut and goji in a naturally sweet crescent.',price:'1 $2.50 / 5 $12.19 / 10 $23.75 / 20 $44.99',size:'12g'},
-      {n:'Cayenne Moon',img:'moon_cayenne',d:'A slow warmth of cayenne in a carob crescent.',price:'1 $2.50 / 5 $12.19 / 10 $23.75 / 20 $44.99',pending:true,size:'12g'},
-      {n:'Almond Moon',img:'moon_almond',d:'Toasted almond in a smooth carob crescent.',price:'1 $2.50 / 5 $12.19 / 10 $23.75 / 20 $44.99',size:'12g'}
+      {n:'Pure Carob Moon',img:'moon_pure_carob',d:'A hand-moulded crescent of pure carob and cacao butter.',price:'1 $2.50 / 5 $12.19 / 10 $23.75 / 20 $44.99',pending:true,size:'12g',sizes:MOON_TIERS,optionLabel:'Pack'},
+      {n:'Peppermint Moon',img:'moon_peppermint',d:'Cool peppermint in a hand-moulded crescent.',price:'1 $2.50 / 5 $12.19 / 10 $23.75 / 20 $44.99',size:'12g',sizes:MOON_TIERS,optionLabel:'Pack'},
+      {n:'Roasted Hazelnut Moon',img:'moon_hazelnut',d:'Roasted hazelnut in a smooth carob crescent.',price:'1 $2.50 / 5 $12.19 / 10 $23.75 / 20 $44.99',size:'12g',sizes:MOON_TIERS,optionLabel:'Pack'},
+      {n:'Coconut & Goji Moon',img:'moon_goji_coconut',d:'Coconut and goji in a naturally sweet crescent.',price:'1 $2.50 / 5 $12.19 / 10 $23.75 / 20 $44.99',size:'12g',sizes:MOON_TIERS,optionLabel:'Pack'},
+      {n:'Cayenne Moon',img:'moon_cayenne',d:'A slow warmth of cayenne in a carob crescent.',price:'1 $2.50 / 5 $12.19 / 10 $23.75 / 20 $44.99',pending:true,size:'12g',sizes:MOON_TIERS,optionLabel:'Pack'},
+      {n:'Almond Moon',img:'moon_almond',d:'Toasted almond in a smooth carob crescent.',price:'1 $2.50 / 5 $12.19 / 10 $23.75 / 20 $44.99',size:'12g',sizes:MOON_TIERS,optionLabel:'Pack'}
     ],
     bites:[
-      {n:'Pecan Nut Eclipse Bite',img:'eclipse_pecan',d:'Carob-dipped Medjool dates and pecans.',price:'$5.99–$59.99',size:'50g'},
-      {n:'Salted Almond Eclipse Bite',img:'eclipse_almond',d:'Medjool dates, almonds and a pinch of Celtic salt in carob.',price:'$5.99–$59.99',size:'50g'},
-      {n:'Hazelnut Eclipse Bite',img:'eclipse_hazelnut',d:'Roasted hazelnut and Medjool dates in smooth carob.',price:'$5.99–$59.99',size:'50g'},
-      {n:'Goji Ripe Eclipse Bite',img:'eclipse_goji',d:'Medjool dates, almonds, cashews, coconut and goji berries in carob.',price:'$5.99–$59.99',size:'50g'},
-      {n:'Salted Caramel Fudge',img:'eclipse_fudge',d:'Medjool dates, almonds, coconut and Celtic salt, carob-dipped.',price:'$5.99–$59.99',size:'50g'},
+      {n:'Pecan Nut Eclipse Bite',img:'eclipse_pecan',d:'Carob-dipped Medjool dates and pecans.',price:'$5.99–$59.99',size:'50g',sizes:ECLIPSE_SIZES},
+      {n:'Salted Almond Eclipse Bite',img:'eclipse_almond',d:'Medjool dates, almonds and a pinch of Celtic salt in carob.',price:'$5.99–$59.99',size:'50g',sizes:ECLIPSE_SIZES},
+      {n:'Hazelnut Eclipse Bite',img:'eclipse_hazelnut',d:'Roasted hazelnut and Medjool dates in smooth carob.',price:'$5.99–$59.99',size:'50g',sizes:ECLIPSE_SIZES},
+      {n:'Goji Ripe Eclipse Bite',img:'eclipse_goji',d:'Medjool dates, almonds, cashews, coconut and goji berries in carob.',price:'$5.99–$59.99',size:'50g',sizes:ECLIPSE_SIZES},
+      {n:'Salted Caramel Fudge',img:'eclipse_fudge',d:'Medjool dates, almonds, coconut and Celtic salt, carob-dipped.',price:'$5.99–$59.99',size:'50g',sizes:ECLIPSE_SIZES},
       {n:'Eclipse Bite Bundle',img:'eclipse_bundle',d:'All five Eclipse Bites together.',price:'$24.99',size:'5 x 50g'}
     ],
     elixirs:[
@@ -377,6 +382,8 @@ html{scroll-behavior:smooth;}
   var DIET=['Vegan','GF','No Caffeine'];
   var PRICED={bars:true,elixirs:true,moons:true,bites:true,bananas:true,powder:true};
   function amp(s){return s.replace(/&/g,'<span class="amp">&amp;</span>');}
+  function money(amount){return '$'+Number(amount).toFixed(2);}
+  function priceNumber(price){var match=String(price).match(/\d+(?:\.\d{1,2})?/);return match?Number(match[0]):0;}
   function flavourOf(p){
     var hay=(p.n+' '+p.d).toLowerCase();
     if(hay.indexOf('peppermint')>-1)return 'peppermint';
@@ -393,18 +400,49 @@ html{scroll-behavior:smooth;}
       var cardId='product-'+cat+'-'+index;
       var cleanName=p.n.replace(/"/g,'');
       var imageAttrs=cat==='bites'?' loading="eager" decoding="sync"':' loading="lazy" decoding="async"';
+      var hasSizePicker=priced&&Array.isArray(p.sizes);
+      var unitPrice=hasSizePicker?p.sizes[0].price:priceNumber(p.price);
+      var unitQuantity=hasSizePicker?(p.sizes[0].quantity||1):1;
+      var displayPrice=cat==='moons'&&priced?'From $2.50 each':p.price;
+      var pickerAttribute=cat==='moons'?' data-tier-picker="moon"':' data-size-picker="eclipse"';
+      var pickerLabel=p.optionLabel||'Size';
+      var sizePicker=hasSizePicker?'<label class="size-picker"'+pickerAttribute+'><span>'+pickerLabel+'</span><select class="size-select" aria-label="'+pickerLabel+' for '+cleanName+'">'+p.sizes.map(function(option){return '<option value="'+option.price+'" data-quantity="'+(option.quantity||1)+'">'+option.label+' &middot; '+money(option.price)+'</option>';}).join('')+'</select></label>':'';
+      var action=priced?'<button class="add" data-add-to-cart type="button" aria-label="Add '+cleanName+' to cart">Add to cart</button>':'<a class="add" aria-label="Enquire about '+cleanName+'" href="mailto:info@maplemoon.com.au?subject=Enquiry%20about%20'+encodeURIComponent(p.n)+'">Enquire</a>';
       var el=document.createElement('article');el.className='pcard';el.setAttribute('aria-labelledby',cardId);
-      el.dataset.cat=cat;el.dataset.flavour=flavourOf(p);el.dataset.name=p.n.toLowerCase();el.dataset.priced=priced?'1':'0';el.dataset.order=String(index);
+      el.dataset.cat=cat;el.dataset.flavour=flavourOf(p);el.dataset.name=p.n.toLowerCase();el.dataset.priced=priced?'1':'0';el.dataset.order=String(index);el.dataset.unitPrice=String(unitPrice);el.dataset.unitQuantity=String(unitQuantity);
       el.innerHTML='<div class="ph"><img src="'+PS+p.img+'.webp" alt="'+cleanName+'"'+imageAttrs+'></div>'+
         '<div class="tx"><h3 id="'+cardId+'">'+amp(p.n)+'</h3><div class="chips">'+DIET.map(function(c){return '<span>'+c+'</span>';}).join('')+'</div>'+
         '<p class="d">'+p.d+'</p>'+
-        '<div class="row"><span class="pr'+(priced?'':' pending')+'">'+(priced?p.price:'Enquire for details')+'<span class="g">('+p.size+')</span></span><a class="add" aria-label="'+(priced?'Ask about ':'Enquire about ')+cleanName+'" href="mailto:info@maplemoon.com.au?subject=Enquiry%20about%20'+encodeURIComponent(p.n)+'">'+(priced?'Ask about this item':'Enquire')+'</a></div></div>';
+        sizePicker+'<div class="row"><div class="price-wrap"><span class="pr'+(priced?'':' pending')+'"><span data-price-label>'+ (priced?displayPrice:'Enquire for details')+'</span><span class="g">('+p.size+')</span></span></div>'+action+'</div></div>';
       grid.appendChild(el);
     });
   });
 
   var state={flavour:'all',sort:'featured',view:'grid'};
   var cards=Array.prototype.slice.call(document.querySelectorAll('.pcard'));
+  var cart={items:0,subtotal:0};
+  var cartSummary=document.querySelector('[data-cart-subtotal]');
+  var cartCount=document.querySelector('[data-cart-count]');
+  var cartToggle=document.querySelector('[data-cart-toggle]');
+  function renderCart(){
+    var itemLabel=cart.items===1?'item':'items';
+    if(cartSummary){cartSummary.querySelector('strong').textContent=money(cart.subtotal);cartSummary.querySelector('small').textContent=cart.items+' '+itemLabel;}
+    if(cartCount)cartCount.textContent=String(cart.items);
+    if(cartToggle)cartToggle.setAttribute('aria-label','Cart, '+cart.items+' '+itemLabel+', subtotal '+money(cart.subtotal));
+  }
+  document.addEventListener('change',function(event){
+    if(!event.target.matches('.size-select'))return;
+    var card=event.target.closest('.pcard');if(!card)return;
+    var nextPrice=Number(event.target.value);card.dataset.unitPrice=String(nextPrice);card.dataset.unitQuantity=event.target.options[event.target.selectedIndex].dataset.quantity||'1';
+    var label=card.querySelector('[data-price-label]');if(label)label.textContent=money(nextPrice);
+  });
+  document.addEventListener('click',function(event){
+    var add=event.target.closest('[data-add-to-cart]');if(!add)return;
+    var card=add.closest('.pcard');if(!card)return;
+    cart.items+=Number(card.dataset.unitQuantity)||1;cart.subtotal+=Number(card.dataset.unitPrice)||0;renderCart();
+  });
+  if(cartToggle)cartToggle.addEventListener('click',function(){var summary=document.getElementById('cart-summary');if(summary)summary.scrollIntoView({behavior:'smooth',block:'center'});});
+  renderCart();
   var status=document.getElementById('catalogue-status');
   var reset=document.getElementById('catalogue-reset');
   var flavourLabels={all:'all flavours',pure:'Pure',peppermint:'Peppermint',hazelnut:'Hazelnut',goji:'Coconut and Goji',cayenne:'Cayenne',almond:'Almond'};
@@ -485,24 +523,38 @@ html{scroll-behavior:smooth;}
 .sp .sp-range-nav .sp-cats.is-filtered{grid-template-columns:repeat(auto-fit,minmax(110px,1fr));}
 .sp{--blue-flow:#b7c9d9;--blue-bridge:#c8d5df;--blue-haze:#d7e2ea;--blue-deep:#457798;--blue-night:#101923;--beige:#c9ba96;--acc:#4074b6;background:linear-gradient(180deg,var(--blue-flow) 0%,#c7d6e3 18%,var(--blue-haze) 44%,#e2e5df 70%,var(--paper) 100%);}
 .sp-main{min-width:0;}
-.sp-tools{display:grid;grid-template-columns:minmax(0,1fr) minmax(170px,220px) auto;gap:14px;align-items:center;margin:12px auto 10px;padding:16px 18px;border:1px solid rgba(69,119,152,.14);border-radius:8px;background:rgba(251,250,247,.68);box-shadow:0 8px 18px rgba(41,57,64,.045);}
-.catalogue-toolbar-heading{grid-column:1/-1;display:flex;align-items:baseline;justify-content:space-between;gap:16px;padding-bottom:12px;border-bottom:1px solid rgba(69,119,152,.14);}
+.sp-tools{display:grid;grid-template-columns:minmax(0,1fr) minmax(170px,220px) auto;grid-template-areas:"heading heading heading" "flavour sort view" "guide guide cart" "status status status";gap:14px;align-items:center;margin:12px auto 10px;padding:16px 18px;border:1px solid rgba(69,119,152,.14);border-radius:8px;background:rgba(251,250,247,.68);box-shadow:0 8px 18px rgba(41,57,64,.045);}
+.catalogue-toolbar-heading{grid-area:heading;display:flex;align-items:baseline;justify-content:space-between;gap:16px;padding-bottom:12px;border-bottom:1px solid rgba(69,119,152,.14);}
 .catalogue-toolbar-heading h2{margin:0;font:500 1.04rem/1.2 var(--mm-serif);color:var(--ink);}
 .reset-tool{min-height:36px;padding:6px 11px;border:0;border-bottom:1px solid currentColor;background:transparent;color:var(--ink-soft);font:500 .63rem/1 var(--mm-sans);letter-spacing:.12em;text-transform:uppercase;cursor:pointer;}
 .reset-tool:hover{color:var(--ink);}
 .tool-group{display:flex;align-items:center;gap:10px;min-width:0;color:rgba(44,42,38,.66);font-size:.62rem;letter-spacing:.13em;text-transform:uppercase;}
-.flavour-tools{flex-wrap:wrap;}
+.flavour-tools{grid-area:flavour;flex-wrap:wrap;}
 .swatch,.view-btn{min-width:44px;min-height:44px;border:1px solid rgba(44,42,38,.14);border-radius:8px;background:rgba(255,255,255,.42);color:var(--ink);font:inherit;cursor:pointer;touch-action:manipulation;}
 .swatch{position:relative;display:grid;place-items:center;padding:5px;}
 .swatch i{display:block;width:24px;height:24px;border-radius:5px;background:var(--sw);border:1px solid rgba(44,42,38,.10);}
 .swatch b{position:absolute;inline-size:1px;block-size:1px;overflow:hidden;clip-path:inset(50%);}
 .swatch.is-active,.view-btn.is-active{border-color:var(--blue-night);box-shadow:inset 0 -2px 0 rgba(201,186,150,.62);background:rgba(255,255,255,.76);}
-.sort-tool{justify-content:flex-end;}
+.sort-tool{grid-area:sort;justify-content:flex-end;}
 .sort-tool select{min-height:44px;width:150px;padding:0 36px 0 14px;border:1px solid rgba(44,42,38,.16);border-radius:8px;background:rgba(255,255,255,.48);color:var(--ink);font:500 .78rem var(--mm-sans);}
-.view-tools{justify-content:flex-end;}
+.view-tools{grid-area:view;justify-content:flex-end;}
 .view-btn{padding:0 12px;font-size:.62rem;}
-.catalogue-status{grid-column:1/-1;margin:0;padding-top:2px;color:var(--ink-soft);font-size:.78rem;line-height:1.35;}
-.sp-tools :is(.swatch,.view-btn,.sort-tool select,.reset-tool):focus-visible{outline:2px solid var(--acc);outline-offset:3px;}
+.purchase-guide{grid-area:guide;display:flex;align-items:baseline;gap:9px;min-width:0;color:var(--ink-soft);font-size:.74rem;line-height:1.42;}
+.purchase-guide strong{color:var(--ink);font:500 .82rem/1.2 var(--mm-serif);white-space:nowrap;}
+.purchase-guide b{color:var(--ink);font-weight:500;}
+.cart-summary{grid-area:cart;display:grid;grid-template-columns:auto auto;justify-content:end;align-items:baseline;gap:0 8px;margin:0;padding:9px 0 9px 14px;border-left:1px solid rgba(69,119,152,.18);color:var(--ink-soft);font-size:.63rem;letter-spacing:.1em;text-transform:uppercase;}
+.cart-summary strong{color:var(--ink);font:500 1rem/1 var(--mm-serif);letter-spacing:0;text-transform:none;}
+.cart-summary small{grid-column:1/-1;justify-self:end;font-size:.58rem;letter-spacing:.08em;}
+.catalogue-status{grid-area:status;margin:0;padding-top:2px;color:var(--ink-soft);font-size:.78rem;line-height:1.35;}
+.sp-tools :is(.swatch,.view-btn,.sort-tool select,.reset-tool,.size-select):focus-visible{outline:2px solid var(--acc);outline-offset:3px;}
+.sp-tools.is-quiet{padding:13px 0 12px;border-width:0 0 1px;border-radius:0;background:transparent;box-shadow:none;}
+.sp-tools.is-quiet .catalogue-toolbar-heading{padding-bottom:4px;border:0;}
+.sp-tools.is-quiet .tool-group{gap:7px;color:rgba(44,42,38,.54);}
+.sp-tools.is-quiet .swatch,.sp-tools.is-quiet .view-btn{min-width:34px;min-height:34px;border:0;border-radius:0;background:transparent;box-shadow:none;}
+.sp-tools.is-quiet .swatch i{width:19px;height:7px;border:0;border-radius:999px;opacity:.58;}
+.sp-tools.is-quiet .swatch.is-active,.sp-tools.is-quiet .view-btn.is-active{border-color:transparent;background:transparent;box-shadow:inset 0 -1px 0 var(--ink);}
+.sp-tools.is-quiet .swatch.is-active i{opacity:1;}
+.sp-tools.is-quiet .sort-tool select{min-height:34px;width:132px;padding-left:9px;border-width:0 0 1px;border-radius:0;background:transparent;}
 .sp-sec{scroll-margin-top:94px;padding:46px 0 10px;}
 .sp-range-nav + .sp-sec{padding-top:28px;}
 .sp-sec:not(#bars){border-top:1px solid rgba(69,119,152,.22);margin-top:34px;}
@@ -526,6 +578,10 @@ html{scroll-behavior:smooth;}
 .chips span{font-size:.5rem;color:rgba(111,106,98,.64);border-color:rgba(44,42,38,.08);padding:3px 6px;}
 .pcard .row{min-height:54px;margin-top:auto;padding-top:10px;border-top:1px solid rgba(44,42,38,.09);}
 .pcard .pr{min-width:0;line-height:1.28;}
+.pcard .price-wrap{display:flex;flex-direction:column;gap:3px;min-width:0;}
+.pcard .moon-tier{color:var(--ink-faint);font-size:.58rem;letter-spacing:.08em;text-transform:uppercase;}
+.size-picker{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:8px 0 0;border-top:1px solid rgba(44,42,38,.09);color:var(--ink-soft);font-size:.58rem;letter-spacing:.1em;text-transform:uppercase;}
+.size-select{min-height:34px;max-width:168px;padding:0 26px 0 9px;border:0;border-bottom:1px solid rgba(44,42,38,.24);border-radius:0;background:transparent;color:var(--ink);font:500 .72rem var(--mm-sans);}
 .pcard .add{display:inline-flex;align-items:center;justify-content:center;text-decoration:none;min-height:44px;}
 .pcard .add:not([disabled]){border-color:var(--blue-night);background:var(--blue-night);color:var(--cream);box-shadow:inset 0 -2px 0 rgba(201,186,150,.58);}
 .pcard .add:not([disabled]):hover{background:var(--blue-deep);border-color:var(--blue-deep);color:var(--cream);}
@@ -557,7 +613,7 @@ html{scroll-behavior:smooth;}
   .sp-opening .sp-sampler{grid-template-columns:minmax(220px,.8fr) minmax(0,1fr);grid-template-areas:"packs details" "packs action";gap:14px 20px;padding:18px 20px;}
   .sp-opening .sp-sampler .pill{justify-self:start;}
   .grid{grid-template-columns:repeat(3,minmax(0,1fr));}
-  .sp-tools{grid-template-columns:1fr 1fr;grid-template-areas:"heading heading" "flavour flavour" "sort view" "status status";}
+  .sp-tools{grid-template-columns:1fr 1fr;grid-template-areas:"heading heading" "flavour flavour" "sort view" "guide cart" "status status";}
   .catalogue-toolbar-heading{grid-area:heading;}.catalogue-status{grid-area:status;}
   .flavour-tools{grid-area:flavour;}.sort-tool{grid-area:sort;justify-content:flex-start;}.view-tools{grid-area:view;}
 }
@@ -586,9 +642,11 @@ html{scroll-behavior:smooth;}
   .sp .sp-range-nav .sp-cats a[aria-current="location"]::after{bottom:10px;width:20px;}
   .sp-sec{padding-top:38px;}
   .sp-range-nav + .sp-sec{padding-top:26px;}
-  .sp-tools{grid-template-columns:1fr;margin-top:10px;padding:14px 16px;}
+  .sp-tools{grid-template-columns:1fr;grid-template-areas:"heading" "flavour" "sort" "view" "guide" "cart" "status";margin-top:10px;padding:14px 0;}
   .catalogue-toolbar-heading{align-items:center;}
   .sort-tool,.view-tools{justify-content:flex-start;}
+  .purchase-guide{align-items:flex-start;flex-direction:column;gap:3px;}
+  .cart-summary{justify-content:start;padding:10px 0;border-width:1px 0 0;}
   .grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;}
   .pcard .row{align-items:stretch;flex-direction:column;}
   .pcard .add{width:100%;}

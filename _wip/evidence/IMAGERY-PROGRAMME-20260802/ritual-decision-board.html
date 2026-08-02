@@ -21,7 +21,7 @@
     <div id="sets"></div>
     <section class="section" aria-labelledby="family-d"><div class="section-head"><div><span class="code">D · not yet rendered</span><h2 id="family-d">Asymmetric editorial range</h2></div><p class="section-desc">Preserved direction only: off-frame crops, vertical tension and foreground/background layering. Choose D only if you want one separate bounded generation round; these schematics are not candidate photographs.</p></div><div class="schematic" aria-label="Family D schematic composition directions"><div class="sketch"><div class="pod"></div><span>Off-edge crop</span></div><div class="sketch"><div class="pod"></div><span>Vertical tension</span></div><div class="sketch"><div class="dish"></div><div class="pod"></div><span>Layered depth</span></div></div></section>
     <div class="decision-grid">
-      <article class="decision-card"><span class="code">Non-binding recommendation</span><h3>R1.1 + R2.2 + R3.3</h3><p>It gives the strongest separation across abundant after-dinner, clean afternoon and quiet night. This is a review recommendation only, not an approval.</p></article>
+      <article class="decision-card"><span class="code">Non-binding recommendation</span><h3>R1.1 + R2.2 + R3.3</h3><p>It gives the strongest separation across abundant after-dinner, clean afternoon and quiet night. This is a review recommendation only, not an approval.</p><p style="margin-top:10px;color:#785b24"><strong>Stale.</strong> This shortlist was written 2 August, before sets RA, RB and RC existed. It has not been restated against them.</p></article>
       <article class="decision-card"><span class="code">Decision 2 · package gate</span><h3>Before send, or later?</h3><p>Putting any imagery into the frozen six-page package before send requires a separate integration decision, new manifest, and fresh CR-0 keyboard and native 200%-zoom proof. Choosing “later” preserves the send-ready bytes.</p><div class="chips"><span class="chip">Before send + re-proof</span><span class="chip">Later · keep frozen</span></div></article>
     </div>
     <div class="history"><article><span class="code">Historical reject</span><h3>v5 trio</h3><p>Rejected as too similar. It is not represented as A, C or D and is not recommended.</p></article><article><span class="code">Secondary evidence only</span><h3>E–H + original-v5 low fidelity</h3><p>Still exploratory. They are not silently upgraded into this decision set.</p></article></div>
@@ -33,6 +33,7 @@
     const ROOT_AC=HOME+'.codex/visualizations/2026/08/02/019fc056-cd9a-7333-ab33-bd1c9f985cb4/maplemoon_ritual_ac_comparison/';
     const ROOT_R=HOME+'.codex/visualizations/2026/07/31/019fb5b5-de62-7862-a5fe-06bc59395c21/maplemoon_ritual_family_a_exploration_20260802_v1/';
     const ROOT_CURRENT=HOME+'maplemoon-website/assets/licensed/';
+    const ROOT_RND=HOME+'.codex/visualizations/2026/08/02/019fc22d-074e-7453-8544-c3a09238af2b/ritual_rounds_abc_20260802_v1/';
     const copy=[['Evening','After dinner','A small after-dinner ritual, when the lights are low.'],['Afternoon','Afternoon reset','A gentle pause in the middle of the day.'],['Night-time','With tea, at night','Warm cup, small moon, lights low.']];
     const sets=[
       {code:'Current · rejected',title:'What is on the frozen Homepage now',desc:'All three are wrong for the intended MapleMoon ritual language: generic chocolate/teaware imagery, off-palette props and no coherent carob-led system.',className:'wrong',items:[
@@ -58,7 +59,19 @@
       {code:'R3 · wildcard',title:'Broadest narrative range',desc:'First-light stillness, cloudbreak pause and midnight hush. These are visually distinct but were created as new safe moments, so the frozen copy is only a treatment test.',items:[
         ['R3.1','First-light stillness',ROOT_R+'r3_first_light_stillness_v1.png','New visual moment; no replacement copy is approved.'],
         ['R3.2','Cloudbreak pause',ROOT_R+'r3_cloudbreak_pause_v1.png','Wide arrangement is crop-sensitive; no replacement copy is approved.'],
-        ['R3.3','Midnight hush',ROOT_R+'r3_midnight_hush_v1.png','Night cue is subtle; no replacement copy is approved.']]}];
+        ['R3.3','Midnight hush',ROOT_R+'r3_midnight_hush_v1.png','Night cue is subtle; no replacement copy is approved.']]},
+      {code:'RA · later round',title:'Later round A',desc:'Produced 3 August by the second imagery thread, after this board was first built. Its own classification: generic generated carob-pod and accessory studies, no verified MapleMoon product photograph used. Folded in unchanged; IDs re-prefixed RA/RB/RC because its original A/B/C labels collided with sets A and C above.',items:[
+        ['RA1','After dinner',ROOT_RND+'round_a_after_dinner_v1.png','No limitation declared by the producing thread.'],
+        ['RA2','Afternoon',ROOT_RND+'round_a_afternoon_v1.png','No limitation declared by the producing thread.'],
+        ['RA3','Tea at night',ROOT_RND+'round_a_tea_at_night_v1.png','No limitation declared by the producing thread.']]},
+      {code:'RB · later round',title:'Later round B',desc:'Second of the 3 August rounds. No equivalent exists in the earlier sets above; this direction is new to the board.',items:[
+        ['RB1','After dinner',ROOT_RND+'round_b_after_dinner_v1.png','No limitation declared by the producing thread.'],
+        ['RB2','Afternoon',ROOT_RND+'round_b_afternoon_v1.png','No limitation declared by the producing thread.'],
+        ['RB3','Tea at night',ROOT_RND+'round_b_tea_at_night_v1.png','No limitation declared by the producing thread.']]},
+      {code:'RC · later round',title:'Later round C',desc:'Third of the 3 August rounds. Compare against set C above, which carries the same letter but is a different, earlier scale-contrast family.',items:[
+        ['RC1','After dinner',ROOT_RND+'round_c_after_dinner_v1.png','No limitation declared by the producing thread.'],
+        ['RC2','Afternoon',ROOT_RND+'round_c_afternoon_v1.png','No limitation declared by the producing thread.'],
+        ['RC3','Tea at night',ROOT_RND+'round_c_tea_at_night_v1.png','No limitation declared by the producing thread.']]}];
     const esc=s=>String(s).replace(/[&<>\"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','\"':'&quot;'}[c]));
     document.getElementById('sets').innerHTML=sets.map((set,si)=>`<section class="section ${set.className||''}" aria-labelledby="set-${si}"><div class="section-head"><div><span class="code">${esc(set.code)}</span><h2 id="set-${si}">${esc(set.title)}</h2></div><p class="section-desc">${esc(set.desc)}</p></div><div class="tiles">${set.items.map((item,i)=>`<article class="option ${item[0]==='R1.1'||item[0]==='R2.2'||item[0]==='R3.3'?'recommended':''}"><div class="label"><div class="label-row"><span class="code">${esc(item[0])}</span><span class="name">${esc(item[1])}</span></div>${item[3]?`<span class="limitation">${esc(item[3])}</span>`:''}</div><div class="q-tile"><div class="ph"><img src="${item[2]}" alt="${esc(item[1])} ritual imagery review candidate"></div><div class="tx"><span class="mo">${copy[i][0]}</span><strong>${copy[i][1]}</strong><span>${copy[i][2]}</span></div></div></article>`).join('')}</div></section>`).join('');
     const writeMetrics=()=>{const m={innerWidth:window.innerWidth,clientWidth:document.documentElement.clientWidth,scrollWidth:document.documentElement.scrollWidth,devicePixelRatio:window.devicePixelRatio};document.documentElement.dataset.metrics=JSON.stringify(m);document.getElementById('metrics').textContent=JSON.stringify(m)};
