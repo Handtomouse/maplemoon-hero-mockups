@@ -6,32 +6,7 @@
   "redirects": [
     {
       "source": "/",
-      "destination": "/homepage.html",
-      "statusCode": 302
-    },
-    {
-      "source": "/shop",
-      "destination": "/shop.html",
-      "statusCode": 302
-    },
-    {
-      "source": "/our-story",
-      "destination": "/our-story.html",
-      "statusCode": 302
-    },
-    {
-      "source": "/carob-story",
-      "destination": "/carob-story.html",
-      "statusCode": 302
-    },
-    {
-      "source": "/stockists",
-      "destination": "/stockists.html",
-      "statusCode": 302
-    },
-    {
-      "source": "/faq",
-      "destination": "/faq.html",
+      "destination": "/homepage",
       "statusCode": 302
     }
   ],

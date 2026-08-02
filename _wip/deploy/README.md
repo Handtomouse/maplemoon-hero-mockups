@@ -48,10 +48,40 @@ breaks the freeze).
 
 2. **Prove no internal content came along** before deploying:
 
+       rm -f _wip/deploy/site/MANIFEST.json   # internal review metadata - see below
        find _wip/deploy/site -maxdepth 1 | sort
-       # expect ONLY: the 6 html pages, index.html, MANIFEST.json,
-       #              4 css, mock-cart.js, assets/, vercel.json
+       # expect ONLY: the 6 html pages, 4 css, mock-cart.js, assets/, vercel.json
+       # (there is no index.html - "/" is handled by a redirect)
        ! test -e _wip/deploy/site/_wip && ! test -e _wip/deploy/site/docs && echo "CLEAN"
+
+   **Delete `MANIFEST.json` from the deploy copy.** It ships inside `clean/`, no page
+   references it, and it served 200 on the first live deploy — exposing the artifact's
+   classification, file hashes and allowed-host policy on a URL the client can browse.
+
+## THE SECOND TRAP — `cleanUrls` and `redirects` fight each other
+
+**This shipped broken once, on 2026-08-03. Do not reintroduce it.**
+
+`cleanUrls: true` already does two things by itself: it serves `/shop` from `shop.html`,
+**and** it 308-redirects `/shop.html` to `/shop`. Adding an explicit redirect from
+`/shop` back to `/shop.html` therefore builds an infinite loop:
+
+    /shop.html --308(cleanUrls)--> /shop --302(redirect)--> /shop.html --> ...
+
+Every internal nav link in these pages is written as `shop.html`, `our-story.html`,
+`stockists.html`, `carob-story.html` — so the homepage loaded fine and **every single
+page Carli clicked from it died with a redirect loop.** The homepage escaped only
+because nothing redirects `/homepage`.
+
+The config now carries exactly one redirect and no per-page rules:
+
+    "cleanUrls": true,
+    "redirects": [ { "source": "/", "destination": "/homepage", "statusCode": 302 } ]
+
+Verify after every deploy that a `.html` link resolves in **one** hop:
+
+    curl -s -o /dev/null -w '%{http_code} -> %{redirect_url}\n' https://<url>/shop.html
+    # expect 308 -> /shop , and then /shop must return 200, not another 302
 
 3. **Deploy that directory only.**
 
