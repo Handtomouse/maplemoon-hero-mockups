@@ -1,0 +1,29 @@
+{
+  "schema": "maplemoon-founder-selects-completion-gate/v1",
+  "generated_at": "2026-08-03T08:41:44+10:00",
+  "terminal_state": "READY-FOR-NATE",
+  "requirements": {
+    "five_verified_raw_developments": "verified",
+    "necessary_manual_photoshop_work": "verified",
+    "five_non_overwriting_layered_work_files": "verified",
+    "five_full_resolution_review_exports": "verified",
+    "source_hashes_unchanged": "verified",
+    "native_100_percent_qa": "verified",
+    "production_css_55_87_94": "verified",
+    "portrait_crop_guard": "verified",
+    "isolated_image_commits": "verified",
+    "final_contact_sheet": "verified",
+    "session_ledger": "verified",
+    "select_receipts": "verified",
+    "parent_live_wip_frozen_untouched": "verified"
+  },
+  "review_artifact": {
+    "path": "_wip/evidence/founder-selects-20260803/FIVE_SELECT_CONTACT_SHEET.png",
+    "sha256": "07e973c977754358610af8d5e732fff4e1c28c80a4160c694fa10f971fc36c69",
+    "dimensions": "1824x1368"
+  },
+  "pending": ["Nate visual acceptance"],
+  "site_integration_performed": false,
+  "merge_performed": false,
+  "upload_or_deploy_performed": false
+}

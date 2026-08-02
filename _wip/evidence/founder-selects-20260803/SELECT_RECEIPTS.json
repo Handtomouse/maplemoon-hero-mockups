@@ -1,0 +1,84 @@
+{
+  "schema": "maplemoon-founder-selects-receipts/v1",
+  "generated_at": "2026-08-03T08:41:44+10:00",
+  "checks": {
+    "drive_source_hashes": {
+      "method": "iMac GUI Terminal shasum -a 256",
+      "result": "verified",
+      "hashes_match_staged_inputs": true
+    },
+    "photoshop_layer_audit": {
+      "method": "Photoshop JSX read of document.layers",
+      "result": "verified",
+      "layers": {"55": 3, "70": 2, "87": 2, "94": 2, "97": 2}
+    },
+    "review_exports": {
+      "result": "verified",
+      "all_open": true,
+      "all_srgb": true,
+      "all_dimensions_expected": true,
+      "all_repo_hashes_match_imac": true
+    },
+    "production_css": {
+      "result": "verified",
+      "selects": [55, 87, 94],
+      "desktop_viewport": 1440,
+      "mobile_viewport": 390,
+      "object_fit": "cover",
+      "object_position": "46% 40%",
+      "desktop_mask": "horizontal 11/91 and vertical 8/90",
+      "mobile_mask": "vertical 8/88",
+      "select_55_browser_errors": [],
+      "select_55_mobile_overflow": false
+    },
+    "portrait_crop_guard": {
+      "command": "node scripts/check-maplemoon-portrait-crop.mjs",
+      "exit_code": 0,
+      "output": [
+        "ok object-position 46% 40% unchanged",
+        "ok mask stops 11%/91% and 8%/90% unchanged",
+        "ok no v04-derived portrait wired yet, gate not armed",
+        "ok no founder bio slot wired yet, bio gate not armed"
+      ]
+    },
+    "shoot_status": {
+      "rows": 160,
+      "unique_select_ids": 160,
+      "ready_for_nate": 5,
+      "awaiting_direction": 155
+    },
+    "forbidden_scope_diff": {
+      "base_commit": "4214f48a8f683f70598d23f2a6c78f0a1c82531f",
+      "patterns": ["docs/client-review/*/staging-v1", "assets", "WIP", "docs/orchestration/packets"],
+      "matches": []
+    }
+  },
+  "proofs": {
+    "55": [
+      ["qa/select-55-v05-desktop-1440.png", "e204ba18ec0567114a892161a3dcb581030599647063e665259364ae91fc65e5"],
+      ["qa/select-55-v05-mobile-390.png", "f66ce09f43382d4a77bad9eaddef64f991d5028eddd10807112970239770e9ea"],
+      ["qa/select-55-v05-native-background-join-100pct.png", "cc34cd106bdf454f89bf0f782ff64a15683677d9477252c3d49a8a67b7374d21"],
+      ["qa/select-55-v05-native-faces-edges-100pct.png", "b38c66584ff71ab044773c3c948fef6378c7284b020721a2e23b68ef0f166a0f"]
+    ],
+    "70": [
+      ["qa/select-70-native-background-100pct.png", "9f41cddd529e1cc1e905ceaadb4a3325bb7470fb836e89a5ed8d22c7997c52b6"],
+      ["qa/select-70-native-hands-pod-100pct.png", "e803e807b80a58742e5161476334a9afd3f1c38114c029e7a53d9484516a8de4"]
+    ],
+    "87": [
+      ["qa/select-87-carli-desktop-1440.png", "3674fc44296b6c9931f65165c945a473c314f6dfcd97236a79b48b5f28fb978a"],
+      ["qa/select-87-carli-mobile-390.png", "6340783c7e69f6ed11157dd994fc11e6e9716fdae1ba04871912fd2cac57fd7b"],
+      ["qa/select-87-native-face-hair-100pct.png", "1e9cf2c2f5151004276a125615ad118e1a7bbc6e80ba576ad07ce0791a2c9926"],
+      ["qa/select-87-native-shoulder-edge-100pct.png", "b38c46b999ab1e1cc8fb9e9b774f7746a016e40738c90522562be1527a057a31"]
+    ],
+    "94": [
+      ["qa/select-94-dylan-desktop-1440.png", "3c73e4323b1af8b5b2b084ed6d620c36c0d318f21367e1592862a3877c31939e"],
+      ["qa/select-94-dylan-mobile-390.png", "b9f38a48572c74e09f3da76d1820c45af46337915bdfb93c45e2293d8f311446"],
+      ["qa/select-94-native-face-hair-100pct.png", "d676f4f20f113d730a50a05d7fa939770880e3ad3cc9580a4a0466591a1ceb40"],
+      ["qa/select-94-native-pair-edge-100pct.png", "1d369bd615e3de289ec97d2f3e6ba221ccfa032a5fbf40deb153b2c4182b1406"]
+    ],
+    "97": [
+      ["qa/select-97-native-faces-hair-100pct.png", "23e8a1c2fbe2f4c908ca5ff14fc74edb3cc4b9f9ce6b789eee25964c8215c09e"],
+      ["qa/select-97-native-hands-edges-100pct.png", "4b18548342dd861ff7b46bdb73f15a85420608b3010dd54d7a74f12097f846a3"]
+    ]
+  }
+}

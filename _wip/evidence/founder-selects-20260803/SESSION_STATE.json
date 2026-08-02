@@ -15,5 +15,5 @@
     {"select": 94, "role": "Dylan bio", "state": "ready_for_nate", "note": "v01 reconciled: source receipt, objective checks, 1440/390 proof and crop guard recorded."},
     {"select": 97, "role": "editorial standing", "state": "ready_for_nate", "note": "Full-frame output, source hash, clipping and native face/hair/hand/edge QA recorded."}
   ],
-  "next_action": "Assemble the five-select contact sheet, session ledger, receipts and completion-gate evidence."
+  "next_action": "Nate reviews the five-select contact sheet; no integration has been performed."
 }
