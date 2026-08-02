@@ -57,8 +57,8 @@ html{scroll-behavior:smooth;}
 
 /* stockist finder */
 .st-finder{padding:0 0 38px;margin-top:26px;position:relative;z-index:2;}
-.st-skip-finder{position:absolute;left:18px;top:8px;z-index:8;transform:translateY(-160%);border:1px solid var(--blue-deep);border-radius:50px;background:var(--card);color:var(--blue-night);font-size:.7rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;padding:11px 16px;transition:transform .2s;}
-.st-skip-finder:focus{transform:translateY(0);outline:2px solid rgba(69,119,152,.62);outline-offset:3px;}
+.st-skip-finder{position:absolute;left:18px;top:8px;z-index:8;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0 0 0 0);clip-path:inset(50%);white-space:nowrap;border:0;border-radius:50px;background:var(--card);color:var(--blue-night);font-size:.7rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;}
+.st-skip-finder:focus{width:auto;height:auto;padding:11px 16px;overflow:visible;clip:auto;clip-path:none;border:1px solid var(--blue-deep);outline:2px solid rgba(69,119,152,.62);outline-offset:3px;}
 .st-finder-intro{display:none;text-align:center;margin-bottom:26px;}
 .st-finder-intro h2{font-family:var(--mm-serif);font-weight:500;font-size:1.72rem;margin:0 0 8px;}
 .st-finder-intro h2 em{font-style:italic;font-weight:400;}
@@ -1219,7 +1219,7 @@ html{scroll-behavior:smooth;}
 .sp .st-trade .inner::before{inset:-120px 0 auto;}
 .sp .st-trade .inner::after{inset:auto 0 -120px;}
 @media(max-width:900px){
-  .sp .st-skip-finder{display:none;}
+  .sp 
   .sp .st-trade .inner::before,.sp .st-trade .inner::after{height:220px;filter:blur(13px);}
   .sp .st-trade .inner::before{inset:-72px 0 auto;}
   .sp .st-trade .inner::after{inset:auto 0 -72px;}

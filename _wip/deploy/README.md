@@ -176,6 +176,35 @@ superseded by the W1-E WebP shots under `assets/product_shots/w1-e-prepared-2026
 **Left alone deliberately** — that path is under an active RECROP writer. Fold them in
 when W1-E lands and shop drops to roughly 1.5MB.
 
+### Second divergence: the stockists skip-link fix (2026-08-03)
+
+`clean/stockists.html` carries a broken `.st-skip-finder` rule. It hides the skip link with
+`transform:translateY(-160%)`, but its positioned ancestor starts partway down the page, so
+`-70px` lands the button at **y=263 — directly on top of the intro paragraph**, obscuring
+"Find Maple Moon at 200+ stockists across Australia". This is **not a mobile bug**: it is
+broken at 390 and at 1280 alike.
+
+The WIP source had masked it with `.st-skip-finder{display:none}` inside
+`@media(max-width:900px)` — which hid it on phones, left it broken on desktop, and removed
+the skip link entirely for mobile keyboard users.
+
+Fixed properly in **both** `_wip/stockists.WIP.html` (source) and the deploy copy, using the
+standard visually-hidden clip pattern instead of a transform, and the mobile `display:none`
+was removed. Verified: blurred → 1px wide with `clip-path:inset(50%)`; focused → 184px wide,
+`clip-path:none`; `href="#stockistResults"` target exists.
+
+`clean/` was NOT rebuilt and NOT touched — it still contains the broken rule. So the deploy
+copy now diverges from `clean/` on **two** things: `assets/licensed/` and this rule. A
+rebuild from `clean/` reintroduces the bug; re-apply the fix, or rebuild from the WIP source
+once the freeze lifts.
+
+### Known, NOT fixed — needs a design decision
+
+`carob-story.html` carob-vs-cacao comparison table at 390: content stacks into a ~130px left
+column with two-thirds of the width empty, and the feature labels (SOURCE, CAFFEINE) render
+*between* the two values they describe, scrambling the reading order. Not an overflow
+(`scrollWidth` equals `clientWidth`). How it should stack is Nate's call, not an agent's.
+
 ## Why `noindex` stays
 
 Correct and deliberate for a private preview. Three separate QA audits recommend removing it;
