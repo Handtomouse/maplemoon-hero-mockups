@@ -146,6 +146,32 @@ only. **R4 as originally written is withdrawn — do not swap bars or elixirs.**
 
 ---
 
+## SHOP
+
+### Carried over from homepage — not re-asked
+
+`RT1` seams (whole site) · `RT2` softer cards (applies to shop's product cards) · `R1` category
+icons (**shop has the chooser too — 7 `data-cat=` instances**) · `R4/R5/R6` product photos
+(**most of this lands on shop**, since every product appears here).
+
+### New to shop
+
+| # | observation | class |
+|---|---|---|
+| SH1 | **Starter box is built twice** — homepage `q-sampler` (no price) and shop `sp-sampler` ($77.70 struck to $73.82), different copy, zero shared classes. **Nate ruled: intentional, leave it.** Homepage teases, shop sells | **no change** |
+| SH2 | Pricing and buying model — **"Small fix", specifics not yet given** | **B, unspecified** |
+| SH3 | *"just make the filters a less intensive"* — reduce the prominence/weight of the catalogue controls (quick-nav pills, flavour chips, Featured sort) | **B** |
+
+> **SH2 needs specifying before it can be built.** The pricing area holds three distinct
+> issues: bulk tiers on Moons (1/5/10/20), a `$5.99–$59.99` range on Eclipse Bites with **no
+> size selector**, and `Enquire For Retail` vs `Add To Cart` split across categories with no
+> explanation. "Small fix" could mean any of them. **Ask before building.**
+
+> **SH1 is a useful ruling to record.** It confirms the duplicated-per-page architecture is
+> *intentional* here, not drift. Do not let a future consistency sweep "fix" it.
+
+---
+
 ## Lane compliance
 
 Written inside `_wip/evidence/` only. Nothing fixed, edited, built or recorded as a gate.
