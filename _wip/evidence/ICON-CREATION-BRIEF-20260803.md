@@ -84,10 +84,30 @@ Current state — all crude, all System B:
 bite, a dipped banana, an elixir bottle, an eclipse bite. Drawn in System A's language, but
 simplified for small on-screen use (see §5).
 
-> **⚠️ BLOCKING NAMING DECISION — Carli's call, not a design one.** The tab reads **MOONS**,
-> the selector says **`crescents`**, the product copy says **"Pure Carob Crescent"**, and faq
-> says **"CAROB MOONS"**. Three names for one category. **The icon depicts whichever is
-> chosen** — a moon reads differently from a crescent bite. Settle the name before drawing.
+> **✅ NAMING RESOLVED — 2026-08-03.** Nate, answering on Carli's behalf:
+> **the category is "Moons"; they are presented by a crescent.**
+>
+> Provenance: recorded as **Nate's decision on Carli's behalf**, not as Carli's own ruling. It
+> is a design/naming call, which is Nate's to make — it is not a CR gate. Worth confirming with
+> Carli in the review send, since it renames a product line.
+>
+> **Consequences for the drawing:** the mark is a **crescent** — the moon form, consistent with
+> the Maple Moon wordmark — and every label reads **Moons**. Not "Crescent", not "Crescents".
+>
+> **Naming standardisation this unblocks** (currently four names for one category):
+>
+> | location | now | becomes |
+> |---|---|---|
+> | homepage tab | `CRESCENTS` | **MOONS** |
+> | homepage selector | `data-cat="crescents"` | `data-cat="moons"` *(code change — needs a packet)* |
+> | homepage product copy | "Pure Carob Crescent", "A crescent-shaped carob bite…" | **Moon** |
+> | shop section | `MOONS` ✓ | unchanged |
+> | carob-story | `crescents` | **Moons** |
+> | faq | `CAROB MOONS` | **Moons** |
+>
+> This closes homepage audit **#34** (tab/copy taxonomy disagreement) and the cross-page audit's
+> category-naming row. **Copy changes are content edits and still need the normal approval —
+> this settles *which* name, not permission to rewrite the pages.**
 
 ### 4.2 Carob-story page — currently has no iconography at all
 
@@ -153,6 +173,36 @@ to 24px will not read.
 The honest brief is: *keep the drawing hand, drop the badge furniture.* Same organic line
 quality, same cream, same fill technique — without the enclosing ring and curved type, which
 exist to make a standalone certification stamp and serve no purpose inline.
+
+## 8b. READY TO APPLY — bundle the caffeine-free icon into the carob packet
+
+Wiring `icon_caffeine_free.svg` into the homepage carob facts row is **not a one-line change**,
+and must not be attempted standalone:
+
+| step | blocker |
+|---|---|
+| edit `_wip/homepage_real_1_lead_photo.WIP.html` | in `LOCK_MANIFEST.json` (3 entries, recorded hash) and named in 5 packets. **Codex is lock custodian.** |
+| ship the asset | `clean/assets/` holds **2** SVGs vs **16** in source. `scripts/build-maplemoon-saturday-review.py` carries an explicit asset list and only path-rewrites the logo (lines 398–399). **Needs a script change — `scripts/` is off-limits and mid-flight.** |
+| rebuild `staging-v1` | **voids the freeze.** Keyboard traversal (`9ead886`) and 200% zoom pre-screen (`fe3c580`) are bound to `clean/MANIFEST.json = d1c66b1d…`. |
+
+**Therefore: bundle it into `SAT-HOME-CAROB-HORIZONTAL-BALANCE-01`.** That packet already edits
+this exact WIP file and already forces a rebuild, so the icon rides along at zero additional
+freeze cost — and it sits in the carob facts row, inside the very section that packet corrects.
+
+Prepared change, for whoever holds the packet:
+
+1. **WIP source** — in the `.q-facts` row, replace the inline 24×24 stroke SVG on the
+   *Caffeine free* item with `<img src="assets/icon_caffeine_free.svg" alt="" width="24"
+   height="24">`. Leave the other two items alone; their marks do not exist yet (§4.3).
+2. **Build script** — add `assets/icon_caffeine_free.svg` to the copied-asset list so it lands
+   in `clean/assets/`. **Without this the image 404s in the built package.**
+3. **Verify** — `clean/assets/icon_caffeine_free.svg` returns 200, and the mark renders at
+   24px. Note §5: the 250×250 original is illustration-dense and **may not read at 24px**. If it
+   does not, that is evidence for the simplified small-size cut, not a reason to revert to the
+   line icon.
+
+**Do not apply any of this from an evidence lane.** It is recorded here so the packet holder
+can act in one move.
 
 ## 9. Lane compliance
 
