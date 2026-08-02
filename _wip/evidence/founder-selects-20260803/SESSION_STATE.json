@@ -9,11 +9,11 @@
   "defects": [],
   "checks": [],
   "queue": [
-    {"select": 55, "role": "pair hero", "state": "awaiting_direction", "note": "Full frame and native QA clean; unchanged mobile production crop loses Carli."},
+    {"select": 55, "role": "pair hero", "state": "ready_for_nate", "note": "v05 mobile-safe canvas verified at native scale and with production CSS at 1440 and 390."},
     {"select": 70, "role": "hands passing carob pod", "state": "ready_for_nate", "note": "Full-frame output, source hash, clipping and native hands/pod/background QA recorded."},
     {"select": 87, "role": "Carli bio", "state": "ready_for_nate", "note": "v01 reconciled: source receipt, objective checks, 1440/390 proof and crop guard recorded."},
     {"select": 94, "role": "Dylan bio", "state": "ready_for_nate", "note": "v01 reconciled: source receipt, objective checks, 1440/390 proof and crop guard recorded."},
     {"select": 97, "role": "editorial standing", "state": "ready_for_nate", "note": "Full-frame output, source hash, clipping and native face/hair/hand/edge QA recorded."}
   ],
-  "next_action": "Await frame-specific direction for unresolved shoot frames; no unadmitted pixel work remains."
+  "next_action": "Assemble the five-select contact sheet, session ledger, receipts and completion-gate evidence."
 }
