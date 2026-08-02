@@ -1,0 +1,89 @@
+{
+  "manifest_version": 1,
+  "created_date": "2026-07-31",
+  "scope": "MapleMoon Wave 1D missing/wrong imagery studio, six Saturday-review pages",
+  "source_pages": [
+    "review-20260724/homepage_real_1_lead_photo.WIP.html",
+    "review-20260724/shop.WIP.html",
+    "review-20260724/our-story.WIP.html",
+    "review-20260724/carob-story.WIP.html",
+    "review-20260724/faq.WIP.html",
+    "review-20260724/stockists.WIP.html"
+  ],
+  "generated_with": "built-in image_gen workflow",
+  "page_references_changed": false,
+  "approval_status": "review-candidates-only",
+  "candidates": [
+    {
+      "id": "MM-W1D-RITUAL-01",
+      "filename": "ritual-after-dinner-v1.png",
+      "path": "docs/client-review/2026-08-01-saturday-review/generated-candidates/ritual-after-dinner-v1.png",
+      "intended_section": "review-20260724/homepage_real_1_lead_photo.WIP.html#ritual, after-dinner tile",
+      "source_references": [
+        {"path": "assets/licensed/scene_after_dinner.jpg", "role": "composition and scene reference"},
+        {"path": "assets/hero_shots/blue_fog_001.webp", "role": "atmosphere and palette reference"}
+      ],
+      "dimensions": "1619x972 px",
+      "aspect_ratio": "5:3",
+      "prompt": "Use case: photorealistic-natural\nAsset type: homepage ritual tile, after-dinner mood\nPrimary request: Create a new wide editorial lifestyle photograph for a premium carob brand review candidate. A quiet after-dinner table scene with a dark stone serving board, a few irregular unbranded dark carob-like squares, a simple warm wooden bowl, and subtle crumbs. Match the restrained, tactile, cinematic mood of the supplied local references while keeping the scene original.\nScene/backdrop: deep blue-grey evening interior, dark stone tabletop, no people.\nComposition/framing: wide landscape 5:3 crop-safe composition; main food grouping lower-right/centre with calm negative space; natural shallow depth of field.\nLighting/mood: low warm side light against cool blue shadow, intimate, quiet, premium editorial food photography.\nColor palette: charcoal, cocoa brown, muted moon-blue, restrained warm wood.\nMaterials/textures: rough stone, matte ceramic or wood, natural food texture.\nText (verbatim): \"\"\nConstraints: this is a concept image only; no branded packaging, no logos, no labels, no readable text, no exact MapleMoon product recreation, no founders or identifiable people, no claims, no watermark.\nAvoid: chocolate-bar branding, wrappers, typography, hands, faces, glossy commercial food styling, oversaturated colour, artificial CGI look.",
+      "known_limitations": [
+        "Generic unbranded food forms are not an exact MapleMoon product or packaging representation.",
+        "The current tile uses a 390x234 desktop slot, so final crop and focal treatment still need human review.",
+        "Generated imagery cannot establish product ingredients, claims, or client photography provenance."
+      ],
+      "visual_validation": "passed local raster inspection on 2026-07-31; no readable text, branding, people, watermark, or obvious generation artifact observed",
+      "approval": "not approved; Nate visual decision required before any page reference"
+    },
+    {
+      "id": "MM-W1D-RITUAL-02",
+      "filename": "ritual-afternoon-v1.png",
+      "path": "docs/client-review/2026-08-01-saturday-review/generated-candidates/ritual-afternoon-v1.png",
+      "intended_section": "review-20260724/homepage_real_1_lead_photo.WIP.html#ritual, afternoon tile",
+      "source_references": [
+        {"path": "assets/licensed/scene_afternoon.jpg", "role": "composition and scene reference"},
+        {"path": "assets/hero_shots/blue_fog_001.webp", "role": "atmosphere and palette reference"}
+      ],
+      "dimensions": "1619x971 px",
+      "aspect_ratio": "5:3",
+      "prompt": "Use case: photorealistic-natural\nAsset type: homepage ritual tile, afternoon mood\nPrimary request: Create a new wide editorial lifestyle photograph for a premium carob brand review candidate. A quiet afternoon table beside a bright window with a plain handmade ceramic cup, a few small unbranded dark carob-like pieces on a simple stone saucer, pale linen, and soft natural shadows. Match the calm, tactile, blue-and-cream mood of the supplied local references while keeping the scene original.\nScene/backdrop: sunlit interior, pale stone or warm wood surface, no people.\nComposition/framing: wide landscape 5:3 crop-safe composition; cup and small food detail grouped slightly left of centre with open breathing room; natural shallow depth of field.\nLighting/mood: gentle late-afternoon window light, quiet, airy, slow-living editorial food photography.\nColor palette: warm cream, pale stone, soft cornflower blue, muted cocoa brown.\nMaterials/textures: handmade ceramic, linen, natural food texture, softly worn tabletop.\nText (verbatim): \"\"\nConstraints: this is a concept image only; no branded packaging, no logos, no labels, no readable text, no exact MapleMoon product recreation, no founders or identifiable people, no claims, no watermark.\nAvoid: chocolate-bar branding, wrappers, typography, hands, faces, cluttered props, oversaturated colour, artificial CGI look.",
+      "known_limitations": [
+        "Generic unbranded food forms are not an exact MapleMoon product or packaging representation.",
+        "The current tile uses a 390x234 desktop slot, so final crop and focal treatment still need human review.",
+        "Generated imagery cannot establish product ingredients, claims, or client photography provenance."
+      ],
+      "visual_validation": "passed local raster inspection on 2026-07-31; no readable text, branding, people, watermark, or obvious generation artifact observed",
+      "approval": "not approved; Nate visual decision required before any page reference"
+    },
+    {
+      "id": "MM-W1D-RITUAL-03",
+      "filename": "ritual-tea-night-v1.png",
+      "path": "docs/client-review/2026-08-01-saturday-review/generated-candidates/ritual-tea-night-v1.png",
+      "intended_section": "review-20260724/homepage_real_1_lead_photo.WIP.html#ritual, tea-at-night tile",
+      "source_references": [
+        {"path": "assets/licensed/scene_tea_night.jpg", "role": "composition and scene reference"},
+        {"path": "assets/hero_shots/blue_fog_001.webp", "role": "atmosphere and palette reference"}
+      ],
+      "dimensions": "1619x972 px",
+      "aspect_ratio": "5:3",
+      "prompt": "Use case: photorealistic-natural\nAsset type: homepage ritual tile, tea-at-night mood\nPrimary request: Create a new wide editorial lifestyle photograph for a premium carob brand review candidate. A plain handmade ceramic mug with a little steam on a wooden table by a deep blue evening window, with one or two small unbranded dark carob-like pieces placed nearby. Match the quiet blue-hour atmosphere of the supplied local references while keeping the scene original.\nScene/backdrop: deep blue dusk interior, soft out-of-focus window lights, no people.\nComposition/framing: wide landscape 5:3 crop-safe composition; mug placed on the right third with generous atmospheric negative space on the left for the existing tile crop; natural shallow depth of field.\nLighting/mood: cool moon-blue ambient light with one restrained warm practical glow, contemplative, quiet, premium editorial food photography.\nColor palette: deep ocean blue, slate, warm wood, muted cocoa brown, soft cream ceramic.\nMaterials/textures: worn wood, matte handmade ceramic, subtle steam, natural food texture.\nText (verbatim): \"\"\nConstraints: this is a concept image only; no branded packaging, no logos, no labels, no readable text, no exact MapleMoon product recreation, no founders or identifiable people, no claims, no watermark.\nAvoid: chocolate-bar branding, wrappers, typography, hands, faces, excessive steam, dramatic fantasy lighting, oversaturated colour, artificial CGI look.",
+      "known_limitations": [
+        "Generic unbranded food forms are not an exact MapleMoon product or packaging representation.",
+        "The current tile uses a 390x234 desktop slot, so final crop and focal treatment still need human review.",
+        "Generated imagery cannot establish product ingredients, claims, or client photography provenance."
+      ],
+      "visual_validation": "passed local raster inspection on 2026-07-31; no readable text, branding, people, watermark, or obvious generation artifact observed",
+      "approval": "not approved; Nate visual decision required before any page reference"
+    }
+  ],
+  "contact_sheet": {
+    "path": "docs/client-review/2026-08-01-saturday-review/generated-candidates/ritual-candidates-contact-sheet.png",
+    "dimensions": "1632x396 px",
+    "contents": ["ritual-after-dinner-v1.png", "ritual-afternoon-v1.png", "ritual-tea-night-v1.png"]
+  },
+  "not_generated": [
+    "Founder portraits or hands: needs client asset and identity/source approval.",
+    "Packaging, labels, exact product variants, or catalogue imagery: needs approved client/catalogue source.",
+    "Testimonials, stockists, certifications, claims, or social proof: not imagery-safe gaps.",
+    "FAQ decorative source-page file reference: placeholder/source-page issue, intentionally not edited in this task."
+  ]
+}

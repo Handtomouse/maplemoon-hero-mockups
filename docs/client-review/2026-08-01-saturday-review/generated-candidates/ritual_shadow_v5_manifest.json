@@ -1,0 +1,82 @@
+{
+  "batch": "wave_1d_phase_2_v5_correction",
+  "created_date": "2026-08-01",
+  "generator": "built_in_image_generation",
+  "status": "pending_human_review",
+  "approval_scope": "Nate-approved single bounded v5 correction batch; no page or code integration",
+  "botanical_reference": {
+    "path": "assets/licensed/carob_pods_macro.jpg",
+    "role": "only verified botanical appearance reference",
+    "dimensions": { "width": 7360, "height": 4912 },
+    "sha256": "0426510e9b7446415af8884ad7969d99d26de7a3cbcbedb0c7ca121379f31922"
+  },
+  "candidates": [
+    {
+      "file": "ritual_after_dinner_shadow_v5.png",
+      "intended_ritual_tile": "after_dinner",
+      "status": "pending_human_review",
+      "dimensions": { "width": 1672, "height": 941 },
+      "sha256": "02111e2c50cda5824e56b0070baafbfd24201493565acec6aba4e9fd53f0b4dd",
+      "composition_source": {
+        "path": "ritual_after_dinner_shadow_v4b.png",
+        "sha256": "99089c8931b5ba2fed88c4b01bd1f561136debe9262af56e594bfcf2d430a95e"
+      },
+      "final_prompt": "Use case: precise-object-edit. Asset type: review-only website ritual tile candidate. Input images: Image 1 is the edit target and composition authority. Image 2 is the only botanical appearance reference for real dried carob pods. Primary request: Preserve Image 1's after-dinner composition, crop, object count and placement, pale MapleMoon website-blue seamless surface and backdrop, restrained diagonal directional shadow, negative space, and quiet handmade weathered-cream shallow stoneware dish. Change only the carob pods so they appear convincingly real, dry, organic and photographically natural, informed by the dried pods in Image 2. Subject texture: true dark natural brown carob pods with substantially reduced sheen and very limited soft specular response; irregular longitudinal wrinkles, uneven ridges, subtle scars, tiny edge chips, dry leathery matte skin, varied tapering, natural asymmetry and individual differences between pods. Keep realistic botanical scale. Do not duplicate pod shapes. Camera and light: preserve Image 1's landscape framing, low three-quarter close view, shallow-to-moderate depth, cool daylight and restrained directional shadows. Invariants: preserve the exact overall B composition, palette, dish, backdrop, surface, crop, lighting direction and generous left-side negative space. No additional objects. No packaging, wrappers, logos, labels, readable text, claims, people, hands, branches, foliage, flowers, linen, wood boards, farmhouse styling, patterns, marble, glossy plastic, ornate objects, recognisable designer forms, watermark or border. No smooth resin, lacquer, metallic bronze, CGI surface, idealised symmetry or oversized fantasy forms. These are generic dried carob pods, not exact MapleMoon products, recipes or client photography.",
+      "v4b_comparison": "Reduced broad glossy highlights; added finer wrinkles, dry ridges and irregular edges while preserving the B composition, dish, blue field and shadow.",
+      "known_limitations": [
+        "Foreground pod remains cleaner and more elongated than examples in the botanical reference.",
+        "Rear pods are partly obscured.",
+        "Dish is generated and unbranded."
+      ]
+    },
+    {
+      "file": "ritual_afternoon_shadow_v5.png",
+      "intended_ritual_tile": "afternoon",
+      "status": "pending_human_review",
+      "dimensions": { "width": 1672, "height": 941 },
+      "sha256": "84e2f068fb9467c20a2a5ce039c401fc4acce428e02b334f78f00aad376af734",
+      "composition_source": {
+        "path": "ritual_afternoon_shadow_v4b.png",
+        "sha256": "10d265cdebbd65bc7f1d74d9c8dae33a24adb0d5798811114a4233cb9f1d4ce1"
+      },
+      "final_prompt": "Use case: precise-object-edit. Asset type: review-only website ritual tile candidate. Input images: Image 1 is the edit target and composition authority. Image 2 is the only botanical appearance reference for real dried carob pods. Primary request: Preserve Image 1's afternoon composition, crop, single-pod placement, pale MapleMoon website-blue seamless surface and backdrop, restrained long directional shadow, generous negative space, and softly out-of-focus low handmade grey-blue stoneware dish. Change only the carob pod so it appears convincingly real, dry, organic and photographically natural, informed by the dried pods in Image 2. Subject texture: true dark natural brown carob pod with substantially reduced sheen and very limited soft specular response; irregular wrinkles, uneven longitudinal ridges, subtle scars, tiny edge chips, dry leathery matte skin, uneven tapering, natural asymmetry and a plausible imperfect stem. Keep realistic botanical scale and avoid an inflated or sculpted silhouette. Camera and light: preserve Image 1's landscape framing, low three-quarter close view, shallow depth, cool daylight and restrained long shadow. Invariants: preserve the exact overall B composition, palette, dish, backdrop, surface, crop, lighting direction and left-side negative space. No additional objects. No packaging, wrappers, logos, labels, readable text, claims, people, hands, branches, foliage, flowers, linen, wood boards, farmhouse styling, patterns, marble, glossy plastic, ornate objects, recognisable designer forms, watermark or border. No smooth resin, lacquer, metallic bronze, CGI surface, idealised symmetry or oversized fantasy forms. This is a generic dried carob pod, not an exact MapleMoon product, recipe or client photograph.",
+      "v4b_comparison": "Replaced the shiny inflated surface with a darker, drier, irregularly wrinkled pod and lower specular glare while preserving the long shadow and negative space.",
+      "known_limitations": [
+        "Tip and stem remain model-generated approximations.",
+        "Dish is generated and unbranded."
+      ]
+    },
+    {
+      "file": "ritual_tea_night_shadow_v5.png",
+      "intended_ritual_tile": "tea_at_night",
+      "status": "pending_human_review",
+      "dimensions": { "width": 1672, "height": 941 },
+      "sha256": "965f2fd8ba35dca16ce025456a783f6179afd6b78e3f1155b10f489695f45daf",
+      "composition_source": {
+        "path": "ritual_tea_night_shadow_v4b.png",
+        "sha256": "ba1b5f4f0029876490952ba46d391470f1c68bec18ce268f9a1f87c60dc16df7"
+      },
+      "final_prompt": "Use case: precise-object-edit. Asset type: review-only website ritual tile candidate. Input images: Image 1 is the edit target and composition authority. Image 2 is the only botanical appearance reference for real dried carob pods. Primary request: Preserve Image 1's tea-at-night composition, crop, two-pod placement, pale MapleMoon website-blue seamless surface and backdrop, restrained directional shadows, generous left negative space, and quiet handmade weathered-cream stoneware cup behind the pods. Change only the carob pods so they appear convincingly real, dry, organic and photographically natural, informed by the dried pods in Image 2. Subject texture: two distinctly different true dark natural brown carob pods with substantially reduced sheen and very limited soft specular response. Give each its own irregular wrinkles, uneven longitudinal ridges, subtle scars, tiny edge chips, dry leathery matte skin, varied taper, curvature, thickness and natural asymmetry. Do not duplicate forms. Keep realistic botanical scale. Camera and light: preserve Image 1's landscape framing, low three-quarter close view, shallow-to-moderate depth, cool soft daylight and restrained directional shadow. Invariants: preserve the exact overall B composition, palette, cup, backdrop, surface, crop, lighting direction, object count and left-side negative space. No additional objects. No packaging, wrappers, logos, labels, readable text, claims, people, hands, branches, foliage, flowers, linen, wood boards, farmhouse styling, patterns, marble, glossy plastic, ornate objects, recognisable designer forms, watermark or border. No smooth resin, lacquer, metallic bronze, CGI surface, idealised symmetry or oversized fantasy forms. These are generic dried carob pods, not exact MapleMoon products, recipes or client photography.",
+      "v4b_comparison": "Reduced smooth repeated arcs and bright highlights; introduced distinct curvature, thickness, taper, wrinkles and end details while preserving the cup, crop and pale-blue lighting.",
+      "known_limitations": [
+        "Pods retain the deliberately parallel arrangement inherited from v4B.",
+        "Cup and atmospheric steam are generated and unbranded.",
+        "Image is not evidence of a MapleMoon recipe or serving ritual."
+      ]
+    }
+  ],
+  "contact_sheet": {
+    "file": "ritual_shadow_v5_contact_sheet.png",
+    "method": "deterministic vertical montage of the three saved v5 PNG files",
+    "dimensions": { "width": 1248, "height": 2172 },
+    "sha256": "7893d26225daa58858aedf56459c6fcaa4121e1ce948cd38f77bab826ab8ae4b",
+    "status": "pending_human_review",
+    "known_limitations": ["Scaled overview only; individual PNGs are the full-resolution review authority."]
+  },
+  "visual_qa": {
+    "inspection": "fresh original-resolution inspection of all three saved v5 candidates plus contact sheet",
+    "hard_exclusions": "pass",
+    "page_or_code_references_added": false,
+    "claim_boundary": "Generic generated pods and accessories must not be represented as exact MapleMoon products, recipes or client photography."
+  }
+}

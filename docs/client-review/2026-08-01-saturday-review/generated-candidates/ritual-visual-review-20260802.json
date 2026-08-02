@@ -1,0 +1,39 @@
+{
+  "schema": "maplemoon-ritual-visual-review/v1",
+  "packet_id": "WAVE-1D-RITUAL-VISUAL-REVIEW-20260802",
+  "worker_thread_id": "019fb5b5-de62-7862-a5fe-06bc59395c21",
+  "status": "pending_human_review",
+  "ready_to_promote": false,
+  "authority_sha256": "12689434a7c46c323b27d1c8a099cb9703bf910b8c6dbbac2cfca193a0c6b599",
+  "source_hashes": {
+    "ritual_after_dinner_shadow_v5.png": "02111e2c50cda5824e56b0070baafbfd24201493565acec6aba4e9fd53f0b4dd",
+    "ritual_afternoon_shadow_v5.png": "84e2f068fb9467c20a2a5ce039c401fc4acce428e02b334f78f00aad376af734",
+    "ritual_tea_night_shadow_v5.png": "965f2fd8ba35dca16ce025456a783f6179afd6b78e3f1155b10f489695f45daf",
+    "ritual_after_dinner_light_blue_v2.png": "45e077cd87df6ec8de78483a30ec5b97b67998552a0fcfe8f7262624837d718c",
+    "ritual_after_dinner_light_blue_v3.png": "8574fc568d723b2ad3cc528bf9613ed20313fdab7dfb63a82e2f1cdd788c9e24",
+    "ritual_after_dinner_shadow_v4a.png": "8f376620649b413fe1c29b79452eb0983dabfaa247d8844e0d274f40b6f319b4",
+    "ritual_after_dinner_shadow_v4b.png": "99089c8931b5ba2fed88c4b01bd1f561136debe9262af56e594bfcf2d430a95e"
+  },
+  "classifications": {
+    "v5_trio": "rejected_historical_too_similar",
+    "A_C_D": "selected_for_expansion_and_shown_as_three_review_options",
+    "E_H": "exploratory_only",
+    "original_v5_low_fidelity": "exploratory_only",
+    "final_approval": "none"
+  },
+  "review_board": {
+    "html": "ritual-visual-review-20260802.html",
+    "desktop_proof": {"path": "ritual-visual-review-20260802-desktop.png", "viewport": "1440x1000", "sha256": "e8151c264a440417f8e0b7d700efd6715bca5ec798e69e97737810135f68e93d"},
+    "mobile_proof": {"path": "ritual-visual-review-20260802-mobile.png", "viewport": "390x844", "sha256": "a93f9684a7455a7595523db88d74922eed84783f72a1d93b1bdcee4b4054829b"}
+  },
+  "rendered_viewport_results": {
+    "1440": {"overflow": false, "missing_images": 0, "offscreen_elements": 0},
+    "390": {"overflow": false, "missing_images": 0, "offscreen_elements": 0}
+  },
+  "limitations": [
+    "Existing generic generated pods and accessories are not exact MapleMoon products or client photography.",
+    "The board is local-only and unwired.",
+    "Human visual approval remains open."
+  ],
+  "unresolved_nate_decision": "Choose whether A, C, or D should receive the next human review as the preferred ritual visual direction; no option is approved in this packet."
+}

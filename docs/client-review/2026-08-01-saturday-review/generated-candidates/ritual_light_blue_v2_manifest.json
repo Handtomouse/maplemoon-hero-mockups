@@ -1,0 +1,66 @@
+{
+  "candidate_set": "maplemoon_homepage_ritual_light_blue_v2",
+  "status": "review_only_pending_human_approval",
+  "generated_on": "2026-07-31",
+  "tool": "built_in_image_generation",
+  "intended_section": "homepage #ritual three-tile sequence",
+  "locked_visual_direction": {
+    "atmosphere": "pale blue full-frame environment for botanicals and atmosphere; pale blue backdrop with true browns for ingredient and product-adjacent imagery",
+    "palette": ["#B7C9D9", "#C8D5DF", "#D7E2EA", "#457798"],
+    "background": "pure light and haze only, with no branches, botanical silhouettes, cast botanical shadows, or props"
+  },
+  "candidates": [
+    {
+      "id": "ritual_after_dinner_light_blue_v2",
+      "file": "ritual_after_dinner_light_blue_v2.png",
+      "section_label": "after dinner",
+      "source_references": [
+        "reference-options/selected_references_2026-07-31/08_blue_range_background.png",
+        "reference-options/selected_references_2026-07-31/06_bar_shadow_warm_archive.png",
+        "reference-options/selected_references_2026-07-31/02_carob_pod_shadow_001.png"
+      ],
+      "prompt": "A minimal after-dinner still life: one small unbranded dark-brown confection piece beside one real dried carob pod, low in a wide 16:9 pale powder-blue scene. Understated editorial food photography, airy and refined. Subject low on the right with generous clear space left and above. Soft evening-adjacent calm without becoming dark; luminous diffuse pale-blue haze and soft contact shadow. Atmosphere fully graded in #B7C9D9, #C8D5DF, #D7E2EA; confection and carob remain natural brown. Pure light and haze only, no branches, silhouettes, or props. No packaging, logo, readable text, people, hands, claims, watermark, or border.",
+      "known_limitations": [
+        "The confection is generic and does not represent a verified MapleMoon product or recipe.",
+        "The generated carob form is review-only and does not establish botanical provenance or product claims."
+      ],
+      "visual_validation": "Visually checked after generation: pale-blue full-frame treatment, unbranded, no readable text, no people, no packaging, no background branches.",
+      "approval_status": "pending_human_review"
+    },
+    {
+      "id": "ritual_afternoon_light_blue_v2",
+      "file": "ritual_afternoon_light_blue_v2.png",
+      "section_label": "afternoon",
+      "source_references": [
+        "reference-options/selected_references_2026-07-31/08_blue_range_background.png",
+        "reference-options/selected_references_2026-07-31/03_carob_pod_shadow_002.png",
+        "reference-options/selected_references_2026-07-31/07_carob_pods_chatgpt_archive.jpg"
+      ],
+      "prompt": "A minimal afternoon still life of two real dried dark-brown carob pods, gently overlapped low in a wide 16:9 pale powder-blue scene. Calm, bright editorial ingredient photography. Subject low and near centre with generous clean negative space. Warm afternoon daylight translated into a light, cool powder-blue website grade; very soft short contact shadow. Pale MapleMoon blue #B7C9D9 through #C8D5DF to #D7E2EA; pods remain natural brown with subtle cool reflected light. Pure light and haze only, no branches, silhouettes, or additional props. No packaging, logo, readable text, people, hands, claims, watermark, or border.",
+      "known_limitations": [
+        "The generated pods are generic review imagery, not a verified client-supplied photoshoot asset.",
+        "This does not establish any product, ingredient, nutrition, or sourcing claim."
+      ],
+      "visual_validation": "Visually checked after generation: pale-blue haze, brown pod treatment, no readable text, no people, no packaging, no background branches.",
+      "approval_status": "pending_human_review"
+    },
+    {
+      "id": "ritual_tea_night_light_blue_v2",
+      "file": "ritual_tea_night_light_blue_v2.png",
+      "section_label": "tea at night",
+      "source_references": [
+        "reference-options/selected_references_2026-07-31/08_blue_range_background.png",
+        "reference-options/selected_references_2026-07-31/01_elixir_pour.jpg"
+      ],
+      "prompt": "One small plain off-white ceramic cup holding a warm dark tea-like drink, with one quiet curl of steam, low in a wide 16:9 pale powder-blue scene. Minimal editorial still life, calm evening ritual, understated and bright rather than dark. Cup low on the right with generous clear negative space left and above. Light diffused blue-hour atmosphere translated into the pale-blue grade, soft contact shadow. Pale MapleMoon blue #B7C9D9 through #C8D5DF to #D7E2EA; cup restrained warm off-white. Pure light and haze only, no branches, silhouettes, decorative props, or background objects. No packaging, brand, logo, readable text, people, hands, claims, watermark, or border.",
+      "known_limitations": [
+        "The cup and drink are generic and do not depict a verified MapleMoon elixir, serving, recipe, or health claim.",
+        "The image must not be described as client-supplied photography."
+      ],
+      "visual_validation": "Visually checked after generation: pale-blue haze, plain unbranded cup, no readable text, no people, no packaging, no background branches.",
+      "approval_status": "pending_human_review"
+    }
+  ],
+  "contact_sheet": "ritual_light_blue_v2_contact_sheet.png",
+  "page_integration": "not applied; no existing page, code, or WIP file references these candidates"
+}

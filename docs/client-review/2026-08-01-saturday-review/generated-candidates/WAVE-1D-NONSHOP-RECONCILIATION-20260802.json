@@ -1,0 +1,36 @@
+{
+  "schema": "maplemoon-reconciliation/v2",
+  "packet_id": "WAVE-1D-NONSHOP-RECONCILE-20260802",
+  "worker_thread_id": "019fb5b5-de62-7862-a5fe-06bc59395c21",
+  "status": "PASS",
+  "scope": "non-Shop five frozen clean pages; report-only",
+  "authority_sha256": "12689434a7c46c323b27d1c8a099cb9703bf910b8c6dbbac2cfca193a0c6b599",
+  "baseline_hashes": {
+    "homepage.html": "0d102050395b79f4add5d9ddb7f75e962d7e41e11a78cd7f88c35ce4a947ef0c",
+    "our-story.html": "e270a5016260eed726f2bdcbb27447cea6066cc19a866d524fd47cff24cef7d1",
+    "carob-story.html": "d93dc036603ae7772e365573de1f89f066556d922d8b99c5e3fc7f2dada62762",
+    "stockists.html": "046a1fe649d75814804b921ac258fca135fa11b9447ca9c54eb28859df3d5af6",
+    "faq.html": "f4acfb51c6e353828a432285f2a37f69ca39154b18d78ef41e337dc29fb35dcf",
+    "MANIFEST.json": "f2d24cbed1068f17d7989010a08354006f59e8dfe575346cd268f149d2b9b5e4"
+  },
+  "classifications": {
+    "homepage": ["approved/current", "suitable-needs-crop", "wrong", "placeholder", "safe-to-generate-ritual-only"],
+    "our_story": ["approved/current", "suitable-needs-crop", "client-asset-required"],
+    "carob_story": ["approved/current", "suitable-needs-crop", "blocked-by-factual-provenance"],
+    "stockists": ["approved/current", "missing", "blocked-by-geographic-evidence"],
+    "faq": ["no-raster-slot", "placeholder"]
+  },
+  "ritual_evidence": {
+    "selected_families": ["A", "C", "D"],
+    "exploratory_only": ["E", "F", "G", "H", "original-v5-low-fidelity"],
+    "final_candidate_approved": false,
+    "approval_status": "pending_human_review"
+  },
+  "preexisting_generated_candidates": {
+    "count": 30,
+    "byte_identical_before_after": true
+  },
+  "shop_deferred": true,
+  "ready_to_promote": false,
+  "next_packet": "Nate visual review of the three isolated Homepage ritual candidates at actual tile crops; do not execute here."
+}

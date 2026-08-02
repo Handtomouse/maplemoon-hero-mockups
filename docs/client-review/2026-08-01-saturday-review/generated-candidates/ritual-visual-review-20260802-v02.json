@@ -1,0 +1,110 @@
+{
+  "schema": "maplemoon-ritual-visual-review/v2",
+  "packet_id": "WAVE-1D-RITUAL-VISUAL-REVIEW-V02-20260802",
+  "worker_thread_id": "019fb5b5-de62-7862-a5fe-06bc59395c21",
+  "created_at": "2026-08-01T16:31:14Z",
+  "scope": "local-only schematic decision board using preserved evidence; no image generation, candidate editing or page integration",
+  "authority": {
+    "path": "/Users/handtomouse/maplemoon-website/docs/orchestration/packets/MAPLEMOON-OVERNIGHT-BOSS-HANDOFF-20260802.md",
+    "sha256": "12689434a7c46c323b27d1c8a099cb9703bf910b8c6dbbac2cfca193a0c6b599"
+  },
+  "source_evidence": [
+    {
+      "path": "/private/tmp/maplemoon-wave1d-brainstorm/.superpowers/brainstorm/44002-1785562295/content/ritual-range-families.html",
+      "sha256": "9ab1f751f901cfdc216c34dcc72d12aba80cc01a516e4f9340a68a955433960b",
+      "use": "preserved A, C and D descriptions and schematic visual grammar"
+    }
+  ],
+  "decision_options": [
+    {
+      "family": "A",
+      "name": "Three distinct moments",
+      "description": "After dinner feels abundant, afternoon is sparse, tea at night is contextual. Strongest narrative separation.",
+      "visual_grammar": ["Abundant", "Minimal", "Ritual-led"],
+      "classification": "selected_composition_family_pending_human_choice",
+      "image_approval": "none"
+    },
+    {
+      "family": "C",
+      "name": "Scale-contrast range",
+      "description": "Macro texture, tiny sculptural pod and recognisable cup scale. Most dramatic difference while staying on-brand.",
+      "visual_grammar": ["Extreme detail", "Tiny object", "Human scale"],
+      "classification": "selected_composition_family_pending_human_choice",
+      "image_approval": "none"
+    },
+    {
+      "family": "D",
+      "name": "Asymmetric editorial range",
+      "description": "Off-frame crops, vertical tension and foreground/background layering. Most art-directed and least catalogue-like.",
+      "visual_grammar": ["Off-edge", "Vertical", "Layered"],
+      "classification": "selected_composition_family_pending_human_choice",
+      "image_approval": "none"
+    }
+  ],
+  "preserved_classifications": {
+    "rejected_v5_trio": {
+      "classification": "historical_rejected",
+      "reason": "too similar",
+      "use_in_acd_cards": false
+    },
+    "families_e_to_h": {
+      "classification": "exploratory_secondary",
+      "upgraded_to_decision_option": false
+    },
+    "original_v5_low_fidelity": {
+      "classification": "exploratory_secondary",
+      "upgraded_to_decision_option": false
+    },
+    "prior_v1_board": {
+      "classification": "superseded_hold",
+      "reason": "did not show A, C and D distinctly and did not provide truthful ordinary-viewer mobile evidence",
+      "files": {
+        "html": {
+          "path": "ritual-visual-review-20260802.html",
+          "sha256": "bedf488cd3e29d93205ad8d7a618c498d9c9c4fce0ff5c8f94acbf70195517e5"
+        },
+        "json": {
+          "path": "ritual-visual-review-20260802.json",
+          "sha256": "7dba77804e89ca1557508fdd5d81d138a49c5e1e799afe87da087a8e9857dfac"
+        },
+        "desktop_proof": {
+          "path": "ritual-visual-review-20260802-desktop.png",
+          "sha256": "e8151c264a440417f8e0b7d700efd6715bca5ec798e69e97737810135f68e93d"
+        },
+        "mobile_proof": {
+          "path": "ritual-visual-review-20260802-mobile.png",
+          "sha256": "a93f9684a7455a7595523db88d74922eed84783f72a1d93b1bdcee4b4054829b"
+        }
+      }
+    }
+  },
+  "rendered_proofs": {
+    "desktop": {
+      "path": "ritual-visual-review-20260802-v02-desktop.png",
+      "viewport_css_pixels": {"width": 1440, "height": 1200},
+      "visual_result": "pass; three distinct cards, readable text, no clipped controls or visible horizontal overflow"
+    },
+    "mobile": {
+      "path": "ritual-visual-review-20260802-v02-mobile.png",
+      "viewport_css_pixels": {"width": 390, "height": 3000},
+      "measured_metrics": {
+        "innerWidth": 390,
+        "documentElementClientWidth": 390,
+        "documentElementScrollWidth": 390,
+        "bodyScrollWidth": 390,
+        "familyCardWidth": 358,
+        "headingRightEdge": 374
+      },
+      "visual_result": "pass; natural text wrapping, full-width single-column cards, no clipped controls or visible horizontal overflow"
+    },
+    "browser": "local Google Chrome headless with file-only navigation and network resolution disabled"
+  },
+  "limitations": [
+    "The A, C and D visuals are schematic composition diagrams, not candidate photography.",
+    "No final ritual image is approved, wired or represented as client photography.",
+    "The saved mobile proof is intentionally tall to show the complete single-column board in one image."
+  ],
+  "unresolved_nate_decision": "Choose one composition family: A, C or D.",
+  "approval_status": "pending_human_review",
+  "ready_to_promote": false
+}

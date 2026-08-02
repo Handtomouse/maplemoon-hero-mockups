@@ -32,3 +32,8 @@ _wip/_section_variants/
 _wip/reviews/
 assets/hero_videos/gen/
 docs/client-review/*/staging-v1/
+
+# --- Wave-1D imagery custody (2 Aug): unapproved exploratory renders stay out,
+# their receipts/manifests/boards stay in. Durable copies: locked worktree 27ab
+# + iMac replica. Integrity: _wip/evidence/IMAGERY-PROGRAMME-20260802/CANDIDATE-MANIFEST.sha256
+docs/client-review/*/generated-candidates/**/*.png

@@ -1,0 +1,45 @@
+{
+  "schema": "maplemoon-imagery-candidate-manifest/v1",
+  "packet_id": "WAVE-1D-RITUAL-WILDCARD-B1-20260802",
+  "batch": "After dinner wildcard v1",
+  "status": "pending_human_review",
+  "provenance": "Built-in image generation using only the two verified local references listed below. Generic generated ingredients and accessories; not exact MapleMoon products, recipes, packaging or client photography.",
+  "sources": [
+    {"path": "assets/licensed/carob_pods_macro.jpg", "role": "only botanical appearance and powder texture reference", "sha256": "0426510e9b7446415af8884ad7969d99d26de7a3cbcbedb0c7ca121379f31922"},
+    {"path": "assets/hero_shots/bg_v4_range.png", "role": "pale website-blue palette and surface reference", "sha256": "b075aa7c46d3d1811c7eb10f061084303a179007dbbcc68438e922d276e8383b"}
+  ],
+  "candidates": [
+    {
+      "id": "A",
+      "path": "ritual_after_dinner_wildcard_v1a.png",
+      "direction": "overhead constellation",
+      "intended_section": "Homepage #ritual — After dinner tile",
+      "dimensions": "1672x941",
+      "prompt": "Photorealistic-natural exploratory Homepage ritual-card image. Editorial overhead still life with a quiet constellation of three convincingly real dried carob pods, each different in curvature, wrinkles, tapering, chips and scarring, arranged loosely around one low handmade matte stoneware dish. True top-down wide 16:9, asymmetrical triangular spacing, upper-left text-safe negative space, one tiny aged pewter spoon partly cropped, restrained late-evening light, pale MapleMoon blue, dry matte pods. Generic botanical editorial only. No packaging, wrappers, logos, labels, text, claims, people, hands, branches, foliage, flowers, linen, wood, farmhouse styling, patterns, marble, glossy plastic, resin, metallic or CGI pods, ornate/designer objects, watermark or border.",
+      "limitations": "The central empty dish is visually prominent; pod surfaces retain narrow natural highlights; spoon is partly cropped as requested.",
+      "approval_status": "pending_human_review"
+    },
+    {
+      "id": "B",
+      "path": "ritual_after_dinner_wildcard_v1b.png",
+      "direction": "low architectural still life",
+      "intended_section": "Homepage #ritual — After dinner tile",
+      "dimensions": "1672x941",
+      "prompt": "Photorealistic-natural exploratory Homepage ritual-card image. Low side-angle architectural still life of convincingly real dried carob pods leaning and crossing at different heights against one low handmade matte grey-blue stoneware cup. Wide 16:9, low tabletop camera, clustered right, left text-safe negative space, low raking after-dinner light, pale MapleMoon blue, dry dark asymmetrical pods, tactile speckled cup. Generic botanical editorial only. No packaging, wrappers, logos, labels, text, claims, people, hands, branches, foliage, flowers, linen, wood, farmhouse styling, patterns, marble, glossy plastic, resin, metallic or CGI pods, perfect symmetry, fantasy forms, ornate/designer objects, watermark or border.",
+      "limitations": "The model produced five visible pods rather than the requested three; the front-right pod carries a broader highlight than the driest botanical reference examples.",
+      "approval_status": "pending_human_review"
+    },
+    {
+      "id": "C",
+      "path": "ritual_after_dinner_wildcard_v1c.png",
+      "direction": "ingredient macro",
+      "intended_section": "Homepage #ritual — After dinner tile",
+      "dimensions": "1672x941",
+      "prompt": "Photorealistic-natural exploratory Homepage ritual-card image. Intimate macro editorial scene focused on one irregular mound of natural carob powder with dried carob pods crossing behind it and one compact aged pewter spoon holding a trace of powder. Wide 16:9 close-up, lower-right subject, clean upper-left text-safe space, shallow depth of field, pale grey-blue surface, dry powder granules, varied pod wrinkles and chips. Generic ingredient scene only, not a serving suggestion or exact recipe. No packaging, wrappers, logos, labels, text, claims, people, hands, branches, foliage, flowers, linen, wood, farmhouse styling, patterns, marble, glossy plastic, resin, metallic or CGI pods, symmetry, fantasy forms, ornate/designer objects, watermark or border.",
+      "limitations": "The model produced three visible pods rather than the requested two; the powder scene may read as an ingredient/process image more than an after-dinner ritual.",
+      "approval_status": "pending_human_review"
+    }
+  ],
+  "hard_exclusions_result": "PASS on visual inspection at full resolution",
+  "ready_to_promote": false
+}

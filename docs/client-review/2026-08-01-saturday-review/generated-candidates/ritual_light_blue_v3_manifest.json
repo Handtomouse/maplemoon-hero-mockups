@@ -1,0 +1,69 @@
+{
+  "candidate_set": "maplemoon_homepage_ritual_light_blue_v3",
+  "status": "review_only_pending_human_approval",
+  "generated_on": "2026-08-01",
+  "tool": "built_in_image_generation",
+  "intended_section": "Homepage #ritual three-tile sequence only",
+  "page_integration": "not applied; no existing page, code, or WIP file references these candidates",
+  "preflight": {
+    "local_ingredient_reference": {
+      "path": "assets/licensed/carob_pods_macro.jpg",
+      "sha256": "0426510e9b7446415af8884ad7969d99d26de7a3cbcbedb0c7ca121379f31922",
+      "role": "shape and material constraint for generic carob-pod concepts only; not an image insert or provenance claim"
+    },
+    "brand_palette": {
+      "path": "assets/brand/brand_kit.css",
+      "tokens": ["#7B9DBF", "#A8BDD4", "#4A7B9D"],
+      "role": "light-blue tonal direction"
+    }
+  },
+  "batch_safeguards": [
+    "No exact MapleMoon product, packaging, wrapper, logo, label, readable text, claim, certification, stockist, testimonial, person, hand, founder identity, watermark, or border.",
+    "Generic generated pod, confection, cup, tea, dish, and spoon forms cannot establish ingredient, recipe, product, sourcing, or client-photography truth.",
+    "No page, code, WIP, catalogue, production, upload, send, commerce, or external-system action is included."
+  ],
+  "candidates": [
+    {
+      "id": "MM-W1D-RITUAL-04",
+      "filename": "ritual_after_dinner_light_blue_v3.png",
+      "sha256": "8574fc568d723b2ad3cc528bf9613ed20313fdab7dfb63a82e2f1cdd788c9e24",
+      "dimensions": "1672x941 px",
+      "intended_section": "Homepage #ritual, after-dinner tile",
+      "source_references": ["assets/licensed/carob_pods_macro.jpg", "assets/brand/brand_kit.css"],
+      "prompt": "Use case: photorealistic-natural\\nAsset type: MapleMoon homepage ritual tile, review-only v3 candidate, after-dinner\\nPrimary request: Create an original wide 16:9 editorial still life in a light MapleMoon-blue studio environment. A single naturally shaped dried carob pod is the clear hero, low on the right third, with one small generic unbranded dark-brown confection beside it. Add at most one quiet secondary accessory: a low handmade matte stoneware dish in weathered cream, softly out of focus behind the pod. Preserve the pod and confection as natural brown; all surroundings are pale blue.\\nScene/backdrop: seamless powder-blue surface and backdrop with luminous soft haze only; no branch, foliage, botanical shadow, window, table, or room.\\nComposition/framing: wide landscape with generous clean negative space left and above, crop-safe for a 3-tile website sequence.\\nLighting/mood: airy diffuse studio daylight, soft contact shadow, calm after-dinner ritual without dark or dramatic mood.\\nColor palette: pale website blue range #B7C9D9, #C8D5DF, #D7E2EA; restrained weathered cream; true natural browns.\\nMaterials/textures: real dried pod texture, matte lightly speckled original stoneware, natural confection surface.\\nText (verbatim): \\\"\\\"\\nConstraints: generic review concept only; no MapleMoon product recreation, no verified product implication, no packaging, wrapper, logo, label, readable text, claim, people, hands, founder identity, testimonial, stockist, certification, watermark, or border.\\nAvoid: branches, leaves, flowers, dried foliage, linen, wood, farmhouse styling, glossy plastic, resin, marble, ornate objects, patterns, designer forms, additional props, saturated cobalt/navy, artificial CGI look.",
+      "visual_validation": "PASS — manually inspected after generation: pale-blue field, generic brown pod and confection, one subdued dish, no visible text, logo, packaging, people, hands, branches, foliage, claim, watermark, or border.",
+      "known_limitations": ["Generic pod and confection are not a verified MapleMoon product or client-supplied photograph.", "Needs Nate visual decision for hierarchy, crop, and brand fit before any page use."],
+      "approval_status": "pending_human_review"
+    },
+    {
+      "id": "MM-W1D-RITUAL-05",
+      "filename": "ritual_afternoon_light_blue_v3.png",
+      "sha256": "999112d3ab2bbba781638a6ead4c5ec0b2807fc48341524e6cc1ab12c863e864",
+      "dimensions": "1672x941 px",
+      "intended_section": "Homepage #ritual, afternoon tile",
+      "source_references": ["assets/licensed/carob_pods_macro.jpg", "assets/brand/brand_kit.css"],
+      "prompt": "Use case: photorealistic-natural\\nAsset type: MapleMoon homepage ritual tile, review-only v3 candidate, afternoon\\nPrimary request: Create an original wide 16:9 editorial ingredient still life in a light MapleMoon-blue studio environment. Two naturally shaped dried carob pods are the clear hero, gently overlapping low near the centre-right. Add no food products and at most one quiet secondary accessory: a very low shallow handmade matte stoneware dish in soft grey-blue, partly out of focus behind the pods. Preserve the pods as natural brown; all surroundings are pale blue.\\nScene/backdrop: seamless powder-blue surface and backdrop with luminous soft haze only; no branches, foliage, botanical shadow, window, table, or room.\\nComposition/framing: wide landscape, generous clear negative space around the ingredients, crop-safe for a three-tile website sequence.\\nLighting/mood: bright gentle afternoon diffuse studio daylight, short soft contact shadow, calm and tactile.\\nColor palette: pale website blue range #B7C9D9, #C8D5DF, #D7E2EA; soft grey-blue stoneware; true natural browns.\\nMaterials/textures: real dried pod texture, subtly irregular low matte stoneware with restrained mineral speckling.\\nText (verbatim): \\\"\\\"\\nConstraints: generic review concept only; no MapleMoon product recreation, no verified product implication, no packaging, wrapper, logo, label, readable text, claim, people, hands, founder identity, testimonial, stockist, certification, watermark, or border.\\nAvoid: branches, leaves, flowers, dried foliage, linen, wood, farmhouse styling, glossy plastic, resin, marble, ornate objects, patterns, designer forms, additional props, saturated cobalt/navy, artificial CGI look.",
+      "visual_validation": "PASS — manually inspected after generation: pale-blue field, two generic brown pods, one subdued dish, no visible text, logo, packaging, people, hands, branches, foliage, claim, watermark, or border.",
+      "known_limitations": ["Generated pods are generic review imagery and do not establish botanical or product provenance.", "Needs Nate visual decision for hierarchy, crop, and brand fit before any page use."],
+      "approval_status": "pending_human_review"
+    },
+    {
+      "id": "MM-W1D-RITUAL-06",
+      "filename": "ritual_tea_night_light_blue_v3.png",
+      "sha256": "db50d216233e3c7ee9b6b04bc62d519af92a14c9dfbf2c79838dcd1e7b5c7d35",
+      "dimensions": "1672x941 px",
+      "intended_section": "Homepage #ritual, tea-at-night tile",
+      "source_references": ["assets/brand/brand_kit.css"],
+      "prompt": "Use case: photorealistic-natural\\nAsset type: MapleMoon homepage ritual tile, review-only v3 candidate, tea at night\\nPrimary request: Create an original wide 16:9 minimalist tea ritual still life in a light MapleMoon-blue studio environment. A single small unbranded handmade-looking matte stoneware cup in weathered cream holds a dark warm tea-like drink; it is low on the right third with one restrained curl of steam. The cup is the clear hero. Add at most one quiet secondary accessory: a compact aged pewter spoon, partly out of focus beside and behind the cup. No food, packaging, or brand object.\\nScene/backdrop: seamless powder-blue surface and backdrop with luminous soft haze only; no branch, foliage, botanical shadow, window, table, or room.\\nComposition/framing: wide landscape with generous clear negative space left and above, crop-safe for a three-tile website sequence.\\nLighting/mood: bright, calm blue-hour suggestion translated to diffuse soft pale studio light; no dark evening room.\\nColor palette: pale website blue range #B7C9D9, #C8D5DF, #D7E2EA; weathered cream cup, muted pewter, dark tea.\\nMaterials/textures: subtly irregular matte stoneware with soft worn glaze and restrained mineral speckling; compact aged pewter.\\nText (verbatim): \\\"\\\"\\nConstraints: generic review concept only; no MapleMoon product recreation, no verified elixir/recipe implication, no packaging, logo, label, readable text, claim, people, hands, founder identity, testimonial, stockist, certification, watermark, or border.\\nAvoid: branches, leaves, flowers, dried foliage, linen, wood, farmhouse styling, glossy plastic, resin, marble, ornate objects, patterns, designer forms, additional props, saturated cobalt/navy, artificial CGI look.",
+      "visual_validation": "PASS — manually inspected after generation: pale-blue field, one plain stoneware cup with steam and one subdued pewter spoon, no visible text, logo, packaging, people, hands, branches, foliage, claim, watermark, or border.",
+      "known_limitations": ["Cup and tea are generic and do not depict a verified MapleMoon drink, recipe, product, or client-supplied photograph.", "Needs Nate visual decision for hierarchy, crop, and brand fit before any page use."],
+      "approval_status": "pending_human_review"
+    }
+  ],
+  "contact_sheet": {
+    "filename": "ritual_light_blue_v3_contact_sheet.png",
+    "sha256": "e05a32816550a52344ccfc7a6524712d53439cef0e22c33925d142379909fcc7",
+    "dimensions": "1536x288 px",
+    "contents": ["ritual_after_dinner_light_blue_v3.png", "ritual_afternoon_light_blue_v3.png", "ritual_tea_night_light_blue_v3.png"]
+  }
+}
