@@ -53,6 +53,51 @@ breaks the freeze).
 6. **Check weight before sending.** If homepage is still over ~3MB, W1-F has not landed and the
    link will feel broken. **Measured before compression: homepage 25.0MB, carob-story 11.5MB.**
 
+## The preview deliberately diverges from `clean/` on `assets/licensed/`
+
+**Recorded 2026-08-03. Read this before comparing preview bytes to artifact bytes.**
+
+`staging-v1/clean/` is a snapshot taken *before* W1-F. It carries the full-res camera
+originals for the licensed stock — `carob_pods_macro.jpg` is 7360x4912 / 9.8MB there.
+W1-F did land, but it landed in the working tree at `assets/licensed/`, at the **same
+paths**, as 1600px web derivatives. Verified same images, not different crops.
+
+Deploying `clean/` bytes unchanged gave **homepage 22MB, carob-story 11MB** — matching
+the runbook's own "before compression" figures at step 6, which is what made it look
+like W1-F had never run.
+
+So the deploy copy takes the working-tree derivatives for these seven referenced files
+only (not the whole dir — the working tree carries extra unreferenced licensed stock
+that must not reach a public URL):
+
+    assets/licensed/{carob_pods_macro,scene_after_dinner,scene_afternoon,scene_tea_night}.jpg
+    assets/licensed/carob_farm/australian-carob-0205{,-16x9,-mobile}.jpg
+
+`assets/licensed/` in the deploy copy: **33MB -> 1.2MB**. Every other asset dir is left
+as `clean/` has it — `clean/` is already the optimised web copy everywhere else, and the
+working tree there holds much larger masters (`hero_shots` 225MB, `hero_videos` 189MB).
+
+This divergence is confined to `_wip/deploy/site/`, which is untracked scratch outside
+the frozen artifact. **No file in `staging-v1/` was touched and no MANIFEST hash moved.**
+The preview is not the review package, so image-byte divergence is in scope for it and
+would not be for a CR-4 send.
+
+### Measured per-page weight after the swap
+
+| page | referenced assets | note |
+|---|---|---|
+| homepage | 3.53 MB | was 22MB; largest single file 0.71MB |
+| shop | 4.27 MB | six product PNGs at ~0.6-0.83MB each |
+| our-story | 1.52 MB | |
+| carob-story | 1.34 MB | was 11MB |
+| stockists | 0.50 MB | |
+| faq | ~0 MB | |
+
+No broken asset references on any page. Shop is the remaining heavy page: its PNGs are
+superseded by the W1-E WebP shots under `assets/product_shots/w1-e-prepared-20260803/`.
+**Left alone deliberately** — that path is under an active RECROP writer. Fold them in
+when W1-E lands and shop drops to roughly 1.5MB.
+
 ## Why `noindex` stays
 
 Correct and deliberate for a private preview. Three separate QA audits recommend removing it;
