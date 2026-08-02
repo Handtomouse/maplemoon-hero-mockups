@@ -1,0 +1,14 @@
+<!doctype html><html><head><meta charset="utf-8"><style>
+*{box-sizing:border-box}body{margin:0;background:#c5d5e5;font:12px system-ui;padding:20px}
+/* viewport 390: wrap max-width 1180 -> 390 - 24*2 padding = 342 wide.
+   portrait height min(118vw,560px) at 390vw = 460px. Mobile mask per line 553:
+   VERTICAL ONLY, no horizontal fade. object-position still 46% 40% (line 603). */
+.portrait{position:relative;width:342px;height:460px;margin:0;overflow:visible;outline:1px dashed rgba(0,0,0,.25)}
+.portrait img{width:100%;height:100%;object-fit:cover;object-position:46% 40%;
+-webkit-mask-image:linear-gradient(180deg,transparent 0,#000 8%,#000 88%,transparent 100%);
+mask-image:linear-gradient(180deg,transparent 0,#000 8%,#000 88%,transparent 100%)}
+p{max-width:342px;margin:8px 0 0}
+</style></head><body>
+<figure class="portrait"><img src="founder_v04_main_imac_qa_export_20260803/carli_bio_v02.png" alt="Carli"></figure>
+<p>390 viewport equivalent: 342x460 box, object-fit cover at 46% 40%, vertical-only mask 8%/88% per line 553. Dashed outline shows the container bounds.</p>
+</body></html>
