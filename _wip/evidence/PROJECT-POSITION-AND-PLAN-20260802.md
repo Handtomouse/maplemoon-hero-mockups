@@ -93,10 +93,35 @@ Bounded, evidence-only, records no verdict, writes only inside `_wip/evidence/`.
 
 1. **Homepage keyboard traversal at literal 390 CSS px** — completes the six-page set using
    the exact harness that just worked (`_wip/evidence/IMAC-KEYBOARD-PROOF-20260802/HARNESS.py`).
-2. **Literal 200% zoom pre-screen, all six pages** — CDP `Emulation.setDeviceMetricsOverride`
-   plus `setPageScaleFactor`/deviceScaleFactor already proved it can hit exact viewports, so
-   200% is reachable the same way. Look for: clipped text, unreachable controls, horizontal
-   overflow, overlapping hit targets, anything an ordinary viewer at 200% would hit.
+2. **200% zoom PRE-SCREEN, all six pages — must run on the iMac, and is NOT gate evidence.**
+
+   Two corrections from a feasibility spike run 2026-08-02, replacing an earlier untested
+   assertion that "200% is reachable the same way" as the 390px work:
+
+   **(a) It cannot run on the macbook.** The extension cannot control the viewport here.
+   Resizing to 720 left `clientWidth`/`innerWidth`/`visualViewport.width` all reading 500,
+   with `outerWidth` = 0 — it is measuring a window it does not actually drive. Same
+   wrong-window ambiguity that caused every failed keypress. Run it on the iMac via CDP,
+   which targets a specific window unambiguously and already hit literal 390 CSS px.
+
+   **(b) Emulated zoom is NOT literal zoom, and must never be labelled as such.** Literal
+   browser zoom (Cmd-plus) halves the CSS layout viewport; CDP `deviceScaleFactor` alone
+   changes rendering scale WITHOUT reflowing layout, so a naive 2x scale factor would produce
+   confident, wrong evidence. The faithful layout proxy is to halve the CSS viewport
+   (e.g. 1440 -> 720 wide) with `Emulation.setDeviceMetricsOverride`. Even done correctly
+   that is a PRE-SCREEN. `CLAUDE.md` is explicit that CR-0 requires literal 200% zoom and
+   that an in-app preview "cannot credibly produce" it. **Nate's literal-zoom pass is still
+   required.** The pre-screen only shortens it by surfacing defects first — exactly the
+   DOM-screening-vs-traversal distinction that already proved its worth this session.
+
+   Look for: clipped text, unreachable controls, horizontal overflow, overlapping hit targets.
+
+   **Detector requirement (validated, reusable).** `overflow-x:hidden` on html+body defeats
+   all `scrollWidth`-based overflow tests — a clean result would be meaningless. Use
+   `getBoundingClientRect` against `document.documentElement.clientWidth`, and **validate the
+   detector on every page by injecting a deliberate offscreen element first and confirming it
+   is caught.** Verified working on 2026-08-02: an injected 200px overflow was detected
+   (count 1 vs 0), and homepage was clean at that viewport under a validated detector.
 3. **Produce a one-page CR-0 PRE-SCREEN PACK** stating exactly two things: what is already
    evidenced (so Nate does not redo it), and the shortlist of anything suspicious that he
    should look at personally.
