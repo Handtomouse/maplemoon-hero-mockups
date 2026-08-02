@@ -94,3 +94,24 @@ produced 1400x933. No Adobe needed for proxies or contact sheets, only for the r
 This is a whole shoot, not selects. Phase 0 of the loop brief should therefore begin with a
 contact sheet so Nate can choose, not with staging all 160. Generating 160 proxies is bulk
 execution and belongs to Codex, not to a Claude session.
+
+## Phase 0 executed 2026-08-03 03:44
+
+Ran on the iMac via the Terminal bridge, not from a Claude session context. 160 ARW
+developed to 1400px JPEG proxies with `sips`, 23 MB total, ~10s per frame while streaming
+from Drive.
+
+```
+~/MapleMoon-Photoshop-Work/_INBOX/proxies/          160 files
+~/MapleMoon-Photoshop-Work/_INBOX/CONTACT-SHEET.html  numbered grid, open in a browser
+```
+
+Open the contact sheet and call out the numbers to use as selects.
+
+**The shoot is mixed, not just portraits.** Verified proxies include product photography,
+e.g. the carob powder tube with the nutrition panel, sharp and correctly exposed. Filenames
+also split into two batches: `20260524 Maple Moon - Studio Session-NNN.arw` and `DSC0NNNN.ARW`.
+
+This matters for the loop: Phase 0b requires a direction per image, and a product shot and a
+founder portrait need different directions and different acceptance criteria. Do not apply
+one direction across the set.
