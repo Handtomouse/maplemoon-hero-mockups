@@ -1,0 +1,41 @@
+{
+  "files": {
+    "annotated/MANIFEST.json": {
+      "bytes": 13617,
+      "sha256": "3be3c0f2df4658558c667b3e9cc6d55966d6a1d7ce9fa9874c46a0afc44244c7"
+    },
+    "clean/MANIFEST.json": {
+      "bytes": 13211,
+      "sha256": "d1c66b1d5937e9956d1806dbbbff4faf4f950def046aa642ae52f809c3d52d20"
+    }
+  },
+  "packet_id": "SAT-SHARED-MOBILE-HEADER-01",
+  "schema": "maplemoon-saturday-review-aggregate/v1",
+  "share_ready": false,
+  "source_lineage": {
+    "carob-story.html": {
+      "sha256": "e1695095f6b8e18eccea468dfd8a09013e85b5c64c5de427b3d8e5701e6f4320",
+      "source_id": "canonical-current:carob-story"
+    },
+    "faq.html": {
+      "sha256": "4a7f5eee7096150f23f07cac6316c83893aab34135e3c40ca0e24848b77704f1",
+      "source_id": "canonical-current:faq"
+    },
+    "homepage.html": {
+      "sha256": "2117f3364e61af5272178ec7bee6068afc03c5181ecee3b9fc8c67526acde4d4",
+      "source_id": "canonical-current:homepage"
+    },
+    "our-story.html": {
+      "sha256": "a823f0f7291ee3b66acfefd0a718227c47717cf7811747db9216a1e17612fb1d",
+      "source_id": "canonical-current:our-story"
+    },
+    "shop.html": {
+      "sha256": "9f5a2093728df88d2d2ccf1a4138d282092192cb96b2e485f237cf23b3fa0875",
+      "source_id": "canonical-current:shop"
+    },
+    "stockists.html": {
+      "sha256": "6e92382ccec4874aac79c32e644d0ed130d03400c7d23682623b0e4154a6fa36",
+      "source_id": "canonical-current:stockists"
+    }
+  }
+}

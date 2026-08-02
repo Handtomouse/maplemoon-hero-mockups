@@ -31,7 +31,14 @@ explorations/
 _wip/_section_variants/
 _wip/reviews/
 assets/hero_videos/gen/
-docs/client-review/*/staging-v1/
+docs/client-review/*/staging-v1/**
+# Track the irreplaceable markup of the frozen review artifact (~1.1MB).
+# Assets stay ignored: all 63 are byte-duplicates of repo assets/ and are reproducible.
+!docs/client-review/*/staging-v1/**/
+!docs/client-review/*/staging-v1/**/*.html
+!docs/client-review/*/staging-v1/**/*.json
+!docs/client-review/*/staging-v1/**/*.css
+!docs/client-review/*/staging-v1/**/*.js
 
 # --- Wave-1D imagery custody (2 Aug): unapproved exploratory renders stay out,
 # their receipts/manifests/boards stay in. Durable copies: locked worktree 27ab
