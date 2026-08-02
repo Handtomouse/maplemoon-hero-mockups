@@ -115,3 +115,32 @@ also split into two batches: `20260524 Maple Moon - Studio Session-NNN.arw` and 
 This matters for the loop: Phase 0b requires a direction per image, and a product shot and a
 founder portrait need different directions and different acceptance criteria. Do not apply
 one direction across the set.
+
+## Shoot map, pre-screened 2026-08-03 04:00
+
+All 160 frames reviewed as overview grids. Three distinct bodies of work, not one.
+
+| Frames | Content |
+|---|---|
+| 1-19 | Styled product, single and paired bars on blue backdrop with stone and carob-pod props, wall-mounted and floating arrangements |
+| 20-44 | Full range lineups on blue, five colourways, several with prop groupings |
+| 45-49 | Prop-only detail shots, carob pods on blue |
+| 50-109 | **Founder portraits**, Dylan and Carli on blue backdrop |
+| 110-136 | Clean packshots on white, bar packaging front and back, Carob Elixir tubs |
+| 137-154 | Unwrapped product, bites and bar cross-sections, loose powder |
+| 155-160 | Bar with chocolate laid out, all colourways |
+
+Founder frames worth a look first: **51-55** the pair laughing and turning to each other, which
+is where v04 came from; **65-66** facing each other; **70-71** hands passing a carob pod, a
+strong detail frame; **79** both standing with a fan of bars; **93-97** close pair and a
+playful arms-crossed setup; **102-109** holding a single bar to camera.
+
+**Known defect in the proxies:** portrait-orientation frames render sideways. `sips` did not
+apply EXIF orientation when developing the ARW, and querying `sips -g orientation` on the RAW
+returned nothing matching, so a conditional rotate was a no-op. The frames are still
+judgeable. Fix before the sheet goes to anyone else: read orientation with `exiftool` or
+`mdls` rather than `sips`, then rotate the JPEG.
+
+**Implication for the loop.** Three bodies of work means three directions, not one. Styled
+blue product, clean white packshots, and founder portraits each need their own Phase 0b
+direction and their own acceptance criteria.
