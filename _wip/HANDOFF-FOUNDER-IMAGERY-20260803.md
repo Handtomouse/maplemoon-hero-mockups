@@ -135,11 +135,17 @@ is where v04 came from; **65-66** facing each other; **70-71** hands passing a c
 strong detail frame; **79** both standing with a fan of bars; **93-97** close pair and a
 playful arms-crossed setup; **102-109** holding a single bar to camera.
 
-**Known defect in the proxies:** portrait-orientation frames render sideways. `sips` did not
-apply EXIF orientation when developing the ARW, and querying `sips -g orientation` on the RAW
-returned nothing matching, so a conditional rotate was a no-op. The frames are still
-judgeable. Fix before the sheet goes to anyone else: read orientation with `exiftool` or
-`mdls` rather than `sips`, then rotate the JPEG.
+**Known defect in the proxies, and a dead end to avoid.** Portrait-orientation frames render
+sideways. This is not a `sips` bug and it is not fixable by reading metadata: `sips -g
+orientation` returns nothing usable and `mdls -name kMDItemOrientation` returns `0` for all
+160 files. **The RAWs carry no orientation flag.** Both rotate passes were verified no-ops,
+checked 160, rotated 0.
+
+So rotation has to be inferred from image content, not read, and it is not uniform: within
+the portrait range some frames are upright and some are not. Do not blanket-rotate a range.
+The frames remain perfectly judgeable sideways, so this is cosmetic. If it is worth fixing,
+it needs per-frame inspection, and it should be done once, on the chosen selects only, never
+across all 160.
 
 **Implication for the loop.** Three bodies of work means three directions, not one. Styled
 blue product, clean white packshots, and founder portraits each need their own Phase 0b
