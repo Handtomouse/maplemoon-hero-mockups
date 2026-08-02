@@ -170,6 +170,50 @@ icons (**shop has the chooser too — 7 `data-cat=` instances**) · `R4/R5/R6` p
 > **SH1 is a useful ruling to record.** It confirms the duplicated-per-page architecture is
 > *intentional* here, not drift. Do not let a future consistency sweep "fix" it.
 
+### SH2 specified — and it is NOT a small fix
+
+Nate selected **all four**:
+
+| # | change | nature |
+|---|---|---|
+| SH2a | **Add a size selector** to Eclipse Bites — `$5.99–$59.99` currently has no way to pick a size | **functional** |
+| SH2b | **Explain Enquire vs Add To Cart** — nothing tells a visitor why some categories are buyable and others are not | copy + logic |
+| SH2c | **Simplify the bulk tiers** on Moons (1 / 5 / 10 / 20 on the card) | presentational |
+| SH2d | **Show a cart subtotal** — the cart shows item counts but never a total before checkout | **functional** |
+
+> **Reclassified `B` → `D`.** Three of these four change commerce behaviour, not styling.
+> `SH2a` and `SH2d` are new UI and new state. This is a **commerce-presentation packet in its
+> own right**, not something to bundle into a styling batch. It also overlaps shop audit #4,
+> #5, #6 and #26, which remain **unverified** — reproduce them before building.
+
+---
+
+## OUR-STORY
+
+| # | observation | class |
+|---|---|---|
+| OS1 | *"Portrait treatment is off"* — the founder imagery: crop, tone or scale | **B, already in flight** |
+| OS2 | **ORIGIN RESOLVED:** *"Brunswick Heads is home, SA grows the carob."* Both true, no conflict | **unblocks S4** |
+| OS3 | *"the whole page needs a codex chat to run over it and bring it up to the brand style of the homepage with section and large image fades into the sections and then its passable"* | **D** |
+
+> **OS1 is already being worked.** Codex committed founder-portrait work today:
+> `62ddcd6` (Carli v02 crop verified at 1440/390), `567d106` (pair portrait in-page),
+> `d84450b` (**Dylan v01 head clipped at desktop**), `d5fecd3` (Dylan v02 with headroom),
+> `0758ed5` (bio slot is 4:5, aspect-ratio not height clamp), `a01665f` (guard extended).
+> **Do not open a second lane on this.** Point Nate's note at the existing work and confirm
+> whether the current state resolves it.
+
+> **OS2 closes the `S4` conflict.** The two locations are complementary, not contradictory:
+> **Brunswick Heads NSW = the brand's home; South Australia = where the carob is farmed.**
+> The copy can carry both. **It is still `CV-046` / `CV-063` gated** — coherent is not the same
+> as substantiated, and origin claims are regulated. Confirm with Carli before it ships, but
+> the copy no longer contradicts itself.
+
+> **OS3 is the same problem as `RT1`.** Section seams and large image fades are one design
+> language, not two. **Homepage `RT1` and our-story `OS3` should be a single coordinated
+> packet**, or the two pages will drift apart again. Homepage is the reference standard —
+> his words: bring our-story *up to* it.
+
 ---
 
 ## Lane compliance
