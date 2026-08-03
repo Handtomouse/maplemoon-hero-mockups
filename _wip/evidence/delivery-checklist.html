@@ -1,0 +1,385 @@
+<title>MapleMoon delivery checklist</title>
+<style>
+  :root{
+    --bg:#e9edf1; --surface:#fbfcfd; --surface-2:#f2f5f8;
+    --ink:#1a2026; --ink-soft:#4b5761; --ink-faint:#7c8892;
+    --rule:#d3dae1; --rule-soft:#e3e9ee;
+    --accent:#b88b3d; --accent-ink:#7d5c22;
+    --critical:#a3312a; --critical-bg:#f6e5e3;
+    --blocked:#56636f; --blocked-bg:#e7ecf1;
+    --ready:#2c6b4d; --ready-bg:#e0eee7;
+    --done:#8b959d;
+    --font-display:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif;
+    --font-body:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+    --font-mono:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+    --shadow:0 1px 2px rgba(26,32,38,.05),0 8px 24px -16px rgba(26,32,38,.28);
+  }
+  @media (prefers-color-scheme:dark){
+    :root{
+      --bg:#14181c; --surface:#1b2126; --surface-2:#222a30;
+      --ink:#e7ecf0; --ink-soft:#a5b0b9; --ink-faint:#76818b;
+      --rule:#2b333a; --rule-soft:#242c32;
+      --accent:#d9a94e; --accent-ink:#e8c583;
+      --critical:#e07068; --critical-bg:#33201e;
+      --blocked:#93a0ac; --blocked-bg:#242c33;
+      --ready:#5fae83; --ready-bg:#1b2a23;
+      --done:#6c777f;
+      --shadow:0 1px 2px rgba(0,0,0,.3),0 8px 24px -16px rgba(0,0,0,.7);
+    }
+  }
+  :root[data-theme="light"]{
+    --bg:#e9edf1; --surface:#fbfcfd; --surface-2:#f2f5f8;
+    --ink:#1a2026; --ink-soft:#4b5761; --ink-faint:#7c8892;
+    --rule:#d3dae1; --rule-soft:#e3e9ee;
+    --accent:#b88b3d; --accent-ink:#7d5c22;
+    --critical:#a3312a; --critical-bg:#f6e5e3;
+    --blocked:#56636f; --blocked-bg:#e7ecf1;
+    --ready:#2c6b4d; --ready-bg:#e0eee7;
+    --done:#8b959d;
+    --shadow:0 1px 2px rgba(26,32,38,.05),0 8px 24px -16px rgba(26,32,38,.28);
+  }
+  :root[data-theme="dark"]{
+    --bg:#14181c; --surface:#1b2126; --surface-2:#222a30;
+    --ink:#e7ecf0; --ink-soft:#a5b0b9; --ink-faint:#76818b;
+    --rule:#2b333a; --rule-soft:#242c32;
+    --accent:#d9a94e; --accent-ink:#e8c583;
+    --critical:#e07068; --critical-bg:#33201e;
+    --blocked:#93a0ac; --blocked-bg:#242c33;
+    --ready:#5fae83; --ready-bg:#1b2a23;
+    --done:#6c777f;
+    --shadow:0 1px 2px rgba(0,0,0,.3),0 8px 24px -16px rgba(0,0,0,.7);
+  }
+
+  *{box-sizing:border-box;}
+  body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--font-body);
+       font-size:15px;line-height:1.55;-webkit-font-smoothing:antialiased;}
+  .shell{max-width:1020px;margin:0 auto;padding:0 20px 96px;}
+
+  /* ---------- masthead ---------- */
+  header.top{padding:44px 0 22px;}
+  .eyebrow{font-size:.66rem;letter-spacing:.19em;text-transform:uppercase;
+           color:var(--accent-ink);font-weight:600;margin:0 0 12px;}
+  h1{font-family:var(--font-display);font-weight:600;font-size:clamp(2rem,4.4vw,2.9rem);
+     line-height:1.06;margin:0 0 12px;text-wrap:balance;letter-spacing:-.01em;}
+  .standfirst{margin:0;max-width:64ch;color:var(--ink-soft);font-size:1.02rem;}
+  .standfirst code{font-family:var(--font-mono);font-size:.86em;background:var(--surface-2);
+                   padding:1px 5px;border-radius:3px;}
+
+  /* ---------- sticky control bar ---------- */
+  .bar{position:sticky;top:0;z-index:20;margin:24px 0 0;padding:14px 16px;
+       background:var(--surface);border:1px solid var(--rule);border-radius:10px;
+       box-shadow:var(--shadow);display:flex;flex-wrap:wrap;gap:16px;align-items:center;}
+  .prog{display:flex;align-items:center;gap:12px;flex:1 1 240px;min-width:220px;}
+  .prog-track{flex:1;height:7px;border-radius:99px;background:var(--rule-soft);overflow:hidden;}
+  .prog-fill{height:100%;width:0;background:var(--accent);border-radius:99px;
+             transition:width .35s cubic-bezier(.4,0,.2,1);}
+  .prog-num{font-family:var(--font-mono);font-size:.82rem;color:var(--ink-soft);
+            font-variant-numeric:tabular-nums;white-space:nowrap;}
+  .filters{display:flex;flex-wrap:wrap;gap:7px;}
+  .chip{font:inherit;font-size:.76rem;padding:5px 11px;border-radius:99px;cursor:pointer;
+        border:1px solid var(--rule);background:transparent;color:var(--ink-soft);
+        transition:background .15s,color .15s,border-color .15s;}
+  .chip:hover{border-color:var(--accent);color:var(--ink);}
+  .chip[aria-pressed="true"]{background:var(--ink);color:var(--bg);border-color:var(--ink);}
+  .chip:focus-visible,.tbtn:focus-visible,.item input:focus-visible+.box{
+        outline:2px solid var(--accent);outline-offset:2px;}
+  .tbtn{font:inherit;font-size:.76rem;padding:5px 11px;border-radius:99px;cursor:pointer;
+        border:1px solid var(--rule);background:transparent;color:var(--ink-soft);}
+  .tbtn:hover{border-color:var(--accent);color:var(--ink);}
+
+  /* ---------- callout ---------- */
+  .callout{margin:26px 0 0;padding:20px 22px;border-radius:10px;background:var(--critical-bg);
+           border:1px solid color-mix(in srgb,var(--critical) 26%,transparent);}
+  .callout h2{font-family:var(--font-display);font-size:1.22rem;margin:0 0 8px;color:var(--critical);}
+  .callout p{margin:0 0 10px;color:var(--ink-soft);max-width:70ch;}
+  .callout p:last-child{margin-bottom:0;}
+  .quote{font-family:var(--font-display);font-size:1.04rem;font-style:italic;
+         color:var(--ink);border-left:2px solid var(--critical);padding-left:14px;margin:12px 0;}
+
+  /* ---------- counts table ---------- */
+  .tablewrap{overflow-x:auto;margin:16px 0 0;border:1px solid var(--rule);border-radius:8px;
+             background:var(--surface);}
+  table{border-collapse:collapse;width:100%;min-width:520px;font-size:.85rem;}
+  caption{text-align:left;padding:11px 14px 9px;font-size:.68rem;letter-spacing:.15em;
+          text-transform:uppercase;color:var(--ink-faint);border-bottom:1px solid var(--rule-soft);}
+  th,td{padding:8px 14px;text-align:right;font-variant-numeric:tabular-nums;
+        font-family:var(--font-mono);border-bottom:1px solid var(--rule-soft);}
+  th:first-child,td:first-child{text-align:left;font-family:var(--font-body);}
+  thead th{font-family:var(--font-body);font-size:.72rem;letter-spacing:.08em;
+           text-transform:uppercase;color:var(--ink-faint);font-weight:600;}
+  tbody tr:last-child td{border-bottom:0;}
+  tbody tr.total td{font-weight:700;color:var(--critical);background:var(--surface-2);}
+  td.zero{color:var(--ink-faint);opacity:.5;}
+
+  /* ---------- sections ---------- */
+  section.grp{margin:38px 0 0;}
+  .grp-head{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap;
+            padding-bottom:9px;border-bottom:1px solid var(--rule);}
+  .grp-key{font-family:var(--font-mono);font-size:.8rem;color:var(--accent-ink);font-weight:700;}
+  .grp-head h2{font-family:var(--font-display);font-size:1.32rem;font-weight:600;margin:0;
+               letter-spacing:-.005em;}
+  .grp-count{margin-left:auto;font-family:var(--font-mono);font-size:.78rem;
+             color:var(--ink-faint);font-variant-numeric:tabular-nums;}
+  .grp-note{margin:9px 0 0;color:var(--ink-soft);font-size:.9rem;max-width:70ch;}
+  .items{list-style:none;margin:14px 0 0;padding:0;display:flex;flex-direction:column;gap:8px;}
+
+  /* ---------- item ---------- */
+  .item{position:relative;background:var(--surface);border:1px solid var(--rule);
+        border-radius:9px;border-left-width:3px;border-left-color:var(--blocked);
+        transition:opacity .2s,border-color .2s;}
+  .item.sev-critical{border-left-color:var(--critical);}
+  .item.sev-ready{border-left-color:var(--ready);}
+  .item label{display:grid;grid-template-columns:auto 1fr;gap:13px;
+              padding:13px 16px;cursor:pointer;align-items:start;}
+  .item input{position:absolute;opacity:0;width:1px;height:1px;}
+  .box{width:19px;height:19px;margin-top:2px;border-radius:5px;border:1.5px solid var(--ink-faint);
+       display:grid;place-items:center;transition:background .15s,border-color .15s;}
+  .box::after{content:"";width:9px;height:5px;border-left:2px solid var(--surface);
+              border-bottom:2px solid var(--surface);transform:rotate(-45deg) scale(0);
+              transition:transform .15s cubic-bezier(.34,1.56,.64,1);margin-top:-2px;}
+  .item input:checked+.box{background:var(--ready);border-color:var(--ready);}
+  .item input:checked+.box::after{transform:rotate(-45deg) scale(1);}
+  .item.is-done{opacity:.5;}
+  .item.is-done .it-title{text-decoration:line-through;text-decoration-color:var(--done);}
+  .it-title{font-weight:600;font-size:.95rem;margin:0 0 3px;}
+  .it-id{font-family:var(--font-mono);font-size:.8rem;color:var(--ink-faint);margin-right:7px;}
+  .it-detail{margin:0;color:var(--ink-soft);font-size:.88rem;max-width:72ch;}
+  .it-detail code{font-family:var(--font-mono);font-size:.85em;background:var(--surface-2);
+                  padding:1px 5px;border-radius:3px;}
+  .tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:9px;}
+  .tag{font-size:.68rem;letter-spacing:.07em;text-transform:uppercase;font-weight:600;
+       padding:3px 8px;border-radius:4px;background:var(--blocked-bg);color:var(--blocked);}
+  .tag.now{background:var(--ready-bg);color:var(--ready);}
+  .tag.live{background:var(--critical-bg);color:var(--critical);}
+  .tag.owner{background:transparent;border:1px solid var(--rule);color:var(--ink-faint);}
+
+  .empty{padding:26px;text-align:center;color:var(--ink-faint);font-size:.9rem;
+         border:1px dashed var(--rule);border-radius:9px;}
+  footer.foot{margin:52px 0 0;padding-top:20px;border-top:1px solid var(--rule);
+              color:var(--ink-faint);font-size:.82rem;}
+  footer.foot p{margin:0 0 7px;max-width:74ch;}
+  footer.foot code{font-family:var(--font-mono);font-size:.9em;}
+  @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;}}
+  @media (max-width:560px){
+    .bar{position:static;}
+    .item label{padding:12px 13px;gap:11px;}
+  }
+</style>
+
+<div class="shell">
+  <header class="top">
+    <p class="eyebrow">Working checklist &middot; 3 August 2026</p>
+    <h1>MapleMoon delivery: what's missing, and what's wrong</h1>
+    <p class="standfirst">Measured against <code>_wip/deploy/site-full/</code> — the build Carli is
+      actually looking at — not the frozen <code>clean/</code> package the Canva register tracks.
+      Tick items off as you go; your progress is saved in this browser.</p>
+  </header>
+
+  <div class="bar">
+    <div class="prog">
+      <div class="prog-track"><div class="prog-fill" id="fill"></div></div>
+      <span class="prog-num" id="pnum">0 / 0</span>
+    </div>
+    <div class="filters" role="group" aria-label="Filter items">
+      <button class="chip" id="f-all" aria-pressed="true" data-f="all">All</button>
+      <button class="chip" id="f-now" aria-pressed="false" data-f="now">Can do now</button>
+      <button class="chip" id="f-live" aria-pressed="false" data-f="live">Live &amp; wrong</button>
+      <button class="chip" id="f-client" aria-pressed="false" data-f="client">Needs Carli</button>
+      <button class="chip" id="f-open" aria-pressed="false" data-f="open">Hide done</button>
+    </div>
+    <button class="tbtn" id="reset">Reset</button>
+  </div>
+
+  <div class="callout">
+    <h2>Start here: this isn't a gap, it's live and wrong</h2>
+    <p>The preview Carli holds states <strong>37 times</strong> across the six pages that Maple Moon
+      slow-roasts and <strong>mills</strong> its own carob, in small batches, handmade. The Canva
+      register records all four as wording her later corrections prohibit.</p>
+    <p class="quote">"Maple Moon uses Australian-grown carob, slow-roasted and milled with cacao
+      butter on the NSW far north coast."</p>
+    <p>It is also in the meta description, so it is the link-preview text anywhere the URL is
+      shared. One factual answer — <strong>who roasts, who mills, and where</strong> — unblocks the
+      whole of section A and most of section C.</p>
+    <div class="tablewrap">
+      <table>
+        <caption>Occurrences per file, <code>_wip/deploy/site-full/</code></caption>
+        <thead><tr><th>Phrase</th><th>Total</th><th>carob-story</th><th>our-story</th><th>faq</th><th>shop</th><th>homepage</th></tr></thead>
+        <tbody>
+          <tr><td>slow-roasted</td><td>13</td><td>7</td><td>3</td><td>3</td><td class="zero">0</td><td class="zero">0</td></tr>
+          <tr><td>milled</td><td>11</td><td>7</td><td>1</td><td>2</td><td>1</td><td class="zero">0</td></tr>
+          <tr><td>mills</td><td>1</td><td class="zero">0</td><td class="zero">0</td><td>1</td><td class="zero">0</td><td class="zero">0</td></tr>
+          <tr><td>small batch</td><td>9</td><td>2</td><td>5</td><td>1</td><td class="zero">0</td><td>1</td></tr>
+          <tr><td>handmade</td><td>2</td><td class="zero">0</td><td>1</td><td class="zero">0</td><td class="zero">0</td><td>1</td></tr>
+          <tr><td>smooth carob</td><td>1</td><td class="zero">0</td><td class="zero">0</td><td class="zero">0</td><td>1</td><td class="zero">0</td></tr>
+          <tr class="total"><td>Total</td><td>37</td><td>16</td><td>10</td><td>7</td><td>2</td><td>2</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p style="margin-top:14px"><strong>The frozen <code>clean/</code> build contains zero of all six.</strong>
+      The stripping removed exactly these unverified claims — that is what it exists to do. So
+      <code>clean/</code> is claim-safe but content-stripped, which is what Carli complained about;
+      <code>site-full/</code> is complete but claim-unsafe. Deploying it answered her complaint and
+      took on the claim risk unpriced.</p>
+  </div>
+
+  <main id="groups"></main>
+
+  <footer class="foot">
+    <p><strong>How this was measured.</strong> Each item was tested by grepping a distinctive phrase
+      against the six built HTML files. Reliable for long unique phrases, weak for short common ones
+      — items tagged <em>eyes</em> matched a short string and want a human look rather than trust.
+      Section A counts are occurrences (<code>grep -o | wc -l</code>) per file, not line counts.</p>
+    <p><strong>Attribution caveat.</strong> The prohibitions in section A come from reconciliation
+      rule 1 of <code>CARLI-CANVA-NOTE-REGISTER-20260731.md</code>, whose header reads
+      <code>Owner: Codex</code>. It records Carli's later corrections as prohibiting this wording.
+      It is the register's summary, not a quote from her — worth knowing before repeating it to her.</p>
+    <p><strong>Fix both copies.</strong> Every check ran inside <code>_wip/deploy/site-full/</code>.
+      A fix there alone is reverted by the next rebuild — the trap that already bit stockists. Apply
+      to <code>_wip/*.WIP.html</code> as well, and skip the <code>*.rollback-*</code> and
+      <code>_hero_*</code> scratch files, which carry more hits but ship nowhere.</p>
+    <p>Source of record: <code>_wip/evidence/DELIVERY-CHECKLIST-20260803.md</code>, commit <code>20359d9</code>.</p>
+  </footer>
+</div>
+
+<script>
+const DATA = [
+  {k:"A", title:"Prohibited claims live on the preview", note:"Not gaps — statements currently in front of the client. One coordinated copy pass across both file copies, but it needs Nate's factual answer first.", items:[
+    {id:"A1", sev:"critical", live:1, owner:"Nate → Codex", t:"The “slow-roasted and milled” sentence", d:"Asserts Maple Moon mills its own carob. <code>slow-roasted</code> ×13 and <code>milled</code> ×11 are separate prohibitions and do not always co-occur."},
+    {id:"A2", sev:"critical", live:1, owner:"Nate → Codex", t:"“small batch” × 9", d:"Includes “Every bar is made in small batches from Australian-grown carob.”"},
+    {id:"A3", sev:"critical", live:1, owner:"Nate → Codex", t:"“handmade” × 2", d:"<code>our-story</code> and <code>homepage</code>."},
+    {id:"A4", sev:"critical", live:1, owner:"Nate → Codex", t:"“smooth carob” × 1 in shop", d:"Also the conflict that blocks CV-014."},
+    {id:"A5", sev:"critical", live:1, owner:"Codex", t:"The meta description repeats it", d:"“Carli and Dylan make carob bars in small batches from Australian-grown carob, milled with cacao butter…” Matches on <code>milled</code> and <code>small batch</code> <em>without</em> <code>slow-roasted</code> — fixing only the A1 sentence leaves this standing."}
+  ]},
+  {k:"B", title:"Unverified claims that went live anyway", note:"Marked needs-fact-check in the register, but present on the preview.", items:[
+    {id:"B1", sev:"critical", live:1, client:1, owner:"Carli / Dylan", t:"Supplier named on the page", d:"CV-046 / CV-063 — “Australian Carob Co” and “South Australia”. The register says Canva “is not sufficient supplier proof”."},
+    {id:"B2", sev:"critical", live:1, client:1, owner:"Carli / Dylan", t:"Business location live on the FAQ", d:"CV-059 — “Brunswick Heads, Byron Shire NSW” needs confirmation."},
+    {id:"B3", sev:"blocked", live:1, owner:"Codex", t:"Cacao butter process claim — eyes", d:"CV-052. <code>cacao butter</code> appears; confirm whether it is a plain ingredient mention or the unverified tempering claim."}
+  ]},
+  {k:"C", title:"Canva notes still not on the page", note:"Two of these are deliverable tonight with no client input. The rest wait on section B.", items:[
+    {id:"C15", sev:"ready", now:1, owner:"Codex", t:"CV-051 is half-applied", d:"The register says use <code>roasted for depth</code> <em>and remove</em> <code>slow</code>. The replacement landed, the removal didn't — the live step still reads “Slow-roasted for depth.” Already-approved direction."},
+    {id:"C10", sev:"ready", now:1, owner:"Codex", t:"CV-053 process step 04", d:"“our maple moon signature carob”. <code>ready-copy-review</code>."},
+    {id:"C1", sev:"blocked", owner:"Blocked by A4", t:"CV-014 Goji Eclipse Bites description", d:"Blocked by its own “smooth carob” wording."},
+    {id:"C2", sev:"blocked", client:1, owner:"Carli / Dylan", t:"CV-015 Pecan Eclipse Bite description", d:"Ingredient and production facts need authority."},
+    {id:"C3", sev:"blocked", client:1, owner:"Carli / Dylan", t:"CV-020 Carob powder flavour notes", d:"“roasted caramel, malt and toasted nuts”."},
+    {id:"C4", sev:"blocked", client:1, owner:"Carli / Dylan", t:"CV-022 / 023 / 024 cacao side of the comparison", d:"Sweetness, caffeine and theobromine, “stimulating and activating”."},
+    {id:"C5", sev:"blocked", client:1, owner:"Carli / Dylan", t:"CV-019 carob definition copy", d:"Needs fact-check."},
+    {id:"C6", sev:"blocked", client:1, owner:"Carli / Dylan", t:"CV-029 ritual intro", d:"Held on the “sugar crash” claim."},
+    {id:"C7", sev:"blocked", owner:"Nate", t:"CV-033 ritual night", d:"“Full Moon Rituals, a bar, a bite and a journal.” Product reference to verify."},
+    {id:"C8", sev:"blocked", client:1, owner:"Carli / Dylan", t:"CV-037 range CTA", d:"“Every flavour, right to your door…” Held pending shipping-policy check."},
+    {id:"C9", sev:"blocked", client:1, owner:"Carli / Dylan", t:"CV-047 comparison intro", d:"“…come from completely different plants.”"},
+    {id:"C11", sev:"blocked", owner:"Nate", t:"CV-054 range transition", d:"Held pending product-support check."},
+    {id:"C12", sev:"blocked", client:1, owner:"Carli / Dylan", t:"CV-056 FAQ caffeine answer", d:"Blocked — and the old question was already removed, so the FAQ is currently one entry short."},
+    {id:"C13", sev:"blocked", client:1, owner:"Carli / Dylan", t:"CV-058 FAQ “Is there Maple in it?”", d:"Product-wide sugar claim needs review."},
+    {id:"C14", sev:"blocked", client:1, owner:"Carli / Dylan", t:"CV-061 / 062 / 064 FAQ answers", d:"Cacao-butter caffeine, tempering, storage."}
+  ]},
+  {k:"D", title:"Missing assets", note:"", items:[
+    {id:"D1", sev:"ready", now:1, owner:"Nate picks → Codex", t:"Open Graph images — 4 referenced, 0 exist", d:"<code>og-homepage.jpg</code>, <code>og-our-story.jpg</code>, <code>og-carob-story.jpg</code>, <code>og-stockists.jpg</code>. <code>assets/social/</code> is absent from the build, so every share of the link renders imageless. Candidates already generated in <code>og_image_candidates_20260803_v1/</code>."},
+    {id:"D4", sev:"blocked", owner:"Nate", t:"CV-030 are the ritual pictures changing at all?", d:"Needs a decision before D2 is worth doing."},
+    {id:"D2", sev:"blocked", owner:"Nate", t:"CV-032 afternoon ritual wants elixir imagery", d:"Currently tea. <code>needs-asset</code>."},
+    {id:"D3", sev:"blocked", owner:"Codex", t:"CV-040 product photography without packaging", d:"Eclipse Bites, Moons and Bananas. Active writer at <code>assets/product_shots/w1-e-prepared-20260803/</code> — do not race it."}
+  ]},
+  {k:"E", title:"Blocked on catalogue truth", note:"Nothing here closes without a fresh WooCommerce export and an approved retail catalogue.", items:[
+    {id:"E1", sev:"blocked", owner:"Codex", t:"CV-039 apply new descriptions across catalogue cards", d:""},
+    {id:"E2", sev:"blocked", owner:"Codex", t:"CV-042 restore original copy for ingredients and further info", d:""},
+    {id:"E3", sev:"blocked", owner:"Codex", t:"CV-013 match flavour order between Bars and Moons", d:""},
+    {id:"E4", sev:"blocked", owner:"Nate", t:"CV-041 answer Carli's question", d:"How long to add all pictures and descriptions."}
+  ]},
+  {k:"F", title:"Structure, QA and hygiene", note:"", items:[
+    {id:"F1", sev:"critical", owner:"Codex", t:"The two builds trade off, and nobody priced the trade", d:"<code>clean/</code> is claim-safe but stripped; <code>site-full/</code> is complete but carries all 37. The roadmap writes CR-0…CR-4 against <code>clean/</code>, so the gates certify the artifact nobody looks at. Closing section A is what makes <code>site-full/</code> gate-able. Codex proposes a §9 packet; do not edit the frozen tree."},
+    {id:"F4", sev:"ready", now:1, owner:"Nate", t:"Founder bios built but not deployed", d:"Committed <code>76a626d</code>, held for local review. Carli crop v01 vs v02 still unpicked."},
+    {id:"F5", sev:"ready", now:1, owner:"Claude", t:"390px pass on the new founder cards", d:"Not yet run. The grid collapses to one column there, so the stranded-footer risk disappears, but it hasn't been looked at."},
+    {id:"F3", sev:"ready", now:1, owner:"Codex", t:"Working tree dirty across a handoff", d:"12 modified product shots plus untracked <code>site/</code> and <code>site-full/</code>. <code>site-full/</code> is deliberately untracked; the product shots belong to an active writer. Explicit paths only."},
+    {id:"F2", sev:"blocked", owner:"Nate", t:"carob-story comparison table stacks badly at 390px", d:"Content in a ~130px column, feature labels between the values they describe. Not an overflow — a design decision."}
+  ]},
+  {k:"✓", title:"Done this session — verified, not asserted", note:"Pre-ticked. These were confirmed by running the check, not by assuming.", done:1, items:[
+    {id:"G1", sev:"ready", owner:"", t:"Carli's preview URL serves the full build", d:"All six pages 200; <code>grep -c 'Why not'</code> on <code>/homepage</code> = 1 (the stripped build returns 0); her shop copy live."},
+    {id:"G2", sev:"ready", owner:"", t:"Carli's and Dylan's bios added to the founder cards", d:"Verbatim, signature blocks stripped — her mobile number was in the source email and must not ship. Applied to the WIP source and the <code>site-full</code> copy."},
+    {id:"G3", sev:"ready", owner:"", t:"All placeholder copy gone from the six pages", d:"Fixed-string sweep for “coming soon”, “to come”, “content pending”, “TBC”, “lorem”, “TODO”, “FIXME” returns zero."},
+    {id:"G4", sev:"ready", owner:"", t:"21 of 32 quotable Canva notes confirmed live", d:"More than the register credits — it tracks <code>clean/</code>, not the preview."},
+    {id:"G5", sev:"ready", owner:"", t:"Section A counts measured per file", d:"Across <code>site-full/</code>, the WIP source and <code>clean/</code>."}
+  ]}
+];
+
+const KEY = "mm-checklist-20260803";
+let state = {};
+try { state = JSON.parse(localStorage.getItem(KEY) || "{}"); } catch (e) { state = {}; }
+DATA.forEach(g => { if (g.done) g.items.forEach(i => { if (!(i.id in state)) state[i.id] = true; }); });
+
+let filter = "all";
+const groups = document.getElementById("groups");
+const esc = s => s.replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+
+function tags(it) {
+  const out = [];
+  if (it.now) out.push('<span class="tag now">Can do now</span>');
+  if (it.live) out.push('<span class="tag live">Live now</span>');
+  if (it.owner) out.push('<span class="tag owner">' + esc(it.owner) + "</span>");
+  return out.length ? '<div class="tags">' + out.join("") + "</div>" : "";
+}
+
+function matches(it) {
+  if (filter === "now") return !!it.now;
+  if (filter === "live") return !!it.live;
+  if (filter === "client") return !!it.client;
+  if (filter === "open") return !state[it.id];
+  return true;
+}
+
+function render() {
+  groups.innerHTML = "";
+  let shown = 0;
+  DATA.forEach(g => {
+    const vis = g.items.filter(matches);
+    if (!vis.length) return;
+    shown += vis.length;
+    const done = g.items.filter(i => state[i.id]).length;
+    const sec = document.createElement("section");
+    sec.className = "grp";
+    sec.innerHTML =
+      '<div class="grp-head"><span class="grp-key">' + esc(g.k) + '</span>' +
+      "<h2>" + esc(g.title) + "</h2>" +
+      '<span class="grp-count">' + done + " / " + g.items.length + "</span></div>" +
+      (g.note ? '<p class="grp-note">' + g.note + "</p>" : "") +
+      '<ul class="items">' + vis.map(it =>
+        '<li class="item sev-' + it.sev + (state[it.id] ? " is-done" : "") + '">' +
+          "<label><input type=\"checkbox\" data-id=\"" + it.id + "\"" + (state[it.id] ? " checked" : "") + ">" +
+          '<span class="box"></span><span>' +
+          '<span class="it-title"><span class="it-id">' + esc(it.id) + "</span>" + esc(it.t) + "</span>" +
+          (it.d ? '<p class="it-detail">' + it.d + "</p>" : "") +
+          tags(it) + "</span></label></li>").join("") +
+      "</ul>";
+    groups.appendChild(sec);
+  });
+  if (!shown) groups.innerHTML = '<p class="empty">Nothing matches this filter.</p>';
+  const all = DATA.flatMap(g => g.items);
+  const n = all.filter(i => state[i.id]).length;
+  document.getElementById("pnum").textContent = n + " / " + all.length + " done";
+  document.getElementById("fill").style.width = (n / all.length * 100) + "%";
+}
+
+groups.addEventListener("change", e => {
+  const id = e.target.dataset && e.target.dataset.id;
+  if (!id) return;
+  state[id] = e.target.checked;
+  try { localStorage.setItem(KEY, JSON.stringify(state)); } catch (err) {}
+  render();
+});
+
+document.querySelectorAll(".chip").forEach(btn => {
+  btn.addEventListener("click", () => {
+    filter = btn.dataset.f;
+    document.querySelectorAll(".chip").forEach(b =>
+      b.setAttribute("aria-pressed", String(b === btn)));
+    render();
+  });
+});
+
+document.getElementById("reset").addEventListener("click", () => {
+  state = {};
+  DATA.forEach(g => { if (g.done) g.items.forEach(i => { state[i.id] = true; }); });
+  try { localStorage.setItem(KEY, JSON.stringify(state)); } catch (err) {}
+  render();
+});
+
+render();
+</script>
