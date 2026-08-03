@@ -307,17 +307,47 @@ body{margin:0;background:#f4f2ed;}
       </article>
       <aside class="os-story-rail" aria-label="Story chapters">
         <div><span>01</span><b>The makers</b><p>Pair portrait and shared story.</p></div>
-        <div><span>02</span><b>Two notes</b><p>Individual stories to come from Carli and Dylan.</p></div>
+        <div><span>02</span><b>Two notes</b><p>Carli and Dylan, in their own words.</p></div>
         <div><span>03</span><b>Pod to place</b><p>From the ingredient to the farm.</p></div>
       </aside>
     </div>
   </section>
 
   <section id="founders" class="wrap os-founder-notes" aria-label="Founder profiles">
-    <div class="os-section-head"><h2>Two individual notes.</h2><p>Each founder gets equal space once their own bio, favourite, and portrait selection are supplied.</p></div>
+    <div class="os-section-head"><h2>Two individual notes.</h2><p>Each founder in their own words, on how Maple Moon began and what they bring to it.</p></div>
     <div class="os-founder-notes__grid">
-      <article class="os-founder-note"><span class="os-kick">Co-founder</span><h3>Carli</h3><div><b>Content pending</b><p>Carli's personal bio and Maple Moon favourite.</p></div></article>
-      <article class="os-founder-note"><span class="os-kick">Co-founder</span><h3>Dylan</h3><div><b>Content pending</b><p>Dylan's personal bio and Maple Moon favourite.</p></div></article>
+      <article class="os-founder-note">
+        <figure class="os-founder-note__portrait"><img src="assets/our_story/founder_carli.webp" width="1100" height="1375" loading="lazy" decoding="async" alt="Carli, co-founder of Maple Moon, in a denim shirt, laughing and looking upward."></figure>
+        <span class="os-kick">Co-founder</span><h3>Carli</h3>
+        <p class="os-founder-note__lead">After struggling with gut and digestive issues, Carli learned firsthand that what you put into your body can have a profound effect on how you feel. As a Montessori school teacher, she also saw this play out through her work with children, observing and studying the impact that food and nutrition can have on behaviour, growth and development.</p>
+        <details class="os-founder-note__more">
+          <summary>Read Carli's story</summary>
+          <div>
+            <p>While passionately working alongside children and families, Carli began eating carob to satisfy her afternoon and nighttime cravings for something rich and chocolatey, without the caffeine and heavy stimulants found in cacao. Cacao products often left her feeling jittery, wired and affected her sleep, which made her question the impact these stimulants could have on smaller, developing bodies.</p>
+            <p>Her love for carob began when she started experimenting with it at home. Her roommate loved the flavour, and together they decided to try selling it. Although they eventually went their separate ways with the idea, the seed had been planted. Carli couldn't let go of the vision and continued to develop the concept, always believing there was something special about carob and its potential as a delicious alternative to traditional chocolate.</p>
+            <p>From there, Maple Moon grew as more and more people discovered the flavour and fell in love with it.</p>
+            <p>Today, Carli is the researcher and creator behind Maple Moon's new flavours. Every ingredient is purposefully chosen&mdash;not only because it creates a delicious flavour combination, but because Carli believes in creating products made with thoughtfully selected ingredients that contribute to whole-body nourishment.</p>
+            <p>Her passion for health, nutrition and conscious eating is at the heart of everything she creates. From researching ingredients and developing new recipes to working on marketing, sales and sharing the story behind the brand, Carli is deeply involved in every part of the Maple Moon journey.</p>
+            <p>Carli is a dedicated Ashtanga yogi who practises every morning. She loves spending time by the ocean, especially during whale season, when she can often be found on the beach watching for her favourite animals as they make their way along the coast.</p>
+          </div>
+        </details>
+        <div><b>Maple Moon favourite</b><p>Goji Ripe Eclipse Bite</p></div>
+      </article>
+      <article class="os-founder-note">
+        <figure class="os-founder-note__portrait"><img src="assets/our_story/founder_dylan.webp" width="1100" height="1375" loading="lazy" decoding="async" alt="Dylan, co-founder of Maple Moon, in a navy shirt, laughing and looking upward."></figure>
+        <span class="os-kick">Co-founder</span><h3>Dylan</h3>
+        <p class="os-founder-note__lead">Dylan has always been a natural athlete, whether it was running, soccer or surfing. His passion for sport led him to explore how to optimise his health by understanding the body and what it needs to perform at its best. This sparked a deeper interest in nutrition, nourishment, rest and recovery, and the role they all play in supporting the body and achieving peak performance.</p>
+        <details class="os-founder-note__more">
+          <summary>Read Dylan's story</summary>
+          <div>
+            <p>When Dylan met Carli, she shared her idea of creating and selling her own carob treats. In the early days of their relationship, they jokingly called their adventures "Maple Mooning" instead of honeymooning, as Dylan was a strict vegan at the time and didn't eat honey. Although Carli had planned to move to Byron Bay and Dylan intended to settle in Sydney, their connection, love and shared passion for health, nature and conscious living kept bringing them together. Just six months into their relationship, they decided to take a leap and start Maple Moon as a passion project, with a shared vision of creating delicious, guilt-free treats that people could genuinely feel good about eating.</p>
+            <p>While Carli was the creator and flavour visionary behind the products, Dylan became the driving force behind turning the idea into a real business. He taught himself how to technically produce carob bars to perfection and, importantly, how to scale production as demand grew. From there, he took on the logistics and operations of the business, from managing the website to building relationships with stockists and distributors and ensuring the finished products made their way onto shelves across Australia.</p>
+            <p>Today, Dylan is the magic behind the scenes, managing the operations that keep Maple Moon moving. From sourcing the highest-quality raw ingredients to overseeing production, logistics and getting the final products into the hands of customers and onto store shelves, he is involved in every step of the journey.</p>
+            <p>Like Carli, Dylan has a deep love for the ocean and spends as much time as possible in the water. Rain, hail or shine, if the waves are good, you can almost always find him out surfing.</p>
+          </div>
+        </details>
+        <div><b>Maple Moon favourite</b><p>Almond Moon</p></div>
+      </article>
     </div>
   </section>
 
@@ -457,6 +487,20 @@ body{margin:0;background:#f4f2ed;}
 .os-founder-note>div{border-top:1px solid var(--story-rule);margin-top:auto;padding-top:15px;}
 .os-founder-note b{display:block;color:var(--ink-faint);font-size:.61rem;letter-spacing:.16em;text-transform:uppercase;margin-bottom:5px;}
 .os-founder-note p{font-size:.86rem;line-height:1.5;margin:0;}
+/* Founder bios. The C1 rule `.os .os-founder-notes__grid{align-items:start}` below already stops an open card stranding its neighbour's footer. */
+.os-founder-note__portrait{width:min(100%,296px);margin:0 0 22px;overflow:hidden;border-radius:6px;background:var(--story-rule);}
+.os-founder-note__portrait img{display:block;width:100%;height:auto;aspect-ratio:4/5;object-fit:cover;}
+.os-founder-note__lead{margin-top:14px;}
+.os-founder-note__lead,.os-founder-note__more p{font-size:.92rem;line-height:1.62;color:var(--ink-soft);}
+.os-founder-note__more{margin-top:12px;}
+.os-founder-note__more>div{padding-top:10px;}
+.os-founder-note__more p+p{margin-top:.9em;}
+.os-founder-note__more summary{display:inline-flex;align-items:center;gap:8px;padding:7px 0;cursor:pointer;list-style:none;font-size:.63rem;letter-spacing:.16em;text-transform:uppercase;color:var(--ink-faint);}
+.os-founder-note__more summary::-webkit-details-marker{display:none;}
+.os-founder-note__more summary::after{content:"+";font-size:1.05rem;letter-spacing:0;line-height:1;}
+.os-founder-note__more[open] summary::after{content:"\2013";}
+.os-founder-note__more summary:hover{color:var(--ink);}
+.os .os-founder-note__more summary:focus-visible{outline:3px solid #b88b3d;outline-offset:4px;}
 .os-ingredient-bridge{position:relative;isolation:isolate;display:block;width:100vw;max-width:none;min-height:clamp(460px,54vw,660px);margin:var(--story-chapter) calc(50% - 50vw) 0;padding:0;overflow:hidden;border:0;border-radius:0;background:#173542;}
 .os-ingredient-bridge figure{position:absolute;inset:0;margin:0;min-height:0;z-index:-2;}
 .os-ingredient-bridge figure::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(13,34,43,.02) 12%,rgba(13,34,43,.16) 42%,rgba(13,34,43,.9) 100%);}
