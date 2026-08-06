@@ -1,0 +1,166 @@
+{
+  "schema": "maplemoon-receipt/v2",
+  "receipt_id": "MM-PRODUCTS-INTAKE-PREP-20260803-RECEIPT-001",
+  "packet_id": "MM-PRODUCTS-INTAKE-PREP-20260803",
+  "candidate_id": "MM-PRODUCTS-INTAKE-PREP-20260803-001",
+  "worker_thread_id": "019fc42c-03b0-7d91-8c25-d127fbbc73e9",
+  "worker": "Codex intake worker",
+  "started_at": "2026-08-02T20:35:38.399644Z",
+  "completed_at": "2026-08-03T00:17:06Z",
+  "outcome": "PASS_LOCAL_PREPARATION_NEEDS_INDEPENDENT_READ_ONLY_REVIEW",
+  "confidence": "high for source preservation and inventory completeness; no confidence asserted for product identity or packaging truth",
+  "files_read": [
+    "/Users/handtomouse/Downloads/MM-Products",
+    "docs/orchestration/SIDECHAT_RECEIPT_GATE.md",
+    "scripts/check-maplemoon-receipt.py",
+    "docs/orchestration/CAT-01-INPUT-READINESS-20260731.md",
+    "docs/orchestration/GOV-01_RATIFIED_LEDGER.md",
+    "docs/orchestration/LOCK_MANIFEST.json",
+    "docs/client-review/2026-08-01-saturday-review/generated-candidates/IMAGERY-MATRIX.md"
+  ],
+  "files_changed": [
+    "docs/orchestration/reviews/MM-PRODUCTS-INTAKE-PREP-20260803.json",
+    "_wip/reviews/mm-products-intake-20260803/source_inventory_v01.json",
+    "_wip/reviews/mm-products-intake-20260803/source_inventory_v01.csv",
+    "_wip/reviews/mm-products-intake-20260803/source_aggregate_manifest_v01.sha256",
+    "_wip/reviews/mm-products-intake-20260803/exact_duplicate_map_v01.json",
+    "_wip/reviews/mm-products-intake-20260803/composition_family_flags_v01.json",
+    "_wip/reviews/mm-products-intake-20260803/visual_index_v01.md",
+    "_wip/reviews/mm-products-intake-20260803/candidate_mapping_manifest_v01.json",
+    "_wip/reviews/mm-products-intake-20260803/qa/qa_proof_v01.json",
+    "_wip/reviews/mm-products-intake-20260803/contact_sheets/contact_sheet_v01_001.png",
+    "_wip/reviews/mm-products-intake-20260803/contact_sheets/contact_sheet_v01_002.png",
+    "_wip/reviews/mm-products-intake-20260803/contact_sheets/contact_sheet_v01_003.png",
+    "_wip/reviews/mm-products-intake-20260803/contact_sheets/contact_sheet_v01_004.png",
+    "_wip/reviews/mm-products-intake-20260803/contact_sheets/contact_sheet_v01_005.png",
+    "_wip/reviews/mm-products-intake-20260803/contact_sheets/contact_sheet_v01_006.png",
+    "_wip/reviews/mm-products-intake-20260803/contact_sheets/contact_sheet_v01_007.png",
+    "_wip/reviews/mm-products-intake-20260803/contact_sheets/contact_sheet_v01_008.png",
+    "_wip/reviews/mm-products-intake-20260803/contact_sheets/contact_sheet_v01_009.png",
+    "_wip/reviews/mm-products-intake-20260803/contact_sheets/contact_sheet_v01_010.png",
+    "_wip/reviews/mm-products-intake-20260803/contact_sheets/contact_sheet_v01_011.png"
+  ],
+  "files_confirmed_untouched": [
+    "/Users/handtomouse/Downloads/MM-Products (204 PNGs; source aggregate manifest SHA-256 unchanged)",
+    "assets/",
+    "_wip/*.WIP.html",
+    "docs/client-review/",
+    "products/",
+    "templates/"
+  ],
+  "checkpoint_path": "_wip/reviews/mm-products-intake-20260803/checkpoints/MM-PRODUCTS-INTAKE-PREP-20260803_20260803_063525_AEST",
+  "source_preservation": {
+    "source_root": "/Users/handtomouse/Downloads/MM-Products",
+    "source_count_before": 204,
+    "source_count_after": 204,
+    "aggregate_manifest_sha256_before": "d7bad42190869453e214f5e71d9ef2def3d3c8e72405353abd29201ef6a2de18",
+    "aggregate_manifest_sha256_after": "d7bad42190869453e214f5e71d9ef2def3d3c8e72405353abd29201ef6a2de18",
+    "source_mutation": false,
+    "provenance": "Nate-supplied ChatGPT/generated candidate imagery; never client photography"
+  },
+  "pre_sha256": {
+    "docs/orchestration/packets/MM-PRODUCTS-INTAKE-PREP-20260803.md": "bc60e42c132f0082277737e6c95455b87c42ba8ea1bf9529a1b9be712daecc56",
+    "docs/orchestration/reviews/MM-PRODUCTS-INTAKE-PREP-20260803.json": null,
+    "_wip/reviews/mm-products-intake-20260803/source_inventory_v01.json": null,
+    "_wip/reviews/mm-products-intake-20260803/source_inventory_v01.csv": null,
+    "_wip/reviews/mm-products-intake-20260803/source_aggregate_manifest_v01.sha256": null,
+    "_wip/reviews/mm-products-intake-20260803/exact_duplicate_map_v01.json": null,
+    "_wip/reviews/mm-products-intake-20260803/composition_family_flags_v01.json": null,
+    "_wip/reviews/mm-products-intake-20260803/visual_index_v01.md": null,
+    "_wip/reviews/mm-products-intake-20260803/candidate_mapping_manifest_v01.json": null,
+    "_wip/reviews/mm-products-intake-20260803/qa/qa_proof_v01.json": null,
+    "_wip/reviews/mm-products-intake-20260803/contact_sheets/contact_sheet_v01_001.png": null,
+    "_wip/reviews/mm-products-intake-20260803/contact_sheets/contact_sheet_v01_002.png": null,
+    "_wip/reviews/mm-products-intake-20260803/contact_sheets/contact_sheet_v01_003.png": null,
+    "_wip/reviews/mm-products-intake-20260803/contact_sheets/contact_sheet_v01_004.png": null,
+    "_wip/reviews/mm-products-intake-20260803/contact_sheets/contact_sheet_v01_005.png": null,
+    "_wip/reviews/mm-products-intake-20260803/contact_sheets/contact_sheet_v01_006.png": null,
+    "_wip/reviews/mm-products-intake-20260803/contact_sheets/contact_sheet_v01_007.png": null,
+    "_wip/reviews/mm-products-intake-20260803/contact_sheets/contact_sheet_v01_008.png": null,
+    "_wip/reviews/mm-products-intake-20260803/contact_sheets/contact_sheet_v01_009.png": null,
+    "_wip/reviews/mm-products-intake-20260803/contact_sheets/contact_sheet_v01_010.png": null,
+    "_wip/reviews/mm-products-intake-20260803/contact_sheets/contact_sheet_v01_011.png": null
+  },
+  "post_sha256": {
+    "docs/orchestration/packets/MM-PRODUCTS-INTAKE-PREP-20260803.md": "bc60e42c132f0082277737e6c95455b87c42ba8ea1bf9529a1b9be712daecc56",
+    "docs/orchestration/reviews/MM-PRODUCTS-INTAKE-PREP-20260803.json": null,
+    "_wip/reviews/mm-products-intake-20260803/source_inventory_v01.json": "1edf033904f582d43676577f24eedd50039480cd73c55d98405425fba211610c",
+    "_wip/reviews/mm-products-intake-20260803/source_inventory_v01.csv": "a6e5abc4e62a4772f3ef90add55264577155a11af617eab87002090853764b07",
+    "_wip/reviews/mm-products-intake-20260803/source_aggregate_manifest_v01.sha256": "97cbfc31b17273fc165ff2b7ffb00f7c68be292cdd336fbf52db399452ff4275",
+    "_wip/reviews/mm-products-intake-20260803/exact_duplicate_map_v01.json": "2742c85272265d742172b91a8e90bde5336e5f7873dbc210a848175ea63dec93",
+    "_wip/reviews/mm-products-intake-20260803/composition_family_flags_v01.json": "dd9c8b7348fc5b2244cfbc7ce31e4bff17d28dcf1d5cda3d137c0a8289ec7fbc",
+    "_wip/reviews/mm-products-intake-20260803/visual_index_v01.md": "aa84c561afcbc54ae8cf41ac73eb19e537353774df37e76d770df764506eba10",
+    "_wip/reviews/mm-products-intake-20260803/candidate_mapping_manifest_v01.json": "232d7d1d48625a0f8b7ec190e1efdb6deeaa06ffe0047bad75519cd63865c966",
+    "_wip/reviews/mm-products-intake-20260803/qa/qa_proof_v01.json": "3962671dcdd409bc8df849ae6ec49e98eca20a8993c9a8dd22e8f3be2b77a8f1",
+    "_wip/reviews/mm-products-intake-20260803/contact_sheets/contact_sheet_v01_001.png": "f98a3a72309787afd8dfc2faf350095ea79673fddc861dd2f303fa0f1b3a3e5d",
+    "_wip/reviews/mm-products-intake-20260803/contact_sheets/contact_sheet_v01_002.png": "218b699c852b63297133d43bfb2b351a02eb03b3d0296a72064f1c193c23694b",
+    "_wip/reviews/mm-products-intake-20260803/contact_sheets/contact_sheet_v01_003.png": "ce2fb81aff57aacfe6854ff195b5d1d243bf1737e0c513794c8c9e8696c3f1ea",
+    "_wip/reviews/mm-products-intake-20260803/contact_sheets/contact_sheet_v01_004.png": "ed3c818d3622336e8ee04e36016d53f5252beb525dc39421ed49f9fd2ef10dbd",
+    "_wip/reviews/mm-products-intake-20260803/contact_sheets/contact_sheet_v01_005.png": "ebf1559ce881b3a972c4f150471efd1c81a4902e0d606220973a59a092b3ffc8",
+    "_wip/reviews/mm-products-intake-20260803/contact_sheets/contact_sheet_v01_006.png": "57034dad021b101c238db3523ec6271a1b6619dcecb7c2f8934243965cc69f55",
+    "_wip/reviews/mm-products-intake-20260803/contact_sheets/contact_sheet_v01_007.png": "58849bd3d66b551a2278ae59f6e9bbee6d522444ca53a87e94fc3c0ede0a2c19",
+    "_wip/reviews/mm-products-intake-20260803/contact_sheets/contact_sheet_v01_008.png": "ed685a8b976416d828fcc4510889e20c832b0ba7ab2f3e09cffa5cd393ef9127",
+    "_wip/reviews/mm-products-intake-20260803/contact_sheets/contact_sheet_v01_009.png": "cfaa6eb3721429341d5da418330ccf824efac78d33a7151786ff71e358470249",
+    "_wip/reviews/mm-products-intake-20260803/contact_sheets/contact_sheet_v01_010.png": "bc7d3bea57bb43c1cb289e1b7fddcc5f562a6764077e7f12efa09ab82d06b6f4",
+    "_wip/reviews/mm-products-intake-20260803/contact_sheets/contact_sheet_v01_011.png": "8ae9b1a5d84cfe173e57462b55eccea739de38f02fce7bc8b980f456e6e80bca"
+  },
+  "checks": [
+    {
+      "command": "python3 -B scripts/check-maplemoon-receipt.py checkpoint --packet docs/orchestration/packets/MM-PRODUCTS-INTAKE-PREP-20260803.md --destination _wip/reviews/mm-products-intake-20260803/checkpoints/MM-PRODUCTS-INTAKE-PREP-20260803_20260803_063525_AEST",
+      "exit_code": 0,
+      "result": "PASS checkpoint packet=MM-PRODUCTS-INTAKE-PREP-20260803 files=21 path=_wip/reviews/mm-products-intake-20260803/checkpoints/MM-PRODUCTS-INTAKE-PREP-20260803_20260803_063525_AEST"
+    },
+    {
+      "command": "python3 -B scripts/check-maplemoon-receipt.py verify --packet docs/orchestration/packets/MM-PRODUCTS-INTAKE-PREP-20260803.md --checkpoint _wip/reviews/mm-products-intake-20260803/checkpoints/MM-PRODUCTS-INTAKE-PREP-20260803_20260803_063525_AEST --phase start",
+      "exit_code": 0,
+      "result": "PASS packet=MM-PRODUCTS-INTAKE-PREP-20260803 phase=start scope=21"
+    },
+    {
+      "command": "admitted source inventory/contact-sheet generator",
+      "exit_code": 0,
+      "result": "PASS generated_outputs=19 source_count=204 aggregate_sha256=d7bad42190869453e214f5e71d9ef2def3d3c8e72405353abd29201ef6a2de18; contact_sheets=11; exact_duplicate_groups=0; composition_families=13; source hash unchanged after write."
+    },
+    {
+      "command": "read-only inventory/mapping/contact-sheet structural verification",
+      "exit_code": 0,
+      "result": "PASS source_count=204; inventory_json=204; inventory_csv=204; mapping_holds=204; exact_unique_sha256=204; contact_sheets=11; coverage=204; no_ready_derivatives=0."
+    },
+    {
+      "command": "read-only rendered contact-sheet inspection, pages 001-011",
+      "exit_code": 0,
+      "result": "PASS visual index sheets render and cover MMPI-001 through MMPI-204. Identity, packaging text/labels, colour truth and responsive framing remain HOLD/not applicable rather than inferred."
+    },
+    {
+      "command": "git diff --check",
+      "exit_code": 0,
+      "result": "PASS (no output)."
+    }
+  ],
+  "screenshots_or_urls": [
+    "file:///Users/handtomouse/.codex/worktrees/32a0/maplemoon-website/_wip/reviews/mm-products-intake-20260803/contact_sheets/contact_sheet_v01_001.png",
+    "file:///Users/handtomouse/.codex/worktrees/32a0/maplemoon-website/_wip/reviews/mm-products-intake-20260803/contact_sheets/contact_sheet_v01_002.png",
+    "file:///Users/handtomouse/.codex/worktrees/32a0/maplemoon-website/_wip/reviews/mm-products-intake-20260803/contact_sheets/contact_sheet_v01_003.png",
+    "file:///Users/handtomouse/.codex/worktrees/32a0/maplemoon-website/_wip/reviews/mm-products-intake-20260803/contact_sheets/contact_sheet_v01_004.png",
+    "file:///Users/handtomouse/.codex/worktrees/32a0/maplemoon-website/_wip/reviews/mm-products-intake-20260803/contact_sheets/contact_sheet_v01_005.png",
+    "file:///Users/handtomouse/.codex/worktrees/32a0/maplemoon-website/_wip/reviews/mm-products-intake-20260803/contact_sheets/contact_sheet_v01_006.png",
+    "file:///Users/handtomouse/.codex/worktrees/32a0/maplemoon-website/_wip/reviews/mm-products-intake-20260803/contact_sheets/contact_sheet_v01_007.png",
+    "file:///Users/handtomouse/.codex/worktrees/32a0/maplemoon-website/_wip/reviews/mm-products-intake-20260803/contact_sheets/contact_sheet_v01_008.png",
+    "file:///Users/handtomouse/.codex/worktrees/32a0/maplemoon-website/_wip/reviews/mm-products-intake-20260803/contact_sheets/contact_sheet_v01_009.png",
+    "file:///Users/handtomouse/.codex/worktrees/32a0/maplemoon-website/_wip/reviews/mm-products-intake-20260803/contact_sheets/contact_sheet_v01_010.png",
+    "file:///Users/handtomouse/.codex/worktrees/32a0/maplemoon-website/_wip/reviews/mm-products-intake-20260803/contact_sheets/contact_sheet_v01_011.png"
+  ],
+  "failures": [],
+  "unknowns": [
+    "No fresh WooCommerce export or approved retail catalogue is available locally, so visual identity cannot become an approved product match.",
+    "Generated candidate labels, packaging text, claims, colours and apparent variants are not authoritative and remain unverified.",
+    "Independent read-only verification by Main is still required; this worker cannot self-accept."
+  ],
+  "residual_risk": [
+    "The 13 perceptual-hash composition families are similarity flags only, not duplicate, identity or product decisions.",
+    "All 204 candidates remain HOLD and no website-ready derivative, asset/reference swap, integration or product fact was created."
+  ],
+  "forbidden_path_changes": [],
+  "proposed_next_state": "needs_review",
+  "next_reviewer": "Main coordinator 019fa858-05c9-7631-b26e-8f5cbbf1387a",
+  "next_action": "Main performs independent read-only verification of the receipt, inventory counts/source aggregate, mapping HOLD state and at least the contact-sheet coverage before any separate catalogue-backed derivative packet is considered."
+}
