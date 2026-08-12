@@ -9,7 +9,7 @@
 <link rel="stylesheet" href="https://use.typekit.net/dvz0xjs.css">
 <style>:root{--mm-serif:'p22-mackinac-pro','P22 Mackinac Pro',Georgia,serif!important;--mm-sans:'neue-haas-grotesk-display','Neue Haas Grotesk Display Pro','Inter','Helvetica Neue',sans-serif!important;}</style>
 <title>What is Carob? | Maple Moon</title>
-<meta name="description" content="Carob is a naturally sweet pod, naturally caffeine free. Maple Moon uses Australian-grown carob, slow-roasted and milled with cacao butter on the NSW far north coast.">
+
 <link rel="stylesheet" href="/brand_kit.css">
 <style>
 /* CAROB STORY (education page): luxury editorial continuation of the homepage. */
@@ -186,109 +186,18 @@ body{margin:0;}
 <link rel="stylesheet" href="/a11y_inner.css?v=20260723">
 <link rel="stylesheet" href="/design_refinement_20260723.css">
 
-<!-- MM-SEO-BLOCK (og-image paths are PLACEHOLDERS: assets/social/*.jpg 1200x630 need producing) -->
-<link rel="canonical" href="https://maplemoon.com.au/pages/carob-story">
-<meta name="robots" content="index, follow, max-image-preview:large">
 <meta name="theme-color" content="#457798">
-<meta property="og:site_name" content="Maple Moon">
-<meta property="og:type" content="article">
-<meta property="og:url" content="https://maplemoon.com.au/pages/carob-story">
-<meta property="og:title" content="What is Carob? | Maple Moon">
-<meta property="og:description" content="Carob is a naturally sweet pod, naturally caffeine free. Maple Moon uses Australian-grown carob, slow-roasted and milled with cacao butter on the NSW far north coast.">
-<meta property="og:image" content="https://maplemoon.com.au/assets/social/og-carob-story.jpg">
-<meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
-<meta property="og:locale" content="en_AU">
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="What is Carob? | Maple Moon">
-<meta name="twitter:description" content="Carob is a naturally sweet pod, naturally caffeine free. Maple Moon uses Australian-grown carob, slow-roasted and milled with cacao butter on the NSW far north coast.">
-<meta name="twitter:image" content="https://maplemoon.com.au/assets/social/og-carob-story.jpg">
-<script type="application/ld+json">
-{
- "@context": "https://schema.org",
- "@type": "Organization",
- "@id": "https://maplemoon.com.au/#organization",
- "name": "Maple Moon",
- "url": "https://maplemoon.com.au",
- "logo": {
-  "@type": "ImageObject",
-  "url": "https://maplemoon.com.au/assets/social/mm_logo_social.jpg",
-  "width": 512,
-  "height": 512
- },
- "description": "Maple Moon makes carob products on the NSW far north coast.",
- "email": "info@maplemoon.com.au",
- "areaServed": {
-  "@type": "Country",
-  "name": "Australia"
- },
- "foundingLocation": {
-  "@type": "Place",
-  "name": "Far North Coast, New South Wales, Australia"
- }
-}
-</script>
-<script type="application/ld+json">
-{
- "@context": "https://schema.org",
- "@type": "WebSite",
- "@id": "https://maplemoon.com.au/#website",
- "url": "https://maplemoon.com.au",
- "name": "Maple Moon",
- "description": "Maple Moon makes carob products on the NSW far north coast.",
- "publisher": {
-  "@id": "https://maplemoon.com.au/#organization"
- },
- "inLanguage": "en-AU"
-}
-</script>
-<script type="application/ld+json">
-{
- "@context": "https://schema.org",
- "@type": "BreadcrumbList",
- "itemListElement": [
-  {
-   "@type": "ListItem",
-   "position": 1,
-   "name": "Home",
-   "item": "https://maplemoon.com.au/"
-  },
-  {
-   "@type": "ListItem",
-   "position": 2,
-   "name": "What is Carob",
-   "item": "https://maplemoon.com.au/pages/carob-story"
-  }
- ]
-}
-</script>
-<script type="application/ld+json">
-{
- "@context": "https://schema.org",
- "@type": "Article",
- "headline": "What is Carob?",
- "description": "Carob is a naturally sweet pod, naturally caffeine free. Maple Moon uses Australian-grown carob, slow-roasted and milled with cacao butter on the NSW far north coast.",
- "url": "https://maplemoon.com.au/pages/carob-story",
- "image": {
-  "@type": "ImageObject",
-  "url": "https://maplemoon.com.au/assets/social/og-carob-story.jpg",
-  "width": 1200,
-  "height": 630
- },
- "author": {
-  "@type": "Organization",
-  "name": "Maple Moon",
-  "@id": "https://maplemoon.com.au/#organization"
- },
- "publisher": {
-  "@id": "https://maplemoon.com.au/#organization"
- },
- "inLanguage": "en-AU",
- "isPartOf": {
-  "@id": "https://maplemoon.com.au/#website"
- }
-}
-</script>
+
 <!--MM-A11Y-SAFE-->
+<meta name="robots" content="noindex,nofollow">
+<script>
+(() => {
+  const params = new URLSearchParams(window.location.search);
+  document.documentElement.classList.toggle("mm-annotated-review", params.get("review") === "1");
+  document.documentElement.classList.toggle("mm-cart-qa", params.get("cart-qa") === "1");
+})();
+</script>
+<link rel="stylesheet" href="/mock-cart.css">
 </head>
 <body>
 <div class="cs">
@@ -298,9 +207,9 @@ body{margin:0;}
   <div class="cs-moonwash" aria-hidden="true"></div>
 
   <header class="sp-top"><div class="wrap bar">
-    <nav class="sp-nav" aria-label="Primary navigation"><a href="/shop.WIP.html">Shop</a><a href="/our-story.WIP.html">Our Story</a><a href="/carob-story.WIP.html" class="on">What is Carob</a></nav>
-    <a class="sp-logo" href="/homepage_real_1_lead_photo.WIP.html">maple moon</a>
-    <nav class="sp-nav r" aria-label="Utility navigation"><a href="/stockists.WIP.html">Stockists</a><span class="sp-currency" aria-label="Currency, Australian dollars">AUD $</span>
+    <nav class="sp-nav" aria-label="Primary navigation"><a href="/shop.html">Shop</a><a href="/our-story.html">Our Story</a><a href="/carob-story.html" class="on">What is Carob</a></nav>
+    <a class="sp-logo" href="/homepage.html">maple moon</a>
+    <nav class="sp-nav r" aria-label="Utility navigation"><a href="/stockists.html">Stockists</a><span class="sp-currency" aria-label="Currency, Australian dollars">AUD $</span>
       <button class="sp-cart" type="button" aria-label="Cart, 0 items"><svg viewBox="0 0 24 24"><path d="M6 8h12l-1 12H7L6 8z"/><path d="M9 8a3 3 0 0 1 6 0"/></svg><b>0</b></button></nav>
   </div></header>
 
@@ -313,7 +222,7 @@ body{margin:0;}
       <div class="col">
         <span class="kick">First things first</span>
         <h1 class="hd">What is Carob, <em>actually?</em></h1>
-        <p class="bodycopy">Carob is a naturally sweet pod, not a bean. Maple Moon uses Australian-grown carob, slow-roasted and milled with cacao butter on the NSW far north coast.</p>
+        <p class="bodycopy">Carob is a naturally sweet pod, not a bean. Maple Moon uses Australian-grown carob.</p>
         <div class="credrow"><span><b>Australian</b><em>grown</em></span><span><b>Naturally</b><em>sweet</em></span><span><b>Caffeine</b><em>free</em></span></div>
       </div>
     </div>
@@ -349,23 +258,7 @@ body{margin:0;}
   </section>
 
   <!-- from pod to bar -->
-  <section class="v2" id="pod-to-bar">
-    <div class="wrap grid">
-      <div>
-        <span class="kick">The making of it</span>
-        <h2 class="hd">From pod<br>to <em>bar.</em></h2>
-        <p class="bodycopy">From a tree-grown pod to a Maple Moon bar, the making stays close to the ingredient.</p>
-      </div>
-      <ol class="process-steps" aria-label="From pod to bar">
-        <li><span class="process-no" aria-hidden="true">01</span><span class="process-icon pod" aria-hidden="true"></span><strong>The pod</strong><span>Australian-grown carob.</span></li>
-        <li><span class="process-no" aria-hidden="true">02</span><span class="process-icon roast" aria-hidden="true"></span><strong>The roast</strong><span>Slow-roasted for depth.</span></li>
-        <li><span class="process-no" aria-hidden="true">03</span><span class="process-icon blend" aria-hidden="true"></span><strong>The blend</strong><span>Milled with cacao butter.</span></li>
-        <li><span class="process-no" aria-hidden="true">04</span><span class="process-icon bar" aria-hidden="true"></span><strong>The bar</strong><span>Poured in small batches.</span></li>
-      </ol>
-    </div>
-  </section>
-
-  <!-- gallery: the pod, up close -->
+<!-- gallery: the pod, up close -->
   <section class="gal" id="gallery">
     <div class="wrap">
       <div class="head">
@@ -388,7 +281,7 @@ body{margin:0;}
       <span class="kick">Taste it for yourself</span>
       <h2 class="hd">Discover our <em>range.</em></h2>
       <p class="bodycopy">Taste Maple Moon's carob range and find the format that suits you.</p>
-      <a class="pill" href="/shop.WIP.html">Shop the range</a>
+      <a class="pill" href="/shop.html">Shop the range</a>
     </div>
   </section>
 
@@ -398,12 +291,12 @@ body{margin:0;}
       <div class="side">
         <span class="kick">Good questions</span>
         <h2 class="hd">Asked, <em>answered.</em></h2>
-        <p class="bodycopy">The three things everyone asks at the market stall.</p>
+        <p class="bodycopy">The four things everyone asks at the market stall.</p>
       </div>
       <div class="list">
         <details open>
           <summary>Does carob taste like chocolate?<span class="ic"><svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span></summary>
-          <p class="a">It is a close cousin, not an impersonation. Roasted carob is smooth and naturally sweet, with a gentle toasted warmth of its own. If you come to it expecting carob rather than chocolate, it wins you over on its own terms.</p>
+          <p class="a">Carob is naturally sweet, with a gentle toasted warmth of its own. If you come to it expecting carob rather than chocolate, it wins you over on its own terms.</p>
         </details>
         <details>
           <summary>Is there any caffeine?<span class="ic"><svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span></summary>
@@ -411,21 +304,17 @@ body{margin:0;}
         </details>
         <details>
           <summary>What is in a bar?<span class="ic"><svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span></summary>
-          <p class="a">Each product label lists its exact ingredients. Maple Moon's carob is slow-roasted and milled with cacao butter.</p>
+          <p class="a">Each product label lists its exact ingredients.</p>
         </details>
-        <details>
-          <summary>Where is it made?<span class="ic"><svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span></summary>
-          <p class="a">Every bar is made in small batches from Australian-grown carob, on the far north coast of New South Wales.</p>
-        </details>
-      </div>
+</div>
     </div>
   </section>
 
   </main>
   <footer class="sp-ft"><div class="wrap">
     <div class="row">
-      <a class="serif" href="/homepage_real_1_lead_photo.WIP.html" style="font-size:1.15rem">maple moon</a>
-      <nav class="fnav" aria-label="Footer navigation"><a href="/shop.WIP.html">Shop</a><a href="/our-story.WIP.html">Our Story</a><a href="/stockists.WIP.html">Stockists</a><a href="mailto:info@maplemoon.com.au">Contact</a></nav>
+      <a class="serif" href="/homepage.html" style="font-size:1.15rem">maple moon</a>
+      <nav class="fnav" aria-label="Footer navigation"><a href="/shop.html">Shop</a><a href="/our-story.html">Our Story</a><a href="/stockists.html">Stockists</a><a href="mailto:info@maplemoon.com.au">Contact</a></nav>
     </div>
   </div></footer>
 
@@ -437,7 +326,7 @@ body{margin:0;}
 .hero::after{content:"";position:absolute;inset:0;z-index:-1;background:rgba(238,244,247,.48);}
 .hero .pic{top:50%;right:max(28px,calc((100vw - 1180px)/2));width:min(520px,43vw);height:calc(100% - 100px);transform:translateY(-50%);}
 .hero .pic picture{display:block;position:relative;width:100%;height:100%;}
-.hero .pic img{-webkit-mask-image:none;mask-image:none;object-position:center;}
+.hero .pic img{-webkit-mask-image:none;mask-image:none;border:1px solid rgba(69,119,152,.18);border-radius:10px;box-shadow:0 18px 44px rgba(41,57,64,.13);object-position:center;}
 .hero .inner{z-index:2;}
 .hero .col{max-width:460px;padding-top:8px;}
 .hero .credrow{padding:13px 0 12px;border-top:1px solid rgba(69,119,152,.18);border-bottom:1px solid rgba(69,119,152,.12);}
@@ -540,7 +429,7 @@ body{margin:0;}
 .cs-mist{opacity:.42}.cs-moonwash{opacity:.28;animation:none}.cs .wrap{max-width:1220px;padding-left:30px;padding-right:30px;}
 .sp-top{border-bottom:1px solid var(--line);padding-top:0;background:rgba(244,250,253,.54);}.sp-top .bar{height:64px;}.sp-nav a{font-size:.61rem;font-weight:600;color:var(--ink);}.sp-nav a.on{position:relative;}.sp-nav a.on::after{content:"";position:absolute;left:0;right:0;bottom:-12px;height:1px;background:var(--ink);}.sp-logo{font-size:1.48rem;}.sp-currency{font-size:.63rem;letter-spacing:.1em;color:var(--ink);}.sp-cart{border-color:rgba(16,45,88,.3);}
 .kick{color:#58708d;font-weight:600;letter-spacing:.22em}.hd{color:var(--ink);letter-spacing:-.015em}.bodycopy{color:#4f6682;}
-.hero{min-height:492px;padding:48px 0 46px;}.hero::before{opacity:.11;filter:blur(30px);}.hero::after{background:rgba(244,250,253,.26);}.hero .pic{right:max(30px,calc((100vw - 1160px)/2));width:min(572px,48vw);height:calc(100% - 94px);}.hero .col{max-width:472px;padding-top:0;}.hero .hd{font-size:clamp(2.75rem,4.2vw,4.05rem);margin-bottom:22px;}.hero .bodycopy{max-width:42ch;font-size:1rem;line-height:1.7;}
+.hero{min-height:492px;padding:48px 0 46px;}.hero::before{opacity:.11;filter:blur(30px);}.hero::after{background:rgba(244,250,253,.26);}.hero .pic{right:max(30px,calc((100vw - 1160px)/2));width:min(572px,48vw);height:calc(100% - 94px);}.hero .pic img{border-radius:12px;border-color:rgba(42,77,110,.18);box-shadow:0 18px 44px rgba(34,59,86,.14);}.hero .col{max-width:472px;padding-top:0;}.hero .hd{font-size:clamp(2.75rem,4.2vw,4.05rem);margin-bottom:22px;}.hero .bodycopy{max-width:42ch;font-size:1rem;line-height:1.7;}
 .hero .credrow{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0;max-width:394px;margin-top:28px;padding:0;border:0;}.hero .credrow span{position:relative;display:grid;gap:2px;padding:38px 12px 0 0;color:var(--ink);font-size:.6rem;letter-spacing:.12em;text-align:center;}.hero .credrow span+span{padding-left:12px;}.hero .credrow span+span::before{left:0;top:18px;height:58px;transform:none;background:rgba(43,83,119,.18);}.hero .credrow span::after{content:"";position:absolute;top:0;left:50%;width:22px;height:22px;border:1.5px solid currentColor;border-radius:50%;transform:translateX(-50%);opacity:.9;}.hero .credrow span:nth-child(1)::after{border-radius:52% 48% 54% 46%;transform:translateX(-50%) rotate(45deg);}.hero .credrow span:nth-child(2)::after{border-radius:50% 50% 44% 56%;}.hero .credrow span:nth-child(3)::after{border-radius:46% 54% 48% 52%;}.hero .credrow b{font-size:.62rem;line-height:1.1;font-weight:700;text-transform:uppercase;}.hero .credrow em{font-family:var(--mm-serif);font-size:.7rem;font-style:italic;letter-spacing:0;text-transform:none;color:#4f6682;}
 .cmp{padding:10px 0 32px;}.cmp-panel{border:1px solid var(--line);border-radius:13px;background:rgba(255,255,255,.48);box-shadow:0 12px 34px rgba(36,68,94,.04);}.cmp-head{grid-template-columns:minmax(0,.95fr) minmax(0,1.45fr);gap:46px;padding:25px 30px 20px;align-items:center;}.cmp-head .hd{font-size:clamp(2rem,3vw,2.65rem);}.cmp-head .bodycopy{max-width:42ch;}.cmp-study{grid-template-columns:1.15fr .8fr 1.15fr;min-height:100px;border-bottom:0;background:transparent;}.cmp-specimen{min-height:100px;}.cmp-specimen+.cmp-specimen{border-left:0;}.cmp-specimen img{opacity:.94;mix-blend-mode:normal;filter:saturate(.78) contrast(.95);}.carob-specimen{box-shadow:none;background:#dcebf2;}.cacao-specimen{background:#faf9f5;}.cmp-feature{display:grid;place-items:center;background:rgba(225,238,247,.66);border-left:1px solid var(--line);border-right:1px solid var(--line);color:var(--ink);font-size:.66rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;}.cmp-specimen figcaption,.cmp-specimen .study-label{left:20px;bottom:17px;display:grid;gap:4px;color:var(--ink);font-size:.64rem;letter-spacing:.11em;text-transform:uppercase;text-shadow:0 1px 8px rgba(255,255,255,.6);}.cmp-specimen figcaption b,.cmp-specimen .study-label b{font-size:.74rem;letter-spacing:.1em;}.cmp-specimen figcaption span,.cmp-specimen .study-label span{font-size:.67rem;letter-spacing:0;text-transform:none;font-weight:400;}.cacao-specimen .study-label{color:#6b5139;}.bean-mark{width:44px;height:62px;border-color:rgba(106,81,57,.6);}.bean-mark::after{background:rgba(106,81,57,.6);}
 .cmp-table thead{position:absolute;width:1px;height:1px;margin:-1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;}.cmp-table tbody tr{display:grid;grid-template-columns:1.15fr .8fr 1.15fr;}.cmp-table th,.cmp-table td{min-height:0;padding:13px 20px;border-top:1px solid var(--line-soft);font-size:.85rem;}.cmp-table tbody th{display:grid;place-items:center;color:var(--ink);background:rgba(225,238,247,.66);font-size:.63rem;letter-spacing:.1em;text-align:center;}.cmp-table .carob{border-left:0;background:rgba(255,255,255,.24);}.cmp-table .cacao{border-left:1px solid var(--line);color:#4f6682;}
@@ -568,7 +457,7 @@ body{margin:0;}
 /* 06. Hero copy gets a more legible measure at wide screens. */
 .hero .bodycopy{max-width:39ch;letter-spacing:-.006em;}
 /* 07. The orchard image holds its editorial frame with no hard edge. */
-.hero .pic::after{content:none;}
+.hero .pic::after{content:"";position:absolute;inset:0;border-radius:12px;pointer-events:none;box-shadow:inset 0 0 0 1px rgba(255,255,255,.28),inset 0 -42px 52px rgba(11,38,61,.08);}
 /* 08. Credential markers have distinct, calmer silhouettes. */
 .hero .credrow span:nth-child(2)::after{border-radius:50% 50% 45% 45%;transform:translateX(-50%) rotate(45deg);}.hero .credrow span:nth-child(3)::after{border-radius:50% 50% 48% 48%;border-top-color:transparent;}
 /* 09. The comparison enters as a contained reading card. */
@@ -626,142 +515,6 @@ body{margin:0;}
   .sp-nav.r{gap:12px;}
 }
 </style>
-<style id="carob-story-seams-fades-20260803">
-/* W2-G: Homepage canonical edge-mask plus bridge treatment. */
-.cs .hero{
-  isolation:isolate;
-  overflow:visible;
-  z-index:6;
-  background:transparent;
-}
-.cs .hero .pic img{
-  -webkit-mask-image:
-    linear-gradient(90deg, transparent 0, #000 18%, #000 100%),
-    linear-gradient(180deg, transparent 0, #000 22%, #000 74%, transparent 100%);
-  mask-image:
-    linear-gradient(90deg, transparent 0, #000 18%, #000 100%),
-    linear-gradient(180deg, transparent 0, #000 22%, #000 74%, transparent 100%);
-  -webkit-mask-composite:source-in;
-  mask-composite:intersect;
-}
-.cs .hero::before{
-  content:"";
-  position:absolute;
-  inset:-120px 0 auto;
-  z-index:1;
-  height:340px;
-  pointer-events:none;
-  background:linear-gradient(
-    180deg,
-    rgba(237,247,252,0) 0%,
-    rgba(237,247,252,.64) 24%,
-    rgba(237,247,252,.82) 44%,
-    rgba(237,247,252,.28) 76%,
-    rgba(237,247,252,0) 100%
-  );
-  filter:blur(18px);
-  transform:scaleY(1.08);
-}
-.cs .hero::after{
-  content:"";
-  position:absolute;
-  inset:auto 0 -120px;
-  z-index:1;
-  height:340px;
-  pointer-events:none;
-  background:linear-gradient(
-    180deg,
-    rgba(237,247,252,0) 0%,
-    rgba(237,247,252,.64) 24%,
-    rgba(237,247,252,.82) 44%,
-    rgba(237,247,252,.28) 76%,
-    rgba(237,247,252,0) 100%
-  );
-  filter:blur(18px);
-  transform:scaleY(1.08);
-}
-.cs .cta{
-  isolation:isolate;
-  overflow:visible;
-  z-index:6;
-  background:transparent;
-}
-.cs .cta .bg img{
-  -webkit-mask-image:
-    linear-gradient(90deg, transparent 0, #000 18%, #000 100%),
-    linear-gradient(180deg, transparent 0, #000 22%, #000 74%, transparent 100%);
-  mask-image:
-    linear-gradient(90deg, transparent 0, #000 18%, #000 100%),
-    linear-gradient(180deg, transparent 0, #000 22%, #000 74%, transparent 100%);
-  -webkit-mask-composite:source-in;
-  mask-composite:intersect;
-}
-.cs .cta::before{
-  content:"";
-  position:absolute;
-  inset:-120px 0 auto;
-  z-index:1;
-  height:340px;
-  pointer-events:none;
-  background:linear-gradient(
-    180deg,
-    rgba(236,245,250,0) 0%,
-    rgba(236,245,250,.64) 24%,
-    rgba(236,245,250,.82) 44%,
-    rgba(236,245,250,.28) 76%,
-    rgba(236,245,250,0) 100%
-  );
-  filter:blur(18px);
-  transform:scaleY(1.08);
-}
-.cs .cta::after{
-  content:"";
-  position:absolute;
-  inset:auto 0 -120px;
-  z-index:1;
-  height:340px;
-  pointer-events:none;
-  background:linear-gradient(
-    180deg,
-    rgba(236,245,250,0) 0%,
-    rgba(236,245,250,.64) 24%,
-    rgba(236,245,250,.82) 44%,
-    rgba(236,245,250,.28) 76%,
-    rgba(236,245,250,0) 100%
-  );
-  filter:blur(18px);
-  transform:scaleY(1.08);
-}
-@media(max-width:900px){
-  .cs .hero::before{
-    top:-72px;
-    height:220px;
-    filter:blur(13px);
-  }
-  .cs .hero::after{
-    bottom:-72px;
-    height:220px;
-    filter:blur(13px);
-  }
-  .cs .hero .pic img{
-    -webkit-mask-image:linear-gradient(180deg, transparent 0, #000 20%, #000 82%, transparent 100%);
-    mask-image:linear-gradient(180deg, transparent 0, #000 20%, #000 82%, transparent 100%);
-  }
-  .cs .cta::before{
-    top:-72px;
-    height:220px;
-    filter:blur(13px);
-  }
-  .cs .cta::after{
-    bottom:-72px;
-    height:220px;
-    filter:blur(13px);
-  }
-  .cs .cta .bg img{
-    -webkit-mask-image:linear-gradient(180deg, transparent 0, #000 20%, #000 82%, transparent 100%);
-    mask-image:linear-gradient(180deg, transparent 0, #000 20%, #000 82%, transparent 100%);
-  }
-}
-</style>
+<script src="/mock-cart.js"></script>
 </body>
 </html>
