@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>W1-E centered product-asset QA</title>
+  <title>W1-E equal-weight product-asset QA</title>
   <style>
     :root {
       color-scheme: light;
@@ -35,11 +35,11 @@
 </head>
 <body>
   <header>
-    <h1>W1-E — centered product-asset QA</h1>
+    <h1>W1-E — equal-weight product-asset QA</h1>
     <p>Unwired local review only. Each asset below is shown at the 140 × 140 px product-card image size.</p>
   </header>
   <main>
-    <p class="note">All eleven cards stay on one horizontal strip so differences in visual weight and centring are reviewable at the real rendered image size. A product fails if it reads materially smaller or off-centre against its neighbours.</p>
+    <p class="note">All eleven cards stay on one horizontal strip so differences in visual weight and centring are reviewable at the real rendered image size. The foreground-box area is normalised to the same moderate coverage, rather than making every product as large as possible.</p>
     <section aria-labelledby="contact-heading">
       <h2 id="contact-heading">11-up contact strip</h2>
       <div class="strip">
@@ -61,20 +61,20 @@
     <section class="evidence" aria-labelledby="evidence-heading">
       <h2 id="evidence-heading">Post-encode foreground evidence</h2>
       <table>
-        <caption>White-background foreground bounds at ImageMagick 5% fuzz. All longest axes pass the 63.5%–64.5% gate; all centres pass the ±2 px gate.</caption>
-        <thead><tr><th>Product</th><th>Bbox</th><th>W × H frame share</th><th>Area</th><th>Longest</th><th>Centre Δ</th></tr></thead>
+        <caption>White-background foreground bounds at ImageMagick 5% fuzz. All foreground-box areas pass the 33.0%–35.0% gate; all centres pass the ±2 px gate.</caption>
+        <thead><tr><th>Product</th><th>Bbox</th><th>W × H frame share</th><th>Bbox area</th><th>Longest</th><th>Centre Δ</th></tr></thead>
         <tbody>
-          <tr><td>bananas</td><td>511 × 286 px</td><td>63.88% × 35.75%</td><td>22.84%</td><td>63.88%</td><td>−0.5, 0.0 px</td></tr>
-          <tr><td>moon_almond</td><td>443 × 512 px</td><td>55.38% × 64.00%</td><td>35.44%</td><td>64.00%</td><td>−0.5, −1.0 px</td></tr>
-          <tr><td>moon_cayenne</td><td>464 × 512 px</td><td>58.00% × 64.00%</td><td>37.12%</td><td>64.00%</td><td>−2.0, −1.0 px</td></tr>
-          <tr><td>moon_goji_coconut</td><td>467 × 512 px</td><td>58.38% × 64.00%</td><td>37.36%</td><td>64.00%</td><td>−1.5, −1.0 px</td></tr>
-          <tr><td>moon_hazelnut</td><td>425 × 512 px</td><td>53.13% × 64.00%</td><td>34.00%</td><td>64.00%</td><td>−0.5, −1.0 px</td></tr>
-          <tr><td>moon_peppermint</td><td>459 × 511 px</td><td>57.38% × 63.88%</td><td>36.65%</td><td>63.88%</td><td>0.5, −1.5 px</td></tr>
-          <tr><td>moon_pure_carob</td><td>459 × 512 px</td><td>57.38% × 64.00%</td><td>36.72%</td><td>64.00%</td><td>−1.5, 0.0 px</td></tr>
-          <tr><td>eclipse_almond</td><td>511 × 369 px</td><td>63.88% × 46.13%</td><td>29.46%</td><td>63.88%</td><td>0.5, −1.5 px</td></tr>
-          <tr><td>eclipse_fudge</td><td>511 × 283 px</td><td>63.88% × 35.38%</td><td>22.60%</td><td>63.88%</td><td>−0.5, −0.5 px</td></tr>
-          <tr><td>eclipse_hazelnut</td><td>513 × 351 px</td><td>64.13% × 43.88%</td><td>28.14%</td><td>64.13%</td><td>0.5, −1.5 px</td></tr>
-          <tr><td>eclipse_pecan</td><td>511 × 365 px</td><td>63.88% × 45.63%</td><td>29.14%</td><td>63.88%</td><td>−1.5, −0.5 px</td></tr>
+          <tr><td>bananas</td><td>622 × 347 px</td><td>77.75% × 43.38%</td><td>33.72%</td><td>77.75%</td><td>−1.0, −0.5 px</td></tr>
+          <tr><td>moon_almond</td><td>434 × 502 px</td><td>54.25% × 62.75%</td><td>34.04%</td><td>62.75%</td><td>0.0, −1.0 px</td></tr>
+          <tr><td>moon_cayenne</td><td>449 × 487 px</td><td>56.13% × 60.88%</td><td>34.17%</td><td>60.88%</td><td>1.5, −0.5 px</td></tr>
+          <tr><td>moon_goji_coconut</td><td>446 × 486 px</td><td>55.75% × 60.75%</td><td>33.87%</td><td>60.75%</td><td>−1.0, −1.0 px</td></tr>
+          <tr><td>moon_hazelnut</td><td>425 × 507 px</td><td>53.13% × 63.38%</td><td>33.67%</td><td>63.38%</td><td>−1.5, −0.5 px</td></tr>
+          <tr><td>moon_peppermint</td><td>444 × 491 px</td><td>55.50% × 61.38%</td><td>34.06%</td><td>61.38%</td><td>0.0, −1.5 px</td></tr>
+          <tr><td>moon_pure_carob</td><td>440 × 491 px</td><td>55.00% × 61.38%</td><td>33.76%</td><td>61.38%</td><td>−2.0, −0.5 px</td></tr>
+          <tr><td>eclipse_almond</td><td>546 × 395 px</td><td>68.25% × 49.38%</td><td>33.70%</td><td>68.25%</td><td>0.0, −1.5 px</td></tr>
+          <tr><td>eclipse_fudge</td><td>628 × 347 px</td><td>78.50% × 43.38%</td><td>34.05%</td><td>78.50%</td><td>0.0, −0.5 px</td></tr>
+          <tr><td>eclipse_hazelnut</td><td>563 × 385 px</td><td>70.38% × 48.13%</td><td>33.87%</td><td>70.38%</td><td>0.5, −0.5 px</td></tr>
+          <tr><td>eclipse_pecan</td><td>553 × 394 px</td><td>69.13% × 49.25%</td><td>34.04%</td><td>69.13%</td><td>0.5, 0.0 px</td></tr>
         </tbody>
       </table>
     </section>
