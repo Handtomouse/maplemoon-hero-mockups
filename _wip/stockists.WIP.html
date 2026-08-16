@@ -98,10 +98,9 @@ html{scroll-behavior:smooth;}
 .st-filter:hover{border-color:rgba(69,119,152,.42);transform:translateY(-1px);background:rgba(239,249,249,.58);}
 .st-filter:focus-visible,.st-search-clear:focus-visible,.st-loc:focus-visible,.st-clear:focus-visible,.st-active-chip:focus-visible,.st-empty-action:focus-visible,.st-empty-link:focus-visible,.st-show-more:focus-visible,.pill:focus-visible,.st-mini-cta:focus-visible,.sp-nav a:focus-visible,.sp-logo:focus-visible,.sp-cart:focus-visible,.sp-ft a:focus-visible{outline:2px solid rgba(69,119,152,.62);outline-offset:4px;}
 .st-filter[aria-pressed="true"]{background:var(--blue-deep);border-color:var(--blue-deep);color:var(--cream);box-shadow:inset 0 -3px 0 rgba(201,186,150,.76);}
-.st-finder-shell{display:grid;grid-template-columns:minmax(460px,1.24fr) minmax(300px,.76fr);gap:24px;align-items:start;}
+.st-finder-shell{display:grid;grid-template-columns:minmax(0,1fr);gap:24px;align-items:start;}
 .st-results-panel{grid-column:1;border:1px solid rgba(69,119,152,.14);border-radius:10px;background:rgba(251,250,247,.9);box-shadow:0 12px 30px rgba(41,57,64,.06);overflow:hidden;display:flex;flex-direction:column;}
 .st-finder-shell.is-empty .st-results-panel{grid-column:1 / -1;}
-.st-finder-shell.is-empty .st-map-panel{grid-column:1 / -1;grid-row:2;position:relative;top:auto;}
 .st-results-head{display:flex;align-items:end;justify-content:space-between;gap:18px;margin:0;padding:14px 20px 10px;}
 .st-results-head h3{font-family:var(--mm-serif);font-weight:500;font-size:1.35rem;margin:2px 0 0;}
 .st-count{font-size:.82rem;color:var(--ink-soft);margin:0;}
@@ -526,7 +525,7 @@ html{scroll-behavior:smooth;}
         <div class="st-data-key" aria-label="Directory caveats">
           <span><i></i>204 source entries</span>
           <span class="pending"><i></i>7 location details pending</span>
-          <span class="online"><i></i>Illustrative preview only</span>
+          <span class="online"><i></i>Directory preview only</span>
         </div>
         <div class="st-active-row" id="stockistActiveFilters" aria-label="Active filters" hidden></div>
         <div class="st-results" id="stockistResults" role="list" tabindex="-1" aria-label="Stockist results"></div>
@@ -542,20 +541,6 @@ html{scroll-behavior:smooth;}
         </div>
         <button class="st-show-more" type="button" id="stockistShowMore" hidden>Load more stockists</button>
       </div>
-
-      <aside class="st-map-panel" aria-label="Stockist coverage preview">
-        <div class="st-map-top">
-          <div>
-            <h3>Illustrative coverage preview</h3>
-            <p id="stockistMapSummary">Preview highlights follow the visible result rows.</p>
-          </div>
-          <span class="st-badge pending">Not a live map</span>
-        </div>
-        <div class="st-map-canvas" id="stockistMap" role="img" aria-label="Illustrative, non-geographic coverage preview" aria-describedby="stockistMapSummary stockistMapTextSummary"></div>
-        <div class="st-map-legend" aria-label="Coverage preview legend"><span><i></i>Current result preview</span><span class="pending"><i></i>Not an exact pin</span></div>
-        <p class="st-map-note">This is a visual coverage guide only. It has no coordinates, distances, live map controls or exact store pins.</p>
-        <p class="st-map-text-summary" id="stockistMapTextSummary" role="status" aria-live="polite">A text summary of the current result preview will appear here.</p>
-      </aside>
 
       <div class="st-cta-grid">
         <a class="st-mini-cta" href="/shop.WIP.html">
@@ -589,12 +574,12 @@ html{scroll-behavior:smooth;}
 
   <section class="wrap st-news" aria-label="Stay in the loop">
     <h2>Be first to the <em>shelf.</em></h2>
-    <p>Leave your email and we will let you know when new stockist details are added.</p>
-    <form class="st-form" onsubmit="return false;">
-      <input type="email" placeholder="Your email" aria-label="Email address">
+    <p>This newsletter form is a non-collecting review demo.</p>
+    <form class="st-form" onsubmit="return false;" aria-describedby="stockists-news-demo-note">
+      <input type="email" placeholder="Email collection disabled" aria-label="Email address; demo only, collection disabled" disabled>
       <button class="pill" type="submit" disabled>Coming soon</button>
     </form>
-    <p class="fine">Stockist news first, nothing else</p>
+    <p class="fine" id="stockists-news-demo-note">Demo only. This form does not collect or submit email addresses.</p>
   </section>
 
   <footer class="sp-ft"><div class="wrap">
@@ -830,13 +815,9 @@ html{scroll-behavior:smooth;}
   var title=document.getElementById("stockistTitle");
   var count=document.getElementById("stockistCount");
   var activeFilters=document.getElementById("stockistActiveFilters");
-  var map=document.getElementById("stockistMap");
-  var mapSummary=document.getElementById("stockistMapSummary");
-  var mapTextSummary=document.getElementById("stockistMapTextSummary");
   var clear=document.getElementById("stockistClear");
   var pendingFilter=document.querySelector('[data-filter="review"][data-value="PENDING"]');
   var popularAreas=document.getElementById("popularAreas");
-  var mapPinPositions=[[63,23],[44,39],[67,57],[51,74]];
   var highlightTimer;
 
   function text(v){return String(v).replace(/[&<>"']/g,function(c){return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c];});}
@@ -887,10 +868,6 @@ html{scroll-behavior:smooth;}
     return items.map(function(item,index){return {item:item,index:index,score:confidenceScore(item)};})
       .sort(function(a,b){return a.score-b.score||a.index-b.index;})
       .map(function(pair){return pair.item;});
-  }
-  function mapPinStyle(index){
-    var point=mapPinPositions[index]||mapPinPositions[0];
-    return "left:"+point[0]+"%;top:"+point[1]+"%;";
   }
   function setPressed(){
     document.querySelectorAll("[data-filter]").forEach(function(btn){
@@ -971,23 +948,6 @@ html{scroll-behavior:smooth;}
       badges.note+
     '</article>';
   }
-  function mapSummaryText(matched,preview){
-    if(!matched.length)return "No preview highlights for this filter.";
-    var pinWord=preview.length===1?"highlight":"highlights";
-    var stockistWord=matched.length===1?"stockist":"stockists";
-    if(filters.review==="PENDING")return preview.length+" preview "+pinWord+" for the "+matched.length+" entries needing confirmation.";
-    if(filters.type!=="ALL")return preview.length+" preview "+pinWord+" from "+matched.length+" current directory-view matches.";
-    if(filters.area)return "Preview "+pinWord+" for "+filters.area+".";
-    if(filters.query)return preview.length+" preview "+pinWord+" matching \""+filters.query+"\".";
-    if(filters.state!=="ALL")return preview.length+" preview "+pinWord+" from "+matched.length+" "+filters.state+" "+stockistWord+".";
-    return preview.length+" preview "+pinWord+" from the 204-store directory.";
-  }
-  function mapTextSummaryText(matched,preview){
-    if(!matched.length)return "No current result preview. Clear filters or try a broader search to see the illustrative coverage guide.";
-    var names=preview.map(function(item){return item.name;});
-    var suffix=matched.length>preview.length?" The remaining matching stockists are available in the list.":"";
-    return "Coverage guide reflects the first "+preview.length+" current list result"+(preview.length===1?"":"s")+": "+names.join(", ")+". It is not a map of exact locations."+suffix;
-  }
   function emptyText(){
     var queryLabel=labelFor("query",filters.query);
     var active=activeDescriptions().map(function(item){return item.label;});
@@ -996,26 +956,6 @@ html{scroll-behavior:smooth;}
     if(filters.query)return 'No listed stockists match "'+filters.query+'". Try a store name, suburb, postcode or state.';
     if(active.length)return 'No listed stockists match '+active.join(", ")+'. Try removing one filter or clear everything.';
     return "Try a broader search or clear the filters.";
-  }
-  function renderMapMarkers(matched,visible){
-    var preview=visible.slice(0,4);
-    var html='<span class="st-map-coast" aria-hidden="true"></span>'+
-      '<span class="st-map-block one" aria-hidden="true"></span>'+
-      '<span class="st-map-block two" aria-hidden="true"></span>'+
-      '<span class="st-map-block three" aria-hidden="true"></span>'+
-      '<span class="st-map-block four" aria-hidden="true"></span>'+
-      '<span class="st-map-label" style="left:58%;top:27%;">Coverage guide</span>'+
-      '<span class="st-map-label muted" style="left:20%;top:76%;">List order</span>';
-    if(preview.length){
-      html+=preview.map(function(item,index){
-        return '<span class="st-map-marker" style="'+mapPinStyle(index)+'" aria-hidden="true"></span>';
-      }).join("");
-    }else{
-      html+='<span class="st-map-empty">No preview highlights. Clear filters or try a broader search.</span>';
-    }
-    map.innerHTML=html;
-    mapSummary.textContent=mapSummaryText(matched,preview);
-    mapTextSummary.textContent=mapTextSummaryText(matched,preview);
   }
   function updateSearchClear(){
     searchClear.hidden=!filters.query;
@@ -1038,7 +978,6 @@ html{scroll-behavior:smooth;}
     showMore.textContent=shown.length>visibleLimit?"Load more stockists ("+(shown.length-visibleLimit)+" remaining)":"Load more stockists";
     showMore.setAttribute("aria-label",shown.length>visibleLimit?"Load "+Math.min(PAGE_INCREMENT,shown.length-visibleLimit)+" more stockists; "+(shown.length-visibleLimit)+" remaining":"Load more stockists");
     resultsSpacer.hidden=showMore.hidden||!visible.length;
-    renderMapMarkers(shown,visible);
     setPressed();
   }
 
@@ -1147,9 +1086,7 @@ html{scroll-behavior:smooth;}
 .st-map-note{padding-top:2px;border-top:1px solid rgba(69,119,152,.12);}
 .st-empty{padding:28px 18px 30px;background:rgba(251,250,247,.6);}
 @media(min-width:901px){
-  .st-finder-shell{grid-template-columns:repeat(2,minmax(0,1fr));gap:28px;align-items:stretch;}
-  .st-map-panel{position:relative;top:auto;align-self:stretch;display:flex;flex-direction:column;}
-  .st-map-canvas{flex:1;min-height:0;}
+  .st-finder-shell{grid-template-columns:minmax(0,1fr);gap:28px;align-items:stretch;}
 }
 @media(max-width:560px){
   .sp .sp-head{padding-top:42px;padding-bottom:34px;}

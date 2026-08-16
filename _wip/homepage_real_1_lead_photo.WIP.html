@@ -16,14 +16,14 @@
 /* HOMEPAGE - REAL 1 "EDITORIAL NIGHT" (LEAD): real moonlit photo hero -> warm-paper editorial body. */
 html{scroll-behavior:smooth;}
 .wf{
-  --mm-serif:'p22-mackinac-pro','P22 Mackinac Pro',Georgia,serif;
-  --ink:#2c2a26;--ink-soft:#665f53;--ink-faint:#a99f87;
-  --paper:#eee9d3;--paper2:#e4dcc0;--card:#eee8d1;--line:rgba(58,42,26,.18);--line-soft:rgba(58,42,26,.09);
-  --cream:#E7E4CA;--cream-soft:rgba(231,228,202,.90);--cream-faint:rgba(231,228,202,.56);
+  --mm-serif:var(--mm-font-serif);
+  --ink:var(--mm-home-ink);--ink-soft:var(--mm-home-ink-soft);--ink-faint:var(--mm-home-ink-faint);
+  --paper:var(--mm-home-paper);--paper2:var(--mm-home-paper-deep);--card:var(--mm-home-card);--line:var(--mm-home-line);--line-soft:var(--mm-home-line-soft);
+  --cream:var(--mm-home-cream);--cream-soft:var(--mm-home-cream-soft);--cream-faint:var(--mm-home-cream-faint);
   --hero-h:48vh;                   /* hero height floor — kept below the content stack so the hero hugs its content and the bars rise fully into the first viewport */
   --hb-end:270px;--hb-hold:120px;  /* hero photo dissolve (offsets below the hero base): end = where it resolves into the blend, hold = where it starts fading. Dissolve C — seascape ~3/4 down the bars */
-  --blend:#c8d5df;                 /* light blue-grey bridge from ocean photo into the MapleMoon paper system */
-  --flow-top:#b7c9d9;              /* lighter MapleMoon blue haze */
+  --blend:var(--mm-home-bridge);    /* light blue-grey bridge from ocean photo into the MapleMoon paper system */
+  --flow-top:var(--mm-home-flow);   /* lighter MapleMoon blue haze */
   /* ---- VERTICAL SPACING ---- change --rhythm to scale every section gap at once (or edit one token / one section). ?rhythm=0.8 previews live. ---- */
   --rhythm:1;
   --sp-xl:calc(64px * var(--rhythm));   /* large gap — ritual, testimonial */
@@ -32,7 +32,7 @@ html{scroll-behavior:smooth;}
   --sp-sm:calc(30px * var(--rhythm));   /* compact strips — trust */
   --sp-xs:calc(24px * var(--rhythm));   /* tight — newsletter, footer */
   --mist:1;--grain:.09;--glow:0.2;       /* atmosphere intensities (overlay layers over the flow) */
-  --wrap-w:1180px;--pad-x:28px;          /* content column width + horizontal padding */
+  --wrap-w:var(--mm-container-max);--pad-x:var(--mm-gutter-desktop); /* content column width + horizontal padding */
   --wordmark-w:46;                       /* CAROB wordmark width (vw, clamped) */
   --h-scale:1;                           /* serif heading size multiplier */
   --flow-pale:#f2ecd6;                   /* the colour the flow pales to at the bottom */
@@ -90,7 +90,7 @@ html{scroll-behavior:smooth;}
 .wf-ptop{position:relative;padding-top:8px;}
 .wf-ptop::before{content:"";position:absolute;left:0;right:0;top:0;height:92px;background:linear-gradient(180deg,rgba(14,31,47,.46),rgba(14,31,47,0));pointer-events:none;}
 .wf-ptop .bar{position:relative;z-index:1;display:grid;grid-template-columns:1fr auto 1fr;align-items:center;height:62px;}
-.wf-pnav{display:flex;gap:28px;}.wf-pnav.r{justify-content:flex-end;gap:22px;align-items:center;}
+.wf-pnav:not([hidden]){display:flex;gap:28px;}.wf-pnav.r{justify-content:flex-end;gap:22px;align-items:center;}
 .wf-pnav a,.wf-pnav .wf-currency{font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;color:rgba(231,228,202,.96);transition:color .25s;text-shadow:0 1px 3px rgba(14,31,47,.88),0 0 18px rgba(14,31,47,.62);}
 .wf-pnav a:hover{color:var(--cream);}
 .wf-plogo{font-family:var(--mm-serif);font-size:1.3rem;text-align:center;color:var(--cream);text-shadow:0 1px 16px rgba(10,12,20,.5);}
@@ -307,7 +307,7 @@ a.wf-ti:focus-visible{outline:2px solid rgba(44,42,38,.55);outline-offset:6px;bo
 .wf-ft .soc svg{width:14px;height:14px;stroke:var(--ink-soft);fill:none;stroke-width:1.3;}
 
 @media (max-width:900px){
-  .wf-pnav a,.wf-pnav .wf-currency{display:none;}               /* hide desktop text links on mobile; keep both nav cells in the grid so the logo stays centred and the cart (a span) survives on the right. Full drawer comes from the Shopify header on port. */
+  .wf-pnav .wf-currency{display:none;} /* Shared mm-chrome owns mobile route-link visibility; currency remains a desktop-only utility. */
   .wf-edu,.wf-edu.img-lead{grid-template-columns:1fr;gap:24px;}
   .wf-edu.img-lead .ill{aspect-ratio:16/10;}
   .wf-strip{grid-template-columns:1fr 1fr;}
@@ -512,7 +512,6 @@ a.wf-ti:focus-visible{outline:2px solid rgba(44,42,38,.55);outline-offset:6px;bo
 
 
 /* per-category coverflow anchoring: short/square packshots sit lower + larger so the arc reads full */
-.wf-cf[data-cat="eclipseBites"] .cf-bp{transform:translateY(52px) scale(1.22);}
 .wf-cf[data-cat="moons"] .cf-bp{transform:translateY(30px) scale(1.1);}
 .wf-cf[data-cat="elixirs"] .cf-bp{transform:translateY(10px) scale(1.02);}
 
@@ -649,11 +648,19 @@ a.wf-ti:focus-visible{outline:2px solid rgba(44,42,38,.55);outline-offset:6px;bo
 }
 </script>
 <!--MM-A11Y-SAFE-->
-<link rel="stylesheet" href="/design_refinement_20260723.css">
+<!-- Legacy /design_refinement_20260723.css request removed in the global-system pilot:
+     it was absent at this rendered URL and contributed no baseline styles. -->
+<!-- MapleMoon system pilot cascade: tokens → base → chrome → primitives → homepage → registered route exceptions. -->
+<link rel="stylesheet" href="/assets/design-system/mm-tokens.css" data-mm-system-layer="tokens">
+<link rel="stylesheet" href="/assets/design-system/mm-base.css" data-mm-system-layer="base">
+<link rel="stylesheet" href="/assets/design-system/mm-chrome.css" data-mm-system-layer="chrome">
+<link rel="stylesheet" href="/assets/design-system/mm-primitives.css" data-mm-system-layer="primitives">
+<link rel="stylesheet" href="/_wip/styles/homepage.css" data-mm-system-layer="homepage">
+<script defer src="/assets/design-system/mm-chrome.js"></script>
 </head>
-<body>
-<a class="skip-link" href="#main-content">Skip to main content</a>
-<div class="wf">
+<body data-mm-route="home">
+<a class="skip-link mm-skip-link" href="#main-content">Skip to main content</a>
+<div class="wf" data-mm-home-pilot>
 
   <!-- atmosphere layers over the flow (mist wisps, central moon-glow, film grain) -->
   <div class="wf-mist" aria-hidden="true"></div>
@@ -701,11 +708,12 @@ a.wf-ti:focus-visible{outline:2px solid rgba(44,42,38,.55);outline-offset:6px;bo
       <img class="hero-moon" src="/assets/product_shots/moon_pure_carob.webp" alt="" decoding="async">
     </div>
 
-    <header class="top wf-ptop"><div class="wrap bar">
-      <nav class="wf-pnav" aria-label="Primary navigation"><a href="/shop.WIP.html">Shop</a><a href="/our-story.WIP.html">Our Story</a></nav>
-      <a class="wf-plogo" href="#top">maple moon</a>
-      <nav class="wf-pnav r" aria-label="Utility navigation"><a href="/stockists.WIP.html">Stockists</a><span class="wf-currency" aria-label="Currency AUD">AUD $</span>
-        <button class="wf-pcart" type="button" aria-label="Cart, 0 items"><svg viewBox="0 0 24 24"><path d="M6 8h12l-1 12H7L6 8z"/><path d="M9 8a3 3 0 0 1 6 0"/></svg><b>0</b></button></nav>
+    <header class="top wf-ptop mm-site-header mm-site-header--home" data-mm-chrome data-header-theme="night"><div class="wrap bar mm-wrap mm-header__bar">
+      <button class="mm-menu-toggle mm-icon-control" type="button" data-mm-menu-toggle aria-expanded="false" aria-label="Open menu" hidden>Menu</button>
+      <nav class="wf-pnav mm-header__nav" id="mm-home-primary-nav" aria-label="Primary navigation" data-mm-primary-nav><a href="/shop.WIP.html">Shop</a><a href="/our-story.WIP.html">Our Story</a></nav>
+      <a class="wf-plogo mm-header__home" href="#top" data-mm-home-link aria-current="page">maple moon</a>
+      <div class="wf-pnav r mm-header__right"><nav class="mm-header__utility-nav" id="mm-home-utility-nav" aria-label="Utility navigation" data-mm-utility-nav><a href="/stockists.WIP.html">Stockists</a><span class="wf-currency" aria-label="Currency AUD">AUD $</span></nav>
+        <button class="wf-pcart mm-icon-control" type="button" aria-label="Cart, 0 items" data-mm-cart-toggle><svg viewBox="0 0 24 24"><path d="M6 8h12l-1 12H7L6 8z"/><path d="M9 8a3 3 0 0 1 6 0"/></svg><b>0</b></button></div>
     </div></header>
 
     <div class="center wf-pcenter wrap">
@@ -743,11 +751,10 @@ a.wf-ti:focus-visible{outline:2px solid rgba(44,42,38,.55);outline-offset:6px;bo
     <div class="wf-cat-dock" aria-label="Shop by format">
       <p class="wf-format-label">Choose your carob moment</p>
       <div class="wf-tabs wf-range-tabs" id="catTabs" aria-label="Shop by format">
-        <button class="wf-tab on" type="button" data-cat="bars"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="4" width="7" height="7" rx="1"/><rect x="13" y="4" width="7" height="7" rx="1"/><rect x="4" y="13" width="7" height="7" rx="1"/><rect x="13" y="13" width="7" height="7" rx="1"/></svg><span>Bars</span></button>
-        <button class="wf-tab" type="button" data-cat="bananas"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6c1 8 6 13 14 13 1.5 0 2.5-.4 3-1-9 0-13-6-13-13 0-.7-.4-1-1-1H5c-.6 0-1 .4-1 1z"/></svg><span>Bananas</span></button>
-        <button class="wf-tab" type="button" data-cat="moons"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17 3a9 9 0 1 0 4 12 7 7 0 0 1-4-12z"/></svg><span>Moons</span></button>
-        <button class="wf-tab" type="button" data-cat="elixirs"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M10 3h4v3l2 3v11a1 1 0 0 1-1 1H9a1 1 0 0 1-1-1V9l2-3z"/></svg><span>Elixirs</span></button>
-        <button class="wf-tab" type="button" data-cat="eclipseBites"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="6" cy="6" r="1.4"/><circle cx="12" cy="6" r="1.4"/><circle cx="18" cy="6" r="1.4"/><circle cx="6" cy="12" r="1.4"/><circle cx="12" cy="12" r="1.4"/><circle cx="18" cy="12" r="1.4"/><circle cx="6" cy="18" r="1.4"/><circle cx="12" cy="18" r="1.4"/><circle cx="18" cy="18" r="1.4"/></svg><span>Bites</span></button>
+        <button class="wf-tab on" type="button" data-cat="bars" aria-selected="true"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="4" width="7" height="7" rx="1"/><rect x="13" y="4" width="7" height="7" rx="1"/><rect x="4" y="13" width="7" height="7" rx="1"/><rect x="13" y="13" width="7" height="7" rx="1"/></svg><span>Bars</span></button>
+        <button class="wf-tab" type="button" data-cat="bananas" aria-selected="false"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6c1 8 6 13 14 13 1.5 0 2.5-.4 3-1-9 0-13-6-13-13 0-.7-.4-1-1-1H5c-.6 0-1 .4-1 1z"/></svg><span>Bananas</span></button>
+        <button class="wf-tab" type="button" data-cat="moons" aria-selected="false"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17 3a9 9 0 1 0 4 12 7 7 0 0 1-4-12z"/></svg><span>Moons</span></button>
+        <button class="wf-tab" type="button" data-cat="elixirs" aria-selected="false"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M10 3h4v3l2 3v11a1 1 0 0 1-1 1H9a1 1 0 0 1-1-1V9l2-3z"/></svg><span>Elixirs</span></button>
       </div>
     </div>
 
@@ -760,7 +767,7 @@ a.wf-ti:focus-visible{outline:2px solid rgba(44,42,38,.55);outline-offset:6px;bo
         <div class="wf-price" id="pdpPrice"></div>
         <div class="wf-pflag" id="pdpFlag"></div>
       </div>
-      <div class="btns"><button class="wf-pill solid" id="pdpAdd" type="button">Shop Now</button><a class="wf-pill" id="pdpView" href="/shop.WIP.html">View Range</a></div>
+      <div class="btns"><button class="wf-pill solid" id="pdpAdd" type="button">Shop Now</button></div>
     </div>
 
     <div class="wf-line-head" hidden aria-hidden="true"><p id="rangeCopy">Carob Bars: Smooth, naturally sweet bites for calm cravings.</p></div>
@@ -772,11 +779,11 @@ a.wf-ti:focus-visible{outline:2px solid rgba(44,42,38,.55);outline-offset:6px;bo
     <div class="wrap inner">
       <div class="col">
         <span class="qkick">First things first</span>
-        <h2 class="lux-hd">What is Carob, <em>actually?</em></h2>
+        <h2 class="lux-hd">What is Carob?</h2>
         <div class="lux-rule"></div>
-        <p class="bodyc" style="color:#57534b;font-size:1.05rem;max-width:40ch;line-height:1.7;margin:0 0 24px;">Carob is a naturally sweet pod that grows in the warm Australian sun. It is not a bean, and it is naturally caffeine free. We slow-roast and mill it with cacao butter for a mellow, velvety finish.</p>
+        <p class="bodyc" style="color:#57534b;font-size:1.05rem;max-width:40ch;line-height:1.7;margin:0 0 24px;">Carob is a naturally sweet pod that grows in the warm Australian sun. Naturally caffeine free and high in fibre. Sourced from the Australian Carob Co. in South Australia, roasted and finely ground there before reaching the kitchen.</p>
         <div class="q-facts">
-          <span><svg viewBox="0 0 24 24"><path d="M17 3a9 9 0 1 0 4 12 7 7 0 0 1-4-12z"/></svg>A pod, not a bean</span>
+          <span><svg viewBox="0 0 24 24"><path d="M17 3a9 9 0 1 0 4 12 7 7 0 0 1-4-12z"/></svg>High in fibre</span>
           <span><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><line x1="12" y1="3" x2="12" y2="5"/><line x1="12" y1="19" x2="12" y2="21"/><line x1="3" y1="12" x2="5" y2="12"/><line x1="19" y1="12" x2="21" y2="12"/><line x1="5.5" y1="5.5" x2="7" y2="7"/><line x1="17" y1="17" x2="18.5" y2="18.5"/></svg>Naturally sweet</span>
           <span><svg viewBox="0 0 24 24"><path d="M4 14c6-1 10-5 16-10-2 7-5 12-12 13-2 .3-4-1-4-3z"/></svg>Caffeine free</span>
         </div>
@@ -795,7 +802,7 @@ a.wf-ti:focus-visible{outline:2px solid rgba(44,42,38,.55);outline-offset:6px;bo
         <h2 class="lux-hd">Why not <em>cacao?</em></h2>
       </div>
       <div class="q-segments" aria-label="Comparison views">
-        <button class="on" type="button">Compare</button>
+        <button class="on" type="button" aria-pressed="true">Compare</button>
         <button type="button" disabled>Nutrition</button>
         <button type="button" disabled>Taste <span class="amp">&amp;</span> Feel</button>
       </div>
@@ -855,17 +862,17 @@ a.wf-ti:focus-visible{outline:2px solid rgba(44,42,38,.55);outline-offset:6px;bo
     <div class="q-when-head">
       <div>
         <span class="qkick">A sweeter kind of ritual</span>
-        <h2 class="lux-hd">When do you <em>moon?</em></h2>
+        <h2 class="lux-hd">What is <em>Maple Mooning?</em></h2>
       </div>
       <p class="q-when-lead">A small pause after dinner. A quiet reset in the afternoon. A cup of tea at night.</p>
     </div>
     <div class="tiles">
       <div class="q-tile"><div class="ph"><img src="/assets/licensed/scene_after_dinner.jpg" alt="Dark carob squares on a stone board in low light" loading="lazy"></div>
-        <div class="tx"><span class="mo">Evening</span><strong>After dinner</strong><span>A small after-dinner ritual, when the lights are low.</span></div></div>
+        <div class="tx"><span class="mo">01</span><strong>A quiet finish</strong><span>A sweet ending without the stimulants</span></div></div>
       <div class="q-tile"><div class="ph"><img src="/assets/licensed/scene_afternoon.jpg" alt="A teacup in soft afternoon light" loading="lazy"></div>
-        <div class="tx"><span class="mo">Afternoon</span><strong>Afternoon reset</strong><span>A gentle pause in the middle of the day.</span></div></div>
+        <div class="tx"><span class="mo">02</span><strong>A softer pause</strong><span>A 3:33pm pick me up without the nasties</span></div></div>
       <div class="q-tile"><div class="ph"><img src="/assets/licensed/scene_tea_night.jpg" alt="A steaming cup against a blue evening window" loading="lazy"></div>
-        <div class="tx"><span class="mo">Night</span><strong>With tea, at night</strong><span>Warm cup, small moon, lights low.</span></div></div>
+        <div class="tx"><span class="mo">03</span><strong>The last cup</strong><span>A warm drink without the activation</span></div></div>
     </div>
   </section>
 
@@ -875,14 +882,14 @@ a.wf-ti:focus-visible{outline:2px solid rgba(44,42,38,.55);outline-offset:6px;bo
     <div class="wrap inner">
       <div class="col">
         <span class="qkick">Our story</span>
-        <h2 class="lux-hd">Born from Nighttime Cravings <span class="amp">&amp;</span> Kind Intentions</h2>
+        <h2 class="lux-hd">Born from Night-time Cravings <span class="amp">&amp;</span> Kind Intentions</h2>
         <div class="lux-rule"></div>
         <p style="color:#57534b;font-size:1.05rem;max-width:40ch;line-height:1.7;margin:0 0 24px;">Discover the thinking behind Maple Moon: naturally sweet carob, quieter evenings, and small rituals made with care.</p>
         <a class="wf-more" href="/our-story.WIP.html">Read the Full Story <svg viewBox="0 0 24 24" width="14" height="14" style="stroke:currentColor;fill:none;stroke-width:1.6"><line x1="4" y1="12" x2="20" y2="12"/><polyline points="14 6 20 12 14 18"/></svg></a>
       </div>
     </div>
     <div class="co" style="left:180px;top:22%"><span class="dot"></span><span class="line"></span><div class="lab"><div class="top"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><line x1="12" y1="3" x2="12" y2="5"/><line x1="12" y1="19" x2="12" y2="21"/><line x1="3" y1="12" x2="5" y2="12"/><line x1="19" y1="12" x2="21" y2="12"/></svg><span class="t">Sun-ripened</span><span class="n">01</span></div><span class="d">Australian-grown carob pods.</span></div></div>
-    <div class="co" style="left:90px;top:58%"><span class="dot"></span><span class="line"></span><div class="lab"><div class="top"><svg viewBox="0 0 24 24"><path d="M12 21s-7-4.5-7-10a7 7 0 0 1 14 0c0 5.5-7 10-7 10z"/></svg><span class="t">Small batches</span><span class="n">02</span></div><span class="d">Hand-poured, hand-packed.</span></div></div>
+    <div class="co" style="left:90px;top:58%"><span class="dot"></span><span class="line"></span><div class="lab"><div class="top"><svg viewBox="0 0 24 24"><path d="M12 21s-7-4.5-7-10a7 7 0 0 1 14 0c0 5.5-7 10-7 10z"/></svg><span class="t">Byron Bay</span><span class="n">02</span></div><span class="d">The Maple Moon kitchen.</span></div></div>
     <div class="co" style="left:400px;top:76%"><span class="dot"></span><span class="line"></span><div class="lab"><div class="top"><svg viewBox="0 0 24 24"><path d="M17 3a9 9 0 1 0 4 12 7 7 0 0 1-4-12z"/></svg><span class="t">The far north coast</span><span class="n">03</span></div><span class="d">Where the slow evenings live.</span></div></div>
   </section>
 
@@ -909,23 +916,23 @@ a.wf-ti:focus-visible{outline:2px solid rgba(44,42,38,.55);outline-offset:6px;bo
       <div class="sbox-frame" aria-label="The starter box, all six bars">
         <span class="sbox-lid">maple moon &middot; the starter box</span>
         <div class="sbox-grid">
-          <div class="well"><img src="/assets/product_shots/bar_pure_carob.webp" alt="Pure Carob and Cacao Butter bar"></div>
-          <div class="well"><img src="/assets/product_shots/bar_peppermint.webp" alt="Peppermint and Buckwheat bar"></div>
-          <div class="well"><img src="/assets/product_shots/bar_hazelnut.webp" alt="Roasted Hazelnut bar"></div>
           <div class="well"><img src="/assets/product_shots/bar_goji_coconut.webp" alt="Coconut and Goji bar"></div>
           <div class="well"><img src="/assets/product_shots/bar_cayenne.webp" alt="Cayenne Chilli bar"></div>
+          <div class="well"><img src="/assets/product_shots/bar_pure_carob.webp" alt="Pure Carob and Cacao Butter bar"></div>
           <div class="well"><img src="/assets/product_shots/bar_almond.webp" alt="Almond and Celtic Salt bar"></div>
+          <div class="well"><img src="/assets/product_shots/bar_peppermint.webp" alt="Peppermint and Buckwheat bar"></div>
+          <div class="well"><img src="/assets/product_shots/bar_hazelnut.webp" alt="Roasted Hazelnut bar"></div>
         </div>
       </div>
       <div class="sbox-info">
         <span class="qkick lid-k">Inside the box</span>
         <ul class="sbox-list">
-          <li>Pure Carob <span class="amp">&amp;</span> Cacao Butter</li>
-          <li>Peppermint <span class="amp">&amp;</span> Buckwheat</li>
-          <li>Roasted Hazelnut</li>
           <li>Coconut <span class="amp">&amp;</span> Goji</li>
           <li>Cayenne Chilli</li>
+          <li>Pure Carob <span class="amp">&amp;</span> Cacao Butter</li>
           <li>Almond <span class="amp">&amp;</span> Celtic Salt</li>
+          <li>Peppermint <span class="amp">&amp;</span> Buckwheat</li>
+          <li>Roasted Hazelnut</li>
         </ul>
         <p class="sbox-gift">Made to be given. The box does the wrapping.</p>
         <div class="btns"><a class="wf-pill solid" href="/shop.WIP.html#bars">View bar flavours</a><a class="wf-pill" href="#range">Shop single bars</a></div>
@@ -941,17 +948,18 @@ a.wf-ti:focus-visible{outline:2px solid rgba(44,42,38,.55);outline-offset:6px;bo
   </section>
 
   </main>
-  <footer class="wf-ft" id="footer"><div class="wrap">
+  <footer class="wf-ft mm-site-footer" id="footer"><div class="wrap mm-wrap">
     <div class="wf-nl">
       <span class="nlh serif">Stay in the loop.</span>
-      <form onsubmit="return false;">
-        <input type="email" placeholder="Your email" aria-label="Email address">
-        <button type="submit">Join</button>
+      <form onsubmit="return false;" aria-describedby="home-newsletter-demo-note">
+        <input type="email" placeholder="Email collection disabled" aria-label="Email address; demo only, collection disabled" disabled>
+        <button type="submit" disabled>Demo only</button>
       </form>
+      <span id="home-newsletter-demo-note">Demo only. This form does not collect or submit email addresses.</span>
     </div>
-    <div class="row">
-      <a class="wf-logo" href="#top" style="font-size:1.15rem">maple moon</a>
-      <nav class="fnav" aria-label="Footer navigation"><a href="/shop.WIP.html">Shop</a><a href="/our-story.WIP.html">Our Story</a><a href="/stockists.WIP.html">Stockists</a><a href="mailto:info@maplemoon.com.au">Contact</a></nav>
+    <div class="row mm-site-footer__row">
+      <a class="wf-logo mm-site-footer__home" href="#top" style="font-size:1.15rem">maple moon</a>
+      <nav class="fnav mm-site-footer__nav" aria-label="Footer navigation"><a href="/shop.WIP.html">Shop</a><a href="/our-story.WIP.html">Our Story</a><a href="/stockists.WIP.html">Stockists</a><a href="mailto:info@maplemoon.com.au">Contact</a></nav>
       <div class="soc" aria-label="Social links to follow">
         <span aria-label="Instagram link to follow"><svg viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" rx="4.5"/><circle cx="12" cy="12" r="3.5"/></svg></span>
         <span aria-label="Facebook link to follow"><svg viewBox="0 0 24 24"><path d="M14 9h2.5V6H14c-2 0-3.5 1.4-3.5 3.5V11H8v3h2.5v6h3v-6H16l.5-3h-3V9.5c0-.3.2-.5.5-.5z"/></svg></span>
@@ -966,46 +974,40 @@ a.wf-ti:focus-visible{outline:2px solid rgba(44,42,38,.55);outline-offset:6px;bo
   var PS='/assets/product_shots/';
   var RANGE_COPY={
     bars:'Carob Bars: Smooth, naturally sweet bites for calm cravings.',
-    moons:'Carob Moons: Elegant, bite-sized comfort.',
-    elixirs:'Carob Elixirs: Versatile powdered goodness for drinks and baking.',
-    eclipseBites:'Eclipse Bites: Mini indulgences perfect for gifting or grazing.',
-    bananas:'Carob Bananas: Naturally sweet banana pieces wrapped in carob.'
+    moons:'Little bite sized treats in every flavour for any moment',
+    elixirs:'The nightcap with benefits',
+    bananas:'Spray Free Australian Grown Bananas coated in our pure carob for the perfect chewy treat.'
   };
   // Product prices live on the shop page; the homepage range stays price-free.
   var CAT={
     bars:[
-      {n:'Peppermint & Buckwheat',img:'bar_peppermint',d:'Refreshing premium peppermint meets the satisfying crunch of activated buckwheat.',size:'(90g)',notes:[['Texture','Crisp melt'],['Sweetness','Naturally sweet'],['Finish','Cool mint'],['Proof','No caffeine']]},
-      {n:'Roasted Hazelnut',img:'bar_hazelnut',d:'Whole roasted hazelnuts deliver an irresistibly indulgent, crunchy carob experience.',size:'(90g)',notes:[['Texture','Nutty melt'],['Sweetness','Naturally sweet'],['Finish','Roasted hazelnut'],['Proof','No caffeine']]},
       {n:'Coconut & Goji',img:'bar_goji_coconut',d:'Shredded coconut and goji berries through naturally sweet carob.',size:'(90g)',notes:[['Texture','Soft chew'],['Sweetness','Fruit lift'],['Finish','Coconut carob'],['Proof','No caffeine']]},
-      {n:'Pure Carob & Cacao Butter',img:'bar_pure_carob',d:'Crafted from only two wholefood ingredients for simple, naturally sweet, guilt-free perfection.',size:'(90g)',url:'products/pure-carob-bar.html',sel:true,notes:[['Texture','Smooth melt'],['Sweetness','Naturally sweet'],['Finish','Buttery carob'],['Proof','No caffeine']]},
       {n:'Cayenne Chilli',img:'bar_cayenne',d:'Rich, naturally sweet carob with a gentle hint of cayenne and a touch of Celtic sea salt for the perfect balance of sweet and spice.',size:'(90g)',notes:[['Texture','Smooth melt'],['Sweetness','Naturally sweet'],['Finish','Slow warmth'],['Proof','No caffeine']]},
-      {n:'Almond & Celtic Salt',img:'bar_almond',d:'The perfect harmony of crunchy whole roasted almonds, natural sweetness and a touch of saltiness.',size:'(90g)',notes:[['Texture','Toasted crunch'],['Sweetness','Naturally sweet'],['Finish','Salted almond'],['Proof','No caffeine']]}
+      {n:'Pure Carob & Cacao Butter',img:'bar_pure_carob',d:'Crafted from only two wholefood ingredients for simple, naturally sweet, guilt-free perfection.',size:'(90g)',url:'products/pure-carob-bar.html',sel:true,notes:[['Texture','Smooth melt'],['Sweetness','Naturally sweet'],['Finish','Buttery carob'],['Proof','No caffeine']]},
+      {n:'Almond & Celtic Salt',img:'bar_almond',d:'The perfect harmony of crunchy whole roasted almonds, natural sweetness and a touch of saltiness.',size:'(90g)',notes:[['Texture','Toasted crunch'],['Sweetness','Naturally sweet'],['Finish','Salted almond'],['Proof','No caffeine']]},
+      {n:'Peppermint & Buckwheat',img:'bar_peppermint',d:'Refreshing premium peppermint meets the satisfying crunch of activated buckwheat.',size:'(90g)',notes:[['Texture','Crisp melt'],['Sweetness','Naturally sweet'],['Finish','Cool mint'],['Proof','No caffeine']]},
+      {n:'Roasted Hazelnut',img:'bar_hazelnut',d:'Whole roasted hazelnuts deliver an irresistibly indulgent, crunchy carob experience.',size:'(90g)',notes:[['Texture','Nutty melt'],['Sweetness','Naturally sweet'],['Finish','Roasted hazelnut'],['Proof','No caffeine']]}
     ],
     moons:[
-      {n:'Pure Carob Moon',img:'moon_pure_carob',d:'A moon-shaped carob bite for slower snacking.',price:null,size:'',sel:true},
-      {n:'Peppermint Moon',img:'moon_peppermint',d:'A cool peppermint pick-me-up with the perfect crunch.',price:null,size:'',notes:[['Texture','Small snap'],['Sweetness','Gentle carob'],['Finish','Cool mint'],['Details','Enquire']]},
       {n:'Coconut & Goji Moon',img:'moon_goji_coconut',d:'The perfect balance of sweetness and texture in every bite.',price:null,size:'',notes:[['Texture','Small snap'],['Sweetness','Fruit lift'],['Finish','Coconut carob'],['Details','Enquire']]},
-      {n:'Roasted Hazelnut Moon',img:'moon_hazelnut',d:'Roasted whole hazelnuts in each crescent bite.',price:null,size:'',notes:[['Texture','Small snap'],['Sweetness','Gentle carob'],['Finish','Hazelnut'],['Details','Enquire']]},
-      {n:'Almond Moon',img:'moon_almond',d:'Whole almonds and a touch of sea salt in each crescent bite.',price:null,size:'',notes:[['Texture','Small snap'],['Sweetness','Gentle carob'],['Finish','Almond'],['Details','Enquire']]}
+      {n:'Cayenne Moon',img:'moon_cayenne',d:'A slow warmth of cayenne in a carob crescent.',price:null,size:'',notes:[['Texture','Small snap'],['Sweetness','Gentle carob'],['Finish','Slow warmth'],['Details','Enquire']]},
+      {n:'Pure Carob Moon',img:'moon_pure_carob',d:'A crescent of pure carob and cacao butter',price:null,size:'',sel:true},
+      {n:'Almond Moon',img:'moon_almond',d:'Whole almonds and a touch of sea salt in each crescent bite.',price:null,size:'',notes:[['Texture','Small snap'],['Sweetness','Gentle carob'],['Finish','Almond'],['Details','Enquire']]},
+      {n:'Peppermint Moon',img:'moon_peppermint',d:'A cool peppermint pick-me-up with the perfect crunch.',price:null,size:'',notes:[['Texture','Small snap'],['Sweetness','Gentle carob'],['Finish','Cool mint'],['Details','Enquire']]},
+      {n:'Roasted Hazelnut Moon',img:'moon_hazelnut',d:'Roasted whole hazelnuts in each crescent bite.',price:null,size:'',notes:[['Texture','Small snap'],['Sweetness','Gentle carob'],['Finish','Hazelnut'],['Details','Enquire']]}
     ],
     elixirs:[
-      {n:'Pure Carob Elixir',img:'elixir_plain',d:'A warm carob drink, naturally sweet and caffeine free.',size:'(150g)',sel:true},
-      {n:'Spiced Carob Elixir',img:'elixir_spiced',d:'Carob elixir with a gentle warmth of spice.',size:'(150g)',notes:[['Texture','Silky drink'],['Sweetness','Naturally sweet'],['Finish','Gentle spice'],['Proof','Caffeine free']]}
-    ],
-    eclipseBites:[
-      {n:'Goji Eclipse Bites',img:'bite_goji',d:'Small carob bites with a bright goji finish.',price:null,size:'',sel:true},
-      {n:'Coconut Eclipse Bites',img:'bite_coconut',d:'Coconut carob bites made for grazing.',price:null,size:'',notes:[['Texture','Tiny bite'],['Sweetness','Coconut lift'],['Finish','Soft carob'],['Details','Enquire']]},
-      {n:'Golden Eclipse Bites',img:'bite_gold',d:'A small-format carob bite for gifting or sharing.',price:null,size:'',notes:[['Texture','Tiny bite'],['Sweetness','Gentle carob'],['Finish','Golden finish'],['Details','Enquire']]}
+      {n:'Pure Carob Elixir',img:'elixir_plain',d:'A warm carob drink with only two ingredients, naturally sweet and caffeine free.',size:'(150g)',sel:true},
+      {n:'Spiced Carob Elixir',img:'elixir_spiced',d:'A warm carob drink with an Ayurvedic inspired spice blend',size:'(150g)',notes:[['Texture','Silky drink'],['Sweetness','Naturally sweet'],['Finish','Gentle spice'],['Proof','Caffeine free']]}
     ],
     bananas:[
-      {n:'Carob Bananas',img:'bananas',d:'Dehydrated banana pieces coated in naturally sweet carob.',price:null,size:'',sel:true}
+      {n:'Carob Bananas',img:'bananas',d:'Spray Free Australian Grown Bananas coated in our pure carob for the perfect chewy treat.',price:null,size:'',sel:true}
     ]
   };
   var PRICE_STATE={
     bars:{priced:true,label:'Available now'},
     elixirs:{priced:true,label:'Available now'},
     moons:{priced:false,label:'Enquire for details'},
-    eclipseBites:{priced:false,label:'Enquire for details'},
     bananas:{priced:false,label:'Enquire for details'}
   };
   var SIZES={
@@ -1026,7 +1028,6 @@ a.wf-ti:focus-visible{outline:2px solid rgba(44,42,38,.55);outline-offset:6px;bo
   var pdpNotes=document.getElementById('pdpNotes');
   var pdpSizes=document.getElementById('pdpSizes');
   var pdpAdd=document.getElementById('pdpAdd');
-  var pdpView=document.getElementById('pdpView');
   if(!stage||!tabs)return;
   var catDock=tabs.closest('.wf-cat-dock');
   var catPrev=catDock&&catDock.querySelector('.cat-prev');
@@ -1035,15 +1036,14 @@ a.wf-ti:focus-visible{outline:2px solid rgba(44,42,38,.55);outline-offset:6px;bo
   // names come from the trusted in-file catalog above; wrap "&" in the Georgia .amp the brand uses
   function amp(s){return s.replace(/&/g,'<span class="amp">&amp;</span>');}
   var currentCat='bars';
-  var CAT_ORDER=['bars','bananas','moons','elixirs','eclipseBites'];
-  var CAT_LABEL={bars:'Selected bar',moons:'Selected moon',elixirs:'Selected elixir',eclipseBites:'Selected bite',bananas:'Selected banana'};
-  var CAT_FORMAT={bars:'Carob Bars',moons:'Carob Moons',elixirs:'Carob Elixirs',eclipseBites:'Eclipse Bites',bananas:'Carob Bananas'};
-  var CAT_SHOP_TARGET={bars:'/shop.WIP.html#bars',moons:'/shop.WIP.html#moons',elixirs:'/shop.WIP.html#elixirs',eclipseBites:'/shop.WIP.html#bites',bananas:'/shop.WIP.html#bananas'};
+  var CAT_ORDER=['bars','bananas','moons','elixirs'];
+  var CAT_LABEL={bars:'Selected bar',moons:'Selected moon',elixirs:'Selected elixir',bananas:'Selected banana'};
+  var CAT_FORMAT={bars:'Carob Bars',moons:'Carob Moons',elixirs:'Carob Elixirs',bananas:'Carob Bananas'};
+  var CAT_SHOP_TARGET={bars:'/shop.WIP.html#bars',moons:'/shop.WIP.html#moons',elixirs:'/shop.WIP.html#elixirs',bananas:'/shop.WIP.html#bananas'};
   var NOTE_FALLBACK={
     bars:[['Texture','Smooth melt'],['Sweetness','Naturally sweet'],['Finish','Buttery carob'],['Proof','No caffeine']],
     moons:[['Texture','Small snap'],['Sweetness','Gentle carob'],['Finish','Clean finish'],['Details','Enquire']],
     elixirs:[['Texture','Silky drink'],['Sweetness','Naturally sweet'],['Finish','Mellow roast'],['Proof','Caffeine free']],
-    eclipseBites:[['Texture','Tiny bite'],['Sweetness','Fruit lift'],['Finish','Carob finish'],['Details','Enquire']],
     bananas:[['Texture','Chewy fruit'],['Sweetness','Banana sweet'],['Finish','Soft carob'],['Details','Enquire']]
   };
   function shopTarget(cat){return CAT_SHOP_TARGET[cat]||'/shop.WIP.html';}
@@ -1053,6 +1053,7 @@ a.wf-ti:focus-visible{outline:2px solid rgba(44,42,38,.55);outline-offset:6px;bo
       var cat=el.getAttribute('data-cat');
       el.classList.toggle('on',cat===activeCat);
       el.setAttribute('aria-pressed',cat===activeCat?'true':'false');
+      el.setAttribute('aria-selected',cat===activeCat?'true':'false');
     });
   }
   function activePack(){
@@ -1076,7 +1077,7 @@ a.wf-ti:focus-visible{outline:2px solid rgba(44,42,38,.55);outline-offset:6px;bo
     if(!pdpProof)return;
     var pack=activePack();
     var size=(pack&&pack.size)||item.size||'';
-    var rows=state.priced?['Shop page pricing',size,'Naturally sweet',state.label||'Available now']:['Range preview','View product','Enquire for details'];
+    var rows=state.priced?['Shop page pricing',size,'Naturally sweet',state.label||'Available now']:['Enquire for details'];
     pdpProof.innerHTML=rows.map(function(row){return '<span>'+row+'</span>';}).join('');
     pdpProof.classList.toggle('pending',!state.priced);
   }
@@ -1110,10 +1111,6 @@ a.wf-ti:focus-visible{outline:2px solid rgba(44,42,38,.55);outline-offset:6px;bo
       pdpAdd.textContent=state.priced?'Shop Now':'Enquire';
       pdpAdd.classList.toggle('notify',!state.priced);
     }
-    if(pdpView){
-      pdpView.href=shopTarget(currentCat);
-      pdpView.textContent='View Range';
-    }
   }
   function setPending(cat){
     var label=CAT_FORMAT[cat]||'Featured format';
@@ -1121,12 +1118,11 @@ a.wf-ti:focus-visible{outline:2px solid rgba(44,42,38,.55);outline-offset:6px;bo
     if(pdpEyebrow)pdpEyebrow.textContent=label;
     if(pdpName)pdpName.textContent=label;
     if(pdpDesc)pdpDesc.textContent='View this range or enquire with Maple Moon.';
-    if(pdpProof){pdpProof.classList.add('pending');pdpProof.innerHTML='<span>Range preview</span><span>View product</span><span>Enquire for details</span>';}
+    if(pdpProof){pdpProof.classList.add('pending');pdpProof.innerHTML='<span>Enquire for details</span>';}
     if(pdpNotes){pdpNotes.innerHTML=(NOTE_FALLBACK[cat]||NOTE_FALLBACK.bars).map(function(n){return '<span><b>'+n[0]+'</b>'+n[1]+'</span>';}).join('');}
     if(pdpPrice){pdpPrice.hidden=true;pdpPrice.textContent='';}
     if(pdpFlag){pdpFlag.hidden=false;pdpFlag.textContent=state.label;pdpFlag.classList.add('pending');}
     if(pdpAdd){pdpAdd.hidden=false;pdpAdd.disabled=false;pdpAdd.textContent='Enquire';pdpAdd.classList.add('notify');}
-    if(pdpView){pdpView.href=shopTarget(cat);pdpView.textContent='View Range';}
   }
   function renderSizes(cat){
     if(!pdpSizes)return;
@@ -1200,7 +1196,7 @@ a.wf-ti:focus-visible{outline:2px solid rgba(44,42,38,.55);outline-offset:6px;bo
     layout();if(data[center])setPdp(data[center]);
   }
   function renderPending(cat){
-    stage.innerHTML='<div class="wf-range-pending"><p>Enquire about this range.</p><a class="wf-pill" href="#range">View Range</a></div>';
+    stage.innerHTML='<div class="wf-range-pending"><p>Enquire about this range.</p></div>';
     els=[];center=0;setPending(cat);
   }
   function render(cat){
@@ -1356,7 +1352,7 @@ a.wf-ti:focus-visible{outline:2px solid rgba(44,42,38,.55);outline-offset:6px;bo
   // S3 what-is-carob / S4 our-story / S5 ritual
   function swap(sel,src,alt,op){var im=document.querySelector(sel);if(im&&src){im.src=src;if(alt)im.alt=alt;if(op)im.style.objectPosition=op;}}
   var S3={ai:null,pod66:[PF+'maplemoon_heros66_brandmatched.webp','A single carob pod in soft blue fog','center 72%']};
-  var S4={ai:null,dusk:['/assets/hero_shots/byron_bay_silhouette.webp','The lighthouse on the headland at dusk'],eco55:[PF+'maplemoon_heros55_brandmatched_atmospheric.webp','The full Maple Moon range, handmade bars, moons and elixirs'],
+  var S4={ai:null,dusk:['/assets/hero_shots/byron_bay_silhouette.webp','The lighthouse on the headland at dusk'],eco55:[PF+'maplemoon_heros55_brandmatched_atmospheric.webp','The full Maple Moon range of bars, moons and elixirs'],
           barstack21:[PF+'maplemoon_heros21_brandmatched.webp','A carob bar standing on stacked stone','center 55%']};
   var S5={ai:null,duo23:[PF+'mm23_xmp_blue_hero_2400.webp','Two carob bars resting on a rock in moonlit blue'],
           trio43:[PF+'maplemoon_heros43_brandmatched.webp','Three carob bars with whole carob pods'],
@@ -1540,8 +1536,6 @@ body.motion-on [data-reveal].is-visible{opacity:1;transform:none;}
   .wf-range-tabs .wf-tab[data-cat="moons"] span::after{content:"Moons";font-size:.56rem;letter-spacing:.02em;}
   .wf-range-tabs .wf-tab[data-cat="elixirs"] span{font-size:0;}
   .wf-range-tabs .wf-tab[data-cat="elixirs"] span::after{content:"Elixirs";font-size:.56rem;letter-spacing:.02em;}
-  .wf-range-tabs .wf-tab[data-cat="eclipseBites"] span{font-size:0;}
-  .wf-range-tabs .wf-tab[data-cat="eclipseBites"] span::after{content:"Bites";font-size:.56rem;letter-spacing:.02em;}
   .wf-range-tabs .wf-tab[data-cat="bananas"] span{font-size:0;}
   .wf-range-tabs .wf-tab[data-cat="bananas"] span::after{content:"Bananas";font-size:.56rem;letter-spacing:.02em;}
   .wf-cf{height:236px;perspective:1050px;}
