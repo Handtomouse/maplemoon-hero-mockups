@@ -1,0 +1,157 @@
+{
+  "schema": "maplemoon-receipt/v2",
+  "receipt_id": "MAPLEMOON-CODEX-LANE-E-HANDOFF-20260816T151818-RECEIPT-01",
+  "packet_id": "MAPLEMOON-CODEX-LANE-E-HANDOFF-20260816T151818",
+  "worker_thread_id": "/root",
+  "worker": "MapleMoon root Boss /root",
+  "started_at": "2026-08-16T05:18:18Z",
+  "completed_at": "2026-08-16T06:01:56Z",
+  "files_read": [
+    "/Users/handtomouse/maplemoon_recentre_20260815/CODEX_LANE_E_HANDOFF_20260816.md",
+    "/Users/handtomouse/maplemoon_recentre_20260815/LANE_E_MUTATING_PACKET_20260816.md",
+    "/Users/handtomouse/maplemoon_recentre_20260815/LANE_E_apply.md",
+    "/Users/handtomouse/maplemoon_apply_20260815/emails/CARLI_HOME_20260814.txt",
+    "/Users/handtomouse/maplemoon_apply_20260815/emails/CARLI_SHOP_20260814.txt",
+    "/Users/handtomouse/maplemoon_apply_20260815/emails/CARLI_OURSTORY_20260814.txt",
+    "/Users/handtomouse/maplemoon_apply_20260815/emails/CARLI_WHATISCAROB_20260814.txt",
+    "/Users/handtomouse/UFC/ops/snapshots/codex_worktrees_20260814/d122/tree/docs/orchestration/reviews/CARLI-CANVA-NOTE-REGISTER-20260731.md",
+    "/Users/handtomouse/maplemoon-website/_wip/AGENTS.md",
+    "/Users/handtomouse/maplemoon-website/docs/orchestration/LOCK_MANIFEST.json",
+    "/Users/handtomouse/maplemoon-website/scripts/check-maplemoon-receipt.py",
+    "/Users/handtomouse/.codex/plugins/cache/openai-bundled/vercel/0.21.4/skills/agent-browser-verify/SKILL.md",
+    "/Users/handtomouse/maplemoon-website/_wip/homepage_real_1_lead_photo.WIP.html",
+    "/Users/handtomouse/maplemoon-website/_wip/shop.WIP.html",
+    "/Users/handtomouse/maplemoon-website/_wip/our-story.WIP.html",
+    "/Users/handtomouse/maplemoon-website/_wip/carob-story.WIP.html",
+    "/Users/handtomouse/maplemoon-website/_wip/faq.WIP.html",
+    "/Users/handtomouse/maplemoon-website/_wip/stockists.WIP.html"
+  ],
+  "files_changed": [
+    "maplemoon-website/_wip/homepage_real_1_lead_photo.WIP.html",
+    "maplemoon-website/_wip/carob-story.WIP.html",
+    "maplemoon-website/_wip/faq.WIP.html",
+    "maplemoon-website/docs/orchestration/LOCK_MANIFEST.json",
+    "maplemoon_apply_20260815/RECEIPT.md",
+    "maplemoon_apply_20260815/CLAIMS_APPLIED.md",
+    "maplemoon_apply_20260815/lane_e_handoff_20260816T151818",
+    "maplemoon-website/docs/orchestration/reviews/MAPLEMOON-CODEX-LANE-E-HANDOFF-20260816T151818.json"
+  ],
+  "pre_sha256": {
+    "maplemoon-website/_wip/homepage_real_1_lead_photo.WIP.html": "d097392fc1c6f44c3e3c09024bb7c2e2ea275e215a468dfe76306c6dcf534748",
+    "maplemoon-website/_wip/shop.WIP.html": "b444b0da4f5778f7434c6343854e3cdf48d1a88b038c7863a2ef1d46b5e0cbac",
+    "maplemoon-website/_wip/our-story.WIP.html": "6beef3f9449804e800ad7883c311c957637d12a5e05c69beb7ed912e49b36e23",
+    "maplemoon-website/_wip/carob-story.WIP.html": "82b8d3a94de71c453ff2970f185832c93056862d4dd5599f02b6fc222bd9b339",
+    "maplemoon-website/_wip/faq.WIP.html": "4540ef31a150cb6de8062c2d4d74709f24d13ce45490f8e3c1c9c283c1fdbd56",
+    "maplemoon-website/_wip/stockists.WIP.html": "1cc8b4e55c7dc59f6e268222c310ac47d477540caf7540970981726a801b9075",
+    "maplemoon-website/docs/orchestration/LOCK_MANIFEST.json": "dadeeb82613370334f8a93862bf6237b04880d65737e36620ead2b2aed90eadf",
+    "maplemoon_apply_20260815/RECEIPT.md": "bfaf5f34502e812a413253c96efd3d7bd7e1f08f581212f7fcc5e494809dd850",
+    "maplemoon_apply_20260815/CLAIMS_APPLIED.md": null,
+    "maplemoon_apply_20260815/lane_e_handoff_20260816T151818": null,
+    "maplemoon-website/docs/orchestration/reviews/MAPLEMOON-CODEX-LANE-E-HANDOFF-20260816T151818.json": null
+  },
+  "post_sha256": {
+    "maplemoon-website/_wip/homepage_real_1_lead_photo.WIP.html": "8baea94b586bda2a079c5cf8d4de9fa24e278ed066314c720ad8b84d33c43261",
+    "maplemoon-website/_wip/shop.WIP.html": "b444b0da4f5778f7434c6343854e3cdf48d1a88b038c7863a2ef1d46b5e0cbac",
+    "maplemoon-website/_wip/our-story.WIP.html": "6beef3f9449804e800ad7883c311c957637d12a5e05c69beb7ed912e49b36e23",
+    "maplemoon-website/_wip/carob-story.WIP.html": "c6b545bc4983960e4ce41bc0bc3a4bdf6ae8432dd5fdbc8e6c26980592d3f2d0",
+    "maplemoon-website/_wip/faq.WIP.html": "3b1156324e7c9156b995bafdc036a28da83be5e7890ba12cf8d14868f49cdcc4",
+    "maplemoon-website/_wip/stockists.WIP.html": "1cc8b4e55c7dc59f6e268222c310ac47d477540caf7540970981726a801b9075",
+    "maplemoon-website/docs/orchestration/LOCK_MANIFEST.json": "a7ec12d38bd272f334f0afe3cfb3f32694f574e3400dc6c0323c434d939c420f",
+    "maplemoon_apply_20260815/RECEIPT.md": "fe1f5d618d952883c4593f7a0916e4e17e247b1f3282a831c5404fe766883111",
+    "maplemoon_apply_20260815/CLAIMS_APPLIED.md": "466da02ff635435884225270cc950716747ef166aa357fee3ac0dbad826b6f18",
+    "maplemoon_apply_20260815/lane_e_handoff_20260816T151818": "c394daa9382e29784f084d4069df3c81e61965a38a2f1dc2fd8bf0a4acce86c7",
+    "maplemoon-website/docs/orchestration/reviews/MAPLEMOON-CODEX-LANE-E-HANDOFF-20260816T151818.json": null
+  },
+  "checks": [
+    {
+      "command": "git rev-parse HEAD; git status --short --untracked-files=no",
+      "exit_code": 0,
+      "result": "PASS: start commit 981b1f02b0f944856f6615c31b5b2ec52a294238; tracked tree clean"
+    },
+    {
+      "command": "scripts/check-maplemoon-receipt.py checkpoint and verify --phase start --root /Users/handtomouse",
+      "exit_code": 0,
+      "result": "PASS checkpoint files=11; PASS phase=start scope=11; the gate-compatible checkpoint preserves the admitted post-lock, pre-content-write bytes"
+    },
+    {
+      "command": "python3 verify_occurrences.py against 981b1f0 and six current WIP pages",
+      "exit_code": 0,
+      "result": "SUMMARY checks=66 order_checks=4 failures=0 result=PASS; every absence had baseline/current Maple Moon positive controls 106/111"
+    },
+    {
+      "command": "node verify_static.mjs",
+      "exit_code": 0,
+      "result": "PASS six pages: Home inline=7 JSON-LD=2; Shop 1/3; Our Story 0/4; What Is Carob 0/4; FAQ 1/0; Stockists 1/3; failures=0"
+    },
+    {
+      "command": "headless system Chrome render_lane_e.mjs at 390x844 and 1440x1100",
+      "exit_code": 0,
+      "result": "PASS 12/12: HTTP 200, nonblank, client width exact, no overflow, broken images, console/page errors, local request failures or bad responses"
+    },
+    {
+      "command": "headless system Chrome verify_faq_open.mjs",
+      "exit_code": 0,
+      "result": "PASS 10/10: five changed FAQ answers at 390/1440 expanded, visible, exact text present, clientWidth=scrollWidth, nonblank screenshots, zero runtime/request errors"
+    },
+    {
+      "command": "headless system Chrome runtime_lane_e.mjs",
+      "exit_code": 0,
+      "result": "PASS 4/4: Home and Stockists newsletters noncollecting with zero storage/network; Shop cart $0.00/0 to $12.95/1; Home cart trigger present"
+    },
+    {
+      "command": "manual visual inspection of changed-page full renders and contact-faq-open.png",
+      "exit_code": 0,
+      "result": "PASS: Home, What Is Carob and FAQ at 390/1440 plus every changed open FAQ answer are readable, nonblank and unclipped"
+    },
+    {
+      "command": "git diff --check; git status --short --untracked-files=no",
+      "exit_code": 0,
+      "result": "PASS: diff check and tracked status produced no output after atomic commits"
+    },
+    {
+      "command": "vercel inspect maplemoonbuild20260813.vercel.app",
+      "exit_code": 0,
+      "result": "PASS read-only freeze: 7vjf2m50b / dpl_G2LER2awaqyFtGRCcTserXbNynct / production / Ready; no deploy, promote or alias command"
+    },
+    {
+      "command": "external evidence file count, zero-byte scan and SHA-256 manifest",
+      "exit_code": 0,
+      "result": "PASS: 37 evidence files including 12 full-page renders, 10 open-FAQ crops, two contact sheets, raw JSON and verifier sources; zero zero-byte files"
+    },
+    {
+      "command": "provisional scripts/check-maplemoon-receipt.py verify --phase complete and --phase promote with all six locks held",
+      "exit_code": 0,
+      "result": "PASS phase=complete changed=7; PASS phase=promote changed=7"
+    },
+    {
+      "command": "six-row final lock release and JSON/hash replay",
+      "exit_code": 0,
+      "result": "LOCK_RELEASE_POSTCHECK PASS rows=6; each exact packet row released by MapleMoon root Boss /root with the certified page SHA-256; no other lock row changed"
+    }
+  ],
+  "screenshots_or_urls": [
+    "/Users/handtomouse/maplemoon_apply_20260815/lane_e_handoff_20260816T151818/contact-changed-pages.png",
+    "/Users/handtomouse/maplemoon_apply_20260815/lane_e_handoff_20260816T151818/contact-faq-open.png",
+    "/Users/handtomouse/maplemoon_apply_20260815/lane_e_handoff_20260816T151818/home-390.png",
+    "/Users/handtomouse/maplemoon_apply_20260815/lane_e_handoff_20260816T151818/home-1440.png",
+    "/Users/handtomouse/maplemoon_apply_20260815/lane_e_handoff_20260816T151818/carob-story-390.png",
+    "/Users/handtomouse/maplemoon_apply_20260815/lane_e_handoff_20260816T151818/carob-story-1440.png",
+    "/Users/handtomouse/maplemoon_apply_20260815/lane_e_handoff_20260816T151818/faq-390.png",
+    "/Users/handtomouse/maplemoon_apply_20260815/lane_e_handoff_20260816T151818/faq-1440.png",
+    "https://maplemoonbuild20260813.vercel.app"
+  ],
+  "failures": [],
+  "unknowns": [
+    "No source maps packaging colours to flavour names. The later handoff requires the Home and Shop order arrays to remain byte-identical to 981b1f0, so no order was guessed.",
+    "The 20 admitted factual/commercial statements are client-supplied wording and were not independently substantiated by this implementation lane.",
+    "No exact human-style pseudonym mapping exists. Transparent anonymous review handles 01/02/03 were used without inventing human identities; the consent-pending gate remains visible."
+  ],
+  "residual_risk": [
+    "Production remains frozen on 7vjf2m50b; this receipt does not authorise deployment, alias movement or client contact.",
+    "Client-supplied claim wording may require later substantiation or copy correction, but Nate explicitly removed that as a build blocker for this lane.",
+    "Shop, Our Story and Stockists have no net page delta from 981b1f0. The transient Shop order candidate was corrected additively and is documented in RECEIPT.md."
+  ],
+  "forbidden_path_changes": [],
+  "proposed_next_state": "complete",
+  "next_reviewer": "Nate for local WIP review and a separately authorised deployment decision; production remains frozen"
+}

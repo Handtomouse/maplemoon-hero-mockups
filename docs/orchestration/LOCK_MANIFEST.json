@@ -1612,15 +1612,16 @@
       "path": "_wip/homepage_real_1_lead_photo.WIP.html",
       "owner": "Codex /root",
       "worker_thread_id": "/root",
-      "status": "held",
+      "status": "released",
       "approval_class": "nate-directed-mutating-local-wip",
       "base_state": "present",
       "base_sha256": "d097392fc1c6f44c3e3c09024bb7c2e2ea275e215a468dfe76306c6dcf534748",
       "acquired_at": "2026-08-16T15:18:18+10:00",
       "lease_expires_at": "2026-08-17T03:18:18+10:00",
       "release_condition": "Exact occurrence, parse, rendered 390/1440, receipt and production-freeze checks pass.",
-      "released_by": null,
-      "notes": "Homepage Lane E exact-copy and pseudonym scope only; no media, deploy or production action."
+      "released_by": "MapleMoon root Boss /root",
+      "post_sha256": "8baea94b586bda2a079c5cf8d4de9fa24e278ed066314c720ad8b84d33c43261",
+      "notes": "Homepage Lane E exact-copy and pseudonym scope only; no media, deploy or production action. Released after this packet's provisional complete/promote gates PASS changed=7 and exact 390/1440 visual/runtime close."
     },
     {
       "schema_version": 2,
@@ -1631,15 +1632,16 @@
       "path": "_wip/shop.WIP.html",
       "owner": "Codex /root",
       "worker_thread_id": "/root",
-      "status": "held",
+      "status": "released",
       "approval_class": "nate-directed-mutating-local-wip",
       "base_state": "present",
       "base_sha256": "b444b0da4f5778f7434c6343854e3cdf48d1a88b038c7863a2ef1d46b5e0cbac",
       "acquired_at": "2026-08-16T15:18:18+10:00",
       "lease_expires_at": "2026-08-17T03:18:18+10:00",
       "release_condition": "Exact occurrence, parse, rendered 390/1440, receipt and production-freeze checks pass.",
-      "released_by": null,
-      "notes": "Shop is verification scope; preserve exact later-email order, catalogue size and cart."
+      "released_by": "MapleMoon root Boss /root",
+      "post_sha256": "b444b0da4f5778f7434c6343854e3cdf48d1a88b038c7863a2ef1d46b5e0cbac",
+      "notes": "Shop is verification scope; final product arrays are byte-identical to the admitted baseline because the handoff says no colour-to-flavour mapping exists. Released after provisional complete/promote and cart/render PASS."
     },
     {
       "schema_version": 2,
@@ -1650,15 +1652,16 @@
       "path": "_wip/our-story.WIP.html",
       "owner": "Codex /root",
       "worker_thread_id": "/root",
-      "status": "held",
+      "status": "released",
       "approval_class": "nate-directed-mutating-local-wip",
       "base_state": "present",
       "base_sha256": "6beef3f9449804e800ad7883c311c957637d12a5e05c69beb7ed912e49b36e23",
       "acquired_at": "2026-08-16T15:18:18+10:00",
       "lease_expires_at": "2026-08-17T03:18:18+10:00",
       "release_condition": "Exact occurrence, parse, rendered 390/1440, receipt and production-freeze checks pass.",
-      "released_by": null,
-      "notes": "Our Story is verification-only for this pass; no structural rebuild or imagery mutation."
+      "released_by": "MapleMoon root Boss /root",
+      "post_sha256": "6beef3f9449804e800ad7883c311c957637d12a5e05c69beb7ed912e49b36e23",
+      "notes": "Our Story is verification-only for this pass; no structural rebuild or imagery mutation. Released byte-identical to the admitted baseline after provisional complete/promote and render PASS."
     },
     {
       "schema_version": 2,
@@ -1669,15 +1672,16 @@
       "path": "_wip/carob-story.WIP.html",
       "owner": "Codex /root",
       "worker_thread_id": "/root",
-      "status": "held",
+      "status": "released",
       "approval_class": "nate-directed-mutating-local-wip",
       "base_state": "present",
       "base_sha256": "82b8d3a94de71c453ff2970f185832c93056862d4dd5599f02b6fc222bd9b339",
       "acquired_at": "2026-08-16T15:18:18+10:00",
       "lease_expires_at": "2026-08-17T03:18:18+10:00",
       "release_condition": "Exact occurrence, parse, rendered 390/1440, receipt and production-freeze checks pass.",
-      "released_by": null,
-      "notes": "Exact missing Canva comparison/process claims only; preserve the later email-led structural rebuild."
+      "released_by": "MapleMoon root Boss /root",
+      "post_sha256": "c6b545bc4983960e4ce41bc0bc3a4bdf6ae8432dd5fdbc8e6c26980592d3f2d0",
+      "notes": "Exact missing Canva comparison claim only; preserves the later email-led structural rebuild. Released after provisional complete/promote and exact 390/1440 render PASS."
     },
     {
       "schema_version": 2,
@@ -1688,15 +1692,16 @@
       "path": "_wip/faq.WIP.html",
       "owner": "Codex /root",
       "worker_thread_id": "/root",
-      "status": "held",
+      "status": "released",
       "approval_class": "nate-directed-mutating-local-wip",
       "base_state": "present",
       "base_sha256": "4540ef31a150cb6de8062c2d4d74709f24d13ce45490f8e3c1c9c283c1fdbd56",
       "acquired_at": "2026-08-16T15:18:18+10:00",
       "lease_expires_at": "2026-08-17T03:18:18+10:00",
       "release_condition": "Exact occurrence, parse, rendered 390/1440, receipt and production-freeze checks pass.",
-      "released_by": null,
-      "notes": "Exact remaining Canva FAQ claims plus existing shipping/returns link; preserve runtime behavior."
+      "released_by": "MapleMoon root Boss /root",
+      "post_sha256": "3b1156324e7c9156b995bafdc036a28da83be5e7890ba12cf8d14868f49cdcc4",
+      "notes": "Exact remaining Canva FAQ claims plus existing shipping/returns link; runtime preserved. Released after provisional complete/promote and all five changed answers PASS open-state QA at 390/1440."
     },
     {
       "schema_version": 2,
@@ -1707,15 +1712,16 @@
       "path": "_wip/stockists.WIP.html",
       "owner": "Codex /root",
       "worker_thread_id": "/root",
-      "status": "held",
+      "status": "released",
       "approval_class": "nate-directed-mutating-local-wip",
       "base_state": "present",
       "base_sha256": "1cc8b4e55c7dc59f6e268222c310ac47d477540caf7540970981726a801b9075",
       "acquired_at": "2026-08-16T15:18:18+10:00",
       "lease_expires_at": "2026-08-17T03:18:18+10:00",
       "release_condition": "Exact occurrence, parse, rendered 390/1440, receipt and production-freeze checks pass.",
-      "released_by": null,
-      "notes": "Stockists is verification-only; preserve 200+ public language and 204/197/7 internal reconciliation."
+      "released_by": "MapleMoon root Boss /root",
+      "post_sha256": "1cc8b4e55c7dc59f6e268222c310ac47d477540caf7540970981726a801b9075",
+      "notes": "Stockists is verification-only; preserves 200+ public language and 204/197/7 internal reconciliation. Released byte-identical to the admitted baseline after provisional complete/promote and newsletter/render PASS."
     }
   ],
   "legacy_lock_schema_v1": {
