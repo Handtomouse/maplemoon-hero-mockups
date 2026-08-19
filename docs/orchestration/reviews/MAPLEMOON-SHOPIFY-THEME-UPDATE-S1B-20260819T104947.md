@@ -177,16 +177,24 @@ the render check is **not run**, and no rendering claim is made.
 ## Ordering deviation, disclosed
 
 The before-state pull and the evidence writes happened before the packet existed,
-so the checkpoint gate ran after those two directories already had content and
-their `pre_sha256` entries are non-null rather than absent. Both gates still
+so the checkpoint recorded both directories as already present rather than
+absent. The receipt's `pre_sha256` carries the checkpoint's actual digests for
+them, not `null`, so the machine-read field and this note agree. Both gates still
 passed: `checkpoint` PASS with `files=4`, and `verify --phase start` PASS with
 `scope=4`. Recording this rather than reordering the timestamps.
 
 ## The one thing that unblocks this
 
-Nate opens the Shopify admin theme library himself and either applies the update,
-or types `gogo` so this lane can drive the click while he watches. Everything
-else is already staged: before bytes captured, both digest algorithms recovered
+Nate applies the update in the Shopify admin theme library himself. That is the
+whole unblock. This lane then resumes at step 4, and everything downstream — the
+after-bytes pull, the migration diff, the settings preservation pass, both gates
+and the preview — is fully drivable from the CLI without any interface work.
+
+A GUI takeover token is deliberately **not** proposed. It would only buy blind
+pixel-clicking inside a theme library already proved unreadable, on a machine
+Nate is actively using, to perform a hard-to-reverse remote mutation.
+
+Everything else is already staged: before bytes captured, both digest algorithms recovered
 and written down, both gates reproducing baseline exactly, the settings baseline
 extracted past two strict-JSON traps, and the live theme proved untouched.
 

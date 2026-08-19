@@ -25,15 +25,15 @@
     "maplemoon-website/docs/orchestration/reviews/MAPLEMOON-SHOPIFY-THEME-UPDATE-S1B-20260819T104947.json"
   ],
   "pre_sha256": {
-    "maplemoon-website/_wip/evidence/shopify_theme_update_s1b_20260819T104947": null,
-    "maplemoon-website/_wip/recovery/shopify_theme_update_s1b_20260819T104947": null,
+    "maplemoon-website/_wip/evidence/shopify_theme_update_s1b_20260819T104947": "27d090ec24fc4e43a219244ad5e575f8a6230aac2b72e8b00e35a949589500e8",
+    "maplemoon-website/_wip/recovery/shopify_theme_update_s1b_20260819T104947": "8b55fa170203e81cccd8710171a70f30447d6d35a93dff65b3e965ee1f9d8a03",
     "maplemoon-website/docs/orchestration/reviews/MAPLEMOON-SHOPIFY-THEME-UPDATE-S1B-20260819T104947.md": null,
     "maplemoon-website/docs/orchestration/reviews/MAPLEMOON-SHOPIFY-THEME-UPDATE-S1B-20260819T104947.json": null
   },
   "post_sha256": {
     "maplemoon-website/_wip/evidence/shopify_theme_update_s1b_20260819T104947": "2afef7ade8ef42dc3462f00b3a79ffa2bff35b18bf4ba490ac273b157634de3d",
     "maplemoon-website/_wip/recovery/shopify_theme_update_s1b_20260819T104947": "6190cad36ae30050983578d1316b7e23c5c72d713cc0ab0cde9a295778e91a3c",
-    "maplemoon-website/docs/orchestration/reviews/MAPLEMOON-SHOPIFY-THEME-UPDATE-S1B-20260819T104947.md": "aa7d32ce28d294e71c3476fb1bc86a3c00509a3d5c49aea5e9ecdc46dbf1a974",
+    "maplemoon-website/docs/orchestration/reviews/MAPLEMOON-SHOPIFY-THEME-UPDATE-S1B-20260819T104947.md": "1533d647cc12b4051f5a435e8a7e183677eb22df4bd91df382827a7a92a59d24",
     "maplemoon-website/docs/orchestration/reviews/MAPLEMOON-SHOPIFY-THEME-UPDATE-S1B-20260819T104947.json": null
   },
   "checks": [
@@ -142,10 +142,11 @@
     "The unpublished duplicate remains exactly 1.4.0 and still carries a strict-invalid settings_schema.json, 3 Theme Check errors and 195 warnings. It is not yet a clean implementation base.",
     "config/settings_data.json is also not strict JSON. Any future tooling that json.load()s it will throw, and a swallowed exception there would produce a clean-looking but empty settings diff.",
     "When the update does run, the Theme Check 'files inspected' count will move because 1.6.0 ships a different file count. That is expected and must not be reported as a regression.",
-    "Settings preservation is not the same as settings_data.json being unchanged. A merchant value surviving in the data file with no matching id in the 1.6.0 schema is orphaned and silently never read again; templates/*.json and sections/*.json orphan the same way."
+    "Settings preservation is not the same as settings_data.json being unchanged. A merchant value surviving in the data file with no matching id in the 1.6.0 schema is orphaned and silently never read again; templates/*.json and sections/*.json orphan the same way.",
+    "This lane committed a third and fourth copy of the same 246-file theme tree into the repo (before-160076628165 and live-154500595909). The S0 and S1 recovery trees were already committed by the 12848c1 Codex baseline sweep, so _wip/recovery now holds four byte-identical copies of Etheryx 1.4.0. Worth a dedupe decision before more recovery pulls land."
   ],
   "forbidden_path_changes": [],
-  "ordering_deviation": "The before-state pull and evidence writes preceded the packet, so the checkpoint gate ran after those two directories already held content and their pre_sha256 entries are non-null rather than absent. Both gates still passed. Recorded rather than reordered.",
+  "ordering_deviation": "The before-state pull and evidence writes preceded the packet, so the checkpoint recorded both directories as already present rather than absent. pre_sha256 therefore carries the checkpoint's actual recorded digests (evidence 4 files 27d090ec..., recovery 492 files 8b55fa17...), not null, so the machine-read field and this explanation agree. The two review files were genuinely absent at checkpoint time and are correctly null. Both gates still passed: checkpoint PASS files=4, verify --phase start PASS scope=4. Recorded rather than reordered.",
   "proposed_next_state": "s1b_held_official_update_route_requires_admin_interface_instrument",
   "next_reviewer": "MapleMoon root Boss, then Nate for the instrument decision"
 }
