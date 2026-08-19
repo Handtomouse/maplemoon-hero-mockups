@@ -1,0 +1,164 @@
+{
+  "status": "PASS",
+  "hashes": {
+    "/Users/handtomouse/.codex/visualizations/2026/08/13/019ffd5b-edd2-7b23-8780-453f9b67a532/maplemoon-product-corrections-20260814/assets/elixir_pure_same_size_clean_edges_v4.png": {
+      "expected": "70f93f414902ae1b10e7ae1416954348aa20bd1d6950e37d05979b4e4aa9eb93",
+      "actual": "70f93f414902ae1b10e7ae1416954348aa20bd1d6950e37d05979b4e4aa9eb93"
+    },
+    "/Users/handtomouse/.codex/visualizations/2026/08/13/019ffd5b-edd2-7b23-8780-453f9b67a532/maplemoon-product-corrections-20260814/assets/elixir_spiced_same_size_clean_edges_v4.png": {
+      "expected": "414f727e84ca0dc24749b10b1092f4618e9f9fc9b954304442a7a0a8779749bb",
+      "actual": "414f727e84ca0dc24749b10b1092f4618e9f9fc9b954304442a7a0a8779749bb"
+    },
+    "/Users/handtomouse/.codex/visualizations/2026/08/13/019ffd5b-edd2-7b23-8780-453f9b67a532/maplemoon-product-corrections-20260814/assets/elixir_clean_shared_alpha_v4.png": {
+      "expected": "39d6ca8c5539d2662703dbe7fa4795c10a30172b39574c487c806ad2d7fe5850",
+      "actual": "39d6ca8c5539d2662703dbe7fa4795c10a30172b39574c487c806ad2d7fe5850"
+    },
+    "/Users/handtomouse/maplemoon_build_20260813/assets/product_shots/elixir_plain.webp": {
+      "expected": "4398f43fcc7ff571f4eea4643e078f8416e6921f4e979f5bf31e53338e04916a",
+      "actual": "4398f43fcc7ff571f4eea4643e078f8416e6921f4e979f5bf31e53338e04916a"
+    },
+    "/Users/handtomouse/maplemoon_build_20260813/assets/product_shots/elixir_spiced.webp": {
+      "expected": "9b92c0f0a0cc11b11aa9a5fa4cb7683b420db373e556c74adcb1ba576ffe1163",
+      "actual": "9b92c0f0a0cc11b11aa9a5fa4cb7683b420db373e556c74adcb1ba576ffe1163"
+    }
+  },
+  "pure_v4": {
+    "path": "/Users/handtomouse/.codex/visualizations/2026/08/13/019ffd5b-edd2-7b23-8780-453f9b67a532/maplemoon-product-corrections-20260814/assets/elixir_pure_same_size_clean_edges_v4.png",
+    "source_mode": "RGBA",
+    "canvas": [
+      1254,
+      1254
+    ],
+    "bbox_xyxy": [
+      334,
+      107,
+      920,
+      1084
+    ],
+    "visible_width_height": [
+      586,
+      977
+    ],
+    "centreline_x": 627.0,
+    "baseline_y_exclusive": 1084,
+    "alpha_min_max": [
+      0,
+      255
+    ],
+    "alpha_unique_values": 36,
+    "transparent_pixels": 1015241,
+    "partial_alpha_pixels": 5876,
+    "opaque_pixels": 551399,
+    "visible_components_8_connected": 1,
+    "largest_component_pixels": 557275,
+    "interior_transparent_holes": 0,
+    "touches_canvas_edge": false
+  },
+  "spiced_v4": {
+    "path": "/Users/handtomouse/.codex/visualizations/2026/08/13/019ffd5b-edd2-7b23-8780-453f9b67a532/maplemoon-product-corrections-20260814/assets/elixir_spiced_same_size_clean_edges_v4.png",
+    "source_mode": "RGBA",
+    "canvas": [
+      1254,
+      1254
+    ],
+    "bbox_xyxy": [
+      334,
+      107,
+      920,
+      1084
+    ],
+    "visible_width_height": [
+      586,
+      977
+    ],
+    "centreline_x": 627.0,
+    "baseline_y_exclusive": 1084,
+    "alpha_min_max": [
+      0,
+      255
+    ],
+    "alpha_unique_values": 36,
+    "transparent_pixels": 1015241,
+    "partial_alpha_pixels": 5876,
+    "opaque_pixels": 551399,
+    "visible_components_8_connected": 1,
+    "largest_component_pixels": 557275,
+    "interior_transparent_holes": 0,
+    "touches_canvas_edge": false
+  },
+  "shared_mask": {
+    "path": "/Users/handtomouse/.codex/visualizations/2026/08/13/019ffd5b-edd2-7b23-8780-453f9b67a532/maplemoon-product-corrections-20260814/assets/elixir_clean_shared_alpha_v4.png",
+    "source_mode": "L",
+    "canvas": [
+      1254,
+      1254
+    ],
+    "min_max": [
+      0,
+      255
+    ],
+    "unique_values": 36
+  },
+  "wired_candidate_comparison": [
+    {
+      "sku": "pure",
+      "path": "/Users/handtomouse/maplemoon_build_20260813/assets/product_shots/elixir_plain.webp",
+      "source_mode": "RGBA",
+      "canvas": [
+        1024,
+        1536
+      ],
+      "bbox_xyxy": [
+        230,
+        312,
+        794,
+        1196
+      ],
+      "visible_width_height": [
+        564,
+        884
+      ]
+    },
+    {
+      "sku": "spiced",
+      "path": "/Users/handtomouse/maplemoon_build_20260813/assets/product_shots/elixir_spiced.webp",
+      "source_mode": "RGBA",
+      "canvas": [
+        1024,
+        1536
+      ],
+      "bbox_xyxy": [
+        224,
+        312,
+        798,
+        1211
+      ],
+      "visible_width_height": [
+        574,
+        899
+      ]
+    }
+  ],
+  "positive_controls": {
+    "pass": true,
+    "clipping_canary_detected": true,
+    "stray_component_canary_components": 2,
+    "interior_hole_canary_detected": 1,
+    "alpha_mismatch_canary_detected": true,
+    "dark_halo_canary_detected": true,
+    "dark_halo_canary_white_composite_mean": 159.0
+  },
+  "required_checks": {
+    "all_hashes_match": true,
+    "v4_rgba": true,
+    "same_canvas_1254": true,
+    "exact_586x977_bounds": true,
+    "same_bbox": true,
+    "same_alpha": true,
+    "one_component_each": true,
+    "zero_interior_holes": true,
+    "not_clipped": true,
+    "positive_controls": true
+  },
+  "visual_inspection_required": "Derived white/neutral-grey/black contact sheet must be independently inspected; numeric checks do not certify package text."
+}

@@ -1,0 +1,21 @@
+{
+  "http": 200,
+  "responseUrl": "http://127.0.0.1:4391/faq.html",
+  "rootState": "open",
+  "reducedMotion": true,
+  "primaryHidden": false,
+  "utilityHidden": false,
+  "primaryRect": {
+    "top": 62,
+    "bottom": 195,
+    "height": 133
+  },
+  "utilityRect": {
+    "top": 194,
+    "bottom": 327,
+    "height": 133
+  },
+  "hitAtPrimaryRow": "Shop",
+  "clientWidth": 390,
+  "scrollWidth": 390
+}

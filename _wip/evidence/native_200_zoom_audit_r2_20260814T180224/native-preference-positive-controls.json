@@ -1,0 +1,165 @@
+{
+  "cdp_methods": [
+    "Browser.getWindowBounds",
+    "Browser.getWindowForTarget",
+    "Browser.setWindowBounds",
+    "Log.enable",
+    "Network.enable",
+    "Page.enable",
+    "Page.navigate",
+    "Runtime.enable",
+    "Runtime.evaluate"
+  ],
+  "controls": {
+    "css_zoom_clean": true,
+    "detector_175_passed_as_200": false,
+    "detector_200_passed_as_200": true,
+    "identical_browser_bounds": true,
+    "visual_viewport_scale_one": true
+  },
+  "forbidden_emulation_or_input_methods": [],
+  "profiles": [
+    {
+      "factor": 1.0,
+      "label": "100",
+      "level": 0.0,
+      "metrics": {
+        "bodyTextLength": 2417,
+        "browserBounds": {
+          "height": 900,
+          "left": 50,
+          "top": 50,
+          "width": 1200,
+          "windowState": "normal"
+        },
+        "clientWidth": 1200,
+        "devicePixelRatio": 2,
+        "innerHeight": 813,
+        "innerWidth": 1200,
+        "outerHeight": 900,
+        "outerWidth": 1200,
+        "pageScaleIndicators": {
+          "rootTransform": "none",
+          "rootTransformOrigin": "600px 2387.89px"
+        },
+        "readyState": "complete",
+        "rootComputedZoom": "1",
+        "rootInlineZoom": "",
+        "scrollWidth": 1200,
+        "url": "http://127.0.0.1:4422/homepage.html",
+        "visualViewport": {
+          "height": 813,
+          "offsetLeft": 0,
+          "offsetTop": 0,
+          "scale": 1,
+          "width": 1200
+        }
+      },
+      "pid": 94567,
+      "pid_command": "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome --user-data-dir=/tmp/maplemoon-native-zoom-r2-20260814T180224-100 --profile-directory=Default --remote-debugging-port=9350 --remote-allow-origins=* --no-first-run --no-default-browser-check --disable-extensions --disable-background-networking --disable-component-update --disable-default-apps --disable-sync --metrics-recording-only --window-position=50,50 --window-size=1200,900 --new-window http://127.0.0.1:4422/homepage.html",
+      "port": 9350,
+      "preference_initial_sha256": "0418430d7c2a6330b0449287dc2a49ec74a6f3ad56087d3654b1287bb233f925",
+      "preference_observed_after_launch": 0.0,
+      "profile": "/tmp/maplemoon-native-zoom-r2-20260814T180224-100",
+      "target_id": "6E3E75D0BE7E66F517358DD7A9439FAA",
+      "window_id": 1356818051
+    },
+    {
+      "factor": 1.7499999999999998,
+      "label": "175",
+      "level": 3.069389038663465,
+      "metrics": {
+        "bodyTextLength": 2285,
+        "browserBounds": {
+          "height": 900,
+          "left": 50,
+          "top": 50,
+          "width": 1200,
+          "windowState": "normal"
+        },
+        "clientWidth": 685,
+        "devicePixelRatio": 3.5,
+        "innerHeight": 464,
+        "innerWidth": 685,
+        "outerHeight": 900,
+        "outerWidth": 1200,
+        "pageScaleIndicators": {
+          "rootTransform": "none",
+          "rootTransformOrigin": "342.857px 2743.04px"
+        },
+        "readyState": "complete",
+        "rootComputedZoom": "1",
+        "rootInlineZoom": "",
+        "scrollWidth": 685,
+        "url": "http://127.0.0.1:4422/homepage.html",
+        "visualViewport": {
+          "height": 464.5714416503906,
+          "offsetLeft": 0,
+          "offsetTop": 0,
+          "scale": 1,
+          "width": 685.7142944335938
+        }
+      },
+      "pid": 94587,
+      "pid_command": "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome --user-data-dir=/tmp/maplemoon-native-zoom-r2-20260814T180224-175 --profile-directory=Default --remote-debugging-port=9351 --remote-allow-origins=* --no-first-run --no-default-browser-check --disable-extensions --disable-background-networking --disable-component-update --disable-default-apps --disable-sync --metrics-recording-only --window-position=50,50 --window-size=1200,900 --new-window http://127.0.0.1:4422/homepage.html",
+      "port": 9351,
+      "preference_initial_sha256": "e30a85e97f0ac18b0500e83766fbb2898485d64acb402ce1adabde9c7496187c",
+      "preference_observed_after_launch": 3.069389038663465,
+      "profile": "/tmp/maplemoon-native-zoom-r2-20260814T180224-175",
+      "target_id": "5B61899497818F91BE61F300EA5EBD32",
+      "window_id": 1524239278
+    },
+    {
+      "factor": 2.0,
+      "label": "200",
+      "level": 3.8017840169239308,
+      "metrics": {
+        "bodyTextLength": 2285,
+        "browserBounds": {
+          "height": 900,
+          "left": 50,
+          "top": 50,
+          "width": 1200,
+          "windowState": "normal"
+        },
+        "clientWidth": 600,
+        "devicePixelRatio": 4,
+        "innerHeight": 406,
+        "innerWidth": 600,
+        "outerHeight": 900,
+        "outerWidth": 1200,
+        "pageScaleIndicators": {
+          "rootTransform": "none",
+          "rootTransformOrigin": "300px 2759.96px"
+        },
+        "readyState": "complete",
+        "rootComputedZoom": "1",
+        "rootInlineZoom": "",
+        "scrollWidth": 600,
+        "url": "http://127.0.0.1:4422/homepage.html",
+        "visualViewport": {
+          "height": 406.5,
+          "offsetLeft": 0,
+          "offsetTop": 0,
+          "scale": 1,
+          "width": 600
+        }
+      },
+      "pid": 94603,
+      "pid_command": "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome --user-data-dir=/tmp/maplemoon-native-zoom-r2-20260814T180224-200 --profile-directory=Default --remote-debugging-port=9352 --remote-allow-origins=* --no-first-run --no-default-browser-check --disable-extensions --disable-background-networking --disable-component-update --disable-default-apps --disable-sync --metrics-recording-only --window-position=50,50 --window-size=1200,900 --new-window http://127.0.0.1:4422/homepage.html",
+      "port": 9352,
+      "preference_initial_sha256": "a7415902a34f468696e0595c6af4a266cd981e7d8afda724cff95b062dfc215c",
+      "preference_observed_after_launch": 3.8017840169239308,
+      "profile": "/tmp/maplemoon-native-zoom-r2-20260814T180224-200",
+      "target_id": "B6FD2167B43445488D8B401C65A2FBB3",
+      "window_id": 1037282139
+    }
+  ],
+  "ratios": {
+    "dpr_175_over_100": 1.75,
+    "dpr_200_over_100": 2.0,
+    "inverse_css_width_175": 1.7518248175182483,
+    "inverse_css_width_200": 2.0
+  },
+  "schema": "maplemoon-native-profile-zoom-proof/v1"
+}

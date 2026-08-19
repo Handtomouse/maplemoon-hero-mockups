@@ -1,0 +1,185 @@
+{
+  "generatedAt": "2026-08-14T04:55:33.729Z",
+  "acquisition": [
+    {
+      "file": "homepage.html",
+      "bytes": 209295,
+      "expected": "27921b2a466ccb670b2851a73043429763d3423bcaf651069e4e860dc01a78b1",
+      "actual": "27921b2a466ccb670b2851a73043429763d3423bcaf651069e4e860dc01a78b1",
+      "pass": true
+    },
+    {
+      "file": "our-story.html",
+      "bytes": 90572,
+      "expected": "2db31868a9791f373f156e7cdeb8261e494d1d47e9418a94c28156e213df7711",
+      "actual": "2db31868a9791f373f156e7cdeb8261e494d1d47e9418a94c28156e213df7711",
+      "pass": true
+    },
+    {
+      "file": "carob-story.html",
+      "bytes": 62273,
+      "expected": "4fd9ad0fabb9d60d0f391925f5a382ccfc8f705b60fca1c681f403a5cd9734bd",
+      "actual": "4fd9ad0fabb9d60d0f391925f5a382ccfc8f705b60fca1c681f403a5cd9734bd",
+      "pass": true
+    },
+    {
+      "file": "shop.html",
+      "bytes": 82545,
+      "expected": "f111ad5123e34dadd46ac497fca286066efc67c05dd7e68f0d3e70c97c735038",
+      "actual": "f111ad5123e34dadd46ac497fca286066efc67c05dd7e68f0d3e70c97c735038",
+      "pass": true
+    },
+    {
+      "file": "faq.html",
+      "bytes": 42132,
+      "expected": "c5ce7aaf0b9b3221f34eb2928fc2ff6732fc1a915ea80144a4ade2b94011fb6e",
+      "actual": "c5ce7aaf0b9b3221f34eb2928fc2ff6732fc1a915ea80144a4ade2b94011fb6e",
+      "pass": true
+    },
+    {
+      "file": "stockists.html",
+      "bytes": 119551,
+      "expected": "4821adfe88680d4f174b7a8700c8d8a65594df2901bf3a7109d51b09040cb887",
+      "actual": "4821adfe88680d4f174b7a8700c8d8a65594df2901bf3a7109d51b09040cb887",
+      "pass": true
+    },
+    {
+      "file": "pure-carob-bar.html",
+      "bytes": 25507,
+      "expected": "015cde27ecc60f3c444820a551c39f6e9c985fc5b2e59bdaea5f496c1c236b65",
+      "actual": "015cde27ecc60f3c444820a551c39f6e9c985fc5b2e59bdaea5f496c1c236b65",
+      "pass": true
+    }
+  ],
+  "acquisitionPass": true,
+  "predecessor": [
+    {
+      "file": "/Users/handtomouse/maplemoon-website/docs/orchestration/packets/MAPLEMOON-FAQ-CAFFEINE-EXACT-20260814T144235.md",
+      "bytes": 5110,
+      "sha256": "c200dcc30535332494291fd401ebd88de4446aac6ea92336ed4a2b0dc17dc94d"
+    },
+    {
+      "file": "/Users/handtomouse/maplemoon-website/docs/orchestration/reviews/MAPLEMOON-FAQ-CAFFEINE-EXACT-20260814T144235.json",
+      "bytes": 3885,
+      "sha256": "5c9ef6fc5da14d102728df3a0f2c2b17a0e7ffe79f9a5cb3b9b40f0dbb98a4d5"
+    },
+    {
+      "file": "/Users/handtomouse/maplemoon-website/_wip/checkpoints/MAPLEMOON-FAQ-CAFFEINE-EXACT-20260814T144235_20260814_144235_AEST/files/maplemoon_build_20260813/faq.html",
+      "bytes": 41964,
+      "sha256": "99dcafedaf8e812ffd2a55fdb028e27529dd47506ca8be68cc2dab0634afd493"
+    }
+  ],
+  "exactDelta": {
+    "predecessorFaqSha256": "99dcafedaf8e812ffd2a55fdb028e27529dd47506ca8be68cc2dab0634afd493",
+    "currentFaqSha256": "c5ce7aaf0b9b3221f34eb2928fc2ff6732fc1a915ea80144a4ade2b94011fb6e",
+    "oldObjectCountInPredecessor": 1,
+    "newObjectCountInCurrent": 1,
+    "reconstructedEqualsCurrent": true,
+    "oldQuestionCountCurrent": 0,
+    "oldAnswerCountCurrent": 0,
+    "newQuestionCountCurrent": 1,
+    "newAnswerCountCurrent": 1,
+    "cacaoButterObjectUnchanged": true,
+    "pass": true
+  },
+  "localReferences": [
+    {
+      "path": "/a11y_inner.css?v=20260723",
+      "status": 200,
+      "bytes": 1714,
+      "pass": true
+    },
+    {
+      "path": "/assets/design-system/mm-chrome.css",
+      "status": 200,
+      "bytes": 5871,
+      "pass": true
+    },
+    {
+      "path": "/assets/design-system/mm-chrome.js",
+      "status": 200,
+      "bytes": 5025,
+      "pass": true
+    },
+    {
+      "path": "/assets/design-system/mm-primitives.css",
+      "status": 200,
+      "bytes": 9006,
+      "pass": true
+    },
+    {
+      "path": "/assets/design-system/mm-tokens.css",
+      "status": 200,
+      "bytes": 3073,
+      "pass": true
+    },
+    {
+      "path": "/assets/mm_logo_icon_blk.svg",
+      "status": 200,
+      "bytes": 3988,
+      "pass": true
+    },
+    {
+      "path": "/assets/mm_wordmark_blk.svg",
+      "status": 200,
+      "bytes": 7737,
+      "pass": true
+    },
+    {
+      "path": "/brand_kit.css",
+      "status": 200,
+      "bytes": 10754,
+      "pass": true
+    },
+    {
+      "path": "/design_refinement_20260723.css",
+      "status": 200,
+      "bytes": 4304,
+      "pass": true
+    },
+    {
+      "path": "/faq.html",
+      "status": 200,
+      "bytes": 42132,
+      "pass": true
+    },
+    {
+      "path": "/homepage.html",
+      "status": 200,
+      "bytes": 209295,
+      "pass": true
+    },
+    {
+      "path": "/mock-cart.css",
+      "status": 200,
+      "bytes": 13040,
+      "pass": true
+    },
+    {
+      "path": "/mock-cart.js",
+      "status": 200,
+      "bytes": 33609,
+      "pass": true
+    },
+    {
+      "path": "/our-story.html",
+      "status": 200,
+      "bytes": 90572,
+      "pass": true
+    },
+    {
+      "path": "/shop.html",
+      "status": 200,
+      "bytes": 82545,
+      "pass": true
+    },
+    {
+      "path": "/stockists.html",
+      "status": 200,
+      "bytes": 119551,
+      "pass": true
+    }
+  ],
+  "localReferencesPass": true,
+  "allPass": true
+}

@@ -1,0 +1,111 @@
+{
+  "schema": "maplemoon-receipt/v2",
+  "receipt_id": "MAPLEMOON-CERTIFIED-PREVIEW-DEPLOY-20260814T165853-RECEIPT",
+  "packet_id": "MAPLEMOON-CERTIFIED-PREVIEW-DEPLOY-20260814T165853",
+  "worker_thread_id": "/root/recertify_updated_preview",
+  "worker": "Codex certified preview-only deployment verifier",
+  "started_at": "2026-08-14T06:58:53Z",
+  "completed_at": "2026-08-14T07:04:46Z",
+  "files_read": [
+    "maplemoon-website/docs/orchestration/packets/MAPLEMOON-CERTIFIED-PREVIEW-DEPLOY-20260814T165853.md",
+    "maplemoon-website/docs/orchestration/packets/MAPLEMOON-INTEGRATED-HEADER-CART-CERT-R2-20260814T163003.md",
+    "maplemoon-website/docs/orchestration/reviews/MAPLEMOON-INTEGRATED-HEADER-CART-CERT-R2-20260814T163003.json",
+    "maplemoon-website/_wip/evidence/integrated_header_cart_cert_r2_20260814T163003",
+    "maplemoon-website/scripts/check-maplemoon-receipt.py",
+    "UFC/ops/bus/maplemoon/tools_20260813/preflight_deploy.py",
+    "maplemoon_build_20260813/homepage.html",
+    "maplemoon_build_20260813/our-story.html",
+    "maplemoon_build_20260813/carob-story.html",
+    "maplemoon_build_20260813/shop.html",
+    "maplemoon_build_20260813/faq.html",
+    "maplemoon_build_20260813/stockists.html",
+    "maplemoon_build_20260813/pure-carob-bar.html",
+    "maplemoon_build_20260813/mock-cart.js",
+    "maplemoon_build_20260813/mock-cart.css",
+    "maplemoon_build_20260813/assets/design-system/mm-chrome.js",
+    "maplemoon_build_20260813/assets/design-system/mm-chrome.css",
+    "maplemoon_build_20260813/assets/design-system/mm-tokens.css",
+    "maplemoon_build_20260813/assets/design-system/mm-primitives.css",
+    "maplemoon_build_20260813/vercel.json",
+    "maplemoon_build_20260813/.vercel/project.json"
+  ],
+  "files_changed": [
+    "maplemoon-website/_wip/evidence/certified_preview_deploy_20260814T165853",
+    "maplemoon-website/docs/orchestration/reviews/MAPLEMOON-CERTIFIED-PREVIEW-DEPLOY-20260814T165853.json"
+  ],
+  "pre_sha256": {
+    "maplemoon-website/_wip/evidence/certified_preview_deploy_20260814T165853": null,
+    "maplemoon-website/docs/orchestration/reviews/MAPLEMOON-CERTIFIED-PREVIEW-DEPLOY-20260814T165853.json": null
+  },
+  "post_sha256": {
+    "maplemoon-website/_wip/evidence/certified_preview_deploy_20260814T165853": "0ee6ced50450f80b70be3027f6a0975df0d56fbed24045882cf06798cadc84d2",
+    "maplemoon-website/docs/orchestration/reviews/MAPLEMOON-CERTIFIED-PREVIEW-DEPLOY-20260814T165853.json": null
+  },
+  "checks": [
+    {
+      "command": "checkpoint and phase-start gate for MAPLEMOON-CERTIFIED-PREVIEW-DEPLOY-20260814T165853",
+      "exit_code": 0,
+      "result": "PASS checkpoint packet=MAPLEMOON-CERTIFIED-PREVIEW-DEPLOY-20260814T165853 files=2 path=_wip/checkpoints/MAPLEMOON-CERTIFIED-PREVIEW-DEPLOY-20260814T165853_20260814_165853_AEST; PASS packet=MAPLEMOON-CERTIFIED-PREVIEW-DEPLOY-20260814T165853 phase=start scope=2"
+    },
+    {
+      "command": "R2 certification completion/promotion gates, certification receipt SHA-256 and eleven candidate SHA-256 values before deployment",
+      "exit_code": 0,
+      "result": "PASS certification complete changed=2; PASS certification promote changed=2; receipt 9eb39d99d6d3504db2d3e798bbd6b1c1941b40127f2c152bd028edb844077695; all eleven certified candidate hashes exact."
+    },
+    {
+      "command": "pre-deploy vercel inspect production alias and authenticated immutable homepage byte/MD5 fetch",
+      "exit_code": 0,
+      "result": "PASS: production immutable 7vjf2m50b / dpl_G2LER2awaqyFtGRCcTserXbNynct, target production, status Ready; homepage 208556 bytes, MD5 6197879a5ca9d3ed0452773abc0bbeb4, nonblank."
+    },
+    {
+      "command": "vercel deploy --yes from /Users/handtomouse/maplemoon_build_20260813",
+      "exit_code": 0,
+      "result": "PASS exactly one invocation: Preview https://maplemoonbuild20260813-28up3uqbm-handtomouses-projects.vercel.app; no second deploy, --prod, promote, alias, rollback or protection action."
+    },
+    {
+      "command": "vercel inspect https://maplemoonbuild20260813-28up3uqbm-handtomouses-projects.vercel.app",
+      "exit_code": 0,
+      "result": "PASS deployment dpl_4okANTnDW3BkRCp3SehpVyzgdyfc, target preview, status Ready, immutable URL exact."
+    },
+    {
+      "command": "anonymous UFC preflight plus packet-authorized SSO-wall classifier",
+      "exit_code": 0,
+      "result": "QUALIFIED PASS: raw preflight exit 1, literal VERDICT: FAIL - VERCEL SSO WALL. This is the exact packet-authorized expected protection state. Preview classified authenticated/private-review-only; protection remained unchanged and no bypass was attempted."
+    },
+    {
+      "command": "python3 -B _wip/evidence/certified_preview_deploy_20260814T165853/verify_deployed_bytes.py",
+      "exit_code": 0,
+      "result": "PREVIEW_BYTES PASS files=13/13 status=200 nonblank=13/13 byte_equal=13/13 bogus=2/2:404 faq=1/1. Authenticated vercel curl covered all seven HTML routes, mock-cart.js/css, mm-chrome.js/css and token/primitive CSS; bogus bodies were nonblank and distinct from homepage bytes."
+    },
+    {
+      "command": "post-deploy vercel inspect production alias and authenticated immutable homepage byte/MD5 fetch",
+      "exit_code": 0,
+      "result": "PASS exact pre/post freeze: production remains 7vjf2m50b / dpl_G2LER2awaqyFtGRCcTserXbNynct / production / Ready; homepage remains 208556 bytes, MD5 6197879a5ca9d3ed0452773abc0bbeb4."
+    },
+    {
+      "command": "post-deploy certification receipt and eleven local candidate SHA-256 values",
+      "exit_code": 0,
+      "result": "PASS: certification receipt 9eb39d99d6d3504db2d3e798bbd6b1c1941b40127f2c152bd028edb844077695 and all eleven candidate hashes remained exact."
+    },
+    {
+      "command": "parse evidence JSON and compute check-maplemoon-receipt.py-compatible evidence snapshot",
+      "exit_code": 0,
+      "result": "PREVIEW_EVIDENCE PASS files=8 sha256=0ee6ced50450f80b70be3027f6a0975df0d56fbed24045882cf06798cadc84d2"
+    }
+  ],
+  "screenshots_or_urls": [
+    "https://maplemoonbuild20260813-28up3uqbm-handtomouses-projects.vercel.app",
+    "maplemoon-website/_wip/evidence/certified_preview_deploy_20260814T165853/verification-summary.json",
+    "maplemoon-website/_wip/evidence/integrated_header_cart_cert_r2_20260814T163003/homepage_night_drawer_390.png",
+    "maplemoon-website/_wip/evidence/integrated_header_cart_cert_r2_20260814T163003/shop_desktop_reset_1440.png",
+    "maplemoon-website/_wip/evidence/integrated_header_cart_cert_r2_20260814T163003/screenshots/cart-mixed-390.png"
+  ],
+  "failures": [],
+  "unknowns": [],
+  "residual_risk": [
+    "Vercel Authentication blocks anonymous/client access; the preview is private-review-only and protection was intentionally left unchanged."
+  ],
+  "forbidden_path_changes": [],
+  "proposed_next_state": "preview_ready_private_review_production_frozen",
+  "next_reviewer": "MapleMoon BOSS; production remains Nate-only"
+}

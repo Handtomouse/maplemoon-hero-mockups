@@ -1,0 +1,85 @@
+{
+  "schema": "maplemoon-receipt/v2",
+  "receipt_id": "MAPLEMOON-SIX-PAGE-TECHNICAL-QA-20260803-RECEIPT-01",
+  "packet_id": "MAPLEMOON-SIX-PAGE-TECHNICAL-QA-20260803",
+  "worker_thread_id": "019fc329-a95c-7523-85fd-16a416d32b3f",
+  "worker": "bounded read-only technical QA worker",
+  "started_at": "2026-08-02T15:50:42Z",
+  "completed_at": "2026-08-02T16:04:10Z",
+  "files_read": [
+    "docs/orchestration/packets/MAPLEMOON-SIX-PAGE-TECHNICAL-QA-20260803.md",
+    "docs/orchestration/SIDECHAT_RECEIPT_GATE.md",
+    "docs/orchestration/GOV-01_RATIFIED_LEDGER.md",
+    "docs/orchestration/SATURDAY_FEEDBACK_REGISTER_20260801.md",
+    "docs/orchestration/reviews/CARLI-CANVA-NOTE-REGISTER-20260731.md",
+    "docs/orchestration/packets/SAT-HOME-01-HOMEPAGE-CLAIM-SAFE-FREEZE.md",
+    "docs/client-review/2026-08-01-saturday-review/staging-v1/clean/homepage.html",
+    "docs/client-review/2026-08-01-saturday-review/staging-v1/clean/shop.html",
+    "docs/client-review/2026-08-01-saturday-review/staging-v1/clean/our-story.html",
+    "docs/client-review/2026-08-01-saturday-review/staging-v1/clean/carob-story.html",
+    "docs/client-review/2026-08-01-saturday-review/staging-v1/clean/stockists.html",
+    "docs/client-review/2026-08-01-saturday-review/staging-v1/clean/faq.html",
+    "docs/client-review/2026-08-01-saturday-review/staging-v1/clean/mock-cart.js",
+    "scripts/check-maplemoon-receipt.py"
+  ],
+  "files_changed": [
+    "_wip/reviews/maplemoon-six-page-qa-20260803/technical",
+    "docs/orchestration/reviews/MAPLEMOON-SIX-PAGE-TECHNICAL-QA-20260803.json"
+  ],
+  "pre_sha256": {
+    "_wip/reviews/maplemoon-six-page-qa-20260803/technical": null,
+    "docs/orchestration/reviews/MAPLEMOON-SIX-PAGE-TECHNICAL-QA-20260803.json": null
+  },
+  "post_sha256": {
+    "_wip/reviews/maplemoon-six-page-qa-20260803/technical": "89944eaa8100d2873f20f0ee7c99ae1628afe5a09dcd2f41f7ffc9d7b9b8a54e",
+    "docs/orchestration/reviews/MAPLEMOON-SIX-PAGE-TECHNICAL-QA-20260803.json": null
+  },
+  "checks": [
+    {
+      "command": "shasum -a 256 on the three manifests and six packet-bound clean pages",
+      "exit_code": 0,
+      "result": "PASS: all nine values exactly matched the packet."
+    },
+    {
+      "command": "git branch --show-current; git rev-parse HEAD",
+      "exit_code": 0,
+      "result": "PASS: codex-maplemoon-section-review at 42d462ac4234ec2694f2eb256e6d80d13cd0bb0b."
+    },
+    {
+      "command": "python3 -B scripts/check-maplemoon-receipt.py verify --packet docs/orchestration/packets/MAPLEMOON-SIX-PAGE-TECHNICAL-QA-20260803.md --checkpoint _wip/checkpoints/MAPLEMOON-SIX-PAGE-TECHNICAL-QA-20260803_20260803_014915_AEST --phase start",
+      "exit_code": 0,
+      "result": "PASS packet=MAPLEMOON-SIX-PAGE-TECHNICAL-QA-20260803 phase=start scope=2"
+    },
+    {
+      "command": "Real Chrome six-route matrix at 390, 834 and 1440",
+      "exit_code": 0,
+      "result": "PASS: no root horizontal overflow, broken images, duplicate IDs, dangling ARIA references, unlabeled inputs or captured console warnings/errors."
+    },
+    {
+      "command": "Real Chrome local-cart, native Tab, Shop filter/sort, Stockists search and FAQ accordion journeys",
+      "exit_code": 0,
+      "result": "PASS: local interactions and focus restoration are recorded in technical/findings.json."
+    },
+    {
+      "command": "python3 -B -m json.tool _wip/reviews/maplemoon-six-page-qa-20260803/technical/findings.json",
+      "exit_code": 0,
+      "result": "PASS: findings JSON parsed."
+    }
+  ],
+  "screenshots_or_urls": [
+    "http://127.0.0.1:3011/"
+  ],
+  "failures": [],
+  "unknowns": [
+    "Literal native Chrome 200 percent zoom is unproven.",
+    "Runtime prefers-reduced-motion behavior is unproven because the real-Chrome preference cannot be enabled by this control surface.",
+    "Actual request-level network destinations are unproven because the permitted interface has no network ledger."
+  ],
+  "residual_risk": [
+    "MM6-UF-001 through MM6-UF-004 are content/catalogue facts outside this technical worker's authority; the clean review candidate must not be promoted as factually approved.",
+    "No source, manifest, asset, package, external, commerce, production, deployment, commit, upload or send action was performed."
+  ],
+  "forbidden_path_changes": [],
+  "proposed_next_state": "needs_review",
+  "next_reviewer": "Main coordinator independent receipt verification"
+}

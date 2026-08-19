@@ -1,0 +1,1045 @@
+{
+  "all_nonblank": true,
+  "count": 58,
+  "screenshots": [
+    {
+      "bytes": 1279466,
+      "file": "screenshots/390-homepage-menu-open.png",
+      "full_page": false,
+      "height_px": 1984,
+      "nonblank": true,
+      "width_px": 1560
+    },
+    {
+      "bytes": 830306,
+      "clip": {
+        "height": 23215.0,
+        "scale": 0.15076459185871205,
+        "width": 1560.0,
+        "x": 0,
+        "y": 0
+      },
+      "content_size": {
+        "height": 23215,
+        "width": 1560,
+        "x": 0,
+        "y": 0
+      },
+      "coordinate_space": "Page.getLayoutMetrics.contentSize",
+      "css_content_size": {
+        "height": 5803,
+        "width": 390,
+        "x": 0,
+        "y": 0
+      },
+      "file": "screenshots/390-homepage-full.png",
+      "full_page": true,
+      "height_px": 7000,
+      "nonblank": true,
+      "width_px": 470
+    },
+    {
+      "bytes": 2972442,
+      "file": "screenshots/390-homepage-segment-top.png",
+      "full_page": false,
+      "height_px": 1984,
+      "nonblank": true,
+      "observed_scroll_y": 0,
+      "page_geometry": {
+        "innerHeight": 496,
+        "scrollHeight": 5803
+      },
+      "requested_scroll_y": 0,
+      "segment": "top",
+      "width_px": 1560
+    },
+    {
+      "bytes": 2304605,
+      "file": "screenshots/390-homepage-segment-middle.png",
+      "full_page": false,
+      "height_px": 1984,
+      "nonblank": true,
+      "observed_scroll_y": 2653,
+      "page_geometry": {
+        "innerHeight": 496,
+        "scrollHeight": 5803
+      },
+      "requested_scroll_y": 2653,
+      "segment": "middle",
+      "width_px": 1560
+    },
+    {
+      "bytes": 406710,
+      "file": "screenshots/390-homepage-segment-bottom.png",
+      "full_page": false,
+      "height_px": 1984,
+      "nonblank": true,
+      "observed_scroll_y": 5307,
+      "page_geometry": {
+        "innerHeight": 496,
+        "scrollHeight": 5803
+      },
+      "requested_scroll_y": 5307,
+      "segment": "bottom",
+      "width_px": 1560
+    },
+    {
+      "bytes": 422116,
+      "clip": {
+        "height": 39942.0,
+        "scale": 0.08762705923589205,
+        "width": 1560.0,
+        "x": 0,
+        "y": 0
+      },
+      "content_size": {
+        "height": 39942,
+        "width": 1560,
+        "x": 0,
+        "y": 0
+      },
+      "coordinate_space": "Page.getLayoutMetrics.contentSize",
+      "css_content_size": {
+        "height": 9985,
+        "width": 390,
+        "x": 0,
+        "y": 0
+      },
+      "file": "screenshots/390-our-story-full.png",
+      "full_page": true,
+      "height_px": 7000,
+      "nonblank": true,
+      "width_px": 273
+    },
+    {
+      "bytes": 1666634,
+      "file": "screenshots/390-our-story-segment-top.png",
+      "full_page": false,
+      "height_px": 1984,
+      "nonblank": true,
+      "observed_scroll_y": 0,
+      "page_geometry": {
+        "innerHeight": 496,
+        "scrollHeight": 9985
+      },
+      "requested_scroll_y": 0,
+      "segment": "top",
+      "width_px": 1560
+    },
+    {
+      "bytes": 1607570,
+      "file": "screenshots/390-our-story-segment-middle.png",
+      "full_page": false,
+      "height_px": 1984,
+      "nonblank": true,
+      "observed_scroll_y": 4744,
+      "page_geometry": {
+        "innerHeight": 496,
+        "scrollHeight": 9985
+      },
+      "requested_scroll_y": 4744,
+      "segment": "middle",
+      "width_px": 1560
+    },
+    {
+      "bytes": 894439,
+      "file": "screenshots/390-our-story-segment-bottom.png",
+      "full_page": false,
+      "height_px": 1984,
+      "nonblank": true,
+      "observed_scroll_y": 9489,
+      "page_geometry": {
+        "innerHeight": 496,
+        "scrollHeight": 9985
+      },
+      "requested_scroll_y": 9489,
+      "segment": "bottom",
+      "width_px": 1560
+    },
+    {
+      "bytes": 1233112,
+      "clip": {
+        "height": 16315.0,
+        "scale": 0.21452650934722647,
+        "width": 1560.0,
+        "x": 0,
+        "y": 0
+      },
+      "content_size": {
+        "height": 16315,
+        "width": 1560,
+        "x": 0,
+        "y": 0
+      },
+      "coordinate_space": "Page.getLayoutMetrics.contentSize",
+      "css_content_size": {
+        "height": 4078,
+        "width": 390,
+        "x": 0,
+        "y": 0
+      },
+      "file": "screenshots/390-carob-story-full.png",
+      "full_page": true,
+      "height_px": 7000,
+      "nonblank": true,
+      "width_px": 669
+    },
+    {
+      "bytes": 3041478,
+      "file": "screenshots/390-carob-story-segment-top.png",
+      "full_page": false,
+      "height_px": 1984,
+      "nonblank": true,
+      "observed_scroll_y": 0,
+      "page_geometry": {
+        "innerHeight": 496,
+        "scrollHeight": 4078
+      },
+      "requested_scroll_y": 0,
+      "segment": "top",
+      "width_px": 1560
+    },
+    {
+      "bytes": 1186039,
+      "file": "screenshots/390-carob-story-segment-middle.png",
+      "full_page": false,
+      "height_px": 1984,
+      "nonblank": true,
+      "observed_scroll_y": 1791,
+      "page_geometry": {
+        "innerHeight": 496,
+        "scrollHeight": 4078
+      },
+      "requested_scroll_y": 1791,
+      "segment": "middle",
+      "width_px": 1560
+    },
+    {
+      "bytes": 668551,
+      "file": "screenshots/390-carob-story-segment-bottom.png",
+      "full_page": false,
+      "height_px": 1984,
+      "nonblank": true,
+      "observed_scroll_y": 3582,
+      "page_geometry": {
+        "innerHeight": 496,
+        "scrollHeight": 4078
+      },
+      "requested_scroll_y": 3582,
+      "segment": "bottom",
+      "width_px": 1560
+    },
+    {
+      "bytes": 362532,
+      "clip": {
+        "height": 65631.0,
+        "scale": 0.053328457588639515,
+        "width": 1560.0,
+        "x": 0,
+        "y": 0
+      },
+      "content_size": {
+        "height": 65631,
+        "width": 1560,
+        "x": 0,
+        "y": 0
+      },
+      "coordinate_space": "Page.getLayoutMetrics.contentSize",
+      "css_content_size": {
+        "height": 16407,
+        "width": 390,
+        "x": 0,
+        "y": 0
+      },
+      "file": "screenshots/390-shop-full.png",
+      "full_page": true,
+      "height_px": 7000,
+      "nonblank": true,
+      "width_px": 166
+    },
+    {
+      "bytes": 1939165,
+      "file": "screenshots/390-shop-segment-top.png",
+      "full_page": false,
+      "height_px": 1984,
+      "nonblank": true,
+      "observed_scroll_y": 0,
+      "page_geometry": {
+        "innerHeight": 496,
+        "scrollHeight": 16407
+      },
+      "requested_scroll_y": 0,
+      "segment": "top",
+      "width_px": 1560
+    },
+    {
+      "bytes": 1223109,
+      "file": "screenshots/390-shop-segment-middle.png",
+      "full_page": false,
+      "height_px": 1984,
+      "nonblank": true,
+      "observed_scroll_y": 7955,
+      "page_geometry": {
+        "innerHeight": 496,
+        "scrollHeight": 16407
+      },
+      "requested_scroll_y": 7955,
+      "segment": "middle",
+      "width_px": 1560
+    },
+    {
+      "bytes": 507504,
+      "file": "screenshots/390-shop-segment-bottom.png",
+      "full_page": false,
+      "height_px": 1984,
+      "nonblank": true,
+      "observed_scroll_y": 15911,
+      "page_geometry": {
+        "innerHeight": 496,
+        "scrollHeight": 16407
+      },
+      "requested_scroll_y": 15911,
+      "segment": "bottom",
+      "width_px": 1560
+    },
+    {
+      "bytes": 894342,
+      "clip": {
+        "height": 11072.0,
+        "scale": 0.3161127167630058,
+        "width": 1560.0,
+        "x": 0,
+        "y": 0
+      },
+      "content_size": {
+        "height": 11072,
+        "width": 1560,
+        "x": 0,
+        "y": 0
+      },
+      "coordinate_space": "Page.getLayoutMetrics.contentSize",
+      "css_content_size": {
+        "height": 2768,
+        "width": 390,
+        "x": 0,
+        "y": 0
+      },
+      "file": "screenshots/390-faq-full.png",
+      "full_page": true,
+      "height_px": 7000,
+      "nonblank": true,
+      "width_px": 986
+    },
+    {
+      "bytes": 2020363,
+      "file": "screenshots/390-faq-segment-top.png",
+      "full_page": false,
+      "height_px": 1984,
+      "nonblank": true,
+      "observed_scroll_y": 0,
+      "page_geometry": {
+        "innerHeight": 496,
+        "scrollHeight": 2768
+      },
+      "requested_scroll_y": 0,
+      "segment": "top",
+      "width_px": 1560
+    },
+    {
+      "bytes": 523336,
+      "file": "screenshots/390-faq-segment-middle.png",
+      "full_page": false,
+      "height_px": 1984,
+      "nonblank": true,
+      "observed_scroll_y": 1136,
+      "page_geometry": {
+        "innerHeight": 496,
+        "scrollHeight": 2768
+      },
+      "requested_scroll_y": 1136,
+      "segment": "middle",
+      "width_px": 1560
+    },
+    {
+      "bytes": 1153823,
+      "file": "screenshots/390-faq-segment-bottom.png",
+      "full_page": false,
+      "height_px": 1984,
+      "nonblank": true,
+      "observed_scroll_y": 2272,
+      "page_geometry": {
+        "innerHeight": 496,
+        "scrollHeight": 2768
+      },
+      "requested_scroll_y": 2272,
+      "segment": "bottom",
+      "width_px": 1560
+    },
+    {
+      "bytes": 853194,
+      "clip": {
+        "height": 13721.0,
+        "scale": 0.2550834487282268,
+        "width": 1560.0,
+        "x": 0,
+        "y": 0
+      },
+      "content_size": {
+        "height": 13721,
+        "width": 1560,
+        "x": 0,
+        "y": 0
+      },
+      "coordinate_space": "Page.getLayoutMetrics.contentSize",
+      "css_content_size": {
+        "height": 3430,
+        "width": 390,
+        "x": 0,
+        "y": 0
+      },
+      "file": "screenshots/390-stockists-full.png",
+      "full_page": true,
+      "height_px": 7000,
+      "nonblank": true,
+      "width_px": 796
+    },
+    {
+      "bytes": 2482166,
+      "file": "screenshots/390-stockists-segment-top.png",
+      "full_page": false,
+      "height_px": 1984,
+      "nonblank": true,
+      "observed_scroll_y": 0,
+      "page_geometry": {
+        "innerHeight": 496,
+        "scrollHeight": 3430
+      },
+      "requested_scroll_y": 0,
+      "segment": "top",
+      "width_px": 1560
+    },
+    {
+      "bytes": 496486,
+      "file": "screenshots/390-stockists-segment-middle.png",
+      "full_page": false,
+      "height_px": 1984,
+      "nonblank": true,
+      "observed_scroll_y": 1467,
+      "page_geometry": {
+        "innerHeight": 496,
+        "scrollHeight": 3430
+      },
+      "requested_scroll_y": 1467,
+      "segment": "middle",
+      "width_px": 1560
+    },
+    {
+      "bytes": 671144,
+      "file": "screenshots/390-stockists-segment-bottom.png",
+      "full_page": false,
+      "height_px": 1984,
+      "nonblank": true,
+      "observed_scroll_y": 2934,
+      "page_geometry": {
+        "innerHeight": 496,
+        "scrollHeight": 3430
+      },
+      "requested_scroll_y": 2934,
+      "segment": "bottom",
+      "width_px": 1560
+    },
+    {
+      "bytes": 843036,
+      "clip": {
+        "height": 12112.0,
+        "scale": 0.2889696169088507,
+        "width": 1560.0,
+        "x": 0,
+        "y": 0
+      },
+      "content_size": {
+        "height": 12112,
+        "width": 1560,
+        "x": 0,
+        "y": 0
+      },
+      "coordinate_space": "Page.getLayoutMetrics.contentSize",
+      "css_content_size": {
+        "height": 3028,
+        "width": 390,
+        "x": 0,
+        "y": 0
+      },
+      "file": "screenshots/390-pure-carob-bar-full.png",
+      "full_page": true,
+      "height_px": 7000,
+      "nonblank": true,
+      "width_px": 902
+    },
+    {
+      "bytes": 1404392,
+      "file": "screenshots/390-pure-carob-bar-segment-top.png",
+      "full_page": false,
+      "height_px": 1984,
+      "nonblank": true,
+      "observed_scroll_y": 0,
+      "page_geometry": {
+        "innerHeight": 496,
+        "scrollHeight": 3028
+      },
+      "requested_scroll_y": 0,
+      "segment": "top",
+      "width_px": 1560
+    },
+    {
+      "bytes": 752957,
+      "file": "screenshots/390-pure-carob-bar-segment-middle.png",
+      "full_page": false,
+      "height_px": 1984,
+      "nonblank": true,
+      "observed_scroll_y": 1266,
+      "page_geometry": {
+        "innerHeight": 496,
+        "scrollHeight": 3028
+      },
+      "requested_scroll_y": 1266,
+      "segment": "middle",
+      "width_px": 1560
+    },
+    {
+      "bytes": 476120,
+      "file": "screenshots/390-pure-carob-bar-segment-bottom.png",
+      "full_page": false,
+      "height_px": 1984,
+      "nonblank": true,
+      "observed_scroll_y": 2532,
+      "page_geometry": {
+        "innerHeight": 496,
+        "scrollHeight": 3028
+      },
+      "requested_scroll_y": 2532,
+      "segment": "bottom",
+      "width_px": 1560
+    },
+    {
+      "bytes": 1643425,
+      "clip": {
+        "height": 21954.0,
+        "scale": 0.15942425070602168,
+        "width": 2880.0,
+        "x": 0,
+        "y": 0
+      },
+      "content_size": {
+        "height": 21954,
+        "width": 2880,
+        "x": 0,
+        "y": 0
+      },
+      "coordinate_space": "Page.getLayoutMetrics.contentSize",
+      "css_content_size": {
+        "height": 5488,
+        "width": 720,
+        "x": 0,
+        "y": 0
+      },
+      "file": "screenshots/720-homepage-full.png",
+      "full_page": true,
+      "height_px": 7000,
+      "nonblank": true,
+      "width_px": 918
+    },
+    {
+      "bytes": 5601837,
+      "file": "screenshots/720-homepage-segment-top.png",
+      "full_page": false,
+      "height_px": 1984,
+      "nonblank": true,
+      "observed_scroll_y": 0,
+      "page_geometry": {
+        "innerHeight": 496,
+        "scrollHeight": 5488
+      },
+      "requested_scroll_y": 0,
+      "segment": "top",
+      "width_px": 2880
+    },
+    {
+      "bytes": 3462384,
+      "file": "screenshots/720-homepage-segment-middle.png",
+      "full_page": false,
+      "height_px": 1984,
+      "nonblank": true,
+      "observed_scroll_y": 2496,
+      "page_geometry": {
+        "innerHeight": 496,
+        "scrollHeight": 5488
+      },
+      "requested_scroll_y": 2496,
+      "segment": "middle",
+      "width_px": 2880
+    },
+    {
+      "bytes": 574549,
+      "file": "screenshots/720-homepage-segment-bottom.png",
+      "full_page": false,
+      "height_px": 1984,
+      "nonblank": true,
+      "observed_scroll_y": 4992,
+      "page_geometry": {
+        "innerHeight": 496,
+        "scrollHeight": 5488
+      },
+      "requested_scroll_y": 4992,
+      "segment": "bottom",
+      "width_px": 2880
+    },
+    {
+      "bytes": 636825,
+      "clip": {
+        "height": 47929.0,
+        "scale": 0.0730246823426318,
+        "width": 2880.0,
+        "x": 0,
+        "y": 0
+      },
+      "content_size": {
+        "height": 47929,
+        "width": 2880,
+        "x": 0,
+        "y": 0
+      },
+      "coordinate_space": "Page.getLayoutMetrics.contentSize",
+      "css_content_size": {
+        "height": 11982,
+        "width": 720,
+        "x": 0,
+        "y": 0
+      },
+      "file": "screenshots/720-our-story-full.png",
+      "full_page": true,
+      "height_px": 7000,
+      "nonblank": true,
+      "width_px": 421
+    },
+    {
+      "bytes": 3429194,
+      "file": "screenshots/720-our-story-segment-top.png",
+      "full_page": false,
+      "height_px": 1984,
+      "nonblank": true,
+      "observed_scroll_y": 0,
+      "page_geometry": {
+        "innerHeight": 496,
+        "scrollHeight": 11982
+      },
+      "requested_scroll_y": 0,
+      "segment": "top",
+      "width_px": 2880
+    },
+    {
+      "bytes": 4022179,
+      "file": "screenshots/720-our-story-segment-middle.png",
+      "full_page": false,
+      "height_px": 1984,
+      "nonblank": true,
+      "observed_scroll_y": 5743,
+      "page_geometry": {
+        "innerHeight": 496,
+        "scrollHeight": 11982
+      },
+      "requested_scroll_y": 5743,
+      "segment": "middle",
+      "width_px": 2880
+    },
+    {
+      "bytes": 2600209,
+      "file": "screenshots/720-our-story-segment-bottom.png",
+      "full_page": false,
+      "height_px": 1984,
+      "nonblank": true,
+      "observed_scroll_y": 11486,
+      "page_geometry": {
+        "innerHeight": 496,
+        "scrollHeight": 11982
+      },
+      "requested_scroll_y": 11486,
+      "segment": "bottom",
+      "width_px": 2880
+    },
+    {
+      "bytes": 2941091,
+      "clip": {
+        "height": 12551.0,
+        "scale": 0.2788622420524261,
+        "width": 2880.0,
+        "x": 0,
+        "y": 0
+      },
+      "content_size": {
+        "height": 12551,
+        "width": 2880,
+        "x": 0,
+        "y": 0
+      },
+      "coordinate_space": "Page.getLayoutMetrics.contentSize",
+      "css_content_size": {
+        "height": 3137,
+        "width": 720,
+        "x": 0,
+        "y": 0
+      },
+      "file": "screenshots/720-carob-story-full.png",
+      "full_page": true,
+      "height_px": 7000,
+      "nonblank": true,
+      "width_px": 1606
+    },
+    {
+      "bytes": 5447235,
+      "file": "screenshots/720-carob-story-segment-top.png",
+      "full_page": false,
+      "height_px": 1984,
+      "nonblank": true,
+      "observed_scroll_y": 0,
+      "page_geometry": {
+        "innerHeight": 496,
+        "scrollHeight": 3137
+      },
+      "requested_scroll_y": 0,
+      "segment": "top",
+      "width_px": 2880
+    },
+    {
+      "bytes": 2861719,
+      "file": "screenshots/720-carob-story-segment-middle.png",
+      "full_page": false,
+      "height_px": 1984,
+      "nonblank": true,
+      "observed_scroll_y": 1320,
+      "page_geometry": {
+        "innerHeight": 496,
+        "scrollHeight": 3137
+      },
+      "requested_scroll_y": 1320,
+      "segment": "middle",
+      "width_px": 2880
+    },
+    {
+      "bytes": 937159,
+      "file": "screenshots/720-carob-story-segment-bottom.png",
+      "full_page": false,
+      "height_px": 1984,
+      "nonblank": true,
+      "observed_scroll_y": 2641,
+      "page_geometry": {
+        "innerHeight": 496,
+        "scrollHeight": 3137
+      },
+      "requested_scroll_y": 2641,
+      "segment": "bottom",
+      "width_px": 2880
+    },
+    {
+      "bytes": 941291,
+      "clip": {
+        "height": 35546.0,
+        "scale": 0.09846396218983852,
+        "width": 2880.0,
+        "x": 0,
+        "y": 0
+      },
+      "content_size": {
+        "height": 35546,
+        "width": 2880,
+        "x": 0,
+        "y": 0
+      },
+      "coordinate_space": "Page.getLayoutMetrics.contentSize",
+      "css_content_size": {
+        "height": 8886,
+        "width": 720,
+        "x": 0,
+        "y": 0
+      },
+      "file": "screenshots/720-shop-full.png",
+      "full_page": true,
+      "height_px": 7000,
+      "nonblank": true,
+      "width_px": 567
+    },
+    {
+      "bytes": 3034339,
+      "file": "screenshots/720-shop-segment-top.png",
+      "full_page": false,
+      "height_px": 1984,
+      "nonblank": true,
+      "observed_scroll_y": 0,
+      "page_geometry": {
+        "innerHeight": 496,
+        "scrollHeight": 8886
+      },
+      "requested_scroll_y": 0,
+      "segment": "top",
+      "width_px": 2880
+    },
+    {
+      "bytes": 1889368,
+      "file": "screenshots/720-shop-segment-middle.png",
+      "full_page": false,
+      "height_px": 1984,
+      "nonblank": true,
+      "observed_scroll_y": 4195,
+      "page_geometry": {
+        "innerHeight": 496,
+        "scrollHeight": 8886
+      },
+      "requested_scroll_y": 4195,
+      "segment": "middle",
+      "width_px": 2880
+    },
+    {
+      "bytes": 797502,
+      "file": "screenshots/720-shop-segment-bottom.png",
+      "full_page": false,
+      "height_px": 1984,
+      "nonblank": true,
+      "observed_scroll_y": 8390,
+      "page_geometry": {
+        "innerHeight": 496,
+        "scrollHeight": 8886
+      },
+      "requested_scroll_y": 8390,
+      "segment": "bottom",
+      "width_px": 2880
+    },
+    {
+      "bytes": 1491290,
+      "clip": {
+        "height": 10892.0,
+        "scale": 0.3213367609254499,
+        "width": 2880.0,
+        "x": 0,
+        "y": 0
+      },
+      "content_size": {
+        "height": 10892,
+        "width": 2880,
+        "x": 0,
+        "y": 0
+      },
+      "coordinate_space": "Page.getLayoutMetrics.contentSize",
+      "css_content_size": {
+        "height": 2723,
+        "width": 720,
+        "x": 0,
+        "y": 0
+      },
+      "file": "screenshots/720-faq-full.png",
+      "full_page": true,
+      "height_px": 7000,
+      "nonblank": true,
+      "width_px": 1851
+    },
+    {
+      "bytes": 2756807,
+      "file": "screenshots/720-faq-segment-top.png",
+      "full_page": false,
+      "height_px": 1984,
+      "nonblank": true,
+      "observed_scroll_y": 0,
+      "page_geometry": {
+        "innerHeight": 496,
+        "scrollHeight": 2723
+      },
+      "requested_scroll_y": 0,
+      "segment": "top",
+      "width_px": 2880
+    },
+    {
+      "bytes": 667250,
+      "file": "screenshots/720-faq-segment-middle.png",
+      "full_page": false,
+      "height_px": 1984,
+      "nonblank": true,
+      "observed_scroll_y": 1113,
+      "page_geometry": {
+        "innerHeight": 496,
+        "scrollHeight": 2723
+      },
+      "requested_scroll_y": 1113,
+      "segment": "middle",
+      "width_px": 2880
+    },
+    {
+      "bytes": 1843411,
+      "file": "screenshots/720-faq-segment-bottom.png",
+      "full_page": false,
+      "height_px": 1984,
+      "nonblank": true,
+      "observed_scroll_y": 2227,
+      "page_geometry": {
+        "innerHeight": 496,
+        "scrollHeight": 2723
+      },
+      "requested_scroll_y": 2227,
+      "segment": "bottom",
+      "width_px": 2880
+    },
+    {
+      "bytes": 1651469,
+      "clip": {
+        "height": 13167.0,
+        "scale": 0.2658160552897395,
+        "width": 2880.0,
+        "x": 0,
+        "y": 0
+      },
+      "content_size": {
+        "height": 13167,
+        "width": 2880,
+        "x": 0,
+        "y": 0
+      },
+      "coordinate_space": "Page.getLayoutMetrics.contentSize",
+      "css_content_size": {
+        "height": 3291,
+        "width": 720,
+        "x": 0,
+        "y": 0
+      },
+      "file": "screenshots/720-stockists-full.png",
+      "full_page": true,
+      "height_px": 7000,
+      "nonblank": true,
+      "width_px": 1531
+    },
+    {
+      "bytes": 4327932,
+      "file": "screenshots/720-stockists-segment-top.png",
+      "full_page": false,
+      "height_px": 1984,
+      "nonblank": true,
+      "observed_scroll_y": 0,
+      "page_geometry": {
+        "innerHeight": 496,
+        "scrollHeight": 3291
+      },
+      "requested_scroll_y": 0,
+      "segment": "top",
+      "width_px": 2880
+    },
+    {
+      "bytes": 696753,
+      "file": "screenshots/720-stockists-segment-middle.png",
+      "full_page": false,
+      "height_px": 1984,
+      "nonblank": true,
+      "observed_scroll_y": 1397,
+      "page_geometry": {
+        "innerHeight": 496,
+        "scrollHeight": 3291
+      },
+      "requested_scroll_y": 1397,
+      "segment": "middle",
+      "width_px": 2880
+    },
+    {
+      "bytes": 897253,
+      "file": "screenshots/720-stockists-segment-bottom.png",
+      "full_page": false,
+      "height_px": 1984,
+      "nonblank": true,
+      "observed_scroll_y": 2795,
+      "page_geometry": {
+        "innerHeight": 496,
+        "scrollHeight": 3291
+      },
+      "requested_scroll_y": 2795,
+      "segment": "bottom",
+      "width_px": 2880
+    },
+    {
+      "bytes": 1779177,
+      "clip": {
+        "height": 9812.0,
+        "scale": 0.35670607419486344,
+        "width": 2880.0,
+        "x": 0,
+        "y": 0
+      },
+      "content_size": {
+        "height": 9812,
+        "width": 2880,
+        "x": 0,
+        "y": 0
+      },
+      "coordinate_space": "Page.getLayoutMetrics.contentSize",
+      "css_content_size": {
+        "height": 2453,
+        "width": 720,
+        "x": 0,
+        "y": 0
+      },
+      "file": "screenshots/720-pure-carob-bar-full.png",
+      "full_page": true,
+      "height_px": 7000,
+      "nonblank": true,
+      "width_px": 2055
+    },
+    {
+      "bytes": 2492209,
+      "file": "screenshots/720-pure-carob-bar-segment-top.png",
+      "full_page": false,
+      "height_px": 1984,
+      "nonblank": true,
+      "observed_scroll_y": 0,
+      "page_geometry": {
+        "innerHeight": 496,
+        "scrollHeight": 2453
+      },
+      "requested_scroll_y": 0,
+      "segment": "top",
+      "width_px": 2880
+    },
+    {
+      "bytes": 962697,
+      "file": "screenshots/720-pure-carob-bar-segment-middle.png",
+      "full_page": false,
+      "height_px": 1984,
+      "nonblank": true,
+      "observed_scroll_y": 978,
+      "page_geometry": {
+        "innerHeight": 496,
+        "scrollHeight": 2453
+      },
+      "requested_scroll_y": 978,
+      "segment": "middle",
+      "width_px": 2880
+    },
+    {
+      "bytes": 988867,
+      "file": "screenshots/720-pure-carob-bar-segment-bottom.png",
+      "full_page": false,
+      "height_px": 1984,
+      "nonblank": true,
+      "observed_scroll_y": 1957,
+      "page_geometry": {
+        "innerHeight": 496,
+        "scrollHeight": 2453
+      },
+      "requested_scroll_y": 1957,
+      "segment": "bottom",
+      "width_px": 2880
+    },
+    {
+      "bytes": 1840787,
+      "file": "screenshots/390-shop-cart-open.png",
+      "full_page": false,
+      "height_px": 1984,
+      "nonblank": true,
+      "width_px": 1560
+    }
+  ],
+  "verdict": "PASS_PENDING_HUMAN_VISUAL_INSPECTION"
+}

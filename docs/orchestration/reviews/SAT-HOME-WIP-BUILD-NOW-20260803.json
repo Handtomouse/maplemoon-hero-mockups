@@ -1,0 +1,100 @@
+{
+  "schema": "maplemoon-receipt/v2",
+  "receipt_id": "SAT-HOME-WIP-BUILD-NOW-20260803-RECEIPT-001",
+  "packet_id": "SAT-HOME-WIP-BUILD-NOW-20260803",
+  "worker_thread_id": "019fa858-05c9-7631-b26e-8f5cbbf1387a",
+  "worker": "Codex Main Boss",
+  "started_at": "2026-08-03T04:03:52+10:00",
+  "completed_at": "2026-08-03T04:12:13+10:00",
+  "outcome": "PASS",
+  "confidence": "high",
+  "files_read": [
+    "_wip/evidence/CODEX-PACKET-REQUEST-HOMEPAGE-FIXES-20260803.md",
+    "_wip/evidence/NATE-HOMEPAGE-REVIEW-20260803.md",
+    "docs/orchestration/SIDECHAT_RECEIPT_GATE.md",
+    "docs/orchestration/LOCK_MANIFEST.json",
+    "_wip/homepage_real_1_lead_photo.WIP.html",
+    "docs/client-review/2026-08-01-saturday-review/staging-v1/clean/MANIFEST.json"
+  ],
+  "files_changed": [
+    "docs/orchestration/reviews/SAT-HOME-WIP-BUILD-NOW-20260803.json",
+    "_wip/homepage_real_1_lead_photo.WIP.html"
+  ],
+  "files_confirmed_untouched": [
+    "_wip/shop.WIP.html",
+    "_wip/our-story.WIP.html",
+    "_wip/carob-story.WIP.html",
+    "_wip/stockists.WIP.html",
+    "_wip/faq.WIP.html",
+    "docs/client-review/2026-08-01-saturday-review/staging-v1/clean/MANIFEST.json",
+    "docs/client-review/2026-08-01-saturday-review/staging-v1"
+  ],
+  "pre_sha256": {
+    "docs/orchestration/packets/SAT-HOME-WIP-BUILD-NOW-20260803.md": "c4638e5725874398d8e7b35676aba6eff8795e7e52e94b8735bd7fd3aecd6042",
+    "docs/orchestration/reviews/SAT-HOME-WIP-BUILD-NOW-20260803.json": null,
+    "_wip/homepage_real_1_lead_photo.WIP.html": "2117f3364e61af5272178ec7bee6068afc03c5181ecee3b9fc8c67526acde4d4"
+  },
+  "post_sha256": {
+    "docs/orchestration/packets/SAT-HOME-WIP-BUILD-NOW-20260803.md": "c4638e5725874398d8e7b35676aba6eff8795e7e52e94b8735bd7fd3aecd6042",
+    "docs/orchestration/reviews/SAT-HOME-WIP-BUILD-NOW-20260803.json": null,
+    "_wip/homepage_real_1_lead_photo.WIP.html": "64893f642ea86fab925561893b7239a674477b0a72c1c0396d6ebc16b00caffd"
+  },
+  "checkpoint_path": "_wip/checkpoints/SAT-HOME-WIP-BUILD-NOW-20260803_20260803_040352_AEST",
+  "checks": [
+    {
+      "command": "python3 -B scripts/check-maplemoon-receipt.py verify --phase start",
+      "exit_code": 0,
+      "result": "PASS: all three admitted writable paths were captured by the timestamped non-overwriting checkpoint before the Homepage edit."
+    },
+    {
+      "command": "python3 -m html.parser and git diff --check",
+      "exit_code": 0,
+      "result": "PASS: the edited Homepage is parseable HTML with no whitespace errors and still contains 11 sections."
+    },
+    {
+      "command": "in-app Browser rendered WIP review at 1440x1000 and 390x844 after waiting for every image",
+      "exit_code": 0,
+      "result": "PASS: every one of the 11 sections was reviewed top-to-bottom; no broken images or document overflow were detected. The softened hero plate, credential-first order, rounded ritual cards, symmetric orchard fade and six-bar row were visibly present."
+    },
+    {
+      "command": "hero order and credential-pill geometry at 1440px and 390px",
+      "exit_code": 0,
+      "result": "PASS: order is eyebrow, wordmark, subtitle, credentials, CTA. Pill stayed exactly 419.3515625x48 CSS px at 1440 and 280.765625x44 CSS px at 390 while text increased from 11.2 to 11.68 CSS px and 8.64 to 9.12 CSS px respectively."
+    },
+    {
+      "command": "Carob responsive regression at 900px and 600px",
+      "exit_code": 0,
+      "result": "PASS: the 900px inner/column remained 900px wide with 56px padding and a 56px column left; the 600px inner/column remained 600px wide with 20px padding and a 20px column left. Desktop 1440px column now begins at the requested 158px grid."
+    },
+    {
+      "command": "Our Story eyebrow sampled contrast measurement",
+      "exit_code": 0,
+      "result": "PASS: measured contrast increased from 1.43:1 to 8.30:1, exceeding WCAG AA 4.5:1."
+    },
+    {
+      "command": "sampler bar grid at 1440px and 390px",
+      "exit_code": 0,
+      "result": "PASS: all six existing images form one six-column row at both widths; mobile grid is 296 CSS px wide with six approximately 45.16px columns and zero document overflow."
+    },
+    {
+      "command": "staging-v1 clean manifest SHA-256 before and after",
+      "exit_code": 0,
+      "result": "PASS: d1c66b1d5937e9956d1806dbbbff4faf4f950def046aa642ae52f809c3d52d20 remained exact; no staging build or staging mutation occurred."
+    }
+  ],
+  "screenshots_or_urls": [
+    "http://127.0.0.1:3016/_wip/homepage_real_1_lead_photo.WIP.html"
+  ],
+  "failures": [],
+  "unknowns": [],
+  "residual_risk": [
+    "This PASS covers only the canonical Homepage WIP BUILD NOW subset. It does not mark CR-0 through CR-4 or NATE-HOME-001, does not rebuild staging-v1, and does not approve any excluded or deferred Homepage idea.",
+    "Five other page reviews remain open and must join the final batch before the one combined rebuild."
+  ],
+  "forbidden_path_changes": [],
+  "proposed_next_state": "homepage_wip_build_now_complete_queued_for_final_batch",
+  "next_reviewer": "Nate and the remaining five page-review lanes before one final combined build",
+  "next_action": "Keep this Homepage WIP queued unchanged while the remaining five pages finish review, then admit one combined six-page rebuild packet.",
+  "ready_to_promote": false,
+  "scope_note": "PASS accepts only the WIP edit and recovery evidence; no generated-package promotion or external action is authorized."
+}

@@ -1,0 +1,108 @@
+{
+  "schema": "maplemoon-receipt/v2",
+  "receipt_id": "MAPLEMOON-STYLE-CHROME-DERIVED-20260817T134139-RECEIPT-FAIL-01",
+  "packet_id": "MAPLEMOON-STYLE-CHROME-DERIVED-20260817T134139",
+  "worker_thread_id": "019ff65f-fd33-7e51-8a83-360ba2f8d665",
+  "worker": "Maple Moon shared site styles kit task",
+  "started_at": "2026-08-17T03:45:02Z",
+  "completed_at": "2026-08-17T03:56:54Z",
+  "files_read": [
+    "maplemoon-website/docs/orchestration/packets/MAPLEMOON-STYLE-CHROME-DERIVED-20260817T134139.md",
+    "maplemoon-website/docs/orchestration/SIDECHAT_RECEIPT_GATE.md",
+    "maplemoon-website/scripts/check-maplemoon-receipt.py",
+    "maplemoon-website/scripts/build-maplemoon-wip-preview.py",
+    "maplemoon-website/_wip/homepage_real_1_lead_photo.WIP.html",
+    "maplemoon-website/_wip/shop.WIP.html",
+    "maplemoon-website/_wip/our-story.WIP.html",
+    "maplemoon-website/_wip/carob-story.WIP.html",
+    "maplemoon-website/_wip/faq.WIP.html",
+    "maplemoon-website/_wip/stockists.WIP.html",
+    "maplemoon_build_20260813/pure-carob-bar.html",
+    "Documents/Codex/2026-08-13/maple-moon-shared-site-styles-kit/outputs/COMPONENT-CONTRACTS.md",
+    "Documents/Codex/2026-08-13/maple-moon-shared-site-styles-kit/outputs/RESPONSIVE-ACCESSIBILITY.md",
+    "Documents/Codex/2026-08-13/maple-moon-shared-site-styles-kit/outputs/RULE-REGISTER.json",
+    "Documents/Codex/2026-08-13/maple-moon-shared-site-styles-kit/outputs/version-lanes/v0.4-provisional/BOSS-HANDOFF.md"
+  ],
+  "files_changed": [
+    "maplemoon-website/scripts/build-maplemoon-style-chrome-derived.py",
+    "maplemoon-website/_wip/deploy/generated/maplemoon-style-chrome-derived-20260817T134139",
+    "maplemoon-website/_wip/evidence/style_chrome_derived_20260817T134139",
+    "maplemoon-website/docs/orchestration/reviews/MAPLEMOON-STYLE-CHROME-DERIVED-20260817T134139.json"
+  ],
+  "pre_sha256": {
+    "maplemoon-website/scripts/build-maplemoon-style-chrome-derived.py": null,
+    "maplemoon-website/_wip/deploy/generated/maplemoon-style-chrome-derived-20260817T134139": null,
+    "maplemoon-website/_wip/evidence/style_chrome_derived_20260817T134139": null,
+    "maplemoon-website/docs/orchestration/reviews/MAPLEMOON-STYLE-CHROME-DERIVED-20260817T134139.json": null
+  },
+  "post_sha256": {
+    "maplemoon-website/scripts/build-maplemoon-style-chrome-derived.py": "726c65c2fa9c0e1de1c0831abd5705300548c76b28bbb2799074fbb17e0bc3d5",
+    "maplemoon-website/_wip/deploy/generated/maplemoon-style-chrome-derived-20260817T134139": "f53f8204edfe56832447041d8d62893e3d8af008bdf968f82ae89f7832f75f3d",
+    "maplemoon-website/_wip/evidence/style_chrome_derived_20260817T134139": "0baba651faad8b6f7160f198fc2256fc3e2b7f81a2d0a472dae861ccda8e3d81",
+    "maplemoon-website/docs/orchestration/reviews/MAPLEMOON-STYLE-CHROME-DERIVED-20260817T134139.json": null
+  },
+  "checks": [
+    {
+      "command": "python3 -B scripts/check-maplemoon-receipt.py checkpoint --root /Users/handtomouse --packet docs/orchestration/packets/MAPLEMOON-STYLE-CHROME-DERIVED-20260817T134139.md --destination _wip/checkpoints/MAPLEMOON-STYLE-CHROME-DERIVED-20260817T134139_20260817_134502_AEST",
+      "exit_code": 0,
+      "result": "PASS checkpoint packet=MAPLEMOON-STYLE-CHROME-DERIVED-20260817T134139 files=4 path=/Users/handtomouse/maplemoon-website/_wip/checkpoints/MAPLEMOON-STYLE-CHROME-DERIVED-20260817T134139_20260817_134502_AEST"
+    },
+    {
+      "command": "python3 -B scripts/check-maplemoon-receipt.py verify --root /Users/handtomouse --packet docs/orchestration/packets/MAPLEMOON-STYLE-CHROME-DERIVED-20260817T134139.md --checkpoint _wip/checkpoints/MAPLEMOON-STYLE-CHROME-DERIVED-20260817T134139_20260817_134502_AEST --phase start",
+      "exit_code": 0,
+      "result": "PASS packet=MAPLEMOON-STYLE-CHROME-DERIVED-20260817T134139 phase=start scope=4"
+    },
+    {
+      "command": "fresh SHA-256 acquisition and close pins",
+      "exit_code": 0,
+      "result": "PASS all six WIPs, Pure input, existing preview builder and four sealed Styles Kit pins match the eleven packet values exactly"
+    },
+    {
+      "command": "python3 -B scripts/build-maplemoon-wip-preview.py --output /private/tmp/maplemoon-style-chrome-baseline-20260817T134502",
+      "exit_code": 0,
+      "result": "BUILD PASS output=/private/tmp/maplemoon-style-chrome-baseline-20260817T134502 files=73 bytes=12815503 pages=7 private_dirs=0 vercel_project_link=0"
+    },
+    {
+      "command": "python3 -B scripts/build-maplemoon-style-chrome-derived.py --baseline /private/tmp/maplemoon-style-chrome-baseline-20260817T134502",
+      "exit_code": 0,
+      "result": "STYLE BUILD PASS output=/Users/handtomouse/maplemoon-website/_wip/deploy/generated/maplemoon-style-chrome-derived-20260817T134139 files=75 bytes=12829978 pages=7 reverse=7/7 projections=7/7 runtime_assets=2"
+    },
+    {
+      "command": "/Users/handtomouse/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node _wip/evidence/style_chrome_derived_20260817T134139/browser-qa.mjs",
+      "exit_code": 1,
+      "result": "FAIL: all seven observed 390px cases reported at least one mandatory browser-gate failure; Our Story root overflow was 32px; the process was stopped at the packet fail-fast boundary before wider, interaction, native-200 or preflight gates"
+    }
+  ],
+  "screenshots_or_urls": [
+    "/Users/handtomouse/maplemoon-website/_wip/evidence/style_chrome_derived_20260817T134139/proofs/measured/homepage-390-top.png",
+    "/Users/handtomouse/maplemoon-website/_wip/evidence/style_chrome_derived_20260817T134139/proofs/measured/shop-390-top.png",
+    "/Users/handtomouse/maplemoon-website/_wip/evidence/style_chrome_derived_20260817T134139/proofs/measured/our-story-390-top.png",
+    "/Users/handtomouse/maplemoon-website/_wip/evidence/style_chrome_derived_20260817T134139/proofs/measured/carob-story-390-top.png",
+    "/Users/handtomouse/maplemoon-website/_wip/evidence/style_chrome_derived_20260817T134139/proofs/measured/faq-390-top.png",
+    "/Users/handtomouse/maplemoon-website/_wip/evidence/style_chrome_derived_20260817T134139/proofs/measured/stockists-390-top.png",
+    "/Users/handtomouse/maplemoon-website/_wip/evidence/style_chrome_derived_20260817T134139/proofs/measured/pure-carob-bar-390-top.png"
+  ],
+  "failures": [
+    "The required 390px measured-width gate did not pass: every route reported at least one failure.",
+    "Our Story exposed 32px root overflow and failed the mobile geometry/wordmark assertion.",
+    "The harness reported internal overflow on Home, Our Story, Carob Story, FAQ and Stockists.",
+    "The harness reported skip-focus semantics failure on Home, Shop, Our Story, Carob Story, Stockists and Pure Carob Bar.",
+    "The harness reported mobile-control sizing/state failure on all seven routes.",
+    "The browser process ended with a Target.createTarget protocol error after the fail-fast stop."
+  ],
+  "unknowns": [
+    "The required 768, 900, 1024 and 1440 measured cases were not run after the first mandatory gate failed.",
+    "Regular and reduced-motion menu interaction matrices were not run.",
+    "The fourteen native-200 cases were not run.",
+    "The exact preflight was not run.",
+    "Production immutable token and homepage MD5 were not freshly queried because the packet was already in failed HOLD state; no Vercel command was run."
+  ],
+  "residual_risk": [
+    "The derived output is a failed local evidence artifact and must not be treated as an approved preview, implementation candidate or deployment source.",
+    "NAV-001, NAV-002, NAV-003, CMP-009 and RESP-004 remain unverified requirements; NAV-004 and RESP-005 remain open technical evidence gates.",
+    "No rule, token, media, copy, runtime or production status was promoted."
+  ],
+  "forbidden_path_changes": [],
+  "proposed_next_state": "hold",
+  "next_reviewer": "MapleMoon BOSS to issue a new checkpointed correction packet if it wants the task-owned browser failures diagnosed and repaired"
+}

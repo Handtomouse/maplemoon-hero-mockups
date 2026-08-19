@@ -1,0 +1,185 @@
+{
+  "schema": "maplemoon-design-system/images/v1",
+  "version": 1,
+  "scope_note": "Presentation contracts only. Asset presence, hash or dimensions do not approve identity, licence, catalogue truth, claims, founder selection, packaging or launch use.",
+  "reference_summary": {
+    "distinct_media_union": 65,
+    "missing": 0,
+    "zero_byte": 0,
+    "decode_or_signature_failures": 0,
+    "per_route_unique_reference_counts": {"home":37,"shop":29,"our-story":16,"carob-story":7,"stockists":3,"faq":1},
+    "evidence": "maplemoon_asset_media_integrity.md"
+  },
+  "contracts": [
+    {
+      "id":"MM-IMG-HOME-HERO-01",
+      "route":"home",
+      "role":"Editorial Night hero atmosphere",
+      "selectors":[".wf-phero .bg",".wf-phero .hero-vid",".wf-phero .scrim",".wf-phero .fog"],
+      "assets":["assets/hero_shots/moonlit_ocean_night.webp","assets/hero_videos/gen/finalists/graded_blue/finalist_wetsand2.mp4"],
+      "alt_mode":"decorative",
+      "presentation":{"poster_or_background":"cover","base_position":"center 30%","reduced_motion":"poster path remains usable and play requests are suppressed","cascade_binding":"entire frozen home source hash"},
+      "subject_preservation":["moonlit atmosphere","legible CAROB hierarchy","long bridge into page wash"],
+      "approval_hold":["video is ignored and not team-locked","final live-computed crop and mask are unproved"]
+    },
+    {
+      "id":"MM-IMG-HOME-CAROB-SIGNATURE-01",
+      "route":"home",
+      "role":"protected CAROB signature",
+      "selectors":[".wf-pwm img"],
+      "assets":["assets/carob_wordmark.svg"],
+      "asset_sha256":"2a16b6671c795ea5126d0f9de5db1238d85c574c13c64e0a32718c154da69560",
+      "intrinsic":{"width":1885.84,"height":446.81,"unit":"SVG viewBox"},
+      "alt_mode":"content",
+      "presentation":{"fit":"contain","replacement":"forbidden","generic_logo_sizing":"forbidden","cascade_binding":"entire frozen home source hash"},
+      "subject_preservation":["full signature","legibility","prominent hero role"],
+      "approval_hold":[]
+    },
+    {
+      "id":"MM-IMG-HOME-RITUAL-01",
+      "route":"home",
+      "role":"three ritual moments",
+      "selectors":["#ritual .wf-mom img"],
+      "assets":["assets/licensed/scene_after_dinner.jpg","assets/licensed/scene_afternoon.jpg","assets/licensed/scene_tea_night.jpg"],
+      "alt_mode":"content",
+      "presentation":{"mechanism":"soft card-specific crop and dissolve","cascade_binding":"entire frozen home source hash"},
+      "subject_preservation":["distinct three-moment set","deliberate card softness"],
+      "approval_hold":["harmonized v2 candidates are preserved but not wired or promoted"]
+    },
+    {
+      "id":"MM-IMG-HOME-STORY-FIELD-01",
+      "route":"home",
+      "role":"responsive carob farm story field",
+      "selectors":["#story picture img","#story picture source"],
+      "assets":["assets/licensed/carob_farm/australian-carob-0205-16x9.jpg","assets/licensed/carob_farm/australian-carob-0205-mobile.jpg"],
+      "alt_mode":"content",
+      "presentation":{"fit":"cover","mechanism":"route-specific dissolve","cascade_binding":"entire frozen home source hash"},
+      "subject_preservation":["orchard rows","page-wash continuity"],
+      "approval_hold":["website-use permission is not established by directory naming"]
+    },
+    {
+      "id":"MM-IMG-SHOP-SAMPLER-01",
+      "route":"shop",
+      "role":"decorative sampler rail",
+      "selectors":[".sp-sampler img"],
+      "assets":["assets/products_new/bar_almond.png","assets/products_new/bar_cayenne.png","assets/products_new/bar_goji_coconut.png","assets/products_new/bar_hazelnut.png","assets/products_new/bar_peppermint.png","assets/products_new/bar_pure_carob.png"],
+      "alt_mode":"decorative",
+      "presentation":{"fit":"contain","cascade_binding":"entire frozen shop source hash"},
+      "subject_preservation":["complete product silhouette"],
+      "approval_hold":["generated-source packaging and catalogue identity remain CAT-01 HOLD"]
+    },
+    {
+      "id":"MM-IMG-SHOP-PRODUCT-CATALOGUE-01",
+      "route":"shop",
+      "role":"runtime catalogue card media",
+      "selectors":[".pcard .ph img"],
+      "assets":["assets/product_shots/*.webp"],
+      "alt_mode":"content",
+      "presentation":{"fit":"contain","observed_max_width":"78 to 80 percent","cascade_binding":"entire frozen shop source hash"},
+      "subject_preservation":["pack edges","labels","complete silhouette"],
+      "approval_hold":["catalogue, product identity, variants, prices and availability remain CAT-01 HOLD"]
+    },
+    {
+      "id":"MM-IMG-OUR-STORY-HERO-01",
+      "route":"our-story",
+      "role":"founder opening portrait field",
+      "selectors":[".os-story-hero__portrait",".os-story-hero__portrait::before",".os-story-hero__portrait::after",".os-story-hero__portrait img"],
+      "assets":["assets/our_story/founders_portrait_h212.webp"],
+      "asset_sha256":"67a56d7c1b7e27973f86f7fe705ec48a963f8c22402bc46f60eb24e155a44e88",
+      "intrinsic":{"width":1400,"height":933,"unit":"px"},
+      "alt_mode":"content",
+      "presentation":{"fit":"cover","desktop_position":"46% 40%","mobile_position":"46% 32%","mechanism":"blurred backing, foreground crop and alpha overlay stack","cascade_binding":"entire frozen our-story source hash"},
+      "subject_preservation":["both founders","faces","hands and limbs","outer-edge dissolve"],
+      "approval_hold":["string-presence crop guard does not prove the final cascade","human portrait acceptance remains separate"]
+    },
+    {
+      "id":"MM-IMG-FOUNDER-BIO-CARLI-01",
+      "route":"our-story",
+      "role":"Carli founder bio portrait",
+      "selectors":[".os-founder-note__portrait img[src=\"assets/our_story/founder_carli.webp\"]"],
+      "assets":["assets/our_story/founder_carli.webp"],
+      "asset_sha256":"00e9b606f01c30a9917a3d61384edd307f1cb80c7e8805a38a4598dc892b18e0",
+      "intrinsic":{"width":1100,"height":1375,"unit":"px"},
+      "alt_mode":"content",
+      "presentation":{"slot_aspect_ratio":"4/5","fit":"cover","cascade_binding":"entire frozen our-story source hash"},
+      "subject_preservation":["face","hair","shoulders","vertical-only fade if approved"],
+      "approval_hold":["current v01 presentation is not human acceptance"]
+    },
+    {
+      "id":"MM-IMG-FOUNDER-BIO-DYLAN-01",
+      "route":"our-story",
+      "role":"Dylan founder bio portrait",
+      "selectors":[".os-founder-note__portrait img[src=\"assets/our_story/founder_dylan.webp\"]"],
+      "assets":["assets/our_story/founder_dylan.webp"],
+      "asset_sha256":"2066281fbe37ab26e1b6ef2d223f57206564e0f62eff9c2cd638a3d6585a1314",
+      "intrinsic":{"width":1100,"height":1375,"unit":"px"},
+      "alt_mode":"content",
+      "presentation":{"slot_aspect_ratio":"4/5","fit":"cover","cascade_binding":"entire frozen our-story source hash"},
+      "subject_preservation":["face","hair","shoulders","vertical-only fade if approved"],
+      "approval_hold":["Dylan v02 acceptance is Nate-only","current v01 presentation is not human acceptance"]
+    },
+    {
+      "id":"MM-IMG-OUR-STORY-FIELDS-01",
+      "route":"our-story",
+      "role":"story, ingredient, farm, craft, place and gallery fields",
+      "selectors":[".os-ingredient-bridge img",".os-source-panel img",".os-sec .os-fig-main",".os-band img",".os-gal img"],
+      "assets":["assets/our_story/founders_hands.webp","assets/hero_shots/carob_pods_cluster.jpg","assets/licensed/carob_farm/australian-carob-0205-16x9.jpg","assets/licensed/carob_farm/australian-carob-0205-mobile.jpg","assets/photo_finals/*.webp","assets/our_story/studio_*.webp"],
+      "known_asset_sha256":{"assets/our_story/founders_hands.webp":"3a8d246f7ca990b53c66120d9458ca53487b00e3a93fe5e48c917d34bc4add68"},
+      "alt_mode":"content",
+      "presentation":{"mechanism":"distinct route-specific masks, object positions and page-wash bridges","cascade_binding":"entire frozen our-story source hash"},
+      "subject_preservation":["hands","faces","carob pods","studio products","chapter continuity"],
+      "approval_hold":["live-computed final crops and seams remain unproved"]
+    },
+    {
+      "id":"MM-IMG-CAROB-HERO-01",
+      "route":"carob-story",
+      "role":"responsive orchard education hero",
+      "selectors":[".cs .hero .pic img",".cs .hero .pic source",".cs .hero::before"],
+      "assets":["assets/licensed/carob_farm/australian-carob-0205-16x9.jpg","assets/licensed/carob_farm/australian-carob-0205-mobile.jpg"],
+      "alt_mode":"content",
+      "presentation":{"fit":"cover","cascade_binding":"entire frozen carob-story source hash; exact final position omitted because later overrides exist"},
+      "subject_preservation":["orchard rows","educational hero continuity"],
+      "approval_hold":["exact final crop lacks live-computed proof","website-use permission remains separately gated"]
+    },
+    {
+      "id":"MM-IMG-CAROB-FIELDS-01",
+      "route":"carob-story",
+      "role":"comparison, gallery and CTA image fields",
+      "selectors":[".carob-specimen",".gal img",".cta"],
+      "assets":["assets/licensed/carob_pods_macro.jpg","assets/licensed/carob_farm/australian-carob-0205.jpg","assets/photo_finals/*.webp"],
+      "alt_mode":"content",
+      "presentation":{"mechanism":"route-specific contained and dissolved fields","cascade_binding":"entire frozen carob-story source hash"},
+      "subject_preservation":["carob pods","orchard","product silhouette"],
+      "approval_hold":["claims and identity remain separate from presentation"]
+    },
+    {
+      "id":"MM-IMG-STOCKISTS-HERO-01",
+      "route":"stockists",
+      "role":"illustrative finder atmosphere",
+      "selectors":[".sp .sp-head::after"],
+      "assets":["assets/hero_shots/silhouette_closeup.webp"],
+      "alt_mode":"decorative",
+      "presentation":{"fit":"cover","position":"center 38%","opacity":0.22,"mechanism":"paired horizontal and vertical masks","cascade_binding":"entire frozen stockists source hash"},
+      "subject_preservation":["illustrative only; no geographic meaning"],
+      "approval_hold":[]
+    },
+    {
+      "id":"MM-IMG-STOCKISTS-WHOLESALE-01",
+      "route":"stockists",
+      "role":"wholesale product field",
+      "selectors":[".st-trade img"],
+      "assets":["assets/photo_finals/maplemoon_heros55_brandmatched.webp"],
+      "alt_mode":"content",
+      "presentation":{"mechanism":"route-specific field and page-wash bridge","cascade_binding":"entire frozen stockists source hash"},
+      "subject_preservation":["product silhouette","illustrative non-location role"],
+      "approval_hold":["wholesale facts and destination remain separate gates"]
+    }
+  ],
+  "route_without_content_images": ["faq"],
+  "global_holds": [
+    "Most referenced media hashes and exact intrinsic dimensions are not enumerated in the admitted evidence.",
+    "Approved alt-text owner is unknown.",
+    "Four OG images and the shared social logo are absent; candidate OG assets are not selected or wired.",
+    "Typekit entitlement and runtime font delivery remain unproved."
+  ]
+}

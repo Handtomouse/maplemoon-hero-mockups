@@ -1,0 +1,385 @@
+{
+  "expected": 7,
+  "passed": 7,
+  "rows": [
+    {
+      "effective_width": 390,
+      "menu": {
+        "closed": {
+          "expanded": "false",
+          "focusReturned": true,
+          "inertRestored": true,
+          "label": "Open menu",
+          "panelHidden": true,
+          "scrollReleased": true,
+          "text": "Menu"
+        },
+        "forward": true,
+        "opened": {
+          "activeInPanel": true,
+          "backgroundContained": true,
+          "expanded": "true",
+          "label": "Close menu",
+          "panelHidden": false,
+          "panelLabel": "Mobile navigation",
+          "rows": [
+            {
+              "height": 52,
+              "text": "Shop",
+              "width": 358
+            },
+            {
+              "height": 52,
+              "text": "Our Story",
+              "width": 358
+            },
+            {
+              "height": 52,
+              "text": "What is Carob",
+              "width": 358
+            },
+            {
+              "height": 52,
+              "text": "Stockists",
+              "width": 358
+            },
+            {
+              "height": 52,
+              "text": "FAQ",
+              "width": 358
+            }
+          ],
+          "text": "Close"
+        },
+        "reverse": true
+      },
+      "route": "homepage.html",
+      "verdict": "PASS"
+    },
+    {
+      "effective_width": 390,
+      "menu": {
+        "closed": {
+          "expanded": "false",
+          "focusReturned": true,
+          "inertRestored": true,
+          "label": "Open menu",
+          "panelHidden": true,
+          "scrollReleased": true,
+          "text": "Menu"
+        },
+        "forward": true,
+        "opened": {
+          "activeInPanel": true,
+          "backgroundContained": true,
+          "expanded": "true",
+          "label": "Close menu",
+          "panelHidden": false,
+          "panelLabel": "Mobile navigation",
+          "rows": [
+            {
+              "height": 52,
+              "text": "Shop",
+              "width": 358
+            },
+            {
+              "height": 52,
+              "text": "Our Story",
+              "width": 358
+            },
+            {
+              "height": 52,
+              "text": "What is Carob",
+              "width": 358
+            },
+            {
+              "height": 52,
+              "text": "Stockists",
+              "width": 358
+            },
+            {
+              "height": 52,
+              "text": "FAQ",
+              "width": 358
+            }
+          ],
+          "text": "Close"
+        },
+        "reverse": true
+      },
+      "route": "shop.html",
+      "verdict": "PASS"
+    },
+    {
+      "effective_width": 390,
+      "menu": {
+        "closed": {
+          "expanded": "false",
+          "focusReturned": true,
+          "inertRestored": true,
+          "label": "Open menu",
+          "panelHidden": true,
+          "scrollReleased": true,
+          "text": "Menu"
+        },
+        "forward": true,
+        "opened": {
+          "activeInPanel": true,
+          "backgroundContained": true,
+          "expanded": "true",
+          "label": "Close menu",
+          "panelHidden": false,
+          "panelLabel": "Mobile navigation",
+          "rows": [
+            {
+              "height": 52,
+              "text": "Shop",
+              "width": 358
+            },
+            {
+              "height": 52,
+              "text": "Our Story",
+              "width": 358
+            },
+            {
+              "height": 52,
+              "text": "What is Carob",
+              "width": 358
+            },
+            {
+              "height": 52,
+              "text": "Stockists",
+              "width": 358
+            },
+            {
+              "height": 52,
+              "text": "FAQ",
+              "width": 358
+            }
+          ],
+          "text": "Close"
+        },
+        "reverse": true
+      },
+      "route": "our-story.html",
+      "verdict": "PASS"
+    },
+    {
+      "effective_width": 390,
+      "menu": {
+        "closed": {
+          "expanded": "false",
+          "focusReturned": true,
+          "inertRestored": true,
+          "label": "Open menu",
+          "panelHidden": true,
+          "scrollReleased": true,
+          "text": "Menu"
+        },
+        "forward": true,
+        "opened": {
+          "activeInPanel": true,
+          "backgroundContained": true,
+          "expanded": "true",
+          "label": "Close menu",
+          "panelHidden": false,
+          "panelLabel": "Mobile navigation",
+          "rows": [
+            {
+              "height": 52,
+              "text": "Shop",
+              "width": 358
+            },
+            {
+              "height": 52,
+              "text": "Our Story",
+              "width": 358
+            },
+            {
+              "height": 52,
+              "text": "What is Carob",
+              "width": 358
+            },
+            {
+              "height": 52,
+              "text": "Stockists",
+              "width": 358
+            },
+            {
+              "height": 52,
+              "text": "FAQ",
+              "width": 358
+            }
+          ],
+          "text": "Close"
+        },
+        "reverse": true
+      },
+      "route": "carob-story.html",
+      "verdict": "PASS"
+    },
+    {
+      "effective_width": 390,
+      "menu": {
+        "closed": {
+          "expanded": "false",
+          "focusReturned": true,
+          "inertRestored": true,
+          "label": "Open menu",
+          "panelHidden": true,
+          "scrollReleased": true,
+          "text": "Menu"
+        },
+        "forward": true,
+        "opened": {
+          "activeInPanel": true,
+          "backgroundContained": true,
+          "expanded": "true",
+          "label": "Close menu",
+          "panelHidden": false,
+          "panelLabel": "Mobile navigation",
+          "rows": [
+            {
+              "height": 52,
+              "text": "Shop",
+              "width": 358
+            },
+            {
+              "height": 52,
+              "text": "Our Story",
+              "width": 358
+            },
+            {
+              "height": 52,
+              "text": "What is Carob",
+              "width": 358
+            },
+            {
+              "height": 52,
+              "text": "Stockists",
+              "width": 358
+            },
+            {
+              "height": 52,
+              "text": "FAQ",
+              "width": 358
+            }
+          ],
+          "text": "Close"
+        },
+        "reverse": true
+      },
+      "route": "faq.html",
+      "verdict": "PASS"
+    },
+    {
+      "effective_width": 390,
+      "menu": {
+        "closed": {
+          "expanded": "false",
+          "focusReturned": true,
+          "inertRestored": true,
+          "label": "Open menu",
+          "panelHidden": true,
+          "scrollReleased": true,
+          "text": "Menu"
+        },
+        "forward": true,
+        "opened": {
+          "activeInPanel": true,
+          "backgroundContained": true,
+          "expanded": "true",
+          "label": "Close menu",
+          "panelHidden": false,
+          "panelLabel": "Mobile navigation",
+          "rows": [
+            {
+              "height": 52,
+              "text": "Shop",
+              "width": 358
+            },
+            {
+              "height": 52,
+              "text": "Our Story",
+              "width": 358
+            },
+            {
+              "height": 52,
+              "text": "What is Carob",
+              "width": 358
+            },
+            {
+              "height": 52,
+              "text": "Stockists",
+              "width": 358
+            },
+            {
+              "height": 52,
+              "text": "FAQ",
+              "width": 358
+            }
+          ],
+          "text": "Close"
+        },
+        "reverse": true
+      },
+      "route": "stockists.html",
+      "verdict": "PASS"
+    },
+    {
+      "effective_width": 390,
+      "menu": {
+        "closed": {
+          "expanded": "false",
+          "focusReturned": true,
+          "inertRestored": true,
+          "label": "Open menu",
+          "panelHidden": true,
+          "scrollReleased": true,
+          "text": "Menu"
+        },
+        "forward": true,
+        "opened": {
+          "activeInPanel": true,
+          "backgroundContained": true,
+          "expanded": "true",
+          "label": "Close menu",
+          "panelHidden": false,
+          "panelLabel": "Mobile navigation",
+          "rows": [
+            {
+              "height": 52,
+              "text": "Shop",
+              "width": 358
+            },
+            {
+              "height": 52,
+              "text": "Our Story",
+              "width": 358
+            },
+            {
+              "height": 52,
+              "text": "What is Carob",
+              "width": 358
+            },
+            {
+              "height": 52,
+              "text": "Stockists",
+              "width": 358
+            },
+            {
+              "height": 52,
+              "text": "FAQ",
+              "width": 358
+            }
+          ],
+          "text": "Close"
+        },
+        "reverse": true
+      },
+      "route": "products/pure-carob-bar.html",
+      "verdict": "PASS"
+    }
+  ],
+  "verdict": "PASS"
+}

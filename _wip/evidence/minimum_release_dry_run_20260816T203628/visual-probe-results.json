@@ -1,0 +1,554 @@
+{
+  "origin": "http://127.0.0.1:8787",
+  "results": [
+    {
+      "route": "products/pure-carob-bar",
+      "width": 390,
+      "httpStatus": 200,
+      "common": {
+        "clientWidth": 390,
+        "scrollWidth": 390,
+        "title": "Pure Carob & Cacao Butter | Maple Moon"
+      },
+      "details": {
+        "related": [
+          {
+            "alt": "Peppermint and Buckwheat bar",
+            "src": "http://127.0.0.1:8787/assets/product_shots/bar_peppermint.webp",
+            "complete": true,
+            "naturalWidth": 800,
+            "naturalHeight": 1200,
+            "width": 84.34,
+            "height": 126.53,
+            "display": "block",
+            "visibility": "visible",
+            "opacity": "1"
+          },
+          {
+            "alt": "Roasted Hazelnut bar",
+            "src": "http://127.0.0.1:8787/assets/product_shots/bar_hazelnut.webp",
+            "complete": true,
+            "naturalWidth": 800,
+            "naturalHeight": 1200,
+            "width": 84.34,
+            "height": 126.53,
+            "display": "block",
+            "visibility": "visible",
+            "opacity": "1"
+          },
+          {
+            "alt": "Coconut and Goji bar",
+            "src": "http://127.0.0.1:8787/assets/product_shots/bar_goji_coconut.webp",
+            "complete": true,
+            "naturalWidth": 800,
+            "naturalHeight": 1200,
+            "width": 84.34,
+            "height": 126.53,
+            "display": "block",
+            "visibility": "visible",
+            "opacity": "1"
+          },
+          {
+            "alt": "Cayenne Chilli bar",
+            "src": "http://127.0.0.1:8787/assets/product_shots/bar_cayenne.webp",
+            "complete": true,
+            "naturalWidth": 800,
+            "naturalHeight": 1200,
+            "width": 84.34,
+            "height": 126.53,
+            "display": "block",
+            "visibility": "visible",
+            "opacity": "1"
+          },
+          {
+            "alt": "Almond and Celtic Salt bar",
+            "src": "http://127.0.0.1:8787/assets/product_shots/bar_almond.webp",
+            "complete": true,
+            "naturalWidth": 800,
+            "naturalHeight": 1200,
+            "width": 84.34,
+            "height": 126.53,
+            "display": "block",
+            "visibility": "visible",
+            "opacity": "1"
+          }
+        ]
+      },
+      "screenshots": [
+        {
+          "path": "/Users/handtomouse/maplemoon-website/_wip/evidence/minimum_release_dry_run_20260816T203628/screenshots/pure-related-390.png",
+          "width": 358,
+          "height": 844,
+          "nonblank": true
+        }
+      ],
+      "consoleErrors": [],
+      "pageErrors": [],
+      "requestFailures": [],
+      "badResponses": [],
+      "failures": [],
+      "result": "PASS"
+    },
+    {
+      "route": "our-story",
+      "width": 390,
+      "httpStatus": 200,
+      "common": {
+        "clientWidth": 390,
+        "scrollWidth": 390,
+        "title": "Our Story | Maple Moon"
+      },
+      "details": {
+        "founders": {
+          "heroImages": [
+            {
+              "alt": "Carli and Dylan, the founders of Maple Moon",
+              "naturalWidth": 1400,
+              "naturalHeight": 933
+            }
+          ],
+          "portraitImages": [],
+          "placeholders": [
+            {
+              "text": "Founder portrait pendingCarliNate selection required",
+              "html": "<span>Founder portrait pending</span><strong>Carli</strong><small>Nate selection required</small>"
+            },
+            {
+              "text": "Founder portrait pendingDylanNate selection required",
+              "html": "<span>Founder portrait pending</span><strong>Dylan</strong><small>Nate selection required</small>"
+            }
+          ]
+        }
+      },
+      "screenshots": [
+        {
+          "path": "/Users/handtomouse/maplemoon-website/_wip/evidence/minimum_release_dry_run_20260816T203628/screenshots/our-story-founders-390.png",
+          "width": 390,
+          "height": 844,
+          "nonblank": true
+        }
+      ],
+      "consoleErrors": [],
+      "pageErrors": [],
+      "requestFailures": [],
+      "badResponses": [],
+      "failures": [],
+      "result": "PASS"
+    },
+    {
+      "route": "faq",
+      "width": 390,
+      "httpStatus": 200,
+      "common": {
+        "clientWidth": 390,
+        "scrollWidth": 390,
+        "title": "FAQ | Maple Moon"
+      },
+      "details": {
+        "pills": {
+          "container": {
+            "clientWidth": 374,
+            "scrollWidth": 645,
+            "overflowX": "auto"
+          },
+          "items": [
+            {
+              "text": "What is carob?",
+              "left": 16,
+              "right": 123.765625,
+              "width": 107.765625,
+              "visibleInViewport": true
+            },
+            {
+              "text": "Is there any caffeine?",
+              "left": 133.765625,
+              "right": 272.390625,
+              "width": 138.625,
+              "visibleInViewport": true
+            },
+            {
+              "text": "Where can I buy Maple Moon?",
+              "left": 282.390625,
+              "right": 471.34375,
+              "width": 188.953125,
+              "visibleInViewport": false
+            },
+            {
+              "text": "Can I get help with an order?",
+              "left": 481.34375,
+              "right": 658.8125,
+              "width": 177.46875,
+              "visibleInViewport": false
+            }
+          ]
+        }
+      },
+      "screenshots": [
+        {
+          "path": "/Users/handtomouse/maplemoon-website/_wip/evidence/minimum_release_dry_run_20260816T203628/screenshots/faq-top-390.png",
+          "width": 374,
+          "height": 443,
+          "nonblank": true
+        }
+      ],
+      "consoleErrors": [],
+      "pageErrors": [],
+      "requestFailures": [],
+      "badResponses": [],
+      "failures": [],
+      "result": "PASS"
+    },
+    {
+      "route": "stockists",
+      "width": 390,
+      "httpStatus": 200,
+      "common": {
+        "clientWidth": 390,
+        "scrollWidth": 390,
+        "title": "Stockists | Maple Moon"
+      },
+      "details": {
+        "status": {
+          "heading": "Find Maple Moon.",
+          "heroCopy": "Find Maple Moon at 200+ health food stores, pharmacies and grocers across Australia.",
+          "count": "Showing 8 of 204 stockists. 204 total; 7 need client confirmation.",
+          "internalTerms": [
+            "Showing 8 of 204 stockists. 204 total; 7 need client confirmation.",
+            "WIP directory status204 entries are in this source parse. Seven entries have incomplete location details and need client confirmation before launch.",
+            "204 entries are in this source parse. Seven entries have incomplete location details and need client confirmation before launch.",
+            "Directory preview only",
+            "This newsletter form is a non-collecting review demo."
+          ]
+        }
+      },
+      "screenshots": [
+        {
+          "path": "/Users/handtomouse/maplemoon-website/_wip/evidence/minimum_release_dry_run_20260816T203628/screenshots/stockists-top-390.png",
+          "width": 390,
+          "height": 209,
+          "nonblank": true
+        }
+      ],
+      "consoleErrors": [],
+      "pageErrors": [],
+      "requestFailures": [],
+      "badResponses": [],
+      "failures": [],
+      "result": "PASS"
+    },
+    {
+      "route": "shop",
+      "width": 390,
+      "httpStatus": 200,
+      "common": {
+        "clientWidth": 390,
+        "scrollWidth": 390,
+        "title": "Shop the Range | Maple Moon"
+      },
+      "details": {
+        "catalogue": {
+          "sections": [
+            "bars",
+            "moons",
+            "bites",
+            "elixirs",
+            "bananas",
+            "powder"
+          ],
+          "cards": 22,
+          "addToCart": 20,
+          "enquire": 2
+        }
+      },
+      "screenshots": [
+        {
+          "path": "/Users/handtomouse/maplemoon-website/_wip/evidence/minimum_release_dry_run_20260816T203628/screenshots/shop-top-390.png",
+          "width": 390,
+          "height": 579,
+          "nonblank": true
+        }
+      ],
+      "consoleErrors": [],
+      "pageErrors": [],
+      "requestFailures": [],
+      "badResponses": [],
+      "failures": [],
+      "result": "PASS"
+    },
+    {
+      "route": "products/pure-carob-bar",
+      "width": 1440,
+      "httpStatus": 200,
+      "common": {
+        "clientWidth": 1440,
+        "scrollWidth": 1440,
+        "title": "Pure Carob & Cacao Butter | Maple Moon"
+      },
+      "details": {
+        "related": [
+          {
+            "alt": "Peppermint and Buckwheat bar",
+            "src": "http://127.0.0.1:8787/assets/product_shots/bar_peppermint.webp",
+            "complete": true,
+            "naturalWidth": 800,
+            "naturalHeight": 1200,
+            "width": 121.63,
+            "height": 182.45,
+            "display": "block",
+            "visibility": "visible",
+            "opacity": "1"
+          },
+          {
+            "alt": "Roasted Hazelnut bar",
+            "src": "http://127.0.0.1:8787/assets/product_shots/bar_hazelnut.webp",
+            "complete": true,
+            "naturalWidth": 800,
+            "naturalHeight": 1200,
+            "width": 121.66,
+            "height": 182.48,
+            "display": "block",
+            "visibility": "visible",
+            "opacity": "1"
+          },
+          {
+            "alt": "Coconut and Goji bar",
+            "src": "http://127.0.0.1:8787/assets/product_shots/bar_goji_coconut.webp",
+            "complete": true,
+            "naturalWidth": 800,
+            "naturalHeight": 1200,
+            "width": 121.63,
+            "height": 182.45,
+            "display": "block",
+            "visibility": "visible",
+            "opacity": "1"
+          },
+          {
+            "alt": "Cayenne Chilli bar",
+            "src": "http://127.0.0.1:8787/assets/product_shots/bar_cayenne.webp",
+            "complete": true,
+            "naturalWidth": 800,
+            "naturalHeight": 1200,
+            "width": 121.66,
+            "height": 182.48,
+            "display": "block",
+            "visibility": "visible",
+            "opacity": "1"
+          },
+          {
+            "alt": "Almond and Celtic Salt bar",
+            "src": "http://127.0.0.1:8787/assets/product_shots/bar_almond.webp",
+            "complete": true,
+            "naturalWidth": 800,
+            "naturalHeight": 1200,
+            "width": 121.63,
+            "height": 182.45,
+            "display": "block",
+            "visibility": "visible",
+            "opacity": "1"
+          }
+        ]
+      },
+      "screenshots": [
+        {
+          "path": "/Users/handtomouse/maplemoon-website/_wip/evidence/minimum_release_dry_run_20260816T203628/screenshots/pure-related-1440.png",
+          "width": 1148,
+          "height": 499,
+          "nonblank": true
+        }
+      ],
+      "consoleErrors": [],
+      "pageErrors": [],
+      "requestFailures": [],
+      "badResponses": [],
+      "failures": [],
+      "result": "PASS"
+    },
+    {
+      "route": "our-story",
+      "width": 1440,
+      "httpStatus": 200,
+      "common": {
+        "clientWidth": 1440,
+        "scrollWidth": 1440,
+        "title": "Our Story | Maple Moon"
+      },
+      "details": {
+        "founders": {
+          "heroImages": [
+            {
+              "alt": "Carli and Dylan, the founders of Maple Moon",
+              "naturalWidth": 1400,
+              "naturalHeight": 933
+            }
+          ],
+          "portraitImages": [],
+          "placeholders": [
+            {
+              "text": "Founder portrait pendingCarliNate selection required",
+              "html": "<span>Founder portrait pending</span><strong>Carli</strong><small>Nate selection required</small>"
+            },
+            {
+              "text": "Founder portrait pendingDylanNate selection required",
+              "html": "<span>Founder portrait pending</span><strong>Dylan</strong><small>Nate selection required</small>"
+            }
+          ]
+        }
+      },
+      "screenshots": [
+        {
+          "path": "/Users/handtomouse/maplemoon-website/_wip/evidence/minimum_release_dry_run_20260816T203628/screenshots/our-story-founders-1440.png",
+          "width": 1204,
+          "height": 773,
+          "nonblank": true
+        }
+      ],
+      "consoleErrors": [],
+      "pageErrors": [],
+      "requestFailures": [],
+      "badResponses": [],
+      "failures": [],
+      "result": "PASS"
+    },
+    {
+      "route": "faq",
+      "width": 1440,
+      "httpStatus": 200,
+      "common": {
+        "clientWidth": 1440,
+        "scrollWidth": 1440,
+        "title": "FAQ | Maple Moon"
+      },
+      "details": {
+        "pills": {
+          "container": {
+            "clientWidth": 1200,
+            "scrollWidth": 1200,
+            "overflowX": "auto"
+          },
+          "items": [
+            {
+              "text": "What is carob?",
+              "left": 121,
+              "right": 236.421875,
+              "width": 115.421875,
+              "visibleInViewport": true
+            },
+            {
+              "text": "Is there any caffeine?",
+              "left": 246.421875,
+              "right": 394.15625,
+              "width": 147.734375,
+              "visibleInViewport": true
+            },
+            {
+              "text": "Where can I buy Maple Moon?",
+              "left": 404.15625,
+              "right": 604.59375,
+              "width": 200.4375,
+              "visibleInViewport": true
+            },
+            {
+              "text": "Can I get help with an order?",
+              "left": 614.59375,
+              "right": 803,
+              "width": 188.40625,
+              "visibleInViewport": true
+            }
+          ]
+        }
+      },
+      "screenshots": [
+        {
+          "path": "/Users/handtomouse/maplemoon-website/_wip/evidence/minimum_release_dry_run_20260816T203628/screenshots/faq-top-1440.png",
+          "width": 1216,
+          "height": 455,
+          "nonblank": true
+        }
+      ],
+      "consoleErrors": [],
+      "pageErrors": [],
+      "requestFailures": [],
+      "badResponses": [],
+      "failures": [],
+      "result": "PASS"
+    },
+    {
+      "route": "stockists",
+      "width": 1440,
+      "httpStatus": 200,
+      "common": {
+        "clientWidth": 1440,
+        "scrollWidth": 1440,
+        "title": "Stockists | Maple Moon"
+      },
+      "details": {
+        "status": {
+          "heading": "Find Maple Moon.",
+          "heroCopy": "Find Maple Moon at 200+ health food stores, pharmacies and grocers across Australia.",
+          "count": "Showing 8 of 204 stockists. 204 total; 7 need client confirmation.",
+          "internalTerms": [
+            "Showing 8 of 204 stockists. 204 total; 7 need client confirmation.",
+            "WIP directory status204 entries are in this source parse. Seven entries have incomplete location details and need client confirmation before launch.",
+            "204 entries are in this source parse. Seven entries have incomplete location details and need client confirmation before launch.",
+            "Directory preview only",
+            "This newsletter form is a non-collecting review demo."
+          ]
+        }
+      },
+      "screenshots": [
+        {
+          "path": "/Users/handtomouse/maplemoon-website/_wip/evidence/minimum_release_dry_run_20260816T203628/screenshots/stockists-top-1440.png",
+          "width": 1196,
+          "height": 424,
+          "nonblank": true
+        }
+      ],
+      "consoleErrors": [],
+      "pageErrors": [],
+      "requestFailures": [],
+      "badResponses": [],
+      "failures": [],
+      "result": "PASS"
+    },
+    {
+      "route": "shop",
+      "width": 1440,
+      "httpStatus": 200,
+      "common": {
+        "clientWidth": 1440,
+        "scrollWidth": 1440,
+        "title": "Shop the Range | Maple Moon"
+      },
+      "details": {
+        "catalogue": {
+          "sections": [
+            "bars",
+            "moons",
+            "bites",
+            "elixirs",
+            "bananas",
+            "powder"
+          ],
+          "cards": 22,
+          "addToCart": 20,
+          "enquire": 2
+        }
+      },
+      "screenshots": [
+        {
+          "path": "/Users/handtomouse/maplemoon-website/_wip/evidence/minimum_release_dry_run_20260816T203628/screenshots/shop-top-1440.png",
+          "width": 1196,
+          "height": 376,
+          "nonblank": true
+        }
+      ],
+      "consoleErrors": [],
+      "pageErrors": [],
+      "requestFailures": [],
+      "badResponses": [],
+      "failures": [],
+      "result": "PASS"
+    }
+  ],
+  "failures": []
+}

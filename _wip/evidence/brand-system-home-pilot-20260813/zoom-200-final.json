@@ -1,0 +1,21 @@
+{
+  "before": {
+    "innerWidth": 1440,
+    "outerWidth": 1442,
+    "devicePixelRatio": 1,
+    "scrollWidth": 1440
+  },
+  "after": {
+    "innerWidth": 720,
+    "outerWidth": 1442,
+    "devicePixelRatio": 2,
+    "visualScale": 1,
+    "scrollWidth": 720,
+    "clientWidth": 720,
+    "brokenImages": []
+  },
+  "estimatedZoomPercent": 200,
+  "consoleErrors": [],
+  "badResponses": [],
+  "pass": true
+}

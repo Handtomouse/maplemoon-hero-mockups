@@ -1,0 +1,104 @@
+{
+  "schema": "maplemoon-receipt/v2",
+  "receipt_id": "MAPLEMOON-SEVEN-ROUTE-VISUAL-AUDIT-R2-20260816T210036-RECEIPT-01",
+  "packet_id": "MAPLEMOON-SEVEN-ROUTE-VISUAL-AUDIT-R2-20260816T210036",
+  "worker_thread_id": "/root",
+  "worker": "Codex /root",
+  "started_at": "2026-08-16T11:00:36Z",
+  "completed_at": "2026-08-16T11:31:13Z",
+  "files_read": [
+    "/Users/handtomouse/maplemoon-website/docs/orchestration/reviews/MAPLEMOON-PDP-ROUTE-REPAIR-20260816.json",
+    "/Users/handtomouse/maplemoon-website/docs/orchestration/reviews/MAPLEMOON-SEVEN-WORKSTREAM-CLOSEOUT-MATRIX-20260816T202900.md",
+    "/Users/handtomouse/maplemoon-website/docs/orchestration/reviews/MAPLEMOON-MINIMUM-RELEASE-DRY-RUN-20260816T203628.md",
+    "/Users/handtomouse/maplemoon-website/_wip/homepage_real_1_lead_photo.WIP.html",
+    "/Users/handtomouse/maplemoon-website/_wip/shop.WIP.html",
+    "/Users/handtomouse/maplemoon-website/_wip/our-story.WIP.html",
+    "/Users/handtomouse/maplemoon-website/_wip/carob-story.WIP.html",
+    "/Users/handtomouse/maplemoon-website/_wip/faq.WIP.html",
+    "/Users/handtomouse/maplemoon-website/_wip/stockists.WIP.html",
+    "/Users/handtomouse/maplemoon-website/scripts/build-maplemoon-wip-preview.py",
+    "/Users/handtomouse/maplemoon_build_20260813/pure-carob-bar.html",
+    "/Users/handtomouse/Documents/Codex/2026-08-13/maple-moon-shared-site-styles-kit/outputs/version-lanes/v0.4-provisional/BOSS-HANDOFF.md",
+    "/private/tmp/maplemoon-pdp-route-repair-20260816"
+  ],
+  "files_changed": [
+    "maplemoon-website/_wip/evidence/seven_route_visual_audit_r2_20260816T210036",
+    "maplemoon-website/docs/orchestration/reviews/MAPLEMOON-SEVEN-ROUTE-VISUAL-AUDIT-R2-20260816T210036.md",
+    "maplemoon-website/docs/orchestration/reviews/MAPLEMOON-SEVEN-ROUTE-VISUAL-AUDIT-R2-20260816T210036.json"
+  ],
+  "pre_sha256": {
+    "maplemoon-website/_wip/evidence/seven_route_visual_audit_r2_20260816T210036": null,
+    "maplemoon-website/docs/orchestration/reviews/MAPLEMOON-SEVEN-ROUTE-VISUAL-AUDIT-R2-20260816T210036.md": null,
+    "maplemoon-website/docs/orchestration/reviews/MAPLEMOON-SEVEN-ROUTE-VISUAL-AUDIT-R2-20260816T210036.json": null
+  },
+  "post_sha256": {
+    "maplemoon-website/_wip/evidence/seven_route_visual_audit_r2_20260816T210036": "d62e4a4930642bd2e616bc7d8472bbcca91160659c59d79409fb80aff22f1034",
+    "maplemoon-website/docs/orchestration/reviews/MAPLEMOON-SEVEN-ROUTE-VISUAL-AUDIT-R2-20260816T210036.md": "8016d98ada1b36c4215c4448c24b98939f4ec97101e08f988d3d305955166c4d",
+    "maplemoon-website/docs/orchestration/reviews/MAPLEMOON-SEVEN-ROUTE-VISUAL-AUDIT-R2-20260816T210036.json": null
+  },
+  "checks": [
+    {
+      "command": "checkpoint and phase=start gate",
+      "exit_code": 0,
+      "result": "CHECKPOINT_DESTINATION_ABSENT; PASS checkpoint packet=MAPLEMOON-SEVEN-ROUTE-VISUAL-AUDIT-R2-20260816T210036 files=3 path=/Users/handtomouse/maplemoon-website/_wip/checkpoints/MAPLEMOON-SEVEN-ROUTE-VISUAL-AUDIT-R2-20260816T210036_20260816_210036_AEST; PASS packet=MAPLEMOON-SEVEN-ROUTE-VISUAL-AUDIT-R2-20260816T210036 phase=start scope=3"
+    },
+    {
+      "command": "certified local HTML acquisition",
+      "exit_code": 0,
+      "result": "ACQUISITION PASS matched=7/7. Homepage, Shop, Our Story, Carob Story, FAQ, Stockists and Pure local SHA-256 values exactly match the authenticated deployed-byte record for dpl_BAMceRFCmxKYpq7bz3GHQZ2qZuKc."
+    },
+    {
+      "command": "node _wip/evidence/seven_route_visual_audit_r2_20260816T210036/audit.mjs",
+      "exit_code": 0,
+      "result": "POSITIVE_CONTROLS PASS missing_route=true overflow=true blank=true; AUDIT_SUMMARY pass=21 fail=0 total=21 screenshots=84 contacts=12. All cases HTTP 200/exact width/nonblank with zero broken images or runtime/request failures. Two harness-only attempts are preserved and do not change candidate assertions."
+    },
+    {
+      "command": "node _wip/evidence/seven_route_visual_audit_r2_20260816T210036/header-probe.mjs",
+      "exit_code": 0,
+      "result": "HEADER_SUMMARY routes=7/7 menu=2 no_menu_or_links=5 overlaps=4 positive_control=PASS. Only Homepage/Pure have Menu; Shop/Our Story/Carob Story/Stockists painted wordmark overlap with cart is 41.1/42.9/18.9/31.1px horizontally."
+    },
+    {
+      "command": "human inspection of 84 screenshots and 12 contact sheets",
+      "exit_code": 0,
+      "result": "PASS_WITH_RELEASE_BLOCKERS: 21/21 cases inspected. Mobile header/navigation P0 on five routes; Our Story placeholders/semantics; Stockists internal state; Shop disposable 22-card commerce controls; FAQ target/content issues. Home/Pure core layout, Carob body/blend, FAQ scroller and Stockists finder composition pass. Full-page off-canvas cart capture qualification recorded."
+    },
+    {
+      "command": "final structural and source-input assertions",
+      "exit_code": 0,
+      "result": "VISUAL_AUDIT_ASSERTIONS PASS hashes=7/7 routes=21/21 screenshots=84/84 contacts=12/12 inspected=21/21 controls=3/3 mobile_menu=2/7 no_menu_or_links=5/7 painted_overlaps=4. Nine source/Styles pins rechecked OK. Review SHA-256 8016d98ada1b36c4215c4448c24b98939f4ec97101e08f988d3d305955166c4d; evidence 108 files, receipt-gate directory SHA-256 d62e4a4930642bd2e616bc7d8472bbcca91160659c59d79409fb80aff22f1034."
+    },
+    {
+      "command": "scope, process and mutation audit",
+      "exit_code": 0,
+      "result": "PASS: localhost server stopped and port 8792 closed. Only the exact evidence directory, review and self-receipt outputs changed after checkpoint. No website, WIP, build source, media, Styles Kit, catalogue, Shopify, Git, Vercel, production or client action occurred."
+    }
+  ],
+  "screenshots_or_urls": [
+    "/Users/handtomouse/maplemoon-website/_wip/evidence/seven_route_visual_audit_r2_20260816T210036/contacts/contact-390-top.png",
+    "/Users/handtomouse/maplemoon-website/_wip/evidence/seven_route_visual_audit_r2_20260816T210036/contacts/contact-390-middle.png",
+    "/Users/handtomouse/maplemoon-website/_wip/evidence/seven_route_visual_audit_r2_20260816T210036/contacts/contact-390-bottom.png",
+    "/Users/handtomouse/maplemoon-website/_wip/evidence/seven_route_visual_audit_r2_20260816T210036/contacts/contact-900-top.png",
+    "/Users/handtomouse/maplemoon-website/_wip/evidence/seven_route_visual_audit_r2_20260816T210036/contacts/contact-900-middle.png",
+    "/Users/handtomouse/maplemoon-website/_wip/evidence/seven_route_visual_audit_r2_20260816T210036/contacts/contact-900-bottom.png",
+    "/Users/handtomouse/maplemoon-website/_wip/evidence/seven_route_visual_audit_r2_20260816T210036/contacts/contact-1440-top.png",
+    "/Users/handtomouse/maplemoon-website/_wip/evidence/seven_route_visual_audit_r2_20260816T210036/contacts/contact-1440-middle.png",
+    "/Users/handtomouse/maplemoon-website/_wip/evidence/seven_route_visual_audit_r2_20260816T210036/contacts/contact-1440-bottom.png",
+    "https://maplemoonbuild20260813-m49nihfds-handtomouses-projects.vercel.app"
+  ],
+  "failures": [],
+  "unknowns": [
+    "Nate has not recorded the D01-D06 minimum-release values or the Our Story media direction.",
+    "The decision-appropriate right-side mobile header action is not chosen; D02-A removes cart, but no new client-facing label may be invented.",
+    "Founder portrait assets and exact live-use slot approvals remain unavailable.",
+    "v0.4 remains planning guidance only and supplies no blanket implementation authority."
+  ],
+  "residual_risk": [
+    "Five routes have no customer-reachable mobile site navigation; four also paint the wordmark across the cart area.",
+    "The private preview is technically functional but remains visibly review-only through founder placeholders, Stockists status, broad claims and mock commerce.",
+    "Fixing disposable 22-card Shop controls before D01/D02 would create rework and preserve the wrong release state.",
+    "Production remains a separate explicit Nate action after decision-bound implementation and independent successor certification."
+  ],
+  "forbidden_path_changes": [],
+  "proposed_next_state": "visual_audit_complete_waiting_on_minimum_release_and_our_story_decisions",
+  "next_reviewer": "Nate to record D01=A; D02=A; D03=B; D04=A; D05=B; D06-PURE=REJECT; D06-SPICED=REJECT and the Our Story media direction, then BOSS admits one deterministic release-builder packet including the five-route mobile-header correction"
+}

@@ -1,0 +1,20 @@
+{
+  "derived": {
+    "files": 75,
+    "sha256": "70d0c80afbdf5b9c2a769f6c2414064aa54c94ebf1600248105211499acfdbd4"
+  },
+  "prior_harness": {
+    "path": "/Users/handtomouse/maplemoon-website/_wip/evidence/native_200_zoom_audit_r2_20260814T180224/r2_native_zoom_audit.py",
+    "sha256": "9d79dce79451e61ee5327da874e159e921d612ef6525de8842c470f0cea39dfa"
+  },
+  "routes": [
+    "homepage.html",
+    "shop.html",
+    "our-story.html",
+    "carob-story.html",
+    "faq.html",
+    "stockists.html",
+    "products/pure-carob-bar.html"
+  ],
+  "verdict": "PASS"
+}

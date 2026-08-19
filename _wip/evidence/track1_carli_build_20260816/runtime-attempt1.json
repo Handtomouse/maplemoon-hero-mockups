@@ -1,0 +1,56 @@
+[
+  {
+    "route": "homepage",
+    "width": 390,
+    "url": "https://maplemoonbuild20260813-fsdi7562p-handtomouses-projects.vercel.app/homepage",
+    "failures": [
+      "harness:Error: TypeError: Cannot set property loading of [object Object] which has only a getter\n    at <anonymous>:2688:43\n    at Array.forEach (<anonymous>)\n    at __playwrightEvaluate (<anonymous>:2688:14)\n    at <anonymous>:2699:14\n    at runUserScript (<anonymous>:2700:10)\n    at <anonymous>:2704:10\n    at <anonymous>:2705:3"
+    ],
+    "interactions": {}
+  },
+  {
+    "route": "shop",
+    "width": 390,
+    "url": "https://maplemoonbuild20260813-fsdi7562p-handtomouses-projects.vercel.app/shop",
+    "failures": [
+      "harness:Error: TypeError: Cannot set property loading of [object Object] which has only a getter\n    at <anonymous>:2688:43\n    at Array.forEach (<anonymous>)\n    at __playwrightEvaluate (<anonymous>:2688:14)\n    at <anonymous>:2699:14\n    at runUserScript (<anonymous>:2700:10)\n    at <anonymous>:2704:10\n    at <anonymous>:2705:3"
+    ],
+    "interactions": {}
+  },
+  {
+    "route": "our-story",
+    "width": 390,
+    "url": "https://maplemoonbuild20260813-fsdi7562p-handtomouses-projects.vercel.app/our-story",
+    "failures": [
+      "harness:Error: TypeError: Cannot set property loading of [object Object] which has only a getter\n    at <anonymous>:2688:43\n    at Array.forEach (<anonymous>)\n    at __playwrightEvaluate (<anonymous>:2688:14)\n    at <anonymous>:2699:14\n    at runUserScript (<anonymous>:2700:10)\n    at <anonymous>:2704:10\n    at <anonymous>:2705:3"
+    ],
+    "interactions": {}
+  },
+  {
+    "route": "carob-story",
+    "width": 390,
+    "url": "https://maplemoonbuild20260813-fsdi7562p-handtomouses-projects.vercel.app/carob-story",
+    "failures": [
+      "harness:Error: TypeError: Cannot set property loading of [object Object] which has only a getter\n    at <anonymous>:2688:43\n    at Array.forEach (<anonymous>)\n    at __playwrightEvaluate (<anonymous>:2688:14)\n    at <anonymous>:2699:14\n    at runUserScript (<anonymous>:2700:10)\n    at <anonymous>:2704:10\n    at <anonymous>:2705:3"
+    ],
+    "interactions": {}
+  },
+  {
+    "route": "faq",
+    "width": 390,
+    "url": "https://maplemoonbuild20260813-fsdi7562p-handtomouses-projects.vercel.app/faq",
+    "failures": [
+      "harness:Error: TypeError: Cannot read properties of undefined (reading 'getEntriesByType')\n    at __playwrightEvaluate (<anonymous>:2688:48)\n    at <anonymous>:2713:14\n    at runUserScript (<anonymous>:2714:10)\n    at <anonymous>:2718:10\n    at <anonymous>:2719:3"
+    ],
+    "interactions": {}
+  },
+  {
+    "route": "stockists",
+    "width": 390,
+    "url": "https://maplemoonbuild20260813-fsdi7562p-handtomouses-projects.vercel.app/stockists",
+    "failures": [
+      "harness:Error: TypeError: Cannot set property loading of [object Object] which has only a getter\n    at <anonymous>:2688:43\n    at Array.forEach (<anonymous>)\n    at __playwrightEvaluate (<anonymous>:2688:14)\n    at <anonymous>:2699:14\n    at runUserScript (<anonymous>:2700:10)\n    at <anonymous>:2704:10\n    at <anonymous>:2705:3"
+    ],
+    "interactions": {}
+  }
+]

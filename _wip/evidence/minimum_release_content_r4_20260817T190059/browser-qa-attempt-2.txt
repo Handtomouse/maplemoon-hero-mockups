@@ -1,0 +1,12 @@
+HARNESS-ONLY FAILURE — Home cases executed; Shop aborted before assertions.
+
+Observed before abort:
+- Home rendered at 390/768/900/1024/1440 with status 200, exact width, and zero
+  broken/incomplete images.
+- Each Home case logged two console errors and one request failure; exact details were
+  not emitted by this attempt and therefore are not classified as candidate defects.
+- Shop strict-mode click failed because `[data-flavour="pure"]` matched both the Pure
+  filter button and the Pure product article.
+
+Correction: narrow the selector to `button.swatch[data-flavour="pure"]` and emit exact
+console/request diagnostics. Candidate bytes and site assertions remain unchanged.

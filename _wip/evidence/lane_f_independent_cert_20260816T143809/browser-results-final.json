@@ -1,0 +1,960 @@
+{
+  "schema": "maplemoon-lane-f-independent-browser/v1",
+  "results": [
+    {
+      "page": "our-story",
+      "width": 390,
+      "url": "http://127.0.0.1:8772/_wip/our-story.WIP.html",
+      "httpStatus": 200,
+      "metrics": {
+        "expectedWidth": 390,
+        "clientWidth": 390,
+        "scrollWidth": 390,
+        "bodyWidth": 390,
+        "bodyHeight": 5246,
+        "textLength": 3100,
+        "imageCount": 2,
+        "images": [
+          {
+            "src": "http://127.0.0.1:8772/assets/our_story/founders_portrait_h212.webp",
+            "complete": true,
+            "naturalWidth": 1400,
+            "naturalHeight": 933,
+            "rect": {
+              "width": 334,
+              "height": 222.65625
+            }
+          },
+          {
+            "src": "http://127.0.0.1:8772/assets/hero_shots/carob_pods_cluster.jpg",
+            "complete": true,
+            "naturalWidth": 1800,
+            "naturalHeight": 1004,
+            "rect": {
+              "width": 334,
+              "height": 417.5
+            }
+          }
+        ],
+        "brokenImages": [],
+        "focusableCount": 16,
+        "focusFailures": [],
+        "focusResults": [
+          {
+            "index": 0,
+            "tag": "a",
+            "text": "maple moon",
+            "focused": true
+          },
+          {
+            "index": 1,
+            "tag": "button",
+            "text": "0",
+            "focused": true
+          },
+          {
+            "index": 2,
+            "tag": "a",
+            "text": "READ OUR STORY",
+            "focused": true
+          },
+          {
+            "index": 3,
+            "tag": "a",
+            "text": "SHOP THE RANGE",
+            "focused": true
+          },
+          {
+            "index": 4,
+            "tag": "a",
+            "text": "THE PEOPLE",
+            "focused": true
+          },
+          {
+            "index": 5,
+            "tag": "a",
+            "text": "HOW IT BEGAN",
+            "focused": true
+          },
+          {
+            "index": 6,
+            "tag": "a",
+            "text": "THE RANGE",
+            "focused": true
+          },
+          {
+            "index": 7,
+            "tag": "summary",
+            "text": "READ CARLI'S STORY",
+            "focused": true
+          },
+          {
+            "index": 8,
+            "tag": "summary",
+            "text": "READ DYLAN'S STORY",
+            "focused": true
+          },
+          {
+            "index": 9,
+            "tag": "a",
+            "text": "THE RANGE",
+            "focused": true
+          },
+          {
+            "index": 10,
+            "tag": "a",
+            "text": "TRY MAPLE MOON",
+            "focused": true
+          },
+          {
+            "index": 11,
+            "tag": "a",
+            "text": "maple moon",
+            "focused": true
+          },
+          {
+            "index": 12,
+            "tag": "a",
+            "text": "SHOP",
+            "focused": true
+          },
+          {
+            "index": 13,
+            "tag": "a",
+            "text": "OUR STORY",
+            "focused": true
+          },
+          {
+            "index": 14,
+            "tag": "a",
+            "text": "STOCKISTS",
+            "focused": true
+          },
+          {
+            "index": 15,
+            "tag": "a",
+            "text": "CONTACT",
+            "focused": true
+          }
+        ],
+        "jsonLd": [
+          {
+            "index": 0,
+            "valid": true
+          },
+          {
+            "index": 1,
+            "valid": true
+          },
+          {
+            "index": 2,
+            "valid": true
+          },
+          {
+            "index": 3,
+            "valid": true
+          }
+        ],
+        "invalidJsonLd": [],
+        "overlay": false,
+        "pageSpecific": {
+          "placeholders": [
+            {
+              "role": "img",
+              "label": "Carli portrait pending Nate selection",
+              "text": "FOUNDER PORTRAIT PENDING\nCarli\nNATE SELECTION REQUIRED",
+              "width": 284,
+              "height": 355,
+              "ratio": 0.8,
+              "visible": true
+            },
+            {
+              "role": "img",
+              "label": "Dylan portrait pending Nate selection",
+              "text": "FOUNDER PORTRAIT PENDING\nDylan\nNATE SELECTION REQUIRED",
+              "width": 284,
+              "height": 355,
+              "ratio": 0.8,
+              "visible": true
+            }
+          ],
+          "chapters": [
+            {
+              "number": "01",
+              "label": "The people behind the product"
+            },
+            {
+              "number": "02",
+              "label": "How Maple Moon began"
+            }
+          ],
+          "rangeLinkPresent": true,
+          "rangeLinkFocused": true,
+          "frame55References": 0
+        }
+      },
+      "consoleErrors": [],
+      "pageErrors": [],
+      "requestFailures": [],
+      "badResponses": [],
+      "screenshot": {
+        "path": "/Users/handtomouse/maplemoon-website/_wip/evidence/lane_f_independent_cert_20260816T143809/our-story-390.png",
+        "bytes": 862307,
+        "width": 390,
+        "height": 5245,
+        "channelStdev": [
+          39.39188354099535,
+          38.66364164946299,
+          38.7371212687818
+        ]
+      },
+      "assertions": {
+        "http200": true,
+        "exactWidth": true,
+        "nonblank": true,
+        "screenshotWidth": true,
+        "imagesHealthy": true,
+        "focusablePositive": true,
+        "jsonLdHealthy": true,
+        "noOverlay": true,
+        "noErrors": true,
+        "placeholderAccessibility": true,
+        "chapterOrder": true,
+        "rangeLink": true,
+        "frame55Absent": true
+      },
+      "pass": true
+    },
+    {
+      "page": "our-story",
+      "width": 1440,
+      "url": "http://127.0.0.1:8772/_wip/our-story.WIP.html",
+      "httpStatus": 200,
+      "metrics": {
+        "expectedWidth": 1440,
+        "clientWidth": 1440,
+        "scrollWidth": 1440,
+        "bodyWidth": 1440,
+        "bodyHeight": 4154,
+        "textLength": 3145,
+        "imageCount": 2,
+        "images": [
+          {
+            "src": "http://127.0.0.1:8772/assets/our_story/founders_portrait_h212.webp",
+            "complete": true,
+            "naturalWidth": 1400,
+            "naturalHeight": 933,
+            "rect": {
+              "width": 560.3125,
+              "height": 373.53125
+            }
+          },
+          {
+            "src": "http://127.0.0.1:8772/assets/hero_shots/carob_pods_cluster.jpg",
+            "complete": true,
+            "naturalWidth": 1800,
+            "naturalHeight": 1004,
+            "rect": {
+              "width": 548,
+              "height": 685
+            }
+          }
+        ],
+        "brokenImages": [],
+        "focusableCount": 20,
+        "focusFailures": [],
+        "focusResults": [
+          {
+            "index": 0,
+            "tag": "a",
+            "text": "SHOP",
+            "focused": true
+          },
+          {
+            "index": 1,
+            "tag": "a",
+            "text": "OUR STORY",
+            "focused": true
+          },
+          {
+            "index": 2,
+            "tag": "a",
+            "text": "WHAT IS CAROB",
+            "focused": true
+          },
+          {
+            "index": 3,
+            "tag": "a",
+            "text": "maple moon",
+            "focused": true
+          },
+          {
+            "index": 4,
+            "tag": "a",
+            "text": "STOCKISTS",
+            "focused": true
+          },
+          {
+            "index": 5,
+            "tag": "button",
+            "text": "0",
+            "focused": true
+          },
+          {
+            "index": 6,
+            "tag": "a",
+            "text": "READ OUR STORY",
+            "focused": true
+          },
+          {
+            "index": 7,
+            "tag": "a",
+            "text": "SHOP THE RANGE",
+            "focused": true
+          },
+          {
+            "index": 8,
+            "tag": "a",
+            "text": "THE PEOPLE",
+            "focused": true
+          },
+          {
+            "index": 9,
+            "tag": "a",
+            "text": "HOW IT BEGAN",
+            "focused": true
+          },
+          {
+            "index": 10,
+            "tag": "a",
+            "text": "THE RANGE",
+            "focused": true
+          },
+          {
+            "index": 11,
+            "tag": "summary",
+            "text": "READ CARLI'S STORY",
+            "focused": true
+          },
+          {
+            "index": 12,
+            "tag": "summary",
+            "text": "READ DYLAN'S STORY",
+            "focused": true
+          },
+          {
+            "index": 13,
+            "tag": "a",
+            "text": "THE RANGE",
+            "focused": true
+          },
+          {
+            "index": 14,
+            "tag": "a",
+            "text": "TRY MAPLE MOON",
+            "focused": true
+          },
+          {
+            "index": 15,
+            "tag": "a",
+            "text": "maple moon",
+            "focused": true
+          },
+          {
+            "index": 16,
+            "tag": "a",
+            "text": "SHOP",
+            "focused": true
+          },
+          {
+            "index": 17,
+            "tag": "a",
+            "text": "OUR STORY",
+            "focused": true
+          },
+          {
+            "index": 18,
+            "tag": "a",
+            "text": "STOCKISTS",
+            "focused": true
+          },
+          {
+            "index": 19,
+            "tag": "a",
+            "text": "CONTACT",
+            "focused": true
+          }
+        ],
+        "jsonLd": [
+          {
+            "index": 0,
+            "valid": true
+          },
+          {
+            "index": 1,
+            "valid": true
+          },
+          {
+            "index": 2,
+            "valid": true
+          },
+          {
+            "index": 3,
+            "valid": true
+          }
+        ],
+        "invalidJsonLd": [],
+        "overlay": false,
+        "pageSpecific": {
+          "placeholders": [
+            {
+              "role": "img",
+              "label": "Carli portrait pending Nate selection",
+              "text": "FOUNDER PORTRAIT PENDING\nCarli\nNATE SELECTION REQUIRED",
+              "width": 296,
+              "height": 370,
+              "ratio": 0.8,
+              "visible": true
+            },
+            {
+              "role": "img",
+              "label": "Dylan portrait pending Nate selection",
+              "text": "FOUNDER PORTRAIT PENDING\nDylan\nNATE SELECTION REQUIRED",
+              "width": 296,
+              "height": 370,
+              "ratio": 0.8,
+              "visible": true
+            }
+          ],
+          "chapters": [
+            {
+              "number": "01",
+              "label": "The people behind the product"
+            },
+            {
+              "number": "02",
+              "label": "How Maple Moon began"
+            }
+          ],
+          "rangeLinkPresent": true,
+          "rangeLinkFocused": true,
+          "frame55References": 0
+        }
+      },
+      "consoleErrors": [],
+      "pageErrors": [],
+      "requestFailures": [],
+      "badResponses": [],
+      "screenshot": {
+        "path": "/Users/handtomouse/maplemoon-website/_wip/evidence/lane_f_independent_cert_20260816T143809/our-story-1440.png",
+        "bytes": 2035990,
+        "width": 1440,
+        "height": 4153,
+        "channelStdev": [
+          46.798686723825405,
+          45.16534950472863,
+          44.151002858106146
+        ]
+      },
+      "assertions": {
+        "http200": true,
+        "exactWidth": true,
+        "nonblank": true,
+        "screenshotWidth": true,
+        "imagesHealthy": true,
+        "focusablePositive": true,
+        "jsonLdHealthy": true,
+        "noOverlay": true,
+        "noErrors": true,
+        "placeholderAccessibility": true,
+        "chapterOrder": true,
+        "rangeLink": true,
+        "frame55Absent": true
+      },
+      "pass": true
+    },
+    {
+      "page": "carob-story",
+      "width": 390,
+      "url": "http://127.0.0.1:8772/_wip/carob-story.WIP.html",
+      "httpStatus": 200,
+      "metrics": {
+        "expectedWidth": 390,
+        "clientWidth": 390,
+        "scrollWidth": 390,
+        "bodyWidth": 390,
+        "bodyHeight": 2549,
+        "textLength": 1242,
+        "imageCount": 3,
+        "images": [
+          {
+            "src": "http://127.0.0.1:8772/assets/licensed/carob_farm/australian-carob-0205-mobile.jpg",
+            "complete": true,
+            "naturalWidth": 1080,
+            "naturalHeight": 1350,
+            "rect": {
+              "width": 358,
+              "height": 274
+            }
+          },
+          {
+            "src": "http://127.0.0.1:8772/assets/licensed/carob_pods_macro.jpg",
+            "complete": true,
+            "naturalWidth": 1600,
+            "naturalHeight": 1068,
+            "rect": {
+              "width": 130.875,
+              "height": 100
+            }
+          },
+          {
+            "src": "http://127.0.0.1:8772/assets/photo_finals/maplemoon_heros41_brandmatched.webp",
+            "complete": true,
+            "naturalWidth": 2400,
+            "naturalHeight": 1600,
+            "rect": {
+              "width": 356,
+              "height": 298
+            }
+          }
+        ],
+        "brokenImages": [],
+        "focusableCount": 9,
+        "focusFailures": [],
+        "focusResults": [
+          {
+            "index": 0,
+            "tag": "a",
+            "text": "SKIP TO THE CAROB STORY",
+            "focused": true
+          },
+          {
+            "index": 1,
+            "tag": "a",
+            "text": "maple moon",
+            "focused": true
+          },
+          {
+            "index": 2,
+            "tag": "button",
+            "text": "0",
+            "focused": true
+          },
+          {
+            "index": 3,
+            "tag": "a",
+            "text": "SHOP THE RANGE",
+            "focused": true
+          },
+          {
+            "index": 4,
+            "tag": "a",
+            "text": "maple moon",
+            "focused": true
+          },
+          {
+            "index": 5,
+            "tag": "a",
+            "text": "SHOP",
+            "focused": true
+          },
+          {
+            "index": 6,
+            "tag": "a",
+            "text": "OUR STORY",
+            "focused": true
+          },
+          {
+            "index": 7,
+            "tag": "a",
+            "text": "STOCKISTS",
+            "focused": true
+          },
+          {
+            "index": 8,
+            "tag": "a",
+            "text": "CONTACT",
+            "focused": true
+          }
+        ],
+        "jsonLd": [
+          {
+            "index": 0,
+            "valid": true
+          },
+          {
+            "index": 1,
+            "valid": true
+          },
+          {
+            "index": 2,
+            "valid": true
+          },
+          {
+            "index": 3,
+            "valid": true
+          }
+        ],
+        "invalidJsonLd": [],
+        "overlay": false,
+        "pageSpecific": {
+          "rows": [
+            {
+              "cells": [
+                {
+                  "text": "A tree-grown pod",
+                  "top": 1160.578125,
+                  "height": 79.140625
+                },
+                {
+                  "text": "Source",
+                  "top": 1129.796875,
+                  "height": 30.78125
+                },
+                {
+                  "text": "A bean",
+                  "top": 1160.578125,
+                  "height": 79.140625
+                }
+              ],
+              "topSpread": 30.78125
+            },
+            {
+              "cells": [
+                {
+                  "text": "Naturally sweet",
+                  "top": 1270.5,
+                  "height": 79.140625
+                },
+                {
+                  "text": "Sweetness",
+                  "top": 1239.71875,
+                  "height": 30.78125
+                },
+                {
+                  "text": "Naturally bitter",
+                  "top": 1270.5,
+                  "height": 79.140625
+                }
+              ],
+              "topSpread": 30.78125
+            },
+            {
+              "cells": [
+                {
+                  "text": "Naturally caffeine free",
+                  "top": 1380.421875,
+                  "height": 79.859375
+                },
+                {
+                  "text": "Caffeine",
+                  "top": 1349.640625,
+                  "height": 30.78125
+                },
+                {
+                  "text": "Contains caffeine and theobromine",
+                  "top": 1380.421875,
+                  "height": 79.859375
+                }
+              ],
+              "topSpread": 30.78125
+            }
+          ],
+          "faqSections": 0,
+          "mainDetails": 0,
+          "skipLinkPresent": true,
+          "skipTargetPresent": true,
+          "skipLinkFocused": true,
+          "crunchyToCreamy": true
+        }
+      },
+      "consoleErrors": [],
+      "pageErrors": [],
+      "requestFailures": [],
+      "badResponses": [],
+      "screenshot": {
+        "path": "/Users/handtomouse/maplemoon-website/_wip/evidence/lane_f_independent_cert_20260816T143809/carob-story-390.png",
+        "bytes": 795196,
+        "width": 390,
+        "height": 2549,
+        "channelStdev": [
+          46.17151062816575,
+          45.48590260011392,
+          46.85130286128927
+        ]
+      },
+      "assertions": {
+        "http200": true,
+        "exactWidth": true,
+        "nonblank": true,
+        "screenshotWidth": true,
+        "imagesHealthy": true,
+        "focusablePositive": true,
+        "jsonLdHealthy": true,
+        "noOverlay": true,
+        "noErrors": true,
+        "comparisonAlignment": true,
+        "noInPageFaq": true,
+        "skipLinkAccessible": true,
+        "crunchyToCreamy": true
+      },
+      "pass": true
+    },
+    {
+      "page": "carob-story",
+      "width": 1440,
+      "url": "http://127.0.0.1:8772/_wip/carob-story.WIP.html",
+      "httpStatus": 200,
+      "metrics": {
+        "expectedWidth": 1440,
+        "clientWidth": 1440,
+        "scrollWidth": 1440,
+        "bodyWidth": 1440,
+        "bodyHeight": 1720,
+        "textLength": 1318,
+        "imageCount": 3,
+        "images": [
+          {
+            "src": "http://127.0.0.1:8772/assets/licensed/carob_farm/australian-carob-0205-16x9.jpg",
+            "complete": true,
+            "naturalWidth": 1600,
+            "naturalHeight": 900,
+            "rect": {
+              "width": 572,
+              "height": 398
+            }
+          },
+          {
+            "src": "http://127.0.0.1:8772/assets/licensed/carob_pods_macro.jpg",
+            "complete": true,
+            "naturalWidth": 1600,
+            "naturalHeight": 1068,
+            "rect": {
+              "width": 429.578125,
+              "height": 100
+            }
+          },
+          {
+            "src": "http://127.0.0.1:8772/assets/photo_finals/maplemoon_heros41_brandmatched.webp",
+            "complete": true,
+            "naturalWidth": 2400,
+            "naturalHeight": 1600,
+            "rect": {
+              "width": 1158,
+              "height": 283.515625
+            }
+          }
+        ],
+        "brokenImages": [],
+        "focusableCount": 13,
+        "focusFailures": [],
+        "focusResults": [
+          {
+            "index": 0,
+            "tag": "a",
+            "text": "SKIP TO THE CAROB STORY",
+            "focused": true
+          },
+          {
+            "index": 1,
+            "tag": "a",
+            "text": "SHOP",
+            "focused": true
+          },
+          {
+            "index": 2,
+            "tag": "a",
+            "text": "OUR STORY",
+            "focused": true
+          },
+          {
+            "index": 3,
+            "tag": "a",
+            "text": "WHAT IS CAROB",
+            "focused": true
+          },
+          {
+            "index": 4,
+            "tag": "a",
+            "text": "maple moon",
+            "focused": true
+          },
+          {
+            "index": 5,
+            "tag": "a",
+            "text": "STOCKISTS",
+            "focused": true
+          },
+          {
+            "index": 6,
+            "tag": "button",
+            "text": "0",
+            "focused": true
+          },
+          {
+            "index": 7,
+            "tag": "a",
+            "text": "SHOP THE RANGE",
+            "focused": true
+          },
+          {
+            "index": 8,
+            "tag": "a",
+            "text": "maple moon",
+            "focused": true
+          },
+          {
+            "index": 9,
+            "tag": "a",
+            "text": "SHOP",
+            "focused": true
+          },
+          {
+            "index": 10,
+            "tag": "a",
+            "text": "OUR STORY",
+            "focused": true
+          },
+          {
+            "index": 11,
+            "tag": "a",
+            "text": "STOCKISTS",
+            "focused": true
+          },
+          {
+            "index": 12,
+            "tag": "a",
+            "text": "CONTACT",
+            "focused": true
+          }
+        ],
+        "jsonLd": [
+          {
+            "index": 0,
+            "valid": true
+          },
+          {
+            "index": 1,
+            "valid": true
+          },
+          {
+            "index": 2,
+            "valid": true
+          },
+          {
+            "index": 3,
+            "valid": true
+          }
+        ],
+        "invalidJsonLd": [],
+        "overlay": false,
+        "pageSpecific": {
+          "rows": [
+            {
+              "cells": [
+                {
+                  "text": "A tree-grown pod",
+                  "top": 842.625,
+                  "height": 47.109375
+                },
+                {
+                  "text": "Source",
+                  "top": 842.625,
+                  "height": 47.109375
+                },
+                {
+                  "text": "A bean",
+                  "top": 842.625,
+                  "height": 47.109375
+                }
+              ],
+              "topSpread": 0
+            },
+            {
+              "cells": [
+                {
+                  "text": "Naturally sweet",
+                  "top": 889.734375,
+                  "height": 47.109375
+                },
+                {
+                  "text": "Sweetness",
+                  "top": 889.734375,
+                  "height": 47.109375
+                },
+                {
+                  "text": "Naturally bitter",
+                  "top": 889.734375,
+                  "height": 47.109375
+                }
+              ],
+              "topSpread": 0
+            },
+            {
+              "cells": [
+                {
+                  "text": "Naturally caffeine free",
+                  "top": 936.84375,
+                  "height": 47.109375
+                },
+                {
+                  "text": "Caffeine",
+                  "top": 936.84375,
+                  "height": 47.109375
+                },
+                {
+                  "text": "Contains caffeine and theobromine",
+                  "top": 936.84375,
+                  "height": 47.109375
+                }
+              ],
+              "topSpread": 0
+            }
+          ],
+          "faqSections": 0,
+          "mainDetails": 0,
+          "skipLinkPresent": true,
+          "skipTargetPresent": true,
+          "skipLinkFocused": true,
+          "crunchyToCreamy": true
+        }
+      },
+      "consoleErrors": [],
+      "pageErrors": [],
+      "requestFailures": [],
+      "badResponses": [],
+      "screenshot": {
+        "path": "/Users/handtomouse/maplemoon-website/_wip/evidence/lane_f_independent_cert_20260816T143809/carob-story-1440.png",
+        "bytes": 1460719,
+        "width": 1440,
+        "height": 1720,
+        "channelStdev": [
+          40.88121166186181,
+          41.0766804364863,
+          42.86682607268715
+        ]
+      },
+      "assertions": {
+        "http200": true,
+        "exactWidth": true,
+        "nonblank": true,
+        "screenshotWidth": true,
+        "imagesHealthy": true,
+        "focusablePositive": true,
+        "jsonLdHealthy": true,
+        "noOverlay": true,
+        "noErrors": true,
+        "comparisonAlignment": true,
+        "noInPageFaq": true,
+        "skipLinkAccessible": true,
+        "crunchyToCreamy": true
+      },
+      "pass": true
+    }
+  ],
+  "summary": {
+    "pass": 4,
+    "fail": 0,
+    "total": 4
+  }
+}

@@ -1,0 +1,159 @@
+{
+  "generatedAt": "2026-08-14T05:03:47.047Z",
+  "deployment": "https://maplemoonbuild20260813-krftm36lg-handtomouses-projects.vercel.app",
+  "deploymentId": "dpl_6gGEYQfUuXZPYGLaasVDEo9KZrQD",
+  "results": [
+    {
+      "localPath": "homepage.html",
+      "deployedName": "homepage.html",
+      "http": 200,
+      "localBytes": 209295,
+      "deployedBytes": 209295,
+      "localSha256": "27921b2a466ccb670b2851a73043429763d3423bcaf651069e4e860dc01a78b1",
+      "deployedSha256": "27921b2a466ccb670b2851a73043429763d3423bcaf651069e4e860dc01a78b1",
+      "cmp": true,
+      "pass": true
+    },
+    {
+      "localPath": "our-story.html",
+      "deployedName": "our-story.html",
+      "http": 200,
+      "localBytes": 90572,
+      "deployedBytes": 90572,
+      "localSha256": "2db31868a9791f373f156e7cdeb8261e494d1d47e9418a94c28156e213df7711",
+      "deployedSha256": "2db31868a9791f373f156e7cdeb8261e494d1d47e9418a94c28156e213df7711",
+      "cmp": true,
+      "pass": true
+    },
+    {
+      "localPath": "carob-story.html",
+      "deployedName": "carob-story.html",
+      "http": 200,
+      "localBytes": 62273,
+      "deployedBytes": 62273,
+      "localSha256": "4fd9ad0fabb9d60d0f391925f5a382ccfc8f705b60fca1c681f403a5cd9734bd",
+      "deployedSha256": "4fd9ad0fabb9d60d0f391925f5a382ccfc8f705b60fca1c681f403a5cd9734bd",
+      "cmp": true,
+      "pass": true
+    },
+    {
+      "localPath": "shop.html",
+      "deployedName": "shop.html",
+      "http": 200,
+      "localBytes": 82545,
+      "deployedBytes": 82545,
+      "localSha256": "f111ad5123e34dadd46ac497fca286066efc67c05dd7e68f0d3e70c97c735038",
+      "deployedSha256": "f111ad5123e34dadd46ac497fca286066efc67c05dd7e68f0d3e70c97c735038",
+      "cmp": true,
+      "pass": true
+    },
+    {
+      "localPath": "faq.html",
+      "deployedName": "faq.html",
+      "http": 200,
+      "localBytes": 42132,
+      "deployedBytes": 42132,
+      "localSha256": "c5ce7aaf0b9b3221f34eb2928fc2ff6732fc1a915ea80144a4ade2b94011fb6e",
+      "deployedSha256": "c5ce7aaf0b9b3221f34eb2928fc2ff6732fc1a915ea80144a4ade2b94011fb6e",
+      "cmp": true,
+      "pass": true
+    },
+    {
+      "localPath": "stockists.html",
+      "deployedName": "stockists.html",
+      "http": 200,
+      "localBytes": 119551,
+      "deployedBytes": 119551,
+      "localSha256": "4821adfe88680d4f174b7a8700c8d8a65594df2901bf3a7109d51b09040cb887",
+      "deployedSha256": "4821adfe88680d4f174b7a8700c8d8a65594df2901bf3a7109d51b09040cb887",
+      "cmp": true,
+      "pass": true
+    },
+    {
+      "localPath": "pure-carob-bar.html",
+      "deployedName": "pure-carob-bar.html",
+      "http": 200,
+      "localBytes": 25507,
+      "deployedBytes": 25507,
+      "localSha256": "015cde27ecc60f3c444820a551c39f6e9c985fc5b2e59bdaea5f496c1c236b65",
+      "deployedSha256": "015cde27ecc60f3c444820a551c39f6e9c985fc5b2e59bdaea5f496c1c236b65",
+      "cmp": true,
+      "pass": true
+    },
+    {
+      "localPath": "assets/design-system/mm-chrome.js",
+      "deployedName": "mm-chrome.js",
+      "http": 200,
+      "localBytes": 5025,
+      "deployedBytes": 5025,
+      "localSha256": "cc72e22a121cbdb1ec695d181219ca696b0e020f82fedc243e1f407154c1316c",
+      "deployedSha256": "cc72e22a121cbdb1ec695d181219ca696b0e020f82fedc243e1f407154c1316c",
+      "cmp": true,
+      "pass": true
+    },
+    {
+      "localPath": "assets/design-system/mm-chrome.css",
+      "deployedName": "mm-chrome.css",
+      "http": 200,
+      "localBytes": 5871,
+      "deployedBytes": 5871,
+      "localSha256": "38ae8acbbdd30ebdfbe633ab1f042549fd2573c7e458e946cc2c53596b32349a",
+      "deployedSha256": "38ae8acbbdd30ebdfbe633ab1f042549fd2573c7e458e946cc2c53596b32349a",
+      "cmp": true,
+      "pass": true
+    },
+    {
+      "localPath": "assets/design-system/mm-tokens.css",
+      "deployedName": "mm-tokens.css",
+      "http": 200,
+      "localBytes": 3073,
+      "deployedBytes": 3073,
+      "localSha256": "cab9a32ee62a5a51d9297ab0320e666c1081a7a81c8c83a3bc48d1f1d2341908",
+      "deployedSha256": "cab9a32ee62a5a51d9297ab0320e666c1081a7a81c8c83a3bc48d1f1d2341908",
+      "cmp": true,
+      "pass": true
+    },
+    {
+      "localPath": "assets/design-system/mm-primitives.css",
+      "deployedName": "mm-primitives.css",
+      "http": 200,
+      "localBytes": 9006,
+      "deployedBytes": 9006,
+      "localSha256": "3108718d5109a28a6221a2eca56fcf5138195f8c020e0d64983b1be1afb839c7",
+      "deployedSha256": "3108718d5109a28a6221a2eca56fcf5138195f8c020e0d64983b1be1afb839c7",
+      "cmp": true,
+      "pass": true
+    },
+    {
+      "localPath": "mock-cart.js",
+      "deployedName": "mock-cart.js",
+      "http": 200,
+      "localBytes": 33609,
+      "deployedBytes": 33609,
+      "localSha256": "5eea3ac3c707964f878b5221c0f001902dc4f6c84d56457fac1455a4e1844816",
+      "deployedSha256": "5eea3ac3c707964f878b5221c0f001902dc4f6c84d56457fac1455a4e1844816",
+      "cmp": true,
+      "pass": true
+    },
+    {
+      "localPath": "mock-cart.css",
+      "deployedName": "mock-cart.css",
+      "http": 200,
+      "localBytes": 13040,
+      "deployedBytes": 13040,
+      "localSha256": "0ebf64caa50e0650778e3bbb84718d0bb9dd716531c02fbd4ee01c9c5cf1df7c",
+      "deployedSha256": "0ebf64caa50e0650778e3bbb84718d0bb9dd716531c02fbd4ee01c9c5cf1df7c",
+      "cmp": true,
+      "pass": true
+    }
+  ],
+  "exactCopy": {
+    "newQuestion": 1,
+    "newAnswer": 1,
+    "oldQuestion": 0,
+    "oldAnswer": 0,
+    "pass": true
+  },
+  "allThirteenByteIdentical": true,
+  "allPass": true
+}

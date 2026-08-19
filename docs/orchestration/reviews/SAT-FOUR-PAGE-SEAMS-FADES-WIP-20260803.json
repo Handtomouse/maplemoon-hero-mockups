@@ -1,0 +1,130 @@
+{
+  "schema": "maplemoon-receipt/v2",
+  "receipt_id": "SAT-FOUR-PAGE-SEAMS-FADES-WIP-20260803-RECEIPT-001",
+  "packet_id": "SAT-FOUR-PAGE-SEAMS-FADES-WIP-20260803",
+  "worker_thread_id": "019fa858-05c9-7631-b26e-8f5cbbf1387a",
+  "worker": "Codex Main Boss",
+  "started_at": "2026-08-03T04:53:52+10:00",
+  "completed_at": "2026-08-03T05:12:22+10:00",
+  "reconciled_at": "2026-08-03T05:54:58+10:00",
+  "outcome": "HOLD",
+  "confidence": "high",
+  "files_read": [
+    "_wip/evidence/CODEX-PACKET-REQUEST-SEAMS-AND-FADES-20260803.md",
+    "_wip/evidence/NATE-REVIEW-PASS-20260803.md",
+    "_wip/evidence/FAN-OUT-DISPATCH-20260803.md",
+    "docs/orchestration/SIDECHAT_RECEIPT_GATE.md",
+    "docs/orchestration/LOCK_MANIFEST.json",
+    "docs/client-review/2026-08-01-saturday-review/staging-v1/clean/MANIFEST.json",
+    "_wip/homepage_real_1_lead_photo.WIP.html",
+    "_wip/our-story.WIP.html",
+    "_wip/carob-story.WIP.html",
+    "_wip/stockists.WIP.html"
+  ],
+  "files_changed": [
+    "docs/orchestration/reviews/SAT-FOUR-PAGE-SEAMS-FADES-WIP-20260803.json",
+    "_wip/homepage_real_1_lead_photo.WIP.html",
+    "_wip/our-story.WIP.html",
+    "_wip/carob-story.WIP.html",
+    "_wip/stockists.WIP.html"
+  ],
+  "files_confirmed_untouched": [
+    "docs/orchestration/packets/SAT-FOUR-PAGE-SEAMS-FADES-WIP-20260803.md",
+    "docs/client-review/2026-08-01-saturday-review/staging-v1/clean/MANIFEST.json"
+  ],
+  "pre_sha256": {
+    "docs/orchestration/packets/SAT-FOUR-PAGE-SEAMS-FADES-WIP-20260803.md": "f0e6f5785b6b5caa3fc44330e69d4e267186dc86ec7971e09dcc550484bf7f1a",
+    "docs/orchestration/reviews/SAT-FOUR-PAGE-SEAMS-FADES-WIP-20260803.json": null,
+    "_wip/homepage_real_1_lead_photo.WIP.html": "64893f642ea86fab925561893b7239a674477b0a72c1c0396d6ebc16b00caffd",
+    "_wip/our-story.WIP.html": "a823f0f7291ee3b66acfefd0a718227c47717cf7811747db9216a1e17612fb1d",
+    "_wip/carob-story.WIP.html": "e1695095f6b8e18eccea468dfd8a09013e85b5c64c5de427b3d8e5701e6f4320",
+    "_wip/stockists.WIP.html": "6e92382ccec4874aac79c32e644d0ed130d03400c7d23682623b0e4154a6fa36"
+  },
+  "post_sha256": {
+    "docs/orchestration/packets/SAT-FOUR-PAGE-SEAMS-FADES-WIP-20260803.md": "f0e6f5785b6b5caa3fc44330e69d4e267186dc86ec7971e09dcc550484bf7f1a",
+    "docs/orchestration/reviews/SAT-FOUR-PAGE-SEAMS-FADES-WIP-20260803.json": null,
+    "_wip/homepage_real_1_lead_photo.WIP.html": "7b2052d0ab72a7d6e58b35af08336f9ea91455bc14a081cd3ae3baa5078f45a1",
+    "_wip/our-story.WIP.html": "48074bbe1284ac93fa08be5efa5e03b6d8ca03044f003ebcbdb959bd5d6b73bc",
+    "_wip/carob-story.WIP.html": "2535371173e491a86bf3ca6b53ed342ae21f3635b333dfa89454dd3dff418777",
+    "_wip/stockists.WIP.html": "add182aeb7458c5d48ab28dab13f85ddd3738363f34505fdd1c46058c7017823"
+  },
+  "checkpoint_path": "_wip/checkpoints/SAT-FOUR-PAGE-SEAMS-FADES-WIP-20260803_20260803_045345_AEST",
+  "checks": [
+    {
+      "command": "python3 -B scripts/check-maplemoon-receipt.py verify --phase start",
+      "exit_code": 0,
+      "result": "PASS: the six-path phase-start gate accepted the timestamped checkpoint before CSS mutation."
+    },
+    {
+      "command": "HTML parsing and git diff --check",
+      "exit_code": 0,
+      "result": "PASS: all four edited WIPs remain parseable and the admitted diff has no whitespace errors."
+    },
+    {
+      "command": "in-app Browser top-to-bottom rendered review at 1440px, 834px and 390px",
+      "exit_code": 0,
+      "result": "PASS: Homepage 11, Our Story 11, Carob Story 6 and Stockists 3 sections were reviewed at all three widths after loading; each page had zero broken images and zero horizontal overflow."
+    },
+    {
+      "command": "Homepage pattern and invariant inspection",
+      "exit_code": 0,
+      "result": "PASS: the existing hero dissolve, symmetric story fade and 24px ritual-card softness remain; the new Homepage CSS is confined to the carob image-field bridge."
+    },
+    {
+      "command": "independent read-only checkpoint diff review",
+      "exit_code": 0,
+      "result": "PASS for the admitted four files: changes are +30, +42, +44 and +19 CSS-only lines; removing each named style block reproduces its checkpoint hash exactly, with no copy, markup, scripts, assets or interactions changed."
+    },
+    {
+      "command": "staging-v1 clean manifest SHA-256 before and after",
+      "exit_code": 0,
+      "result": "PASS: d1c66b1d5937e9956d1806dbbbff4faf4f950def046aa642ae52f809c3d52d20 remains exact; staging-v1 was not rebuilt or mutated."
+    },
+    {
+      "command": "non-target WIP stability reconciliation",
+      "exit_code": 0,
+      "result": "RECONCILED HOLD FINDING: Shop changed from admission hash 9f5a2093728df88d2d2ccf1a4138d282092192cb96b2e485f237cf23b3fa0875 to c77d1006077569203fb3f204eab506c8b1f57397408f2bb5654ec2b9aa6adda5, and FAQ changed from 4a7f5eee7096150f23f07cac6316c83893aab34135e3c40ca0e24848b77704f1 to 5dc68f31f5fb82a8149e2984541a30a4028932d2aa2f3cef11ae6940228c45fd during this phase. The read-only reconciliation command completed successfully; its finding is recorded below as an unresolved failure. These paths were not written by Main in this packet and were preserved untouched."
+    }
+  ],
+  "screenshots_or_urls": [
+    "http://127.0.0.1:3016/_wip/homepage_real_1_lead_photo.WIP.html",
+    "http://127.0.0.1:3016/_wip/our-story.WIP.html",
+    "http://127.0.0.1:3016/_wip/carob-story.WIP.html",
+    "http://127.0.0.1:3016/_wip/stockists.WIP.html"
+  ],
+  "failures": [
+    "The packet required Shop and FAQ WIP hashes to remain exact. Both changed concurrently after admission, and Shop changed again after the independent verifier had observed its original hash. Stable non-target ownership and hashes were therefore unproven at the original completion gate.",
+    "Subsequent external commits 559becc25f049f4f2bf05b16212b27f693729d68 and 2734a902139b492010e3426199e3c55a68fe47eb modified FAQ and Stockists, then Homepage, Our Story, Carob Story and Shop. All six WIP files now differ from the hashes tested by this receipt. No matching maplemoon-packet/v2 and maplemoon-receipt/v2 records with immutable worker_thread_id and ownership release were found for those commits, and this packet explicitly forbade commits. The old candidate can no longer be promoted or honestly re-gated as unchanged."
+  ],
+  "unknowns": [
+    "The commits identify Claude Opus 5 as co-author and a fan-out brief describes W1-A through W2-H lanes, but no immutable matching worker binding or valid completion receipt proves authority, independent acceptance or ownership release for the six WIP writes.",
+    "The current external commit set has not received a full rendered and interaction review against the exact current hashes."
+  ],
+  "external_subsequent_state": {
+    "head": "2734a902139b492010e3426199e3c55a68fe47eb",
+    "commits_requiring_reconciliation": [
+      "559becc25f049f4f2bf05b16212b27f693729d68",
+      "2734a902139b492010e3426199e3c55a68fe47eb"
+    ],
+    "current_wip_sha256": {
+      "_wip/homepage_real_1_lead_photo.WIP.html": "c2eddfff47b4abffdbe7c82e4066ce245c5bc3dca0e4adb64200d609bade2f04",
+      "_wip/shop.WIP.html": "f15f4070997bd8504b1fbd13fd5c03c5fd8bde9c43da353da4cbd25cef097b9e",
+      "_wip/our-story.WIP.html": "f3a72926931b7cbb2ec625a87654059a0bf2a6d34764949ec298725bccde9a06",
+      "_wip/carob-story.WIP.html": "e4cc851c3b014cb2a13d487989088764a3a4d86fc10539aba9c7efa5b690e56b",
+      "_wip/stockists.WIP.html": "75ee424e6b82f0c44b4d75d610dfda8bf2ecc318a023a41a1b6cbd5f499cbaef",
+      "_wip/faq.WIP.html": "5dc68f31f5fb82a8149e2984541a30a4028932d2aa2f3cef11ae6940228c45fd"
+    },
+    "frozen_manifest_sha256": "d1c66b1d5937e9956d1806dbbbff4faf4f950def046aa642ae52f809c3d52d20"
+  },
+  "residual_risk": [
+    "The four admitted WIP treatments were complete, visually checked and reversibly isolated at the original receipt hashes, but later external commits changed every WIP page in the six-page set. The original candidate remains recoverable from its receipt/checkpoint evidence but is no longer the checked-out state.",
+    "HEAD advanced from 07152ce54d48ae7492febacd469e1ed5efd1b85c to 5a4249bbe52658b77800649d8a635ecbb177da7f through disjoint evidence, preview-config and goal commits. Review found no overlap with the four admitted WIPs or frozen staging.",
+    "The checkpoint manifest records exact pre-hashes. Three page pre-states are also Git-recoverable from the admitted base; the Homepage pre-state is byte-reproducible by removing only the named packet style block, as independently verified."
+  ],
+  "forbidden_path_changes": [],
+  "proposed_next_state": "four_page_packet_superseded_by_unratified_six_page_external_commits",
+  "next_reviewer": "Nate after Main's read-only commit provenance reconciliation",
+  "next_action": "Choose whether Main should preserve and supersede-review the current 559becc plus 2734a90 commit state, or recovery-gate an unwind to the last verified WIP hashes; do not reset or ratify either route implicitly.",
+  "ready_to_promote": false,
+  "scope_note": "HOLD preserves the completed four-page WIP candidate and frozen staging; it authorizes no rebuild, promotion or external action."
+}

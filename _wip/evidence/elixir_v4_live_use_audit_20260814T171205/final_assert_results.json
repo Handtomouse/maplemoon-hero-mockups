@@ -1,0 +1,71 @@
+{
+  "status": "PASS",
+  "pin_results": {
+    "/Users/handtomouse/.codex/visualizations/2026/08/13/019ffd5b-edd2-7b23-8780-453f9b67a532/maplemoon-product-corrections-20260814/assets/elixir_pure_same_size_clean_edges_v4.png": {
+      "expected": "70f93f414902ae1b10e7ae1416954348aa20bd1d6950e37d05979b4e4aa9eb93",
+      "actual": "70f93f414902ae1b10e7ae1416954348aa20bd1d6950e37d05979b4e4aa9eb93"
+    },
+    "/Users/handtomouse/.codex/visualizations/2026/08/13/019ffd5b-edd2-7b23-8780-453f9b67a532/maplemoon-product-corrections-20260814/assets/elixir_spiced_same_size_clean_edges_v4.png": {
+      "expected": "414f727e84ca0dc24749b10b1092f4618e9f9fc9b954304442a7a0a8779749bb",
+      "actual": "414f727e84ca0dc24749b10b1092f4618e9f9fc9b954304442a7a0a8779749bb"
+    },
+    "/Users/handtomouse/.codex/visualizations/2026/08/13/019ffd5b-edd2-7b23-8780-453f9b67a532/maplemoon-product-corrections-20260814/assets/elixir_clean_shared_alpha_v4.png": {
+      "expected": "39d6ca8c5539d2662703dbe7fa4795c10a30172b39574c487c806ad2d7fe5850",
+      "actual": "39d6ca8c5539d2662703dbe7fa4795c10a30172b39574c487c806ad2d7fe5850"
+    },
+    "/Users/handtomouse/.codex/visualizations/2026/08/13/019ffd5b-edd2-7b23-8780-453f9b67a532/maplemoon-product-corrections-20260814/maplemoon_elixir_clean_edges_proof_v4.html": {
+      "expected": "fab275c64ec07e69ec8a3acab4c4cd32f80592e05d67251ea81137d073042e0d",
+      "actual": "fab275c64ec07e69ec8a3acab4c4cd32f80592e05d67251ea81137d073042e0d"
+    },
+    "/Users/handtomouse/maplemoon_build_20260813/shop.html": {
+      "expected": "f111ad5123e34dadd46ac497fca286066efc67c05dd7e68f0d3e70c97c735038",
+      "actual": "f111ad5123e34dadd46ac497fca286066efc67c05dd7e68f0d3e70c97c735038"
+    },
+    "/Users/handtomouse/maplemoon_build_20260813/assets/product_shots/elixir_plain.webp": {
+      "expected": "4398f43fcc7ff571f4eea4643e078f8416e6921f4e979f5bf31e53338e04916a",
+      "actual": "4398f43fcc7ff571f4eea4643e078f8416e6921f4e979f5bf31e53338e04916a"
+    },
+    "/Users/handtomouse/maplemoon_build_20260813/assets/product_shots/elixir_spiced.webp": {
+      "expected": "9b92c0f0a0cc11b11aa9a5fa4cb7683b420db373e556c74adcb1ba576ffe1163",
+      "actual": "9b92c0f0a0cc11b11aa9a5fa4cb7683b420db373e556c74adcb1ba576ffe1163"
+    },
+    "/Users/handtomouse/maplemoon-website/docs/orchestration/reviews/MAPLEMOON-ASSET-SLOT-AUTHORITY-MATRIX-20260814T143614.md": {
+      "expected": "8b68ad125353c57befd0f0035acae2530756cb52c9a242cbdd12a148becb40a0",
+      "actual": "8b68ad125353c57befd0f0035acae2530756cb52c9a242cbdd12a148becb40a0"
+    },
+    "/Users/handtomouse/maplemoon-website/docs/orchestration/reviews/MAPLEMOON-ASSET-AUTHORITY-ADDENDUM-20260814T160123.md": {
+      "expected": "ccc4f3ca6991fd33b3f1348c051bc0cb6a7e6b920767ba0ca6c0581259f626f0",
+      "actual": "ccc4f3ca6991fd33b3f1348c051bc0cb6a7e6b920767ba0ca6c0581259f626f0"
+    }
+  },
+  "authority": {
+    "matrix_holds_plain": true,
+    "matrix_holds_spiced": true,
+    "addendum_reconstructed_text_hold": true,
+    "addendum_nate_approval_required": true,
+    "photo_ratio_36_preserved": true
+  },
+  "screenshots": {
+    "/Users/handtomouse/maplemoon-website/_wip/evidence/elixir_v4_live_use_audit_20260814T171205/review_surface_390.png": {
+      "exists": true,
+      "bytes": 708173
+    },
+    "/Users/handtomouse/maplemoon-website/_wip/evidence/elixir_v4_live_use_audit_20260814T171205/review_surface_900.png": {
+      "exists": true,
+      "bytes": 884453
+    },
+    "/Users/handtomouse/maplemoon-website/_wip/evidence/elixir_v4_live_use_audit_20260814T171205/review_surface_1440.png": {
+      "exists": true,
+      "bytes": 2100542
+    }
+  },
+  "checks": {
+    "all_close_hashes_match": true,
+    "mechanical_pass": true,
+    "browser_pass": true,
+    "binding_scan_pass_unwired": true,
+    "authority_holds_present": true,
+    "screenshots_nonblank": true
+  },
+  "live_use_boundary": "HOLD_RECONSTRUCTED_LABEL_AND_NATE_LIVE_SLOT_APPROVAL_REQUIRED"
+}

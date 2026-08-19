@@ -1,0 +1,10 @@
+HTTP/2 308 
+cache-control: public, max-age=0, must-revalidate
+content-type: text/plain
+date: Sun, 16 Aug 2026 08:09:45 GMT
+location: /homepage
+refresh: 0;url=/homepage
+server: Vercel
+strict-transport-security: max-age=63072000; includeSubDomains; preload
+x-vercel-id: iad1::n75vc-1786867785589-d5098df1b9be
+

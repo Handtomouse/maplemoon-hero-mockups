@@ -1,0 +1,22 @@
+HTTP/2 200 
+accept-ranges: bytes
+access-control-allow-origin: *
+age: 15716
+cache-control: public, max-age=0, must-revalidate
+content-disposition: inline; filename="homepage"
+content-security-policy: default-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://use.typekit.net https://p.typekit.net; font-src 'self' https://fonts.gstatic.com https://use.typekit.net https://p.typekit.net; img-src 'self' data:; media-src 'self'; script-src 'self' 'unsafe-inline'; connect-src 'self'; frame-ancestors 'self'
+content-type: text/html; charset=utf-8
+date: Sun, 16 Aug 2026 08:03:51 GMT
+etag: "6197879a5ca9d3ed0452773abc0bbeb4"
+last-modified: Sun, 16 Aug 2026 03:41:55 GMT
+permissions-policy: camera=(), microphone=(), geolocation=()
+referrer-policy: strict-origin-when-cross-origin
+server: Vercel
+strict-transport-security: max-age=63072000; includeSubDomains; preload
+x-content-type-options: nosniff
+x-frame-options: SAMEORIGIN
+x-robots-tag: noindex, nofollow, noarchive, nosnippet
+x-vercel-cache: HIT
+x-vercel-id: iad1::wfwck-1786867431588-0c3ee679bf4e
+content-length: 208556
+

@@ -1,0 +1,97 @@
+{
+  "schema": "maplemoon-receipt/v2",
+  "receipt_id": "MAPLEMOON-SIX-PAGE-VISUAL-QA-20260803-RECEIPT-001",
+  "packet_id": "MAPLEMOON-SIX-PAGE-VISUAL-QA-20260803",
+  "worker_thread_id": "019fc329-b874-72b3-82d9-95bfe0c3af45",
+  "worker": "Codex bounded read-only visual QA worker",
+  "started_at": "2026-08-02T15:50:42.231860Z",
+  "completed_at": "2026-08-02T15:57:52Z",
+  "outcome": "HOLD",
+  "confidence": "high",
+  "files_read": [
+    "docs/orchestration/packets/MAPLEMOON-SIX-PAGE-VISUAL-QA-20260803.md",
+    "docs/orchestration/SIDECHAT_RECEIPT_GATE.md",
+    "docs/orchestration/GOV-01_RATIFIED_LEDGER.md",
+    "docs/orchestration/SATURDAY_FEEDBACK_REGISTER_20260801.md",
+    "docs/orchestration/reviews/CARLI-CANVA-NOTE-REGISTER-20260731.md",
+    "_wip/checkpoints/MAPLEMOON-SIX-PAGE-VISUAL-QA-20260803_20260803_014915_AEST/RECOVERY_MANIFEST.json",
+    "_wip/reviews/canva-full-page-captures-20260803/canva-ready-v2 (18 admitted PNGs)",
+    "docs/client-review/2026-08-01-saturday-review/staging-v1/MANIFEST.json",
+    "docs/client-review/2026-08-01-saturday-review/staging-v1/clean/MANIFEST.json",
+    "docs/client-review/2026-08-01-saturday-review/staging-v1/annotated/MANIFEST.json"
+  ],
+  "files_changed": [
+    "_wip/reviews/maplemoon-six-page-qa-20260803/visual",
+    "docs/orchestration/reviews/MAPLEMOON-SIX-PAGE-VISUAL-QA-20260803.json"
+  ],
+  "files_confirmed_untouched": [
+    "_wip/reviews/canva-full-page-captures-20260803/canva-ready-v2 (all 18 supplied PNGs)",
+    "docs/client-review/2026-08-01-saturday-review/staging-v1/MANIFEST.json",
+    "docs/client-review/2026-08-01-saturday-review/staging-v1/clean/MANIFEST.json",
+    "docs/client-review/2026-08-01-saturday-review/staging-v1/annotated/MANIFEST.json"
+  ],
+  "pre_sha256": {
+    "_wip/reviews/maplemoon-six-page-qa-20260803/visual": null,
+    "docs/orchestration/reviews/MAPLEMOON-SIX-PAGE-VISUAL-QA-20260803.json": null,
+    "docs/client-review/2026-08-01-saturday-review/staging-v1/MANIFEST.json": "d0d834b9b9173a497d0b03e39e4c282a7d5247f51484ebfd7ba3a64e8416bf7c",
+    "docs/client-review/2026-08-01-saturday-review/staging-v1/clean/MANIFEST.json": "d1c66b1d5937e9956d1806dbbbff4faf4f950def046aa642ae52f809c3d52d20",
+    "docs/client-review/2026-08-01-saturday-review/staging-v1/annotated/MANIFEST.json": "3be3c0f2df4658558c667b3e9cc6d55966d6a1d7ce9fa9874c46a0afc44244c7"
+  },
+  "post_sha256": {
+    "_wip/reviews/maplemoon-six-page-qa-20260803/visual": "0d70233dcdb2951c8e09728182b52dc3fd457d92c6dc5fcc1dc461e952456435",
+    "docs/orchestration/reviews/MAPLEMOON-SIX-PAGE-VISUAL-QA-20260803.json": null,
+    "docs/client-review/2026-08-01-saturday-review/staging-v1/MANIFEST.json": "d0d834b9b9173a497d0b03e39e4c282a7d5247f51484ebfd7ba3a64e8416bf7c",
+    "docs/client-review/2026-08-01-saturday-review/staging-v1/clean/MANIFEST.json": "d1c66b1d5937e9956d1806dbbbff4faf4f950def046aa642ae52f809c3d52d20",
+    "docs/client-review/2026-08-01-saturday-review/staging-v1/annotated/MANIFEST.json": "3be3c0f2df4658558c667b3e9cc6d55966d6a1d7ce9fa9874c46a0afc44244c7"
+  },
+  "checkpoint_path": "_wip/checkpoints/MAPLEMOON-SIX-PAGE-VISUAL-QA-20260803_20260803_014915_AEST",
+  "checks": [
+    {
+      "command": "python3 -B scripts/check-maplemoon-receipt.py verify --packet docs/orchestration/packets/MAPLEMOON-SIX-PAGE-VISUAL-QA-20260803.md --checkpoint _wip/checkpoints/MAPLEMOON-SIX-PAGE-VISUAL-QA-20260803_20260803_014915_AEST --phase start",
+      "exit_code": 0,
+      "result": "PASS packet=MAPLEMOON-SIX-PAGE-VISUAL-QA-20260803 phase=start scope=2"
+    },
+    {
+      "command": "shasum -a 256 on three authority MANIFEST.json files",
+      "exit_code": 0,
+      "result": "All three actual SHA-256 values exactly matched the packet pins."
+    },
+    {
+      "command": "rg --files admitted capture root plus sips -g pixelWidth -g pixelHeight",
+      "exit_code": 0,
+      "result": "PASS: 18 PNGs present; each filename's viewport width was exact (390, 834, or 1440). Dimensions and per-file SHA-256 are recorded in visual/coverage.json."
+    },
+    {
+      "command": "read-only visual review of every admitted full-page PNG",
+      "exit_code": 0,
+      "result": "PASS coverage: 6 pages x 3 viewports inspected; section-level PASS coverage and all material exceptions are recorded in visual/coverage.json and visual/findings.json."
+    }
+  ],
+  "screenshots_or_urls": [
+    "file:///Users/handtomouse/maplemoon-website/_wip/reviews/canva-full-page-captures-20260803/canva-ready-v2/01-homepage--desktop-1440.png",
+    "file:///Users/handtomouse/maplemoon-website/_wip/reviews/canva-full-page-captures-20260803/canva-ready-v2/02-shop--desktop-1440.png",
+    "file:///Users/handtomouse/maplemoon-website/_wip/reviews/canva-full-page-captures-20260803/canva-ready-v2/03-our-story--desktop-1440.png",
+    "file:///Users/handtomouse/maplemoon-website/_wip/reviews/canva-full-page-captures-20260803/canva-ready-v2/04-carob-story--desktop-1440.png",
+    "file:///Users/handtomouse/maplemoon-website/_wip/reviews/canva-full-page-captures-20260803/canva-ready-v2/05-stockists--desktop-1440.png",
+    "file:///Users/handtomouse/maplemoon-website/_wip/reviews/canva-full-page-captures-20260803/canva-ready-v2/06-faq--desktop-1440.png",
+    "file:///Users/handtomouse/maplemoon-website/_wip/reviews/maplemoon-six-page-qa-20260803/visual/coverage.json"
+  ],
+  "failures": [
+    "VIS-001: unstyled duplicate navigation is visibly exposed across all 18 surfaces.",
+    "IMG-001 to IMG-004: Shop, Our Story, responsive Carob Story, and responsive Stockists contain blank framed image areas that make the clean capture visibly unfinished.",
+    "FACT-001 and FACT-002: public claims and catalogue/commerce facts remain authority-gated; no factual correction was inferred from the review captures."
+  ],
+  "unknowns": [
+    "This packet admitted immutable screenshots, not a fresh live-site or keyboard interaction inspection. The report proves only the captured surfaces and does not certify current 127.0.0.1:3011 state, interactions, focus order, or 200 percent native browser zoom."
+  ],
+  "residual_risk": [
+    "The supplied captures are an artifact review, not a source-of-truth catalogue, factual-claim, or live-runtime acceptance record.",
+    "No replacement source asset or approved factual copy was provided; any correction must have its own admitted, source-bound packet.",
+    "No critical or major issue may remain in the Saturday review artifact, so this packet cannot be promoted from the recorded evidence."
+  ],
+  "forbidden_path_changes": [],
+  "proposed_next_state": "hold",
+  "next_reviewer": "Main coordinator independent receipt verification",
+  "next_action": "Main should open one source-bound correction decision for VIS-001 and the four blank-media clusters; retain FACT-001 and FACT-002 as separate Carli/catalogue authority gates.",
+  "ready_to_promote": false
+}

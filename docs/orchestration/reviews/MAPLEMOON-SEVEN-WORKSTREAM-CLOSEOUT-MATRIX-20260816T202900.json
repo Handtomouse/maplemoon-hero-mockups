@@ -1,0 +1,104 @@
+{
+  "schema": "maplemoon-receipt/v2",
+  "receipt_id": "MAPLEMOON-SEVEN-WORKSTREAM-CLOSEOUT-MATRIX-20260816T202900-RECEIPT-01",
+  "packet_id": "MAPLEMOON-SEVEN-WORKSTREAM-CLOSEOUT-MATRIX-20260816T202900",
+  "worker_thread_id": "/root",
+  "worker": "Codex /root",
+  "started_at": "2026-08-16T10:29:00Z",
+  "completed_at": "2026-08-16T10:32:12Z",
+  "files_read": [
+    "/Users/handtomouse/maplemoon-website/docs/orchestration/packets/MAPLEMOON-SEVEN-WORKSTREAM-PROGRAM-20260814T143154.md",
+    "/Users/handtomouse/maplemoon-website/docs/orchestration/LOCK_MANIFEST.json",
+    "/Users/handtomouse/maplemoon-website/docs/orchestration/reviews/MAPLEMOON-PDP-ROUTE-REPAIR-20260816.json",
+    "/Users/handtomouse/maplemoon-website/docs/orchestration/reviews/MAPLEMOON-TRACK1-REPAIR-20260816.json",
+    "/Users/handtomouse/maplemoon-website/docs/orchestration/reviews/MAPLEMOON-FOUNDER73-PAIR-HERO-FEASIBILITY-20260816.json",
+    "/Users/handtomouse/maplemoon-website/docs/orchestration/reviews/MAPLEMOON-LANE-E-INDEPENDENT-CERT-20260816T133827.json",
+    "/Users/handtomouse/maplemoon-website/docs/orchestration/reviews/MAPLEMOON-LANE-F-INDEPENDENT-CERT-20260816T143809.json",
+    "/Users/handtomouse/maplemoon-website/docs/orchestration/reviews/MAPLEMOON-CONTENT-CATALOGUE-TRUTH-AUDIT-R2-20260814T164221.md",
+    "/Users/handtomouse/maplemoon-website/docs/orchestration/reviews/MAPLEMOON-INTEGRATED-HEADER-CART-CERT-R2-20260814T163003.json",
+    "/Users/handtomouse/maplemoon-website/docs/orchestration/reviews/MAPLEMOON-NATIVE-200-ZOOM-AUDIT-R2-20260814T180224.json",
+    "/Users/handtomouse/maplemoon-website/docs/orchestration/reviews/MAPLEMOON-NATE-DECISION-GATE-R2-20260814T184422.md",
+    "/Users/handtomouse/maplemoon-website/docs/orchestration/reviews/MAPLEMOON-NATE-DECISION-ADDENDUM-R3-20260815T043624.md",
+    "/Users/handtomouse/maplemoon_cat01a_20260815/LEDGER.md",
+    "/Users/handtomouse/maplemoon_cat01a_20260815/NEEDED.md",
+    "/Users/handtomouse/maplemoon_shopify_groundwork_20260815/PLAN.md",
+    "/Users/handtomouse/maplemoon_shopify_groundwork_20260815/BLOCKED.md",
+    "/Users/handtomouse/maplemoon_ps_prep_20260815/WORKSHEET.md",
+    "/Users/handtomouse/maplemoon_rebuild_20260815/FOUNDER_FRAMES.md",
+    "/Users/handtomouse/Documents/Codex/2026-08-13/maple-moon-shared-site-styles-kit/outputs/version-lanes/v0.4-provisional/BOSS-HANDOFF.md",
+    "/Users/handtomouse/Documents/Codex/2026-08-13/maple-moon-shared-site-styles-kit/outputs/version-lanes/v0.4-provisional/VERIFICATION-RECEIPT.md"
+  ],
+  "files_changed": [
+    "maplemoon-website/docs/orchestration/reviews/MAPLEMOON-SEVEN-WORKSTREAM-CLOSEOUT-MATRIX-20260816T202900.md",
+    "maplemoon-website/docs/orchestration/reviews/MAPLEMOON-SEVEN-WORKSTREAM-CLOSEOUT-MATRIX-20260816T202900.json"
+  ],
+  "pre_sha256": {
+    "maplemoon-website/docs/orchestration/reviews/MAPLEMOON-SEVEN-WORKSTREAM-CLOSEOUT-MATRIX-20260816T202900.md": null,
+    "maplemoon-website/docs/orchestration/reviews/MAPLEMOON-SEVEN-WORKSTREAM-CLOSEOUT-MATRIX-20260816T202900.json": null
+  },
+  "post_sha256": {
+    "maplemoon-website/docs/orchestration/reviews/MAPLEMOON-SEVEN-WORKSTREAM-CLOSEOUT-MATRIX-20260816T202900.md": "c04cdcd568c93b445cec0419c3ecdc88e5294de11aff15bed3fc84df566d7e57",
+    "maplemoon-website/docs/orchestration/reviews/MAPLEMOON-SEVEN-WORKSTREAM-CLOSEOUT-MATRIX-20260816T202900.json": null
+  },
+  "checks": [
+    {
+      "command": "checkpoint and phase=start gate",
+      "exit_code": 0,
+      "result": "PASS checkpoint packet=MAPLEMOON-SEVEN-WORKSTREAM-CLOSEOUT-MATRIX-20260816T202900 files=2 path=/Users/handtomouse/maplemoon-website/_wip/checkpoints/MAPLEMOON-SEVEN-WORKSTREAM-CLOSEOUT-MATRIX-20260816T202900_20260816_202900_AEST; PASS packet=MAPLEMOON-SEVEN-WORKSTREAM-CLOSEOUT-MATRIX-20260816T202900 phase=start scope=2"
+    },
+    {
+      "command": "lock-manifest read-only reconciliation",
+      "exit_code": 0,
+      "result": "PASS: manifest SHA-256 a7ec12d38bd272f334f0afe3cfb3f32694f574e3400dc6c0323c434d939c420f; 73 total locks, 73 released, zero active or held writers."
+    },
+    {
+      "command": "MAPLEMOON-PDP-ROUTE-REPAIR-20260816 completion and promotion replay",
+      "exit_code": 0,
+      "result": "PASS packet=MAPLEMOON-PDP-ROUTE-REPAIR-20260816 phase=complete changed=3; PASS packet=MAPLEMOON-PDP-ROUTE-REPAIR-20260816 phase=promote changed=3. Receipt SHA-256 a636fbb47550b7ed92cc4bfe9591296d75ae9daecd7b8f3d9daa4ec6b35bf28d."
+    },
+    {
+      "command": "python3 /Users/handtomouse/maplemoon_cat01a_20260815/verify.py",
+      "exit_code": 0,
+      "result": "PASS: rows=24; confirmed=121, conflict=0, unknown=35, excluded=0, approval-required=12, BLOCKED-WOO-EXPORT=216; content 121/168=72.0 percent; commerce 0/216; 18 variants have zero approved imagery."
+    },
+    {
+      "command": "current external-source hash close",
+      "exit_code": 0,
+      "result": "PASS: CAT ledger 96cc025cb63ef9542e8f114e9e98d055ebc69f1abd106a8d892bf3def69e5e4d; Photoshop worksheet 4d1e65d8f7af84e7225d8bf90fdc4b14355df8095051c493461391e7dcf14bd1; Shopify blocker c76c38ea039e5f55acd1e106a6aa91a84054a00c256ce59471c3bde38c3d9fd3."
+    },
+    {
+      "command": "Styles Kit v0.4 planning-boundary hash close",
+      "exit_code": 0,
+      "result": "PASS: BOSS-HANDOFF cf2cded755ede6064b54cc5966a7cda45e5e8e46d1314b612ba9037bffcd5932; VERIFICATION-RECEIPT e727823094643a4800bb0ad6b36fe0282fd2b954a39029548b4d3bcfd6a82caa; disposition remains PLANNING_VISUAL_GUIDANCE_ONLY_IMPLEMENTATION_HOLD."
+    },
+    {
+      "command": "seven-workstream matrix structural assertions",
+      "exit_code": 0,
+      "result": "PASS: exact rows 1 through 7 once each; current private-preview and production identities present; exactly one 36 percent photo figure and zero 80 percent figures; scratch/media/Styles/commerce/production holds remain explicit. Review SHA-256 c04cdcd568c93b445cec0419c3ecdc88e5294de11aff15bed3fc84df566d7e57."
+    },
+    {
+      "command": "scope and mutation audit",
+      "exit_code": 0,
+      "result": "PASS: only the exact review and self-receipt outputs changed after checkpoint. No website, WIP, candidate, media, Styles Kit, catalogue, Shopify, Git, deployment, production or client action occurred in this reconciliation."
+    }
+  ],
+  "screenshots_or_urls": [
+    "https://maplemoonbuild20260813-m49nihfds-handtomouses-projects.vercel.app",
+    "/Users/handtomouse/maplemoon-website/docs/orchestration/reviews/MAPLEMOON-SEVEN-WORKSTREAM-CLOSEOUT-MATRIX-20260816T202900.md"
+  ],
+  "failures": [],
+  "unknowns": [
+    "No literal D01-D06/R3 choice record was found; recommendation text and blank checkboxes are not approvals.",
+    "The Our Story final pair-hero treatment and individual 4:5 founder portraits do not have exact slot approval.",
+    "Fresh Woo commerce data and Shopify admin/store facts remain unavailable to this read-only reconciliation."
+  ],
+  "residual_risk": [
+    "The private preview can work technically while still containing product, claim and commerce surfaces that are not production-authorised.",
+    "Scratch Photoshop PSD structure does not prove the final correction in Photoshop or establish live-use authority.",
+    "Styles Kit planning evidence cannot be converted into blanket website implementation authority.",
+    "Production movement remains a separate explicit Nate action after final successor certification."
+  ],
+  "forbidden_path_changes": [],
+  "proposed_next_state": "waiting_on_nate_minimum_release_bundle_and_our_story_media_decision",
+  "next_reviewer": "Nate to record D01=A, D02=A, D03=B, D04=A, D05=B, D06-PURE=REJECT, D06-SPICED=REJECT and the Our Story media choice, with any exceptions named"
+}

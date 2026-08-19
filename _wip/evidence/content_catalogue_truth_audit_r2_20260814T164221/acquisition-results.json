@@ -1,0 +1,938 @@
+{
+  "schema": "maplemoon-content-truth-audit-r2-evidence/v1",
+  "phase": "acquisition",
+  "hashResults": {
+    "maplemoon_build_20260813/homepage.html": {
+      "expected": "27921b2a466ccb670b2851a73043429763d3423bcaf651069e4e860dc01a78b1",
+      "actual": "27921b2a466ccb670b2851a73043429763d3423bcaf651069e4e860dc01a78b1",
+      "matches": true
+    },
+    "maplemoon_build_20260813/our-story.html": {
+      "expected": "2db31868a9791f373f156e7cdeb8261e494d1d47e9418a94c28156e213df7711",
+      "actual": "2db31868a9791f373f156e7cdeb8261e494d1d47e9418a94c28156e213df7711",
+      "matches": true
+    },
+    "maplemoon_build_20260813/carob-story.html": {
+      "expected": "4fd9ad0fabb9d60d0f391925f5a382ccfc8f705b60fca1c681f403a5cd9734bd",
+      "actual": "4fd9ad0fabb9d60d0f391925f5a382ccfc8f705b60fca1c681f403a5cd9734bd",
+      "matches": true
+    },
+    "maplemoon_build_20260813/shop.html": {
+      "expected": "f111ad5123e34dadd46ac497fca286066efc67c05dd7e68f0d3e70c97c735038",
+      "actual": "f111ad5123e34dadd46ac497fca286066efc67c05dd7e68f0d3e70c97c735038",
+      "matches": true
+    },
+    "maplemoon_build_20260813/faq.html": {
+      "expected": "c5ce7aaf0b9b3221f34eb2928fc2ff6732fc1a915ea80144a4ade2b94011fb6e",
+      "actual": "c5ce7aaf0b9b3221f34eb2928fc2ff6732fc1a915ea80144a4ade2b94011fb6e",
+      "matches": true
+    },
+    "maplemoon_build_20260813/stockists.html": {
+      "expected": "4821adfe88680d4f174b7a8700c8d8a65594df2901bf3a7109d51b09040cb887",
+      "actual": "4821adfe88680d4f174b7a8700c8d8a65594df2901bf3a7109d51b09040cb887",
+      "matches": true
+    },
+    "maplemoon_build_20260813/pure-carob-bar.html": {
+      "expected": "015cde27ecc60f3c444820a551c39f6e9c985fc5b2e59bdaea5f496c1c236b65",
+      "actual": "015cde27ecc60f3c444820a551c39f6e9c985fc5b2e59bdaea5f496c1c236b65",
+      "matches": true
+    },
+    "maplemoon_build_20260813/mock-cart.js": {
+      "expected": "36fb46b05a46ecf1c770991c6b9cf2eb8c08fda361c7176d37df081668f123aa",
+      "actual": "36fb46b05a46ecf1c770991c6b9cf2eb8c08fda361c7176d37df081668f123aa",
+      "matches": true
+    },
+    "maplemoon_build_20260813/mock-cart.css": {
+      "expected": "c17deb1f972017d9790f2191360a457e54d7287730847f9f470c9de371603308",
+      "actual": "c17deb1f972017d9790f2191360a457e54d7287730847f9f470c9de371603308",
+      "matches": true
+    },
+    "Documents/Codex/2026-08-13/maple-moon-shared-site-styles-kit/outputs/CONTENT-SAFETY-AND-VOICE.md": {
+      "expected": "f93775ee1d96f518100dc6cd036ea85edc3414ea8110abc8e95fdf2d88269403",
+      "actual": "f93775ee1d96f518100dc6cd036ea85edc3414ea8110abc8e95fdf2d88269403",
+      "matches": true
+    },
+    "UFC/ops/bus/maplemoon/BOSS_20260814.md": {
+      "expected": "3f1e51db694cd53f43bde0d0783b262a526e200ea3657d521c313d97c0e2e4db",
+      "actual": "3f1e51db694cd53f43bde0d0783b262a526e200ea3657d521c313d97c0e2e4db",
+      "matches": true
+    },
+    "maplemoon-website/docs/orchestration/reviews/MAPLEMOON-ASSET-SLOT-AUTHORITY-MATRIX-20260814T143614.md": {
+      "expected": "8b68ad125353c57befd0f0035acae2530756cb52c9a242cbdd12a148becb40a0",
+      "actual": "8b68ad125353c57befd0f0035acae2530756cb52c9a242cbdd12a148becb40a0",
+      "matches": true
+    },
+    "maplemoon-website/docs/orchestration/reviews/MAPLEMOON-STYLES-KIT-BOSS-INTAKE-20260814T151331.md": {
+      "expected": "f476f207550fc44dca08638a486ae071105a79a56f48250b8e96e5dcc4a2d2ed",
+      "actual": "f476f207550fc44dca08638a486ae071105a79a56f48250b8e96e5dcc4a2d2ed",
+      "matches": true
+    },
+    "maplemoon-website/docs/orchestration/reviews/MAPLEMOON-CONTENT-CATALOGUE-TRUTH-AUDIT-20260814T161450.md": {
+      "expected": "86b86437447de056293a960f6f9ca53bd92fdf20312b2eaf5c1b56e86d3d12e0",
+      "actual": "86b86437447de056293a960f6f9ca53bd92fdf20312b2eaf5c1b56e86d3d12e0",
+      "matches": true
+    },
+    "maplemoon-website/_wip/evidence/content_catalogue_truth_audit_20260814T161450/analysis-results.json": {
+      "expected": "8306c2a124c98f23e4392a936c0d0a44a66b239299f087308c5fd369b64f81f7",
+      "actual": "8306c2a124c98f23e4392a936c0d0a44a66b239299f087308c5fd369b64f81f7",
+      "matches": true
+    },
+    "maplemoon-website/_wip/evidence/content_catalogue_truth_audit_20260814T161450/browser-results.json": {
+      "expected": "36ff65dbedeb2c69928398f1b98130570c7af7faf85e56e12a0aff1301eac0fd",
+      "actual": "36ff65dbedeb2c69928398f1b98130570c7af7faf85e56e12a0aff1301eac0fd",
+      "matches": true
+    },
+    "maplemoon-website/_wip/evidence/content_catalogue_truth_audit_20260814T161450/default-state-results.json": {
+      "expected": "7cfaea38df8d31a9b6f066f965349e8f03bcde94f998b52889d35f73c337bf04",
+      "actual": "7cfaea38df8d31a9b6f066f965349e8f03bcde94f998b52889d35f73c337bf04",
+      "matches": true
+    },
+    "maplemoon-website/_wip/evidence/content_catalogue_truth_audit_20260814T161450/content-state-results.json": {
+      "expected": "a0ecf1fbb82fe606bdf30586211cc4545e0d4dfebe1ebf43a121c5fa0d9b67fc",
+      "actual": "a0ecf1fbb82fe606bdf30586211cc4545e0d4dfebe1ebf43a121c5fa0d9b67fc",
+      "matches": true
+    },
+    "maplemoon-website/_wip/evidence/content_catalogue_truth_audit_20260814T161450/verification-results.json": {
+      "expected": "145057a5b4b16792b5b7b2d3bf095a9c3962dea5d10b5d4ef7839d10ea4069a3",
+      "actual": "145057a5b4b16792b5b7b2d3bf095a9c3962dea5d10b5d4ef7839d10ea4069a3",
+      "matches": true
+    }
+  },
+  "projections": {
+    "materialRules": {
+      "expected": "6a9492f98aa6194e096200d42ba0d3ff97ffe3af14c7ea263f75d6fb0e8d4690",
+      "actual": "6a9492f98aa6194e096200d42ba0d3ff97ffe3af14c7ea263f75d6fb0e8d4690",
+      "matches": true
+    },
+    "decisions010Through012": {
+      "expected": "d9bfeb4dcb2d9d907972fea627d93da53b5a9330c67da5f97947fd4d3884b82a",
+      "actual": "d9bfeb4dcb2d9d907972fea627d93da53b5a9330c67da5f97947fd4d3884b82a",
+      "matches": true
+    }
+  },
+  "wholeFileObservations": {
+    "decisionsNeeded": {
+      "sha256": "ed1bc299ed203b20d5b50ab19ecdf868a1d520721973dc767480af704d6ec08b",
+      "bytes": 10514,
+      "mtime": "2026-08-14T06:37:57.409Z"
+    },
+    "sourceRegister": {
+      "sha256": "656d7fdbe2abf44b0a679d188f94d6f9f84fbb676aa6ed7b667c271678c1d6f6",
+      "bytes": 3150,
+      "mtime": "2026-08-14T06:21:58.379Z"
+    },
+    "ruleRegister": {
+      "sha256": "98a67138c800cad65f49845fad812f9b2c518f725806cfb7c691ad36f340d516",
+      "bytes": 26181,
+      "mtime": "2026-08-14T06:21:58.049Z"
+    }
+  },
+  "authorityFindings": {
+    "catalogue": {
+      "rule": {
+        "appliesTo": [
+          "home",
+          "shop"
+        ],
+        "id": "CNT-001",
+        "rationale": "Prevents unsupported catalogue expansion.",
+        "sourceIds": [
+          "SRC-LEDGER"
+        ],
+        "status": "APPROVED",
+        "summary": "Home and Shop show exactly Pure Carob, Peppermint, Hazelnut, Coconut & Goji, Cayenne and Almond."
+      },
+      "resolvedTo24": false
+    },
+    "healthDiet": {
+      "appliesTo": [
+        "content",
+        "all-pages"
+      ],
+      "id": "CNT-003",
+      "rationale": "Consent and truthfulness gate.",
+      "sourceIds": [
+        "SRC-LEDGER"
+      ],
+      "status": "APPROVED",
+      "summary": "Do not show unconsented testimonials or unsupported health/diet claims; anonymising is not a workaround."
+    },
+    "commerce": {
+      "appliesTo": [
+        "content",
+        "all-pages"
+      ],
+      "id": "CNT-004",
+      "rationale": "Interface must match capability.",
+      "sourceIds": [
+        "SRC-LEDGER"
+      ],
+      "status": "APPROVED",
+      "summary": "Do not imply live checkout, inventory, stockist map, distances, hours, availability or verification without evidence."
+    },
+    "caffeine": {
+      "rule": {
+        "appliesTo": [
+          "faq",
+          "content"
+        ],
+        "approvalBoundary": "Exact wording only; not blanket proof for every finished Maple Moon recipe",
+        "approvalDate": "2026-08-14",
+        "id": "CNT-005",
+        "rationale": "Closes the CV-056/CV-057 hole with a sourced carob-only statement and a product-specific ingredient caveat.",
+        "sourceIds": [
+          "SRC-NATE-STYLE-REVIEW",
+          "SRC-CAFFEINE-STUDY",
+          "SRC-MORNING-BRIEF"
+        ],
+        "status": "APPROVED",
+        "summary": "Use the exact approved FAQ answer: Carob itself is naturally caffeine-free. Its mellow, naturally sweet flavour works beautifully in bars, baking and warm drinks. Maple Moon recipes vary, so please check the individual product label for the full ingredient list."
+      },
+      "decision": {
+        "affects": [
+          "CNT-005"
+        ],
+        "approvalBoundary": "Exact wording only; broader product-level claims remain evidence-gated",
+        "approvalDate": "2026-08-14",
+        "id": "DEC-011",
+        "selectedChoice": "A",
+        "sourceIds": [
+          "SRC-NATE-STYLE-REVIEW",
+          "SRC-CAFFEINE-STUDY",
+          "SRC-MORNING-BRIEF"
+        ],
+        "status": "APPROVED",
+        "summary": "Use the exact expanded caffeine FAQ wording recorded under CNT-005."
+      }
+    },
+    "customerLanguage": {
+      "appliesTo": [
+        "shared",
+        "all-pages"
+      ],
+      "id": "CMP-010",
+      "rationale": "Internal workflow state erodes trust.",
+      "sourceIds": [
+        "SRC-LEDGER"
+      ],
+      "status": "APPROVED",
+      "summary": "Customer notices use plain customer language and never expose internal review or status vocabulary."
+    },
+    "media": {
+      "identity": {
+        "appliesTo": [
+          "media",
+          "all-pages"
+        ],
+        "id": "MEDIA-001",
+        "rationale": "Authenticity outranks decorative completeness.",
+        "sourceIds": [
+          "SRC-LEDGER"
+        ],
+        "status": "APPROVED",
+        "summary": "Use governed real Maple Moon media or explicit neutral placeholders; never invent missing product imagery."
+      },
+      "proof": {
+        "appliesTo": [
+          "media",
+          "all-pages"
+        ],
+        "evidenceFlags": [
+          "UNVERIFIED"
+        ],
+        "id": "MEDIA-002",
+        "rationale": "Asset existence is not page approval.",
+        "sourceIds": [
+          "SRC-LEDGER"
+        ],
+        "status": "CONTENT/MEDIA DEPENDENCY",
+        "summary": "Critical media needs source, derivative, hash, crop intent, grade and rendered 1440/390 proof."
+      },
+      "decision": {
+        "affects": [
+          "CNT-001",
+          "MEDIA-001",
+          "MEDIA-002"
+        ],
+        "approvalBoundary": "No cutout identity, crop, derivative or live binding approved",
+        "approvalDate": "2026-08-14",
+        "id": "DEC-012",
+        "proofDependencies": [
+          "MEDIA-002"
+        ],
+        "selectedChoice": "A plus neutral-slot handling",
+        "sourceIds": [
+          "SRC-NATE-STYLE-REVIEW",
+          "SRC-LEDGER",
+          "SRC-VISUAL-TASK"
+        ],
+        "status": "APPROVED",
+        "summary": "Use the six ledger-hash derivatives only for internal spacing previews; website candidates use labelled neutral slots until each exact live image is separately approved."
+      }
+    },
+    "caseLevelCopy": {
+      "rule": {
+        "appliesTo": [
+          "content",
+          "all-pages"
+        ],
+        "approvedPolicy": {
+          "choice": "A + C",
+          "date": "2026-08-14",
+          "decisionId": "DEC-010"
+        },
+        "dependencies": [
+          "Nate individual sign-off for each live occurrence"
+        ],
+        "evidenceFlags": [
+          "CV-014/CV-051/CV-062 unresolved"
+        ],
+        "id": "CNT-002",
+        "rationale": "DEC-010 resolves the policy without turning it into a broad compliance strip or automatic edit authority.",
+        "sourceIds": [
+          "SRC-NATE-STYLE-REVIEW",
+          "SRC-MORNING-BRIEF"
+        ],
+        "status": "NEEDS NATE",
+        "summary": "Preserve Carli-requested copy by default; for genuine explicit contradictions her later explicit wording is the governing default, but CV-014, CV-051 and CV-062 each require Nate individual sign-off before removal or change."
+      },
+      "decision": {
+        "affects": [
+          "CNT-002"
+        ],
+        "approvalBoundary": "Policy approved; CV-014/CV-051/CV-062 remain case-level NEEDS NATE",
+        "approvalDate": "2026-08-14",
+        "id": "DEC-010",
+        "selectedChoice": "A + C",
+        "sourceIds": [
+          "SRC-NATE-STYLE-REVIEW",
+          "SRC-MORNING-BRIEF"
+        ],
+        "status": "APPROVED",
+        "summary": "Preserve Carli copy; later explicit wording governs genuine contradictions, but Nate must approve each live occurrence before removal or change."
+      }
+    }
+  },
+  "inheritedEvidence": {
+    "pngCount": 63,
+    "pngs": [
+      {
+        "name": "carob-story_1440_cart.png",
+        "bytes": 458248,
+        "width": 1440,
+        "height": 1000,
+        "sha256": "bf410f98e99663076d2677fa7fd534f8883e4db8330362523e569c31459d604a"
+      },
+      {
+        "name": "carob-story_1440_default.png",
+        "bytes": 1238028,
+        "width": 1440,
+        "height": 1000,
+        "sha256": "8b9efebfdad4a8cd91a2cc7eb5fb734b5e1dd3bdc1e7b814ce2bf096d6c0702b"
+      },
+      {
+        "name": "carob-story_1440_full.png",
+        "bytes": 1813845,
+        "width": 1440,
+        "height": 2432,
+        "sha256": "d5559d478de238035e0243354fd94f8c4d679382f226fd407316878c2993f0bc"
+      },
+      {
+        "name": "carob-story_390_cart.png",
+        "bytes": 106798,
+        "width": 390,
+        "height": 1000,
+        "sha256": "7f50a66f9d88af6b50bdc6a72b3bd56ffeb4400b3e64e3fae9f64aa7d7c3790f"
+      },
+      {
+        "name": "carob-story_390_default.png",
+        "bytes": 410721,
+        "width": 390,
+        "height": 1000,
+        "sha256": "e70d48dcf029355de9edc44e586d6974fff51e1466f031b78bf0d389b17f051b"
+      },
+      {
+        "name": "carob-story_390_drawer.png",
+        "bytes": 298611,
+        "width": 390,
+        "height": 1000,
+        "sha256": "1ac4d8a6504d0aa88c2b4b1b5893919efc9a73fae2a79fa9389dced2dc55fb70"
+      },
+      {
+        "name": "carob-story_390_full.png",
+        "bytes": 735320,
+        "width": 390,
+        "height": 4078,
+        "sha256": "1ce89aa182501732cfd7d88dc71919ad7f6c91e5b6754bb70a74b8f90df287c8"
+      },
+      {
+        "name": "contact-content-states.png",
+        "bytes": 981239,
+        "width": 1008,
+        "height": 467,
+        "sha256": "84c81d65837920b62e1997a0a6efa10b7e409d1c0dcbc9766e0e2f7753d88fa2"
+      },
+      {
+        "name": "contact-default-1440.png",
+        "bytes": 2178062,
+        "width": 752,
+        "height": 1144,
+        "sha256": "82291ad69a044d32e842c455f8df60414977efc27331a431a6543367cd81b0ab"
+      },
+      {
+        "name": "contact-default-390.png",
+        "bytes": 2664307,
+        "width": 844,
+        "height": 1072,
+        "sha256": "1c652411cbad0d907208a05ae860f11bdfa8c02941daf18df3a231a168c29247"
+      },
+      {
+        "name": "contact-dynamic-390.png",
+        "bytes": 1249146,
+        "width": 633,
+        "height": 1072,
+        "sha256": "233ab0ef4ca4833ff29c9413f32164711b2ba247d2a9cfe970dea06baf4b5374"
+      },
+      {
+        "name": "faq_1440_caffeine-open.png",
+        "bytes": 37236,
+        "width": 858,
+        "height": 181,
+        "sha256": "2b197909a454e3667d9411f9fc9fa35c5b6808b0c32280e806d676bd4b2d142b"
+      },
+      {
+        "name": "faq_1440_cart.png",
+        "bytes": 333855,
+        "width": 1440,
+        "height": 1000,
+        "sha256": "17e32bb14f7ed51ff4b8306aa176b42276e51d26d1e275e8d1b55ccacfe70dbc"
+      },
+      {
+        "name": "faq_1440_default.png",
+        "bytes": 460788,
+        "width": 1440,
+        "height": 1000,
+        "sha256": "f273a6f1b3df0eb273876c6d01ef2c909608e0ee63ca0b65cbfb7e58430d09e4"
+      },
+      {
+        "name": "faq_1440_full.png",
+        "bytes": 685025,
+        "width": 1440,
+        "height": 2319,
+        "sha256": "0c28c5f7f1a3c545623b044efc128063658e2c69ef3b53d3448b9231b47feb71"
+      },
+      {
+        "name": "faq_390_caffeine-open.png",
+        "bytes": 28128,
+        "width": 358,
+        "height": 219,
+        "sha256": "51c8f56c26065a4c20ec155a86195e56bfa1300c911a346207e5b0705a1670ea"
+      },
+      {
+        "name": "faq_390_cart.png",
+        "bytes": 113500,
+        "width": 390,
+        "height": 1000,
+        "sha256": "917958e830855716f37790d0c2d3c01a9e73073acd7ed63da3701f6a8c87d89e"
+      },
+      {
+        "name": "faq_390_default.png",
+        "bytes": 230738,
+        "width": 390,
+        "height": 1000,
+        "sha256": "1337fa93cdc1f87fc7ea380212dec9f2baf43abd9ee9d488f3377c13fd20f768"
+      },
+      {
+        "name": "faq_390_drawer.png",
+        "bytes": 148460,
+        "width": 390,
+        "height": 1000,
+        "sha256": "1dcdb6972934276a98f472173528174f70d79d01f9f9271bddcb00bbd8e47a2d"
+      },
+      {
+        "name": "faq_390_full.png",
+        "bytes": 392260,
+        "width": 390,
+        "height": 2768,
+        "sha256": "f238b2f309bedc640795d194fb9aeea0478783529b4b021a38ab2e2832bd86e7"
+      },
+      {
+        "name": "homepage_1440_cart.png",
+        "bytes": 723768,
+        "width": 1440,
+        "height": 1000,
+        "sha256": "9eea838603893f7cfc3c46dfdb9266b4fc6656f9af00502768217f7531572a4c"
+      },
+      {
+        "name": "homepage_1440_default.png",
+        "bytes": 1620023,
+        "width": 1440,
+        "height": 1000,
+        "sha256": "c5d1f795d83e515fba60e948ac6bd3da09965f9121c24f35f79727e58961da5f"
+      },
+      {
+        "name": "homepage_1440_full.png",
+        "bytes": 4465944,
+        "width": 1440,
+        "height": 5176,
+        "sha256": "2dc40079cd9a2c6dfa5b301d7e21b37b259b38eaf9af1f3f4fb5bab64f3101ee"
+      },
+      {
+        "name": "homepage_1440_newsletter-review.png",
+        "bytes": 16096,
+        "width": 1124,
+        "height": 96,
+        "sha256": "40314726da4c79ecce63b2e90e56ffc6e70c4058206c266af1526cd05d3570e8"
+      },
+      {
+        "name": "homepage_390_cart.png",
+        "bytes": 138981,
+        "width": 390,
+        "height": 1000,
+        "sha256": "3234f41a24cca02039c7c7959667ff467630477ec003d88d66a41258e1a09029"
+      },
+      {
+        "name": "homepage_390_default.png",
+        "bytes": 460607,
+        "width": 390,
+        "height": 1000,
+        "sha256": "ccb5ce7dc5909eaad354bc98fc4e076ef2a5a58f41e18918c86b3817dead068f"
+      },
+      {
+        "name": "homepage_390_drawer.png",
+        "bytes": 335032,
+        "width": 390,
+        "height": 1000,
+        "sha256": "ebaf543fd7bccd85784e2cb14b317409b5828b68df82bce495c73764bcd1e9fb"
+      },
+      {
+        "name": "homepage_390_full.png",
+        "bytes": 1401888,
+        "width": 390,
+        "height": 5803,
+        "sha256": "7af87a0a1d44bb3f0a5a535f3d9ceb4d06062a5d23bbe8c69b991489720a5b47"
+      },
+      {
+        "name": "homepage_390_newsletter-review.png",
+        "bytes": 13772,
+        "width": 334,
+        "height": 195,
+        "sha256": "7444cdfe3534fa6941fc912cc46699008e35b2323dedfbbc227d5aaa7d77db63"
+      },
+      {
+        "name": "our-story_1440_cart.png",
+        "bytes": 349308,
+        "width": 1440,
+        "height": 1000,
+        "sha256": "8cd4059b77414b106efaaf7ed1b7789ab31a4a3e159258e4f536ab017d6bbefa"
+      },
+      {
+        "name": "our-story_1440_default.png",
+        "bytes": 685690,
+        "width": 1440,
+        "height": 1000,
+        "sha256": "96b0d791ff4a0640ce367baf7ca56ab2e892228842f898111b20572e7ff4dcc3"
+      },
+      {
+        "name": "our-story_1440_full.png",
+        "bytes": 2674659,
+        "width": 1440,
+        "height": 10208,
+        "sha256": "951718bd046eee0b62c94abb07d8decabcf5615290f70a387e52d1ebbb14e83a"
+      },
+      {
+        "name": "our-story_390_cart.png",
+        "bytes": 78773,
+        "width": 390,
+        "height": 1000,
+        "sha256": "e4c4c517cba30bdffd8ac80a39f936a6eb511da84aa0441513cd6b7fe084426b"
+      },
+      {
+        "name": "our-story_390_default.png",
+        "bytes": 249517,
+        "width": 390,
+        "height": 1000,
+        "sha256": "91095bfc399eff7f8a903b9b2a6d4368a08b8f19e82fc5ac6fa4853d40ea71ba"
+      },
+      {
+        "name": "our-story_390_drawer.png",
+        "bytes": 169206,
+        "width": 390,
+        "height": 1000,
+        "sha256": "44795e5e84f0e63ceaf6737aaab3d7e40e48207f26a82c1bfef57901ad55c1f3"
+      },
+      {
+        "name": "our-story_390_full.png",
+        "bytes": 1112504,
+        "width": 390,
+        "height": 9984,
+        "sha256": "302257f1c4e0e9134cc2d52f813ae0e4571138a7df376027ea4d7d65271efc32"
+      },
+      {
+        "name": "pure-carob-bar_1440_cart.png",
+        "bytes": 334140,
+        "width": 1440,
+        "height": 1000,
+        "sha256": "d4d6bbd586eb7e488c3a12635b6057dbfa70f54102549825a3cea3a9e7003746"
+      },
+      {
+        "name": "pure-carob-bar_1440_default.png",
+        "bytes": 438605,
+        "width": 1440,
+        "height": 1000,
+        "sha256": "d2eb7127964a910f0341f874112b04d533abd92d35e9ff805596265acd2f2577"
+      },
+      {
+        "name": "pure-carob-bar_1440_full.png",
+        "bytes": 670173,
+        "width": 1440,
+        "height": 1682,
+        "sha256": "964bffc360cf1201330dec89596bc79a1bfd0c821cdcb2ebf0842ea8a76e8c21"
+      },
+      {
+        "name": "pure-carob-bar_390_cart.png",
+        "bytes": 83940,
+        "width": 390,
+        "height": 1000,
+        "sha256": "aa3b410463102ffbcb4b78734ec954c78a626ecc2a418391cbc02417e5f3992a"
+      },
+      {
+        "name": "pure-carob-bar_390_default.png",
+        "bytes": 185201,
+        "width": 390,
+        "height": 1000,
+        "sha256": "d7807e5ba7d7e2ba97af6c0fb21f9306867cd4e49890020f6aa1d4657bec8c73"
+      },
+      {
+        "name": "pure-carob-bar_390_drawer.png",
+        "bytes": 144177,
+        "width": 390,
+        "height": 1000,
+        "sha256": "a8c8f8a7eb28eb12a3559748334e46b6a7a55a6f9348910d76b6b5d6e057b10a"
+      },
+      {
+        "name": "pure-carob-bar_390_full.png",
+        "bytes": 324166,
+        "width": 390,
+        "height": 3029,
+        "sha256": "78a2547f011580e0a916ee3acd0ac8180215b1e3da7cdd1ddd416347209667be"
+      },
+      {
+        "name": "shop_1440_cart-item.png",
+        "bytes": 270880,
+        "width": 1440,
+        "height": 1000,
+        "sha256": "f1a7c85abc1b9829cfae946d3e53d4bd47e55f51137e2a78bf1c94c5259fbdd1"
+      },
+      {
+        "name": "shop_1440_cart.png",
+        "bytes": 394528,
+        "width": 1440,
+        "height": 1000,
+        "sha256": "15dffb94b0e4324a0aab5cceef387896fd8b194a6d13319cc3d94e96d4edbbd0"
+      },
+      {
+        "name": "shop_1440_checkout.png",
+        "bytes": 250710,
+        "width": 1440,
+        "height": 1000,
+        "sha256": "d8e974bb9ddd180dfd2de31bbadc3d5b4c2fcff7821c4b4256505519fc5d105a"
+      },
+      {
+        "name": "shop_1440_complete.png",
+        "bytes": 238873,
+        "width": 1440,
+        "height": 1000,
+        "sha256": "acf418202008085b13ff5b95dbecc2262a1a2831a15647d2a383e5dc864e231b"
+      },
+      {
+        "name": "shop_1440_default.png",
+        "bytes": 653164,
+        "width": 1440,
+        "height": 1000,
+        "sha256": "df4747a86b6513e95dcc7340ebe754e51b2e02971a1c1f2749c50cd7a75b0388"
+      },
+      {
+        "name": "shop_1440_full.png",
+        "bytes": 3040393,
+        "width": 1440,
+        "height": 5950,
+        "sha256": "192e6d3acea4567ce7430ed7f039a8de94fcbba5b58c25393e04163ed82b827e"
+      },
+      {
+        "name": "shop_390_cart-item.png",
+        "bytes": 100109,
+        "width": 390,
+        "height": 1000,
+        "sha256": "f550e28541923fa51c9ab6b61c90c3e7f9ee3e4a883b7480d5ef035fe5bb1123"
+      },
+      {
+        "name": "shop_390_cart.png",
+        "bytes": 103464,
+        "width": 390,
+        "height": 1000,
+        "sha256": "57aea3bb807f03eae71bc6f5f02dbde4d83aec01e4238a20f0fa2480fe3d558a"
+      },
+      {
+        "name": "shop_390_checkout.png",
+        "bytes": 78713,
+        "width": 390,
+        "height": 1000,
+        "sha256": "4b9d654e120c35b724de9c62b7ea84011bfc7891c1d32309da5e14393d3d8cee"
+      },
+      {
+        "name": "shop_390_complete.png",
+        "bytes": 66925,
+        "width": 390,
+        "height": 1000,
+        "sha256": "250883f5500cf56cd5c05da11cc427f61441c9bc00fe54b10d15d2e0c2769419"
+      },
+      {
+        "name": "shop_390_default.png",
+        "bytes": 222369,
+        "width": 390,
+        "height": 1000,
+        "sha256": "ddb3713840b6fa1616c75be5d3a41e25d2063de46587132bb0d050bef772afac"
+      },
+      {
+        "name": "shop_390_drawer.png",
+        "bytes": 152946,
+        "width": 390,
+        "height": 1000,
+        "sha256": "6c7f734359bbde4fef851cc25bd7e151bb136159c933ac62946dc36515e37516"
+      },
+      {
+        "name": "shop_390_full.png",
+        "bytes": 3244811,
+        "width": 390,
+        "height": 16406,
+        "sha256": "e9c58de5afa740f85b92284469ce6a7943a3e6ed0a353a82732fda66ba831e1d"
+      },
+      {
+        "name": "stockists_1440_cart.png",
+        "bytes": 316297,
+        "width": 1440,
+        "height": 1000,
+        "sha256": "b921fd85702adf0d7a8bf7450280878bbd136fca1d61ef688cd55d07010bb2cd"
+      },
+      {
+        "name": "stockists_1440_default.png",
+        "bytes": 734303,
+        "width": 1440,
+        "height": 1000,
+        "sha256": "88df8fc74e8c341738f922731c6cdb7100f184326241504c3c8b30bf5c80b003"
+      },
+      {
+        "name": "stockists_1440_full.png",
+        "bytes": 1267949,
+        "width": 1440,
+        "height": 2758,
+        "sha256": "f6c5764be132f8a86ced877ecfe9d927d2c35c135e3c81024d8c0d7e4e5feb8d"
+      },
+      {
+        "name": "stockists_390_cart.png",
+        "bytes": 95690,
+        "width": 390,
+        "height": 1000,
+        "sha256": "007a6fb117382710544c9cf478a4e38bbaa8b65a83de4f1d6135c59c18b6ffa2"
+      },
+      {
+        "name": "stockists_390_default.png",
+        "bytes": 261819,
+        "width": 390,
+        "height": 1000,
+        "sha256": "470e20b82ca5707ce5af89b6081565acc3263492abfd28ffdb787161697f6dc6"
+      },
+      {
+        "name": "stockists_390_drawer.png",
+        "bytes": 180064,
+        "width": 390,
+        "height": 1000,
+        "sha256": "2cedff0423508fe6a6b85a6d859780993bb2332b3dc4200e2cfd5ed8ec656453"
+      },
+      {
+        "name": "stockists_390_full.png",
+        "bytes": 558117,
+        "width": 390,
+        "height": 3435,
+        "sha256": "b89977769270d7c5bbba6f3c900ec06d40033dae523f7860f7cf74798155d644"
+      }
+    ]
+  },
+  "detectors": {
+    "health_diet": {
+      "canaryCount": 6,
+      "candidateHits": {
+        "homepage": 2,
+        "our-story": 22,
+        "carob-story": 0,
+        "shop": 21,
+        "faq": 0,
+        "stockists": 2,
+        "pure-carob-bar": 2
+      }
+    },
+    "origin": {
+      "canaryCount": 3,
+      "candidateHits": {
+        "homepage": 3,
+        "our-story": 4,
+        "carob-story": 3,
+        "shop": 0,
+        "faq": 1,
+        "stockists": 1,
+        "pure-carob-bar": 0
+      }
+    },
+    "manufacturing": {
+      "canaryCount": 4,
+      "candidateHits": {
+        "homepage": 2,
+        "our-story": 1,
+        "carob-story": 1,
+        "shop": 11,
+        "faq": 0,
+        "stockists": 1,
+        "pure-carob-bar": 2
+      }
+    },
+    "availability_commerce": {
+      "canaryCount": 5,
+      "candidateHits": {
+        "homepage": 10,
+        "our-story": 2,
+        "carob-story": 1,
+        "shop": 12,
+        "faq": 5,
+        "stockists": 9,
+        "pure-carob-bar": 6
+      }
+    },
+    "caffeine": {
+      "canaryCount": 3,
+      "candidateHits": {
+        "homepage": 3,
+        "our-story": 6,
+        "carob-story": 4,
+        "shop": 24,
+        "faq": 0,
+        "stockists": 0,
+        "pure-carob-bar": 1
+      }
+    },
+    "internal_vocabulary": {
+      "canaryCount": 6,
+      "candidateHits": {
+        "homepage": 0,
+        "our-story": 0,
+        "carob-story": 0,
+        "shop": 0,
+        "faq": 0,
+        "stockists": 0,
+        "pure-carob-bar": 0
+      }
+    },
+    "testimonials": {
+      "canaryCount": 2,
+      "candidateHits": {
+        "homepage": 0,
+        "our-story": 0,
+        "carob-story": 0,
+        "shop": 0,
+        "faq": 0,
+        "stockists": 0,
+        "pure-carob-bar": 0
+      }
+    },
+    "superlative_sensory": {
+      "canaryCount": 5,
+      "candidateHits": {
+        "homepage": 1,
+        "our-story": 8,
+        "carob-story": 1,
+        "shop": 12,
+        "faq": 0,
+        "stockists": 0,
+        "pure-carob-bar": 1
+      }
+    },
+    "prices": {
+      "canaryCount": 2,
+      "candidateHits": {
+        "homepage": 1,
+        "our-story": 0,
+        "carob-story": 0,
+        "shop": 32,
+        "faq": 0,
+        "stockists": 0,
+        "pure-carob-bar": 6
+      }
+    },
+    "placeholder_links": {
+      "canaryCount": 1,
+      "candidateHits": {
+        "homepage.html": 0,
+        "our-story.html": 0,
+        "carob-story.html": 0,
+        "shop.html": 1,
+        "faq.html": 0,
+        "stockists.html": 0,
+        "pure-carob-bar.html": 0,
+        "mock-cart.js": 0
+      }
+    },
+    "personal_data_fields": {
+      "canaryCount": 1,
+      "candidateHits": {
+        "homepage.html": 1,
+        "our-story.html": 0,
+        "carob-story.html": 0,
+        "shop.html": 0,
+        "faq.html": 0,
+        "stockists.html": 1,
+        "pure-carob-bar.html": 0,
+        "mock-cart.js": 0
+      }
+    }
+  },
+  "counts": {
+    "browserCases": 14,
+    "defaultCases": 14,
+    "contentStateCases": 2,
+    "catalogue": {
+      "total": 24,
+      "beyondSix": 18,
+      "enquiry": 4,
+      "cart": 20,
+      "bitesDistinct": true
+    },
+    "faq": {
+      "sourceQuestion": 1,
+      "sourceAnswer": 1,
+      "domQuestion": 1,
+      "domAnswer": 1
+    },
+    "stockists": {
+      "source": 204,
+      "withheld": 7,
+      "publicEligible": 197
+    },
+    "photographyPercent": 36
+  },
+  "visibility": {
+    "defaultCartClosed": true,
+    "reviewCartOpenNoPersonalFields": true,
+    "defaultMobileDrawerClosed": true,
+    "reviewMobileDrawerOpenSixRows": true,
+    "exactFaqOpen": true,
+    "newsletterNonSaving": true,
+    "noMutationRequests": true
+  },
+  "firstReview": {
+    "path": "/Users/handtomouse/maplemoon-website/docs/orchestration/reviews/MAPLEMOON-CONTENT-CATALOGUE-TRUTH-AUDIT-20260814T161450.md",
+    "sha256": "86b86437447de056293a960f6f9ca53bd92fdf20312b2eaf5c1b56e86d3d12e0",
+    "disposition": "superseded-by-R2 due reconciled whole-file source drift; preserved byte-for-byte"
+  },
+  "r2Review": null,
+  "failures": []
+}

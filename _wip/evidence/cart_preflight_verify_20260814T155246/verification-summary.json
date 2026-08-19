@@ -1,0 +1,69 @@
+{
+  "schema": "maplemoon-cart-preflight-verification/v1",
+  "packet_id": "MAPLEMOON-CART-PREFLIGHT-VERIFY-20260814T155246",
+  "completed_at": "2026-08-14T05:58:35Z",
+  "outcome": "PASS",
+  "predecessor": {
+    "packet_id": "MAPLEMOON-CART-OPTION-SUBTOTAL-FIX-20260814T152958",
+    "completion_gate_exit_code": 2,
+    "completion_gate_output": "HOLD packet=MAPLEMOON-CART-OPTION-SUBTOTAL-FIX-20260814T152958 reason=receipt reports unresolved failures",
+    "forbidden_path_changes": [],
+    "evidence_snapshot": {
+      "state": "present",
+      "kind": "directory",
+      "files": 9,
+      "sha256": "8ffece7f5e215fb3b78b094a8070d69518ffc95e3185fcd498e513d5753ae03c"
+    },
+    "static_contract": {
+      "outcome": "PASS",
+      "positive_controlled_probes": 4,
+      "candidate_probes_passed": 4
+    },
+    "runtime": {
+      "outcome": "PASS",
+      "mixed_subtotal": "$108.12",
+      "widths_css_px": [390, 900, 1440]
+    },
+    "screenshots": [
+      {"path": "cart-390-mixed.png", "bytes": 66357},
+      {"path": "cart-900-option.png", "bytes": 143255},
+      {"path": "cart-1440-option.png", "bytes": 233256}
+    ]
+  },
+  "source_hashes": {
+    "mock-cart.js": "5776f8d628710970e81cf704ae0673ff69988d46952778f5624772db335b8b1a",
+    "mock-cart.css": "c17deb1f972017d9790f2191360a457e54d7287730847f9f470c9de371603308",
+    "homepage.html": "27921b2a466ccb670b2851a73043429763d3423bcaf651069e4e860dc01a78b1",
+    "our-story.html": "2db31868a9791f373f156e7cdeb8261e494d1d47e9418a94c28156e213df7711",
+    "carob-story.html": "4fd9ad0fabb9d60d0f391925f5a382ccfc8f705b60fca1c681f403a5cd9734bd",
+    "shop.html": "f111ad5123e34dadd46ac497fca286066efc67c05dd7e68f0d3e70c97c735038",
+    "faq.html": "c5ce7aaf0b9b3221f34eb2928fc2ff6732fc1a915ea80144a4ade2b94011fb6e",
+    "stockists.html": "4821adfe88680d4f174b7a8700c8d8a65594df2901bf3a7109d51b09040cb887",
+    "pure-carob-bar.html": "015cde27ecc60f3c444820a551c39f6e9c985fc5b2e59bdaea5f496c1c236b65"
+  },
+  "authorized_preflight": {
+    "path": "/Users/handtomouse/UFC/ops/bus/maplemoon/tools_20260813/preflight_deploy.py",
+    "bytes": 28319,
+    "command": "python3 /Users/handtomouse/UFC/ops/bus/maplemoon/tools_20260813/preflight_deploy.py http://127.0.0.1:4392 --local",
+    "exit_code": 0,
+    "verdict": "VERDICT: PASS with 2 review-only hit(s) - leak:internal-status-review, leak:word-testimonial-hidden | WAIVED: root:homepage",
+    "deploy_root_claimed_clear": false,
+    "literal_output": "preflight-output.txt",
+    "execution_note": "An initial invocation in an isolated network namespace could not reach its loopback server and explicitly checked nothing. The same exact command then ran with both processes in one host namespace and produced the authoritative exit-0 verdict above."
+  },
+  "production_freeze": {
+    "alias": "https://maplemoonbuild20260813.vercel.app",
+    "immutable_url": "https://maplemoonbuild20260813-7vjf2m50b-handtomouses-projects.vercel.app",
+    "deployment_id": "dpl_G2LER2awaqyFtGRCcTserXbNynct",
+    "target": "production",
+    "status": "Ready",
+    "homepage_path": "/homepage.html",
+    "homepage_bytes": 208556,
+    "homepage_md5": "6197879a5ca9d3ed0452773abc0bbeb4",
+    "homepage_sha256": "b936b5bb4856cdd6134e5b15bce5dfc3b353c1d442fd1a418180b35b8fa10356"
+  },
+  "source_changes": [],
+  "forbidden_path_changes": [],
+  "failures": [],
+  "unknowns": []
+}

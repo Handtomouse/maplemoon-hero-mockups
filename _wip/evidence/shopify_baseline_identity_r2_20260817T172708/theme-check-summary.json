@@ -1,0 +1,33 @@
+{
+  "command": "shopify theme check --path <recovery-theme> --output json --fail-level error --no-color",
+  "exit_code": 1,
+  "files_with_offenses": 48,
+  "error_count": 3,
+  "warning_count": 195,
+  "strict_settings_schema_json": {
+    "command": "jq empty config/settings_schema.json",
+    "exit_code": 4,
+    "result": "parse error near line 470"
+  },
+  "errors": [
+    {
+      "path": "assets/c-slider.js.liquid",
+      "check": "LiquidHTMLSyntaxError",
+      "start_row": 290,
+      "message": "SyntaxError: expected svg, style, or script"
+    },
+    {
+      "path": "snippets/inc-socials.liquid",
+      "check": "TranslationKeyExists",
+      "start_row": 66,
+      "message": "openthinking.socials. has no matching entry in locales/en.default.json"
+    },
+    {
+      "path": "sections/t-giftcard.liquid",
+      "check": "ParserBlockingScript",
+      "start_row": 217,
+      "message": "script_tag is parser-blocking"
+    }
+  ],
+  "disposition": "INHERITED_BASELINE_FINDINGS_S1_MUST_UPDATE_OR_REPAIR_ON_UNPUBLISHED_DUPLICATE"
+}

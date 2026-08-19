@@ -1,0 +1,119 @@
+{
+  "schema": "maplemoon-cart-inert-focus-fix-verification/v1",
+  "packet_id": "MAPLEMOON-CART-INERT-FOCUS-FIX-20260814T161020",
+  "outcome": "PASS",
+  "source": {
+    "path": "maplemoon_build_20260813/mock-cart.js",
+    "pre_sha256": "5776f8d628710970e81cf704ae0673ff69988d46952778f5624772db335b8b1a",
+    "post_sha256": "36fb46b05a46ecf1c770991c6b9cf2eb8c08fda361c7176d37df081668f123aa",
+    "syntax": "PASS",
+    "other_source_changes": []
+  },
+  "static_contract": {
+    "outcome": "PASS",
+    "positive_controlled_probes": 7,
+    "probes": [
+      "already-open guard before opener capture",
+      "direct body-child inert capture",
+      "dynamic body-child MutationObserver",
+      "focusin containment fallback",
+      "exact inert ownership restoration",
+      "observer/listener teardown before restoration and focus return",
+      "guarded deferred focus"
+    ],
+    "background_aria_hidden_expansion": false
+  },
+  "browser_quick": {
+    "outcome": "PASS",
+    "agent_browser_available": false,
+    "fallback": "Bundled Playwright with system Google Chrome",
+    "shop_http": 200,
+    "homepage_http": 200,
+    "shop_body_text_characters": 5636,
+    "homepage_body_text_characters": 2292,
+    "shop_cards": 24,
+    "errors": []
+  },
+  "inert_focus_runtime": {
+    "outcome": "PASS",
+    "measured_widths_css_px": [390, 900, 1440],
+    "outside_inert": {
+      "390": "7/7",
+      "900": "7/7",
+      "1440": "7/7"
+    },
+    "programmatic_focus_escaped": false,
+    "dynamic_branch_inerted": true,
+    "dynamic_branch_focus_escaped": false,
+    "focusin_fallback_redirected": true,
+    "preexisting_inert_preserved": true,
+    "cart_introduced_inert_removed": true,
+    "header_primary_inert_preserved": true,
+    "header_utility_inert_preserved": true,
+    "close_routes": ["x", "overlay", "escape", "secondary", "completed-demo-order"],
+    "background_pointer_clicks_during_overlay_test": 0,
+    "repeated_cycles": 3,
+    "observer_add_disconnect_balanced": true,
+    "focusin_add_remove_balanced": true,
+    "already_open_duplicate_observer_or_listener": false,
+    "opener_returned_on_every_route": true,
+    "controls_44px": true,
+    "tab_and_shift_tab_contained": true,
+    "zoom_200_horizontal_overflow": 0,
+    "runtime_request_image_errors": []
+  },
+  "cart_regression": {
+    "outcome": "PASS",
+    "selected_options": {
+      "Peppermint Moon": {"label": "10 moons", "unit_price_cents": 2375},
+      "Carob Bananas": {"label": "20 bananas", "unit_price_cents": 5099},
+      "Pecan Nut Eclipse Bite": {"label": "Value pack", "unit_price_cents": 5999},
+      "Peppermint Moon second option": {"label": "5 moons", "unit_price_cents": 1219}
+    },
+    "mixed_subtotal": "$108.12",
+    "independent_same_product_lines": true,
+    "quantity_remove_empty_bag": true,
+    "reload_cross_route_fresh_corrupt_legacy_storage": true,
+    "cookie_local_storage_external_network_navigation_order_payment_email_side_effects": false,
+    "measured_widths_css_px": [390, 900, 1440],
+    "runtime_request_image_errors": []
+  },
+  "rendered_evidence": [
+    {"path": "screenshots/cart-inert-390.png", "bytes": 43527},
+    {"path": "screenshots/cart-inert-900.png", "bytes": 118460},
+    {"path": "screenshots/cart-inert-1440.png", "bytes": 206321},
+    {"path": "screenshots/cart-390-mixed.png", "bytes": 67738},
+    {"path": "screenshots/cart-900-option.png", "bytes": 143251},
+    {"path": "screenshots/cart-1440-option.png", "bytes": 233274}
+  ],
+  "preflight": {
+    "command": "python3 /Users/handtomouse/UFC/ops/bus/maplemoon/tools_20260813/preflight_deploy.py http://127.0.0.1:4402 --local",
+    "exit_code": 0,
+    "verdict": "VERDICT: PASS with 2 review-only hit(s) - leak:internal-status-review, leak:word-testimonial-hidden | WAIVED: root:homepage",
+    "deploy_root_claimed_clear": false
+  },
+  "immutable_hashes": {
+    "mock-cart.css": "c17deb1f972017d9790f2191360a457e54d7287730847f9f470c9de371603308",
+    "assets/design-system/mm-chrome.js": "063fe11d5f5ed5d90c724868f1ffb8f3536aed73cc2f7fb9bc6e4791eb192d18",
+    "assets/design-system/mm-chrome.css": "2d7414a8994ae11414cb269f4ca335293b409eb9da956ca3b625e716c26080ba",
+    "homepage.html": "27921b2a466ccb670b2851a73043429763d3423bcaf651069e4e860dc01a78b1",
+    "our-story.html": "2db31868a9791f373f156e7cdeb8261e494d1d47e9418a94c28156e213df7711",
+    "carob-story.html": "4fd9ad0fabb9d60d0f391925f5a382ccfc8f705b60fca1c681f403a5cd9734bd",
+    "shop.html": "f111ad5123e34dadd46ac497fca286066efc67c05dd7e68f0d3e70c97c735038",
+    "faq.html": "c5ce7aaf0b9b3221f34eb2928fc2ff6732fc1a915ea80144a4ade2b94011fb6e",
+    "stockists.html": "4821adfe88680d4f174b7a8700c8d8a65594df2901bf3a7109d51b09040cb887",
+    "pure-carob-bar.html": "015cde27ecc60f3c444820a551c39f6e9c985fc5b2e59bdaea5f496c1c236b65"
+  },
+  "production_freeze": {
+    "prewrite_and_postwrite_match": true,
+    "immutable": "7vjf2m50b",
+    "deployment_id": "dpl_G2LER2awaqyFtGRCcTserXbNynct",
+    "target": "production",
+    "status": "Ready",
+    "homepage_bytes": 208556,
+    "homepage_md5": "6197879a5ca9d3ed0452773abc0bbeb4"
+  },
+  "failures": [],
+  "unknowns": [],
+  "forbidden_path_changes": []
+}

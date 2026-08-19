@@ -1,0 +1,69 @@
+{
+  "schema": "maplemoon-receipt/v2",
+  "receipt_id": "MAPLEMOON-FOUNDER-FRAME-REVIEW-R2-20260816-RECEIPT-01",
+  "packet_id": "MAPLEMOON-FOUNDER-FRAME-REVIEW-R2-20260816",
+  "worker_thread_id": "/root",
+  "worker": "Codex /root",
+  "started_at": "2026-08-16T09:33:00Z",
+  "completed_at": "2026-08-16T09:34:22Z",
+  "files_read": [
+    "/Users/handtomouse/maplemoon_rebuild_20260815/FOUNDER_FRAMES.md",
+    "/Users/handtomouse/maplemoon-website/_wip/evidence/track1_repair_20260816/founder-review",
+    "/Users/handtomouse/Projects/maplemoon/downloads/wetransfer_website-hero-raws_2026-06-03_1315"
+  ],
+  "files_changed": [
+    "maplemoon-website/docs/orchestration/reviews/MAPLEMOON-FOUNDER-FRAME-REVIEW-R2-20260816.json"
+  ],
+  "pre_sha256": {
+    "maplemoon-website/docs/orchestration/reviews/MAPLEMOON-FOUNDER-FRAME-REVIEW-R2-20260816.json": null
+  },
+  "post_sha256": {
+    "maplemoon-website/docs/orchestration/reviews/MAPLEMOON-FOUNDER-FRAME-REVIEW-R2-20260816.json": null
+  },
+  "checks": [
+    {
+      "command": "python3 -B maplemoon-website/scripts/check-maplemoon-receipt.py checkpoint and verify phase=start against the R2 packet",
+      "exit_code": 0,
+      "result": "PASS checkpoint files=1; PASS packet=MAPLEMOON-FOUNDER-FRAME-REVIEW-R2-20260816 phase=start scope=1"
+    },
+    {
+      "command": "natural-order SHA-256 digest and count across the exact Heros*.jpg input set",
+      "exit_code": 0,
+      "result": "PASS: exactly 75 readable JPEGs; aggregate ordered digest bc3fa38009940b2d52a2c779b8434b2ff881d1d59469e8e58c7b1f41e468ad0e"
+    },
+    {
+      "command": "ImageMagick-labelled contact sheet inventory and manual visual inspection",
+      "exit_code": 0,
+      "result": "PASS: five nonblank 1880x1023 contact sheets cover frames 1-75, aggregate 1687755 bytes, ordered digest b487f6df210429d00188b4f3c090224206628532b18d41058d399592821e9a78; every frame was visually inspected. Frames 73-75 were also inspected individually at full resolution."
+    },
+    {
+      "command": "pinned output hash and required-section assertions",
+      "exit_code": 0,
+      "result": "PASS: FOUNDER_FRAMES.md SHA-256 989bc18c58d2eba7264e1c46341e24a1bde522fec2088bc2374d506ae0622794; each of the three required classification headings and the Top three candidates heading occurs exactly once; Heros-73.jpg is explicitly the sole qualifying both-founder frame."
+    },
+    {
+      "command": "manual full-resolution founder-content determination",
+      "exit_code": 0,
+      "result": "PASS: Heros-73.jpg clearly shows both founders relaxed and smiling. No one-founder frame exists. Frames 1-72 contain products/props; 74-75 show hands only and do not visibly identify either founder."
+    }
+  ],
+  "screenshots_or_urls": [
+    "/Users/handtomouse/maplemoon-website/_wip/evidence/track1_repair_20260816/founder-review/founder-1-15.jpg",
+    "/Users/handtomouse/maplemoon-website/_wip/evidence/track1_repair_20260816/founder-review/founder-16-30.jpg",
+    "/Users/handtomouse/maplemoon-website/_wip/evidence/track1_repair_20260816/founder-review/founder-31-45.jpg",
+    "/Users/handtomouse/maplemoon-website/_wip/evidence/track1_repair_20260816/founder-review/founder-46-60.jpg",
+    "/Users/handtomouse/maplemoon-website/_wip/evidence/track1_repair_20260816/founder-review/founder-61-75.jpg"
+  ],
+  "failures": [],
+  "unknowns": [
+    "Hands in Heros-74.jpg and Heros-75.jpg may belong to the founders, but identity is not visually provable; both are therefore classified as neither visibly identifiable founder.",
+    "Only one qualifying both-founder frame exists, so a second and third option require Mitch's undelivered founder frames/raws."
+  ],
+  "residual_risk": [
+    "The first packet's phase-start verification was accidentally run after FOUNDER_FRAMES.md had been written and truthfully returned HOLD. R2 pins that exact output and independently verifies it without editing or hiding the process error.",
+    "Heros-73.jpg is a shortlist recommendation only; it has not been selected, retouched, regraded, admitted or integrated."
+  ],
+  "forbidden_path_changes": [],
+  "proposed_next_state": "verified_founder_candidate_needs_nate_selection",
+  "next_reviewer": "Nate for Heros-73.jpg selection; Mitch only if more both-founder options are required"
+}

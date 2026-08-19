@@ -1,0 +1,19 @@
+{
+  "baseline": "/private/tmp/maplemoon-style-chrome-r2-baseline-20260817T140406",
+  "builder": {
+    "path": "/Users/handtomouse/maplemoon-website/scripts/build-maplemoon-style-chrome-derived-r2.py",
+    "sha256": "0cb7a27ea2c67dd992797a05d94f9eb33ed49f2a5ad86ca91fcb66a6a60408be"
+  },
+  "current": {
+    "bytes": 12832419,
+    "directory_sha256": "3a1e162a6e63db71478e3d365155eff146e2e5839dfc7fad5833b7bc14175e24",
+    "files": 75,
+    "path": "/Users/handtomouse/maplemoon-website/_wip/deploy/generated/maplemoon-style-chrome-derived-r2-20260817T140018"
+  },
+  "isolated_rebuild_byte_equal": true,
+  "projections_equal": true,
+  "reverse_equal": true,
+  "routes": 7,
+  "schema": "maplemoon-style-chrome-r2-manifest-refresh/v1",
+  "verdict": "PASS"
+}

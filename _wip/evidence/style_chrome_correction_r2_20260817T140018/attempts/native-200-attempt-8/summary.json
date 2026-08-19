@@ -1,0 +1,19 @@
+{
+  "candidate_changes": [],
+  "client_actions": [],
+  "completed_at": "2026-08-17T05:01:17Z",
+  "deployments": [],
+  "derived_acquisition": {
+    "files": 75,
+    "sha256": "70d0c80afbdf5b9c2a769f6c2414064aa54c94ebf1600248105211499acfdbd4"
+  },
+  "derived_close": {
+    "files": 75,
+    "sha256": "70d0c80afbdf5b9c2a769f6c2414064aa54c94ebf1600248105211499acfdbd4"
+  },
+  "failure": "stockists.html@720 paint/skip failed: {'innerWidth': 720, 'clientWidth': 720, 'scrollWidth': 720, 'dpr': 4, 'vv': {'width': 720, 'scale': 1}, 'rootZoom': '1', 'headerVisible': True, 'headerHeight': 70, 'headerCount': 1, 'mainCount': 1, 'wordmark': 'maple moon', 'wordmarkCentreDelta': 0, 'targets': [{'text': 'Menu', 'width': 48.5703125, 'height': 44}, {'text': 'maple moon', 'width': 134.0859375, 'height': 44}, {'text': 'Contact', 'width': 65.4765625, 'height': 44}], 'sub44': [], 'contact': 'mailto:info@maplemoon.com.au', 'cartCount': 0, 'generatedOverflow': 0, 'images': [{'src': 'http://127.0.0.1:8804/assets/photo_finals/maplemoon_heros55_brandmatched.webp', 'complete': True, 'naturalWidth': 2400, 'naturalHeight': 1600}], 'brokenImages': [], 'skipFocused': {'isFirst': True, 'href': '#main-content', 'targetExists': True, 'visible': False, 'rect': {'x': 10, 'y': -69.19999694824219, 'width': 165.1015625, 'height': 44}}, 'skipActivated': {'reached': True, 'targetRect': {'x': 0, 'y': 70, 'width': 720, 'height': 3631.3828125}}, 'nonblank': True}",
+  "git_actions": [],
+  "outcome": "FAIL",
+  "schema": "maplemoon-style-chrome-native-200-r2/v1",
+  "started_at": "2026-08-17T05:00:27Z"
+}

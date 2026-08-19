@@ -1,0 +1,111 @@
+{
+  "schema": "maplemoon-receipt/v2",
+  "receipt_id": "OG-IMAGE-CANDIDATES-20260803-V1-CLOSEOUT-RECEIPT-01",
+  "packet_id": "OG-IMAGE-CANDIDATES-20260803-V1-CLOSEOUT",
+  "worker_thread_id": "019fc360-a934-7a52-b410-b72865ce6533",
+  "worker": "Open Graph share-image candidate worker",
+  "started_at": "2026-08-03T02:58:37+10:00",
+  "completed_at": "2026-08-03T03:37:39+10:00",
+  "files_read": [
+    "_wip/evidence/IMAGERY-PROGRAMME-20260802/OG-IMAGE-CANDIDATE-BRIEF-20260803.md",
+    "_wip/evidence/IMAGERY-PROGRAMME-20260802/OG-IMAGE-CANDIDATES-20260803-V1-PACKET.md",
+    "_wip/evidence/IMAGERY-PROGRAMME-20260802/OG-IMAGE-CANDIDATES-20260803-V1-CLOSEOUT-PACKET.md",
+    "_wip/evidence/IMAGERY-PROGRAMME-20260802/og_image_candidates_20260803_v1/manifest_v1.json",
+    "docs/client-review/2026-08-01-saturday-review/staging-v1/clean/MANIFEST.json",
+    "docs/client-review/2026-08-01-saturday-review/staging-v1/clean/homepage.html",
+    "docs/client-review/2026-08-01-saturday-review/staging-v1/clean/shop.html",
+    "docs/client-review/2026-08-01-saturday-review/staging-v1/clean/our-story.html",
+    "docs/client-review/2026-08-01-saturday-review/staging-v1/clean/carob-story.html",
+    "docs/client-review/2026-08-01-saturday-review/staging-v1/clean/stockists.html",
+    "docs/client-review/2026-08-01-saturday-review/staging-v1/clean/faq.html",
+    "assets/licensed/carob_pods_macro.jpg",
+    "assets/hero_shots/bg_v4_range.png",
+    "/Users/handtomouse/UFC/clients/maplemoon/deliverables/hero_raws_ORIGINAL_wetransfer_20260603/Heros-24.jpg",
+    "/Users/handtomouse/UFC/spins/maplemoon_bites_moodboard_export_20260516/SPIN_BRIEF.md",
+    "/Users/handtomouse/UFC/spins/maplemoon_bites_moodboard_export_20260516/output_PNG/moons-group-01.png",
+    "/Users/handtomouse/UFC/spins/maplemoon_bites_moodboard_export_20260516/output_PNG/moons-group-02.png",
+    "/Users/handtomouse/UFC/spins/maplemoon_bites_moodboard_export_20260516/output_PNG/moons-group-03.png",
+    "/Users/handtomouse/UFC/spins/maplemoon_bites_moodboard_export_20260516/output_PNG/moons-pure-main.png",
+    "/Users/handtomouse/UFC/spins/maplemoon_bites_moodboard_export_20260516/output_PNG/moons-pure-close-top.png"
+  ],
+  "files_changed": [
+    "_wip/evidence/IMAGERY-PROGRAMME-20260802/OG-IMAGE-CANDIDATES-20260803-V1-RECEIPT.json"
+  ],
+  "pre_sha256": {
+    "_wip/evidence/IMAGERY-PROGRAMME-20260802/OG-IMAGE-CANDIDATES-20260803-V1-RECEIPT.json": null
+  },
+  "post_sha256": {
+    "_wip/evidence/IMAGERY-PROGRAMME-20260802/OG-IMAGE-CANDIDATES-20260803-V1-RECEIPT.json": null
+  },
+  "checks": [
+    {
+      "command": "df -h /System/Volumes/Data",
+      "exit_code": 0,
+      "result": "PASS: 45 GiB free before generation, above the 20 GiB HOLD threshold."
+    },
+    {
+      "command": "python3 -B scripts/check-maplemoon-receipt.py verify --packet _wip/evidence/IMAGERY-PROGRAMME-20260802/OG-IMAGE-CANDIDATES-20260803-V1-PACKET.md --checkpoint _wip/evidence/IMAGERY-PROGRAMME-20260802/checkpoints/OG-IMAGE-CANDIDATES-20260803-V1_20260803_025837_AEST --phase start",
+      "exit_code": 0,
+      "result": "PASS packet=OG-IMAGE-CANDIDATES-20260803-V1 phase=start scope=2"
+    },
+    {
+      "command": "python3 -B scripts/check-maplemoon-receipt.py verify --packet _wip/evidence/IMAGERY-PROGRAMME-20260802/OG-IMAGE-CANDIDATES-20260803-V1-CLOSEOUT-PACKET.md --checkpoint _wip/evidence/IMAGERY-PROGRAMME-20260802/checkpoints/OG-IMAGE-CANDIDATES-20260803-V1-CLOSEOUT_20260803_032930_AEST --phase start",
+      "exit_code": 0,
+      "result": "PASS packet=OG-IMAGE-CANDIDATES-20260803-V1-CLOSEOUT phase=start scope=2"
+    },
+    {
+      "command": "SHA-256 and byte validation of the frozen clean MANIFEST.json and all 74 frozen package files",
+      "exit_code": 0,
+      "result": "PASS: all 74 files match; clean manifest SHA-256 d1c66b1d5937e9956d1806dbbbff4faf4f950def046aa642ae52f809c3d52d20."
+    },
+    {
+      "command": "case-insensitive og:image and twitter:image scan of all six frozen clean HTML pages",
+      "exit_code": 0,
+      "result": "PASS: NONE on homepage, shop, our-story, carob-story, stockists and faq."
+    },
+    {
+      "command": "python3 -m json.tool and manifest-to-file SHA-256 and dimension validation",
+      "exit_code": 0,
+      "result": "PASS: manifest valid; seven accepted candidates, four preserved rejected v0 studies, all recorded hashes match, and every master is 1200 by 630."
+    },
+    {
+      "command": "full-resolution visual inspection of seven source generations and seven final masters, plus contact sheet and geometry comparison",
+      "exit_code": 0,
+      "result": "PASS: no packaging, wrappers, labels, logos, text, claims, people, faces or hands; crop evidence is readable and limitations are recorded."
+    },
+    {
+      "command": "git diff --quiet on staging-v1, docs/orchestration, LOCK_MANIFEST.json, .gitignore and scripts/check-maplemoon-review.py",
+      "exit_code": 0,
+      "result": "PASS: forbidden tracked paths unchanged."
+    }
+  ],
+  "screenshots_or_urls": [
+    "/Users/handtomouse/maplemoon-website/_wip/evidence/IMAGERY-PROGRAMME-20260802/og_image_candidates_20260803_v1/og_share_candidates_contact_sheet_v1.png",
+    "/Users/handtomouse/maplemoon-website/_wip/evidence/IMAGERY-PROGRAMME-20260802/og_image_candidates_20260803_v1/moon_geometry_comparison_v1.png"
+  ],
+  "failures": [],
+  "unknowns": [
+    "Nate has not selected or approved any candidate.",
+    "Product-led studies remain generic generated forms; final proprietary tip taper and handmade variation require Nate visual judgment against Heros-24.",
+    "Absolute HTTPS URL behavior, deployed-host previews, approved copy and canonical URLs were not tested because implementation and external access are outside scope."
+  ],
+  "residual_risk": [
+    "Atmosphere candidates retain mild studio sheen on some pods.",
+    "Product-led candidates use Heros-24 geometry and matching rock language but are not exact client photography and must never be presented as such.",
+    "Gate LP-03 remains HOLD and no CR gate is cleared."
+  ],
+  "forbidden_path_changes": [],
+  "proposed_next_state": "needs_review",
+  "next_reviewer": "Nate",
+  "generation_route": "Built-in OpenAI image generation workflow using approved local references only.",
+  "candidate_counts": {
+    "atmosphere_only": 3,
+    "product_led_generic_form_study": 4,
+    "total_pending_human_review": 7
+  },
+  "candidate_directory_sha256": "4380463700f43e8491d10faccb3a4811e6bb67412a9940823084884cc143bd0d",
+  "candidate_directory_file_count": 25,
+  "lp_03_status": "HOLD",
+  "ready_to_promote": false,
+  "ownership": "none"
+}

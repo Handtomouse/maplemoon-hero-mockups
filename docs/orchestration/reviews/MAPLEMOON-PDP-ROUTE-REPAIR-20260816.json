@@ -1,0 +1,123 @@
+{
+  "schema": "maplemoon-receipt/v2",
+  "receipt_id": "MAPLEMOON-PDP-ROUTE-REPAIR-20260816-RECEIPT-01",
+  "packet_id": "MAPLEMOON-PDP-ROUTE-REPAIR-20260816",
+  "worker_thread_id": "/root",
+  "worker": "Codex /root",
+  "started_at": "2026-08-16T10:03:02Z",
+  "completed_at": "2026-08-16T10:25:23Z",
+  "files_read": [
+    "/Users/handtomouse/maplemoon-website/docs/orchestration/packets/MAPLEMOON-PDP-ROUTE-REPAIR-20260816.md",
+    "/Users/handtomouse/maplemoon-website/docs/orchestration/packets/MAPLEMOON-TRACK1-REPAIR-20260816.md",
+    "/Users/handtomouse/maplemoon-website/docs/orchestration/reviews/MAPLEMOON-TRACK1-REPAIR-20260816.json",
+    "/Users/handtomouse/maplemoon-website/scripts/build-maplemoon-wip-preview.py",
+    "/Users/handtomouse/maplemoon-website/_wip/homepage_real_1_lead_photo.WIP.html",
+    "/Users/handtomouse/maplemoon-website/_wip/shop.WIP.html",
+    "/Users/handtomouse/maplemoon-website/_wip/our-story.WIP.html",
+    "/Users/handtomouse/maplemoon-website/_wip/carob-story.WIP.html",
+    "/Users/handtomouse/maplemoon-website/_wip/faq.WIP.html",
+    "/Users/handtomouse/maplemoon-website/_wip/stockists.WIP.html",
+    "/Users/handtomouse/maplemoon_build_20260813/pure-carob-bar.html",
+    "/Users/handtomouse/maplemoon_build_20260813/mock-cart.js",
+    "/Users/handtomouse/maplemoon_build_20260813/mock-cart.css"
+  ],
+  "files_changed": [
+    "maplemoon-website/scripts/build-maplemoon-wip-preview.py",
+    "maplemoon-website/_wip/evidence/pdp_route_repair_20260816",
+    "maplemoon-website/docs/orchestration/reviews/MAPLEMOON-PDP-ROUTE-REPAIR-20260816.json"
+  ],
+  "pre_sha256": {
+    "maplemoon-website/scripts/build-maplemoon-wip-preview.py": "c2c2ccbc0f9e4b4be8c3f111744968566de88de6d605e0e463df4b0d708f48d0",
+    "maplemoon-website/_wip/evidence/pdp_route_repair_20260816": null,
+    "maplemoon-website/docs/orchestration/reviews/MAPLEMOON-PDP-ROUTE-REPAIR-20260816.json": null
+  },
+  "post_sha256": {
+    "maplemoon-website/scripts/build-maplemoon-wip-preview.py": "803c439e0e937309b7ada0c3f886983908c3cc6aed64f92e38c57fd656707808",
+    "maplemoon-website/_wip/evidence/pdp_route_repair_20260816": "62541edc351fc45b42d776565dd9c55e8830a4724b852264e459f87f3aad381f",
+    "maplemoon-website/docs/orchestration/reviews/MAPLEMOON-PDP-ROUTE-REPAIR-20260816.json": null
+  },
+  "checks": [
+    {
+      "command": "checkpoint and phase=start gate for MAPLEMOON-PDP-ROUTE-REPAIR-20260816",
+      "exit_code": 0,
+      "result": "PASS checkpoint packet=MAPLEMOON-PDP-ROUTE-REPAIR-20260816 files=3 path=maplemoon-website/_wip/checkpoints/MAPLEMOON-PDP-ROUTE-REPAIR-20260816_20260816_200302_AEST; PASS packet=MAPLEMOON-PDP-ROUTE-REPAIR-20260816 phase=start scope=3"
+    },
+    {
+      "command": "predecessor MAPLEMOON-TRACK1-REPAIR-20260816 receipt replay before the builder edit",
+      "exit_code": 0,
+      "result": "PASS packet=MAPLEMOON-TRACK1-REPAIR-20260816 phase=complete changed=5; PASS packet=MAPLEMOON-TRACK1-REPAIR-20260816 phase=promote changed=5"
+    },
+    {
+      "command": "pinned Pure page and cart asset SHA-256 acquisition and close",
+      "exit_code": 0,
+      "result": "PASS: Pure page remained 015cde27ecc60f3c444820a551c39f6e9c985fc5b2e59bdaea5f496c1c236b65; mock-cart.js remained 36fb46b05a46ecf1c770991c6b9cf2eb8c08fda361c7176d37df081668f123aa; mock-cart.css remained c17deb1f972017d9790f2191360a457e54d7287730847f9f470c9de371603308. No source page or cart source asset was edited."
+    },
+    {
+      "command": "python3 -B scripts/build-maplemoon-wip-preview.py --output /private/tmp/maplemoon-pdp-route-repair-20260816",
+      "exit_code": 0,
+      "result": "BUILD PASS output=/private/tmp/maplemoon-pdp-route-repair-20260816 files=73 bytes=12815503 pages=7 private_dirs=0 vercel_project_link=0"
+    },
+    {
+      "command": "verify_static.py against the isolated candidate",
+      "exit_code": 0,
+      "result": "STATIC PASS pages=7/7 references=159 failures=0. Homepage contains exactly one clean Pure target and exactly one product-aware Shop Now navigation seam; the old .html product target is absent; the Pure title positive control occurs exactly once."
+    },
+    {
+      "command": "bundled Playwright/system-Chrome verify.mjs at measured 390 and 1440 across seven routes plus Homepage-to-Pure click journey",
+      "exit_code": 0,
+      "result": "PASS 14/14 plus journey PASS. Every route returned HTTP 200 at clientWidth=scrollWidth with zero broken images, console errors, page errors, request failures and bad responses. Homepage and Pure each had six 44px full-width drawer rows whose centres hit their own targets; each cart opened one dialog. Homepage Shop Now navigated to /products/pure-carob-bar, HTTP 200, title Pure Carob & Cacao Butter."
+    },
+    {
+      "command": "manual visual inspection of final 390/1440 contact sheets, Pure drawer, Pure cart and Homepage-to-Pure journey",
+      "exit_code": 0,
+      "result": "PASS: all final evidence is nonblank and unclipped; the Pure drawer is opaque with exactly six distinct rows and no paint-through; the product route and cart render visibly at mobile and desktop."
+    },
+    {
+      "command": "preserved attempt reconciliation",
+      "exit_code": 0,
+      "result": "PASS: attempt 1 truthfully records the real seven-row Pure drawer failure. The builder now maps the exact legacy /homepage.html#carob link to /carob-story, preventing pinned mock-cart.js from appending a duplicate. A later ERR_CONNECTION_RESET was isolated to the verifier server changing into an atomically replaced build directory; serve_clean.py now binds an explicit directory. The complete final matrix reran without weakened candidate assertions."
+    },
+    {
+      "command": "vercel deploy --yes from the isolated seven-route candidate",
+      "exit_code": 0,
+      "result": "PASS: exactly one preview deploy created dpl_BAMceRFCmxKYpq7bz3GHQZ2qZuKc at https://maplemoonbuild20260813-m49nihfds-handtomouses-projects.vercel.app; target preview; status Ready. No --prod, promote, alias or protection command ran."
+    },
+    {
+      "command": "authenticated deployed-byte remote_verify.mjs",
+      "exit_code": 0,
+      "result": "PASS 14/14: seven HTML routes and six critical shared assets returned HTTP 200 and were byte/SHA-256 identical to the certified local candidate; /products/definitely-missing-control returned 404/79 bytes and differed from the real Pure page."
+    },
+    {
+      "command": "vercel inspect production alias and authenticated production homepage hash close",
+      "exit_code": 0,
+      "result": "PASS: production still resolves to immutable 7vjf2m50b, deployment dpl_G2LER2awaqyFtGRCcTserXbNynct, target production, Ready. Homepage remains HTTP 200/208556 bytes, MD5 6197879a5ca9d3ed0452773abc0bbeb4, SHA-256 b936b5bb4856cdd6134e5b15bce5dfc3b353c1d442fd1a418180b35b8fa10356."
+    },
+    {
+      "command": "evidence integrity and git diff --check",
+      "exit_code": 0,
+      "result": "PASS: 53 evidence files, zero empty files, zero symlinks, receipt-gate-compatible evidence-tree SHA-256 62541edc351fc45b42d776565dd9c55e8830a4724b852264e459f87f3aad381f; git diff --check returned no output for the builder."
+    }
+  ],
+  "screenshots_or_urls": [
+    "https://maplemoonbuild20260813-m49nihfds-handtomouses-projects.vercel.app",
+    "/Users/handtomouse/maplemoon-website/_wip/evidence/pdp_route_repair_20260816/screenshots/contact-390.png",
+    "/Users/handtomouse/maplemoon-website/_wip/evidence/pdp_route_repair_20260816/screenshots/contact-1440.png",
+    "/Users/handtomouse/maplemoon-website/_wip/evidence/pdp_route_repair_20260816/screenshots/pure-carob-bar-390-menu-open.png",
+    "/Users/handtomouse/maplemoon-website/_wip/evidence/pdp_route_repair_20260816/screenshots/pure-carob-bar-390-cart-open.png",
+    "/Users/handtomouse/maplemoon-website/_wip/evidence/pdp_route_repair_20260816/screenshots/homepage-to-pure-journey-390.png"
+  ],
+  "failures": [],
+  "unknowns": [
+    "Nate has not chosen the final Our Story founder imagery direction; the certified candidate still contains the deliberate founder portrait holds.",
+    "Product catalogue titles, imagery approval, Woo commerce data, stockist ownership/cadence, collection endpoints and held claims remain governed by their existing Nate decisions rather than this route repair.",
+    "Production movement has not been authorised."
+  ],
+  "residual_risk": [
+    "The preview is a private review candidate under the existing Vercel protection posture; no protection setting was changed.",
+    "The Pure page deliberately retains its certified enquiry-first controls and does not by itself resolve the separate commerce-authority workstream.",
+    "The worktree contains extensive unrelated pre-existing untracked material; it was preserved and excluded from this packet."
+  ],
+  "forbidden_path_changes": [],
+  "proposed_next_state": "seven_route_preview_certified_needs_nate_our_story_content_commerce_and_production_decisions",
+  "next_reviewer": "Nate for the remaining seven-workstream decisions; production remains frozen"
+}

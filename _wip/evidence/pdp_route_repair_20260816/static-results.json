@@ -1,0 +1,1330 @@
+{
+  "root": "/private/tmp/maplemoon-pdp-route-repair-20260816",
+  "pages": [
+    "homepage.html",
+    "shop.html",
+    "our-story.html",
+    "carob-story.html",
+    "faq.html",
+    "stockists.html",
+    "products/pure-carob-bar.html"
+  ],
+  "controls": {
+    "homepage_clean_target_exactly_once": true,
+    "homepage_target_is_used_by_shop_now": true,
+    "homepage_old_target_absent": true,
+    "pure_title_positive_control_exactly_once": true,
+    "page_count": 7
+  },
+  "checks": [
+    {
+      "check": "page",
+      "path": "homepage.html",
+      "pass": true
+    },
+    {
+      "check": "reference",
+      "page": "homepage.html",
+      "attribute": "href",
+      "value": "/assets/mm_logo_icon_blk.svg",
+      "target": "assets/mm_logo_icon_blk.svg",
+      "pass": true
+    },
+    {
+      "check": "reference",
+      "page": "homepage.html",
+      "attribute": "href",
+      "value": "/assets/hero_shots/moonlit_ocean_night.webp",
+      "target": "assets/hero_shots/moonlit_ocean_night.webp",
+      "pass": true
+    },
+    {
+      "check": "reference",
+      "page": "homepage.html",
+      "attribute": "href",
+      "value": "/brand_kit.css",
+      "target": "brand_kit.css",
+      "pass": true
+    },
+    {
+      "check": "reference",
+      "page": "homepage.html",
+      "attribute": "href",
+      "value": "/assets/design-system/mm-tokens.css",
+      "target": "assets/design-system/mm-tokens.css",
+      "pass": true
+    },
+    {
+      "check": "reference",
+      "page": "homepage.html",
+      "attribute": "href",
+      "value": "/assets/design-system/mm-base.css",
+      "target": "assets/design-system/mm-base.css",
+      "pass": true
+    },
+    {
+      "check": "reference",
+      "page": "homepage.html",
+      "attribute": "href",
+      "value": "/assets/design-system/mm-chrome.css",
+      "target": "assets/design-system/mm-chrome.css",
+      "pass": true
+    },
+    {
+      "check": "reference",
+      "page": "homepage.html",
+      "attribute": "href",
+      "value": "/assets/design-system/mm-primitives.css",
+      "target": "assets/design-system/mm-primitives.css",
+      "pass": true
+    },
+    {
+      "check": "reference",
+      "page": "homepage.html",
+      "attribute": "href",
+      "value": "/styles/homepage.css",
+      "target": "styles/homepage.css",
+      "pass": true
+    },
+    {
+      "check": "reference",
+      "page": "homepage.html",
+      "attribute": "href",
+      "value": "/mock-cart.css",
+      "target": "mock-cart.css",
+      "pass": true
+    },
+    {
+      "check": "reference",
+      "page": "homepage.html",
+      "attribute": "src",
+      "value": "/assets/design-system/mm-chrome.js",
+      "target": "assets/design-system/mm-chrome.js",
+      "pass": true
+    },
+    {
+      "check": "reference",
+      "page": "homepage.html",
+      "attribute": "src",
+      "value": "/assets/hero_videos/gen/finalists/graded_blue/finalist_wetsand2.mp4",
+      "target": "assets/hero_videos/gen/finalists/graded_blue/finalist_wetsand2.mp4",
+      "pass": true
+    },
+    {
+      "check": "reference",
+      "page": "homepage.html",
+      "attribute": "src",
+      "value": "/assets/product_shots/bar_pure_carob_hero.webp",
+      "target": "assets/product_shots/bar_pure_carob_hero.webp",
+      "pass": true
+    },
+    {
+      "check": "reference",
+      "page": "homepage.html",
+      "attribute": "src",
+      "value": "/assets/product_shots/moon_pure_carob.webp",
+      "target": "assets/product_shots/moon_pure_carob.webp",
+      "pass": true
+    },
+    {
+      "check": "reference",
+      "page": "homepage.html",
+      "attribute": "href",
+      "value": "/shop",
+      "target": "shop.html",
+      "pass": true
+    },
+    {
+      "check": "reference",
+      "page": "homepage.html",
+      "attribute": "href",
+      "value": "/our-story",
+      "target": "our-story.html",
+      "pass": true
+    },
+    {
+      "check": "reference",
+      "page": "homepage.html",
+      "attribute": "href",
+      "value": "/stockists",
+      "target": "stockists.html",
+      "pass": true
+    },
+    {
+      "check": "reference",
+      "page": "homepage.html",
+      "attribute": "src",
+      "value": "/assets/carob_wordmark.svg",
+      "target": "assets/carob_wordmark.svg",
+      "pass": true
+    },
+    {
+      "check": "reference",
+      "page": "homepage.html",
+      "attribute": "src",
+      "value": "/assets/hero_shots/carob_branch_dusk.jpg",
+      "target": "assets/hero_shots/carob_branch_dusk.jpg",
+      "pass": true
+    },
+    {
+      "check": "reference",
+      "page": "homepage.html",
+      "attribute": "href",
+      "value": "/carob-story",
+      "target": "carob-story.html",
+      "pass": true
+    },
+    {
+      "check": "reference",
+      "page": "homepage.html",
+      "attribute": "src",
+      "value": "/assets/licensed/scene_after_dinner.jpg",
+      "target": "assets/licensed/scene_after_dinner.jpg",
+      "pass": true
+    },
+    {
+      "check": "reference",
+      "page": "homepage.html",
+      "attribute": "src",
+      "value": "/assets/licensed/scene_afternoon.jpg",
+      "target": "assets/licensed/scene_afternoon.jpg",
+      "pass": true
+    },
+    {
+      "check": "reference",
+      "page": "homepage.html",
+      "attribute": "src",
+      "value": "/assets/licensed/scene_tea_night.jpg",
+      "target": "assets/licensed/scene_tea_night.jpg",
+      "pass": true
+    },
+    {
+      "check": "reference",
+      "page": "homepage.html",
+      "attribute": "src",
+      "value": "/assets/licensed/carob_farm/australian-carob-0205-16x9.jpg",
+      "target": "assets/licensed/carob_farm/australian-carob-0205-16x9.jpg",
+      "pass": true
+    },
+    {
+      "check": "reference",
+      "page": "homepage.html",
+      "attribute": "href",
+      "value": "/our-story",
+      "target": "our-story.html",
+      "pass": true
+    },
+    {
+      "check": "reference",
+      "page": "homepage.html",
+      "attribute": "href",
+      "value": "/our-story",
+      "target": "our-story.html",
+      "pass": true
+    },
+    {
+      "check": "reference",
+      "page": "homepage.html",
+      "attribute": "href",
+      "value": "/stockists",
+      "target": "stockists.html",
+      "pass": true
+    },
+    {
+      "check": "reference",
+      "page": "homepage.html",
+      "attribute": "src",
+      "value": "/assets/product_shots/bar_goji_coconut.webp",
+      "target": "assets/product_shots/bar_goji_coconut.webp",
+      "pass": true
+    },
+    {
+      "check": "reference",
+      "page": "homepage.html",
+      "attribute": "src",
+      "value": "/assets/product_shots/bar_cayenne.webp",
+      "target": "assets/product_shots/bar_cayenne.webp",
+      "pass": true
+    },
+    {
+      "check": "reference",
+      "page": "homepage.html",
+      "attribute": "src",
+      "value": "/assets/product_shots/bar_pure_carob.webp",
+      "target": "assets/product_shots/bar_pure_carob.webp",
+      "pass": true
+    },
+    {
+      "check": "reference",
+      "page": "homepage.html",
+      "attribute": "src",
+      "value": "/assets/product_shots/bar_almond.webp",
+      "target": "assets/product_shots/bar_almond.webp",
+      "pass": true
+    },
+    {
+      "check": "reference",
+      "page": "homepage.html",
+      "attribute": "src",
+      "value": "/assets/product_shots/bar_peppermint.webp",
+      "target": "assets/product_shots/bar_peppermint.webp",
+      "pass": true
+    },
+    {
+      "check": "reference",
+      "page": "homepage.html",
+      "attribute": "src",
+      "value": "/assets/product_shots/bar_hazelnut.webp",
+      "target": "assets/product_shots/bar_hazelnut.webp",
+      "pass": true
+    },
+    {
+      "check": "reference",
+      "page": "homepage.html",
+      "attribute": "href",
+      "value": "/shop#bars",
+      "target": "shop.html",
+      "pass": true
+    },
+    {
+      "check": "reference",
+      "page": "homepage.html",
+      "attribute": "href",
+      "value": "/stockists",
+      "target": "stockists.html",
+      "pass": true
+    },
+    {
+      "check": "reference",
+      "page": "homepage.html",
+      "attribute": "href",
+      "value": "/shop",
+      "target": "shop.html",
+      "pass": true
+    },
+    {
+      "check": "reference",
+      "page": "homepage.html",
+      "attribute": "href",
+      "value": "/our-story",
+      "target": "our-story.html",
+      "pass": true
+    },
+    {
+      "check": "reference",
+      "page": "homepage.html",
+      "attribute": "href",
+      "value": "/stockists",
+      "target": "stockists.html",
+      "pass": true
+    },
+    {
+      "check": "reference",
+      "page": "homepage.html",
+      "attribute": "src",
+      "value": "/mock-cart.js",
+      "target": "mock-cart.js",
+      "pass": true
+    },
+    {
+      "check": "page",
+      "path": "shop.html",
+      "pass": true
+    },
+    {
+      "check": "reference",
+      "page": "shop.html",
+      "attribute": "href",
+      "value": "/assets/mm_logo_icon_blk.svg",
+      "target": "assets/mm_logo_icon_blk.svg",
+      "pass": true
+    },
+    {
+      "check": "reference",
+      "page": "shop.html",
+      "attribute": "href",
+      "value": "/brand_kit.css",
+      "target": "brand_kit.css",
+      "pass": true
+    },
+    {
+      "check": "reference",
+      "page": "shop.html",
+      "attribute": "href",
+      "value": "/a11y_inner.css?v=20260723",
+      "target": "a11y_inner.css",
+      "pass": true
+    },
+    {
+      "check": "reference",
+      "page": "shop.html",
+      "attribute": "href",
+      "value": "/design_refinement_20260723.css",
+      "target": "design_refinement_20260723.css",
+      "pass": true
+    },
+    {
+      "check": "reference",
+      "page": "shop.html",
+      "attribute": "href",
+      "value": "/shop",
+      "target": "shop.html",
+      "pass": true
+    },
+    {
+      "check": "reference",
+      "page": "shop.html",
+      "attribute": "href",
+      "value": "/our-story",
+      "target": "our-story.html",
+      "pass": true
+    },
+    {
+      "check": "reference",
+      "page": "shop.html",
+      "attribute": "href",
+      "value": "/homepage#carob",
+      "target": "homepage.html",
+      "pass": true
+    },
+    {
+      "check": "reference",
+      "page": "shop.html",
+      "attribute": "href",
+      "value": "/homepage",
+      "target": "homepage.html",
+      "pass": true
+    },
+    {
+      "check": "reference",
+      "page": "shop.html",
+      "attribute": "href",
+      "value": "/stockists",
+      "target": "stockists.html",
+      "pass": true
+    },
+    {
+      "check": "reference",
+      "page": "shop.html",
+      "attribute": "src",
+      "value": "/assets/products_new/bar_pure_carob.png",
+      "target": "assets/products_new/bar_pure_carob.png",
+      "pass": true
+    },
+    {
+      "check": "reference",
+      "page": "shop.html",
+      "attribute": "src",
+      "value": "/assets/products_new/bar_peppermint.png",
+      "target": "assets/products_new/bar_peppermint.png",
+      "pass": true
+    },
+    {
+      "check": "reference",
+      "page": "shop.html",
+      "attribute": "src",
+      "value": "/assets/products_new/bar_hazelnut.png",
+      "target": "assets/products_new/bar_hazelnut.png",
+      "pass": true
+    },
+    {
+      "check": "reference",
+      "page": "shop.html",
+      "attribute": "src",
+      "value": "/assets/products_new/bar_goji_coconut.png",
+      "target": "assets/products_new/bar_goji_coconut.png",
+      "pass": true
+    },
+    {
+      "check": "reference",
+      "page": "shop.html",
+      "attribute": "src",
+      "value": "/assets/products_new/bar_cayenne.png",
+      "target": "assets/products_new/bar_cayenne.png",
+      "pass": true
+    },
+    {
+      "check": "reference",
+      "page": "shop.html",
+      "attribute": "src",
+      "value": "/assets/products_new/bar_almond.png",
+      "target": "assets/products_new/bar_almond.png",
+      "pass": true
+    },
+    {
+      "check": "reference",
+      "page": "shop.html",
+      "attribute": "href",
+      "value": "/homepage",
+      "target": "homepage.html",
+      "pass": true
+    },
+    {
+      "check": "reference",
+      "page": "shop.html",
+      "attribute": "href",
+      "value": "/shop",
+      "target": "shop.html",
+      "pass": true
+    },
+    {
+      "check": "reference",
+      "page": "shop.html",
+      "attribute": "href",
+      "value": "/our-story",
+      "target": "our-story.html",
+      "pass": true
+    },
+    {
+      "check": "reference",
+      "page": "shop.html",
+      "attribute": "href",
+      "value": "/stockists",
+      "target": "stockists.html",
+      "pass": true
+    },
+    {
+      "check": "page",
+      "path": "our-story.html",
+      "pass": true
+    },
+    {
+      "check": "reference",
+      "page": "our-story.html",
+      "attribute": "href",
+      "value": "/assets/mm_logo_icon_blk.svg",
+      "target": "assets/mm_logo_icon_blk.svg",
+      "pass": true
+    },
+    {
+      "check": "reference",
+      "page": "our-story.html",
+      "attribute": "href",
+      "value": "/a11y_inner.css?v=20260723",
+      "target": "a11y_inner.css",
+      "pass": true
+    },
+    {
+      "check": "reference",
+      "page": "our-story.html",
+      "attribute": "href",
+      "value": "/design_refinement_20260723.css",
+      "target": "design_refinement_20260723.css",
+      "pass": true
+    },
+    {
+      "check": "reference",
+      "page": "our-story.html",
+      "attribute": "href",
+      "value": "/shop",
+      "target": "shop.html",
+      "pass": true
+    },
+    {
+      "check": "reference",
+      "page": "our-story.html",
+      "attribute": "href",
+      "value": "/our-story",
+      "target": "our-story.html",
+      "pass": true
+    },
+    {
+      "check": "reference",
+      "page": "our-story.html",
+      "attribute": "href",
+      "value": "/homepage#carob",
+      "target": "homepage.html",
+      "pass": true
+    },
+    {
+      "check": "reference",
+      "page": "our-story.html",
+      "attribute": "href",
+      "value": "/homepage",
+      "target": "homepage.html",
+      "pass": true
+    },
+    {
+      "check": "reference",
+      "page": "our-story.html",
+      "attribute": "href",
+      "value": "/stockists",
+      "target": "stockists.html",
+      "pass": true
+    },
+    {
+      "check": "reference",
+      "page": "our-story.html",
+      "attribute": "href",
+      "value": "/shop",
+      "target": "shop.html",
+      "pass": true
+    },
+    {
+      "check": "reference",
+      "page": "our-story.html",
+      "attribute": "src",
+      "value": "/assets/our_story/founders_portrait_h212.webp",
+      "target": "assets/our_story/founders_portrait_h212.webp",
+      "pass": true
+    },
+    {
+      "check": "reference",
+      "page": "our-story.html",
+      "attribute": "src",
+      "value": "/assets/hero_shots/carob_pods_cluster.jpg",
+      "target": "assets/hero_shots/carob_pods_cluster.jpg",
+      "pass": true
+    },
+    {
+      "check": "reference",
+      "page": "our-story.html",
+      "attribute": "href",
+      "value": "/shop",
+      "target": "shop.html",
+      "pass": true
+    },
+    {
+      "check": "reference",
+      "page": "our-story.html",
+      "attribute": "href",
+      "value": "/shop",
+      "target": "shop.html",
+      "pass": true
+    },
+    {
+      "check": "reference",
+      "page": "our-story.html",
+      "attribute": "href",
+      "value": "/homepage",
+      "target": "homepage.html",
+      "pass": true
+    },
+    {
+      "check": "reference",
+      "page": "our-story.html",
+      "attribute": "href",
+      "value": "/shop",
+      "target": "shop.html",
+      "pass": true
+    },
+    {
+      "check": "reference",
+      "page": "our-story.html",
+      "attribute": "href",
+      "value": "/our-story",
+      "target": "our-story.html",
+      "pass": true
+    },
+    {
+      "check": "reference",
+      "page": "our-story.html",
+      "attribute": "href",
+      "value": "/stockists",
+      "target": "stockists.html",
+      "pass": true
+    },
+    {
+      "check": "page",
+      "path": "carob-story.html",
+      "pass": true
+    },
+    {
+      "check": "reference",
+      "page": "carob-story.html",
+      "attribute": "href",
+      "value": "/assets/mm_logo_icon_blk.svg",
+      "target": "assets/mm_logo_icon_blk.svg",
+      "pass": true
+    },
+    {
+      "check": "reference",
+      "page": "carob-story.html",
+      "attribute": "href",
+      "value": "/brand_kit.css",
+      "target": "brand_kit.css",
+      "pass": true
+    },
+    {
+      "check": "reference",
+      "page": "carob-story.html",
+      "attribute": "href",
+      "value": "/a11y_inner.css?v=20260723",
+      "target": "a11y_inner.css",
+      "pass": true
+    },
+    {
+      "check": "reference",
+      "page": "carob-story.html",
+      "attribute": "href",
+      "value": "/design_refinement_20260723.css",
+      "target": "design_refinement_20260723.css",
+      "pass": true
+    },
+    {
+      "check": "reference",
+      "page": "carob-story.html",
+      "attribute": "href",
+      "value": "/shop",
+      "target": "shop.html",
+      "pass": true
+    },
+    {
+      "check": "reference",
+      "page": "carob-story.html",
+      "attribute": "href",
+      "value": "/our-story",
+      "target": "our-story.html",
+      "pass": true
+    },
+    {
+      "check": "reference",
+      "page": "carob-story.html",
+      "attribute": "href",
+      "value": "/carob-story",
+      "target": "carob-story.html",
+      "pass": true
+    },
+    {
+      "check": "reference",
+      "page": "carob-story.html",
+      "attribute": "href",
+      "value": "/homepage",
+      "target": "homepage.html",
+      "pass": true
+    },
+    {
+      "check": "reference",
+      "page": "carob-story.html",
+      "attribute": "href",
+      "value": "/stockists",
+      "target": "stockists.html",
+      "pass": true
+    },
+    {
+      "check": "reference",
+      "page": "carob-story.html",
+      "attribute": "src",
+      "value": "/assets/licensed/carob_farm/australian-carob-0205-16x9.jpg",
+      "target": "assets/licensed/carob_farm/australian-carob-0205-16x9.jpg",
+      "pass": true
+    },
+    {
+      "check": "reference",
+      "page": "carob-story.html",
+      "attribute": "src",
+      "value": "/assets/licensed/carob_pods_macro.jpg",
+      "target": "assets/licensed/carob_pods_macro.jpg",
+      "pass": true
+    },
+    {
+      "check": "reference",
+      "page": "carob-story.html",
+      "attribute": "src",
+      "value": "/assets/photo_finals/maplemoon_heros41_brandmatched.webp",
+      "target": "assets/photo_finals/maplemoon_heros41_brandmatched.webp",
+      "pass": true
+    },
+    {
+      "check": "reference",
+      "page": "carob-story.html",
+      "attribute": "href",
+      "value": "/shop",
+      "target": "shop.html",
+      "pass": true
+    },
+    {
+      "check": "reference",
+      "page": "carob-story.html",
+      "attribute": "href",
+      "value": "/homepage",
+      "target": "homepage.html",
+      "pass": true
+    },
+    {
+      "check": "reference",
+      "page": "carob-story.html",
+      "attribute": "href",
+      "value": "/shop",
+      "target": "shop.html",
+      "pass": true
+    },
+    {
+      "check": "reference",
+      "page": "carob-story.html",
+      "attribute": "href",
+      "value": "/our-story",
+      "target": "our-story.html",
+      "pass": true
+    },
+    {
+      "check": "reference",
+      "page": "carob-story.html",
+      "attribute": "href",
+      "value": "/stockists",
+      "target": "stockists.html",
+      "pass": true
+    },
+    {
+      "check": "page",
+      "path": "faq.html",
+      "pass": true
+    },
+    {
+      "check": "reference",
+      "page": "faq.html",
+      "attribute": "href",
+      "value": "/assets/mm_logo_icon_blk.svg",
+      "target": "assets/mm_logo_icon_blk.svg",
+      "pass": true
+    },
+    {
+      "check": "reference",
+      "page": "faq.html",
+      "attribute": "href",
+      "value": "/brand_kit.css",
+      "target": "brand_kit.css",
+      "pass": true
+    },
+    {
+      "check": "reference",
+      "page": "faq.html",
+      "attribute": "href",
+      "value": "/a11y_inner.css?v=20260723",
+      "target": "a11y_inner.css",
+      "pass": true
+    },
+    {
+      "check": "reference",
+      "page": "faq.html",
+      "attribute": "href",
+      "value": "/design_refinement_20260723.css",
+      "target": "design_refinement_20260723.css",
+      "pass": true
+    },
+    {
+      "check": "reference",
+      "page": "faq.html",
+      "attribute": "href",
+      "value": "/shop",
+      "target": "shop.html",
+      "pass": true
+    },
+    {
+      "check": "reference",
+      "page": "faq.html",
+      "attribute": "href",
+      "value": "/our-story",
+      "target": "our-story.html",
+      "pass": true
+    },
+    {
+      "check": "reference",
+      "page": "faq.html",
+      "attribute": "href",
+      "value": "/homepage#carob",
+      "target": "homepage.html",
+      "pass": true
+    },
+    {
+      "check": "reference",
+      "page": "faq.html",
+      "attribute": "href",
+      "value": "/homepage",
+      "target": "homepage.html",
+      "pass": true
+    },
+    {
+      "check": "reference",
+      "page": "faq.html",
+      "attribute": "href",
+      "value": "/stockists",
+      "target": "stockists.html",
+      "pass": true
+    },
+    {
+      "check": "reference",
+      "page": "faq.html",
+      "attribute": "href",
+      "value": "/faq",
+      "target": "faq.html",
+      "pass": true
+    },
+    {
+      "check": "reference",
+      "page": "faq.html",
+      "attribute": "href",
+      "value": "/stockists",
+      "target": "stockists.html",
+      "pass": true
+    },
+    {
+      "check": "reference",
+      "page": "faq.html",
+      "attribute": "href",
+      "value": "/homepage",
+      "target": "homepage.html",
+      "pass": true
+    },
+    {
+      "check": "reference",
+      "page": "faq.html",
+      "attribute": "href",
+      "value": "/shop",
+      "target": "shop.html",
+      "pass": true
+    },
+    {
+      "check": "reference",
+      "page": "faq.html",
+      "attribute": "href",
+      "value": "/our-story",
+      "target": "our-story.html",
+      "pass": true
+    },
+    {
+      "check": "reference",
+      "page": "faq.html",
+      "attribute": "href",
+      "value": "/stockists",
+      "target": "stockists.html",
+      "pass": true
+    },
+    {
+      "check": "reference",
+      "page": "faq.html",
+      "attribute": "href",
+      "value": "/faq",
+      "target": "faq.html",
+      "pass": true
+    },
+    {
+      "check": "page",
+      "path": "stockists.html",
+      "pass": true
+    },
+    {
+      "check": "reference",
+      "page": "stockists.html",
+      "attribute": "href",
+      "value": "/assets/mm_logo_icon_blk.svg",
+      "target": "assets/mm_logo_icon_blk.svg",
+      "pass": true
+    },
+    {
+      "check": "reference",
+      "page": "stockists.html",
+      "attribute": "href",
+      "value": "/brand_kit.css",
+      "target": "brand_kit.css",
+      "pass": true
+    },
+    {
+      "check": "reference",
+      "page": "stockists.html",
+      "attribute": "href",
+      "value": "/a11y_inner.css?v=20260723",
+      "target": "a11y_inner.css",
+      "pass": true
+    },
+    {
+      "check": "reference",
+      "page": "stockists.html",
+      "attribute": "href",
+      "value": "/design_refinement_20260723.css",
+      "target": "design_refinement_20260723.css",
+      "pass": true
+    },
+    {
+      "check": "reference",
+      "page": "stockists.html",
+      "attribute": "href",
+      "value": "/shop",
+      "target": "shop.html",
+      "pass": true
+    },
+    {
+      "check": "reference",
+      "page": "stockists.html",
+      "attribute": "href",
+      "value": "/our-story",
+      "target": "our-story.html",
+      "pass": true
+    },
+    {
+      "check": "reference",
+      "page": "stockists.html",
+      "attribute": "href",
+      "value": "/homepage#carob",
+      "target": "homepage.html",
+      "pass": true
+    },
+    {
+      "check": "reference",
+      "page": "stockists.html",
+      "attribute": "href",
+      "value": "/homepage",
+      "target": "homepage.html",
+      "pass": true
+    },
+    {
+      "check": "reference",
+      "page": "stockists.html",
+      "attribute": "href",
+      "value": "/stockists",
+      "target": "stockists.html",
+      "pass": true
+    },
+    {
+      "check": "reference",
+      "page": "stockists.html",
+      "attribute": "href",
+      "value": "/shop",
+      "target": "shop.html",
+      "pass": true
+    },
+    {
+      "check": "reference",
+      "page": "stockists.html",
+      "attribute": "href",
+      "value": "/shop",
+      "target": "shop.html",
+      "pass": true
+    },
+    {
+      "check": "reference",
+      "page": "stockists.html",
+      "attribute": "src",
+      "value": "/assets/photo_finals/maplemoon_heros55_brandmatched.webp",
+      "target": "assets/photo_finals/maplemoon_heros55_brandmatched.webp",
+      "pass": true
+    },
+    {
+      "check": "reference",
+      "page": "stockists.html",
+      "attribute": "href",
+      "value": "/homepage",
+      "target": "homepage.html",
+      "pass": true
+    },
+    {
+      "check": "reference",
+      "page": "stockists.html",
+      "attribute": "href",
+      "value": "/shop",
+      "target": "shop.html",
+      "pass": true
+    },
+    {
+      "check": "reference",
+      "page": "stockists.html",
+      "attribute": "href",
+      "value": "/our-story",
+      "target": "our-story.html",
+      "pass": true
+    },
+    {
+      "check": "reference",
+      "page": "stockists.html",
+      "attribute": "href",
+      "value": "/stockists",
+      "target": "stockists.html",
+      "pass": true
+    },
+    {
+      "check": "page",
+      "path": "products/pure-carob-bar.html",
+      "pass": true
+    },
+    {
+      "check": "reference",
+      "page": "products/pure-carob-bar.html",
+      "attribute": "href",
+      "value": "/assets/mm_logo_icon_blk.svg",
+      "target": "assets/mm_logo_icon_blk.svg",
+      "pass": true
+    },
+    {
+      "check": "reference",
+      "page": "products/pure-carob-bar.html",
+      "attribute": "href",
+      "value": "/brand_kit.css",
+      "target": "brand_kit.css",
+      "pass": true
+    },
+    {
+      "check": "reference",
+      "page": "products/pure-carob-bar.html",
+      "attribute": "href",
+      "value": "/mock-cart.css",
+      "target": "mock-cart.css",
+      "pass": true
+    },
+    {
+      "check": "reference",
+      "page": "products/pure-carob-bar.html",
+      "attribute": "href",
+      "value": "/assets/design-system/mm-tokens.css",
+      "target": "assets/design-system/mm-tokens.css",
+      "pass": true
+    },
+    {
+      "check": "reference",
+      "page": "products/pure-carob-bar.html",
+      "attribute": "href",
+      "value": "/assets/design-system/mm-primitives.css",
+      "target": "assets/design-system/mm-primitives.css",
+      "pass": true
+    },
+    {
+      "check": "reference",
+      "page": "products/pure-carob-bar.html",
+      "attribute": "href",
+      "value": "/assets/design-system/mm-chrome.css",
+      "target": "assets/design-system/mm-chrome.css",
+      "pass": true
+    },
+    {
+      "check": "reference",
+      "page": "products/pure-carob-bar.html",
+      "attribute": "src",
+      "value": "/assets/design-system/mm-chrome.js",
+      "target": "assets/design-system/mm-chrome.js",
+      "pass": true
+    },
+    {
+      "check": "reference",
+      "page": "products/pure-carob-bar.html",
+      "attribute": "href",
+      "value": "/shop",
+      "target": "shop.html",
+      "pass": true
+    },
+    {
+      "check": "reference",
+      "page": "products/pure-carob-bar.html",
+      "attribute": "href",
+      "value": "/our-story",
+      "target": "our-story.html",
+      "pass": true
+    },
+    {
+      "check": "reference",
+      "page": "products/pure-carob-bar.html",
+      "attribute": "href",
+      "value": "/carob-story",
+      "target": "carob-story.html",
+      "pass": true
+    },
+    {
+      "check": "reference",
+      "page": "products/pure-carob-bar.html",
+      "attribute": "href",
+      "value": "/homepage",
+      "target": "homepage.html",
+      "pass": true
+    },
+    {
+      "check": "reference",
+      "page": "products/pure-carob-bar.html",
+      "attribute": "href",
+      "value": "/stockists",
+      "target": "stockists.html",
+      "pass": true
+    },
+    {
+      "check": "reference",
+      "page": "products/pure-carob-bar.html",
+      "attribute": "href",
+      "value": "/shop",
+      "target": "shop.html",
+      "pass": true
+    },
+    {
+      "check": "reference",
+      "page": "products/pure-carob-bar.html",
+      "attribute": "href",
+      "value": "/shop#bars",
+      "target": "shop.html",
+      "pass": true
+    },
+    {
+      "check": "reference",
+      "page": "products/pure-carob-bar.html",
+      "attribute": "src",
+      "value": "/assets/product_shots/bar_pure_carob_hero.webp",
+      "target": "assets/product_shots/bar_pure_carob_hero.webp",
+      "pass": true
+    },
+    {
+      "check": "reference",
+      "page": "products/pure-carob-bar.html",
+      "attribute": "href",
+      "value": "/shop#bars",
+      "target": "shop.html",
+      "pass": true
+    },
+    {
+      "check": "reference",
+      "page": "products/pure-carob-bar.html",
+      "attribute": "href",
+      "value": "/faq#allergy-question",
+      "target": "faq.html",
+      "pass": true
+    },
+    {
+      "check": "reference",
+      "page": "products/pure-carob-bar.html",
+      "attribute": "href",
+      "value": "/faq#storage",
+      "target": "faq.html",
+      "pass": true
+    },
+    {
+      "check": "reference",
+      "page": "products/pure-carob-bar.html",
+      "attribute": "href",
+      "value": "/shop#bars",
+      "target": "shop.html",
+      "pass": true
+    },
+    {
+      "check": "reference",
+      "page": "products/pure-carob-bar.html",
+      "attribute": "src",
+      "value": "/assets/product_shots/bar_peppermint.webp",
+      "target": "assets/product_shots/bar_peppermint.webp",
+      "pass": true
+    },
+    {
+      "check": "reference",
+      "page": "products/pure-carob-bar.html",
+      "attribute": "href",
+      "value": "/shop#bars",
+      "target": "shop.html",
+      "pass": true
+    },
+    {
+      "check": "reference",
+      "page": "products/pure-carob-bar.html",
+      "attribute": "src",
+      "value": "/assets/product_shots/bar_hazelnut.webp",
+      "target": "assets/product_shots/bar_hazelnut.webp",
+      "pass": true
+    },
+    {
+      "check": "reference",
+      "page": "products/pure-carob-bar.html",
+      "attribute": "href",
+      "value": "/shop#bars",
+      "target": "shop.html",
+      "pass": true
+    },
+    {
+      "check": "reference",
+      "page": "products/pure-carob-bar.html",
+      "attribute": "src",
+      "value": "/assets/product_shots/bar_goji_coconut.webp",
+      "target": "assets/product_shots/bar_goji_coconut.webp",
+      "pass": true
+    },
+    {
+      "check": "reference",
+      "page": "products/pure-carob-bar.html",
+      "attribute": "href",
+      "value": "/shop#bars",
+      "target": "shop.html",
+      "pass": true
+    },
+    {
+      "check": "reference",
+      "page": "products/pure-carob-bar.html",
+      "attribute": "src",
+      "value": "/assets/product_shots/bar_cayenne.webp",
+      "target": "assets/product_shots/bar_cayenne.webp",
+      "pass": true
+    },
+    {
+      "check": "reference",
+      "page": "products/pure-carob-bar.html",
+      "attribute": "href",
+      "value": "/shop#bars",
+      "target": "shop.html",
+      "pass": true
+    },
+    {
+      "check": "reference",
+      "page": "products/pure-carob-bar.html",
+      "attribute": "src",
+      "value": "/assets/product_shots/bar_almond.webp",
+      "target": "assets/product_shots/bar_almond.webp",
+      "pass": true
+    },
+    {
+      "check": "reference",
+      "page": "products/pure-carob-bar.html",
+      "attribute": "href",
+      "value": "/shop",
+      "target": "shop.html",
+      "pass": true
+    },
+    {
+      "check": "reference",
+      "page": "products/pure-carob-bar.html",
+      "attribute": "href",
+      "value": "/stockists",
+      "target": "stockists.html",
+      "pass": true
+    },
+    {
+      "check": "reference",
+      "page": "products/pure-carob-bar.html",
+      "attribute": "href",
+      "value": "/homepage",
+      "target": "homepage.html",
+      "pass": true
+    },
+    {
+      "check": "reference",
+      "page": "products/pure-carob-bar.html",
+      "attribute": "src",
+      "value": "/assets/mm_wordmark_blk.svg",
+      "target": "assets/mm_wordmark_blk.svg",
+      "pass": true
+    },
+    {
+      "check": "reference",
+      "page": "products/pure-carob-bar.html",
+      "attribute": "href",
+      "value": "/shop",
+      "target": "shop.html",
+      "pass": true
+    },
+    {
+      "check": "reference",
+      "page": "products/pure-carob-bar.html",
+      "attribute": "href",
+      "value": "/our-story",
+      "target": "our-story.html",
+      "pass": true
+    },
+    {
+      "check": "reference",
+      "page": "products/pure-carob-bar.html",
+      "attribute": "href",
+      "value": "/stockists",
+      "target": "stockists.html",
+      "pass": true
+    },
+    {
+      "check": "reference",
+      "page": "products/pure-carob-bar.html",
+      "attribute": "src",
+      "value": "/mock-cart.js",
+      "target": "mock-cart.js",
+      "pass": true
+    }
+  ],
+  "failures": [],
+  "result": "PASS"
+}

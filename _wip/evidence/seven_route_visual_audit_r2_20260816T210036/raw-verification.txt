@@ -1,0 +1,36 @@
+ACQUISITION PASS matched=7/7
+PASS route=homepage width=390 body=6881 images=20/0 internal_overflow=11 sub44=0 content_flags=0 semantic=footer-landmarks-2 failures=none
+PASS route=shop width=390 body=15569 images=28/0 internal_overflow=2 sub44=19 content_flags=0 semantic=none failures=none
+PASS route=our-story width=390 body=5245 images=2/0 internal_overflow=2 sub44=2 content_flags=4 semantic=main-landmarks-0 failures=none
+PASS route=carob-story width=390 body=2690 images=3/0 internal_overflow=5 sub44=0 content_flags=0 semantic=none failures=none
+PASS route=faq width=390 body=2723 images=0/0 internal_overflow=7 sub44=1 content_flags=0 semantic=none failures=none
+PASS route=stockists width=390 body=3767 images=1/0 internal_overflow=4 sub44=0 content_flags=5 semantic=none failures=none
+PASS route=pure-carob-bar width=390 body=3029 images=7/0 internal_overflow=2 sub44=0 content_flags=0 semantic=footer-landmarks-2 failures=none
+PASS route=homepage width=900 body=5990 images=20/0 internal_overflow=14 sub44=0 content_flags=0 semantic=footer-landmarks-2 failures=none
+PASS route=shop width=900 body=10348 images=28/0 internal_overflow=2 sub44=19 content_flags=0 semantic=none failures=none
+PASS route=our-story width=900 body=5483 images=2/0 internal_overflow=2 sub44=2 content_flags=4 semantic=main-landmarks-0 failures=none
+PASS route=carob-story width=900 body=2298 images=3/0 internal_overflow=2 sub44=0 content_flags=0 semantic=none failures=none
+PASS route=faq width=900 body=2637 images=0/0 internal_overflow=7 sub44=4 content_flags=0 semantic=none failures=none
+PASS route=stockists width=900 body=3883 images=1/0 internal_overflow=5 sub44=0 content_flags=5 semantic=none failures=none
+PASS route=pure-carob-bar width=900 body=2532 images=7/0 internal_overflow=2 sub44=0 content_flags=0 semantic=footer-landmarks-2 failures=none
+PASS route=homepage width=1440 body=5719 images=20/0 internal_overflow=15 sub44=0 content_flags=0 semantic=footer-landmarks-2 failures=none
+PASS route=shop width=1440 body=6826 images=28/0 internal_overflow=2 sub44=19 content_flags=0 semantic=none failures=none
+PASS route=our-story width=1440 body=4153 images=2/0 internal_overflow=2 sub44=2 content_flags=4 semantic=main-landmarks-0 failures=none
+PASS route=carob-story width=1440 body=1767 images=3/0 internal_overflow=2 sub44=0 content_flags=0 semantic=none failures=none
+PASS route=faq width=1440 body=2318 images=0/0 internal_overflow=4 sub44=1 content_flags=0 semantic=none failures=none
+PASS route=stockists width=1440 body=3282 images=1/0 internal_overflow=3 sub44=0 content_flags=5 semantic=none failures=none
+PASS route=pure-carob-bar width=1440 body=1682 images=7/0 internal_overflow=2 sub44=0 content_flags=0 semantic=footer-landmarks-2 failures=none
+POSITIVE_CONTROLS PASS missing_route=true overflow=true blank=true
+AUDIT_SUMMARY pass=21 fail=0 total=21 screenshots=84 contacts=12
+
+HEADER route=homepage status=200 menu=yes visible_nav_links=0 logo_cart_overlap=0 header_height=70
+HEADER route=shop status=200 menu=no visible_nav_links=0 logo_cart_overlap=1808.4 header_height=70
+HEADER route=our-story status=200 menu=no visible_nav_links=0 logo_cart_overlap=1887.6 header_height=70
+HEADER route=carob-story status=200 menu=no visible_nav_links=0 logo_cart_overlap=831.6 header_height=65
+HEADER route=faq status=200 menu=no visible_nav_links=0 logo_cart_overlap=0 header_height=59
+HEADER route=stockists status=200 menu=no visible_nav_links=0 logo_cart_overlap=1368.4 header_height=70
+HEADER route=pure-carob-bar status=200 menu=yes visible_nav_links=0 logo_cart_overlap=0 header_height=70
+HEADER_SUMMARY routes=7/7 menu=2 no_menu_or_links=5 overlaps=4 positive_control=PASS
+
+VISUAL_AUDIT_ASSERTIONS PASS hashes=7/7 routes=21/21 screenshots=84/84 contacts=12/12 inspected=21/21 controls=3/3 mobile_menu=2/7 no_menu_or_links=5/7 painted_overlaps=4
+LOCAL_SERVER_CLOSED port=8792

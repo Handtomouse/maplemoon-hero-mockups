@@ -1,0 +1,22 @@
+{
+  "checked_at": "2026-08-14T14:56:00+10:00",
+  "alias": "https://maplemoonbuild20260813.vercel.app",
+  "resolved_immutable_url": "https://maplemoonbuild20260813-7vjf2m50b-handtomouses-projects.vercel.app",
+  "deployment_id": "dpl_G2LER2awaqyFtGRCcTserXbNynct",
+  "target": "production",
+  "status": "Ready",
+  "alias_homepage": {
+    "http": 200,
+    "bytes": 208556,
+    "md5": "6197879a5ca9d3ed0452773abc0bbeb4",
+    "sha256": "b936b5bb4856cdd6134e5b15bce5dfc3b353c1d442fd1a418180b35b8fa10356"
+  },
+  "immutable_homepage": {
+    "http": 200,
+    "bytes": 208556,
+    "md5": "6197879a5ca9d3ed0452773abc0bbeb4",
+    "sha256": "b936b5bb4856cdd6134e5b15bce5dfc3b353c1d442fd1a418180b35b8fa10356"
+  },
+  "byte_identical": true,
+  "pass": true
+}

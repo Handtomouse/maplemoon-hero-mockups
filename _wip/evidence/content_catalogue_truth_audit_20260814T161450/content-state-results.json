@@ -1,0 +1,42 @@
+[
+  {
+    "width": 390,
+    "faqHttp": 200,
+    "faqState": {
+      "question": "Does carob contain caffeine?",
+      "answer": "Carob itself is naturally caffeine-free. Its mellow, naturally sweet flavour works beautifully in bars, baking and warm drinks. Maple Moon recipes vary, so please check the individual product label for the full ingredient list.",
+      "expanded": "true",
+      "answerHidden": false,
+      "answerMatches": true
+    },
+    "faqScreenshot": "/Users/handtomouse/maplemoon-website/_wip/evidence/content_catalogue_truth_audit_20260814T161450/faq_390_caffeine-open.png",
+    "homeHttp": 200,
+    "newsletterState": {
+      "inputCleared": true,
+      "statusText": "Thanks, your submission was received.Review preview: your email was not saved.",
+      "statusHidden": false,
+      "storageContainsAuditEmail": false
+    },
+    "newsletterScreenshot": "/Users/handtomouse/maplemoon-website/_wip/evidence/content_catalogue_truth_audit_20260814T161450/homepage_390_newsletter-review.png"
+  },
+  {
+    "width": 1440,
+    "faqHttp": 200,
+    "faqState": {
+      "question": "Does carob contain caffeine?",
+      "answer": "Carob itself is naturally caffeine-free. Its mellow, naturally sweet flavour works beautifully in bars, baking and warm drinks. Maple Moon recipes vary, so please check the individual product label for the full ingredient list.",
+      "expanded": "true",
+      "answerHidden": false,
+      "answerMatches": true
+    },
+    "faqScreenshot": "/Users/handtomouse/maplemoon-website/_wip/evidence/content_catalogue_truth_audit_20260814T161450/faq_1440_caffeine-open.png",
+    "homeHttp": 200,
+    "newsletterState": {
+      "inputCleared": true,
+      "statusText": "Thanks, your submission was received.Review preview: your email was not saved.",
+      "statusHidden": false,
+      "storageContainsAuditEmail": false
+    },
+    "newsletterScreenshot": "/Users/handtomouse/maplemoon-website/_wip/evidence/content_catalogue_truth_audit_20260814T161450/homepage_1440_newsletter-review.png"
+  }
+]

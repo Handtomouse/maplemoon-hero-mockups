@@ -1,0 +1,326 @@
+{
+  "status": "PASS",
+  "results": [
+    {
+      "width": 390,
+      "status": "PASS",
+      "documentStatus": 200,
+      "measuredViewport": {
+        "width": 390,
+        "height": 1000
+      },
+      "bodyTextLength": 785,
+      "scrollWidth": 390,
+      "clientWidth": 390,
+      "images": [
+        {
+          "src": "http://127.0.0.1:8766/.codex/visualizations/2026/08/13/019ffd5b-edd2-7b23-8780-453f9b67a532/maplemoon-product-corrections-20260814/assets/elixir_pure_same_size_clean_edges_v4.png",
+          "complete": true,
+          "naturalWidth": 1254,
+          "naturalHeight": 1254,
+          "renderedWidth": 372,
+          "renderedHeight": 372
+        },
+        {
+          "src": "http://127.0.0.1:8766/.codex/visualizations/2026/08/13/019ffd5b-edd2-7b23-8780-453f9b67a532/maplemoon-product-corrections-20260814/assets/elixir_spiced_same_size_clean_edges_v4.png",
+          "complete": true,
+          "naturalWidth": 1254,
+          "naturalHeight": 1254,
+          "renderedWidth": 372,
+          "renderedHeight": 372
+        },
+        {
+          "src": "http://127.0.0.1:8766/.codex/visualizations/2026/08/13/019ffd5b-edd2-7b23-8780-453f9b67a532/maplemoon-product-corrections-20260814/assets/elixir_pure_same_size_clean_edges_v4.png",
+          "complete": true,
+          "naturalWidth": 1254,
+          "naturalHeight": 1254,
+          "renderedWidth": 372,
+          "renderedHeight": 372
+        },
+        {
+          "src": "http://127.0.0.1:8766/.codex/visualizations/2026/08/13/019ffd5b-edd2-7b23-8780-453f9b67a532/maplemoon-product-corrections-20260814/assets/elixir_spiced_same_size_clean_edges_v4.png",
+          "complete": true,
+          "naturalWidth": 1254,
+          "naturalHeight": 1254,
+          "renderedWidth": 372,
+          "renderedHeight": 372
+        },
+        {
+          "src": "http://127.0.0.1:8766/.codex/visualizations/2026/08/13/019ffd5b-edd2-7b23-8780-453f9b67a532/maplemoon-product-corrections-20260814/assets/elixir_pure_same_size_clean_edges_v4.png",
+          "complete": true,
+          "naturalWidth": 1254,
+          "naturalHeight": 1254,
+          "renderedWidth": 372,
+          "renderedHeight": 372
+        },
+        {
+          "src": "http://127.0.0.1:8766/.codex/visualizations/2026/08/13/019ffd5b-edd2-7b23-8780-453f9b67a532/maplemoon-product-corrections-20260814/assets/elixir_spiced_same_size_clean_edges_v4.png",
+          "complete": true,
+          "naturalWidth": 1254,
+          "naturalHeight": 1254,
+          "renderedWidth": 372,
+          "renderedHeight": 372
+        },
+        {
+          "src": "http://127.0.0.1:8766/maplemoon_build_20260813/assets/product_shots/elixir_plain.webp",
+          "complete": true,
+          "naturalWidth": 1024,
+          "naturalHeight": 1536,
+          "renderedWidth": 372,
+          "renderedHeight": 558
+        },
+        {
+          "src": "http://127.0.0.1:8766/maplemoon_build_20260813/assets/product_shots/elixir_spiced.webp",
+          "complete": true,
+          "naturalWidth": 1024,
+          "naturalHeight": 1536,
+          "renderedWidth": 372,
+          "renderedHeight": 558
+        }
+      ],
+      "holdTextPresent": true,
+      "uniqueImageSources": [
+        "http://127.0.0.1:8766/.codex/visualizations/2026/08/13/019ffd5b-edd2-7b23-8780-453f9b67a532/maplemoon-product-corrections-20260814/assets/elixir_pure_same_size_clean_edges_v4.png",
+        "http://127.0.0.1:8766/.codex/visualizations/2026/08/13/019ffd5b-edd2-7b23-8780-453f9b67a532/maplemoon-product-corrections-20260814/assets/elixir_spiced_same_size_clean_edges_v4.png",
+        "http://127.0.0.1:8766/maplemoon_build_20260813/assets/product_shots/elixir_plain.webp",
+        "http://127.0.0.1:8766/maplemoon_build_20260813/assets/product_shots/elixir_spiced.webp"
+      ],
+      "imageResponses": [
+        {
+          "url": "http://127.0.0.1:8766/.codex/visualizations/2026/08/13/019ffd5b-edd2-7b23-8780-453f9b67a532/maplemoon-product-corrections-20260814/assets/elixir_pure_same_size_clean_edges_v4.png",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:8766/.codex/visualizations/2026/08/13/019ffd5b-edd2-7b23-8780-453f9b67a532/maplemoon-product-corrections-20260814/assets/elixir_spiced_same_size_clean_edges_v4.png",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:8766/maplemoon_build_20260813/assets/product_shots/elixir_plain.webp",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:8766/maplemoon_build_20260813/assets/product_shots/elixir_spiced.webp",
+          "status": 200
+        }
+      ],
+      "consoleErrors": [],
+      "pageErrors": [],
+      "failedRequests": [],
+      "screenshot": "/Users/handtomouse/maplemoon-website/_wip/evidence/elixir_v4_live_use_audit_20260814T171205/review_surface_390.png"
+    },
+    {
+      "width": 900,
+      "status": "PASS",
+      "documentStatus": 200,
+      "measuredViewport": {
+        "width": 900,
+        "height": 1000
+      },
+      "bodyTextLength": 785,
+      "scrollWidth": 900,
+      "clientWidth": 900,
+      "images": [
+        {
+          "src": "http://127.0.0.1:8766/.codex/visualizations/2026/08/13/019ffd5b-edd2-7b23-8780-453f9b67a532/maplemoon-product-corrections-20260814/assets/elixir_pure_same_size_clean_edges_v4.png",
+          "complete": true,
+          "naturalWidth": 1254,
+          "naturalHeight": 1254,
+          "renderedWidth": 428,
+          "renderedHeight": 428
+        },
+        {
+          "src": "http://127.0.0.1:8766/.codex/visualizations/2026/08/13/019ffd5b-edd2-7b23-8780-453f9b67a532/maplemoon-product-corrections-20260814/assets/elixir_spiced_same_size_clean_edges_v4.png",
+          "complete": true,
+          "naturalWidth": 1254,
+          "naturalHeight": 1254,
+          "renderedWidth": 428,
+          "renderedHeight": 428
+        },
+        {
+          "src": "http://127.0.0.1:8766/.codex/visualizations/2026/08/13/019ffd5b-edd2-7b23-8780-453f9b67a532/maplemoon-product-corrections-20260814/assets/elixir_pure_same_size_clean_edges_v4.png",
+          "complete": true,
+          "naturalWidth": 1254,
+          "naturalHeight": 1254,
+          "renderedWidth": 428,
+          "renderedHeight": 428
+        },
+        {
+          "src": "http://127.0.0.1:8766/.codex/visualizations/2026/08/13/019ffd5b-edd2-7b23-8780-453f9b67a532/maplemoon-product-corrections-20260814/assets/elixir_spiced_same_size_clean_edges_v4.png",
+          "complete": true,
+          "naturalWidth": 1254,
+          "naturalHeight": 1254,
+          "renderedWidth": 428,
+          "renderedHeight": 428
+        },
+        {
+          "src": "http://127.0.0.1:8766/.codex/visualizations/2026/08/13/019ffd5b-edd2-7b23-8780-453f9b67a532/maplemoon-product-corrections-20260814/assets/elixir_pure_same_size_clean_edges_v4.png",
+          "complete": true,
+          "naturalWidth": 1254,
+          "naturalHeight": 1254,
+          "renderedWidth": 428,
+          "renderedHeight": 428
+        },
+        {
+          "src": "http://127.0.0.1:8766/.codex/visualizations/2026/08/13/019ffd5b-edd2-7b23-8780-453f9b67a532/maplemoon-product-corrections-20260814/assets/elixir_spiced_same_size_clean_edges_v4.png",
+          "complete": true,
+          "naturalWidth": 1254,
+          "naturalHeight": 1254,
+          "renderedWidth": 428,
+          "renderedHeight": 428
+        },
+        {
+          "src": "http://127.0.0.1:8766/maplemoon_build_20260813/assets/product_shots/elixir_plain.webp",
+          "complete": true,
+          "naturalWidth": 1024,
+          "naturalHeight": 1536,
+          "renderedWidth": 428,
+          "renderedHeight": 642
+        },
+        {
+          "src": "http://127.0.0.1:8766/maplemoon_build_20260813/assets/product_shots/elixir_spiced.webp",
+          "complete": true,
+          "naturalWidth": 1024,
+          "naturalHeight": 1536,
+          "renderedWidth": 428,
+          "renderedHeight": 642
+        }
+      ],
+      "holdTextPresent": true,
+      "uniqueImageSources": [
+        "http://127.0.0.1:8766/.codex/visualizations/2026/08/13/019ffd5b-edd2-7b23-8780-453f9b67a532/maplemoon-product-corrections-20260814/assets/elixir_pure_same_size_clean_edges_v4.png",
+        "http://127.0.0.1:8766/.codex/visualizations/2026/08/13/019ffd5b-edd2-7b23-8780-453f9b67a532/maplemoon-product-corrections-20260814/assets/elixir_spiced_same_size_clean_edges_v4.png",
+        "http://127.0.0.1:8766/maplemoon_build_20260813/assets/product_shots/elixir_plain.webp",
+        "http://127.0.0.1:8766/maplemoon_build_20260813/assets/product_shots/elixir_spiced.webp"
+      ],
+      "imageResponses": [
+        {
+          "url": "http://127.0.0.1:8766/.codex/visualizations/2026/08/13/019ffd5b-edd2-7b23-8780-453f9b67a532/maplemoon-product-corrections-20260814/assets/elixir_spiced_same_size_clean_edges_v4.png",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:8766/.codex/visualizations/2026/08/13/019ffd5b-edd2-7b23-8780-453f9b67a532/maplemoon-product-corrections-20260814/assets/elixir_pure_same_size_clean_edges_v4.png",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:8766/maplemoon_build_20260813/assets/product_shots/elixir_spiced.webp",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:8766/maplemoon_build_20260813/assets/product_shots/elixir_plain.webp",
+          "status": 200
+        }
+      ],
+      "consoleErrors": [],
+      "pageErrors": [],
+      "failedRequests": [],
+      "screenshot": "/Users/handtomouse/maplemoon-website/_wip/evidence/elixir_v4_live_use_audit_20260814T171205/review_surface_900.png"
+    },
+    {
+      "width": 1440,
+      "status": "PASS",
+      "documentStatus": 200,
+      "measuredViewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "bodyTextLength": 785,
+      "scrollWidth": 1440,
+      "clientWidth": 1440,
+      "images": [
+        {
+          "src": "http://127.0.0.1:8766/.codex/visualizations/2026/08/13/019ffd5b-edd2-7b23-8780-453f9b67a532/maplemoon-product-corrections-20260814/assets/elixir_pure_same_size_clean_edges_v4.png",
+          "complete": true,
+          "naturalWidth": 1254,
+          "naturalHeight": 1254,
+          "renderedWidth": 698,
+          "renderedHeight": 698
+        },
+        {
+          "src": "http://127.0.0.1:8766/.codex/visualizations/2026/08/13/019ffd5b-edd2-7b23-8780-453f9b67a532/maplemoon-product-corrections-20260814/assets/elixir_spiced_same_size_clean_edges_v4.png",
+          "complete": true,
+          "naturalWidth": 1254,
+          "naturalHeight": 1254,
+          "renderedWidth": 698,
+          "renderedHeight": 698
+        },
+        {
+          "src": "http://127.0.0.1:8766/.codex/visualizations/2026/08/13/019ffd5b-edd2-7b23-8780-453f9b67a532/maplemoon-product-corrections-20260814/assets/elixir_pure_same_size_clean_edges_v4.png",
+          "complete": true,
+          "naturalWidth": 1254,
+          "naturalHeight": 1254,
+          "renderedWidth": 698,
+          "renderedHeight": 698
+        },
+        {
+          "src": "http://127.0.0.1:8766/.codex/visualizations/2026/08/13/019ffd5b-edd2-7b23-8780-453f9b67a532/maplemoon-product-corrections-20260814/assets/elixir_spiced_same_size_clean_edges_v4.png",
+          "complete": true,
+          "naturalWidth": 1254,
+          "naturalHeight": 1254,
+          "renderedWidth": 698,
+          "renderedHeight": 698
+        },
+        {
+          "src": "http://127.0.0.1:8766/.codex/visualizations/2026/08/13/019ffd5b-edd2-7b23-8780-453f9b67a532/maplemoon-product-corrections-20260814/assets/elixir_pure_same_size_clean_edges_v4.png",
+          "complete": true,
+          "naturalWidth": 1254,
+          "naturalHeight": 1254,
+          "renderedWidth": 698,
+          "renderedHeight": 698
+        },
+        {
+          "src": "http://127.0.0.1:8766/.codex/visualizations/2026/08/13/019ffd5b-edd2-7b23-8780-453f9b67a532/maplemoon-product-corrections-20260814/assets/elixir_spiced_same_size_clean_edges_v4.png",
+          "complete": true,
+          "naturalWidth": 1254,
+          "naturalHeight": 1254,
+          "renderedWidth": 698,
+          "renderedHeight": 698
+        },
+        {
+          "src": "http://127.0.0.1:8766/maplemoon_build_20260813/assets/product_shots/elixir_plain.webp",
+          "complete": true,
+          "naturalWidth": 1024,
+          "naturalHeight": 1536,
+          "renderedWidth": 698,
+          "renderedHeight": 1047
+        },
+        {
+          "src": "http://127.0.0.1:8766/maplemoon_build_20260813/assets/product_shots/elixir_spiced.webp",
+          "complete": true,
+          "naturalWidth": 1024,
+          "naturalHeight": 1536,
+          "renderedWidth": 698,
+          "renderedHeight": 1047
+        }
+      ],
+      "holdTextPresent": true,
+      "uniqueImageSources": [
+        "http://127.0.0.1:8766/.codex/visualizations/2026/08/13/019ffd5b-edd2-7b23-8780-453f9b67a532/maplemoon-product-corrections-20260814/assets/elixir_pure_same_size_clean_edges_v4.png",
+        "http://127.0.0.1:8766/.codex/visualizations/2026/08/13/019ffd5b-edd2-7b23-8780-453f9b67a532/maplemoon-product-corrections-20260814/assets/elixir_spiced_same_size_clean_edges_v4.png",
+        "http://127.0.0.1:8766/maplemoon_build_20260813/assets/product_shots/elixir_plain.webp",
+        "http://127.0.0.1:8766/maplemoon_build_20260813/assets/product_shots/elixir_spiced.webp"
+      ],
+      "imageResponses": [
+        {
+          "url": "http://127.0.0.1:8766/.codex/visualizations/2026/08/13/019ffd5b-edd2-7b23-8780-453f9b67a532/maplemoon-product-corrections-20260814/assets/elixir_pure_same_size_clean_edges_v4.png",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:8766/.codex/visualizations/2026/08/13/019ffd5b-edd2-7b23-8780-453f9b67a532/maplemoon-product-corrections-20260814/assets/elixir_spiced_same_size_clean_edges_v4.png",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:8766/maplemoon_build_20260813/assets/product_shots/elixir_plain.webp",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:8766/maplemoon_build_20260813/assets/product_shots/elixir_spiced.webp",
+          "status": 200
+        }
+      ],
+      "consoleErrors": [],
+      "pageErrors": [],
+      "failedRequests": [],
+      "screenshot": "/Users/handtomouse/maplemoon-website/_wip/evidence/elixir_v4_live_use_audit_20260814T171205/review_surface_1440.png"
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "schema": "maplemoon-design-system/responsive/v1",
+  "version": 1,
+  "tested_widths": [320, 390, 834, 1440],
+  "shared_breakpoints": [
+    {"id":"MM-BP-NARROW","condition":"(max-width: 560px)","use":"shared narrow layout"},
+    {"id":"MM-BP-MOBILE-NAV","condition":"(max-width: 900px)","use":"shared mobile navigation and stacked layouts"}
+  ],
+  "allowed_narrow_correction": {"condition":"(max-width: 400px)","rule":"Only for a source-proven narrow correction; never a substitute for fluid layout."},
+  "allowed_capabilities": ["(prefers-reduced-motion: reduce)","(prefers-contrast: more)","(hover: hover) and (pointer: fine)"],
+  "manual_gates": ["native browser 200 percent zoom","root horizontal overflow","keyboard access at all tested widths"],
+  "observed_conditions": {
+    "home": ["(max-width: 430px)","(max-width: 520px)","(max-width: 600px)","(max-width: 720px)","(max-width: 760px)","(max-width: 820px)","(max-width: 900px)","(max-width: 1180px)","(min-width: 721px)","(min-width: 901px)","(prefers-reduced-motion: reduce)"],
+    "shop": ["(max-width: 400px)","(max-width: 560px)","(max-width: 900px)","(min-width: 1051px)","(max-width: 1050px) and (min-width: 701px)","(prefers-reduced-motion: reduce)"],
+    "our-story": ["(max-width: 400px)","(max-width: 900px)","(prefers-reduced-motion: reduce)"],
+    "carob-story": ["(max-width: 400px)","(max-width: 560px)","(max-width: 900px)","(hover: hover) and (pointer: fine)","(prefers-contrast: more)","(prefers-reduced-motion: reduce)"],
+    "stockists": ["(max-width: 400px)","(max-width: 560px)","(max-width: 900px)","(min-width: 901px)","(prefers-reduced-motion: reduce)"],
+    "faq": ["(max-width: 560px)","(max-width: 900px)","(min-width: 561px) and (max-width: 900px)","(prefers-reduced-motion: reduce)"]
+  },
+  "observed_linked_css_conditions": {
+    "brand_kit.css": ["(max-width: 400px)","(max-width: 767px)","(prefers-reduced-motion: reduce)","(prefers-reduced-motion: no-preference)"],
+    "a11y_inner.css": ["(max-width: 900px)"],
+    "design_refinement_20260723.css": ["(max-width: 560px)","(max-width: 900px)"]
+  },
+  "extraction_policy": "Existing route conditions are source-resolved and grandfathered by exact source hash. They are not approved for consolidation. New shared code may use only the shared breakpoints and allowed capabilities above."
+}

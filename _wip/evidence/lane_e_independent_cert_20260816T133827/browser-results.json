@@ -1,0 +1,508 @@
+{
+  "browser": "Google Chrome via Playwright isolated headless contexts",
+  "origin": "http://127.0.0.1:8771",
+  "routeOverrides": {
+    "/a11y_inner.css": "/Users/handtomouse/maplemoon-website/_wip/a11y_inner.css",
+    "/design_refinement_20260723.css": "/Users/handtomouse/maplemoon-website/_wip/design_refinement_20260723.css"
+  },
+  "agentBrowserCli": "unavailable; bundled Playwright used as deterministic browser fallback",
+  "contacts": [
+    "/Users/handtomouse/maplemoon-website/_wip/evidence/lane_e_independent_cert_20260816T133827/contact-390.png",
+    "/Users/handtomouse/maplemoon-website/_wip/evidence/lane_e_independent_cert_20260816T133827/contact-1440.png"
+  ],
+  "results": [
+    {
+      "page": "home",
+      "route": "homepage_real_1_lead_photo.WIP.html",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "httpStatus": 200,
+      "screenshot": "/Users/handtomouse/maplemoon-website/_wip/evidence/lane_e_independent_cert_20260816T133827/home-390.png",
+      "screenshotBytes": 2295836,
+      "screenshotMetadata": {
+        "width": 390,
+        "height": 9860,
+        "channels": 3
+      },
+      "screenshotChannelStdev": [
+        55.71547356671739,
+        55.91246392518574,
+        54.84308901563009
+      ],
+      "metrics": {
+        "title": "Maple Moon: Australian Organic Carob",
+        "url": "http://127.0.0.1:8771/_wip/homepage_real_1_lead_photo.WIP.html",
+        "clientWidth": 390,
+        "scrollWidth": 390,
+        "bodyHeight": 9861,
+        "textLength": 3764,
+        "imageCount": 20,
+        "brokenImages": [],
+        "enabledNewsletterInputs": 0,
+        "newsletterNotices": 1,
+        "productCards": 0,
+        "homeBitesTabs": 0,
+        "stockistMapPanels": 0
+      },
+      "consoleErrors": [],
+      "pageErrors": [],
+      "requestFailures": [],
+      "badResponses": [],
+      "result": "PASS"
+    },
+    {
+      "page": "home",
+      "route": "homepage_real_1_lead_photo.WIP.html",
+      "viewport": {
+        "width": 1440,
+        "height": 1100
+      },
+      "httpStatus": 200,
+      "screenshot": "/Users/handtomouse/maplemoon-website/_wip/evidence/lane_e_independent_cert_20260816T133827/home-1440.png",
+      "screenshotBytes": 5770979,
+      "screenshotMetadata": {
+        "width": 1440,
+        "height": 7403,
+        "channels": 3
+      },
+      "screenshotChannelStdev": [
+        52.92252016328957,
+        49.037618107491255,
+        43.96007037001669
+      ],
+      "metrics": {
+        "title": "Maple Moon: Australian Organic Carob",
+        "url": "http://127.0.0.1:8771/_wip/homepage_real_1_lead_photo.WIP.html",
+        "clientWidth": 1440,
+        "scrollWidth": 1440,
+        "bodyHeight": 7404,
+        "textLength": 3898,
+        "imageCount": 20,
+        "brokenImages": [],
+        "enabledNewsletterInputs": 0,
+        "newsletterNotices": 1,
+        "productCards": 0,
+        "homeBitesTabs": 0,
+        "stockistMapPanels": 0
+      },
+      "consoleErrors": [],
+      "pageErrors": [],
+      "requestFailures": [],
+      "badResponses": [],
+      "result": "PASS"
+    },
+    {
+      "page": "shop",
+      "route": "shop.WIP.html",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "httpStatus": 200,
+      "screenshot": "/Users/handtomouse/maplemoon-website/_wip/evidence/lane_e_independent_cert_20260816T133827/shop-390.png",
+      "screenshotBytes": 3327794,
+      "screenshotMetadata": {
+        "width": 390,
+        "height": 15569,
+        "channels": 3
+      },
+      "screenshotChannelStdev": [
+        50.377360505205125,
+        50.41710385251459,
+        48.696939317899464
+      ],
+      "metrics": {
+        "title": "Shop the Range | Maple Moon",
+        "url": "http://127.0.0.1:8771/_wip/shop.WIP.html",
+        "clientWidth": 390,
+        "scrollWidth": 390,
+        "bodyHeight": 15570,
+        "textLength": 5182,
+        "imageCount": 28,
+        "brokenImages": [],
+        "enabledNewsletterInputs": 0,
+        "newsletterNotices": 0,
+        "productCards": 22,
+        "homeBitesTabs": 0,
+        "stockistMapPanels": 0
+      },
+      "consoleErrors": [],
+      "pageErrors": [],
+      "requestFailures": [],
+      "badResponses": [],
+      "result": "PASS"
+    },
+    {
+      "page": "shop",
+      "route": "shop.WIP.html",
+      "viewport": {
+        "width": 1440,
+        "height": 1100
+      },
+      "httpStatus": 200,
+      "screenshot": "/Users/handtomouse/maplemoon-website/_wip/evidence/lane_e_independent_cert_20260816T133827/shop-1440.png",
+      "screenshotBytes": 3715471,
+      "screenshotMetadata": {
+        "width": 1440,
+        "height": 6826,
+        "channels": 3
+      },
+      "screenshotChannelStdev": [
+        33.08922674528366,
+        33.02223570678961,
+        33.711762311201596
+      ],
+      "metrics": {
+        "title": "Shop the Range | Maple Moon",
+        "url": "http://127.0.0.1:8771/_wip/shop.WIP.html",
+        "clientWidth": 1440,
+        "scrollWidth": 1440,
+        "bodyHeight": 6826,
+        "textLength": 5227,
+        "imageCount": 28,
+        "brokenImages": [],
+        "enabledNewsletterInputs": 0,
+        "newsletterNotices": 0,
+        "productCards": 22,
+        "homeBitesTabs": 0,
+        "stockistMapPanels": 0
+      },
+      "consoleErrors": [],
+      "pageErrors": [],
+      "requestFailures": [],
+      "badResponses": [],
+      "result": "PASS"
+    },
+    {
+      "page": "our-story",
+      "route": "our-story.WIP.html",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "httpStatus": 200,
+      "screenshot": "/Users/handtomouse/maplemoon-website/_wip/evidence/lane_e_independent_cert_20260816T133827/our-story-390.png",
+      "screenshotBytes": 933151,
+      "screenshotMetadata": {
+        "width": 390,
+        "height": 9940,
+        "channels": 3
+      },
+      "screenshotChannelStdev": [
+        26.4302961632997,
+        25.275728922508595,
+        25.62362789267656
+      ],
+      "metrics": {
+        "title": "Our Story | Maple Moon",
+        "url": "http://127.0.0.1:8771/_wip/our-story.WIP.html",
+        "clientWidth": 390,
+        "scrollWidth": 390,
+        "bodyHeight": 9940,
+        "textLength": 4384,
+        "imageCount": 14,
+        "brokenImages": [],
+        "enabledNewsletterInputs": 0,
+        "newsletterNotices": 0,
+        "productCards": 0,
+        "homeBitesTabs": 0,
+        "stockistMapPanels": 0
+      },
+      "consoleErrors": [],
+      "pageErrors": [],
+      "requestFailures": [],
+      "badResponses": [],
+      "result": "PASS"
+    },
+    {
+      "page": "our-story",
+      "route": "our-story.WIP.html",
+      "viewport": {
+        "width": 1440,
+        "height": 1100
+      },
+      "httpStatus": 200,
+      "screenshot": "/Users/handtomouse/maplemoon-website/_wip/evidence/lane_e_independent_cert_20260816T133827/our-story-1440.png",
+      "screenshotBytes": 1611121,
+      "screenshotMetadata": {
+        "width": 1440,
+        "height": 9467,
+        "channels": 3
+      },
+      "screenshotChannelStdev": [
+        19.48557938589868,
+        16.586930455411892,
+        15.435485385926865
+      ],
+      "metrics": {
+        "title": "Our Story | Maple Moon",
+        "url": "http://127.0.0.1:8771/_wip/our-story.WIP.html",
+        "clientWidth": 1440,
+        "scrollWidth": 1440,
+        "bodyHeight": 9467,
+        "textLength": 4429,
+        "imageCount": 14,
+        "brokenImages": [],
+        "enabledNewsletterInputs": 0,
+        "newsletterNotices": 0,
+        "productCards": 0,
+        "homeBitesTabs": 0,
+        "stockistMapPanels": 0
+      },
+      "consoleErrors": [],
+      "pageErrors": [],
+      "requestFailures": [],
+      "badResponses": [],
+      "result": "PASS"
+    },
+    {
+      "page": "carob-story",
+      "route": "carob-story.WIP.html",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "httpStatus": 200,
+      "screenshot": "/Users/handtomouse/maplemoon-website/_wip/evidence/lane_e_independent_cert_20260816T133827/carob-story-390.png",
+      "screenshotBytes": 1143285,
+      "screenshotMetadata": {
+        "width": 390,
+        "height": 4518,
+        "channels": 3
+      },
+      "screenshotChannelStdev": [
+        48.472930106310606,
+        49.639342597593746,
+        52.0384112961862
+      ],
+      "metrics": {
+        "title": "What is Carob? | Maple Moon",
+        "url": "http://127.0.0.1:8771/_wip/carob-story.WIP.html",
+        "clientWidth": 390,
+        "scrollWidth": 390,
+        "bodyHeight": 4519,
+        "textLength": 1673,
+        "imageCount": 6,
+        "brokenImages": [],
+        "enabledNewsletterInputs": 0,
+        "newsletterNotices": 0,
+        "productCards": 0,
+        "homeBitesTabs": 0,
+        "stockistMapPanels": 0
+      },
+      "consoleErrors": [],
+      "pageErrors": [],
+      "requestFailures": [],
+      "badResponses": [],
+      "result": "PASS"
+    },
+    {
+      "page": "carob-story",
+      "route": "carob-story.WIP.html",
+      "viewport": {
+        "width": 1440,
+        "height": 1100
+      },
+      "httpStatus": 200,
+      "screenshot": "/Users/handtomouse/maplemoon-website/_wip/evidence/lane_e_independent_cert_20260816T133827/carob-story-1440.png",
+      "screenshotBytes": 1766061,
+      "screenshotMetadata": {
+        "width": 1440,
+        "height": 2629,
+        "channels": 3
+      },
+      "screenshotChannelStdev": [
+        40.97056458985888,
+        42.2399404250005,
+        44.41080107208817
+      ],
+      "metrics": {
+        "title": "What is Carob? | Maple Moon",
+        "url": "http://127.0.0.1:8771/_wip/carob-story.WIP.html",
+        "clientWidth": 1440,
+        "scrollWidth": 1440,
+        "bodyHeight": 2629,
+        "textLength": 1749,
+        "imageCount": 6,
+        "brokenImages": [],
+        "enabledNewsletterInputs": 0,
+        "newsletterNotices": 0,
+        "productCards": 0,
+        "homeBitesTabs": 0,
+        "stockistMapPanels": 0
+      },
+      "consoleErrors": [],
+      "pageErrors": [],
+      "requestFailures": [],
+      "badResponses": [],
+      "result": "PASS"
+    },
+    {
+      "page": "faq",
+      "route": "faq.WIP.html",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "httpStatus": 200,
+      "screenshot": "/Users/handtomouse/maplemoon-website/_wip/evidence/lane_e_independent_cert_20260816T133827/faq-390.png",
+      "screenshotBytes": 408317,
+      "screenshotMetadata": {
+        "width": 390,
+        "height": 2581,
+        "channels": 3
+      },
+      "screenshotChannelStdev": [
+        31.894407328870876,
+        28.985565872481303,
+        25.90537746187081
+      ],
+      "metrics": {
+        "title": "FAQ | Maple Moon",
+        "url": "http://127.0.0.1:8771/_wip/faq.WIP.html",
+        "clientWidth": 390,
+        "scrollWidth": 390,
+        "bodyHeight": 2582,
+        "textLength": 1282,
+        "imageCount": 0,
+        "brokenImages": [],
+        "enabledNewsletterInputs": 0,
+        "newsletterNotices": 0,
+        "productCards": 0,
+        "homeBitesTabs": 0,
+        "stockistMapPanels": 0
+      },
+      "consoleErrors": [],
+      "pageErrors": [],
+      "requestFailures": [],
+      "badResponses": [],
+      "result": "PASS"
+    },
+    {
+      "page": "faq",
+      "route": "faq.WIP.html",
+      "viewport": {
+        "width": 1440,
+        "height": 1100
+      },
+      "httpStatus": 200,
+      "screenshot": "/Users/handtomouse/maplemoon-website/_wip/evidence/lane_e_independent_cert_20260816T133827/faq-1440.png",
+      "screenshotBytes": 607154,
+      "screenshotMetadata": {
+        "width": 1440,
+        "height": 2164,
+        "channels": 3
+      },
+      "screenshotChannelStdev": [
+        23.713013944051035,
+        21.641481053469995,
+        19.54318676826746
+      ],
+      "metrics": {
+        "title": "FAQ | Maple Moon",
+        "url": "http://127.0.0.1:8771/_wip/faq.WIP.html",
+        "clientWidth": 1440,
+        "scrollWidth": 1440,
+        "bodyHeight": 2164,
+        "textLength": 1386,
+        "imageCount": 0,
+        "brokenImages": [],
+        "enabledNewsletterInputs": 0,
+        "newsletterNotices": 0,
+        "productCards": 0,
+        "homeBitesTabs": 0,
+        "stockistMapPanels": 0
+      },
+      "consoleErrors": [],
+      "pageErrors": [],
+      "requestFailures": [],
+      "badResponses": [],
+      "result": "PASS"
+    },
+    {
+      "page": "stockists",
+      "route": "stockists.WIP.html",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "httpStatus": 200,
+      "screenshot": "/Users/handtomouse/maplemoon-website/_wip/evidence/lane_e_independent_cert_20260816T133827/stockists-390.png",
+      "screenshotBytes": 702526,
+      "screenshotMetadata": {
+        "width": 390,
+        "height": 3767,
+        "channels": 3
+      },
+      "screenshotChannelStdev": [
+        37.73181252072609,
+        33.08107958303919,
+        31.18770686400973
+      ],
+      "metrics": {
+        "title": "Stockists | Maple Moon",
+        "url": "http://127.0.0.1:8771/_wip/stockists.WIP.html",
+        "clientWidth": 390,
+        "scrollWidth": 390,
+        "bodyHeight": 3768,
+        "textLength": 2386,
+        "imageCount": 1,
+        "brokenImages": [],
+        "enabledNewsletterInputs": 0,
+        "newsletterNotices": 1,
+        "productCards": 0,
+        "homeBitesTabs": 0,
+        "stockistMapPanels": 0
+      },
+      "consoleErrors": [],
+      "pageErrors": [],
+      "requestFailures": [],
+      "badResponses": [],
+      "result": "PASS"
+    },
+    {
+      "page": "stockists",
+      "route": "stockists.WIP.html",
+      "viewport": {
+        "width": 1440,
+        "height": 1100
+      },
+      "httpStatus": 200,
+      "screenshot": "/Users/handtomouse/maplemoon-website/_wip/evidence/lane_e_independent_cert_20260816T133827/stockists-1440.png",
+      "screenshotBytes": 1461784,
+      "screenshotMetadata": {
+        "width": 1440,
+        "height": 3282,
+        "channels": 3
+      },
+      "screenshotChannelStdev": [
+        28.077986593193955,
+        22.686646665497513,
+        19.03903772215938
+      ],
+      "metrics": {
+        "title": "Stockists | Maple Moon",
+        "url": "http://127.0.0.1:8771/_wip/stockists.WIP.html",
+        "clientWidth": 1440,
+        "scrollWidth": 1440,
+        "bodyHeight": 3283,
+        "textLength": 2526,
+        "imageCount": 1,
+        "brokenImages": [],
+        "enabledNewsletterInputs": 0,
+        "newsletterNotices": 1,
+        "productCards": 0,
+        "homeBitesTabs": 0,
+        "stockistMapPanels": 0
+      },
+      "consoleErrors": [],
+      "pageErrors": [],
+      "requestFailures": [],
+      "badResponses": [],
+      "result": "PASS"
+    }
+  ],
+  "failures": []
+}

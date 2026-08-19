@@ -1,0 +1,21 @@
+{
+  "schema": "maplemoon-certifier-harness-correction/v1",
+  "outcome": "HARNESS_FALSE_POSITIVE",
+  "candidate_failure": false,
+  "route": "homepage.html",
+  "measured_width": 390,
+  "literal_observation": {
+    "drawer_primary_left": 0,
+    "drawer_primary_right": 390,
+    "drawer_utility_left": 0,
+    "drawer_utility_right": 390,
+    "row_left": 1,
+    "row_right": 389,
+    "row_width": 388,
+    "row_height_min": 43.99999237060547,
+    "row_height_max": 44,
+    "row_count": 6,
+    "all_paint_order_hits": true
+  },
+  "correction": "The independent assertion incorrectly required each row box to ignore the full-width drawer's 1px border. The packet contract requires a full-width drawer plus six 44px rows and exact paint-order hit targets. Full width remains asserted on both drawer containers; row assertions now cover 44px geometry and paint-order ownership."
+}

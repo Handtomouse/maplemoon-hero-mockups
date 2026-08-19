@@ -1,0 +1,91 @@
+{
+  "schema": "maplemoon-receipt/v2",
+  "receipt_id": "MAPLEMOON-QA-PROOF-200-ZOOM-20260803-RECEIPT-001",
+  "packet_id": "MAPLEMOON-QA-PROOF-200-ZOOM-20260803",
+  "worker_thread_id": "019fc349-4347-7ba2-ab86-77971b20aabf",
+  "worker": "literal Chrome 200 percent QA verifier",
+  "started_at": "2026-08-03T02:24:16+10:00",
+  "completed_at": "2026-08-03T02:29:09+10:00",
+  "outcome": "HOLD",
+  "confidence": "high for pre-admission HOLD; no Chrome or route QA claim",
+  "phase": "complete",
+  "status": "HOLD",
+  "ready_to_promote": false,
+  "checkpoint_path": "_wip/checkpoints/MAPLEMOON-QA-PROOF-200-ZOOM-20260803_20260803_022416_AEST",
+  "files_changed": [
+    "_wip/reviews/maplemoon-six-page-qa-20260803/proof-200-zoom",
+    "docs/orchestration/reviews/MAPLEMOON-QA-PROOF-200-ZOOM-20260803.json"
+  ],
+  "files_read": [
+    "docs/orchestration/packets/MAPLEMOON-QA-PROOF-200-ZOOM-20260803.md",
+    "docs/orchestration/SIDECHAT_RECEIPT_GATE.md",
+    "_wip/checkpoints/MAPLEMOON-QA-PROOF-200-ZOOM-20260803_20260803_022416_AEST/RECOVERY_MANIFEST.json",
+    "docs/client-review/2026-08-01-saturday-review/staging-v1/MANIFEST.json",
+    "docs/client-review/2026-08-01-saturday-review/staging-v1/clean/MANIFEST.json"
+  ],
+  "pre_sha256": {
+    "_wip/reviews/maplemoon-six-page-qa-20260803/proof-200-zoom": null,
+    "docs/orchestration/reviews/MAPLEMOON-QA-PROOF-200-ZOOM-20260803.json": null
+  },
+  "post_sha256": {
+    "_wip/reviews/maplemoon-six-page-qa-20260803/proof-200-zoom": "998f6fbb2a27759d7a10cb01f5403880d44d31cefb655434b0567cd0b9475458",
+    "docs/orchestration/reviews/MAPLEMOON-QA-PROOF-200-ZOOM-20260803.json": null
+  },
+  "verified_subject_sha256": {
+    "docs/client-review/2026-08-01-saturday-review/staging-v1/MANIFEST.json": "d0d834b9b9173a497d0b03e39e4c282a7d5247f51484ebfd7ba3a64e8416bf7c",
+    "docs/client-review/2026-08-01-saturday-review/staging-v1/clean/MANIFEST.json": "d1c66b1d5937e9956d1806dbbbff4faf4f950def046aa642ae52f809c3d52d20"
+  },
+  "screenshots_or_urls": [],
+  "failures": [
+    "Packet-admitted HEAD 42d462ac4234ec2694f2eb256e6d80d13cd0bb0b did not match preflight HEAD a4b2efa6319c65156c9fa5b0faf1fe9902addb73, and HEAD then changed concurrently to c05914ceb7f48dfe773e680ebbe7f392464f2dfa; the packet explicitly requires HOLD before browser work."
+  ],
+  "unknowns": [
+    "Native Chrome zoom state and displayed value were not inspected.",
+    "All six routes and the keyboard-visible-focus path remain unverified at literal native Chrome 200 percent."
+  ],
+  "residual_risk": [
+    "The exact frozen six-page clean package has no current native Chrome 200 percent visual or keyboard proof under this packet.",
+    "Chrome was intentionally not touched, so no 100 percent restoration claim is made or required for this held run.",
+    "The branch HEAD moved during this read-only verification, so any subsequent QA admission must bind a newly revalidated exact snapshot."
+  ],
+  "forbidden_path_changes": [],
+  "proposed_next_state": "HOLD",
+  "next_reviewer": "Main independent verifier",
+  "checks": [
+    {
+      "command": "git branch --show-current",
+      "exit_code": 0,
+      "result": "PASS: codex-maplemoon-section-review"
+    },
+    {
+      "command": "git rev-parse HEAD and compare with packet-admitted HEAD",
+      "exit_code": 0,
+      "result": "HOLD detected: preflight a4b2efa6319c65156c9fa5b0faf1fe9902addb73 and final custody c05914ceb7f48dfe773e680ebbe7f392464f2dfa both differ from admitted 42d462ac4234ec2694f2eb256e6d80d13cd0bb0b"
+    },
+    {
+      "command": "shasum -a 256 docs/client-review/2026-08-01-saturday-review/staging-v1/MANIFEST.json",
+      "exit_code": 0,
+      "result": "PASS: d0d834b9b9173a497d0b03e39e4c282a7d5247f51484ebfd7ba3a64e8416bf7c"
+    },
+    {
+      "command": "shasum -a 256 docs/client-review/2026-08-01-saturday-review/staging-v1/clean/MANIFEST.json",
+      "exit_code": 0,
+      "result": "PASS: d1c66b1d5937e9956d1806dbbbff4faf4f950def046aa642ae52f809c3d52d20"
+    },
+    {
+      "command": "python3 -B scripts/check-maplemoon-receipt.py verify --packet docs/orchestration/packets/MAPLEMOON-QA-PROOF-200-ZOOM-20260803.md --checkpoint _wip/checkpoints/MAPLEMOON-QA-PROOF-200-ZOOM-20260803_20260803_022416_AEST --phase start",
+      "exit_code": 0,
+      "result": "PASS packet=MAPLEMOON-QA-PROOF-200-ZOOM-20260803 phase=start scope=2"
+    },
+    {
+      "command": "packet stop-condition enforcement",
+      "exit_code": 0,
+      "result": "PASS: no browser inspection, zoom mutation, route QA, keyboard QA, website edit, or package edit performed after HEAD drift was detected"
+    }
+  ],
+  "blockers": [
+    "A fresh packet must bind the current exact HEAD, or a separately authorised recovery action must restore the admitted HEAD."
+  ],
+  "ownership": "Pre-admission evidence and receipt only; no website, package, browser, client-review, promotion, or acceptance ownership.",
+  "next_action": "Main independent verifier should issue a fresh hash-bound GO packet for the intended current HEAD before Chrome proof is attempted."
+}

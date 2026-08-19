@@ -1,0 +1,84 @@
+{
+  "outcome": "PASS_WITH_RELEASE_BLOCKERS",
+  "humanInspectedCases": 21,
+  "widths": [390, 900, 1440],
+  "routes": [
+    "homepage",
+    "shop",
+    "our-story",
+    "carob-story",
+    "faq",
+    "stockists",
+    "pure-carob-bar"
+  ],
+  "renderedEvidence": {
+    "screenshots": 84,
+    "contacts": 12,
+    "nonblankCases": 21,
+    "failedCases": 0
+  },
+  "routeFindings": {
+    "homepage": {
+      "verdict": "PASS_WITH_CONTENT_COMMERCE_HOLDS",
+      "findings": [
+        "Existing 390 mobile Menu/logo/cart composition is visually coherent and is the current implementation reference for successor mobile headers.",
+        "Long-form mobile rhythm and photographic cards remain coherent; Home remains the explicit visual-system exception.",
+        "Nonnumeric stockist, collection-form, commerce and claim changes belong to D02-D05, not a redesign."
+      ]
+    },
+    "shop": {
+      "verdict": "RELEASE_BLOCKER",
+      "findings": [
+        "At 390 there is no Menu and no visible nav link; painted wordmark overlaps the cart visual/hit area by 41.1px horizontally.",
+        "Current page is 15569px tall at 390 and renders 22 cards, 20 Add-to-cart actions and two enquiries.",
+        "Nineteen visible controls are below 44px at every measured width; flavour buttons, sort/view controls and product option selects are 34px high.",
+        "D01=A and D02=A remove the disposable catalogue/control/cart surfaces, so do not separately polish them before those decisions."
+      ]
+    },
+    "our-story": {
+      "verdict": "RELEASE_BLOCKER",
+      "findings": [
+        "At 390 there is no Menu and no visible nav link; painted wordmark overlaps the cart visual/hit area by 42.9px horizontally.",
+        "Two large founder portrait placeholders are visible at all three widths and explicitly say Founder portrait pending / Nate selection required.",
+        "The route has zero main landmarks and both founder-story summary controls measure about 30.8px high.",
+        "The pair hero renders cleanly; individual portrait/media admission remains a separate exact-slot decision."
+      ]
+    },
+    "carob-story": {
+      "verdict": "RELEASE_BLOCKER_HEADER_ONLY",
+      "findings": [
+        "At 390 there is no Menu and no visible nav link; painted wordmark overlaps the cart visual/hit area by 18.9px horizontally.",
+        "The 390 header is 65px rather than the 70px shared baseline.",
+        "Hero, all-edge orchard blend, comparison block and mobile copy-first order visually pass. The small measured comparison-heading overhang is italic paint, not visible clipping."
+      ]
+    },
+    "faq": {
+      "verdict": "RELEASE_BLOCKER_HEADER_AND_CONTENT",
+      "findings": [
+        "At 390 there is no Menu and no visible nav link; the logo is centred and does not overlap the cart.",
+        "The mobile header is 59px rather than the 70px shared baseline.",
+        "The popular-question strip is an intentional overflow-x scroller with no root overflow and visually passes.",
+        "The actual search input is 25.9px high inside a larger visual shell; at 900 the three category buttons are 42px high.",
+        "Current caffeine wording has regressed from the exact D05 approved question/answer and is a content blocker, not a typography defect."
+      ]
+    },
+    "stockists": {
+      "verdict": "RELEASE_BLOCKER",
+      "findings": [
+        "At 390 there is no Menu and no visible nav link; painted wordmark overlaps the cart visual/hit area by 31.1px horizontally.",
+        "Five internal-state strings remain visibly reachable at all widths, including WIP directory status, source parse, client confirmation, review demo and Coming soon.",
+        "The responsive finder/filter composition itself passes with no root overflow; D03-B/D04-A should remove internal/numeric/form surfaces without redesigning the working filters."
+      ]
+    },
+    "pure-carob-bar": {
+      "verdict": "PASS_WITH_CONTENT_COMMERCE_HOLDS",
+      "findings": [
+        "Existing 390 Menu/logo/cart composition is coherent and provides the second current implementation reference for successor mobile headers.",
+        "Hero and all five related bar images decode, paint and remain visually coherent at all widths.",
+        "No image or layout repair is required; D02/D05 own cart and held-claim removal."
+      ]
+    }
+  },
+  "captureQualification": "Full-page 390 captures expose off-canvas fixed cart content on Homepage and Pure because full-page coordinate acquisition includes auxiliary painted layers. Closed-state top/middle/bottom viewport captures and runtime geometry are the state authority; this acquisition artefact is not a candidate defect.",
+  "overallFinding": "The five legacy inner routes must not ship at mobile until they receive one consistent Menu/logo/action header. Four also need painted-wordmark collision removal. Other major visible blockers map cleanly to existing content, commerce and media decisions rather than blanket Styles Kit implementation."
+}

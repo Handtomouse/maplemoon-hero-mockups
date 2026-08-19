@@ -1,0 +1,142 @@
+{
+  "preview": "https://maplemoonbuild20260813-rx9cjirjk-handtomouses-projects.vercel.app",
+  "deploymentId": "dpl_GMAVpJvm6ytQkLpDBAJXSGr1yffd",
+  "routeResults": [
+    {
+      "route": "homepage",
+      "status": 200,
+      "bytes": 190801,
+      "carobControl": 119,
+      "localSha256": "ffb44e06161e7c4867bb957d094619ae3cf54b128b71b198a3ed551f82caa57c",
+      "remoteSha256": "ffb44e06161e7c4867bb957d094619ae3cf54b128b71b198a3ed551f82caa57c",
+      "byteEqual": true,
+      "assertions": {
+        "testimonial": true
+      },
+      "result": "PASS"
+    },
+    {
+      "route": "shop",
+      "status": 200,
+      "bytes": 50564,
+      "carobControl": 39,
+      "localSha256": "a0c5c03c2aaf2b21307995a7b33843c5ffa0d5785ddf4a6dea252f40b8ab208a",
+      "remoteSha256": "a0c5c03c2aaf2b21307995a7b33843c5ffa0d5785ddf4a6dea252f40b8ab208a",
+      "byteEqual": true,
+      "assertions": {
+        "positives": true,
+        "negatives": true
+      },
+      "result": "PASS"
+    },
+    {
+      "route": "our-story",
+      "status": 200,
+      "bytes": 63842,
+      "carobControl": 39,
+      "localSha256": "0f00cb8beae8b911920f20f6e5976d60d0e94e70ed99f7d3557dbf9a1883c2b2",
+      "remoteSha256": "0f00cb8beae8b911920f20f6e5976d60d0e94e70ed99f7d3557dbf9a1883c2b2",
+      "byteEqual": true,
+      "assertions": {
+        "founderPending": true
+      },
+      "result": "PASS"
+    },
+    {
+      "route": "carob-story",
+      "status": 200,
+      "bytes": 54352,
+      "carobControl": 87,
+      "localSha256": "5bfc9842c36d9f093d193f21cc7ea11cc96f3565fe65925d023e6ce0380e0756",
+      "remoteSha256": "5bfc9842c36d9f093d193f21cc7ea11cc96f3565fe65925d023e6ce0380e0756",
+      "byteEqual": true,
+      "assertions": {
+        "stimulantSentence": true
+      },
+      "result": "PASS"
+    },
+    {
+      "route": "faq",
+      "status": 200,
+      "bytes": 31865,
+      "carobControl": 27,
+      "localSha256": "29c1fb87be58a0c8ac65e148201c7164143fe947122e11c819c0444956a4b601",
+      "remoteSha256": "29c1fb87be58a0c8ac65e148201c7164143fe947122e11c819c0444956a4b601",
+      "byteEqual": true,
+      "assertions": {
+        "mapleAnswer": true
+      },
+      "result": "PASS"
+    },
+    {
+      "route": "stockists",
+      "status": 200,
+      "bytes": 112138,
+      "carobControl": 10,
+      "localSha256": "b93f676f6ebdf9edc8bef7a7e013a0ab9a8aa6d7f2a0662c6da516d2741e955a",
+      "remoteSha256": "b93f676f6ebdf9edc8bef7a7e013a0ab9a8aa6d7f2a0662c6da516d2741e955a",
+      "byteEqual": true,
+      "assertions": {
+        "status": true
+      },
+      "result": "PASS"
+    }
+  ],
+  "assetResults": [
+    {
+      "asset": "mock-cart.js",
+      "status": 200,
+      "bytes": 42691,
+      "localSha256": "754ea8b1235a6329bfcbc32aae0f9e5e09c334bf26726bbff8c2c8653f54afe5",
+      "remoteSha256": "754ea8b1235a6329bfcbc32aae0f9e5e09c334bf26726bbff8c2c8653f54afe5",
+      "byteEqual": true,
+      "result": "PASS"
+    },
+    {
+      "asset": "mock-cart.css",
+      "status": 200,
+      "bytes": 13576,
+      "localSha256": "c17deb1f972017d9790f2191360a457e54d7287730847f9f470c9de371603308",
+      "remoteSha256": "c17deb1f972017d9790f2191360a457e54d7287730847f9f470c9de371603308",
+      "byteEqual": true,
+      "result": "PASS"
+    },
+    {
+      "asset": "assets/design-system/mm-chrome.js",
+      "status": 200,
+      "bytes": 5025,
+      "localSha256": "cc72e22a121cbdb1ec695d181219ca696b0e020f82fedc243e1f407154c1316c",
+      "remoteSha256": "cc72e22a121cbdb1ec695d181219ca696b0e020f82fedc243e1f407154c1316c",
+      "byteEqual": true,
+      "result": "PASS"
+    },
+    {
+      "asset": "assets/design-system/mm-chrome.css",
+      "status": 200,
+      "bytes": 5871,
+      "localSha256": "38ae8acbbdd30ebdfbe633ab1f042549fd2573c7e458e946cc2c53596b32349a",
+      "remoteSha256": "38ae8acbbdd30ebdfbe633ab1f042549fd2573c7e458e946cc2c53596b32349a",
+      "byteEqual": true,
+      "result": "PASS"
+    },
+    {
+      "asset": "assets/design-system/mm-tokens.css",
+      "status": 200,
+      "bytes": 3073,
+      "localSha256": "cab9a32ee62a5a51d9297ab0320e666c1081a7a81c8c83a3bc48d1f1d2341908",
+      "remoteSha256": "cab9a32ee62a5a51d9297ab0320e666c1081a7a81c8c83a3bc48d1f1d2341908",
+      "byteEqual": true,
+      "result": "PASS"
+    },
+    {
+      "asset": "assets/design-system/mm-primitives.css",
+      "status": 200,
+      "bytes": 9006,
+      "localSha256": "3108718d5109a28a6221a2eca56fcf5138195f8c020e0d64983b1be1afb839c7",
+      "remoteSha256": "3108718d5109a28a6221a2eca56fcf5138195f8c020e0d64983b1be1afb839c7",
+      "byteEqual": true,
+      "result": "PASS"
+    }
+  ],
+  "failures": []
+}

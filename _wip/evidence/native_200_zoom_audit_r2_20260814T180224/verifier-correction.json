@@ -1,0 +1,99 @@
+{
+  "schema": "maplemoon-verifier-acquisition-correction/v1",
+  "packet_id": "MAPLEMOON-NATIVE-200-ZOOM-AUDIT-R2-20260814T180224",
+  "first_run": {
+    "outcome": "HOLD",
+    "literal": "Chrome 200 outer bounds did not settle: wanted 780x1100, got {'left': 30, 'top': 38, 'width': 780, 'height': 1079, 'windowState': 'normal'}",
+    "native_preference_proof_sha256": "f15a0b68e07bdd1ce52e525bc58aaa2addd2dfd4ccbb521ea3d2e47cc3cc69f2",
+    "harness_summary_sha256": "2661c6989489abba5355d6838a0b561ea95b5698a89e9462b8db77e016d057d1",
+    "cleanup_sha256": "9e8b3f6ce5bbdc126b25b53316d8005aef046000be82bb37e72ff51d72b46534",
+    "closed_exact_pids": [72449, 72002, 71978, 71977],
+    "closed_ports": [4422, 9350, 9351, 9352]
+  },
+  "second_run": {
+    "outcome": "FAIL_CLASSIFIER_WITHDRAWN",
+    "literal": "timed out waiting for Array.from(document.images).every(img => img.complete)",
+    "harness_summary_sha256": "67ba6d29be434b656952a77b99ef6325065a5b545c397e91ce2b8666a452a941",
+    "cleanup_sha256": "f786c50abd5b541883e2a538fdd5b74049110c12e2452d2b42b89b5f4c88d43f",
+    "closed_exact_pids": [75646, 75609, 75572, 75564],
+    "closed_ports": [4422, 9350, 9351, 9352]
+  },
+  "third_run": {
+    "outcome": "FAIL_CLASSIFIER_WITHDRAWN",
+    "literal": "timed out waiting for Array.from(document.images).every(img => img.complete)",
+    "harness_summary_sha256": "2ac0da05819bf5fd73228048e1264946824e6824874073ffb64aaec2f8bcb2a0",
+    "cleanup_sha256": "3ef684ea01fff06faddcb7df8103b68e7ad445e0a46cba8011fc14d8524dfebe",
+    "closed_exact_pids": [77043, 77027, 77005, 77004],
+    "closed_ports": [4422, 9350, 9351, 9352]
+  },
+  "fourth_run": {
+    "outcome": "FAIL_CLASSIFIER_WITHDRAWN_AFTER_STATIC_AND_ELIGIBILITY_ANALYSIS",
+    "literal": "homepage.html@390 reported three lazy ritual images complete=false, naturalWidth=0 after vertical scrolling",
+    "observed_sources": [
+      "/assets/ritual/ritual_after_dinner.webp",
+      "/assets/ritual/ritual_afternoon.webp",
+      "/assets/ritual/ritual_tea_night.webp"
+    ],
+    "static_controls": [
+      {"source": "/assets/ritual/ritual_after_dinner.webp", "sha256": "70786224f83e1ff858dcfbdf6328c1341f745be4df61fd112aa93f400098b4d7", "dimensions": "837x1350", "format": "WebP"},
+      {"source": "/assets/ritual/ritual_afternoon.webp", "sha256": "308e6f3a489f11b4a8bb57f25f8ed2fb6f275387ab8436695edb1fb6be9ebe79", "dimensions": "837x1350", "format": "WebP"},
+      {"source": "/assets/ritual/ritual_tea_night.webp", "sha256": "da82fc967439666d586e9bf75578d7728b1de289b3456418d85514904483d920", "dimensions": "837x1350", "format": "WebP"}
+    ],
+    "harness_summary_sha256": "3b330a24de9e8f64a3b970d57761de662e77ba3077e61a48d1e7cd56e3eb57a5",
+    "cleanup_sha256": "5bfb1f4ccf861f58edd5d133c14d8c37880e30bf57b48a39c2567ad1150edd9f",
+    "interpretation": "No failed request was observed and the files are present, decodable WebPs. Their complete=false state means Chromium had not made them fetch-eligible. The corrected acquisition records that initial state, changes only the isolated DOM loading hint to eager, awaits decode, and still fails on any incomplete or zero-natural-size result or failed request."
+  },
+  "fifth_run": {
+    "outcome": "FAIL_CLASSIFIER_WITHDRAWN",
+    "literal": "drawer row count 5 != 6",
+    "harness_summary_sha256": "1081b02ffea77785d4c6a9b88ca4d790e5ae7c1d4aea2c200bd185d99297b4b1",
+    "cleanup_sha256": "a14916ab47ad66aa8a569e3aa71cf3ae0cf92c6fa4932c2a0f56b8ba466daf02",
+    "closed_exact_pids": [79471, 79404, 79377, 79376],
+    "correction": "Match the already-certified drawer contract exactly: six visible direct children across the primary and utility containers, including the currency span and injected FAQ row, rather than counting anchors only. Keep 44px geometry and paint-order ownership strict on every row."
+  },
+  "sixth_run": {
+    "outcome": "FAIL_CLASSIFIER_WITHDRAWN",
+    "literal": "cart overlay blocking failed at hard-coded x=5",
+    "harness_summary_sha256": "ef0cdeb265e7a1d0f421ae5404578a9b0f04db8700cd73c21cee117f865949c6",
+    "cleanup_sha256": "a76c8dee86e2d8b4de7bbd2d3c03f9cbc3223cf5dd45706c98e8a0b27f415ca2",
+    "closed_exact_pids": [84402, 84380, 84356, 84354],
+    "correction": "At effective 390 the 100%-width dialog may itself cover the background probe, so overlay-only ownership at a hard-coded point is not the modal pointer contract. After transition settlement, probe the background menu control's measured centre, require the top painted target to be either the open overlay or dialog layer, require overlay pointer-events auto, invoke only that top isolated-DOM target, and require zero background click leakage."
+  },
+  "seventh_run": {
+    "outcome": "FAIL_CLASSIFIER_WITHDRAWN",
+    "literal": "pointer probe invoked the correctly top-painted overlay, which closed the cart; verifier then misread the post-close state as the pre-click open state",
+    "harness_summary_sha256": "fc8b1c6f6d92cfa9521b61c963298b3d7d526b30c527c72459c45818b4130338",
+    "cleanup_sha256": "403030fc94a703f6f739071f6f68545bd8620ac28f67d81824be1a3ebef29d1e",
+    "closed_exact_pids": [85618, 85592, 85286, 85225],
+    "correction": "Measure and require the open modal-layer paint target before invocation. In the overlay close cycle only, invoke that measured top target, require zero background clicks, accept the overlay's expected close, and inspect the closed/restored state separately."
+  },
+  "screenshot_coordinate_attempt": {
+    "outcome": "VISUAL_CLASSIFIER_WITHDRAWN",
+    "literal": "Full-page Page.captureScreenshot clips constructed from cssContentSize at native 200 percent showed only the left portion of the page even though no-clip viewport controls showed the complete width.",
+    "preserved_artifact_directory": "screenshot-coordinate-artifact",
+    "preserved_390_faq_full_sha256": "529feb6ed3838dfe3635a25b3a402a96dd750cf7b713a454e289391480aff2c3",
+    "control_comparison": [
+      "390-homepage-menu-open.png",
+      "390-shop-cart-open.png"
+    ],
+    "correction": "Use Page.getLayoutMetrics.contentSize for the zoom-aware whole-page clip and pair every route/width case with no-clip top, middle and bottom viewport captures. Require each viewport capture to equal the physical width implied by the native DPR: 1560 pixels at effective 390 and 2880 pixels at effective 720. Preserve the prior clipped captures as false-positive evidence."
+  },
+  "eighth_run": {
+    "outcome": "PASS_PENDING_VISUAL_INSPECTION",
+    "literal": "R2_BROWSER PASS_PENDING_VISUAL_INSPECTION native_controls=3/3 routes=14/14 interactions=7/7",
+    "harness_summary_sha256": "d9e9935b641422839287d3c958f8db210445a05e037c945c8b4baba1ac56088b",
+    "cleanup_sha256": "a73a10b7f25d237b2507b14dd470e303e8ac7235fdc8714969d3f5809321104c",
+    "corrected_390_faq_full_sha256": "87ffc89aba51c7da4e426f3ffbe2e9ecce4964fccf4c1d9ce8eb05fef7402ecd",
+    "closed_exact_pids": [94603, 94587, 94567, 94566],
+    "closed_ports": [4422, 9350, 9351, 9352],
+    "screenshots": 58,
+    "whole_page_cases": 14,
+    "no_clip_viewport_cases": 42
+  },
+  "classification": "verifier-only false positive",
+  "reason": "The packet requires exact measured CSS width and recorded outer size, not an exact requested outer height. macOS preserved the requested width 780 but constrained height 1100 to the available 1079 pixels. Native controls had already passed exactly: DPR ratios 1:1.75:2, inverse CSS widths approximately 1:1/1.75:1/2, 175 rejected, 200 passed, visualViewport scale 1 and no forbidden CDP methods.",
+  "correction": "Accept the observed macOS-constrained height while still requiring exact outer width and exact effective CSS inner width. Reuse the same preserved task-local profiles only after validating their immutable first-launch Preferences-only evidence and current native preference values; do not recreate or edit their Preferences. Before judging authored images, programmatically scroll the isolated page through its full height so native lazy-loading is eligible, then keep the complete, natural-size and request checks strict.",
+  "candidate_failure": false,
+  "preference_edit": false,
+  "user_browser_action": false
+}

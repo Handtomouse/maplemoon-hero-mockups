@@ -1,0 +1,122 @@
+{
+  "schema": "maplemoon-receipt/v2",
+  "receipt_id": "MAPLEMOON-DESIGN-SYSTEM-GAP-AUDIT-20260817T153140-RECEIPT-FAIL-01",
+  "packet_id": "MAPLEMOON-DESIGN-SYSTEM-GAP-AUDIT-20260817T153140",
+  "worker_thread_id": "019ff65f-fd33-7e51-8a83-360ba2f8d665",
+  "worker": "Maple Moon shared site styles kit task",
+  "started_at": "2026-08-17T05:38:34Z",
+  "completed_at": "2026-08-17T07:51:28Z",
+  "files_read": [
+    "maplemoon-website/docs/orchestration/packets/MAPLEMOON-DESIGN-SYSTEM-GAP-AUDIT-20260817T153140.md",
+    "maplemoon-website/docs/orchestration/MAPLEMOON_BOSS_EXECUTION_LEDGER_20260816.md",
+    "maplemoon-website/docs/orchestration/SIDECHAT_RECEIPT_GATE.md",
+    "maplemoon-website/scripts/check-maplemoon-receipt.py",
+    "Documents/Codex/2026-08-13/maple-moon-shared-site-styles-kit/outputs",
+    "Documents/Codex/2026-08-13/maple-moon-shared-site-styles-kit/outputs/version-lanes/v0.3.2-provisional",
+    "Documents/Codex/2026-08-13/maple-moon-shared-site-styles-kit/outputs/version-lanes/v0.4-provisional",
+    "maplemoon-website/docs/orchestration/reviews/MAPLEMOON-STYLES-KIT-V031-BOSS-REINTAKE-20260814T204321.md",
+    "maplemoon-website/docs/orchestration/reviews/MAPLEMOON-SEVEN-ROUTE-VISUAL-AUDIT-R2-20260816T210036.md",
+    "maplemoon-website/docs/orchestration/reviews/MAPLEMOON-SEVEN-ROUTE-VISUAL-AUDIT-R2-20260816T210036.json",
+    "maplemoon-website/_wip/evidence/seven_route_visual_audit_r2_20260816T210036",
+    "/private/tmp/maplemoon-pdp-route-repair-20260816",
+    "maplemoon-website/_wip/deploy/generated/maplemoon-style-chrome-derived-r2-20260817T140018",
+    "maplemoon-website/_wip/evidence/style_chrome_correction_r2_20260817T140018",
+    "maplemoon-website/docs/orchestration/reviews/MAPLEMOON-STYLE-CHROME-CORRECTION-R2-20260817T140018.json",
+    "maplemoon-website/docs/orchestration/packets/MAPLEMOON-STYLE-CHROME-R2-HOLD-DISPOSITION-20260817T151159.md",
+    "Documents/Codex/2026-08-11/referenced-chatgpt-conversation-this-is-an/outputs/maple-moon-recovery/MAPLE-MOON-SIX-PAGE-DESIGN-CRITIQUE-20260812.md",
+    "Documents/Codex/2026-08-11/referenced-chatgpt-conversation-this-is-an/outputs/maple-moon-recovery/reference-pack",
+    "Documents/Codex/2026-08-11/referenced-chatgpt-conversation-this-is-an/outputs/maple-moon-recovery/CARLI-CLAUDE-SIX-PAGE-RECONCILIATION.md",
+    "UFC/ops/day/20260813/MORNING_BRIEF.html"
+  ],
+  "files_changed": [
+    "maplemoon-website/docs/orchestration/reviews/MAPLEMOON-DESIGN-SYSTEM-GAP-AUDIT-20260817T153140.md",
+    "maplemoon-website/_wip/evidence/design_system_gap_audit_20260817T153140",
+    "maplemoon-website/docs/orchestration/reviews/MAPLEMOON-DESIGN-SYSTEM-GAP-AUDIT-20260817T153140.json"
+  ],
+  "pre_sha256": {
+    "maplemoon-website/docs/orchestration/reviews/MAPLEMOON-DESIGN-SYSTEM-GAP-AUDIT-20260817T153140.md": null,
+    "maplemoon-website/_wip/evidence/design_system_gap_audit_20260817T153140": null,
+    "maplemoon-website/docs/orchestration/reviews/MAPLEMOON-DESIGN-SYSTEM-GAP-AUDIT-20260817T153140.json": null
+  },
+  "post_sha256": {
+    "maplemoon-website/docs/orchestration/reviews/MAPLEMOON-DESIGN-SYSTEM-GAP-AUDIT-20260817T153140.md": "d0a8cc3895e079bf56a2ce0c0a7fffc3d80f3fd214a33bdcdd8854e3ea4fda44",
+    "maplemoon-website/_wip/evidence/design_system_gap_audit_20260817T153140": "3de02a167f7e0b225c9624dabb2ce09c4d70fa4bd30372c80c8c5549dd7a83aa",
+    "maplemoon-website/docs/orchestration/reviews/MAPLEMOON-DESIGN-SYSTEM-GAP-AUDIT-20260817T153140.json": null
+  },
+  "checks": [
+    {
+      "command": "python3 -B scripts/check-maplemoon-receipt.py checkpoint --root /Users/handtomouse --packet docs/orchestration/packets/MAPLEMOON-DESIGN-SYSTEM-GAP-AUDIT-20260817T153140.md --destination _wip/checkpoints/MAPLEMOON-DESIGN-SYSTEM-GAP-AUDIT-20260817T153140_20260817_153827_AEST",
+      "exit_code": 0,
+      "result": "PASS checkpoint packet=MAPLEMOON-DESIGN-SYSTEM-GAP-AUDIT-20260817T153140 files=3 path=/Users/handtomouse/maplemoon-website/_wip/checkpoints/MAPLEMOON-DESIGN-SYSTEM-GAP-AUDIT-20260817T153140_20260817_153827_AEST"
+    },
+    {
+      "command": "python3 -B scripts/check-maplemoon-receipt.py verify --root /Users/handtomouse --packet docs/orchestration/packets/MAPLEMOON-DESIGN-SYSTEM-GAP-AUDIT-20260817T153140.md --checkpoint _wip/checkpoints/MAPLEMOON-DESIGN-SYSTEM-GAP-AUDIT-20260817T153140_20260817_153827_AEST --phase start",
+      "exit_code": 0,
+      "result": "PASS packet=MAPLEMOON-DESIGN-SYSTEM-GAP-AUDIT-20260817T153140 phase=start scope=3"
+    },
+    {
+      "command": "fresh close authority, baseline, comparison, candidate and evidence SHA-256 replay",
+      "exit_code": 1,
+      "result": "FAIL packet Boss ledger pin expected=abd5030e32c7673d243f90a600cfbc0cb15af94545be108f5aaa9c20a06ab2d3 actual=82735f8eaa9aea90923a2f84717260f5055500aa1d7f69f1adea0693b57abf43; all other 20 named file/directory authority pins and all seven route hashes matched"
+    },
+    {
+      "command": "python3 -B /Users/handtomouse/maplemoon-website/_wip/evidence/design_system_gap_audit_20260817T153140/verify-design-gap-audit.py --report /Users/handtomouse/maplemoon-website/docs/orchestration/reviews/MAPLEMOON-DESIGN-SYSTEM-GAP-AUDIT-20260817T153140.md --matrix /Users/handtomouse/maplemoon-website/_wip/evidence/design_system_gap_audit_20260817T153140/GAP-MATRIX.json --sources /Users/handtomouse/maplemoon-website/_wip/evidence/design_system_gap_audit_20260817T153140/SOURCE-MANIFEST.json --visual-qa /Users/handtomouse/maplemoon-website/_wip/evidence/design_system_gap_audit_20260817T153140/VISUAL-QA.json",
+      "exit_code": 2,
+      "result": "Python: can't open file verify-design-gap-audit.py: [Errno 2] No such file or directory"
+    },
+    {
+      "command": "node /Users/handtomouse/maplemoon-website/_wip/evidence/design_system_gap_audit_20260817T153140/verify-current-site-browser.mjs --url https://maplemoonbuild20260813-m49nihfds-handtomouses-projects.vercel.app --widths 1440,1024,768,390",
+      "exit_code": 0,
+      "result": "BROWSER_QA PASS routes=7 widths=4 cases=28 screenshots=28 contacts=4 runtime_failures=0 broken_images=0 root_overflow=0; POSITIVE_CONTROLS PASS missing_route=true overflow=true broken=true blank=true widths=true"
+    },
+    {
+      "command": "python3 -B /Users/handtomouse/maplemoon-website/_wip/evidence/design_system_gap_audit_20260817T153140/verify-readonly-close.py",
+      "exit_code": 2,
+      "result": "Python: can't open file verify-readonly-close.py: [Errno 2] No such file or directory"
+    },
+    {
+      "command": "jq structural audit of GAP-MATRIX.json, SOURCE-MANIFEST.json and VISUAL-QA.json plus report/matrix unique ID count",
+      "exit_code": 0,
+      "result": "PASS true/true/true; matrix findings=40 required fields=40/40 top10=10; sources=23 dated=23/23; visual rows=28 acquisition pins=7/7 positiveControls=PASS; report unique GAP IDs=40 matrix unique GAP IDs=40"
+    },
+    {
+      "command": "jq rule/decision/token inventory replay",
+      "exit_code": 0,
+      "result": "PASS rules=68 decisions=12 tokens=70; no rule, decision, token or status was changed or promoted"
+    },
+    {
+      "command": "jq empty /Users/handtomouse/maplemoon-website/_wip/evidence/design_system_gap_audit_20260817T153140/GAP-MATRIX.json /Users/handtomouse/maplemoon-website/_wip/evidence/design_system_gap_audit_20260817T153140/SOURCE-MANIFEST.json /Users/handtomouse/maplemoon-website/_wip/evidence/design_system_gap_audit_20260817T153140/VISUAL-QA.json /Users/handtomouse/maplemoon-website/docs/orchestration/reviews/MAPLEMOON-DESIGN-SYSTEM-GAP-AUDIT-20260817T153140.json",
+      "exit_code": 0,
+      "result": "JQ_EMPTY PASS files=4"
+    }
+  ],
+  "screenshots_or_urls": [
+    "https://maplemoonbuild20260813-m49nihfds-handtomouses-projects.vercel.app",
+    "/Users/handtomouse/maplemoon-website/_wip/evidence/design_system_gap_audit_20260817T153140/screenshots",
+    "/Users/handtomouse/maplemoon-website/_wip/evidence/design_system_gap_audit_20260817T153140/contacts/contact-1440-tops.png",
+    "/Users/handtomouse/maplemoon-website/_wip/evidence/design_system_gap_audit_20260817T153140/contacts/contact-1024-tops.png",
+    "/Users/handtomouse/maplemoon-website/_wip/evidence/design_system_gap_audit_20260817T153140/contacts/contact-768-tops.png",
+    "/Users/handtomouse/maplemoon-website/_wip/evidence/design_system_gap_audit_20260817T153140/contacts/contact-390-tops.png"
+  ],
+  "failures": [
+    "The close Boss-ledger authority pin drifted: packet expected abd5030e32c7673d243f90a600cfbc0cb15af94545be108f5aaa9c20a06ab2d3, current file is 82735f8eaa9aea90923a2f84717260f5055500aa1d7f69f1adea0693b57abf43.",
+    "The packet-required verify-design-gap-audit.py is absent, so the exact design-gap verifier and its required positive controls did not run.",
+    "The packet-required verify-readonly-close.py is absent, so the exact out-of-scope close proof did not run."
+  ],
+  "unknowns": [
+    "Without verify-design-gap-audit.py, the ad hoc structural checks cannot substitute for the packet-required one-to-one, domain, status-promotion, R2-label and mutated-pin positive controls.",
+    "Without verify-readonly-close.py, zero mutation outside the three packet writable scopes is not independently established by the required close verifier; no out-of-scope mutation was intentionally performed in this close turn.",
+    "The current-candidate native 200 percent browser proof, forced colours, user text-spacing, coarse-pointer and safe-area modes remain TECHNICAL EVIDENCE REQUIRED.",
+    "Exact media rights/crops, fog numbers, font licensing/delivery and the implementation/demo base remain unresolved under their existing statuses."
+  ],
+  "residual_risk": [
+    "The report and matrix are useful planning evidence, but the packet cannot be admitted or promoted while required verifier files are absent and the highest authority pin is stale.",
+    "The browser harness passes 28/28 as an audit harness; findings such as Shop sub-44 targets, Our Story missing main and absent route menus remain reported site gaps rather than harness errors.",
+    "All 68 rules, 12 decisions and 70 tokens retain their existing APPROVED, PROVISIONAL/RECOMMENDED, NEEDS NATE, CONTENT/MEDIA DEPENDENCY and TECHNICAL EVIDENCE REQUIRED statuses.",
+    "The visual interview is paused at the unanswered editorial-section-composition decision; no option was inferred or recorded and all current mocks remain unchanged.",
+    "R2 remains EVIDENCE_ONLY, FAILED_REQUIRED_CHECK and NOT_PROMOTED; this audit provides no website, Shopify, deployment or production authority."
+  ],
+  "forbidden_path_changes": [],
+  "proposed_next_state": "hold",
+  "next_reviewer": "MapleMoon BOSS to issue a fresh checkpointed close-correction packet pinned to the current Boss ledger and explicitly restore or replace both missing required verifiers"
+}

@@ -1,0 +1,766 @@
+{
+  "schema": "maplemoon-integrated-cart-r2/v2",
+  "started_at": "2026-08-14T06:52:27.254Z",
+  "widths": {
+    "390": {
+      "boundary": {
+        "lifecycleBefore": {
+          "activeObservers": 0,
+          "observeCalls": 0,
+          "disconnectCalls": 0,
+          "activeFocusListeners": 0,
+          "focusAdds": 0,
+          "focusRemoves": 0
+        },
+        "opened": {
+          "initialFocus": "Close cart",
+          "direct": [
+            {
+              "tag": "DIV",
+              "inert": true
+            },
+            {
+              "tag": "SCRIPT",
+              "inert": true
+            },
+            {
+              "tag": "STYLE",
+              "inert": true
+            },
+            {
+              "tag": "SCRIPT",
+              "inert": true
+            },
+            {
+              "tag": "ASIDE",
+              "inert": true
+            },
+            {
+              "tag": "DIV",
+              "inert": true
+            },
+            {
+              "tag": "STYLE",
+              "inert": true
+            },
+            {
+              "tag": "SECTION",
+              "inert": true
+            }
+          ],
+          "dynamicInert": true,
+          "nativeBlocked": true,
+          "fallbackRedirected": true,
+          "buttons": [
+            {
+              "label": "Close cart",
+              "width": 44,
+              "height": 44
+            },
+            {
+              "label": "Continue to checkout",
+              "width": 346,
+              "height": 44
+            },
+            {
+              "label": "Continue shopping",
+              "width": 346,
+              "height": 44
+            }
+          ],
+          "semantics": {
+            "role": "dialog",
+            "modal": "true",
+            "hidden": "false",
+            "inert": false
+          },
+          "rect": {
+            "left": 0,
+            "right": 390,
+            "top": 140,
+            "bottom": 900
+          },
+          "overflow": {
+            "document": 0,
+            "dialog": 0,
+            "body": 0
+          }
+        },
+        "zoom": {
+          "document": 0,
+          "dialog": 0,
+          "body": 0
+        },
+        "alreadyOpen": {
+          "beforeSecond": {
+            "lifecycle": {
+              "activeObservers": 1,
+              "observeCalls": 1,
+              "disconnectCalls": 0,
+              "activeFocusListeners": 1,
+              "focusAdds": 1,
+              "focusRemoves": 0
+            },
+            "active": "Close cart"
+          },
+          "afterSecond": {
+            "lifecycle": {
+              "activeObservers": 1,
+              "observeCalls": 1,
+              "disconnectCalls": 0,
+              "activeFocusListeners": 1,
+              "focusAdds": 1,
+              "focusRemoves": 0
+            },
+            "active": "Close cart"
+          }
+        },
+        "pointerBlocked": true,
+        "overlayClosed": true,
+        "restored": {
+          "preseed": true,
+          "dynamic": false,
+          "opener": true,
+          "dialogInert": true,
+          "lifecycle": {
+            "activeObservers": 0,
+            "observeCalls": 1,
+            "disconnectCalls": 1,
+            "activeFocusListeners": 0,
+            "focusAdds": 1,
+            "focusRemoves": 1
+          }
+        }
+      },
+      "variants": [
+        {
+          "variant": "x",
+          "returned": true
+        },
+        {
+          "variant": "escape",
+          "returned": true
+        },
+        {
+          "variant": "secondary",
+          "returned": true
+        }
+      ],
+      "cycles": {
+        "before": {
+          "activeObservers": 0,
+          "observeCalls": 4,
+          "disconnectCalls": 4,
+          "activeFocusListeners": 0,
+          "focusAdds": 4,
+          "focusRemoves": 4
+        },
+        "after": {
+          "activeObservers": 0,
+          "observeCalls": 7,
+          "disconnectCalls": 7,
+          "activeFocusListeners": 0,
+          "focusAdds": 7,
+          "focusRemoves": 7
+        }
+      },
+      "header": {
+        "applicable": true,
+        "beforeCount": 13,
+        "after": {
+          "menuOpen": true,
+          "preserved": true,
+          "activeCart": true
+        }
+      },
+      "arithmetic": {
+        "availability": {
+          "available": 20,
+          "enquiry": 4
+        },
+        "selections": [
+          {
+            "id": "moons-1",
+            "name": "Peppermint Moon",
+            "option": "10 moons",
+            "cents": 2375,
+            "unitQuantity": 10
+          },
+          {
+            "id": "bananas-0",
+            "name": "Carob Bananas",
+            "option": "20 bananas",
+            "cents": 5099,
+            "unitQuantity": 20
+          },
+          {
+            "id": "eclipses-0",
+            "name": "Pecan Nut Eclipse Bite",
+            "option": "Value pack",
+            "cents": 5999,
+            "unitQuantity": 1
+          },
+          {
+            "id": "moons-1",
+            "name": "Peppermint Moon",
+            "option": "5 moons",
+            "cents": 1219,
+            "unitQuantity": 5
+          }
+        ],
+        "finalMixed": "$108.12",
+        "empty": {
+          "rows": [],
+          "stored": [],
+          "subtotal": "$0.00",
+          "checkoutSubtotal": "$0.00",
+          "count": 0,
+          "emptyVisible": true
+        },
+        "sideEffects": {
+          "coreObserved": 8,
+          "coreForbidden": [],
+          "finalObserved": 3,
+          "forbidden": [],
+          "environment": {
+            "cookie": "",
+            "localStorage": [],
+            "href": "http://127.0.0.1:4403/shop.html?cart-qa=1"
+          }
+        },
+        "screenshot": {
+          "path": "screenshots/cart-mixed-390.png",
+          "bytes": 67079
+        }
+      },
+      "completed": {
+        "count": 0,
+        "stored": [],
+        "focusReturned": true,
+        "events": [
+          {
+            "kind": "sessionStorage",
+            "detail": "maplemoon_review_cart_v2"
+          },
+          {
+            "kind": "sessionStorage",
+            "detail": "maplemoon_review_cart_v2"
+          }
+        ]
+      },
+      "trace": {
+        "consoleErrors": [],
+        "pageErrors": [],
+        "failedRequests": [],
+        "badResponses": []
+      }
+    },
+    "900": {
+      "boundary": {
+        "lifecycleBefore": {
+          "activeObservers": 0,
+          "observeCalls": 0,
+          "disconnectCalls": 0,
+          "activeFocusListeners": 0,
+          "focusAdds": 0,
+          "focusRemoves": 0
+        },
+        "opened": {
+          "initialFocus": "Close cart",
+          "direct": [
+            {
+              "tag": "DIV",
+              "inert": true
+            },
+            {
+              "tag": "SCRIPT",
+              "inert": true
+            },
+            {
+              "tag": "STYLE",
+              "inert": true
+            },
+            {
+              "tag": "SCRIPT",
+              "inert": true
+            },
+            {
+              "tag": "ASIDE",
+              "inert": true
+            },
+            {
+              "tag": "DIV",
+              "inert": true
+            },
+            {
+              "tag": "STYLE",
+              "inert": true
+            },
+            {
+              "tag": "SECTION",
+              "inert": true
+            }
+          ],
+          "dynamicInert": true,
+          "nativeBlocked": true,
+          "fallbackRedirected": true,
+          "buttons": [
+            {
+              "label": "Close cart",
+              "width": 44,
+              "height": 44
+            },
+            {
+              "label": "Continue to checkout",
+              "width": 476,
+              "height": 44
+            },
+            {
+              "label": "Continue shopping",
+              "width": 476,
+              "height": 44
+            }
+          ],
+          "semantics": {
+            "role": "dialog",
+            "modal": "true",
+            "hidden": "false",
+            "inert": false
+          },
+          "rect": {
+            "left": 380,
+            "right": 900,
+            "top": 0,
+            "bottom": 900
+          },
+          "overflow": {
+            "document": 0,
+            "dialog": 0,
+            "body": 0
+          }
+        },
+        "zoom": {
+          "document": 0,
+          "dialog": 0,
+          "body": 0
+        },
+        "alreadyOpen": {
+          "beforeSecond": {
+            "lifecycle": {
+              "activeObservers": 1,
+              "observeCalls": 1,
+              "disconnectCalls": 0,
+              "activeFocusListeners": 1,
+              "focusAdds": 1,
+              "focusRemoves": 0
+            },
+            "active": "Close cart"
+          },
+          "afterSecond": {
+            "lifecycle": {
+              "activeObservers": 1,
+              "observeCalls": 1,
+              "disconnectCalls": 0,
+              "activeFocusListeners": 1,
+              "focusAdds": 1,
+              "focusRemoves": 0
+            },
+            "active": "Close cart"
+          }
+        },
+        "pointerBlocked": true,
+        "overlayClosed": true,
+        "restored": {
+          "preseed": true,
+          "dynamic": false,
+          "opener": true,
+          "dialogInert": true,
+          "lifecycle": {
+            "activeObservers": 0,
+            "observeCalls": 1,
+            "disconnectCalls": 1,
+            "activeFocusListeners": 0,
+            "focusAdds": 1,
+            "focusRemoves": 1
+          }
+        }
+      },
+      "variants": [
+        {
+          "variant": "x",
+          "returned": true
+        },
+        {
+          "variant": "escape",
+          "returned": true
+        },
+        {
+          "variant": "secondary",
+          "returned": true
+        }
+      ],
+      "cycles": {
+        "before": {
+          "activeObservers": 0,
+          "observeCalls": 4,
+          "disconnectCalls": 4,
+          "activeFocusListeners": 0,
+          "focusAdds": 4,
+          "focusRemoves": 4
+        },
+        "after": {
+          "activeObservers": 0,
+          "observeCalls": 7,
+          "disconnectCalls": 7,
+          "activeFocusListeners": 0,
+          "focusAdds": 7,
+          "focusRemoves": 7
+        }
+      },
+      "header": {
+        "applicable": true,
+        "beforeCount": 13,
+        "after": {
+          "menuOpen": true,
+          "preserved": true,
+          "activeCart": true
+        }
+      },
+      "arithmetic": {
+        "availability": {
+          "available": 20,
+          "enquiry": 4
+        },
+        "selections": [
+          {
+            "id": "moons-1",
+            "name": "Peppermint Moon",
+            "option": "10 moons",
+            "cents": 2375,
+            "unitQuantity": 10
+          },
+          {
+            "id": "bananas-0",
+            "name": "Carob Bananas",
+            "option": "20 bananas",
+            "cents": 5099,
+            "unitQuantity": 20
+          },
+          {
+            "id": "eclipses-0",
+            "name": "Pecan Nut Eclipse Bite",
+            "option": "Value pack",
+            "cents": 5999,
+            "unitQuantity": 1
+          },
+          {
+            "id": "moons-1",
+            "name": "Peppermint Moon",
+            "option": "5 moons",
+            "cents": 1219,
+            "unitQuantity": 5
+          }
+        ],
+        "finalMixed": "$108.12",
+        "empty": {
+          "rows": [],
+          "stored": [],
+          "subtotal": "$0.00",
+          "checkoutSubtotal": "$0.00",
+          "count": 0,
+          "emptyVisible": true
+        },
+        "sideEffects": {
+          "coreObserved": 8,
+          "coreForbidden": [],
+          "finalObserved": 3,
+          "forbidden": [],
+          "environment": {
+            "cookie": "",
+            "localStorage": [],
+            "href": "http://127.0.0.1:4403/shop.html?cart-qa=1"
+          }
+        },
+        "screenshot": {
+          "path": "screenshots/cart-mixed-900.png",
+          "bytes": 149491
+        }
+      },
+      "completed": {
+        "count": 0,
+        "stored": [],
+        "focusReturned": true,
+        "events": [
+          {
+            "kind": "sessionStorage",
+            "detail": "maplemoon_review_cart_v2"
+          },
+          {
+            "kind": "sessionStorage",
+            "detail": "maplemoon_review_cart_v2"
+          }
+        ]
+      },
+      "trace": {
+        "consoleErrors": [],
+        "pageErrors": [],
+        "failedRequests": [],
+        "badResponses": []
+      }
+    },
+    "1440": {
+      "boundary": {
+        "lifecycleBefore": {
+          "activeObservers": 0,
+          "observeCalls": 0,
+          "disconnectCalls": 0,
+          "activeFocusListeners": 0,
+          "focusAdds": 0,
+          "focusRemoves": 0
+        },
+        "opened": {
+          "initialFocus": "Close cart",
+          "direct": [
+            {
+              "tag": "DIV",
+              "inert": true
+            },
+            {
+              "tag": "SCRIPT",
+              "inert": true
+            },
+            {
+              "tag": "STYLE",
+              "inert": true
+            },
+            {
+              "tag": "SCRIPT",
+              "inert": true
+            },
+            {
+              "tag": "ASIDE",
+              "inert": true
+            },
+            {
+              "tag": "DIV",
+              "inert": true
+            },
+            {
+              "tag": "STYLE",
+              "inert": true
+            },
+            {
+              "tag": "SECTION",
+              "inert": true
+            }
+          ],
+          "dynamicInert": true,
+          "nativeBlocked": true,
+          "fallbackRedirected": true,
+          "buttons": [
+            {
+              "label": "Close cart",
+              "width": 44,
+              "height": 44
+            },
+            {
+              "label": "Continue to checkout",
+              "width": 476,
+              "height": 44
+            },
+            {
+              "label": "Continue shopping",
+              "width": 476,
+              "height": 44
+            }
+          ],
+          "semantics": {
+            "role": "dialog",
+            "modal": "true",
+            "hidden": "false",
+            "inert": false
+          },
+          "rect": {
+            "left": 920,
+            "right": 1440,
+            "top": 0,
+            "bottom": 900
+          },
+          "overflow": {
+            "document": 0,
+            "dialog": 0,
+            "body": 0
+          }
+        },
+        "zoom": {
+          "document": 0,
+          "dialog": 0,
+          "body": 0
+        },
+        "alreadyOpen": {
+          "beforeSecond": {
+            "lifecycle": {
+              "activeObservers": 1,
+              "observeCalls": 1,
+              "disconnectCalls": 0,
+              "activeFocusListeners": 1,
+              "focusAdds": 1,
+              "focusRemoves": 0
+            },
+            "active": "Close cart"
+          },
+          "afterSecond": {
+            "lifecycle": {
+              "activeObservers": 1,
+              "observeCalls": 1,
+              "disconnectCalls": 0,
+              "activeFocusListeners": 1,
+              "focusAdds": 1,
+              "focusRemoves": 0
+            },
+            "active": "Close cart"
+          }
+        },
+        "pointerBlocked": true,
+        "overlayClosed": true,
+        "restored": {
+          "preseed": true,
+          "dynamic": false,
+          "opener": true,
+          "dialogInert": true,
+          "lifecycle": {
+            "activeObservers": 0,
+            "observeCalls": 1,
+            "disconnectCalls": 1,
+            "activeFocusListeners": 0,
+            "focusAdds": 1,
+            "focusRemoves": 1
+          }
+        }
+      },
+      "variants": [
+        {
+          "variant": "x",
+          "returned": true
+        },
+        {
+          "variant": "escape",
+          "returned": true
+        },
+        {
+          "variant": "secondary",
+          "returned": true
+        }
+      ],
+      "cycles": {
+        "before": {
+          "activeObservers": 0,
+          "observeCalls": 4,
+          "disconnectCalls": 4,
+          "activeFocusListeners": 0,
+          "focusAdds": 4,
+          "focusRemoves": 4
+        },
+        "after": {
+          "activeObservers": 0,
+          "observeCalls": 7,
+          "disconnectCalls": 7,
+          "activeFocusListeners": 0,
+          "focusAdds": 7,
+          "focusRemoves": 7
+        }
+      },
+      "header": {
+        "applicable": false
+      },
+      "arithmetic": {
+        "availability": {
+          "available": 20,
+          "enquiry": 4
+        },
+        "selections": [
+          {
+            "id": "moons-1",
+            "name": "Peppermint Moon",
+            "option": "10 moons",
+            "cents": 2375,
+            "unitQuantity": 10
+          },
+          {
+            "id": "bananas-0",
+            "name": "Carob Bananas",
+            "option": "20 bananas",
+            "cents": 5099,
+            "unitQuantity": 20
+          },
+          {
+            "id": "eclipses-0",
+            "name": "Pecan Nut Eclipse Bite",
+            "option": "Value pack",
+            "cents": 5999,
+            "unitQuantity": 1
+          },
+          {
+            "id": "moons-1",
+            "name": "Peppermint Moon",
+            "option": "5 moons",
+            "cents": 1219,
+            "unitQuantity": 5
+          }
+        ],
+        "finalMixed": "$108.12",
+        "empty": {
+          "rows": [],
+          "stored": [],
+          "subtotal": "$0.00",
+          "checkoutSubtotal": "$0.00",
+          "count": 0,
+          "emptyVisible": true
+        },
+        "sideEffects": {
+          "coreObserved": 8,
+          "coreForbidden": [],
+          "finalObserved": 3,
+          "forbidden": [],
+          "environment": {
+            "cookie": "",
+            "localStorage": [],
+            "href": "http://127.0.0.1:4403/shop.html?cart-qa=1"
+          }
+        },
+        "screenshot": {
+          "path": "screenshots/cart-mixed-1440.png",
+          "bytes": 207956
+        }
+      },
+      "completed": {
+        "count": 0,
+        "stored": [],
+        "focusReturned": true,
+        "events": [
+          {
+            "kind": "sessionStorage",
+            "detail": "maplemoon_review_cart_v2"
+          },
+          {
+            "kind": "sessionStorage",
+            "detail": "maplemoon_review_cart_v2"
+          }
+        ]
+      },
+      "trace": {
+        "consoleErrors": [],
+        "pageErrors": [],
+        "failedRequests": [],
+        "badResponses": []
+      }
+    }
+  },
+  "storage": {
+    "fresh": "$0.00",
+    "corrupt": "$0.00 and reset []",
+    "legacy": "$25.90 / unitPriceCents=1295 / price removed"
+  },
+  "outcome": "PASS",
+  "completed_at": "2026-08-14T06:53:00.685Z"
+}

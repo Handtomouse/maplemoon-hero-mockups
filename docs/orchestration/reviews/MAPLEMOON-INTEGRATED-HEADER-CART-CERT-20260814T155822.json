@@ -1,0 +1,93 @@
+{
+  "schema": "maplemoon-receipt/v2",
+  "receipt_id": "MAPLEMOON-INTEGRATED-HEADER-CART-CERT-20260814T155822-RECEIPT-001",
+  "packet_id": "MAPLEMOON-INTEGRATED-HEADER-CART-CERT-20260814T155822",
+  "worker_thread_id": "/root/recertify_updated_preview",
+  "worker": "Codex independent integrated header/cart certifier",
+  "started_at": "2026-08-14T15:58:22+10:00",
+  "completed_at": "2026-08-14T16:06:06+10:00",
+  "outcome": "FAIL_REQUIRED_CART_INERT_BACKGROUND",
+  "confidence": "high",
+  "checkpoint_path": "maplemoon-website/_wip/checkpoints/MAPLEMOON-INTEGRATED-HEADER-CART-CERT-20260814T155822_20260814_155822_AEST",
+  "files_read": [
+    "maplemoon-website/docs/orchestration/packets/MAPLEMOON-INTEGRATED-HEADER-CART-CERT-20260814T155822.md",
+    "maplemoon-website/docs/orchestration/packets/MAPLEMOON-MOBILE-HEADER-RUNTIME-20260814T150338.md",
+    "maplemoon-website/docs/orchestration/reviews/MAPLEMOON-MOBILE-HEADER-RUNTIME-20260814T150338.json",
+    "maplemoon-website/_wip/evidence/mobile_header_runtime_20260814T150338",
+    "maplemoon-website/docs/orchestration/packets/MAPLEMOON-CART-PREFLIGHT-VERIFY-20260814T155246.md",
+    "maplemoon-website/docs/orchestration/reviews/MAPLEMOON-CART-PREFLIGHT-VERIFY-20260814T155246.json",
+    "maplemoon-website/docs/orchestration/reviews/MAPLEMOON-CART-OPTION-SUBTOTAL-FIX-20260814T152958.json",
+    "maplemoon-website/_wip/evidence/cart_option_subtotal_fix_20260814T152958",
+    "maplemoon-website/scripts/check-maplemoon-receipt.py",
+    "maplemoon_build_20260813/homepage.html",
+    "maplemoon_build_20260813/our-story.html",
+    "maplemoon_build_20260813/carob-story.html",
+    "maplemoon_build_20260813/shop.html",
+    "maplemoon_build_20260813/faq.html",
+    "maplemoon_build_20260813/stockists.html",
+    "maplemoon_build_20260813/pure-carob-bar.html",
+    "maplemoon_build_20260813/mock-cart.js",
+    "maplemoon_build_20260813/mock-cart.css",
+    "maplemoon_build_20260813/assets/design-system/mm-chrome.js",
+    "maplemoon_build_20260813/assets/design-system/mm-chrome.css"
+  ],
+  "files_changed": [
+    "maplemoon-website/_wip/evidence/integrated_header_cart_cert_20260814T155822",
+    "maplemoon-website/docs/orchestration/reviews/MAPLEMOON-INTEGRATED-HEADER-CART-CERT-20260814T155822.json"
+  ],
+  "pre_sha256": {
+    "maplemoon-website/_wip/evidence/integrated_header_cart_cert_20260814T155822": null,
+    "maplemoon-website/docs/orchestration/reviews/MAPLEMOON-INTEGRATED-HEADER-CART-CERT-20260814T155822.json": null
+  },
+  "post_sha256": {
+    "maplemoon-website/_wip/evidence/integrated_header_cart_cert_20260814T155822": "16963801b2908e770fd3dd424e5017ce594f57b2c85bbb4b10d1974179298d4d",
+    "maplemoon-website/docs/orchestration/reviews/MAPLEMOON-INTEGRATED-HEADER-CART-CERT-20260814T155822.json": null
+  },
+  "checks": [
+    {
+      "command": "python3 -B scripts/check-maplemoon-receipt.py verify --root /Users/handtomouse --packet docs/orchestration/packets/MAPLEMOON-INTEGRATED-HEADER-CART-CERT-20260814T155822.md --checkpoint _wip/checkpoints/MAPLEMOON-INTEGRATED-HEADER-CART-CERT-20260814T155822_20260814_155822_AEST --phase start",
+      "exit_code": 0,
+      "result": "PASS packet=MAPLEMOON-INTEGRATED-HEADER-CART-CERT-20260814T155822 phase=start scope=2"
+    },
+    {
+      "command": "independent predecessor completion and promotion gate rerun",
+      "exit_code": 0,
+      "result": "PASS packet=MAPLEMOON-MOBILE-HEADER-RUNTIME-20260814T150338 phase=complete changed=4; PASS packet=MAPLEMOON-MOBILE-HEADER-RUNTIME-20260814T150338 phase=promote changed=4; PASS packet=MAPLEMOON-CART-PREFLIGHT-VERIFY-20260814T155246 phase=complete changed=2; PASS packet=MAPLEMOON-CART-PREFLIGHT-VERIFY-20260814T155246 phase=promote changed=2"
+    },
+    {
+      "command": "shasum -a 256 of seven route files, mock-cart JS/CSS and mm-chrome JS/CSS before and after focused probe",
+      "exit_code": 0,
+      "result": "PASS: all eleven acquisition hashes match the packet and remained unchanged after the focused probe."
+    },
+    {
+      "command": "node _wip/evidence/integrated_header_cart_cert_20260814T155822/cart_inert_probe.cjs",
+      "exit_code": 2,
+      "result": "INTEGRATED_CART_INERT FAIL http=200 content=5636 outside_inert=0/7 programmatic_focus_escaped=true initial_focus=Close cart overlay_return=true escape_return=true errors=0"
+    },
+    {
+      "command": "visual inspection and nonblank control for cart_inert_failure_390.png",
+      "exit_code": 0,
+      "result": "PASS evidence quality: 390x844 nonblank PNG shows the open cart dialog and overlay; the failing inert behavior is recorded machine-readably in cart_inert_probe.json."
+    }
+  ],
+  "screenshots_or_urls": [
+    "maplemoon-website/_wip/evidence/integrated_header_cart_cert_20260814T155822/cart_inert_failure_390.png",
+    "maplemoon-website/_wip/evidence/integrated_header_cart_cert_20260814T155822/cart_inert_probe.json",
+    "maplemoon-website/_wip/evidence/integrated_header_cart_cert_20260814T155822/verification-summary.json"
+  ],
+  "failures": [
+    "Required cart inert-background check failed at measured 390. With the dialog open, none of seven outside body branches had inert state and the background Menu button accepted programmatic focus, moving focus outside the aria-modal dialog. A candidate source fix is required, so the certifier stopped without editing."
+  ],
+  "unknowns": [
+    "The seven-route regular, reduced-motion and desktop header matrices were not run after the stop condition.",
+    "The remaining Shop option/arithmetic/persistence/zoom/no-side-effect matrix, FAQ exact-copy matrix, all-route asset/error/overflow matrix, UFC preflight and production-freeze recheck were not run after the stop condition."
+  ],
+  "residual_risk": [
+    "The modal background remains keyboard/programmatically reachable despite role=dialog, aria-modal=true, correct initial focus, overlay close and Escape focus return.",
+    "No integrated preview-only deployment can be admitted from this receipt."
+  ],
+  "forbidden_path_changes": [],
+  "proposed_next_state": "fail_requires_cart_background_inert_fix_then_new_successor_cert",
+  "next_reviewer": "MapleMoon BOSS for correction packet decision",
+  "ready_to_promote": false
+}

@@ -1,0 +1,13 @@
+{
+  "schema": "maplemoon-certifier-harness-correction/v1",
+  "outcome": "HARNESS_FALSE_POSITIVE",
+  "candidate_failure": false,
+  "stage": "header-owned inert setup after prior cart scroll interactions",
+  "measured_width": 390,
+  "literal_error": "locator.click timed out: menu toggle resolved visible, enabled and stable, but was outside the viewport because the mobile header had auto-hidden after prior scrolling",
+  "correction": "Use the menu toggle's direct click event for ownership setup and teardown. Header visibility, physical paint order and keyboard interaction remain independently proved by header_faq_assets_cert.cjs across all seven routes.",
+  "second_harness_observation": "At 390 the cart dialog intentionally occupies the full viewport, so a physical pointer at the background control's coordinates is intercepted by the dialog rather than the overlay and does not close the cart. The background click count was still zero. The verifier now records that blocked pointer result, then invokes the overlay control directly to certify its close path.",
+  "third_harness_observation": "The empty-state helper captured three index-based remove locators before mutating the list; after earlier removals the final nth locator no longer existed. The three exact lines and prior remove behavior had passed. The helper now repeatedly removes the current first line until none remain.",
+  "fourth_harness_observation": "The side-effect snapshot after returning to Shop included Shop's own same-URL history.replaceState initialization from before the cart actions. Core cart isolation had already passed with no forbidden events. The final empty-state segment now clears the positive instrumentation immediately after page initialization so only cart actions are classified.",
+  "fifth_harness_observation": "At 900 the dialog geometry was sampled 90ms into its authored 340ms opening transition, producing a transient right edge of 981.36. The 390 matrix had passed and no settled geometry had failed. Geometry sampling now waits 450ms, matching the stable-state ownership harness timing."
+}

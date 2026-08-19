@@ -1,0 +1,674 @@
+[
+  {
+    "route": "homepage",
+    "width": 390,
+    "http": 200,
+    "errors": [],
+    "failedRequests": [],
+    "metrics": {
+      "clientWidth": 390,
+      "scrollWidth": 390,
+      "scrollY": 0,
+      "header": {
+        "top": 0,
+        "bottom": 71,
+        "width": 390,
+        "height": 71,
+        "position": "relative",
+        "transform": "none"
+      },
+      "firstMain": {
+        "top": 386.828125,
+        "bottom": 5389.21875
+      },
+      "drawerState": "closed",
+      "menuOpen": false,
+      "toggle": {
+        "hidden": false,
+        "display": "flex",
+        "expanded": "false"
+      },
+      "focusTarget": "menu-toggle"
+    }
+  },
+  {
+    "route": "homepage",
+    "width": 900,
+    "http": 200,
+    "errors": [],
+    "failedRequests": [],
+    "metrics": {
+      "clientWidth": 900,
+      "scrollWidth": 900,
+      "scrollY": 0,
+      "header": {
+        "top": 0,
+        "bottom": 71,
+        "width": 900,
+        "height": 71,
+        "position": "relative",
+        "transform": "none"
+      },
+      "firstMain": {
+        "top": 388.28125,
+        "bottom": 5254.53125
+      },
+      "drawerState": "closed",
+      "menuOpen": false,
+      "toggle": {
+        "hidden": false,
+        "display": "flex",
+        "expanded": "false"
+      },
+      "focusTarget": "menu-toggle"
+    }
+  },
+  {
+    "route": "homepage",
+    "width": 1440,
+    "http": 200,
+    "errors": [],
+    "failedRequests": [],
+    "metrics": {
+      "clientWidth": 1440,
+      "scrollWidth": 1440,
+      "scrollY": 0,
+      "header": {
+        "top": 0,
+        "bottom": 71,
+        "width": 1440,
+        "height": 71,
+        "position": "relative",
+        "transform": "none"
+      },
+      "firstMain": {
+        "top": 518.953125,
+        "bottom": 4988.671875
+      },
+      "drawerState": "closed",
+      "menuOpen": false,
+      "toggle": {
+        "hidden": true,
+        "display": "none",
+        "expanded": "false"
+      },
+      "focusTarget": "body"
+    }
+  },
+  {
+    "route": "shop",
+    "width": 390,
+    "http": 200,
+    "errors": [],
+    "failedRequests": [],
+    "metrics": {
+      "clientWidth": 390,
+      "scrollWidth": 390,
+      "scrollY": 0,
+      "header": {
+        "top": 0,
+        "bottom": 70,
+        "width": 390,
+        "height": 70,
+        "position": "relative",
+        "transform": "none"
+      },
+      "firstMain": {
+        "top": 70,
+        "bottom": 15906.078125
+      },
+      "drawerState": "closed",
+      "menuOpen": false,
+      "toggle": {
+        "hidden": false,
+        "display": "flex",
+        "expanded": "false"
+      },
+      "focusTarget": "menu-toggle"
+    }
+  },
+  {
+    "route": "shop",
+    "width": 900,
+    "http": 200,
+    "errors": [],
+    "failedRequests": [],
+    "metrics": {
+      "clientWidth": 900,
+      "scrollWidth": 900,
+      "scrollY": 0,
+      "header": {
+        "top": 0,
+        "bottom": 70,
+        "width": 900,
+        "height": 70,
+        "position": "relative",
+        "transform": "none"
+      },
+      "firstMain": {
+        "top": 70,
+        "bottom": 9520.421875
+      },
+      "drawerState": "closed",
+      "menuOpen": false,
+      "toggle": {
+        "hidden": false,
+        "display": "flex",
+        "expanded": "false"
+      },
+      "focusTarget": "menu-toggle"
+    }
+  },
+  {
+    "route": "shop",
+    "width": 1440,
+    "http": 200,
+    "errors": [],
+    "failedRequests": [],
+    "metrics": {
+      "clientWidth": 1440,
+      "scrollWidth": 1440,
+      "scrollY": 0,
+      "header": {
+        "top": 0,
+        "bottom": 70,
+        "width": 1440,
+        "height": 70,
+        "position": "relative",
+        "transform": "none"
+      },
+      "firstMain": {
+        "top": 70,
+        "bottom": 5753.859375
+      },
+      "drawerState": "closed",
+      "menuOpen": false,
+      "toggle": {
+        "hidden": true,
+        "display": "none",
+        "expanded": "false"
+      },
+      "focusTarget": "body"
+    }
+  },
+  {
+    "route": "our-story",
+    "width": 390,
+    "http": 200,
+    "errors": [],
+    "failedRequests": [],
+    "metrics": {
+      "clientWidth": 390,
+      "scrollWidth": 390,
+      "scrollY": 0,
+      "header": {
+        "top": 0,
+        "bottom": 70,
+        "width": 390,
+        "height": 70,
+        "position": "relative",
+        "transform": "none"
+      },
+      "firstMain": {
+        "top": 70,
+        "bottom": 713.421875
+      },
+      "drawerState": "closed",
+      "menuOpen": false,
+      "toggle": {
+        "hidden": false,
+        "display": "flex",
+        "expanded": "false"
+      },
+      "focusTarget": "menu-toggle"
+    }
+  },
+  {
+    "route": "our-story",
+    "width": 900,
+    "http": 200,
+    "errors": [],
+    "failedRequests": [],
+    "metrics": {
+      "clientWidth": 900,
+      "scrollWidth": 900,
+      "scrollY": 0,
+      "header": {
+        "top": 0,
+        "bottom": 70,
+        "width": 900,
+        "height": 70,
+        "position": "relative",
+        "transform": "none"
+      },
+      "firstMain": {
+        "top": 70,
+        "bottom": 965.8125
+      },
+      "drawerState": "closed",
+      "menuOpen": false,
+      "toggle": {
+        "hidden": false,
+        "display": "flex",
+        "expanded": "false"
+      },
+      "focusTarget": "menu-toggle"
+    }
+  },
+  {
+    "route": "our-story",
+    "width": 1440,
+    "http": 200,
+    "errors": [],
+    "failedRequests": [],
+    "metrics": {
+      "clientWidth": 1440,
+      "scrollWidth": 1440,
+      "scrollY": 0,
+      "header": {
+        "top": 0,
+        "bottom": 70,
+        "width": 1440,
+        "height": 70,
+        "position": "relative",
+        "transform": "none"
+      },
+      "firstMain": {
+        "top": 70,
+        "bottom": 788
+      },
+      "drawerState": "closed",
+      "menuOpen": false,
+      "toggle": {
+        "hidden": true,
+        "display": "none",
+        "expanded": "false"
+      },
+      "focusTarget": "body"
+    }
+  },
+  {
+    "route": "carob-story",
+    "width": 390,
+    "http": 200,
+    "errors": [],
+    "failedRequests": [],
+    "metrics": {
+      "clientWidth": 390,
+      "scrollWidth": 390,
+      "scrollY": 0,
+      "header": {
+        "top": 0,
+        "bottom": 70,
+        "width": 390,
+        "height": 70,
+        "position": "relative",
+        "transform": "none"
+      },
+      "firstMain": {
+        "top": 70,
+        "bottom": 3849.921875
+      },
+      "drawerState": "closed",
+      "menuOpen": false,
+      "toggle": {
+        "hidden": false,
+        "display": "flex",
+        "expanded": "false"
+      },
+      "focusTarget": "menu-toggle"
+    }
+  },
+  {
+    "route": "carob-story",
+    "width": 900,
+    "http": 200,
+    "errors": [],
+    "failedRequests": [],
+    "metrics": {
+      "clientWidth": 900,
+      "scrollWidth": 900,
+      "scrollY": 0,
+      "header": {
+        "top": 0,
+        "bottom": 70,
+        "width": 900,
+        "height": 70,
+        "position": "relative",
+        "transform": "none"
+      },
+      "firstMain": {
+        "top": 70,
+        "bottom": 3100.859375
+      },
+      "drawerState": "closed",
+      "menuOpen": false,
+      "toggle": {
+        "hidden": false,
+        "display": "flex",
+        "expanded": "false"
+      },
+      "focusTarget": "menu-toggle"
+    }
+  },
+  {
+    "route": "carob-story",
+    "width": 1440,
+    "http": 200,
+    "errors": [],
+    "failedRequests": [],
+    "metrics": {
+      "clientWidth": 1440,
+      "scrollWidth": 1440,
+      "scrollY": 0,
+      "header": {
+        "top": 0,
+        "bottom": 70,
+        "width": 1440,
+        "height": 70,
+        "position": "relative",
+        "transform": "none"
+      },
+      "firstMain": {
+        "top": 70,
+        "bottom": 2338.09375
+      },
+      "drawerState": "closed",
+      "menuOpen": false,
+      "toggle": {
+        "hidden": true,
+        "display": "none",
+        "expanded": "false"
+      },
+      "focusTarget": "body"
+    }
+  },
+  {
+    "route": "faq",
+    "width": 390,
+    "http": 200,
+    "errors": [],
+    "failedRequests": [],
+    "metrics": {
+      "clientWidth": 390,
+      "scrollWidth": 390,
+      "scrollY": 0,
+      "header": {
+        "top": 0,
+        "bottom": 62,
+        "width": 390,
+        "height": 62,
+        "position": "relative",
+        "transform": "none"
+      },
+      "firstMain": {
+        "top": 62,
+        "bottom": 2498.796875
+      },
+      "drawerState": "closed",
+      "menuOpen": false,
+      "toggle": {
+        "hidden": false,
+        "display": "flex",
+        "expanded": "false"
+      },
+      "focusTarget": "menu-toggle"
+    }
+  },
+  {
+    "route": "faq",
+    "width": 900,
+    "http": 200,
+    "errors": [],
+    "failedRequests": [],
+    "metrics": {
+      "clientWidth": 900,
+      "scrollWidth": 900,
+      "scrollY": 0,
+      "header": {
+        "top": 0,
+        "bottom": 70,
+        "width": 900,
+        "height": 70,
+        "position": "relative",
+        "transform": "none"
+      },
+      "firstMain": {
+        "top": 70,
+        "bottom": 2522.21875
+      },
+      "drawerState": "closed",
+      "menuOpen": false,
+      "toggle": {
+        "hidden": false,
+        "display": "flex",
+        "expanded": "false"
+      },
+      "focusTarget": "menu-toggle"
+    }
+  },
+  {
+    "route": "faq",
+    "width": 1440,
+    "http": 200,
+    "errors": [],
+    "failedRequests": [],
+    "metrics": {
+      "clientWidth": 1440,
+      "scrollWidth": 1440,
+      "scrollY": 0,
+      "header": {
+        "top": 0,
+        "bottom": 70,
+        "width": 1440,
+        "height": 70,
+        "position": "relative",
+        "transform": "none"
+      },
+      "firstMain": {
+        "top": 70,
+        "bottom": 2148.65625
+      },
+      "drawerState": "closed",
+      "menuOpen": false,
+      "toggle": {
+        "hidden": true,
+        "display": "none",
+        "expanded": "false"
+      },
+      "focusTarget": "body"
+    }
+  },
+  {
+    "route": "stockists",
+    "width": 390,
+    "http": 200,
+    "errors": [],
+    "failedRequests": [],
+    "metrics": {
+      "clientWidth": 390,
+      "scrollWidth": 390,
+      "scrollY": 0,
+      "header": {
+        "top": 0,
+        "bottom": 70,
+        "width": 390,
+        "height": 70,
+        "position": "relative",
+        "transform": "none"
+      },
+      "firstMain": {
+        "top": 70,
+        "bottom": 3168.5
+      },
+      "drawerState": "closed",
+      "menuOpen": false,
+      "toggle": {
+        "hidden": false,
+        "display": "flex",
+        "expanded": "false"
+      },
+      "focusTarget": "menu-toggle"
+    }
+  },
+  {
+    "route": "stockists",
+    "width": 900,
+    "http": 200,
+    "errors": [],
+    "failedRequests": [],
+    "metrics": {
+      "clientWidth": 900,
+      "scrollWidth": 900,
+      "scrollY": 0,
+      "header": {
+        "top": 0,
+        "bottom": 70,
+        "width": 900,
+        "height": 70,
+        "position": "relative",
+        "transform": "none"
+      },
+      "firstMain": {
+        "top": 70,
+        "bottom": 2955.109375
+      },
+      "drawerState": "closed",
+      "menuOpen": false,
+      "toggle": {
+        "hidden": false,
+        "display": "flex",
+        "expanded": "false"
+      },
+      "focusTarget": "menu-toggle"
+    }
+  },
+  {
+    "route": "stockists",
+    "width": 1440,
+    "http": 200,
+    "errors": [],
+    "failedRequests": [],
+    "metrics": {
+      "clientWidth": 1440,
+      "scrollWidth": 1440,
+      "scrollY": 0,
+      "header": {
+        "top": 0,
+        "bottom": 70,
+        "width": 1440,
+        "height": 70,
+        "position": "relative",
+        "transform": "none"
+      },
+      "firstMain": {
+        "top": 70,
+        "bottom": 2659.90625
+      },
+      "drawerState": "closed",
+      "menuOpen": false,
+      "toggle": {
+        "hidden": true,
+        "display": "none",
+        "expanded": "false"
+      },
+      "focusTarget": "body"
+    }
+  },
+  {
+    "route": "pure-carob-bar",
+    "width": 390,
+    "http": 200,
+    "errors": [],
+    "failedRequests": [],
+    "metrics": {
+      "clientWidth": 390,
+      "scrollWidth": 390,
+      "scrollY": 0,
+      "header": {
+        "top": 0,
+        "bottom": 70,
+        "width": 390,
+        "height": 70,
+        "position": "relative",
+        "transform": "none"
+      },
+      "firstMain": {
+        "top": 70,
+        "bottom": 2799.25
+      },
+      "drawerState": "closed",
+      "menuOpen": false,
+      "toggle": {
+        "hidden": false,
+        "display": "flex",
+        "expanded": "false"
+      },
+      "focusTarget": "menu-toggle"
+    }
+  },
+  {
+    "route": "pure-carob-bar",
+    "width": 900,
+    "http": 200,
+    "errors": [],
+    "failedRequests": [],
+    "metrics": {
+      "clientWidth": 900,
+      "scrollWidth": 900,
+      "scrollY": 0,
+      "header": {
+        "top": 0,
+        "bottom": 70,
+        "width": 900,
+        "height": 70,
+        "position": "relative",
+        "transform": "none"
+      },
+      "firstMain": {
+        "top": 70,
+        "bottom": 2391.515625
+      },
+      "drawerState": "closed",
+      "menuOpen": false,
+      "toggle": {
+        "hidden": false,
+        "display": "flex",
+        "expanded": "false"
+      },
+      "focusTarget": "menu-toggle"
+    }
+  },
+  {
+    "route": "pure-carob-bar",
+    "width": 1440,
+    "http": 200,
+    "errors": [],
+    "failedRequests": [],
+    "metrics": {
+      "clientWidth": 1440,
+      "scrollWidth": 1440,
+      "scrollY": 0,
+      "header": {
+        "top": 0,
+        "bottom": 70,
+        "width": 1440,
+        "height": 70,
+        "position": "relative",
+        "transform": "none"
+      },
+      "firstMain": {
+        "top": 70,
+        "bottom": 1541.765625
+      },
+      "drawerState": "closed",
+      "menuOpen": false,
+      "toggle": {
+        "hidden": true,
+        "display": "none",
+        "expanded": "false"
+      },
+      "focusTarget": "body"
+    }
+  }
+]

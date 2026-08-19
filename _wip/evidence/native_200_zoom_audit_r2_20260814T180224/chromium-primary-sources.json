@@ -1,0 +1,31 @@
+{
+  "schema": "maplemoon-chromium-native-zoom-source-proof/v1",
+  "verified_at": "2026-08-14T08:07:48Z",
+  "sources": [
+    {
+      "file": "chrome/common/pref_names.h",
+      "url": "https://chromium.googlesource.com/chromium/src/+/refs/heads/main/chrome/common/pref_names.h#868",
+      "lines": "868-874",
+      "verified_fact": "Desktop Chromium names the double dictionary preference partition.default_zoom_level."
+    },
+    {
+      "file": "chrome/browser/ui/zoom/chrome_zoom_level_prefs.cc",
+      "url": "https://chromium.googlesource.com/chromium/src/+/ee29dd0c3875d017f69f0be001756602b8b8f1e9/chrome/browser/ui/zoom/chrome_zoom_level_prefs.cc#35",
+      "lines": "35-43, 75-77, 101-109, 223-244",
+      "verified_fact": "The partition key is x plus the hex-encoded relative path; the empty default relative path therefore gives x, and InitHostZoomMap loads that default preference into HostZoomMap."
+    },
+    {
+      "file": "third_party/blink/common/page/page_zoom.cc",
+      "url": "https://chromium.googlesource.com/chromium/src/+/938b37a6d2886bf8335fc7db792f1eb46c65b2ae/third_party/blink/common/page/page_zoom.cc#23",
+      "lines": "23-33",
+      "verified_fact": "Blink converts page zoom level to factor with pow(1.2, zoom_level)."
+    }
+  ],
+  "preference_path": "partition.default_zoom_level.x",
+  "levels": {
+    "100": {"level": 0, "calculated_factor": 1.0},
+    "175": {"level": 3.069389038663465, "calculated_factor": 1.7499999999999998},
+    "200": {"level": 3.8017840169239308, "calculated_factor": 2.0}
+  },
+  "source_verdict": "PASS"
+}

@@ -1,0 +1,7 @@
+{
+  "outcome": "HARNESS_CLASSIFICATION_CORRECTION",
+  "raw": "AUDIT_SUMMARY pass=12 fail=9 total=21 screenshots=84 contacts=12",
+  "render_integrity": "All 21 cases were HTTP 200, nonblank, exact-width, free of broken images and free of runtime/request errors.",
+  "misclassification": "The harness treated auxiliary footer counts on Homepage/Pure and the missing main landmark on Our Story as screenshot-capture failures.",
+  "correction": "Keep exactly-one-h1 as render integrity; record main/footer differences as semantic flags for the visual audit. Expand evidence-only visibility scans from main/footer to the full body so the legacy Our Story structure is not skipped."
+}

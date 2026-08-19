@@ -1,0 +1,30 @@
+COMMAND: vercel deploy --yes
+WORKDIR: /Users/handtomouse/maplemoon_build_20260813
+INVOCATION_COUNT: 1
+EXIT_CODE: 0
+
+Retrieving project…
+Deploying handtomouses-projects/maplemoon_build_20260813
+Uploading [--------------------] (0.0B/71.5KB)
+Uploading [=========-----------] (32.7KB/71.5KB)
+Uploading [=============-------] (48.7KB/71.5KB)
+Uploading [================----] (58.3KB/71.5KB)
+Uploading [====================] (71.5KB/71.5KB)
+Inspect: https://vercel.com/handtomouses-projects/maplemoon_build_20260813/4okANTnDW3BkRCp3SehpVyzgdyfc [2s]
+Preview: https://maplemoonbuild20260813-28up3uqbm-handtomouses-projects.vercel.app [2s]
+https://maplemoonbuild20260813-28up3uqbm-handtomouses-projects.vercel.app
+Building...
+Building: Running build in Washington, D.C., USA (East) – iad1
+Building: Build machine configuration: 2 cores, 8 GB
+Building: Retrieving list of deployment files...
+Building: Previous build caches not available.
+Building: Downloading 120 deployment files...
+Building: Running "vercel build"
+Building: Vercel CLI 58.1.0
+Building: Build Completed in /vercel/output [163ms]
+Building: Deploying outputs...
+Preview: https://maplemoonbuild20260813-28up3uqbm-handtomouses-projects.vercel.app [7s]
+Completing...
+To deploy to production (maplemoonbuild20260813.vercel.app), run `vercel --prod`
+
+No second deploy, --prod, promote, alias, rollback or protection command was run.

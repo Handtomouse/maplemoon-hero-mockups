@@ -1,0 +1,103 @@
+{
+  "schema": "maplemoon-receipt/v2",
+  "receipt_id": "MAPLEMOON-MINIMUM-RELEASE-DRY-RUN-20260816T203628-RECEIPT-01",
+  "packet_id": "MAPLEMOON-MINIMUM-RELEASE-DRY-RUN-20260816T203628",
+  "worker_thread_id": "/root",
+  "worker": "Codex /root",
+  "started_at": "2026-08-16T10:36:28Z",
+  "completed_at": "2026-08-16T10:55:57Z",
+  "files_read": [
+    "/Users/handtomouse/maplemoon-website/docs/orchestration/reviews/MAPLEMOON-SEVEN-WORKSTREAM-CLOSEOUT-MATRIX-20260816T202900.md",
+    "/Users/handtomouse/maplemoon-website/docs/orchestration/reviews/MAPLEMOON-NATE-DECISION-GATE-R2-20260814T184422.md",
+    "/Users/handtomouse/maplemoon-website/docs/orchestration/reviews/MAPLEMOON-NATE-DECISION-ADDENDUM-R3-20260815T043624.md",
+    "/Users/handtomouse/maplemoon-website/_wip/homepage_real_1_lead_photo.WIP.html",
+    "/Users/handtomouse/maplemoon-website/_wip/shop.WIP.html",
+    "/Users/handtomouse/maplemoon-website/_wip/our-story.WIP.html",
+    "/Users/handtomouse/maplemoon-website/_wip/carob-story.WIP.html",
+    "/Users/handtomouse/maplemoon-website/_wip/faq.WIP.html",
+    "/Users/handtomouse/maplemoon-website/_wip/stockists.WIP.html",
+    "/Users/handtomouse/maplemoon-website/scripts/build-maplemoon-wip-preview.py",
+    "/Users/handtomouse/maplemoon_build_20260813/pure-carob-bar.html",
+    "/private/tmp/maplemoon-pdp-route-repair-20260816"
+  ],
+  "files_changed": [
+    "maplemoon-website/_wip/evidence/minimum_release_dry_run_20260816T203628",
+    "maplemoon-website/docs/orchestration/reviews/MAPLEMOON-MINIMUM-RELEASE-DRY-RUN-20260816T203628.md",
+    "maplemoon-website/docs/orchestration/reviews/MAPLEMOON-MINIMUM-RELEASE-DRY-RUN-20260816T203628.json"
+  ],
+  "pre_sha256": {
+    "maplemoon-website/_wip/evidence/minimum_release_dry_run_20260816T203628": null,
+    "maplemoon-website/docs/orchestration/reviews/MAPLEMOON-MINIMUM-RELEASE-DRY-RUN-20260816T203628.md": null,
+    "maplemoon-website/docs/orchestration/reviews/MAPLEMOON-MINIMUM-RELEASE-DRY-RUN-20260816T203628.json": null
+  },
+  "post_sha256": {
+    "maplemoon-website/_wip/evidence/minimum_release_dry_run_20260816T203628": "9d4ad26d526dcb5e747e6a4d94bf803601916bd9e2bf57512076fa8c180f9f20",
+    "maplemoon-website/docs/orchestration/reviews/MAPLEMOON-MINIMUM-RELEASE-DRY-RUN-20260816T203628.md": "c868a822b88a4a50994ea41b1d265e8b0abe235085b9d7ac9c6376e79531bfaf",
+    "maplemoon-website/docs/orchestration/reviews/MAPLEMOON-MINIMUM-RELEASE-DRY-RUN-20260816T203628.json": null
+  },
+  "checks": [
+    {
+      "command": "checkpoint and phase=start gate",
+      "exit_code": 0,
+      "result": "PASS checkpoint packet=MAPLEMOON-MINIMUM-RELEASE-DRY-RUN-20260816T203628 files=3 path=/Users/handtomouse/maplemoon-website/_wip/checkpoints/MAPLEMOON-MINIMUM-RELEASE-DRY-RUN-20260816T203628_20260816_203628_AEST; PASS packet=MAPLEMOON-MINIMUM-RELEASE-DRY-RUN-20260816T203628 phase=start scope=3"
+    },
+    {
+      "command": "node _wip/evidence/minimum_release_dry_run_20260816T203628/visual-probe.mjs",
+      "exit_code": 0,
+      "result": "PASS route matrix 10/10 at exact 390 and 1440: Pure, Our Story, FAQ, Stockists and Shop. Every route returned 200 with clientWidth=scrollWidth=requested width; zero runtime, request, image or blank-screenshot failures. Two harness-only attempts are preserved before the final unchanged matrix."
+    },
+    {
+      "command": "node _wip/evidence/minimum_release_dry_run_20260816T203628/shop-count-probe.mjs",
+      "exit_code": 0,
+      "result": "SHOP_COUNTS status=200 cards=22 categories={\"bars\":6,\"moons\":6,\"bites\":6,\"elixirs\":2,\"bananas\":1,\"powder\":1} add=20 enquire=2 positive_control=PASS"
+    },
+    {
+      "command": "node _wip/evidence/minimum_release_dry_run_20260816T203628/scope-scan.mjs",
+      "exit_code": 0,
+      "result": "STATIC_SCOPE_SCAN routes=7/7 positive_control=PASS; all seven source hashes and line-level D01-D05 claim/capability surfaces recorded. One positive-control assumption attempt is preserved before the final pass."
+    },
+    {
+      "command": "input hash close",
+      "exit_code": 0,
+      "result": "PASS: six WIP inputs, the existing private-preview builder and the frozen Pure source match 8/8 hashes in input-hashes.sha256. Builder 803c439e0e937309b7ada0c3f886983908c3cc6aed64f92e38c57fd656707808; Pure 015cde27ecc60f3c444820a551c39f6e9c985fc5b2e59bdaea5f496c1c236b65."
+    },
+    {
+      "command": "minimum-release review structural assertions",
+      "exit_code": 0,
+      "result": "DRY_RUN_ASSERTIONS PASS routes=7 decisions=6 browser=10/10 screenshots=10/10 shop=22 current_inputs=8/8. Review SHA-256 c868a822b88a4a50994ea41b1d265e8b0abe235085b9d7ac9c6376e79531bfaf; evidence 21 files, receipt-gate directory SHA-256 9d4ad26d526dcb5e747e6a4d94bf803601916bd9e2bf57512076fa8c180f9f20."
+    },
+    {
+      "command": "scope, process and mutation audit",
+      "exit_code": 0,
+      "result": "PASS: local evidence server stopped and port 8787 closed. Only the exact evidence directory, review and self-receipt outputs changed after checkpoint. No website, WIP, build source, media, Styles Kit, catalogue, Shopify, Git, Vercel, production or client mutation occurred."
+    }
+  ],
+  "screenshots_or_urls": [
+    "/Users/handtomouse/maplemoon-website/_wip/evidence/minimum_release_dry_run_20260816T203628/screenshots/pure-related-390.png",
+    "/Users/handtomouse/maplemoon-website/_wip/evidence/minimum_release_dry_run_20260816T203628/screenshots/pure-related-1440.png",
+    "/Users/handtomouse/maplemoon-website/_wip/evidence/minimum_release_dry_run_20260816T203628/screenshots/our-story-founders-390.png",
+    "/Users/handtomouse/maplemoon-website/_wip/evidence/minimum_release_dry_run_20260816T203628/screenshots/our-story-founders-1440.png",
+    "/Users/handtomouse/maplemoon-website/_wip/evidence/minimum_release_dry_run_20260816T203628/screenshots/faq-top-390.png",
+    "/Users/handtomouse/maplemoon-website/_wip/evidence/minimum_release_dry_run_20260816T203628/screenshots/faq-top-1440.png",
+    "/Users/handtomouse/maplemoon-website/_wip/evidence/minimum_release_dry_run_20260816T203628/screenshots/stockists-top-390.png",
+    "/Users/handtomouse/maplemoon-website/_wip/evidence/minimum_release_dry_run_20260816T203628/screenshots/stockists-top-1440.png",
+    "/Users/handtomouse/maplemoon-website/_wip/evidence/minimum_release_dry_run_20260816T203628/screenshots/shop-top-390.png",
+    "/Users/handtomouse/maplemoon-website/_wip/evidence/minimum_release_dry_run_20260816T203628/screenshots/shop-top-1440.png"
+  ],
+  "failures": [],
+  "unknowns": [
+    "Nate has not recorded literal D01-D06 values; recommendations are not approvals.",
+    "The Our Story final pair-hero direction and exact 4:5 Carli and Dylan portrait assets remain unselected/unapproved.",
+    "D05-B authorises removal/neutralisation but not invented substitute copy; only the exact FAQ caffeine boundary is already approved.",
+    "Woo and Shopify commerce authority remains unavailable and intentionally outside this minimum release."
+  ],
+  "residual_risk": [
+    "The certified private preview remains technically sound while containing customer-visible founder placeholders, internal Stockists state, broad claims and fake-commerce capability that are not production-ready.",
+    "The current Shop drifted to 22 cards while the authority ledger has 24 rows, so successor verification must assert exactly six bars rather than rely on a deletion count.",
+    "No Styles Kit planning guidance, held media or Shopify groundwork becomes implementation authority through this dry-run.",
+    "Production remains a separate explicit Nate action after a fully certified successor preview."
+  ],
+  "forbidden_path_changes": [],
+  "proposed_next_state": "waiting_on_nate_minimum_release_bundle_and_our_story_media_decision",
+  "next_reviewer": "Nate to record D01=A; D02=A; D03=B; D04=A; D05=B; D06-PURE=REJECT; D06-SPICED=REJECT and choose the Our Story media direction, naming any exception"
+}

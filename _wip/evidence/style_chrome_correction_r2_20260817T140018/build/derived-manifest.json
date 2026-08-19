@@ -1,0 +1,308 @@
+{
+  "directory_sha256": "3a1e162a6e63db71478e3d365155eff146e2e5839dfc7fad5833b7bc14175e24",
+  "file_count": 75,
+  "files": {
+    "a11y_inner.css": {
+      "bytes": 1714,
+      "sha256": "7ea80be7443dd178360aca4e8b511627aeca156e3ff46cc903a7529c75d999b0"
+    },
+    "assets/carob_wordmark.svg": {
+      "bytes": 3766,
+      "sha256": "2a16b6671c795ea5126d0f9de5db1238d85c574c13c64e0a32718c154da69560"
+    },
+    "assets/design-system/mm-base.css": {
+      "bytes": 1270,
+      "sha256": "a11dbf9b7bfa9f545849cdad5a73832b21221ff77c585d33427bbe99219e19bb"
+    },
+    "assets/design-system/mm-chrome.css": {
+      "bytes": 5871,
+      "sha256": "38ae8acbbdd30ebdfbe633ab1f042549fd2573c7e458e946cc2c53596b32349a"
+    },
+    "assets/design-system/mm-chrome.js": {
+      "bytes": 5025,
+      "sha256": "cc72e22a121cbdb1ec695d181219ca696b0e020f82fedc243e1f407154c1316c"
+    },
+    "assets/design-system/mm-primitives.css": {
+      "bytes": 9006,
+      "sha256": "3108718d5109a28a6221a2eca56fcf5138195f8c020e0d64983b1be1afb839c7"
+    },
+    "assets/design-system/mm-tokens.css": {
+      "bytes": 3073,
+      "sha256": "cab9a32ee62a5a51d9297ab0320e666c1081a7a81c8c83a3bc48d1f1d2341908"
+    },
+    "assets/hero_shots/blue_fog_001.webp": {
+      "bytes": 166356,
+      "sha256": "794d3096aadccde851f7045ac2a36989bffce7f57e5a3273f980b6f29bf8a669"
+    },
+    "assets/hero_shots/byron_bay_silhouette.webp": {
+      "bytes": 66264,
+      "sha256": "edffc47e32ec593282e50731156972de9e10a58e13a47086bfb5a95863940e64"
+    },
+    "assets/hero_shots/carob_branch_dusk.jpg": {
+      "bytes": 567218,
+      "sha256": "5f6fd5235bdde463a84d7133317b354208f97f84a1ca98983746be4c625efee9"
+    },
+    "assets/hero_shots/carob_pods_cluster.jpg": {
+      "bytes": 313419,
+      "sha256": "c2b24330e2a9363be5635619bdaa1890096ba749ccfbf271677bdf38e59046a7"
+    },
+    "assets/hero_shots/moonlit_ocean_night.webp": {
+      "bytes": 138352,
+      "sha256": "76d8195360474ebc2e944bbae06abbcfb62bb4dd5d79354e12ee3088267c5e15"
+    },
+    "assets/hero_shots/silhouette_closeup.webp": {
+      "bytes": 182582,
+      "sha256": "ae753811391090aad4b9587792c47dfc020c99a88af443a145b3c544ff6320b7"
+    },
+    "assets/hero_videos/gen/finalists/graded_blue/finalist_wetsand2.mp4": {
+      "bytes": 711200,
+      "sha256": "35f7c3b6dc5f114b8c841a4a6d0980976f4eac2b8aea569960fd585cf8334f78"
+    },
+    "assets/licensed/carob_farm/australian-carob-0205-16x9.jpg": {
+      "bytes": 139958,
+      "sha256": "7298b7c387549b64660a1d82d3e78196a62b2bfbc950392aabd68ed92305108f"
+    },
+    "assets/licensed/carob_farm/australian-carob-0205-mobile.jpg": {
+      "bytes": 232605,
+      "sha256": "03b764279d3e053779a0ca0bce5bbef2e54824c93f9a12e1fa710dbae6b1a7ac"
+    },
+    "assets/licensed/carob_pods_macro.jpg": {
+      "bytes": 222996,
+      "sha256": "9916815baa52b9d85dab8bbe7dc216282d7f3e012625fe7d03ad8f8cb4a3f511"
+    },
+    "assets/licensed/scene_after_dinner.jpg": {
+      "bytes": 206721,
+      "sha256": "89bbb70a435e0f849aa29793b529ebdfe15cd6af57139fe49593d777fb6deed5"
+    },
+    "assets/licensed/scene_afternoon.jpg": {
+      "bytes": 177769,
+      "sha256": "d2c61e7c5fdd0315b82ef9628a24c961d0e5c5c8f62dba16f86b47dd38337f80"
+    },
+    "assets/licensed/scene_tea_night.jpg": {
+      "bytes": 92595,
+      "sha256": "e6d4383f24c674ade53af773e38539527796dbc9d872fe78e9e13a1e9afab984"
+    },
+    "assets/mm_logo_icon_blk.svg": {
+      "bytes": 3988,
+      "sha256": "aaffe3fbc7f38fb73f04e09d8b248e9c12184f79308dd17139ede6f26540a988"
+    },
+    "assets/mm_wordmark_blk.svg": {
+      "bytes": 7737,
+      "sha256": "5e1be42597c334fd33194477aa6b7c3527206d2f858fc2e9414a4d9d29e7fdcc"
+    },
+    "assets/our_story/founders_portrait_h212.webp": {
+      "bytes": 116564,
+      "sha256": "67a56d7c1b7e27973f86f7fe705ec48a963f8c22402bc46f60eb24e155a44e88"
+    },
+    "assets/photo_finals/maplemoon_heros1_brandmatched.webp": {
+      "bytes": 92688,
+      "sha256": "5a0f1480ff57abf290636f9140e8e4905e1f271f84df72e9e5c645fd4fc78a63"
+    },
+    "assets/photo_finals/maplemoon_heros21_brandmatched.webp": {
+      "bytes": 344452,
+      "sha256": "3db9dccd65cf6003a2185d5a851c503a93d86fb4ae6ff338f0a1fbbf4c07579e"
+    },
+    "assets/photo_finals/maplemoon_heros41_brandmatched.webp": {
+      "bytes": 248162,
+      "sha256": "4f4d74f47385396bbbf79aba559d9dc8718c7c04ed957c737a0c7b3a8e65fb75"
+    },
+    "assets/photo_finals/maplemoon_heros43_brandmatched.webp": {
+      "bytes": 681042,
+      "sha256": "1b09a6bad57f079ec91d9d502fe2d01d2032ef0d8976b58f68b31cb1dbb67868"
+    },
+    "assets/photo_finals/maplemoon_heros55_brandmatched.webp": {
+      "bytes": 325136,
+      "sha256": "11e46744169c52ecfc339ef8876e745b1544313fcfd7e00e9ffbfdc03d0679af"
+    },
+    "assets/photo_finals/maplemoon_heros55_brandmatched_atmospheric.webp": {
+      "bytes": 224840,
+      "sha256": "f9f80ce6f9ec6627d58aa93c53f6b5cd9f4cdaf250800858e1414bb9803f5ef0"
+    },
+    "assets/photo_finals/maplemoon_heros66_brandmatched.webp": {
+      "bytes": 166130,
+      "sha256": "83c47a329de7c985804ee576be85e564e5766fa37dbb702eee96e7f4ce68ffda"
+    },
+    "assets/photo_finals/mm23_xmp_blue_hero_2400.webp": {
+      "bytes": 361084,
+      "sha256": "64fb77d86a2c3180ff49c77cec33277d797ec3b5d22d7ae87744856d2c0ac4f9"
+    },
+    "assets/product_shots/bananas.webp": {
+      "bytes": 11782,
+      "sha256": "09626c817446a751d229f48038ddf2b07bc032ffb951899a8cab486004de36ff"
+    },
+    "assets/product_shots/bar_almond.webp": {
+      "bytes": 127140,
+      "sha256": "87b890393a549ba8e477f19892ac82d7a8934f101b4347441f3db2878c06c208"
+    },
+    "assets/product_shots/bar_cayenne.webp": {
+      "bytes": 129838,
+      "sha256": "957340b94fd87095b96eaed416ebef7c086333bd0685ab67fdabde6488542e81"
+    },
+    "assets/product_shots/bar_goji_coconut.webp": {
+      "bytes": 127706,
+      "sha256": "f695b7171b72ec1f9d7f7010a54a9694c372d1807b04868412107a399e5f409e"
+    },
+    "assets/product_shots/bar_hazelnut.webp": {
+      "bytes": 129290,
+      "sha256": "bc71c90d342d1f6fcad6d70bd239c8d425b4acb02e3afc82158699ec59e8b852"
+    },
+    "assets/product_shots/bar_peppermint.webp": {
+      "bytes": 130000,
+      "sha256": "4d5709e5775c71d91541e945ff8e9827d17174d1e1642d3c80225ac2db753787"
+    },
+    "assets/product_shots/bar_pure_carob.webp": {
+      "bytes": 122240,
+      "sha256": "ba6e31d13684f7459dd2df44c90ca804c46886aa1a2a2092e36fe627352c8db8"
+    },
+    "assets/product_shots/bar_pure_carob_hero.webp": {
+      "bytes": 247106,
+      "sha256": "3292a84d7665b4ac756b1a43388ad3710a48805c9629cfbe26a096471a54e981"
+    },
+    "assets/product_shots/eclipse_almond.webp": {
+      "bytes": 22676,
+      "sha256": "ed43b412568a4d3ac2beeee08927f9f18453838a4a3fdecd63ba98b37b8ed703"
+    },
+    "assets/product_shots/eclipse_bundle.webp": {
+      "bytes": 163216,
+      "sha256": "3b0515fd4deb8916da9d613f0d8fd94ba6a7c25756f188e6187a932056b6ff46"
+    },
+    "assets/product_shots/eclipse_fudge.webp": {
+      "bytes": 47794,
+      "sha256": "61b38e828f35e87d1c142835a03e73fcb599a09c9388cc709345ee6ff44a3e9a"
+    },
+    "assets/product_shots/eclipse_goji.webp": {
+      "bytes": 209434,
+      "sha256": "506ec155c935bb7e99ca5fbe22d0f30d8ca80f4789e0a8dc98375948720cb1ff"
+    },
+    "assets/product_shots/eclipse_hazelnut.webp": {
+      "bytes": 27174,
+      "sha256": "83413a35ce8d53a808ed6f40079e6b272b39f287d93788bdca23435c2fe16df4"
+    },
+    "assets/product_shots/eclipse_pecan.webp": {
+      "bytes": 17290,
+      "sha256": "e3f1216e701eb5b8b194eb4f5259bee43a4bc8c854ff830c3cd4a3909cb5943b"
+    },
+    "assets/product_shots/elixir_plain.webp": {
+      "bytes": 35552,
+      "sha256": "4398f43fcc7ff571f4eea4643e078f8416e6921f4e979f5bf31e53338e04916a"
+    },
+    "assets/product_shots/elixir_spiced.webp": {
+      "bytes": 64218,
+      "sha256": "9b92c0f0a0cc11b11aa9a5fa4cb7683b420db373e556c74adcb1ba576ffe1163"
+    },
+    "assets/product_shots/moon_almond.webp": {
+      "bytes": 9246,
+      "sha256": "de8f28186c50d7a407f2070293b418b872b4187d985b62c96f328844ba7c42f1"
+    },
+    "assets/product_shots/moon_cayenne.webp": {
+      "bytes": 17374,
+      "sha256": "f6f2e71b5c59abe56a79bb04afcc6c15a1597644628eda5a3c8e90d204297cc0"
+    },
+    "assets/product_shots/moon_goji_coconut.webp": {
+      "bytes": 12990,
+      "sha256": "fdd5be44f37e9766c966541ceaf68a044279409a2cc87f7d056c244226ac5b32"
+    },
+    "assets/product_shots/moon_hazelnut.webp": {
+      "bytes": 9198,
+      "sha256": "bb73f940642a56bf4a593cef58b1ba593b8664517126722690dad08453b583cc"
+    },
+    "assets/product_shots/moon_peppermint.webp": {
+      "bytes": 9492,
+      "sha256": "463a192590e7762ed928609b01d67555ef4869c1c13c7de43d47a757bad51b45"
+    },
+    "assets/product_shots/moon_pure_carob.webp": {
+      "bytes": 9134,
+      "sha256": "8e8a41d0442d76eea707a26c5d1da604d8ef95384551389547caa7fd21865295"
+    },
+    "assets/product_shots/powder_roasted.webp": {
+      "bytes": 446602,
+      "sha256": "d1afebddd399e24dcb14efae93b4fde33b588ce7de6dae07d88a43886b489cf9"
+    },
+    "assets/products_new/bar_almond.png": {
+      "bytes": 624532,
+      "sha256": "f276faafd7267244ce9a3c9e33d1fb0a79995d9144e64996a096e1603feea412"
+    },
+    "assets/products_new/bar_cayenne.png": {
+      "bytes": 714910,
+      "sha256": "98198122d6a4131dc02f3b8f8b902807d24c9815144a42e12ed76a996f07fb8f"
+    },
+    "assets/products_new/bar_goji_coconut.png": {
+      "bytes": 792129,
+      "sha256": "c052cf0d1a657f6c88ec8266ca2d99a4ddb78bfa3f14fa722dbb1a1bd94bda17"
+    },
+    "assets/products_new/bar_hazelnut.png": {
+      "bytes": 831697,
+      "sha256": "918fa46feaba6306d5a6e64e1aadc9a9e4d0270c81d12ad00a9dd3f8dbdff664"
+    },
+    "assets/products_new/bar_peppermint.png": {
+      "bytes": 586829,
+      "sha256": "a28f054e3717bca52dd835814630b1db045f17d6461dd289d3753ea49cd4073b"
+    },
+    "assets/products_new/bar_pure_carob.png": {
+      "bytes": 715330,
+      "sha256": "b6e64b00acd3e502e19c7b7ee1aa16e9669d1d9e9c19bbbe1dac0917c4967cff"
+    },
+    "brand_kit.css": {
+      "bytes": 10754,
+      "sha256": "53043df665ab3bc696b3d925f5ed108912cdc50330def58f92d2e7c2adbbbbe3"
+    },
+    "carob-story.html": {
+      "bytes": 55436,
+      "sha256": "54208ed66d3fee52f808c65cef78ab59461be955395f0ad6693efb14c480f471"
+    },
+    "design_refinement_20260723.css": {
+      "bytes": 4304,
+      "sha256": "90de7de62efb16b0fe10da4dfea5b1ab2889a01cc2ac4a895127466a68803df2"
+    },
+    "faq.html": {
+      "bytes": 32925,
+      "sha256": "9c4aae65128b3f6f1dc040d913359edb3eb8b26a2036b3c314fe91676d62e303"
+    },
+    "homepage.html": {
+      "bytes": 191878,
+      "sha256": "ad4fa970a8f0e9f549c841a52674fd9416e7e242f3db1d421e47ecd9e334e82f"
+    },
+    "mock-cart.css": {
+      "bytes": 13576,
+      "sha256": "c17deb1f972017d9790f2191360a457e54d7287730847f9f470c9de371603308"
+    },
+    "mock-cart.js": {
+      "bytes": 42691,
+      "sha256": "754ea8b1235a6329bfcbc32aae0f9e5e09c334bf26726bbff8c2c8653f54afe5"
+    },
+    "our-story.html": {
+      "bytes": 65080,
+      "sha256": "08040cbac52e8fe1cf9eec1841b4bd8ddf9961c551b99298e9fa2abaa85dade6"
+    },
+    "products/pure-carob-bar.html": {
+      "bytes": 26492,
+      "sha256": "526ac1dfc604561079b5cbd7c4a70b80b1312432fa4f07a4487ad1cefc91bef4"
+    },
+    "shop.html": {
+      "bytes": 51627,
+      "sha256": "8e7746e7e13c775602c1695a8b00212f956efcabfb86093e5be1fe364cb36003"
+    },
+    "stockists.html": {
+      "bytes": 113216,
+      "sha256": "9be32057b9e1ddb7fe2255f0a851e50ac899eaccae581ac9356cb6aa52b13e57"
+    },
+    "style-chrome-derived.css": {
+      "bytes": 5243,
+      "sha256": "72321bf7134909058f56c0f770d5f9c2cdf1576f5374e375cd6c2c22a6b6ace1"
+    },
+    "style-chrome-derived.js": {
+      "bytes": 3994,
+      "sha256": "30ae2a3776d6ef8d4ebb087615005b1a168b9a3bbde26ad2fb4ece094bd8d020"
+    },
+    "styles/homepage.css": {
+      "bytes": 1911,
+      "sha256": "2aa6e0aee5536d12356af732c5caed56975feaa8ad43be45cec9c4102a029549"
+    },
+    "vercel.json": {
+      "bytes": 1790,
+      "sha256": "06d2399ad511747ffb9d6b241c2329f00ce8a79ba7168050e5b7e7725915166d"
+    }
+  },
+  "root": "/Users/handtomouse/maplemoon-website/_wip/deploy/generated/maplemoon-style-chrome-derived-r2-20260817T140018",
+  "schema": "maplemoon-style-chrome-file-manifest/v1"
+}

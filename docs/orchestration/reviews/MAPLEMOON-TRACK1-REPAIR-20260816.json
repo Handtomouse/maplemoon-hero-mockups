@@ -1,0 +1,120 @@
+{
+  "schema": "maplemoon-receipt/v2",
+  "receipt_id": "MAPLEMOON-TRACK1-REPAIR-20260816-RECEIPT-01",
+  "packet_id": "MAPLEMOON-TRACK1-REPAIR-20260816",
+  "worker_thread_id": "/root",
+  "worker": "Codex /root",
+  "started_at": "2026-08-16T08:50:41Z",
+  "completed_at": "2026-08-16T09:39:56Z",
+  "files_read": [
+    "/Users/handtomouse/maplemoon-website/docs/orchestration/packets/MAPLEMOON-TRACK1-REPAIR-20260816.md",
+    "/Users/handtomouse/maplemoon-website/_wip/evidence/track1_carli_build_20260816/REPORT.md",
+    "/Users/handtomouse/maplemoon-website/_wip/homepage_real_1_lead_photo.WIP.html",
+    "/Users/handtomouse/maplemoon-website/_wip/stockists.WIP.html",
+    "/Users/handtomouse/maplemoon-website/scripts/build-maplemoon-wip-preview.py",
+    "/Users/handtomouse/maplemoon-website/assets/design-system/mm-chrome.js",
+    "/Users/handtomouse/maplemoon-website/assets/design-system/mm-chrome.css",
+    "/Users/handtomouse/maplemoon_build_20260813/homepage.html",
+    "/Users/handtomouse/maplemoon_build_20260813/mock-cart.js",
+    "/Users/handtomouse/maplemoon_build_20260813/mock-cart.css"
+  ],
+  "files_changed": [
+    "maplemoon-website/_wip/homepage_real_1_lead_photo.WIP.html",
+    "maplemoon-website/_wip/stockists.WIP.html",
+    "maplemoon-website/scripts/build-maplemoon-wip-preview.py",
+    "maplemoon-website/_wip/evidence/track1_repair_20260816",
+    "maplemoon-website/docs/orchestration/reviews/MAPLEMOON-TRACK1-REPAIR-20260816.json"
+  ],
+  "pre_sha256": {
+    "maplemoon-website/_wip/homepage_real_1_lead_photo.WIP.html": "8baea94b586bda2a079c5cf8d4de9fa24e278ed066314c720ad8b84d33c43261",
+    "maplemoon-website/_wip/stockists.WIP.html": "1cc8b4e55c7dc59f6e268222c310ac47d477540caf7540970981726a801b9075",
+    "maplemoon-website/scripts/build-maplemoon-wip-preview.py": "0ebf7c213c37d07cc4999c9d9cc38d93dd290c605e1641e4ec5f3a6de5f755b0",
+    "maplemoon-website/_wip/evidence/track1_repair_20260816": null,
+    "maplemoon-website/docs/orchestration/reviews/MAPLEMOON-TRACK1-REPAIR-20260816.json": null
+  },
+  "post_sha256": {
+    "maplemoon-website/_wip/homepage_real_1_lead_photo.WIP.html": "423184b66a18a2e1eb44bf547b6392ef1bc26be982309846c949c4e971251c04",
+    "maplemoon-website/_wip/stockists.WIP.html": "dbff73357e3425005db5fc7f0e0e589ed8a70b9dbcb62f31cab667cf37409f37",
+    "maplemoon-website/scripts/build-maplemoon-wip-preview.py": "c2c2ccbc0f9e4b4be8c3f111744968566de88de6d605e0e463df4b0d708f48d0",
+    "maplemoon-website/_wip/evidence/track1_repair_20260816": "a2d8c605d1f03b13bbd2821d420a4a4410fd4b9cbc841a027541dd7e82108597",
+    "maplemoon-website/docs/orchestration/reviews/MAPLEMOON-TRACK1-REPAIR-20260816.json": null
+  },
+  "checks": [
+    {
+      "command": "python3 -B scripts/check-maplemoon-receipt.py checkpoint and verify phase=start against MAPLEMOON-TRACK1-REPAIR-20260816",
+      "exit_code": 0,
+      "result": "PASS checkpoint packet=MAPLEMOON-TRACK1-REPAIR-20260816 files=5 path=maplemoon-website/_wip/checkpoints/MAPLEMOON-TRACK1-REPAIR-20260816_20260816_184907_AEST; PASS packet=MAPLEMOON-TRACK1-REPAIR-20260816 phase=start scope=5"
+    },
+    {
+      "command": "certified cart source hash acquisition and close",
+      "exit_code": 0,
+      "result": "PASS: mock-cart.js stayed 36fb46b05a46ecf1c770991c6b9cf2eb8c08fda361c7176d37df081668f123aa and mock-cart.css stayed c17deb1f972017d9790f2191360a457e54d7287730847f9f470c9de371603308. The output CSS is byte-identical; the output JS is deterministically transformed only at the clean-route normalizer seam and hashes 754ea8b1235a6329bfcbc32aae0f9e5e09c334bf26726bbff8c2c8653f54afe5."
+    },
+    {
+      "command": "python3 scripts/build-maplemoon-wip-preview.py --output /private/tmp/maplemoon-track1-repair-20260816",
+      "exit_code": 0,
+      "result": "BUILD PASS output=/private/tmp/maplemoon-track1-repair-20260816 files=71 bytes=12782353 pages=6 private_dirs=0 vercel_project_link=0"
+    },
+    {
+      "command": "source assertions for Homepage cart includes and Stockists skip-link/main target",
+      "exit_code": 0,
+      "result": "PASS: Homepage contains exactly one /mock-cart.css and one /mock-cart.js include; Stockists contains exactly one href=#main-content and one id=main-content."
+    },
+    {
+      "command": "bundled Playwright/system-Chrome verify.mjs at measured 390 and 1440 across six routes",
+      "exit_code": 0,
+      "result": "PASS 12/12, failures=0. Every page returned HTTP 200 with clientWidth=scrollWidth, zero broken images, console errors, page errors, request failures and bad responses. Homepage measured-390 menu had six 44px full-width rows and every centre hit resolved to its own anchor; one cart dialog opened. Stockists skip-link focus/target passed."
+    },
+    {
+      "command": "manual inspection of 12 final page renders, two contact sheets, Homepage open-menu and open-cart screenshots, plus menu paint-order probe",
+      "exit_code": 0,
+      "result": "PASS: final mobile drawer is opaque rgb(244,242,237), correctly layered, and has no hero/content paint-through; cart is painted and usable; pages are nonblank and unclipped. The visible Our Story pending-founder cards were recorded as a human direction gate rather than silently accepted."
+    },
+    {
+      "command": "vercel deploy --yes from the isolated /private/tmp candidate",
+      "exit_code": 0,
+      "result": "PASS: exactly one preview deploy created dpl_GMAVpJvm6ytQkLpDBAJXSGr1yffd at https://maplemoonbuild20260813-rx9cjirjk-handtomouses-projects.vercel.app; target preview; status Ready. No --prod, promote, alias or protection command ran."
+    },
+    {
+      "command": "authenticated deployed-byte remote-verify.mjs",
+      "exit_code": 0,
+      "result": "PASS 12/12: Homepage, Shop, Our Story, Carob Story, FAQ and Stockists plus mock-cart.js/css and four shared design-system assets all returned HTTP 200, were nonblank and were byte/SHA-256 identical to the certified local candidate. Positive controls were nonzero on every route."
+    },
+    {
+      "command": "vercel inspect preview and production; authenticated production /homepage fetch and hash close",
+      "exit_code": 0,
+      "result": "PASS: preview dpl_GMAVpJvm6ytQkLpDBAJXSGr1yffd is Ready/preview. Production alias still resolves to immutable 7vjf2m50b, deployment dpl_G2LER2awaqyFtGRCcTserXbNynct, target production, Ready. Production /homepage remains 208556 bytes, MD5 6197879a5ca9d3ed0452773abc0bbeb4, SHA-256 b936b5bb4856cdd6134e5b15bce5dfc3b353c1d442fd1a418180b35b8fa10356."
+    },
+    {
+      "command": "read-only Gmail, iMessage and WhatsApp exact-phrase reconciliation for the four T7 questions",
+      "exit_code": 0,
+      "result": "PASS: no matching sent message was found; Gmail Shop PAGE thread 19ffed8779cb19e3 has Carli's incoming message and no reply. Existing draft remains unsent and its em-dash, en-dash, vibe and -> counts are all zero."
+    },
+    {
+      "command": "evidence integrity and git diff --check",
+      "exit_code": 0,
+      "result": "PASS: 30 evidence files, zero empty files, zero symlinks, receipt-gate-compatible evidence-tree SHA-256 a2d8c605d1f03b13bbd2821d420a4a4410fd4b9cbc841a027541dd7e82108597; git diff --check returned no output for the three implementation files."
+    }
+  ],
+  "screenshots_or_urls": [
+    "https://maplemoonbuild20260813-rx9cjirjk-handtomouses-projects.vercel.app",
+    "/Users/handtomouse/maplemoon-website/_wip/evidence/track1_repair_20260816/screenshots/contact-390.png",
+    "/Users/handtomouse/maplemoon-website/_wip/evidence/track1_repair_20260816/screenshots/contact-1440.png",
+    "/Users/handtomouse/maplemoon-website/_wip/evidence/track1_repair_20260816/screenshots/homepage-390-menu-open-probe.png",
+    "/Users/handtomouse/maplemoon-website/_wip/evidence/track1_repair_20260816/screenshots/homepage-390-cart-open.png"
+  ],
+  "failures": [],
+  "unknowns": [
+    "Nate has not chosen whether to preserve the current production Our Story route or expose the pending-founder cards; no hybrid successor was built without that decision.",
+    "Heros-73.jpg is the sole supplied relaxed/smiling both-founder frame, but it is not selected or integrated.",
+    "The T7 draft is confirmed unsent and still requires Nate's approval and manual send."
+  ],
+  "residual_risk": [
+    "The preview is suitable only for authenticated/private review until Vercel protection state is separately changed by an authorised owner.",
+    "Promotion of the exact six-route preview would make the pending-founder cards client-visible; the recommended release path requires a separately checkpointed hybrid build that keeps production Our Story unchanged.",
+    "The worktree contains extensive unrelated pre-existing untracked material; it was preserved and excluded from this packet."
+  ],
+  "forbidden_path_changes": [],
+  "proposed_next_state": "certified_preview_ready_needs_nate_our_story_and_deployment_id_approval",
+  "next_reviewer": "Nate for Our Story direction, then explicit approval of deployment dpl_GMAVpJvm6ytQkLpDBAJXSGr1yffd or a separately certified hybrid successor"
+}

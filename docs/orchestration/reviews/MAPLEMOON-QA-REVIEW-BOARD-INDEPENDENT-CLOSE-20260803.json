@@ -1,0 +1,81 @@
+{
+  "schema": "maplemoon-receipt/v2",
+  "receipt_id": "MAPLEMOON-QA-REVIEW-BOARD-INDEPENDENT-CLOSE-20260803-RECEIPT-001",
+  "packet_id": "MAPLEMOON-QA-REVIEW-BOARD-INDEPENDENT-CLOSE-20260803",
+  "worker_thread_id": "019fa858-05c9-7631-b26e-8f5cbbf1387a",
+  "worker": "Main independent live-board verifier and proof-receipt reconciler",
+  "started_at": "2026-08-03T03:04:32+10:00",
+  "completed_at": "2026-08-03T03:12:04+10:00",
+  "outcome": "PASS",
+  "confidence": "high",
+  "files_read": [
+    "docs/orchestration/packets/MAPLEMOON-QA-REVIEW-BOARD-INDEPENDENT-CLOSE-20260803.md",
+    "docs/orchestration/reviews/MAPLEMOON-QA-REVIEW-BOARD-LIVE-EMBED-R2-20260803.json",
+    "docs/orchestration/reviews/MAPLEMOON-QA-PROOF-200-ZOOM-R2-20260803.json",
+    "docs/orchestration/reviews/MAPLEMOON-QA-PROOF-REDUCED-MOTION-R2-20260803.json",
+    "docs/orchestration/reviews/MAPLEMOON-QA-PROOF-NETWORK-R2-20260803.json",
+    "_wip/reviews/maplemoon-six-page-qa-20260803/review-board/index.html",
+    "_wip/reviews/maplemoon-six-page-qa-20260803/review-board/app.js",
+    "_wip/reviews/maplemoon-six-page-qa-20260803/review-board/styles.css",
+    "docs/client-review/2026-08-01-saturday-review/staging-v1/MANIFEST.json",
+    "docs/client-review/2026-08-01-saturday-review/staging-v1/clean/MANIFEST.json"
+  ],
+  "files_changed": [
+    "_wip/reviews/maplemoon-six-page-qa-20260803/technical/findings.json",
+    "_wip/reviews/maplemoon-six-page-qa-20260803/review-board/qa-checks.json",
+    "docs/orchestration/reviews/MAPLEMOON-QA-REVIEW-BOARD-INDEPENDENT-CLOSE-20260803.json"
+  ],
+  "pre_sha256": {
+    "_wip/reviews/maplemoon-six-page-qa-20260803/technical/findings.json": "8733510fcf368517276470a897a3f3c643b24f0d7598f1af6ef42287e4914e3b",
+    "_wip/reviews/maplemoon-six-page-qa-20260803/review-board/qa-checks.json": "659b2fee88c0f4eefbfde59b851e9012738504c69b20464513b766a6756da549",
+    "docs/orchestration/reviews/MAPLEMOON-QA-REVIEW-BOARD-INDEPENDENT-CLOSE-20260803.json": null
+  },
+  "post_sha256": {
+    "_wip/reviews/maplemoon-six-page-qa-20260803/technical/findings.json": "bd888fd9d519a5178b6f8930e0b46a3bd4644713fb822222c1f8fc4eea59b53a",
+    "_wip/reviews/maplemoon-six-page-qa-20260803/review-board/qa-checks.json": "cead871c704e50207d950653e290bcd8e2a68b7c0d4c0c3de177840a89456714",
+    "docs/orchestration/reviews/MAPLEMOON-QA-REVIEW-BOARD-INDEPENDENT-CLOSE-20260803.json": null
+  },
+  "checks": [
+    {
+      "command": "three R2 specialist completion gates",
+      "exit_code": 0,
+      "result": "PASS: all three independently reproduced their declared HOLD outcomes; none claimed missing browser-level proof"
+    },
+    {
+      "command": "independent Chrome live-board verification",
+      "exit_code": 0,
+      "result": "PASS: live iframe, Tag dialog, note persistence and deletion, decision persistence and pending restoration, and visible 3px keyboard focus were directly observed"
+    },
+    {
+      "command": "first-worker deterministic and live-route evidence reconciliation",
+      "exit_code": 0,
+      "result": "PASS: screenshot mode default, six same-origin routes, 390/834/1440 widths, cart and FAQ interactions were preserved and independently consistent with the live candidate"
+    },
+    {
+      "command": "node --check review-board/app.js; parse findings.json and qa-checks.json",
+      "exit_code": 0,
+      "result": "PASS"
+    },
+    {
+      "command": "package, clean and annotated manifest SHA-256",
+      "exit_code": 0,
+      "result": "PASS: d0d834b9b9173a497d0b03e39e4c282a7d5247f51484ebfd7ba3a64e8416bf7c; d1c66b1d5937e9956d1806dbbbff4faf4f950def046aa642ae52f809c3d52d20; 3be3c0f2df4658558c667b3e9cc6d55966d6a1d7ce9fa9874c46a0afc44244c7"
+    },
+    {
+      "command": "refined HEAD-drift audit from 567d10644ed2ed9a1d08a9b8336892a4e5923ecc to d84450bc3d86fc95cdb08ffe48c2c39994eba07e",
+      "exit_code": 0,
+      "result": "PASS: later commits touched only unrelated founder-photo evidence and no protected board, packet, manifest or clean-package path"
+    }
+  ],
+  "screenshots_or_urls": [
+    "http://127.0.0.1:3016/_wip/reviews/maplemoon-six-page-qa-20260803/review-board/"
+  ],
+  "failures": [],
+  "unknowns": [],
+  "residual_risk": [],
+  "forbidden_path_changes": [],
+  "proposed_next_state": "accepted",
+  "next_reviewer": "Nate",
+  "ready_to_promote": true,
+  "scope_note": "PASS accepts only the local review-board workflow. It does not convert the site's literal 200 percent zoom, reduced-motion runtime or request-level network HOLDs into PASS and authorizes no deployment or sharing."
+}

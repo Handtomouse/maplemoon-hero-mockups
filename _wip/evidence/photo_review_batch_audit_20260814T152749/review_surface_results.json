@@ -1,0 +1,782 @@
+{
+  "generatedAt": "2026-08-14T05:33:08.913Z",
+  "required": [
+    "carob_powder_isolated.png",
+    "elixir_pure_isolated_equal-size.png",
+    "elixir_spiced_isolated_equal-size.png",
+    "five_item_bundle_low_angle_isolated.png"
+  ],
+  "results": [
+    {
+      "width": 390,
+      "http": 200,
+      "errors": [
+        "CONSOLE Failed to load resource: the server responded with a status of 404 (File not found)"
+      ],
+      "failedRequests": [],
+      "imageResponses": [
+        {
+          "url": "http://127.0.0.1:4395/assets/carob_powder_isolated.png",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4395/assets/elixir_pure_isolated_equal-size.png",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4395/assets/five_item_bundle_low_angle_isolated.png",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4395/assets/elixir_spiced_isolated_equal-size.png",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4395/assets/fudge_authoritative_reference_crop.png",
+          "status": 200
+        }
+      ],
+      "requiredResponsesPass": true,
+      "metrics": {
+        "clientWidth": 390,
+        "scrollWidth": 390,
+        "innerWidth": 390,
+        "bodyScrollWidth": 390,
+        "labels": [
+          {
+            "text": "MapleMoon product corrections",
+            "visible": true
+          },
+          {
+            "text": "1. Carob powder only",
+            "visible": true
+          },
+          {
+            "text": "review candidate",
+            "visible": true
+          },
+          {
+            "text": "Product image",
+            "visible": true
+          },
+          {
+            "text": "Transparent 1254 x 1254 PNG, object bounds 878 x 408 px.",
+            "visible": true
+          },
+          {
+            "text": "2. Elixirs at the same size",
+            "visible": true
+          },
+          {
+            "text": "review only",
+            "visible": true
+          },
+          {
+            "text": "Pure elixir",
+            "visible": true
+          },
+          {
+            "text": "584 x 975 px at x335, y108",
+            "visible": true
+          },
+          {
+            "text": "Spiced elixir",
+            "visible": true
+          },
+          {
+            "text": "584 x 975 px at x335, y108",
+            "visible": true
+          },
+          {
+            "text": "Probe set: the two generated elixir PNGs shown above. Within that pair, the scale is exact. Their small label text and icons remain reconstructed, so these are not client-ready packaging masters without Nate accepting that limitation.",
+            "visible": true
+          },
+          {
+            "text": "3. Five-item bundle, lower and isolated",
+            "visible": true
+          },
+          {
+            "text": "review candidate",
+            "visible": true
+          },
+          {
+            "text": "New bundle candidate",
+            "visible": true
+          },
+          {
+            "text": "Transparent 1254 x 1254 PNG. Within this image, five items are visible and no pack or scene is visible.",
+            "visible": true
+          },
+          {
+            "text": "Authoritative fudge reference",
+            "visible": true
+          },
+          {
+            "text": "Layered nut and date base, dark top, thin white drizzle.",
+            "visible": true
+          },
+          {
+            "text": "Probe set: the pecan, salted almond, hazelnut, goji, and Nate-supplied layered fudge references used for this second candidate. Within this generated result, one pecan-topped dome, one almond-topped dome, one hazelnut-topped dome, one orange-dusted rectangular bite, and one layered fudge are visible. No duplicate or sixth item is visible in this five-item result.",
+            "visible": true
+          }
+        ],
+        "labelsVisible": true,
+        "images": [
+          {
+            "src": "assets/carob_powder_isolated.png",
+            "complete": true,
+            "naturalWidth": 1254,
+            "naturalHeight": 1254,
+            "visible": true,
+            "rect": {
+              "left": 13,
+              "right": 377,
+              "top": 442.390625,
+              "bottom": 806.390625,
+              "width": 364,
+              "height": 364
+            }
+          },
+          {
+            "src": "assets/elixir_pure_isolated_equal-size.png",
+            "complete": true,
+            "naturalWidth": 1254,
+            "naturalHeight": 1254,
+            "visible": true,
+            "rect": {
+              "left": 13,
+              "right": 377,
+              "top": 1165.15625,
+              "bottom": 1529.15625,
+              "width": 364,
+              "height": 364
+            }
+          },
+          {
+            "src": "assets/elixir_spiced_isolated_equal-size.png",
+            "complete": true,
+            "naturalWidth": 1254,
+            "naturalHeight": 1254,
+            "visible": true,
+            "rect": {
+              "left": 13,
+              "right": 377,
+              "top": 1630.53125,
+              "bottom": 1994.53125,
+              "width": 364,
+              "height": 364
+            }
+          },
+          {
+            "src": "assets/five_item_bundle_low_angle_isolated.png",
+            "complete": true,
+            "naturalWidth": 1254,
+            "naturalHeight": 1254,
+            "visible": true,
+            "rect": {
+              "left": 13,
+              "right": 377,
+              "top": 2600.40625,
+              "bottom": 2964.40625,
+              "width": 364,
+              "height": 364
+            }
+          },
+          {
+            "src": "assets/fudge_authoritative_reference_crop.png",
+            "complete": true,
+            "naturalWidth": 943,
+            "naturalHeight": 603,
+            "visible": true,
+            "rect": {
+              "left": 13,
+              "right": 377,
+              "top": 3112.15625,
+              "bottom": 3476.15625,
+              "width": 364,
+              "height": 364
+            }
+          }
+        ],
+        "requiredImages": [
+          {
+            "src": "assets/carob_powder_isolated.png",
+            "complete": true,
+            "naturalWidth": 1254,
+            "naturalHeight": 1254,
+            "visible": true,
+            "rect": {
+              "left": 13,
+              "right": 377,
+              "top": 442.390625,
+              "bottom": 806.390625,
+              "width": 364,
+              "height": 364
+            }
+          },
+          {
+            "src": "assets/elixir_pure_isolated_equal-size.png",
+            "complete": true,
+            "naturalWidth": 1254,
+            "naturalHeight": 1254,
+            "visible": true,
+            "rect": {
+              "left": 13,
+              "right": 377,
+              "top": 1165.15625,
+              "bottom": 1529.15625,
+              "width": 364,
+              "height": 364
+            }
+          },
+          {
+            "src": "assets/elixir_spiced_isolated_equal-size.png",
+            "complete": true,
+            "naturalWidth": 1254,
+            "naturalHeight": 1254,
+            "visible": true,
+            "rect": {
+              "left": 13,
+              "right": 377,
+              "top": 1630.53125,
+              "bottom": 1994.53125,
+              "width": 364,
+              "height": 364
+            }
+          },
+          {
+            "src": "assets/five_item_bundle_low_angle_isolated.png",
+            "complete": true,
+            "naturalWidth": 1254,
+            "naturalHeight": 1254,
+            "visible": true,
+            "rect": {
+              "left": 13,
+              "right": 377,
+              "top": 2600.40625,
+              "bottom": 2964.40625,
+              "width": 364,
+              "height": 364
+            }
+          }
+        ],
+        "requiredImagesLoaded": true,
+        "allImagesLoaded": true
+      },
+      "pass": false
+    },
+    {
+      "width": 900,
+      "http": 200,
+      "errors": [],
+      "failedRequests": [],
+      "imageResponses": [
+        {
+          "url": "http://127.0.0.1:4395/assets/carob_powder_isolated.png",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4395/assets/elixir_pure_isolated_equal-size.png",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4395/assets/elixir_spiced_isolated_equal-size.png",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4395/assets/fudge_authoritative_reference_crop.png",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4395/assets/five_item_bundle_low_angle_isolated.png",
+          "status": 200
+        }
+      ],
+      "requiredResponsesPass": true,
+      "metrics": {
+        "clientWidth": 900,
+        "scrollWidth": 900,
+        "innerWidth": 900,
+        "bodyScrollWidth": 900,
+        "labels": [
+          {
+            "text": "MapleMoon product corrections",
+            "visible": true
+          },
+          {
+            "text": "1. Carob powder only",
+            "visible": true
+          },
+          {
+            "text": "review candidate",
+            "visible": true
+          },
+          {
+            "text": "Product image",
+            "visible": true
+          },
+          {
+            "text": "Transparent 1254 x 1254 PNG, object bounds 878 x 408 px.",
+            "visible": true
+          },
+          {
+            "text": "2. Elixirs at the same size",
+            "visible": true
+          },
+          {
+            "text": "review only",
+            "visible": true
+          },
+          {
+            "text": "Pure elixir",
+            "visible": true
+          },
+          {
+            "text": "584 x 975 px at x335, y108",
+            "visible": true
+          },
+          {
+            "text": "Spiced elixir",
+            "visible": true
+          },
+          {
+            "text": "584 x 975 px at x335, y108",
+            "visible": true
+          },
+          {
+            "text": "Probe set: the two generated elixir PNGs shown above. Within that pair, the scale is exact. Their small label text and icons remain reconstructed, so these are not client-ready packaging masters without Nate accepting that limitation.",
+            "visible": true
+          },
+          {
+            "text": "3. Five-item bundle, lower and isolated",
+            "visible": true
+          },
+          {
+            "text": "review candidate",
+            "visible": true
+          },
+          {
+            "text": "New bundle candidate",
+            "visible": true
+          },
+          {
+            "text": "Transparent 1254 x 1254 PNG. Within this image, five items are visible and no pack or scene is visible.",
+            "visible": true
+          },
+          {
+            "text": "Authoritative fudge reference",
+            "visible": true
+          },
+          {
+            "text": "Layered nut and date base, dark top, thin white drizzle.",
+            "visible": true
+          },
+          {
+            "text": "Probe set: the pecan, salted almond, hazelnut, goji, and Nate-supplied layered fudge references used for this second candidate. Within this generated result, one pecan-topped dome, one almond-topped dome, one hazelnut-topped dome, one orange-dusted rectangular bite, and one layered fudge are visible. No duplicate or sixth item is visible in this five-item result.",
+            "visible": true
+          }
+        ],
+        "labelsVisible": true,
+        "images": [
+          {
+            "src": "assets/carob_powder_isolated.png",
+            "complete": true,
+            "naturalWidth": 1254,
+            "naturalHeight": 1254,
+            "visible": true,
+            "rect": {
+              "left": 21,
+              "right": 879,
+              "top": 319.515625,
+              "bottom": 1177.515625,
+              "width": 858,
+              "height": 858
+            }
+          },
+          {
+            "src": "assets/elixir_pure_isolated_equal-size.png",
+            "complete": true,
+            "naturalWidth": 1254,
+            "naturalHeight": 1254,
+            "visible": true,
+            "rect": {
+              "left": 21,
+              "right": 440,
+              "top": 1445.40625,
+              "bottom": 1864.40625,
+              "width": 419,
+              "height": 419
+            }
+          },
+          {
+            "src": "assets/elixir_spiced_isolated_equal-size.png",
+            "complete": true,
+            "naturalWidth": 1254,
+            "naturalHeight": 1254,
+            "visible": true,
+            "rect": {
+              "left": 460,
+              "right": 879,
+              "top": 1445.40625,
+              "bottom": 1864.40625,
+              "width": 419,
+              "height": 419
+            }
+          },
+          {
+            "src": "assets/five_item_bundle_low_angle_isolated.png",
+            "complete": true,
+            "naturalWidth": 1254,
+            "naturalHeight": 1254,
+            "visible": true,
+            "rect": {
+              "left": 21,
+              "right": 581,
+              "top": 2275.046875,
+              "bottom": 2835.046875,
+              "width": 560,
+              "height": 560
+            }
+          },
+          {
+            "src": "assets/fudge_authoritative_reference_crop.png",
+            "complete": true,
+            "naturalWidth": 943,
+            "naturalHeight": 603,
+            "visible": true,
+            "rect": {
+              "left": 601,
+              "right": 879,
+              "top": 2275.046875,
+              "bottom": 2553.046875,
+              "width": 278,
+              "height": 278
+            }
+          }
+        ],
+        "requiredImages": [
+          {
+            "src": "assets/carob_powder_isolated.png",
+            "complete": true,
+            "naturalWidth": 1254,
+            "naturalHeight": 1254,
+            "visible": true,
+            "rect": {
+              "left": 21,
+              "right": 879,
+              "top": 319.515625,
+              "bottom": 1177.515625,
+              "width": 858,
+              "height": 858
+            }
+          },
+          {
+            "src": "assets/elixir_pure_isolated_equal-size.png",
+            "complete": true,
+            "naturalWidth": 1254,
+            "naturalHeight": 1254,
+            "visible": true,
+            "rect": {
+              "left": 21,
+              "right": 440,
+              "top": 1445.40625,
+              "bottom": 1864.40625,
+              "width": 419,
+              "height": 419
+            }
+          },
+          {
+            "src": "assets/elixir_spiced_isolated_equal-size.png",
+            "complete": true,
+            "naturalWidth": 1254,
+            "naturalHeight": 1254,
+            "visible": true,
+            "rect": {
+              "left": 460,
+              "right": 879,
+              "top": 1445.40625,
+              "bottom": 1864.40625,
+              "width": 419,
+              "height": 419
+            }
+          },
+          {
+            "src": "assets/five_item_bundle_low_angle_isolated.png",
+            "complete": true,
+            "naturalWidth": 1254,
+            "naturalHeight": 1254,
+            "visible": true,
+            "rect": {
+              "left": 21,
+              "right": 581,
+              "top": 2275.046875,
+              "bottom": 2835.046875,
+              "width": 560,
+              "height": 560
+            }
+          }
+        ],
+        "requiredImagesLoaded": true,
+        "allImagesLoaded": true
+      },
+      "pass": true
+    },
+    {
+      "width": 1440,
+      "http": 200,
+      "errors": [],
+      "failedRequests": [],
+      "imageResponses": [
+        {
+          "url": "http://127.0.0.1:4395/assets/carob_powder_isolated.png",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4395/assets/elixir_pure_isolated_equal-size.png",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4395/assets/five_item_bundle_low_angle_isolated.png",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4395/assets/elixir_spiced_isolated_equal-size.png",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4395/assets/fudge_authoritative_reference_crop.png",
+          "status": 200
+        }
+      ],
+      "requiredResponsesPass": true,
+      "metrics": {
+        "clientWidth": 1440,
+        "scrollWidth": 1440,
+        "innerWidth": 1440,
+        "bodyScrollWidth": 1440,
+        "labels": [
+          {
+            "text": "MapleMoon product corrections",
+            "visible": true
+          },
+          {
+            "text": "1. Carob powder only",
+            "visible": true
+          },
+          {
+            "text": "review candidate",
+            "visible": true
+          },
+          {
+            "text": "Product image",
+            "visible": true
+          },
+          {
+            "text": "Transparent 1254 x 1254 PNG, object bounds 878 x 408 px.",
+            "visible": true
+          },
+          {
+            "text": "2. Elixirs at the same size",
+            "visible": true
+          },
+          {
+            "text": "review only",
+            "visible": true
+          },
+          {
+            "text": "Pure elixir",
+            "visible": true
+          },
+          {
+            "text": "584 x 975 px at x335, y108",
+            "visible": true
+          },
+          {
+            "text": "Spiced elixir",
+            "visible": true
+          },
+          {
+            "text": "584 x 975 px at x335, y108",
+            "visible": true
+          },
+          {
+            "text": "Probe set: the two generated elixir PNGs shown above. Within that pair, the scale is exact. Their small label text and icons remain reconstructed, so these are not client-ready packaging masters without Nate accepting that limitation.",
+            "visible": true
+          },
+          {
+            "text": "3. Five-item bundle, lower and isolated",
+            "visible": true
+          },
+          {
+            "text": "review candidate",
+            "visible": true
+          },
+          {
+            "text": "New bundle candidate",
+            "visible": true
+          },
+          {
+            "text": "Transparent 1254 x 1254 PNG. Within this image, five items are visible and no pack or scene is visible.",
+            "visible": true
+          },
+          {
+            "text": "Authoritative fudge reference",
+            "visible": true
+          },
+          {
+            "text": "Layered nut and date base, dark top, thin white drizzle.",
+            "visible": true
+          },
+          {
+            "text": "Probe set: the pecan, salted almond, hazelnut, goji, and Nate-supplied layered fudge references used for this second candidate. Within this generated result, one pecan-topped dome, one almond-topped dome, one hazelnut-topped dome, one orange-dusted rectangular bite, and one layered fudge are visible. No duplicate or sixth item is visible in this five-item result.",
+            "visible": true
+          }
+        ],
+        "labelsVisible": true,
+        "images": [
+          {
+            "src": "assets/carob_powder_isolated.png",
+            "complete": true,
+            "naturalWidth": 1254,
+            "naturalHeight": 1254,
+            "visible": true,
+            "rect": {
+              "left": 21,
+              "right": 1419,
+              "top": 354.46875,
+              "bottom": 1752.46875,
+              "width": 1398,
+              "height": 1398
+            }
+          },
+          {
+            "src": "assets/elixir_pure_isolated_equal-size.png",
+            "complete": true,
+            "naturalWidth": 1254,
+            "naturalHeight": 1254,
+            "visible": true,
+            "rect": {
+              "left": 21,
+              "right": 710,
+              "top": 2013.125,
+              "bottom": 2702.125,
+              "width": 689,
+              "height": 689
+            }
+          },
+          {
+            "src": "assets/elixir_spiced_isolated_equal-size.png",
+            "complete": true,
+            "naturalWidth": 1254,
+            "naturalHeight": 1254,
+            "visible": true,
+            "rect": {
+              "left": 730,
+              "right": 1419,
+              "top": 2013.125,
+              "bottom": 2702.125,
+              "width": 689,
+              "height": 689
+            }
+          },
+          {
+            "src": "assets/five_item_bundle_low_angle_isolated.png",
+            "complete": true,
+            "naturalWidth": 1254,
+            "naturalHeight": 1254,
+            "visible": true,
+            "rect": {
+              "left": 21,
+              "right": 950.34375,
+              "top": 3082.34375,
+              "bottom": 4011.6875,
+              "width": 929.34375,
+              "height": 929.34375
+            }
+          },
+          {
+            "src": "assets/fudge_authoritative_reference_crop.png",
+            "complete": true,
+            "naturalWidth": 943,
+            "naturalHeight": 603,
+            "visible": true,
+            "rect": {
+              "left": 970.34375,
+              "right": 1418.984375,
+              "top": 3082.34375,
+              "bottom": 3530.984375,
+              "width": 448.640625,
+              "height": 448.640625
+            }
+          }
+        ],
+        "requiredImages": [
+          {
+            "src": "assets/carob_powder_isolated.png",
+            "complete": true,
+            "naturalWidth": 1254,
+            "naturalHeight": 1254,
+            "visible": true,
+            "rect": {
+              "left": 21,
+              "right": 1419,
+              "top": 354.46875,
+              "bottom": 1752.46875,
+              "width": 1398,
+              "height": 1398
+            }
+          },
+          {
+            "src": "assets/elixir_pure_isolated_equal-size.png",
+            "complete": true,
+            "naturalWidth": 1254,
+            "naturalHeight": 1254,
+            "visible": true,
+            "rect": {
+              "left": 21,
+              "right": 710,
+              "top": 2013.125,
+              "bottom": 2702.125,
+              "width": 689,
+              "height": 689
+            }
+          },
+          {
+            "src": "assets/elixir_spiced_isolated_equal-size.png",
+            "complete": true,
+            "naturalWidth": 1254,
+            "naturalHeight": 1254,
+            "visible": true,
+            "rect": {
+              "left": 730,
+              "right": 1419,
+              "top": 2013.125,
+              "bottom": 2702.125,
+              "width": 689,
+              "height": 689
+            }
+          },
+          {
+            "src": "assets/five_item_bundle_low_angle_isolated.png",
+            "complete": true,
+            "naturalWidth": 1254,
+            "naturalHeight": 1254,
+            "visible": true,
+            "rect": {
+              "left": 21,
+              "right": 950.34375,
+              "top": 3082.34375,
+              "bottom": 4011.6875,
+              "width": 929.34375,
+              "height": 929.34375
+            }
+          }
+        ],
+        "requiredImagesLoaded": true,
+        "allImagesLoaded": true
+      },
+      "pass": true
+    }
+  ],
+  "allPass": false
+}

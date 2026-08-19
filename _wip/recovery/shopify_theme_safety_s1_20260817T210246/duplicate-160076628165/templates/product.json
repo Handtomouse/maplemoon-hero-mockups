@@ -1,0 +1,159 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "t-product",
+      "blocks": {
+        "vendor": {
+          "type": "vendor",
+          "settings": {
+            "vendorOrigin": "default"
+          }
+        },
+        "title": {
+          "type": "title",
+          "settings": {}
+        },
+        "description": {
+          "type": "description",
+          "settings": {
+            "heading": "Description",
+            "collapsible_desc": true,
+            "expand_by_default": true
+          }
+        },
+        "popup_MebGP8": {
+          "type": "popup",
+          "settings": {}
+        },
+        "popup_zGh6UC": {
+          "type": "popup",
+          "settings": {}
+        },
+        "separator": {
+          "type": "separator",
+          "settings": {}
+        },
+        "liquid_KT7Biq": {
+          "type": "liquid",
+          "settings": {}
+        },
+        "price": {
+          "type": "price",
+          "settings": {
+            "hidePriceSold": false
+          }
+        },
+        "quantity": {
+          "type": "quantity",
+          "settings": {
+            "label": true
+          }
+        },
+        "product_list_LxajFg": {
+          "type": "product_list",
+          "settings": {
+            "swatch_shape": "square",
+            "swatch_size": "medium",
+            "swatch_crop": "true"
+          }
+        },
+        "variant_picker": {
+          "type": "variant_picker",
+          "settings": {
+            "picker_type": "button",
+            "swatch_shape": "square",
+            "show_text": false,
+            "size_chart": ""
+          }
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": false,
+            "show_addtocart_as_primary": false,
+            "show_pickup_availability": false,
+            "show_gift_card_recipient": false
+          }
+        }
+      },
+      "block_order": [
+        "vendor",
+        "title",
+        "description",
+        "popup_MebGP8",
+        "popup_zGh6UC",
+        "separator",
+        "liquid_KT7Biq",
+        "price",
+        "quantity",
+        "product_list_LxajFg",
+        "variant_picker",
+        "buy_buttons"
+      ],
+      "settings": {
+        "sticky": true,
+        "vertical_alignment": "end",
+        "priceOnMobile": false,
+        "previewTab": true,
+        "columnOrderMob": false,
+        "media_first": false,
+        "bigger_media": false,
+        "contain_media_size": false,
+        "imageZoom": false,
+        "media_type": "stacked",
+        "slider_thumbnails": false,
+        "slider_thumbnails_irregular": true,
+        "slider_button": true,
+        "slider_button_position": "overlay",
+        "pagination_overlay": true,
+        "slider_loop": true,
+        "pagination_type": "lines",
+        "mediaGap": 4,
+        "enable_video_autoplay": true,
+        "enable_video_looping": true,
+        "enable_video_controls": false
+      }
+    },
+    "product-recommendations": {
+      "type": "pdp-recommend",
+      "settings": {
+        "stealthMode": false,
+        "heading": "You may also like",
+        "product_limit": 10
+      }
+    },
+    "product-recommendations-vendor": {
+      "type": "pdp-recommend-vendor",
+      "settings": {}
+    },
+    "product-recommendations-recent": {
+      "type": "ls-recently-viewed",
+      "settings": {
+        "stealthMode": false,
+        "useLocalCardSize": false,
+        "card_size": 250,
+        "marginTop": 0,
+        "marginBottom": 0,
+        "paddingTop": 2,
+        "paddingBottom": 2,
+        "global_color_scheme": true,
+        "color_scheme": ""
+      }
+    }
+  },
+  "order": [
+    "main",
+    "product-recommendations",
+    "product-recommendations-vendor",
+    "product-recommendations-recent"
+  ]
+}

@@ -1,0 +1,122 @@
+{
+  "schema": "maplemoon-receipt/v2",
+  "receipt_id": "MAPLEMOON-INTEGRATED-HEADER-CART-CERT-R2-20260814T163003-RECEIPT",
+  "packet_id": "MAPLEMOON-INTEGRATED-HEADER-CART-CERT-R2-20260814T163003",
+  "worker_thread_id": "/root/recertify_updated_preview",
+  "worker": "Codex independent integrated header/cart R2 certifier",
+  "started_at": "2026-08-14T06:31:51Z",
+  "completed_at": "2026-08-14T06:55:31Z",
+  "files_read": [
+    "maplemoon-website/docs/orchestration/packets/MAPLEMOON-INTEGRATED-HEADER-CART-CERT-R2-20260814T163003.md",
+    "maplemoon-website/docs/orchestration/packets/MAPLEMOON-MOBILE-HEADER-RUNTIME-20260814T150338.md",
+    "maplemoon-website/docs/orchestration/reviews/MAPLEMOON-MOBILE-HEADER-RUNTIME-20260814T150338.json",
+    "maplemoon-website/_wip/evidence/mobile_header_runtime_20260814T150338",
+    "maplemoon-website/docs/orchestration/packets/MAPLEMOON-CART-PREFLIGHT-VERIFY-20260814T155246.md",
+    "maplemoon-website/docs/orchestration/reviews/MAPLEMOON-CART-PREFLIGHT-VERIFY-20260814T155246.json",
+    "maplemoon-website/docs/orchestration/packets/MAPLEMOON-CART-INERT-FOCUS-FIX-20260814T161020.md",
+    "maplemoon-website/docs/orchestration/reviews/MAPLEMOON-CART-INERT-FOCUS-FIX-20260814T161020.json",
+    "maplemoon-website/_wip/evidence/cart_inert_focus_fix_20260814T161020",
+    "maplemoon-website/docs/orchestration/packets/MAPLEMOON-INTEGRATED-HEADER-CART-CERT-20260814T155822.md",
+    "maplemoon-website/docs/orchestration/reviews/MAPLEMOON-INTEGRATED-HEADER-CART-CERT-20260814T155822.json",
+    "maplemoon-website/_wip/evidence/integrated_header_cart_cert_20260814T155822",
+    "maplemoon-website/docs/orchestration/reviews/MAPLEMOON-FAQ-CORRECTED-PREVIEW-20260814T145952.json",
+    "maplemoon-website/scripts/check-maplemoon-receipt.py",
+    "UFC/ops/bus/maplemoon/tools_20260813/preflight_deploy.py",
+    "maplemoon_build_20260813/homepage.html",
+    "maplemoon_build_20260813/our-story.html",
+    "maplemoon_build_20260813/carob-story.html",
+    "maplemoon_build_20260813/shop.html",
+    "maplemoon_build_20260813/faq.html",
+    "maplemoon_build_20260813/stockists.html",
+    "maplemoon_build_20260813/pure-carob-bar.html",
+    "maplemoon_build_20260813/mock-cart.js",
+    "maplemoon_build_20260813/mock-cart.css",
+    "maplemoon_build_20260813/assets/design-system/mm-chrome.js",
+    "maplemoon_build_20260813/assets/design-system/mm-chrome.css"
+  ],
+  "files_changed": [
+    "maplemoon-website/_wip/evidence/integrated_header_cart_cert_r2_20260814T163003",
+    "maplemoon-website/docs/orchestration/reviews/MAPLEMOON-INTEGRATED-HEADER-CART-CERT-R2-20260814T163003.json"
+  ],
+  "pre_sha256": {
+    "maplemoon-website/_wip/evidence/integrated_header_cart_cert_r2_20260814T163003": null,
+    "maplemoon-website/docs/orchestration/reviews/MAPLEMOON-INTEGRATED-HEADER-CART-CERT-R2-20260814T163003.json": null
+  },
+  "post_sha256": {
+    "maplemoon-website/_wip/evidence/integrated_header_cart_cert_r2_20260814T163003": "5bcdd57454d284b98469982a753f0e7843217aadbd42862743afb9ec5fa6c67f",
+    "maplemoon-website/docs/orchestration/reviews/MAPLEMOON-INTEGRATED-HEADER-CART-CERT-R2-20260814T163003.json": null
+  },
+  "checks": [
+    {
+      "command": "python3 -B scripts/check-maplemoon-receipt.py checkpoint --root /Users/handtomouse --packet docs/orchestration/packets/MAPLEMOON-INTEGRATED-HEADER-CART-CERT-R2-20260814T163003.md --destination _wip/checkpoints/MAPLEMOON-INTEGRATED-HEADER-CART-CERT-R2-20260814T163003_20260814_163003_AEST; phase-start verify",
+      "exit_code": 0,
+      "result": "PASS checkpoint packet=MAPLEMOON-INTEGRATED-HEADER-CART-CERT-R2-20260814T163003 files=2 path=_wip/checkpoints/MAPLEMOON-INTEGRATED-HEADER-CART-CERT-R2-20260814T163003_20260814_163003_AEST; PASS packet=MAPLEMOON-INTEGRATED-HEADER-CART-CERT-R2-20260814T163003 phase=start scope=2"
+    },
+    {
+      "command": "python3 -B _wip/evidence/integrated_header_cart_cert_r2_20260814T163003/admission_verify.py",
+      "exit_code": 0,
+      "result": "R2_ADMISSION PASS predecessor_gates=6/6 first_cert_preserved=True hashes=11/11 inert_receipt=True. Exact cart-inert receipt SHA-256 946cd78c94acbba76265a0bf88e6126a7e6c39b3873751dc85c590c8ad395fdd and superseded first-cert receipt SHA-256 78c2e183699be5483125dbc0fc8a3bd4d5274a173cc11614188b0f7893f7ee10."
+    },
+    {
+      "command": "node --check header_faq_assets_cert.cjs; node --check cart_cert.cjs; Python compile() admission_verify.py and stream_md5.py",
+      "exit_code": 0,
+      "result": "R2_HARNESS_SYNTAX PASS js=2 python=2"
+    },
+    {
+      "command": "node _wip/evidence/integrated_header_cart_cert_r2_20260814T163003/header_faq_assets_cert.cjs",
+      "exit_code": 0,
+      "result": "R2_HEADER_FAQ PASS regular=14/14 reduced=14/14 desktop=7/7 faq=2/2 screenshots=6. Every authored route/width image/runtime/request/overflow trace passed. Two verifier-only acquisition corrections are preserved in header_harness_false_positive.json; neither was a candidate failure."
+    },
+    {
+      "command": "node _wip/evidence/integrated_header_cart_cert_r2_20260814T163003/cart_cert.cjs",
+      "exit_code": 0,
+      "result": "R2_CART width=390 pass; width=900 pass; width=1440 pass; R2_CART PASS widths=3/3 arithmetic=3/3 inert=3/3 lifecycle=3/3 storage=3/3 screenshots=3. Exact $146.92/$159.11/$182.86/$108.12 states, reload/cross-route, fresh/corrupt/legacy storage, semantics/focus/44px/200% zoom, dynamic/preseed/header inert ownership, pointer blocking, three-cycle balance and positive-controlled zero forbidden side effects passed. Resolved verifier-only acquisition corrections are preserved in cart_harness_false_positive.json."
+    },
+    {
+      "command": "python3 -B /Users/handtomouse/UFC/ops/bus/maplemoon/tools_20260813/preflight_deploy.py http://127.0.0.1:4403 --local",
+      "exit_code": 0,
+      "result": "VERDICT: PASS with 2 review-only hit(s) - leak:internal-status-review, leak:word-testimonial-hidden | WAIVED: root:homepage | Not visitor-readable, but they are shipped bytes. A human must clear them. A waived root is NOT a cleared root. Re-run without --local on the deploy host. The first network-sandbox acquisition could not see the live localhost process and checked nothing; exact rerun with localhost access is the authoritative exit-0 output in preflight-output.txt."
+    },
+    {
+      "command": "visual inspection with nonblank byte controls for 9 representative header/drawer/reduced-motion/FAQ/cart/desktop renders",
+      "exit_code": 0,
+      "result": "PASS: 9/9 images nonblank, readable, settled and horizontally unclipped; exact byte counts and observations are recorded in visual-inspection.json."
+    },
+    {
+      "command": "vercel inspect https://maplemoonbuild20260813.vercel.app; authenticated vercel curl immutable /homepage.html piped to stream_md5.py",
+      "exit_code": 0,
+      "result": "PASS: alias still resolves immutable 7vjf2m50b / dpl_G2LER2awaqyFtGRCcTserXbNynct, target production, status Ready; PRODUCTION_HOME bytes=208556 md5=6197879a5ca9d3ed0452773abc0bbeb4 nonblank=true. No Vercel mutation was performed."
+    },
+    {
+      "command": "final admission_verify.py after browser and freeze checks",
+      "exit_code": 0,
+      "result": "R2_ADMISSION PASS predecessor_gates=6/6 first_cert_preserved=True hashes=11/11 inert_receipt=True; every candidate acquisition hash remained exact."
+    },
+    {
+      "command": "parse every evidence JSON and compute check-maplemoon-receipt.py-compatible path snapshot",
+      "exit_code": 0,
+      "result": "R2_EVIDENCE_JSON PASS files=25 sha256=5bcdd57454d284b98469982a753f0e7843217aadbd42862743afb9ec5fa6c67f"
+    }
+  ],
+  "screenshots_or_urls": [
+    "maplemoon-website/_wip/evidence/integrated_header_cart_cert_r2_20260814T163003/homepage_night_drawer_390.png",
+    "maplemoon-website/_wip/evidence/integrated_header_cart_cert_r2_20260814T163003/shop_light_drawer_390.png",
+    "maplemoon-website/_wip/evidence/integrated_header_cart_cert_r2_20260814T163003/homepage_reduced_drawer_390.png",
+    "maplemoon-website/_wip/evidence/integrated_header_cart_cert_r2_20260814T163003/faq_exact_drawer_390.png",
+    "maplemoon-website/_wip/evidence/integrated_header_cart_cert_r2_20260814T163003/faq_exact_1440.png",
+    "maplemoon-website/_wip/evidence/integrated_header_cart_cert_r2_20260814T163003/shop_desktop_reset_1440.png",
+    "maplemoon-website/_wip/evidence/integrated_header_cart_cert_r2_20260814T163003/screenshots/cart-mixed-390.png",
+    "maplemoon-website/_wip/evidence/integrated_header_cart_cert_r2_20260814T163003/screenshots/cart-mixed-900.png",
+    "maplemoon-website/_wip/evidence/integrated_header_cart_cert_r2_20260814T163003/screenshots/cart-mixed-1440.png",
+    "maplemoon-website/_wip/evidence/integrated_header_cart_cert_r2_20260814T163003/verification-summary.json"
+  ],
+  "failures": [],
+  "unknowns": [],
+  "residual_risk": [
+    "Exact UFC preflight retains two established review-only shipped-byte hits: leak:internal-status-review and leak:word-testimonial-hidden.",
+    "The local root waiver is not a cleared deploy root; any later deployment packet must rerun the deploy-host preflight without --local."
+  ],
+  "forbidden_path_changes": [],
+  "proposed_next_state": "ready_for_boss_preview_only_deployment_packet",
+  "next_reviewer": "MapleMoon BOSS for separate preview-only deployment admission"
+}

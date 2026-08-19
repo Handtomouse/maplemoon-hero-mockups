@@ -1,0 +1,105 @@
+{
+  "schema": "maplemoon-receipt/v2",
+  "receipt_id": "MAPLEMOON-MINIMUM-RELEASE-CONTENT-R4-20260817T190059-RECEIPT-FAIL-01",
+  "packet_id": "MAPLEMOON-MINIMUM-RELEASE-CONTENT-R4-20260817T190059",
+  "worker_thread_id": "019ffe53-6243-73a2-9d75-e1a072cd07ce",
+  "worker": "MapleMoon BOSS content/release integration lane",
+  "started_at": "2026-08-17T09:02:23Z",
+  "completed_at": "2026-08-17T09:20:16Z",
+  "files_read": [
+    "maplemoon-website/docs/orchestration/packets/MAPLEMOON-MINIMUM-RELEASE-CONTENT-R4-20260817T190059.md",
+    "maplemoon-website/docs/orchestration/packets/MAPLEMOON-MINIMUM-RELEASE-CONTENT-20260817T141810.md",
+    "maplemoon-website/docs/orchestration/packets/MAPLEMOON-MINIMUM-RELEASE-CONTENT-R2-20260817T142633.md",
+    "maplemoon-website/docs/orchestration/packets/MAPLEMOON-MINIMUM-RELEASE-CONTENT-R3-20260817T143013.md",
+    "maplemoon-website/docs/orchestration/MAPLEMOON_BOSS_EXECUTION_LEDGER_20260816.md",
+    "maplemoon-website/docs/orchestration/SIDECHAT_RECEIPT_GATE.md",
+    "maplemoon-website/scripts/check-maplemoon-receipt.py",
+    "maplemoon-website/scripts/build-maplemoon-wip-preview.py",
+    "maplemoon-website/_wip/homepage_real_1_lead_photo.WIP.html",
+    "maplemoon-website/_wip/shop.WIP.html",
+    "maplemoon-website/_wip/our-story.WIP.html",
+    "maplemoon-website/_wip/carob-story.WIP.html",
+    "maplemoon-website/_wip/faq.WIP.html",
+    "maplemoon-website/_wip/stockists.WIP.html",
+    "maplemoon_build_20260813/pure-carob-bar.html",
+    "Library/Messages/Attachments/e0/00/3631B118-5A32-487A-8E55-C0533B3B96CB/Maple Moon Store CSV File Export.csv",
+    "UFC/ops/bus/maplemoon/tools_20260813/preflight_deploy.py"
+  ],
+  "files_changed": [
+    "maplemoon-website/scripts/check-maplemoon-minimum-release-preflight-r4.py",
+    "maplemoon-website/scripts/build-maplemoon-minimum-release-content-r4.py",
+    "maplemoon-website/_wip/deploy/generated/maplemoon-minimum-release-content-r4-20260817T190059",
+    "maplemoon-website/_wip/evidence/minimum_release_content_r4_20260817T190059",
+    "maplemoon-website/docs/orchestration/reviews/MAPLEMOON-MINIMUM-RELEASE-CONTENT-R4-20260817T190059.json"
+  ],
+  "pre_sha256": {
+    "maplemoon-website/scripts/check-maplemoon-minimum-release-preflight-r4.py": null,
+    "maplemoon-website/scripts/build-maplemoon-minimum-release-content-r4.py": null,
+    "maplemoon-website/_wip/deploy/generated/maplemoon-minimum-release-content-r4-20260817T190059": null,
+    "maplemoon-website/_wip/evidence/minimum_release_content_r4_20260817T190059": null,
+    "maplemoon-website/docs/orchestration/reviews/MAPLEMOON-MINIMUM-RELEASE-CONTENT-R4-20260817T190059.json": null
+  },
+  "post_sha256": {
+    "maplemoon-website/scripts/check-maplemoon-minimum-release-preflight-r4.py": "02fc0f5511510eddc60491640605e0ce52c7ee5e26dc213bca5fa2d6da93c65d",
+    "maplemoon-website/scripts/build-maplemoon-minimum-release-content-r4.py": "8bd757df8baff887aaeca14cf6e1c3fc2233e875c99d8595d4e71ad4e72dc9b2",
+    "maplemoon-website/_wip/deploy/generated/maplemoon-minimum-release-content-r4-20260817T190059": "c26be2a4ac9304e065784115425bbd2cd3eafe94e8c6640b8e34dc2506ca47f7",
+    "maplemoon-website/_wip/evidence/minimum_release_content_r4_20260817T190059": "7b8a0cd1ca1309645b7067c9e52bd2bff63f66ab7ad25989fc633c6f40225292",
+    "maplemoon-website/docs/orchestration/reviews/MAPLEMOON-MINIMUM-RELEASE-CONTENT-R4-20260817T190059.json": null
+  },
+  "checks": [
+    {
+      "command": "python3 -B scripts/check-maplemoon-receipt.py checkpoint --root /Users/handtomouse --packet docs/orchestration/packets/MAPLEMOON-MINIMUM-RELEASE-CONTENT-R4-20260817T190059.md --destination _wip/checkpoints/MAPLEMOON-MINIMUM-RELEASE-CONTENT-R4-20260817T190059_20260817_190320_AEST",
+      "exit_code": 0,
+      "result": "PASS checkpoint packet=MAPLEMOON-MINIMUM-RELEASE-CONTENT-R4-20260817T190059 files=5 path=/Users/handtomouse/maplemoon-website/_wip/checkpoints/MAPLEMOON-MINIMUM-RELEASE-CONTENT-R4-20260817T190059_20260817_190320_AEST"
+    },
+    {
+      "command": "python3 -B scripts/check-maplemoon-receipt.py verify --root /Users/handtomouse --packet docs/orchestration/packets/MAPLEMOON-MINIMUM-RELEASE-CONTENT-R4-20260817T190059.md --checkpoint _wip/checkpoints/MAPLEMOON-MINIMUM-RELEASE-CONTENT-R4-20260817T190059_20260817_190320_AEST --phase start",
+      "exit_code": 0,
+      "result": "PASS packet=MAPLEMOON-MINIMUM-RELEASE-CONTENT-R4-20260817T190059 phase=start scope=5"
+    },
+    {
+      "command": "python3 -B scripts/build-maplemoon-minimum-release-content-r4.py",
+      "exit_code": 0,
+      "result": "BUILD_R4 PASS pages=7 cart_controls=0 forms=0 mock_cart_refs=0 home_quotes=3 founder_cards=2+2 founder_placeholders=0 faq_exact=1+1 shop_bars=6 stockists=204 unknown=7 shipping=1 free_over_99=1"
+    },
+    {
+      "command": "python3 -B scripts/build-maplemoon-minimum-release-content-r4.py --output /private/tmp/maplemoon-r4-repro-20260817T190059 && diff -qr exact-output repro-output",
+      "exit_code": 0,
+      "result": "TREE_BYTE_EQUAL"
+    },
+    {
+      "command": "python3 -B _wip/evidence/minimum_release_content_r4_20260817T190059/run_local_preflight.py",
+      "exit_code": 0,
+      "result": "VERDICT: PASS with 2 review-only hit(s) - leak:internal-status-review, leak:word-testimonial-hidden | WAIVED: root:homepage"
+    },
+    {
+      "command": "/Users/handtomouse/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node _wip/evidence/minimum_release_content_r4_20260817T190059/browser-qa.mjs",
+      "exit_code": 2,
+      "result": "BROWSER_QA outcome=FAIL cases=35/35 screenshots=14/14 failures=69; all routes HTTP 200, exact root widths, zero broken/incomplete images; required failures are inherited Typekit DNS requests, Home/Pure incomplete chrome mount console errors, and FAQ exact-text DOM assertion count 2"
+    }
+  ],
+  "screenshots_or_urls": [
+    "/Users/handtomouse/maplemoon-website/_wip/evidence/minimum_release_content_r4_20260817T190059/screenshots",
+    "/Users/handtomouse/maplemoon-website/_wip/evidence/minimum_release_content_r4_20260817T190059/BROWSER-QA-FAILURE.md"
+  ],
+  "failures": [
+    "The mandatory 35-case browser gate failed; the packet therefore cannot complete or promote.",
+    "Adobe Typekit requests to p.typekit.net failed with net::ERR_NAME_NOT_RESOLVED and were not stubbed or waived.",
+    "Home and Pure Carob Bar emitted the inherited runtime console error `MapleMoon chrome: mount contract is incomplete; navigation left visible.` at every width.",
+    "The FAQ browser assertion found two exact-text DOM matches; source/preflight truth is green, but the required browser proof is not.",
+    "Per the content/style ownership split, no style, chrome, font or FAQ runtime correction was attempted in R4."
+  ],
+  "unknowns": [
+    "The exact Typekit CSS/font delivery result in an unrestricted public browser remains UNKNOWN because the isolated QA environment could not resolve p.typekit.net.",
+    "The fourteen screenshots were created but not promoted as passing visual evidence after the required runtime gate failed.",
+    "Production identity was not re-queried after the browser stop; no Vercel command or mutation occurred."
+  ],
+  "residual_risk": [
+    "The R4 generated output is evidence-only and must not be deployed or integrated as a certified candidate.",
+    "The deterministic content transformation and local preflight are green, but style-owned chrome/runtime and font-delivery faults must be resolved and the full matrix rerun.",
+    "All three anonymised quote cards and both founder cards are retained; only internal review/process surfaces were removed."
+  ],
+  "forbidden_path_changes": [],
+  "proposed_next_state": "hold",
+  "next_reviewer": "MapleMoon Styles task for the inherited chrome/font runtime defects, then BOSS for a fresh non-overwriting integrated successor"
+}

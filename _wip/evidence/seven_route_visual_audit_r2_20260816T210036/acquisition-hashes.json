@@ -1,0 +1,58 @@
+[
+  {
+    "route": "homepage",
+    "file": "/private/tmp/maplemoon-pdp-route-repair-20260816/homepage.html",
+    "bytes": 190815,
+    "expectedSha256": "9495d2eee0d81cbc8f86749df36b8f6532a9603c40638ffc728e55aae857cb89",
+    "actualSha256": "9495d2eee0d81cbc8f86749df36b8f6532a9603c40638ffc728e55aae857cb89",
+    "match": true
+  },
+  {
+    "route": "shop",
+    "file": "/private/tmp/maplemoon-pdp-route-repair-20260816/shop.html",
+    "bytes": 50564,
+    "expectedSha256": "a0c5c03c2aaf2b21307995a7b33843c5ffa0d5785ddf4a6dea252f40b8ab208a",
+    "actualSha256": "a0c5c03c2aaf2b21307995a7b33843c5ffa0d5785ddf4a6dea252f40b8ab208a",
+    "match": true
+  },
+  {
+    "route": "our-story",
+    "file": "/private/tmp/maplemoon-pdp-route-repair-20260816/our-story.html",
+    "bytes": 63842,
+    "expectedSha256": "0f00cb8beae8b911920f20f6e5976d60d0e94e70ed99f7d3557dbf9a1883c2b2",
+    "actualSha256": "0f00cb8beae8b911920f20f6e5976d60d0e94e70ed99f7d3557dbf9a1883c2b2",
+    "match": true
+  },
+  {
+    "route": "carob-story",
+    "file": "/private/tmp/maplemoon-pdp-route-repair-20260816/carob-story.html",
+    "bytes": 54352,
+    "expectedSha256": "5bfc9842c36d9f093d193f21cc7ea11cc96f3565fe65925d023e6ce0380e0756",
+    "actualSha256": "5bfc9842c36d9f093d193f21cc7ea11cc96f3565fe65925d023e6ce0380e0756",
+    "match": true
+  },
+  {
+    "route": "faq",
+    "file": "/private/tmp/maplemoon-pdp-route-repair-20260816/faq.html",
+    "bytes": 31865,
+    "expectedSha256": "29c1fb87be58a0c8ac65e148201c7164143fe947122e11c819c0444956a4b601",
+    "actualSha256": "29c1fb87be58a0c8ac65e148201c7164143fe947122e11c819c0444956a4b601",
+    "match": true
+  },
+  {
+    "route": "stockists",
+    "file": "/private/tmp/maplemoon-pdp-route-repair-20260816/stockists.html",
+    "bytes": 112138,
+    "expectedSha256": "b93f676f6ebdf9edc8bef7a7e013a0ab9a8aa6d7f2a0662c6da516d2741e955a",
+    "actualSha256": "b93f676f6ebdf9edc8bef7a7e013a0ab9a8aa6d7f2a0662c6da516d2741e955a",
+    "match": true
+  },
+  {
+    "route": "pure-carob-bar",
+    "file": "/private/tmp/maplemoon-pdp-route-repair-20260816/products/pure-carob-bar.html",
+    "bytes": 25399,
+    "expectedSha256": "2157a7ef9846c854a2565b9e1c4c4a3f934b8b2ab92dc1e119a31bb838109869",
+    "actualSha256": "2157a7ef9846c854a2565b9e1c4c4a3f934b8b2ab92dc1e119a31bb838109869",
+    "match": true
+  }
+]

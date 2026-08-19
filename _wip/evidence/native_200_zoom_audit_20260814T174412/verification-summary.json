@@ -1,0 +1,30 @@
+{
+  "schema": "maplemoon-native-200-zoom-audit-summary/v1",
+  "packet_id": "MAPLEMOON-NATIVE-200-ZOOM-AUDIT-20260814T174412",
+  "worker_thread_id": "/root/recertify_updated_preview",
+  "completed_at": "2026-08-14T07:56:21Z",
+  "outcome": "HOLD",
+  "reason": "Native 200 percent zoom could not be proved without stealing focus from the user's active application or weakening the contract to emulation.",
+  "proved": [
+    "checkpoint and phase-start passed before the first write",
+    "all pinned predecessor and candidate hashes were exact at acquisition and close",
+    "two fresh isolated profiles and unique CDP ports each resolved to one exact candidate page and one recorded Chrome PID",
+    "the global-input path rejected the first attempt before any keypress because the isolated PID was not frontmost",
+    "the only process-directed Command-Plus was confined to isolated PID 34563 and quantitatively rejected because DPR and CSS width did not change",
+    "the replacement isolated PID 44151 remained non-frontmost while Messages PID 79920 was active, so no zoom input was sent",
+    "only exact audit Chrome/server PIDs were closed; both profile paths were preserved; ports 4412/9347/9348 were closed"
+  ],
+  "not_proved": [
+    "native 175 percent positive control",
+    "native 200 percent DPR/inner-width proof",
+    "effective CSS widths 390 and 720 at native 200 percent",
+    "seven-route 200 percent runtime, navigation, cart, screenshot and visual matrices"
+  ],
+  "source_edits": [],
+  "deployments": [],
+  "production_actions": [],
+  "git_actions": [],
+  "client_contacts": [],
+  "forbidden_path_changes": [],
+  "proposed_next_state": "hold_until_isolated_chrome_can_be_made_frontmost_without_touching_user_state"
+}

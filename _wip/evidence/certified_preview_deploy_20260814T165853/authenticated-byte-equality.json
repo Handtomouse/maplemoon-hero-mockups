@@ -1,0 +1,190 @@
+{
+  "bogus_controls": [
+    {
+      "bytes": 79,
+      "command": "vercel curl /zzq-certified-preview-missing-9471 --deployment https://maplemoonbuild20260813-28up3uqbm-handtomouses-projects.vercel.app -- -- [curl output controls]",
+      "distinct_from_homepage": true,
+      "exit_code": 0,
+      "sha256": "37408b98d31e01c60aea1497c54e2f46a0a6a08ada9bab9289273569b43993cc",
+      "status": 404,
+      "stderr": "Retrieving project\u2026\nRetrieving project\u2026"
+    },
+    {
+      "bytes": 79,
+      "command": "vercel curl /zzq-certified-preview-missing-9471.html --deployment https://maplemoonbuild20260813-28up3uqbm-handtomouses-projects.vercel.app -- -- [curl output controls]",
+      "distinct_from_homepage": true,
+      "exit_code": 0,
+      "sha256": "75c7f5c9170a868aca103c3e34faa4c5d17d6d7f609361958bb49befdb977731",
+      "status": 404,
+      "stderr": "Retrieving project\u2026\nRetrieving project\u2026"
+    }
+  ],
+  "checked_at": "2026-08-14T07:03:40.099545Z",
+  "faq": {
+    "answer": "Carob itself is naturally caffeine-free. Its mellow, naturally sweet flavour works beautifully in bars, baking and warm drinks. Maple Moon recipes vary, so please check the individual product label for the full ingredient list.",
+    "answer_count": 1,
+    "question": "Does carob contain caffeine?",
+    "question_count": 1
+  },
+  "files": {
+    "assets/design-system/mm-chrome.css": {
+      "byte_equal": true,
+      "bytes": 7095,
+      "command": "vercel curl /assets/design-system/mm-chrome.css --deployment https://maplemoonbuild20260813-28up3uqbm-handtomouses-projects.vercel.app -- -- [curl output controls]",
+      "exit_code": 0,
+      "local_bytes": 7095,
+      "local_sha256": "2d7414a8994ae11414cb269f4ca335293b409eb9da956ca3b625e716c26080ba",
+      "nonblank": true,
+      "sha256": "2d7414a8994ae11414cb269f4ca335293b409eb9da956ca3b625e716c26080ba",
+      "status": 200,
+      "stderr": "Retrieving project\u2026\nRetrieving project\u2026"
+    },
+    "assets/design-system/mm-chrome.js": {
+      "byte_equal": true,
+      "bytes": 9970,
+      "command": "vercel curl /assets/design-system/mm-chrome.js --deployment https://maplemoonbuild20260813-28up3uqbm-handtomouses-projects.vercel.app -- -- [curl output controls]",
+      "exit_code": 0,
+      "local_bytes": 9970,
+      "local_sha256": "063fe11d5f5ed5d90c724868f1ffb8f3536aed73cc2f7fb9bc6e4791eb192d18",
+      "nonblank": true,
+      "sha256": "063fe11d5f5ed5d90c724868f1ffb8f3536aed73cc2f7fb9bc6e4791eb192d18",
+      "status": 200,
+      "stderr": "Retrieving project\u2026\nRetrieving project\u2026"
+    },
+    "assets/design-system/mm-primitives.css": {
+      "byte_equal": true,
+      "bytes": 9006,
+      "command": "vercel curl /assets/design-system/mm-primitives.css --deployment https://maplemoonbuild20260813-28up3uqbm-handtomouses-projects.vercel.app -- -- [curl output controls]",
+      "exit_code": 0,
+      "local_bytes": 9006,
+      "local_sha256": "3108718d5109a28a6221a2eca56fcf5138195f8c020e0d64983b1be1afb839c7",
+      "nonblank": true,
+      "sha256": "3108718d5109a28a6221a2eca56fcf5138195f8c020e0d64983b1be1afb839c7",
+      "status": 200,
+      "stderr": "Retrieving project\u2026\nRetrieving project\u2026"
+    },
+    "assets/design-system/mm-tokens.css": {
+      "byte_equal": true,
+      "bytes": 3073,
+      "command": "vercel curl /assets/design-system/mm-tokens.css --deployment https://maplemoonbuild20260813-28up3uqbm-handtomouses-projects.vercel.app -- -- [curl output controls]",
+      "exit_code": 0,
+      "local_bytes": 3073,
+      "local_sha256": "cab9a32ee62a5a51d9297ab0320e666c1081a7a81c8c83a3bc48d1f1d2341908",
+      "nonblank": true,
+      "sha256": "cab9a32ee62a5a51d9297ab0320e666c1081a7a81c8c83a3bc48d1f1d2341908",
+      "status": 200,
+      "stderr": "Retrieving project\u2026\nRetrieving project\u2026"
+    },
+    "carob-story.html": {
+      "byte_equal": true,
+      "bytes": 62273,
+      "command": "vercel curl /carob-story.html --deployment https://maplemoonbuild20260813-28up3uqbm-handtomouses-projects.vercel.app -- -- [curl output controls]",
+      "exit_code": 0,
+      "local_bytes": 62273,
+      "local_sha256": "4fd9ad0fabb9d60d0f391925f5a382ccfc8f705b60fca1c681f403a5cd9734bd",
+      "nonblank": true,
+      "sha256": "4fd9ad0fabb9d60d0f391925f5a382ccfc8f705b60fca1c681f403a5cd9734bd",
+      "status": 200,
+      "stderr": "Retrieving project\u2026\nRetrieving project\u2026"
+    },
+    "faq.html": {
+      "byte_equal": true,
+      "bytes": 42132,
+      "command": "vercel curl /faq.html --deployment https://maplemoonbuild20260813-28up3uqbm-handtomouses-projects.vercel.app -- -- [curl output controls]",
+      "exit_code": 0,
+      "local_bytes": 42132,
+      "local_sha256": "c5ce7aaf0b9b3221f34eb2928fc2ff6732fc1a915ea80144a4ade2b94011fb6e",
+      "nonblank": true,
+      "sha256": "c5ce7aaf0b9b3221f34eb2928fc2ff6732fc1a915ea80144a4ade2b94011fb6e",
+      "status": 200,
+      "stderr": "Retrieving project\u2026\nRetrieving project\u2026"
+    },
+    "homepage.html": {
+      "byte_equal": true,
+      "bytes": 209295,
+      "command": "vercel curl /homepage.html --deployment https://maplemoonbuild20260813-28up3uqbm-handtomouses-projects.vercel.app -- -- [curl output controls]",
+      "exit_code": 0,
+      "local_bytes": 209295,
+      "local_sha256": "27921b2a466ccb670b2851a73043429763d3423bcaf651069e4e860dc01a78b1",
+      "nonblank": true,
+      "sha256": "27921b2a466ccb670b2851a73043429763d3423bcaf651069e4e860dc01a78b1",
+      "status": 200,
+      "stderr": "Retrieving project\u2026\nRetrieving project\u2026"
+    },
+    "mock-cart.css": {
+      "byte_equal": true,
+      "bytes": 13576,
+      "command": "vercel curl /mock-cart.css --deployment https://maplemoonbuild20260813-28up3uqbm-handtomouses-projects.vercel.app -- -- [curl output controls]",
+      "exit_code": 0,
+      "local_bytes": 13576,
+      "local_sha256": "c17deb1f972017d9790f2191360a457e54d7287730847f9f470c9de371603308",
+      "nonblank": true,
+      "sha256": "c17deb1f972017d9790f2191360a457e54d7287730847f9f470c9de371603308",
+      "status": 200,
+      "stderr": "Retrieving project\u2026\nRetrieving project\u2026"
+    },
+    "mock-cart.js": {
+      "byte_equal": true,
+      "bytes": 42615,
+      "command": "vercel curl /mock-cart.js --deployment https://maplemoonbuild20260813-28up3uqbm-handtomouses-projects.vercel.app -- -- [curl output controls]",
+      "exit_code": 0,
+      "local_bytes": 42615,
+      "local_sha256": "36fb46b05a46ecf1c770991c6b9cf2eb8c08fda361c7176d37df081668f123aa",
+      "nonblank": true,
+      "sha256": "36fb46b05a46ecf1c770991c6b9cf2eb8c08fda361c7176d37df081668f123aa",
+      "status": 200,
+      "stderr": "Retrieving project\u2026\nRetrieving project\u2026"
+    },
+    "our-story.html": {
+      "byte_equal": true,
+      "bytes": 90572,
+      "command": "vercel curl /our-story.html --deployment https://maplemoonbuild20260813-28up3uqbm-handtomouses-projects.vercel.app -- -- [curl output controls]",
+      "exit_code": 0,
+      "local_bytes": 90572,
+      "local_sha256": "2db31868a9791f373f156e7cdeb8261e494d1d47e9418a94c28156e213df7711",
+      "nonblank": true,
+      "sha256": "2db31868a9791f373f156e7cdeb8261e494d1d47e9418a94c28156e213df7711",
+      "status": 200,
+      "stderr": "Retrieving project\u2026\nRetrieving project\u2026"
+    },
+    "pure-carob-bar.html": {
+      "byte_equal": true,
+      "bytes": 25507,
+      "command": "vercel curl /pure-carob-bar.html --deployment https://maplemoonbuild20260813-28up3uqbm-handtomouses-projects.vercel.app -- -- [curl output controls]",
+      "exit_code": 0,
+      "local_bytes": 25507,
+      "local_sha256": "015cde27ecc60f3c444820a551c39f6e9c985fc5b2e59bdaea5f496c1c236b65",
+      "nonblank": true,
+      "sha256": "015cde27ecc60f3c444820a551c39f6e9c985fc5b2e59bdaea5f496c1c236b65",
+      "status": 200,
+      "stderr": "Retrieving project\u2026\nRetrieving project\u2026"
+    },
+    "shop.html": {
+      "byte_equal": true,
+      "bytes": 82545,
+      "command": "vercel curl /shop.html --deployment https://maplemoonbuild20260813-28up3uqbm-handtomouses-projects.vercel.app -- -- [curl output controls]",
+      "exit_code": 0,
+      "local_bytes": 82545,
+      "local_sha256": "f111ad5123e34dadd46ac497fca286066efc67c05dd7e68f0d3e70c97c735038",
+      "nonblank": true,
+      "sha256": "f111ad5123e34dadd46ac497fca286066efc67c05dd7e68f0d3e70c97c735038",
+      "status": 200,
+      "stderr": "Retrieving project\u2026\nRetrieving project\u2026"
+    },
+    "stockists.html": {
+      "byte_equal": true,
+      "bytes": 119551,
+      "command": "vercel curl /stockists.html --deployment https://maplemoonbuild20260813-28up3uqbm-handtomouses-projects.vercel.app -- -- [curl output controls]",
+      "exit_code": 0,
+      "local_bytes": 119551,
+      "local_sha256": "4821adfe88680d4f174b7a8700c8d8a65594df2901bf3a7109d51b09040cb887",
+      "nonblank": true,
+      "sha256": "4821adfe88680d4f174b7a8700c8d8a65594df2901bf3a7109d51b09040cb887",
+      "status": 200,
+      "stderr": "Retrieving project\u2026\nRetrieving project\u2026"
+    }
+  },
+  "outcome": "PASS",
+  "preview_url": "https://maplemoonbuild20260813-28up3uqbm-handtomouses-projects.vercel.app",
+  "schema": "maplemoon-certified-preview-byte-equality/v1"
+}

@@ -1,0 +1,82 @@
+{
+  "schema": "maplemoon-ritual-harmonized-receipt/v2",
+  "created_at": "2026-08-03T16:35:02+10:00",
+  "result": "PASS_CANDIDATE_APPROVED_HOLD_INTEGRATION",
+  "approval": {
+    "granted_by": "Nate",
+    "evidence": "Nate selected option A after viewing the original and harmonized desktop and true-390 comparisons.",
+    "approved_scope": "The three isolated harmonized ritual image candidates only.",
+    "integration_authorized": false
+  },
+  "manifest": {
+    "file": "harmonized_manifest_v2.json",
+    "sha256": "b13bc9a860028deac2fbf7d43bbe76177f8f6a6f10b7e0befe3c86f2fcbfcedc"
+  },
+  "files_created": [
+    "harmonized_slot_1_after_dinner_v2.png",
+    "harmonized_slot_2_afternoon_reset_v2.png",
+    "harmonized_slot_3_tea_at_night_v2.png",
+    "harmonized_slot_2_afternoon_reset_v2_raw_1671.png",
+    "harmonized_slot_3_tea_at_night_v2_raw_1671.png",
+    "harmonized_site_treatment_v2.html",
+    "render_harmonized_proofs_v2.py",
+    "harmonized_site_treatment_desktop_v2.png",
+    "harmonized_site_treatment_mobile_true390_v2.png",
+    "harmonized_chrome_qa_v2.json",
+    "harmonized_manifest_v2.json",
+    "harmonized_receipt_v2.json"
+  ],
+  "selected_candidates": [
+    {
+      "slot": "After dinner",
+      "file": "harmonized_slot_1_after_dinner_v2.png",
+      "sha256": "87dab0ec03364b8caabdb268d07e5f70b729c8a9085c3489cf0c6d808ab9918c",
+      "dimensions": "1672x941"
+    },
+    {
+      "slot": "Afternoon reset",
+      "file": "harmonized_slot_2_afternoon_reset_v2.png",
+      "sha256": "0aa937e353879ad437646c1b3c1a68805236aa77092d09786f521a0728365931",
+      "dimensions": "1672x941"
+    },
+    {
+      "slot": "With tea, at night",
+      "file": "harmonized_slot_3_tea_at_night_v2.png",
+      "sha256": "55977de64770eff776f634dd8d2b7e7cc4bcee62eb903a09da4dde541d0492ec",
+      "dimensions": "1672x941"
+    }
+  ],
+  "checks": [
+    "PASS: all three masters visually inspected at full resolution",
+    "PASS: all three masters normalized to exact 1672x941 dimensions",
+    "PASS: raw 1671px built-in editor outputs preserved non-destructively",
+    "PASS: lower-field grades measured as #C8D8EA, #C8DAEB and #BCCEDE",
+    "PASS: 1440 desktop board rendered at 1440/1440/1440 with 432px cards",
+    "PASS: mobile board rendered at 390/390/390 with 334x330 cards",
+    "PASS: all local images loaded and no horizontal overflow",
+    "PASS: desktop and mobile proofs visually inspected",
+    "PASS: frozen Homepage SHA-256 remains 0d102050395b79f4add5d9ddb7f75e962d7e41e11a78cd7f88c35ce4a947ef0c",
+    "PASS: original manifest_v1.json remains e3fd2ff9db8c0cf911a287d7ffcc3f44e53c3fc4938cb642361619c23b7edc45",
+    "PASS: original receipt_v1.json remains 2e4366770a896863b0a86338ff2357200a5c64ecd8545c3a774d6952742236a9",
+    "PASS: local Chrome QA session stopped; no TCP 9333 listener"
+  ],
+  "untouched": [
+    "all staging-v1 files and manifests",
+    "all frozen page files",
+    "all website source and WIP files",
+    "Shop and product imagery",
+    "all existing v1 candidates and evidence",
+    "Git history and remotes",
+    "production and commerce systems"
+  ],
+  "limitations": [
+    "Afternoon and night fine surface details were regenerated during the lighting edit, so they are not pixel-identical colour transforms.",
+    "All visible pods and accessories remain generic generated forms, not client photography or exact MapleMoon products.",
+    "Candidate approval does not authorize page integration or deployment."
+  ],
+  "ready_to_promote": false,
+  "wired_to_pages": false,
+  "coordinator_message_sent": false,
+  "blocker": "Integration requires a separate coordinator-admitted, recovery-gated packet because the frozen review package must remain unchanged.",
+  "one_next_action": "Route this approved candidate receipt to the currently accepted Main coordinator after the control-plane handoff, for an explicit integration or preserve-unwired decision."
+}

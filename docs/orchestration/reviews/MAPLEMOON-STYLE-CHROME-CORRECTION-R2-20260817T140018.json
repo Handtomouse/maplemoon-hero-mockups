@@ -1,0 +1,147 @@
+{
+  "schema": "maplemoon-receipt/v2",
+  "receipt_id": "MAPLEMOON-STYLE-CHROME-CORRECTION-R2-20260817T140018-RECEIPT-FAIL-01",
+  "packet_id": "MAPLEMOON-STYLE-CHROME-CORRECTION-R2-20260817T140018",
+  "worker_thread_id": "019ff65f-fd33-7e51-8a83-360ba2f8d665",
+  "worker": "Maple Moon shared site styles kit task",
+  "started_at": "2026-08-17T04:04:13Z",
+  "completed_at": "2026-08-17T05:16:31Z",
+  "files_read": [
+    "maplemoon-website/docs/orchestration/packets/MAPLEMOON-STYLE-CHROME-CORRECTION-R2-20260817T140018.md",
+    "maplemoon-website/docs/orchestration/packets/MAPLEMOON-STYLE-CHROME-R2-HOLD-DISPOSITION-20260817T151159.md",
+    "maplemoon-website/docs/orchestration/packets/MAPLEMOON-STYLE-CHROME-DERIVED-20260817T134139.md",
+    "maplemoon-website/docs/orchestration/reviews/MAPLEMOON-STYLE-CHROME-DERIVED-20260817T134139.json",
+    "maplemoon-website/_wip/evidence/style_chrome_derived_20260817T134139",
+    "maplemoon-website/_wip/deploy/generated/maplemoon-style-chrome-derived-20260817T134139",
+    "maplemoon-website/scripts/build-maplemoon-style-chrome-derived.py",
+    "maplemoon-website/docs/orchestration/SIDECHAT_RECEIPT_GATE.md",
+    "maplemoon-website/scripts/check-maplemoon-receipt.py",
+    "maplemoon-website/scripts/build-maplemoon-wip-preview.py",
+    "maplemoon-website/_wip/homepage_real_1_lead_photo.WIP.html",
+    "maplemoon-website/_wip/shop.WIP.html",
+    "maplemoon-website/_wip/our-story.WIP.html",
+    "maplemoon-website/_wip/carob-story.WIP.html",
+    "maplemoon-website/_wip/faq.WIP.html",
+    "maplemoon-website/_wip/stockists.WIP.html",
+    "maplemoon_build_20260813/pure-carob-bar.html",
+    "maplemoon-website/docs/orchestration/reviews/MAPLEMOON-NATIVE-200-ZOOM-AUDIT-R2-20260814T180224.md",
+    "maplemoon-website/docs/orchestration/reviews/MAPLEMOON-NATIVE-200-ZOOM-AUDIT-R2-20260814T180224.json",
+    "maplemoon-website/_wip/evidence/native_200_zoom_audit_r2_20260814T180224",
+    "Documents/Codex/2026-08-13/maple-moon-shared-site-styles-kit/outputs/COMPONENT-CONTRACTS.md",
+    "Documents/Codex/2026-08-13/maple-moon-shared-site-styles-kit/outputs/RESPONSIVE-ACCESSIBILITY.md",
+    "Documents/Codex/2026-08-13/maple-moon-shared-site-styles-kit/outputs/RULE-REGISTER.json",
+    "Documents/Codex/2026-08-13/maple-moon-shared-site-styles-kit/outputs/version-lanes/v0.4-provisional/BOSS-HANDOFF.md",
+    "UFC/ops/bus/maplemoon/tools_20260813/preflight_deploy.py"
+  ],
+  "files_changed": [
+    "maplemoon-website/scripts/build-maplemoon-style-chrome-derived-r2.py",
+    "maplemoon-website/_wip/deploy/generated/maplemoon-style-chrome-derived-r2-20260817T140018",
+    "maplemoon-website/_wip/evidence/style_chrome_correction_r2_20260817T140018",
+    "maplemoon-website/docs/orchestration/reviews/MAPLEMOON-STYLE-CHROME-CORRECTION-R2-20260817T140018.json"
+  ],
+  "pre_sha256": {
+    "maplemoon-website/scripts/build-maplemoon-style-chrome-derived-r2.py": null,
+    "maplemoon-website/_wip/deploy/generated/maplemoon-style-chrome-derived-r2-20260817T140018": null,
+    "maplemoon-website/_wip/evidence/style_chrome_correction_r2_20260817T140018": null,
+    "maplemoon-website/docs/orchestration/reviews/MAPLEMOON-STYLE-CHROME-CORRECTION-R2-20260817T140018.json": null
+  },
+  "post_sha256": {
+    "maplemoon-website/scripts/build-maplemoon-style-chrome-derived-r2.py": "0cb7a27ea2c67dd992797a05d94f9eb33ed49f2a5ad86ca91fcb66a6a60408be",
+    "maplemoon-website/_wip/deploy/generated/maplemoon-style-chrome-derived-r2-20260817T140018": "3a1e162a6e63db71478e3d365155eff146e2e5839dfc7fad5833b7bc14175e24",
+    "maplemoon-website/_wip/evidence/style_chrome_correction_r2_20260817T140018": "1f7217132d5308b1d62f2147f31e50f8ad08e5278a6d3c8ad4f545671f6cdeb4",
+    "maplemoon-website/docs/orchestration/reviews/MAPLEMOON-STYLE-CHROME-CORRECTION-R2-20260817T140018.json": null
+  },
+  "checks": [
+    {
+      "command": "python3 -B scripts/check-maplemoon-receipt.py checkpoint --root /Users/handtomouse --packet docs/orchestration/packets/MAPLEMOON-STYLE-CHROME-CORRECTION-R2-20260817T140018.md --destination _wip/checkpoints/MAPLEMOON-STYLE-CHROME-CORRECTION-R2-20260817T140018_20260817_140406_AEST",
+      "exit_code": 0,
+      "result": "PASS checkpoint packet=MAPLEMOON-STYLE-CHROME-CORRECTION-R2-20260817T140018 files=4 path=/Users/handtomouse/maplemoon-website/_wip/checkpoints/MAPLEMOON-STYLE-CHROME-CORRECTION-R2-20260817T140018_20260817_140406_AEST"
+    },
+    {
+      "command": "python3 -B scripts/check-maplemoon-receipt.py verify --root /Users/handtomouse --packet docs/orchestration/packets/MAPLEMOON-STYLE-CHROME-CORRECTION-R2-20260817T140018.md --checkpoint _wip/checkpoints/MAPLEMOON-STYLE-CHROME-CORRECTION-R2-20260817T140018_20260817_140406_AEST --phase start",
+      "exit_code": 0,
+      "result": "PASS packet=MAPLEMOON-STYLE-CHROME-CORRECTION-R2-20260817T140018 phase=start scope=4"
+    },
+    {
+      "command": "fresh acquisition pins and predecessor completion replay",
+      "exit_code": 0,
+      "result": "PASS all predecessor packet/receipt/evidence/runtime/manifests, six WIPs, Pure input, private-preview builder, four sealed Styles Kit files and two native-200 files matched packet pins; predecessor completion reproduced its expected literal FAIL"
+    },
+    {
+      "command": "python3 -B scripts/build-maplemoon-wip-preview.py --output /private/tmp/maplemoon-style-chrome-r2-baseline-20260817T140406",
+      "exit_code": 0,
+      "result": "BUILD PASS output=/private/tmp/maplemoon-style-chrome-r2-baseline-20260817T140406 files=73 bytes=12815503 pages=7 private_dirs=0 vercel_project_link=0"
+    },
+    {
+      "command": "python3 -B _wip/evidence/style_chrome_correction_r2_20260817T140018/refresh-build-evidence.py",
+      "exit_code": 0,
+      "result": "MANIFEST_REFRESH PASS files=75 bytes=12832419 routes=7 reverse=7/7 projections=7/7 byte_equal=true digest=3a1e162a6e63db71478e3d365155eff146e2e5839dfc7fad5833b7bc14175e24"
+    },
+    {
+      "command": "node _wip/evidence/style_chrome_correction_r2_20260817T140018/verify-focused-390.mjs",
+      "exit_code": 0,
+      "result": "FOCUSED_390 PASS routes=7/7 proofs=7 positive_controls=PASS"
+    },
+    {
+      "command": "node _wip/evidence/style_chrome_correction_r2_20260817T140018/browser-qa-r2.mjs",
+      "exit_code": 0,
+      "result": "BROWSER_QA_R2 PASS measured=35/35 interactions=28/28 proofs=63 contacts=9"
+    },
+    {
+      "command": "python3 -B _wip/evidence/style_chrome_correction_r2_20260817T140018/native-200-r2.py",
+      "exit_code": 0,
+      "result": "NATIVE_200_R2 PASS controls=3/3 routes=14/14 menus=7/7 screenshots=14 forbidden_methods=0"
+    },
+    {
+      "command": "python3 -B /Users/handtomouse/UFC/ops/bus/maplemoon/tools_20260813/preflight_deploy.py http://127.0.0.1:8803 --local",
+      "exit_code": 1,
+      "result": "VERDICT: FAIL (6) - page:homepage body anchor, page:our-story body anchor, page:carob-story body anchor, leak:bare-204-visitor-copy, leak:internal-ops-language, leak:word-testimonial | 2 review-only hit(s) | WAIVED: root:homepage"
+    },
+    {
+      "command": "fresh close SHA-256 replay",
+      "exit_code": 0,
+      "result": "CLOSE_PINS PASS file_pins=23/23 r1_directory=1/1 failed=0"
+    },
+    {
+      "command": "lsof close check for ports 8800-8804 and 9360-9362",
+      "exit_code": 0,
+      "result": "PASS all eight task-owned local QA ports CLOSED"
+    }
+  ],
+  "screenshots_or_urls": [
+    "/Users/handtomouse/maplemoon-website/_wip/evidence/style_chrome_correction_r2_20260817T140018/focused-390-proofs",
+    "/Users/handtomouse/maplemoon-website/_wip/evidence/style_chrome_correction_r2_20260817T140018/browser-proofs",
+    "/Users/handtomouse/maplemoon-website/_wip/evidence/style_chrome_correction_r2_20260817T140018/browser-contacts/measured-390.png",
+    "/Users/handtomouse/maplemoon-website/_wip/evidence/style_chrome_correction_r2_20260817T140018/browser-contacts/measured-768.png",
+    "/Users/handtomouse/maplemoon-website/_wip/evidence/style_chrome_correction_r2_20260817T140018/browser-contacts/measured-900.png",
+    "/Users/handtomouse/maplemoon-website/_wip/evidence/style_chrome_correction_r2_20260817T140018/browser-contacts/measured-1024.png",
+    "/Users/handtomouse/maplemoon-website/_wip/evidence/style_chrome_correction_r2_20260817T140018/browser-contacts/measured-1440.png",
+    "/Users/handtomouse/maplemoon-website/_wip/evidence/style_chrome_correction_r2_20260817T140018/browser-contacts/menu-390-normal.png",
+    "/Users/handtomouse/maplemoon-website/_wip/evidence/style_chrome_correction_r2_20260817T140018/browser-contacts/menu-390-reduce.png",
+    "/Users/handtomouse/maplemoon-website/_wip/evidence/style_chrome_correction_r2_20260817T140018/browser-contacts/menu-900-normal.png",
+    "/Users/handtomouse/maplemoon-website/_wip/evidence/style_chrome_correction_r2_20260817T140018/browser-contacts/menu-900-reduce.png",
+    "/Users/handtomouse/maplemoon-website/_wip/evidence/style_chrome_correction_r2_20260817T140018/native-200/screenshots"
+  ],
+  "failures": [
+    "The mandatory unchanged local anonymous preflight failed overall even though every R2 style/chrome gate passed.",
+    "Homepage, Our Story and Carob Story did not contain the preflight verifier's expected body anchors.",
+    "Stockists exposed five bare-204 visitor-copy hits and seven internal-operations-language hits inherited unchanged from the pinned source baseline.",
+    "Homepage exposed one visitor-readable testimonial-process hit inherited unchanged from the pinned source baseline.",
+    "Two preliminary preflight invocations checked no pages: the prior local server had ended, then the sandbox denied localhost access; the final escalated read-only local invocation reached all pages and produced the authoritative inherited-content FAIL above.",
+    "Per MAPLEMOON-STYLE-CHROME-R2-HOLD-DISPOSITION-20260817T151159, these failures are outside style-lane authority and were neither edited, waived nor relabelled."
+  ],
+  "unknowns": [
+    "The production immutable token 7vjf2m50b and homepage MD5 6197879a5ca9d3ed0452773abc0bbeb4 were not freshly queried because this packet forbids Vercel action and closed at the required local preflight failure; production was not touched.",
+    "The separate BOSS-owned content/integration successor has not yet corrected or re-certified the inherited preflight failures.",
+    "No claim is made that this local derived output matches any live, demo or production base."
+  ],
+  "residual_risk": [
+    "The R2 generated output is not release-ready, receives no promotion and must not be used as a deployment source while the mandatory preflight remains failed.",
+    "The focused 7/7, measured 35/35, interaction 28/28, native-200 14/14 and reversible/protected 7/7 style results are valid planning/integration evidence only.",
+    "NAV-001, NAV-002, NAV-003, CMP-009 and RESP-004 remain requirements; NAV-004 and RESP-005 remain proof gates. No rule, token, copy, media, runtime or production status was promoted.",
+    "Inherited content failures require a separate checkpointed content/integration lane followed by a fresh anonymous preflight and independent route certification."
+  ],
+  "forbidden_path_changes": [],
+  "proposed_next_state": "hold",
+  "next_reviewer": "MapleMoon BOSS content/integration lane under a new checkpointed non-overwriting successor packet"
+}

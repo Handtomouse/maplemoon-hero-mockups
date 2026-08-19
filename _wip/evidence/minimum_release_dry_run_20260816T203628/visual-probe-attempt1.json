@@ -1,0 +1,10 @@
+{
+  "outcome": "HARNESS_ONLY_FAILURE",
+  "passed_before_stop": [
+    "products/pure-carob-bar@390",
+    "our-story@390",
+    "faq@390"
+  ],
+  "failure": "Stockists screenshot selector .sp-opening does not exist on the Stockists route.",
+  "correction": "Changed only the Stockists screenshot selector to the existing .sp-head element; no assertion, route, width, or candidate file changed."
+}

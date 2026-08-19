@@ -1,0 +1,25 @@
+{
+  "schema": "maplemoon-immutable-snapshot-acquisition/v1",
+  "deployment_id": "dpl_6gGEYQfUuXZPYGLaasVDEo9KZrQD",
+  "deployment_url": "https://maplemoonbuild20260813-krftm36lg-handtomouses-projects.vercel.app",
+  "target": "preview",
+  "status": "Ready",
+  "authenticated_transport": "vercel curl --deployment",
+  "responses": [
+    {"route": "/", "file": "snapshot/index.html", "http_status": 200, "bytes": 209295},
+    {"route": "/our-story.html", "file": "snapshot/our-story.html", "http_status": 200, "bytes": 90572},
+    {"route": "/carob-story.html", "file": "snapshot/carob-story.html", "http_status": 200, "bytes": 62273},
+    {"route": "/shop.html", "file": "snapshot/shop.html", "http_status": 200, "bytes": 82545},
+    {"route": "/faq.html", "file": "snapshot/faq.html", "http_status": 200, "bytes": 42132},
+    {"route": "/stockists.html", "file": "snapshot/stockists.html", "http_status": 200, "bytes": 119551},
+    {"route": "/pure-carob-bar.html", "file": "snapshot/pure-carob-bar.html", "http_status": 200, "bytes": 25507},
+    {"route": "/mock-cart.js", "file": "snapshot/mock-cart.js", "http_status": 200, "bytes": 33609},
+    {"route": "/mock-cart.css", "file": "snapshot/mock-cart.css", "http_status": 200, "bytes": 13040},
+    {"route": "/assets/design-system/mm-chrome.js", "file": "snapshot/assets/design-system/mm-chrome.js", "http_status": 200, "bytes": 5025},
+    {"route": "/assets/design-system/mm-chrome.css", "file": "snapshot/assets/design-system/mm-chrome.css", "http_status": 200, "bytes": 5871},
+    {"route": "/assets/design-system/mm-tokens.css", "file": "snapshot/assets/design-system/mm-tokens.css", "http_status": 200, "bytes": 3073},
+    {"route": "/assets/design-system/mm-primitives.css", "file": "snapshot/assets/design-system/mm-primitives.css", "http_status": 200, "bytes": 9006}
+  ],
+  "all_http_200": true,
+  "all_nonempty": true
+}

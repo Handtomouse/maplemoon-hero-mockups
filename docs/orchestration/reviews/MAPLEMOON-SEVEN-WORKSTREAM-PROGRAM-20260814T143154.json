@@ -1,0 +1,86 @@
+{
+  "schema": "maplemoon-receipt/v2",
+  "receipt_id": "MAPLEMOON-SEVEN-WORKSTREAM-PROGRAM-20260814T143154-RECEIPT-001",
+  "packet_id": "MAPLEMOON-SEVEN-WORKSTREAM-PROGRAM-20260814T143154",
+  "worker_thread_id": "019ffe53-6243-73a2-9d75-e1a072cd07ce",
+  "worker": "MapleMoon BOSS control plane",
+  "started_at": "2026-08-14T14:31:54+10:00",
+  "completed_at": "2026-08-14T14:34:22+10:00",
+  "outcome": "PASS_GO_FOR_READ_ONLY_INTAKE_HOLD_FOR_IMPLEMENTATION",
+  "confidence": "high",
+  "checkpoint_path": "_wip/checkpoints/MAPLEMOON-SEVEN-WORKSTREAM-PROGRAM-20260814T143154_20260814_143154_AEST",
+  "control_artifact_checkpoint_path": "_wip/checkpoints/MAPLEMOON-SEVEN-WORKSTREAM-PROGRAM-20260814T143154_CONTROL_20260814_143154_AEST",
+  "files_read": [
+    "/Users/handtomouse/UFC/ops/bus/maplemoon/BOSS_20260814.md",
+    "/Users/handtomouse/UFC/ops/bus/maplemoon/CHECKPOINT_20260814_0915_photography_delivery.md",
+    "/Users/handtomouse/Documents/Codex/2026-08-13/maple-moon-shared-site-styles-kit/outputs/CLAUDE-CHECK-TO-CODEX-BOSS-HANDOFF-20260814.md",
+    "/Users/handtomouse/Documents/Codex/2026-08-13/maple-moon-shared-site-styles-kit/outputs/RULE-REGISTER.json",
+    "/Users/handtomouse/Documents/Codex/2026-08-13/maple-moon-shared-site-styles-kit/outputs/VERIFICATION-RECEIPT.md",
+    "/Users/handtomouse/Documents/Codex/2026-08-13/maple-moon-shared-site-styles-kit/outputs/verify-style-kit.mjs",
+    "/Users/handtomouse/maplemoon_product_shots_20260814/product_master_18_sku_v7_manifest.md",
+    "docs/orchestration/SIDECHAT_RECEIPT_GATE.md",
+    "docs/orchestration/packets/MAPLEMOON-SEVEN-WORKSTREAM-PROGRAM-20260814T143154.md",
+    "Codex task 019ffd5b-edd2-7b23-8780-453f9b67a532",
+    "Codex task 019ffd66-b02c-7470-82ef-24a9b199e907",
+    "Codex task 019ff65f-fd33-7e51-8a83-360ba2f8d665",
+    "Codex task 019ffabc-e7e4-71c3-b769-3563efcc8cac"
+  ],
+  "files_changed": [
+    "docs/orchestration/reviews/MAPLEMOON-SEVEN-WORKSTREAM-PROGRAM-20260814T143154.json"
+  ],
+  "pre_sha256": {
+    "docs/orchestration/reviews/MAPLEMOON-SEVEN-WORKSTREAM-PROGRAM-20260814T143154.json": null
+  },
+  "post_sha256": {
+    "docs/orchestration/reviews/MAPLEMOON-SEVEN-WORKSTREAM-PROGRAM-20260814T143154.json": null
+  },
+  "checks": [
+    {
+      "command": "manual non-overwriting control-artifact checkpoint before packet creation",
+      "exit_code": 0,
+      "result": "PASS: packet target was absent; checkpoint records branch 91f0362 and grants no implementation or external authority."
+    },
+    {
+      "command": "python3 -B scripts/check-maplemoon-receipt.py checkpoint ... && verify ... --phase start",
+      "exit_code": 0,
+      "result": "PASS checkpoint packet=MAPLEMOON-SEVEN-WORKSTREAM-PROGRAM-20260814T143154 files=1; PASS phase=start scope=1 before receipt creation."
+    },
+    {
+      "command": "direct reads of the four exact Codex task IDs",
+      "exit_code": 0,
+      "result": "PASS: three tasks readable and idle; Organisation Orchestrator returned notLoaded/interrupted and is classified UNKNOWN, with durable local evidence used instead of inferred UI state."
+    },
+    {
+      "command": "node verify-style-kit.mjs",
+      "exit_code": 0,
+      "result": "RESULT PASS: 30/30 required files; package 0.1.6-provisional; 47/47 cleanup entries; 53 rules plus 12 decisions; 59/59 JSON-CSS tokens; 6/6 assets; 10/10 visual proofs; links/assets/forbidden paths/playground/anti-pattern/JavaScript/CSS checks pass."
+    },
+    {
+      "command": "sha256sum programme packet, RULE-REGISTER.json and VERIFICATION-RECEIPT.md",
+      "exit_code": 0,
+      "result": "PASS: programme packet 2df1973d14330d7e27d8fcd57117455a8ff2f2b2536d471ae6028b72d7aaa15b; rule register 728960a4fb87978741730990ddee3319eebb15bfa791cce45edf81b60baf621f; style verification receipt 141ecca7cd86954ae871e4c7d21e9396f0b78e81de30ca0cc9d5072f0d5d5d31."
+    },
+    {
+      "command": "git diff --check -- docs/orchestration/packets/MAPLEMOON-SEVEN-WORKSTREAM-PROGRAM-20260814T143154.md",
+      "exit_code": 0,
+      "result": "PASS: no whitespace errors. Existing Homepage modification and protected untracked trees remain untouched."
+    }
+  ],
+  "screenshots_or_urls": [],
+  "failures": [],
+  "unknowns": [
+    "The Organisation Orchestrator task remains notLoaded/interrupted; its UI continuation state is unknown.",
+    "The style kit's requested Claude review has not occurred.",
+    "Held Moon finish/binding decisions and the three user-owned Crescent cuts are not yet available as live-approved site assets."
+  ],
+  "residual_risk": [
+    "A passing local style-kit verifier establishes internal consistency, not implementation approval.",
+    "The 18-SKU master is review-only and cannot be treated as blanket live-media approval.",
+    "Stale rebuild scripts still reference missing obsolete or generated intermediates; another cleanup pass remains held.",
+    "Production and client contact remain outside this programme's authority."
+  ],
+  "forbidden_path_changes": [],
+  "proposed_next_state": "read_only_intake_verified_asset_decision_matrix_next",
+  "next_reviewer": "MapleMoon BOSS",
+  "ready_to_promote": false
+}

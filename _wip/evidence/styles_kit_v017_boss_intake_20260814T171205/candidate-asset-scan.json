@@ -1,0 +1,297 @@
+{
+  "root": "/Users/handtomouse/maplemoon_build_20260813",
+  "report": {
+    "our-story.html": {
+      "references": 18,
+      "nonblank": 18,
+      "rows": [
+        {
+          "ref": "/assets/design-system/mm-chrome.js",
+          "exists": true,
+          "bytes": 9970
+        },
+        {
+          "ref": "/assets/hero_shots/carob_pods_cluster.jpg",
+          "exists": true,
+          "bytes": 313419
+        },
+        {
+          "ref": "/assets/hero_shots/silhouette_closeup.webp",
+          "exists": true,
+          "bytes": 182582
+        },
+        {
+          "ref": "/assets/licensed/carob_farm/australian-carob-0205-16x9.jpg",
+          "exists": true,
+          "bytes": 139958
+        },
+        {
+          "ref": "/assets/mm_wordmark_blk.svg",
+          "exists": true,
+          "bytes": 7737
+        },
+        {
+          "ref": "/assets/our_story/01_founders_hero_v03.webp",
+          "exists": true,
+          "bytes": 578170
+        },
+        {
+          "ref": "/assets/our_story/ai_ritual_afternoon.png",
+          "exists": true,
+          "bytes": 751261
+        },
+        {
+          "ref": "/assets/our_story/founder_carli.webp",
+          "exists": true,
+          "bytes": 184886
+        },
+        {
+          "ref": "/assets/our_story/founder_dylan.webp",
+          "exists": true,
+          "bytes": 83318
+        },
+        {
+          "ref": "/assets/our_story/founders_hands.webp",
+          "exists": true,
+          "bytes": 43944
+        },
+        {
+          "ref": "/assets/our_story/studio_bar_almond.webp",
+          "exists": true,
+          "bytes": 50158
+        },
+        {
+          "ref": "/assets/our_story/studio_bar_rock.webp",
+          "exists": true,
+          "bytes": 145156
+        },
+        {
+          "ref": "/assets/our_story/studio_moons_brick.webp",
+          "exists": true,
+          "bytes": 90492
+        },
+        {
+          "ref": "/assets/our_story/studio_moons_trail.webp",
+          "exists": true,
+          "bytes": 37840
+        },
+        {
+          "ref": "/assets/photo_finals/maplemoon_heros21_brandmatched.webp",
+          "exists": true,
+          "bytes": 344452
+        },
+        {
+          "ref": "/assets/photo_finals/maplemoon_heros55_brandmatched.webp",
+          "exists": true,
+          "bytes": 325136
+        },
+        {
+          "ref": "/assets/photo_finals/maplemoon_heros55_brandmatched_atmospheric.webp",
+          "exists": true,
+          "bytes": 224840
+        },
+        {
+          "ref": "/mock-cart.js",
+          "exists": true,
+          "bytes": 42615
+        }
+      ]
+    },
+    "carob-story.html": {
+      "references": 16,
+      "nonblank": 16,
+      "rows": [
+        {
+          "ref": "/assets/ai/carob_branch_hero.webp",
+          "exists": true,
+          "bytes": 80110
+        },
+        {
+          "ref": "/assets/ai/carob_pods.webp",
+          "exists": true,
+          "bytes": 22460
+        },
+        {
+          "ref": "/assets/ai/carob_powder_roast.webp",
+          "exists": true,
+          "bytes": 102092
+        },
+        {
+          "ref": "/assets/ai/origin_carob_tree.webp",
+          "exists": true,
+          "bytes": 139598
+        },
+        {
+          "ref": "/assets/ai/study_cacao.webp",
+          "exists": true,
+          "bytes": 54858
+        },
+        {
+          "ref": "/assets/ai/study_carob.webp",
+          "exists": true,
+          "bytes": 42968
+        },
+        {
+          "ref": "/assets/brand/icon_caffeine_free.svg",
+          "exists": true,
+          "bytes": 9782
+        },
+        {
+          "ref": "/assets/brand/icon_made_in_aus.svg",
+          "exists": true,
+          "bytes": 14113
+        },
+        {
+          "ref": "/assets/brand/icon_no_artificial.svg",
+          "exists": true,
+          "bytes": 17697
+        },
+        {
+          "ref": "/assets/design-system/mm-chrome.js",
+          "exists": true,
+          "bytes": 9970
+        },
+        {
+          "ref": "/assets/licensed/carob_farm/australian-carob-0205-16x9.jpg",
+          "exists": true,
+          "bytes": 139958
+        },
+        {
+          "ref": "/assets/licensed/carob_pods_macro.jpg",
+          "exists": true,
+          "bytes": 222996
+        },
+        {
+          "ref": "/assets/mm_wordmark_blk.svg",
+          "exists": true,
+          "bytes": 7737
+        },
+        {
+          "ref": "/assets/photo_finals/maplemoon_heros55_brandmatched_atmospheric.webp",
+          "exists": true,
+          "bytes": 224840
+        },
+        {
+          "ref": "/assets/photo_finals/mm23_xmp_blue_hero_2400.webp",
+          "exists": true,
+          "bytes": 361084
+        },
+        {
+          "ref": "/mock-cart.js",
+          "exists": true,
+          "bytes": 42615
+        }
+      ]
+    },
+    "faq.html": {
+      "references": 4,
+      "nonblank": 4,
+      "rows": [
+        {
+          "ref": "/assets/design-system/mm-chrome.js",
+          "exists": true,
+          "bytes": 9970
+        },
+        {
+          "ref": "/assets/faq_hero_ritual.webp",
+          "exists": true,
+          "bytes": 20944
+        },
+        {
+          "ref": "/assets/mm_wordmark_blk.svg",
+          "exists": true,
+          "bytes": 7737
+        },
+        {
+          "ref": "/mock-cart.js",
+          "exists": true,
+          "bytes": 42615
+        }
+      ]
+    },
+    "shop.html": {
+      "references": 9,
+      "nonblank": 9,
+      "rows": [
+        {
+          "ref": "/assets/design-system/mm-chrome.js",
+          "exists": true,
+          "bytes": 9970
+        },
+        {
+          "ref": "/assets/mm_wordmark_blk.svg",
+          "exists": true,
+          "bytes": 7737
+        },
+        {
+          "ref": "/assets/products_new/bar_almond.png",
+          "exists": true,
+          "bytes": 624532
+        },
+        {
+          "ref": "/assets/products_new/bar_cayenne.png",
+          "exists": true,
+          "bytes": 714910
+        },
+        {
+          "ref": "/assets/products_new/bar_goji_coconut.png",
+          "exists": true,
+          "bytes": 792129
+        },
+        {
+          "ref": "/assets/products_new/bar_hazelnut.png",
+          "exists": true,
+          "bytes": 831697
+        },
+        {
+          "ref": "/assets/products_new/bar_peppermint.png",
+          "exists": true,
+          "bytes": 586829
+        },
+        {
+          "ref": "/assets/products_new/bar_pure_carob.png",
+          "exists": true,
+          "bytes": 715330
+        },
+        {
+          "ref": "/mock-cart.js",
+          "exists": true,
+          "bytes": 42615
+        }
+      ]
+    },
+    "stockists.html": {
+      "references": 5,
+      "nonblank": 5,
+      "rows": [
+        {
+          "ref": "/assets/design-system/mm-chrome.js",
+          "exists": true,
+          "bytes": 9970
+        },
+        {
+          "ref": "/assets/hero_shots/silhouette_closeup.webp",
+          "exists": true,
+          "bytes": 182582
+        },
+        {
+          "ref": "/assets/mm_wordmark_blk.svg",
+          "exists": true,
+          "bytes": 7737
+        },
+        {
+          "ref": "/assets/photo_finals/maplemoon_heros55_brandmatched.webp",
+          "exists": true,
+          "bytes": 325136
+        },
+        {
+          "ref": "/mock-cart.js",
+          "exists": true,
+          "bytes": 42615
+        }
+      ]
+    }
+  },
+  "positiveControl": true,
+  "failures": []
+}

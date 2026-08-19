@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<link rel="icon" type="image/svg+xml" href="/assets/mm_logo_icon_blk.svg">
+<!-- WIP: Adobe Fonts kit dvz0xjs replaces local() demo cuts (renders off-machine) -->
+<link rel="preconnect" href="https://use.typekit.net">
+<link rel="stylesheet" href="https://use.typekit.net/dvz0xjs.css">
+<style>:root{--mm-serif:'p22-mackinac-pro','P22 Mackinac Pro',Georgia,serif!important;--mm-sans:'neue-haas-grotesk-display','Neue Haas Grotesk Display Pro','Inter','Helvetica Neue',sans-serif!important;}</style>
+<title>Shop the Range | Maple Moon</title>
+<meta name="description" content="Australian organic carob bars. Vegan, gluten free, caffeine free. Made from Australian organic carob.">
+<link rel="stylesheet" href="/brand_kit.css">
+<style>
+/* SHOP (working copy, flavour-funnel wireframe): warm-paper editorial continuation of the homepage. */
+html{scroll-behavior:smooth;}
+.sp{
+  --mm-serif:'p22-mackinac-pro','P22 Mackinac Pro',Georgia,serif;
+  --ink:#2c2a26;--ink-soft:#6f6a62;--ink-faint:#a39d92;
+  --paper:#f4f2ed;--card:#fbfaf7;--line:rgba(44,42,38,.14);--line-soft:rgba(44,42,38,.08);
+  --cream:#f1ede3;--acc:#4074b6;
+  background:linear-gradient(180deg,#c5d5e5 0%,#dde6ee 22%,#eef2f5 55%,var(--paper) 100%);
+  color:var(--ink);font-family:var(--mm-sans,'Neue Haas Grotesk Display Pro',Helvetica,sans-serif);line-height:1.5;-webkit-font-smoothing:antialiased;min-height:100vh;overflow-x:hidden;
+}
+.sp *,.sp *::before,.sp *::after{box-sizing:border-box;}
+.sp img{max-width:100%;display:block;}
+.sp a{color:inherit;text-decoration:none;}
+.sp .wrap{max-width:1180px;margin:0 auto;padding:0 28px;}
+.sp .serif{font-family:var(--mm-serif);}
+.skip-link{position:absolute;z-index:20;top:10px;left:10px;padding:10px 14px;border-radius:4px;background:var(--blue-night,#101923);color:var(--cream);font-size:.75rem;letter-spacing:.06em;transform:translateY(-160%);transition:transform .2s ease;}
+.skip-link:focus{transform:translateY(0);outline:2px solid var(--cream);outline-offset:3px;}
+.sr-only{position:absolute!important;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0;}
+
+/* nav (mirrors homepage) */
+.sp-top{padding-top:8px;}
+.sp-top .bar{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;height:62px;}
+.sp-nav{display:flex;gap:28px;}.sp-nav.r{justify-content:flex-end;gap:22px;align-items:center;}
+.sp-nav a{font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-soft);transition:color .25s;}
+.sp-nav a:hover,.sp-nav a.on{color:var(--ink);}
+.sp-logo{font-family:var(--mm-serif);font-size:1.3rem;text-align:center;color:var(--ink);}
+.sp-cart{display:inline-flex;align-items:center;justify-content:center;width:32px;height:32px;border:1px solid var(--line);border-radius:50%;position:relative;}
+.sp-cart svg{width:15px;height:15px;stroke:var(--ink);fill:none;stroke-width:1.4;}
+.sp-cart b{position:absolute;top:-4px;right:-4px;width:15px;height:15px;border-radius:50%;background:var(--ink);color:var(--cream);font-size:.55rem;display:grid;place-items:center;}
+
+/* page head */
+.sp-head{text-align:center;padding:44px 0 10px;}
+.sp-kick{font-size:.64rem;letter-spacing:.22em;text-transform:uppercase;color:var(--ink-faint);display:block;margin-bottom:14px;}
+.qh{display:flex;justify-content:center;gap:6px;margin:0 0 14px;flex-wrap:wrap;}
+.qh .chip{display:inline-block;padding:.1em .28em .14em;background:var(--ink);color:var(--cream);font-family:var(--mm-serif);font-weight:500;font-size:clamp(2rem,4.6vw,3.2rem);line-height:1.02;border-radius:3px;}
+.qh .chip.lt{background:var(--card);color:var(--ink);box-shadow:0 2px 10px rgba(44,42,38,.10);}
+.qh .chip.acc{background:var(--acc);color:var(--cream);}
+.qh .chip.sm{font-family:var(--mm-sans,sans-serif);font-weight:500;font-size:.42em;letter-spacing:.18em;text-transform:uppercase;align-self:center;padding:.55em .9em;}
+.qh .tilt-l{transform:rotate(-1.4deg);}.qh .tilt-r{transform:rotate(1.1deg);}
+.sp-head p{color:var(--ink-soft);max-width:48ch;margin:0 auto;}
+.sp-flag{font-size:.62rem;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-faint);margin-top:10px;}
+
+/* sampler banner (combo 02: bestseller sampler) */
+.sp-sampler{display:flex;align-items:center;gap:30px;border:1px solid var(--line);border-radius:12px;background:var(--card);padding:24px 30px;margin:34px auto 8px;box-shadow:0 14px 34px rgba(44,42,38,.08);flex-wrap:wrap;}
+.sp-sampler .minirow{display:flex;align-items:flex-end;gap:3px;flex:0 0 220px;}
+.sp-sampler .minirow img{width:calc(16.6% - 3px);filter:drop-shadow(0 8px 10px rgba(44,42,38,.16));}
+.sp-sampler .t{flex:1;min-width:240px;}
+.sp-sampler strong{font-family:var(--mm-serif);font-weight:500;font-size:1.3rem;display:block;margin-bottom:4px;}
+.sp-sampler span{color:var(--ink-soft);font-size:.94rem;}
+.sp-sampler .deal{display:block;margin-top:8px;color:var(--ink);font-weight:600;letter-spacing:.01em;}
+.sp-sampler .deal s{color:var(--ink-faint);font-weight:400;margin-right:6px;text-decoration-thickness:1px;}
+.pill{display:inline-flex;align-items:center;gap:9px;font-size:.66rem;letter-spacing:.16em;text-transform:uppercase;font-weight:500;padding:13px 26px;border:1px solid var(--ink);border-radius:50px;background:transparent;color:var(--ink);cursor:pointer;transition:all .28s;}
+.pill:hover{background:var(--ink);color:var(--paper);}
+.pill.solid{background:var(--ink);color:var(--paper);}.pill.solid:hover{opacity:.85;}
+.add:disabled{opacity:.58;cursor:not-allowed;background:transparent;color:var(--ink-soft);border-color:rgba(44,42,38,.22);}
+.pr.pending{font-family:var(--mm-sans);font-size:.86rem;font-weight:500;color:var(--ink-soft);letter-spacing:.02em;}
+.pr.pending .g{display:none;}
+
+/* category anchor row */
+.sp-cats{display:flex;justify-content:center;gap:10px;margin:30px 0 8px;flex-wrap:wrap;}
+.sp-cats a{font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;border:1px solid var(--line);border-radius:50px;padding:10px 20px;background:var(--card);color:var(--ink-soft);transition:all .2s;}
+.sp-cats a:hover{color:var(--ink);border-color:var(--ink);}
+
+/* category section */
+.sp-sec{padding:40px 0 8px;}
+.sp-sec h2{font-family:var(--mm-serif);font-weight:500;font-size:1.7rem;margin:0 0 4px;}
+.sp-sec .sub{color:var(--ink-soft);font-size:.95rem;margin:0 0 22px;max-width:60ch;}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;}
+.pcard{border:1px solid var(--line-soft);border-radius:10px;background:var(--card);overflow:hidden;display:flex;flex-direction:column;transition:box-shadow .25s,transform .25s;}
+.pcard:hover{box-shadow:0 18px 40px rgba(44,42,38,.12);transform:translateY(-3px);}
+.pcard .ph{aspect-ratio:1/1;display:grid;place-items:center;padding:26px;background:linear-gradient(180deg,#e7edf3,#f2f4f4);}
+.pcard .ph img{max-height:100%;width:auto;max-width:78%;filter:drop-shadow(0 14px 18px rgba(44,42,38,.18));transition:transform .3s ease;}
+.pcard:hover .ph img{transform:scale(1.04) rotate(-1deg);}
+.pcard .tx{padding:18px 20px 20px;display:flex;flex-direction:column;gap:8px;flex:1;}
+.pcard h3{font-family:var(--mm-serif);font-weight:500;font-size:1.06rem;margin:0;}
+.pcard .d{font-size:.85rem;color:var(--ink-soft);line-height:1.5;flex:1;}
+.pcard .row{display:flex;align-items:center;justify-content:space-between;gap:10px;}
+.pcard .pr{font-weight:500;font-size:1.02rem;}
+.pcard .pr .g{font-size:.72rem;color:var(--ink-faint);font-weight:400;margin-left:3px;}
+.pcard .add{font-size:.6rem;letter-spacing:.14em;text-transform:uppercase;font-weight:500;border:1px solid var(--ink);border-radius:50px;padding:9px 16px;background:transparent;color:var(--ink);cursor:pointer;transition:all .25s;font-family:inherit;}
+.pcard .add:hover{background:var(--ink);color:var(--paper);}
+.chips{display:flex;gap:6px;flex-wrap:wrap;}
+.chips span{font-size:.56rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-faint);border:1px solid var(--line-soft);border-radius:50px;padding:4px 9px;}
+
+/* footer */
+.sp-ft{border-top:1px solid var(--line);margin-top:60px;}
+.sp-ft .row{display:flex;align-items:center;justify-content:space-between;gap:24px;padding:26px 0;flex-wrap:wrap;}
+.sp-ft .fnav{display:flex;gap:22px;flex-wrap:wrap;}
+.sp-ft .fnav a{font-size:.66rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-soft);}
+.sp-ft .fnav a:hover{color:var(--ink);}
+
+@media (max-width:900px){
+  .sp-nav a{display:none;}
+  .grid{grid-template-columns:1fr 1fr;}
+  .sp-sampler{flex-direction:column;gap:18px;text-align:center;}
+  .sp-sampler .t{order:1;min-width:0;width:100%;}
+  .sp-sampler .minirow{order:2;flex-basis:auto;width:min(100%,260px);margin:0 auto;justify-content:center;gap:6px;}
+  .sp-sampler .minirow img{width:calc((100% - 30px)/6);max-width:38px;}
+  .sp-sampler .pill{order:3;}
+}
+@media (max-width:560px){
+  .grid{grid-template-columns:1fr;}
+  .pcard .row{align-items:flex-start;flex-direction:column;}
+  .pcard .add{width:100%;}
+}
+
+/* homepage atmosphere layers (mist wisps + film grain + moon-glow pulse) */
+.sp{position:relative;overflow-x:hidden;}
+.sp-mist{position:absolute;inset:0;z-index:0;pointer-events:none;
+  background:
+    radial-gradient(48% 15% at 15% 18%, rgba(255,255,255,.26), transparent 68%),
+    radial-gradient(44% 15% at 88% 34%, rgba(150,178,208,.20), transparent 70%),
+    radial-gradient(50% 16% at 12% 55%, rgba(255,255,255,.22), transparent 70%),
+    radial-gradient(44% 15% at 87% 76%, rgba(150,178,208,.16), transparent 70%);}
+.sp-grain{position:absolute;inset:0;z-index:0;pointer-events:none;opacity:.07;mix-blend-mode:soft-light;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='g'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23g)'/%3E%3C/svg%3E");background-size:200px 200px;}
+.sp-moonwash{position:absolute;top:0;left:0;right:0;height:520px;z-index:0;pointer-events:none;mix-blend-mode:screen;
+  background:radial-gradient(ellipse at 50% 12%,rgba(241,237,227,.15),rgba(136,165,190,.09) 16%,transparent 38%);
+  animation:spMoonPulse 7.5s ease-in-out infinite;}
+@keyframes spMoonPulse{0%,100%{opacity:.5;transform:scale(.985);}50%{opacity:.85;transform:scale(1.04);}}
+.sp>header,.sp>div,.sp>section,.sp>footer{position:relative;z-index:1;}.sp>[class$="-mist"],.sp>[class$="-grain"],.sp>[class$="-moonwash"]{position:absolute;z-index:0;}
+
+@media (prefers-reduced-motion:reduce){.sp *{transition:none!important;animation:none!important;}}
+</style>
+
+<style>/* WIP iOS-safe (non-drifting) */html{-webkit-text-size-adjust:100%;text-size-adjust:100%}*{-webkit-tap-highlight-color:transparent}input,select,textarea{font-size:16px}</style>
+<link rel="stylesheet" href="/a11y_inner.css?v=20260723">
+<link rel="stylesheet" href="/design_refinement_20260723.css">
+
+<!-- MM-SEO-BLOCK (social share imagery stays withheld until an approved 1200x630 asset exists) -->
+<link rel="canonical" href="https://maplemoon.com.au/collections/all">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta name="theme-color" content="#457798">
+<meta property="og:site_name" content="Maple Moon">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://maplemoon.com.au/collections/all">
+<meta property="og:title" content="Shop the Range | Maple Moon">
+<meta property="og:description" content="Browse the six Maple Moon carob bars. Australian organic carob, vegan, gluten free and caffeine free. Free shipping over $99.">
+<meta property="og:locale" content="en_AU">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Shop the Range | Maple Moon">
+<meta name="twitter:description" content="Browse the six Maple Moon carob bars. Australian organic carob, vegan, gluten free and caffeine free. Free shipping over $99.">
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "Organization",
+ "@id": "https://maplemoon.com.au/#organization",
+ "name": "Maple Moon",
+ "url": "https://maplemoon.com.au",
+ "logo": {
+  "@type": "ImageObject",
+  "url": "https://maplemoon.com.au/assets/mm_logo_icon_blk.svg",
+  "width": 252,
+  "height": 416
+ },
+ "description": "Maple Moon makes Australian organic carob bars. Vegan, gluten free, caffeine free. Far north coast of NSW.",
+ "email": "info@maplemoon.com.au",
+ "areaServed": {
+  "@type": "Country",
+  "name": "Australia"
+ },
+ "foundingLocation": {
+  "@type": "Place",
+  "name": "Far North Coast, New South Wales, Australia"
+ }
+}
+</script>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "WebSite",
+ "@id": "https://maplemoon.com.au/#website",
+ "url": "https://maplemoon.com.au",
+ "name": "Maple Moon",
+ "description": "Australian organic carob bars. Vegan, gluten free, caffeine free.",
+ "publisher": {
+  "@id": "https://maplemoon.com.au/#organization"
+ },
+ "inLanguage": "en-AU"
+}
+</script>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "BreadcrumbList",
+ "itemListElement": [
+  {
+   "@type": "ListItem",
+   "position": 1,
+   "name": "Home",
+   "item": "https://maplemoon.com.au/"
+  },
+  {
+   "@type": "ListItem",
+   "position": 2,
+   "name": "Shop",
+   "item": "https://maplemoon.com.au/collections/all"
+  }
+ ]
+}
+</script>
+<!--MM-A11Y-SAFE-->
+</head>
+<body>
+<div class="sp">
+  <div class="sp-mist" aria-hidden="true"></div>
+  <div class="sp-grain" aria-hidden="true"></div>
+  <div class="sp-moonwash" aria-hidden="true"></div>
+  <a class="skip-link" href="#catalogue-title">Skip to the catalogue</a>
+
+  <header class="sp-top"><div class="wrap bar">
+    <nav class="sp-nav" aria-label="Primary navigation"><a href="/shop" class="on">Shop</a><a href="/our-story">Our Story</a><a href="/homepage#carob">What is Carob</a></nav>
+    <a class="sp-logo" href="/homepage">maple moon</a>
+    <nav class="sp-nav r" aria-label="Utility navigation"><a href="/stockists">Stockists</a><span class="sp-currency" aria-label="Currency, Australian dollars">AUD $</span></nav>
+  </div></header>
+
+  <main class="sp-main" id="shop-main">
+  <div class="wrap sp-opening">
+    <div class="sp-head">
+      <span class="sp-kick">The full range</span>
+      <h1 class="serif" style="font-weight:500;font-size:clamp(2rem,3.4vw,2.9rem);line-height:1.1;margin:0 0 14px;">Shop the <em style="font-weight:400">range.</em></h1>
+      <p>Six carob bars made from Australian organic carob, naturally sweet with nothing added.</p>
+      <div class="sp-flag">Orders ship Monday and Tuesday via Australia Post. Standard shipping $16.95. Free shipping over $99.</div>
+    </div>
+    <div class="sp-sampler" id="packs">
+      <div class="minirow" aria-hidden="true">
+        <img src="/assets/products_new/bar_pure_carob.png" alt=""><img src="/assets/products_new/bar_peppermint.png" alt=""><img src="/assets/products_new/bar_hazelnut.png" alt=""><img src="/assets/products_new/bar_goji_coconut.png" alt=""><img src="/assets/products_new/bar_cayenne.png" alt=""><img src="/assets/products_new/bar_almond.png" alt="">
+      </div>
+      <div class="t"><strong>New here? Start with every flavour.</strong>
+      <span>The starter box: all six bars in one set, gift-ready. The easiest way in.</span>
+      <span class="deal"><s>$77.70</s> $73.82 &middot; 6 bars, 90g each</span></div>
+      <a class="pill solid" href="#bars">View bar flavours</a>
+    </div>
+
+  </div>
+
+  <section class="wrap sp-tools is-quiet" aria-labelledby="catalogue-controls-title" aria-describedby="catalogue-status">
+    <div class="catalogue-toolbar-heading">
+      <h2 id="catalogue-controls-title">Find your flavour</h2>
+      <button class="reset-tool" id="catalogue-reset" type="button" hidden>Reset filters</button>
+    </div>
+    <div class="tool-group flavour-tools" aria-label="Flavour filter">
+      <span>Flavour</span>
+      <button type="button" class="swatch is-active" data-flavour="all" aria-pressed="true"><i style="--sw:#f8f6ef"></i><b>All</b></button>
+      <button type="button" class="swatch" data-flavour="pure" aria-pressed="false"><i style="--sw:#bfd4e6"></i><b>Pure</b></button>
+      <button type="button" class="swatch" data-flavour="peppermint" aria-pressed="false"><i style="--sw:#b9d5ca"></i><b>Peppermint</b></button>
+      <button type="button" class="swatch" data-flavour="hazelnut" aria-pressed="false"><i style="--sw:#c89a60"></i><b>Hazelnut</b></button>
+      <button type="button" class="swatch" data-flavour="goji" aria-pressed="false"><i style="--sw:#d85d80"></i><b>Coconut &amp; Goji</b></button>
+      <button type="button" class="swatch" data-flavour="cayenne" aria-pressed="false"><i style="--sw:#c84d2f"></i><b>Cayenne</b></button>
+      <button type="button" class="swatch" data-flavour="almond" aria-pressed="false"><i style="--sw:#c7a36d"></i><b>Almond</b></button>
+    </div>
+    <label class="tool-group sort-tool">Sort by
+      <select id="shop-sort" aria-label="Sort products">
+        <option value="featured">Featured</option>
+        <option value="name">Name</option>
+        <option value="priced">Priced first</option>
+      </select>
+    </label>
+    <div class="tool-group view-tools" aria-label="Catalogue view">
+      <span>View</span>
+      <button type="button" class="view-btn is-active" data-view="grid" aria-pressed="true" aria-label="Grid view">Grid</button>
+      <button type="button" class="view-btn" data-view="list" aria-pressed="false" aria-label="List view">List</button>
+    </div>
+    <aside class="purchase-guide" data-purchase-legend aria-label="How to enquire"><strong>Direct enquiry</strong><span>Every listed bar is available by email enquiry.</span></aside>
+    <p class="catalogue-status" id="catalogue-status" aria-live="polite"></p>
+  </section>
+
+  <div class="sp-range-nav" id="catalogue">
+    <h2 id="catalogue-title" class="sr-only" tabindex="-1">Shop all products</h2>
+  </div>
+
+  <section class="wrap sp-sec" id="bars">
+    <h2 class="serif">Bars</h2>
+    <p class="sub">The full-size 90g bar, six flavours.</p>
+    <div class="grid" data-cat="bars"></div>
+  </section>
+  </main>
+
+  <footer class="sp-ft"><div class="wrap">
+    <div class="row">
+      <a class="serif" href="/homepage" style="font-size:1.15rem">maple moon</a>
+      <nav class="fnav" aria-label="Footer navigation"><a href="/shop">Shop</a><a href="/our-story">Our Story</a><a href="/stockists">Stockists</a><a href="mailto:info@maplemoon.com.au">Contact</a></nav>
+    </div>
+  </div></footer>
+
+</div>
+<script>
+(function(){
+  var PS='/assets/product_shots/';
+  // same trusted catalog as the homepage; bars and elixirs priced from Carli's doc
+  var CAT={
+    bars:[
+      {n:'Coconut & Goji',img:'bar_goji_coconut',d:'Shredded coconut and goji berries through naturally sweet carob.',price:'$12.95',size:'90g'},
+      {n:'Cayenne Chilli',img:'bar_cayenne',d:'Rich, naturally sweet carob with a gentle hint of cayenne and a touch of Celtic sea salt for the perfect balance of sweet and spice.',price:'$12.95',size:'90g'},
+      {n:'Pure Carob & Cacao Butter',img:'bar_pure_carob',d:'Crafted from only two wholefood ingredients for simple, naturally sweet, guilt-free perfection.',price:'$12.95',size:'90g'},
+      {n:'Almond & Celtic Salt',img:'bar_almond',d:'The perfect harmony of crunchy whole roasted almonds, natural sweetness and a touch of saltiness.',price:'$12.95',size:'90g'},
+      {n:'Peppermint & Buckwheat',img:'bar_peppermint',d:'Refreshing premium peppermint meets the satisfying crunch of activated buckwheat.',price:'$12.95',size:'90g'},
+      {n:'Roasted Hazelnut',img:'bar_hazelnut',d:'Whole roasted hazelnuts deliver an irresistibly indulgent, crunchy carob experience.',price:'$12.95',size:'90g'}
+    ]
+  };
+  var DIET=['Vegan','GF','No Caffeine'];
+  var PRICED={bars:true};
+  function amp(s){return s.replace(/&/g,'<span class="amp">&amp;</span>');}
+  function money(amount){return '$'+Number(amount).toFixed(2);}
+  function priceNumber(price){var match=String(price).match(/\d+(?:\.\d{1,2})?/);return match?Number(match[0]):0;}
+  function flavourOf(p){
+    var hay=(p.n+' '+p.d).toLowerCase();
+    if(hay.indexOf('peppermint')>-1)return 'peppermint';
+    if(hay.indexOf('hazelnut')>-1)return 'hazelnut';
+    if(hay.indexOf('goji')>-1||hay.indexOf('coconut')>-1)return 'goji';
+    if(hay.indexOf('cayenne')>-1||hay.indexOf('chilli')>-1)return 'cayenne';
+    if(hay.indexOf('almond')>-1||hay.indexOf('salt')>-1)return 'almond';
+    return 'pure';
+  }
+  Object.keys(CAT).forEach(function(cat){
+    var grid=document.querySelector('.grid[data-cat="'+cat+'"]');if(!grid)return;
+    CAT[cat].forEach(function(p,index){
+      var priced=!!PRICED[cat] && !p.pending;
+      var cardId='product-'+cat+'-'+index;
+      var cleanName=p.n.replace(/"/g,'');
+      var imageAttrs=cat==='bites'?' loading="eager" decoding="sync"':' loading="lazy" decoding="async"';
+      var hasSizePicker=priced&&Array.isArray(p.sizes);
+      var unitPrice=hasSizePicker?p.sizes[0].price:priceNumber(p.price);
+      var unitQuantity=hasSizePicker?(p.sizes[0].quantity||1):1;
+      var displayPrice=cat==='moons'&&priced?'From $2.50 each':p.price;
+      var pickerAttribute=cat==='moons'?' data-tier-picker="moon"':' data-size-picker="eclipse"';
+      var pickerLabel=p.optionLabel||'Size';
+      var sizePicker=hasSizePicker?'<label class="size-picker"'+pickerAttribute+'><span>'+pickerLabel+'</span><select class="size-select" aria-label="'+pickerLabel+' for '+cleanName+'">'+p.sizes.map(function(option){return '<option value="'+option.price+'" data-quantity="'+(option.quantity||1)+'">'+option.label+' &middot; '+money(option.price)+'</option>';}).join('')+'</select></label>':'';
+      var action='<a class="add" aria-label="Enquire about '+cleanName+'" href="mailto:info@maplemoon.com.au?subject=Enquiry%20about%20'+encodeURIComponent(p.n)+'">Enquire</a>';
+      var el=document.createElement('article');el.className='pcard';el.setAttribute('aria-labelledby',cardId);
+      el.dataset.cat=cat;el.dataset.flavour=flavourOf(p);el.dataset.name=p.n.toLowerCase();el.dataset.priced=priced?'1':'0';el.dataset.order=String(index);el.dataset.unitPrice=String(unitPrice);el.dataset.unitQuantity=String(unitQuantity);
+      el.innerHTML='<div class="ph"><img src="'+PS+p.img+'.webp" alt="'+cleanName+'"'+imageAttrs+'></div>'+
+        '<div class="tx"><h3 id="'+cardId+'">'+amp(p.n)+'</h3><div class="chips">'+DIET.map(function(c){return '<span>'+c+'</span>';}).join('')+'</div>'+
+        '<p class="d">'+p.d+'</p>'+
+        sizePicker+'<div class="row"><div class="price-wrap"><span class="pr'+(priced?'':' pending')+'"><span data-price-label>'+ (priced?displayPrice:'Enquire for details')+'</span><span class="g">('+p.size+')</span></span></div>'+action+'</div></div>';
+      grid.appendChild(el);
+    });
+  });
+
+  var state={flavour:'all',sort:'featured',view:'grid'};
+  var cards=Array.prototype.slice.call(document.querySelectorAll('.pcard'));
+  var status=document.getElementById('catalogue-status');
+  var reset=document.getElementById('catalogue-reset');
+  var flavourLabels={all:'all flavours',pure:'Pure',peppermint:'Peppermint',hazelnut:'Hazelnut',goji:'Coconut and Goji',cayenne:'Cayenne',almond:'Almond'};
+  var sortLabels={featured:'featured order',name:'name',priced:'priced items first'};
+  function syncQuery(){
+    var url=new URL(window.location.href);
+    if(state.flavour==='all')url.searchParams.delete('flavour');else url.searchParams.set('flavour',state.flavour);
+    if(state.sort==='featured')url.searchParams.delete('sort');else url.searchParams.set('sort',state.sort);
+    if(state.view==='grid')url.searchParams.delete('view');else url.searchParams.set('view',state.view);
+    history.replaceState(null,'',url);
+  }
+  function applyState(){
+    document.body.classList.toggle('shop-list-view',state.view==='list');
+    cards.forEach(function(card){card.hidden=state.flavour!=='all'&&card.dataset.flavour!==state.flavour;});
+    document.querySelectorAll('.grid').forEach(function(grid){
+      var sorted=Array.prototype.slice.call(grid.children).sort(function(a,b){
+        if(state.sort==='name')return a.dataset.name.localeCompare(b.dataset.name);
+        if(state.sort==='priced')return b.dataset.priced.localeCompare(a.dataset.priced)||a.dataset.name.localeCompare(b.dataset.name);
+        return Number(a.dataset.order)-Number(b.dataset.order);
+      });
+      sorted.forEach(function(card){grid.appendChild(card);});
+    });
+    document.querySelectorAll('.swatch').forEach(function(btn){var on=btn.dataset.flavour===state.flavour;btn.classList.toggle('is-active',on);btn.setAttribute('aria-pressed',on?'true':'false');});
+    document.querySelectorAll('.view-btn').forEach(function(btn){var on=btn.dataset.view===state.view;btn.classList.toggle('is-active',on);btn.setAttribute('aria-pressed',on?'true':'false');});
+    var select=document.getElementById('shop-sort');if(select)select.value=state.sort;
+    var visible=cards.filter(function(card){return !card.hidden;});
+    document.querySelectorAll('.sp-sec[id]').forEach(function(section){
+      var hasMatch=Array.prototype.some.call(section.querySelectorAll('.pcard'),function(card){return !card.hidden;});
+      section.hidden=state.flavour!=='all'&&!hasMatch;
+      var navLink=document.querySelector('.sp-range-nav .sp-cats a[href="#'+section.id+'"]');
+      if(navLink)navLink.hidden=state.flavour!=='all'&&!hasMatch;
+    });
+    var catNav=document.querySelector('.sp-range-nav .sp-cats');
+    if(catNav)catNav.classList.toggle('is-filtered',state.flavour!=='all');
+    if(status){
+      var productWord=visible.length===1?'product':'products';
+      var filterCopy=state.flavour==='all'?'across the full range':'for '+flavourLabels[state.flavour];
+      status.textContent='Showing '+visible.length+' '+productWord+' '+filterCopy+', sorted by '+sortLabels[state.sort]+'.';
+    }
+    if(reset)reset.hidden=state.flavour==='all'&&state.sort==='featured'&&state.view==='grid';
+    syncQuery();
+  }
+  var params=new URLSearchParams(window.location.search);
+  if(['all','pure','peppermint','hazelnut','goji','cayenne','almond'].indexOf(params.get('flavour'))>-1)state.flavour=params.get('flavour');
+  if(['featured','name','priced'].indexOf(params.get('sort'))>-1)state.sort=params.get('sort');
+  if(['grid','list'].indexOf(params.get('view'))>-1)state.view=params.get('view');
+  document.querySelectorAll('.swatch').forEach(function(btn){btn.addEventListener('click',function(){state.flavour=btn.dataset.flavour;applyState();});});
+  document.querySelectorAll('.view-btn').forEach(function(btn){btn.addEventListener('click',function(){state.view=btn.dataset.view;applyState();});});
+  var sort=document.getElementById('shop-sort');if(sort)sort.addEventListener('change',function(){state.sort=sort.value;applyState();});
+  if(reset)reset.addEventListener('click',function(){state.flavour='all';state.sort='featured';state.view='grid';applyState();});
+  applyState();
+
+  var catLinks=Array.prototype.slice.call(document.querySelectorAll('.sp-range-nav .sp-cats a'));
+  if('IntersectionObserver' in window){
+    var setCurrent=function(id){
+      catLinks.forEach(function(link){
+        if(link.getAttribute('href')==='#'+id){link.setAttribute('aria-current','location');}
+        else{link.removeAttribute('aria-current');}
+      });
+    };
+    var sectionObserver=new IntersectionObserver(function(entries){
+      var current=entries.filter(function(entry){return entry.isIntersecting;}).sort(function(a,b){return Math.abs(a.boundingClientRect.top)-Math.abs(b.boundingClientRect.top);})[0];
+      if(current){setCurrent(current.target.id);}
+    },{rootMargin:'-18% 0px -66% 0px',threshold:.01});
+    document.querySelectorAll('.sp-sec[id], .sp-sampler[id], .sp-range-nav[id]').forEach(function(section){sectionObserver.observe(section);});
+  }
+})();
+</script>
+<style>
+/* SHOP LANE: catalogue chapters stay navigable while purchase wiring remains pending. */
+.sp .sp-range-nav{position:sticky;top:8px;z-index:4;padding:6px 0;background:transparent;border:0;}
+.sp .sp-range-nav .sp-cats{position:static;display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:0;width:min(880px,calc(100% - 56px));min-height:52px;margin:0 auto;padding:0;overflow:hidden;border:1px solid rgba(58,42,26,.10);border-radius:999px;background:rgba(238,248,249,.20);box-shadow:none;-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);}
+.sp .sp-range-nav .sp-cats a{position:relative;display:flex;align-items:center;justify-content:center;min-height:52px;padding:8px 10px;border:0;border-left:1px solid rgba(58,42,26,.10);border-radius:0;background:transparent;color:rgba(44,42,38,.48);font-size:.6rem;letter-spacing:.08em;text-transform:uppercase;text-align:center;}
+.sp .sp-range-nav .sp-cats a:first-child{border-left:0;}
+.sp .sp-range-nav .sp-cats a[aria-current="location"]{color:var(--ink);font-weight:500;background:rgba(247,253,250,.50);box-shadow:none;}
+.sp .sp-range-nav .sp-cats a[aria-current="location"]::after{content:"";position:absolute;bottom:10px;width:24px;height:2px;background:#9b8352;}
+.sp .sp-range-nav .sp-cats a:hover{color:rgba(44,42,38,.82);background:rgba(247,253,250,.34);}
+.sp .sp-range-nav .sp-cats.is-filtered{grid-template-columns:repeat(auto-fit,minmax(110px,1fr));}
+.sp{--blue-flow:#b7c9d9;--blue-bridge:#c8d5df;--blue-haze:#d7e2ea;--blue-deep:#457798;--blue-night:#101923;--beige:#c9ba96;--acc:#4074b6;background:linear-gradient(180deg,var(--blue-flow) 0%,#c7d6e3 18%,var(--blue-haze) 44%,#e2e5df 70%,var(--paper) 100%);}
+.sp-main{min-width:0;}
+.sp-tools{display:grid;grid-template-columns:minmax(0,1fr) minmax(170px,220px) auto;grid-template-areas:"heading heading heading" "flavour sort view" "guide guide cart" "status status status";gap:14px;align-items:center;margin:12px auto 10px;padding:16px 18px;border:1px solid rgba(69,119,152,.14);border-radius:8px;background:rgba(251,250,247,.68);box-shadow:0 8px 18px rgba(41,57,64,.045);}
+.catalogue-toolbar-heading{grid-area:heading;display:flex;align-items:baseline;justify-content:space-between;gap:16px;padding-bottom:12px;border-bottom:1px solid rgba(69,119,152,.14);}
+.catalogue-toolbar-heading h2{margin:0;font:500 1.04rem/1.2 var(--mm-serif);color:var(--ink);}
+.reset-tool{min-height:36px;padding:6px 11px;border:0;border-bottom:1px solid currentColor;background:transparent;color:var(--ink-soft);font:500 .63rem/1 var(--mm-sans);letter-spacing:.12em;text-transform:uppercase;cursor:pointer;}
+.reset-tool:hover{color:var(--ink);}
+.tool-group{display:flex;align-items:center;gap:10px;min-width:0;color:rgba(44,42,38,.66);font-size:.62rem;letter-spacing:.13em;text-transform:uppercase;}
+.flavour-tools{grid-area:flavour;flex-wrap:wrap;}
+.swatch,.view-btn{min-width:44px;min-height:44px;border:1px solid rgba(44,42,38,.14);border-radius:8px;background:rgba(255,255,255,.42);color:var(--ink);font:inherit;cursor:pointer;touch-action:manipulation;}
+.swatch{position:relative;display:grid;place-items:center;padding:5px;}
+.swatch i{display:block;width:24px;height:24px;border-radius:5px;background:var(--sw);border:1px solid rgba(44,42,38,.10);}
+.swatch b{position:absolute;inline-size:1px;block-size:1px;overflow:hidden;clip-path:inset(50%);}
+.swatch.is-active,.view-btn.is-active{border-color:var(--blue-night);box-shadow:inset 0 -2px 0 rgba(201,186,150,.62);background:rgba(255,255,255,.76);}
+.sort-tool{grid-area:sort;justify-content:flex-end;}
+.sort-tool select{min-height:44px;width:150px;padding:0 36px 0 14px;border:1px solid rgba(44,42,38,.16);border-radius:8px;background:rgba(255,255,255,.48);color:var(--ink);font:500 .78rem var(--mm-sans);}
+.view-tools{grid-area:view;justify-content:flex-end;}
+.view-btn{padding:0 12px;font-size:.62rem;}
+.purchase-guide{grid-area:guide;display:flex;align-items:baseline;gap:9px;min-width:0;color:var(--ink-soft);font-size:.74rem;line-height:1.42;}
+.purchase-guide strong{color:var(--ink);font:500 .82rem/1.2 var(--mm-serif);white-space:nowrap;}
+.purchase-guide b{color:var(--ink);font-weight:500;}
+.cart-summary{grid-area:cart;display:grid;grid-template-columns:auto auto;justify-content:end;align-items:baseline;gap:0 8px;margin:0;padding:9px 0 9px 14px;border-left:1px solid rgba(69,119,152,.18);color:var(--ink-soft);font-size:.63rem;letter-spacing:.1em;text-transform:uppercase;}
+.cart-summary strong{color:var(--ink);font:500 1rem/1 var(--mm-serif);letter-spacing:0;text-transform:none;}
+.cart-summary small{grid-column:1/-1;justify-self:end;font-size:.58rem;letter-spacing:.08em;}
+.catalogue-status{grid-area:status;margin:0;padding-top:2px;color:var(--ink-soft);font-size:.78rem;line-height:1.35;}
+.sp-tools :is(.swatch,.view-btn,.sort-tool select,.reset-tool,.size-select):focus-visible{outline:2px solid var(--acc);outline-offset:3px;}
+.sp-tools.is-quiet{padding:13px 0 12px;border-width:0 0 1px;border-radius:0;background:transparent;box-shadow:none;}
+.sp-tools.is-quiet .catalogue-toolbar-heading{padding-bottom:4px;border:0;}
+.sp-tools.is-quiet .tool-group{gap:7px;color:rgba(44,42,38,.54);}
+.sp-tools.is-quiet .swatch,.sp-tools.is-quiet .view-btn{min-width:34px;min-height:34px;border:0;border-radius:0;background:transparent;box-shadow:none;}
+.sp-tools.is-quiet .swatch i{width:19px;height:7px;border:0;border-radius:999px;opacity:.58;}
+.sp-tools.is-quiet .swatch.is-active,.sp-tools.is-quiet .view-btn.is-active{border-color:transparent;background:transparent;box-shadow:inset 0 -1px 0 var(--ink);}
+.sp-tools.is-quiet .swatch.is-active i{opacity:1;}
+.sp-tools.is-quiet .sort-tool select{min-height:34px;width:132px;padding-left:9px;border-width:0 0 1px;border-radius:0;background:transparent;}
+.sp-sec{scroll-margin-top:94px;padding:46px 0 10px;}
+.sp-range-nav + .sp-sec{padding-top:28px;}
+.sp-sec:not(#bars){border-top:1px solid rgba(69,119,152,.22);margin-top:34px;}
+.sp-sec h2{font-size:clamp(1.8rem,2.2vw,2.2rem);margin-bottom:6px;}
+.sp-sec .sub{margin-bottom:20px;}
+.sp-sec.is-pending h2{color:rgba(44,42,38,.68);}
+.sp-sec.is-pending .sub{color:rgba(111,106,98,.78);}
+.grid{grid-template-columns:repeat(4,minmax(0,1fr));gap:20px;}
+@media(min-width:1051px){#bars .grid,#bites .grid{grid-template-columns:repeat(3,minmax(0,1fr));}}
+.shop-list-view .grid{grid-template-columns:1fr;}
+.shop-list-view .pcard{display:grid;grid-template-columns:minmax(120px,190px) minmax(0,1fr);}
+.shop-list-view .pcard .ph{aspect-ratio:4/3;}
+.pcard[hidden]{display:none!important;}
+.pcard{border-color:rgba(69,119,152,.13);border-radius:8px;background:rgba(251,250,247,.86);}
+.pcard .ph{padding:24px;}
+.pcard .ph img{height:76%;max-width:80%;object-fit:contain;}
+.pcard .tx{padding:17px 18px 18px;gap:8px;}
+.pcard h3{font-size:1.1rem;line-height:1.2;}
+.pcard .d{display:-webkit-box;overflow:hidden;-webkit-box-orient:vertical;-webkit-line-clamp:3;}
+.chips{gap:5px;}
+.chips span{font-size:.5rem;color:rgba(111,106,98,.64);border-color:rgba(44,42,38,.08);padding:3px 6px;}
+.pcard .row{min-height:54px;margin-top:auto;padding-top:10px;border-top:1px solid rgba(44,42,38,.09);}
+.pcard .pr{min-width:0;line-height:1.28;}
+.pcard .price-wrap{display:flex;flex-direction:column;gap:3px;min-width:0;}
+.pcard .moon-tier{color:var(--ink-faint);font-size:.58rem;letter-spacing:.08em;text-transform:uppercase;}
+.size-picker{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:8px 0 0;border-top:1px solid rgba(44,42,38,.09);color:var(--ink-soft);font-size:.58rem;letter-spacing:.1em;text-transform:uppercase;}
+.size-select{min-height:34px;max-width:168px;padding:0 26px 0 9px;border:0;border-bottom:1px solid rgba(44,42,38,.24);border-radius:0;background:transparent;color:var(--ink);font:500 .72rem var(--mm-sans);}
+.pcard .add{display:inline-flex;align-items:center;justify-content:center;text-decoration:none;min-height:44px;}
+.pcard .add:not([disabled]){border-color:var(--blue-night);background:var(--blue-night);color:var(--cream);box-shadow:inset 0 -2px 0 rgba(201,186,150,.58);}
+.pcard .add:not([disabled]):hover{background:var(--blue-deep);border-color:var(--blue-deep);color:var(--cream);}
+.pcard .pr.pending{color:var(--ink-faint);font-size:.74rem;letter-spacing:.08em;text-transform:uppercase;}
+.pcard .add[disabled]{border-style:dashed;background:rgba(251,250,247,.44);box-shadow:none;}
+.pcard:hover,.pcard:focus-within{box-shadow:0 12px 28px rgba(41,57,64,.10);transform:translateY(-1px);}
+.pcard:hover .ph img,.pcard:focus-within .ph img{transform:scale(1.015);}
+.sp-sec[hidden],.sp-range-nav .sp-cats a[hidden]{display:none!important;}
+.sp-ft{margin-top:82px;background:linear-gradient(180deg,rgba(226,229,223,.34),rgba(244,242,237,.72));border-top-color:rgba(69,119,152,.16);}
+.sp-ft .row{padding-top:34px;padding-bottom:34px;}
+.sp-opening{display:grid;grid-template-columns:minmax(0,1fr);gap:16px;padding:38px 0 8px;}
+.sp-opening .sp-head{max-width:760px;padding:0;text-align:left;}
+.sp-opening .sp-head h1{font-size:clamp(2.45rem,3.6vw,3.35rem)!important;line-height:1.05!important;margin:0 0 14px!important;}
+.sp-opening .sp-head p{margin:0;max-width:39ch;font-size:1rem;line-height:1.54;}
+.sp-opening .sp-head::after{margin:14px 0 0;}
+.sp-opening .sp-flag{color:rgba(44,42,38,.68);font-size:.64rem;letter-spacing:.12em;margin-top:12px;}
+/* The sampler is a range shelf: images, decision details, then one clear action. */
+.sp-opening .sp-sampler{display:grid;grid-template-columns:minmax(235px,.72fr) minmax(280px,1fr) minmax(168px,auto);grid-template-areas:"packs details action";align-items:center;gap:20px;margin:0 0 8px;min-height:0;padding:17px 22px;border-color:rgba(69,119,152,.15);border-radius:8px;background:rgba(251,250,247,.74);box-shadow:0 6px 16px rgba(41,57,64,.045);}
+.sp-opening .sp-sampler .minirow{grid-area:packs;display:flex;align-items:flex-end;justify-content:flex-start;flex:initial;gap:5px;width:100%;padding:6px 0;}
+.sp-opening .sp-sampler .minirow img{width:calc((100% - 40px)/6);max-width:45px;filter:drop-shadow(0 6px 8px rgba(44,42,38,.10));}
+.sp-opening .sp-sampler .t{grid-area:details;min-width:0;}
+.sp-opening .sp-sampler strong{font-size:clamp(1.2rem,1.55vw,1.42rem);line-height:1.15;margin-bottom:6px;}
+.sp-opening .sp-sampler .deal{margin-top:7px;font-size:.94rem;}
+.sp-opening .sp-sampler .pill{grid-area:action;justify-self:end;justify-content:center;min-width:176px;min-height:40px;padding:10px 16px;border-color:var(--blue-night);background:var(--blue-night);color:var(--cream);box-shadow:inset 0 -2px 0 rgba(201,186,150,.62);}
+.sp-opening .sp-sampler .pill:hover{border-color:var(--blue-deep);background:var(--blue-deep);color:var(--cream);opacity:1;}
+.sp .sp-range-nav .sp-cats a:focus-visible,.sp-opening .sp-sampler .pill:focus-visible,.pcard .add:focus-visible{outline:2px solid var(--acc);outline-offset:3px;}
+@media(max-width:1050px) and (min-width:701px){
+  .sp-opening{gap:14px;padding-top:36px;}
+  .sp-opening .sp-sampler{grid-template-columns:minmax(220px,.8fr) minmax(0,1fr);grid-template-areas:"packs details" "packs action";gap:14px 20px;padding:18px 20px;}
+  .sp-opening .sp-sampler .pill{justify-self:start;}
+  .grid{grid-template-columns:repeat(3,minmax(0,1fr));}
+  .sp-tools{grid-template-columns:1fr 1fr;grid-template-areas:"heading heading" "flavour flavour" "sort view" "guide cart" "status status";}
+  .catalogue-toolbar-heading{grid-area:heading;}.catalogue-status{grid-area:status;}
+  .flavour-tools{grid-area:flavour;}.sort-tool{grid-area:sort;justify-content:flex-start;}.view-tools{grid-area:view;}
+}
+@media(max-width:560px){
+  .sp .sp-range-nav .sp-cats{width:calc(100% - 32px);}
+}
+@media(max-width:900px){
+  .sp-opening{gap:16px;padding:34px 0 12px;}
+  .sp-opening .sp-head{max-width:640px;padding:0;text-align:center;}
+  .sp-opening .sp-head p{margin:0 auto;}
+  .sp-opening .sp-head::after{margin:18px auto 0;}
+  .sp-opening .sp-sampler{display:grid;grid-template-columns:minmax(0,1fr);grid-template-areas:"packs" "details" "action";gap:16px;margin:0 0 12px;padding:20px;text-align:center;}
+  .sp-opening .sp-sampler .minirow{justify-content:center;width:min(100%,320px);margin:0 auto;}
+  .sp-opening .sp-sampler .minirow img{max-width:48px;}
+  .sp-opening .sp-sampler .pill{justify-self:center;width:min(100%,280px);}
+  .sp .sp-range-nav{top:6px;padding:6px 0;}
+  /* justify-content inherits `center` from the base .sp-cats rule. With
+     flex-wrap:nowrap + overflow-x:auto a centred row spills BOTH directions and
+     the leading overflow is unreachable, because scrollLeft cannot go negative.
+     That hid the first category ("Bars") entirely at <=430px. flex-start is the
+     baseline; `safe center` restores centring where supported, but only while
+     the row actually fits. */
+  .sp .sp-range-nav .sp-cats{display:flex;flex-wrap:nowrap;justify-content:flex-start;justify-content:safe center;width:calc(100% - 32px);min-height:54px;border-radius:18px;overflow-x:auto;scrollbar-width:none;-webkit-overflow-scrolling:touch;}
+  .sp .sp-range-nav .sp-cats::-webkit-scrollbar{display:none;}
+  .sp .sp-range-nav .sp-cats a{flex:0 0 auto;min-width:96px;min-height:54px;padding:6px 12px;font-size:.56rem;letter-spacing:.02em;line-height:1.08;}
+  .sp .sp-range-nav .sp-cats a[aria-current="location"]::after{bottom:10px;width:20px;}
+  .sp-sec{padding-top:38px;}
+  .sp-range-nav + .sp-sec{padding-top:26px;}
+  .sp-tools{grid-template-columns:1fr;grid-template-areas:"heading" "flavour" "sort" "view" "guide" "cart" "status";margin-top:10px;padding:14px 0;}
+  .catalogue-toolbar-heading{align-items:center;}
+  .sort-tool,.view-tools{justify-content:flex-start;}
+  .purchase-guide{align-items:flex-start;flex-direction:column;gap:3px;}
+  .cart-summary{justify-content:start;padding:10px 0;border-width:1px 0 0;}
+  .grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;}
+  .pcard .row{align-items:stretch;flex-direction:column;}
+  .pcard .add{width:100%;}
+  .shop-list-view .pcard{grid-template-columns:1fr;}
+}
+@media(max-width:560px){
+  .sp-opening{gap:14px;padding:30px 0 10px;}
+  .sp-opening .sp-head h1{font-size:2.35rem!important;}
+  .sp-opening .sp-sampler{padding:18px 16px;}
+  .sp-opening .sp-sampler .minirow{gap:5px;}
+  .sp-opening .sp-sampler .minirow img{width:calc((100% - 25px)/6);}
+  .grid{grid-template-columns:1fr;}
+}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto;}}
+
+/* Narrow-viewport header fix. `.sp-top .bar` uses `1fr auto 1fr`, which forces
+   the (empty, links hidden <=900px) left column to mirror the right column's
+   width. The right column still carries the currency label and the cart button,
+   so at 320px the three tracks exceeded the viewport and pushed the cart button
+   past the right edge (measured: right edge at 362px in a 320px viewport on
+   carob-story, 374px on shop, 364px on stockists). Dropping the forced symmetry
+   lets the empty track collapse. No content is hidden. */
+@media (max-width:400px){
+  .sp-top .bar{grid-template-columns:auto minmax(0,1fr) auto;column-gap:10px;}
+  .sp-nav.r{gap:12px;}
+}
+</style>
+</body>
+</html>

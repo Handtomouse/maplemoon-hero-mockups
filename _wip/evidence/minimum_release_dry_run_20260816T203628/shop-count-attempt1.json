@@ -1,0 +1,5 @@
+{
+  "outcome": "VERIFIER_ONLY_FAILURE",
+  "reason": "The first counter referenced a stale Playwright module path and stopped before launching Chrome or acquiring candidate state.",
+  "correction": "Use the exact bundled runtime path already proven by visual-probe.mjs; count assertions are unchanged."
+}

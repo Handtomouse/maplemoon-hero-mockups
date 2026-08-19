@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Maple Moon founder pair hero feasibility</title>
+  <style>
+    :root{--wash:#c5d5e5;--ink:#18344a;--paper:#f8f7f3;--rule:rgba(24,52,74,.18)}
+    *{box-sizing:border-box}
+    body{margin:0;background:#edf3f7;color:var(--ink);font:16px/1.5 Arial,sans-serif}
+    main{width:min(1320px,100%);margin:auto;padding:32px}
+    header{margin-bottom:28px}
+    h1,h2,p,figure{margin:0}
+    h1{font:500 clamp(2rem,5vw,4.4rem)/.98 Georgia,serif;max-width:12ch}
+    header p{max-width:70ch;margin-top:14px}
+    .specimen{display:grid;grid-template-columns:minmax(0,.82fr) minmax(0,1.18fr);gap:0;margin:24px 0 34px;border:1px solid var(--rule);background:var(--wash)}
+    .copy{display:flex;flex-direction:column;justify-content:center;padding:clamp(24px,4vw,64px)}
+    .tag{margin-bottom:12px;font-size:.72rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase}
+    h2{font:500 clamp(2.1rem,4vw,4.2rem)/1 Georgia,serif}
+    .copy p{max-width:43ch;margin-top:16px}
+    .frame{position:relative;min-width:0;aspect-ratio:3/2;overflow:hidden;background:#426b77}
+    .frame img{display:block;width:100%;height:100%;object-fit:cover;object-position:center center}
+    .frame::after{content:"";position:absolute;inset:0;pointer-events:none;background:linear-gradient(90deg,rgba(197,213,229,.96) 0%,rgba(197,213,229,.62) 15%,rgba(197,213,229,0) 39%),linear-gradient(180deg,rgba(197,213,229,.22),rgba(197,213,229,0) 22%,rgba(238,242,245,.42) 100%)}
+    .facts{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin-top:18px}
+    .facts div{padding:14px;border:1px solid var(--rule);background:rgba(255,255,255,.6)}
+    .facts b{display:block;font-size:.72rem;letter-spacing:.1em;text-transform:uppercase}
+    .facts span{display:block;margin-top:4px}
+    @media(max-width:700px){
+      main{padding:18px}
+      .specimen{grid-template-columns:1fr}
+      .copy{order:0;padding:26px 22px}
+      .frame{order:1;width:100%;aspect-ratio:3/2}
+      .frame::after{background:linear-gradient(180deg,rgba(197,213,229,.82) 0%,rgba(197,213,229,0) 19%,rgba(238,242,245,0) 76%,rgba(238,242,245,.82) 100%),linear-gradient(90deg,rgba(197,213,229,.42),rgba(197,213,229,0) 18%,rgba(238,242,245,0) 82%,rgba(238,242,245,.42))}
+      .facts{grid-template-columns:1fr}
+    }
+  </style>
+</head>
+<body>
+<main>
+  <header>
+    <div class="tag">Review only · no site binding</div>
+    <h1>Smiling pair hero feasibility.</h1>
+    <p>Both specimens use the current Our Story pair-hero geometry: copy first, a 3:2 image field, centred object position and the existing edge wash. The source files are loaded directly and remain unchanged.</p>
+    <div class="facts">
+      <div><b>Current asset</b><span>1400 × 933 · 1.5005:1</span></div>
+      <div><b>Frame 73</b><span>6000 × 4000 · exact 3:2</span></div>
+      <div><b>Decision boundary</b><span>Review candidate only</span></div>
+    </div>
+  </header>
+
+  <section class="specimen" data-specimen="current">
+    <div class="copy"><div class="tag">Current pair asset</div><h2>Carli &amp;<br>Dylan.</h2><p>Existing WIP binding shown in the current responsive slot.</p></div>
+    <figure class="frame"><img src="file:///Users/handtomouse/maplemoon-website/assets/our_story/founders_portrait_h212.webp" alt="Current Our Story pair asset"></figure>
+  </section>
+
+  <section class="specimen" data-specimen="frame73">
+    <div class="copy"><div class="tag">Real-shoot candidate · Heros-73.jpg</div><h2>Carli &amp;<br>Dylan.</h2><p>The only supplied JPEG showing both founders visibly relaxed and smiling.</p></div>
+    <figure class="frame"><img src="file:///Users/handtomouse/Projects/maplemoon/downloads/wetransfer_website-hero-raws_2026-06-03_1315/Heros-73.jpg" alt="Carli and Dylan smiling in the studio"></figure>
+  </section>
+</main>
+</body>
+</html>

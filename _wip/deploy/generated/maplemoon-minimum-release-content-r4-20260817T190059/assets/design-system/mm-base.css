@@ -1,0 +1,74 @@
+@layer reset, tokens, base, chrome, primitives, pages, exceptions;
+
+@layer reset {
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+
+  html {
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+  }
+
+  body {
+    margin: 0;
+  }
+
+  img,
+  picture,
+  video,
+  canvas,
+  svg {
+    display: block;
+    max-inline-size: 100%;
+  }
+
+  img,
+  video {
+    block-size: auto;
+  }
+
+  button,
+  input,
+  select,
+  textarea {
+    font: inherit;
+  }
+}
+
+@layer base {
+  body {
+    color: var(--mm-color-ink);
+    background: var(--mm-color-paper);
+    font-family: var(--mm-font-sans);
+    font-size: var(--mm-type-body-size);
+    line-height: var(--mm-type-body-leading);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  :focus-visible {
+    outline: var(--mm-focus-width) solid var(--mm-color-accent-blue);
+    outline-offset: var(--mm-focus-offset);
+  }
+
+  [hidden] {
+    display: none;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html:focus-within {
+      scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+      animation-duration: var(--mm-motion-reduced) !important;
+      animation-iteration-count: 1 !important;
+      scroll-behavior: auto !important;
+      transition-duration: var(--mm-motion-reduced) !important;
+    }
+  }
+}

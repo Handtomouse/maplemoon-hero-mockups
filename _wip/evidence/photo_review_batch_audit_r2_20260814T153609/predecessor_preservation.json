@@ -1,0 +1,9 @@
+{
+  "predecessor_packet": "maplemoon-website/docs/orchestration/packets/MAPLEMOON-PHOTO-REVIEW-BATCH-AUDIT-20260814T152749.md",
+  "predecessor_receipt": "maplemoon-website/docs/orchestration/reviews/MAPLEMOON-PHOTO-REVIEW-BATCH-AUDIT-20260814T152749.json",
+  "receipt_sha256": "2a3cb2ef945b0c179032d2a9fd9884a71d480b6a400ed13f85382ee82be7faab",
+  "completion_gate_exit_code": 3,
+  "completion_gate_literal_output": "FAIL packet=MAPLEMOON-PHOTO-REVIEW-BATCH-AUDIT-20260814T152749 reason=receipt contains a failed or malformed check",
+  "preserved_exactly": true,
+  "reclassified": false
+}

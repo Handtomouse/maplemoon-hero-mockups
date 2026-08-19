@@ -1,0 +1,6 @@
+
+DevTools listening on ws://127.0.0.1:9360/devtools/browser/b40a8567-ee24-4527-903c-beb618f1e2a7
+Trying to load the allocator multiple times. This is *not* supported.
+[72803:4188859:0817/150612.103463:ERROR:chrome/browser/ui/views/user_education/impl/browser_user_education_interface_impl.cc:186] Attempting to show IPH IPH_BatterySaverMode before browser initialization complete; IPH will not be shown.
+[72803:4188906:0817/150620.962356:ERROR:google_apis/gcm/engine/registration_request.cc:291] Registration response error message: DEPRECATED_ENDPOINT
+Created TensorFlow Lite XNNPACK delegate for CPU.

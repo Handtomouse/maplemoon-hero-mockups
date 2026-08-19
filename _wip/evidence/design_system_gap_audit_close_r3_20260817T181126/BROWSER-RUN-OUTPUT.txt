@@ -1,0 +1,43 @@
+COMMAND
+node /Users/handtomouse/maplemoon-website/_wip/evidence/design_system_gap_audit_close_r3_20260817T181126/verify-current-site-browser-r3.mjs --url https://maplemoonbuild20260813-m49nihfds-handtomouses-projects.vercel.app --widths 1440,1024,768,390
+
+EXIT_CODE
+1
+
+STDOUT_STDERR
+PASS route=homepage width=1440 root=1440/1440 broken=0 sub44=0 main=1 menu=false runtime=0
+PASS route=shop width=1440 root=1440/1440 broken=0 sub44=19 main=1 menu=false runtime=0
+PASS route=our-story width=1440 root=1440/1440 broken=0 sub44=2 main=0 menu=false runtime=0
+PASS route=carob-story width=1440 root=1440/1440 broken=0 sub44=0 main=1 menu=false runtime=0
+PASS route=faq width=1440 root=1440/1440 broken=0 sub44=1 main=1 menu=false runtime=0
+PASS route=stockists width=1440 root=1440/1440 broken=0 sub44=0 main=1 menu=false runtime=0
+PASS route=pure-carob-bar width=1440 root=1440/1440 broken=0 sub44=0 main=1 menu=false runtime=0
+FAIL route=homepage width=1024 root=1024/1024 broken=0 sub44=0 main=1 menu=false runtime=1
+PASS route=shop width=1024 root=1024/1024 broken=0 sub44=19 main=1 menu=false runtime=0
+PASS route=our-story width=1024 root=1024/1024 broken=0 sub44=2 main=0 menu=false runtime=0
+PASS route=carob-story width=1024 root=1024/1024 broken=0 sub44=0 main=1 menu=false runtime=0
+PASS route=faq width=1024 root=1024/1024 broken=0 sub44=1 main=1 menu=false runtime=0
+PASS route=stockists width=1024 root=1024/1024 broken=0 sub44=0 main=1 menu=false runtime=0
+PASS route=pure-carob-bar width=1024 root=1024/1024 broken=0 sub44=0 main=1 menu=false runtime=0
+PASS route=homepage width=768 root=768/768 broken=0 sub44=0 main=1 menu=true runtime=0
+PASS route=shop width=768 root=768/768 broken=0 sub44=19 main=1 menu=false runtime=0
+PASS route=our-story width=768 root=768/768 broken=0 sub44=2 main=0 menu=false runtime=0
+PASS route=carob-story width=768 root=768/768 broken=0 sub44=0 main=1 menu=false runtime=0
+PASS route=faq width=768 root=768/768 broken=0 sub44=4 main=1 menu=false runtime=0
+PASS route=stockists width=768 root=768/768 broken=0 sub44=0 main=1 menu=false runtime=0
+PASS route=pure-carob-bar width=768 root=768/768 broken=0 sub44=0 main=1 menu=true runtime=0
+PASS route=homepage width=390 root=390/390 broken=0 sub44=0 main=1 menu=true runtime=0
+PASS route=shop width=390 root=390/390 broken=0 sub44=19 main=1 menu=false runtime=0
+PASS route=our-story width=390 root=390/390 broken=0 sub44=2 main=0 menu=false runtime=0
+PASS route=carob-story width=390 root=390/390 broken=0 sub44=0 main=1 menu=false runtime=0
+PASS route=faq width=390 root=390/390 broken=0 sub44=1 main=1 menu=false runtime=0
+PASS route=stockists width=390 root=390/390 broken=0 sub44=0 main=1 menu=false runtime=0
+PASS route=pure-carob-bar width=390 root=390/390 broken=0 sub44=0 main=1 menu=true runtime=0
+file:///Users/handtomouse/maplemoon-website/_wip/evidence/design_system_gap_audit_close_r3_20260817T181126/verify-current-site-browser-r3.mjs:200
+  if (failures.length || positiveControls.result !== 'PASS') throw new Error(`browser QA failed rows=${failures.length} controls=${positiveControls.result}`);
+                                                                   ^
+
+Error: browser QA failed rows=1 controls=PASS
+    at file:///Users/handtomouse/maplemoon-website/_wip/evidence/design_system_gap_audit_close_r3_20260817T181126/verify-current-site-browser-r3.mjs:200:68
+
+Node.js v24.6.0

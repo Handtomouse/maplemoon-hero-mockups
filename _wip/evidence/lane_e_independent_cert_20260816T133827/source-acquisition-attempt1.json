@@ -1,0 +1,1167 @@
+{
+  "schema": "maplemoon-lane-e-independent-source-cert/v1",
+  "phase": "acquisition",
+  "corpus": [
+    "_wip/homepage_real_1_lead_photo.WIP.html",
+    "_wip/shop.WIP.html",
+    "_wip/our-story.WIP.html",
+    "_wip/carob-story.WIP.html",
+    "_wip/faq.WIP.html",
+    "_wip/stockists.WIP.html"
+  ],
+  "corpus_rule": "all six current root-level WIP review pages; checkpoints, recovery, evidence and deploy copies excluded",
+  "hashes": {
+    "_wip/homepage_real_1_lead_photo.WIP.html": "d097392fc1c6f44c3e3c09024bb7c2e2ea275e215a468dfe76306c6dcf534748",
+    "_wip/shop.WIP.html": "b444b0da4f5778f7434c6343854e3cdf48d1a88b038c7863a2ef1d46b5e0cbac",
+    "_wip/our-story.WIP.html": "f861ae24b6d4cd106402455e1361172be8b769cf0c0f967c17ee8de9a55fed19",
+    "_wip/carob-story.WIP.html": "0ad6ea9bfaacf81d7ee4d7e5ddcf93c2bd77afe3635d575bf7a2c30c8f696e27",
+    "_wip/faq.WIP.html": "4540ef31a150cb6de8062c2d4d74709f24d13ce45490f8e3c1c9c283c1fdbd56",
+    "_wip/stockists.WIP.html": "1cc8b4e55c7dc59f6e268222c310ac47d477540caf7540970981726a801b9075"
+  },
+  "predecessor_receipt_sha256": "7a4d0e3c97c1cee599774b02300f9e4a96ece019adeb8fe7d84992b15c6f69d7",
+  "lock_rows": [
+    {
+      "schema_version": 2,
+      "hash_algorithm": "sha256-raw",
+      "packet_id": "MAPLEMOON-LANE-E-APPLY-20260815T213337",
+      "candidate_id": "MAPLEMOON-LANE-E-WIP-CANDIDATE-20260815-001",
+      "cluster_id": "MAPLEMOON-LANE-E-APPLY",
+      "path": "_wip/homepage_real_1_lead_photo.WIP.html",
+      "owner": "Codex /root/dedup_risk_audit",
+      "worker_thread_id": "/root/dedup_risk_audit",
+      "status": "held",
+      "approval_class": "nate-decided-mutating-local-wip",
+      "base_state": "present",
+      "base_sha256": "8cb75735c8689979b7c9b85cad05c5e7d6ab6efab812863b5a84db68c88a0304",
+      "acquired_at": "2026-08-15T21:33:37+10:00",
+      "lease_expires_at": "2026-08-16T09:33:37+10:00",
+      "release_condition": "Lane E receipt passes whole-tree occurrence checks and rendered QA; root Boss records the raw post-hash before release.",
+      "released_by": null,
+      "post_sha256": null,
+      "notes": "Preserve the pre-existing tracked modification as acquisition state. Six-bar demo only; no 24-product expansion, image generation, deploy or production action."
+    },
+    {
+      "schema_version": 2,
+      "hash_algorithm": "sha256-raw",
+      "packet_id": "MAPLEMOON-LANE-E-APPLY-20260815T213337",
+      "candidate_id": "MAPLEMOON-LANE-E-WIP-CANDIDATE-20260815-001",
+      "cluster_id": "MAPLEMOON-LANE-E-APPLY",
+      "path": "_wip/shop.WIP.html",
+      "owner": "Codex /root/dedup_risk_audit",
+      "worker_thread_id": "/root/dedup_risk_audit",
+      "status": "held",
+      "approval_class": "nate-decided-mutating-local-wip",
+      "base_state": "present",
+      "base_sha256": "77117b625de3d31377545ddf58341ff287997efacf90d55db57af1dfac8d8805",
+      "acquired_at": "2026-08-15T21:33:37+10:00",
+      "lease_expires_at": "2026-08-16T09:33:37+10:00",
+      "release_condition": "Lane E receipt passes whole-tree occurrence checks and rendered QA; root Boss records the raw post-hash before release.",
+      "released_by": null,
+      "post_sha256": null,
+      "notes": "Preserve cart UI. D02 is not applicable to this demo. Elixir wiring remains held for matched no-upscale re-export."
+    },
+    {
+      "schema_version": 2,
+      "hash_algorithm": "sha256-raw",
+      "packet_id": "MAPLEMOON-LANE-E-APPLY-20260815T213337",
+      "candidate_id": "MAPLEMOON-LANE-E-WIP-CANDIDATE-20260815-001",
+      "cluster_id": "MAPLEMOON-LANE-E-APPLY",
+      "path": "_wip/our-story.WIP.html",
+      "owner": "Codex /root/dedup_risk_audit",
+      "worker_thread_id": "/root/dedup_risk_audit",
+      "status": "held",
+      "approval_class": "nate-decided-mutating-local-wip",
+      "base_state": "present",
+      "base_sha256": "5a49926e2619fd09667d2869808fb8571af88a4add10b2346b81b732859074c1",
+      "acquired_at": "2026-08-15T21:33:37+10:00",
+      "lease_expires_at": "2026-08-16T09:33:37+10:00",
+      "release_condition": "Lane E receipt passes whole-tree occurrence checks and rendered QA; root Boss records the raw post-hash before release.",
+      "released_by": null,
+      "post_sha256": null,
+      "notes": "Lane E may apply only enumerated defect-level changes. Lane F rebuild remains sequentially held."
+    },
+    {
+      "schema_version": 2,
+      "hash_algorithm": "sha256-raw",
+      "packet_id": "MAPLEMOON-LANE-E-APPLY-20260815T213337",
+      "candidate_id": "MAPLEMOON-LANE-E-WIP-CANDIDATE-20260815-001",
+      "cluster_id": "MAPLEMOON-LANE-E-APPLY",
+      "path": "_wip/carob-story.WIP.html",
+      "owner": "Codex /root/dedup_risk_audit",
+      "worker_thread_id": "/root/dedup_risk_audit",
+      "status": "held",
+      "approval_class": "nate-decided-mutating-local-wip",
+      "base_state": "present",
+      "base_sha256": "5f83713033166688bd7d77bed8130d97b680d750be2e8796cdb9ed73dce54c1a",
+      "acquired_at": "2026-08-15T21:33:37+10:00",
+      "lease_expires_at": "2026-08-16T09:33:37+10:00",
+      "release_condition": "Lane E receipt passes whole-tree occurrence checks and rendered QA; root Boss records the raw post-hash before release.",
+      "released_by": null,
+      "post_sha256": null,
+      "notes": "All visible and machine-readable occurrences are in scope for enumerated defects; Lane F structural rework remains held."
+    },
+    {
+      "schema_version": 2,
+      "hash_algorithm": "sha256-raw",
+      "packet_id": "MAPLEMOON-LANE-E-APPLY-20260815T213337",
+      "candidate_id": "MAPLEMOON-LANE-E-WIP-CANDIDATE-20260815-001",
+      "cluster_id": "MAPLEMOON-LANE-E-APPLY",
+      "path": "_wip/faq.WIP.html",
+      "owner": "Codex /root/dedup_risk_audit",
+      "worker_thread_id": "/root/dedup_risk_audit",
+      "status": "held",
+      "approval_class": "nate-decided-mutating-local-wip",
+      "base_state": "present",
+      "base_sha256": "139731f9944c5527e4d2d20c6650f4f0739321b3b7fdb93485b244d04fdff45f",
+      "acquired_at": "2026-08-15T21:33:37+10:00",
+      "lease_expires_at": "2026-08-16T09:33:37+10:00",
+      "release_condition": "Lane E receipt passes whole-tree occurrence checks and rendered QA; root Boss records the raw post-hash before release.",
+      "released_by": null,
+      "post_sha256": null,
+      "notes": "Exact FAQ-page changes only; carob-story duplicate FAQ is a separate occurrence and cannot be ignored."
+    },
+    {
+      "schema_version": 2,
+      "hash_algorithm": "sha256-raw",
+      "packet_id": "MAPLEMOON-LANE-E-APPLY-20260815T213337",
+      "candidate_id": "MAPLEMOON-LANE-E-WIP-CANDIDATE-20260815-001",
+      "cluster_id": "MAPLEMOON-LANE-E-APPLY",
+      "path": "_wip/stockists.WIP.html",
+      "owner": "Codex /root/dedup_risk_audit",
+      "worker_thread_id": "/root/dedup_risk_audit",
+      "status": "held",
+      "approval_class": "nate-decided-mutating-local-wip",
+      "base_state": "present",
+      "base_sha256": "8bd2d02e0728c5697408f34ebbf254789c86bfaa955eead6b18afbc9ccfba002",
+      "acquired_at": "2026-08-15T21:33:37+10:00",
+      "lease_expires_at": "2026-08-16T09:33:37+10:00",
+      "release_condition": "Lane E receipt passes whole-tree occurrence checks and rendered QA; root Boss records the raw post-hash before release.",
+      "released_by": null,
+      "post_sha256": null,
+      "notes": "Standing count is 200+. Keep newsletter form but make the demo's non-collecting state visible."
+    }
+  ],
+  "checks": [
+    {
+      "name": "hash:home",
+      "status": "required",
+      "actual": "d097392fc1c6f44c3e3c09024bb7c2e2ea275e215a468dfe76306c6dcf534748",
+      "expected": "d097392fc1c6f44c3e3c09024bb7c2e2ea275e215a468dfe76306c6dcf534748",
+      "result": "PASS"
+    },
+    {
+      "name": "hash:shop",
+      "status": "required",
+      "actual": "b444b0da4f5778f7434c6343854e3cdf48d1a88b038c7863a2ef1d46b5e0cbac",
+      "expected": "b444b0da4f5778f7434c6343854e3cdf48d1a88b038c7863a2ef1d46b5e0cbac",
+      "result": "PASS"
+    },
+    {
+      "name": "hash:our-story",
+      "status": "required",
+      "actual": "f861ae24b6d4cd106402455e1361172be8b769cf0c0f967c17ee8de9a55fed19",
+      "expected": "f861ae24b6d4cd106402455e1361172be8b769cf0c0f967c17ee8de9a55fed19",
+      "result": "PASS"
+    },
+    {
+      "name": "hash:carob-story",
+      "status": "required",
+      "actual": "0ad6ea9bfaacf81d7ee4d7e5ddcf93c2bd77afe3635d575bf7a2c30c8f696e27",
+      "expected": "0ad6ea9bfaacf81d7ee4d7e5ddcf93c2bd77afe3635d575bf7a2c30c8f696e27",
+      "result": "PASS"
+    },
+    {
+      "name": "hash:faq",
+      "status": "required",
+      "actual": "4540ef31a150cb6de8062c2d4d74709f24d13ce45490f8e3c1c9c283c1fdbd56",
+      "expected": "4540ef31a150cb6de8062c2d4d74709f24d13ce45490f8e3c1c9c283c1fdbd56",
+      "result": "PASS"
+    },
+    {
+      "name": "hash:stockists",
+      "status": "required",
+      "actual": "1cc8b4e55c7dc59f6e268222c310ac47d477540caf7540970981726a801b9075",
+      "expected": "1cc8b4e55c7dc59f6e268222c310ac47d477540caf7540970981726a801b9075",
+      "result": "PASS"
+    },
+    {
+      "name": "predecessor-receipt-hash",
+      "status": "required",
+      "actual": "7a4d0e3c97c1cee599774b02300f9e4a96ece019adeb8fe7d84992b15c6f69d7",
+      "expected": "7a4d0e3c97c1cee599774b02300f9e4a96ece019adeb8fe7d84992b15c6f69d7",
+      "result": "PASS"
+    },
+    {
+      "name": "held-lock-count",
+      "status": "required",
+      "actual": 6,
+      "expected": 6,
+      "result": "PASS"
+    },
+    {
+      "name": "held-lock-paths",
+      "status": "required",
+      "actual": [
+        "_wip/carob-story.WIP.html",
+        "_wip/faq.WIP.html",
+        "_wip/homepage_real_1_lead_photo.WIP.html",
+        "_wip/our-story.WIP.html",
+        "_wip/shop.WIP.html",
+        "_wip/stockists.WIP.html"
+      ],
+      "expected": [
+        "_wip/carob-story.WIP.html",
+        "_wip/faq.WIP.html",
+        "_wip/homepage_real_1_lead_photo.WIP.html",
+        "_wip/our-story.WIP.html",
+        "_wip/shop.WIP.html",
+        "_wip/stockists.WIP.html"
+      ],
+      "result": "PASS"
+    },
+    {
+      "name": "held-lock-workers",
+      "status": "required",
+      "actual": [
+        "/root/dedup_risk_audit"
+      ],
+      "expected": [
+        "/root/dedup_risk_audit"
+      ],
+      "result": "PASS"
+    },
+    {
+      "name": "held-lock-statuses",
+      "status": "required",
+      "actual": [
+        "held"
+      ],
+      "expected": [
+        "held"
+      ],
+      "result": "PASS"
+    },
+    {
+      "name": "held-lock-unreleased",
+      "status": "required",
+      "actual": true,
+      "expected": true,
+      "result": "PASS"
+    },
+    {
+      "name": "positive-control:Maple Moon",
+      "status": "required",
+      "actual": 132,
+      "expected": 118,
+      "result": "FAIL"
+    },
+    {
+      "name": "negative-control:sentinel",
+      "status": "required",
+      "actual": 0,
+      "expected": 0,
+      "result": "PASS"
+    },
+    {
+      "name": "no-displayed-197-substitution",
+      "status": "required",
+      "actual": 0,
+      "expected": 0,
+      "result": "PASS"
+    },
+    {
+      "name": "no-v4-elixir-binding",
+      "status": "required",
+      "actual": 0,
+      "expected": 0,
+      "result": "PASS"
+    },
+    {
+      "name": "home-bars-six-approved-order",
+      "status": "required",
+      "actual": [
+        "Coconut & Goji",
+        "Cayenne Chilli",
+        "Pure Carob & Cacao Butter",
+        "Almond & Celtic Salt",
+        "Peppermint & Buckwheat",
+        "Roasted Hazelnut"
+      ],
+      "expected": [
+        "Coconut & Goji",
+        "Cayenne Chilli",
+        "Pure Carob & Cacao Butter",
+        "Almond & Celtic Salt",
+        "Peppermint & Buckwheat",
+        "Roasted Hazelnut"
+      ],
+      "result": "PASS"
+    },
+    {
+      "name": "home-moons-six-approved-order",
+      "status": "required",
+      "actual": [
+        "Coconut & Goji Moon",
+        "Cayenne Moon",
+        "Pure Carob Moon",
+        "Almond Moon",
+        "Peppermint Moon",
+        "Roasted Hazelnut Moon"
+      ],
+      "expected": [
+        "Coconut & Goji Moon",
+        "Cayenne Moon",
+        "Pure Carob Moon",
+        "Almond Moon",
+        "Peppermint Moon",
+        "Roasted Hazelnut Moon"
+      ],
+      "result": "PASS"
+    },
+    {
+      "name": "shop-bars-six-approved-order",
+      "status": "required",
+      "actual": [
+        "Coconut & Goji",
+        "Cayenne Chilli",
+        "Pure Carob & Cacao Butter",
+        "Almond & Celtic Salt",
+        "Peppermint & Buckwheat",
+        "Roasted Hazelnut"
+      ],
+      "expected": [
+        "Coconut & Goji",
+        "Cayenne Chilli",
+        "Pure Carob & Cacao Butter",
+        "Almond & Celtic Salt",
+        "Peppermint & Buckwheat",
+        "Roasted Hazelnut"
+      ],
+      "result": "PASS"
+    },
+    {
+      "name": "shop-moons-six-approved-order",
+      "status": "required",
+      "actual": [
+        "Coconut & Goji Moon",
+        "Cayenne Moon",
+        "Pure Carob Moon",
+        "Almond Moon",
+        "Peppermint Moon",
+        "Roasted Hazelnut Moon"
+      ],
+      "expected": [
+        "Coconut & Goji Moon",
+        "Cayenne Moon",
+        "Pure Carob Moon",
+        "Almond Moon",
+        "Peppermint Moon",
+        "Roasted Hazelnut Moon"
+      ],
+      "result": "PASS"
+    },
+    {
+      "name": "home-demo-product-count",
+      "status": "required",
+      "actual": 15,
+      "expected": 15,
+      "result": "PASS"
+    },
+    {
+      "name": "shop-demo-product-count",
+      "status": "required",
+      "actual": 22,
+      "expected": 22,
+      "result": "PASS"
+    },
+    {
+      "name": "24-product-shopify-catalogue-added",
+      "status": "required",
+      "actual": false,
+      "expected": false,
+      "result": "PASS"
+    },
+    {
+      "name": "home-cart-trigger-source",
+      "status": "required",
+      "actual": 1,
+      "expected": 1,
+      "result": "PASS"
+    },
+    {
+      "name": "shop-cart-add-source",
+      "status": "required",
+      "actual": 2,
+      "expected": 3,
+      "result": "FAIL"
+    },
+    {
+      "name": "shop-cart-subtotal-source",
+      "status": "required",
+      "actual": 2,
+      "expected": 2,
+      "result": "PASS"
+    },
+    {
+      "name": "shop-cart-arithmetic-source",
+      "status": "required",
+      "actual": true,
+      "expected": true,
+      "result": "PASS"
+    }
+  ],
+  "occurrence_checks": [
+    {
+      "name": "old-home-actually",
+      "needle": "<h2 class=\"lux-hd\">What is Carob, <em>actually?</em></h2>",
+      "disposition": "applied",
+      "positive_control": 132,
+      "count": 0,
+      "expected": 0,
+      "hits": [],
+      "result": "PASS"
+    },
+    {
+      "name": "new-home-carob-heading",
+      "needle": "<h2 class=\"lux-hd\">What is Carob?</h2>",
+      "disposition": "applied",
+      "positive_control": 132,
+      "count": 1,
+      "expected": 1,
+      "hits": [
+        "_wip/homepage_real_1_lead_photo.WIP.html:782"
+      ],
+      "result": "PASS"
+    },
+    {
+      "name": "old-home-not-bean-sentence",
+      "needle": "It is not a bean, and it is naturally caffeine free.",
+      "disposition": "applied",
+      "positive_control": 132,
+      "count": 0,
+      "expected": 0,
+      "hits": [],
+      "result": "PASS"
+    },
+    {
+      "name": "old-home-not-bean-fact",
+      "needle": "A pod, not a bean",
+      "disposition": "applied",
+      "positive_control": 132,
+      "count": 0,
+      "expected": 0,
+      "hits": [],
+      "result": "PASS"
+    },
+    {
+      "name": "new-high-in-fibre",
+      "needle": "high in fibre",
+      "disposition": "applied",
+      "positive_control": 132,
+      "count": 2,
+      "expected": 2,
+      "hits": [
+        "_wip/homepage_real_1_lead_photo.WIP.html:784",
+        "_wip/homepage_real_1_lead_photo.WIP.html:786"
+      ],
+      "result": "PASS"
+    },
+    {
+      "name": "old-ritual-heading",
+      "needle": "When do you <em>moon?</em>",
+      "disposition": "applied",
+      "positive_control": 132,
+      "count": 0,
+      "expected": 0,
+      "hits": [],
+      "result": "PASS"
+    },
+    {
+      "name": "new-ritual-heading",
+      "needle": "What is <em>Maple Mooning?</em>",
+      "disposition": "applied",
+      "positive_control": 132,
+      "count": 1,
+      "expected": 1,
+      "hits": [
+        "_wip/homepage_real_1_lead_photo.WIP.html:865"
+      ],
+      "result": "PASS"
+    },
+    {
+      "name": "new-ritual-01",
+      "needle": "<strong>A quiet finish</strong>",
+      "disposition": "applied",
+      "positive_control": 132,
+      "count": 1,
+      "expected": 1,
+      "hits": [
+        "_wip/homepage_real_1_lead_photo.WIP.html:871"
+      ],
+      "result": "PASS"
+    },
+    {
+      "name": "new-ritual-02",
+      "needle": "<strong>A softer pause</strong>",
+      "disposition": "applied",
+      "positive_control": 132,
+      "count": 1,
+      "expected": 1,
+      "hits": [
+        "_wip/homepage_real_1_lead_photo.WIP.html:873"
+      ],
+      "result": "PASS"
+    },
+    {
+      "name": "new-ritual-03",
+      "needle": "<strong>The last cup</strong>",
+      "disposition": "applied",
+      "positive_control": 132,
+      "count": 1,
+      "expected": 1,
+      "hits": [
+        "_wip/homepage_real_1_lead_photo.WIP.html:875"
+      ],
+      "result": "PASS"
+    },
+    {
+      "name": "home-bites-column-absent",
+      "needle": "data-cat=\"eclipseBites\"",
+      "disposition": "applied",
+      "positive_control": 132,
+      "count": 0,
+      "expected": 0,
+      "hits": [],
+      "result": "PASS"
+    },
+    {
+      "name": "home-category-order",
+      "needle": "var CAT_ORDER=['bars','bananas','moons','elixirs'];",
+      "disposition": "applied",
+      "positive_control": 132,
+      "count": 1,
+      "expected": 1,
+      "hits": [
+        "_wip/homepage_real_1_lead_photo.WIP.html:1039"
+      ],
+      "result": "PASS"
+    },
+    {
+      "name": "old-view-range",
+      "needle": "View Range",
+      "disposition": "applied",
+      "positive_control": 132,
+      "count": 0,
+      "expected": 0,
+      "hits": [],
+      "result": "PASS"
+    },
+    {
+      "name": "new-shop-now",
+      "needle": "Shop Now",
+      "disposition": "applied",
+      "positive_control": 132,
+      "count": 2,
+      "expected": 2,
+      "hits": [
+        "_wip/homepage_real_1_lead_photo.WIP.html:770",
+        "_wip/homepage_real_1_lead_photo.WIP.html:1111"
+      ],
+      "result": "PASS"
+    },
+    {
+      "name": "old-range-preview",
+      "needle": "Range preview",
+      "disposition": "applied",
+      "positive_control": 132,
+      "count": 0,
+      "expected": 0,
+      "hits": [],
+      "result": "PASS"
+    },
+    {
+      "name": "new-enquire-details",
+      "needle": "Enquire for details",
+      "disposition": "applied",
+      "positive_control": 132,
+      "count": 7,
+      "expected": 7,
+      "hits": [
+        "_wip/homepage_real_1_lead_photo.WIP.html:1010",
+        "_wip/homepage_real_1_lead_photo.WIP.html:1011",
+        "_wip/homepage_real_1_lead_photo.WIP.html:1080",
+        "_wip/homepage_real_1_lead_photo.WIP.html:1085",
+        "_wip/homepage_real_1_lead_photo.WIP.html:1117",
+        "_wip/homepage_real_1_lead_photo.WIP.html:1121",
+        "_wip/shop.WIP.html:416"
+      ],
+      "result": "PASS"
+    },
+    {
+      "name": "old-slow-roasted",
+      "needle": "slow-roasted",
+      "disposition": "applied",
+      "positive_control": 132,
+      "count": 0,
+      "expected": 0,
+      "hits": [],
+      "result": "PASS"
+    },
+    {
+      "name": "supplier-wording",
+      "needle": "Sourced from the Australian Carob Co. in South Australia, roasted and finely ground there before reaching the kitchen.",
+      "disposition": "applied",
+      "positive_control": 132,
+      "count": 13,
+      "expected": 13,
+      "hits": [
+        "_wip/homepage_real_1_lead_photo.WIP.html:784",
+        "_wip/our-story.WIP.html:12",
+        "_wip/our-story.WIP.html:166",
+        "_wip/our-story.WIP.html:172",
+        "_wip/our-story.WIP.html:238",
+        "_wip/our-story.WIP.html:385",
+        "_wip/carob-story.WIP.html:12",
+        "_wip/carob-story.WIP.html:197",
+        "_wip/carob-story.WIP.html:203",
+        "_wip/carob-story.WIP.html:269",
+        "_wip/carob-story.WIP.html:316",
+        "_wip/faq.WIP.html:97",
+        "_wip/faq.WIP.html:100"
+      ],
+      "result": "PASS"
+    },
+    {
+      "name": "old-small-batches",
+      "needle": "small batches",
+      "disposition": "applied",
+      "positive_control": 132,
+      "count": 0,
+      "expected": 0,
+      "hits": [],
+      "result": "PASS"
+    },
+    {
+      "name": "byron-kitchen",
+      "needle": "The Maple Moon kitchen is in Byron Bay.",
+      "disposition": "applied",
+      "positive_control": 132,
+      "count": 6,
+      "expected": 6,
+      "hits": [
+        "_wip/our-story.WIP.html:12",
+        "_wip/our-story.WIP.html:166",
+        "_wip/our-story.WIP.html:172",
+        "_wip/our-story.WIP.html:238",
+        "_wip/our-story.WIP.html:400",
+        "_wip/carob-story.WIP.html:418"
+      ],
+      "result": "PASS"
+    },
+    {
+      "name": "old-hand-moulded",
+      "needle": "hand-moulded",
+      "disposition": "applied",
+      "positive_control": 132,
+      "count": 0,
+      "expected": 0,
+      "hits": [],
+      "result": "PASS"
+    },
+    {
+      "name": "old-smooth-carob",
+      "needle": "smooth carob",
+      "disposition": "applied",
+      "positive_control": 132,
+      "count": 0,
+      "expected": 0,
+      "hits": [],
+      "result": "PASS"
+    },
+    {
+      "name": "new-nightcap",
+      "needle": "The nightcap with benefits",
+      "disposition": "applied",
+      "positive_control": 132,
+      "count": 2,
+      "expected": 2,
+      "hits": [
+        "_wip/homepage_real_1_lead_photo.WIP.html:978",
+        "_wip/shop.WIP.html:315"
+      ],
+      "result": "PASS"
+    },
+    {
+      "name": "new-pure-moon",
+      "needle": "A crescent of pure carob and cacao butter",
+      "disposition": "applied",
+      "positive_control": 132,
+      "count": 2,
+      "expected": 2,
+      "hits": [
+        "_wip/homepage_real_1_lead_photo.WIP.html:994",
+        "_wip/shop.WIP.html:358"
+      ],
+      "result": "PASS"
+    },
+    {
+      "name": "new-eclipse-section",
+      "needle": "The perfect treats for those that desire a healthy clean creation made with whole ingredients.",
+      "disposition": "applied",
+      "positive_control": 132,
+      "count": 1,
+      "expected": 1,
+      "hits": [
+        "_wip/shop.WIP.html:309"
+      ],
+      "result": "PASS"
+    },
+    {
+      "name": "new-pecan",
+      "needle": "A blend of pecans and dates for a fudgy inside, coated in our pure carob",
+      "disposition": "applied",
+      "positive_control": 132,
+      "count": 1,
+      "expected": 1,
+      "hits": [
+        "_wip/shop.WIP.html:364"
+      ],
+      "result": "PASS"
+    },
+    {
+      "name": "new-goji",
+      "needle": "Two layers for a fruit indulgence. Goji berries, dates and almonds blended together and layered on coconut and cashews.",
+      "disposition": "applied",
+      "positive_control": 132,
+      "count": 1,
+      "expected": 1,
+      "hits": [
+        "_wip/shop.WIP.html:367"
+      ],
+      "result": "PASS"
+    },
+    {
+      "name": "new-bundle",
+      "needle": "Can't decide? Try the range. All 5 bites to satisfy your cravings and curiosity.",
+      "disposition": "applied",
+      "positive_control": 132,
+      "count": 0,
+      "expected": 1,
+      "hits": [],
+      "result": "FAIL"
+    },
+    {
+      "name": "new-pure-elixir",
+      "needle": "A warm carob drink with only two ingredients, naturally sweet and caffeine free.",
+      "disposition": "applied",
+      "positive_control": 132,
+      "count": 2,
+      "expected": 2,
+      "hits": [
+        "_wip/homepage_real_1_lead_photo.WIP.html:1000",
+        "_wip/shop.WIP.html:372"
+      ],
+      "result": "PASS"
+    },
+    {
+      "name": "new-spiced-elixir",
+      "needle": "A warm carob drink with an Ayurvedic inspired spice blend",
+      "disposition": "applied",
+      "positive_control": 132,
+      "count": 2,
+      "expected": 2,
+      "hits": [
+        "_wip/homepage_real_1_lead_photo.WIP.html:1001",
+        "_wip/shop.WIP.html:373"
+      ],
+      "result": "PASS"
+    },
+    {
+      "name": "new-bananas",
+      "needle": "Spray Free Australian Grown Bananas coated in our pure carob for the perfect chewy treat.",
+      "disposition": "applied",
+      "positive_control": 132,
+      "count": 4,
+      "expected": 4,
+      "hits": [
+        "_wip/homepage_real_1_lead_photo.WIP.html:979",
+        "_wip/homepage_real_1_lead_photo.WIP.html:1004",
+        "_wip/shop.WIP.html:321",
+        "_wip/shop.WIP.html:376"
+      ],
+      "result": "PASS"
+    },
+    {
+      "name": "old-comparison-heading",
+      "needle": "An honest comparison",
+      "disposition": "applied",
+      "positive_control": 132,
+      "count": 0,
+      "expected": 0,
+      "hits": [],
+      "result": "PASS"
+    },
+    {
+      "name": "new-comparison-heading",
+      "needle": "The Honest Comparison",
+      "disposition": "applied",
+      "positive_control": 132,
+      "count": 2,
+      "expected": 2,
+      "hits": [
+        "_wip/homepage_real_1_lead_photo.WIP.html:801",
+        "_wip/carob-story.WIP.html:328"
+      ],
+      "result": "PASS"
+    },
+    {
+      "name": "old-carob-table-header",
+      "needle": "<th scope=\"col\" class=\"carob\">Carob</th>",
+      "disposition": "applied",
+      "positive_control": 132,
+      "count": 0,
+      "expected": 0,
+      "hits": [],
+      "result": "PASS"
+    },
+    {
+      "name": "new-carob-table-header",
+      "needle": "Carob / Maple Moon Carob",
+      "disposition": "applied",
+      "positive_control": 132,
+      "count": 4,
+      "expected": 4,
+      "hits": [
+        "_wip/carob-story.WIP.html:340",
+        "_wip/carob-story.WIP.html:342",
+        "_wip/carob-story.WIP.html:343",
+        "_wip/carob-story.WIP.html:344"
+      ],
+      "result": "PASS"
+    },
+    {
+      "name": "removed-our-story-sentence",
+      "needle": "We make carob because we love what it is, not what it stands in for.",
+      "disposition": "applied",
+      "positive_control": 132,
+      "count": 0,
+      "expected": 0,
+      "hits": [],
+      "result": "PASS"
+    },
+    {
+      "name": "new-roast-copy",
+      "needle": "Roasted for depth.",
+      "disposition": "applied",
+      "positive_control": 132,
+      "count": 1,
+      "expected": 1,
+      "hits": [
+        "_wip/carob-story.WIP.html:361"
+      ],
+      "result": "PASS"
+    },
+    {
+      "name": "old-small-batch-process",
+      "needle": "Poured in small batches.",
+      "disposition": "applied",
+      "positive_control": 132,
+      "count": 0,
+      "expected": 0,
+      "hits": [],
+      "result": "PASS"
+    },
+    {
+      "name": "new-signature-result",
+      "needle": "our maple moon signature carob",
+      "disposition": "applied",
+      "positive_control": 132,
+      "count": 1,
+      "expected": 1,
+      "hits": [
+        "_wip/carob-story.WIP.html:363"
+      ],
+      "result": "PASS"
+    },
+    {
+      "name": "old-faq-id",
+      "needle": "is-carob-caffeine-free",
+      "disposition": "applied",
+      "positive_control": 132,
+      "count": 0,
+      "expected": 0,
+      "hits": [],
+      "result": "PASS"
+    },
+    {
+      "name": "new-faq-id",
+      "needle": "does-it-taste-like-chocolate",
+      "disposition": "applied",
+      "positive_control": 132,
+      "count": 1,
+      "expected": 1,
+      "hits": [
+        "_wip/faq.WIP.html:98"
+      ],
+      "result": "PASS"
+    },
+    {
+      "name": "old-pending-policy-id",
+      "needle": "pending-policy-details",
+      "disposition": "applied",
+      "positive_control": 132,
+      "count": 0,
+      "expected": 0,
+      "hits": [],
+      "result": "PASS"
+    },
+    {
+      "name": "new-shipping-link-id",
+      "needle": "shipping-and-returns",
+      "disposition": "applied",
+      "positive_control": 132,
+      "count": 1,
+      "expected": 1,
+      "hits": [
+        "_wip/faq.WIP.html:106"
+      ],
+      "result": "PASS"
+    },
+    {
+      "name": "old-map-heading",
+      "needle": "Illustrative coverage preview",
+      "disposition": "applied",
+      "positive_control": 132,
+      "count": 0,
+      "expected": 0,
+      "hits": [],
+      "result": "PASS"
+    },
+    {
+      "name": "new-map-legend",
+      "needle": "Directory preview only",
+      "disposition": "applied",
+      "positive_control": 132,
+      "count": 1,
+      "expected": 1,
+      "hits": [
+        "_wip/stockists.WIP.html:528"
+      ],
+      "result": "PASS"
+    },
+    {
+      "name": "old-stockist-count",
+      "needle": "150+",
+      "disposition": "applied",
+      "positive_control": 132,
+      "count": 0,
+      "expected": 0,
+      "hits": [],
+      "result": "PASS"
+    },
+    {
+      "name": "standing-stockist-count",
+      "needle": "200+",
+      "disposition": "applied",
+      "positive_control": 132,
+      "count": 7,
+      "expected": 7,
+      "hits": [
+        "_wip/homepage_real_1_lead_photo.WIP.html:905",
+        "_wip/homepage_real_1_lead_photo.WIP.html:947",
+        "_wip/stockists.WIP.html:12",
+        "_wip/stockists.WIP.html:359",
+        "_wip/stockists.WIP.html:365",
+        "_wip/stockists.WIP.html:444",
+        "_wip/stockists.WIP.html:446"
+      ],
+      "result": "PASS"
+    },
+    {
+      "name": "newsletter-notice",
+      "needle": "Demo only. This form does not collect or submit email addresses.",
+      "disposition": "applied",
+      "positive_control": 132,
+      "count": 2,
+      "expected": 2,
+      "hits": [
+        "_wip/homepage_real_1_lead_photo.WIP.html:958",
+        "_wip/stockists.WIP.html:582"
+      ],
+      "result": "PASS"
+    },
+    {
+      "name": "testimonial-natasha",
+      "needle": "Natasha, Sydney",
+      "disposition": "hold-preserved",
+      "positive_control": 132,
+      "count": 1,
+      "expected": 1,
+      "hits": [
+        "_wip/homepage_real_1_lead_photo.WIP.html:908"
+      ],
+      "result": "PASS"
+    },
+    {
+      "name": "testimonial-janice",
+      "needle": "Janice",
+      "disposition": "hold-preserved",
+      "positive_control": 132,
+      "count": 1,
+      "expected": 1,
+      "hits": [
+        "_wip/homepage_real_1_lead_photo.WIP.html:908"
+      ],
+      "result": "PASS"
+    },
+    {
+      "name": "testimonial-acacia",
+      "needle": "Acacia",
+      "disposition": "hold-preserved",
+      "positive_control": 132,
+      "count": 1,
+      "expected": 1,
+      "hits": [
+        "_wip/homepage_real_1_lead_photo.WIP.html:908"
+      ],
+      "result": "PASS"
+    },
+    {
+      "name": "testimonial-hold-notice",
+      "needle": "Consent and final testimonial selection pending before go-live.",
+      "disposition": "hold-preserved",
+      "positive_control": 132,
+      "count": 1,
+      "expected": 1,
+      "hits": [
+        "_wip/homepage_real_1_lead_photo.WIP.html:908"
+      ],
+      "result": "PASS"
+    },
+    {
+      "name": "process-fact-hold",
+      "needle": "Milled with cacao butter.",
+      "disposition": "hold-preserved",
+      "positive_control": 132,
+      "count": 1,
+      "expected": 1,
+      "hits": [
+        "_wip/carob-story.WIP.html:362"
+      ],
+      "result": "PASS"
+    },
+    {
+      "name": "faq-fact-hold",
+      "needle": "Maple Moon mills its carob with cacao butter.",
+      "disposition": "hold-preserved",
+      "positive_control": 132,
+      "count": 1,
+      "expected": 1,
+      "hits": [
+        "_wip/faq.WIP.html:99"
+      ],
+      "result": "PASS"
+    },
+    {
+      "name": "comparison-fact-hold-cacao-sugar",
+      "needle": "Naturally bitter, so it needs added sugar",
+      "disposition": "hold-preserved",
+      "positive_control": 132,
+      "count": 1,
+      "expected": 1,
+      "hits": [
+        "_wip/homepage_real_1_lead_photo.WIP.html:819"
+      ],
+      "result": "PASS"
+    },
+    {
+      "name": "comparison-fact-hold-cacao-caffeine",
+      "needle": "Contains caffeine, late in the day",
+      "disposition": "hold-preserved",
+      "positive_control": 132,
+      "count": 1,
+      "expected": 1,
+      "hits": [
+        "_wip/homepage_real_1_lead_photo.WIP.html:823"
+      ],
+      "result": "PASS"
+    },
+    {
+      "name": "comparison-fact-hold-carob-sugar",
+      "needle": "Sweet from the pod itself, no added sugar",
+      "disposition": "hold-preserved",
+      "positive_control": 132,
+      "count": 1,
+      "expected": 1,
+      "hits": [
+        "_wip/homepage_real_1_lead_photo.WIP.html:840"
+      ],
+      "result": "PASS"
+    },
+    {
+      "name": "comparison-fact-hold-carob-caffeine",
+      "needle": "Naturally caffeine free, any hour you like",
+      "disposition": "hold-preserved",
+      "positive_control": 132,
+      "count": 1,
+      "expected": 1,
+      "hits": [
+        "_wip/homepage_real_1_lead_photo.WIP.html:845"
+      ],
+      "result": "PASS"
+    },
+    {
+      "name": "pure-elixir-binding",
+      "needle": "img:'elixir_plain'",
+      "disposition": "hold-preserved",
+      "positive_control": 132,
+      "count": 2,
+      "expected": 2,
+      "hits": [
+        "_wip/homepage_real_1_lead_photo.WIP.html:1000",
+        "_wip/shop.WIP.html:372"
+      ],
+      "result": "PASS"
+    },
+    {
+      "name": "spiced-elixir-binding",
+      "needle": "img:'elixir_spiced'",
+      "disposition": "hold-preserved",
+      "positive_control": 132,
+      "count": 2,
+      "expected": 2,
+      "hits": [
+        "_wip/homepage_real_1_lead_photo.WIP.html:1001",
+        "_wip/shop.WIP.html:373"
+      ],
+      "result": "PASS"
+    }
+  ],
+  "failures": [
+    {
+      "name": "positive-control:Maple Moon",
+      "status": "required",
+      "actual": 132,
+      "expected": 118,
+      "result": "FAIL"
+    },
+    {
+      "name": "new-bundle",
+      "needle": "Can't decide? Try the range. All 5 bites to satisfy your cravings and curiosity.",
+      "disposition": "applied",
+      "positive_control": 132,
+      "count": 0,
+      "expected": 1,
+      "hits": [],
+      "result": "FAIL"
+    },
+    {
+      "name": "shop-cart-add-source",
+      "status": "required",
+      "actual": 2,
+      "expected": 3,
+      "result": "FAIL"
+    }
+  ],
+  "result": "FAIL"
+}

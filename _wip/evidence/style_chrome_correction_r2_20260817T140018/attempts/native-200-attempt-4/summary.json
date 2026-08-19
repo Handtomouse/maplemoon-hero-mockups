@@ -1,0 +1,19 @@
+{
+  "candidate_changes": [],
+  "client_actions": [],
+  "completed_at": "2026-08-17T04:45:33Z",
+  "deployments": [],
+  "derived_acquisition": {
+    "files": 75,
+    "sha256": "f82dd58eb5d134cce96b8c1a7311e96e39471ccc58f1d6712797c56ff028e389"
+  },
+  "derived_close": {
+    "files": 75,
+    "sha256": "f82dd58eb5d134cce96b8c1a7311e96e39471ccc58f1d6712797c56ff028e389"
+  },
+  "failure": "Chrome 200 outer bounds did not settle: wanted 360x1100, got {'left': 30, 'top': 38, 'width': 500, 'height': 1079, 'windowState': 'normal'}",
+  "git_actions": [],
+  "outcome": "HOLD",
+  "schema": "maplemoon-style-chrome-native-200-r2/v1",
+  "started_at": "2026-08-17T04:44:58Z"
+}

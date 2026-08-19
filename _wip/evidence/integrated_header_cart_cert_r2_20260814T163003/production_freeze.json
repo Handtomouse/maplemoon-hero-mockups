@@ -1,0 +1,17 @@
+{
+  "schema": "maplemoon-production-freeze-proof/v1",
+  "checked_at": "2026-08-14T06:55:31Z",
+  "alias": "https://maplemoonbuild20260813.vercel.app",
+  "immutable_url": "https://maplemoonbuild20260813-7vjf2m50b-handtomouses-projects.vercel.app",
+  "immutable_token": "7vjf2m50b",
+  "deployment_id": "dpl_G2LER2awaqyFtGRCcTserXbNynct",
+  "target": "production",
+  "status": "Ready",
+  "homepage": {
+    "bytes": 208556,
+    "md5": "6197879a5ca9d3ed0452773abc0bbeb4",
+    "nonblank": true
+  },
+  "outcome": "PASS",
+  "mutation_performed": false
+}

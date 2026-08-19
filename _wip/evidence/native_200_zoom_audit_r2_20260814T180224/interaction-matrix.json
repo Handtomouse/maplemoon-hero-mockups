@@ -1,0 +1,2846 @@
+{
+  "expected": 7,
+  "passed": 7,
+  "rows": [
+    {
+      "cart": {
+        "baseline": {
+          "listenerAdds": {
+            "keydown": 2
+          },
+          "listenerRemoves": {},
+          "observerActive": 2,
+          "observerPeak": 2
+        },
+        "cycles": [
+          {
+            "closed": {
+              "ariaHidden": "true",
+              "audit": {
+                "listenerAdds": {
+                  "focusin": 1,
+                  "keydown": 2
+                },
+                "listenerRemoves": {
+                  "focusin": 1
+                },
+                "observerActive": 2,
+                "observerPeak": 3
+              },
+              "backgroundInert": 0,
+              "dialogInert": true,
+              "dialogOpen": false,
+              "restored": true
+            },
+            "closer": "escape",
+            "dynamic_branch_inert": true,
+            "focus": {
+              "beforeInside": true,
+              "remainedInside": true
+            },
+            "opened": {
+              "activeInside": true,
+              "ariaHidden": "false",
+              "audit": {
+                "listenerAdds": {
+                  "focusin": 1,
+                  "keydown": 2
+                },
+                "listenerRemoves": {},
+                "observerActive": 3,
+                "observerPeak": 3
+              },
+              "backgroundAllInert": true,
+              "clientWidth": 390,
+              "dialogInert": false,
+              "dialogOpen": true,
+              "modalLayerTopHit": true,
+              "overlayOpen": true,
+              "overlayPointerEvents": "auto",
+              "scrollWidth": 390,
+              "topHit": {
+                "className": "mm-cart-overlay is-open",
+                "insideDialog": false,
+                "isOverlay": true,
+                "tag": "BUTTON"
+              }
+            },
+            "opener": {
+              "label": "Cart, 0 items",
+              "tag": "BUTTON"
+            },
+            "pointer": null
+          },
+          {
+            "closed": {
+              "ariaHidden": "true",
+              "audit": {
+                "listenerAdds": {
+                  "focusin": 2,
+                  "keydown": 2
+                },
+                "listenerRemoves": {
+                  "focusin": 2
+                },
+                "observerActive": 2,
+                "observerPeak": 3
+              },
+              "backgroundInert": 0,
+              "dialogInert": true,
+              "dialogOpen": false,
+              "restored": true
+            },
+            "closer": "explicit",
+            "dynamic_branch_inert": true,
+            "focus": {
+              "beforeInside": true,
+              "remainedInside": true
+            },
+            "opened": {
+              "activeInside": true,
+              "ariaHidden": "false",
+              "audit": {
+                "listenerAdds": {
+                  "focusin": 2,
+                  "keydown": 2
+                },
+                "listenerRemoves": {
+                  "focusin": 1
+                },
+                "observerActive": 3,
+                "observerPeak": 3
+              },
+              "backgroundAllInert": true,
+              "clientWidth": 390,
+              "dialogInert": false,
+              "dialogOpen": true,
+              "modalLayerTopHit": true,
+              "overlayOpen": true,
+              "overlayPointerEvents": "auto",
+              "scrollWidth": 390,
+              "topHit": {
+                "className": "mm-cart-overlay is-open",
+                "insideDialog": false,
+                "isOverlay": true,
+                "tag": "BUTTON"
+              }
+            },
+            "opener": {
+              "label": "Cart, 0 items",
+              "tag": "BUTTON"
+            },
+            "pointer": null
+          },
+          {
+            "closed": {
+              "ariaHidden": "true",
+              "audit": {
+                "listenerAdds": {
+                  "focusin": 3,
+                  "keydown": 2
+                },
+                "listenerRemoves": {
+                  "focusin": 3
+                },
+                "observerActive": 2,
+                "observerPeak": 3
+              },
+              "backgroundInert": 0,
+              "dialogInert": true,
+              "dialogOpen": false,
+              "restored": true
+            },
+            "closer": "overlay",
+            "dynamic_branch_inert": true,
+            "focus": {
+              "beforeInside": true,
+              "remainedInside": true
+            },
+            "opened": {
+              "activeInside": true,
+              "ariaHidden": "false",
+              "audit": {
+                "listenerAdds": {
+                  "focusin": 3,
+                  "keydown": 2
+                },
+                "listenerRemoves": {
+                  "focusin": 2
+                },
+                "observerActive": 3,
+                "observerPeak": 3
+              },
+              "backgroundAllInert": true,
+              "clientWidth": 390,
+              "dialogInert": false,
+              "dialogOpen": true,
+              "modalLayerTopHit": true,
+              "overlayOpen": true,
+              "overlayPointerEvents": "auto",
+              "scrollWidth": 390,
+              "topHit": {
+                "className": "mm-cart-overlay is-open",
+                "insideDialog": false,
+                "isOverlay": true,
+                "tag": "BUTTON"
+              }
+            },
+            "opener": {
+              "label": "Cart, 0 items",
+              "tag": "BUTTON"
+            },
+            "pointer": {
+              "backgroundClicks": 0,
+              "topInsideDialog": false,
+              "topIsModalLayer": true,
+              "topIsOverlay": true
+            }
+          }
+        ],
+        "final": {
+          "listenerAdds": {
+            "focusin": 3,
+            "keydown": 2
+          },
+          "listenerRemoves": {
+            "focusin": 3
+          },
+          "observerActive": 2,
+          "observerPeak": 3
+        },
+        "focusin_active_delta": 0
+      },
+      "effective_width": 390,
+      "header": {
+        "closed": {
+          "expanded": "false",
+          "primaryHidden": true,
+          "state": "closed",
+          "utilityHidden": true
+        },
+        "escape": {
+          "expanded": "false",
+          "restored": true,
+          "state": "closed",
+          "unexpectedOutsideInert": 0
+        },
+        "focus_trap": {
+          "active": "cart",
+          "backward": true,
+          "forward": true
+        },
+        "opened": {
+          "activeText": "Shop",
+          "bodyOpen": true,
+          "expanded": "true",
+          "outside": [
+            {
+              "inert": true,
+              "tag": "DIV"
+            },
+            {
+              "inert": true,
+              "tag": "VIDEO"
+            },
+            {
+              "inert": true,
+              "tag": "SCRIPT"
+            },
+            {
+              "inert": true,
+              "tag": "DIV"
+            },
+            {
+              "inert": true,
+              "tag": "DIV"
+            },
+            {
+              "inert": true,
+              "tag": "DIV"
+            },
+            {
+              "inert": true,
+              "tag": "DIV"
+            },
+            {
+              "inert": true,
+              "tag": "DIV"
+            },
+            {
+              "inert": true,
+              "tag": "A"
+            },
+            {
+              "inert": true,
+              "tag": "DIV"
+            },
+            {
+              "inert": true,
+              "tag": "DIV"
+            },
+            {
+              "inert": true,
+              "tag": "DIV"
+            },
+            {
+              "inert": true,
+              "tag": "MAIN"
+            },
+            {
+              "inert": true,
+              "tag": "FOOTER"
+            },
+            {
+              "inert": true,
+              "tag": "A"
+            },
+            {
+              "inert": true,
+              "tag": "SCRIPT"
+            },
+            {
+              "inert": true,
+              "tag": "SCRIPT"
+            },
+            {
+              "inert": true,
+              "tag": "SCRIPT"
+            },
+            {
+              "inert": true,
+              "tag": "STYLE"
+            },
+            {
+              "inert": true,
+              "tag": "BUTTON"
+            },
+            {
+              "inert": true,
+              "tag": "SCRIPT"
+            },
+            {
+              "inert": true,
+              "tag": "STYLE"
+            },
+            {
+              "inert": true,
+              "tag": "STYLE"
+            },
+            {
+              "inert": true,
+              "tag": "STYLE"
+            },
+            {
+              "inert": true,
+              "tag": "STYLE"
+            },
+            {
+              "inert": true,
+              "tag": "SCRIPT"
+            },
+            {
+              "inert": true,
+              "tag": "STYLE"
+            },
+            {
+              "inert": true,
+              "tag": "STYLE"
+            },
+            {
+              "inert": true,
+              "tag": "STYLE"
+            },
+            {
+              "inert": true,
+              "tag": "STYLE"
+            },
+            {
+              "inert": true,
+              "tag": "STYLE"
+            },
+            {
+              "inert": true,
+              "tag": "STYLE"
+            },
+            {
+              "inert": true,
+              "tag": "STYLE"
+            },
+            {
+              "inert": true,
+              "tag": "STYLE"
+            },
+            {
+              "inert": true,
+              "tag": "STYLE"
+            },
+            {
+              "inert": true,
+              "tag": "STYLE"
+            },
+            {
+              "inert": true,
+              "tag": "SCRIPT"
+            },
+            {
+              "inert": true,
+              "tag": "STYLE"
+            },
+            {
+              "inert": true,
+              "tag": "STYLE"
+            },
+            {
+              "inert": true,
+              "tag": "STYLE"
+            },
+            {
+              "inert": true,
+              "tag": "SCRIPT"
+            },
+            {
+              "inert": true,
+              "tag": "BUTTON"
+            },
+            {
+              "inert": true,
+              "tag": "SECTION"
+            },
+            {
+              "inert": true,
+              "tag": "DIV"
+            },
+            {
+              "inert": true,
+              "tag": "SCRIPT"
+            },
+            {
+              "inert": true,
+              "tag": "STYLE"
+            },
+            {
+              "inert": true,
+              "tag": "STYLE"
+            },
+            {
+              "inert": true,
+              "tag": "STYLE"
+            },
+            {
+              "inert": true,
+              "tag": "STYLE"
+            }
+          ],
+          "primaryHidden": false,
+          "primaryRect": {
+            "left": 0,
+            "right": 390,
+            "width": 390
+          },
+          "reducedMotion": {
+            "contract": true,
+            "matches": false,
+            "ruleCount": 8
+          },
+          "rowCount": 6,
+          "rows": [
+            {
+              "height": 44,
+              "left": 1,
+              "right": 389,
+              "tag": "a",
+              "text": "Shop",
+              "top": 71,
+              "topHitWithinLink": true
+            },
+            {
+              "height": 44,
+              "left": 1,
+              "right": 389,
+              "tag": "a",
+              "text": "Our Story",
+              "top": 115,
+              "topHitWithinLink": true
+            },
+            {
+              "height": 44,
+              "left": 1,
+              "right": 389,
+              "tag": "a",
+              "text": "What is Carob",
+              "top": 159,
+              "topHitWithinLink": true
+            },
+            {
+              "height": 44,
+              "left": 1,
+              "right": 389,
+              "tag": "a",
+              "text": "Stockists",
+              "top": 202,
+              "topHitWithinLink": true
+            },
+            {
+              "height": 44,
+              "left": 1,
+              "right": 389,
+              "tag": "span",
+              "text": "AUD $",
+              "top": 246,
+              "topHitWithinLink": true
+            },
+            {
+              "height": 44,
+              "left": 1,
+              "right": 389,
+              "tag": "a",
+              "text": "FAQ",
+              "top": 290,
+              "topHitWithinLink": true
+            }
+          ],
+          "state": "open",
+          "utilityHidden": false,
+          "utilityRect": {
+            "left": 0,
+            "right": 390,
+            "width": 390
+          }
+        }
+      },
+      "route": "homepage.html",
+      "verdict": "PASS"
+    },
+    {
+      "cart": {
+        "baseline": {
+          "listenerAdds": {
+            "keydown": 1
+          },
+          "listenerRemoves": {},
+          "observerActive": 0,
+          "observerPeak": 0
+        },
+        "cycles": [
+          {
+            "closed": {
+              "ariaHidden": "true",
+              "audit": {
+                "listenerAdds": {
+                  "focusin": 1,
+                  "keydown": 1
+                },
+                "listenerRemoves": {
+                  "focusin": 1
+                },
+                "observerActive": 0,
+                "observerPeak": 1
+              },
+              "backgroundInert": 0,
+              "dialogInert": true,
+              "dialogOpen": false,
+              "restored": true
+            },
+            "closer": "escape",
+            "dynamic_branch_inert": true,
+            "focus": {
+              "beforeInside": true,
+              "remainedInside": true
+            },
+            "opened": {
+              "activeInside": true,
+              "ariaHidden": "false",
+              "audit": {
+                "listenerAdds": {
+                  "focusin": 1,
+                  "keydown": 1
+                },
+                "listenerRemoves": {},
+                "observerActive": 1,
+                "observerPeak": 1
+              },
+              "backgroundAllInert": true,
+              "clientWidth": 390,
+              "dialogInert": false,
+              "dialogOpen": true,
+              "modalLayerTopHit": true,
+              "overlayOpen": true,
+              "overlayPointerEvents": "auto",
+              "scrollWidth": 390,
+              "topHit": {
+                "className": "mm-cart-overlay is-open",
+                "insideDialog": false,
+                "isOverlay": true,
+                "tag": "BUTTON"
+              }
+            },
+            "opener": {
+              "label": "Cart, 0 items",
+              "tag": "BUTTON"
+            },
+            "pointer": null
+          },
+          {
+            "closed": {
+              "ariaHidden": "true",
+              "audit": {
+                "listenerAdds": {
+                  "focusin": 2,
+                  "keydown": 1
+                },
+                "listenerRemoves": {
+                  "focusin": 2
+                },
+                "observerActive": 0,
+                "observerPeak": 1
+              },
+              "backgroundInert": 0,
+              "dialogInert": true,
+              "dialogOpen": false,
+              "restored": true
+            },
+            "closer": "explicit",
+            "dynamic_branch_inert": true,
+            "focus": {
+              "beforeInside": true,
+              "remainedInside": true
+            },
+            "opened": {
+              "activeInside": true,
+              "ariaHidden": "false",
+              "audit": {
+                "listenerAdds": {
+                  "focusin": 2,
+                  "keydown": 1
+                },
+                "listenerRemoves": {
+                  "focusin": 1
+                },
+                "observerActive": 1,
+                "observerPeak": 1
+              },
+              "backgroundAllInert": true,
+              "clientWidth": 390,
+              "dialogInert": false,
+              "dialogOpen": true,
+              "modalLayerTopHit": true,
+              "overlayOpen": true,
+              "overlayPointerEvents": "auto",
+              "scrollWidth": 390,
+              "topHit": {
+                "className": "mm-cart-overlay is-open",
+                "insideDialog": false,
+                "isOverlay": true,
+                "tag": "BUTTON"
+              }
+            },
+            "opener": {
+              "label": "Cart, 0 items",
+              "tag": "BUTTON"
+            },
+            "pointer": null
+          },
+          {
+            "closed": {
+              "ariaHidden": "true",
+              "audit": {
+                "listenerAdds": {
+                  "focusin": 3,
+                  "keydown": 1
+                },
+                "listenerRemoves": {
+                  "focusin": 3
+                },
+                "observerActive": 0,
+                "observerPeak": 1
+              },
+              "backgroundInert": 0,
+              "dialogInert": true,
+              "dialogOpen": false,
+              "restored": true
+            },
+            "closer": "overlay",
+            "dynamic_branch_inert": true,
+            "focus": {
+              "beforeInside": true,
+              "remainedInside": true
+            },
+            "opened": {
+              "activeInside": true,
+              "ariaHidden": "false",
+              "audit": {
+                "listenerAdds": {
+                  "focusin": 3,
+                  "keydown": 1
+                },
+                "listenerRemoves": {
+                  "focusin": 2
+                },
+                "observerActive": 1,
+                "observerPeak": 1
+              },
+              "backgroundAllInert": true,
+              "clientWidth": 390,
+              "dialogInert": false,
+              "dialogOpen": true,
+              "modalLayerTopHit": true,
+              "overlayOpen": true,
+              "overlayPointerEvents": "auto",
+              "scrollWidth": 390,
+              "topHit": {
+                "className": "mm-cart-overlay is-open",
+                "insideDialog": false,
+                "isOverlay": true,
+                "tag": "BUTTON"
+              }
+            },
+            "opener": {
+              "label": "Cart, 0 items",
+              "tag": "BUTTON"
+            },
+            "pointer": {
+              "backgroundClicks": 0,
+              "topInsideDialog": false,
+              "topIsModalLayer": true,
+              "topIsOverlay": true
+            }
+          }
+        ],
+        "final": {
+          "listenerAdds": {
+            "focusin": 3,
+            "keydown": 1
+          },
+          "listenerRemoves": {
+            "focusin": 3
+          },
+          "observerActive": 0,
+          "observerPeak": 1
+        },
+        "focusin_active_delta": 0
+      },
+      "effective_width": 390,
+      "header": {
+        "closed": {
+          "expanded": "false",
+          "primaryHidden": true,
+          "state": "closed",
+          "utilityHidden": true
+        },
+        "escape": {
+          "expanded": "false",
+          "restored": true,
+          "state": "closed",
+          "unexpectedOutsideInert": 0
+        },
+        "focus_trap": {
+          "active": "cart",
+          "backward": true,
+          "forward": true
+        },
+        "opened": {
+          "activeText": "Shop",
+          "bodyOpen": true,
+          "expanded": "true",
+          "outside": [
+            {
+              "inert": true,
+              "tag": "SECTION"
+            },
+            {
+              "inert": true,
+              "tag": "NAV"
+            },
+            {
+              "inert": true,
+              "tag": "SECTION"
+            },
+            {
+              "inert": true,
+              "tag": "SECTION"
+            },
+            {
+              "inert": true,
+              "tag": "SECTION"
+            },
+            {
+              "inert": true,
+              "tag": "SECTION"
+            },
+            {
+              "inert": true,
+              "tag": "SECTION"
+            },
+            {
+              "inert": true,
+              "tag": "SECTION"
+            },
+            {
+              "inert": true,
+              "tag": "SECTION"
+            },
+            {
+              "inert": true,
+              "tag": "SECTION"
+            },
+            {
+              "inert": true,
+              "tag": "SECTION"
+            },
+            {
+              "inert": true,
+              "tag": "SECTION"
+            },
+            {
+              "inert": true,
+              "tag": "FOOTER"
+            },
+            {
+              "inert": true,
+              "tag": "STYLE"
+            },
+            {
+              "inert": true,
+              "tag": "STYLE"
+            },
+            {
+              "inert": true,
+              "tag": "STYLE"
+            },
+            {
+              "inert": true,
+              "tag": "STYLE"
+            },
+            {
+              "inert": true,
+              "tag": "SCRIPT"
+            },
+            {
+              "inert": true,
+              "tag": "BUTTON"
+            },
+            {
+              "inert": true,
+              "tag": "SECTION"
+            },
+            {
+              "inert": true,
+              "tag": "DIV"
+            }
+          ],
+          "primaryHidden": false,
+          "primaryRect": {
+            "left": 0,
+            "right": 390,
+            "width": 390
+          },
+          "reducedMotion": {
+            "contract": true,
+            "matches": false,
+            "ruleCount": 5
+          },
+          "rowCount": 6,
+          "rows": [
+            {
+              "height": 44,
+              "left": 1,
+              "right": 389,
+              "tag": "a",
+              "text": "Shop",
+              "top": 71,
+              "topHitWithinLink": true
+            },
+            {
+              "height": 44,
+              "left": 1,
+              "right": 389,
+              "tag": "a",
+              "text": "Our Story",
+              "top": 115,
+              "topHitWithinLink": true
+            },
+            {
+              "height": 44,
+              "left": 1,
+              "right": 389,
+              "tag": "a",
+              "text": "What is Carob",
+              "top": 159,
+              "topHitWithinLink": true
+            },
+            {
+              "height": 44,
+              "left": 1,
+              "right": 389,
+              "tag": "a",
+              "text": "Stockists",
+              "top": 202,
+              "topHitWithinLink": true
+            },
+            {
+              "height": 44,
+              "left": 1,
+              "right": 389,
+              "tag": "span",
+              "text": "AUD $",
+              "top": 246,
+              "topHitWithinLink": true
+            },
+            {
+              "height": 44,
+              "left": 1,
+              "right": 389,
+              "tag": "a",
+              "text": "FAQ",
+              "top": 290,
+              "topHitWithinLink": true
+            }
+          ],
+          "state": "open",
+          "utilityHidden": false,
+          "utilityRect": {
+            "left": 0,
+            "right": 390,
+            "width": 390
+          }
+        }
+      },
+      "route": "our-story.html",
+      "verdict": "PASS"
+    },
+    {
+      "cart": {
+        "baseline": {
+          "listenerAdds": {
+            "keydown": 1
+          },
+          "listenerRemoves": {},
+          "observerActive": 0,
+          "observerPeak": 0
+        },
+        "cycles": [
+          {
+            "closed": {
+              "ariaHidden": "true",
+              "audit": {
+                "listenerAdds": {
+                  "focusin": 1,
+                  "keydown": 1
+                },
+                "listenerRemoves": {
+                  "focusin": 1
+                },
+                "observerActive": 0,
+                "observerPeak": 1
+              },
+              "backgroundInert": 0,
+              "dialogInert": true,
+              "dialogOpen": false,
+              "restored": true
+            },
+            "closer": "escape",
+            "dynamic_branch_inert": true,
+            "focus": {
+              "beforeInside": true,
+              "remainedInside": true
+            },
+            "opened": {
+              "activeInside": true,
+              "ariaHidden": "false",
+              "audit": {
+                "listenerAdds": {
+                  "focusin": 1,
+                  "keydown": 1
+                },
+                "listenerRemoves": {},
+                "observerActive": 1,
+                "observerPeak": 1
+              },
+              "backgroundAllInert": true,
+              "clientWidth": 390,
+              "dialogInert": false,
+              "dialogOpen": true,
+              "modalLayerTopHit": true,
+              "overlayOpen": true,
+              "overlayPointerEvents": "auto",
+              "scrollWidth": 390,
+              "topHit": {
+                "className": "mm-cart-overlay is-open",
+                "insideDialog": false,
+                "isOverlay": true,
+                "tag": "BUTTON"
+              }
+            },
+            "opener": {
+              "label": "Cart, 0 items",
+              "tag": "BUTTON"
+            },
+            "pointer": null
+          },
+          {
+            "closed": {
+              "ariaHidden": "true",
+              "audit": {
+                "listenerAdds": {
+                  "focusin": 2,
+                  "keydown": 1
+                },
+                "listenerRemoves": {
+                  "focusin": 2
+                },
+                "observerActive": 0,
+                "observerPeak": 1
+              },
+              "backgroundInert": 0,
+              "dialogInert": true,
+              "dialogOpen": false,
+              "restored": true
+            },
+            "closer": "explicit",
+            "dynamic_branch_inert": true,
+            "focus": {
+              "beforeInside": true,
+              "remainedInside": true
+            },
+            "opened": {
+              "activeInside": true,
+              "ariaHidden": "false",
+              "audit": {
+                "listenerAdds": {
+                  "focusin": 2,
+                  "keydown": 1
+                },
+                "listenerRemoves": {
+                  "focusin": 1
+                },
+                "observerActive": 1,
+                "observerPeak": 1
+              },
+              "backgroundAllInert": true,
+              "clientWidth": 390,
+              "dialogInert": false,
+              "dialogOpen": true,
+              "modalLayerTopHit": true,
+              "overlayOpen": true,
+              "overlayPointerEvents": "auto",
+              "scrollWidth": 390,
+              "topHit": {
+                "className": "mm-cart-overlay is-open",
+                "insideDialog": false,
+                "isOverlay": true,
+                "tag": "BUTTON"
+              }
+            },
+            "opener": {
+              "label": "Cart, 0 items",
+              "tag": "BUTTON"
+            },
+            "pointer": null
+          },
+          {
+            "closed": {
+              "ariaHidden": "true",
+              "audit": {
+                "listenerAdds": {
+                  "focusin": 3,
+                  "keydown": 1
+                },
+                "listenerRemoves": {
+                  "focusin": 3
+                },
+                "observerActive": 0,
+                "observerPeak": 1
+              },
+              "backgroundInert": 0,
+              "dialogInert": true,
+              "dialogOpen": false,
+              "restored": true
+            },
+            "closer": "overlay",
+            "dynamic_branch_inert": true,
+            "focus": {
+              "beforeInside": true,
+              "remainedInside": true
+            },
+            "opened": {
+              "activeInside": true,
+              "ariaHidden": "false",
+              "audit": {
+                "listenerAdds": {
+                  "focusin": 3,
+                  "keydown": 1
+                },
+                "listenerRemoves": {
+                  "focusin": 2
+                },
+                "observerActive": 1,
+                "observerPeak": 1
+              },
+              "backgroundAllInert": true,
+              "clientWidth": 390,
+              "dialogInert": false,
+              "dialogOpen": true,
+              "modalLayerTopHit": true,
+              "overlayOpen": true,
+              "overlayPointerEvents": "auto",
+              "scrollWidth": 390,
+              "topHit": {
+                "className": "mm-cart-overlay is-open",
+                "insideDialog": false,
+                "isOverlay": true,
+                "tag": "BUTTON"
+              }
+            },
+            "opener": {
+              "label": "Cart, 0 items",
+              "tag": "BUTTON"
+            },
+            "pointer": {
+              "backgroundClicks": 0,
+              "topInsideDialog": false,
+              "topIsModalLayer": true,
+              "topIsOverlay": true
+            }
+          }
+        ],
+        "final": {
+          "listenerAdds": {
+            "focusin": 3,
+            "keydown": 1
+          },
+          "listenerRemoves": {
+            "focusin": 3
+          },
+          "observerActive": 0,
+          "observerPeak": 1
+        },
+        "focusin_active_delta": 0
+      },
+      "effective_width": 390,
+      "header": {
+        "closed": {
+          "expanded": "false",
+          "primaryHidden": true,
+          "state": "closed",
+          "utilityHidden": true
+        },
+        "escape": {
+          "expanded": "false",
+          "restored": true,
+          "state": "closed",
+          "unexpectedOutsideInert": 0
+        },
+        "focus_trap": {
+          "active": "cart",
+          "backward": true,
+          "forward": true
+        },
+        "opened": {
+          "activeText": "Shop",
+          "bodyOpen": true,
+          "expanded": "true",
+          "outside": [
+            {
+              "inert": true,
+              "tag": "A"
+            },
+            {
+              "inert": true,
+              "tag": "DIV"
+            },
+            {
+              "inert": true,
+              "tag": "DIV"
+            },
+            {
+              "inert": true,
+              "tag": "DIV"
+            },
+            {
+              "inert": true,
+              "tag": "MAIN"
+            },
+            {
+              "inert": true,
+              "tag": "FOOTER"
+            },
+            {
+              "inert": true,
+              "tag": "STYLE"
+            },
+            {
+              "inert": true,
+              "tag": "STYLE"
+            },
+            {
+              "inert": true,
+              "tag": "STYLE"
+            },
+            {
+              "inert": true,
+              "tag": "STYLE"
+            },
+            {
+              "inert": true,
+              "tag": "STYLE"
+            },
+            {
+              "inert": true,
+              "tag": "STYLE"
+            },
+            {
+              "inert": true,
+              "tag": "STYLE"
+            },
+            {
+              "inert": true,
+              "tag": "SCRIPT"
+            },
+            {
+              "inert": true,
+              "tag": "BUTTON"
+            },
+            {
+              "inert": true,
+              "tag": "SECTION"
+            },
+            {
+              "inert": true,
+              "tag": "DIV"
+            }
+          ],
+          "primaryHidden": false,
+          "primaryRect": {
+            "left": 0,
+            "right": 390,
+            "width": 390
+          },
+          "reducedMotion": {
+            "contract": true,
+            "matches": false,
+            "ruleCount": 6
+          },
+          "rowCount": 6,
+          "rows": [
+            {
+              "height": 44,
+              "left": 1,
+              "right": 389,
+              "tag": "a",
+              "text": "Shop",
+              "top": 71,
+              "topHitWithinLink": true
+            },
+            {
+              "height": 44,
+              "left": 1,
+              "right": 389,
+              "tag": "a",
+              "text": "Our Story",
+              "top": 115,
+              "topHitWithinLink": true
+            },
+            {
+              "height": 44,
+              "left": 1,
+              "right": 389,
+              "tag": "a",
+              "text": "What is Carob",
+              "top": 159,
+              "topHitWithinLink": true
+            },
+            {
+              "height": 44,
+              "left": 1,
+              "right": 389,
+              "tag": "a",
+              "text": "Stockists",
+              "top": 202,
+              "topHitWithinLink": true
+            },
+            {
+              "height": 44,
+              "left": 1,
+              "right": 389,
+              "tag": "span",
+              "text": "AUD $",
+              "top": 246,
+              "topHitWithinLink": true
+            },
+            {
+              "height": 44,
+              "left": 1,
+              "right": 389,
+              "tag": "a",
+              "text": "FAQ",
+              "top": 290,
+              "topHitWithinLink": true
+            }
+          ],
+          "state": "open",
+          "utilityHidden": false,
+          "utilityRect": {
+            "left": 0,
+            "right": 390,
+            "width": 390
+          }
+        }
+      },
+      "route": "carob-story.html",
+      "verdict": "PASS"
+    },
+    {
+      "cart": {
+        "baseline": {
+          "listenerAdds": {
+            "keydown": 1
+          },
+          "listenerRemoves": {},
+          "observerActive": 2,
+          "observerPeak": 2
+        },
+        "cycles": [
+          {
+            "closed": {
+              "ariaHidden": "true",
+              "audit": {
+                "listenerAdds": {
+                  "focusin": 1,
+                  "keydown": 1
+                },
+                "listenerRemoves": {
+                  "focusin": 1
+                },
+                "observerActive": 2,
+                "observerPeak": 3
+              },
+              "backgroundInert": 0,
+              "dialogInert": true,
+              "dialogOpen": false,
+              "restored": true
+            },
+            "closer": "escape",
+            "dynamic_branch_inert": true,
+            "focus": {
+              "beforeInside": true,
+              "remainedInside": true
+            },
+            "opened": {
+              "activeInside": true,
+              "ariaHidden": "false",
+              "audit": {
+                "listenerAdds": {
+                  "focusin": 1,
+                  "keydown": 1
+                },
+                "listenerRemoves": {},
+                "observerActive": 3,
+                "observerPeak": 3
+              },
+              "backgroundAllInert": true,
+              "clientWidth": 390,
+              "dialogInert": false,
+              "dialogOpen": true,
+              "modalLayerTopHit": true,
+              "overlayOpen": true,
+              "overlayPointerEvents": "auto",
+              "scrollWidth": 390,
+              "topHit": {
+                "className": "mm-cart-overlay is-open",
+                "insideDialog": false,
+                "isOverlay": true,
+                "tag": "BUTTON"
+              }
+            },
+            "opener": {
+              "label": "Cart, 0 items",
+              "tag": "BUTTON"
+            },
+            "pointer": null
+          },
+          {
+            "closed": {
+              "ariaHidden": "true",
+              "audit": {
+                "listenerAdds": {
+                  "focusin": 2,
+                  "keydown": 1
+                },
+                "listenerRemoves": {
+                  "focusin": 2
+                },
+                "observerActive": 2,
+                "observerPeak": 3
+              },
+              "backgroundInert": 0,
+              "dialogInert": true,
+              "dialogOpen": false,
+              "restored": true
+            },
+            "closer": "explicit",
+            "dynamic_branch_inert": true,
+            "focus": {
+              "beforeInside": true,
+              "remainedInside": true
+            },
+            "opened": {
+              "activeInside": true,
+              "ariaHidden": "false",
+              "audit": {
+                "listenerAdds": {
+                  "focusin": 2,
+                  "keydown": 1
+                },
+                "listenerRemoves": {
+                  "focusin": 1
+                },
+                "observerActive": 3,
+                "observerPeak": 3
+              },
+              "backgroundAllInert": true,
+              "clientWidth": 390,
+              "dialogInert": false,
+              "dialogOpen": true,
+              "modalLayerTopHit": true,
+              "overlayOpen": true,
+              "overlayPointerEvents": "auto",
+              "scrollWidth": 390,
+              "topHit": {
+                "className": "mm-cart-overlay is-open",
+                "insideDialog": false,
+                "isOverlay": true,
+                "tag": "BUTTON"
+              }
+            },
+            "opener": {
+              "label": "Cart, 0 items",
+              "tag": "BUTTON"
+            },
+            "pointer": null
+          },
+          {
+            "closed": {
+              "ariaHidden": "true",
+              "audit": {
+                "listenerAdds": {
+                  "focusin": 3,
+                  "keydown": 1
+                },
+                "listenerRemoves": {
+                  "focusin": 3
+                },
+                "observerActive": 2,
+                "observerPeak": 3
+              },
+              "backgroundInert": 0,
+              "dialogInert": true,
+              "dialogOpen": false,
+              "restored": true
+            },
+            "closer": "overlay",
+            "dynamic_branch_inert": true,
+            "focus": {
+              "beforeInside": true,
+              "remainedInside": true
+            },
+            "opened": {
+              "activeInside": true,
+              "ariaHidden": "false",
+              "audit": {
+                "listenerAdds": {
+                  "focusin": 3,
+                  "keydown": 1
+                },
+                "listenerRemoves": {
+                  "focusin": 2
+                },
+                "observerActive": 3,
+                "observerPeak": 3
+              },
+              "backgroundAllInert": true,
+              "clientWidth": 390,
+              "dialogInert": false,
+              "dialogOpen": true,
+              "modalLayerTopHit": true,
+              "overlayOpen": true,
+              "overlayPointerEvents": "auto",
+              "scrollWidth": 390,
+              "topHit": {
+                "className": "mm-cart-overlay is-open",
+                "insideDialog": false,
+                "isOverlay": true,
+                "tag": "BUTTON"
+              }
+            },
+            "opener": {
+              "label": "Cart, 0 items",
+              "tag": "BUTTON"
+            },
+            "pointer": {
+              "backgroundClicks": 0,
+              "topInsideDialog": false,
+              "topIsModalLayer": true,
+              "topIsOverlay": true
+            }
+          }
+        ],
+        "final": {
+          "listenerAdds": {
+            "focusin": 3,
+            "keydown": 1
+          },
+          "listenerRemoves": {
+            "focusin": 3
+          },
+          "observerActive": 2,
+          "observerPeak": 3
+        },
+        "focusin_active_delta": 0
+      },
+      "effective_width": 390,
+      "header": {
+        "closed": {
+          "expanded": "false",
+          "primaryHidden": true,
+          "state": "closed",
+          "utilityHidden": true
+        },
+        "escape": {
+          "expanded": "false",
+          "restored": true,
+          "state": "closed",
+          "unexpectedOutsideInert": 0
+        },
+        "focus_trap": {
+          "active": "cart",
+          "backward": true,
+          "forward": true
+        },
+        "opened": {
+          "activeText": "Shop",
+          "bodyOpen": true,
+          "expanded": "true",
+          "outside": [
+            {
+              "inert": true,
+              "tag": "DIV"
+            },
+            {
+              "inert": true,
+              "tag": "DIV"
+            },
+            {
+              "inert": true,
+              "tag": "DIV"
+            },
+            {
+              "inert": true,
+              "tag": "A"
+            },
+            {
+              "inert": true,
+              "tag": "MAIN"
+            },
+            {
+              "inert": true,
+              "tag": "FOOTER"
+            },
+            {
+              "inert": true,
+              "tag": "SCRIPT"
+            },
+            {
+              "inert": true,
+              "tag": "STYLE"
+            },
+            {
+              "inert": true,
+              "tag": "SCRIPT"
+            },
+            {
+              "inert": true,
+              "tag": "BUTTON"
+            },
+            {
+              "inert": true,
+              "tag": "SECTION"
+            },
+            {
+              "inert": true,
+              "tag": "DIV"
+            },
+            {
+              "inert": true,
+              "tag": "STYLE"
+            }
+          ],
+          "primaryHidden": false,
+          "primaryRect": {
+            "left": 0,
+            "right": 390,
+            "width": 390
+          },
+          "reducedMotion": {
+            "contract": true,
+            "matches": false,
+            "ruleCount": 6
+          },
+          "rowCount": 6,
+          "rows": [
+            {
+              "height": 44,
+              "left": 1,
+              "right": 389,
+              "tag": "a",
+              "text": "Shop",
+              "top": 71,
+              "topHitWithinLink": true
+            },
+            {
+              "height": 44,
+              "left": 1,
+              "right": 389,
+              "tag": "a",
+              "text": "Our Story",
+              "top": 115,
+              "topHitWithinLink": true
+            },
+            {
+              "height": 44,
+              "left": 1,
+              "right": 389,
+              "tag": "a",
+              "text": "What is Carob",
+              "top": 159,
+              "topHitWithinLink": true
+            },
+            {
+              "height": 44,
+              "left": 1,
+              "right": 389,
+              "tag": "a",
+              "text": "Stockists",
+              "top": 202,
+              "topHitWithinLink": true
+            },
+            {
+              "height": 44,
+              "left": 1,
+              "right": 389,
+              "tag": "span",
+              "text": "AUD $",
+              "top": 246,
+              "topHitWithinLink": true
+            },
+            {
+              "height": 44,
+              "left": 1,
+              "right": 389,
+              "tag": "a",
+              "text": "FAQ",
+              "top": 290,
+              "topHitWithinLink": true
+            }
+          ],
+          "state": "open",
+          "utilityHidden": false,
+          "utilityRect": {
+            "left": 0,
+            "right": 390,
+            "width": 390
+          }
+        }
+      },
+      "route": "shop.html",
+      "verdict": "PASS"
+    },
+    {
+      "cart": {
+        "baseline": {
+          "listenerAdds": {
+            "keydown": 1
+          },
+          "listenerRemoves": {},
+          "observerActive": 1,
+          "observerPeak": 1
+        },
+        "cycles": [
+          {
+            "closed": {
+              "ariaHidden": "true",
+              "audit": {
+                "listenerAdds": {
+                  "focusin": 1,
+                  "keydown": 1
+                },
+                "listenerRemoves": {
+                  "focusin": 1
+                },
+                "observerActive": 1,
+                "observerPeak": 2
+              },
+              "backgroundInert": 0,
+              "dialogInert": true,
+              "dialogOpen": false,
+              "restored": true
+            },
+            "closer": "escape",
+            "dynamic_branch_inert": true,
+            "focus": {
+              "beforeInside": true,
+              "remainedInside": true
+            },
+            "opened": {
+              "activeInside": true,
+              "ariaHidden": "false",
+              "audit": {
+                "listenerAdds": {
+                  "focusin": 1,
+                  "keydown": 1
+                },
+                "listenerRemoves": {},
+                "observerActive": 2,
+                "observerPeak": 2
+              },
+              "backgroundAllInert": true,
+              "clientWidth": 390,
+              "dialogInert": false,
+              "dialogOpen": true,
+              "modalLayerTopHit": true,
+              "overlayOpen": true,
+              "overlayPointerEvents": "auto",
+              "scrollWidth": 390,
+              "topHit": {
+                "className": "mm-cart-overlay is-open",
+                "insideDialog": false,
+                "isOverlay": true,
+                "tag": "BUTTON"
+              }
+            },
+            "opener": {
+              "label": "Cart, 0 items",
+              "tag": "BUTTON"
+            },
+            "pointer": null
+          },
+          {
+            "closed": {
+              "ariaHidden": "true",
+              "audit": {
+                "listenerAdds": {
+                  "focusin": 2,
+                  "keydown": 1
+                },
+                "listenerRemoves": {
+                  "focusin": 2
+                },
+                "observerActive": 1,
+                "observerPeak": 2
+              },
+              "backgroundInert": 0,
+              "dialogInert": true,
+              "dialogOpen": false,
+              "restored": true
+            },
+            "closer": "explicit",
+            "dynamic_branch_inert": true,
+            "focus": {
+              "beforeInside": true,
+              "remainedInside": true
+            },
+            "opened": {
+              "activeInside": true,
+              "ariaHidden": "false",
+              "audit": {
+                "listenerAdds": {
+                  "focusin": 2,
+                  "keydown": 1
+                },
+                "listenerRemoves": {
+                  "focusin": 1
+                },
+                "observerActive": 2,
+                "observerPeak": 2
+              },
+              "backgroundAllInert": true,
+              "clientWidth": 390,
+              "dialogInert": false,
+              "dialogOpen": true,
+              "modalLayerTopHit": true,
+              "overlayOpen": true,
+              "overlayPointerEvents": "auto",
+              "scrollWidth": 390,
+              "topHit": {
+                "className": "mm-cart-overlay is-open",
+                "insideDialog": false,
+                "isOverlay": true,
+                "tag": "BUTTON"
+              }
+            },
+            "opener": {
+              "label": "Cart, 0 items",
+              "tag": "BUTTON"
+            },
+            "pointer": null
+          },
+          {
+            "closed": {
+              "ariaHidden": "true",
+              "audit": {
+                "listenerAdds": {
+                  "focusin": 3,
+                  "keydown": 1
+                },
+                "listenerRemoves": {
+                  "focusin": 3
+                },
+                "observerActive": 1,
+                "observerPeak": 2
+              },
+              "backgroundInert": 0,
+              "dialogInert": true,
+              "dialogOpen": false,
+              "restored": true
+            },
+            "closer": "overlay",
+            "dynamic_branch_inert": true,
+            "focus": {
+              "beforeInside": true,
+              "remainedInside": true
+            },
+            "opened": {
+              "activeInside": true,
+              "ariaHidden": "false",
+              "audit": {
+                "listenerAdds": {
+                  "focusin": 3,
+                  "keydown": 1
+                },
+                "listenerRemoves": {
+                  "focusin": 2
+                },
+                "observerActive": 2,
+                "observerPeak": 2
+              },
+              "backgroundAllInert": true,
+              "clientWidth": 390,
+              "dialogInert": false,
+              "dialogOpen": true,
+              "modalLayerTopHit": true,
+              "overlayOpen": true,
+              "overlayPointerEvents": "auto",
+              "scrollWidth": 390,
+              "topHit": {
+                "className": "mm-cart-overlay is-open",
+                "insideDialog": false,
+                "isOverlay": true,
+                "tag": "BUTTON"
+              }
+            },
+            "opener": {
+              "label": "Cart, 0 items",
+              "tag": "BUTTON"
+            },
+            "pointer": {
+              "backgroundClicks": 0,
+              "topInsideDialog": false,
+              "topIsModalLayer": true,
+              "topIsOverlay": true
+            }
+          }
+        ],
+        "final": {
+          "listenerAdds": {
+            "focusin": 3,
+            "keydown": 1
+          },
+          "listenerRemoves": {
+            "focusin": 3
+          },
+          "observerActive": 1,
+          "observerPeak": 2
+        },
+        "focusin_active_delta": 0
+      },
+      "effective_width": 390,
+      "header": {
+        "closed": {
+          "expanded": "false",
+          "primaryHidden": true,
+          "state": "closed",
+          "utilityHidden": true
+        },
+        "escape": {
+          "expanded": "false",
+          "restored": true,
+          "state": "closed",
+          "unexpectedOutsideInert": 0
+        },
+        "focus_trap": {
+          "active": "cart",
+          "backward": true,
+          "forward": true
+        },
+        "opened": {
+          "activeText": "Shop",
+          "bodyOpen": true,
+          "expanded": "true",
+          "outside": [
+            {
+              "inert": true,
+              "tag": "MAIN"
+            },
+            {
+              "inert": true,
+              "tag": "FOOTER"
+            },
+            {
+              "inert": true,
+              "tag": "A"
+            },
+            {
+              "inert": true,
+              "tag": "SCRIPT"
+            },
+            {
+              "inert": true,
+              "tag": "SCRIPT"
+            },
+            {
+              "inert": true,
+              "tag": "BUTTON"
+            },
+            {
+              "inert": true,
+              "tag": "SECTION"
+            },
+            {
+              "inert": true,
+              "tag": "DIV"
+            }
+          ],
+          "primaryHidden": false,
+          "primaryRect": {
+            "left": 0,
+            "right": 390,
+            "width": 390
+          },
+          "reducedMotion": {
+            "contract": true,
+            "matches": false,
+            "ruleCount": 6
+          },
+          "rowCount": 6,
+          "rows": [
+            {
+              "height": 44,
+              "left": 1,
+              "right": 389,
+              "tag": "a",
+              "text": "Shop",
+              "top": 63,
+              "topHitWithinLink": true
+            },
+            {
+              "height": 44,
+              "left": 1,
+              "right": 389,
+              "tag": "a",
+              "text": "Our Story",
+              "top": 107,
+              "topHitWithinLink": true
+            },
+            {
+              "height": 44,
+              "left": 1,
+              "right": 389,
+              "tag": "a",
+              "text": "What is Carob",
+              "top": 151,
+              "topHitWithinLink": true
+            },
+            {
+              "height": 44,
+              "left": 1,
+              "right": 389,
+              "tag": "a",
+              "text": "Stockists",
+              "top": 194,
+              "topHitWithinLink": true
+            },
+            {
+              "height": 44,
+              "left": 1,
+              "right": 389,
+              "tag": "span",
+              "text": "AUD $",
+              "top": 238,
+              "topHitWithinLink": true
+            },
+            {
+              "height": 44,
+              "left": 1,
+              "right": 389,
+              "tag": "a",
+              "text": "FAQ",
+              "top": 282,
+              "topHitWithinLink": true
+            }
+          ],
+          "state": "open",
+          "utilityHidden": false,
+          "utilityRect": {
+            "left": 0,
+            "right": 390,
+            "width": 390
+          }
+        }
+      },
+      "route": "faq.html",
+      "verdict": "PASS"
+    },
+    {
+      "cart": {
+        "baseline": {
+          "listenerAdds": {
+            "keydown": 1
+          },
+          "listenerRemoves": {},
+          "observerActive": 1,
+          "observerPeak": 1
+        },
+        "cycles": [
+          {
+            "closed": {
+              "ariaHidden": "true",
+              "audit": {
+                "listenerAdds": {
+                  "focusin": 1,
+                  "keydown": 1
+                },
+                "listenerRemoves": {
+                  "focusin": 1
+                },
+                "observerActive": 1,
+                "observerPeak": 2
+              },
+              "backgroundInert": 0,
+              "dialogInert": true,
+              "dialogOpen": false,
+              "restored": true
+            },
+            "closer": "escape",
+            "dynamic_branch_inert": true,
+            "focus": {
+              "beforeInside": true,
+              "remainedInside": true
+            },
+            "opened": {
+              "activeInside": true,
+              "ariaHidden": "false",
+              "audit": {
+                "listenerAdds": {
+                  "focusin": 1,
+                  "keydown": 1
+                },
+                "listenerRemoves": {},
+                "observerActive": 2,
+                "observerPeak": 2
+              },
+              "backgroundAllInert": true,
+              "clientWidth": 390,
+              "dialogInert": false,
+              "dialogOpen": true,
+              "modalLayerTopHit": true,
+              "overlayOpen": true,
+              "overlayPointerEvents": "auto",
+              "scrollWidth": 390,
+              "topHit": {
+                "className": "mm-cart-overlay is-open",
+                "insideDialog": false,
+                "isOverlay": true,
+                "tag": "BUTTON"
+              }
+            },
+            "opener": {
+              "label": "Cart, 0 items",
+              "tag": "BUTTON"
+            },
+            "pointer": null
+          },
+          {
+            "closed": {
+              "ariaHidden": "true",
+              "audit": {
+                "listenerAdds": {
+                  "focusin": 2,
+                  "keydown": 1
+                },
+                "listenerRemoves": {
+                  "focusin": 2
+                },
+                "observerActive": 1,
+                "observerPeak": 2
+              },
+              "backgroundInert": 0,
+              "dialogInert": true,
+              "dialogOpen": false,
+              "restored": true
+            },
+            "closer": "explicit",
+            "dynamic_branch_inert": true,
+            "focus": {
+              "beforeInside": true,
+              "remainedInside": true
+            },
+            "opened": {
+              "activeInside": true,
+              "ariaHidden": "false",
+              "audit": {
+                "listenerAdds": {
+                  "focusin": 2,
+                  "keydown": 1
+                },
+                "listenerRemoves": {
+                  "focusin": 1
+                },
+                "observerActive": 2,
+                "observerPeak": 2
+              },
+              "backgroundAllInert": true,
+              "clientWidth": 390,
+              "dialogInert": false,
+              "dialogOpen": true,
+              "modalLayerTopHit": true,
+              "overlayOpen": true,
+              "overlayPointerEvents": "auto",
+              "scrollWidth": 390,
+              "topHit": {
+                "className": "mm-cart-overlay is-open",
+                "insideDialog": false,
+                "isOverlay": true,
+                "tag": "BUTTON"
+              }
+            },
+            "opener": {
+              "label": "Cart, 0 items",
+              "tag": "BUTTON"
+            },
+            "pointer": null
+          },
+          {
+            "closed": {
+              "ariaHidden": "true",
+              "audit": {
+                "listenerAdds": {
+                  "focusin": 3,
+                  "keydown": 1
+                },
+                "listenerRemoves": {
+                  "focusin": 3
+                },
+                "observerActive": 1,
+                "observerPeak": 2
+              },
+              "backgroundInert": 0,
+              "dialogInert": true,
+              "dialogOpen": false,
+              "restored": true
+            },
+            "closer": "overlay",
+            "dynamic_branch_inert": true,
+            "focus": {
+              "beforeInside": true,
+              "remainedInside": true
+            },
+            "opened": {
+              "activeInside": true,
+              "ariaHidden": "false",
+              "audit": {
+                "listenerAdds": {
+                  "focusin": 3,
+                  "keydown": 1
+                },
+                "listenerRemoves": {
+                  "focusin": 2
+                },
+                "observerActive": 2,
+                "observerPeak": 2
+              },
+              "backgroundAllInert": true,
+              "clientWidth": 390,
+              "dialogInert": false,
+              "dialogOpen": true,
+              "modalLayerTopHit": true,
+              "overlayOpen": true,
+              "overlayPointerEvents": "auto",
+              "scrollWidth": 390,
+              "topHit": {
+                "className": "mm-cart-overlay is-open",
+                "insideDialog": false,
+                "isOverlay": true,
+                "tag": "BUTTON"
+              }
+            },
+            "opener": {
+              "label": "Cart, 0 items",
+              "tag": "BUTTON"
+            },
+            "pointer": {
+              "backgroundClicks": 0,
+              "topInsideDialog": false,
+              "topIsModalLayer": true,
+              "topIsOverlay": true
+            }
+          }
+        ],
+        "final": {
+          "listenerAdds": {
+            "focusin": 3,
+            "keydown": 1
+          },
+          "listenerRemoves": {
+            "focusin": 3
+          },
+          "observerActive": 1,
+          "observerPeak": 2
+        },
+        "focusin_active_delta": 0
+      },
+      "effective_width": 390,
+      "header": {
+        "closed": {
+          "expanded": "false",
+          "primaryHidden": true,
+          "state": "closed",
+          "utilityHidden": true
+        },
+        "escape": {
+          "expanded": "false",
+          "restored": true,
+          "state": "closed",
+          "unexpectedOutsideInert": 0
+        },
+        "focus_trap": {
+          "active": "cart",
+          "backward": true,
+          "forward": true
+        },
+        "opened": {
+          "activeText": "Shop",
+          "bodyOpen": true,
+          "expanded": "true",
+          "outside": [
+            {
+              "inert": true,
+              "tag": "DIV"
+            },
+            {
+              "inert": true,
+              "tag": "DIV"
+            },
+            {
+              "inert": true,
+              "tag": "DIV"
+            },
+            {
+              "inert": true,
+              "tag": "MAIN"
+            },
+            {
+              "inert": true,
+              "tag": "FOOTER"
+            },
+            {
+              "inert": true,
+              "tag": "A"
+            },
+            {
+              "inert": true,
+              "tag": "SCRIPT"
+            },
+            {
+              "inert": true,
+              "tag": "STYLE"
+            },
+            {
+              "inert": true,
+              "tag": "STYLE"
+            },
+            {
+              "inert": true,
+              "tag": "SCRIPT"
+            },
+            {
+              "inert": true,
+              "tag": "BUTTON"
+            },
+            {
+              "inert": true,
+              "tag": "SECTION"
+            },
+            {
+              "inert": true,
+              "tag": "DIV"
+            }
+          ],
+          "primaryHidden": false,
+          "primaryRect": {
+            "left": 0,
+            "right": 390,
+            "width": 390
+          },
+          "reducedMotion": {
+            "contract": true,
+            "matches": false,
+            "ruleCount": 6
+          },
+          "rowCount": 6,
+          "rows": [
+            {
+              "height": 44,
+              "left": 1,
+              "right": 389,
+              "tag": "a",
+              "text": "Shop",
+              "top": 71,
+              "topHitWithinLink": true
+            },
+            {
+              "height": 44,
+              "left": 1,
+              "right": 389,
+              "tag": "a",
+              "text": "Our Story",
+              "top": 115,
+              "topHitWithinLink": true
+            },
+            {
+              "height": 44,
+              "left": 1,
+              "right": 389,
+              "tag": "a",
+              "text": "What is Carob",
+              "top": 159,
+              "topHitWithinLink": true
+            },
+            {
+              "height": 44,
+              "left": 1,
+              "right": 389,
+              "tag": "a",
+              "text": "Stockists",
+              "top": 202,
+              "topHitWithinLink": true
+            },
+            {
+              "height": 44,
+              "left": 1,
+              "right": 389,
+              "tag": "span",
+              "text": "AUD $",
+              "top": 246,
+              "topHitWithinLink": true
+            },
+            {
+              "height": 44,
+              "left": 1,
+              "right": 389,
+              "tag": "a",
+              "text": "FAQ",
+              "top": 290,
+              "topHitWithinLink": true
+            }
+          ],
+          "state": "open",
+          "utilityHidden": false,
+          "utilityRect": {
+            "left": 0,
+            "right": 390,
+            "width": 390
+          }
+        }
+      },
+      "route": "stockists.html",
+      "verdict": "PASS"
+    },
+    {
+      "cart": {
+        "baseline": {
+          "listenerAdds": {
+            "keydown": 1
+          },
+          "listenerRemoves": {},
+          "observerActive": 0,
+          "observerPeak": 0
+        },
+        "cycles": [
+          {
+            "closed": {
+              "ariaHidden": "true",
+              "audit": {
+                "listenerAdds": {
+                  "focusin": 1,
+                  "keydown": 1
+                },
+                "listenerRemoves": {
+                  "focusin": 1
+                },
+                "observerActive": 0,
+                "observerPeak": 1
+              },
+              "backgroundInert": 0,
+              "dialogInert": true,
+              "dialogOpen": false,
+              "restored": true
+            },
+            "closer": "escape",
+            "dynamic_branch_inert": true,
+            "focus": {
+              "beforeInside": true,
+              "remainedInside": true
+            },
+            "opened": {
+              "activeInside": true,
+              "ariaHidden": "false",
+              "audit": {
+                "listenerAdds": {
+                  "focusin": 1,
+                  "keydown": 1
+                },
+                "listenerRemoves": {},
+                "observerActive": 1,
+                "observerPeak": 1
+              },
+              "backgroundAllInert": true,
+              "clientWidth": 390,
+              "dialogInert": false,
+              "dialogOpen": true,
+              "modalLayerTopHit": true,
+              "overlayOpen": true,
+              "overlayPointerEvents": "auto",
+              "scrollWidth": 390,
+              "topHit": {
+                "className": "mm-cart-overlay is-open",
+                "insideDialog": false,
+                "isOverlay": true,
+                "tag": "BUTTON"
+              }
+            },
+            "opener": {
+              "label": "Cart, 0 items",
+              "tag": "BUTTON"
+            },
+            "pointer": null
+          },
+          {
+            "closed": {
+              "ariaHidden": "true",
+              "audit": {
+                "listenerAdds": {
+                  "focusin": 2,
+                  "keydown": 1
+                },
+                "listenerRemoves": {
+                  "focusin": 2
+                },
+                "observerActive": 0,
+                "observerPeak": 1
+              },
+              "backgroundInert": 0,
+              "dialogInert": true,
+              "dialogOpen": false,
+              "restored": true
+            },
+            "closer": "explicit",
+            "dynamic_branch_inert": true,
+            "focus": {
+              "beforeInside": true,
+              "remainedInside": true
+            },
+            "opened": {
+              "activeInside": true,
+              "ariaHidden": "false",
+              "audit": {
+                "listenerAdds": {
+                  "focusin": 2,
+                  "keydown": 1
+                },
+                "listenerRemoves": {
+                  "focusin": 1
+                },
+                "observerActive": 1,
+                "observerPeak": 1
+              },
+              "backgroundAllInert": true,
+              "clientWidth": 390,
+              "dialogInert": false,
+              "dialogOpen": true,
+              "modalLayerTopHit": true,
+              "overlayOpen": true,
+              "overlayPointerEvents": "auto",
+              "scrollWidth": 390,
+              "topHit": {
+                "className": "mm-cart-overlay is-open",
+                "insideDialog": false,
+                "isOverlay": true,
+                "tag": "BUTTON"
+              }
+            },
+            "opener": {
+              "label": "Cart, 0 items",
+              "tag": "BUTTON"
+            },
+            "pointer": null
+          },
+          {
+            "closed": {
+              "ariaHidden": "true",
+              "audit": {
+                "listenerAdds": {
+                  "focusin": 3,
+                  "keydown": 1
+                },
+                "listenerRemoves": {
+                  "focusin": 3
+                },
+                "observerActive": 0,
+                "observerPeak": 1
+              },
+              "backgroundInert": 0,
+              "dialogInert": true,
+              "dialogOpen": false,
+              "restored": true
+            },
+            "closer": "overlay",
+            "dynamic_branch_inert": true,
+            "focus": {
+              "beforeInside": true,
+              "remainedInside": true
+            },
+            "opened": {
+              "activeInside": true,
+              "ariaHidden": "false",
+              "audit": {
+                "listenerAdds": {
+                  "focusin": 3,
+                  "keydown": 1
+                },
+                "listenerRemoves": {
+                  "focusin": 2
+                },
+                "observerActive": 1,
+                "observerPeak": 1
+              },
+              "backgroundAllInert": true,
+              "clientWidth": 390,
+              "dialogInert": false,
+              "dialogOpen": true,
+              "modalLayerTopHit": true,
+              "overlayOpen": true,
+              "overlayPointerEvents": "auto",
+              "scrollWidth": 390,
+              "topHit": {
+                "className": "mm-cart-overlay is-open",
+                "insideDialog": false,
+                "isOverlay": true,
+                "tag": "BUTTON"
+              }
+            },
+            "opener": {
+              "label": "Cart, 0 items",
+              "tag": "BUTTON"
+            },
+            "pointer": {
+              "backgroundClicks": 0,
+              "topInsideDialog": false,
+              "topIsModalLayer": true,
+              "topIsOverlay": true
+            }
+          }
+        ],
+        "final": {
+          "listenerAdds": {
+            "focusin": 3,
+            "keydown": 1
+          },
+          "listenerRemoves": {
+            "focusin": 3
+          },
+          "observerActive": 0,
+          "observerPeak": 1
+        },
+        "focusin_active_delta": 0
+      },
+      "effective_width": 390,
+      "header": {
+        "closed": {
+          "expanded": "false",
+          "primaryHidden": true,
+          "state": "closed",
+          "utilityHidden": true
+        },
+        "escape": {
+          "expanded": "false",
+          "restored": true,
+          "state": "closed",
+          "unexpectedOutsideInert": 0
+        },
+        "focus_trap": {
+          "active": "cart",
+          "backward": true,
+          "forward": true
+        },
+        "opened": {
+          "activeText": "Shop",
+          "bodyOpen": true,
+          "expanded": "true",
+          "outside": [
+            {
+              "inert": true,
+              "tag": "DIV"
+            },
+            {
+              "inert": true,
+              "tag": "DIV"
+            },
+            {
+              "inert": true,
+              "tag": "DIV"
+            },
+            {
+              "inert": true,
+              "tag": "A"
+            },
+            {
+              "inert": true,
+              "tag": "MAIN"
+            },
+            {
+              "inert": true,
+              "tag": "FOOTER"
+            },
+            {
+              "inert": true,
+              "tag": "SCRIPT"
+            },
+            {
+              "inert": true,
+              "tag": "BUTTON"
+            },
+            {
+              "inert": true,
+              "tag": "SECTION"
+            },
+            {
+              "inert": true,
+              "tag": "DIV"
+            }
+          ],
+          "primaryHidden": false,
+          "primaryRect": {
+            "left": 0,
+            "right": 390,
+            "width": 390
+          },
+          "reducedMotion": {
+            "contract": true,
+            "matches": false,
+            "ruleCount": 6
+          },
+          "rowCount": 6,
+          "rows": [
+            {
+              "height": 44,
+              "left": 1,
+              "right": 389,
+              "tag": "a",
+              "text": "Shop",
+              "top": 71,
+              "topHitWithinLink": true
+            },
+            {
+              "height": 44,
+              "left": 1,
+              "right": 389,
+              "tag": "a",
+              "text": "Our Story",
+              "top": 115,
+              "topHitWithinLink": true
+            },
+            {
+              "height": 44,
+              "left": 1,
+              "right": 389,
+              "tag": "a",
+              "text": "What is Carob",
+              "top": 159,
+              "topHitWithinLink": true
+            },
+            {
+              "height": 44,
+              "left": 1,
+              "right": 389,
+              "tag": "a",
+              "text": "Stockists",
+              "top": 202,
+              "topHitWithinLink": true
+            },
+            {
+              "height": 44,
+              "left": 1,
+              "right": 389,
+              "tag": "span",
+              "text": "AUD $",
+              "top": 246,
+              "topHitWithinLink": true
+            },
+            {
+              "height": 44,
+              "left": 1,
+              "right": 389,
+              "tag": "a",
+              "text": "FAQ",
+              "top": 290,
+              "topHitWithinLink": true
+            }
+          ],
+          "state": "open",
+          "utilityHidden": false,
+          "utilityRect": {
+            "left": 0,
+            "right": 390,
+            "width": 390
+          }
+        }
+      },
+      "route": "pure-carob-bar.html",
+      "verdict": "PASS"
+    }
+  ],
+  "shop_arithmetic": {
+    "expected_subtotal": "$36.57",
+    "first": {
+      "stored": [
+        {
+          "id": "moons-1",
+          "image": "/assets/product_shots/moon_peppermint.webp",
+          "imageAlt": "Peppermint Moon",
+          "name": "Peppermint Moon",
+          "optionLabel": "5 moons",
+          "quantity": 1,
+          "size": "12g",
+          "unitPriceCents": 1219
+        }
+      ],
+      "subtotal": "$12.19"
+    },
+    "initial_navigation": {
+      "console_errors": [],
+      "document_responses": [
+        {
+          "mimeType": "text/html",
+          "status": 200,
+          "type": "Document",
+          "url": "http://127.0.0.1:4422/shop.html"
+        }
+      ],
+      "exceptions": [],
+      "http_errors": [],
+      "lazy_activation": {
+        "afterIncomplete": [],
+        "beforeIncomplete": [
+          "/assets/product_shots/bar_cayenne.webp",
+          "/assets/product_shots/bar_almond.webp",
+          "/assets/product_shots/moon_pure_carob.webp",
+          "/assets/product_shots/moon_peppermint.webp",
+          "/assets/product_shots/moon_hazelnut.webp",
+          "/assets/product_shots/moon_goji_coconut.webp",
+          "/assets/product_shots/moon_cayenne.webp",
+          "/assets/product_shots/moon_almond.webp",
+          "/assets/product_shots/elixir_plain.webp",
+          "/assets/product_shots/elixir_spiced.webp",
+          "/assets/product_shots/bananas.webp",
+          "/assets/product_shots/powder_roasted.webp"
+        ],
+        "decodeRejected": []
+      },
+      "loading_failures": [],
+      "log_errors": [],
+      "request_count": 47,
+      "response_count": 47,
+      "scroll_activation": {
+        "bottom": 15684,
+        "images": 31,
+        "step": 396
+      },
+      "url": "http://127.0.0.1:4422/shop.html"
+    },
+    "persisted": {
+      "count": "3",
+      "stored": [
+        {
+          "id": "moons-1",
+          "image": "/assets/product_shots/moon_peppermint.webp",
+          "imageAlt": "Peppermint Moon",
+          "name": "Peppermint Moon",
+          "optionLabel": "5 moons",
+          "quantity": 3,
+          "size": "12g",
+          "unitPriceCents": 1219
+        }
+      ],
+      "subtotal": "$36.57"
+    },
+    "reload_navigation": {
+      "console_errors": [],
+      "document_responses": [
+        {
+          "mimeType": "text/html",
+          "status": 200,
+          "type": "Document",
+          "url": "http://127.0.0.1:4422/shop.html"
+        }
+      ],
+      "exceptions": [],
+      "http_errors": [],
+      "lazy_activation": {
+        "afterIncomplete": [],
+        "beforeIncomplete": [],
+        "decodeRejected": []
+      },
+      "loading_failures": [],
+      "log_errors": [],
+      "request_count": 47,
+      "response_count": 47,
+      "scroll_activation": {
+        "bottom": 15911,
+        "images": 32,
+        "step": 396
+      },
+      "url": "http://127.0.0.1:4422/shop.html"
+    },
+    "selection": {
+      "id": "moons-1",
+      "label": "5 moons",
+      "priceCents": 1219,
+      "quantity": 5
+    },
+    "tripled": {
+      "stored": [
+        {
+          "id": "moons-1",
+          "image": "/assets/product_shots/moon_peppermint.webp",
+          "imageAlt": "Peppermint Moon",
+          "name": "Peppermint Moon",
+          "optionLabel": "5 moons",
+          "quantity": 3,
+          "size": "12g",
+          "unitPriceCents": 1219
+        }
+      ],
+      "subtotal": "$36.57"
+    }
+  },
+  "verdict": "PASS"
+}

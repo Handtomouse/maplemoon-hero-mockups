@@ -1,0 +1,1865 @@
+{
+  "browser": "Google Chrome via bundled Playwright; agent-browser CLI unavailable",
+  "source": "byte-identical local staging for SSO-protected preview",
+  "preview": "https://maplemoonbuild20260813-fsdi7562p-handtomouses-projects.vercel.app",
+  "contacts": [
+    "/Users/handtomouse/maplemoon-website/_wip/evidence/track1_carli_build_20260816/screenshots/contact-390.png",
+    "/Users/handtomouse/maplemoon-website/_wip/evidence/track1_carli_build_20260816/screenshots/contact-1440.png"
+  ],
+  "results": [
+    {
+      "route": "homepage",
+      "width": "390",
+      "url": "http://127.0.0.1:8782/homepage.html",
+      "httpStatus": 200,
+      "metrics": {
+        "title": "Maple Moon: Australian Organic Carob",
+        "clientWidth": 390,
+        "scrollWidth": 390,
+        "bodyHeight": 9892,
+        "textLength": 3844,
+        "headerVisible": true,
+        "headerHeight": 70,
+        "images": [
+          {
+            "src": "http://127.0.0.1:8782/assets/product_shots/bar_pure_carob_hero.webp",
+            "complete": true,
+            "naturalWidth": 1200,
+            "naturalHeight": 1800,
+            "rect": {
+              "width": 0,
+              "height": 0
+            }
+          },
+          {
+            "src": "http://127.0.0.1:8782/assets/product_shots/moon_pure_carob.webp",
+            "complete": true,
+            "naturalWidth": 800,
+            "naturalHeight": 800,
+            "rect": {
+              "width": 0,
+              "height": 0
+            }
+          },
+          {
+            "src": "http://127.0.0.1:8782/assets/carob_wordmark.svg",
+            "complete": true,
+            "naturalWidth": 300,
+            "naturalHeight": 71,
+            "rect": {
+              "width": 342,
+              "height": 81
+            }
+          },
+          {
+            "src": "http://127.0.0.1:8782/assets/product_shots/bar_goji_coconut.webp",
+            "complete": true,
+            "naturalWidth": 800,
+            "naturalHeight": 1200,
+            "rect": {
+              "width": 0,
+              "height": 0
+            }
+          },
+          {
+            "src": "http://127.0.0.1:8782/assets/product_shots/bar_cayenne.webp",
+            "complete": true,
+            "naturalWidth": 800,
+            "naturalHeight": 1200,
+            "rect": {
+              "width": 126,
+              "height": 253
+            }
+          },
+          {
+            "src": "http://127.0.0.1:8782/assets/product_shots/bar_pure_carob.webp",
+            "complete": true,
+            "naturalWidth": 800,
+            "naturalHeight": 1200,
+            "rect": {
+              "width": 192,
+              "height": 305
+            }
+          },
+          {
+            "src": "http://127.0.0.1:8782/assets/product_shots/bar_almond.webp",
+            "complete": true,
+            "naturalWidth": 800,
+            "naturalHeight": 1200,
+            "rect": {
+              "width": 126,
+              "height": 253
+            }
+          },
+          {
+            "src": "http://127.0.0.1:8782/assets/product_shots/bar_peppermint.webp",
+            "complete": true,
+            "naturalWidth": 800,
+            "naturalHeight": 1200,
+            "rect": {
+              "width": 0,
+              "height": 0
+            }
+          },
+          {
+            "src": "http://127.0.0.1:8782/assets/product_shots/bar_hazelnut.webp",
+            "complete": true,
+            "naturalWidth": 800,
+            "naturalHeight": 1200,
+            "rect": {
+              "width": 0,
+              "height": 0
+            }
+          },
+          {
+            "src": "http://127.0.0.1:8782/assets/hero_shots/carob_branch_dusk.jpg",
+            "complete": true,
+            "naturalWidth": 2200,
+            "naturalHeight": 1228,
+            "rect": {
+              "width": 390,
+              "height": 260
+            }
+          },
+          {
+            "src": "http://127.0.0.1:8782/assets/licensed/scene_after_dinner.jpg",
+            "complete": true,
+            "naturalWidth": 1600,
+            "naturalHeight": 1067,
+            "rect": {
+              "width": 332,
+              "height": 328
+            }
+          },
+          {
+            "src": "http://127.0.0.1:8782/assets/licensed/scene_afternoon.jpg",
+            "complete": true,
+            "naturalWidth": 1600,
+            "naturalHeight": 1067,
+            "rect": {
+              "width": 332,
+              "height": 328
+            }
+          },
+          {
+            "src": "http://127.0.0.1:8782/assets/licensed/scene_tea_night.jpg",
+            "complete": true,
+            "naturalWidth": 1600,
+            "naturalHeight": 1067,
+            "rect": {
+              "width": 332,
+              "height": 328
+            }
+          },
+          {
+            "src": "http://127.0.0.1:8782/assets/licensed/carob_farm/australian-carob-0205-mobile.jpg",
+            "complete": true,
+            "naturalWidth": 1080,
+            "naturalHeight": 1350,
+            "rect": {
+              "width": 390,
+              "height": 270
+            }
+          },
+          {
+            "src": "http://127.0.0.1:8782/assets/product_shots/bar_goji_coconut.webp",
+            "complete": true,
+            "naturalWidth": 800,
+            "naturalHeight": 1200,
+            "rect": {
+              "width": 37,
+              "height": 56
+            }
+          },
+          {
+            "src": "http://127.0.0.1:8782/assets/product_shots/bar_cayenne.webp",
+            "complete": true,
+            "naturalWidth": 800,
+            "naturalHeight": 1200,
+            "rect": {
+              "width": 37,
+              "height": 56
+            }
+          },
+          {
+            "src": "http://127.0.0.1:8782/assets/product_shots/bar_pure_carob.webp",
+            "complete": true,
+            "naturalWidth": 800,
+            "naturalHeight": 1200,
+            "rect": {
+              "width": 37,
+              "height": 56
+            }
+          },
+          {
+            "src": "http://127.0.0.1:8782/assets/product_shots/bar_almond.webp",
+            "complete": true,
+            "naturalWidth": 800,
+            "naturalHeight": 1200,
+            "rect": {
+              "width": 37,
+              "height": 56
+            }
+          },
+          {
+            "src": "http://127.0.0.1:8782/assets/product_shots/bar_peppermint.webp",
+            "complete": true,
+            "naturalWidth": 800,
+            "naturalHeight": 1200,
+            "rect": {
+              "width": 37,
+              "height": 56
+            }
+          },
+          {
+            "src": "http://127.0.0.1:8782/assets/product_shots/bar_hazelnut.webp",
+            "complete": true,
+            "naturalWidth": 800,
+            "naturalHeight": 1200,
+            "rect": {
+              "width": 37,
+              "height": 56
+            }
+          }
+        ],
+        "brokenImages": [],
+        "menuToggleCount": 1,
+        "cartToggleCount": 1
+      },
+      "screenshot": "/Users/handtomouse/maplemoon-website/_wip/evidence/track1_carli_build_20260816/screenshots/homepage-390.png",
+      "screenshotBytes": 2318926,
+      "screenshotMetadata": {
+        "width": 390,
+        "height": 9891
+      },
+      "screenshotChannelStdev": [
+        55.69709500464747,
+        55.8869449742213,
+        54.832884313718246
+      ],
+      "interactions": {
+        "menu": {
+          "expanded": "true",
+          "state": "open",
+          "bodyOpen": true
+        },
+        "menuScreenshot": "/Users/handtomouse/maplemoon-website/_wip/evidence/track1_carli_build_20260816/screenshots/homepage-390-menu-open.png",
+        "homeCart": {
+          "before": {
+            "dialogs": 0,
+            "bodyAttributes": [
+              "data-mm-route=home"
+            ]
+          },
+          "after": {
+            "dialogs": 0,
+            "bodyAttributes": [
+              "data-mm-route=home"
+            ]
+          },
+          "effect": false
+        }
+      },
+      "consoleErrors": [],
+      "pageErrors": [],
+      "requestFailures": [],
+      "badResponses": [],
+      "failures": [
+        "homepage-cart-no-effect"
+      ],
+      "result": "FAIL"
+    },
+    {
+      "route": "homepage",
+      "width": "1440",
+      "url": "http://127.0.0.1:8782/homepage.html",
+      "httpStatus": 200,
+      "metrics": {
+        "title": "Maple Moon: Australian Organic Carob",
+        "clientWidth": 1440,
+        "scrollWidth": 1440,
+        "bodyHeight": 7404,
+        "textLength": 3978,
+        "headerVisible": true,
+        "headerHeight": 70,
+        "images": [
+          {
+            "src": "http://127.0.0.1:8782/assets/product_shots/bar_pure_carob_hero.webp",
+            "complete": true,
+            "naturalWidth": 1200,
+            "naturalHeight": 1800,
+            "rect": {
+              "width": 0,
+              "height": 0
+            }
+          },
+          {
+            "src": "http://127.0.0.1:8782/assets/product_shots/moon_pure_carob.webp",
+            "complete": true,
+            "naturalWidth": 800,
+            "naturalHeight": 800,
+            "rect": {
+              "width": 0,
+              "height": 0
+            }
+          },
+          {
+            "src": "http://127.0.0.1:8782/assets/carob_wordmark.svg",
+            "complete": true,
+            "naturalWidth": 300,
+            "naturalHeight": 71,
+            "rect": {
+              "width": 749,
+              "height": 177
+            }
+          },
+          {
+            "src": "http://127.0.0.1:8782/assets/product_shots/bar_goji_coconut.webp",
+            "complete": true,
+            "naturalWidth": 800,
+            "naturalHeight": 1200,
+            "rect": {
+              "width": 109,
+              "height": 273
+            }
+          },
+          {
+            "src": "http://127.0.0.1:8782/assets/product_shots/bar_cayenne.webp",
+            "complete": true,
+            "naturalWidth": 800,
+            "naturalHeight": 1200,
+            "rect": {
+              "width": 177,
+              "height": 366
+            }
+          },
+          {
+            "src": "http://127.0.0.1:8782/assets/product_shots/bar_pure_carob.webp",
+            "complete": true,
+            "naturalWidth": 800,
+            "naturalHeight": 1200,
+            "rect": {
+              "width": 278,
+              "height": 442
+            }
+          },
+          {
+            "src": "http://127.0.0.1:8782/assets/product_shots/bar_almond.webp",
+            "complete": true,
+            "naturalWidth": 800,
+            "naturalHeight": 1200,
+            "rect": {
+              "width": 177,
+              "height": 366
+            }
+          },
+          {
+            "src": "http://127.0.0.1:8782/assets/product_shots/bar_peppermint.webp",
+            "complete": true,
+            "naturalWidth": 800,
+            "naturalHeight": 1200,
+            "rect": {
+              "width": 109,
+              "height": 273
+            }
+          },
+          {
+            "src": "http://127.0.0.1:8782/assets/product_shots/bar_hazelnut.webp",
+            "complete": true,
+            "naturalWidth": 800,
+            "naturalHeight": 1200,
+            "rect": {
+              "width": 0,
+              "height": 0
+            }
+          },
+          {
+            "src": "http://127.0.0.1:8782/assets/hero_shots/carob_branch_dusk.jpg",
+            "complete": true,
+            "naturalWidth": 2200,
+            "naturalHeight": 1228,
+            "rect": {
+              "width": 1440,
+              "height": 691
+            }
+          },
+          {
+            "src": "http://127.0.0.1:8782/assets/licensed/scene_after_dinner.jpg",
+            "complete": true,
+            "naturalWidth": 1600,
+            "naturalHeight": 1067,
+            "rect": {
+              "width": 253,
+              "height": 430
+            }
+          },
+          {
+            "src": "http://127.0.0.1:8782/assets/licensed/scene_afternoon.jpg",
+            "complete": true,
+            "naturalWidth": 1600,
+            "naturalHeight": 1067,
+            "rect": {
+              "width": 253,
+              "height": 430
+            }
+          },
+          {
+            "src": "http://127.0.0.1:8782/assets/licensed/scene_tea_night.jpg",
+            "complete": true,
+            "naturalWidth": 1600,
+            "naturalHeight": 1067,
+            "rect": {
+              "width": 253,
+              "height": 430
+            }
+          },
+          {
+            "src": "http://127.0.0.1:8782/assets/licensed/carob_farm/australian-carob-0205-16x9.jpg",
+            "complete": true,
+            "naturalWidth": 1600,
+            "naturalHeight": 900,
+            "rect": {
+              "width": 1440,
+              "height": 660
+            }
+          },
+          {
+            "src": "http://127.0.0.1:8782/assets/product_shots/bar_goji_coconut.webp",
+            "complete": true,
+            "naturalWidth": 800,
+            "naturalHeight": 1200,
+            "rect": {
+              "width": 74,
+              "height": 111
+            }
+          },
+          {
+            "src": "http://127.0.0.1:8782/assets/product_shots/bar_cayenne.webp",
+            "complete": true,
+            "naturalWidth": 800,
+            "naturalHeight": 1200,
+            "rect": {
+              "width": 74,
+              "height": 111
+            }
+          },
+          {
+            "src": "http://127.0.0.1:8782/assets/product_shots/bar_pure_carob.webp",
+            "complete": true,
+            "naturalWidth": 800,
+            "naturalHeight": 1200,
+            "rect": {
+              "width": 74,
+              "height": 111
+            }
+          },
+          {
+            "src": "http://127.0.0.1:8782/assets/product_shots/bar_almond.webp",
+            "complete": true,
+            "naturalWidth": 800,
+            "naturalHeight": 1200,
+            "rect": {
+              "width": 74,
+              "height": 111
+            }
+          },
+          {
+            "src": "http://127.0.0.1:8782/assets/product_shots/bar_peppermint.webp",
+            "complete": true,
+            "naturalWidth": 800,
+            "naturalHeight": 1200,
+            "rect": {
+              "width": 74,
+              "height": 111
+            }
+          },
+          {
+            "src": "http://127.0.0.1:8782/assets/product_shots/bar_hazelnut.webp",
+            "complete": true,
+            "naturalWidth": 800,
+            "naturalHeight": 1200,
+            "rect": {
+              "width": 74,
+              "height": 111
+            }
+          }
+        ],
+        "brokenImages": [],
+        "menuToggleCount": 1,
+        "cartToggleCount": 1
+      },
+      "screenshot": "/Users/handtomouse/maplemoon-website/_wip/evidence/track1_carli_build_20260816/screenshots/homepage-1440.png",
+      "screenshotBytes": 5782269,
+      "screenshotMetadata": {
+        "width": 1440,
+        "height": 7403
+      },
+      "screenshotChannelStdev": [
+        52.91694752394381,
+        49.035903348606055,
+        43.97011748037324
+      ],
+      "interactions": {},
+      "consoleErrors": [],
+      "pageErrors": [],
+      "requestFailures": [],
+      "badResponses": [],
+      "failures": [],
+      "result": "PASS"
+    },
+    {
+      "route": "shop",
+      "width": "390",
+      "url": "http://127.0.0.1:8782/shop.html",
+      "httpStatus": 200,
+      "metrics": {
+        "title": "Shop the Range | Maple Moon",
+        "clientWidth": 390,
+        "scrollWidth": 390,
+        "bodyHeight": 15570,
+        "textLength": 5182,
+        "headerVisible": true,
+        "headerHeight": 70,
+        "images": [
+          {
+            "src": "http://127.0.0.1:8782/assets/products_new/bar_pure_carob.png",
+            "complete": true,
+            "naturalWidth": 1024,
+            "naturalHeight": 1536,
+            "rect": {
+              "width": 46,
+              "height": 69
+            }
+          },
+          {
+            "src": "http://127.0.0.1:8782/assets/products_new/bar_peppermint.png",
+            "complete": true,
+            "naturalWidth": 1024,
+            "naturalHeight": 1536,
+            "rect": {
+              "width": 46,
+              "height": 69
+            }
+          },
+          {
+            "src": "http://127.0.0.1:8782/assets/products_new/bar_hazelnut.png",
+            "complete": true,
+            "naturalWidth": 1024,
+            "naturalHeight": 1536,
+            "rect": {
+              "width": 46,
+              "height": 69
+            }
+          },
+          {
+            "src": "http://127.0.0.1:8782/assets/products_new/bar_goji_coconut.png",
+            "complete": true,
+            "naturalWidth": 1024,
+            "naturalHeight": 1536,
+            "rect": {
+              "width": 46,
+              "height": 69
+            }
+          },
+          {
+            "src": "http://127.0.0.1:8782/assets/products_new/bar_cayenne.png",
+            "complete": true,
+            "naturalWidth": 1024,
+            "naturalHeight": 1536,
+            "rect": {
+              "width": 46,
+              "height": 69
+            }
+          },
+          {
+            "src": "http://127.0.0.1:8782/assets/products_new/bar_almond.png",
+            "complete": true,
+            "naturalWidth": 1024,
+            "naturalHeight": 1536,
+            "rect": {
+              "width": 46,
+              "height": 69
+            }
+          },
+          {
+            "src": "http://127.0.0.1:8782/assets/product_shots/bar_goji_coconut.webp",
+            "complete": true,
+            "naturalWidth": 800,
+            "naturalHeight": 1200,
+            "rect": {
+              "width": 173,
+              "height": 259
+            }
+          },
+          {
+            "src": "http://127.0.0.1:8782/assets/product_shots/bar_cayenne.webp",
+            "complete": true,
+            "naturalWidth": 800,
+            "naturalHeight": 1200,
+            "rect": {
+              "width": 173,
+              "height": 259
+            }
+          },
+          {
+            "src": "http://127.0.0.1:8782/assets/product_shots/bar_pure_carob.webp",
+            "complete": true,
+            "naturalWidth": 800,
+            "naturalHeight": 1200,
+            "rect": {
+              "width": 173,
+              "height": 259
+            }
+          },
+          {
+            "src": "http://127.0.0.1:8782/assets/product_shots/bar_almond.webp",
+            "complete": true,
+            "naturalWidth": 800,
+            "naturalHeight": 1200,
+            "rect": {
+              "width": 173,
+              "height": 259
+            }
+          },
+          {
+            "src": "http://127.0.0.1:8782/assets/product_shots/bar_peppermint.webp",
+            "complete": true,
+            "naturalWidth": 800,
+            "naturalHeight": 1200,
+            "rect": {
+              "width": 173,
+              "height": 259
+            }
+          },
+          {
+            "src": "http://127.0.0.1:8782/assets/product_shots/bar_hazelnut.webp",
+            "complete": true,
+            "naturalWidth": 800,
+            "naturalHeight": 1200,
+            "rect": {
+              "width": 173,
+              "height": 259
+            }
+          },
+          {
+            "src": "http://127.0.0.1:8782/assets/product_shots/moon_goji_coconut.webp",
+            "complete": true,
+            "naturalWidth": 800,
+            "naturalHeight": 800,
+            "rect": {
+              "width": 216,
+              "height": 216
+            }
+          },
+          {
+            "src": "http://127.0.0.1:8782/assets/product_shots/moon_cayenne.webp",
+            "complete": true,
+            "naturalWidth": 800,
+            "naturalHeight": 800,
+            "rect": {
+              "width": 216,
+              "height": 216
+            }
+          },
+          {
+            "src": "http://127.0.0.1:8782/assets/product_shots/moon_pure_carob.webp",
+            "complete": true,
+            "naturalWidth": 800,
+            "naturalHeight": 800,
+            "rect": {
+              "width": 216,
+              "height": 216
+            }
+          },
+          {
+            "src": "http://127.0.0.1:8782/assets/product_shots/moon_almond.webp",
+            "complete": true,
+            "naturalWidth": 800,
+            "naturalHeight": 800,
+            "rect": {
+              "width": 216,
+              "height": 216
+            }
+          },
+          {
+            "src": "http://127.0.0.1:8782/assets/product_shots/moon_peppermint.webp",
+            "complete": true,
+            "naturalWidth": 800,
+            "naturalHeight": 800,
+            "rect": {
+              "width": 216,
+              "height": 216
+            }
+          },
+          {
+            "src": "http://127.0.0.1:8782/assets/product_shots/moon_hazelnut.webp",
+            "complete": true,
+            "naturalWidth": 800,
+            "naturalHeight": 800,
+            "rect": {
+              "width": 216,
+              "height": 216
+            }
+          },
+          {
+            "src": "http://127.0.0.1:8782/assets/product_shots/eclipse_pecan.webp",
+            "complete": true,
+            "naturalWidth": 800,
+            "naturalHeight": 800,
+            "rect": {
+              "width": 216,
+              "height": 216
+            }
+          },
+          {
+            "src": "http://127.0.0.1:8782/assets/product_shots/eclipse_almond.webp",
+            "complete": true,
+            "naturalWidth": 800,
+            "naturalHeight": 800,
+            "rect": {
+              "width": 216,
+              "height": 216
+            }
+          },
+          {
+            "src": "http://127.0.0.1:8782/assets/product_shots/eclipse_hazelnut.webp",
+            "complete": true,
+            "naturalWidth": 800,
+            "naturalHeight": 800,
+            "rect": {
+              "width": 216,
+              "height": 216
+            }
+          },
+          {
+            "src": "http://127.0.0.1:8782/assets/product_shots/eclipse_goji.webp",
+            "complete": true,
+            "naturalWidth": 2560,
+            "naturalHeight": 2560,
+            "rect": {
+              "width": 216,
+              "height": 216
+            }
+          },
+          {
+            "src": "http://127.0.0.1:8782/assets/product_shots/eclipse_fudge.webp",
+            "complete": true,
+            "naturalWidth": 800,
+            "naturalHeight": 800,
+            "rect": {
+              "width": 216,
+              "height": 216
+            }
+          },
+          {
+            "src": "http://127.0.0.1:8782/assets/product_shots/eclipse_bundle.webp",
+            "complete": true,
+            "naturalWidth": 2048,
+            "naturalHeight": 2048,
+            "rect": {
+              "width": 216,
+              "height": 216
+            }
+          },
+          {
+            "src": "http://127.0.0.1:8782/assets/product_shots/elixir_plain.webp",
+            "complete": true,
+            "naturalWidth": 1024,
+            "naturalHeight": 1536,
+            "rect": {
+              "width": 173,
+              "height": 259
+            }
+          },
+          {
+            "src": "http://127.0.0.1:8782/assets/product_shots/elixir_spiced.webp",
+            "complete": true,
+            "naturalWidth": 1024,
+            "naturalHeight": 1536,
+            "rect": {
+              "width": 173,
+              "height": 259
+            }
+          },
+          {
+            "src": "http://127.0.0.1:8782/assets/product_shots/bananas.webp",
+            "complete": true,
+            "naturalWidth": 800,
+            "naturalHeight": 800,
+            "rect": {
+              "width": 216,
+              "height": 216
+            }
+          },
+          {
+            "src": "http://127.0.0.1:8782/assets/product_shots/powder_roasted.webp",
+            "complete": true,
+            "naturalWidth": 2560,
+            "naturalHeight": 2560,
+            "rect": {
+              "width": 216,
+              "height": 216
+            }
+          }
+        ],
+        "brokenImages": [],
+        "menuToggleCount": 0,
+        "cartToggleCount": 1
+      },
+      "screenshot": "/Users/handtomouse/maplemoon-website/_wip/evidence/track1_carli_build_20260816/screenshots/shop-390.png",
+      "screenshotBytes": 3307682,
+      "screenshotMetadata": {
+        "width": 390,
+        "height": 15569
+      },
+      "screenshotChannelStdev": [
+        50.16967180447906,
+        50.32316431752592,
+        48.66871030056013
+      ],
+      "interactions": {
+        "cart": {
+          "before": "CART SUBTOTAL\n$0.00\n0 ITEMS",
+          "after": "CART SUBTOTAL\n$12.95\n1 ITEM",
+          "count": "1",
+          "label": "Cart, 1 item, subtotal $12.95"
+        },
+        "cartScreenshot": "/Users/handtomouse/maplemoon-website/_wip/evidence/track1_carli_build_20260816/screenshots/shop-390-cart.png"
+      },
+      "consoleErrors": [],
+      "pageErrors": [],
+      "requestFailures": [],
+      "badResponses": [],
+      "failures": [],
+      "result": "PASS"
+    },
+    {
+      "route": "shop",
+      "width": "1440",
+      "url": "http://127.0.0.1:8782/shop.html",
+      "httpStatus": 200,
+      "metrics": {
+        "title": "Shop the Range | Maple Moon",
+        "clientWidth": 1440,
+        "scrollWidth": 1440,
+        "bodyHeight": 6826,
+        "textLength": 5227,
+        "headerVisible": true,
+        "headerHeight": 70,
+        "images": [
+          {
+            "src": "http://127.0.0.1:8782/assets/products_new/bar_pure_carob.png",
+            "complete": true,
+            "naturalWidth": 1024,
+            "naturalHeight": 1536,
+            "rect": {
+              "width": 45,
+              "height": 68
+            }
+          },
+          {
+            "src": "http://127.0.0.1:8782/assets/products_new/bar_peppermint.png",
+            "complete": true,
+            "naturalWidth": 1024,
+            "naturalHeight": 1536,
+            "rect": {
+              "width": 45,
+              "height": 68
+            }
+          },
+          {
+            "src": "http://127.0.0.1:8782/assets/products_new/bar_hazelnut.png",
+            "complete": true,
+            "naturalWidth": 1024,
+            "naturalHeight": 1536,
+            "rect": {
+              "width": 45,
+              "height": 68
+            }
+          },
+          {
+            "src": "http://127.0.0.1:8782/assets/products_new/bar_goji_coconut.png",
+            "complete": true,
+            "naturalWidth": 1024,
+            "naturalHeight": 1536,
+            "rect": {
+              "width": 45,
+              "height": 68
+            }
+          },
+          {
+            "src": "http://127.0.0.1:8782/assets/products_new/bar_cayenne.png",
+            "complete": true,
+            "naturalWidth": 1024,
+            "naturalHeight": 1536,
+            "rect": {
+              "width": 45,
+              "height": 68
+            }
+          },
+          {
+            "src": "http://127.0.0.1:8782/assets/products_new/bar_almond.png",
+            "complete": true,
+            "naturalWidth": 1024,
+            "naturalHeight": 1536,
+            "rect": {
+              "width": 45,
+              "height": 68
+            }
+          },
+          {
+            "src": "http://127.0.0.1:8782/assets/product_shots/bar_goji_coconut.webp",
+            "complete": true,
+            "naturalWidth": 800,
+            "naturalHeight": 1200,
+            "rect": {
+              "width": 189,
+              "height": 284
+            }
+          },
+          {
+            "src": "http://127.0.0.1:8782/assets/product_shots/bar_cayenne.webp",
+            "complete": true,
+            "naturalWidth": 800,
+            "naturalHeight": 1200,
+            "rect": {
+              "width": 189,
+              "height": 284
+            }
+          },
+          {
+            "src": "http://127.0.0.1:8782/assets/product_shots/bar_pure_carob.webp",
+            "complete": true,
+            "naturalWidth": 800,
+            "naturalHeight": 1200,
+            "rect": {
+              "width": 189,
+              "height": 284
+            }
+          },
+          {
+            "src": "http://127.0.0.1:8782/assets/product_shots/bar_almond.webp",
+            "complete": true,
+            "naturalWidth": 800,
+            "naturalHeight": 1200,
+            "rect": {
+              "width": 189,
+              "height": 284
+            }
+          },
+          {
+            "src": "http://127.0.0.1:8782/assets/product_shots/bar_peppermint.webp",
+            "complete": true,
+            "naturalWidth": 800,
+            "naturalHeight": 1200,
+            "rect": {
+              "width": 189,
+              "height": 284
+            }
+          },
+          {
+            "src": "http://127.0.0.1:8782/assets/product_shots/bar_hazelnut.webp",
+            "complete": true,
+            "naturalWidth": 800,
+            "naturalHeight": 1200,
+            "rect": {
+              "width": 189,
+              "height": 284
+            }
+          },
+          {
+            "src": "http://127.0.0.1:8782/assets/product_shots/moon_goji_coconut.webp",
+            "complete": true,
+            "naturalWidth": 800,
+            "naturalHeight": 800,
+            "rect": {
+              "width": 164,
+              "height": 164
+            }
+          },
+          {
+            "src": "http://127.0.0.1:8782/assets/product_shots/moon_cayenne.webp",
+            "complete": true,
+            "naturalWidth": 800,
+            "naturalHeight": 800,
+            "rect": {
+              "width": 164,
+              "height": 164
+            }
+          },
+          {
+            "src": "http://127.0.0.1:8782/assets/product_shots/moon_pure_carob.webp",
+            "complete": true,
+            "naturalWidth": 800,
+            "naturalHeight": 800,
+            "rect": {
+              "width": 164,
+              "height": 164
+            }
+          },
+          {
+            "src": "http://127.0.0.1:8782/assets/product_shots/moon_almond.webp",
+            "complete": true,
+            "naturalWidth": 800,
+            "naturalHeight": 800,
+            "rect": {
+              "width": 164,
+              "height": 164
+            }
+          },
+          {
+            "src": "http://127.0.0.1:8782/assets/product_shots/moon_peppermint.webp",
+            "complete": true,
+            "naturalWidth": 800,
+            "naturalHeight": 800,
+            "rect": {
+              "width": 164,
+              "height": 164
+            }
+          },
+          {
+            "src": "http://127.0.0.1:8782/assets/product_shots/moon_hazelnut.webp",
+            "complete": true,
+            "naturalWidth": 800,
+            "naturalHeight": 800,
+            "rect": {
+              "width": 164,
+              "height": 164
+            }
+          },
+          {
+            "src": "http://127.0.0.1:8782/assets/product_shots/eclipse_pecan.webp",
+            "complete": true,
+            "naturalWidth": 800,
+            "naturalHeight": 800,
+            "rect": {
+              "width": 237,
+              "height": 237
+            }
+          },
+          {
+            "src": "http://127.0.0.1:8782/assets/product_shots/eclipse_almond.webp",
+            "complete": true,
+            "naturalWidth": 800,
+            "naturalHeight": 800,
+            "rect": {
+              "width": 237,
+              "height": 237
+            }
+          },
+          {
+            "src": "http://127.0.0.1:8782/assets/product_shots/eclipse_hazelnut.webp",
+            "complete": true,
+            "naturalWidth": 800,
+            "naturalHeight": 800,
+            "rect": {
+              "width": 237,
+              "height": 237
+            }
+          },
+          {
+            "src": "http://127.0.0.1:8782/assets/product_shots/eclipse_goji.webp",
+            "complete": true,
+            "naturalWidth": 2560,
+            "naturalHeight": 2560,
+            "rect": {
+              "width": 237,
+              "height": 237
+            }
+          },
+          {
+            "src": "http://127.0.0.1:8782/assets/product_shots/eclipse_fudge.webp",
+            "complete": true,
+            "naturalWidth": 800,
+            "naturalHeight": 800,
+            "rect": {
+              "width": 237,
+              "height": 237
+            }
+          },
+          {
+            "src": "http://127.0.0.1:8782/assets/product_shots/eclipse_bundle.webp",
+            "complete": true,
+            "naturalWidth": 2048,
+            "naturalHeight": 2048,
+            "rect": {
+              "width": 237,
+              "height": 237
+            }
+          },
+          {
+            "src": "http://127.0.0.1:8782/assets/product_shots/elixir_plain.webp",
+            "complete": true,
+            "naturalWidth": 1024,
+            "naturalHeight": 1536,
+            "rect": {
+              "width": 131,
+              "height": 197
+            }
+          },
+          {
+            "src": "http://127.0.0.1:8782/assets/product_shots/elixir_spiced.webp",
+            "complete": true,
+            "naturalWidth": 1024,
+            "naturalHeight": 1536,
+            "rect": {
+              "width": 131,
+              "height": 197
+            }
+          },
+          {
+            "src": "http://127.0.0.1:8782/assets/product_shots/bananas.webp",
+            "complete": true,
+            "naturalWidth": 800,
+            "naturalHeight": 800,
+            "rect": {
+              "width": 164,
+              "height": 164
+            }
+          },
+          {
+            "src": "http://127.0.0.1:8782/assets/product_shots/powder_roasted.webp",
+            "complete": true,
+            "naturalWidth": 2560,
+            "naturalHeight": 2560,
+            "rect": {
+              "width": 164,
+              "height": 164
+            }
+          }
+        ],
+        "brokenImages": [],
+        "menuToggleCount": 0,
+        "cartToggleCount": 1
+      },
+      "screenshot": "/Users/handtomouse/maplemoon-website/_wip/evidence/track1_carli_build_20260816/screenshots/shop-1440.png",
+      "screenshotBytes": 3715600,
+      "screenshotMetadata": {
+        "width": 1440,
+        "height": 6826
+      },
+      "screenshotChannelStdev": [
+        33.09056121710991,
+        33.022470375416695,
+        33.71474905551847
+      ],
+      "interactions": {
+        "cart": {
+          "before": "CART SUBTOTAL\n$0.00\n0 ITEMS",
+          "after": "CART SUBTOTAL\n$12.95\n1 ITEM",
+          "count": "1",
+          "label": "Cart, 1 item, subtotal $12.95"
+        },
+        "cartScreenshot": "/Users/handtomouse/maplemoon-website/_wip/evidence/track1_carli_build_20260816/screenshots/shop-1440-cart.png"
+      },
+      "consoleErrors": [],
+      "pageErrors": [],
+      "requestFailures": [],
+      "badResponses": [],
+      "failures": [],
+      "result": "PASS"
+    },
+    {
+      "route": "our-story",
+      "width": "390",
+      "url": "http://127.0.0.1:8782/our-story.html",
+      "httpStatus": 200,
+      "metrics": {
+        "title": "Our Story | Maple Moon",
+        "clientWidth": 390,
+        "scrollWidth": 390,
+        "bodyHeight": 5246,
+        "textLength": 3100,
+        "headerVisible": true,
+        "headerHeight": 70,
+        "images": [
+          {
+            "src": "http://127.0.0.1:8782/assets/our_story/founders_portrait_h212.webp",
+            "complete": true,
+            "naturalWidth": 1400,
+            "naturalHeight": 933,
+            "rect": {
+              "width": 334,
+              "height": 223
+            }
+          },
+          {
+            "src": "http://127.0.0.1:8782/assets/hero_shots/carob_pods_cluster.jpg",
+            "complete": true,
+            "naturalWidth": 1800,
+            "naturalHeight": 1004,
+            "rect": {
+              "width": 334,
+              "height": 418
+            }
+          }
+        ],
+        "brokenImages": [],
+        "menuToggleCount": 0,
+        "cartToggleCount": 0
+      },
+      "screenshot": "/Users/handtomouse/maplemoon-website/_wip/evidence/track1_carli_build_20260816/screenshots/our-story-390.png",
+      "screenshotBytes": 764678,
+      "screenshotMetadata": {
+        "width": 390,
+        "height": 5245
+      },
+      "screenshotChannelStdev": [
+        31.577868153794025,
+        31.00176520089507,
+        31.54451718596926
+      ],
+      "interactions": {},
+      "consoleErrors": [],
+      "pageErrors": [],
+      "requestFailures": [],
+      "badResponses": [],
+      "failures": [],
+      "result": "PASS"
+    },
+    {
+      "route": "our-story",
+      "width": "1440",
+      "url": "http://127.0.0.1:8782/our-story.html",
+      "httpStatus": 200,
+      "metrics": {
+        "title": "Our Story | Maple Moon",
+        "clientWidth": 1440,
+        "scrollWidth": 1440,
+        "bodyHeight": 4154,
+        "textLength": 3145,
+        "headerVisible": true,
+        "headerHeight": 70,
+        "images": [
+          {
+            "src": "http://127.0.0.1:8782/assets/our_story/founders_portrait_h212.webp",
+            "complete": true,
+            "naturalWidth": 1400,
+            "naturalHeight": 933,
+            "rect": {
+              "width": 560,
+              "height": 374
+            }
+          },
+          {
+            "src": "http://127.0.0.1:8782/assets/hero_shots/carob_pods_cluster.jpg",
+            "complete": true,
+            "naturalWidth": 1800,
+            "naturalHeight": 1004,
+            "rect": {
+              "width": 548,
+              "height": 685
+            }
+          }
+        ],
+        "brokenImages": [],
+        "menuToggleCount": 0,
+        "cartToggleCount": 0
+      },
+      "screenshot": "/Users/handtomouse/maplemoon-website/_wip/evidence/track1_carli_build_20260816/screenshots/our-story-1440.png",
+      "screenshotBytes": 1264435,
+      "screenshotMetadata": {
+        "width": 1440,
+        "height": 4153
+      },
+      "screenshotChannelStdev": [
+        22.661289992941757,
+        20.501817776211432,
+        19.752661774271647
+      ],
+      "interactions": {},
+      "consoleErrors": [],
+      "pageErrors": [],
+      "requestFailures": [],
+      "badResponses": [],
+      "failures": [],
+      "result": "PASS"
+    },
+    {
+      "route": "carob-story",
+      "width": "390",
+      "url": "http://127.0.0.1:8782/carob-story.html",
+      "httpStatus": 200,
+      "metrics": {
+        "title": "What is Carob? | Maple Moon",
+        "clientWidth": 390,
+        "scrollWidth": 390,
+        "bodyHeight": 2691,
+        "textLength": 1338,
+        "headerVisible": true,
+        "headerHeight": 65,
+        "images": [
+          {
+            "src": "http://127.0.0.1:8782/assets/licensed/carob_farm/australian-carob-0205-mobile.jpg",
+            "complete": true,
+            "naturalWidth": 1080,
+            "naturalHeight": 1350,
+            "rect": {
+              "width": 358,
+              "height": 274
+            }
+          },
+          {
+            "src": "http://127.0.0.1:8782/assets/licensed/carob_pods_macro.jpg",
+            "complete": true,
+            "naturalWidth": 1600,
+            "naturalHeight": 1068,
+            "rect": {
+              "width": 131,
+              "height": 100
+            }
+          },
+          {
+            "src": "http://127.0.0.1:8782/assets/photo_finals/maplemoon_heros41_brandmatched.webp",
+            "complete": true,
+            "naturalWidth": 2400,
+            "naturalHeight": 1600,
+            "rect": {
+              "width": 356,
+              "height": 298
+            }
+          }
+        ],
+        "brokenImages": [],
+        "menuToggleCount": 0,
+        "cartToggleCount": 0
+      },
+      "screenshot": "/Users/handtomouse/maplemoon-website/_wip/evidence/track1_carli_build_20260816/screenshots/carob-story-390.png",
+      "screenshotBytes": 825304,
+      "screenshotMetadata": {
+        "width": 390,
+        "height": 2690
+      },
+      "screenshotChannelStdev": [
+        45.50853236362585,
+        44.7343917512963,
+        45.95485628772978
+      ],
+      "interactions": {},
+      "consoleErrors": [],
+      "pageErrors": [],
+      "requestFailures": [],
+      "badResponses": [],
+      "failures": [],
+      "result": "PASS"
+    },
+    {
+      "route": "carob-story",
+      "width": "1440",
+      "url": "http://127.0.0.1:8782/carob-story.html",
+      "httpStatus": 200,
+      "metrics": {
+        "title": "What is Carob? | Maple Moon",
+        "clientWidth": 1440,
+        "scrollWidth": 1440,
+        "bodyHeight": 1767,
+        "textLength": 1414,
+        "headerVisible": true,
+        "headerHeight": 65,
+        "images": [
+          {
+            "src": "http://127.0.0.1:8782/assets/licensed/carob_farm/australian-carob-0205-16x9.jpg",
+            "complete": true,
+            "naturalWidth": 1600,
+            "naturalHeight": 900,
+            "rect": {
+              "width": 572,
+              "height": 398
+            }
+          },
+          {
+            "src": "http://127.0.0.1:8782/assets/licensed/carob_pods_macro.jpg",
+            "complete": true,
+            "naturalWidth": 1600,
+            "naturalHeight": 1068,
+            "rect": {
+              "width": 430,
+              "height": 100
+            }
+          },
+          {
+            "src": "http://127.0.0.1:8782/assets/photo_finals/maplemoon_heros41_brandmatched.webp",
+            "complete": true,
+            "naturalWidth": 2400,
+            "naturalHeight": 1600,
+            "rect": {
+              "width": 1158,
+              "height": 284
+            }
+          }
+        ],
+        "brokenImages": [],
+        "menuToggleCount": 0,
+        "cartToggleCount": 0
+      },
+      "screenshot": "/Users/handtomouse/maplemoon-website/_wip/evidence/track1_carli_build_20260816/screenshots/carob-story-1440.png",
+      "screenshotBytes": 1434120,
+      "screenshotMetadata": {
+        "width": 1440,
+        "height": 1767
+      },
+      "screenshotChannelStdev": [
+        39.840494766850654,
+        40.41131626958378,
+        42.28415781872245
+      ],
+      "interactions": {},
+      "consoleErrors": [],
+      "pageErrors": [],
+      "requestFailures": [],
+      "badResponses": [],
+      "failures": [],
+      "result": "PASS"
+    },
+    {
+      "route": "faq",
+      "width": "390",
+      "url": "http://127.0.0.1:8782/faq.html",
+      "httpStatus": 200,
+      "metrics": {
+        "title": "FAQ | Maple Moon",
+        "clientWidth": 390,
+        "scrollWidth": 390,
+        "bodyHeight": 2724,
+        "textLength": 1321,
+        "headerVisible": true,
+        "headerHeight": 59,
+        "images": [],
+        "brokenImages": [],
+        "menuToggleCount": 0,
+        "cartToggleCount": 0
+      },
+      "screenshot": "/Users/handtomouse/maplemoon-website/_wip/evidence/track1_carli_build_20260816/screenshots/faq-390.png",
+      "screenshotBytes": 420131,
+      "screenshotMetadata": {
+        "width": 390,
+        "height": 2723
+      },
+      "screenshotChannelStdev": [
+        31.56457314259178,
+        28.710509595402733,
+        25.673208758774983
+      ],
+      "interactions": {
+        "faq": {
+          "questionCount": 1,
+          "expanded": "true",
+          "answerId": "is-there-maple-in-it-answer",
+          "answerVisible": true
+        },
+        "faqScreenshot": "/Users/handtomouse/maplemoon-website/_wip/evidence/track1_carli_build_20260816/screenshots/faq-390-open.png"
+      },
+      "consoleErrors": [],
+      "pageErrors": [],
+      "requestFailures": [],
+      "badResponses": [],
+      "failures": [],
+      "result": "PASS"
+    },
+    {
+      "route": "faq",
+      "width": "1440",
+      "url": "http://127.0.0.1:8782/faq.html",
+      "httpStatus": 200,
+      "metrics": {
+        "title": "FAQ | Maple Moon",
+        "clientWidth": 1440,
+        "scrollWidth": 1440,
+        "bodyHeight": 2318,
+        "textLength": 1425,
+        "headerVisible": true,
+        "headerHeight": 70,
+        "images": [],
+        "brokenImages": [],
+        "menuToggleCount": 0,
+        "cartToggleCount": 0
+      },
+      "screenshot": "/Users/handtomouse/maplemoon-website/_wip/evidence/track1_carli_build_20260816/screenshots/faq-1440.png",
+      "screenshotBytes": 624319,
+      "screenshotMetadata": {
+        "width": 1440,
+        "height": 2318
+      },
+      "screenshotChannelStdev": [
+        23.248395604795483,
+        21.222613065750355,
+        19.16858106158621
+      ],
+      "interactions": {
+        "faq": {
+          "questionCount": 1,
+          "expanded": "true",
+          "answerId": "is-there-maple-in-it-answer",
+          "answerVisible": true
+        },
+        "faqScreenshot": "/Users/handtomouse/maplemoon-website/_wip/evidence/track1_carli_build_20260816/screenshots/faq-1440-open.png"
+      },
+      "consoleErrors": [],
+      "pageErrors": [],
+      "requestFailures": [],
+      "badResponses": [],
+      "failures": [],
+      "result": "PASS"
+    },
+    {
+      "route": "stockists",
+      "width": "390",
+      "url": "http://127.0.0.1:8782/stockists.html",
+      "httpStatus": 200,
+      "metrics": {
+        "title": "Stockists | Maple Moon",
+        "clientWidth": 390,
+        "scrollWidth": 390,
+        "bodyHeight": 3768,
+        "textLength": 2386,
+        "headerVisible": true,
+        "headerHeight": 70,
+        "images": [
+          {
+            "src": "http://127.0.0.1:8782/assets/photo_finals/maplemoon_heros55_brandmatched.webp",
+            "complete": true,
+            "naturalWidth": 2400,
+            "naturalHeight": 1600,
+            "rect": {
+              "width": 318,
+              "height": 212
+            }
+          }
+        ],
+        "brokenImages": [],
+        "menuToggleCount": 0,
+        "cartToggleCount": 0
+      },
+      "screenshot": "/Users/handtomouse/maplemoon-website/_wip/evidence/track1_carli_build_20260816/screenshots/stockists-390.png",
+      "screenshotBytes": 644083,
+      "screenshotMetadata": {
+        "width": 390,
+        "height": 3767
+      },
+      "screenshotChannelStdev": [
+        33.890449634355214,
+        29.44778746929882,
+        26.74490574421594
+      ],
+      "interactions": {},
+      "consoleErrors": [],
+      "pageErrors": [],
+      "requestFailures": [],
+      "badResponses": [],
+      "failures": [],
+      "result": "PASS"
+    },
+    {
+      "route": "stockists",
+      "width": "1440",
+      "url": "http://127.0.0.1:8782/stockists.html",
+      "httpStatus": 200,
+      "metrics": {
+        "title": "Stockists | Maple Moon",
+        "clientWidth": 1440,
+        "scrollWidth": 1440,
+        "bodyHeight": 3283,
+        "textLength": 2526,
+        "headerVisible": true,
+        "headerHeight": 70,
+        "images": [
+          {
+            "src": "http://127.0.0.1:8782/assets/photo_finals/maplemoon_heros55_brandmatched.webp",
+            "complete": true,
+            "naturalWidth": 2400,
+            "naturalHeight": 1600,
+            "rect": {
+              "width": 390,
+              "height": 330
+            }
+          }
+        ],
+        "brokenImages": [],
+        "menuToggleCount": 0,
+        "cartToggleCount": 0
+      },
+      "screenshot": "/Users/handtomouse/maplemoon-website/_wip/evidence/track1_carli_build_20260816/screenshots/stockists-1440.png",
+      "screenshotBytes": 1461784,
+      "screenshotMetadata": {
+        "width": 1440,
+        "height": 3282
+      },
+      "screenshotChannelStdev": [
+        28.077986593193955,
+        22.686646665497513,
+        19.03903772215938
+      ],
+      "interactions": {},
+      "consoleErrors": [],
+      "pageErrors": [],
+      "requestFailures": [],
+      "badResponses": [],
+      "failures": [],
+      "result": "PASS"
+    }
+  ],
+  "failures": [
+    {
+      "route": "homepage",
+      "width": "390",
+      "url": "http://127.0.0.1:8782/homepage.html",
+      "httpStatus": 200,
+      "metrics": {
+        "title": "Maple Moon: Australian Organic Carob",
+        "clientWidth": 390,
+        "scrollWidth": 390,
+        "bodyHeight": 9892,
+        "textLength": 3844,
+        "headerVisible": true,
+        "headerHeight": 70,
+        "images": [
+          {
+            "src": "http://127.0.0.1:8782/assets/product_shots/bar_pure_carob_hero.webp",
+            "complete": true,
+            "naturalWidth": 1200,
+            "naturalHeight": 1800,
+            "rect": {
+              "width": 0,
+              "height": 0
+            }
+          },
+          {
+            "src": "http://127.0.0.1:8782/assets/product_shots/moon_pure_carob.webp",
+            "complete": true,
+            "naturalWidth": 800,
+            "naturalHeight": 800,
+            "rect": {
+              "width": 0,
+              "height": 0
+            }
+          },
+          {
+            "src": "http://127.0.0.1:8782/assets/carob_wordmark.svg",
+            "complete": true,
+            "naturalWidth": 300,
+            "naturalHeight": 71,
+            "rect": {
+              "width": 342,
+              "height": 81
+            }
+          },
+          {
+            "src": "http://127.0.0.1:8782/assets/product_shots/bar_goji_coconut.webp",
+            "complete": true,
+            "naturalWidth": 800,
+            "naturalHeight": 1200,
+            "rect": {
+              "width": 0,
+              "height": 0
+            }
+          },
+          {
+            "src": "http://127.0.0.1:8782/assets/product_shots/bar_cayenne.webp",
+            "complete": true,
+            "naturalWidth": 800,
+            "naturalHeight": 1200,
+            "rect": {
+              "width": 126,
+              "height": 253
+            }
+          },
+          {
+            "src": "http://127.0.0.1:8782/assets/product_shots/bar_pure_carob.webp",
+            "complete": true,
+            "naturalWidth": 800,
+            "naturalHeight": 1200,
+            "rect": {
+              "width": 192,
+              "height": 305
+            }
+          },
+          {
+            "src": "http://127.0.0.1:8782/assets/product_shots/bar_almond.webp",
+            "complete": true,
+            "naturalWidth": 800,
+            "naturalHeight": 1200,
+            "rect": {
+              "width": 126,
+              "height": 253
+            }
+          },
+          {
+            "src": "http://127.0.0.1:8782/assets/product_shots/bar_peppermint.webp",
+            "complete": true,
+            "naturalWidth": 800,
+            "naturalHeight": 1200,
+            "rect": {
+              "width": 0,
+              "height": 0
+            }
+          },
+          {
+            "src": "http://127.0.0.1:8782/assets/product_shots/bar_hazelnut.webp",
+            "complete": true,
+            "naturalWidth": 800,
+            "naturalHeight": 1200,
+            "rect": {
+              "width": 0,
+              "height": 0
+            }
+          },
+          {
+            "src": "http://127.0.0.1:8782/assets/hero_shots/carob_branch_dusk.jpg",
+            "complete": true,
+            "naturalWidth": 2200,
+            "naturalHeight": 1228,
+            "rect": {
+              "width": 390,
+              "height": 260
+            }
+          },
+          {
+            "src": "http://127.0.0.1:8782/assets/licensed/scene_after_dinner.jpg",
+            "complete": true,
+            "naturalWidth": 1600,
+            "naturalHeight": 1067,
+            "rect": {
+              "width": 332,
+              "height": 328
+            }
+          },
+          {
+            "src": "http://127.0.0.1:8782/assets/licensed/scene_afternoon.jpg",
+            "complete": true,
+            "naturalWidth": 1600,
+            "naturalHeight": 1067,
+            "rect": {
+              "width": 332,
+              "height": 328
+            }
+          },
+          {
+            "src": "http://127.0.0.1:8782/assets/licensed/scene_tea_night.jpg",
+            "complete": true,
+            "naturalWidth": 1600,
+            "naturalHeight": 1067,
+            "rect": {
+              "width": 332,
+              "height": 328
+            }
+          },
+          {
+            "src": "http://127.0.0.1:8782/assets/licensed/carob_farm/australian-carob-0205-mobile.jpg",
+            "complete": true,
+            "naturalWidth": 1080,
+            "naturalHeight": 1350,
+            "rect": {
+              "width": 390,
+              "height": 270
+            }
+          },
+          {
+            "src": "http://127.0.0.1:8782/assets/product_shots/bar_goji_coconut.webp",
+            "complete": true,
+            "naturalWidth": 800,
+            "naturalHeight": 1200,
+            "rect": {
+              "width": 37,
+              "height": 56
+            }
+          },
+          {
+            "src": "http://127.0.0.1:8782/assets/product_shots/bar_cayenne.webp",
+            "complete": true,
+            "naturalWidth": 800,
+            "naturalHeight": 1200,
+            "rect": {
+              "width": 37,
+              "height": 56
+            }
+          },
+          {
+            "src": "http://127.0.0.1:8782/assets/product_shots/bar_pure_carob.webp",
+            "complete": true,
+            "naturalWidth": 800,
+            "naturalHeight": 1200,
+            "rect": {
+              "width": 37,
+              "height": 56
+            }
+          },
+          {
+            "src": "http://127.0.0.1:8782/assets/product_shots/bar_almond.webp",
+            "complete": true,
+            "naturalWidth": 800,
+            "naturalHeight": 1200,
+            "rect": {
+              "width": 37,
+              "height": 56
+            }
+          },
+          {
+            "src": "http://127.0.0.1:8782/assets/product_shots/bar_peppermint.webp",
+            "complete": true,
+            "naturalWidth": 800,
+            "naturalHeight": 1200,
+            "rect": {
+              "width": 37,
+              "height": 56
+            }
+          },
+          {
+            "src": "http://127.0.0.1:8782/assets/product_shots/bar_hazelnut.webp",
+            "complete": true,
+            "naturalWidth": 800,
+            "naturalHeight": 1200,
+            "rect": {
+              "width": 37,
+              "height": 56
+            }
+          }
+        ],
+        "brokenImages": [],
+        "menuToggleCount": 1,
+        "cartToggleCount": 1
+      },
+      "screenshot": "/Users/handtomouse/maplemoon-website/_wip/evidence/track1_carli_build_20260816/screenshots/homepage-390.png",
+      "screenshotBytes": 2318926,
+      "screenshotMetadata": {
+        "width": 390,
+        "height": 9891
+      },
+      "screenshotChannelStdev": [
+        55.69709500464747,
+        55.8869449742213,
+        54.832884313718246
+      ],
+      "interactions": {
+        "menu": {
+          "expanded": "true",
+          "state": "open",
+          "bodyOpen": true
+        },
+        "menuScreenshot": "/Users/handtomouse/maplemoon-website/_wip/evidence/track1_carli_build_20260816/screenshots/homepage-390-menu-open.png",
+        "homeCart": {
+          "before": {
+            "dialogs": 0,
+            "bodyAttributes": [
+              "data-mm-route=home"
+            ]
+          },
+          "after": {
+            "dialogs": 0,
+            "bodyAttributes": [
+              "data-mm-route=home"
+            ]
+          },
+          "effect": false
+        }
+      },
+      "consoleErrors": [],
+      "pageErrors": [],
+      "requestFailures": [],
+      "badResponses": [],
+      "failures": [
+        "homepage-cart-no-effect"
+      ],
+      "result": "FAIL"
+    }
+  ]
+}

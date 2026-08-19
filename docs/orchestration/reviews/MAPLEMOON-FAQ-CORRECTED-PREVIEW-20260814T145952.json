@@ -1,0 +1,111 @@
+{
+  "schema": "maplemoon-receipt/v2",
+  "receipt_id": "MAPLEMOON-FAQ-CORRECTED-PREVIEW-20260814T145952-RECEIPT-001",
+  "packet_id": "MAPLEMOON-FAQ-CORRECTED-PREVIEW-20260814T145952",
+  "worker_thread_id": "/root/recertify_updated_preview",
+  "worker": "Codex preview deployment and independent byte-verification worker",
+  "started_at": "2026-08-14T15:00:53+10:00",
+  "completed_at": "2026-08-14T15:04:55+10:00",
+  "outcome": "PASS_PREVIEW_READY_PRODUCTION_FROZEN",
+  "confidence": "high",
+  "checkpoint_path": "maplemoon-website/_wip/checkpoints/MAPLEMOON-FAQ-CORRECTED-PREVIEW-20260814T145952_20260814_145952_AEST",
+  "files_read": [
+    "maplemoon-website/docs/orchestration/packets/MAPLEMOON-FAQ-CORRECTED-PREVIEW-20260814T145952.md",
+    "maplemoon-website/docs/orchestration/packets/MAPLEMOON-FAQ-CAFFEINE-VERIFY-20260814T145103.md",
+    "maplemoon-website/docs/orchestration/reviews/MAPLEMOON-FAQ-CAFFEINE-VERIFY-20260814T145103.json",
+    "maplemoon_build_20260813/homepage.html",
+    "maplemoon_build_20260813/our-story.html",
+    "maplemoon_build_20260813/carob-story.html",
+    "maplemoon_build_20260813/shop.html",
+    "maplemoon_build_20260813/faq.html",
+    "maplemoon_build_20260813/stockists.html",
+    "maplemoon_build_20260813/pure-carob-bar.html",
+    "maplemoon_build_20260813/assets/design-system/mm-chrome.js",
+    "maplemoon_build_20260813/assets/design-system/mm-chrome.css",
+    "maplemoon_build_20260813/assets/design-system/mm-tokens.css",
+    "maplemoon_build_20260813/assets/design-system/mm-primitives.css",
+    "maplemoon_build_20260813/mock-cart.js",
+    "maplemoon_build_20260813/mock-cart.css",
+    "maplemoon-website/scripts/check-maplemoon-receipt.py"
+  ],
+  "files_changed": [
+    "maplemoon-website/_wip/evidence/faq_corrected_preview_20260814T145952",
+    "maplemoon-website/docs/orchestration/reviews/MAPLEMOON-FAQ-CORRECTED-PREVIEW-20260814T145952.json"
+  ],
+  "pre_sha256": {
+    "maplemoon-website/_wip/evidence/faq_corrected_preview_20260814T145952": null,
+    "maplemoon-website/docs/orchestration/reviews/MAPLEMOON-FAQ-CORRECTED-PREVIEW-20260814T145952.json": null
+  },
+  "post_sha256": {
+    "maplemoon-website/_wip/evidence/faq_corrected_preview_20260814T145952": "eae32f5a63a04c8e6467cf7f2ba7c96f997ff742494cbe6730db0dda6f9355ee",
+    "maplemoon-website/docs/orchestration/reviews/MAPLEMOON-FAQ-CORRECTED-PREVIEW-20260814T145952.json": null
+  },
+  "checks": [
+    {
+      "command": "python3 -B scripts/check-maplemoon-receipt.py verify --root /Users/handtomouse --packet docs/orchestration/packets/MAPLEMOON-FAQ-CORRECTED-PREVIEW-20260814T145952.md --checkpoint _wip/checkpoints/MAPLEMOON-FAQ-CORRECTED-PREVIEW-20260814T145952_20260814_145952_AEST --phase start",
+      "exit_code": 0,
+      "result": "PASS packet=MAPLEMOON-FAQ-CORRECTED-PREVIEW-20260814T145952 phase=start scope=2"
+    },
+    {
+      "command": "completion and promotion gates for MAPLEMOON-FAQ-CAFFEINE-VERIFY-20260814T145103",
+      "exit_code": 0,
+      "result": "PASS packet=MAPLEMOON-FAQ-CAFFEINE-VERIFY-20260814T145103 phase=complete changed=2; PASS packet=MAPLEMOON-FAQ-CAFFEINE-VERIFY-20260814T145103 phase=promote changed=2."
+    },
+    {
+      "command": "pre-deploy shasum -a 256 homepage.html our-story.html carob-story.html shop.html faq.html stockists.html pure-carob-bar.html",
+      "exit_code": 0,
+      "result": "PASS: all seven candidate SHA-256 values exactly matched the packet, including corrected FAQ c5ce7aaf0b9b3221f34eb2928fc2ff6732fc1a915ea80144a4ade2b94011fb6e."
+    },
+    {
+      "command": "pre-deploy vercel inspect production alias plus authenticated in-memory homepage hashes",
+      "exit_code": 0,
+      "result": "PASS: alias resolved immutable 7vjf2m50b / dpl_G2LER2awaqyFtGRCcTserXbNynct, target production, status Ready. Alias and immutable homepage each returned 208556 bytes, MD5 6197879a5ca9d3ed0452773abc0bbeb4 and SHA-256 b936b5bb4856cdd6134e5b15bce5dfc3b353c1d442fd1a418180b35b8fa10356."
+    },
+    {
+      "command": "vercel deploy --yes",
+      "exit_code": 0,
+      "result": "PASS: exactly one permitted deploy command created https://maplemoonbuild20260813-krftm36lg-handtomouses-projects.vercel.app. No other deploy command was run."
+    },
+    {
+      "command": "vercel inspect https://maplemoonbuild20260813-krftm36lg-handtomouses-projects.vercel.app",
+      "exit_code": 0,
+      "result": "PASS: deployment dpl_6gGEYQfUuXZPYGLaasVDEo9KZrQD, target preview, status Ready."
+    },
+    {
+      "command": "13 authenticated vercel curl fetches with --location",
+      "exit_code": 0,
+      "result": "PASS: homepage, our-story, carob-story, shop, FAQ, stockists, pure-carob-bar, mm-chrome.js, mm-chrome.css, mm-tokens.css, mm-primitives.css, mock-cart.js and mock-cart.css each returned HTTP 200 with nonzero bodies."
+    },
+    {
+      "command": "node _wip/evidence/faq_corrected_preview_20260814T145952/byte-verify.cjs",
+      "exit_code": 0,
+      "result": "PASS allPass=true: all 13 authenticated deployed response bodies had exact local byte lengths, identical SHA-256 values and cmp=true. The deployed FAQ contains the approved question and answer exactly once and both old strings zero times."
+    },
+    {
+      "command": "post-deploy vercel inspect production alias plus authenticated in-memory homepage hashes",
+      "exit_code": 0,
+      "result": "PASS: production still resolves 7vjf2m50b / dpl_G2LER2awaqyFtGRCcTserXbNynct. Alias and immutable homepage remain 208556 bytes, MD5 6197879a5ca9d3ed0452773abc0bbeb4 and SHA-256 b936b5bb4856cdd6134e5b15bce5dfc3b353c1d442fd1a418180b35b8fa10356."
+    },
+    {
+      "command": "final shasum -a 256 of all seven HTML files and six critical shared assets",
+      "exit_code": 0,
+      "result": "PASS: all 13 local candidate files remained unchanged after deployment and verification."
+    }
+  ],
+  "screenshots_or_urls": [
+    "https://maplemoonbuild20260813-krftm36lg-handtomouses-projects.vercel.app",
+    "https://vercel.com/handtomouses-projects/maplemoon_build_20260813/6gGEYQfUuXZPYGLaasVDEo9KZrQD",
+    "maplemoon-website/_wip/evidence/faq_corrected_preview_20260814T145952/deployment-result.json",
+    "maplemoon-website/_wip/evidence/faq_corrected_preview_20260814T145952/byte-results.json",
+    "maplemoon-website/_wip/evidence/faq_corrected_preview_20260814T145952/production-freeze.json"
+  ],
+  "failures": [],
+  "unknowns": [],
+  "residual_risk": [
+    "The new URL is an authenticated internal preview. Vercel Authentication was not changed, production intentionally remains frozen, and client delivery remains outside this packet."
+  ],
+  "forbidden_path_changes": [],
+  "proposed_next_state": "preview_verified_ready_for_boss_review",
+  "next_reviewer": "MapleMoon BOSS",
+  "ready_to_promote": false
+}

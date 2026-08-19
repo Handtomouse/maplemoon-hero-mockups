@@ -1,0 +1,1451 @@
+{
+  "expected": 14,
+  "passed": 14,
+  "rows": [
+    {
+      "effective_width": 390,
+      "native_metrics": {
+        "bodyTextLength": 2285,
+        "browserBounds": {
+          "height": 1079,
+          "left": 30,
+          "top": 38,
+          "width": 780,
+          "windowState": "normal"
+        },
+        "clientWidth": 390,
+        "devicePixelRatio": 4,
+        "innerHeight": 496,
+        "innerWidth": 390,
+        "outerHeight": 1079,
+        "outerWidth": 780,
+        "pageScaleIndicators": {
+          "rootTransform": "none",
+          "rootTransformOrigin": "195px 2901.33px"
+        },
+        "readyState": "complete",
+        "rootComputedZoom": "1",
+        "rootInlineZoom": "",
+        "scrollWidth": 390,
+        "url": "http://127.0.0.1:4422/homepage.html",
+        "visualViewport": {
+          "height": 496,
+          "offsetLeft": 0,
+          "offsetTop": 0,
+          "scale": 1,
+          "width": 390
+        }
+      },
+      "navigation": {
+        "console_errors": [],
+        "document_responses": [
+          {
+            "mimeType": "text/html",
+            "status": 200,
+            "type": "Document",
+            "url": "http://127.0.0.1:4422/homepage.html"
+          }
+        ],
+        "exceptions": [],
+        "http_errors": [],
+        "lazy_activation": {
+          "afterIncomplete": [],
+          "beforeIncomplete": [],
+          "decodeRejected": []
+        },
+        "loading_failures": [],
+        "log_errors": [],
+        "request_count": 34,
+        "response_count": 34,
+        "scroll_activation": {
+          "bottom": 5293,
+          "images": 22,
+          "step": 396
+        },
+        "url": "http://127.0.0.1:4422/homepage.html"
+      },
+      "probe": {
+        "authoredImageFailures": [],
+        "authoredImages": 22,
+        "bodyTextLength": 2285,
+        "clientWidth": 390,
+        "header": {
+          "enhanced": "true",
+          "exists": true,
+          "fixed": true,
+          "rect": {
+            "height": 71,
+            "left": 0,
+            "right": 390,
+            "top": 0,
+            "width": 390
+          },
+          "state": "closed",
+          "topHitWithinHeader": true,
+          "visible": "visible"
+        },
+        "innerHeight": 496,
+        "innerWidth": 390,
+        "nonblank": true,
+        "rootZoom": {
+          "computed": "1",
+          "inline": ""
+        },
+        "scrollWidth": 390,
+        "vv": {
+          "height": 496,
+          "scale": 1,
+          "width": 390
+        }
+      },
+      "route": "homepage.html",
+      "verdict": "PASS"
+    },
+    {
+      "effective_width": 390,
+      "native_metrics": {
+        "bodyTextLength": 4457,
+        "browserBounds": {
+          "height": 1079,
+          "left": 30,
+          "top": 38,
+          "width": 780,
+          "windowState": "normal"
+        },
+        "clientWidth": 390,
+        "devicePixelRatio": 4,
+        "innerHeight": 496,
+        "innerWidth": 390,
+        "outerHeight": 1079,
+        "outerWidth": 780,
+        "pageScaleIndicators": {
+          "rootTransform": "none",
+          "rootTransformOrigin": "195px 4992.2px"
+        },
+        "readyState": "complete",
+        "rootComputedZoom": "1",
+        "rootInlineZoom": "",
+        "scrollWidth": 390,
+        "url": "http://127.0.0.1:4422/our-story.html",
+        "visualViewport": {
+          "height": 496,
+          "offsetLeft": 0,
+          "offsetTop": 0,
+          "scale": 1,
+          "width": 390
+        }
+      },
+      "navigation": {
+        "console_errors": [],
+        "document_responses": [
+          {
+            "mimeType": "text/html",
+            "status": 200,
+            "type": "Document",
+            "url": "http://127.0.0.1:4422/our-story.html"
+          }
+        ],
+        "exceptions": [],
+        "http_errors": [],
+        "lazy_activation": {
+          "afterIncomplete": [],
+          "beforeIncomplete": [
+            "/assets/our_story/founder_dylan.webp",
+            "/assets/licensed/carob_farm/australian-carob-0205-16x9.jpg"
+          ],
+          "decodeRejected": []
+        },
+        "loading_failures": [],
+        "log_errors": [],
+        "request_count": 29,
+        "response_count": 29,
+        "scroll_activation": {
+          "bottom": 9489,
+          "images": 15,
+          "step": 396
+        },
+        "url": "http://127.0.0.1:4422/our-story.html"
+      },
+      "probe": {
+        "authoredImageFailures": [],
+        "authoredImages": 15,
+        "bodyTextLength": 4457,
+        "clientWidth": 390,
+        "header": {
+          "enhanced": "true",
+          "exists": true,
+          "fixed": true,
+          "rect": {
+            "height": 70,
+            "left": 0,
+            "right": 390,
+            "top": 0,
+            "width": 390
+          },
+          "state": "closed",
+          "topHitWithinHeader": true,
+          "visible": "visible"
+        },
+        "innerHeight": 496,
+        "innerWidth": 390,
+        "nonblank": true,
+        "rootZoom": {
+          "computed": "1",
+          "inline": ""
+        },
+        "scrollWidth": 390,
+        "vv": {
+          "height": 496,
+          "scale": 1,
+          "width": 390
+        }
+      },
+      "route": "our-story.html",
+      "verdict": "PASS"
+    },
+    {
+      "effective_width": 390,
+      "native_metrics": {
+        "bodyTextLength": 1746,
+        "browserBounds": {
+          "height": 1079,
+          "left": 30,
+          "top": 38,
+          "width": 780,
+          "windowState": "normal"
+        },
+        "clientWidth": 390,
+        "devicePixelRatio": 4,
+        "innerHeight": 496,
+        "innerWidth": 390,
+        "outerHeight": 1079,
+        "outerWidth": 780,
+        "pageScaleIndicators": {
+          "rootTransform": "none",
+          "rootTransformOrigin": "195px 2038.82px"
+        },
+        "readyState": "complete",
+        "rootComputedZoom": "1",
+        "rootInlineZoom": "",
+        "scrollWidth": 390,
+        "url": "http://127.0.0.1:4422/carob-story.html",
+        "visualViewport": {
+          "height": 496,
+          "offsetLeft": 0,
+          "offsetTop": 0,
+          "scale": 1,
+          "width": 390
+        }
+      },
+      "navigation": {
+        "console_errors": [],
+        "document_responses": [
+          {
+            "mimeType": "text/html",
+            "status": 200,
+            "type": "Document",
+            "url": "http://127.0.0.1:4422/carob-story.html"
+          }
+        ],
+        "exceptions": [],
+        "http_errors": [],
+        "lazy_activation": {
+          "afterIncomplete": [],
+          "beforeIncomplete": [
+            "/assets/ai/carob_pods.webp",
+            "/assets/ai/carob_powder_roast.webp",
+            "/assets/photo_finals/mm23_xmp_blue_hero_2400.webp",
+            "/assets/photo_finals/maplemoon_heros55_brandmatched_atmospheric.webp"
+          ],
+          "decodeRejected": []
+        },
+        "loading_failures": [],
+        "log_errors": [],
+        "request_count": 30,
+        "response_count": 30,
+        "scroll_activation": {
+          "bottom": 3582,
+          "images": 12,
+          "step": 396
+        },
+        "url": "http://127.0.0.1:4422/carob-story.html"
+      },
+      "probe": {
+        "authoredImageFailures": [],
+        "authoredImages": 12,
+        "bodyTextLength": 1746,
+        "clientWidth": 390,
+        "header": {
+          "enhanced": "true",
+          "exists": true,
+          "fixed": true,
+          "rect": {
+            "height": 70,
+            "left": 0,
+            "right": 390,
+            "top": 0,
+            "width": 390
+          },
+          "state": "closed",
+          "topHitWithinHeader": true,
+          "visible": "visible"
+        },
+        "innerHeight": 496,
+        "innerWidth": 390,
+        "nonblank": true,
+        "rootZoom": {
+          "computed": "1",
+          "inline": ""
+        },
+        "scrollWidth": 390,
+        "vv": {
+          "height": 496,
+          "scale": 1,
+          "width": 390
+        }
+      },
+      "route": "carob-story.html",
+      "verdict": "PASS"
+    },
+    {
+      "effective_width": 390,
+      "native_metrics": {
+        "bodyTextLength": 5629,
+        "browserBounds": {
+          "height": 1079,
+          "left": 30,
+          "top": 38,
+          "width": 780,
+          "windowState": "normal"
+        },
+        "clientWidth": 390,
+        "devicePixelRatio": 4,
+        "innerHeight": 496,
+        "innerWidth": 390,
+        "outerHeight": 1079,
+        "outerWidth": 780,
+        "pageScaleIndicators": {
+          "rootTransform": "none",
+          "rootTransformOrigin": "195px 8203.42px"
+        },
+        "readyState": "complete",
+        "rootComputedZoom": "1",
+        "rootInlineZoom": "",
+        "scrollWidth": 390,
+        "url": "http://127.0.0.1:4422/shop.html",
+        "visualViewport": {
+          "height": 496,
+          "offsetLeft": 0,
+          "offsetTop": 0,
+          "scale": 1,
+          "width": 390
+        }
+      },
+      "navigation": {
+        "console_errors": [],
+        "document_responses": [
+          {
+            "mimeType": "text/html",
+            "status": 200,
+            "type": "Document",
+            "url": "http://127.0.0.1:4422/shop.html"
+          }
+        ],
+        "exceptions": [],
+        "http_errors": [],
+        "lazy_activation": {
+          "afterIncomplete": [],
+          "beforeIncomplete": [
+            "/assets/product_shots/bar_cayenne.webp",
+            "/assets/product_shots/bar_almond.webp",
+            "/assets/product_shots/moon_pure_carob.webp",
+            "/assets/product_shots/moon_peppermint.webp",
+            "/assets/product_shots/moon_hazelnut.webp",
+            "/assets/product_shots/moon_goji_coconut.webp",
+            "/assets/product_shots/moon_cayenne.webp",
+            "/assets/product_shots/moon_almond.webp",
+            "/assets/product_shots/elixir_plain.webp",
+            "/assets/product_shots/elixir_spiced.webp",
+            "/assets/product_shots/bananas.webp",
+            "/assets/product_shots/powder_roasted.webp"
+          ],
+          "decodeRejected": []
+        },
+        "loading_failures": [],
+        "log_errors": [],
+        "request_count": 47,
+        "response_count": 47,
+        "scroll_activation": {
+          "bottom": 15684,
+          "images": 31,
+          "step": 396
+        },
+        "url": "http://127.0.0.1:4422/shop.html"
+      },
+      "probe": {
+        "authoredImageFailures": [],
+        "authoredImages": 31,
+        "bodyTextLength": 5629,
+        "clientWidth": 390,
+        "header": {
+          "enhanced": "true",
+          "exists": true,
+          "fixed": true,
+          "rect": {
+            "height": 70,
+            "left": 0,
+            "right": 390,
+            "top": 0,
+            "width": 390
+          },
+          "state": "closed",
+          "topHitWithinHeader": true,
+          "visible": "visible"
+        },
+        "innerHeight": 496,
+        "innerWidth": 390,
+        "nonblank": true,
+        "rootZoom": {
+          "computed": "1",
+          "inline": ""
+        },
+        "scrollWidth": 390,
+        "vv": {
+          "height": 496,
+          "scale": 1,
+          "width": 390
+        }
+      },
+      "route": "shop.html",
+      "verdict": "PASS"
+    },
+    {
+      "effective_width": 390,
+      "native_metrics": {
+        "bodyTextLength": 1543,
+        "browserBounds": {
+          "height": 1079,
+          "left": 30,
+          "top": 38,
+          "width": 780,
+          "windowState": "normal"
+        },
+        "clientWidth": 390,
+        "devicePixelRatio": 4,
+        "innerHeight": 496,
+        "innerWidth": 390,
+        "outerHeight": 1079,
+        "outerWidth": 780,
+        "pageScaleIndicators": {
+          "rootTransform": "none",
+          "rootTransformOrigin": "195px 1383.53px"
+        },
+        "readyState": "complete",
+        "rootComputedZoom": "1",
+        "rootInlineZoom": "",
+        "scrollWidth": 390,
+        "url": "http://127.0.0.1:4422/faq.html",
+        "visualViewport": {
+          "height": 496,
+          "offsetLeft": 0,
+          "offsetTop": 0,
+          "scale": 1,
+          "width": 390
+        }
+      },
+      "navigation": {
+        "console_errors": [],
+        "document_responses": [
+          {
+            "mimeType": "text/html",
+            "status": 200,
+            "type": "Document",
+            "url": "http://127.0.0.1:4422/faq.html"
+          }
+        ],
+        "exceptions": [],
+        "http_errors": [],
+        "lazy_activation": {
+          "afterIncomplete": [],
+          "beforeIncomplete": [],
+          "decodeRejected": []
+        },
+        "loading_failures": [],
+        "log_errors": [],
+        "request_count": 17,
+        "response_count": 17,
+        "scroll_activation": {
+          "bottom": 2272,
+          "images": 1,
+          "step": 396
+        },
+        "url": "http://127.0.0.1:4422/faq.html"
+      },
+      "probe": {
+        "authoredImageFailures": [],
+        "authoredImages": 1,
+        "bodyTextLength": 1543,
+        "clientWidth": 390,
+        "header": {
+          "enhanced": "true",
+          "exists": true,
+          "fixed": true,
+          "rect": {
+            "height": 62,
+            "left": 0,
+            "right": 390,
+            "top": 0,
+            "width": 390
+          },
+          "state": "closed",
+          "topHitWithinHeader": true,
+          "visible": "visible"
+        },
+        "innerHeight": 496,
+        "innerWidth": 390,
+        "nonblank": true,
+        "rootZoom": {
+          "computed": "1",
+          "inline": ""
+        },
+        "scrollWidth": 390,
+        "vv": {
+          "height": 496,
+          "scale": 1,
+          "width": 390
+        }
+      },
+      "route": "faq.html",
+      "verdict": "PASS"
+    },
+    {
+      "effective_width": 390,
+      "native_metrics": {
+        "bodyTextLength": 2102,
+        "browserBounds": {
+          "height": 1079,
+          "left": 30,
+          "top": 38,
+          "width": 780,
+          "windowState": "normal"
+        },
+        "clientWidth": 390,
+        "devicePixelRatio": 4,
+        "innerHeight": 496,
+        "innerWidth": 390,
+        "outerHeight": 1079,
+        "outerWidth": 780,
+        "pageScaleIndicators": {
+          "rootTransform": "none",
+          "rootTransformOrigin": "195px 1714.64px"
+        },
+        "readyState": "complete",
+        "rootComputedZoom": "1",
+        "rootInlineZoom": "",
+        "scrollWidth": 390,
+        "url": "http://127.0.0.1:4422/stockists.html",
+        "visualViewport": {
+          "height": 496,
+          "offsetLeft": 0,
+          "offsetTop": 0,
+          "scale": 1,
+          "width": 390
+        }
+      },
+      "navigation": {
+        "console_errors": [],
+        "document_responses": [
+          {
+            "mimeType": "text/html",
+            "status": 200,
+            "type": "Document",
+            "url": "http://127.0.0.1:4422/stockists.html"
+          }
+        ],
+        "exceptions": [],
+        "http_errors": [],
+        "lazy_activation": {
+          "afterIncomplete": [],
+          "beforeIncomplete": [
+            "/assets/photo_finals/maplemoon_heros55_brandmatched.webp"
+          ],
+          "decodeRejected": []
+        },
+        "loading_failures": [],
+        "log_errors": [],
+        "request_count": 18,
+        "response_count": 18,
+        "scroll_activation": {
+          "bottom": 2899,
+          "images": 2,
+          "step": 396
+        },
+        "url": "http://127.0.0.1:4422/stockists.html"
+      },
+      "probe": {
+        "authoredImageFailures": [],
+        "authoredImages": 2,
+        "bodyTextLength": 2102,
+        "clientWidth": 390,
+        "header": {
+          "enhanced": "true",
+          "exists": true,
+          "fixed": true,
+          "rect": {
+            "height": 70,
+            "left": 0,
+            "right": 390,
+            "top": 0,
+            "width": 390
+          },
+          "state": "closed",
+          "topHitWithinHeader": true,
+          "visible": "visible"
+        },
+        "innerHeight": 496,
+        "innerWidth": 390,
+        "nonblank": true,
+        "rootZoom": {
+          "computed": "1",
+          "inline": ""
+        },
+        "scrollWidth": 390,
+        "vv": {
+          "height": 496,
+          "scale": 1,
+          "width": 390
+        }
+      },
+      "route": "stockists.html",
+      "verdict": "PASS"
+    },
+    {
+      "effective_width": 390,
+      "native_metrics": {
+        "bodyTextLength": 1490,
+        "browserBounds": {
+          "height": 1079,
+          "left": 30,
+          "top": 38,
+          "width": 780,
+          "windowState": "normal"
+        },
+        "clientWidth": 390,
+        "devicePixelRatio": 4,
+        "innerHeight": 496,
+        "innerWidth": 390,
+        "outerHeight": 1079,
+        "outerWidth": 780,
+        "pageScaleIndicators": {
+          "rootTransform": "none",
+          "rootTransformOrigin": "195px 1513.51px"
+        },
+        "readyState": "complete",
+        "rootComputedZoom": "1",
+        "rootInlineZoom": "",
+        "scrollWidth": 390,
+        "url": "http://127.0.0.1:4422/pure-carob-bar.html",
+        "visualViewport": {
+          "height": 496,
+          "offsetLeft": 0,
+          "offsetTop": 0,
+          "scale": 1,
+          "width": 390
+        }
+      },
+      "navigation": {
+        "console_errors": [],
+        "document_responses": [
+          {
+            "mimeType": "text/html",
+            "status": 200,
+            "type": "Document",
+            "url": "http://127.0.0.1:4422/pure-carob-bar.html"
+          }
+        ],
+        "exceptions": [],
+        "http_errors": [],
+        "lazy_activation": {
+          "afterIncomplete": [],
+          "beforeIncomplete": [
+            "/assets/product_shots/bar_goji_coconut.webp",
+            "/assets/product_shots/bar_cayenne.webp",
+            "/assets/product_shots/bar_almond.webp"
+          ],
+          "decodeRejected": []
+        },
+        "loading_failures": [],
+        "log_errors": [],
+        "request_count": 20,
+        "response_count": 20,
+        "scroll_activation": {
+          "bottom": 2494,
+          "images": 7,
+          "step": 396
+        },
+        "url": "http://127.0.0.1:4422/pure-carob-bar.html"
+      },
+      "probe": {
+        "authoredImageFailures": [],
+        "authoredImages": 7,
+        "bodyTextLength": 1490,
+        "clientWidth": 390,
+        "header": {
+          "enhanced": "true",
+          "exists": true,
+          "fixed": true,
+          "rect": {
+            "height": 70,
+            "left": 0,
+            "right": 390,
+            "top": 0,
+            "width": 390
+          },
+          "state": "closed",
+          "topHitWithinHeader": true,
+          "visible": "visible"
+        },
+        "innerHeight": 496,
+        "innerWidth": 390,
+        "nonblank": true,
+        "rootZoom": {
+          "computed": "1",
+          "inline": ""
+        },
+        "scrollWidth": 390,
+        "vv": {
+          "height": 496,
+          "scale": 1,
+          "width": 390
+        }
+      },
+      "route": "pure-carob-bar.html",
+      "verdict": "PASS"
+    },
+    {
+      "effective_width": 720,
+      "native_metrics": {
+        "bodyTextLength": 2285,
+        "browserBounds": {
+          "height": 1079,
+          "left": 30,
+          "top": 38,
+          "width": 1440,
+          "windowState": "normal"
+        },
+        "clientWidth": 720,
+        "devicePixelRatio": 4,
+        "innerHeight": 496,
+        "innerWidth": 720,
+        "outerHeight": 1079,
+        "outerWidth": 1440,
+        "pageScaleIndicators": {
+          "rootTransform": "none",
+          "rootTransformOrigin": "360px 2743.81px"
+        },
+        "readyState": "complete",
+        "rootComputedZoom": "1",
+        "rootInlineZoom": "",
+        "scrollWidth": 720,
+        "url": "http://127.0.0.1:4422/homepage.html",
+        "visualViewport": {
+          "height": 496,
+          "offsetLeft": 0,
+          "offsetTop": 0,
+          "scale": 1,
+          "width": 720
+        }
+      },
+      "navigation": {
+        "console_errors": [],
+        "document_responses": [
+          {
+            "mimeType": "text/html",
+            "status": 200,
+            "type": "Document",
+            "url": "http://127.0.0.1:4422/homepage.html"
+          }
+        ],
+        "exceptions": [],
+        "http_errors": [],
+        "lazy_activation": {
+          "afterIncomplete": [],
+          "beforeIncomplete": [
+            "/assets/ritual/ritual_after_dinner.webp",
+            "/assets/ritual/ritual_afternoon.webp",
+            "/assets/ritual/ritual_tea_night.webp",
+            "/assets/product_shots/bar_pure_carob.webp",
+            "/assets/product_shots/bar_peppermint.webp",
+            "/assets/product_shots/bar_hazelnut.webp",
+            "/assets/product_shots/bar_goji_coconut.webp",
+            "/assets/product_shots/bar_cayenne.webp",
+            "/assets/product_shots/bar_almond.webp"
+          ],
+          "decodeRejected": []
+        },
+        "loading_failures": [],
+        "log_errors": [],
+        "request_count": 34,
+        "response_count": 34,
+        "scroll_activation": {
+          "bottom": 4992,
+          "images": 22,
+          "step": 396
+        },
+        "url": "http://127.0.0.1:4422/homepage.html"
+      },
+      "probe": {
+        "authoredImageFailures": [],
+        "authoredImages": 22,
+        "bodyTextLength": 2285,
+        "clientWidth": 720,
+        "header": {
+          "enhanced": "true",
+          "exists": true,
+          "fixed": true,
+          "rect": {
+            "height": 71,
+            "left": 0,
+            "right": 720,
+            "top": 0,
+            "width": 720
+          },
+          "state": "closed",
+          "topHitWithinHeader": true,
+          "visible": "visible"
+        },
+        "innerHeight": 496,
+        "innerWidth": 720,
+        "nonblank": true,
+        "rootZoom": {
+          "computed": "1",
+          "inline": ""
+        },
+        "scrollWidth": 720,
+        "vv": {
+          "height": 496,
+          "scale": 1,
+          "width": 720
+        }
+      },
+      "route": "homepage.html",
+      "verdict": "PASS"
+    },
+    {
+      "effective_width": 720,
+      "native_metrics": {
+        "bodyTextLength": 4457,
+        "browserBounds": {
+          "height": 1079,
+          "left": 30,
+          "top": 38,
+          "width": 1440,
+          "windowState": "normal"
+        },
+        "clientWidth": 720,
+        "devicePixelRatio": 4,
+        "innerHeight": 496,
+        "innerWidth": 720,
+        "outerHeight": 1079,
+        "outerWidth": 1440,
+        "pageScaleIndicators": {
+          "rootTransform": "none",
+          "rootTransformOrigin": "360px 5990.59px"
+        },
+        "readyState": "complete",
+        "rootComputedZoom": "1",
+        "rootInlineZoom": "",
+        "scrollWidth": 720,
+        "url": "http://127.0.0.1:4422/our-story.html",
+        "visualViewport": {
+          "height": 496,
+          "offsetLeft": 0,
+          "offsetTop": 0,
+          "scale": 1,
+          "width": 720
+        }
+      },
+      "navigation": {
+        "console_errors": [],
+        "document_responses": [
+          {
+            "mimeType": "text/html",
+            "status": 200,
+            "type": "Document",
+            "url": "http://127.0.0.1:4422/our-story.html"
+          }
+        ],
+        "exceptions": [],
+        "http_errors": [],
+        "lazy_activation": {
+          "afterIncomplete": [],
+          "beforeIncomplete": [
+            "/assets/our_story/founder_dylan.webp",
+            "/assets/licensed/carob_farm/australian-carob-0205-16x9.jpg"
+          ],
+          "decodeRejected": []
+        },
+        "loading_failures": [],
+        "log_errors": [],
+        "request_count": 29,
+        "response_count": 29,
+        "scroll_activation": {
+          "bottom": 11486,
+          "images": 15,
+          "step": 396
+        },
+        "url": "http://127.0.0.1:4422/our-story.html"
+      },
+      "probe": {
+        "authoredImageFailures": [],
+        "authoredImages": 15,
+        "bodyTextLength": 4457,
+        "clientWidth": 720,
+        "header": {
+          "enhanced": "true",
+          "exists": true,
+          "fixed": true,
+          "rect": {
+            "height": 70,
+            "left": 0,
+            "right": 720,
+            "top": 0,
+            "width": 720
+          },
+          "state": "closed",
+          "topHitWithinHeader": true,
+          "visible": "visible"
+        },
+        "innerHeight": 496,
+        "innerWidth": 720,
+        "nonblank": true,
+        "rootZoom": {
+          "computed": "1",
+          "inline": ""
+        },
+        "scrollWidth": 720,
+        "vv": {
+          "height": 496,
+          "scale": 1,
+          "width": 720
+        }
+      },
+      "route": "our-story.html",
+      "verdict": "PASS"
+    },
+    {
+      "effective_width": 720,
+      "native_metrics": {
+        "bodyTextLength": 1777,
+        "browserBounds": {
+          "height": 1079,
+          "left": 30,
+          "top": 38,
+          "width": 1440,
+          "windowState": "normal"
+        },
+        "clientWidth": 720,
+        "devicePixelRatio": 4,
+        "innerHeight": 496,
+        "innerWidth": 720,
+        "outerHeight": 1079,
+        "outerWidth": 1440,
+        "pageScaleIndicators": {
+          "rootTransform": "none",
+          "rootTransformOrigin": "360px 1568.34px"
+        },
+        "readyState": "complete",
+        "rootComputedZoom": "1",
+        "rootInlineZoom": "",
+        "scrollWidth": 720,
+        "url": "http://127.0.0.1:4422/carob-story.html",
+        "visualViewport": {
+          "height": 496,
+          "offsetLeft": 0,
+          "offsetTop": 0,
+          "scale": 1,
+          "width": 720
+        }
+      },
+      "navigation": {
+        "console_errors": [],
+        "document_responses": [
+          {
+            "mimeType": "text/html",
+            "status": 200,
+            "type": "Document",
+            "url": "http://127.0.0.1:4422/carob-story.html"
+          }
+        ],
+        "exceptions": [],
+        "http_errors": [],
+        "lazy_activation": {
+          "afterIncomplete": [],
+          "beforeIncomplete": [
+            "/assets/photo_finals/maplemoon_heros55_brandmatched_atmospheric.webp"
+          ],
+          "decodeRejected": []
+        },
+        "loading_failures": [],
+        "log_errors": [],
+        "request_count": 30,
+        "response_count": 30,
+        "scroll_activation": {
+          "bottom": 2641,
+          "images": 12,
+          "step": 396
+        },
+        "url": "http://127.0.0.1:4422/carob-story.html"
+      },
+      "probe": {
+        "authoredImageFailures": [],
+        "authoredImages": 12,
+        "bodyTextLength": 1777,
+        "clientWidth": 720,
+        "header": {
+          "enhanced": "true",
+          "exists": true,
+          "fixed": true,
+          "rect": {
+            "height": 70,
+            "left": 0,
+            "right": 720,
+            "top": 0,
+            "width": 720
+          },
+          "state": "closed",
+          "topHitWithinHeader": true,
+          "visible": "visible"
+        },
+        "innerHeight": 496,
+        "innerWidth": 720,
+        "nonblank": true,
+        "rootZoom": {
+          "computed": "1",
+          "inline": ""
+        },
+        "scrollWidth": 720,
+        "vv": {
+          "height": 496,
+          "scale": 1,
+          "width": 720
+        }
+      },
+      "route": "carob-story.html",
+      "verdict": "PASS"
+    },
+    {
+      "effective_width": 720,
+      "native_metrics": {
+        "bodyTextLength": 5629,
+        "browserBounds": {
+          "height": 1079,
+          "left": 30,
+          "top": 38,
+          "width": 1440,
+          "windowState": "normal"
+        },
+        "clientWidth": 720,
+        "devicePixelRatio": 4,
+        "innerHeight": 496,
+        "innerWidth": 720,
+        "outerHeight": 1079,
+        "outerWidth": 1440,
+        "pageScaleIndicators": {
+          "rootTransform": "none",
+          "rootTransformOrigin": "360px 4442.79px"
+        },
+        "readyState": "complete",
+        "rootComputedZoom": "1",
+        "rootInlineZoom": "",
+        "scrollWidth": 720,
+        "url": "http://127.0.0.1:4422/shop.html",
+        "visualViewport": {
+          "height": 496,
+          "offsetLeft": 0,
+          "offsetTop": 0,
+          "scale": 1,
+          "width": 720
+        }
+      },
+      "navigation": {
+        "console_errors": [],
+        "document_responses": [
+          {
+            "mimeType": "text/html",
+            "status": 200,
+            "type": "Document",
+            "url": "http://127.0.0.1:4422/shop.html"
+          }
+        ],
+        "exceptions": [],
+        "http_errors": [],
+        "lazy_activation": {
+          "afterIncomplete": [],
+          "beforeIncomplete": [
+            "/assets/product_shots/moon_pure_carob.webp",
+            "/assets/product_shots/moon_peppermint.webp",
+            "/assets/product_shots/moon_hazelnut.webp",
+            "/assets/product_shots/moon_goji_coconut.webp",
+            "/assets/product_shots/moon_cayenne.webp",
+            "/assets/product_shots/moon_almond.webp",
+            "/assets/product_shots/elixir_plain.webp",
+            "/assets/product_shots/elixir_spiced.webp",
+            "/assets/product_shots/bananas.webp",
+            "/assets/product_shots/powder_roasted.webp"
+          ],
+          "decodeRejected": []
+        },
+        "loading_failures": [],
+        "log_errors": [],
+        "request_count": 47,
+        "response_count": 47,
+        "scroll_activation": {
+          "bottom": 8335,
+          "images": 31,
+          "step": 396
+        },
+        "url": "http://127.0.0.1:4422/shop.html"
+      },
+      "probe": {
+        "authoredImageFailures": [],
+        "authoredImages": 31,
+        "bodyTextLength": 5629,
+        "clientWidth": 720,
+        "header": {
+          "enhanced": "true",
+          "exists": true,
+          "fixed": true,
+          "rect": {
+            "height": 70,
+            "left": 0,
+            "right": 720,
+            "top": 0,
+            "width": 720
+          },
+          "state": "closed",
+          "topHitWithinHeader": true,
+          "visible": "visible"
+        },
+        "innerHeight": 496,
+        "innerWidth": 720,
+        "nonblank": true,
+        "rootZoom": {
+          "computed": "1",
+          "inline": ""
+        },
+        "scrollWidth": 720,
+        "vv": {
+          "height": 496,
+          "scale": 1,
+          "width": 720
+        }
+      },
+      "route": "shop.html",
+      "verdict": "PASS"
+    },
+    {
+      "effective_width": 720,
+      "native_metrics": {
+        "bodyTextLength": 1543,
+        "browserBounds": {
+          "height": 1079,
+          "left": 30,
+          "top": 38,
+          "width": 1440,
+          "windowState": "normal"
+        },
+        "clientWidth": 720,
+        "devicePixelRatio": 4,
+        "innerHeight": 496,
+        "innerWidth": 720,
+        "outerHeight": 1079,
+        "outerWidth": 1440,
+        "pageScaleIndicators": {
+          "rootTransform": "none",
+          "rootTransformOrigin": "360px 1360.98px"
+        },
+        "readyState": "complete",
+        "rootComputedZoom": "1",
+        "rootInlineZoom": "",
+        "scrollWidth": 720,
+        "url": "http://127.0.0.1:4422/faq.html",
+        "visualViewport": {
+          "height": 496,
+          "offsetLeft": 0,
+          "offsetTop": 0,
+          "scale": 1,
+          "width": 720
+        }
+      },
+      "navigation": {
+        "console_errors": [],
+        "document_responses": [
+          {
+            "mimeType": "text/html",
+            "status": 200,
+            "type": "Document",
+            "url": "http://127.0.0.1:4422/faq.html"
+          }
+        ],
+        "exceptions": [],
+        "http_errors": [],
+        "lazy_activation": {
+          "afterIncomplete": [],
+          "beforeIncomplete": [],
+          "decodeRejected": []
+        },
+        "loading_failures": [],
+        "log_errors": [],
+        "request_count": 17,
+        "response_count": 17,
+        "scroll_activation": {
+          "bottom": 2227,
+          "images": 1,
+          "step": 396
+        },
+        "url": "http://127.0.0.1:4422/faq.html"
+      },
+      "probe": {
+        "authoredImageFailures": [],
+        "authoredImages": 1,
+        "bodyTextLength": 1543,
+        "clientWidth": 720,
+        "header": {
+          "enhanced": "true",
+          "exists": true,
+          "fixed": true,
+          "rect": {
+            "height": 70,
+            "left": 0,
+            "right": 720,
+            "top": 0,
+            "width": 720
+          },
+          "state": "closed",
+          "topHitWithinHeader": true,
+          "visible": "visible"
+        },
+        "innerHeight": 496,
+        "innerWidth": 720,
+        "nonblank": true,
+        "rootZoom": {
+          "computed": "1",
+          "inline": ""
+        },
+        "scrollWidth": 720,
+        "vv": {
+          "height": 496,
+          "scale": 1,
+          "width": 720
+        }
+      },
+      "route": "faq.html",
+      "verdict": "PASS"
+    },
+    {
+      "effective_width": 720,
+      "native_metrics": {
+        "bodyTextLength": 2106,
+        "browserBounds": {
+          "height": 1079,
+          "left": 30,
+          "top": 38,
+          "width": 1440,
+          "windowState": "normal"
+        },
+        "clientWidth": 720,
+        "devicePixelRatio": 4,
+        "innerHeight": 496,
+        "innerWidth": 720,
+        "outerHeight": 1079,
+        "outerWidth": 1440,
+        "pageScaleIndicators": {
+          "rootTransform": "none",
+          "rootTransformOrigin": "360px 1645.38px"
+        },
+        "readyState": "complete",
+        "rootComputedZoom": "1",
+        "rootInlineZoom": "",
+        "scrollWidth": 720,
+        "url": "http://127.0.0.1:4422/stockists.html",
+        "visualViewport": {
+          "height": 496,
+          "offsetLeft": 0,
+          "offsetTop": 0,
+          "scale": 1,
+          "width": 720
+        }
+      },
+      "navigation": {
+        "console_errors": [],
+        "document_responses": [
+          {
+            "mimeType": "text/html",
+            "status": 200,
+            "type": "Document",
+            "url": "http://127.0.0.1:4422/stockists.html"
+          }
+        ],
+        "exceptions": [],
+        "http_errors": [],
+        "lazy_activation": {
+          "afterIncomplete": [],
+          "beforeIncomplete": [
+            "/assets/photo_finals/maplemoon_heros55_brandmatched.webp"
+          ],
+          "decodeRejected": []
+        },
+        "loading_failures": [],
+        "log_errors": [],
+        "request_count": 18,
+        "response_count": 18,
+        "scroll_activation": {
+          "bottom": 2611,
+          "images": 2,
+          "step": 396
+        },
+        "url": "http://127.0.0.1:4422/stockists.html"
+      },
+      "probe": {
+        "authoredImageFailures": [],
+        "authoredImages": 2,
+        "bodyTextLength": 2106,
+        "clientWidth": 720,
+        "header": {
+          "enhanced": "true",
+          "exists": true,
+          "fixed": true,
+          "rect": {
+            "height": 70,
+            "left": 0,
+            "right": 720,
+            "top": 0,
+            "width": 720
+          },
+          "state": "closed",
+          "topHitWithinHeader": true,
+          "visible": "visible"
+        },
+        "innerHeight": 496,
+        "innerWidth": 720,
+        "nonblank": true,
+        "rootZoom": {
+          "computed": "1",
+          "inline": ""
+        },
+        "scrollWidth": 720,
+        "vv": {
+          "height": 496,
+          "scale": 1,
+          "width": 720
+        }
+      },
+      "route": "stockists.html",
+      "verdict": "PASS"
+    },
+    {
+      "effective_width": 720,
+      "native_metrics": {
+        "bodyTextLength": 1490,
+        "browserBounds": {
+          "height": 1079,
+          "left": 30,
+          "top": 38,
+          "width": 1440,
+          "windowState": "normal"
+        },
+        "clientWidth": 720,
+        "devicePixelRatio": 4,
+        "innerHeight": 496,
+        "innerWidth": 720,
+        "outerHeight": 1079,
+        "outerWidth": 1440,
+        "pageScaleIndicators": {
+          "rootTransform": "none",
+          "rootTransformOrigin": "360px 1225.99px"
+        },
+        "readyState": "complete",
+        "rootComputedZoom": "1",
+        "rootInlineZoom": "",
+        "scrollWidth": 720,
+        "url": "http://127.0.0.1:4422/pure-carob-bar.html",
+        "visualViewport": {
+          "height": 496,
+          "offsetLeft": 0,
+          "offsetTop": 0,
+          "scale": 1,
+          "width": 720
+        }
+      },
+      "navigation": {
+        "console_errors": [],
+        "document_responses": [
+          {
+            "mimeType": "text/html",
+            "status": 200,
+            "type": "Document",
+            "url": "http://127.0.0.1:4422/pure-carob-bar.html"
+          }
+        ],
+        "exceptions": [],
+        "http_errors": [],
+        "lazy_activation": {
+          "afterIncomplete": [],
+          "beforeIncomplete": [
+            "/assets/product_shots/bar_cayenne.webp",
+            "/assets/product_shots/bar_almond.webp"
+          ],
+          "decodeRejected": []
+        },
+        "loading_failures": [],
+        "log_errors": [],
+        "request_count": 20,
+        "response_count": 20,
+        "scroll_activation": {
+          "bottom": 1939,
+          "images": 7,
+          "step": 396
+        },
+        "url": "http://127.0.0.1:4422/pure-carob-bar.html"
+      },
+      "probe": {
+        "authoredImageFailures": [],
+        "authoredImages": 7,
+        "bodyTextLength": 1490,
+        "clientWidth": 720,
+        "header": {
+          "enhanced": "true",
+          "exists": true,
+          "fixed": true,
+          "rect": {
+            "height": 70,
+            "left": 0,
+            "right": 720,
+            "top": 0,
+            "width": 720
+          },
+          "state": "closed",
+          "topHitWithinHeader": true,
+          "visible": "visible"
+        },
+        "innerHeight": 496,
+        "innerWidth": 720,
+        "nonblank": true,
+        "rootZoom": {
+          "computed": "1",
+          "inline": ""
+        },
+        "scrollWidth": 720,
+        "vv": {
+          "height": 496,
+          "scale": 1,
+          "width": 720
+        }
+      },
+      "route": "pure-carob-bar.html",
+      "verdict": "PASS"
+    }
+  ],
+  "verdict": "PASS"
+}

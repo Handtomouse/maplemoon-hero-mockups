@@ -1,0 +1,137 @@
+{
+  "schema": "maplemoon-receipt/v2",
+  "receipt_id": "MAPLEMOON-CONTROLLED-RESET-CLOSEOUT-20260813T125447Z-RECEIPT-001",
+  "packet_id": "MAPLEMOON-CONTROLLED-RESET-CLOSEOUT-20260813T125447Z",
+  "worker_thread_id": "019ffabc-e7e4-71c3-b769-3563efcc8cac",
+  "worker": "persistent pinned MapleMoon Boss",
+  "started_at": "2026-08-13T12:54:47Z",
+  "completed_at": "2026-08-13T13:29:44Z",
+  "phase": "complete",
+  "outcome": "HOLD_FOR_NATE_SCOPE_BREACH_AND_RESIDUAL_WRITERS",
+  "ready_to_promote": false,
+  "checkpoint_path": "_wip/checkpoints/MAPLEMOON-CONTROLLED-RESET-CLOSEOUT-20260813T125447Z_20260813_225447_AEST",
+  "checkpoint_manifest_sha256": "5003deb18bfd22dac341f114731c1b31d1f3f26e9f2ee0bf7f362d035239b4bc",
+  "files_read": [
+    "/Users/handtomouse/Desktop/CODEX_BOSS_RECENTER_STAGE0.md",
+    "AGENTS.md",
+    "CLAUDE.md",
+    "docs/orchestration/SIDECHAT_RECEIPT_GATE.md",
+    "docs/orchestration/packets/MAPLEMOON-BOSS-RECENTER-STAGE0-20260813T111244Z.md",
+    "docs/orchestration/reviews/MAPLEMOON-BOSS-RECENTER-STAGE0-20260813T111244Z.json",
+    "live immutable-ID task ledger and bounded one-turn task evidence",
+    "claude agents --json --all plus supported management-console state",
+    "live Git, worktree, lock, process, port, cwd, served-root, disk, size and CPU evidence",
+    "retained task outputs, checkpoints, receipts and rendered-evidence paths"
+  ],
+  "files_changed": [
+    "docs/orchestration/packets/MAPLEMOON-CONTROLLED-RESET-CLOSEOUT-20260813T125447Z.md",
+    "docs/orchestration/reviews/MAPLEMOON-CONTROLLED-RESET-CLOSEOUT-20260813T125447Z.json"
+  ],
+  "pre_sha256": {
+    "docs/orchestration/packets/MAPLEMOON-CONTROLLED-RESET-CLOSEOUT-20260813T125447Z.md": null,
+    "docs/orchestration/reviews/MAPLEMOON-CONTROLLED-RESET-CLOSEOUT-20260813T125447Z.json": null
+  },
+  "post_sha256": {
+    "docs/orchestration/packets/MAPLEMOON-CONTROLLED-RESET-CLOSEOUT-20260813T125447Z.md": "ece506df7132e292c4c189e72e65d09ba7d92d45c3bdc834e520b7782b837bdb",
+    "docs/orchestration/reviews/MAPLEMOON-CONTROLLED-RESET-CLOSEOUT-20260813T125447Z.json": null
+  },
+  "checks": [
+    {
+      "command": "parent Stage 0 packet/receipt completion gate",
+      "exit_code": 0,
+      "result": "PASS packet=MAPLEMOON-BOSS-RECENTER-STAGE0-20260813T111244Z phase=complete changed=2"
+    },
+    {
+      "command": "timestamped non-overwriting reset recovery checkpoint before external action",
+      "exit_code": 0,
+      "result": "RECOVERY_MANIFEST.json created first; 1,736 bytes; SHA-256 5003deb18bfd22dac341f114731c1b31d1f3f26e9f2ee0bf7f362d035239b4bc; exact packet/receipt writable scope recorded absent"
+    },
+    {
+      "command": "immutable-ID task baseline, immediate archive gate, and final list_threads/read_thread classification",
+      "exit_code": 0,
+      "result": "20 supplied IDs accounted: 9 archived; 1 Boss active/pinned; 8 Codex notLoaded/absent; 2 ChatGPT idle and unsupported by the archive control"
+    },
+    {
+      "command": "claude agents --json --all and exact candidate/session comparison",
+      "exit_code": 0,
+      "result": "35 records; exact candidates = 126b9f23 done, 9955f441 done, 2dbc5ce0 done, 3d5b7877 blocked, e675f15e blocked; no job/session record deleted and no exact job claimed stopped"
+    },
+    {
+      "command": "server PID + port + cwd + owner + command + served-root recheck, TERM, and final listener audit",
+      "exit_code": 0,
+      "result": "TERM exit 0 for 28886/4323, 48843/4330, 50862/4801, 62777/8788, 75254/4332, 77984/4324; all six exact PIDs absent; new PID 18285 rebound on 8788 and was held"
+    },
+    {
+      "command": "git branch, HEAD, staged count, porcelain count and SHA-256 before receipt",
+      "exit_code": 0,
+      "result": "fix/trailing-slash-and-w1e-assets-20260812 at b5d385d5ae9db04438fde17a5a7cc1275b0ed07a; staged 0; porcelain 145; SHA-256 0902edf2e020e0449e23f9789905c86cded09cb0c6b134bf8d48a64713ed0045, exactly equal to pre-action"
+    },
+    {
+      "command": "git worktree list --porcelain and git worktree prune --dry-run --verbose",
+      "exit_code": 0,
+      "result": "main/product/locked-27ab/d122 retained; ce8f absent after lifecycle exception; dry-run still names only four stale registrations 4835, 870f, 2ae6 and 32a0; no actual prune/remove/unlock ran"
+    },
+    {
+      "command": "locks, df -h, bounded du, uptime and elevated iostat before/after",
+      "exit_code": 0,
+      "result": "no Git lock; thread-writer locks 45 to 9; Data availability 81Gi to 83Gi; bounded ce8f 601M to absent; final iostat us/sy/id 31/20/49 and 32/15/53; no CPU or full-disk delta attributed to the stopped zero-CPU servers"
+    },
+    {
+      "command": "packet embedded control JSON, checkpoint JSON, exact hashes and writable-scope comparison",
+      "exit_code": 0,
+      "result": "one maplemoon-packet/v2 block parses; one maplemoon-recovery-checkpoint/v1 manifest parses; worker and packet IDs match; checkpoint scope exactly matches the packet's two writable files"
+    }
+  ],
+  "screenshots_or_urls": [
+    "http://127.0.0.1:8788/index.html (rebound PID 18285; read-only fetch HTTP 200, 58,085 bytes, SHA-256 1cd813156456983d9f0b717833f5a0973c0afe7e72724932bc5d2138e381e10c)"
+  ],
+  "failures": [
+    "Archiving the two ce8f-bound Codex tasks indirectly removed their clean 601M checkout and Git worktree registration, breaching the absolute no-filesystem-deletion outcome even though the commit is recoverable from main/origin/main.",
+    "The e675f15e console interpreted /exit as another prompt, performed one extra external work turn, and remains a retained blocked record rather than a proved gracefully closed job.",
+    "Port 8788 rebound under new PID 18285 after the verified candidate PID was stopped; its controller/dependency is unproved and it remains live."
+  ],
+  "unknowns": [
+    "Codex task terminality for 019ff60a-46fe-7331-8cfd-e32e9aa91206, 019ffa77-b47a-73c2-972c-d6630a353c89, 019ff64b-93b4-7e52-b2e8-14b6470ebccd, 019ff65f-fd33-7e51-8a83-360ba2f8d665, 019fd776-fb3f-7fc1-aa88-187fabb5971a, 019fda1e-0f9d-7f43-b798-7ec17e03677a, 019fd9a6-bf0f-7662-9a74-5458e50bf830 and 019fb5b5-de62-7862-a5fe-06bc59395c21.",
+    "Controller or active dependency that relaunched PID 18285 on port 8788.",
+    "Whether foreground Claude PIDs 36206 and 966 can write MapleMoon-adjacent state despite their prompts fencing or pausing website work.",
+    "Exact causal mapping for the thread-writer-lock directory falling from 45 files to 9 during the action window.",
+    "Whether Nate wants the clean ce8f checkout recreated from commit 1e4bed10fbd50c36c58941720988770760581a5b."
+  ],
+  "residual_risk": [
+    "The Boss is intentionally still active and pinned pending Nate's review; its archive is proposal-only.",
+    "Blocked Claude records e675f15e and 3d5b7877 are retained because the supported record-clear path is destructive.",
+    "ChatGPT task IDs 6a7a9003-9670-83ec-ac6a-a9313fffcd4b and 6a7d8ff1-714c-83ec-8810-02d8de291a4d remain idle/open because the archive tool cannot target ChatGPT backing.",
+    "The repository remains heavily dirty with protected historical work; no attribution, clean, commit or promotion was attempted.",
+    "The coarse +2Gi df availability delta is not isolated and must not be presented as reset recovery."
+  ],
+  "forbidden_path_changes": [
+    "/Users/handtomouse/.codex/worktrees/ce8f/maplemoon-website and its associated Git worktree registration were indirectly removed by Codex task archival outside the packet's admitted writable scope"
+  ],
+  "external_mutations_observed": [
+    "/Users/handtomouse/.codex/worktrees/ce8f/maplemoon-website: 601M clean checkout became absent",
+    "/Users/handtomouse/.codex/thread-writer-locks: file count 45 became 9; exact removed-file set was not captured",
+    "/Users/handtomouse/maplemoon_build_20260813: bounded size 105M became 106M after e675f15e's extra turn",
+    "/Users/handtomouse/.claude/jobs/e675f15e: bounded size 175M became 176M after its extra turn"
+  ],
+  "post_git_status": {
+    "branch": "fix/trailing-slash-and-w1e-assets-20260812",
+    "head": "b5d385d5ae9db04438fde17a5a7cc1275b0ed07a",
+    "staged_count": 0,
+    "porcelain_count": 146,
+    "porcelain_sha256": "1a2b4346783a8a1bb27620d3a03608f5fcd7dd68bf7f719fe9ba2af179020e3a",
+    "expected_delta_from_pre_action": "one additional untracked status record: this admitted completion receipt"
+  },
+  "completion_gate": {
+    "exit_code": 3,
+    "raw_output": "FAIL packet=MAPLEMOON-CONTROLLED-RESET-CLOSEOUT-20260813T125447Z reason=receipt reports forbidden path changes"
+  },
+  "stable_artifact_integrity": {
+    "packet_bytes": 32002,
+    "packet_sha256": "ece506df7132e292c4c189e72e65d09ba7d92d45c3bdc834e520b7782b837bdb",
+    "checkpoint_manifest_bytes": 1736,
+    "checkpoint_manifest_sha256": "5003deb18bfd22dac341f114731c1b31d1f3f26e9f2ee0bf7f362d035239b4bc"
+  },
+  "control_exception": "The non-overwriting recovery manifest is the checkpoint itself and was created before any archive/stop action. The coordinator wrote only the two governed packet/receipt paths; the ce8f and lock-file transitions are explicitly reported external lifecycle effects, not hidden as admitted writes.",
+  "proposed_next_state": "hold_for_nate",
+  "next_reviewer": "Nate"
+}

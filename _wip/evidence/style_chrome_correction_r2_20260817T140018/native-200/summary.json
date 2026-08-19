@@ -1,0 +1,19 @@
+{
+  "candidate_changes": [],
+  "client_actions": [],
+  "completed_at": "2026-08-17T05:08:21Z",
+  "deployments": [],
+  "derived_acquisition": {
+    "files": 75,
+    "sha256": "e99ca3da903ca2b45b9f36065796f0ed071dc328a0e9a3d36bbd323c115ab01e"
+  },
+  "derived_close": {
+    "files": 75,
+    "sha256": "e99ca3da903ca2b45b9f36065796f0ed071dc328a0e9a3d36bbd323c115ab01e"
+  },
+  "failure": null,
+  "git_actions": [],
+  "outcome": "PASS",
+  "schema": "maplemoon-style-chrome-native-200-r2/v1",
+  "started_at": "2026-08-17T05:07:31Z"
+}

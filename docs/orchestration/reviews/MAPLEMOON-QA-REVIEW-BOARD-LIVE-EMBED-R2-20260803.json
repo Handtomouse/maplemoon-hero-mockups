@@ -1,0 +1,114 @@
+{
+  "schema": "maplemoon-receipt/v2",
+  "receipt_id": "MAPLEMOON-QA-REVIEW-BOARD-LIVE-EMBED-R2-20260803-RECEIPT-001",
+  "packet_id": "MAPLEMOON-QA-REVIEW-BOARD-LIVE-EMBED-R2-20260803",
+  "worker_thread_id": "019fc349-4347-7ba2-ab86-77971b20aabf",
+  "worker": "live review-board R2 adopter and verifier",
+  "started_at": "2026-08-03T02:57:46+10:00",
+  "completed_at": "2026-08-03T03:04:32+10:00",
+  "outcome": "HOLD",
+  "confidence": "high for deterministic custody and currently observed behavior; incomplete for the remaining browser acceptance matrix",
+  "phase": "complete",
+  "status": "HOLD",
+  "ready_to_promote": false,
+  "checkpoint_path": "_wip/checkpoints/MAPLEMOON-QA-REVIEW-BOARD-LIVE-EMBED-R2-20260803_20260803_025712_AEST",
+  "files_changed": [
+    "docs/orchestration/reviews/MAPLEMOON-QA-REVIEW-BOARD-LIVE-EMBED-R2-20260803.json"
+  ],
+  "files_read": [
+    "docs/orchestration/packets/MAPLEMOON-QA-REVIEW-BOARD-LIVE-EMBED-R2-20260803.md",
+    "docs/orchestration/SIDECHAT_RECEIPT_GATE.md",
+    "_wip/checkpoints/MAPLEMOON-QA-REVIEW-BOARD-LIVE-EMBED-R2-20260803_20260803_025712_AEST/RECOVERY_MANIFEST.json",
+    "_wip/checkpoints/MAPLEMOON-QA-REVIEW-BOARD-LIVE-EMBED-20260803_20260803_024259_AEST",
+    "_wip/reviews/maplemoon-six-page-qa-20260803/review-board/index.html",
+    "_wip/reviews/maplemoon-six-page-qa-20260803/review-board/app.js",
+    "_wip/reviews/maplemoon-six-page-qa-20260803/review-board/styles.css",
+    "_wip/reviews/maplemoon-six-page-qa-20260803/review-board/qa-checks.json",
+    "docs/client-review/2026-08-01-saturday-review/staging-v1/MANIFEST.json",
+    "docs/client-review/2026-08-01-saturday-review/staging-v1/clean/MANIFEST.json"
+  ],
+  "pre_sha256": {
+    "docs/orchestration/reviews/MAPLEMOON-QA-REVIEW-BOARD-LIVE-EMBED-R2-20260803.json": null
+  },
+  "post_sha256": {
+    "docs/orchestration/reviews/MAPLEMOON-QA-REVIEW-BOARD-LIVE-EMBED-R2-20260803.json": null
+  },
+  "verified_subject_sha256": {
+    "_wip/reviews/maplemoon-six-page-qa-20260803/review-board/index.html": "a38b387b2b3d13924a8f2db3a18d1ef9c6ed0dc2105873ad8f1b4355da43fce8",
+    "_wip/reviews/maplemoon-six-page-qa-20260803/review-board/app.js": "3b4d168145f4df1c9048a8826cc2352699ffcf631412798d5441f5b257cb8095",
+    "_wip/reviews/maplemoon-six-page-qa-20260803/review-board/styles.css": "f25bce11ace444003d5da86805557a26c090313ff5f16447359b069ac868dacd",
+    "_wip/reviews/maplemoon-six-page-qa-20260803/review-board/qa-checks.json": "659b2fee88c0f4eefbfde59b851e9012738504c69b20464513b766a6756da549",
+    "docs/client-review/2026-08-01-saturday-review/staging-v1/MANIFEST.json": "d0d834b9b9173a497d0b03e39e4c282a7d5247f51484ebfd7ba3a64e8416bf7c",
+    "docs/client-review/2026-08-01-saturday-review/staging-v1/clean/MANIFEST.json": "d1c66b1d5937e9956d1806dbbbff4faf4f950def046aa642ae52f809c3d52d20"
+  },
+  "screenshots_or_urls": [
+    "http://127.0.0.1:3016/_wip/reviews/maplemoon-six-page-qa-20260803/review-board/"
+  ],
+  "failures": [
+    "The bounded browser pass ended before independent verification of Live Tag coordinate persistence, all viewport and page switches, decision persistence, note persistence and the complete visible-keyboard-focus path.",
+    "The browser was unavailable when the receipt gate ordered release; no reconnect or further browser action was attempted."
+  ],
+  "unknowns": [
+    "Whether the preserved candidate passes the complete final browser acceptance matrix without another bounded session.",
+    "Whether a live note remains correctly associated after ordinary in-frame cross-page navigation; this was not reached before the receipt gate."
+  ],
+  "residual_risk": [
+    "The candidate is deterministic and package-safe but cannot yet be promoted as a fully verified live-review workflow.",
+    "The existing qa-checks.json correctly remains HOLD and was not rewritten from partial evidence."
+  ],
+  "forbidden_path_changes": [],
+  "proposed_next_state": "HOLD",
+  "next_reviewer": "Main independent verifier",
+  "checks": [
+    {
+      "command": "create specialist goal",
+      "exit_code": 0,
+      "result": "PASS: active goal bound to worker thread 019fc349-4347-7ba2-ab86-77971b20aabf"
+    },
+    {
+      "command": "review first-worker candidate diff against its protected checkpoint",
+      "exit_code": 0,
+      "result": "PASS: live iframe, Screenshot/Live, Browse/Tag, viewport widths, same-origin guards and tag-coordinate implementation identified; no candidate edit performed"
+    },
+    {
+      "command": "node --check review-board/app.js and parse qa-checks.json",
+      "exit_code": 0,
+      "result": "PASS"
+    },
+    {
+      "command": "GET all six exact clean routes from 127.0.0.1:3016",
+      "exit_code": 0,
+      "result": "PASS: six of six returned HTTP 200 with manifest-matching byte counts"
+    },
+    {
+      "command": "bounded in-app Browser screenshot-mode and Live Browse verification",
+      "exit_code": 0,
+      "result": "PASS: Screenshot remained selected by default; six page and three viewport controls rendered; Live loaded same-origin FAQ; Browse and Tag became enabled; closed FAQ item changed aria-expanded false to true"
+    },
+    {
+      "command": "remaining browser acceptance matrix",
+      "exit_code": 0,
+      "result": "HOLD: receipt gate stopped the session before Live Tag, full page/viewport switching, persistence and keyboard-focus completion"
+    },
+    {
+      "command": "R2 writable-byte custody",
+      "exit_code": 0,
+      "result": "PASS: all four candidate hashes equal the R2 checkpoint; only this R2 receipt changed"
+    },
+    {
+      "command": "pre/post package and clean manifest hashes",
+      "exit_code": 0,
+      "result": "PASS: package d0d834b9b9173a497d0b03e39e4c282a7d5247f51484ebfd7ba3a64e8416bf7c; clean d1c66b1d5937e9956d1806dbbbff4faf4f950def046aa642ae52f809c3d52d20"
+    },
+    {
+      "command": "refined HEAD-drift policy from 4affbd2231ce69c4841019e459b3607d85f6754e to 7248b7c212476b8bc84528bc258397a56ebdc46c",
+      "exit_code": 0,
+      "result": "PASS: later diff touched only unrelated founder evidence and scripts/check-maplemoon-portrait-crop.mjs; no protected board, packet, manifest or clean-package path"
+    }
+  ],
+  "blockers": [
+    "The final bounded browser acceptance matrix remains incomplete."
+  ],
+  "ownership": "Released after receipt gate; no remaining writer claim over the five R2 paths.",
+  "next_action": "Main should keep this candidate on HOLD and admit one short final browser-only verification packet if complete live Tag, persistence and keyboard-focus proof is still required."
+}

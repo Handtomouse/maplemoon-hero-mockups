@@ -1,0 +1,11 @@
+HTTP/2 308 
+cache-control: public, max-age=0, must-revalidate
+content-type: text/plain
+date: Sun, 16 Aug 2026 08:09:03 GMT
+location: /shop
+refresh: 0;url=/shop
+server: Vercel
+strict-transport-security: max-age=63072000; includeSubDomains; preload
+x-robots-tag: noindex
+x-vercel-id: iad1::jdk6b-1786867743124-8394ec56fa4b
+

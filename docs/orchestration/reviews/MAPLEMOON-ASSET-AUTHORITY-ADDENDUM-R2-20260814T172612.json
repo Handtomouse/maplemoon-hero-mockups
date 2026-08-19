@@ -1,0 +1,76 @@
+{
+  "schema": "maplemoon-receipt/v2",
+  "receipt_id": "MAPLEMOON-ASSET-AUTHORITY-ADDENDUM-R2-20260814T172612-RECEIPT-001",
+  "packet_id": "MAPLEMOON-ASSET-AUTHORITY-ADDENDUM-R2-20260814T172612",
+  "worker_thread_id": "/root/dedup_risk_audit",
+  "worker": "Codex asset-authority control-plane recorder",
+  "started_at": "2026-08-14T17:27:07+10:00",
+  "completed_at": "2026-08-14T17:29:08+10:00",
+  "outcome": "PASS_R2_AUTHORITY_RECORDED_ALL_HOLDS_PRESERVED",
+  "confidence": "high",
+  "checkpoint_path": "maplemoon-website/_wip/checkpoints/MAPLEMOON-ASSET-AUTHORITY-ADDENDUM-R2-20260814T172612_20260814_172612_AEST",
+  "files_read": [
+    "maplemoon-website/docs/orchestration/reviews/MAPLEMOON-ASSET-SLOT-AUTHORITY-MATRIX-20260814T143614.md",
+    "maplemoon-website/docs/orchestration/packets/MAPLEMOON-ASSET-AUTHORITY-ADDENDUM-20260814T160123.md",
+    "maplemoon-website/docs/orchestration/reviews/MAPLEMOON-ASSET-AUTHORITY-ADDENDUM-20260814T160123.md",
+    "maplemoon-website/docs/orchestration/reviews/MAPLEMOON-ASSET-AUTHORITY-ADDENDUM-20260814T160123.json",
+    "maplemoon-website/docs/orchestration/packets/MAPLEMOON-ELIXIR-V4-LIVE-USE-AUDIT-20260814T171205.md",
+    "maplemoon-website/docs/orchestration/reviews/MAPLEMOON-ELIXIR-V4-LIVE-USE-AUDIT-20260814T171205.md",
+    "maplemoon-website/docs/orchestration/reviews/MAPLEMOON-ELIXIR-V4-LIVE-USE-AUDIT-20260814T171205.json",
+    "maplemoon-website/_wip/evidence/elixir_v4_live_use_audit_20260814T171205",
+    ".codex/visualizations/2026/08/13/019ffd5b-edd2-7b23-8780-453f9b67a532/maplemoon-product-corrections-20260814/assets/elixir_pure_same_size_clean_edges_v4.png",
+    ".codex/visualizations/2026/08/13/019ffd5b-edd2-7b23-8780-453f9b67a532/maplemoon-product-corrections-20260814/assets/elixir_spiced_same_size_clean_edges_v4.png",
+    "maplemoon-website/scripts/check-maplemoon-receipt.py"
+  ],
+  "files_changed": [
+    "maplemoon-website/docs/orchestration/reviews/MAPLEMOON-ASSET-AUTHORITY-ADDENDUM-R2-20260814T172612.md",
+    "maplemoon-website/docs/orchestration/reviews/MAPLEMOON-ASSET-AUTHORITY-ADDENDUM-R2-20260814T172612.json"
+  ],
+  "pre_sha256": {
+    "maplemoon-website/docs/orchestration/reviews/MAPLEMOON-ASSET-AUTHORITY-ADDENDUM-R2-20260814T172612.md": null,
+    "maplemoon-website/docs/orchestration/reviews/MAPLEMOON-ASSET-AUTHORITY-ADDENDUM-R2-20260814T172612.json": null
+  },
+  "post_sha256": {
+    "maplemoon-website/docs/orchestration/reviews/MAPLEMOON-ASSET-AUTHORITY-ADDENDUM-R2-20260814T172612.md": "c1466768f82a8938acd6bbdf6d7ec33100b1326920f5d5669d260adeb52ed508",
+    "maplemoon-website/docs/orchestration/reviews/MAPLEMOON-ASSET-AUTHORITY-ADDENDUM-R2-20260814T172612.json": null
+  },
+  "checks": [
+    {
+      "command": "python3 -B scripts/check-maplemoon-receipt.py verify --root /Users/handtomouse --packet docs/orchestration/packets/MAPLEMOON-ASSET-AUTHORITY-ADDENDUM-R2-20260814T172612.md --checkpoint /Users/handtomouse/maplemoon-website/_wip/checkpoints/MAPLEMOON-ASSET-AUTHORITY-ADDENDUM-R2-20260814T172612_20260814_172612_AEST --phase start",
+      "exit_code": 0,
+      "result": "PASS packet=MAPLEMOON-ASSET-AUTHORITY-ADDENDUM-R2-20260814T172612 phase=start scope=2"
+    },
+    {
+      "command": "shasum -a 256 [six packet-pinned source records/assets] at acquisition and close",
+      "exit_code": 0,
+      "result": "PASS hashes 6/6: matrix=8b68ad125353c57befd0f0035acae2530756cb52c9a242cbdd12a148becb40a0 first_addendum=ccc4f3ca6991fd33b3f1348c051bc0cb6a7e6b920767ba0ca6c0581259f626f0 v4_review=2859892d6332eeae281dbe077c4acb66f9279c66a88745112e537eb07d338c32 v4_receipt=3d05c6da3f3b4fffaa58fc4b137cd97f9b5520e347a1ca55ebf51a20b3a030ef pure_v4=70f93f414902ae1b10e7ae1416954348aa20bd1d6950e37d05979b4e4aa9eb93 spiced_v4=414f727e84ca0dc24749b10b1092f4618e9f9fc9b954304442a7a0a8779749bb"
+    },
+    {
+      "command": "first-addendum receipt completion and promotion replay",
+      "exit_code": 0,
+      "result": "PASS packet=MAPLEMOON-ASSET-AUTHORITY-ADDENDUM-20260814T160123 phase=complete changed=2; PASS packet=MAPLEMOON-ASSET-AUTHORITY-ADDENDUM-20260814T160123 phase=promote changed=2; receipt SHA-256=75cb1cc8d7986559d7470d92b46e739eca1abb5b802d8cdbb85711c56aeab0a4"
+    },
+    {
+      "command": "elixir-v4 audit receipt completion and promotion replay",
+      "exit_code": 0,
+      "result": "PASS packet=MAPLEMOON-ELIXIR-V4-LIVE-USE-AUDIT-20260814T171205 phase=complete changed=3; PASS packet=MAPLEMOON-ELIXIR-V4-LIVE-USE-AUDIT-20260814T171205 phase=promote changed=3"
+    },
+    {
+      "command": "deterministic R2 content reconciliation against first addendum, matrix and v4 review",
+      "exit_code": 0,
+      "result": "ADDENDUM_R2_CONTENT PASS complete_first_addendum=True matrix_preserved=True pure_full_sha=True spiced_full_sha=True two_exact_decisions=True label_holds=True unwired_evidence=True integration_closed=True photo_ratio_36_only=True"
+    }
+  ],
+  "screenshots_or_urls": [],
+  "failures": [],
+  "unknowns": [],
+  "residual_risk": [
+    "Both exact v4 assets remain HOLD for live use until Nate records APPROVE or REJECT for reconstructed-label use in each named slot.",
+    "All first-addendum and authority-matrix product-image, bundle, identity, label and live-use holds remain active; no integration wave is admitted."
+  ],
+  "forbidden_path_changes": [],
+  "proposed_next_state": "asset_authority_r2_recorded_holds_preserved_waiting_nate",
+  "next_reviewer": "MapleMoon BOSS, then Nate only for the two exact elixir v4 live-use decisions",
+  "ready_to_promote": true,
+  "promotion_boundary": "Durable control-plane documentation only; no asset, candidate, deployment or production promotion is authorized."
+}

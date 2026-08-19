@@ -1,0 +1,12 @@
+RESULT
+VERDICT: FAIL (1) - leak:internal-ops-language | 2 review-only hit(s) | WAIVED: root:homepage
+
+REQUIRED FAILURE
+Stockists shipped an inert aria-label string: `entries needing client confirmation`.
+The associated pending-review control had already been removed from visible HTML,
+but the unchanged raw-byte matcher correctly found the obsolete JavaScript branch.
+
+CORRECTION
+Removed the complete unreachable review-filter state, matcher, label, count,
+active-filter and reset branches from the deterministic builder and exact
+candidate. All 204 source rows and seven incomplete records remain unchanged.

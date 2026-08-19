@@ -1,0 +1,160 @@
+{
+  "schema": "maplemoon-candidate-gold-contrast/v1",
+  "method": "Computed foreground against an adjacent blank-field pixel sampled at the right edge of the same block, deviceScaleFactor=1. Text-shadow recorded but not credited toward WCAG foreground contrast.",
+  "rows": [
+    {
+      "route": "homepage.html",
+      "selector": "#pdpEyebrow",
+      "label": "Home selected-product eyebrow",
+      "width": 390,
+      "foreground": "rgb(140, 113, 60)",
+      "backgroundSample": "rgb(171, 194, 214)",
+      "contrast": 2.51,
+      "fontSize": "12px",
+      "textShadow": "rgba(248, 251, 249, 0.86) 0px 1px 9px",
+      "text": "Selected bar",
+      "sample": {
+        "x": 293,
+        "y": 17
+      },
+      "screenshot": "gold-homepage-390.png"
+    },
+    {
+      "route": "homepage.html",
+      "selector": "#pdpEyebrow",
+      "label": "Home selected-product eyebrow",
+      "width": 900,
+      "foreground": "rgb(140, 113, 60)",
+      "backgroundSample": "rgb(195, 212, 226)",
+      "contrast": 3.05,
+      "fontSize": "12px",
+      "textShadow": "rgba(248, 251, 249, 0.86) 0px 1px 9px",
+      "text": "Selected bar",
+      "sample": {
+        "x": 403,
+        "y": 17
+      },
+      "screenshot": "gold-homepage-900.png"
+    },
+    {
+      "route": "homepage.html",
+      "selector": "#pdpEyebrow",
+      "label": "Home selected-product eyebrow",
+      "width": 1440,
+      "foreground": "rgb(140, 113, 60)",
+      "backgroundSample": "rgb(201, 218, 230)",
+      "contrast": 3.23,
+      "fontSize": "12px",
+      "textShadow": "rgba(248, 251, 249, 0.86) 0px 1px 9px",
+      "text": "Selected bar",
+      "sample": {
+        "x": 553,
+        "y": 17
+      },
+      "screenshot": "gold-homepage-1440.png"
+    },
+    {
+      "route": "faq.html",
+      "selector": ".faq-hero .eyebrow",
+      "label": "FAQ header eyebrow",
+      "width": 390,
+      "foreground": "rgb(104, 94, 74)",
+      "backgroundSample": "rgb(224, 234, 245)",
+      "contrast": 5.25,
+      "fontSize": "10.72px",
+      "textShadow": "none",
+      "text": "Good questions",
+      "sample": {
+        "x": 353,
+        "y": 16
+      },
+      "screenshot": "gold-faq-390.png"
+    },
+    {
+      "route": "faq.html",
+      "selector": ".faq-hero .eyebrow",
+      "label": "FAQ header eyebrow",
+      "width": 900,
+      "foreground": "rgb(104, 94, 74)",
+      "backgroundSample": "rgb(216, 227, 240)",
+      "contrast": 4.92,
+      "fontSize": "10.72px",
+      "textShadow": "none",
+      "text": "Good questions",
+      "sample": {
+        "x": 839,
+        "y": 16
+      },
+      "screenshot": "gold-faq-900.png"
+    },
+    {
+      "route": "faq.html",
+      "selector": ".faq-hero .eyebrow",
+      "label": "FAQ header eyebrow",
+      "width": 1440,
+      "foreground": "rgb(104, 94, 74)",
+      "backgroundSample": "rgb(233, 242, 247)",
+      "contrast": 5.63,
+      "fontSize": "10.72px",
+      "textShadow": "none",
+      "text": "Good questions",
+      "sample": {
+        "x": 484,
+        "y": 16
+      },
+      "screenshot": "gold-faq-1440.png"
+    },
+    {
+      "route": "pure-carob-bar.html",
+      "selector": ".pd-eyebrow",
+      "label": "Pure product eyebrow",
+      "width": 390,
+      "foreground": "rgb(104, 94, 74)",
+      "backgroundSample": "rgb(210, 222, 233)",
+      "contrast": 4.67,
+      "fontSize": "12px",
+      "textShadow": "none",
+      "text": "Selected bar",
+      "sample": {
+        "x": 329,
+        "y": 17
+      },
+      "screenshot": "gold-pure-carob-bar-390.png"
+    },
+    {
+      "route": "pure-carob-bar.html",
+      "selector": ".pd-eyebrow",
+      "label": "Pure product eyebrow",
+      "width": 900,
+      "foreground": "rgb(104, 94, 74)",
+      "backgroundSample": "rgb(217, 225, 234)",
+      "contrast": 4.84,
+      "fontSize": "12px",
+      "textShadow": "none",
+      "text": "Selected bar",
+      "sample": {
+        "x": 839,
+        "y": 17
+      },
+      "screenshot": "gold-pure-carob-bar-900.png"
+    },
+    {
+      "route": "pure-carob-bar.html",
+      "selector": ".pd-eyebrow",
+      "label": "Pure product eyebrow",
+      "width": 1440,
+      "foreground": "rgb(104, 94, 74)",
+      "backgroundSample": "rgb(208, 220, 233)",
+      "contrast": 4.59,
+      "fontSize": "12px",
+      "textShadow": "none",
+      "text": "Selected bar",
+      "sample": {
+        "x": 524,
+        "y": 17
+      },
+      "screenshot": "gold-pure-carob-bar-1440.png"
+    }
+  ]
+}
+RESULT PASS measurements=9/9 below4.5=3

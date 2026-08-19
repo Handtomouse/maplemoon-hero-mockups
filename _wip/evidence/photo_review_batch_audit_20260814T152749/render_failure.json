@@ -1,0 +1,13 @@
+{
+  "classification": "FAIL_REQUIRED_RENDER_CHECK",
+  "width": 390,
+  "page_http": 200,
+  "console_error": "Failed to load resource: the server responded with a status of 404 (File not found)",
+  "failed_resource": "http://127.0.0.1:4395/favicon.ico",
+  "failed_resource_http": 404,
+  "server_evidence": "GET /favicon.ico HTTP/1.1 404",
+  "four_required_asset_responses": 200,
+  "reference_asset_response": 200,
+  "source_edit_authorised": false,
+  "continued_to_absence_or_production_checks": false
+}

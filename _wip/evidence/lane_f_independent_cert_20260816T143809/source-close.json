@@ -1,0 +1,699 @@
+{
+  "schema": "maplemoon-lane-f-independent-source/v1",
+  "phase": "close",
+  "positive_control": {
+    "needle": "Maple Moon",
+    "count": 64,
+    "corpus_files": 3
+  },
+  "checks": [
+    {
+      "name": "sha256:/Users/handtomouse/maplemoon-website/docs/orchestration/reviews/MAPLEMOON-LANE-F-REBUILD-R2-20260816T141330.json",
+      "pass": true,
+      "actual": "034769fc3451c0045d42b89e1ed5fa14d30603c8920185f2464856f0e5e49103",
+      "expected": "034769fc3451c0045d42b89e1ed5fa14d30603c8920185f2464856f0e5e49103",
+      "detail": ""
+    },
+    {
+      "name": "sha256:/Users/handtomouse/maplemoon-website/_wip/our-story.WIP.html",
+      "pass": true,
+      "actual": "6beef3f9449804e800ad7883c311c957637d12a5e05c69beb7ed912e49b36e23",
+      "expected": "6beef3f9449804e800ad7883c311c957637d12a5e05c69beb7ed912e49b36e23",
+      "detail": ""
+    },
+    {
+      "name": "sha256:/Users/handtomouse/maplemoon-website/_wip/carob-story.WIP.html",
+      "pass": true,
+      "actual": "82b8d3a94de71c453ff2970f185832c93056862d4dd5599f02b6fc222bd9b339",
+      "expected": "82b8d3a94de71c453ff2970f185832c93056862d4dd5599f02b6fc222bd9b339",
+      "detail": ""
+    },
+    {
+      "name": "sha256:/Users/handtomouse/maplemoon_rebuild_20260815/RECEIPT.md",
+      "pass": true,
+      "actual": "94548492290343f58d2e8b55530307bd6967b921ee180f5ec73448b26c2a16b6",
+      "expected": "94548492290343f58d2e8b55530307bd6967b921ee180f5ec73448b26c2a16b6",
+      "detail": ""
+    },
+    {
+      "name": "sha256:/Users/handtomouse/maplemoon_rebuild_20260815/FOR_NATE.md",
+      "pass": true,
+      "actual": "3ce2323be612d16226a21d82308816c09fb844851cb6c6e97fe9f82ee79c94ec",
+      "expected": "3ce2323be612d16226a21d82308816c09fb844851cb6c6e97fe9f82ee79c94ec",
+      "detail": ""
+    },
+    {
+      "name": "sha256:/Users/handtomouse/maplemoon-website/docs/orchestration/LOCK_MANIFEST.json",
+      "pass": true,
+      "actual": "5d09ba28d3dc8b8d016cccd4ad0e9a3898eedb5b4c0ab810ee091fe3a6e3d8d2",
+      "expected": "5d09ba28d3dc8b8d016cccd4ad0e9a3898eedb5b4c0ab810ee091fe3a6e3d8d2",
+      "detail": ""
+    },
+    {
+      "name": "sha256:/Users/handtomouse/maplemoon-website/_wip/faq.WIP.html",
+      "pass": true,
+      "actual": "4540ef31a150cb6de8062c2d4d74709f24d13ce45490f8e3c1c9c283c1fdbd56",
+      "expected": "4540ef31a150cb6de8062c2d4d74709f24d13ce45490f8e3c1c9c283c1fdbd56",
+      "detail": ""
+    },
+    {
+      "name": "lock_count",
+      "pass": true,
+      "actual": 2,
+      "expected": 2,
+      "detail": ""
+    },
+    {
+      "name": "lock_paths",
+      "pass": true,
+      "actual": [
+        "_wip/carob-story.WIP.html",
+        "_wip/our-story.WIP.html"
+      ],
+      "expected": [
+        "_wip/carob-story.WIP.html",
+        "_wip/our-story.WIP.html"
+      ],
+      "detail": ""
+    },
+    {
+      "name": "lock_statuses",
+      "pass": true,
+      "actual": [
+        "held",
+        "held"
+      ],
+      "expected": [
+        "held",
+        "held"
+      ],
+      "detail": ""
+    },
+    {
+      "name": "lock_thread_ids",
+      "pass": true,
+      "actual": [
+        "/root/dedup_risk_audit",
+        "/root/dedup_risk_audit"
+      ],
+      "expected": [
+        "/root/dedup_risk_audit",
+        "/root/dedup_risk_audit"
+      ],
+      "detail": ""
+    },
+    {
+      "name": "lock_released_by",
+      "pass": true,
+      "actual": [
+        null,
+        null
+      ],
+      "expected": [
+        null,
+        null
+      ],
+      "detail": ""
+    },
+    {
+      "name": "lock_post_sha",
+      "pass": true,
+      "actual": [
+        null,
+        null
+      ],
+      "expected": [
+        null,
+        null
+      ],
+      "detail": ""
+    },
+    {
+      "name": "positive_control_maple_moon",
+      "pass": true,
+      "actual": true,
+      "expected": true,
+      "detail": "count=64"
+    },
+    {
+      "name": "our_story_chapter_pairs",
+      "pass": true,
+      "actual": [
+        [
+          "01",
+          "The people behind the product"
+        ],
+        [
+          "02",
+          "How Maple Moon began"
+        ]
+      ],
+      "expected": [
+        [
+          "01",
+          "The people behind the product"
+        ],
+        [
+          "02",
+          "How Maple Moon began"
+        ]
+      ],
+      "detail": ""
+    },
+    {
+      "name": "our_story_no_chapter_03",
+      "pass": true,
+      "actual": false,
+      "expected": false,
+      "detail": ""
+    },
+    {
+      "name": "our_story_cut:We aren't corporate, but we are intentional",
+      "pass": true,
+      "actual": 0,
+      "expected": 0,
+      "detail": ""
+    },
+    {
+      "name": "our_story_cut:we are intentional",
+      "pass": true,
+      "actual": 0,
+      "expected": 0,
+      "detail": ""
+    },
+    {
+      "name": "our_story_cut:The people, then the ingredient, then the place.",
+      "pass": true,
+      "actual": 0,
+      "expected": 0,
+      "detail": ""
+    },
+    {
+      "name": "our_story_cut:the ingredient, then the beginning, then the place",
+      "pass": true,
+      "actual": 0,
+      "expected": 0,
+      "detail": ""
+    },
+    {
+      "name": "our_story_cut:Shared story",
+      "pass": true,
+      "actual": 0,
+      "expected": 0,
+      "detail": ""
+    },
+    {
+      "name": "our_story_cut:Two individual notes",
+      "pass": true,
+      "actual": 0,
+      "expected": 0,
+      "detail": ""
+    },
+    {
+      "name": "our_story_cut:Each founder in their own words",
+      "pass": true,
+      "actual": 0,
+      "expected": 0,
+      "detail": ""
+    },
+    {
+      "name": "our_story_cut:So she asked a different question",
+      "pass": true,
+      "actual": 0,
+      "expected": 0,
+      "detail": ""
+    },
+    {
+      "name": "our_story_cut:so she asked a different question",
+      "pass": true,
+      "actual": 0,
+      "expected": 0,
+      "detail": ""
+    },
+    {
+      "name": "our_story_cut:02: the craft",
+      "pass": true,
+      "actual": 0,
+      "expected": 0,
+      "detail": ""
+    },
+    {
+      "name": "our_story_cut:the range in its own light",
+      "pass": true,
+      "actual": 0,
+      "expected": 0,
+      "detail": ""
+    },
+    {
+      "name": "our_story_cut:the range in its downlight",
+      "pass": true,
+      "actual": 0,
+      "expected": 0,
+      "detail": ""
+    },
+    {
+      "name": "our_story_cut:We love what it is, not want it stands for",
+      "pass": true,
+      "actual": 0,
+      "expected": 0,
+      "detail": ""
+    },
+    {
+      "name": "accepted_pair_hero_refs",
+      "pass": true,
+      "actual": 2,
+      "expected": 2,
+      "detail": ""
+    },
+    {
+      "name": "frame55_atmospheric_zero",
+      "pass": true,
+      "actual": 0,
+      "expected": 0,
+      "detail": ""
+    },
+    {
+      "name": "frame55_zero",
+      "pass": true,
+      "actual": 0,
+      "expected": 0,
+      "detail": ""
+    },
+    {
+      "name": "rejected_carli_binding_zero",
+      "pass": true,
+      "actual": 0,
+      "expected": 0,
+      "detail": ""
+    },
+    {
+      "name": "rejected_dylan_binding_zero",
+      "pass": true,
+      "actual": 0,
+      "expected": 0,
+      "detail": ""
+    },
+    {
+      "name": "founder_placeholder_count",
+      "pass": true,
+      "actual": 2,
+      "expected": 2,
+      "detail": ""
+    },
+    {
+      "name": "founder_placeholder_roles",
+      "pass": true,
+      "actual": [
+        "img",
+        "img"
+      ],
+      "expected": [
+        "img",
+        "img"
+      ],
+      "detail": ""
+    },
+    {
+      "name": "founder_placeholder_labels",
+      "pass": true,
+      "actual": [
+        "Carli portrait pending Nate selection",
+        "Dylan portrait pending Nate selection"
+      ],
+      "expected": [
+        "Carli portrait pending Nate selection",
+        "Dylan portrait pending Nate selection"
+      ],
+      "detail": ""
+    },
+    {
+      "name": "founder_placeholder_visible_hold",
+      "pass": true,
+      "actual": [
+        true,
+        true
+      ],
+      "expected": [
+        true,
+        true
+      ],
+      "detail": ""
+    },
+    {
+      "name": "exact_location",
+      "pass": true,
+      "actual": 1,
+      "expected": 1,
+      "detail": ""
+    },
+    {
+      "name": "range_links",
+      "pass": true,
+      "actual": 1,
+      "expected": 1,
+      "detail": ""
+    },
+    {
+      "name": "accepted_range_blurb:Maple Moon is more than a treat.",
+      "pass": true,
+      "actual": 1,
+      "expected": 1,
+      "detail": ""
+    },
+    {
+      "name": "accepted_range_blurb:We invite you to slow down, savo",
+      "pass": true,
+      "actual": 1,
+      "expected": 1,
+      "detail": ""
+    },
+    {
+      "name": "accepted_range_blurb:Try Maple Moon, for presence, pl",
+      "pass": true,
+      "actual": 1,
+      "expected": 1,
+      "detail": ""
+    },
+    {
+      "name": "our_story_img_srcs",
+      "pass": true,
+      "actual": [
+        "/assets/our_story/founders_portrait_h212.webp",
+        "/assets/hero_shots/carob_pods_cluster.jpg"
+      ],
+      "expected": [
+        "/assets/our_story/founders_portrait_h212.webp",
+        "/assets/hero_shots/carob_pods_cluster.jpg"
+      ],
+      "detail": ""
+    },
+    {
+      "name": "carob_exact_h1",
+      "pass": true,
+      "actual": [
+        "What is Carob?"
+      ],
+      "expected": [
+        "What is Carob?"
+      ],
+      "detail": ""
+    },
+    {
+      "name": "carob_actually_zero",
+      "pass": true,
+      "actual": 0,
+      "expected": 0,
+      "detail": ""
+    },
+    {
+      "name": "carob_exact_intro",
+      "pass": true,
+      "actual": 1,
+      "expected": 1,
+      "detail": ""
+    },
+    {
+      "name": "carob_used_exact",
+      "pass": true,
+      "actual": 1,
+      "expected": 1,
+      "detail": ""
+    },
+    {
+      "name": "carob_uses_silent_correction_zero",
+      "pass": true,
+      "actual": 0,
+      "expected": 0,
+      "detail": ""
+    },
+    {
+      "name": "comparison_intro",
+      "pass": true,
+      "actual": 1,
+      "expected": 1,
+      "detail": ""
+    },
+    {
+      "name": "cacoa_misspelling_zero",
+      "pass": true,
+      "actual": 0,
+      "expected": 0,
+      "detail": ""
+    },
+    {
+      "name": "cacao_positive_control",
+      "pass": true,
+      "actual": true,
+      "expected": true,
+      "detail": "count=25"
+    },
+    {
+      "name": "comparison_table_present",
+      "pass": true,
+      "actual": true,
+      "expected": true,
+      "detail": ""
+    },
+    {
+      "name": "comparison_aligned_rows",
+      "pass": true,
+      "actual": [
+        [
+          "A tree-grown pod",
+          "Source",
+          "A bean"
+        ],
+        [
+          "Naturally sweet",
+          "Sweetness",
+          "Naturally bitter"
+        ],
+        [
+          "Naturally caffeine free",
+          "Caffeine",
+          "Contains caffeine and theobromine"
+        ]
+      ],
+      "expected": [
+        [
+          "A tree-grown pod",
+          "Source",
+          "A bean"
+        ],
+        [
+          "Naturally sweet",
+          "Sweetness",
+          "Naturally bitter"
+        ],
+        [
+          "Naturally caffeine free",
+          "Caffeine",
+          "Contains caffeine and theobromine"
+        ]
+      ],
+      "detail": ""
+    },
+    {
+      "name": "process_list_present",
+      "pass": true,
+      "actual": true,
+      "expected": true,
+      "detail": ""
+    },
+    {
+      "name": "process_exact_rows",
+      "pass": true,
+      "actual": [
+        [
+          "01",
+          "The pod",
+          "Australian-grown carob."
+        ],
+        [
+          "02",
+          "The roast",
+          "Roasted for depth."
+        ],
+        [
+          "03",
+          "The Base",
+          "Mixed with premium cacao butter for chocolatey undertones"
+        ],
+        [
+          "04",
+          "The result",
+          "our maple moon signature carob"
+        ]
+      ],
+      "expected": [
+        [
+          "01",
+          "The pod",
+          "Australian-grown carob."
+        ],
+        [
+          "02",
+          "The roast",
+          "Roasted for depth."
+        ],
+        [
+          "03",
+          "The Base",
+          "Mixed with premium cacao butter for chocolatey undertones"
+        ],
+        [
+          "04",
+          "The result",
+          "our maple moon signature carob"
+        ]
+      ],
+      "detail": ""
+    },
+    {
+      "name": "process_slow_zero",
+      "pass": true,
+      "actual": 0,
+      "expected": 0,
+      "detail": ""
+    },
+    {
+      "name": "crunchy_to_creamy",
+      "pass": true,
+      "actual": 1,
+      "expected": 1,
+      "detail": ""
+    },
+    {
+      "name": "from_the_grove_unpublished",
+      "pass": true,
+      "actual": 0,
+      "expected": 0,
+      "detail": ""
+    },
+    {
+      "name": "carob_in_page_faq_sections",
+      "pass": true,
+      "actual": 0,
+      "expected": 0,
+      "detail": ""
+    },
+    {
+      "name": "carob_in_page_details",
+      "pass": true,
+      "actual": 0,
+      "expected": 0,
+      "detail": ""
+    },
+    {
+      "name": "separate_faq_has_questions",
+      "pass": true,
+      "actual": true,
+      "expected": true,
+      "detail": ""
+    },
+    {
+      "name": "nate_only_unpublished:Carob begins on the tree as a natura",
+      "pass": true,
+      "actual": 0,
+      "expected": 0,
+      "detail": ""
+    },
+    {
+      "name": "nate_only_unpublished:From the carob tree, to the pod, the",
+      "pass": true,
+      "actual": 0,
+      "expected": 0,
+      "detail": ""
+    },
+    {
+      "name": "nate_only_unpublished:A naturally sweet pod, grown on the ",
+      "pass": true,
+      "actual": 0,
+      "expected": 0,
+      "detail": ""
+    },
+    {
+      "name": "nate_only_unpublished:between the Maple Mooning section an",
+      "pass": true,
+      "actual": 0,
+      "expected": 0,
+      "detail": ""
+    },
+    {
+      "name": "nate_only_unpublished:20260524 Maple Moon - Studio Session",
+      "pass": true,
+      "actual": 0,
+      "expected": 0,
+      "detail": ""
+    },
+    {
+      "name": "nate_only_unpublished:20260524 Maple Moon - Studio Session",
+      "pass": true,
+      "actual": 0,
+      "expected": 0,
+      "detail": ""
+    },
+    {
+      "name": "asset_positive_control",
+      "pass": true,
+      "actual": true,
+      "expected": true,
+      "detail": "refs=6"
+    },
+    {
+      "name": "missing_assets",
+      "pass": true,
+      "actual": [],
+      "expected": [],
+      "detail": ""
+    },
+    {
+      "name": "our_story_jsonld_positive",
+      "pass": true,
+      "actual": true,
+      "expected": true,
+      "detail": "count=4"
+    },
+    {
+      "name": "our_story_jsonld_parse",
+      "pass": true,
+      "actual": [],
+      "expected": [],
+      "detail": ""
+    },
+    {
+      "name": "carob_story_jsonld_positive",
+      "pass": true,
+      "actual": true,
+      "expected": true,
+      "detail": "count=4"
+    },
+    {
+      "name": "carob_story_jsonld_parse",
+      "pass": true,
+      "actual": [],
+      "expected": [],
+      "detail": ""
+    },
+    {
+      "name": "faq_jsonld_exact_count",
+      "pass": true,
+      "actual": 0,
+      "expected": 0,
+      "detail": ""
+    },
+    {
+      "name": "faq_jsonld_parse",
+      "pass": true,
+      "actual": [],
+      "expected": [],
+      "detail": ""
+    }
+  ],
+  "summary": {
+    "pass": 76,
+    "fail": 0,
+    "total": 76
+  },
+  "failures": []
+}

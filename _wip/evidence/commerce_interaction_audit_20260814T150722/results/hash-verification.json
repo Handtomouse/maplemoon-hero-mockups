@@ -1,0 +1,19 @@
+{
+  "schema": "maplemoon-immutable-snapshot-hash-verification/v1",
+  "routes": {
+    "homepage.html": {"sha256": "27921b2a466ccb670b2851a73043429763d3423bcaf651069e4e860dc01a78b1", "candidate_cmp": true},
+    "our-story.html": {"sha256": "2db31868a9791f373f156e7cdeb8261e494d1d47e9418a94c28156e213df7711", "candidate_cmp": true},
+    "carob-story.html": {"sha256": "4fd9ad0fabb9d60d0f391925f5a382ccfc8f705b60fca1c681f403a5cd9734bd", "candidate_cmp": true},
+    "shop.html": {"sha256": "f111ad5123e34dadd46ac497fca286066efc67c05dd7e68f0d3e70c97c735038", "candidate_cmp": true},
+    "faq.html": {"sha256": "c5ce7aaf0b9b3221f34eb2928fc2ff6732fc1a915ea80144a4ade2b94011fb6e", "candidate_cmp": true},
+    "stockists.html": {"sha256": "4821adfe88680d4f174b7a8700c8d8a65594df2901bf3a7109d51b09040cb887", "candidate_cmp": true},
+    "pure-carob-bar.html": {"sha256": "015cde27ecc60f3c444820a551c39f6e9c985fc5b2e59bdaea5f496c1c236b65", "candidate_cmp": true}
+  },
+  "runtime": {
+    "mock-cart.js": {"sha256": "5eea3ac3c707964f878b5221c0f001902dc4f6c84d56457fac1455a4e1844816", "packet_match": true, "candidate_cmp": true},
+    "mock-cart.css": {"sha256": "0ebf64caa50e0650778e3bbb84718d0bb9dd716531c02fbd4ee01c9c5cf1df7c", "packet_match": true, "candidate_cmp": true}
+  },
+  "all_seven_routes_cmp": true,
+  "pinned_cart_hashes_match": true,
+  "note": "Changing candidate shared-header bytes are excluded from runtime authority; browser testing was not started after the early commerce HOLD."
+}

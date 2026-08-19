@@ -1,0 +1,13 @@
+{
+  "schema": "maplemoon-isolated-process-cleanup/v1",
+  "checked_at": "2026-08-14T07:56:21Z",
+  "closed_exact_pids": [34563, 44151, 34109],
+  "profiles_preserved": [
+    "/tmp/maplemoon-native-zoom.QA32LU",
+    "/tmp/maplemoon-native-zoom-ls.KrEwK2"
+  ],
+  "ports_confirmed_closed": [4412, 9347, 9348],
+  "remaining_processes_matching_profiles_or_ports": 0,
+  "broad_kill_or_user_browser_action": false,
+  "outcome": "PASS"
+}

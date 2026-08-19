@@ -1,0 +1,61 @@
+{
+  "widths": [
+    {
+      "width": 390,
+      "height": 844,
+      "scrollWidth": 390,
+      "clientWidth": 390,
+      "sections": [
+        "colour",
+        "type",
+        "chrome",
+        "actions",
+        "controls",
+        "surfaces",
+        "tokens"
+      ],
+      "swatches": 21,
+      "buttons": 5,
+      "fields": 3,
+      "chips": 5,
+      "segments": 3,
+      "surfaces": 4,
+      "cards": 2,
+      "pending": 3,
+      "chromeMounts": 1,
+      "brokenImages": [],
+      "consoleErrors": [],
+      "badResponses": [],
+      "pass": true
+    },
+    {
+      "width": 1440,
+      "height": 900,
+      "scrollWidth": 1440,
+      "clientWidth": 1440,
+      "sections": [
+        "colour",
+        "type",
+        "chrome",
+        "actions",
+        "controls",
+        "surfaces",
+        "tokens"
+      ],
+      "swatches": 21,
+      "buttons": 5,
+      "fields": 3,
+      "chips": 5,
+      "segments": 3,
+      "surfaces": 4,
+      "cards": 2,
+      "pending": 3,
+      "chromeMounts": 1,
+      "brokenImages": [],
+      "consoleErrors": [],
+      "badResponses": [],
+      "pass": true
+    }
+  ],
+  "pass": true
+}

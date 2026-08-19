@@ -1,0 +1,45 @@
+{
+  "schema": "maplemoon-ritual-harmonized-chrome-qa/v2",
+  "desktop": {
+    "readyState": "complete",
+    "allImagesLoaded": true,
+    "innerWidth": 1440,
+    "clientWidth": 1440,
+    "scrollWidth": 1440,
+    "scrollHeight": 1240,
+    "cardWidths": [
+      362.656,
+      362.672,
+      362.656
+    ],
+    "cardHeights": [
+      432,
+      432,
+      432
+    ],
+    "file": "harmonized_site_treatment_desktop_v2.png",
+    "screenshotWidth": 1440,
+    "screenshotHeight": 1240
+  },
+  "mobile": {
+    "readyState": "complete",
+    "allImagesLoaded": true,
+    "innerWidth": 390,
+    "clientWidth": 390,
+    "scrollWidth": 390,
+    "scrollHeight": 2053,
+    "cardWidths": [
+      334,
+      334,
+      334
+    ],
+    "cardHeights": [
+      330,
+      330,
+      330
+    ],
+    "file": "harmonized_site_treatment_mobile_true390_v2.png",
+    "screenshotWidth": 390,
+    "screenshotHeight": 2053
+  }
+}

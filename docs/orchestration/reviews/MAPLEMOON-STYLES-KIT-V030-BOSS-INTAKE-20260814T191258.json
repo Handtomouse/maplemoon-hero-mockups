@@ -1,0 +1,156 @@
+{
+  "schema": "maplemoon-receipt/v2",
+  "receipt_id": "MAPLEMOON-STYLES-KIT-V030-BOSS-INTAKE-20260814T191258-RECEIPT-001",
+  "packet_id": "MAPLEMOON-STYLES-KIT-V030-BOSS-INTAKE-20260814T191258",
+  "worker_thread_id": "/root/header_powder_update",
+  "worker": "Codex independent Styles Kit v0.3 Boss intake worker",
+  "started_at": "2026-08-14T19:15:48+10:00",
+  "completed_at": "2026-08-14T19:44:00+10:00",
+  "outcome": "FAIL_REQUIRED_CHECKS_HOLD_PLANNING_PROMOTION",
+  "checkpoint_path": "maplemoon-website/_wip/checkpoints/MAPLEMOON-STYLES-KIT-V030-BOSS-INTAKE-20260814T191258_20260814_191548_AEST",
+  "files_read": [
+    "maplemoon-website/docs/orchestration/packets/MAPLEMOON-STYLES-KIT-V030-BOSS-INTAKE-20260814T191258.md",
+    "/Users/handtomouse/Documents/Codex/2026-08-13/maple-moon-shared-site-styles-kit/outputs/README.md",
+    "/Users/handtomouse/Documents/Codex/2026-08-13/maple-moon-shared-site-styles-kit/outputs/STATUS.md",
+    "/Users/handtomouse/Documents/Codex/2026-08-13/maple-moon-shared-site-styles-kit/outputs/CLAUDE-CODEX-INTAKE.md",
+    "/Users/handtomouse/Documents/Codex/2026-08-13/maple-moon-shared-site-styles-kit/outputs/RULE-REGISTER.json",
+    "/Users/handtomouse/Documents/Codex/2026-08-13/maple-moon-shared-site-styles-kit/outputs/DESIGN-TOKENS.json",
+    "/Users/handtomouse/Documents/Codex/2026-08-13/maple-moon-shared-site-styles-kit/outputs/maple-moon-tokens.css",
+    "/Users/handtomouse/Documents/Codex/2026-08-13/maple-moon-shared-site-styles-kit/outputs/MAPLE-MOON-DESIGN-SYSTEM.md",
+    "/Users/handtomouse/Documents/Codex/2026-08-13/maple-moon-shared-site-styles-kit/outputs/COMPONENT-CONTRACTS.md",
+    "/Users/handtomouse/Documents/Codex/2026-08-13/maple-moon-shared-site-styles-kit/outputs/SECTIONS-MEDIA-OVERLAYS.md",
+    "/Users/handtomouse/Documents/Codex/2026-08-13/maple-moon-shared-site-styles-kit/outputs/PAGE-ARCHETYPES.md",
+    "/Users/handtomouse/Documents/Codex/2026-08-13/maple-moon-shared-site-styles-kit/outputs/RESPONSIVE-ACCESSIBILITY.md",
+    "/Users/handtomouse/Documents/Codex/2026-08-13/maple-moon-shared-site-styles-kit/outputs/MEDIA-FOG-CROP-SPEC.md",
+    "/Users/handtomouse/Documents/Codex/2026-08-13/maple-moon-shared-site-styles-kit/outputs/CONTENT-SAFETY-AND-VOICE.md",
+    "/Users/handtomouse/Documents/Codex/2026-08-13/maple-moon-shared-site-styles-kit/outputs/PAGE-COVERAGE-MATRIX.md",
+    "/Users/handtomouse/Documents/Codex/2026-08-13/maple-moon-shared-site-styles-kit/outputs/DECISIONS-NEEDED.md",
+    "/Users/handtomouse/Documents/Codex/2026-08-13/maple-moon-shared-site-styles-kit/outputs/GOVERNANCE.md",
+    "/Users/handtomouse/Documents/Codex/2026-08-13/maple-moon-shared-site-styles-kit/outputs/SOURCE-REGISTER.md",
+    "/Users/handtomouse/Documents/Codex/2026-08-13/maple-moon-shared-site-styles-kit/outputs/CHANGELOG.md",
+    "/Users/handtomouse/Documents/Codex/2026-08-13/maple-moon-shared-site-styles-kit/outputs/VERIFICATION-RECEIPT.md",
+    "/Users/handtomouse/Documents/Codex/2026-08-13/maple-moon-shared-site-styles-kit/outputs/COMPLETION-AUDIT.md",
+    "/Users/handtomouse/Documents/Codex/2026-08-13/maple-moon-shared-site-styles-kit/outputs/CLAUDE-CHECK-TO-CODEX-BOSS-HANDOFF-20260814.md",
+    "/Users/handtomouse/Documents/Codex/2026-08-13/maple-moon-shared-site-styles-kit/outputs/style-kit-playground.html",
+    "/Users/handtomouse/Documents/Codex/2026-08-13/maple-moon-shared-site-styles-kit/outputs/playground.css",
+    "/Users/handtomouse/Documents/Codex/2026-08-13/maple-moon-shared-site-styles-kit/outputs/playground.js",
+    "/Users/handtomouse/Documents/Codex/2026-08-13/maple-moon-shared-site-styles-kit/outputs/ASSET-MANIFEST.json",
+    "/Users/handtomouse/Documents/Codex/2026-08-13/maple-moon-shared-site-styles-kit/outputs/AI-TEMPLATE-ANTI-PATTERNS.md",
+    "/Users/handtomouse/Documents/Codex/2026-08-13/maple-moon-shared-site-styles-kit/outputs/SHOPIFY-MAPPING.md",
+    "/Users/handtomouse/Documents/Codex/2026-08-13/maple-moon-shared-site-styles-kit/outputs/AGENTS-SNIPPET.md",
+    "/Users/handtomouse/Documents/Codex/2026-08-13/maple-moon-shared-site-styles-kit/outputs/CLEANUP-CANDIDATES.json",
+    "/Users/handtomouse/Documents/Codex/2026-08-13/maple-moon-shared-site-styles-kit/outputs/verify-style-kit.mjs",
+    "maplemoon_build_20260813/homepage.html",
+    "maplemoon_build_20260813/our-story.html",
+    "maplemoon_build_20260813/carob-story.html",
+    "maplemoon_build_20260813/shop.html",
+    "maplemoon_build_20260813/faq.html",
+    "maplemoon_build_20260813/stockists.html",
+    "maplemoon_build_20260813/pure-carob-bar.html",
+    "maplemoon-website/docs/orchestration/reviews/MAPLEMOON-INTEGRATED-HEADER-CART-CERT-R2-20260814T163003.json",
+    "maplemoon-website/docs/orchestration/reviews/MAPLEMOON-NATIVE-200-ZOOM-AUDIT-R2-20260814T180224.md",
+    "maplemoon-website/docs/orchestration/reviews/MAPLEMOON-NATIVE-200-ZOOM-AUDIT-R2-20260814T180224.json",
+    "maplemoon-website/docs/orchestration/reviews/MAPLEMOON-NATE-DECISION-GATE-R2-20260814T184422.md",
+    "maplemoon-website/docs/orchestration/reviews/MAPLEMOON-NATE-DECISION-GATE-R2-20260814T184422.json",
+    "maplemoon-website/scripts/check-maplemoon-receipt.py"
+  ],
+  "files_changed": [
+    "maplemoon-website/_wip/evidence/styles_kit_v030_boss_intake_20260814T191258",
+    "maplemoon-website/docs/orchestration/reviews/MAPLEMOON-STYLES-KIT-V030-BOSS-INTAKE-20260814T191258.md",
+    "maplemoon-website/docs/orchestration/reviews/MAPLEMOON-STYLES-KIT-V030-BOSS-INTAKE-20260814T191258.json"
+  ],
+  "pre_sha256": {
+    "maplemoon-website/_wip/evidence/styles_kit_v030_boss_intake_20260814T191258": null,
+    "maplemoon-website/docs/orchestration/reviews/MAPLEMOON-STYLES-KIT-V030-BOSS-INTAKE-20260814T191258.md": null,
+    "maplemoon-website/docs/orchestration/reviews/MAPLEMOON-STYLES-KIT-V030-BOSS-INTAKE-20260814T191258.json": null
+  },
+  "post_sha256": {
+    "maplemoon-website/_wip/evidence/styles_kit_v030_boss_intake_20260814T191258": "c9de6706bace6dd2d5d018291a7c074519e108897cf10fcfae5b8e5f3e6bc731",
+    "maplemoon-website/docs/orchestration/reviews/MAPLEMOON-STYLES-KIT-V030-BOSS-INTAKE-20260814T191258.md": "f179584e144035b2f4a278f17b2a01964ba0548e24fbfe226de95f7f5f7a1d2e",
+    "maplemoon-website/docs/orchestration/reviews/MAPLEMOON-STYLES-KIT-V030-BOSS-INTAKE-20260814T191258.json": null
+  },
+  "checks": [
+    {
+      "command": "checkpoint then check-maplemoon-receipt.py phase=start with --root /Users/handtomouse",
+      "exit_code": 0,
+      "result": "PASS checkpoint packet=MAPLEMOON-STYLES-KIT-V030-BOSS-INTAKE-20260814T191258 files=3 path=_wip/checkpoints/MAPLEMOON-STYLES-KIT-V030-BOSS-INTAKE-20260814T191258_20260814_191548_AEST; PASS packet=MAPLEMOON-STYLES-KIT-V030-BOSS-INTAKE-20260814T191258 phase=start scope=3"
+    },
+    {
+      "command": "verify packet-pinned kit, predecessor and candidate SHA-256 values at acquisition and close",
+      "exit_code": 0,
+      "result": "PASS all pinned hashes exact at acquisition and close; packet SHA-256 d785d126af72f45deb3b1d1b3ee58a129d8bcce968aef3f165c2894fad9f5880"
+    },
+    {
+      "command": "node verify-style-kit.mjs from the pinned kit output root",
+      "exit_code": 0,
+      "result": "RESULT PASS: 31/31 required, 68 rules + 12 decisions, 66/66 tokens, small-gold kit pairs 5.80/5.93/6.47, 9/9 assets, 31/31 proof PNGs, links/assets, JavaScript/CSS, 12 anti-patterns and scrim containment"
+    },
+    {
+      "command": "node independent-audit.mjs with in-memory positive controls",
+      "exit_code": 0,
+      "result": "RESULT PASS; missing required, malformed rule/token/asset, broken link/asset and escaped scrim all DETECTED. The first task-harness scrim-path failure is preserved and corrected."
+    },
+    {
+      "command": "browser-audit.cjs: kit 1440x1000/1024x900/768x900/390x844, five header tabs, modal/drawer/popover, seven candidate routes at 390/900/1440",
+      "exit_code": 0,
+      "result": "RESULT PASS kitWidths=4 kitPass=true interactionsPass=true candidateRenders=21 candidateNetworkPass=true; final run zero root overflow, broken loaded images, required sub-44 controls and console/page/request/HTTP errors. Initial favicon-only harness failure preserved and corrected."
+    },
+    {
+      "command": "candidate-static-audit.mjs",
+      "exit_code": 0,
+      "result": "RESULT PASS candidate_hashes=7/7 declared_assets=56/56; MEDIA-005 remains HOLD because responsive placement/fallback fields are inconsistent"
+    },
+    {
+      "command": "candidate-gold-contrast.cjs then jq -e require every measured FND-009 pair >=4.5",
+      "exit_code": 1,
+      "result": "false; FAIL Home #pdpEyebrow=2.51/3.05/3.23 at 390/900/1440. FAQ=5.25/4.92/5.63 and Pure=4.67/4.84/4.59 pass."
+    },
+    {
+      "command": "material-self-audit-replay.cjs",
+      "exit_code": 0,
+      "result": "CONFIRMED 11/11 source claims including 28/68 + 2/12 literal traceability, MEDIA-003 4/5, primary-only CMP-017 matrix, fog semantic gap, missing proof manifest/open interactions, missing CV map, split media placement record, Shopify discovery hold and Stockists internal overflow +2/+5/+9/+18 at 390/375/360/320"
+    },
+    {
+      "command": "jq -e required kit acceptance aggregate: zero internal overflow, MEDIA-003 5/5, CMP-017 all tiers, defined fog semantics, proof manifest",
+      "exit_code": 1,
+      "result": "false; required kit acceptance fails. Two earlier task-owned jq expression errors are preserved before this authoritative exit 1."
+    },
+    {
+      "command": "replay completion and promotion gates for integrated header/cart R2, native-200 R2 and Nate decision R2",
+      "exit_code": 0,
+      "result": "PASS 6/6 corrected commands. The first relative-script-path attempt failed from /Users/handtomouse and was corrected without source mutation."
+    },
+    {
+      "command": "visual inspection of kit header, candidate and contrast contact sheets plus nonblank file controls",
+      "exit_code": 0,
+      "result": "PASS evidence is nonblank and readable; candidate route states are settled and the Home low-contrast small-gold surface is visually present"
+    }
+  ],
+  "screenshots_or_urls": [
+    "maplemoon-website/_wip/evidence/styles_kit_v030_boss_intake_20260814T191258/kit-widths-contact-sheet.png",
+    "maplemoon-website/_wip/evidence/styles_kit_v030_boss_intake_20260814T191258/kit-header-contact-sheet.png",
+    "maplemoon-website/_wip/evidence/styles_kit_v030_boss_intake_20260814T191258/candidate-contact-sheet.png",
+    "maplemoon-website/_wip/evidence/styles_kit_v030_boss_intake_20260814T191258/gold-contrast-contact-sheet.png",
+    "maplemoon-website/_wip/evidence/styles_kit_v030_boss_intake_20260814T191258/browser-audit.json",
+    "maplemoon-website/_wip/evidence/styles_kit_v030_boss_intake_20260814T191258/material-self-audit-replay.json"
+  ],
+  "failures": [
+    "Required kit browser/specimen acceptance fails: Stockists internal panel overflow is hidden by root clipping; MEDIA-003, CMP-017 and proof-custody claims do not match the written contracts.",
+    "Candidate FND-009 fails on homepage #pdpEyebrow at all three measured widths."
+  ],
+  "unknowns": [
+    "CV-014, CV-051 and CV-062 have no phrase-to-route/block occurrence map and remain NEEDS NATE.",
+    "FOG-002 numbers do not define opacity versus mask core/falloff and remain NEEDS NATE.",
+    "Exact media identities, placements, responsive delivery and Shopify theme architecture remain unadmitted."
+  ],
+  "residual_risk": [
+    "The task-owned verifier remains green despite the confirmed internal overflow and specimen-contract gaps.",
+    "Candidate native-200 evidence is valid only for the pinned candidate and cannot close kit/media/FND/overlay/layer holds.",
+    "Production remains frozen on immutable token 7vjf2m50b; this receipt grants no implementation, deployment, production or client-contact authority."
+  ],
+  "forbidden_path_changes": [],
+  "proposed_next_state": "hold_for_single_v031_docs_playground_verifier_correction_packet",
+  "ready_to_promote": false,
+  "promotion_boundary": "No promotion. v0.3.0-provisional does not replace v0.1.7 for planning until the one bounded correction packet passes fresh independent intake.",
+  "next_reviewer": "MapleMoon root Boss to replay this receipt, preserve FAIL/HOLD, and issue at most one bounded v0.3.1 docs/playground/verifier-only correction packet"
+}

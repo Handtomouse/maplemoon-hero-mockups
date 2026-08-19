@@ -1,0 +1,18 @@
+MAPLEMOON FINDER MEDIA REVIEW
+
+Start with:
+  3 REVIEW - POSSIBLY UNUSED
+  4 REVIEW - EXACT DUPLICATE GROUPS
+  5 REVIEW - BY SAFETY
+
+Finder tags:
+  MM Keep - Site Used
+  MM Check - Referenced
+  MM Review - Possibly Unused
+  MM Exact Duplicate
+  MM Hold
+  MM Cleanup Candidate
+  MM Review
+
+IMPORTANT
+These file entries are symlinks. They preview the real project media without creating another copy. Deleting a symlink does not delete its original and does not free meaningful disk space. Use the shown source path to verify an original before deletion, or give Codex the selected paths for a controlled deletion pass.

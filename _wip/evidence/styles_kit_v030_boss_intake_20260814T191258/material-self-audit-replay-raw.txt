@@ -1,0 +1,329 @@
+{
+  "schema": "maplemoon-styles-kit-v030-material-self-audit-replay/v1",
+  "source": {
+    "traceability": {
+      "literalRules": 28,
+      "totalRules": 68,
+      "literalDecisions": 2,
+      "totalDecisions": 12,
+      "ruleIds": [
+        "FND-009",
+        "NAV-001",
+        "NAV-003",
+        "NAV-004",
+        "RESP-007",
+        "FOG-002",
+        "MEDIA-002",
+        "CMP-013",
+        "CMP-014",
+        "MEDIA-003",
+        "MEDIA-004",
+        "FOG-005",
+        "MEDIA-005",
+        "FOG-004",
+        "CMP-015",
+        "CMP-016",
+        "LAYER-001",
+        "RESP-009",
+        "FOG-006",
+        "LAYER-002",
+        "CMP-009",
+        "RESP-004",
+        "CMP-017",
+        "FND-008",
+        "RESP-005",
+        "RESP-006",
+        "CNT-001",
+        "CNT-005"
+      ],
+      "decisionIds": [
+        "DEC-002",
+        "DEC-012"
+      ]
+    },
+    "mediaStates": {
+      "required": [
+        "governed",
+        "placeholder",
+        "loading",
+        "error",
+        "unavailable"
+      ],
+      "present": [
+        "governed",
+        "placeholder",
+        "loading",
+        "error"
+      ],
+      "media003": {
+        "id": "MEDIA-003",
+        "status": "PROVISIONAL/RECOMMENDED",
+        "sourceIds": [
+          "SRC-KIT",
+          "SRC-BOSS-SECTIONS-OVERLAYS"
+        ],
+        "summary": "Media frames use a small named aspect family, reserved geometry, external captions and explicit governed, placeholder, loading, error and unavailable states.",
+        "rationale": "Prevents layout shift, arbitrary crops and fake-media substitution while keeping exact assets held.",
+        "appliesTo": [
+          "media",
+          "all-pages"
+        ],
+        "dependencies": [
+          "MEDIA-002"
+        ]
+      }
+    },
+    "controlStates": {
+      "required": [
+        "default",
+        "hover",
+        "focus-visible",
+        "pressed",
+        "loading",
+        "disabled"
+      ],
+      "primary": 6,
+      "secondaryFullMatrix": false,
+      "tertiaryFullMatrix": false,
+      "iconFullMatrix": false,
+      "cmp017": {
+        "id": "CMP-017",
+        "status": "PROVISIONAL/RECOMMENDED",
+        "sourceIds": [
+          "SRC-KIT"
+        ],
+        "summary": "Primary, secondary, tertiary and icon controls define default, hover, focus-visible, pressed, loading and disabled appearances without changing hierarchy, label width or meaning.",
+        "rationale": "A default-state button alone is not an implementable component contract and invites generic framework styling in missing states.",
+        "appliesTo": [
+          "shared",
+          "all-pages",
+          "controls"
+        ],
+        "dependencies": [
+          "RESP-004",
+          "RESP-005",
+          "RESP-006"
+        ]
+      }
+    },
+    "fog": {
+      "fog002": {
+        "id": "FOG-002",
+        "status": "NEEDS NATE",
+        "sourceIds": [
+          "SRC-KIT"
+        ],
+        "summary": "Candidate numeric strengths are 0, 0.18 and 0.34.",
+        "rationale": "Exact intensity requires visual approval.",
+        "appliesTo": [
+          "media",
+          "all-pages"
+        ],
+        "evidenceFlags": [
+          "UNVERIFIED"
+        ]
+      },
+      "tokenValues": [
+        [
+          "fog.none",
+          "0"
+        ],
+        [
+          "fog.light",
+          "0.18"
+        ],
+        [
+          "fog.medium",
+          "0.34"
+        ]
+      ],
+      "definesOpacityVsMaskCoreFalloff": false
+    },
+    "rawColours": {
+      "uniqueCount": 69,
+      "values": [
+        "#000",
+        "#0a1a2a",
+        "#0d2238",
+        "#152a43",
+        "#234666",
+        "#244b70",
+        "#245f45",
+        "#315b83",
+        "#456d5a",
+        "#637e5d",
+        "#6d86b5",
+        "#71808b",
+        "#765d2f",
+        "#773f3f",
+        "#89abc2",
+        "#8c6c42",
+        "#8f4a4a",
+        "#91b5ca",
+        "#9a7d43",
+        "#aeb7c0",
+        "#b67dc0",
+        "#bb7bd5",
+        "#eaf2f7",
+        "#eef0f2",
+        "#f7f3ea",
+        "#fff",
+        "#fffdf8",
+        "rgba(0,0,0,.88)",
+        "rgba(0,0,0,.92)",
+        "rgba(122,63,63,.34)",
+        "rgba(154,125,67,.52)",
+        "rgba(21,42,67,.05)",
+        "rgba(21,42,67,.12)",
+        "rgba(21,42,67,.24)",
+        "rgba(21,42,67,.25)",
+        "rgba(21,42,67,.26)",
+        "rgba(21,42,67,.28)",
+        "rgba(21,42,67,.3)",
+        "rgba(21,42,67,.32)",
+        "rgba(21,42,67,.35)",
+        "rgba(21,42,67,.82)",
+        "rgba(220,233,241,.42)",
+        "rgba(220,233,241,.52)",
+        "rgba(220,233,241,.78)",
+        "rgba(234,242,247,.98)",
+        "rgba(234,242,247,0)",
+        "rgba(234,242,247,var(--fog)",
+        "rgba(238,240,242,.7)",
+        "rgba(247,243,234,.88)",
+        "rgba(247,243,234,.96)",
+        "rgba(255,253,248,.12)",
+        "rgba(255,253,248,.18)",
+        "rgba(255,253,248,.4)",
+        "rgba(255,253,248,.44)",
+        "rgba(255,253,248,.5)",
+        "rgba(255,253,248,.54)",
+        "rgba(255,253,248,.55)",
+        "rgba(255,253,248,.62)",
+        "rgba(255,253,248,.8)",
+        "rgba(255,253,248,.84)",
+        "rgba(255,253,248,.88)",
+        "rgba(255,253,248,.9)",
+        "rgba(255,255,255,.2)",
+        "rgba(255,255,255,.22)",
+        "rgba(255,255,255,.45)",
+        "rgba(255,255,255,.5)",
+        "rgba(255,255,255,.65)",
+        "rgba(30,20,60,.28)",
+        "rgba(36,103,72,.42)"
+      ]
+    },
+    "proofs": {
+      "count": 31,
+      "manifestCandidates": [],
+      "currentOpenInteractionScreenshots": [],
+      "files": [
+        "00-playground-desktop-1440.png",
+        "01-foundations-desktop-1440.png",
+        "02-components-products-desktop-1440.png",
+        "03-archetypes-antipatterns-desktop-1440.png",
+        "04-playground-mobile-390.png",
+        "05-foundations-mobile-390.png",
+        "06-components-mobile-390.png",
+        "07-archetypes-mobile-390.png",
+        "08-faq-decision-desktop-1440.png",
+        "09-faq-decision-mobile-390.png",
+        "10-shell-desktop-1440.png",
+        "11-shell-mobile-390.png",
+        "12-page-headers-desktop-1440.png",
+        "13-page-headers-mobile-390.png",
+        "14-sections-media-desktop-1440.png",
+        "15-media-effects-desktop-1440.png",
+        "16-overlays-states-desktop-1440.png",
+        "17-sections-media-mobile-390.png",
+        "18-media-effects-mobile-390.png",
+        "19-overlays-states-mobile-390.png",
+        "20-foundations-contrast-desktop-1440.png",
+        "21-page-rhythm-desktop-1440.png",
+        "22-media-delivery-desktop-1440.png",
+        "23-controls-icons-desktop-1440.png",
+        "24-overlays-system-desktop-1440.png",
+        "25-foundations-contrast-mobile-390.png",
+        "26-page-rhythm-mobile-390.png",
+        "27-media-delivery-mobile-390.png",
+        "28-control-states-mobile-390.png",
+        "29-overlays-system-mobile-390.png",
+        "30-icons-motion-mobile-390.png"
+      ]
+    },
+    "contentMap": {
+      "cvPhraseRouteBlockMapPresent": false
+    },
+    "splitMediaRecord": {
+      "assetManifestContainsPlacementFields": false,
+      "mediaSpecDefinesPlacementRecord": true
+    },
+    "shopify": {
+      "implementationDiscoveryStillRequired": true
+    }
+  },
+  "stockistsOverflow": [
+    {
+      "width": 390,
+      "rootClientWidth": 390,
+      "rootScrollWidth": 390,
+      "panelClientWidth": 348,
+      "panelScrollWidth": 350,
+      "panelOverflow": 2,
+      "visualRightOverflow": 1.11,
+      "visualLeftOverflow": 20,
+      "innerClientWidth": 348,
+      "innerScrollWidth": 350
+    },
+    {
+      "width": 375,
+      "rootClientWidth": 375,
+      "rootScrollWidth": 375,
+      "panelClientWidth": 333,
+      "panelScrollWidth": 338,
+      "panelOverflow": 5,
+      "visualRightOverflow": 4.48,
+      "visualLeftOverflow": 20,
+      "innerClientWidth": 333,
+      "innerScrollWidth": 338
+    },
+    {
+      "width": 360,
+      "rootClientWidth": 360,
+      "rootScrollWidth": 360,
+      "panelClientWidth": 318,
+      "panelScrollWidth": 327,
+      "panelOverflow": 9,
+      "visualRightOverflow": 7.88,
+      "visualLeftOverflow": 20,
+      "innerClientWidth": 318,
+      "innerScrollWidth": 327
+    },
+    {
+      "width": 320,
+      "rootClientWidth": 320,
+      "rootScrollWidth": 320,
+      "panelClientWidth": 278,
+      "panelScrollWidth": 296,
+      "panelOverflow": 18,
+      "visualRightOverflow": 16.89,
+      "visualLeftOverflow": 20,
+      "innerClientWidth": 278,
+      "innerScrollWidth": 296
+    }
+  ],
+  "findings": {
+    "traceabilityGap": true,
+    "mediaStateGap": true,
+    "controlMatrixGap": true,
+    "fogSemanticGap": true,
+    "stockistsInternalOverflow": true,
+    "rawColoursPresent": true,
+    "proofManifestGap": true,
+    "openInteractionScreenshotGap": true,
+    "cvOccurrenceMapGap": true,
+    "mediaPlacementRecordSplit": true,
+    "shopifyDiscoveryGap": true
+  }
+}
+RESULT CONFIRMED findings=11/11

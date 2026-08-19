@@ -1,0 +1,372 @@
+{
+  "schema": "maplemoon-design-system-gap-source-manifest/v1",
+  "accessed_at": "2026-08-17",
+  "authority_note": "External sources are dated advisory comparisons only and never Maple Moon authority.",
+  "sources": [
+    {
+      "source_id": "SRC-PACKET",
+      "kind": "local-authority",
+      "title": "Boss design-system gap audit packet",
+      "url_or_path": "/Users/handtomouse/maplemoon-website/docs/orchestration/packets/MAPLEMOON-DESIGN-SYSTEM-GAP-AUDIT-20260817T153140.md",
+      "owner": "MapleMoon Boss",
+      "accessed_at": "2026-08-17",
+      "observation": "Defines exact authority, inputs, outputs, controls and no-implementation boundary.",
+      "applicability": "Governs this audit.",
+      "conflict_or_fit": "Highest scope authority for this work.",
+      "mapped_rule_ids": [
+        "ALL"
+      ]
+    },
+    {
+      "source_id": "SRC-BOSS-LEDGER",
+      "kind": "local-authority",
+      "title": "Current Boss execution ledger",
+      "url_or_path": "/Users/handtomouse/maplemoon-website/docs/orchestration/MAPLEMOON_BOSS_EXECUTION_LEDGER_20260816.md",
+      "owner": "MapleMoon Boss",
+      "accessed_at": "2026-08-17",
+      "observation": "Current decisions include D01\u2013D06, shared mobile chrome, Home exception, Etheryx/OS2.0 and all 24 products.",
+      "applicability": "Current decision authority.",
+      "conflict_or_fit": "Supersedes stale six-bar/implementation assumptions only where explicit.",
+      "mapped_rule_ids": [
+        "NAV-001",
+        "NAV-003",
+        "ARC-005",
+        "DEC-007"
+      ]
+    },
+    {
+      "source_id": "SRC-KIT-V031",
+      "kind": "local-planning-authority",
+      "title": "Accepted sealed v0.3.1 Styles Kit",
+      "url_or_path": "/Users/handtomouse/Documents/Codex/2026-08-13/maple-moon-shared-site-styles-kit/outputs",
+      "owner": "Maple Moon Styles Kit task; accepted by Boss",
+      "accessed_at": "2026-08-17",
+      "observation": "68 rules, 12 decisions and 70 tokens with mixed statuses.",
+      "applicability": "Planning authority only; never implementation proof.",
+      "conflict_or_fit": "Statuses preserved.",
+      "mapped_rule_ids": [
+        "ALL"
+      ]
+    },
+    {
+      "source_id": "SRC-KIT-V032",
+      "kind": "local-advisory",
+      "title": "Luxury polish research overlay v0.3.2",
+      "url_or_path": "/Users/handtomouse/Documents/Codex/2026-08-13/maple-moon-shared-site-styles-kit/outputs/version-lanes/v0.3.2-provisional",
+      "owner": "Maple Moon Styles Kit task",
+      "accessed_at": "2026-08-17",
+      "observation": "Advisory restraint, hierarchy, pacing and media principles.",
+      "applicability": "Clarifies eight named rules only.",
+      "conflict_or_fit": "No status promotion.",
+      "mapped_rule_ids": [
+        "FND-002",
+        "FND-008",
+        "CMP-002",
+        "CMP-013",
+        "CMP-014",
+        "MEDIA-002",
+        "MEDIA-004",
+        "MEDIA-005"
+      ]
+    },
+    {
+      "source_id": "SRC-KIT-V040",
+      "kind": "local-advisory-visual",
+      "title": "v0.4 planning visual guidance",
+      "url_or_path": "/Users/handtomouse/Documents/Codex/2026-08-13/maple-moon-shared-site-styles-kit/outputs/version-lanes/v0.4-provisional",
+      "owner": "Maple Moon Styles Kit task",
+      "accessed_at": "2026-08-17",
+      "observation": "Four specimen families at four widths.",
+      "applicability": "Comparison only.",
+      "conflict_or_fit": "No specimen is website approval.",
+      "mapped_rule_ids": [
+        "FND-008",
+        "CMP-002",
+        "CMP-013",
+        "CMP-014",
+        "MEDIA-004",
+        "MEDIA-005"
+      ]
+    },
+    {
+      "source_id": "SRC-CURRENT-CANDIDATE",
+      "kind": "current-site-evidence",
+      "title": "Boss-pinned m49 candidate and exact local bytes",
+      "url_or_path": "https://maplemoonbuild20260813-m49nihfds-handtomouses-projects.vercel.app",
+      "owner": "MapleMoon candidate",
+      "accessed_at": "2026-08-17",
+      "observation": "Authenticated IAB inspection plus 28 local hash-pinned fresh contexts.",
+      "applicability": "Current visual/runtime evidence.",
+      "conflict_or_fit": "Implementation evidence, never rule authority.",
+      "mapped_rule_ids": [
+        "ALL"
+      ]
+    },
+    {
+      "source_id": "EXT-WCAG22",
+      "kind": "external-primary",
+      "title": "Web Content Accessibility Guidelines 2.2",
+      "url_or_path": "https://www.w3.org/TR/WCAG22/",
+      "owner": "W3C WAI",
+      "accessed_at": "2026-08-17",
+      "observation": "Defines reflow, focus, target size and other conformance criteria.",
+      "applicability": "Accessibility acceptance.",
+      "conflict_or_fit": "Fits Maple Moon guardrails; not visual authority.",
+      "mapped_rule_ids": [
+        "RESP-002",
+        "RESP-003",
+        "RESP-004",
+        "RESP-005",
+        "RESP-009"
+      ]
+    },
+    {
+      "source_id": "EXT-WCAG-REFLOW",
+      "kind": "external-primary",
+      "title": "Understanding Reflow",
+      "url_or_path": "https://www.w3.org/WAI/WCAG22/Understanding/reflow.html",
+      "owner": "W3C WAI",
+      "accessed_at": "2026-08-17",
+      "observation": "Reflow and 200% text/zoom must avoid two-dimensional reading; sticky content must not obscure focus.",
+      "applicability": "Small-width, zoom and sticky-header tests.",
+      "conflict_or_fit": "Fits.",
+      "mapped_rule_ids": [
+        "RESP-002",
+        "RESP-003",
+        "RESP-009"
+      ]
+    },
+    {
+      "source_id": "EXT-WAI-APG",
+      "kind": "external-primary",
+      "title": "ARIA Authoring Practices patterns",
+      "url_or_path": "https://www.w3.org/WAI/ARIA/apg/patterns/",
+      "owner": "W3C WAI",
+      "accessed_at": "2026-08-17",
+      "observation": "Documents keyboard and semantic contracts for accordion, disclosure, dialog and menu button patterns.",
+      "applicability": "FAQ, mobile menu and overlays.",
+      "conflict_or_fit": "Fits; native HTML remains preferred where possible.",
+      "mapped_rule_ids": [
+        "CMP-006",
+        "CMP-007",
+        "CMP-008",
+        "LAYER-002"
+      ]
+    },
+    {
+      "source_id": "EXT-SHOPIFY-ACCESS",
+      "kind": "external-primary",
+      "title": "Accessibility best practices for Shopify themes",
+      "url_or_path": "https://shopify.dev/docs/storefronts/themes/best-practices/accessibility",
+      "owner": "Shopify",
+      "accessed_at": "2026-08-17",
+      "observation": "Requires keyboard operation, visible focus, skip link, labelled forms, dialog focus management and 44\u00d744 primary targets.",
+      "applicability": "Commerce and theme acceptance.",
+      "conflict_or_fit": "Fits Maple Moon\u2019s 44px rule.",
+      "mapped_rule_ids": [
+        "RESP-004",
+        "RESP-005",
+        "CMP-008",
+        "LAYER-002"
+      ]
+    },
+    {
+      "source_id": "EXT-SHOPIFY-PERF",
+      "kind": "external-primary",
+      "title": "Performance best practices for Shopify themes",
+      "url_or_path": "https://shopify.dev/docs/storefronts/themes/best-practices/performance/index",
+      "owner": "Shopify",
+      "accessed_at": "2026-08-17",
+      "observation": "Prefer HTML/CSS, responsive image_tag output, restrained preloads and below-fold lazy loading.",
+      "applicability": "Media delivery and later Etheryx implementation.",
+      "conflict_or_fit": "Fits; no implementation imported.",
+      "mapped_rule_ids": [
+        "MEDIA-005",
+        "RESP-009"
+      ]
+    },
+    {
+      "source_id": "EXT-SHOPIFY-SECTIONS",
+      "kind": "external-primary",
+      "title": "Building with sections and blocks",
+      "url_or_path": "https://shopify.dev/docs/storefronts/themes/best-practices/templates-sections-blocks",
+      "owner": "Shopify",
+      "accessed_at": "2026-08-17",
+      "observation": "Sections/blocks should remain reorderable and flow logically regardless of block sequence.",
+      "applicability": "Merchant editability and future pages.",
+      "conflict_or_fit": "Fits; design guardrails must constrain unsafe combinations.",
+      "mapped_rule_ids": [
+        "ARC-007",
+        "CMP-013",
+        "CMP-014"
+      ]
+    },
+    {
+      "source_id": "EXT-SHOPIFY-OS20",
+      "kind": "external-primary",
+      "title": "Online Store 2.0",
+      "url_or_path": "https://shopify.dev/docs/storefronts/themes/os20",
+      "owner": "Shopify",
+      "accessed_at": "2026-08-17",
+      "observation": "JSON templates, dynamic sources and app blocks enable modular merchant editing.",
+      "applicability": "Etheryx planning.",
+      "conflict_or_fit": "Fits current Boss decision.",
+      "mapped_rule_ids": [
+        "ARC-007"
+      ]
+    },
+    {
+      "source_id": "EXT-SHOPIFY-JSON",
+      "kind": "external-primary",
+      "title": "JSON templates",
+      "url_or_path": "https://shopify.dev/docs/storefronts/themes/architecture/templates/json-templates",
+      "owner": "Shopify",
+      "accessed_at": "2026-08-17",
+      "observation": "A JSON template supports up to 25 sections and each section up to 50 blocks.",
+      "applicability": "Future page and section architecture.",
+      "conflict_or_fit": "Constraints must be discovered in Etheryx before mapping.",
+      "mapped_rule_ids": [
+        "ARC-007"
+      ]
+    },
+    {
+      "source_id": "EXT-WEBDEV-RESPONSIVE",
+      "kind": "external-primary",
+      "title": "Preload responsive images",
+      "url_or_path": "https://web.dev/articles/preload-responsive-images",
+      "owner": "Google web.dev",
+      "accessed_at": "2026-08-17",
+      "observation": "srcset/sizes let the browser choose an appropriately sized resource; critical images may need carefully targeted preload/fetch priority.",
+      "applicability": "Header/product media.",
+      "conflict_or_fit": "Fits MEDIA-005.",
+      "mapped_rule_ids": [
+        "MEDIA-005"
+      ]
+    },
+    {
+      "source_id": "EXT-WEBDEV-CLS",
+      "kind": "external-primary",
+      "title": "Optimize Cumulative Layout Shift",
+      "url_or_path": "https://web.dev/articles/optimize-cls",
+      "owner": "Google web.dev",
+      "accessed_at": "2026-08-17",
+      "observation": "Unreserved lazy media can shift content; intrinsic geometry reduces CLS.",
+      "applicability": "Media placement ledger.",
+      "conflict_or_fit": "Fits.",
+      "mapped_rule_ids": [
+        "MEDIA-005",
+        "RESP-009"
+      ]
+    },
+    {
+      "source_id": "EXT-APPLE-TYPE",
+      "kind": "external-primary-advisory",
+      "title": "Human Interface Guidelines \u2014 Typography",
+      "url_or_path": "https://developer.apple.com/design/human-interface-guidelines/typography",
+      "owner": "Apple",
+      "accessed_at": "2026-08-17",
+      "observation": "Use a limited type set, preserve hierarchy and adapt to larger text without truncation.",
+      "applicability": "Advisory for legibility and fallback testing.",
+      "conflict_or_fit": "Fits; platform styling is not imported.",
+      "mapped_rule_ids": [
+        "FND-002",
+        "FND-008",
+        "RESP-002"
+      ]
+    },
+    {
+      "source_id": "EXT-APPLE-MOTION",
+      "kind": "external-primary-advisory",
+      "title": "Human Interface Guidelines \u2014 Motion",
+      "url_or_path": "https://developer.apple.com/design/human-interface-guidelines/motion",
+      "owner": "Apple",
+      "accessed_at": "2026-08-17",
+      "observation": "Motion should be purposeful, brief, optional and cancelable.",
+      "applicability": "Header motion, media and overlays.",
+      "conflict_or_fit": "Fits quiet premium direction.",
+      "mapped_rule_ids": [
+        "RESP-009",
+        "LAYER-002"
+      ]
+    },
+    {
+      "source_id": "EXT-PORSCHE-DS",
+      "kind": "external-primary-advisory",
+      "title": "Porsche Design System v3 \u2014 Spacing",
+      "url_or_path": "https://designsystem.porsche.com/v3/styles/spacing/",
+      "owner": "Porsche",
+      "accessed_at": "2026-08-17",
+      "observation": "Separates fluid and static spacing scales in a documented system.",
+      "applicability": "Reference for disciplined token use only.",
+      "conflict_or_fit": "Fits methodology; values/components are not imported.",
+      "mapped_rule_ids": [
+        "FND-001",
+        "CMP-013"
+      ]
+    },
+    {
+      "source_id": "EXT-AESOP",
+      "kind": "external-first-party-advisory",
+      "title": "Aesop official site",
+      "url_or_path": "https://www.aesop.com/",
+      "owner": "Aesop",
+      "accessed_at": "2026-08-17",
+      "observation": "Combines narrative modules, product discovery and truthful service capability.",
+      "applicability": "Editorial-commerce pacing.",
+      "conflict_or_fit": "Fit: truthful service and varied pacing. Conflict: dense catalogue/navigation must not be copied.",
+      "mapped_rule_ids": [
+        "ARC-001",
+        "ARC-005",
+        "CMP-013"
+      ]
+    },
+    {
+      "source_id": "EXT-LOEWE",
+      "kind": "external-first-party-advisory",
+      "title": "LOEWE official site",
+      "url_or_path": "https://www.loewe.com/usa/en/women/wardrobe-essentials-thm",
+      "owner": "LOEWE",
+      "accessed_at": "2026-08-17",
+      "observation": "Inserts editorial chapters inside product discovery rather than treating every module equally.",
+      "applicability": "Shop rhythm reference.",
+      "conflict_or_fit": "Fit: asymmetric editorial/product pacing. Conflict: fashion-scale imagery and oversized branding.",
+      "mapped_rule_ids": [
+        "ARC-005",
+        "CMP-013",
+        "MEDIA-004"
+      ]
+    },
+    {
+      "source_id": "EXT-THEROW",
+      "kind": "external-first-party-advisory",
+      "title": "The Row official site",
+      "url_or_path": "https://www.therow.com/en-au",
+      "owner": "The Row",
+      "accessed_at": "2026-08-17",
+      "observation": "Shows extreme editing, low chrome and image-first hierarchy.",
+      "applicability": "Restraint benchmark.",
+      "conflict_or_fit": "Fit: fewer modules. Conflict: small utility type and image-dependent emptiness fail Maple Moon needs.",
+      "mapped_rule_ids": [
+        "FND-008",
+        "CMP-002",
+        "CMP-014"
+      ]
+    },
+    {
+      "source_id": "EXT-HERMES",
+      "kind": "external-first-party-advisory",
+      "title": "Herm\u00e8s official online store",
+      "url_or_path": "https://www.hermes.com/us/en/",
+      "owner": "Herm\u00e8s",
+      "accessed_at": "2026-08-17",
+      "observation": "Uses distinct story-to-product chapters with focused actions.",
+      "applicability": "Editorial-commerce pacing.",
+      "conflict_or_fit": "Fit: chapter variation. Conflict: campaign theatre and luxury copy are not Maple Moon authority.",
+      "mapped_rule_ids": [
+        "CMP-013",
+        "CMP-014",
+        "MEDIA-004"
+      ]
+    }
+  ]
+}

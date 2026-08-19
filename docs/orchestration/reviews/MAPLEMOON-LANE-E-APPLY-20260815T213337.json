@@ -1,0 +1,136 @@
+{
+  "schema": "maplemoon-receipt/v2",
+  "receipt_id": "MAPLEMOON-LANE-E-APPLY-20260815T213337-RECEIPT-01",
+  "packet_id": "MAPLEMOON-LANE-E-APPLY-20260815T213337",
+  "worker_thread_id": "/root/dedup_risk_audit",
+  "worker": "Codex /root/dedup_risk_audit",
+  "started_at": "2026-08-15T11:47:59Z",
+  "completed_at": "2026-08-15T12:19:23Z",
+  "files_read": [
+    "/Users/handtomouse/maplemoon_recentre_20260815/LANE_E_apply.md",
+    "/Users/handtomouse/maplemoon_recentre_20260815/ALIGN.html",
+    "/Users/handtomouse/maplemoon_recentre_20260815/CV_STATUS.md",
+    "/Users/handtomouse/maplemoon-website/docs/orchestration/reviews/CARLI-CANVA-OCCURRENCE-RECONCILIATION-20260731.md",
+    "/Users/handtomouse/maplemoon-website/docs/orchestration/LOCK_MANIFEST.json",
+    "/Users/handtomouse/maplemoon-website/_wip/AGENTS.md",
+    "/Users/handtomouse/maplemoon-website/scripts/check-maplemoon-receipt.py",
+    "/Users/handtomouse/maplemoon-website/docs/orchestration/packets/MAPLEMOON-LANE-E-APPLY-20260815T213337.md"
+  ],
+  "files_changed": [
+    "maplemoon-website/_wip/homepage_real_1_lead_photo.WIP.html",
+    "maplemoon-website/_wip/shop.WIP.html",
+    "maplemoon-website/_wip/our-story.WIP.html",
+    "maplemoon-website/_wip/carob-story.WIP.html",
+    "maplemoon-website/_wip/faq.WIP.html",
+    "maplemoon-website/_wip/stockists.WIP.html",
+    "maplemoon_apply_20260815",
+    "maplemoon-website/docs/orchestration/reviews/MAPLEMOON-LANE-E-APPLY-20260815T213337.json"
+  ],
+  "pre_sha256": {
+    "maplemoon-website/_wip/homepage_real_1_lead_photo.WIP.html": "8cb75735c8689979b7c9b85cad05c5e7d6ab6efab812863b5a84db68c88a0304",
+    "maplemoon-website/_wip/shop.WIP.html": "77117b625de3d31377545ddf58341ff287997efacf90d55db57af1dfac8d8805",
+    "maplemoon-website/_wip/our-story.WIP.html": "5a49926e2619fd09667d2869808fb8571af88a4add10b2346b81b732859074c1",
+    "maplemoon-website/_wip/carob-story.WIP.html": "5f83713033166688bd7d77bed8130d97b680d750be2e8796cdb9ed73dce54c1a",
+    "maplemoon-website/_wip/faq.WIP.html": "139731f9944c5527e4d2d20c6650f4f0739321b3b7fdb93485b244d04fdff45f",
+    "maplemoon-website/_wip/stockists.WIP.html": "8bd2d02e0728c5697408f34ebbf254789c86bfaa955eead6b18afbc9ccfba002",
+    "maplemoon_apply_20260815": null,
+    "maplemoon-website/docs/orchestration/reviews/MAPLEMOON-LANE-E-APPLY-20260815T213337.json": null
+  },
+  "post_sha256": {
+    "maplemoon-website/_wip/homepage_real_1_lead_photo.WIP.html": "d097392fc1c6f44c3e3c09024bb7c2e2ea275e215a468dfe76306c6dcf534748",
+    "maplemoon-website/_wip/shop.WIP.html": "b444b0da4f5778f7434c6343854e3cdf48d1a88b038c7863a2ef1d46b5e0cbac",
+    "maplemoon-website/_wip/our-story.WIP.html": "f861ae24b6d4cd106402455e1361172be8b769cf0c0f967c17ee8de9a55fed19",
+    "maplemoon-website/_wip/carob-story.WIP.html": "0ad6ea9bfaacf81d7ee4d7e5ddcf93c2bd77afe3635d575bf7a2c30c8f696e27",
+    "maplemoon-website/_wip/faq.WIP.html": "4540ef31a150cb6de8062c2d4d74709f24d13ce45490f8e3c1c9c283c1fdbd56",
+    "maplemoon-website/_wip/stockists.WIP.html": "1cc8b4e55c7dc59f6e268222c310ac47d477540caf7540970981726a801b9075",
+    "maplemoon_apply_20260815": "e1b70c638310aab43f134403adfca8df480e99c0822eeaaac0a967f1249af2bc",
+    "maplemoon-website/docs/orchestration/reviews/MAPLEMOON-LANE-E-APPLY-20260815T213337.json": null
+  },
+  "checks": [
+    {
+      "command": "scripts/check-maplemoon-receipt.py checkpoint and verify --phase start --root /Users/handtomouse",
+      "exit_code": 0,
+      "result": "PASS checkpoint packet=MAPLEMOON-LANE-E-APPLY-20260815T213337 files=8; PASS phase=start scope=8"
+    },
+    {
+      "command": "six-lock-row replay plus git rev-list -n 1 pre-canva-68-20260815",
+      "exit_code": 0,
+      "result": "PASS: six rows held by /root/dedup_risk_audit with exact packet bases; tag=91f03623163b549ab45ef6adfb50631a8017a150; same six rows held at close"
+    },
+    {
+      "command": "python3 /Users/handtomouse/maplemoon_apply_20260815/occurrence_check.py",
+      "exit_code": 0,
+      "result": "PASS: 43/43 controlled current-WIP probes. Applied old strings zero; 150+=0 and 200+=7. Three testimonial names remain one each under named pseudonym HOLD; one standalone milled-with-cacao-butter process occurrence and one FAQ mills-its-carob occurrence remain under named fact HOLD; both exact elixir bindings remain count=2. Full hits in occurrence-results.json."
+    },
+    {
+      "command": "Node inline-script parse plus JSON.parse for application/ld+json across six WIP pages",
+      "exit_code": 0,
+      "result": "PASS: Home 7 inline/2 JSON-LD; Shop 1/3; Our Story 0/4; Carob Story 0/4; FAQ 1/0; Stockists 1/3"
+    },
+    {
+      "command": "static CAT order, D02 cart marker and D06 binding replay",
+      "exit_code": 0,
+      "result": "PASS: Home/Shop Bars and Moons each exact pink-red-yellow-green-blue-brown; Home and Shop six-bar counts preserved; Home cart toggle, Shop toggle/add/subtotal/arithmetic present; elixir_plain=2 and elixir_spiced=2; v4 path references=0"
+    },
+    {
+      "command": "git diff --check and current demo-product count on six owned pages",
+      "exit_code": 0,
+      "result": "PASS: diff check produced no output; Home demo=15, Shop demo=22, Home bars=6, Shop bars=6, 24-product Shopify catalogue added=false"
+    },
+    {
+      "command": "headless Chrome render_lane_e.mjs at 390x844 and 1440x1100",
+      "exit_code": 0,
+      "result": "PASS 12/12: each HTTP 200, nonblank, no horizontal overflow, zero bad images, zero console/page errors, zero local request failures and zero bad responses; full measurements in render-results.json"
+    },
+    {
+      "command": "headless Chrome runtime_lane_e.mjs",
+      "exit_code": 0,
+      "result": "PASS: both newsletter forms disabled/cancelled with visible notice, zero email storage and zero submit requests; Shop cart $0.00/0 -> $12.95/1; Home cart trigger present"
+    },
+    {
+      "command": "manual visual inspection of contact-390.png and contact-1440.png plus Our Story loaded-image computed-style probe",
+      "exit_code": 0,
+      "result": "PASS: six pages at both widths are nonblank and readable with no clipped page edge; Our Story inspected gallery images are complete, visible, opacity=1 and have nonzero rendered geometry"
+    },
+    {
+      "command": "vercel inspect production alias; vercel curl /homepage.html; wc -c; md5; shasum -a 256",
+      "exit_code": 0,
+      "result": "PASS read-only freeze: immutable 7vjf2m50b, deployment dpl_G2LER2awaqyFtGRCcTserXbNynct, target production, Ready; homepage 208556 bytes, MD5 6197879a5ca9d3ed0452773abc0bbeb4, SHA-256 b936b5bb4856cdd6134e5b15bce5dfc3b353c1d442fd1a418180b35b8fa10356"
+    },
+    {
+      "command": "external evidence integrity: find zero-byte files; count files; file *.png",
+      "exit_code": 0,
+      "result": "PASS: 22 evidence files, zero zero-byte files, 12 full-page PNGs at exact 390/1440 widths plus two nonblank contact sheets"
+    }
+  ],
+  "screenshots_or_urls": [
+    "/Users/handtomouse/maplemoon_apply_20260815/home-390.png",
+    "/Users/handtomouse/maplemoon_apply_20260815/home-1440.png",
+    "/Users/handtomouse/maplemoon_apply_20260815/shop-390.png",
+    "/Users/handtomouse/maplemoon_apply_20260815/shop-1440.png",
+    "/Users/handtomouse/maplemoon_apply_20260815/our-story-390.png",
+    "/Users/handtomouse/maplemoon_apply_20260815/our-story-1440.png",
+    "/Users/handtomouse/maplemoon_apply_20260815/carob-story-390.png",
+    "/Users/handtomouse/maplemoon_apply_20260815/carob-story-1440.png",
+    "/Users/handtomouse/maplemoon_apply_20260815/faq-390.png",
+    "/Users/handtomouse/maplemoon_apply_20260815/faq-1440.png",
+    "/Users/handtomouse/maplemoon_apply_20260815/stockists-390.png",
+    "/Users/handtomouse/maplemoon_apply_20260815/stockists-1440.png",
+    "/Users/handtomouse/maplemoon_apply_20260815/contact-390.png",
+    "/Users/handtomouse/maplemoon_apply_20260815/contact-1440.png"
+  ],
+  "failures": [],
+  "unknowns": [
+    "Exact authorised pseudonym mapping for Natasha, Janice and Acacia is absent; testimonial edits remain HOLD without invention or block removal.",
+    "Exact named-authority replacements for the remaining standalone Milled with cacao butter process occurrence and the FAQ Maple Moon mills its carob with cacao butter occurrence are absent; both facts remain HOLD."
+  ],
+  "residual_risk": [
+    "The existing source map contains 68 CV rows although the packet and ALIGN describe 76; the actual CV-001 through CV-068 source was rebased and no phantom rows were created.",
+    "Homepage comparison duplicate still contains CV-022/CV-023/CV-024 fact-held cacao rows; Lane E preserved them because no claim authority was granted.",
+    "Both v4 elixirs are Nate-approved aesthetically but remain intentionally unwired until Pure 1500x1500 and Spiced 800x800 receive a matched no-upscale export.",
+    "Local render harness routed the pages' root CSS requests to the existing _wip CSS files to reproduce the intended WIP candidate layout; it did not edit or copy those styles."
+  ],
+  "forbidden_path_changes": [],
+  "proposed_next_state": "needs_review",
+  "next_reviewer": "MapleMoon root Boss for receipt replay and lock release; independent certification is a later packet"
+}

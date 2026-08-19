@@ -1,0 +1,64 @@
+{
+  "schema": "maplemoon-receipt/v2",
+  "receipt_id": "MAPLEMOON-FAQ-CAFFEINE-EXACT-20260814T144235-RECEIPT-001",
+  "packet_id": "MAPLEMOON-FAQ-CAFFEINE-EXACT-20260814T144235",
+  "worker_thread_id": "019ffd66-b02c-7470-82ef-24a9b199e907",
+  "worker": "Codex sole worker",
+  "started_at": "2026-08-14T14:43:35+10:00",
+  "completed_at": "2026-08-14T14:49:13+10:00",
+  "outcome": "HOLD_MISSING_NAMED_PREFLIGHT_VERIFIER",
+  "confidence": "high",
+  "checkpoint_path": "maplemoon-website/_wip/checkpoints/MAPLEMOON-FAQ-CAFFEINE-EXACT-20260814T144235_20260814_144235_AEST",
+  "files_read": [
+    "maplemoon-website/docs/orchestration/packets/MAPLEMOON-FAQ-CAFFEINE-EXACT-20260814T144235.md",
+    "maplemoon-website/docs/orchestration/SIDECHAT_RECEIPT_GATE.md",
+    "maplemoon-website/docs/orchestration/packets/MAPLEMOON-SEVEN-WORKSTREAM-PROGRAM-20260814T143154.md",
+    "maplemoon-website/scripts/check-maplemoon-receipt.py",
+    "maplemoon_build_20260813/faq.html",
+    "maplemoon_build_20260813/tools_20260813/preflight_deploy.py"
+  ],
+  "files_changed": [
+    "maplemoon_build_20260813/faq.html",
+    "maplemoon-website/docs/orchestration/reviews/MAPLEMOON-FAQ-CAFFEINE-EXACT-20260814T144235.json"
+  ],
+  "pre_sha256": {
+    "maplemoon_build_20260813/faq.html": "99dcafedaf8e812ffd2a55fdb028e27529dd47506ca8be68cc2dab0634afd493",
+    "maplemoon-website/docs/orchestration/reviews/MAPLEMOON-FAQ-CAFFEINE-EXACT-20260814T144235.json": null
+  },
+  "post_sha256": {
+    "maplemoon_build_20260813/faq.html": "c5ce7aaf0b9b3221f34eb2928fc2ff6732fc1a915ea80144a4ade2b94011fb6e",
+    "maplemoon-website/docs/orchestration/reviews/MAPLEMOON-FAQ-CAFFEINE-EXACT-20260814T144235.json": null
+  },
+  "checks": [
+    {
+      "command": "python3 -B scripts/check-maplemoon-receipt.py verify --root /Users/handtomouse --packet docs/orchestration/packets/MAPLEMOON-FAQ-CAFFEINE-EXACT-20260814T144235.md --checkpoint _wip/checkpoints/MAPLEMOON-FAQ-CAFFEINE-EXACT-20260814T144235_20260814_144235_AEST --phase start",
+      "exit_code": 0,
+      "result": "PASS packet=MAPLEMOON-FAQ-CAFFEINE-EXACT-20260814T144235 phase=start scope=3"
+    },
+    {
+      "command": "shasum -a 256 /Users/handtomouse/maplemoon_build_20260813/faq.html before first write",
+      "exit_code": 0,
+      "result": "PASS: acquisition SHA-256 was 99dcafedaf8e812ffd2a55fdb028e27529dd47506ca8be68cc2dab0634afd493."
+    },
+    {
+      "command": "exact checkpoint-to-current one-object replacement assertion",
+      "exit_code": 0,
+      "result": "PASS: only the caffeine question and answer changed; id, category, keywords, order, cacao-butter object and every other byte are unchanged. Exact new question and answer each occur once; both old strings are absent."
+    }
+  ],
+  "screenshots_or_urls": [],
+  "failures": [
+    "The packet-required verifier /Users/handtomouse/maplemoon_build_20260813/tools_20260813/preflight_deploy.py is absent, so its established local preflight pass profile cannot be run. BOSS independently confirmed it is also absent from the other bounded local locations and ordered this packet closed as HOLD without substitution."
+  ],
+  "unknowns": [
+    "Because the missing named verifier triggered the correction boundary, measured 390/1440 render, runtime, overflow, seven-route, production-alias and frozen-homepage completion checks were not continued; no visual evidence was produced in this packet."
+  ],
+  "residual_risk": [
+    "faq.html contains the exact isolated approved copy change but remains unaccepted until the corrected verification-only packet completes the omitted checks.",
+    "No commit, deploy, preview promotion, production action, Vercel change or client contact occurred."
+  ],
+  "forbidden_path_changes": [],
+  "proposed_next_state": "hold_pending_corrected_verification_only_packet",
+  "next_reviewer": "MapleMoon BOSS independent completion gate",
+  "ready_to_promote": false
+}

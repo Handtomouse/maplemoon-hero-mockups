@@ -1,0 +1,295 @@
+{
+  "generatedAt": "2026-08-14T07:33:36.518Z",
+  "root": "/Users/handtomouse/Documents/Codex/2026-08-13/maple-moon-shared-site-styles-kit/outputs",
+  "requiredCount": 30,
+  "requiredNonblank": 30,
+  "ruleCount": 54,
+  "decisionCount": 12,
+  "tokenCount": 59,
+  "tokenCssParity": 59,
+  "cssVariableCount": 59,
+  "governedAssetCount": 9,
+  "governedAssetHashes": [
+    {
+      "file": "assets/bar-pure-carob.webp",
+      "expected": "cc3c5d943bb7426d9adf6f958cc0a4d80a9669fb0c7ca367cf4df8b5984bd40c",
+      "actual": "cc3c5d943bb7426d9adf6f958cc0a4d80a9669fb0c7ca367cf4df8b5984bd40c",
+      "ok": true
+    },
+    {
+      "file": "assets/bar-peppermint.webp",
+      "expected": "1c0364808f55eaa7c5b05383fd87b86fc301a6349d9a9485f70860e14135ab70",
+      "actual": "1c0364808f55eaa7c5b05383fd87b86fc301a6349d9a9485f70860e14135ab70",
+      "ok": true
+    },
+    {
+      "file": "assets/bar-hazelnut.webp",
+      "expected": "c54ef0471bc62c2726ef91673aa4faf2bc5be7026188ec37393eb6e7fea393eb",
+      "actual": "c54ef0471bc62c2726ef91673aa4faf2bc5be7026188ec37393eb6e7fea393eb",
+      "ok": true
+    },
+    {
+      "file": "assets/bar-goji-coconut.webp",
+      "expected": "90ca847be75418ec5c72fa976327b6fcd34e5343ce02fb9380dde8b348477897",
+      "actual": "90ca847be75418ec5c72fa976327b6fcd34e5343ce02fb9380dde8b348477897",
+      "ok": true
+    },
+    {
+      "file": "assets/bar-cayenne.webp",
+      "expected": "d931f34881407534968f4ccd53ac8b83fecb5d436aaeb5d59ccd663579e197f8",
+      "actual": "d931f34881407534968f4ccd53ac8b83fecb5d436aaeb5d59ccd663579e197f8",
+      "ok": true
+    },
+    {
+      "file": "assets/bar-almond.webp",
+      "expected": "1020ae031347f2db9120dca4c2c2f92d783600e37802d2065a068ea2cd4e70ba",
+      "actual": "1020ae031347f2db9120dca4c2c2f92d783600e37802d2065a068ea2cd4e70ba",
+      "ok": true
+    },
+    {
+      "file": "assets/reference-carob-grove.webp",
+      "expected": "e92eccaf23e50244649d834c7d2e7e8d83744bb2bd972dedf132a7ed0497fb19",
+      "actual": "e92eccaf23e50244649d834c7d2e7e8d83744bb2bd972dedf132a7ed0497fb19",
+      "ok": true
+    },
+    {
+      "file": "assets/reference-our-story-founders.webp",
+      "expected": "d45a9dfa5db75c0024d7071f0149c86aff907c70ccbbdf49790afc6604952bdd",
+      "actual": "d45a9dfa5db75c0024d7071f0149c86aff907c70ccbbdf49790afc6604952bdd",
+      "ok": true
+    },
+    {
+      "file": "assets/reference-stockists-silhouette.webp",
+      "expected": "9c79db2f4b1e33dd253a7e33bd31e446869b9b7f42695b59cc021e86e40464de",
+      "actual": "9c79db2f4b1e33dd253a7e33bd31e446869b9b7f42695b59cc021e86e40464de",
+      "ok": true
+    }
+  ],
+  "proofCount": 14,
+  "proofs": [
+    {
+      "file": "proof/00-playground-desktop-1440.png",
+      "expected": [
+        1440,
+        1000
+      ],
+      "actual": [
+        1440,
+        1000
+      ],
+      "bytes": 433821,
+      "sha256": "30fe3a64540727e99775c21396b004f666346718612f998f90857e8d5c12a10c",
+      "ok": true
+    },
+    {
+      "file": "proof/01-foundations-desktop-1440.png",
+      "expected": [
+        1440,
+        1000
+      ],
+      "actual": [
+        1440,
+        1000
+      ],
+      "bytes": 386128,
+      "sha256": "698666432c410790eed90e32184b9e8c087098c1d6c4e0a4efbe3d6b9395b2dd",
+      "ok": true
+    },
+    {
+      "file": "proof/02-components-products-desktop-1440.png",
+      "expected": [
+        1440,
+        1000
+      ],
+      "actual": [
+        1440,
+        1000
+      ],
+      "bytes": 349858,
+      "sha256": "1e42246e3f95800fa689f0ff8adbbe2aa8df33c47eee265158e045860f2132d7",
+      "ok": true
+    },
+    {
+      "file": "proof/03-archetypes-antipatterns-desktop-1440.png",
+      "expected": [
+        1440,
+        1000
+      ],
+      "actual": [
+        1440,
+        1000
+      ],
+      "bytes": 522044,
+      "sha256": "9986f1eb7f45bf18807f3e83910782527e3610daf05f99f6194318d0f1daf6f0",
+      "ok": true
+    },
+    {
+      "file": "proof/04-playground-mobile-390.png",
+      "expected": [
+        390,
+        844
+      ],
+      "actual": [
+        390,
+        844
+      ],
+      "bytes": 203382,
+      "sha256": "6a650fca64673f4d582b5218dde7b6d69e022c6fa0eb3f897c0fcabb76d19424",
+      "ok": true
+    },
+    {
+      "file": "proof/05-foundations-mobile-390.png",
+      "expected": [
+        390,
+        844
+      ],
+      "actual": [
+        390,
+        844
+      ],
+      "bytes": 157601,
+      "sha256": "85a955d7e0fdb1d517ebbf3babc9bbff177484d500f7d4848347ea04ea2bb11b",
+      "ok": true
+    },
+    {
+      "file": "proof/06-components-mobile-390.png",
+      "expected": [
+        390,
+        844
+      ],
+      "actual": [
+        390,
+        844
+      ],
+      "bytes": 164429,
+      "sha256": "03b0521a3fcc50b1797879c7eaad0783f630bc4dbab14460a5696c5595dec742",
+      "ok": true
+    },
+    {
+      "file": "proof/07-archetypes-mobile-390.png",
+      "expected": [
+        390,
+        844
+      ],
+      "actual": [
+        390,
+        844
+      ],
+      "bytes": 210312,
+      "sha256": "586bfdeff7e7f432f3db6b05a4c49ab6e7d68d11a94bcdff576933ebbdc11cbc",
+      "ok": true
+    },
+    {
+      "file": "proof/08-faq-decision-desktop-1440.png",
+      "expected": [
+        1440,
+        1000
+      ],
+      "actual": [
+        1440,
+        1000
+      ],
+      "bytes": 417641,
+      "sha256": "7feff9e8fd0d83648a51a238b638827ae34eec4eb461bc1f67d9ed49b078600e",
+      "ok": true
+    },
+    {
+      "file": "proof/09-faq-decision-mobile-390.png",
+      "expected": [
+        390,
+        844
+      ],
+      "actual": [
+        390,
+        844
+      ],
+      "bytes": 217790,
+      "sha256": "2d21370fcedc2fa8afc04ccca52514c913d79c51645f0c208cb980a4ca5f18ca",
+      "ok": true
+    },
+    {
+      "file": "proof/10-shell-desktop-1440.png",
+      "expected": [
+        1440,
+        1000
+      ],
+      "actual": [
+        1440,
+        1000
+      ],
+      "bytes": 392732,
+      "sha256": "9a5482eb81ecbdbac20888be43cc082de4122dd683e31335d4b6d3956f260580",
+      "ok": true
+    },
+    {
+      "file": "proof/11-shell-mobile-390.png",
+      "expected": [
+        390,
+        844
+      ],
+      "actual": [
+        390,
+        844
+      ],
+      "bytes": 185716,
+      "sha256": "30c3efb945f9f1fdf4aec2ea42624fbfb5f88ba5ddcf9c11f170f8c09918bbd5",
+      "ok": true
+    },
+    {
+      "file": "proof/12-page-headers-desktop-1440.png",
+      "expected": [
+        1440,
+        1000
+      ],
+      "actual": [
+        1440,
+        1000
+      ],
+      "bytes": 419632,
+      "sha256": "efda789d0d0c08413d37f3c1fc6568312ba786e1ae87db101eecc7da101deb5e",
+      "ok": true
+    },
+    {
+      "file": "proof/13-page-headers-mobile-390.png",
+      "expected": [
+        390,
+        844
+      ],
+      "actual": [
+        390,
+        844
+      ],
+      "bytes": 125587,
+      "sha256": "d63dcf1fad59735670105692c6ed1eba6df28b8565e97e7cf1be345d84298a45",
+      "ok": true
+    }
+  ],
+  "internalLinkFailures": [],
+  "packageFileCount": 55,
+  "packageBytes": 4865131,
+  "symlinks": [],
+  "cleanupCandidateCount": 47,
+  "positiveControls": [
+    {
+      "name": "required-file detector",
+      "detected": true
+    },
+    {
+      "name": "JSON parser",
+      "detected": true
+    },
+    {
+      "name": "asset hash detector",
+      "detected": true
+    },
+    {
+      "name": "link detector",
+      "detected": true
+    },
+    {
+      "name": "proof dimension detector",
+      "detected": true
+    }
+  ],
+  "failures": []
+}

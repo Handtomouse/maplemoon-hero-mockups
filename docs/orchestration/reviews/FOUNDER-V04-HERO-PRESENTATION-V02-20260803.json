@@ -1,0 +1,96 @@
+{
+  "schema": "maplemoon-receipt/v2",
+  "receipt_id": "FOUNDER-V04-HERO-PRESENTATION-V02-20260803-RECEIPT-001",
+  "packet_id": "FOUNDER-V04-HERO-PRESENTATION-V02-20260803",
+  "candidate_id": "FOUNDER-V04-HERO-PRESENTATION-V02-CANDIDATE-001",
+  "worker_thread_id": "019f9c36-83e1-7941-92e5-a3b134212288",
+  "worker": "Current Codex photo task",
+  "started_at": "2026-08-02T18:01:27Z",
+  "completed_at": "2026-08-02T18:13:29Z",
+  "outcome": "PASS",
+  "confidence": "high",
+  "files_read": [
+    "_wip/evidence/founder_v04_main_imac_qa_export_20260803/our_story_v04_review.html",
+    "_wip/evidence/founder_v04_main_imac_qa_export_20260803/founders_portrait_v04_review.png",
+    "_wip/evidence/founder_v04_main_imac_qa_export_20260803/carli_bio_v02.png",
+    "_wip/evidence/founder_v04_main_imac_qa_export_20260803/dylan_bio_v01.png",
+    "_wip/our-story.WIP.html",
+    "assets/our_story/founders_portrait_h212.webp"
+  ],
+  "files_changed": [
+    "docs/orchestration/reviews/FOUNDER-V04-HERO-PRESENTATION-V02-20260803.json",
+    "_wip/evidence/founder_v04_main_imac_qa_export_20260803/our_story_v04_review_v02.html",
+    "_wip/evidence/founder_v04_main_imac_qa_export_20260803/qa/our_story_v04_v02_desktop_1440.png",
+    "_wip/evidence/founder_v04_main_imac_qa_export_20260803/qa/our_story_v04_v02_mobile_390.png"
+  ],
+  "files_confirmed_untouched": [
+    "accepted pair, Carli v02 and Dylan v01 image pixels",
+    "prior review HTML and evidence",
+    "saved founder v04 PSD and source masters",
+    "canonical Our Story WIP, H212 live asset, frozen pages and unrelated repository work"
+  ],
+  "pre_sha256": {
+    "docs/orchestration/packets/FOUNDER-V04-HERO-PRESENTATION-V02-20260803.md": "b044325db9879a0d97c909aa5b279bc1a83e9156e6ee3e7776e0dd5a676dc7cf",
+    "docs/orchestration/reviews/FOUNDER-V04-HERO-PRESENTATION-V02-20260803.json": null,
+    "_wip/evidence/founder_v04_main_imac_qa_export_20260803/our_story_v04_review_v02.html": null,
+    "_wip/evidence/founder_v04_main_imac_qa_export_20260803/qa/our_story_v04_v02_desktop_1440.png": null,
+    "_wip/evidence/founder_v04_main_imac_qa_export_20260803/qa/our_story_v04_v02_mobile_390.png": null
+  },
+  "post_sha256": {
+    "docs/orchestration/packets/FOUNDER-V04-HERO-PRESENTATION-V02-20260803.md": "b044325db9879a0d97c909aa5b279bc1a83e9156e6ee3e7776e0dd5a676dc7cf",
+    "docs/orchestration/reviews/FOUNDER-V04-HERO-PRESENTATION-V02-20260803.json": null,
+    "_wip/evidence/founder_v04_main_imac_qa_export_20260803/our_story_v04_review_v02.html": "2131be20000f10ed36cb4b1388b3c08ce099d464ab3fb5804de87bf945279125",
+    "_wip/evidence/founder_v04_main_imac_qa_export_20260803/qa/our_story_v04_v02_desktop_1440.png": "7938fc2af7e53dc0777d012441965bc50cb8ff1a9425cb95b4e7ddffc45c4a05",
+    "_wip/evidence/founder_v04_main_imac_qa_export_20260803/qa/our_story_v04_v02_mobile_390.png": "266b6f3ee61affaa40787dcf61c7c3eca98ea737ecd0c5b008bc21502a2e9829"
+  },
+  "checkpoint_path": "_wip/checkpoints/FOUNDER-V04-HERO-PRESENTATION-V02-20260803_20260803_040110_AEST",
+  "checks": [
+    {
+      "command": "check-maplemoon-receipt checkpoint and phase-start verify",
+      "exit_code": 0,
+      "result": "PASS checkpoint packet=FOUNDER-V04-HERO-PRESENTATION-V02-20260803 files=5 and PASS phase=start scope=5."
+    },
+    {
+      "command": "headless Chrome 1440x900 and 390x844 render loop",
+      "exit_code": 0,
+      "result": "PASS after one mobile crop correction: desktop 1440/1440/1440 and mobile 390/390/390 inner/client/scroll widths; pair image 6000x4000 and both portraits 2600x3250 loaded; zero console, page or request errors."
+    },
+    {
+      "command": "visual inspection of full-page desktop and mobile proofs",
+      "exit_code": 0,
+      "result": "PASS: pair photograph fills the complete hero, both faces and Carli's hand remain visible, hero copy avoids faces, and Carli/Dylan render as large editorial panels without clipping or card treatment."
+    },
+    {
+      "command": "sips -g pixelWidth -g pixelHeight QA screenshots",
+      "exit_code": 0,
+      "result": "PASS: desktop proof 1440x2001 and mobile proof 390x1737."
+    },
+    {
+      "command": "protected image and site-file SHA-256 recheck",
+      "exit_code": 0,
+      "result": "PASS: pair d20b9e63..., Carli 5e6744f1..., Dylan 78e551e6..., Our Story WIP a823f0f7... and H212 live asset 67a56d7c... remain unchanged."
+    },
+    {
+      "command": "git diff --check -- packet and v02 HTML",
+      "exit_code": 0,
+      "result": "PASS with no output."
+    }
+  ],
+  "screenshots_or_urls": [
+    "_wip/evidence/founder_v04_main_imac_qa_export_20260803/qa/our_story_v04_v02_desktop_1440.png",
+    "_wip/evidence/founder_v04_main_imac_qa_export_20260803/qa/our_story_v04_v02_mobile_390.png",
+    "http://127.0.0.1:3131/_wip/evidence/founder_v04_main_imac_qa_export_20260803/our_story_v04_review_v02.html"
+  ],
+  "failures": [],
+  "unknowns": [
+    "Nate has not yet visually approved the v02 hero and large portrait presentation."
+  ],
+  "residual_risk": [
+    "This remains an isolated review surface. Any canonical Our Story integration needs a separate reference-change and regression packet."
+  ],
+  "forbidden_path_changes": [],
+  "proposed_next_state": "needs_review",
+  "next_reviewer": "Nate",
+  "next_action": "Nate reviews v02 and chooses Confirm v02, Fix hero, Fix Carli, Fix Dylan or Reject before any website integration.",
+  "ready_to_promote": false
+}

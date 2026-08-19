@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>MapleMoon harmonized ritual trio v2</title>
+<style>
+*{box-sizing:border-box}
+:root{--wrap-w:1180px;--pad-x:28px;--ink:#2c3d47;--line:rgba(57,73,80,.18)}
+html,body{margin:0;background:#dbe8ee;color:var(--ink);font-family:Arial,Helvetica,sans-serif}
+main{padding:58px 0 80px}.wrap{width:100%;max-width:var(--wrap-w);margin:0 auto;padding:0 var(--pad-x)}
+.intro{margin-bottom:34px}.intro h1{font:500 clamp(31px,4vw,54px)/1.04 Georgia,serif;margin:0 0 14px}.intro p{max-width:75ch;line-height:1.55;color:#526b78;margin:0}.status{display:inline-block;margin-top:16px;padding:7px 10px;border:1px solid rgba(62,93,107,.28);font-size:11px;letter-spacing:.11em;text-transform:uppercase;color:#4e6977;background:rgba(255,255,255,.34)}
+.tiles{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.candidate{min-width:0}.outside{display:flex;justify-content:space-between;gap:10px;margin:0 0 8px;font-size:11px;letter-spacing:.09em;text-transform:uppercase;color:#58717f}.outside b{color:#263d4b}
+.q-tile{position:relative;min-height:432px;border:1px solid var(--line);overflow:hidden;background:#c9dce7}.ph{position:absolute;inset:0}.ph img{width:100%;height:100%;object-fit:cover;filter:saturate(.72) contrast(.91) brightness(.82)}
+.candidate:nth-child(1) img{object-position:center 58%}.candidate:nth-child(2) img{object-position:center 44%}.candidate:nth-child(3) img{object-position:center 62%}
+.ph:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(24,51,68,.04) 12%,rgba(25,51,66,.06) 42%,rgba(15,36,49,.70) 100%)}
+.tx{position:absolute;left:0;right:0;bottom:0;z-index:1;padding:24px 22px 26px;color:#f5f1e2}.tx span{display:block;font-size:.87rem;line-height:1.55;color:rgba(246,244,232,.84)}.tx .mo{font-size:.58rem;letter-spacing:.18em;text-transform:uppercase;color:#e0c58c;margin-bottom:8px}.tx strong{display:block;font:500 clamp(1.2rem,1.7vw,1.45rem)/1.15 Georgia,serif;color:#fff9e8;margin-bottom:6px}
+.why{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:18px}.why div{border-top:1px solid rgba(57,73,80,.23);padding-top:12px;color:#5b707c;font-size:13px;line-height:1.5}.why b{display:block;color:#2d4755;margin-bottom:3px}
+#qa{white-space:pre-wrap;font:11px/1.4 monospace;background:#203b4d;color:#d7e8ef;padding:12px 16px;margin:34px 0 0}
+@media(max-width:900px){main{padding:34px 0 54px}.intro{margin-bottom:26px}.tiles,.why{grid-template-columns:1fr}.q-tile{min-height:330px}.why{gap:10px}.why div{margin-bottom:4px}}
+</style>
+</head>
+<body>
+<main><div class="wrap">
+ <section class="intro"><h1>Harmonized ritual trio</h1><p>The approved compositions are unchanged. This v2 board aligns the pale-blue family, tonal curve, pod browns, matte surfaces and shadow density while preserving each time-of-day distinction. It reproduces the frozen Homepage card crop, filter, gradient and copy treatment.</p><span class="status">candidate only, unwired</span></section>
+ <section class="tiles">
+  <article class="candidate"><div class="outside"><b>Slot 1</b><span>high-key anchor</span></div><div class="q-tile"><div class="ph"><img src="harmonized_slot_1_after_dinner_v2.png" alt=""></div><div class="tx"><span class="mo">Evening</span><strong>After dinner</strong><span>A small after-dinner ritual, when the lights are low.</span></div></div></article>
+  <article class="candidate"><div class="outside"><b>Slot 2</b><span>matched afternoon</span></div><div class="q-tile"><div class="ph"><img src="harmonized_slot_2_afternoon_reset_v2.png" alt=""></div><div class="tx"><span class="mo">Afternoon</span><strong>Afternoon reset</strong><span>A gentle pause in the middle of the day.</span></div></div></article>
+  <article class="candidate"><div class="outside"><b>Slot 3</b><span>matched dusk step</span></div><div class="q-tile"><div class="ph"><img src="harmonized_slot_3_tea_at_night_v2.png" alt=""></div><div class="tx"><span class="mo">Night-time</span><strong>With tea, at night</strong><span>Warm cup, small moon, lights low.</span></div></div></article>
+ </section>
+ <section class="why"><div><b>#C8D8EA</b>After dinner remains the high-key set anchor.</div><div><b>#C8DAEB</b>Afternoon now shares the anchor's powder-blue field and matte tonal curve.</div><div><b>#BCCEDE</b>Tea keeps a modest dusk step while remaining in the same pale-blue family.</div></section>
+ <pre id="qa"></pre>
+</div></main>
+<script>
+const imgs=[...document.images];
+Promise.all(imgs.map(i=>i.complete?Promise.resolve():new Promise(r=>{i.onload=i.onerror=r}))).then(()=>{
+ document.getElementById('qa').textContent=JSON.stringify({
+  innerWidth:window.innerWidth,clientWidth:document.documentElement.clientWidth,
+  scrollWidth:document.documentElement.scrollWidth,scrollHeight:document.documentElement.scrollHeight,
+  imageCount:imgs.length,allImagesLoaded:imgs.every(i=>i.complete&&i.naturalWidth>0),
+  cardWidths:[...document.querySelectorAll('.q-tile')].map(e=>Number(e.getBoundingClientRect().width.toFixed(3))),
+  cardHeights:[...document.querySelectorAll('.q-tile')].map(e=>Number(e.getBoundingClientRect().height.toFixed(3)))
+ },null,2);
+});
+</script>
+</body>
+</html>

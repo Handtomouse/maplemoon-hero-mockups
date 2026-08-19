@@ -1,0 +1,1245 @@
+{
+  "schema": "maplemoon-design-system-gap-matrix/v1",
+  "status": "READ_ONLY_AUDIT_PLANNING_GUIDANCE_ONLY",
+  "generated_at": "2026-08-17",
+  "authority_order": [
+    "current Boss ledger",
+    "accepted sealed v0.3.1 planning baseline",
+    "v0.3.2 advisory research overlay",
+    "v0.4 advisory visual proof",
+    "current candidate evidence",
+    "historical critique/reference only",
+    "external sources advisory only"
+  ],
+  "finding_count": 40,
+  "findings": [
+    {
+      "id": "GAP-001",
+      "domain": "navigation",
+      "affected_page_component": "Shop, Our Story, What Is Carob, FAQ and Stockists \u2014 390/768 site header",
+      "evidence": [
+        {
+          "pointer": "/Users/handtomouse/maplemoon-website/_wip/evidence/design_system_gap_audit_20260817T153140/VISUAL-QA.json#/rows[route=shop|our-story|carob-story|faq|stockists,width=390].observed.hasVisibleMenu",
+          "observation": "All five values are false; Home and Pure are true."
+        },
+        {
+          "pointer": "/Users/handtomouse/Documents/Codex/2026-08-13/maple-moon-shared-site-styles-kit/outputs/RULE-REGISTER.json#NAV-001",
+          "observation": "One shared desktop/mobile header is APPROVED."
+        }
+      ],
+      "wrong_missing_underdeveloped": "Five of seven current routes have no customer-reachable mobile menu, so navigation disappears on the exact screens most customers will use.",
+      "recommended_direction": "Apply the approved shared mobile chrome to all seven routes: Menu left, centred inseparable wordmark, Contact right, one route map, current-route state, 52px menu rows.",
+      "priority": "P0",
+      "effort_risk": "M / low design risk, high regression risk",
+      "shared_rule_or_intentional_exception": "SHARED RULE",
+      "current_authority_status": "APPROVED \u2014 NAV-001/NAV-003; implementation absent",
+      "needs_nate": false,
+      "site_vs_styles_kit_conflict": "DIRECT CONFLICT",
+      "ai_template_flag": false,
+      "mobile_weakness_flag": true,
+      "state": "OPEN"
+    },
+    {
+      "id": "GAP-002",
+      "domain": "navigation",
+      "affected_page_component": "Home and Pure \u2014 mobile right action",
+      "evidence": [
+        {
+          "pointer": "/Users/handtomouse/maplemoon-website/_wip/evidence/design_system_gap_audit_20260817T153140/raw/iab-visual-rows.json#/rows[route=homepage|pure-carob-bar,width=390].metrics.interactiveNames",
+          "observation": "Both routes expose Cart, not Contact."
+        },
+        {
+          "pointer": "/Users/handtomouse/maplemoon-website/docs/orchestration/MAPLEMOON_BOSS_EXECUTION_LEDGER_20260816.md#D02/D05",
+          "observation": "Current approved line records mobile header Menu / centred wordmark / Contact and D02=A."
+        }
+      ],
+      "wrong_missing_underdeveloped": "The only two routes with a working mobile header use Cart as the right action, contradicting the current approved chrome.",
+      "recommended_direction": "Use Contact as the shared mobile right action. Keep cart/commerce access inside the appropriate commerce flow unless a later approved decision changes it.",
+      "priority": "P0",
+      "effort_risk": "S / low",
+      "shared_rule_or_intentional_exception": "SHARED RULE",
+      "current_authority_status": "CURRENT BOSS/NATE DECISION",
+      "needs_nate": false,
+      "site_vs_styles_kit_conflict": "DIRECT CONFLICT",
+      "ai_template_flag": false,
+      "mobile_weakness_flag": true,
+      "state": "OPEN"
+    },
+    {
+      "id": "GAP-003",
+      "domain": "navigation",
+      "affected_page_component": "Desktop header across all seven routes",
+      "evidence": [
+        {
+          "pointer": "/Users/handtomouse/maplemoon-website/docs/orchestration/reviews/MAPLEMOON-SEVEN-ROUTE-VISUAL-AUDIT-R2-20260816T210036.md#Header probe",
+          "observation": "Prior pinned audit measured four wordmark/cart overlaps and only two menu-capable routes."
+        },
+        {
+          "pointer": "/Users/handtomouse/Documents/Codex/2026-08-13/maple-moon-shared-site-styles-kit/outputs/COMPONENT-CONTRACTS.md#Shared-header",
+          "observation": "One anatomy and route map are specified."
+        }
+      ],
+      "wrong_missing_underdeveloped": "Header markup, class systems, breakpoints and utility sets remain route-specific; the prior current-candidate proof measured painted overlap on four routes.",
+      "recommended_direction": "Converge on one semantic header primitive and route map while keeping Home visual transparency/overlay behaviour as the explicit exception.",
+      "priority": "P0",
+      "effort_risk": "M / high regression surface",
+      "shared_rule_or_intentional_exception": "SHARED RULE with HOME VISUAL EXCEPTION",
+      "current_authority_status": "APPROVED \u2014 NAV-001/NAV-002/NAV-003",
+      "needs_nate": false,
+      "site_vs_styles_kit_conflict": "DIRECT CONFLICT",
+      "ai_template_flag": false,
+      "mobile_weakness_flag": true,
+      "state": "OPEN"
+    },
+    {
+      "id": "GAP-004",
+      "domain": "accessibility",
+      "affected_page_component": "Our Story \u2014 primary landmark",
+      "evidence": [
+        {
+          "pointer": "/Users/handtomouse/maplemoon-website/_wip/evidence/design_system_gap_audit_20260817T153140/VISUAL-QA.json#/rows[route=our-story].observed.landmarks.main",
+          "observation": "Main count is 0 at all four widths."
+        },
+        {
+          "pointer": "/Users/handtomouse/Documents/Codex/2026-08-13/maple-moon-shared-site-styles-kit/outputs/RESPONSIVE-ACCESSIBILITY.md#Semantic expectations",
+          "observation": "Exactly one main landmark and working skip target are required."
+        }
+      ],
+      "wrong_missing_underdeveloped": "Our Story has no <main>, so the page fails the shared semantic shell even though its visual composition is broadly viable.",
+      "recommended_direction": "Wrap the existing approved page content in exactly one main landmark and bind the skip link without changing the page design.",
+      "priority": "P0",
+      "effort_risk": "S / low",
+      "shared_rule_or_intentional_exception": "SHARED RULE",
+      "current_authority_status": "TECHNICAL EVIDENCE REQUIRED \u2014 RESP-005/NAV-004",
+      "needs_nate": false,
+      "site_vs_styles_kit_conflict": "DIRECT CONFLICT",
+      "ai_template_flag": false,
+      "mobile_weakness_flag": true,
+      "state": "OPEN"
+    },
+    {
+      "id": "GAP-005",
+      "domain": "footer",
+      "affected_page_component": "All seven routes \u2014 website footer",
+      "evidence": [
+        {
+          "pointer": "/Users/handtomouse/maplemoon-website/_wip/evidence/design_system_gap_audit_20260817T153140/raw/iab-visual-rows.json#/rows[width=390].metrics.footer.text",
+          "observation": "Home includes demo newsletter and seven links; Shop/Story/Carob/Stockists expose four links; FAQ and Pure use different maps."
+        },
+        {
+          "pointer": "/Users/handtomouse/Documents/Codex/2026-08-13/maple-moon-shared-site-styles-kit/outputs/COMPONENT-CONTRACTS.md#Shared-footer",
+          "observation": "The kit specifies a governed shared anatomy with conditional held slots."
+        }
+      ],
+      "wrong_missing_underdeveloped": "The footer is not one shared component: route maps, wordmark treatment, newsletter/demo messaging and legal/help anatomy differ.",
+      "recommended_direction": "Create one shared footer anatomy and route map. Contact, newsletter and legal slots remain held/conditional until real capability and copy are supplied.",
+      "priority": "P1",
+      "effort_risk": "M / medium",
+      "shared_rule_or_intentional_exception": "SHARED RULE",
+      "current_authority_status": "APPROVED anatomy; held content dependencies",
+      "needs_nate": false,
+      "site_vs_styles_kit_conflict": "DIRECT CONFLICT",
+      "ai_template_flag": false,
+      "mobile_weakness_flag": true,
+      "state": "OPEN"
+    },
+    {
+      "id": "GAP-006",
+      "domain": "page headers",
+      "affected_page_component": "Shop, Our Story, What Is Carob, FAQ and Stockists \u2014 opening composition",
+      "evidence": [
+        {
+          "pointer": "/Users/handtomouse/maplemoon-website/_wip/evidence/design_system_gap_audit_20260817T153140/VISUAL-QA.json#/rows[width=390].observed.heading",
+          "observation": "Non-Home page openings use different geometry and H1 scales."
+        },
+        {
+          "pointer": "/Users/handtomouse/Documents/Codex/2026-08-13/maple-moon-shared-site-styles-kit/outputs/RULE-REGISTER.json#RESP-007/RESP-008",
+          "observation": "Copy-first mobile page headers and shared non-Home headline/media blend grammar are APPROVED."
+        }
+      ],
+      "wrong_missing_underdeveloped": "The non-Home page headers do not yet read as one family: copy/media order, height, headline measure and relationship to the site header differ.",
+      "recommended_direction": "Use one shared non-Home page-header contract: copy first, same headline grammar, same blend-edge logic, same vertical entry rhythm; change only content, crop/focal point and page-role density.",
+      "priority": "P1",
+      "effort_risk": "M / medium",
+      "shared_rule_or_intentional_exception": "SHARED RULE",
+      "current_authority_status": "APPROVED \u2014 RESP-007/RESP-008",
+      "needs_nate": false,
+      "site_vs_styles_kit_conflict": "DIRECT CONFLICT",
+      "ai_template_flag": false,
+      "mobile_weakness_flag": true,
+      "state": "OPEN"
+    },
+    {
+      "id": "GAP-007",
+      "domain": "typography",
+      "affected_page_component": "Non-Home H1 system at 390",
+      "evidence": [
+        {
+          "pointer": "/Users/handtomouse/maplemoon-website/_wip/evidence/design_system_gap_audit_20260817T153140/VISUAL-QA.json#/rows[width=390].observed.heading",
+          "observation": "Stockists 32px; Shop 37.6px; Carob 42.9px; FAQ 46.8px; Our Story 54.6px."
+        },
+        {
+          "pointer": "/Users/handtomouse/Documents/Codex/2026-08-13/maple-moon-shared-site-styles-kit/outputs/RULE-REGISTER.json#RESP-008",
+          "observation": "Shared non-Home headline typography is APPROVED; Maple Moon must remain inseparable."
+        }
+      ],
+      "wrong_missing_underdeveloped": "The same headline role spans a 22.6px range on mobile and uses different line-height/measure rules, creating visual drift.",
+      "recommended_direction": "Adopt one fluid non-Home H1 token and CMS-safe wrapping contract. Preserve the words \u201cMaple Moon\u201d as one unit; allow only the leading verb/phrase to vary.",
+      "priority": "P1",
+      "effort_risk": "S\u2013M / medium",
+      "shared_rule_or_intentional_exception": "SHARED RULE",
+      "current_authority_status": "APPROVED direction; type delivery still FND-002 dependency",
+      "needs_nate": false,
+      "site_vs_styles_kit_conflict": "DIRECT CONFLICT",
+      "ai_template_flag": false,
+      "mobile_weakness_flag": true,
+      "state": "OPEN"
+    },
+    {
+      "id": "GAP-008",
+      "domain": "typography",
+      "affected_page_component": "Eyebrows, kickers and section labels across Story, Carob, FAQ and Stockists",
+      "evidence": [
+        {
+          "pointer": "/Users/handtomouse/Documents/Codex/2026-08-13/maple-moon-shared-site-styles-kit/outputs/AI-TEMPLATE-ANTI-PATTERNS.md#AP-018",
+          "observation": "The anti-pattern register warns against repetitive template symmetry and generic micro-label systems."
+        },
+        {
+          "pointer": "/Users/handtomouse/Documents/Codex/2026-08-13/maple-moon-shared-site-styles-kit/outputs/version-lanes/v0.3.2-provisional/LUXURY-POLISH-RESEARCH-SUPPLEMENT.md#Luxury-polish principles",
+          "observation": "Editorial hierarchy should be carried by type and space, not repeated chrome."
+        }
+      ],
+      "wrong_missing_underdeveloped": "Repeated tiny all-caps gold/grey kickers such as \u201cStockists\u201d, \u201cGood questions\u201d and \u201cThe makers\u201d are a recognisable AI/Claude-template trait when used before every heading.",
+      "recommended_direction": "Reserve kickers for orientation that genuinely adds meaning. Else use an editorial opening line, chapter number, plain-language subhead or whitespace/line rhythm.",
+      "priority": "P1",
+      "effort_risk": "S / aesthetic decision",
+      "shared_rule_or_intentional_exception": "SHARED RULE with page-specific copy",
+      "current_authority_status": "PROVISIONAL/RECOMMENDED \u2014 FND-008/CMP-014",
+      "needs_nate": true,
+      "site_vs_styles_kit_conflict": "NO DIRECT RULE BREACH; under-specified aesthetic",
+      "ai_template_flag": true,
+      "mobile_weakness_flag": false,
+      "state": "OPEN"
+    },
+    {
+      "id": "GAP-009",
+      "domain": "media",
+      "affected_page_component": "Non-Home page-header images \u2014 crops, fades and edges",
+      "evidence": [
+        {
+          "pointer": "/private/tmp/maplemoon-pdp-route-repair-20260816/our-story.html#mask-image",
+          "observation": "Story contains 36 mask-image declarations; Carob 14; Stockists 8; Shop/FAQ use different or no header media."
+        },
+        {
+          "pointer": "/Users/handtomouse/Documents/Codex/2026-08-13/maple-moon-shared-site-styles-kit/outputs/MEDIA-FOG-CROP-SPEC.md#Page-header contract",
+          "observation": "Responsive art direction and named fog are specified, but exact crops/media remain held."
+        }
+      ],
+      "wrong_missing_underdeveloped": "The desired shared headline/photo integration exists conceptually but is implemented as page-specific mask stacks and crop overrides, not one inspectable media contract.",
+      "recommended_direction": "Create one header-media placement contract with shared edge treatment and per-page focal-point/crop fields. Exact media and focal points remain held until governed.",
+      "priority": "P1",
+      "effort_risk": "M / media regression risk",
+      "shared_rule_or_intentional_exception": "SHARED RULE with page-specific crop/focal point",
+      "current_authority_status": "APPROVED grammar + CONTENT/MEDIA DEPENDENCY",
+      "needs_nate": true,
+      "site_vs_styles_kit_conflict": "PARTIAL CONFLICT",
+      "ai_template_flag": false,
+      "mobile_weakness_flag": true,
+      "state": "OPEN"
+    },
+    {
+      "id": "GAP-010",
+      "domain": "media",
+      "affected_page_component": "All mask-based page-header blends",
+      "evidence": [
+        {
+          "pointer": "/private/tmp/maplemoon-pdp-route-repair-20260816/{homepage,our-story,carob-story,stockists}.html#@supports",
+          "observation": "Static inspection found no @supports/no-mask fallback despite 132 mask declarations."
+        },
+        {
+          "pointer": "/Users/handtomouse/Documents/Codex/2026-08-13/maple-moon-shared-site-styles-kit/outputs/MEDIA-FOG-CROP-SPEC.md#Fallback",
+          "observation": "The kit requires a fallback that does not reveal a hard rectangle."
+        }
+      ],
+      "wrong_missing_underdeveloped": "Unsupported or partially supported masks can expose hard rectangular image edges\u2014the exact failure Nate flagged visually.",
+      "recommended_direction": "Every header blend needs a no-mask fallback using overscan, pseudo-element fog and background-colour continuity; verify with mask support disabled.",
+      "priority": "P1",
+      "effort_risk": "S\u2013M / medium",
+      "shared_rule_or_intentional_exception": "SHARED RULE",
+      "current_authority_status": "TECHNICAL EVIDENCE REQUIRED \u2014 MEDIA-004/FOG-006",
+      "needs_nate": false,
+      "site_vs_styles_kit_conflict": "IMPLEMENTATION PROOF MISSING",
+      "ai_template_flag": false,
+      "mobile_weakness_flag": true,
+      "state": "OPEN"
+    },
+    {
+      "id": "GAP-011",
+      "domain": "fog",
+      "affected_page_component": "Shared media fog numeric model",
+      "evidence": [
+        {
+          "pointer": "/Users/handtomouse/Documents/Codex/2026-08-13/maple-moon-shared-site-styles-kit/outputs/RULE-REGISTER.json#FOG-002",
+          "observation": "Exact alpha/core/falloff dimensions remain NEEDS NATE."
+        },
+        {
+          "pointer": "/private/tmp/maplemoon-pdp-route-repair-20260816/homepage.html#mask-image",
+          "observation": "Current pages contain many unrelated numeric masks and blurs."
+        }
+      ],
+      "wrong_missing_underdeveloped": "Names none/light/medium are approved, but no approved alpha, core/depth or falloff/edge values exist; current raw values cannot become authority by repetition.",
+      "recommended_direction": "Show Nate one controlled A/B/C proof with all three numeric dimensions separated. Do not derive geometry from old 0/.18/.34 opacity examples.",
+      "priority": "P1",
+      "effort_risk": "S visual proof / low technical risk",
+      "shared_rule_or_intentional_exception": "SHARED RULE",
+      "current_authority_status": "NEEDS NATE \u2014 FOG-002",
+      "needs_nate": true,
+      "site_vs_styles_kit_conflict": "UNRESOLVED, not a breach",
+      "ai_template_flag": false,
+      "mobile_weakness_flag": false,
+      "state": "HOLD"
+    },
+    {
+      "id": "GAP-012",
+      "domain": "layout",
+      "affected_page_component": "Shared content shell",
+      "evidence": [
+        {
+          "pointer": "/private/tmp/maplemoon-pdp-route-repair-20260816/{shop,our-story,carob-story,stockists,products/pure-carob-bar}.html#.wrap",
+          "observation": "These routes use max-width 1180px; FAQ uses 1200px; Home references the 1240px kit token."
+        },
+        {
+          "pointer": "/Users/handtomouse/Documents/Codex/2026-08-13/maple-moon-shared-site-styles-kit/outputs/RULE-REGISTER.json#FND-001",
+          "observation": "1240px shell is PROVISIONAL/RECOMMENDED, not locked."
+        }
+      ],
+      "wrong_missing_underdeveloped": "Three shell systems coexist, so columns and page-header edges do not align from route to route.",
+      "recommended_direction": "Resolve one shared shell token during visual proof; page-specific full-bleed sections may escape it deliberately. Do not silently promote 1240 before review.",
+      "priority": "P1",
+      "effort_risk": "M / broad layout impact",
+      "shared_rule_or_intentional_exception": "SHARED RULE with explicit full-bleed exceptions",
+      "current_authority_status": "PROVISIONAL/RECOMMENDED \u2014 FND-001",
+      "needs_nate": true,
+      "site_vs_styles_kit_conflict": "SITE/KIT DRIFT; final value not approved",
+      "ai_template_flag": false,
+      "mobile_weakness_flag": false,
+      "state": "OPEN"
+    },
+    {
+      "id": "GAP-013",
+      "domain": "responsive",
+      "affected_page_component": "Gutters and breakpoint ownership",
+      "evidence": [
+        {
+          "pointer": "/private/tmp/maplemoon-pdp-route-repair-20260816#route CSS",
+          "observation": "Current routes mix 28/20/16px gutters and 1180/1050/1000/900/820/768/720/700/600/560/520/400 breakpoints."
+        },
+        {
+          "pointer": "/Users/handtomouse/Documents/Codex/2026-08-13/maple-moon-shared-site-styles-kit/outputs/RESPONSIVE-ACCESSIBILITY.md#Composition",
+          "observation": "Kit specifies 20px mobile gutters and shared acceptance widths."
+        }
+      ],
+      "wrong_missing_underdeveloped": "Spacing and breakpoint changes are page-local, producing hard-to-predict 768\u20131024 and 360\u2013390 behaviour.",
+      "recommended_direction": "Define shared shell/gutter/breakpoint ownership and permit page-specific composition changes only when tied to an archetype rule.",
+      "priority": "P1",
+      "effort_risk": "M\u2013L / high regression surface",
+      "shared_rule_or_intentional_exception": "SHARED RULE",
+      "current_authority_status": "PROVISIONAL/RECOMMENDED + TECHNICAL EVIDENCE REQUIRED",
+      "needs_nate": false,
+      "site_vs_styles_kit_conflict": "PARTIAL CONFLICT",
+      "ai_template_flag": false,
+      "mobile_weakness_flag": true,
+      "state": "OPEN"
+    },
+    {
+      "id": "GAP-014",
+      "domain": "sections",
+      "affected_page_component": "Late-page rhythm on Home, Story, Carob and Stockists",
+      "evidence": [
+        {
+          "pointer": "/Users/handtomouse/Documents/Codex/2026-08-11/referenced-chatgpt-conversation-this-is-an/outputs/maple-moon-recovery/MAPLE-MOON-SIX-PAGE-DESIGN-CRITIQUE-20260812.md#late-page degradation",
+          "observation": "The canonical critique identified denser, more generic lower-page composition."
+        },
+        {
+          "pointer": "/Users/handtomouse/maplemoon-website/_wip/evidence/design_system_gap_audit_20260817T153140/VISUAL-QA.json#/contacts",
+          "observation": "Fresh full-page contacts show long sequences of similarly weighted modules."
+        }
+      ],
+      "wrong_missing_underdeveloped": "The first viewport carries the brand; later sections increasingly become equal cards, bordered panels and repeated CTA blocks.",
+      "recommended_direction": "For each archetype, define a 3\u20135-beat section rhythm (open editorial / evidence / task / quiet close) and cap consecutive contained modules.",
+      "priority": "P1",
+      "effort_risk": "M / editorial re-sequencing risk",
+      "shared_rule_or_intentional_exception": "SHARED RHYTHM with page-specific content",
+      "current_authority_status": "PROVISIONAL/RECOMMENDED \u2014 CMP-013/CMP-014",
+      "needs_nate": false,
+      "site_vs_styles_kit_conflict": "UNDERDEVELOPED",
+      "ai_template_flag": true,
+      "mobile_weakness_flag": true,
+      "state": "OPEN"
+    },
+    {
+      "id": "GAP-015",
+      "domain": "cards",
+      "affected_page_component": "FAQ, Shop, Carob comparisons, Story founders and Stockists utilities",
+      "evidence": [
+        {
+          "pointer": "/Users/handtomouse/Documents/Codex/2026-08-13/maple-moon-shared-site-styles-kit/outputs/AI-TEMPLATE-ANTI-PATTERNS.md#AP-001/AP-002/AP-006",
+          "observation": "The kit rejects excessive cards, pills and nested containers."
+        },
+        {
+          "pointer": "/Users/handtomouse/maplemoon-website/_wip/evidence/design_system_gap_audit_20260817T153140/VISUAL-QA.json#/contacts",
+          "observation": "Fresh proofs show multiple stacked bordered panels and capsule filter rows."
+        }
+      ],
+      "wrong_missing_underdeveloped": "Purposeful cards are mixed with containers that only group spacing, making the site feel like a themed dashboard.",
+      "recommended_direction": "Use cards only for objects or bounded actions. Replace decorative containers with open editorial spacing, hairlines or full-bleed section shifts.",
+      "priority": "P1",
+      "effort_risk": "M / medium",
+      "shared_rule_or_intentional_exception": "SHARED RULE",
+      "current_authority_status": "APPROVED anti-template guardrail; component details provisional",
+      "needs_nate": false,
+      "site_vs_styles_kit_conflict": "PARTIAL CONFLICT",
+      "ai_template_flag": true,
+      "mobile_weakness_flag": true,
+      "state": "OPEN"
+    },
+    {
+      "id": "GAP-016",
+      "domain": "actions",
+      "affected_page_component": "Buttons and text-link hierarchy across all routes",
+      "evidence": [
+        {
+          "pointer": "/Users/handtomouse/Documents/Codex/2026-08-13/maple-moon-shared-site-styles-kit/outputs/COMPONENT-CONTRACTS.md#Buttons-and-text-links",
+          "observation": "Primary navy, secondary outline and tertiary underline are specified."
+        },
+        {
+          "pointer": "/Users/handtomouse/maplemoon-website/_wip/evidence/design_system_gap_audit_20260817T153140/VISUAL-QA.json#/contacts",
+          "observation": "Current CTA shapes, sizes, letterspacing and link treatment vary by route."
+        }
+      ],
+      "wrong_missing_underdeveloped": "Primary/secondary/tertiary actions are not consistently recognisable, especially between commerce, utility and editorial pages.",
+      "recommended_direction": "Map every action to one of three shared roles; keep capsule shape per DEC-004 but prevent every link/filter from becoming a pill.",
+      "priority": "P1",
+      "effort_risk": "M / low\u2013medium",
+      "shared_rule_or_intentional_exception": "SHARED RULE",
+      "current_authority_status": "APPROVED direction DEC-004; CMP-002 PROVISIONAL",
+      "needs_nate": false,
+      "site_vs_styles_kit_conflict": "PARTIAL CONFLICT",
+      "ai_template_flag": true,
+      "mobile_weakness_flag": true,
+      "state": "OPEN"
+    },
+    {
+      "id": "GAP-017",
+      "domain": "states",
+      "affected_page_component": "Primary, secondary, tertiary and icon controls",
+      "evidence": [
+        {
+          "pointer": "/Users/handtomouse/Documents/Codex/2026-08-13/maple-moon-shared-site-styles-kit/outputs/RULE-REGISTER.json#CMP-017",
+          "observation": "Six-state control matrix remains PROVISIONAL/RECOMMENDED."
+        },
+        {
+          "pointer": "/Users/handtomouse/maplemoon-website/_wip/evidence/design_system_gap_audit_20260817T153140/VISUAL-QA.json#/stateCoverage",
+          "observation": "Only selected current interactions were exercisable; loading/error/disabled matrices are not present site-wide."
+        }
+      ],
+      "wrong_missing_underdeveloped": "Default/hover/focus-visible/pressed/loading/disabled states are not demonstrated on real components across all control roles.",
+      "recommended_direction": "Implement and test the full six-state matrix as a shared primitive before route styling; do not promote CMP-017 from this audit.",
+      "priority": "P1",
+      "effort_risk": "M / interaction regression risk",
+      "shared_rule_or_intentional_exception": "SHARED RULE",
+      "current_authority_status": "PROVISIONAL/RECOMMENDED \u2014 CMP-017",
+      "needs_nate": false,
+      "site_vs_styles_kit_conflict": "IMPLEMENTATION PROOF MISSING",
+      "ai_template_flag": false,
+      "mobile_weakness_flag": true,
+      "state": "OPEN"
+    },
+    {
+      "id": "GAP-018",
+      "domain": "icons",
+      "affected_page_component": "Header, FAQ, Shop, Carob and Stockists utility icons",
+      "evidence": [
+        {
+          "pointer": "/Users/handtomouse/Documents/Codex/2026-08-13/maple-moon-shared-site-styles-kit/outputs/RULE-REGISTER.json#CMP-009",
+          "observation": "Thin functional 1.25\u20131.5px icons and no decorative tiles/circles are APPROVED."
+        },
+        {
+          "pointer": "/private/tmp/maplemoon-pdp-route-repair-20260816#inline SVG and glyphs",
+          "observation": "Current pages mix inline SVG, Unicode symbols, CSS shapes and circular icon containers."
+        }
+      ],
+      "wrong_missing_underdeveloped": "There is no governed production icon source, export grid, license record or linecap/stroke mapping; visual weight varies.",
+      "recommended_direction": "Choose one licensed/source-controlled icon family or governed custom set with 20/24px grid, stroke, linecap, optical sizing and accessible-name rules.",
+      "priority": "P1",
+      "effort_risk": "M / asset governance risk",
+      "shared_rule_or_intentional_exception": "SHARED RULE",
+      "current_authority_status": "APPROVED appearance \u2014 CMP-009; source TECHNICAL DEPENDENCY",
+      "needs_nate": false,
+      "site_vs_styles_kit_conflict": "PARTIAL CONFLICT",
+      "ai_template_flag": true,
+      "mobile_weakness_flag": true,
+      "state": "OPEN"
+    },
+    {
+      "id": "GAP-019",
+      "domain": "shop",
+      "affected_page_component": "Shop catalogue composition at 1440/1024/768/390",
+      "evidence": [
+        {
+          "pointer": "/Users/handtomouse/Documents/Codex/2026-08-13/maple-moon-shared-site-styles-kit/outputs/RULE-REGISTER.json#DEC-007",
+          "observation": "Approved planning direction is one asymmetric Pure feature plus five supporting at desktop, two-column mobile."
+        },
+        {
+          "pointer": "/Users/handtomouse/maplemoon-website/_wip/evidence/design_system_gap_audit_20260817T153140/VISUAL-QA.json#/rows[route=shop].screenshot",
+          "observation": "Current Shop is an equal product grid with 22 items."
+        }
+      ],
+      "wrong_missing_underdeveloped": "The current composition is an equal catalogue grid and does not express the approved feature/supporting hierarchy.",
+      "recommended_direction": "Show a 24-product extension of DEC-007: Pure feature opening, five supporting launch bars, then quieter scalable catalogue groups; preserve two-column mobile where readable.",
+      "priority": "P0",
+      "effort_risk": "M\u2013L / catalogue architecture risk",
+      "shared_rule_or_intentional_exception": "SHARED PRODUCT-LED RULE",
+      "current_authority_status": "APPROVED DEC-007 but 24-product extension unapproved",
+      "needs_nate": true,
+      "site_vs_styles_kit_conflict": "DIRECT CONFLICT + SCOPE EVOLUTION",
+      "ai_template_flag": true,
+      "mobile_weakness_flag": true,
+      "state": "OPEN"
+    },
+    {
+      "id": "GAP-020",
+      "domain": "governance",
+      "affected_page_component": "Shop catalogue scope in Styles Kit versus current Boss ledger",
+      "evidence": [
+        {
+          "pointer": "/Users/handtomouse/Documents/Codex/2026-08-13/maple-moon-shared-site-styles-kit/outputs/RULE-REGISTER.json#ARC-005/CNT-001",
+          "observation": "Sealed kit still limits Home/Shop preview to six bars."
+        },
+        {
+          "pointer": "/Users/handtomouse/maplemoon-website/docs/orchestration/MAPLEMOON_BOSS_EXECUTION_LEDGER_20260816.md#Shopify/Etheryx decisions",
+          "observation": "Later direct decision requires all 24 products."
+        }
+      ],
+      "wrong_missing_underdeveloped": "The planning authority contains a live contradiction: six-bar preview scope is stale against the later 24-product launch decision.",
+      "recommended_direction": "In the next governed documentation revision, supersede only the catalogue-scope statements and extend the Shop archetype without changing other statuses.",
+      "priority": "P0",
+      "effort_risk": "S governance / high consequence if ignored",
+      "shared_rule_or_intentional_exception": "SHARED RULE",
+      "current_authority_status": "CURRENT BOSS DECISION supersedes stale kit scope",
+      "needs_nate": false,
+      "site_vs_styles_kit_conflict": "DIRECT AUTHORITY CONFLICT",
+      "ai_template_flag": false,
+      "mobile_weakness_flag": false,
+      "state": "HOLD"
+    },
+    {
+      "id": "GAP-021",
+      "domain": "filters",
+      "affected_page_component": "Shop flavour filter and taxonomy",
+      "evidence": [
+        {
+          "pointer": "/Users/handtomouse/maplemoon-website/_wip/evidence/design_system_gap_audit_20260817T153140/VISUAL-QA.json#/interactions[component=shop-filter-view]",
+          "observation": "The Pure filter returns eight visible products across unrelated-looking families in the current UI."
+        },
+        {
+          "pointer": "https://shopify.dev/docs/storefronts/themes/best-practices/design",
+          "observation": "Official Shopify guidance says discovery should fit the target segment."
+        }
+      ],
+      "wrong_missing_underdeveloped": "Filter labels do not explain whether they mean ingredient, flavour family, format or availability; the result set weakens trust.",
+      "recommended_direction": "Define product taxonomy first (format, flavour, availability, dietary attributes) and expose only filters with deterministic merchant-owned data.",
+      "priority": "P1",
+      "effort_risk": "M / data-model dependency",
+      "shared_rule_or_intentional_exception": "SHARED RULE",
+      "current_authority_status": "TECHNICAL/DATA EVIDENCE REQUIRED \u2014 CMP-005",
+      "needs_nate": false,
+      "site_vs_styles_kit_conflict": "UNDERDEVELOPED",
+      "ai_template_flag": false,
+      "mobile_weakness_flag": true,
+      "state": "OPEN"
+    },
+    {
+      "id": "GAP-022",
+      "domain": "accessibility",
+      "affected_page_component": "Shop interactive controls",
+      "evidence": [
+        {
+          "pointer": "/Users/handtomouse/maplemoon-website/_wip/evidence/design_system_gap_audit_20260817T153140/VISUAL-QA.json#/rows[route=shop].observed.sub44",
+          "observation": "Nineteen controls are below 44px at every tested width."
+        },
+        {
+          "pointer": "https://shopify.dev/docs/storefronts/themes/best-practices/accessibility#touch-screen-and-mobile-devices",
+          "observation": "Shopify calls for 44\u00d744 primary touch targets."
+        }
+      ],
+      "wrong_missing_underdeveloped": "Sort, view, size/pack and product actions do not meet the kit\u2019s 44px requirement.",
+      "recommended_direction": "Raise the interactive hit area to at least 44\u00d744 without visually bloating the controls; verify pointer and keyboard behaviour.",
+      "priority": "P0",
+      "effort_risk": "S\u2013M / low",
+      "shared_rule_or_intentional_exception": "SHARED RULE",
+      "current_authority_status": "APPROVED \u2014 RESP-004",
+      "needs_nate": false,
+      "site_vs_styles_kit_conflict": "DIRECT CONFLICT",
+      "ai_template_flag": false,
+      "mobile_weakness_flag": true,
+      "state": "OPEN"
+    },
+    {
+      "id": "GAP-023",
+      "domain": "product media",
+      "affected_page_component": "Products without governed imagery",
+      "evidence": [
+        {
+          "pointer": "/Users/handtomouse/maplemoon-website/docs/orchestration/MAPLEMOON_BOSS_EXECUTION_LEDGER_20260816.md#Shopify/Etheryx decisions",
+          "observation": "Nate permits a clean image-free product layout when approved imagery is missing."
+        },
+        {
+          "pointer": "/Users/handtomouse/Documents/Codex/2026-08-13/maple-moon-shared-site-styles-kit/outputs/RULE-REGISTER.json#DEC-012/MEDIA-002",
+          "observation": "Neutral held slots are approved; media admission remains held."
+        }
+      ],
+      "wrong_missing_underdeveloped": "Current repeated crescent/product-like graphics can read as invented product imagery instead of an honest image-free state.",
+      "recommended_direction": "Show Nate type-first and neutral-material placeholder options that never imply the missing product appearance; keep admission/rights separate.",
+      "priority": "P1",
+      "effort_risk": "S visual proof / media custody risk",
+      "shared_rule_or_intentional_exception": "SHARED RULE",
+      "current_authority_status": "APPROVED neutral-state direction; exact appearance NEEDS NATE",
+      "needs_nate": true,
+      "site_vs_styles_kit_conflict": "POTENTIAL CONFLICT",
+      "ai_template_flag": true,
+      "mobile_weakness_flag": true,
+      "state": "HOLD"
+    },
+    {
+      "id": "GAP-024",
+      "domain": "archetypes",
+      "affected_page_component": "Pure Carob product-detail page and future PDPs",
+      "evidence": [
+        {
+          "pointer": "/Users/handtomouse/Documents/Codex/2026-08-13/maple-moon-shared-site-styles-kit/outputs/PAGE-ARCHETYPES.md#Current archetypes",
+          "observation": "The kit defines six route archetypes but no explicit product-detail subtype."
+        },
+        {
+          "pointer": "/Users/handtomouse/maplemoon-website/_wip/evidence/design_system_gap_audit_20260817T153140/VISUAL-QA.json#/rows[route=pure-carob-bar]",
+          "observation": "Pure is now a seventh audited route with distinct commerce needs."
+        }
+      ],
+      "wrong_missing_underdeveloped": "PDP behaviour is only implicit inside the Shop archetype, leaving media, purchase, information and related-product hierarchy under-specified.",
+      "recommended_direction": "Add a product-detail subtype under the product-led archetype, preserving the six-page character model while covering commerce-specific structure.",
+      "priority": "P1",
+      "effort_risk": "M / medium",
+      "shared_rule_or_intentional_exception": "SHARED RULE",
+      "current_authority_status": "PROVISIONAL documentation gap; no rule promotion",
+      "needs_nate": false,
+      "site_vs_styles_kit_conflict": "COVERAGE GAP",
+      "ai_template_flag": false,
+      "mobile_weakness_flag": true,
+      "state": "OPEN"
+    },
+    {
+      "id": "GAP-025",
+      "domain": "commerce states",
+      "affected_page_component": "PDP and product-card purchase states",
+      "evidence": [
+        {
+          "pointer": "/Users/handtomouse/Documents/Codex/2026-08-13/maple-moon-shared-site-styles-kit/outputs/COMPONENT-CONTRACTS.md#Product-items",
+          "observation": "The kit lists product/card primitives but real availability/variant/cart states need technical proof."
+        },
+        {
+          "pointer": "/Users/handtomouse/maplemoon-website/_wip/evidence/design_system_gap_audit_20260817T153140/VISUAL-QA.json#/stateCoverage",
+          "observation": "No safe deterministic sold-out, unavailable, loading or commerce-error state was available."
+        }
+      ],
+      "wrong_missing_underdeveloped": "Variant selection, quantity, add-to-cart feedback, sold-out, enquiry-only, price range, sale, error and unavailable states are not governed end-to-end.",
+      "recommended_direction": "Create a state contract driven by Shopify product data and test it on both cards and PDPs; no fake checkout or stock state.",
+      "priority": "P0",
+      "effort_risk": "L / commerce and data risk",
+      "shared_rule_or_intentional_exception": "SHARED RULE",
+      "current_authority_status": "TECHNICAL EVIDENCE REQUIRED + Shopify dependency",
+      "needs_nate": false,
+      "site_vs_styles_kit_conflict": "UNDERDEVELOPED",
+      "ai_template_flag": false,
+      "mobile_weakness_flag": true,
+      "state": "HOLD"
+    },
+    {
+      "id": "GAP-026",
+      "domain": "product system",
+      "affected_page_component": "Shop cards versus Pure PDP",
+      "evidence": [
+        {
+          "pointer": "/Users/handtomouse/maplemoon-website/_wip/evidence/design_system_gap_audit_20260817T153140/VISUAL-QA.json#/contacts/contact-1440-local-full.png",
+          "observation": "Fresh proof shows different image wells, radii, action density and metadata hierarchy."
+        },
+        {
+          "pointer": "/Users/handtomouse/Documents/Codex/2026-08-13/maple-moon-shared-site-styles-kit/outputs/COMPONENT-CONTRACTS.md#Product-items",
+          "observation": "One product/card primitive is planned."
+        }
+      ],
+      "wrong_missing_underdeveloped": "Cards and PDP do not yet share a clear media ratio, price hierarchy, metadata order, state language or action grammar.",
+      "recommended_direction": "Define a shared product information anatomy with intentionally different card/PDP density, not different semantics.",
+      "priority": "P1",
+      "effort_risk": "M / medium",
+      "shared_rule_or_intentional_exception": "SHARED RULE with card/PDP density exception",
+      "current_authority_status": "PROVISIONAL/RECOMMENDED \u2014 CMP-004",
+      "needs_nate": false,
+      "site_vs_styles_kit_conflict": "PARTIAL CONFLICT",
+      "ai_template_flag": true,
+      "mobile_weakness_flag": true,
+      "state": "OPEN"
+    },
+    {
+      "id": "GAP-027",
+      "domain": "forms",
+      "affected_page_component": "Homepage newsletter, Stockists search/newsletter, FAQ search and future Shopify forms",
+      "evidence": [
+        {
+          "pointer": "/private/tmp/maplemoon-pdp-route-repair-20260816/stockists.html#st-news",
+          "observation": "The email form is disabled/demo-only; current forms do not cover the full kit state catalogue."
+        },
+        {
+          "pointer": "/Users/handtomouse/Documents/Codex/2026-08-13/maple-moon-shared-site-styles-kit/outputs/COMPONENT-CONTRACTS.md#Forms",
+          "observation": "Help, error, success, required, read-only, autofill, disabled and error-summary states are documented."
+        }
+      ],
+      "wrong_missing_underdeveloped": "The site has fragments of form styling but no shared field/label/help/error/success/autofill/disabled system demonstrated in real context.",
+      "recommended_direction": "Build one accessible form primitive and exercise every documented state; keep newsletter/contact endpoints held until real.",
+      "priority": "P1",
+      "effort_risk": "M / capability and accessibility risk",
+      "shared_rule_or_intentional_exception": "SHARED RULE",
+      "current_authority_status": "TECHNICAL EVIDENCE REQUIRED \u2014 CMP-008",
+      "needs_nate": false,
+      "site_vs_styles_kit_conflict": "IMPLEMENTATION PROOF MISSING",
+      "ai_template_flag": false,
+      "mobile_weakness_flag": true,
+      "state": "OPEN"
+    },
+    {
+      "id": "GAP-028",
+      "domain": "faq",
+      "affected_page_component": "FAQ clear button and category controls",
+      "evidence": [
+        {
+          "pointer": "/Users/handtomouse/maplemoon-website/_wip/evidence/design_system_gap_audit_20260817T153140/VISUAL-QA.json#/rows[route=faq].observed.sub44",
+          "observation": "At least one FAQ control is sub-44 at 390/1440 and four at 768."
+        },
+        {
+          "pointer": "/Users/handtomouse/maplemoon-website/_wip/evidence/design_system_gap_audit_20260817T153140/VISUAL-QA.json#/interactions[component=faq-search-empty|faq-accordion]",
+          "observation": "Search empty and accordion behaviour otherwise work in the fresh harness."
+        }
+      ],
+      "wrong_missing_underdeveloped": "Useful search/accordion states exist, but the clear/category controls do not consistently meet target size and intermediate-density behaviour.",
+      "recommended_direction": "Preserve the quiet utility pattern and zero-results guidance; enlarge hit areas and verify the 768/900 transition without adding more pills.",
+      "priority": "P1",
+      "effort_risk": "S / low",
+      "shared_rule_or_intentional_exception": "SHARED RULE",
+      "current_authority_status": "APPROVED target size; CMP-006/CMP-007 technical proof",
+      "needs_nate": false,
+      "site_vs_styles_kit_conflict": "PARTIAL CONFLICT",
+      "ai_template_flag": false,
+      "mobile_weakness_flag": true,
+      "state": "OPEN"
+    },
+    {
+      "id": "GAP-029",
+      "domain": "overlays",
+      "affected_page_component": "Menu drawer, cart dialog and future modal/popover surfaces",
+      "evidence": [
+        {
+          "pointer": "/Users/handtomouse/maplemoon-website/_wip/evidence/design_system_gap_audit_20260817T153140/VISUAL-QA.json#/interactions[component=mobile-menu]",
+          "observation": "Home/Pure menu open and Escape close were exercised."
+        },
+        {
+          "pointer": "/Users/handtomouse/maplemoon-website/_wip/evidence/design_system_gap_audit_20260817T153140/VISUAL-QA.json#/stateCoverage",
+          "observation": "No general modal exists; cart dialog presence differs by route; five routes lack the shared menu drawer."
+        }
+      ],
+      "wrong_missing_underdeveloped": "Overlay anatomy and layer behaviour are not shared across routes; current proof covers only a subset of menu/cart states.",
+      "recommended_direction": "Use one layer scale, scroll-lock/focus-return contract and overlay chrome. Only create modals/popovers for real tasks.",
+      "priority": "P1",
+      "effort_risk": "M / focus and layer risk",
+      "shared_rule_or_intentional_exception": "SHARED RULE",
+      "current_authority_status": "LAYER-001 PROVISIONAL; LAYER-002 TECHNICAL EVIDENCE REQUIRED",
+      "needs_nate": false,
+      "site_vs_styles_kit_conflict": "PARTIAL CONFLICT",
+      "ai_template_flag": true,
+      "mobile_weakness_flag": true,
+      "state": "OPEN"
+    },
+    {
+      "id": "GAP-030",
+      "domain": "accessibility",
+      "affected_page_component": "Keyboard focus order and native 200% zoom",
+      "evidence": [
+        {
+          "pointer": "/Users/handtomouse/maplemoon-website/_wip/evidence/design_system_gap_audit_20260817T153140/VISUAL-QA.json#/focusRows",
+          "observation": "Local fresh contexts record keyboard sequences; focus styling is inspectable."
+        },
+        {
+          "pointer": "/Users/handtomouse/maplemoon-website/_wip/evidence/design_system_gap_audit_20260817T153140/VISUAL-QA.json#/stateCoverage/native200",
+          "observation": "Current candidate native-200 remains UNKNOWN because the authenticated in-app browser has no native zoom control; R2 proof is not current authority."
+        }
+      ],
+      "wrong_missing_underdeveloped": "Focus traversal has partial proof, but current-candidate native browser 200% proof is not closed and cannot be inherited from failed R2.",
+      "recommended_direction": "Run a separate current-candidate native-zoom harness after implementation, including sticky header, skip link, menu, forms and purchase controls.",
+      "priority": "P1",
+      "effort_risk": "M / test-harness risk",
+      "shared_rule_or_intentional_exception": "SHARED RULE",
+      "current_authority_status": "TECHNICAL EVIDENCE REQUIRED \u2014 RESP-002/RESP-009",
+      "needs_nate": false,
+      "site_vs_styles_kit_conflict": "PROOF GAP",
+      "ai_template_flag": false,
+      "mobile_weakness_flag": true,
+      "state": "UNKNOWN"
+    },
+    {
+      "id": "GAP-031",
+      "domain": "responsive",
+      "affected_page_component": "320px, 360px, 375px and landscape acceptance",
+      "evidence": [
+        {
+          "pointer": "/Users/handtomouse/maplemoon-website/_wip/evidence/design_system_gap_audit_20260817T153140/VISUAL-QA.json#/widths",
+          "observation": "Fresh current proof covers 390, 768, 1024 and 1440 only."
+        },
+        {
+          "pointer": "/Users/handtomouse/Documents/Codex/2026-08-13/maple-moon-shared-site-styles-kit/outputs/RESPONSIVE-ACCESSIBILITY.md#Acceptance",
+          "observation": "The kit calls for reflow and overflow safety beyond 390, including small widths and zoom."
+        }
+      ],
+      "wrong_missing_underdeveloped": "The current route set has no fresh whole-site proof at 320/360/375 or phone landscape, where long words, filters and headers are most fragile.",
+      "recommended_direction": "Add small-width and landscape acceptance after shared chrome/page-header implementation; do not infer from the kit playground.",
+      "priority": "P1",
+      "effort_risk": "M / medium",
+      "shared_rule_or_intentional_exception": "SHARED RULE",
+      "current_authority_status": "TECHNICAL EVIDENCE REQUIRED \u2014 RESP-003/RESP-006",
+      "needs_nate": false,
+      "site_vs_styles_kit_conflict": "PROOF GAP",
+      "ai_template_flag": false,
+      "mobile_weakness_flag": true,
+      "state": "UNKNOWN"
+    },
+    {
+      "id": "GAP-032",
+      "domain": "accessibility",
+      "affected_page_component": "Forced colours, text spacing, coarse pointer, safe areas and focus-not-obscured",
+      "evidence": [
+        {
+          "pointer": "/Users/handtomouse/Documents/Codex/2026-08-13/maple-moon-shared-site-styles-kit/outputs/RESPONSIVE-ACCESSIBILITY.md#Additional acceptance contracts",
+          "observation": "These contracts are documented in the kit."
+        },
+        {
+          "pointer": "/Users/handtomouse/maplemoon-website/_wip/evidence/design_system_gap_audit_20260817T153140/VISUAL-QA.json#/stateCoverage",
+          "observation": "Fresh current browser QA did not close these OS/browser-specific modes."
+        }
+      ],
+      "wrong_missing_underdeveloped": "The documentation is ahead of real-site proof for high-contrast, user text-spacing overrides, coarse pointer, env(safe-area-inset-*), and sticky-focus visibility.",
+      "recommended_direction": "Add dedicated acceptance tests; ensure the visual system still works without gradients/masks/colour-only distinction.",
+      "priority": "P1",
+      "effort_risk": "M / accessibility risk",
+      "shared_rule_or_intentional_exception": "SHARED RULE",
+      "current_authority_status": "TECHNICAL EVIDENCE REQUIRED",
+      "needs_nate": false,
+      "site_vs_styles_kit_conflict": "PROOF GAP",
+      "ai_template_flag": false,
+      "mobile_weakness_flag": true,
+      "state": "UNKNOWN"
+    },
+    {
+      "id": "GAP-033",
+      "domain": "system states",
+      "affected_page_component": "Loading, error, unavailable and empty states",
+      "evidence": [
+        {
+          "pointer": "/Users/handtomouse/maplemoon-website/_wip/evidence/design_system_gap_audit_20260817T153140/VISUAL-QA.json#/stateCoverage",
+          "observation": "FAQ empty is exercised; deterministic loading and error triggers are UNKNOWN; media-specific unavailable is not current-site proof."
+        },
+        {
+          "pointer": "/Users/handtomouse/Documents/Codex/2026-08-13/maple-moon-shared-site-styles-kit/outputs/RULE-REGISTER.json#MEDIA-003/CMP-006/CMP-008",
+          "observation": "Five media states and utility/form states are planned but not promoted."
+        }
+      ],
+      "wrong_missing_underdeveloped": "State coverage is uneven: FAQ empty is useful, while media/product/filter/form loading and error states are absent or untestable.",
+      "recommended_direction": "Create a cross-component state matrix with honest copy, stable geometry, retry/escape paths and no fake capability.",
+      "priority": "P1",
+      "effort_risk": "M / medium",
+      "shared_rule_or_intentional_exception": "SHARED RULE",
+      "current_authority_status": "PROVISIONAL/RECOMMENDED + TECHNICAL EVIDENCE REQUIRED",
+      "needs_nate": false,
+      "site_vs_styles_kit_conflict": "IMPLEMENTATION PROOF MISSING",
+      "ai_template_flag": true,
+      "mobile_weakness_flag": true,
+      "state": "UNKNOWN"
+    },
+    {
+      "id": "GAP-034",
+      "domain": "performance",
+      "affected_page_component": "Responsive image delivery across all routes",
+      "evidence": [
+        {
+          "pointer": "/Users/handtomouse/maplemoon-website/_wip/evidence/design_system_gap_audit_20260817T153140/VISUAL-QA.json#/rows[width=390].observed.imageDelivery",
+          "observation": "Across seven routes: 61 DOM images, 5 with intrinsic width+height, 0 srcset, 0 sizes; 38 have decoding attributes."
+        },
+        {
+          "pointer": "https://shopify.dev/docs/storefronts/themes/best-practices/performance/index#use-responsive-images",
+          "observation": "Shopify recommends responsive image_tag output and below-fold lazy loading."
+        }
+      ],
+      "wrong_missing_underdeveloped": "The visual system specifies crops but the current candidate does not provide responsive candidates/sizes and rarely reserves intrinsic geometry.",
+      "recommended_direction": "Bind every placement to intrinsic ratio, widths/sizes, priority, decoding and error behaviour. Above-fold media loads normally; below-fold media lazy-loads.",
+      "priority": "P0",
+      "effort_risk": "M\u2013L / asset pipeline risk",
+      "shared_rule_or_intentional_exception": "SHARED RULE",
+      "current_authority_status": "TECHNICAL EVIDENCE REQUIRED \u2014 MEDIA-005",
+      "needs_nate": false,
+      "site_vs_styles_kit_conflict": "DIRECT DELIVERY GAP",
+      "ai_template_flag": false,
+      "mobile_weakness_flag": true,
+      "state": "OPEN"
+    },
+    {
+      "id": "GAP-035",
+      "domain": "typography",
+      "affected_page_component": "Mackinac/Neue Haas delivery and fallback metrics",
+      "evidence": [
+        {
+          "pointer": "/private/tmp/maplemoon-pdp-route-repair-20260816/*#use.typekit.net/dvz0xjs.css",
+          "observation": "All seven pages reference the same external Typekit kit and named fallbacks."
+        },
+        {
+          "pointer": "/Users/handtomouse/Documents/Codex/2026-08-13/maple-moon-shared-site-styles-kit/outputs/RULE-REGISTER.json#FND-002/DEC-003",
+          "observation": "Type strategy is selected, but licensing/file delivery remains a dependency."
+        }
+      ],
+      "wrong_missing_underdeveloped": "The face choices are coherent, but license scope, Shopify delivery, fallback metric matching and failure behaviour are not sealed.",
+      "recommended_direction": "Record license/host authority, exact weights/styles, preload policy and metric-compatible fallback tests before production.",
+      "priority": "P1",
+      "effort_risk": "S\u2013M / licensing and CLS risk",
+      "shared_rule_or_intentional_exception": "SHARED RULE",
+      "current_authority_status": "CONTENT/MEDIA DEPENDENCY \u2014 FND-002",
+      "needs_nate": false,
+      "site_vs_styles_kit_conflict": "UNRESOLVED, not a style reversal",
+      "ai_template_flag": false,
+      "mobile_weakness_flag": false,
+      "state": "HOLD"
+    },
+    {
+      "id": "GAP-036",
+      "domain": "tokens",
+      "affected_page_component": "Current candidate CSS and token adoption",
+      "evidence": [
+        {
+          "pointer": "/Users/handtomouse/maplemoon-website/_wip/evidence/design_system_gap_audit_20260817T153140/raw/static-source-metrics.json",
+          "observation": "Seven HTML files contain 56 style blocks, 1,809 raw colour literals, 132 mask rules and 111 media queries."
+        },
+        {
+          "pointer": "/Users/handtomouse/Documents/Codex/2026-08-13/maple-moon-shared-site-styles-kit/outputs/RULE-REGISTER.json#FND-001..FND-009",
+          "observation": "The accepted kit exposes shared tokens, but most remain provisional or require proof."
+        }
+      ],
+      "wrong_missing_underdeveloped": "The candidate is a stack of route-local overrides; shared decisions can drift because tokens and primitives are not the dominant implementation path.",
+      "recommended_direction": "For later implementation, map accepted tokens to theme settings/CSS once, classify bounded page exceptions, and remove duplicate overrides only under a separate reversible packet.",
+      "priority": "P0",
+      "effort_risk": "L / high regression risk",
+      "shared_rule_or_intentional_exception": "SHARED RULE + bounded exceptions",
+      "current_authority_status": "MIXED: approved decisions, provisional token values",
+      "needs_nate": false,
+      "site_vs_styles_kit_conflict": "ARCHITECTURE GAP",
+      "ai_template_flag": false,
+      "mobile_weakness_flag": true,
+      "state": "OPEN"
+    },
+    {
+      "id": "GAP-037",
+      "domain": "content safety",
+      "affected_page_component": "Visible internal/demo language in Home and Stockists UI",
+      "evidence": [
+        {
+          "pointer": "/private/tmp/maplemoon-pdp-route-repair-20260816/stockists.html#WIP directory status/Needs confirmation/Demo only",
+          "observation": "Internal review labels are visible in customer-facing component surfaces."
+        },
+        {
+          "pointer": "/Users/handtomouse/Documents/Codex/2026-08-13/maple-moon-shared-site-styles-kit/outputs/RULE-REGISTER.json#CMP-010",
+          "observation": "No internal status vocabulary is APPROVED."
+        }
+      ],
+      "wrong_missing_underdeveloped": "WIP, pending-confirmation and demo labels make the interface feel unfinished and are explicitly prohibited as customer-facing UI.",
+      "recommended_direction": "Hold unavailable capabilities silently or use customer-neutral unavailable/help states; retain internal provenance only in evidence, not the page.",
+      "priority": "P0",
+      "effort_risk": "S / low",
+      "shared_rule_or_intentional_exception": "SHARED RULE",
+      "current_authority_status": "APPROVED \u2014 CMP-010",
+      "needs_nate": false,
+      "site_vs_styles_kit_conflict": "DIRECT CONFLICT",
+      "ai_template_flag": true,
+      "mobile_weakness_flag": true,
+      "state": "OPEN"
+    },
+    {
+      "id": "GAP-038",
+      "domain": "stockists",
+      "affected_page_component": "Stockists map/list relationship",
+      "evidence": [
+        {
+          "pointer": "/private/tmp/maplemoon-pdp-route-repair-20260816/stockists.html#.st-map-canvas/.st-map-marker",
+          "observation": "The current map is CSS-drawn, has markers and hover/focus styles, and is paired with internal preview language."
+        },
+        {
+          "pointer": "/Users/handtomouse/maplemoon-website/docs/orchestration/MAPLEMOON_BOSS_EXECUTION_LEDGER_20260816.md#D03",
+          "observation": "Current decision keeps a non-interactive visual map; kit ARC-006 is list-first."
+        }
+      ],
+      "wrong_missing_underdeveloped": "The surface can look interactive despite having no governed coordinates, weakening the list-first truthfulness standard.",
+      "recommended_direction": "Keep the directory primary. If the visual map remains, make it unmistakably illustrative/noninteractive and remove pins, hover affordance and implied precision.",
+      "priority": "P0",
+      "effort_risk": "S\u2013M / trust risk",
+      "shared_rule_or_intentional_exception": "INTENTIONAL PAGE-SPECIFIC DIFFERENCE within shared truthfulness rule",
+      "current_authority_status": "CURRENT BOSS/NATE DECISION + ARC-006",
+      "needs_nate": false,
+      "site_vs_styles_kit_conflict": "PARTIAL CONFLICT",
+      "ai_template_flag": true,
+      "mobile_weakness_flag": true,
+      "state": "OPEN"
+    },
+    {
+      "id": "GAP-039",
+      "domain": "capability",
+      "affected_page_component": "Demo cart, checkout and newsletter affordances",
+      "evidence": [
+        {
+          "pointer": "/Users/handtomouse/maplemoon-website/_wip/evidence/design_system_gap_audit_20260817T153140/raw/iab-visual-rows.json#/homepage-mobile-menu-open",
+          "observation": "Home exposes a cart dialog with \u201cContinue to checkout\u201d; Home/Stockists newsletter surfaces say demo/disabled."
+        },
+        {
+          "pointer": "/Users/handtomouse/Documents/Codex/2026-08-13/maple-moon-shared-site-styles-kit/outputs/RULE-REGISTER.json#CONTENT-SAFETY/CMP-010",
+          "observation": "No fake checkout or fake capability is a shared guardrail."
+        }
+      ],
+      "wrong_missing_underdeveloped": "Controls that look transactional but are local/demo-only violate the premium trust model even when accompanied by small disclaimer text.",
+      "recommended_direction": "In planning previews, remove or clearly neutralise the action itself; in Shopify, bind the same visual role only to real native capability.",
+      "priority": "P0",
+      "effort_risk": "S now / L for real commerce",
+      "shared_rule_or_intentional_exception": "SHARED RULE",
+      "current_authority_status": "APPROVED anti-fake-capability guardrail",
+      "needs_nate": false,
+      "site_vs_styles_kit_conflict": "DIRECT CONFLICT",
+      "ai_template_flag": true,
+      "mobile_weakness_flag": true,
+      "state": "OPEN"
+    },
+    {
+      "id": "GAP-040",
+      "domain": "shopify",
+      "affected_page_component": "Etheryx/OS2.0 implementation mapping and future extensibility",
+      "evidence": [
+        {
+          "pointer": "/Users/handtomouse/maplemoon-website/docs/orchestration/MAPLEMOON_BOSS_EXECUTION_LEDGER_20260816.md#Shopify/Etheryx decisions",
+          "observation": "Current authority is purchased Etheryx on an unpublished duplicate of maplemooncarob, native OS2.0, all 24 products."
+        },
+        {
+          "pointer": "/Users/handtomouse/Documents/Codex/2026-08-13/maple-moon-shared-site-styles-kit/outputs/SHOPIFY-MAPPING.md#Discovery fields",
+          "observation": "The kit remains planning-only and has no read-only Etheryx schema discovery findings."
+        },
+        {
+          "pointer": "https://shopify.dev/docs/storefronts/themes/best-practices/templates-sections-blocks",
+          "observation": "Shopify says sections/blocks must remain reorderable without relying on a fixed block sequence."
+        }
+      ],
+      "wrong_missing_underdeveloped": "The design system is not yet mapped to the actual theme\u2019s section/block limits, settings, dynamic sources, locales/Markets, app extensions, SEO ownership, rollback or deprecation model.",
+      "recommended_direction": "Run a separate read-only Etheryx discovery; then define protected global primitives, merchant-editable content/crops, safe ranges and migration/rollback boundaries.",
+      "priority": "P0",
+      "effort_risk": "L / platform and merchant-risk",
+      "shared_rule_or_intentional_exception": "SHARED RULE with template-specific bindings",
+      "current_authority_status": "PLANNING ONLY \u2014 TECHNICAL EVIDENCE REQUIRED",
+      "needs_nate": false,
+      "site_vs_styles_kit_conflict": "IMPLEMENTATION MAPPING GAP",
+      "ai_template_flag": false,
+      "mobile_weakness_flag": true,
+      "state": "HOLD"
+    }
+  ],
+  "highest_value_improvements": [
+    {
+      "rank": 1,
+      "finding_id": "GAP-001",
+      "improvement": "Put the approved shared mobile navigation on all seven routes."
+    },
+    {
+      "rank": 2,
+      "finding_id": "GAP-006",
+      "improvement": "Unify non-Home page-header, headline and photo-blend grammar."
+    },
+    {
+      "rank": 3,
+      "finding_id": "GAP-019",
+      "improvement": "Extend the approved asymmetric Shop composition to the decided 24-product scope."
+    },
+    {
+      "rank": 4,
+      "finding_id": "GAP-037",
+      "improvement": "Remove internal/demo UI language and fake-looking capability surfaces."
+    },
+    {
+      "rank": 5,
+      "finding_id": "GAP-034",
+      "improvement": "Add responsive image geometry, candidates, sizes and priority rules."
+    },
+    {
+      "rank": 6,
+      "finding_id": "GAP-036",
+      "improvement": "Replace route-local override stacks with governed shared primitives and bounded exceptions."
+    },
+    {
+      "rank": 7,
+      "finding_id": "GAP-022",
+      "improvement": "Bring all primary Shop/FAQ controls to the 44px interaction standard and complete states."
+    },
+    {
+      "rank": 8,
+      "finding_id": "GAP-040",
+      "improvement": "Map the system to the actual Etheryx/OS2.0 schema through read-only discovery."
+    },
+    {
+      "rank": 9,
+      "finding_id": "GAP-030",
+      "improvement": "Close current-site focus, native-200, small-width and high-contrast proof gaps."
+    },
+    {
+      "rank": 10,
+      "finding_id": "GAP-024",
+      "improvement": "Add a product-detail subtype and real Shopify commerce-state contract."
+    }
+  ],
+  "important_unconsidered_areas": [
+    "The decided 24-product catalogue taxonomy: format, flavour, dietary attributes, price/availability and how each is merchant-owned.",
+    "The product-detail subtype: variants, quantities, enquiry-only, sold-out, price range, sale, error and post-add feedback.",
+    "Etheryx schema discovery and which current theme settings must be protected, deprecated or rolled back.",
+    "Shopify Markets/locales, longer translated text, currencies and right-to-left resilience.",
+    "App-extension boundaries for reviews, subscriptions, search, stockists and analytics without template drift.",
+    "Native Shopify checkout/account/search-result/policy surfaces and where Maple Moon styling must stop.",
+    "Asset colour-management, focal-point metadata and governance when Carli/Nate replace imagery in the editor.",
+    "Performance budgets for fonts, LCP media, total image bytes, section JavaScript and app impact.",
+    "Whole-site browser modes at 320/360/375, phone landscape, 200% native zoom, forced colours and user text spacing.",
+    "Deprecation/version migration: how old sections/tokens are detected and retired without breaking merchant content."
+  ],
+  "proposed_shared_standards": [
+    "One semantic header/footer/route map; mobile Menu / centred wordmark / Contact; 44px targets and 52px menu rows.",
+    "One non-Home page-header/H1/media-edge grammar with inseparable \u201cMaple Moon\u201d; copy and crop vary by page.",
+    "One shell/gutter/breakpoint ownership model, after Nate reviews the 1180/1200/1240 visual comparison.",
+    "One primary/secondary/tertiary action hierarchy and six-state matrix.",
+    "One icon source/export/stroke/accessibility contract.",
+    "One media placement ledger: custody, crop, intrinsic ratio, srcset/sizes, priority, alt/caption, decoding and error state.",
+    "One form, filter, accordion and overlay accessibility contract.",
+    "No internal WIP/demo labels, fake checkout/map precision, invented imagery or unsupported capability.",
+    "Shared performance and accessibility acceptance, including reduced motion, small widths, high contrast and native 200%.",
+    "Shared Shopify global primitives with bounded merchant-editable content and safe ranges."
+  ],
+  "intentional_page_specific_differences": [
+    "Home remains the cinematic exception: keep the already-decided hero concept; tune styles only and do not force the non-Home page header onto it.",
+    "Our Story remains editorial: longer reading rhythm, founder/media narrative and open chapter transitions.",
+    "What Is Carob remains educational: comparison and process structures may be denser, but not dashboard-like.",
+    "FAQ remains quiet utility: search, categories and accordions can be compact and task-first.",
+    "Shop remains product-led: asymmetric opening plus scalable catalogue hierarchy, not an editorial Story page.",
+    "Stockists remains list-first and task-led; any retained map is illustrative and noninteractive.",
+    "PDP is a product-led subtype with commerce state density that other pages do not inherit.",
+    "Per-page media crops/focal points and section sequencing remain content-specific inside the shared media/rhythm contracts."
+  ],
+  "visual_decisions_for_nate": [
+    {
+      "id": "VD-01",
+      "question": "Which non-Home page-header proof best balances shared H1/media grammar with Story, Carob, FAQ, Shop and Stockists character?",
+      "options": "A shared split; B copy-first with media below; C shared grammar with page-role density variants",
+      "recommendation": "C, with the same type/blend grammar and only crop/density changing."
+    },
+    {
+      "id": "VD-02",
+      "question": "What replaces generic all-caps eyebrow repetition?",
+      "options": "A selective chapter numbers; B plain editorial subheads; C whitespace/hairline only; D a controlled mix",
+      "recommendation": "D: use a kicker only when it adds orientation."
+    },
+    {
+      "id": "VD-03",
+      "question": "How should DEC-007 scale from six bars to all 24 products?",
+      "options": "A Pure feature + five bars then grouped catalogue; B one continuous equal grid; C filter-first list",
+      "recommendation": "A."
+    },
+    {
+      "id": "VD-04",
+      "question": "How should image-free products appear before governed imagery exists?",
+      "options": "A type-first no image box; B neutral material field; C generic package silhouette",
+      "recommendation": "A or B; reject invented silhouettes."
+    },
+    {
+      "id": "VD-05",
+      "question": "Which exact none/light/medium fog alpha, core/depth and falloff/edge model is approved?",
+      "options": "A restrained narrow falloff; B broader atmospheric falloff; C page-specific numbers",
+      "recommendation": "A shared restrained model, with crop-specific placement rather than page-specific strength."
+    },
+    {
+      "id": "VD-06",
+      "question": "How visible should the illustrative Stockists map be beside the list?",
+      "options": "A quiet background illustration; B equal column; C remove it",
+      "recommendation": "A, with no pins/hover/precision."
+    },
+    {
+      "id": "VD-07",
+      "question": "Which shared footer composition should be reviewed?",
+      "options": "A links/legal only; B links plus held newsletter slot; C editorial sign-off plus links",
+      "recommendation": "C, with newsletter conditional on real capability."
+    },
+    {
+      "id": "VD-08",
+      "question": "Which governed icon family/export direction best matches Maple Moon?",
+      "options": "A custom thin organic set; B restrained licensed outline set; C mixed route-specific icons",
+      "recommendation": "B unless a custom set is budgeted and licensed."
+    }
+  ],
+  "staged_plan": [
+    {
+      "stage": "0 \u2014 Authority reconciliation",
+      "scope": "Supersede stale six-product scope with the recorded 24-product decision; keep all other statuses; bind Etheryx decision in planning docs.",
+      "proof": "Rule/status diff only.",
+      "implementation": "None."
+    },
+    {
+      "stage": "1 \u2014 Shared visual proof",
+      "scope": "Header/footer, non-Home page headers, headline wrapping, media blends/no-mask fallback, actions/icons and mobile density.",
+      "proof": "1440/1024/768/390 plus 375/360/320; Nate selects only the bounded questions above.",
+      "implementation": "None until selection."
+    },
+    {
+      "stage": "2 \u2014 Commerce and utility proof",
+      "scope": "24-product Shop, image-free products, PDP subtype, filters, forms, FAQ, Stockists list/map, all states.",
+      "proof": "Realistic governed placeholders/data; keyboard, reduced motion, forced-colour and error/empty/loading specimens.",
+      "implementation": "None until review."
+    },
+    {
+      "stage": "3 \u2014 Read-only Etheryx discovery",
+      "scope": "Theme settings, sections/blocks, dynamic sources, locales/Markets, SEO/schema, apps, migration and rollback.",
+      "proof": "Schema/ownership matrix; no Shopify connection or change in this audit lane.",
+      "implementation": "None."
+    },
+    {
+      "stage": "4 \u2014 Checkpointed implementation",
+      "scope": "One shared primitive layer first, then page-specific archetypes and commerce bindings.",
+      "proof": "Reverse-patch/copy preservation; real site at all acceptance widths/modes.",
+      "implementation": "Separate Boss packet only."
+    },
+    {
+      "stage": "5 \u2014 Independent acceptance",
+      "scope": "Visual, accessibility, performance, Shopify editability and regression QA.",
+      "proof": "Current deployed candidate with hashes, browser evidence and Nate\u2019s recorded decisions.",
+      "implementation": "Promotion remains a separate authority action."
+    }
+  ],
+  "holds": [
+    "FOG-002 exact numbers remain NEEDS NATE.",
+    "Exact media/crops/rights remain CONTENT/MEDIA DEPENDENCY.",
+    "Font licensing/delivery remains unresolved.",
+    "Native-200 and several OS/browser modes remain TECHNICAL EVIDENCE REQUIRED.",
+    "R2 is EVIDENCE_ONLY, FAILED_REQUIRED_CHECK and NOT_PROMOTED.",
+    "Current demo base is the Boss-pinned m49 candidate for this audit only; no implementation/demo base is designated by the Styles Kit.",
+    "Port 4183 remains rejected and never authority.",
+    "No claim decision is opened or changed by this style audit."
+  ]
+}

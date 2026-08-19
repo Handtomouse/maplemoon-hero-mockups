@@ -1,0 +1,45 @@
+{
+  "closed_chrome": [
+    {
+      "label": "200",
+      "pid": 73595,
+      "returncode": -9
+    },
+    {
+      "label": "175",
+      "pid": 73571,
+      "returncode": 0
+    },
+    {
+      "label": "100",
+      "pid": 73546,
+      "returncode": 0
+    }
+  ],
+  "no_emulation_or_input": true,
+  "ports": {
+    "8804": {
+      "closed": true
+    },
+    "9360": {
+      "closed": true
+    },
+    "9361": {
+      "closed": true
+    },
+    "9362": {
+      "closed": true
+    }
+  },
+  "profiles_preserved": {
+    "100": "/private/tmp/maplemoon-style-chrome-r2-native-100",
+    "175": "/private/tmp/maplemoon-style-chrome-r2-native-175",
+    "200": "/private/tmp/maplemoon-style-chrome-r2-native-200"
+  },
+  "server": {
+    "pid": 73545,
+    "returncode": -15
+  },
+  "user_browser_actions": 0,
+  "verdict": "PASS"
+}

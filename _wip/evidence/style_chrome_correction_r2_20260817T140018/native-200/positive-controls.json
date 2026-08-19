@@ -1,0 +1,10 @@
+{
+  "detector_175_rejected": true,
+  "detector_200_accepted": true,
+  "forbidden_method_count": 0,
+  "missing_image_caught": true,
+  "root_overflow_caught": true,
+  "route_count_caught": true,
+  "sub44_caught": true,
+  "verdict": "PASS"
+}

@@ -1,0 +1,8 @@
+{
+  "kitWidths": 4,
+  "kitPass": false,
+  "interactionsPass": true,
+  "candidateRenders": 15,
+  "candidateNetworkPass": true
+}
+RESULT FAIL

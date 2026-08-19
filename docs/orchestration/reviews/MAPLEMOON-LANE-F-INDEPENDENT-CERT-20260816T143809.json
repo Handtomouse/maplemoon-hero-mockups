@@ -1,0 +1,101 @@
+{
+  "schema": "maplemoon-receipt/v2",
+  "receipt_id": "MAPLEMOON-LANE-F-INDEPENDENT-CERT-20260816T143809-RECEIPT-01",
+  "packet_id": "MAPLEMOON-LANE-F-INDEPENDENT-CERT-20260816T143809",
+  "worker_thread_id": "/root/recertify_updated_preview",
+  "worker": "Codex /root/recertify_updated_preview",
+  "started_at": "2026-08-16T04:39:08Z",
+  "completed_at": "2026-08-16T05:03:34Z",
+  "files_read": [
+    "/Users/handtomouse/maplemoon-website/docs/orchestration/packets/MAPLEMOON-LANE-F-INDEPENDENT-CERT-20260816T143809.md",
+    "/Users/handtomouse/maplemoon-website/docs/orchestration/packets/MAPLEMOON-LANE-F-REBUILD-R2-20260816T141330.md",
+    "/Users/handtomouse/maplemoon-website/docs/orchestration/reviews/MAPLEMOON-LANE-F-REBUILD-R2-20260816T141330.json",
+    "/Users/handtomouse/maplemoon_rebuild_20260815/RECEIPT.md",
+    "/Users/handtomouse/maplemoon_rebuild_20260815/FOR_NATE.md",
+    "/Users/handtomouse/maplemoon_recentre_20260815/LANE_F_rebuild.md",
+    "/Users/handtomouse/maplemoon_recentre_20260815/ALIGN.html",
+    "/Users/handtomouse/maplemoon_lane_a_20260815/DISPOSITIONS.md",
+    "/Users/handtomouse/maplemoon_lane_a_20260815/SHOT_LIST.md",
+    "/Users/handtomouse/maplemoon-website/docs/orchestration/LOCK_MANIFEST.json",
+    "/Users/handtomouse/maplemoon-website/_wip/our-story.WIP.html",
+    "/Users/handtomouse/maplemoon-website/_wip/carob-story.WIP.html",
+    "/Users/handtomouse/maplemoon-website/_wip/faq.WIP.html",
+    "/Users/handtomouse/maplemoon-website/_wip/AGENTS.md",
+    "/Users/handtomouse/maplemoon-website/scripts/check-maplemoon-receipt.py"
+  ],
+  "files_changed": [
+    "maplemoon-website/_wip/evidence/lane_f_independent_cert_20260816T143809",
+    "maplemoon-website/docs/orchestration/reviews/MAPLEMOON-LANE-F-INDEPENDENT-CERT-20260816T143809.json"
+  ],
+  "pre_sha256": {
+    "maplemoon-website/_wip/evidence/lane_f_independent_cert_20260816T143809": null,
+    "maplemoon-website/docs/orchestration/reviews/MAPLEMOON-LANE-F-INDEPENDENT-CERT-20260816T143809.json": null
+  },
+  "post_sha256": {
+    "maplemoon-website/_wip/evidence/lane_f_independent_cert_20260816T143809": "485b27334ef7b3d6641685d9f008f162627d1864e156dbeff18f51acb2246f06",
+    "maplemoon-website/docs/orchestration/reviews/MAPLEMOON-LANE-F-INDEPENDENT-CERT-20260816T143809.json": null
+  },
+  "checks": [
+    {
+      "command": "python3 -B scripts/check-maplemoon-receipt.py verify --packet docs/orchestration/packets/MAPLEMOON-LANE-F-INDEPENDENT-CERT-20260816T143809.md --receipt docs/orchestration/reviews/MAPLEMOON-LANE-F-INDEPENDENT-CERT-20260816T143809.json --checkpoint _wip/checkpoints/MAPLEMOON-LANE-F-INDEPENDENT-CERT-20260816T143809_20260816_143809_AEST --phase start --root /Users/handtomouse",
+      "exit_code": 0,
+      "result": "PASS packet=MAPLEMOON-LANE-F-INDEPENDENT-CERT-20260816T143809 phase=start scope=2"
+    },
+    {
+      "command": "predecessor receipt replay at phase=complete and phase=promote against its named checkpoint",
+      "exit_code": 0,
+      "result": "PASS packet=MAPLEMOON-LANE-F-REBUILD-R2-20260816T141330 phase=complete changed=4; PASS packet=MAPLEMOON-LANE-F-REBUILD-R2-20260816T141330 phase=promote changed=4"
+    },
+    {
+      "command": "python3 -B _wip/evidence/lane_f_independent_cert_20260816T143809/source_cert.py --phase acquisition; repeat with --phase close",
+      "exit_code": 0,
+      "result": "PASS: acquisition and close each reported POSITIVE_CONTROL needle='Maple Moon' count=64 corpus=3 and SUMMARY pass=76 fail=0 total=76. All seven pins, both held locks, exact page structure/copy/occurrence boundaries, FAQ separation, local assets and JSON-LD boundaries passed."
+    },
+    {
+      "command": "bundled Playwright browser_cert.mjs in isolated real system Chrome at exact measured widths 390 and 1440",
+      "exit_code": 0,
+      "result": "PASS 4/4: Our Story 390 client/scroll=390/390 body=5246 PNG=390x5245/1083840B images=2 broken=0 focus=16/0 JSON-LD=4/0; Our Story 1440 client/scroll=1440/1440 body=4154 PNG=1440x4153/2034814B images=2 broken=0 focus=20/0 JSON-LD=4/0; Carob Story 390 client/scroll=390/390 body=2549 PNG=390x2549/822434B images=3 broken=0 focus=9/0 JSON-LD=4/0; Carob Story 1440 client/scroll=1440/1440 body=1720 PNG=1440x1720/1460719B images=3 broken=0 focus=13/0 JSON-LD=4/0. HTTP 200 and console/page/request/bad-response counts zero throughout."
+    },
+    {
+      "command": "manual visual inspection of four final full-page PNGs",
+      "exit_code": 0,
+      "result": "PASS: 4/4 are nonblank, full-width, unclipped and fully painted. Exact Our Story chapters/hero/placeholders/Range and Carob intro/comparison/process/no-FAQ boundaries are visibly present."
+    },
+    {
+      "command": "git diff --check -- _wip/our-story.WIP.html _wip/carob-story.WIP.html",
+      "exit_code": 0,
+      "result": "PASS: no output."
+    },
+    {
+      "command": "vercel inspect production alias; authenticated vercel curl /homepage.html at acquisition and close; sha256/md5/cmp",
+      "exit_code": 0,
+      "result": "PASS read-only freeze: immutable 7vjf2m50b; deployment dpl_G2LER2awaqyFtGRCcTserXbNynct; target production; Ready; alias unchanged. Before/after homepage HTTP 200 and 208556 bytes; MD5 6197879a5ca9d3ed0452773abc0bbeb4; SHA-256 b936b5bb4856cdd6134e5b15bce5dfc3b353c1d442fd1a418180b35b8fa10356; cmp_exit=0."
+    },
+    {
+      "command": "find evidence files/zero-byte files/symlinks; jq -e evidence JSON; file and wc -c PNGs; deterministic evidence-tree hash",
+      "exit_code": 0,
+      "result": "PASS: 14 evidence files, zero zero-byte files, zero symlinks, all JSON parses, four PNGs have exact 390/1440 widths and aggregate 5401807 bytes; evidence tree SHA-256=485b27334ef7b3d6641685d9f008f162627d1864e156dbeff18f51acb2246f06."
+    }
+  ],
+  "screenshots_or_urls": [
+    "/Users/handtomouse/maplemoon-website/_wip/evidence/lane_f_independent_cert_20260816T143809/our-story-390.png",
+    "/Users/handtomouse/maplemoon-website/_wip/evidence/lane_f_independent_cert_20260816T143809/our-story-1440.png",
+    "/Users/handtomouse/maplemoon-website/_wip/evidence/lane_f_independent_cert_20260816T143809/carob-story-390.png",
+    "/Users/handtomouse/maplemoon-website/_wip/evidence/lane_f_independent_cert_20260816T143809/carob-story-1440.png"
+  ],
+  "failures": [],
+  "unknowns": [
+    "The raw feedback emails named by the source brief were not present in the admitted readable paths; exact applied and not-applied boundaries were reconstructed from the pinned local ledger, options, alignment and lane evidence.",
+    "Nate has not selected the individual Carli or Dylan founder portraits, so the exact accessible 4:5 holds remain deliberate.",
+    "Nate has not selected the alternate grove/studio option, so it remains unpublished."
+  ],
+  "residual_risk": [
+    "The exact approved Carob intro contains the past-tense word 'used'; certification preserves rather than rewrites it.",
+    "The comparison heading correctly uses 'CACAO OVER CACOA', preserving the intended contrast with the misspelling.",
+    "The isolated local browser harness fulfilled Typekit as an empty successful stylesheet, so visual evidence uses the page's local/system fallback typography.",
+    "Preserved earlier artifacts contain verifier-only predicate/acquisition failures before the clean full rerun; SUMMARY.md identifies each without misclassifying it as a candidate failure."
+  ],
+  "forbidden_path_changes": [],
+  "proposed_next_state": "certified_needs_boss_lock_release",
+  "next_reviewer": "MapleMoon root Boss for receipt replay and a separately checkpointed two-lock release decision"
+}

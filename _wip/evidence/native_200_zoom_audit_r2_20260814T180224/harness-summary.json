@@ -1,0 +1,58 @@
+{
+  "candidate_changes": [],
+  "cleanup": {
+    "checked_at": "2026-08-14T08:36:34Z",
+    "closed_chrome_pids": [
+      {
+        "label": "200",
+        "pid": 94603,
+        "returncode": 0
+      },
+      {
+        "label": "175",
+        "pid": 94587,
+        "returncode": 0
+      },
+      {
+        "label": "100",
+        "pid": 94567,
+        "returncode": 0
+      }
+    ],
+    "no_broad_kill": true,
+    "ports": {
+      "4422": {
+        "closed": true
+      },
+      "9350": {
+        "closed": true
+      },
+      "9351": {
+        "closed": true
+      },
+      "9352": {
+        "closed": true
+      }
+    },
+    "profiles_preserved": {
+      "100": "/tmp/maplemoon-native-zoom-r2-20260814T180224-100",
+      "175": "/tmp/maplemoon-native-zoom-r2-20260814T180224-175",
+      "200": "/tmp/maplemoon-native-zoom-r2-20260814T180224-200"
+    },
+    "server": {
+      "pid": 94566,
+      "returncode": -15
+    },
+    "user_browser_actions": 0,
+    "verdict": "PASS"
+  },
+  "client_actions": [],
+  "completed_at": "2026-08-14T08:36:34Z",
+  "deployments": [],
+  "failure": null,
+  "git_actions": [],
+  "outcome": "PASS_PENDING_VISUAL_INSPECTION",
+  "packet_id": "MAPLEMOON-NATIVE-200-ZOOM-AUDIT-R2-20260814T180224",
+  "schema": "maplemoon-native-200-zoom-audit-r2-summary/v1",
+  "started_at": "2026-08-14T08:34:18Z"
+}

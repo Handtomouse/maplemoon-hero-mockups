@@ -1,0 +1,102 @@
+{
+  "schema": "maplemoon-receipt/v2",
+  "receipt_id": "MAPLEMOON-SIX-LANE-ADMISSION-20260815T213337-RECEIPT-001",
+  "packet_id": "MAPLEMOON-SIX-LANE-ADMISSION-20260815T213337",
+  "worker_thread_id": "/root",
+  "worker": "MapleMoon root Boss",
+  "started_at": "2026-08-15T21:33:37+10:00",
+  "completed_at": "2026-08-15T21:39:00+10:00",
+  "outcome": "PASS_SIX_LANES_SEQUENCED_READONLY_WAVE_ADMITTED_LANE_E_LOCKED_LANE_F_HELD_NO_BUILD",
+  "confidence": "high",
+  "checkpoint_path": "maplemoon-website/_wip/checkpoints/MAPLEMOON-SIX-LANE-ADMISSION-20260815T213337_20260815_213337_AEST",
+  "files_read": [
+    "maplemoon_recentre_20260815/CAT-01A_content_half.md",
+    "maplemoon_recentre_20260815/LANE_A_product_imagery.md",
+    "maplemoon_recentre_20260815/LANE_B_photoshop_prep.md",
+    "maplemoon_recentre_20260815/LANE_C_shopify_groundwork.md",
+    "maplemoon_recentre_20260815/LANE_E_apply.md",
+    "maplemoon_recentre_20260815/LANE_F_rebuild.md",
+    "maplemoon_recentre_20260815/ALIGN.html",
+    "maplemoon_recentre_20260815/CV_STATUS.md",
+    "maplemoon-website/docs/orchestration/reviews/CARLI-CANVA-OCCURRENCE-RECONCILIATION-20260731.md",
+    "maplemoon-website/docs/orchestration/LOCK_MANIFEST.json",
+    "maplemoon-website/_wip/AGENTS.md",
+    "maplemoon-website/docs/orchestration/SIDECHAT_RECEIPT_GATE.md"
+  ],
+  "files_changed": [
+    "maplemoon-website/docs/orchestration/LOCK_MANIFEST.json",
+    "maplemoon-website/docs/orchestration/packets/MAPLEMOON-LANE-E-APPLY-20260815T213337.md",
+    "maplemoon-website/docs/orchestration/packets/MAPLEMOON-LANE-F-REBUILD-20260815T213337.md",
+    "maplemoon-website/docs/orchestration/reviews/MAPLEMOON-SIX-LANE-ADMISSION-20260815T213337.json"
+  ],
+  "pre_sha256": {
+    "maplemoon-website/docs/orchestration/LOCK_MANIFEST.json": "8817645e128f6723fd2384f62fdfb78ca01d6b5ba5196339bb764137c38e12b2",
+    "maplemoon-website/docs/orchestration/packets/MAPLEMOON-LANE-E-APPLY-20260815T213337.md": null,
+    "maplemoon-website/docs/orchestration/packets/MAPLEMOON-LANE-F-REBUILD-20260815T213337.md": null,
+    "maplemoon-website/docs/orchestration/reviews/MAPLEMOON-SIX-LANE-ADMISSION-20260815T213337.json": null
+  },
+  "post_sha256": {
+    "maplemoon-website/docs/orchestration/LOCK_MANIFEST.json": "00f6c0fdabc54b9cfcd98624ee5c34460571b607cbeb78bd0bdc33dd61305094",
+    "maplemoon-website/docs/orchestration/packets/MAPLEMOON-LANE-E-APPLY-20260815T213337.md": "a70366baac35f6c45fd0d708b0b6717ad1a004c4dbd9df3ab40be6c764ca04dc",
+    "maplemoon-website/docs/orchestration/packets/MAPLEMOON-LANE-F-REBUILD-20260815T213337.md": "7140856584e20c994b2aa7c7c3a8e3297038c46acf8b3bad59d520496a77147d",
+    "maplemoon-website/docs/orchestration/reviews/MAPLEMOON-SIX-LANE-ADMISSION-20260815T213337.json": null
+  },
+  "checks": [
+    {
+      "command": "test ! -e _wip/checkpoints/MAPLEMOON-SIX-LANE-ADMISSION-20260815T213337_20260815_213337_AEST",
+      "exit_code": 0,
+      "result": "CHECKPOINT_DESTINATION_ABSENT"
+    },
+    {
+      "command": "python3 -B scripts/check-maplemoon-receipt.py checkpoint --root /Users/handtomouse --packet docs/orchestration/packets/MAPLEMOON-SIX-LANE-ADMISSION-20260815T213337.md --destination /Users/handtomouse/maplemoon-website/_wip/checkpoints/MAPLEMOON-SIX-LANE-ADMISSION-20260815T213337_20260815_213337_AEST",
+      "exit_code": 0,
+      "result": "PASS checkpoint packet=MAPLEMOON-SIX-LANE-ADMISSION-20260815T213337 files=4 path=/Users/handtomouse/maplemoon-website/_wip/checkpoints/MAPLEMOON-SIX-LANE-ADMISSION-20260815T213337_20260815_213337_AEST"
+    },
+    {
+      "command": "python3 -B scripts/check-maplemoon-receipt.py verify --root /Users/handtomouse --packet docs/orchestration/packets/MAPLEMOON-SIX-LANE-ADMISSION-20260815T213337.md --checkpoint /Users/handtomouse/maplemoon-website/_wip/checkpoints/MAPLEMOON-SIX-LANE-ADMISSION-20260815T213337_20260815_213337_AEST --phase start",
+      "exit_code": 0,
+      "result": "PASS packet=MAPLEMOON-SIX-LANE-ADMISSION-20260815T213337 phase=start scope=4"
+    },
+    {
+      "command": "git show-ref --tags --verify refs/tags/pre-canva-68-20260815",
+      "exit_code": 0,
+      "result": "91f03623163b549ab45ef6adfb50631a8017a150 refs/tags/pre-canva-68-20260815"
+    },
+    {
+      "command": "jq held/reserved lock projection after exact manifest update",
+      "exit_code": 0,
+      "result": "PASS live_locks=6 all packet=MAPLEMOON-LANE-E-APPLY-20260815T213337 owner=/root/dedup_risk_audit; no Lane-F live lock"
+    },
+    {
+      "command": "six brief hashes, ALIGN, occurrence map and six WIP page hashes at acquisition",
+      "exit_code": 0,
+      "result": "PASS briefs=6/6 align=4f1151dbaa6fdd7314074c4f44a99e7fce3c8b1500ef0700b9e2509f76aaacf7 occurrence_map=88abbf6bf94c59ba31353e8ef3dc8e8dd3532d5bf32ee09c75a2b812eda671ff pages=6/6"
+    },
+    {
+      "command": "deterministic decision and sequence assertion",
+      "exit_code": 0,
+      "result": "PASS D01=six D02=not-applicable-withdrawn D03=200+ D04=B D05=B+existing-map D06=approve+matched-reexport R3-OAI=approved-unfired Frames01/43=colour-gated Frame55=HOLD; Wave1=CAT/A/B/C Wave2=E Wave3=F"
+    }
+  ],
+  "screenshots_or_urls": [],
+  "failures": [],
+  "unknowns": [
+    "The exact pseudonym mapping for Natasha, Janice and Acacia is not supplied; Lane E must not invent names.",
+    "Lane A has not yet returned the binary founder-smile result.",
+    "The WooCommerce authoritative export remains unavailable.",
+    "The matched no-upscale Pure and Spiced v4 re-export does not yet exist.",
+    "The approved one-call OpenAI price remains unknown and the target remains gated on Lane A."
+  ],
+  "residual_risk": [
+    "The main worktree intentionally retains pre-existing untracked files and one tracked Homepage modification; no cleanup, stash or commit is authorised.",
+    "Lane E must fail closed on any drift from its six acquisition hashes or held locks.",
+    "Lane F remains non-executable until Lane E releases overlapping locks and Lane A closes the founder-photo gate.",
+    "Frames 01 and 43 are not colour-approved, exported or wired; Frame 55 remains HOLD.",
+    "Production remains frozen on immutable token 7vjf2m50b."
+  ],
+  "forbidden_path_changes": [],
+  "proposed_next_state": "wave1_readonly_lanes_admitted_lane_e_locked_waiting_acquisition_lane_f_held",
+  "next_reviewer": "MapleMoon root Boss for literal gate replay and worker dispatch",
+  "ready_to_promote": true,
+  "promotion_boundary": "Admission and lock-state promotion only. No site build, image generation, Photoshop grade, deploy, Shopify action, Git action, production movement or client contact is authorised by this receipt."
+}

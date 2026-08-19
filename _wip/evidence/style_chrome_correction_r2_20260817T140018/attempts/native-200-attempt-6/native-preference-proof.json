@@ -1,0 +1,140 @@
+{
+  "detector_175_passed_as_200": false,
+  "detector_200_passed_as_200": true,
+  "forbidden_methods": [],
+  "profiles": [
+    {
+      "factor": 1.0,
+      "label": "100",
+      "level": 0.0,
+      "metrics": {
+        "bodyTextLength": 2765,
+        "browserBounds": {
+          "height": 900,
+          "left": 50,
+          "top": 50,
+          "width": 1200,
+          "windowState": "normal"
+        },
+        "clientWidth": 1200,
+        "devicePixelRatio": 2,
+        "innerHeight": 813,
+        "innerWidth": 1200,
+        "outerHeight": 900,
+        "outerWidth": 1200,
+        "pageScaleIndicators": {
+          "rootTransform": "none",
+          "rootTransformOrigin": "600px 2648.83px"
+        },
+        "readyState": "complete",
+        "rootComputedZoom": "1",
+        "rootInlineZoom": "",
+        "scrollWidth": 1200,
+        "url": "http://127.0.0.1:8804/homepage.html",
+        "visualViewport": {
+          "height": 813,
+          "offsetLeft": 0,
+          "offsetTop": 0,
+          "scale": 1,
+          "width": 1200
+        }
+      },
+      "pid": 50516,
+      "port": 9360,
+      "preference_initial_sha256": "0418430d7c2a6330b0449287dc2a49ec74a6f3ad56087d3654b1287bb233f925",
+      "preference_observed_after_launch": 0.0,
+      "profile": "/private/tmp/maplemoon-style-chrome-r2-native-100"
+    },
+    {
+      "factor": 1.7499999999999998,
+      "label": "175",
+      "level": 3.069389038663465,
+      "metrics": {
+        "bodyTextLength": 2620,
+        "browserBounds": {
+          "height": 900,
+          "left": 50,
+          "top": 50,
+          "width": 1200,
+          "windowState": "normal"
+        },
+        "clientWidth": 685,
+        "devicePixelRatio": 3.5,
+        "innerHeight": 464,
+        "innerWidth": 685,
+        "outerHeight": 900,
+        "outerWidth": 1200,
+        "pageScaleIndicators": {
+          "rootTransform": "none",
+          "rootTransformOrigin": "342.857px 3359.62px"
+        },
+        "readyState": "complete",
+        "rootComputedZoom": "1",
+        "rootInlineZoom": "",
+        "scrollWidth": 685,
+        "url": "http://127.0.0.1:8804/homepage.html",
+        "visualViewport": {
+          "height": 464.5714416503906,
+          "offsetLeft": 0,
+          "offsetTop": 0,
+          "scale": 1,
+          "width": 685.7142944335938
+        }
+      },
+      "pid": 50562,
+      "port": 9361,
+      "preference_initial_sha256": "e30a85e97f0ac18b0500e83766fbb2898485d64acb402ce1adabde9c7496187c",
+      "preference_observed_after_launch": 3.069389038663465,
+      "profile": "/private/tmp/maplemoon-style-chrome-r2-native-175"
+    },
+    {
+      "factor": 2.0,
+      "label": "200",
+      "level": 3.8017840169239308,
+      "metrics": {
+        "bodyTextLength": 2620,
+        "browserBounds": {
+          "height": 900,
+          "left": 50,
+          "top": 50,
+          "width": 1200,
+          "windowState": "normal"
+        },
+        "clientWidth": 600,
+        "devicePixelRatio": 4,
+        "innerHeight": 406,
+        "innerWidth": 600,
+        "outerHeight": 900,
+        "outerWidth": 1200,
+        "pageScaleIndicators": {
+          "rootTransform": "none",
+          "rootTransformOrigin": "300px 3337.67px"
+        },
+        "readyState": "complete",
+        "rootComputedZoom": "1",
+        "rootInlineZoom": "",
+        "scrollWidth": 600,
+        "url": "http://127.0.0.1:8804/homepage.html",
+        "visualViewport": {
+          "height": 406.5,
+          "offsetLeft": 0,
+          "offsetTop": 0,
+          "scale": 1,
+          "width": 600
+        }
+      },
+      "pid": 50616,
+      "port": 9362,
+      "preference_initial_sha256": "a7415902a34f468696e0595c6af4a266cd981e7d8afda724cff95b062dfc215c",
+      "preference_observed_after_launch": 3.8017840169239308,
+      "profile": "/private/tmp/maplemoon-style-chrome-r2-native-200"
+    }
+  ],
+  "ratios": {
+    "dpr_175": 1.75,
+    "dpr_200": 2.0,
+    "width_175": 1.7518248175182483,
+    "width_200": 2.0
+  },
+  "verdict": "PASS"
+}

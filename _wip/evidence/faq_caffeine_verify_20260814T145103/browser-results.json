@@ -1,0 +1,333 @@
+{
+  "generatedAt": "2026-08-14T04:54:33.873Z",
+  "expectedQuestion": "Does carob contain caffeine?",
+  "expectedAnswer": "Carob itself is naturally caffeine-free. Its mellow, naturally sweet flavour works beautifully in bars, baking and warm drinks. Maple Moon recipes vary, so please check the individual product label for the full ingredient list.",
+  "routeResults": [
+    {
+      "path": "/homepage.html",
+      "status": 200,
+      "bytes": 209295,
+      "sha256": "27921b2a466ccb670b2851a73043429763d3423bcaf651069e4e860dc01a78b1"
+    },
+    {
+      "path": "/our-story.html",
+      "status": 200,
+      "bytes": 90572,
+      "sha256": "2db31868a9791f373f156e7cdeb8261e494d1d47e9418a94c28156e213df7711"
+    },
+    {
+      "path": "/carob-story.html",
+      "status": 200,
+      "bytes": 62273,
+      "sha256": "4fd9ad0fabb9d60d0f391925f5a382ccfc8f705b60fca1c681f403a5cd9734bd"
+    },
+    {
+      "path": "/shop.html",
+      "status": 200,
+      "bytes": 82545,
+      "sha256": "f111ad5123e34dadd46ac497fca286066efc67c05dd7e68f0d3e70c97c735038"
+    },
+    {
+      "path": "/faq.html",
+      "status": 200,
+      "bytes": 42132,
+      "sha256": "c5ce7aaf0b9b3221f34eb2928fc2ff6732fc1a915ea80144a4ade2b94011fb6e"
+    },
+    {
+      "path": "/stockists.html",
+      "status": 200,
+      "bytes": 119551,
+      "sha256": "4821adfe88680d4f174b7a8700c8d8a65594df2901bf3a7109d51b09040cb887"
+    },
+    {
+      "path": "/pure-carob-bar.html",
+      "status": 200,
+      "bytes": 25507,
+      "sha256": "015cde27ecc60f3c444820a551c39f6e9c985fc5b2e59bdaea5f496c1c236b65"
+    }
+  ],
+  "assetResults": [
+    {
+      "path": "/a11y_inner.css?v=20260723",
+      "status": 200,
+      "bytes": 1714,
+      "sha256": "7ea80be7443dd178360aca4e8b511627aeca156e3ff46cc903a7529c75d999b0"
+    },
+    {
+      "path": "/brand_kit.css",
+      "status": 200,
+      "bytes": 10754,
+      "sha256": "53043df665ab3bc696b3d925f5ed108912cdc50330def58f92d2e7c2adbbbbe3"
+    },
+    {
+      "path": "/design_refinement_20260723.css",
+      "status": 200,
+      "bytes": 4304,
+      "sha256": "90de7de62efb16b0fe10da4dfea5b1ab2889a01cc2ac4a895127466a68803df2"
+    },
+    {
+      "path": "/mock-cart.css",
+      "status": 200,
+      "bytes": 13040,
+      "sha256": "0ebf64caa50e0650778e3bbb84718d0bb9dd716531c02fbd4ee01c9c5cf1df7c"
+    },
+    {
+      "path": "/mock-cart.js",
+      "status": 200,
+      "bytes": 33609,
+      "sha256": "5eea3ac3c707964f878b5221c0f001902dc4f6c84d56457fac1455a4e1844816"
+    },
+    {
+      "path": "/assets/design-system/mm-tokens.css",
+      "status": 200,
+      "bytes": 3073,
+      "sha256": "cab9a32ee62a5a51d9297ab0320e666c1081a7a81c8c83a3bc48d1f1d2341908"
+    },
+    {
+      "path": "/assets/design-system/mm-primitives.css",
+      "status": 200,
+      "bytes": 9006,
+      "sha256": "3108718d5109a28a6221a2eca56fcf5138195f8c020e0d64983b1be1afb839c7"
+    },
+    {
+      "path": "/assets/design-system/mm-chrome.css",
+      "status": 200,
+      "bytes": 5871,
+      "sha256": "38ae8acbbdd30ebdfbe633ab1f042549fd2573c7e458e946cc2c53596b32349a"
+    },
+    {
+      "path": "/assets/design-system/mm-chrome.js",
+      "status": 200,
+      "bytes": 5025,
+      "sha256": "cc72e22a121cbdb1ec695d181219ca696b0e020f82fedc243e1f407154c1316c"
+    },
+    {
+      "path": "/assets/mm_wordmark_blk.svg",
+      "status": 200,
+      "bytes": 7737,
+      "sha256": "5e1be42597c334fd33194477aa6b7c3527206d2f858fc2e9414a4d9d29e7fdcc"
+    },
+    {
+      "path": "/assets/mm_logo_icon_blk.svg",
+      "status": 200,
+      "bytes": 3988,
+      "sha256": "aaffe3fbc7f38fb73f04e09d8b248e9c12184f79308dd17139ede6f26540a988"
+    },
+    {
+      "path": "/assets/faq_hero_ritual.webp",
+      "status": 200,
+      "bytes": 20944,
+      "sha256": "8ed28003e9ae922f2ce0d7911f7899656296c1a791aaf08714f256784a35dc1e"
+    }
+  ],
+  "bogusResults": [
+    {
+      "path": "/zzq-faq-caffeine-not-real-145103",
+      "status": 404,
+      "bytes": 460,
+      "sha256": "b47a55e09e9d3af62b1d6a73975ca7f455b4a76cf3d39e552fef398a7bdba7a9",
+      "differsFromFaq": true
+    },
+    {
+      "path": "/zzq-faq-caffeine-not-real-145103.html",
+      "status": 404,
+      "bytes": 460,
+      "sha256": "b47a55e09e9d3af62b1d6a73975ca7f455b4a76cf3d39e552fef398a7bdba7a9",
+      "differsFromFaq": true
+    }
+  ],
+  "viewportResults": [
+    {
+      "width": 390,
+      "http": 200,
+      "errors": [],
+      "failedRequests": [],
+      "metrics": {
+        "clientWidth": 390,
+        "scrollWidth": 390,
+        "innerWidth": 390,
+        "bodyScrollWidth": 390,
+        "questionText": "Does carob contain caffeine?",
+        "answerText": "Carob itself is naturally caffeine-free. Its mellow, naturally sweet flavour works beautifully in bars, baking and warm drinks. Maple Moon recipes vary, so please check the individual product label for the full ingredient list.",
+        "questionMatches": true,
+        "answerMatches": true,
+        "expanded": "true",
+        "answerHidden": false,
+        "article": {
+          "left": 16,
+          "right": 374,
+          "top": 0.25,
+          "bottom": 218.578125,
+          "width": 358,
+          "height": 218.328125
+        },
+        "button": {
+          "left": 27,
+          "right": 366,
+          "top": 1.25,
+          "bottom": 71.25,
+          "width": 339,
+          "height": 70
+        },
+        "answer": {
+          "left": 27,
+          "right": 366,
+          "top": 71.25,
+          "bottom": 218.578125,
+          "width": 339,
+          "height": 147.328125,
+          "scrollWidth": 339,
+          "clientWidth": 339,
+          "scrollHeight": 147,
+          "clientHeight": 147
+        },
+        "brokenImages": [],
+        "images": [
+          {
+            "src": "/assets/mm_wordmark_blk.svg",
+            "complete": true,
+            "naturalWidth": 300,
+            "naturalHeight": 57
+          }
+        ]
+      },
+      "drawer": {
+        "bodyOpen": true,
+        "expanded": "true",
+        "clientWidth": 390,
+        "scrollWidth": 390,
+        "primary": {
+          "display": "grid",
+          "left": 0,
+          "right": 390,
+          "width": 390
+        },
+        "utility": {
+          "display": "grid",
+          "left": 0,
+          "right": 390,
+          "width": 390
+        },
+        "rows": [
+          {
+            "text": "Shop",
+            "height": 44,
+            "left": 1,
+            "right": 389,
+            "hitTag": "A",
+            "hitSelf": true
+          },
+          {
+            "text": "Our Story",
+            "height": 44,
+            "left": 1,
+            "right": 389,
+            "hitTag": "A",
+            "hitSelf": true
+          },
+          {
+            "text": "What is Carob",
+            "height": 44,
+            "left": 1,
+            "right": 389,
+            "hitTag": "A",
+            "hitSelf": true
+          },
+          {
+            "text": "Stockists",
+            "height": 44,
+            "left": 1,
+            "right": 389,
+            "hitTag": "A",
+            "hitSelf": true
+          },
+          {
+            "text": "AUD $",
+            "height": 44,
+            "left": 1,
+            "right": 389,
+            "hitTag": "SPAN",
+            "hitSelf": true
+          },
+          {
+            "text": "FAQ",
+            "height": 44,
+            "left": 1,
+            "right": 389,
+            "hitTag": "A",
+            "hitSelf": true
+          }
+        ],
+        "rowCountSix": true,
+        "allRows44": true,
+        "allRowsHit": true,
+        "fullWidth": true
+      },
+      "pass": true
+    },
+    {
+      "width": 1440,
+      "http": 200,
+      "errors": [],
+      "failedRequests": [],
+      "metrics": {
+        "clientWidth": 1440,
+        "scrollWidth": 1440,
+        "innerWidth": 1440,
+        "bodyScrollWidth": 1440,
+        "questionText": "Does carob contain caffeine?",
+        "answerText": "Carob itself is naturally caffeine-free. Its mellow, naturally sweet flavour works beautifully in bars, baking and warm drinks. Maple Moon recipes vary, so please check the individual product label for the full ingredient list.",
+        "questionMatches": true,
+        "answerMatches": true,
+        "expanded": "true",
+        "answerHidden": false,
+        "article": {
+          "left": 462,
+          "right": 1320,
+          "top": -0.203125,
+          "bottom": 179.828125,
+          "width": 858,
+          "height": 180.03125
+        },
+        "button": {
+          "left": 480,
+          "right": 1305,
+          "top": 0.796875,
+          "bottom": 76.796875,
+          "width": 825,
+          "height": 76
+        },
+        "answer": {
+          "left": 480,
+          "right": 1305,
+          "top": 76.796875,
+          "bottom": 179.828125,
+          "width": 825,
+          "height": 103.03125,
+          "scrollWidth": 825,
+          "clientWidth": 825,
+          "scrollHeight": 103,
+          "clientHeight": 103
+        },
+        "brokenImages": [],
+        "images": [
+          {
+            "src": "/assets/mm_wordmark_blk.svg",
+            "complete": true,
+            "naturalWidth": 300,
+            "naturalHeight": 57
+          }
+        ]
+      },
+      "drawer": null,
+      "pass": true
+    }
+  ],
+  "checks": {
+    "routesPass": true,
+    "assetsPass": true,
+    "bogusPass": true,
+    "viewportsPass": true
+  },
+  "allPass": true
+}

@@ -1,0 +1,6 @@
+{
+  "outcome": "VERIFIER_ONLY_FAILURE",
+  "raw": "STATIC_SCOPE_SCAN routes=7/7 positive_control=FAIL",
+  "reason": "The first positive control expected a data-mm-cart-trigger attribute, but the current candidate integrates the cart through mock-cart asset includes and route-specific button classes.",
+  "correction": "Positive control now checks the exact mock-cart include seam on Homepage and Pure. All route scans and authority-sensitive occurrence assertions remain unchanged."
+}

@@ -1,0 +1,1537 @@
+{
+  "candidateRoot": "/private/tmp/maplemoon-pdp-route-repair-20260816",
+  "routeCount": 7,
+  "positiveControl": "PASS",
+  "pages": {
+    "homepage": {
+      "file": "/private/tmp/maplemoon-pdp-route-repair-20260816/homepage.html",
+      "bytes": 190815,
+      "sha256": "9495d2eee0d81cbc8f86749df36b8f6532a9603c40638ffc728e55aae857cb89",
+      "scans": {
+        "numericStockist": [
+          {
+            "line": 955,
+            "matches": [
+              "200+"
+            ],
+            "text": "<section class=\"wrap mm-stockists\" id=\"stockists\" aria-labelledby=\"stockists-title\"><span class=\"qkick\">Stockists</span><h2 id=\"stockists-title\" class=\"lux-hd\">200+ stockists across Australia</h2><p>Browse the directory while individual store details continue through final verification.</p><div class=\"mm-stock-controls\"><input type=\"search\" placeholder=\"Search suburb or postcode\" aria-label=\"Search suburb or postcode\" disabled><button type=\"button\" disabled>List</button><button type=\"button\" dis"
+          },
+          {
+            "line": 997,
+            "matches": [
+              "200+"
+            ],
+            "text": "<a class=\"wf-ti\" href=\"/stockists\"><svg viewBox=\"0 0 24 24\"><path d=\"M12 21s-7-4.5-7-10a7 7 0 0 1 14 0c0 5.5-7 10-7 10z\"/><circle cx=\"12\" cy=\"11\" r=\"2.5\"/></svg><div><strong>Stockists</strong><span>200+ locations across Australia</span></div></a>"
+          }
+        ],
+        "internalReview": [],
+        "commerce": [
+          {
+            "line": 97,
+            "matches": [
+              "cart"
+            ],
+            "text": ".wf-pcart{display:inline-flex;align-items:center;justify-content:center;width:44px;height:44px;border:1px solid var(--cream-faint);border-radius:50%;position:relative;background:transparent;cursor:pointer;padding:0;}"
+          },
+          {
+            "line": 98,
+            "matches": [
+              "cart"
+            ],
+            "text": ".wf-pcart svg{width:15px;height:15px;stroke:var(--cream);fill:none;stroke-width:1.4;}"
+          },
+          {
+            "line": 99,
+            "matches": [
+              "cart"
+            ],
+            "text": ".wf-pcart b{position:absolute;top:-4px;right:-4px;width:15px;height:15px;border-radius:50%;background:var(--cream);color:#16181f;font-size:.55rem;display:grid;place-items:center;}"
+          },
+          {
+            "line": 659,
+            "matches": [
+              "mock-cart"
+            ],
+            "text": "<link rel=\"stylesheet\" href=\"/mock-cart.css\">"
+          },
+          {
+            "line": 766,
+            "matches": [
+              "cart",
+              "Cart",
+              "cart"
+            ],
+            "text": "<button class=\"wf-pcart mm-icon-control\" type=\"button\" aria-label=\"Cart, 0 items\" data-mm-cart-toggle><svg viewBox=\"0 0 24 24\"><path d=\"M6 8h12l-1 12H7L6 8z\"/><path d=\"M9 8a3 3 0 0 1 6 0\"/></svg><b>0</b></button></div>"
+          },
+          {
+            "line": 996,
+            "matches": [
+              "Checkout"
+            ],
+            "text": "<div class=\"wf-ti\"><svg viewBox=\"0 0 24 24\"><rect x=\"5\" y=\"11\" width=\"14\" height=\"9\" rx=\"1.5\"/><path d=\"M8 11V8a4 4 0 0 1 8 0v3\"/></svg><div><strong>Checkout</strong><span>Final payment details pending</span></div></div>"
+          },
+          {
+            "line": 3243,
+            "matches": [
+              "mock-cart"
+            ],
+            "text": "<script src=\"/mock-cart.js\"></script>"
+          }
+        ],
+        "collectionForm": [
+          {
+            "line": 33,
+            "matches": [
+              "newsletter"
+            ],
+            "text": "--sp-xs:calc(24px * var(--rhythm));   /* tight — newsletter, footer */"
+          },
+          {
+            "line": 1004,
+            "matches": [
+              "<form",
+              "newsletter"
+            ],
+            "text": "<form onsubmit=\"return false;\" aria-describedby=\"home-newsletter-demo-note\">"
+          },
+          {
+            "line": 1008,
+            "matches": [
+              "newsletter",
+              "collect or submit email"
+            ],
+            "text": "<span id=\"home-newsletter-demo-note\">Demo only. This form does not collect or submit email addresses.</span>"
+          }
+        ],
+        "authoritySensitiveClaim": [
+          {
+            "line": 12,
+            "matches": [
+              "Australian Organic"
+            ],
+            "text": "<title>Maple Moon: Australian Organic Carob</title>"
+          },
+          {
+            "line": 13,
+            "matches": [
+              "Australian organic",
+              "Vegan",
+              "gluten free",
+              "caffeine"
+            ],
+            "text": "<meta name=\"description\" content=\"Australian organic carob bars, moons, bites and elixirs. Vegan, gluten free, caffeine free. Slow-made on the far north coast of NSW.\">"
+          },
+          {
+            "line": 602,
+            "matches": [
+              "Australian Organic"
+            ],
+            "text": "<meta property=\"og:title\" content=\"Maple Moon: Australian Organic Carob\">"
+          },
+          {
+            "line": 603,
+            "matches": [
+              "Australian organic",
+              "Naturally sweet",
+              "caffeine",
+              "vegan"
+            ],
+            "text": "<meta property=\"og:description\" content=\"Carob bars, moons, bites and elixirs made from Australian organic carob. Naturally sweet, caffeine free, 100% vegan. Slow-made on the far north coast of NSW.\">"
+          },
+          {
+            "line": 608,
+            "matches": [
+              "Australian Organic"
+            ],
+            "text": "<meta name=\"twitter:title\" content=\"Maple Moon: Australian Organic Carob\">"
+          },
+          {
+            "line": 609,
+            "matches": [
+              "Australian organic",
+              "Naturally sweet",
+              "caffeine",
+              "vegan"
+            ],
+            "text": "<meta name=\"twitter:description\" content=\"Carob bars, moons, bites and elixirs made from Australian organic carob. Naturally sweet, caffeine free, 100% vegan. Slow-made on the far north coast of NSW.\">"
+          },
+          {
+            "line": 624,
+            "matches": [
+              "Australian organic",
+              "Vegan",
+              "gluten free",
+              "caffeine"
+            ],
+            "text": "\"description\": \"Maple Moon makes Australian organic carob bars, moons, bites and elixirs. Vegan, gluten free, caffeine free. Far north coast of NSW.\","
+          },
+          {
+            "line": 643,
+            "matches": [
+              "Australian organic",
+              "Vegan",
+              "gluten free",
+              "caffeine"
+            ],
+            "text": "\"description\": \"Australian organic carob bars, moons, bites and elixirs. Vegan, gluten free, caffeine free.\","
+          },
+          {
+            "line": 771,
+            "matches": [
+              "Australian organic"
+            ],
+            "text": "<p class=\"wf-peyebrow\">Australian organic carob</p>"
+          },
+          {
+            "line": 773,
+            "matches": [
+              "Naturally Sweet",
+              "Nothing Added"
+            ],
+            "text": "<p class=\"wf-ptag\">Naturally Sweet, Nothing Added.</p>"
+          },
+          {
+            "line": 774,
+            "matches": [
+              "No Caffeine",
+              "Vegan"
+            ],
+            "text": "<div class=\"wf-pcreds\"><span>No Caffeine</span><span>Organic Ingredients</span><span>Vegan Friendly</span></div>"
+          },
+          {
+            "line": 798,
+            "matches": [
+              "naturally sweet"
+            ],
+            "text": "<p class=\"d\" id=\"pdpDesc\">Deep, smooth and naturally sweet. Made with just real ingredients.</p>"
+          },
+          {
+            "line": 823,
+            "matches": [
+              "naturally sweet"
+            ],
+            "text": "<div class=\"wf-line-head\" hidden aria-hidden=\"true\"><p id=\"rangeCopy\">Carob Bars: Smooth, naturally sweet bites for calm cravings.</p></div>"
+          },
+          {
+            "line": 834,
+            "matches": [
+              "naturally sweet",
+              "caffeine"
+            ],
+            "text": "<p class=\"bodyc\" style=\"color:#57534b;font-size:1.05rem;max-width:40ch;line-height:1.7;margin:0 0 24px;\">Carob is a naturally sweet pod that grows in the warm Australian sun. Naturally caffeine free and high in fibre. Sourced from the Australian Carob Co. in South Australia, roasted and finely ground there before reaching the kitchen.</p>"
+          },
+          {
+            "line": 837,
+            "matches": [
+              "Naturally sweet"
+            ],
+            "text": "<span><svg viewBox=\"0 0 24 24\"><circle cx=\"12\" cy=\"12\" r=\"4\"/><line x1=\"12\" y1=\"3\" x2=\"12\" y2=\"5\"/><line x1=\"12\" y1=\"19\" x2=\"12\" y2=\"21\"/><line x1=\"3\" y1=\"12\" x2=\"5\" y2=\"12\"/><line x1=\"19\" y1=\"12\" x2=\"21\" y2=\"12\"/><line x1=\"5.5\" y1=\"5.5\" x2=\"7\" y2=\"7\"/><line x1=\"17\" y1=\"17\" x2=\"18.5\" y2=\"18.5\"/></svg>Naturally sweet</span>"
+          },
+          {
+            "line": 838,
+            "matches": [
+              "Caffeine"
+            ],
+            "text": "<span><svg viewBox=\"0 0 24 24\"><path d=\"M4 14c6-1 10-5 16-10-2 7-5 12-12 13-2 .3-4-1-4-3z\"/></svg>Caffeine free</span>"
+          },
+          {
+            "line": 843,
+            "matches": [
+              "naturally sweet"
+            ],
+            "text": "<div class=\"co flip\" data-carob-callout=\"central-pod-cluster\" style=\"right:clamp(460px,38vw,610px);top:56%\"><span class=\"dot\"></span><span class=\"line\"></span><div class=\"lab\"><div class=\"top\"><svg viewBox=\"0 0 24 24\"><circle cx=\"12\" cy=\"12\" r=\"4\"/><line x1=\"12\" y1=\"3\" x2=\"12\" y2=\"5\"/><line x1=\"12\" y1=\"19\" x2=\"12\" y2=\"21\"/><line x1=\"3\" y1=\"12\" x2=\"5\" y2=\"12\"/><line x1=\"19\" y1=\"12\" x2=\"21\" y2=\"12\"/></svg><span class=\"t\">The pod</span><span class=\"n\">01</span></div><span class=\"d\">Sun-ripened, nat"
+          },
+          {
+            "line": 844,
+            "matches": [
+              "Caffeine",
+              "caffeine"
+            ],
+            "text": "<div class=\"co flip\" data-carob-callout=\"right-pod-cluster\" style=\"right:clamp(112px,9vw,168px);top:29%\"><span class=\"dot\"></span><span class=\"line\"></span><div class=\"lab\"><div class=\"top\"><svg viewBox=\"0 0 24 24\"><path d=\"M4 14c6-1 10-5 16-10-2 7-5 12-12 13-2 .3-4-1-4-3z\"/></svg><span class=\"t\">Caffeine free</span><span class=\"n\">02</span></div><span class=\"d\">Naturally caffeine free.</span></div></div>"
+          },
+          {
+            "line": 873,
+            "matches": [
+              "Caffeine",
+              "caffeine"
+            ],
+            "text": "<div><b>Caffeine</b><p>Contains caffeine and theobromine</p></div>"
+          },
+          {
+            "line": 895,
+            "matches": [
+              "Caffeine",
+              "caffeine"
+            ],
+            "text": "<div><b>Caffeine</b><p>Naturally caffeine free, any hour you like</p></div>"
+          },
+          {
+            "line": 900,
+            "matches": [
+              "Stimulant"
+            ],
+            "text": "<div><b>Moment</b><p>Stimulant free, making it perfect for arvos and slow evenings</p></div>"
+          },
+          {
+            "line": 917,
+            "matches": [
+              "sugar crash"
+            ],
+            "text": "<p class=\"q-when-lead\">A small pause after dinner, A quiet reset in the afternoon, A warm elixir to satisfy your cravings without the sugar crash.</p>"
+          },
+          {
+            "line": 921,
+            "matches": [
+              "stimulant"
+            ],
+            "text": "<div class=\"tx\"><span class=\"mo\">01</span><strong>A quiet finish</strong><span>A sweet ending without the stimulants</span></div></div>"
+          },
+          {
+            "line": 937,
+            "matches": [
+              "naturally sweet"
+            ],
+            "text": "<p style=\"color:#57534b;font-size:1.05rem;max-width:40ch;line-height:1.7;margin:0 0 24px;\">Discover the thinking behind Maple Moon: naturally sweet carob, quieter evenings, and small rituals made with care.</p>"
+          },
+          {
+            "line": 958,
+            "matches": [
+              "gluten free"
+            ],
+            "text": "<section class=\"wrap mm-reviews\" id=\"reviews\" aria-labelledby=\"reviews-title\"><span class=\"qkick\">Reviews · consent pending</span><h2 id=\"reviews-title\" class=\"lux-hd\">Customer reviews</h2><p>Real experiences, shared with care. These WIP quotes remain noindexed until Carli confirms consent.</p><div class=\"mm-review-grid\"><div>“<br><span>With a huge reaction to high histamine food + being dairy &amp; gluten free, your two carob bars (almond/mint) are life saving for me!”<br><b>Maple Moon customer"
+          },
+          {
+            "line": 1026,
+            "matches": [
+              "naturally sweet"
+            ],
+            "text": "bars:'Carob Bars: Smooth, naturally sweet bites for calm cravings.',"
+          },
+          {
+            "line": 1034,
+            "matches": [
+              "naturally sweet",
+              "No caffeine"
+            ],
+            "text": "{n:'Coconut & Goji',img:'bar_goji_coconut',d:'Shredded coconut and goji berries through naturally sweet carob.',size:'(90g)',notes:[['Texture','Soft chew'],['Sweetness','Fruit lift'],['Finish','Coconut carob'],['Proof','No caffeine']]},"
+          },
+          {
+            "line": 1035,
+            "matches": [
+              "naturally sweet",
+              "Naturally sweet",
+              "No caffeine"
+            ],
+            "text": "{n:'Cayenne Chilli',img:'bar_cayenne',d:'Rich, naturally sweet carob with a gentle hint of cayenne and a touch of Celtic sea salt for the perfect balance of sweet and spice.',size:'(90g)',notes:[['Texture','Smooth melt'],['Sweetness','Naturally sweet'],['Finish','Slow warmth'],['Proof','No caffeine']]},"
+          },
+          {
+            "line": 1036,
+            "matches": [
+              "naturally sweet",
+              "guilt-free",
+              "Naturally sweet",
+              "No caffeine"
+            ],
+            "text": "{n:'Pure Carob & Cacao Butter',img:'bar_pure_carob',d:'Crafted from only two wholefood ingredients for simple, naturally sweet, guilt-free perfection.',size:'(90g)',url:'/products/pure-carob-bar',sel:true,notes:[['Texture','Smooth melt'],['Sweetness','Naturally sweet'],['Finish','Buttery carob'],['Proof','No caffeine']]},"
+          },
+          {
+            "line": 1037,
+            "matches": [
+              "Naturally sweet",
+              "No caffeine"
+            ],
+            "text": "{n:'Almond & Celtic Salt',img:'bar_almond',d:'The perfect harmony of crunchy whole roasted almonds, natural sweetness and a touch of saltiness.',size:'(90g)',notes:[['Texture','Toasted crunch'],['Sweetness','Naturally sweet'],['Finish','Salted almond'],['Proof','No caffeine']]},"
+          },
+          {
+            "line": 1038,
+            "matches": [
+              "Naturally sweet",
+              "No caffeine"
+            ],
+            "text": "{n:'Peppermint & Buckwheat',img:'bar_peppermint',d:'Refreshing premium peppermint meets the satisfying crunch of activated buckwheat.',size:'(90g)',notes:[['Texture','Crisp melt'],['Sweetness','Naturally sweet'],['Finish','Cool mint'],['Proof','No caffeine']]},"
+          },
+          {
+            "line": 1039,
+            "matches": [
+              "Naturally sweet",
+              "No caffeine"
+            ],
+            "text": "{n:'Roasted Hazelnut',img:'bar_hazelnut',d:'Whole roasted hazelnuts deliver an irresistibly indulgent, crunchy carob experience.',size:'(90g)',notes:[['Texture','Nutty melt'],['Sweetness','Naturally sweet'],['Finish','Roasted hazelnut'],['Proof','No caffeine']]}"
+          },
+          {
+            "line": 1050,
+            "matches": [
+              "naturally sweet",
+              "caffeine"
+            ],
+            "text": "{n:'Pure Carob Elixir',img:'elixir_plain',d:'A warm carob drink with only two ingredients, naturally sweet and caffeine free.',size:'(150g)',sel:true},"
+          },
+          {
+            "line": 1051,
+            "matches": [
+              "Naturally sweet",
+              "Caffeine"
+            ],
+            "text": "{n:'Spiced Carob Elixir',img:'elixir_spiced',d:'A warm carob drink with an Ayurvedic inspired spice blend',size:'(150g)',notes:[['Texture','Silky drink'],['Sweetness','Naturally sweet'],['Finish','Gentle spice'],['Proof','Caffeine free']]}"
+          },
+          {
+            "line": 1094,
+            "matches": [
+              "Naturally sweet",
+              "No caffeine"
+            ],
+            "text": "bars:[['Texture','Smooth melt'],['Sweetness','Naturally sweet'],['Finish','Buttery carob'],['Proof','No caffeine']],"
+          },
+          {
+            "line": 1096,
+            "matches": [
+              "Naturally sweet",
+              "Caffeine"
+            ],
+            "text": "elixirs:[['Texture','Silky drink'],['Sweetness','Naturally sweet'],['Finish','Mellow roast'],['Proof','Caffeine free']],"
+          },
+          {
+            "line": 1130,
+            "matches": [
+              "Naturally sweet"
+            ],
+            "text": "var rows=state.priced?['Shop page pricing',size,'Naturally sweet',state.label||'Available now']:['Enquire for details'];"
+          }
+        ]
+      },
+      "literalCounts": {
+        "forms": 1,
+        "mailto": 3,
+        "cartTriggers": 0,
+        "mockCartIncludes": 2,
+        "founderPlaceholders": 0,
+        "stockist200Plus": 2
+      }
+    },
+    "shop": {
+      "file": "/private/tmp/maplemoon-pdp-route-repair-20260816/shop.html",
+      "bytes": 50564,
+      "sha256": "a0c5c03c2aaf2b21307995a7b33843c5ffa0d5785ddf4a6dea252f40b8ab208a",
+      "scans": {
+        "numericStockist": [],
+        "internalReview": [],
+        "commerce": [
+          {
+            "line": 41,
+            "matches": [
+              "cart"
+            ],
+            "text": ".sp-cart{display:inline-flex;align-items:center;justify-content:center;width:32px;height:32px;border:1px solid var(--line);border-radius:50%;position:relative;}"
+          },
+          {
+            "line": 42,
+            "matches": [
+              "cart"
+            ],
+            "text": ".sp-cart svg{width:15px;height:15px;stroke:var(--ink);fill:none;stroke-width:1.4;}"
+          },
+          {
+            "line": 43,
+            "matches": [
+              "cart"
+            ],
+            "text": ".sp-cart b{position:absolute;top:-4px;right:-4px;width:15px;height:15px;border-radius:50%;background:var(--ink);color:var(--cream);font-size:.55rem;display:grid;place-items:center;}"
+          },
+          {
+            "line": 229,
+            "matches": [
+              "cart",
+              "cart",
+              "Cart",
+              "cart"
+            ],
+            "text": "<button class=\"sp-cart\" data-cart-toggle type=\"button\" aria-label=\"Cart, 0 items, subtotal $0.00\"><svg viewBox=\"0 0 24 24\"><path d=\"M6 8h12l-1 12H7L6 8z\"/><path d=\"M9 8a3 3 0 0 1 6 0\"/></svg><b data-cart-count>0</b></button></nav>"
+          },
+          {
+            "line": 281,
+            "matches": [
+              "Add to cart"
+            ],
+            "text": "<span><b>Add to cart</b> keeps a local subtotal while you browse.</span>"
+          },
+          {
+            "line": 284,
+            "matches": [
+              "cart",
+              "cart",
+              "cart",
+              "Cart"
+            ],
+            "text": "<p class=\"cart-summary\" id=\"cart-summary\" data-cart-subtotal role=\"status\" aria-live=\"polite\"><span>Cart subtotal</span><strong>$0.00</strong><small>0 items</small></p>"
+          },
+          {
+            "line": 410,
+            "matches": [
+              "data-add-to-cart",
+              "cart",
+              "Add to cart"
+            ],
+            "text": "var action=priced?'<button class=\"add\" data-add-to-cart type=\"button\" aria-label=\"Add '+cleanName+' to cart\">Add to cart</button>':'<a class=\"add\" aria-label=\"Enquire about '+cleanName+'\" href=\"mailto:info@maplemoon.com.au?subject=Enquiry%20about%20'+encodeURIComponent(p.n)+'\">Enquire</a>';"
+          },
+          {
+            "line": 423,
+            "matches": [
+              "cart"
+            ],
+            "text": "var cart={items:0,subtotal:0};"
+          },
+          {
+            "line": 424,
+            "matches": [
+              "cart",
+              "cart"
+            ],
+            "text": "var cartSummary=document.querySelector('[data-cart-subtotal]');"
+          },
+          {
+            "line": 425,
+            "matches": [
+              "cart",
+              "cart"
+            ],
+            "text": "var cartCount=document.querySelector('[data-cart-count]');"
+          },
+          {
+            "line": 426,
+            "matches": [
+              "cart",
+              "cart"
+            ],
+            "text": "var cartToggle=document.querySelector('[data-cart-toggle]');"
+          },
+          {
+            "line": 427,
+            "matches": [
+              "Cart"
+            ],
+            "text": "function renderCart(){"
+          },
+          {
+            "line": 428,
+            "matches": [
+              "cart"
+            ],
+            "text": "var itemLabel=cart.items===1?'item':'items';"
+          },
+          {
+            "line": 429,
+            "matches": [
+              "cart",
+              "cart",
+              "cart",
+              "cart",
+              "cart"
+            ],
+            "text": "if(cartSummary){cartSummary.querySelector('strong').textContent=money(cart.subtotal);cartSummary.querySelector('small').textContent=cart.items+' '+itemLabel;}"
+          },
+          {
+            "line": 430,
+            "matches": [
+              "cart",
+              "cart",
+              "cart"
+            ],
+            "text": "if(cartCount)cartCount.textContent=String(cart.items);"
+          },
+          {
+            "line": 431,
+            "matches": [
+              "cart",
+              "cart",
+              "Cart",
+              "cart",
+              "cart"
+            ],
+            "text": "if(cartToggle)cartToggle.setAttribute('aria-label','Cart, '+cart.items+' '+itemLabel+', subtotal '+money(cart.subtotal));"
+          },
+          {
+            "line": 440,
+            "matches": [
+              "data-add-to-cart"
+            ],
+            "text": "var add=event.target.closest('[data-add-to-cart]');if(!add)return;"
+          },
+          {
+            "line": 442,
+            "matches": [
+              "cart",
+              "cart",
+              "Cart"
+            ],
+            "text": "cart.items+=Number(card.dataset.unitQuantity)||1;cart.subtotal+=Number(card.dataset.unitPrice)||0;renderCart();"
+          },
+          {
+            "line": 444,
+            "matches": [
+              "cart",
+              "cart",
+              "cart"
+            ],
+            "text": "if(cartToggle)cartToggle.addEventListener('click',function(){var summary=document.getElementById('cart-summary');if(summary)summary.scrollIntoView({behavior:'smooth',block:'center'});});"
+          },
+          {
+            "line": 445,
+            "matches": [
+              "Cart"
+            ],
+            "text": "renderCart();"
+          },
+          {
+            "line": 526,
+            "matches": [
+              "cart"
+            ],
+            "text": ".sp-tools{display:grid;grid-template-columns:minmax(0,1fr) minmax(170px,220px) auto;grid-template-areas:\"heading heading heading\" \"flavour sort view\" \"guide guide cart\" \"status status status\";gap:14px;align-items:center;margin:12px auto 10px;padding:16px 18px;border:1px solid rgba(69,119,152,.14);border-radius:8px;background:rgba(251,250,247,.68);box-shadow:0 8px 18px rgba(41,57,64,.045);}"
+          },
+          {
+            "line": 545,
+            "matches": [
+              "cart",
+              "cart"
+            ],
+            "text": ".cart-summary{grid-area:cart;display:grid;grid-template-columns:auto auto;justify-content:end;align-items:baseline;gap:0 8px;margin:0;padding:9px 0 9px 14px;border-left:1px solid rgba(69,119,152,.18);color:var(--ink-soft);font-size:.63rem;letter-spacing:.1em;text-transform:uppercase;}"
+          },
+          {
+            "line": 546,
+            "matches": [
+              "cart"
+            ],
+            "text": ".cart-summary strong{color:var(--ink);font:500 1rem/1 var(--mm-serif);letter-spacing:0;text-transform:none;}"
+          },
+          {
+            "line": 547,
+            "matches": [
+              "cart"
+            ],
+            "text": ".cart-summary small{grid-column:1/-1;justify-self:end;font-size:.58rem;letter-spacing:.08em;}"
+          },
+          {
+            "line": 616,
+            "matches": [
+              "cart"
+            ],
+            "text": ".sp-tools{grid-template-columns:1fr 1fr;grid-template-areas:\"heading heading\" \"flavour flavour\" \"sort view\" \"guide cart\" \"status status\";}"
+          },
+          {
+            "line": 645,
+            "matches": [
+              "cart"
+            ],
+            "text": ".sp-tools{grid-template-columns:1fr;grid-template-areas:\"heading\" \"flavour\" \"sort\" \"view\" \"guide\" \"cart\" \"status\";margin-top:10px;padding:14px 0;}"
+          },
+          {
+            "line": 649,
+            "matches": [
+              "cart"
+            ],
+            "text": ".cart-summary{justify-content:start;padding:10px 0;border-width:1px 0 0;}"
+          },
+          {
+            "line": 667,
+            "matches": [
+              "cart"
+            ],
+            "text": "width. The right column still carries the currency label and the cart button,"
+          },
+          {
+            "line": 668,
+            "matches": [
+              "cart"
+            ],
+            "text": "so at 320px the three tracks exceeded the viewport and pushed the cart button"
+          }
+        ],
+        "collectionForm": [],
+        "authoritySensitiveClaim": [
+          {
+            "line": 12,
+            "matches": [
+              "Australian organic",
+              "Vegan",
+              "gluten free",
+              "caffeine",
+              "Australian organic"
+            ],
+            "text": "<meta name=\"description\" content=\"Australian organic carob bars, moons, bites, elixirs and carob bananas. Vegan, gluten free, caffeine free. Made from Australian organic carob.\">"
+          },
+          {
+            "line": 152,
+            "matches": [
+              "Australian organic",
+              "vegan",
+              "gluten free",
+              "caffeine"
+            ],
+            "text": "<meta property=\"og:description\" content=\"Browse carob bars, moons, bites, elixirs and carob bananas. Australian organic carob, vegan, gluten free and caffeine free. Free shipping over $99.\">"
+          },
+          {
+            "line": 156,
+            "matches": [
+              "Australian organic",
+              "vegan",
+              "gluten free",
+              "caffeine"
+            ],
+            "text": "<meta name=\"twitter:description\" content=\"Browse carob bars, moons, bites, elixirs and carob bananas. Australian organic carob, vegan, gluten free and caffeine free. Free shipping over $99.\">"
+          },
+          {
+            "line": 170,
+            "matches": [
+              "Australian organic",
+              "Vegan",
+              "gluten free",
+              "caffeine"
+            ],
+            "text": "\"description\": \"Maple Moon makes Australian organic carob bars, moons, bites and elixirs. Vegan, gluten free, caffeine free. Far north coast of NSW.\","
+          },
+          {
+            "line": 189,
+            "matches": [
+              "Australian organic",
+              "Vegan",
+              "gluten free",
+              "caffeine"
+            ],
+            "text": "\"description\": \"Australian organic carob bars, moons, bites and elixirs. Vegan, gluten free, caffeine free.\","
+          },
+          {
+            "line": 237,
+            "matches": [
+              "Australian organic",
+              "naturally sweet",
+              "nothing added"
+            ],
+            "text": "<p>Bars, moons, bites, elixirs and carob bananas. All made from Australian organic carob, naturally sweet with nothing added.</p>"
+          },
+          {
+            "line": 327,
+            "matches": [
+              "organic carob",
+              "Caffeine",
+              "naturally sweet"
+            ],
+            "text": "<p class=\"sub\">Roasted organic carob powder. Caffeine free and naturally sweet, for baking, drinks and raw treats.</p>"
+          },
+          {
+            "line": 348,
+            "matches": [
+              "naturally sweet"
+            ],
+            "text": "{n:'Coconut & Goji',img:'bar_goji_coconut',d:'Shredded coconut and goji berries through naturally sweet carob.',price:'$12.95',size:'90g'},"
+          },
+          {
+            "line": 349,
+            "matches": [
+              "naturally sweet"
+            ],
+            "text": "{n:'Cayenne Chilli',img:'bar_cayenne',d:'Rich, naturally sweet carob with a gentle hint of cayenne and a touch of Celtic sea salt for the perfect balance of sweet and spice.',price:'$12.95',size:'90g'},"
+          },
+          {
+            "line": 350,
+            "matches": [
+              "naturally sweet",
+              "guilt-free"
+            ],
+            "text": "{n:'Pure Carob & Cacao Butter',img:'bar_pure_carob',d:'Crafted from only two wholefood ingredients for simple, naturally sweet, guilt-free perfection.',price:'$12.95',size:'90g'},"
+          },
+          {
+            "line": 372,
+            "matches": [
+              "naturally sweet",
+              "caffeine"
+            ],
+            "text": "{n:'Pure Carob Elixir',img:'elixir_plain',d:'A warm carob drink with only two ingredients, naturally sweet and caffeine free.',price:'$23.95',size:'150g'},"
+          },
+          {
+            "line": 379,
+            "matches": [
+              "organic carob",
+              "Caffeine",
+              "naturally sweet"
+            ],
+            "text": "{n:'Carob Powder',img:'powder_roasted',d:'Roasted organic carob powder. Caffeine free and naturally sweet, for baking, drinks and raw treats.',price:'$14.95',size:'300g'}"
+          },
+          {
+            "line": 382,
+            "matches": [
+              "Vegan",
+              "GF",
+              "No Caffeine"
+            ],
+            "text": "var DIET=['Vegan','GF','No Caffeine'];"
+          }
+        ]
+      },
+      "literalCounts": {
+        "forms": 0,
+        "mailto": 2,
+        "cartTriggers": 0,
+        "mockCartIncludes": 0,
+        "founderPlaceholders": 0,
+        "stockist200Plus": 0
+      }
+    },
+    "our-story": {
+      "file": "/private/tmp/maplemoon-pdp-route-repair-20260816/our-story.html",
+      "bytes": 63842,
+      "sha256": "0f00cb8beae8b911920f20f6e5976d60d0e94e70ed99f7d3557dbf9a1883c2b2",
+      "scans": {
+        "numericStockist": [],
+        "internalReview": [
+          {
+            "line": 318,
+            "matches": [
+              "Founder portrait pending",
+              "Nate selection required"
+            ],
+            "text": "<div class=\"os-founder-note__portrait os-founder-placeholder\" role=\"img\" aria-label=\"Carli portrait pending Nate selection\"><span>Founder portrait pending</span><strong>Carli</strong><small>Nate selection required</small></div>"
+          },
+          {
+            "line": 335,
+            "matches": [
+              "Founder portrait pending",
+              "Nate selection required"
+            ],
+            "text": "<div class=\"os-founder-note__portrait os-founder-placeholder\" role=\"img\" aria-label=\"Dylan portrait pending Nate selection\"><span>Founder portrait pending</span><strong>Dylan</strong><small>Nate selection required</small></div>"
+          }
+        ],
+        "commerce": [
+          {
+            "line": 40,
+            "matches": [
+              "cart"
+            ],
+            "text": ".os-cart{display:inline-flex;align-items:center;justify-content:center;width:32px;height:32px;border:1px solid var(--line);border-radius:50%;position:relative;}"
+          },
+          {
+            "line": 41,
+            "matches": [
+              "cart"
+            ],
+            "text": ".os-cart svg{width:15px;height:15px;stroke:var(--ink);fill:none;stroke-width:1.4;}"
+          },
+          {
+            "line": 42,
+            "matches": [
+              "cart"
+            ],
+            "text": ".os-cart b{position:absolute;top:-4px;right:-4px;width:15px;height:15px;border-radius:50%;background:var(--ink);color:var(--cream);font-size:.55rem;display:grid;place-items:center;}"
+          },
+          {
+            "line": 269,
+            "matches": [
+              "cart",
+              "Cart"
+            ],
+            "text": "<button class=\"os-cart\" type=\"button\" aria-label=\"Cart, 0 items\"><svg viewBox=\"0 0 24 24\"><path d=\"M6 8h12l-1 12H7L6 8z\"/><path d=\"M9 8a3 3 0 0 1 6 0\"/></svg><b>0</b></button></nav>"
+          }
+        ],
+        "collectionForm": [],
+        "authoritySensitiveClaim": [
+          {
+            "line": 187,
+            "matches": [
+              "Australian organic",
+              "Vegan",
+              "gluten free",
+              "caffeine"
+            ],
+            "text": "\"description\": \"Maple Moon makes Australian organic carob bars, moons, bites and elixirs. Vegan, gluten free, caffeine free. Far north coast of NSW.\","
+          },
+          {
+            "line": 206,
+            "matches": [
+              "Australian organic",
+              "Vegan",
+              "gluten free",
+              "caffeine"
+            ],
+            "text": "\"description\": \"Australian organic carob bars, moons, bites and elixirs. Vegan, gluten free, caffeine free.\","
+          },
+          {
+            "line": 304,
+            "matches": [
+              "caffeine"
+            ],
+            "text": "<p>They began creating flavours that are rich, joyful, and deeply satisfying, an explosion of sensation without caffeine or guilt.</p>"
+          },
+          {
+            "line": 305,
+            "matches": [
+              "vegan"
+            ],
+            "text": "<p>Maple Moon (affectionately known as \"the vegan ultimate honeymooning experience\") is a true reflection of who they are and what they value: nourishment, simplicity, love, and connection.</p>"
+          },
+          {
+            "line": 320,
+            "matches": [
+              "digestive"
+            ],
+            "text": "<p class=\"os-founder-note__lead\">After struggling with gut and digestive issues, Carli learned firsthand that what you put into your body can have a profound effect on how you feel. As a Montessori school teacher, she also saw this play out through her work with children, observing and studying the impact that food and nutrition can have on behaviour, growth and development.</p>"
+          },
+          {
+            "line": 324,
+            "matches": [
+              "caffeine",
+              "stimulant",
+              "stimulant"
+            ],
+            "text": "<p>While passionately working alongside children and families, Carli began eating carob to satisfy her afternoon and nighttime cravings for something rich and chocolatey, without the caffeine and heavy stimulants found in cacao. Cacao products often left her feeling jittery, wired and affected her sleep, which made her question the impact these stimulants could have on smaller, developing bodies.</p>"
+          },
+          {
+            "line": 337,
+            "matches": [
+              "performance"
+            ],
+            "text": "<p class=\"os-founder-note__lead\">Dylan has always been a natural athlete, whether it was running, soccer or surfing. His passion for sport led him to explore how to optimise his health by understanding the body and what it needs to perform at its best. This sparked a deeper interest in nutrition, nourishment, rest and recovery, and the role they all play in supporting the body and achieving peak performance.</p>"
+          },
+          {
+            "line": 341,
+            "matches": [
+              "vegan",
+              "guilt-free"
+            ],
+            "text": "<p>When Dylan met Carli, she shared her idea of creating and selling her own carob treats. In the early days of their relationship, they jokingly called their adventures \"Maple Mooning\" instead of honeymooning, as Dylan was a strict vegan at the time and didn't eat honey. Although Carli had planned to move to Byron Bay and Dylan intended to settle in Sydney, their connection, love and shared passion for health, nature and conscious living kept bringing them together. Just six months into their r"
+          },
+          {
+            "line": 357,
+            "matches": [
+              "caffeine"
+            ],
+            "text": "<p>Maple Moon began simply, with a craving. Our co-founder Carli was searching for a sweet evening treat that felt good in her body. Something indulgent, comforting, and grounding, without the buzz or stimulation of caffeine.</p>"
+          },
+          {
+            "line": 358,
+            "matches": [
+              "caffeine"
+            ],
+            "text": "<p>After making her own raw cacao creations, she began noticing something wasn't right. Even in the evenings, she felt jittery, wired, and restless. That's when she realised cacao naturally contains caffeine, and because of its bitterness, it's often paired with heavily processed sweeteners.</p>"
+          },
+          {
+            "line": 359,
+            "matches": [
+              "Naturally sweet",
+              "Caffeine"
+            ],
+            "text": "<p>That's when she turned to carob. Naturally sweet. Caffeine-free. Gentle and grounding.</p>"
+          },
+          {
+            "line": 372,
+            "matches": [
+              "nervous system"
+            ],
+            "text": "<p style=\"max-width:48ch;margin:0 auto 12px;\">Maple Moon is more than a treat. It's a ritual. A pause. A moment of care for your nervous system, your body, and your evenings.</p>"
+          }
+        ]
+      },
+      "literalCounts": {
+        "forms": 0,
+        "mailto": 1,
+        "cartTriggers": 0,
+        "mockCartIncludes": 0,
+        "founderPlaceholders": 2,
+        "stockist200Plus": 0
+      }
+    },
+    "carob-story": {
+      "file": "/private/tmp/maplemoon-pdp-route-repair-20260816/carob-story.html",
+      "bytes": 54352,
+      "sha256": "5bfc9842c36d9f093d193f21cc7ea11cc96f3565fe65925d023e6ce0380e0756",
+      "scans": {
+        "numericStockist": [],
+        "internalReview": [],
+        "commerce": [
+          {
+            "line": 55,
+            "matches": [
+              "cart"
+            ],
+            "text": ".sp-cart{display:inline-flex;align-items:center;justify-content:center;width:32px;height:32px;border:1px solid var(--line);border-radius:50%;position:relative;}"
+          },
+          {
+            "line": 56,
+            "matches": [
+              "cart"
+            ],
+            "text": ".sp-cart svg{width:15px;height:15px;stroke:var(--ink);fill:none;stroke-width:1.4;}"
+          },
+          {
+            "line": 57,
+            "matches": [
+              "cart"
+            ],
+            "text": ".sp-cart b{position:absolute;top:-4px;right:-4px;width:15px;height:15px;border-radius:50%;background:var(--ink);color:var(--cream);font-size:.55rem;display:grid;place-items:center;}"
+          },
+          {
+            "line": 304,
+            "matches": [
+              "cart",
+              "Cart"
+            ],
+            "text": "<button class=\"sp-cart\" type=\"button\" aria-label=\"Cart, 0 items\"><svg viewBox=\"0 0 24 24\"><path d=\"M6 8h12l-1 12H7L6 8z\"/><path d=\"M9 8a3 3 0 0 1 6 0\"/></svg><b>0</b></button></nav>"
+          },
+          {
+            "line": 497,
+            "matches": [
+              "cart"
+            ],
+            "text": ".sp-top{border-bottom:1px solid var(--line);padding-top:0;background:rgba(244,250,253,.54);}.sp-top .bar{height:64px;}.sp-nav a{font-size:.61rem;font-weight:600;color:var(--ink);}.sp-nav a.on{position:relative;}.sp-nav a.on::after{content:\"\";position:absolute;left:0;right:0;bottom:-12px;height:1px;background:var(--ink);}.sp-logo{font-size:1.48rem;}.sp-currency{font-size:.63rem;letter-spacing:.1em;color:var(--ink);}.sp-cart{border-color:rgba(16,45,88,.3);}"
+          },
+          {
+            "line": 575,
+            "matches": [
+              "cart"
+            ],
+            "text": "width. The right column still carries the currency label and the cart button,"
+          },
+          {
+            "line": 576,
+            "matches": [
+              "cart"
+            ],
+            "text": "so at 320px the three tracks exceeded the viewport and pushed the cart button"
+          }
+        ],
+        "collectionForm": [],
+        "authoritySensitiveClaim": [
+          {
+            "line": 12,
+            "matches": [
+              "naturally sweet"
+            ],
+            "text": "<meta name=\"description\" content=\"Carob is a naturally sweet pod. Maple Moon carob is sourced from the Australian Carob Co. in South Australia, roasted and finely ground there before reaching the kitchen.\">"
+          },
+          {
+            "line": 197,
+            "matches": [
+              "naturally sweet"
+            ],
+            "text": "<meta property=\"og:description\" content=\"Carob is a naturally sweet pod. Maple Moon carob is sourced from the Australian Carob Co. in South Australia, roasted and finely ground there before reaching the kitchen.\">"
+          },
+          {
+            "line": 203,
+            "matches": [
+              "naturally sweet"
+            ],
+            "text": "<meta name=\"twitter:description\" content=\"Carob is a naturally sweet pod. Maple Moon carob is sourced from the Australian Carob Co. in South Australia, roasted and finely ground there before reaching the kitchen.\">"
+          },
+          {
+            "line": 269,
+            "matches": [
+              "naturally sweet"
+            ],
+            "text": "\"description\": \"Carob is a naturally sweet pod. Maple Moon carob is sourced from the Australian Carob Co. in South Australia, roasted and finely ground there before reaching the kitchen.\","
+          },
+          {
+            "line": 316,
+            "matches": [
+              "naturally sweet",
+              "naturally sweet"
+            ],
+            "text": "<p class=\"bodycopy\">Carob is a naturally sweet pod grown on the carob tree. The pods are deseeded, ground and roasted into a fine powder. Maple Moon used organic Australia grown carob in all its products. It is naturally sweet, so we never add refined sugars or sweeteners to our products.</p>"
+          },
+          {
+            "line": 317,
+            "matches": [
+              "Caffeine"
+            ],
+            "text": "<div class=\"credrow\"><span><b>Australian</b><em>grown</em></span><span><b>Naturally</b><em>sweet</em></span><span><b>Caffeine</b><em>free</em></span></div>"
+          },
+          {
+            "line": 334,
+            "matches": [
+              "naturally sweet"
+            ],
+            "text": "<figure class=\"cmp-specimen carob-specimen\"><img src=\"/assets/licensed/carob_pods_macro.jpg\" alt=\"Whole carob pods and carob powder, up close\" width=\"7360\" height=\"4912\" decoding=\"async\"><figcaption><b>Carob</b><span>A naturally sweet pod.</span></figcaption></figure>"
+          },
+          {
+            "line": 343,
+            "matches": [
+              "Naturally sweet"
+            ],
+            "text": "<tr><td class=\"carob\" data-label=\"Carob / Maple Moon Carob\">Naturally sweet</td><th scope=\"row\">Sweetness</th><td class=\"cacao\" data-label=\"Cacao\">Naturally bitter</td></tr>"
+          },
+          {
+            "line": 344,
+            "matches": [
+              "caffeine",
+              "Caffeine",
+              "caffeine"
+            ],
+            "text": "<tr><td class=\"carob\" data-label=\"Carob / Maple Moon Carob\">Naturally caffeine free</td><th scope=\"row\">Caffeine</th><td class=\"cacao\" data-label=\"Cacao\">Contains caffeine and theobromine</td></tr>"
+          },
+          {
+            "line": 345,
+            "matches": [
+              "Stimulant"
+            ],
+            "text": "<tr><td class=\"carob\" data-label=\"Carob / Maple Moon Carob\">Stimulant free, making it perfect for arvos and slow evenings</td><th scope=\"row\">Moment</th><td class=\"cacao\" data-label=\"Cacao\">Stimulating and activating</td></tr>"
+          }
+        ]
+      },
+      "literalCounts": {
+        "forms": 0,
+        "mailto": 1,
+        "cartTriggers": 0,
+        "mockCartIncludes": 0,
+        "founderPlaceholders": 0,
+        "stockist200Plus": 0
+      }
+    },
+    "faq": {
+      "file": "/private/tmp/maplemoon-pdp-route-repair-20260816/faq.html",
+      "bytes": 31865,
+      "sha256": "29c1fb87be58a0c8ac65e148201c7164143fe947122e11c819c0444956a4b601",
+      "scans": {
+        "numericStockist": [],
+        "internalReview": [],
+        "commerce": [
+          {
+            "line": 27,
+            "matches": [
+              "cart",
+              "cart",
+              "cart"
+            ],
+            "text": ".sp-top{padding-top:8px}.bar{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;min-height:62px}.sp-nav{display:flex;gap:25px}.sp-nav.r{justify-content:flex-end;align-items:center;gap:20px}.sp-nav a{font-size:.68rem;letter-spacing:.11em;text-transform:uppercase;color:var(--muted)}.sp-nav a:hover,.sp-nav a.on{color:var(--navy)}.sp-logo{font:500 1.34rem var(--mm-serif);letter-spacing:.01em;color:var(--ink)}.sp-cart{display:inline-grid;place-items:center;position:relative;width:33px"
+          },
+          {
+            "line": 73,
+            "matches": [
+              "cart",
+              "Cart"
+            ],
+            "text": "<nav class=\"sp-nav r\" aria-label=\"Utility navigation\"><a href=\"/stockists\">Stockists</a><a href=\"/faq\" class=\"on\" aria-current=\"page\">FAQ</a><button class=\"sp-cart\" type=\"button\" aria-label=\"Cart, 0 items\"><svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"M6 8h12l-1 12H7L6 8z\"/><path d=\"M9 8a3 3 0 0 1 6 0\"/></svg><b>0</b></button></nav>"
+          }
+        ],
+        "collectionForm": [],
+        "authoritySensitiveClaim": [
+          {
+            "line": 98,
+            "matches": [
+              "caffeine",
+              "caffeine",
+              "naturally sweet",
+              "stimulant",
+              "caffeine",
+              "stimulant"
+            ],
+            "text": "{id:'is-there-any-caffeine',category:'carob',question:'Is there any caffeine?',answer:'No carob is naturally sweet and we use stimulant free ingredients',keywords:['caffeine','stimulant','ingredients'],popular:true},"
+          },
+          {
+            "line": 99,
+            "matches": [
+              "naturally sweet"
+            ],
+            "text": "{id:'is-there-maple-in-it',category:'carob',question:'Is there Maple in it?',answer:'No, despite the name, we dont ADD any extra sugars or sweetners to our bars. Carob is naturally sweet.',keywords:['maple','name','sugar','sweetener']},"
+          },
+          {
+            "line": 101,
+            "matches": [
+              "caffeine",
+              "caffeine",
+              "caffeine"
+            ],
+            "text": "{id:'why-cacao-butter',category:'carob',question:'Why does Maple Moon use cacao butter?',answer:'Cacao butter is the natural fat extracted from the cacao bean during the production of cacao powder. While it contains only trace amounts of caffeine, it is considered virtually caffeine-free. At Maple Moon, we use organic cacao butter to perfectly temper our carob, creating a smooth, creamy finish with a rich melt and subtle chocolate-like undertones.',keywords:['cacao butter','caffeine','temper','i"
+          }
+        ]
+      },
+      "literalCounts": {
+        "forms": 0,
+        "mailto": 8,
+        "cartTriggers": 0,
+        "mockCartIncludes": 0,
+        "founderPlaceholders": 0,
+        "stockist200Plus": 0
+      }
+    },
+    "stockists": {
+      "file": "/private/tmp/maplemoon-pdp-route-repair-20260816/stockists.html",
+      "bytes": 112138,
+      "sha256": "b93f676f6ebdf9edc8bef7a7e013a0ab9a8aa6d7f2a0662c6da516d2741e955a",
+      "scans": {
+        "numericStockist": [
+          {
+            "line": 12,
+            "matches": [
+              "200+"
+            ],
+            "text": "<meta name=\"description\" content=\"Find Maple Moon at 200+ stockists across Australia. Directory details are being confirmed before launch.\">"
+          },
+          {
+            "line": 364,
+            "matches": [
+              "200+"
+            ],
+            "text": "<meta property=\"og:description\" content=\"Find Maple Moon Australian carob at 200+ stockists across Australia. Directory details are being confirmed.\">"
+          },
+          {
+            "line": 370,
+            "matches": [
+              "200+"
+            ],
+            "text": "<meta name=\"twitter:description\" content=\"Find Maple Moon Australian carob at 200+ stockists across Australia. Directory details are being confirmed.\">"
+          },
+          {
+            "line": 452,
+            "matches": [
+              "200+"
+            ],
+            "text": "<p>Find Maple Moon at 200+ health food stores, pharmacies and grocers across Australia.</p>"
+          },
+          {
+            "line": 454,
+            "matches": [
+              "200+"
+            ],
+            "text": "<span>200+ stockists across Australia</span>"
+          },
+          {
+            "line": 464,
+            "matches": [
+              "Seven entries"
+            ],
+            "text": "<p class=\"sub\">Search the current Maple Moon stockist directory by store, suburb, postcode or state. Seven entries still need client confirmation.</p>"
+          },
+          {
+            "line": 532,
+            "matches": [
+              "204 entries",
+              "Seven entries"
+            ],
+            "text": "<p class=\"st-directory-status\" id=\"stockistDirectoryStatus\"><strong>WIP directory status</strong><span>204 entries are in this source parse. Seven entries have incomplete location details and need client confirmation before launch.</span></p>"
+          },
+          {
+            "line": 977,
+            "matches": [
+              "204 total",
+              "7 need client confirmation",
+              "204 total",
+              "7 need client confirmation"
+            ],
+            "text": "count.textContent=shown.length?(\"Showing \"+visible.length+\" of \"+shown.length+\" stockists. 204 total; 7 need client confirmation.\"):(\"No stockists shown. 204 total; 7 need client confirmation.\");"
+          }
+        ],
+        "internalReview": [
+          {
+            "line": 464,
+            "matches": [
+              "client confirmation"
+            ],
+            "text": "<p class=\"sub\">Search the current Maple Moon stockist directory by store, suburb, postcode or state. Seven entries still need client confirmation.</p>"
+          },
+          {
+            "line": 532,
+            "matches": [
+              "WIP directory status",
+              "source parse",
+              "client confirmation"
+            ],
+            "text": "<p class=\"st-directory-status\" id=\"stockistDirectoryStatus\"><strong>WIP directory status</strong><span>204 entries are in this source parse. Seven entries have incomplete location details and need client confirmation before launch.</span></p>"
+          },
+          {
+            "line": 536,
+            "matches": [
+              "Directory preview only"
+            ],
+            "text": "<span class=\"online\"><i></i>Directory preview only</span>"
+          },
+          {
+            "line": 585,
+            "matches": [
+              "review demo"
+            ],
+            "text": "<p>This newsletter form is a non-collecting review demo.</p>"
+          },
+          {
+            "line": 902,
+            "matches": [
+              "client confirmation"
+            ],
+            "text": "pendingFilter.setAttribute(\"aria-label\",pendingTotal+\" entries needing client confirmation\");"
+          },
+          {
+            "line": 977,
+            "matches": [
+              "client confirmation",
+              "client confirmation"
+            ],
+            "text": "count.textContent=shown.length?(\"Showing \"+visible.length+\" of \"+shown.length+\" stockists. 204 total; 7 need client confirmation.\"):(\"No stockists shown. 204 total; 7 need client confirmation.\");"
+          }
+        ],
+        "commerce": [
+          {
+            "line": 40,
+            "matches": [
+              "cart"
+            ],
+            "text": ".sp-cart{display:inline-flex;align-items:center;justify-content:center;width:32px;height:32px;border:1px solid var(--line);border-radius:50%;position:relative;}"
+          },
+          {
+            "line": 41,
+            "matches": [
+              "cart"
+            ],
+            "text": ".sp-cart svg{width:15px;height:15px;stroke:var(--ink);fill:none;stroke-width:1.4;}"
+          },
+          {
+            "line": 42,
+            "matches": [
+              "cart"
+            ],
+            "text": ".sp-cart b{position:absolute;top:-4px;right:-4px;width:15px;height:15px;border-radius:50%;background:var(--ink);color:var(--cream);font-size:.55rem;display:grid;place-items:center;}"
+          },
+          {
+            "line": 99,
+            "matches": [
+              "cart"
+            ],
+            "text": ".st-filter:focus-visible,.st-search-clear:focus-visible,.st-loc:focus-visible,.st-clear:focus-visible,.st-active-chip:focus-visible,.st-empty-action:focus-visible,.st-empty-link:focus-visible,.st-show-more:focus-visible,.pill:focus-visible,.st-mini-cta:focus-visible,.sp-nav a:focus-visible,.sp-logo:focus-visible,.sp-cart:focus-visible,.sp-ft a:focus-visible{outline:2px solid rgba(69,119,152,.62);outline-offset:4px;}"
+          },
+          {
+            "line": 444,
+            "matches": [
+              "cart",
+              "Cart"
+            ],
+            "text": "<button class=\"sp-cart\" type=\"button\" aria-label=\"Cart, 0 items\"><svg viewBox=\"0 0 24 24\"><path d=\"M6 8h12l-1 12H7L6 8z\"/><path d=\"M9 8a3 3 0 0 1 6 0\"/></svg><b>0</b></button></nav>"
+          },
+          {
+            "line": 1115,
+            "matches": [
+              "cart"
+            ],
+            "text": "width. The right column still carries the currency label and the cart button,"
+          },
+          {
+            "line": 1116,
+            "matches": [
+              "cart"
+            ],
+            "text": "so at 320px the three tracks exceeded the viewport and pushed the cart button"
+          }
+        ],
+        "collectionForm": [
+          {
+            "line": 215,
+            "matches": [
+              "newsletter"
+            ],
+            "text": "/* newsletter closing band */"
+          },
+          {
+            "line": 585,
+            "matches": [
+              "newsletter"
+            ],
+            "text": "<p>This newsletter form is a non-collecting review demo.</p>"
+          },
+          {
+            "line": 586,
+            "matches": [
+              "<form"
+            ],
+            "text": "<form class=\"st-form\" onsubmit=\"return false;\" aria-describedby=\"stockists-news-demo-note\">"
+          },
+          {
+            "line": 588,
+            "matches": [
+              "Coming soon"
+            ],
+            "text": "<button class=\"pill\" type=\"submit\" disabled>Coming soon</button>"
+          },
+          {
+            "line": 590,
+            "matches": [
+              "collect or submit email"
+            ],
+            "text": "<p class=\"fine\" id=\"stockists-news-demo-note\">Demo only. This form does not collect or submit email addresses.</p>"
+          }
+        ],
+        "authoritySensitiveClaim": [
+          {
+            "line": 385,
+            "matches": [
+              "Australian organic",
+              "Vegan",
+              "gluten free",
+              "caffeine"
+            ],
+            "text": "\"description\": \"Maple Moon makes Australian organic carob bars, moons, bites and elixirs. Vegan, gluten free, caffeine free. Far north coast of NSW.\","
+          },
+          {
+            "line": 404,
+            "matches": [
+              "Australian organic",
+              "Vegan",
+              "gluten free",
+              "caffeine"
+            ],
+            "text": "\"description\": \"Australian organic carob bars, moons, bites and elixirs. Vegan, gluten free, caffeine free.\","
+          },
+          {
+            "line": 573,
+            "matches": [
+              "Australian organic"
+            ],
+            "text": "<p>We supply selected retailers, cafes and grocers with the full carob range: bars, moons, bites and elixirs, all made from Australian organic carob. If your shelves would suit a quieter kind of treat, we would love to hear from you.</p>"
+          },
+          {
+            "line": 705,
+            "matches": [
+              "Vegan"
+            ],
+            "text": "{name:\"La Vida Vegan\",type:\"Independent store\",state:\"WA\",area:\"Subiaco\",group:\"Independent Stores\",address:\"60 Coghlan Rd,, Subiaco, 6008, Australia\",postcode:\"6008\",sourceLine:425},"
+          },
+          {
+            "line": 792,
+            "matches": [
+              "Vegan"
+            ],
+            "text": "{name:\"Vegan Grocery Store\",type:\"Independent store\",state:\"UNKNOWN\",area:\"Town Hall Square\",group:\"Independent Stores\",address:\"Shop  40, Town Hall Square, 464-480 Kent Street, Sydney, Australia\",postcode:null,sourceLine:599,note:\"No postcode in source; address text \\\"...Kent Street, Sydney, Australia\\\" strongly implies NSW but not confirmed per no-postcode/no-explicit-state rule.\"},"
+          }
+        ]
+      },
+      "literalCounts": {
+        "forms": 1,
+        "mailto": 4,
+        "cartTriggers": 0,
+        "mockCartIncludes": 0,
+        "founderPlaceholders": 0,
+        "stockist200Plus": 5
+      }
+    },
+    "products/pure-carob-bar": {
+      "file": "/private/tmp/maplemoon-pdp-route-repair-20260816/products/pure-carob-bar.html",
+      "bytes": 25399,
+      "sha256": "2157a7ef9846c854a2565b9e1c4c4a3f934b8b2ab92dc1e119a31bb838109869",
+      "scans": {
+        "numericStockist": [],
+        "internalReview": [],
+        "commerce": [
+          {
+            "line": 46,
+            "matches": [
+              "cart"
+            ],
+            "text": ".sp-cart{display:inline-flex;align-items:center;justify-content:center;width:32px;height:32px;border:1px solid var(--line);border-radius:50%;position:relative;}"
+          },
+          {
+            "line": 47,
+            "matches": [
+              "cart"
+            ],
+            "text": ".sp-cart svg{width:15px;height:15px;stroke:var(--ink);fill:none;stroke-width:1.4;}"
+          },
+          {
+            "line": 48,
+            "matches": [
+              "cart"
+            ],
+            "text": ".sp-cart b{position:absolute;top:-4px;right:-4px;width:15px;height:15px;border-radius:50%;background:var(--ink);color:var(--cream);font-size:.55rem;display:grid;place-items:center;}"
+          },
+          {
+            "line": 147,
+            "matches": [
+              "cart"
+            ],
+            "text": "reintroduce the measured cart-button overflow that the 1fr auto 1fr track forced. */"
+          },
+          {
+            "line": 179,
+            "matches": [
+              "cart",
+              "cart"
+            ],
+            "text": "document.documentElement.classList.toggle(\"mm-cart-qa\", params.get(\"cart-qa\") === \"1\");"
+          },
+          {
+            "line": 182,
+            "matches": [
+              "mock-cart"
+            ],
+            "text": "<link rel=\"stylesheet\" href=\"/mock-cart.css\">"
+          },
+          {
+            "line": 224,
+            "matches": [
+              "mock-cart"
+            ],
+            "text": "/* mock-cart.js injects .mm-review-mobile-nav at z-index:40, which painted over the drawer. */"
+          },
+          {
+            "line": 306,
+            "matches": [
+              "cart",
+              "Cart",
+              "cart"
+            ],
+            "text": "<button class=\"sp-cart mm-icon-control\" type=\"button\" aria-label=\"Cart, 0 items\" data-mm-cart-toggle><svg viewBox=\"0 0 24 24\"><path d=\"M6 8h12l-1 12H7L6 8z\"/><path d=\"M9 8a3 3 0 0 1 6 0\"/></svg><b>0</b></button></div>"
+          },
+          {
+            "line": 394,
+            "matches": [
+              "mock-cart"
+            ],
+            "text": "<script src=\"/mock-cart.js\"></script>"
+          }
+        ],
+        "collectionForm": [],
+        "authoritySensitiveClaim": [
+          {
+            "line": 12,
+            "matches": [
+              "Vegan",
+              "gluten free"
+            ],
+            "text": "<meta name=\"description\" content=\"The full-size 90g Pure Carob and Cacao Butter bar from Maple Moon. Vegan, gluten free.\">"
+          },
+          {
+            "line": 326,
+            "matches": [
+              "Vegan",
+              "GF",
+              "No Caffeine"
+            ],
+            "text": "<div class=\"chips\"><span>Vegan</span><span>GF</span><span>No Caffeine</span></div>"
+          },
+          {
+            "line": 327,
+            "matches": [
+              "naturally sweet",
+              "guilt-free"
+            ],
+            "text": "<p class=\"pd-d\">Crafted from only two wholefood ingredients for simple, naturally sweet, guilt-free perfection.</p>"
+          },
+          {
+            "line": 343,
+            "matches": [
+              "Naturally sweet"
+            ],
+            "text": "<div><dt>Sweetness</dt><dd>Naturally sweet</dd></div>"
+          },
+          {
+            "line": 365,
+            "matches": [
+              "Naturally sweet"
+            ],
+            "text": "<p class=\"sub\">The full-size 90g bar, six flavours. Naturally sweet carob.</p>"
+          }
+        ]
+      },
+      "literalCounts": {
+        "forms": 0,
+        "mailto": 3,
+        "cartTriggers": 0,
+        "mockCartIncludes": 3,
+        "founderPlaceholders": 0,
+        "stockist200Plus": 0
+      }
+    }
+  }
+}

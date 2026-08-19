@@ -1,0 +1,119 @@
+{
+  "results": [
+    {
+      "test": "home-newsletter",
+      "formPresent": true,
+      "formAction": "",
+      "inputDisabled": true,
+      "buttonDisabled": true,
+      "dispatchDefaultAllowed": false,
+      "noticeVisible": true,
+      "localStorage": {
+        "lane-e-local-control": "keep-local"
+      },
+      "sessionStorage": {
+        "lane-e-session-control": "keep-session"
+      },
+      "cookie": "",
+      "beforeUrl": "http://127.0.0.1:8771/_wip/homepage_real_1_lead_photo.WIP.html",
+      "afterUrl": "http://127.0.0.1:8771/_wip/homepage_real_1_lead_photo.WIP.html",
+      "networkAfterSubmit": [],
+      "forbiddenNetwork": [],
+      "consoleErrors": [],
+      "pageErrors": [],
+      "requestFailures": [],
+      "badResponses": [],
+      "result": "PASS"
+    },
+    {
+      "test": "stockists-newsletter",
+      "formPresent": true,
+      "formAction": "",
+      "inputDisabled": true,
+      "buttonDisabled": true,
+      "dispatchDefaultAllowed": false,
+      "noticeVisible": true,
+      "localStorage": {
+        "lane-e-local-control": "keep-local"
+      },
+      "sessionStorage": {
+        "lane-e-session-control": "keep-session"
+      },
+      "cookie": "",
+      "beforeUrl": "http://127.0.0.1:8771/_wip/stockists.WIP.html",
+      "afterUrl": "http://127.0.0.1:8771/_wip/stockists.WIP.html",
+      "networkAfterSubmit": [],
+      "forbiddenNetwork": [],
+      "consoleErrors": [],
+      "pageErrors": [],
+      "requestFailures": [],
+      "badResponses": [],
+      "result": "PASS"
+    },
+    {
+      "test": "shop-cart",
+      "before": "CART SUBTOTAL\n$0.00\n0 ITEMS",
+      "after": "CART SUBTOTAL\n$12.95\n1 ITEM",
+      "count": "1",
+      "label": "Cart, 1 item, subtotal $12.95",
+      "beforeUrl": "http://127.0.0.1:8771/_wip/shop.WIP.html",
+      "afterUrl": "http://127.0.0.1:8771/_wip/shop.WIP.html",
+      "beforeStorage": {
+        "local": {},
+        "session": {},
+        "cookie": ""
+      },
+      "afterStorage": {
+        "local": {},
+        "session": {},
+        "cookie": ""
+      },
+      "networkAfterClick": [],
+      "forbiddenNetwork": [],
+      "consoleErrors": [],
+      "pageErrors": [],
+      "requestFailures": [],
+      "badResponses": [],
+      "result": "FAIL"
+    },
+    {
+      "test": "home-cart-trigger",
+      "present": 1,
+      "visible": true,
+      "label": "Cart, 0 items",
+      "consoleErrors": [],
+      "pageErrors": [],
+      "requestFailures": [],
+      "badResponses": [],
+      "result": "PASS"
+    }
+  ],
+  "failures": [
+    {
+      "test": "shop-cart",
+      "before": "CART SUBTOTAL\n$0.00\n0 ITEMS",
+      "after": "CART SUBTOTAL\n$12.95\n1 ITEM",
+      "count": "1",
+      "label": "Cart, 1 item, subtotal $12.95",
+      "beforeUrl": "http://127.0.0.1:8771/_wip/shop.WIP.html",
+      "afterUrl": "http://127.0.0.1:8771/_wip/shop.WIP.html",
+      "beforeStorage": {
+        "local": {},
+        "session": {},
+        "cookie": ""
+      },
+      "afterStorage": {
+        "local": {},
+        "session": {},
+        "cookie": ""
+      },
+      "networkAfterClick": [],
+      "forbiddenNetwork": [],
+      "consoleErrors": [],
+      "pageErrors": [],
+      "requestFailures": [],
+      "badResponses": [],
+      "result": "FAIL"
+    }
+  ]
+}

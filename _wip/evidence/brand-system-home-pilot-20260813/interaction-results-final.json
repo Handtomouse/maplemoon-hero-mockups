@@ -1,0 +1,120 @@
+{
+  "before": {
+    "state": "closed",
+    "expanded": "false",
+    "primary": {
+      "hidden": true,
+      "display": "none",
+      "rects": 0
+    },
+    "utility": {
+      "hidden": true,
+      "display": "none",
+      "rects": 0
+    },
+    "bodyOverflow": "hidden auto",
+    "activeText": "BODY"
+  },
+  "open": {
+    "state": "open",
+    "expanded": "true",
+    "primary": {
+      "hidden": false,
+      "display": "flex",
+      "rects": 1
+    },
+    "utility": {
+      "hidden": false,
+      "display": "grid",
+      "rects": 1
+    },
+    "bodyOverflow": "hidden",
+    "activeText": "Shop"
+  },
+  "closed": {
+    "state": "closed",
+    "expanded": "false",
+    "primary": {
+      "hidden": true,
+      "display": "none",
+      "rects": 0
+    },
+    "utility": {
+      "hidden": true,
+      "display": "none",
+      "rects": 0
+    },
+    "bodyOverflow": "hidden auto",
+    "activeText": "Menu",
+    "focusReturned": true,
+    "outlineStyle": "solid",
+    "outlineWidth": "2px"
+  },
+  "tabTrail": [
+    {
+      "tag": "A",
+      "text": "maple moon",
+      "outline": "solid 2px"
+    },
+    {
+      "tag": "BUTTON",
+      "text": "0",
+      "outline": "solid 2px"
+    },
+    {
+      "tag": "A",
+      "text": "Shop the Range",
+      "outline": "solid 2px"
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Previous",
+      "outline": "solid 2px"
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Coconut & Goji",
+      "outline": "none 3px"
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Pure Carob & Cacao Butter",
+      "outline": "none 3px"
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Cayenne Chilli",
+      "outline": "none 3px"
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Next",
+      "outline": "solid 2px"
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Bars",
+      "outline": "solid 2px"
+    },
+    {
+      "tag": "BUTTON",
+      "text": "Bananas",
+      "outline": "solid 2px"
+    }
+  ],
+  "productBefore": "Pure Carob & Cacao Butter",
+  "productAfter": {
+    "name": "Pure Carob Moon",
+    "selected": "true",
+    "otherSelected": false,
+    "stageItems": 5
+  },
+  "productNext": "Peppermint Moon",
+  "loaded": {
+    "brokenImages": [],
+    "overflow": 0
+  },
+  "consoleErrors": [],
+  "badResponses": [],
+  "pass": true
+}

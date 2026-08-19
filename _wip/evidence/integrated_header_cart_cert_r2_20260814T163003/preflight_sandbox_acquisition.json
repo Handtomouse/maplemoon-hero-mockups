@@ -1,0 +1,8 @@
+{
+  "schema": "maplemoon-certifier-acquisition-note/v1",
+  "candidate_failure": false,
+  "first_attempt_exit_code": 1,
+  "first_attempt_verdict": "VERDICT: FAIL - host did not respond. Nothing was checked.",
+  "cause": "The default network sandbox could not reach the separately running localhost server; the same exact preflight was rerun read-only with localhost access and exited 0 with the established PASS verdict.",
+  "authoritative_output": "preflight-output.txt"
+}

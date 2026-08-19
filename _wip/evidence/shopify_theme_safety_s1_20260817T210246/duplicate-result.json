@@ -1,0 +1,12 @@
+{
+  "command_count": 1,
+  "command": "shopify theme duplicate --store maplemooncarob.myshopify.com --theme 154500595909 --name 'MapleMoon Private Review 20260817 S1' --json --force --no-color",
+  "exit_code": 0,
+  "theme": {
+    "id": 160076628165,
+    "name": "MapleMoon Private Review 20260817 S1",
+    "role": "unpublished",
+    "shop": "maplemooncarob.myshopify.com"
+  },
+  "result": "PASS"
+}

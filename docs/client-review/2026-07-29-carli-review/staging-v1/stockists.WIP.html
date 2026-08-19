@@ -1,0 +1,1168 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<link rel="icon" type="image/svg+xml" href="assets/mm_logo_icon_blk.svg">
+<!-- WIP: Adobe Fonts kit dvz0xjs replaces local() demo cuts (renders off-machine) -->
+<link rel="preconnect" href="https://use.typekit.net">
+<link rel="stylesheet" href="https://use.typekit.net/dvz0xjs.css">
+<style>:root{--mm-serif:'p22-mackinac-pro','P22 Mackinac Pro',Georgia,serif!important;--mm-sans:'neue-haas-grotesk-display','Neue Haas Grotesk Display Pro','Inter','Helvetica Neue',sans-serif!important;}</style>
+<title>Stockists | Maple Moon</title>
+<meta name="description" content="Find Maple Moon at 200+ stockists across Australia. Directory details are being confirmed before launch.">
+<link rel="stylesheet" href="brand_kit.css">
+<link rel="stylesheet" href="review-mode.css">
+<style>
+/* STOCKISTS: warm-paper editorial continuation of the shop page. */
+html{scroll-behavior:smooth;}
+.sp{
+  --mm-serif:'p22-mackinac-pro','P22 Mackinac Pro',Georgia,serif;
+  --ink:#2c2a26;--ink-soft:#4f4942;--ink-faint:#5f574d;
+  --paper:#f4f2ed;--card:#fbfaf7;--line:rgba(44,42,38,.14);--line-soft:rgba(44,42,38,.08);
+  --cream:#f1ede3;--beige:#c9ba96;
+  --blue-flow:#b7c9d9;--blue-bridge:#c8d5df;--blue-haze:#d7e2ea;--blue-deep:#457798;--blue-accent:#4074b6;--blue-night:#101923;--acc:var(--blue-accent);
+  background:linear-gradient(180deg,var(--blue-flow) 0%,#c7d6e3 18%,var(--blue-haze) 44%,#e2e5df 70%,var(--paper) 100%);
+  color:var(--ink);font-family:var(--mm-sans,'Neue Haas Grotesk Display Pro',Helvetica,sans-serif);line-height:1.5;-webkit-font-smoothing:antialiased;min-height:100vh;overflow-x:hidden;
+}
+.sp *,.sp *::before,.sp *::after{box-sizing:border-box;}
+.sp img{max-width:100%;display:block;}
+.sp a{color:inherit;text-decoration:none;}
+.sp .wrap{max-width:1180px;margin:0 auto;padding:0 28px;}
+.sp .serif{font-family:var(--mm-serif);}
+
+/* nav (mirrors shop) */
+.sp-top{padding-top:8px;}
+.sp-top .bar{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;height:62px;}
+.sp-nav{display:flex;gap:28px;}.sp-nav.r{justify-content:flex-end;gap:22px;align-items:center;}
+.sp-nav a,.sp-currency{font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-soft);transition:color .25s;}
+.sp-nav a:hover,.sp-nav a.on{color:var(--ink);}
+.sp-currency{white-space:nowrap;}
+.sp-logo{font-family:var(--mm-serif);font-size:1.3rem;text-align:center;color:var(--ink);}
+.sp-cart{display:inline-flex;align-items:center;justify-content:center;width:32px;height:32px;border:1px solid var(--line);border-radius:50%;position:relative;}
+.sp-cart svg{width:15px;height:15px;stroke:var(--ink);fill:none;stroke-width:1.4;}
+.sp-cart b{position:absolute;top:-4px;right:-4px;width:15px;height:15px;border-radius:50%;background:var(--ink);color:var(--cream);font-size:.55rem;display:grid;place-items:center;}
+
+/* page head */
+.sp-head{text-align:left;padding:88px 28px 54px;position:relative;isolation:isolate;}
+.sp-head::before{content:"";position:absolute;left:40%;top:18px;width:min(960px,calc(100% - 88px));height:250px;transform:translateX(-50%);z-index:-1;pointer-events:none;background:radial-gradient(ellipse at 48% 24%,rgba(239,249,249,.5) 0%,rgba(69,119,152,.18) 38%,rgba(123,157,191,.09) 60%,rgba(231,228,202,0) 78%);filter:blur(10px);opacity:.82;-webkit-mask-image:radial-gradient(ellipse at center,#000 0 54%,rgba(0,0,0,.6) 66%,transparent 82%);mask-image:radial-gradient(ellipse at center,#000 0 54%,rgba(0,0,0,.6) 66%,transparent 82%);}
+.sp-kick{font-size:.62rem;letter-spacing:.28em;text-transform:uppercase;color:var(--ink-faint);display:block;margin-bottom:20px;}
+.sp-head h1{font-family:var(--mm-serif);font-weight:500;font-size:clamp(2.34rem,4.55vw,4.1rem);line-height:1.04;margin:0 0 28px;letter-spacing:.01em;max-width:9.4em;}
+.sp-head h1 em{font-style:normal;font-weight:500;}
+.sp-head p{color:var(--ink-soft);max-width:43ch;margin:0;font-size:1.08rem;line-height:1.62;}
+.sp-flag{font-size:.62rem;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-faint);margin-top:12px;}
+.st-proof-row{display:flex;justify-content:flex-start;gap:24px;flex-wrap:wrap;margin:46px 0 0;max-width:780px;padding-top:18px;border-top:1px solid rgba(44,42,38,.12);}
+.st-proof-row span{display:inline-flex;align-items:center;gap:9px;border:0;border-radius:0;background:transparent;color:var(--ink-soft);font-size:.6rem;letter-spacing:.18em;text-transform:uppercase;padding:0;box-shadow:none;}
+.st-proof-row span::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--beige);box-shadow:0 0 0 1px rgba(44,42,38,.08);}
+.st-proof-row span:nth-child(2)::before{background:transparent;border:1px dashed rgba(44,42,38,.42);}
+.st-proof-row span:nth-child(3)::before{background:var(--blue-accent);}
+
+/* stockist finder */
+.st-finder{padding:0 0 38px;margin-top:26px;position:relative;z-index:2;}
+.st-skip-finder{position:absolute;left:18px;top:8px;z-index:8;transform:translateY(-160%);border:1px solid var(--blue-deep);border-radius:50px;background:var(--card);color:var(--blue-night);font-size:.7rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;padding:11px 16px;transition:transform .2s;}
+.st-skip-finder:focus{transform:translateY(0);outline:2px solid rgba(69,119,152,.62);outline-offset:3px;}
+.st-finder-intro{display:none;text-align:center;margin-bottom:26px;}
+.st-finder-intro h2{font-family:var(--mm-serif);font-weight:500;font-size:1.72rem;margin:0 0 8px;}
+.st-finder-intro h2 em{font-style:italic;font-weight:400;}
+.st-finder-intro .sub{color:var(--ink-soft);font-size:.95rem;margin:0 auto;max-width:58ch;}
+.st-search-panel{border:0;border-top:1px solid rgba(69,119,152,.15);border-bottom:1px solid rgba(69,119,152,.15);border-radius:0;background:linear-gradient(180deg,rgba(239,249,249,.22),rgba(251,250,247,.1));box-shadow:none;padding:24px 0 22px;margin-bottom:24px;}
+.st-finder-cue{display:flex;align-items:center;justify-content:space-between;gap:16px;margin:0 32px 18px;color:var(--ink-faint);}
+.st-finder-cue span{font-size:.62rem;letter-spacing:.16em;text-transform:uppercase;}
+.st-finder-cue small{font-size:.68rem;color:var(--ink-soft);}
+.st-search-row{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:14px;align-items:center;margin:0 32px;}
+.st-search{display:flex;align-items:center;gap:10px;border:1px solid rgba(69,119,152,.22);border-radius:50px;background:rgba(251,250,247,.82);padding:13px 12px 13px 18px;min-width:0;box-shadow:0 14px 34px rgba(41,57,64,.08);transition:border-color .22s,box-shadow .22s,background .22s;}
+.st-search:focus-within{border-color:rgba(69,119,152,.68);background:#fffdf8;box-shadow:0 0 0 4px rgba(69,119,152,.11),0 14px 30px rgba(41,57,64,.1);}
+.st-search svg{width:18px;height:18px;stroke:var(--blue-deep);fill:none;stroke-width:1.9;flex:0 0 auto;}
+.st-search input{width:100%;border:0;outline:0;background:transparent;color:var(--ink);font-family:inherit;font-size:1rem;min-width:0;}
+.st-search input::placeholder{color:var(--ink-faint);}
+.st-search-clear{appearance:none;border:0;border-radius:50px;background:rgba(232,244,247,.78);color:var(--blue-deep);font:inherit;font-size:.68rem;letter-spacing:.12em;text-transform:uppercase;padding:7px 12px;cursor:pointer;white-space:nowrap;}
+.st-search-clear[hidden]{display:none;}
+.st-location-block{display:grid;gap:6px;justify-items:center;max-width:236px;}
+.st-loc{display:inline-flex;align-items:center;justify-content:center;min-width:174px;font:inherit;font-size:.68rem;letter-spacing:.14em;text-transform:uppercase;font-weight:600;border:1px solid rgba(69,119,152,.28);border-radius:50px;background:rgba(251,250,247,.96);color:var(--blue-night);padding:13px 18px;white-space:nowrap;box-shadow:0 3px 8px rgba(41,57,64,.05);}
+.st-loc:disabled{cursor:not-allowed;opacity:.78;color:var(--ink-soft);}
+.st-loc-note{font-size:.68rem;line-height:1.25;color:var(--ink-faint);text-align:center;}
+.st-filter-set{margin:14px 32px 0;}
+.st-state-set{border-top:1px solid rgba(69,119,152,.12);padding-top:13px;}
+.st-filter-label{font-size:.62rem;letter-spacing:.16em;text-transform:uppercase;color:var(--ink-faint);font-weight:500;margin:0 0 9px;}
+.st-area-details summary{list-style:none;cursor:pointer;display:inline-flex;align-items:center;gap:8px;}
+.st-area-details summary::after{content:"";width:7px;height:7px;border-right:1px solid currentColor;border-bottom:1px solid currentColor;transform:rotate(45deg) translateY(-2px);transition:transform .2s;}
+.st-area-details[open] summary::after{transform:rotate(225deg) translateY(-1px);}
+.st-area-details summary::-webkit-details-marker{display:none;}
+.st-chip-row{display:flex;flex-wrap:wrap;gap:9px;}
+.st-state-row{display:flex;flex-wrap:nowrap;gap:0;border:1px solid rgba(69,119,152,.14);border-radius:50px;background:rgba(251,250,247,.44);padding:3px;overflow:auto;scrollbar-width:none;}
+.st-state-row::-webkit-scrollbar{display:none;}
+.st-state-row .st-filter{flex:1 0 auto;min-width:78px;border-color:transparent;background:transparent;box-shadow:none;text-align:center;}
+.st-state-row .st-filter[aria-pressed="true"]{background:var(--blue-deep);border-color:var(--blue-deep);color:var(--cream);box-shadow:inset 0 -3px 0 rgba(201,186,150,.76);}
+.st-area-row{display:grid;grid-template-columns:minmax(0,1fr) 42px;gap:9px;align-items:center;}
+.st-area-next{appearance:none;width:42px;height:38px;border:1px solid rgba(69,119,152,.16);border-radius:8px;background:rgba(251,250,247,.58);color:var(--ink-soft);font:inherit;font-size:1.05rem;line-height:1;display:grid;place-items:center;}
+.st-area-next:disabled{cursor:not-allowed;opacity:.72;}
+.st-filter{appearance:none;border:1px solid rgba(44,42,38,.12);border-radius:50px;background:rgba(251,250,247,.58);color:var(--ink-soft);font:inherit;font-size:.7rem;font-weight:500;letter-spacing:.08em;text-transform:uppercase;padding:9px 16px;cursor:pointer;transition:background .22s,color .22s,border-color .22s,transform .22s;}
+.st-filter:hover{border-color:rgba(69,119,152,.42);transform:translateY(-1px);background:rgba(239,249,249,.58);}
+.st-filter:focus-visible,.st-search-clear:focus-visible,.st-loc:focus-visible,.st-clear:focus-visible,.st-active-chip:focus-visible,.st-empty-action:focus-visible,.st-empty-link:focus-visible,.st-show-more:focus-visible,.pill:focus-visible,.st-mini-cta:focus-visible,.sp-nav a:focus-visible,.sp-logo:focus-visible,.sp-cart:focus-visible,.sp-ft a:focus-visible{outline:2px solid rgba(69,119,152,.62);outline-offset:4px;}
+.st-filter[aria-pressed="true"]{background:var(--blue-deep);border-color:var(--blue-deep);color:var(--cream);box-shadow:inset 0 -3px 0 rgba(201,186,150,.76);}
+.st-finder-shell{display:grid;grid-template-columns:minmax(460px,1.24fr) minmax(300px,.76fr);gap:24px;align-items:start;}
+.st-results-panel{grid-column:1;border:1px solid rgba(69,119,152,.14);border-radius:10px;background:rgba(251,250,247,.9);box-shadow:0 12px 30px rgba(41,57,64,.06);overflow:hidden;display:flex;flex-direction:column;}
+.st-finder-shell.is-empty .st-results-panel{grid-column:1 / -1;}
+.st-finder-shell.is-empty .st-map-panel{grid-column:1 / -1;grid-row:2;position:relative;top:auto;}
+.st-results-head{display:flex;align-items:end;justify-content:space-between;gap:18px;margin:0;padding:14px 20px 10px;}
+.st-results-head h3{font-family:var(--mm-serif);font-weight:500;font-size:1.35rem;margin:2px 0 0;}
+.st-count{font-size:.82rem;color:var(--ink-soft);margin:0;}
+.st-result-state{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-top:3px;}
+.st-status-note{display:inline-flex;align-items:center;gap:6px;font-size:.58rem;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-faint);}
+.st-status-note::before{content:"";width:7px;height:7px;border-radius:50%;border:1px dashed rgba(44,42,38,.38);}
+.st-clear{appearance:none;border:0;background:transparent;color:var(--ink-soft);font:inherit;font-size:.72rem;text-decoration:underline;text-underline-offset:4px;cursor:pointer;padding:6px;}
+.st-result-filter-row{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:8px;padding:0 20px 10px;}
+.st-result-filter{appearance:none;border:1px solid var(--line);border-radius:7px;background:var(--card);color:var(--ink);font:inherit;font-size:.72rem;font-weight:500;padding:9px 12px;cursor:pointer;min-width:0;text-align:left;transition:background .2s,border-color .2s;}
+.st-result-filter:hover,.st-result-filter:focus-visible{border-color:rgba(69,119,152,.38);background:rgba(232,244,247,.5);}
+.st-result-filter[aria-pressed="true"]{background:var(--blue-deep);border-color:var(--blue-deep);color:var(--cream);box-shadow:inset 0 -3px 0 rgba(201,186,150,.76);}
+.st-active-row{display:flex;flex-wrap:wrap;gap:8px;margin:0;padding:0 20px 14px;background:linear-gradient(180deg,rgba(232,244,247,.22),rgba(251,250,247,0));}
+.st-active-row[hidden]{display:none;}
+.st-active-chip{appearance:none;display:inline-flex;align-items:center;gap:8px;border:1px solid rgba(69,119,152,.38);border-radius:50px;background:rgba(251,250,247,.94);color:var(--blue-night);font:inherit;font-size:.64rem;letter-spacing:.08em;text-transform:uppercase;padding:7px 11px;cursor:pointer;box-shadow:0 6px 14px rgba(41,57,64,.05);}
+.st-active-chip::after{content:"Remove";font-size:.54rem;letter-spacing:.12em;color:var(--blue-deep);opacity:.84;}
+.st-directory-status{display:grid;grid-template-columns:auto minmax(0,1fr);gap:8px 12px;align-items:start;margin:0;padding:0 20px 12px;color:var(--ink-soft);font-size:.74rem;line-height:1.42;border-bottom:1px solid rgba(69,119,152,.1);}
+.st-directory-status strong{font-size:.58rem;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-faint);padding-top:2px;white-space:nowrap;}
+.st-directory-status span{max-width:62ch;}
+.st-pending-note{font-size:.74rem;line-height:1.35;color:var(--ink-soft);margin:0;padding:0 20px 8px;max-width:48ch;}
+.st-data-key{display:flex;flex-wrap:wrap;gap:8px;padding:0 20px 10px;color:var(--ink-faint);}
+.st-data-key span{display:inline-flex;align-items:center;gap:6px;font-size:.58rem;letter-spacing:.12em;text-transform:uppercase;}
+.st-data-key i{width:7px;height:7px;border-radius:50%;background:var(--beige);box-shadow:0 0 0 1px rgba(44,42,38,.12);}
+.st-data-key .pending i{background:transparent;border:1px dashed rgba(44,42,38,.34);}
+.st-data-key .online i{background:var(--blue-accent);}
+.st-results{display:grid;gap:0;}
+.st-results[hidden],.st-results-spacer[hidden],.st-empty[hidden],.st-show-more[hidden]{display:none;}
+.st-result{display:grid;grid-template-columns:22px minmax(0,1fr);gap:8px 12px;align-items:center;border:0;border-top:1px solid var(--line-soft);border-radius:0;background:var(--card);padding:14px 18px;box-shadow:none;transition:background .2s,transform .2s;}
+.st-result:hover,.st-result:focus-within{background:rgba(251,250,247,.94);transform:translateY(-1px);}
+.st-result.is-map-highlight{background:rgba(232,244,247,.68);box-shadow:inset 3px 0 0 var(--blue-deep);}
+.st-result-num{width:10px;height:10px;border-radius:50%;background:var(--blue-night);color:transparent;display:block;font-size:0;box-shadow:0 0 0 5px rgba(69,119,152,.1);}
+.st-result h4{font-family:var(--mm-sans,'Neue Haas Grotesk Display Pro',Helvetica,sans-serif);font-weight:500;font-size:1rem;line-height:1.22;margin:0;color:var(--ink);}
+.st-result-place{grid-column:2 / -1;display:flex;flex-wrap:wrap;gap:6px;justify-content:flex-start;margin-top:-2px;color:var(--ink-soft);font-size:.8rem;}
+.st-result-place strong{font-weight:500;color:var(--ink);}
+.st-result-place .pending{color:var(--ink-faint);}
+.st-result-kind{grid-column:2 / -1;justify-self:start;margin-top:1px;}
+.st-result-address{grid-column:2 / -1;color:var(--ink-faint);font-size:.76rem;line-height:1.35;margin-top:1px;max-width:54ch;}
+.st-result-note{grid-column:2 / -1;color:var(--ink-faint);font-size:.7rem;line-height:1.35;margin-top:2px;}
+.st-meta{display:flex;flex-wrap:wrap;gap:5px;margin-top:7px;}
+.st-badge{display:inline-flex;align-items:center;border:1px solid var(--line);border-radius:50px;background:var(--cream);color:var(--ink-soft);font-size:.58rem;letter-spacing:.12em;text-transform:uppercase;padding:4px 8px;line-height:1;}
+.st-badge.pending{background:rgba(241,237,227,.58);border-style:dashed;color:var(--ink-faint);}
+.st-badge.online{border-color:rgba(64,116,182,.26);background:rgba(232,244,247,.72);color:var(--blue-deep);}
+.st-badge.confirm{border-style:dashed;background:rgba(251,250,247,.6);color:var(--ink-faint);}
+.st-empty{border-top:1px solid var(--line-soft);background:var(--card);padding:22px 20px;color:var(--ink-soft);}
+.st-empty h4{font-family:var(--mm-serif);font-weight:500;font-size:1.18rem;margin:0 0 6px;color:var(--ink);}
+.st-empty p{margin:0 0 16px;max-width:46ch;}
+.st-empty-action{appearance:none;border:1px solid var(--blue-deep);border-radius:50px;background:var(--blue-deep);color:var(--cream);font:inherit;font-size:.66rem;letter-spacing:.14em;text-transform:uppercase;padding:11px 18px;cursor:pointer;}
+.st-empty-actions{display:flex;flex-wrap:wrap;gap:9px;}
+.st-empty-link{display:inline-flex;align-items:center;justify-content:center;min-height:44px;border:1px solid rgba(69,119,152,.24);border-radius:50px;background:rgba(251,250,247,.96);color:var(--blue-night);font-size:.66rem;letter-spacing:.14em;text-transform:uppercase;padding:11px 18px;}
+.st-empty-link:last-child{opacity:.74;}
+.st-results-spacer{flex:1;min-height:14px;border-top:1px solid var(--line-soft);background:linear-gradient(180deg,rgba(251,250,247,.86),rgba(251,250,247,.62));}
+.st-show-more{appearance:none;width:100%;margin:0;border:0;border-top:1px solid var(--line-soft);border-radius:0;background:var(--card);color:var(--ink);font:inherit;font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;padding:13px 20px;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:9px;}
+.st-show-more::after{content:"";width:6px;height:6px;border-right:1px solid currentColor;border-bottom:1px solid currentColor;transform:rotate(45deg) translateY(-2px);}
+.st-show-more:hover{background:rgba(232,244,247,.52);}
+.st-map-panel{grid-column:2;grid-row:1;position:sticky;top:86px;border:1px solid rgba(69,119,152,.13);border-radius:10px;background:rgba(251,250,247,.72);box-shadow:0 10px 28px rgba(41,57,64,.05);padding:18px;}
+.st-map-top{display:flex;align-items:start;justify-content:space-between;gap:12px;margin-bottom:12px;}
+.st-map-top h3{font-family:var(--mm-serif);font-weight:500;font-size:1.22rem;margin:0;}
+.st-map-top p{font-size:.78rem;color:var(--ink-soft);margin:3px 0 0;max-width:28ch;}
+.st-map-canvas{position:relative;min-height:420px;border:1px solid rgba(69,119,152,.16);border-radius:9px;overflow:hidden;background:radial-gradient(circle at 28% 24%,rgba(255,255,255,.62),transparent 25%),radial-gradient(circle at 72% 68%,rgba(232,244,247,.62),transparent 28%),linear-gradient(150deg,#e1ebf1 0%,#f6f7f3 48%,#d3e1eb 100%);}
+.st-map-canvas::before{content:'';position:absolute;inset:-8%;background:
+  radial-gradient(circle at 18% 20%,rgba(255,255,255,.58) 0 8%,transparent 8.5%),
+  radial-gradient(circle at 42% 38%,rgba(255,255,255,.45) 0 11%,transparent 11.5%),
+  radial-gradient(circle at 30% 72%,rgba(255,255,255,.4) 0 10%,transparent 10.5%),
+  linear-gradient(28deg,transparent 30%,rgba(255,255,255,.38) 30.5%,rgba(255,255,255,.38) 31.2%,transparent 31.8%);
+  opacity:.72;}
+.st-map-canvas::after{content:"";position:absolute;inset:0;background:
+  repeating-linear-gradient(0deg,transparent 0 86px,rgba(69,119,152,.026) 87px,transparent 88px),
+  repeating-linear-gradient(90deg,transparent 0 104px,rgba(69,119,152,.024) 105px,transparent 106px),
+  radial-gradient(ellipse at 38% 45%,rgba(255,255,255,.2),transparent 48%);}
+.st-map-canvas::before,.st-map-canvas::after{pointer-events:none;}
+.st-map-coast{position:absolute;z-index:1;right:-7%;top:-8%;bottom:-8%;width:36%;background:linear-gradient(180deg,rgba(201,219,230,.72),rgba(255,255,255,.88));clip-path:polygon(36% 0,100% 0,100% 100%,34% 100%,18% 80%,31% 64%,18% 49%,39% 31%);box-shadow:inset 12px 0 28px rgba(255,255,255,.54);pointer-events:none;}
+.st-map-block{position:absolute;z-index:1;border:1px solid rgba(255,255,255,.4);border-radius:50%;background:rgba(255,255,255,.18);box-shadow:0 1px 0 rgba(69,119,152,.04);pointer-events:none;}
+.st-map-block.one{left:13%;top:18%;width:22%;height:19%;transform:rotate(3deg);}
+.st-map-block.two{left:34%;top:24%;width:21%;height:18%;transform:rotate(-7deg);}
+.st-map-block.three{left:18%;top:52%;width:25%;height:18%;transform:rotate(-12deg);}
+.st-map-block.four{left:48%;top:61%;width:18%;height:18%;transform:rotate(8deg);}
+.st-map-label{position:absolute;z-index:2;color:rgba(44,42,38,.52);font-size:.68rem;letter-spacing:.14em;text-transform:uppercase;text-shadow:0 1px 0 rgba(251,250,247,.72);pointer-events:none;}
+.st-map-label.muted{color:rgba(44,42,38,.34);}
+.st-map-marker{position:absolute;z-index:4;width:20px;height:20px;border-radius:50%;background:rgba(16,25,35,.72);transform:translate(-50%,-50%);box-shadow:0 0 0 11px rgba(69,119,152,.08),0 0 0 20px rgba(69,119,152,.035),0 8px 18px rgba(16,25,35,.12);pointer-events:none;}
+.st-map-empty{position:absolute;z-index:4;left:50%;top:50%;transform:translate(-50%,-50%);border:1px dashed rgba(44,42,38,.24);border-radius:10px;background:rgba(251,250,247,.84);padding:16px 18px;color:var(--ink-soft);font-size:.78rem;text-align:center;max-width:230px;}
+.st-map-preview-note{position:absolute;left:18px;bottom:28px;border:1px solid rgba(44,42,38,.1);border-radius:50px;background:rgba(251,250,247,.82);padding:7px 11px;color:var(--ink-faint);font-size:.62rem;letter-spacing:.12em;text-transform:uppercase;}
+.st-map-large{position:absolute;right:18px;bottom:26px;border:1px dashed rgba(44,42,38,.28);border-radius:8px;background:rgba(251,250,247,.82);padding:12px 16px;color:var(--ink-soft);font-size:.72rem;font-weight:500;box-shadow:none;}
+.st-map-legend{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px;color:var(--ink-faint);}
+.st-map-legend span{display:inline-flex;align-items:center;gap:6px;font-size:.58rem;letter-spacing:.12em;text-transform:uppercase;}
+.st-map-legend i{width:7px;height:7px;border-radius:50%;background:var(--blue-night);box-shadow:0 0 0 1px rgba(44,42,38,.12);}
+.st-map-legend .pending i{background:var(--beige);border:1px solid rgba(44,42,38,.18);}
+.st-map-legend .online i{background:var(--blue-accent);}
+.st-map-note{font-size:.74rem;color:var(--ink-faint);margin:12px 0 0;}
+.st-map-text-summary{font-size:.72rem;line-height:1.45;color:var(--ink-soft);margin:10px 0 0;}
+.st-cta-grid{grid-column:1/-1;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px;margin:0;}
+.st-mini-cta{border:1px solid rgba(69,119,152,.14);border-radius:10px;background:var(--card);padding:20px;display:grid;grid-template-columns:auto minmax(0,1fr) auto;gap:16px;align-items:center;transition:box-shadow .25s,transform .25s,background .25s;}
+.st-mini-cta:hover,.st-mini-cta:focus-visible{background:linear-gradient(180deg,rgba(239,249,249,.58),var(--card));box-shadow:0 16px 36px rgba(41,57,64,.1);transform:translateY(-2px);}
+.st-mini-icon{width:42px;height:42px;border:1px solid rgba(69,119,152,.24);border-radius:50%;display:grid;place-items:center;color:var(--blue-night);background:rgba(232,244,247,.4);}
+.st-mini-icon svg{width:22px;height:22px;stroke:currentColor;fill:none;stroke-width:1.5;}
+.st-mini-cta h3{font-family:var(--mm-serif);font-weight:500;font-size:1.12rem;margin:0 0 4px;}
+.st-mini-cta p{margin:0;color:var(--ink-soft);font-size:.86rem;}
+.st-mini-cta b{font-size:1.2rem;font-weight:400;color:var(--ink-soft);}
+/* trade cta band */
+.st-trade{margin:0;}
+.st-trade .inner{border:1px solid rgba(69,119,152,.16);border-radius:12px;background:var(--card);box-shadow:0 16px 42px rgba(41,57,64,.08);padding:28px;display:grid;grid-template-columns:minmax(0,1fr) minmax(240px,390px);gap:34px;align-items:center;overflow:hidden;}
+.st-trade-copy{text-align:left;display:flex;flex-direction:column;align-items:flex-start;padding:24px 0 24px 10px;}
+.st-trade .sp-kick{margin:0 0 16px;}
+.st-trade h2{font-family:var(--mm-serif);font-weight:500;font-size:clamp(1.6rem,2.6vw,2.2rem);line-height:1.12;margin:0;}
+.st-trade h2 em{font-style:italic;font-weight:400;}
+.st-trade p{color:var(--ink-soft);max-width:52ch;margin:20px 0 28px;}
+.pill{display:inline-flex;align-items:center;gap:9px;font-size:.66rem;letter-spacing:.16em;text-transform:uppercase;font-weight:500;padding:13px 26px;border:1px solid var(--ink);border-radius:50px;background:transparent;color:var(--ink);cursor:pointer;transition:all .28s;}
+.pill:hover{background:var(--blue-night);color:var(--cream);}
+.pill.solid{background:var(--blue-night);border-color:var(--blue-night);color:var(--cream);}.pill.solid:hover{opacity:.9;}
+.st-trade .note{font-size:.62rem;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-faint);max-width:34ch;margin:18px 0 0;text-align:left;}
+.st-trade-art{align-self:stretch;margin:0;border-radius:10px;overflow:hidden;min-height:278px;background:linear-gradient(180deg,var(--blue-bridge),#edf1f2);box-shadow:inset 0 0 0 1px rgba(69,119,152,.18),0 18px 36px rgba(41,57,64,.12);}
+.st-trade-art img{width:100%;height:100%;object-fit:cover;object-position:center bottom;}
+
+/* newsletter closing band */
+.st-news{margin:40px 0 0;padding:42px 0 62px;border-top:1px solid rgba(69,119,152,.22);background:linear-gradient(180deg,rgba(232,244,247,.2),rgba(244,242,237,0));text-align:center;}
+.st-news h2{font-family:var(--mm-serif);font-weight:500;font-size:1.6rem;margin:0 0 8px;}
+.st-news h2 em{font-style:italic;font-weight:400;}
+.st-news p{color:var(--ink-soft);max-width:46ch;margin:0 auto 22px;font-size:.95rem;}
+.st-form{display:flex;justify-content:center;gap:10px;flex-wrap:wrap;}
+.st-form input{font-family:inherit;font-size:.85rem;color:var(--ink);background:var(--card);border:1px solid rgba(69,119,152,.18);border-radius:50px;padding:12px 20px;width:min(300px,100%);outline:none;}
+.st-form input::placeholder{color:var(--ink-faint);}
+.st-form input:focus{border-color:var(--blue-deep);box-shadow:0 0 0 3px rgba(69,119,152,.12);}
+.st-form .pill[disabled]{opacity:.55;cursor:default;}
+.st-form .pill[disabled]:hover{background:transparent;color:var(--ink);}
+.st-news .fine{font-size:.62rem;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-faint);margin-top:16px;}
+
+.sp .wrap.st-finder{padding-top:0;padding-bottom:38px;margin-top:26px;}
+.sp .wrap.st-trade{margin-top:0;}
+.sp .wrap.st-news{margin-top:40px;padding-top:42px;padding-bottom:62px;}
+
+/* footer (mirrors shop) */
+.sp-ft{border-top:1px solid var(--line);margin-top:0;}
+.sp-ft .row{display:flex;align-items:center;justify-content:space-between;gap:24px;padding:26px 0;flex-wrap:wrap;}
+.sp-ft .fnav{display:flex;gap:22px;flex-wrap:wrap;}
+.sp-ft .fnav a{font-size:.66rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-soft);}
+.sp-ft .fnav a:hover{color:var(--ink);}
+
+@media (max-width:900px){
+  .sp-nav a,.sp-currency{display:none;}
+  .sp-head{text-align:center;padding:64px 28px 46px;}
+  .sp-head::before{left:50%;}
+  .sp-head h1{max-width:none;margin-left:auto;margin-right:auto;}
+  .sp-head p{margin:0 auto;}
+  .st-proof-row{justify-content:center;margin-left:auto;margin-right:auto;}
+  .st-search-row{grid-template-columns:1fr;}
+  .st-finder-cue{justify-content:center;text-align:center;}
+  .st-location-block{max-width:none;}
+  .st-loc{width:100%;justify-content:center;}
+  .st-finder-shell{grid-template-columns:1fr;}
+  .st-map-panel{grid-column:1;grid-row:auto;position:relative;top:auto;}
+  .st-map-canvas{min-height:430px;}
+  .st-cta-grid{grid-template-columns:1fr;}
+  .st-result{grid-template-columns:30px minmax(0,1fr);}
+  .st-result-place{grid-column:2 / -1;justify-content:flex-start;}
+  .st-result-kind,.st-result-address,.st-result-note{grid-column:2 / -1;justify-self:start;}
+  .st-trade .inner{grid-template-columns:1fr;}
+  .st-trade-copy{padding:12px 0 0;text-align:center;align-items:center;}
+  .st-trade .note{text-align:center;margin-left:auto;margin-right:auto;}
+  .st-trade-art{min-height:220px;order:-1;}
+}
+@media (max-width:560px){
+  .sp .wrap{padding:0 18px;}
+  .sp-head{padding:42px 18px 34px;}
+  .sp-head::before{top:12px;width:calc(100% - 24px);height:124px;background:radial-gradient(ellipse at 50% 18%,rgba(69,119,152,.2),rgba(123,157,191,.12) 50%,rgba(231,228,202,0) 78%);}
+  .sp-kick{margin-bottom:16px;}
+  .sp-head h1{font-size:2rem;margin-bottom:12px;}
+  .sp-head p{font-size:.9rem;line-height:1.42;max-width:31ch;}
+  .st-proof-row{display:none;}
+  .sp .wrap.st-finder{padding-top:20px;padding-bottom:28px;margin-top:0;}
+  .st-finder-intro{margin-bottom:16px;}
+  .st-finder-intro h2{font-size:1.5rem;}
+  .st-finder-intro .sub{font-size:.88rem;max-width:33ch;}
+  .st-search-panel{padding:18px 0 16px;margin-bottom:16px;}
+  .st-finder-cue{display:grid;gap:6px;margin:0 0 16px;}
+  .st-finder-cue small{font-size:.62rem;line-height:1.3;}
+  .st-search-row{gap:10px;}
+  .st-search{padding:11px 10px 11px 13px;}
+  .st-location-block{gap:4px;}
+  .st-loc{min-width:0;padding:11px 14px;}
+  .st-loc-note{font-size:.62rem;}
+  .st-state-set{padding-top:10px;}
+  .st-chip-row{gap:6px;}
+  .st-state-row{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:6px;border:0;border-radius:0;background:transparent;padding:0;overflow:visible;}
+  .st-state-row .st-filter{width:100%;min-width:0;border-color:var(--line);background:var(--card);font-size:.6rem;letter-spacing:.06em;padding:7px 6px;}
+  .st-area-row{grid-template-columns:minmax(0,1fr) 38px;}
+  .st-area-next{width:38px;height:36px;}
+  .st-filter{font-size:.64rem;padding:8px 12px;}
+  .st-filter-set{margin:10px 0 0;}
+  .st-area-details:not([open]) .st-area-row{display:none;}
+  .st-results-head{align-items:end;flex-direction:row;gap:10px;padding:13px 16px 8px;}
+  .st-results-head h3{font-size:1.2rem;}
+  .st-count{font-size:.76rem;}
+  .st-result-state{align-items:flex-start;flex-direction:column;gap:3px;}
+  .st-status-note{font-size:.5rem;letter-spacing:.08em;}
+  .st-clear{font-size:.68rem;padding:0 0 3px;}
+  .st-result-filter-row{grid-template-columns:repeat(2,minmax(0,1fr));gap:6px;padding:0 16px 10px;}
+  .st-result-filter{font-size:.62rem;padding:8px 6px;}
+  .st-pending-note{font-size:.68rem;line-height:1.28;padding:0 16px 8px;}
+  .st-data-key{gap:6px;padding:0 16px 10px;}
+  .st-data-key span{font-size:.52rem;letter-spacing:.08em;}
+  .st-directory-status{grid-template-columns:1fr;gap:3px;padding:0 16px 10px;font-size:.7rem;}
+  .st-result{grid-template-columns:18px minmax(0,1fr);gap:10px;padding:12px 16px;}
+  .st-result h4{font-size:1rem;}
+  .st-result-place{grid-column:2 / -1;justify-content:flex-start;margin-top:-2px;}
+  .st-result-kind,.st-result-address,.st-result-note{grid-column:2 / -1;justify-self:start;}
+  .st-result-address{font-size:.72rem;line-height:1.3;}
+  .st-result-note{font-size:.66rem;}
+  .st-meta{gap:4px;margin-top:6px;}
+  .st-badge{font-size:.54rem;padding:4px 7px;}
+  .st-show-more{font-size:.62rem;letter-spacing:.12em;padding:12px 16px;}
+  .st-map-panel{padding:14px;}
+  .st-map-canvas{min-height:340px;}
+  .st-map-preview-note{left:12px;bottom:20px;}
+  .st-map-large{right:12px;bottom:18px;padding:10px 12px;font-size:.66rem;}
+  .st-mini-cta{grid-template-columns:auto minmax(0,1fr);padding:17px;}
+  .st-mini-cta b{display:none;}
+  .st-trade .inner{padding:18px 18px 36px;}
+  .st-trade .sp-kick{margin-bottom:12px;}
+  .st-trade p{margin:16px auto 24px;}
+  .st-trade-art{min-height:176px;}
+  .sp .wrap.st-news{margin-top:32px;padding-top:36px;}
+}
+
+/* homepage atmosphere layers (mist wisps + film grain + moon-glow pulse) */
+.sp{position:relative;}
+.sp-mist{position:absolute;inset:0;z-index:0;pointer-events:none;
+  background:
+    radial-gradient(48% 15% at 15% 18%, rgba(255,255,255,.26), transparent 68%),
+    radial-gradient(44% 15% at 88% 34%, rgba(123,157,191,.24), transparent 70%),
+    radial-gradient(50% 16% at 12% 55%, rgba(123,157,191,.14), transparent 70%),
+    radial-gradient(44% 15% at 87% 76%, rgba(123,157,191,.18), transparent 70%);}
+.sp-grain{position:absolute;inset:0;z-index:0;pointer-events:none;opacity:.07;mix-blend-mode:soft-light;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='g'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23g)'/%3E%3C/svg%3E");background-size:200px 200px;}
+.sp-moonwash{position:absolute;top:0;left:0;right:0;height:520px;z-index:0;pointer-events:none;mix-blend-mode:screen;
+  background:radial-gradient(ellipse at 50% 12%,rgba(241,237,227,.14),rgba(69,119,152,.14) 16%,rgba(123,157,191,.1) 28%,transparent 42%);
+  animation:spMoonPulse 7.5s ease-in-out infinite;}
+@keyframes spMoonPulse{0%,100%{opacity:.5;transform:scale(.985);}50%{opacity:.85;transform:scale(1.04);}}
+.sp>header,.sp>div,.sp>section,.sp>footer{position:relative;z-index:1;}.sp>[class$="-mist"],.sp>[class$="-grain"],.sp>[class$="-moonwash"]{position:absolute;z-index:0;}
+
+@media (prefers-reduced-motion:reduce){.sp *{transition:none!important;animation:none!important;}}
+</style>
+
+<style>/* WIP iOS-safe (non-drifting) */html{-webkit-text-size-adjust:100%;text-size-adjust:100%}*{-webkit-tap-highlight-color:transparent}input,select,textarea{font-size:16px}
+/* Keep finder controls comfortable to use without changing the visual hierarchy. */
+.st-search input,.st-search-clear,.st-filter,.st-area-next,.st-result-filter,.st-active-chip,.st-empty-action,.st-show-more,.st-clear{min-width:44px;min-height:44px}
+</style>
+<link rel="stylesheet" href="a11y_inner.css?v=20260723">
+<link rel="stylesheet" href="design_refinement_20260723.css">
+
+<!-- MM-SEO-BLOCK (og-image paths are PLACEHOLDERS: assets/social/*.jpg 1200x630 need producing) -->
+<meta name="robots" content="noindex, nofollow, noarchive">
+<meta name="theme-color" content="#457798">
+<meta property="og:site_name" content="Maple Moon">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://maplemoon.com.au/pages/stockists">
+<meta property="og:title" content="Stockists | Maple Moon">
+<meta property="og:description" content="Find Maple Moon Australian carob at 200+ stockists across Australia. Directory details are being confirmed.">
+<meta property="og:image" content="https://maplemoon.com.au/assets/social/og-stockists.jpg">
+<meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
+<meta property="og:locale" content="en_AU">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Stockists | Maple Moon">
+<meta name="twitter:description" content="Find Maple Moon Australian carob at 200+ stockists across Australia. Directory details are being confirmed.">
+<meta name="twitter:image" content="https://maplemoon.com.au/assets/social/og-stockists.jpg">
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "Organization",
+ "@id": "https://maplemoon.com.au/#organization",
+ "name": "Maple Moon",
+ "url": "https://maplemoon.com.au",
+ "logo": {
+  "@type": "ImageObject",
+  "url": "https://maplemoon.com.au/assets/social/mm_logo_social.jpg",
+  "width": 512,
+  "height": 512
+ },
+ "description": "Maple Moon makes Australian organic carob bars, moons, bites and elixirs. Vegan, gluten free, caffeine free. Far north coast of NSW.",
+ "email": "info@maplemoon.com.au",
+ "areaServed": {
+  "@type": "Country",
+  "name": "Australia"
+ },
+ "foundingLocation": {
+  "@type": "Place",
+  "name": "Far North Coast, New South Wales, Australia"
+ }
+}
+</script>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "WebSite",
+ "@id": "https://maplemoon.com.au/#website",
+ "url": "https://maplemoon.com.au",
+ "name": "Maple Moon",
+ "description": "Australian organic carob bars, moons, bites and elixirs. Vegan, gluten free, caffeine free.",
+ "publisher": {
+  "@id": "https://maplemoon.com.au/#organization"
+ },
+ "inLanguage": "en-AU"
+}
+</script>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "BreadcrumbList",
+ "itemListElement": [
+  {
+   "@type": "ListItem",
+   "position": 1,
+   "name": "Home",
+   "item": "https://maplemoon.com.au/"
+  },
+  {
+   "@type": "ListItem",
+   "position": 2,
+   "name": "Stockists",
+   "item": "https://maplemoon.com.au/pages/stockists"
+  }
+ ]
+}
+</script>
+<!--MM-A11Y-SAFE-->
+</head>
+<body>
+<div class="sp">
+  <div class="sp-mist" aria-hidden="true"></div>
+  <div class="sp-grain" aria-hidden="true"></div>
+  <div class="sp-moonwash" aria-hidden="true"></div>
+
+  <header class="sp-top"><div class="wrap bar">
+    <nav class="sp-nav" aria-label="Primary navigation"><a href="shop.WIP.html">Shop</a><a href="our-story.WIP.html">Our Story</a><a href="homepage_real_1_lead_photo.WIP.html#carob">What is Carob</a></nav>
+    <a class="sp-logo" href="homepage_real_1_lead_photo.WIP.html">maple moon</a>
+    <nav class="sp-nav r" aria-label="Utility navigation"><a href="stockists.WIP.html" class="on">Stockists</a><span class="sp-currency" aria-label="Currency, Australian dollars">AUD $</span>
+      <button class="sp-cart" type="button" aria-label="Cart, 0 items"><svg viewBox="0 0 24 24"><path d="M6 8h12l-1 12H7L6 8z"/><path d="M9 8a3 3 0 0 1 6 0"/></svg><b>0</b></button></nav>
+  </div></header>
+
+  <div class="wrap sp-head">
+    <span class="sp-kick">Stockists</span>
+    <h1>Find Maple Moon.</h1>
+    <p>Find Maple Moon at 200+ health food stores, pharmacies and grocers across Australia.</p>
+    <div class="st-proof-row" aria-label="Stockist page status">
+      <span>200+ stockists across Australia</span>
+      <span>204 parsed · 7 need confirmation</span>
+      <span>Online ordering available</span>
+    </div>
+  </div>
+
+  <section class="wrap st-finder" aria-label="Find a Maple Moon stockist">
+    <a class="st-skip-finder" href="#stockistResults">Skip filters to results</a>
+    <div class="st-finder-intro">
+      <h2>Stockists across <em>Australia.</em></h2>
+      <p class="sub">Search the current Maple Moon stockist directory by store, suburb, postcode or state. Seven entries still need client confirmation.</p>
+    </div>
+
+    <div class="st-search-panel">
+      <div class="st-finder-cue">
+        <span>Find a stockist</span>
+        <small>Search the source directory; store-type labels are provisional pending client sign-off.</small>
+      </div>
+      <div class="st-search-row">
+        <div class="st-search">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><path d="m16.5 16.5 4 4"></path></svg>
+          <input id="stockistSearch" type="search" placeholder="Search store, suburb, postcode or state" autocomplete="off" aria-label="Search stockists by store, suburb, postcode or state" aria-describedby="stockistDirectoryStatus" aria-controls="stockistResults" aria-keyshortcuts="Escape">
+          <button class="st-search-clear" type="button" id="stockistSearchClear" hidden aria-label="Clear stockist search">Clear</button>
+        </div>
+      </div>
+
+      <div class="st-filter-set st-state-set">
+        <p class="st-filter-label">State</p>
+        <div class="st-chip-row st-state-row" role="group" aria-label="Filter by state">
+          <button class="st-filter" type="button" data-filter="state" data-value="ALL" aria-pressed="true">All</button>
+          <button class="st-filter" type="button" data-filter="state" data-value="NSW" aria-pressed="false">NSW</button>
+          <button class="st-filter" type="button" data-filter="state" data-value="QLD" aria-pressed="false">QLD</button>
+          <button class="st-filter" type="button" data-filter="state" data-value="VIC" aria-pressed="false">VIC</button>
+          <button class="st-filter" type="button" data-filter="state" data-value="WA" aria-pressed="false">WA</button>
+          <button class="st-filter" type="button" data-filter="state" data-value="SA" aria-pressed="false">SA</button>
+          <button class="st-filter" type="button" data-filter="state" data-value="ACT" aria-pressed="false">ACT</button>
+          <button class="st-filter" type="button" data-filter="state" data-value="TAS" aria-pressed="false">TAS</button>
+          <button class="st-filter" type="button" data-filter="state" data-value="NT" aria-pressed="false">NT</button>
+        </div>
+      </div>
+
+      <p class="st-filter-label st-type-label">Directory view <span>Store-type labels are provisional</span></p>
+      <div class="st-result-filter-row st-finder-type-row" role="group" aria-label="Filter results by directory view">
+        <button class="st-result-filter" type="button" data-filter="type" data-value="ALL" aria-pressed="true">All types</button>
+        <button class="st-result-filter" type="button" data-filter="type" data-value="National chain" aria-pressed="false">National</button>
+        <button class="st-result-filter" type="button" data-filter="type" data-value="Independent store" aria-pressed="false">Independent</button>
+        <button class="st-result-filter" type="button" data-filter="type" data-value="Online / delivery" aria-pressed="false">Online</button>
+        <button class="st-result-filter" type="button" data-filter="review" data-value="PENDING" aria-pressed="false">Needs confirmation</button>
+      </div>
+
+      <details class="st-filter-set st-area-details" id="popularAreas">
+        <summary class="st-filter-label">Quick areas</summary>
+        <div class="st-area-row">
+          <div class="st-chip-row" role="group" aria-label="Filter by quick area">
+            <button class="st-filter" type="button" data-area="Sydney" aria-pressed="false">Sydney</button>
+            <button class="st-filter" type="button" data-area="Byron Bay" aria-pressed="false">Byron Bay</button>
+            <button class="st-filter" type="button" data-area="Melbourne" aria-pressed="false">Melbourne</button>
+            <button class="st-filter" type="button" data-area="Perth" aria-pressed="false">Perth</button>
+            <button class="st-filter" type="button" data-area="Cairns" aria-pressed="false">Cairns</button>
+            <button class="st-filter" type="button" data-area="Noosa" aria-pressed="false">Noosa</button>
+          </div>
+          <button class="st-area-next" type="button" disabled aria-disabled="true" aria-label="More popular areas pending">&gt;</button>
+        </div>
+      </details>
+    </div>
+
+    <div class="st-finder-shell">
+      <div class="st-results-panel">
+        <div class="st-results-head">
+          <div>
+            <span class="sp-kick">Results</span>
+            <h3 id="stockistTitle" aria-live="polite" aria-atomic="true">Showing all stockists</h3>
+            <div class="st-result-state">
+              <p class="st-count" id="stockistCount" role="status" aria-live="polite" aria-atomic="true">Loading stockists.</p>
+            </div>
+          </div>
+          <button class="st-clear" type="button" id="stockistClear" aria-controls="stockistResults" hidden>Reset finder</button>
+        </div>
+        <p class="st-directory-status" id="stockistDirectoryStatus"><strong>WIP directory status</strong><span>204 entries are in this source parse. Seven entries have incomplete location details and need client confirmation before launch.</span></p>
+        <div class="st-data-key" aria-label="Directory caveats">
+          <span><i></i>204 source entries</span>
+          <span class="pending"><i></i>7 location details pending</span>
+          <span class="online"><i></i>Illustrative preview only</span>
+        </div>
+        <div class="st-active-row" id="stockistActiveFilters" aria-label="Active filters" hidden></div>
+        <div class="st-results" id="stockistResults" role="list" tabindex="-1" aria-label="Stockist results"></div>
+        <div class="st-results-spacer" id="stockistResultsSpacer" aria-hidden="true" hidden></div>
+        <div class="st-empty" id="stockistEmpty" hidden>
+          <h4>No matching stockists yet.</h4>
+          <p id="stockistEmptyCopy">Try a broader search or clear the filters while the remaining store details are confirmed.</p>
+          <div class="st-empty-actions">
+            <button class="st-empty-action" type="button" id="stockistEmptyClear">Clear filters</button>
+            <a class="st-empty-link" href="shop.WIP.html">Shop online</a>
+            <a class="st-empty-link" href="mailto:info@maplemoon.com.au?subject=Stocking%20enquiry">Wholesale enquiry</a>
+          </div>
+        </div>
+        <button class="st-show-more" type="button" id="stockistShowMore" hidden>Load more stockists</button>
+      </div>
+
+      <aside class="st-map-panel" aria-label="Stockist coverage preview">
+        <div class="st-map-top">
+          <div>
+            <h3>Illustrative coverage preview</h3>
+            <p id="stockistMapSummary">Preview highlights follow the visible result rows.</p>
+          </div>
+          <span class="st-badge pending">Not a live map</span>
+        </div>
+        <div class="st-map-canvas" id="stockistMap" role="img" aria-label="Illustrative, non-geographic coverage preview" aria-describedby="stockistMapSummary stockistMapTextSummary"></div>
+        <div class="st-map-legend" aria-label="Coverage preview legend"><span><i></i>Current result preview</span><span class="pending"><i></i>Not an exact pin</span></div>
+        <p class="st-map-note">This is a visual coverage guide only. It has no coordinates, distances, live map controls or exact store pins.</p>
+        <p class="st-map-text-summary" id="stockistMapTextSummary" role="status" aria-live="polite">A text summary of the current result preview will appear here.</p>
+      </aside>
+
+      <div class="st-cta-grid">
+        <a class="st-mini-cta" href="shop.WIP.html">
+          <span class="st-mini-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 7h11v10H4z"></path><path d="M15 11h3l2 3v3h-5z"></path><circle cx="7" cy="18" r="1.6"></circle><circle cx="18" cy="18" r="1.6"></circle></svg></span>
+          <div><h3>Can't find a listed store?</h3><p>Shop online while store details are confirmed.</p></div>
+          <b aria-hidden="true">&gt;</b>
+        </a>
+        <a class="st-mini-cta" href="mailto:info@maplemoon.com.au?subject=Stocking%20enquiry">
+          <span class="st-mini-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 3 21 12 12 21 3 12z"></path><path d="M12 8v4"></path><path d="M12 16h.01"></path></svg></span>
+          <div><h3>Want to stock Maple Moon?</h3><p>Send a wholesale enquiry for the current range.</p></div>
+          <b aria-hidden="true">&gt;</b>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="wrap st-trade" aria-label="Wholesale">
+    <div class="inner">
+      <div class="st-trade-copy">
+        <span class="sp-kick">For retailers &amp; cafes</span>
+        <h2>Stock maple <em>moon.</em></h2>
+        <p>We supply selected retailers, cafes and grocers with the full carob range: bars, moons, bites and elixirs, all made from Australian organic carob. If your shelves would suit a quieter kind of treat, we would love to hear from you.</p>
+        <a class="pill solid" href="mailto:info@maplemoon.com.au?subject=Stocking%20enquiry">Enquire about stocking</a>
+        <p class="note">Wholesale pricing &amp; minimums shared on enquiry</p>
+      </div>
+      <figure class="st-trade-art">
+        <img src="assets/photo_finals/maplemoon_heros55_brandmatched.webp" alt="Maple Moon carob bars, moons and elixirs arranged in soft blue studio light" loading="lazy" decoding="async">
+      </figure>
+    </div>
+  </section>
+
+  <section class="wrap st-news" aria-label="Stay in the loop">
+    <h2>Be first to the <em>shelf.</em></h2>
+    <p>Leave your email and we will let you know when new stockist details are added.</p>
+    <form class="st-form" onsubmit="return false;">
+      <input type="email" placeholder="Your email" aria-label="Email address">
+      <button class="pill" type="submit" disabled>Coming soon</button>
+    </form>
+    <p class="fine">Stockist news first, nothing else</p>
+  </section>
+
+  <footer class="sp-ft"><div class="wrap">
+    <div class="row">
+      <a class="serif" href="homepage_real_1_lead_photo.WIP.html" style="font-size:1.15rem">maple moon</a>
+      <nav class="fnav" aria-label="Footer navigation"><a href="shop.WIP.html">Shop</a><a href="our-story.WIP.html">Our Story</a><a href="stockists.WIP.html">Stockists</a><a href="mailto:info@maplemoon.com.au">Contact</a></nav>
+    </div>
+  </div></footer>
+
+</div>
+<script>
+(function(){
+  /* WIP guardrail: no live map, exact pins, near-me, distances or hours until stockist coordinates are sourced. Type/group labels are inferred and need client sign-off. */
+  var stockists=[
+    {name:"About Me Organics",type:"Independent store",state:"NSW",area:"Penrith",group:"Independent Stores",address:"122 Station Street, Shop 2 Nepean Village, Penrith, Sydney, 2750, Australia",postcode:"2750",sourceLine:229},
+    {name:"Alkhemy - Aegle Aceso Pty Ltd",type:"Independent store",state:"UNKNOWN",area:"Details pending",group:"Independent Stores",address:null,postcode:null,sourceLine:231,note:"No address text at all in source directory."},
+    {name:"Arcadia Store",type:"Independent store",state:"QLD",area:"Magnetic Island",group:"Independent Stores",address:"Shop 1, 5 Bright Ave, Arcadia, Magnetic Island, 4819, Australia",postcode:"4819",sourceLine:233},
+    {name:"Atherton Food Co-op",type:"Independent store",state:"QLD",area:"Atherton",group:"Independent Stores",address:"7E Heberton Rd, Atherton, 4883, Australia",postcode:"4883",sourceLine:235},
+    {name:"Avalon Wholefoods",type:"Independent store",state:"NSW",area:"Avalon Beach",group:"Independent Stores",address:"25 Old Barrenjoey Road, Shop 3-4, Avalon Beach, Sydney, 2107, Australia",postcode:"2107",sourceLine:237},
+    {name:"aZesty",type:"Independent store",state:"VIC",area:"Wodonga",group:"Independent Stores",address:"194A High St, Wodonga, 3690, Australia",postcode:"3690",sourceLine:239},
+    {name:"Balaclava Health Foods",type:"Independent store",state:"VIC",area:"Balaclava",group:"Independent Stores",address:"153 Carlisle Street, Balaclava, 3183",postcode:"3183",sourceLine:241},
+    {name:"Bayside Natural Health Centre",type:"Independent store",state:"NSW",area:"Double Bay",group:"Independent Stores",address:"Shop G30 Cosmopolitan Shopping Centre, 2/22 Knox Street, Double Bay, Sydney, 2028, Australia",postcode:"2028",sourceLine:243},
+    {name:"Baz & Shaz",type:"Independent store",state:"NSW",area:"Suffolk Park",group:"Independent Stores",address:"44 Beech Drive, Suffolk Park, 2481, Australia",postcode:"2481",sourceLine:245},
+    {name:"Be Earth Organic Street Store - (Previously Rawvit Hornsby)",type:"National chain",state:"NSW",area:"Hornsby",group:"National Chains",address:"1/12-14 George Street, Hornsby, 2077, Australia",postcode:"2077",sourceLine:247},
+    {name:"Be Earth Organic Westfields - (Hornsby Westfields)",type:"National chain",state:"NSW",area:"Hornsby",group:"National Chains",address:"Level 1, Shop 1021, Hornsby westfields, 236 Pacific Hwy, Hornsby, Sydney, 2077, Australia",postcode:"2077",sourceLine:249},
+    {name:"Be Earth Organic Woy Woy",type:"National chain",state:"NSW",area:"Woy Woy",group:"National Chains",address:"T28, Ground floor, Railway St, Deepwater Plaza, Woy Woy, Sydney, 2256",postcode:"2256",sourceLine:251},
+    {name:"Beaches Health Foods - Warriewood",type:"Independent store",state:"NSW",area:"Warriewood",group:"Independent Stores",address:"Shop SP013, Warriewood Square, Jacksons Road, Warriewood, 2101, Australia",postcode:"2101",sourceLine:253},
+    {name:"Belmondos Wholefoods",type:"Independent store",state:"QLD",area:"Noosaville",group:"Independent Stores",address:"2/59 Rene St, Noosaville, 4566, Australia",postcode:"4566",sourceLine:255},
+    {name:"Bio Organic Farm Shop",type:"Independent store",state:"NSW",area:"Murwillumbah",group:"Independent Stores",address:"75 Wollumbin Street, Murwillumbah, 2484, Australia",postcode:"2484",sourceLine:257},
+    {name:"Biome Milton",type:"Independent store",state:"QLD",area:"Milton",group:"Independent Stores",address:"37 Douglas St, Milton, 4064, Australia",postcode:"4064",sourceLine:259},
+    {name:"Blackwood Health Foods",type:"Independent store",state:"SA",area:"Blackwood",group:"Independent Stores",address:"248 Main Road, Blackwood, Adelaide, 5051, Australia",postcode:"5051",sourceLine:261},
+    {name:"Blake Family Grocers Daylesford",type:"Independent store",state:"VIC",area:"Daylesford",group:"Independent Stores",address:"1 Howe St, Daylesford, 3460, Australia",postcode:"3460",sourceLine:263},
+    {name:"Boatshed Market WA",type:"Independent store",state:"WA",area:"Cottesloe",group:"Independent Stores",address:"40 Jarrad Street, Cottesloe, Perth, 6011, Australia",postcode:"6011",sourceLine:265},
+    {name:"BP Murwillumbah",type:"Independent store",state:"NSW",area:"South Murwillumbah",group:"Independent Stores",address:"216 Tweed Valley Way, South Murwillumbah, 2484, Australia",postcode:"2484",sourceLine:267},
+    {name:"Bridgetown Home of Health",type:"Independent store",state:"WA",area:"Bridgetown",group:"Independent Stores",address:"130 Hampton Street, Bridgetown, 6255, Australia",postcode:"6255",sourceLine:269},
+    {name:"Carsburgs Mullumbimby",type:"Independent store",state:"NSW",area:"Mullumbimby",group:"Independent Stores",address:"2 Argyle Street, Mullumbimby, 2482, Australia",postcode:"2482",sourceLine:271},
+    {name:"Clay Health & Organics",type:"Independent store",state:"VIC",area:"Victoria",group:"Independent Stores",address:"719-721 Rathdowne Street, Carlton North, Victoria, 3054, Australia",postcode:"3054",sourceLine:273},
+    {name:"Coburg Health",type:"Independent store",state:"VIC",area:"5/461 Sydney Rd",group:"Independent Stores",address:"5/461 Sydney Rd, Coburg VIC 3058",postcode:"3058",sourceLine:275},
+    {name:"Coco's Wealth of Health",type:"Independent store",state:"NSW",area:"Maroubra",group:"Independent Stores",address:"936 Anzac Parade, Coco's Wealth of Health, Maroubra, 2035, Australia",postcode:"2035",sourceLine:277},
+    {name:"Dee Why Discount Vitamins",type:"Independent store",state:"NSW",area:"Dee Why",group:"Independent Stores",address:"681 Pittwater Road, Dee Why, Dee Why, 2099, Australia",postcode:"2099",sourceLine:279},
+    {name:"Dino's IGA Mullumbimby",type:"National chain",state:"NSW",area:"Mullumbimby",group:"National Chains",address:"62 Burringbar Street, Mullumbimby, 2482, Australia",postcode:"2482",sourceLine:281},
+    {name:"Earth Wholefoods Joondalup",type:"Independent store",state:"WA",area:"Joondalup",group:"Independent Stores",address:"3/25 Delage St, Joondalup, WA, 6027, Australia",postcode:"6027",sourceLine:283},
+    {name:"EatRaw Organic Delivery",type:"Online / delivery",state:"NSW",area:"Botany",group:"Online / Delivery",address:"130 Banksia St, Botany, 2019, Australia",postcode:"2019",sourceLine:285},
+    {name:"Eden's Landing",type:"Independent store",state:"NSW",area:"Mullumbimby",group:"Independent Stores",address:"Shop 4/97-99/99 Stuart Street, Shop 4, 1, Mullumbimby, 2482, Australia",postcode:"2482",sourceLine:287},
+    {name:"Empower Wholefoods",type:"Independent store",state:"NSW",area:"Ulladulla",group:"Independent Stores",address:"276 Green Street, Shop 2 The Pavilion, Ulladulla, Ulladulla, 2539, Australia",postcode:"2539",sourceLine:289},
+    {name:"Eumarrah Hobart",type:"National chain",state:"TAS",area:"Hobart",group:"National Chains",address:"39 Barrack Street, Hobart, Hobart, 7000, Australia",postcode:"7000",sourceLine:291},
+    {name:"Eumarrah Launceston",type:"National chain",state:"TAS",area:"Launceston",group:"National Chains",address:"54 Frederick Street, Launceston, 7250, Australia",postcode:"7250",sourceLine:293},
+    {name:"Farmer & Sun",type:"Independent store",state:"QLD",area:"Southside",group:"Independent Stores",address:"1 Woolgar Road, Shop 306-308, Gympie, Southside, 4570, Australia",postcode:"4570",sourceLine:295},
+    {name:"Flannerys Benowa",type:"National chain",state:"QLD",area:"Benowa",group:"National Chains",address:"138-162 Slatyer Avenue, Shop 5 Bronberg Plaza, Benowa, Gold Coast, 4217, Australia",postcode:"4217",sourceLine:297},
+    {name:"Flannerys Chermside",type:"National chain",state:"QLD",area:"Chermside",group:"National Chains",address:"628 Rode Road, Chermside, 4032, Australia",postcode:"4032",sourceLine:299},
+    {name:"Flannerys Maroochydore",type:"National chain",state:"QLD",area:"Maroochydore",group:"National Chains",address:"45 Plaza Parade, Shop 1 Central One, Maroochydore, 4558, Australia",postcode:"4558",sourceLine:301},
+    {name:"Flannerys Miami",type:"National chain",state:"QLD",area:"Miami",group:"National Chains",address:"Miami, Gold Coast, 4220",postcode:"4220",sourceLine:303},
+    {name:"Flannerys Mona Vale",type:"National chain",state:"NSW",area:"Mona Vale",group:"National Chains",address:"12-14 Park Street, Mona Vale, Sydney, 2103, Australia",postcode:"2103",sourceLine:305},
+    {name:"Flannerys Neutral Bay",type:"National chain",state:"NSW",area:"NEUTRAL BAY",group:"National Chains",address:"202-212 Military Road, Shop 15, Theo's Arcade, NEUTRAL BAY, 2089, Australia",postcode:"2089",sourceLine:307},
+    {name:"Flannerys Paddington",type:"National chain",state:"QLD",area:"Paddington",group:"National Chains",address:"219 Given Terrace, Paddington, 4064, Australia",postcode:"4064",sourceLine:309},
+    {name:"Flannerys Robina",type:"National chain",state:"QLD",area:"Robina",group:"National Chains",address:"Easy T Centre, Shop 7, 514 Christine Avenue, Robina, 4226, Australia",postcode:"4226",sourceLine:311},
+    {name:"Flannerys Tewantin",type:"National chain",state:"QLD",area:"TEWANTIN",group:"National Chains",address:"117 Poinciana Avenue, TEWANTIN, 4565, Australia",postcode:"4565",sourceLine:313},
+    {name:"Flannerys Victoria Point",type:"National chain",state:"QLD",area:"VICTORIA POINT",group:"National Chains",address:"329-369 Colburn Ave, VICTORIA POINT, 4165",postcode:"4165",sourceLine:315},
+    {name:"Food For Thought",type:"Independent store",state:"SA",area:"Mount Gambier",group:"Independent Stores",address:"50 Commercial St E, Mount Gambier, 5290, Australia",postcode:"5290",sourceLine:317},
+    {name:"Foodies Organic Supplies",type:"Independent store",state:"NSW",area:"Peakhurst",group:"Independent Stores",address:"812-820 Forest Road, Shop 1, Peakhurst, Sydney, 2210, Australia",postcode:"2210",sourceLine:319},
+    {name:"Fresh Wholefoods Gio's",type:"Independent store",state:"NSW",area:"Murwillumbah",group:"Independent Stores",address:"35 Wollumbin Street, Murwillumbah, 2484, Australia",postcode:"2484",sourceLine:321},
+    {name:"Fruit Lovers Maroochydore",type:"Independent store",state:"UNKNOWN",area:"Details pending",group:"Independent Stores",address:null,postcode:null,sourceLine:323,note:"No address text at all in source directory (store name itself references Maroochydore, QLD, but no address line present)."},
+    {name:"Fundies Byron Bay",type:"Independent store",state:"NSW",area:"Byron Bay",group:"Independent Stores",address:"FUNDIES ORGANICS, 61 Jonson Street, Byron Bay, 2481, Australia",postcode:"2481",sourceLine:325},
+    {name:"Fundies Lismore",type:"Independent store",state:"NSW",area:"LISMORE",group:"Independent Stores",address:"140 Keen Street, LISMORE, LISMORE, 2480",postcode:"2480",sourceLine:327},
+    {name:"Girija Tropp",type:"Independent store",state:"NSW",area:"Byron Bay",group:"Independent Stores",address:"28 Seaview Street, Byron Bay, 2481, Australia",postcode:"2481",sourceLine:329},
+    {name:"Go Natural Foods",type:"Independent store",state:"UNKNOWN",area:"Details pending",group:"Independent Stores",address:null,postcode:null,sourceLine:331,note:"No address text at all in source directory."},
+    {name:"Go Vita Alice Springs",type:"National chain",state:"NT",area:"ALICE SPRINGS",group:"National Chains",address:"Shop 35 Alice Plaza 36 Todd Mall, ALICE SPRINGS, 870, Australia",postcode:"0870",sourceLine:333},
+    {name:"Go Vita Byron Bay - Intelligence of Health",type:"National chain",state:"NSW",area:"BYRON BAY",group:"National Chains",address:"Shop 2/69 Jonson Street (Community Centre Building), BYRON BAY, NSW, 2481, Australia",postcode:"2481",sourceLine:335},
+    {name:"Go Vita Cairns North",type:"National chain",state:"QLD",area:"CAIRNS NORTH",group:"National Chains",address:"45 Moffat Street,, CAIRNS NORTH, 4870, Australia",postcode:"4870",sourceLine:337},
+    {name:"Go Vita Cheltenham",type:"National chain",state:"VIC",area:"Cheltenham",group:"National Chains",address:"Shop 1124 Southland Shopping Centre, 1239 Nepean Hwy, Cheltenham, 3192",postcode:"3192",sourceLine:339},
+    {name:"Go Vita Dickson ACT",type:"National chain",state:"ACT",area:"Dickson",group:"National Chains",address:"Shop 2/5 Dickson Place, Dickson, 2602, Australia",postcode:"2602",sourceLine:341},
+    {name:"Go Vita Epping",type:"National chain",state:"VIC",area:"Epping",group:"National Chains",address:"Shop T63, Pacific Epping S/C 571-583 High Street, Epping, VIC, 3076, Australia",postcode:"3076",sourceLine:343},
+    {name:"Go Vita Fairview Green",type:"National chain",state:"SA",area:"Fairview Park",group:"National Chains",address:"Go Vita Fairview Green, 8/325 Hancock Road, Fairview Park, 5126, Australia",postcode:"5126",sourceLine:345},
+    {name:"Go Vita Grafton",type:"National chain",state:"NSW",area:"Grafton",group:"National Chains",address:"Shop 28 Grafton Shoppingworld, 52-74 Fitzroy St, Grafton, 2460, Australia",postcode:"2460",sourceLine:347},
+    {name:"Go Vita Knox",type:"National chain",state:"VIC",area:"Wantirna South",group:"National Chains",address:"425 Burwood Highway, Shop 1104, Wantirna South, 3152, Australia",postcode:"3152",sourceLine:349},
+    {name:"Go Vita Lake Haven",type:"National chain",state:"NSW",area:"LAKE HAVEN",group:"National Chains",address:"Shop 114 Lakehaven Centre, 43 Lake Haven Drive, LAKE HAVEN, 2263, Australia",postcode:"2263",sourceLine:351},
+    {name:"Go Vita Lake Macquarie",type:"National chain",state:"NSW",area:"MOUNT HUTTON",group:"National Chains",address:"Shop 17 Lake Macquarie Fair, 46 Wilson Road, Mount Hutton, MOUNT HUTTON, 2290, Australia",postcode:"2290",sourceLine:353},
+    {name:"Go Vita Marrickville",type:"National chain",state:"NSW",area:"shop 42/20 Smidmore Street",group:"National Chains",address:"shop 42/20 Smidmore Street, 2204, Marrickville, 2204, Australia",postcode:"2204",sourceLine:355},
+    {name:"Go Vita Midland - My Health Market",type:"National chain",state:"WA",area:"MIDLAND",group:"National Chains",address:"Shop T015 Midland Gate SC, 274 Great Eastern Hwy, MIDLAND, 6056, Australia",postcode:"6056",sourceLine:357},
+    {name:"Go Vita Mt Barker",type:"National chain",state:"SA",area:"Mt Barker",group:"National Chains",address:"Shop 39, 13 McLaren Street, Mt Barker SA, Mt Barker SA, 5251, Australia",postcode:"5251",sourceLine:359},
+    {name:"Go Vita Orange",type:"National chain",state:"NSW",area:"Orange",group:"National Chains",address:"Shop SV9 Orange City Centre, 190 Anson street, Orange, 2800, Australia",postcode:"2800",sourceLine:361},
+    {name:"Go Vita Rockhampton - Natural Evolution Foods",type:"National chain",state:"QLD",area:"ROCKHAMPTON CITY",group:"National Chains",address:"Shop 26, City Centre Plaza, 130 Bolsover St, Rockhampton City, ROCKHAMPTON CITY, 4700, Australia",postcode:"4700",sourceLine:363},
+    {name:"Go Vita Rouse Hill",type:"National chain",state:"NSW",area:"Rouse Hill",group:"National Chains",address:"10-14 Market Lane, Shop GR032 Rouse Hill Town Centre, Rouse Hill, 2155, Australia",postcode:"2155",sourceLine:365},
+    {name:"Go Vita Semaphore Health Foods",type:"National chain",state:"SA",area:"semaphore",group:"National Chains",address:"48a semaphore rd, semaphore, 5019, Australia",postcode:"5019",sourceLine:367},
+    {name:"Go Vita Southlands - Sam's Emporium",type:"National chain",state:"WA",area:"WILLETTON",group:"National Chains",address:"Shop 31-33 Southlands SC,  45 Burrendah Boulevard, WILLETTON, 6155, Australia",postcode:"6155",sourceLine:369},
+    {name:"Go Vita Southport",type:"National chain",state:"QLD",area:"Southport",group:"National Chains",address:"16 Nerang Street, Fair Shopping Centre, 99g/42 Marine Parade, Southport, 4215, Australia",postcode:"4215",sourceLine:371},
+    {name:"Go Vita Springwood NSW",type:"National chain",state:"NSW",area:"SPRINGWOOD",group:"National Chains",address:"166 Macquarie Road, SPRINGWOOD, 2777, Australia",postcode:"2777",sourceLine:373},
+    {name:"Go Vita The Glen",type:"National chain",state:"VIC",area:"GLEN WAVERLEY",group:"National Chains",address:"Shop 110,Level 2 , The Glen, 235 Springvale Rd, GLEN WAVERLEY, VIC, 3150, Australia",postcode:"3150",sourceLine:375},
+    {name:"Go Vita Victoria Gardens",type:"National chain",state:"VIC",area:"Richmond",group:"National Chains",address:"Victoria Gardens Shopping Centre, Shop SP014 (next to Coles), 620 Victoria Street, Richmond, Richmond, 3121, Australia",postcode:"3121",sourceLine:377},
+    {name:"Go Vita Waverley Gardens",type:"National chain",state:"VIC",area:"Mulgrave",group:"National Chains",address:"Shop 88 Waverley Gardens Shopping Centre, 271 Police Road, Mulgrave, 3170, Australia",postcode:"3170",sourceLine:379},
+    {name:"Go Vita Woden",type:"National chain",state:"ACT",area:"Phillip",group:"National Chains",address:"Keltie Street, Shop G88, Phillip, Canberra, 2606, Australia",postcode:"2606",sourceLine:381},
+    {name:"Go Vita Woodvale",type:"National chain",state:"WA",area:"WOODVALE",group:"National Chains",address:"Shop 13 Woodvale Boulevarde SC, 931 Whitfords Ave, 931 Whitfords Ave, WOODVALE, 6026, Australia",postcode:"6026",sourceLine:383},
+    {name:"Good Food Emporium",type:"Independent store",state:"VIC",area:"Narre Warren",group:"Independent Stores",address:"15/430-440 Princess Highway, Good Food Emporium, Narre Warren, 3805, Australia",postcode:"3805",sourceLine:385},
+    {name:"Great Earth Doncaster",type:"National chain",state:"VIC",area:"Doncaster East",group:"National Chains",address:"Tunstall Square Shopping Center, Shop 46, Doncaster East, Victoria 3109",postcode:"3109",sourceLine:387},
+    {name:"Great Earth Camberwell",type:"National chain",state:"VIC",area:"640 Burke Road Camberwell",group:"National Chains",address:"640 Burke Road Camberwell, Victoria 3124",postcode:"3124",sourceLine:389},
+    {name:"Great Earth Melbourne CBD",type:"National chain",state:"VIC",area:"88 Elizabeth St",group:"National Chains",address:"88 Elizabeth St, Melbourne, 3000, Australia",postcode:"3000",sourceLine:391},
+    {name:"Greensoul Organics",type:"Independent store",state:"VIC",area:"Beaconsfield",group:"Independent Stores",address:"Beaconsfield, 3807, Australia",postcode:"3807",sourceLine:393},
+    {name:"Harvest Organic Food Store",type:"Independent store",state:"VIC",area:"108 Station St Fairfield",group:"Independent Stores",address:"108 Station St Fairfield, Melbourne, 3078, Australia",postcode:"3078",sourceLine:395},
+    {name:"Health 4 Life Nutrition",type:"Independent store",state:"QLD",area:"Garbutt",group:"Independent Stores",address:"103-141 Duckworth Street, Domain Central Building J Shop J04, Garbutt, Garbutt, 4814, Australia",postcode:"4814",sourceLine:397},
+    {name:"Health Beat",type:"Independent store",state:"QLD",area:"Nambour",group:"Independent Stores",address:"Nambour Plaza, 24 Ann St, Nambour, QLD, 4560, Australia",postcode:"4560",sourceLine:399},
+    {name:"Health Nuts Kings Cross",type:"Independent store",state:"UNKNOWN",area:"Sydney",group:"Independent Stores",address:"Kings Cross, Sydney",postcode:null,sourceLine:401,note:"No postcode in source; address text \"Kings Cross, Sydney\" strongly implies NSW but not confirmed per no-postcode/no-explicit-state rule."},
+    {name:"Health Shop + Brookside",type:"National chain",state:"QLD",area:"Mitchelton",group:"National Chains",address:"159 Osborne Rd, Health Shop +, Shop 91 Brookside Shopping Centre, Mitchelton, QLD, 4053, Australia",postcode:"4053",sourceLine:403},
+    {name:"Health Shop + Morayfield",type:"National chain",state:"QLD",area:"Morayfield",group:"National Chains",address:"Shop 99, Morayfield Shopping Centre, Morayfield Road, Morayfield, 4506, Australia",postcode:"4506",sourceLine:405},
+    {name:"Health Shop + North Lakes",type:"National chain",state:"QLD",area:"North Lakes",group:"National Chains",address:"HealthShop+, Shop 1209 Westfield Shopping Town, 1 North Lakes Dr, North Lakes, North Lakes, 4509, Australia",postcode:"4509",sourceLine:407},
+    {name:"Heart and Sol Organics",type:"Independent store",state:"NSW",area:"Kiama",group:"Independent Stores",address:"106 Terralong Street, Shop 22, Kiama, 2533, Australia",postcode:"2533",sourceLine:409},
+    {name:"Heart and Whole",type:"Independent store",state:"SA",area:"Port Noarlunga",group:"Independent Stores",address:"7 Gawler Street, Shop 4, Port Noarlunga, 5167, Australia",postcode:"5167",sourceLine:411},
+    {name:"Helen's Heavenly Bulk Foods",type:"Independent store",state:"QLD",area:"Burleigh Heads",group:"Independent Stores",address:"2/29 James St, Burleigh Heads, 4220, Australia",postcode:"4220",sourceLine:413},
+    {name:"House of Health Collective",type:"Independent store",state:"SA",area:"44-60 Gouger St",group:"Independent Stores",address:"Store 73, Adelaide Central Market, 44-60 Gouger St, Adelaide, 5000, Australia",postcode:"5000",sourceLine:415},
+    {name:"House of Health Collective Norwood",type:"Independent store",state:"SA",area:"Norwood",group:"Independent Stores",address:"49 George Street, Norwood, 5067, Australia",postcode:"5067",sourceLine:417},
+    {name:"IGA Brunswick Heads",type:"National chain",state:"NSW",area:"Brunswick Heads",group:"National Chains",address:"19 Booyun Street, Unit 6, Brunswick Heads, 2483, Australia",postcode:"2483",sourceLine:419},
+    {name:"Kombu Wholefoods",type:"Independent store",state:"UNKNOWN",area:"Bellingen",group:"Independent Stores",address:"Bellingen",postcode:null,sourceLine:421,note:"No postcode in source; address text \"Bellingen\" (NSW town) but not confirmed per no-postcode/no-explicit-state rule."},
+    {name:"Kunara Organic Marketplace",type:"Independent store",state:"QLD",area:"Forest Glen",group:"Independent Stores",address:"330 Mons Rd, Forest Glen, 4556, Australia",postcode:"4556",sourceLine:423},
+    {name:"La Vida Vegan",type:"Independent store",state:"WA",area:"Subiaco",group:"Independent Stores",address:"60 Coghlan Rd,, Subiaco, 6008, Australia",postcode:"6008",sourceLine:425},
+    {name:"Lawler's Wholelife Dee Why",type:"National chain",state:"NSW",area:"Dee Why",group:"National Chains",address:"Shop 9B, 27-33 Oaks Avenue, Dee Why, 2099, Australia",postcode:"2099",sourceLine:427},
+    {name:"Leichhardt Health Store",type:"Independent store",state:"NSW",area:"Leichhardt",group:"Independent Stores",address:"55 Norton St, SHOP 27 Norton Plaza, Leichhardt, 2040, Australia",postcode:"2040",sourceLine:429},
+    {name:"LiveLife Pharmacy Noosa Fair",type:"National chain",state:"QLD",area:"Noosa Heads",group:"National Chains",address:"Noosa Fair Shopping Centre, Lanyana Way, Noosa Heads, 4567, Australia",postcode:"4567",sourceLine:431},
+    {name:"Long Life Health Foods Casey",type:"Independent store",state:"VIC",area:"Narre Warren South",group:"Independent Stores",address:"Shop F106, Casey Central Shopping Centre, Narre Warren South, VIC, 3805, Australia",postcode:"3805",sourceLine:433},
+    {name:"Long Life Health Foods Forest Hill",type:"Independent store",state:"VIC",area:"Forest Hill",group:"Independent Stores",address:"Forest Hill Chase, 13/270 Canterbury Rd, Forest Hill, 3131, Australia",postcode:"3131",sourceLine:435},
+    {name:"Love & Tonic",type:"Independent store",state:"NSW",area:"terrigal",group:"Independent Stores",address:"14a/10 Church Street, Terrigal, terrigal, 2260, Australia",postcode:"2260",sourceLine:437},
+    {name:"Mandurah WholeLife Pharmacy Mandurah",type:"National chain",state:"WA",area:"Greenfields",group:"National Chains",address:"Murray Medical Complex, Corner Lakes Road and Minilya Pkwy, Greenfields, 6210, Australia",postcode:"6210",sourceLine:439},
+    {name:"Manly Health Foods",type:"Independent store",state:"NSW",area:"Manly",group:"Independent Stores",address:"17-23 Wentworth Street, Shop 8, Manly, 2095, Australia",postcode:"2095",sourceLine:441},
+    {name:"Manna Wholefoods & Cafe",type:"Independent store",state:"WA",area:"South Fremantle",group:"Independent Stores",address:"274 South Terrace, delivery off nelson street warehouse, South Fremantle, WA, 6162, Australia",postcode:"6162",sourceLine:443},
+    {name:"Maple Street Co-operative Society Limited",type:"Independent store",state:"QLD",area:"Maleny",group:"Independent Stores",address:"37 Maple Street, Maleny, 4552, Australia",postcode:"4552",sourceLine:445},
+    {name:"Market Health Foods",type:"Independent store",state:"ACT",area:"Fyshwick",group:"Independent Stores",address:"Shop G11 Fyshwick fresh food markets, Dalby street, Fyshwick, Canberra, 2609, Australia",postcode:"2609",sourceLine:447},
+    {name:"Mega Health Hallett Cove",type:"Independent store",state:"SA",area:"Hallett Cove",group:"Independent Stores",address:"Shop 21, Hallett Cove Shopping Centre, 15/246 Lonsdale Rd, Hallett Cove, 5158, Australia",postcode:"5158",sourceLine:449},
+    {name:"Merimbula Health Foods",type:"Independent store",state:"NSW",area:"Merimbula",group:"Independent Stores",address:"Shop 2, 6 Merimbula Drive, Merimbula, 2548, Australia",postcode:"2548",sourceLine:451},
+    {name:"Miami Health Solutions",type:"Independent store",state:"WA",area:"Halls Head",group:"Independent Stores",address:"14 Guava Way, Miami Health Solutions - Centuria Central, Halls Head, 6210, Australia",postcode:"6210",sourceLine:453},
+    {name:"Miss Spelts Grains and Goodies (High Freight)",type:"Independent store",state:"VIC",area:"Healesville",group:"Independent Stores",address:"250 Maroondah Highway, Healesville, Healesville, 3777, Australia",postcode:"3777",sourceLine:455},
+    {name:"Moana Natural Health & Organics",type:"Independent store",state:"SA",area:"Moana",group:"Independent Stores",address:"Shop 4, 1 Griffiths Drive, Moana, Moana, 5169, Australia",postcode:"5169",sourceLine:457},
+    {name:"MoonTree",type:"Independent store",state:"NSW",area:"Cooma",group:"Independent Stores",address:"8, Vale St, Cooma, 26309, Australia",postcode:"2630",sourceLine:459,note:"Source postcode text \"26309\" (5 digits, likely typo) - treated first 4 digits \"2630\" (Cooma NSW) as postcode."},
+    {name:"Mr Vitamins Bondi",type:"National chain",state:"NSW",area:"Bondi Junction",group:"National Chains",address:"201 Oxford St, Bondi Junction, 2022, Australia",postcode:"2022",sourceLine:461},
+    {name:"Mr Vitamins Brookvale",type:"National chain",state:"NSW",area:"Brookvale",group:"National Chains",address:"Shop 241, Warringah mall, 145 Old pittwater Rd,, Brookvale, NSW, 2100, Australia",postcode:"2100",sourceLine:463},
+    {name:"Murilla Health & Nutrition",type:"Independent store",state:"QLD",area:"Miles",group:"Independent Stores",address:"59 Murilla St, Miles, Miles, 4415, Australia",postcode:"4415",sourceLine:465},
+    {name:"Nana's Pantry Pialba",type:"Independent store",state:"QLD",area:"Pialba",group:"Independent Stores",address:"14/ 53 Torquay Rd, Pialba, 4655",postcode:"4655",sourceLine:467},
+    {name:"NaturaHeal Bathurst",type:"National chain",state:"NSW",area:"Bathurst",group:"National Chains",address:"NaturaHeal Bathurst, Shop 32 Bathurst city centre, Bathurst, 2795, Australia",postcode:"2795",sourceLine:469},
+    {name:"NaturaHeal Dubbo - Go Vita Dubbo",type:"National chain",state:"NSW",area:"Dubbo",group:"National Chains",address:"Shop 120B Orana Mall, 56 Windsor Parade, Dubbo, Dubbo, 2830, Australia",postcode:"2830",sourceLine:471},
+    {name:"Natural Balance Mornington",type:"Independent store",state:"VIC",area:"Mornington",group:"Independent Stores",address:"146 Main Street, Mornington, 3931, Australia",postcode:"3931",sourceLine:473},
+    {name:"Nature's Nectar Health & Healing",type:"Independent store",state:"WA",area:"BUSSELTON",group:"Independent Stores",address:"Shop 14-16 Fig Tree Lane 55 Prince Street, BUSSELTON, 6280, Australia",postcode:"6280",sourceLine:475},
+    {name:"Natures Choice",type:"Independent store",state:"WA",area:"Geraldton",group:"Independent Stores",address:"53 Marine Terrace, Geraldton, 6530, Australia",postcode:"6530",sourceLine:477},
+    {name:"Natures Health Traralgon",type:"Independent store",state:"VIC",area:"Traralgon",group:"Independent Stores",address:"16B Seymour Street, Traralgon, Traralgon, 3844, Australia",postcode:"3844",sourceLine:479},
+    {name:"New Harvest Produce",type:"Independent store",state:"VIC",area:"Seaford",group:"Independent Stores",address:"111b Nepean Highway, Seaford, 3198",postcode:"3198",sourceLine:481},
+    {name:"Newstead Organics",type:"Independent store",state:"QLD",area:"Newstead",group:"Independent Stores",address:"76 Skyring Terrace, Gasworks Plaza next to Woolworths, Shop E4D/, Newstead, 4006, Australia",postcode:"4006",sourceLine:483},
+    {name:"Nourish Port Douglas",type:"Independent store",state:"QLD",area:"Port Douglas",group:"Independent Stores",address:"56-64 Macrossan St, Nourish Cafe, Port Douglas, 4877, Australia",postcode:"4877",sourceLine:485},
+    {name:"Nowra Health Store",type:"Independent store",state:"NSW",area:"Nowra",group:"Independent Stores",address:"27 Kinghorn Street, Nowra, 2541, Australia",postcode:"2541",sourceLine:487},
+    {name:"Nurcha Kawana",type:"Independent store",state:"QLD",area:"Birtinya",group:"Independent Stores",address:"566 Kawana Way, Shop 3B Home Central, Birtinya, Sunshine Coast, 4575, Australia",postcode:"4575",sourceLine:489},
+    {name:"Organic & Natural Store",type:"Independent store",state:"QLD",area:"Mackay",group:"Independent Stores",address:"60 yakapari seaforth rd, The Leap, Mackay, 4740, Australia",postcode:"4740",sourceLine:491},
+    {name:"Organic on Charles",type:"Independent store",state:"WA",area:"East Perth",group:"Independent Stores",address:"7 Bramall St, East Perth, WA, 6004, Australia",postcode:"6004",sourceLine:493},
+    {name:"Organics 4 Health",type:"Independent store",state:"QLD",area:"Mackay",group:"Independent Stores",address:"Unit 2 27 Lorraine Court, Andergrove, Mackay, 4740, Australia",postcode:"4740",sourceLine:495},
+    {name:"Organics at Marcia's",type:"Independent store",state:"QLD",area:"West End",group:"Independent Stores",address:"4 Beesley Street, West End, Brisbane, 4105, Australia",postcode:"4105",sourceLine:497},
+    {name:"Organics MattR",type:"Independent store",state:"NSW",area:"Port Macquarie",group:"Independent Stores",address:"Shop F1-F2 40-42 Horton Street, Port Macquarie, 2444, Australia",postcode:"2444",sourceLine:499},
+    {name:"Organika",type:"Independent store",state:"QLD",area:"Noosaville",group:"Independent Stores",address:"Shop 2, 3 Gibson Road, Noosaville, 4566, Australia",postcode:"4566",sourceLine:501},
+    {name:"Pambula Wholefoods",type:"Independent store",state:"NSW",area:"Pambula",group:"Independent Stores",address:"24A Quondola St, Pambula, 2549, Australia",postcode:"2549",sourceLine:503},
+    {name:"Panetta Mercato Kirrawee",type:"National chain",state:"NSW",area:"Kirrawee",group:"National Chains",address:"31 Flora Street, Bay 1, Kirrawee, Sydney, 2232, Australia",postcode:"2232",sourceLine:505},
+    {name:"Panetta Mercato Leichhardt",type:"National chain",state:"NSW",area:"Leichhardt",group:"National Chains",address:"122-138 Flood St, Shop 21, Leichhardt, 2040, Australia",postcode:"2040",sourceLine:507},
+    {name:"Panetta Mercato Woolooware",type:"National chain",state:"NSW",area:"Woolooware",group:"National Chains",address:"Bay Central, Woolooware, 2230, Australia",postcode:"2230",sourceLine:509},
+    {name:"Paradise Blue",type:"Independent store",state:"NSW",area:"Freshwater",group:"Independent Stores",address:"3/119 Harbord Road, freshwater, Freshwater, 2096, Australia",postcode:"2096",sourceLine:511},
+    {name:"Peaches Fresh Food Market",type:"Independent store",state:"WA",area:"South Fremantle",group:"Independent Stores",address:"1-3 / 195 Hampton Road, South Fremantle, WA, 6162, Australia",postcode:"6162",sourceLine:513},
+    {name:"Pharmacy 777 Applecross",type:"National chain",state:"WA",area:"APPLECROSS",group:"National Chains",address:"777 Canning Highway, APPLECROSS, PERTH, 6153, Australia",postcode:"6153",sourceLine:515},
+    {name:"Pickering Family Farm",type:"Independent store",state:"NSW",area:"Quorrobolong",group:"Independent Stores",address:"735 Sandy Creek Rd (GATE 2633#), Quorrobolong, Quorrobolong, 2325, Australia",postcode:"2325",sourceLine:517},
+    {name:"Pomona's Little Pantry",type:"Independent store",state:"QLD",area:"Pomona",group:"Independent Stores",address:"4 Memorial Ave, Pomona, QLD, 4568, Australia",postcode:"4568",sourceLine:519},
+    {name:"Prahran Convenience",type:"Independent store",state:"VIC",area:"PRAHRAN",group:"Independent Stores",address:"196 Commercial Rd, PRAHRAN, 3181, Australia",postcode:"3181",sourceLine:521},
+    {name:"Precious Organics Willagee",type:"Independent store",state:"WA",area:"Willagee",group:"Independent Stores",address:"92 Bawdan St, Willagee, 6156, Australia",postcode:"6156",sourceLine:523},
+    {name:"Queanbeyan Health Foods",type:"Independent store",state:"NSW",area:"Queanbeyan",group:"Independent Stores",address:"222, Crawford St, Queanbeyan, Canberra, 2620, Australia",postcode:"2620",sourceLine:525},
+    {name:"Rich Glen Bright",type:"Independent store",state:"VIC",area:"Bright",group:"Independent Stores",address:"106B Gavan St, Bright, 3741, Australia",postcode:"3741",sourceLine:527},
+    {name:"Rich Glen olives",type:"Independent store",state:"VIC",area:"yarrawonga",group:"Independent Stores",address:"Shop 3 137-139 Belmore St, yarrawonga, 3730, Australia",postcode:"3730",sourceLine:529},
+    {name:"River Fresh IGA - Margaret River",type:"National chain",state:"WA",area:"Margaret River",group:"National Chains",address:"1 Bussell Hwy, Margaret River, 6285, Australia",postcode:"6285",sourceLine:531},
+    {name:"Santos Byron",type:"National chain",state:"NSW",area:"Byron Bay",group:"National Chains",address:"105 Jonson Street, Byron Bay, 2481, Australia",postcode:"2481",sourceLine:533},
+    {name:"Santos Mullum",type:"National chain",state:"NSW",area:"Mullumbimby",group:"National Chains",address:"51/53 Burringbar Street, Mullumbimby, 2482, Australia",postcode:"2482",sourceLine:535},
+    {name:"Santos Warehouse",type:"National chain",state:"NSW",area:"Byron Bay",group:"National Chains",address:"7 Banksia Drive, Byron Bay, 2481, Australia",postcode:"2481",sourceLine:537},
+    {name:"STORM + INDIA",type:"Independent store",state:"TAS",area:"Longford",group:"Independent Stores",address:"59 Wellington Street, Longford, Longford, 7301, Australia",postcode:"7301",sourceLine:539},
+    {name:"Sunnybrook Health Store",type:"Independent store",state:"VIC",area:"Ormond",group:"Independent Stores",address:"553a North Rd, Ormond, 3204",postcode:"3204",sourceLine:541},
+    {name:"SUPA IGA Sunrise",type:"National chain",state:"NSW",area:"Byron Bay",group:"National Chains",address:"Sunrise Boulevard, Byron Bay, 2481, Australia",postcode:"2481",sourceLine:543},
+    {name:"SuperNatural Online",type:"Online / delivery",state:"QLD",area:"Landsborough",group:"Online / Delivery",address:"16A Mulberry Place, Landsborough, 4550, Australia",postcode:"4550",sourceLine:545},
+    {name:"Taste Organic Cammeray",type:"Independent store",state:"NSW",area:"Cammeray",group:"Independent Stores",address:"2/520 Miller St, Cammeray, 2062, Australia",postcode:"2062",sourceLine:547},
+    {name:"The Allergy Centre",type:"Independent store",state:"ACT",area:"Macquarie",group:"Independent Stores",address:"Allergy Centre- Jamison Centre, Shop 2, Macquarie, Canberra, 2614, Australia",postcode:"2614",sourceLine:549},
+    {name:"The Barn Wholefoods",type:"Independent store",state:"QLD",area:"Svensson Heights",group:"Independent Stores",address:"62 Takalvan St, Svensson Heights, 4670",postcode:"4670",sourceLine:551},
+    {name:"The Bulk Cellar",type:"Independent store",state:"SA",area:"Aldinga",group:"Independent Stores",address:"Lot 10 unit A, 173 Port Rd, Aldinga, Aldinga, 5173, Australia",postcode:"5173",sourceLine:553},
+    {name:"The Clean Food Store",type:"Independent store",state:"WA",area:"Subiaco",group:"Independent Stores",address:"214a Nicholson Rd, Subiaco, Subiaco, 6008, Australia",postcode:"6008",sourceLine:555},
+    {name:"The Denmark Health Shop",type:"Independent store",state:"WA",area:"Denmark",group:"Independent Stores",address:"1/39 Strickland Street, Denmark, WA, 6333, Australia",postcode:"6333",sourceLine:557},
+    {name:"The Fox's Pantry 4224 PTY LTD",type:"Independent store",state:"QLD",area:"Tugun",group:"Independent Stores",address:"468 GOLDEN FOUR DRIVE, Tugun, Tugun, 4224, Australia",postcode:"4224",sourceLine:559},
+    {name:"The Good Grocer 2nd Ave",type:"National chain",state:"WA",area:"Mount Lawley",group:"National Chains",address:"Cnr Second Ave &, Beaufort St, Mount Lawley, Perth, 6050, Australia",postcode:"6050",sourceLine:561},
+    {name:"The Good Grocer Canning Bridge",type:"National chain",state:"WA",area:"Applecross",group:"National Chains",address:"916 Canning Hwy, Applecross, Perth, 6153, Australia",postcode:"6153",sourceLine:563},
+    {name:"The Good Grocer East Fremantle",type:"National chain",state:"WA",area:"East Fremantle",group:"National Chains",address:"6 Silas St, East Fremantle, WA, 6158, Australia",postcode:"6158",sourceLine:565},
+    {name:"The Good Grocer Newman",type:"National chain",state:"WA",area:"Canning Vale",group:"National Chains",address:"280 Bannister Road, Canning Vale, PERTH, 6155",postcode:"6155",sourceLine:567},
+    {name:"The Grocer and Co",type:"Independent store",state:"NSW",area:"Orange",group:"Independent Stores",address:"52 McNamara Street, Orange, 2800, Australia",postcode:"2800",sourceLine:569},
+    {name:"The Herdsman",type:"Independent store",state:"WA",area:"Churchlands",group:"Independent Stores",address:"9 Flynn St, Churchlands, 6018, Australia",postcode:"6018",sourceLine:571},
+    {name:"The Nutrition Corner",type:"Independent store",state:"VIC",area:"Somerton",group:"Independent Stores",address:"Somerton, Melbourne, 3062, Australia",postcode:"3062",sourceLine:573},
+    {name:"The Organic Market & Cafe Stirling",type:"Independent store",state:"SA",area:"Stirling",group:"Independent Stores",address:"5 Druid Avenue, Stirlng, Stirling, 5152, Australia",postcode:"5152",sourceLine:575},
+    {name:"The Pines Health Foods",type:"Independent store",state:"QLD",area:"Elanora",group:"Independent Stores",address:"The Pines Elanora, Shop 13/31 Guineas Creek Road, Elanora, 4221, Australia",postcode:"4221",sourceLine:577},
+    {name:"The Plant Organic",type:"Independent store",state:"WA",area:"Bunbury",group:"Independent Stores",address:"Unit 1, 20 Stephen Street, Bunbury, Bunbury, 6230, Australia",postcode:"6230",sourceLine:579},
+    {name:"The Sage and Clover",type:"Independent store",state:"NSW",area:"Glen Innes",group:"Independent Stores",address:"298 Grey St, Glen Innes, 2370, Australia",postcode:"2370",sourceLine:581},
+    {name:"The Simple Market",type:"Independent store",state:"SA",area:"Mile End",group:"Independent Stores",address:"44 Henley Beach Road, Mile End, 5031, Australia",postcode:"5031",sourceLine:583},
+    {name:"The Wellness Grove",type:"Independent store",state:"WA",area:"Karawara",group:"Independent Stores",address:"Shop 12, Village Green Shopping centre, Karawara, 6153, Australia",postcode:"6153",sourceLine:585},
+    {name:"The Wholefood Pantry",type:"Independent store",state:"QLD",area:"Palm Beach",group:"Independent Stores",address:"Shop 23, 19th Ave Shops, 155 Nineteenth Ave, Palm Beach, Palm Beach, 4221, Australia",postcode:"4221",sourceLine:587},
+    {name:"The Wholistic Hub (Nutrition pod)",type:"Independent store",state:"VIC",area:"Sale",group:"Independent Stores",address:"142 Raymond Street, Sale, 3850, Australia",postcode:"3850",sourceLine:589},
+    {name:"This Earth This Food East Brunswick",type:"Independent store",state:"VIC",area:"Brunswick East",group:"Independent Stores",address:"5 Village Ave, Brunswick East, Melbourne, 3057, Australia",postcode:"3057",sourceLine:591},
+    {name:"Turramurra Wholefoods",type:"Independent store",state:"NSW",area:"Turramurra",group:"Independent Stores",address:"20, Princes St, Turramurra, 2074, Australia",postcode:"2074",sourceLine:593},
+    {name:"Unique Wholefoods Crows Nest",type:"Independent store",state:"NSW",area:"Crows Nest",group:"Independent Stores",address:"25 Falcon Street, Crows Nest, Sydney, 2065, Australia",postcode:"2065",sourceLine:595},
+    {name:"Unique Wholefoods Leichhardt",type:"Independent store",state:"NSW",area:"Leichhardt",group:"Independent Stores",address:"51-53 Flood St, Leichhardt, 2040, Australia",postcode:"2040",sourceLine:597},
+    {name:"Vegan Grocery Store",type:"Independent store",state:"UNKNOWN",area:"Town Hall Square",group:"Independent Stores",address:"Shop  40, Town Hall Square, 464-480 Kent Street, Sydney, Australia",postcode:null,sourceLine:599,note:"No postcode in source; address text \"...Kent Street, Sydney, Australia\" strongly implies NSW but not confirmed per no-postcode/no-explicit-state rule."},
+    {name:"VIE. Market (Manly Farm)",type:"Independent store",state:"NSW",area:"Manly",group:"Independent Stores",address:"16/17-25 Wentworth Street, Manly, Sydney, 2095, Australia",postcode:"2095",sourceLine:601},
+    {name:"Vitology KOTARA",type:"Independent store",state:"NSW",area:"Kotara",group:"Independent Stores",address:"Westfield Kotara, Northcott Dr, Kotara, 2289, Australia",postcode:"2289",sourceLine:603},
+    {name:"West End Organics",type:"Independent store",state:"UNKNOWN",area:"Brisbane",group:"Independent Stores",address:"West End, Brisbane",postcode:null,sourceLine:605,note:"No postcode in source; address text \"West End, Brisbane\" strongly implies QLD but not confirmed per no-postcode/no-explicit-state rule."},
+    {name:"Wholefood Merchants Ferntree Gully",type:"Independent store",state:"VIC",area:"Ferntree Gully",group:"Independent Stores",address:"794 Burwood Highway, Shop 3, Ferntree Gully, VIC, 3156, Australia",postcode:"3156",sourceLine:607},
+    {name:"Wholelife Cairns Pease St",type:"National chain",state:"QLD",area:"Manoora",group:"National Chains",address:"Shop 27, Piccone’s Shopping Village, 159-161 Pease St, Manoora, 4870, Australia",postcode:"4870",sourceLine:609},
+    {name:"WholeLife Healthfoods Markets Cairns Central",type:"National chain",state:"QLD",area:"1/21 McLeod St",group:"National Chains",address:"Shop 159, Cairns Central Shopping Centre, 1/21 McLeod St, Cairns, 4870, Australia",postcode:"4870",sourceLine:611},
+    {name:"WholeLife Healthfoods Markets Fairfield",type:"National chain",state:"QLD",area:"Idalia",group:"National Chains",address:"Shop 40, Fairfield Central Shopping Centre, 2/30 Lakeside Drive, Idalia, 4811, Australia",postcode:"4811",sourceLine:613},
+    {name:"WholeLife Healthfoods Markets Tweed Heads",type:"National chain",state:"NSW",area:"Tweed Heads South",group:"National Chains",address:"3/3 Machinery Drive, Tweed Heads South, 2486, Australia",postcode:"2486",sourceLine:615},
+    {name:"Wholelife Mareeba",type:"National chain",state:"QLD",area:"Mareeba",group:"National Chains",address:"Shop 9, Mareeba Square, 12 Brynes St, Mareeba, 4880, Australia",postcode:"4880",sourceLine:617},
+    {name:"Wholelife Pharmacy & Healthfoods Prahran",type:"National chain",state:"VIC",area:"Prahran",group:"National Chains",address:"Shop 26-31, Pran Central Shopping Centre, 325 Chapel St, Prahran, 3181, Australia",postcode:"3181",sourceLine:619},
+    {name:"WholeLife Pharmacy and Healthfoods Maroochydore",type:"National chain",state:"QLD",area:"Maroochydore",group:"National Chains",address:"Shop 4, The Zone Shopping Centre, 32 Wises Road, Maroochydore, 4556, Australia",postcode:"4556",sourceLine:621},
+    {name:"Wholelife Smithfield Healthfoods Markets",type:"National chain",state:"QLD",area:"Smithfield",group:"National Chains",address:"Shop 77, Smithfield Shopping Centre, Corner of Kennedy & Captain Cook Highway, Smithfield, 4878, Australia",postcode:"4878",sourceLine:623},
+    {name:"Wholistic Living",type:"Independent store",state:"NSW",area:"Woonona",group:"Independent Stores",address:"Shop 1/409 Princes Highway, Woonona, 2517, Australia",postcode:"2517",sourceLine:625},
+    {name:"Wildwood Organics Yandina",type:"Independent store",state:"QLD",area:"Yandina",group:"Independent Stores",address:"3/8 Farrell St, Yandina, 4561, Australia",postcode:"4561",sourceLine:627},
+    {name:"Willow & Bean",type:"Independent store",state:"VIC",area:"Portland",group:"Independent Stores",address:"70 Percy st, Portland, 3305, Australia",postcode:"3305",sourceLine:629},
+    {name:"World of Health",type:"Independent store",state:"NSW",area:"Mosman",group:"Independent Stores",address:"Shop 8, 1-3 Brady St, Bridgepoint Shopping Centre, Mosman, 2088, Australia",postcode:"2088",sourceLine:631},
+    {name:"Yamba Wholefoods",type:"Independent store",state:"NSW",area:"Yamba",group:"Independent Stores",address:"Shop 3/5 Yamba St, Yamba, 2464, Australia",postcode:"2464",sourceLine:633},
+    {name:"Your Organic Health Shop",type:"Independent store",state:"NSW",area:"Casuarina",group:"Independent Stores",address:"482 Casuarina Way, Shop 3A, Casuarina, NSW, 2487, Australia",postcode:"2487",sourceLine:635},
+  ];
+  var DEFAULT_LIMIT=8;
+  var PAGE_INCREMENT=8;
+  var visibleLimit=DEFAULT_LIMIT;
+  var filters={state:"ALL",type:"ALL",review:"ALL",area:"",query:""};
+  var q=document.getElementById("stockistSearch");
+  var searchClear=document.getElementById("stockistSearchClear");
+  var finderShell=document.querySelector(".st-finder-shell");
+  var results=document.getElementById("stockistResults");
+  var resultsSpacer=document.getElementById("stockistResultsSpacer");
+  var showMore=document.getElementById("stockistShowMore");
+  var empty=document.getElementById("stockistEmpty");
+  var emptyCopy=document.getElementById("stockistEmptyCopy");
+  var emptyClear=document.getElementById("stockistEmptyClear");
+  var title=document.getElementById("stockistTitle");
+  var count=document.getElementById("stockistCount");
+  var activeFilters=document.getElementById("stockistActiveFilters");
+  var map=document.getElementById("stockistMap");
+  var mapSummary=document.getElementById("stockistMapSummary");
+  var mapTextSummary=document.getElementById("stockistMapTextSummary");
+  var clear=document.getElementById("stockistClear");
+  var pendingFilter=document.querySelector('[data-filter="review"][data-value="PENDING"]');
+  var popularAreas=document.getElementById("popularAreas");
+  var mapPinPositions=[[63,23],[44,39],[67,57],[51,74]];
+  var highlightTimer;
+
+  function text(v){return String(v).replace(/[&<>"']/g,function(c){return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c];});}
+  function norm(v){return String(v||"").toLowerCase();}
+  function hay(item){return norm([item.name,item.type,item.state,item.area,item.group,item.address,item.postcode,item.note].join(" "));}
+  function matches(item){
+    if(filters.state!=="ALL"&&item.state!==filters.state)return false;
+    if(filters.type!=="ALL"&&item.type!==filters.type)return false;
+    if(filters.review==="PENDING"&&item.state!=="UNKNOWN")return false;
+    if(filters.area&&hay(item).indexOf(norm(filters.area))<0)return false;
+    if(filters.query&&hay(item).indexOf(norm(filters.query))<0)return false;
+    return true;
+  }
+  function labelFor(kind,value){
+    if(kind==="type"&&value==="National chain")return "National chains";
+    if(kind==="type"&&value==="Independent store")return "Independent";
+    if(kind==="type"&&value==="Online / delivery")return "Online";
+    if(kind==="review"&&value==="PENDING")return "Needs confirmation";
+    if(kind==="query")return "Search "+value;
+    return value;
+  }
+  function resetAll(focusSearch){
+    filters={state:"ALL",type:"ALL",review:"ALL",area:"",query:""};
+    visibleLimit=DEFAULT_LIMIT;
+    q.value="";
+    render();
+    if(focusSearch)q.focus();
+  }
+  function resetForNewFilter(){
+    visibleLimit=DEFAULT_LIMIT;
+  }
+  function confidenceScore(item){
+    var score=0;
+    if(item.state==="Online")score+=40;
+    if(item.state==="UNKNOWN")score+=35;
+    if(item.state==="AUS")score+=30;
+    if(filters.area&&norm(item.area)===norm(filters.area))score-=10;
+    if(filters.state!=="ALL"&&item.state===filters.state)score-=8;
+    if(filters.query){
+      var query=norm(filters.query);
+      if(norm(item.area)===query)score-=7;
+      if(norm(item.name).indexOf(query)===0)score-=5;
+      if(norm(item.name).indexOf(query)>0)score-=2;
+    }
+    return score;
+  }
+  function sortResults(items){
+    return items.map(function(item,index){return {item:item,index:index,score:confidenceScore(item)};})
+      .sort(function(a,b){return a.score-b.score||a.index-b.index;})
+      .map(function(pair){return pair.item;});
+  }
+  function mapPinStyle(index){
+    var point=mapPinPositions[index]||mapPinPositions[0];
+    return "left:"+point[0]+"%;top:"+point[1]+"%;";
+  }
+  function setPressed(){
+    document.querySelectorAll("[data-filter]").forEach(function(btn){
+      btn.setAttribute("aria-pressed",filters[btn.dataset.filter]===btn.dataset.value?"true":"false");
+    });
+    document.querySelectorAll("[data-area]").forEach(function(btn){
+      btn.setAttribute("aria-pressed",filters.area===btn.dataset.area?"true":"false");
+    });
+  }
+  function updateStateCounts(){
+    var stateNames={ALL:"All states",NSW:"New South Wales",QLD:"Queensland",VIC:"Victoria",WA:"Western Australia",SA:"South Australia",ACT:"Australian Capital Territory",TAS:"Tasmania",NT:"Northern Territory"};
+    document.querySelectorAll('[data-filter="state"]').forEach(function(btn){
+      if(!btn.dataset.label)btn.dataset.label=btn.textContent.trim();
+      var value=btn.dataset.value;
+      var total=value==="ALL"?stockists.length:stockists.filter(function(item){return item.state===value;}).length;
+      btn.textContent=btn.dataset.label+" "+total;
+      btn.setAttribute("aria-label",stateNames[value]+", "+total+" stockists");
+    });
+    if(pendingFilter){
+      var pendingTotal=stockists.filter(function(item){return item.state==="UNKNOWN";}).length;
+      pendingFilter.textContent="Needs confirmation "+pendingTotal;
+      pendingFilter.setAttribute("aria-label",pendingTotal+" entries needing client confirmation");
+    }
+  }
+  function activeDescriptions(){
+    var items=[];
+    if(filters.state!=="ALL")items.push({kind:"state",label:filters.state});
+    if(filters.type!=="ALL")items.push({kind:"type",label:labelFor("type",filters.type)});
+    if(filters.review!=="ALL")items.push({kind:"review",label:labelFor("review",filters.review)});
+    if(filters.area)items.push({kind:"area",label:filters.area});
+    if(filters.query)items.push({kind:"query",label:labelFor("query",filters.query)});
+    return items;
+  }
+  function renderActiveFilters(){
+    var items=activeDescriptions();
+    activeFilters.hidden=!items.length;
+    activeFilters.innerHTML=items.map(function(item){
+      return '<button class="st-active-chip" type="button" data-remove="'+text(item.kind)+'" aria-label="Remove '+text(item.label)+' filter"><span>'+text(item.label)+'</span></button>';
+    }).join("");
+  }
+  function titleText(){
+    var bits=[];
+    if(filters.state!=="ALL")bits.push(filters.state);
+    if(filters.type==="National chain")bits.push("national-chain");
+    if(filters.type==="Independent store")bits.push("independent");
+    if(filters.type==="Online / delivery")bits.push("online");
+    if(filters.review==="PENDING")bits.push("needs-confirmation");
+    var prefix=bits.length?bits.join(" ")+" stockists":"stockists";
+    if(filters.query&&filters.area)return 'Showing '+prefix+' for '+filters.area+' matching "'+filters.query+'"';
+    if(filters.query)return 'Showing '+prefix+' matching "'+filters.query+'"';
+    if(filters.area)return "Showing "+prefix+" for "+filters.area;
+    if(bits.length)return "Showing "+prefix;
+    return "Showing all stockists";
+  }
+  function badgeHtml(item){
+    var parts={place:"",kind:""};
+    if(item.type==="Online / delivery"||item.state==="Online"){
+      parts.place='<span class="online">Online ordering</span>';
+    }else if(item.state==="UNKNOWN"||item.state==="AUS"&&item.area==="Details pending"){
+      parts.place=item.area&&item.area!=="Details pending"?'<span class="pending">Area reference: '+text(item.area)+' · state pending confirmation</span>':'<span class="pending">Location details pending confirmation</span>';
+    }else{
+      parts.place='<strong>'+text(item.area)+'</strong><span>, '+text(item.state)+'</span>';
+    }
+    parts.kind='<span class="st-badge '+(item.type==="Online / delivery"?"online":"")+'">'+text(item.type)+'</span>';
+    if(item.state==="UNKNOWN")parts.kind+='<span class="st-badge confirm">Confirm details</span>';
+    parts.address=item.address?'<address class="st-result-address">'+text(item.address)+'</address>':'';
+    parts.note=item.note?'<div class="st-result-note"><span>Source note</span>'+text(item.note)+'</div>':'';
+    return parts;
+  }
+  function resultCard(item,index){
+    var badges=badgeHtml(item);
+    return '<article class="st-result '+(item.state==="UNKNOWN"?"is-pending":"")+'" role="listitem" data-result-index="'+index+'">'+
+      '<span class="st-result-num" aria-hidden="true"></span>'+
+      '<div class="st-result-main"><h4>'+text(item.name)+'</h4></div>'+
+      '<div class="st-result-place">'+badges.place+'</div>'+
+      '<div class="st-result-kind">'+badges.kind+'</div>'+
+      badges.address+
+      badges.note+
+    '</article>';
+  }
+  function mapSummaryText(matched,preview){
+    if(!matched.length)return "No preview highlights for this filter.";
+    var pinWord=preview.length===1?"highlight":"highlights";
+    var stockistWord=matched.length===1?"stockist":"stockists";
+    if(filters.review==="PENDING")return preview.length+" preview "+pinWord+" for the "+matched.length+" entries needing confirmation.";
+    if(filters.type!=="ALL")return preview.length+" preview "+pinWord+" from "+matched.length+" current directory-view matches.";
+    if(filters.area)return "Preview "+pinWord+" for "+filters.area+".";
+    if(filters.query)return preview.length+" preview "+pinWord+" matching \""+filters.query+"\".";
+    if(filters.state!=="ALL")return preview.length+" preview "+pinWord+" from "+matched.length+" "+filters.state+" "+stockistWord+".";
+    return preview.length+" preview "+pinWord+" from the 204-store directory.";
+  }
+  function mapTextSummaryText(matched,preview){
+    if(!matched.length)return "No current result preview. Clear filters or try a broader search to see the illustrative coverage guide.";
+    var names=preview.map(function(item){return item.name;});
+    var suffix=matched.length>preview.length?" The remaining matching stockists are available in the list.":"";
+    return "Coverage guide reflects the first "+preview.length+" current list result"+(preview.length===1?"":"s")+": "+names.join(", ")+". It is not a map of exact locations."+suffix;
+  }
+  function emptyText(){
+    var queryLabel=labelFor("query",filters.query);
+    var active=activeDescriptions().map(function(item){return item.label;});
+    var nonQuery=active.filter(function(label){return label!==queryLabel;});
+    if(filters.query&&nonQuery.length)return 'No listed stockists match "'+filters.query+'" with '+nonQuery.join(", ")+'. Try removing one filter or clearing the search.';
+    if(filters.query)return 'No listed stockists match "'+filters.query+'". Try a store name, suburb, postcode or state.';
+    if(active.length)return 'No listed stockists match '+active.join(", ")+'. Try removing one filter or clear everything.';
+    return "Try a broader search or clear the filters.";
+  }
+  function renderMapMarkers(matched,visible){
+    var preview=visible.slice(0,4);
+    var html='<span class="st-map-coast" aria-hidden="true"></span>'+
+      '<span class="st-map-block one" aria-hidden="true"></span>'+
+      '<span class="st-map-block two" aria-hidden="true"></span>'+
+      '<span class="st-map-block three" aria-hidden="true"></span>'+
+      '<span class="st-map-block four" aria-hidden="true"></span>'+
+      '<span class="st-map-label" style="left:58%;top:27%;">Coverage guide</span>'+
+      '<span class="st-map-label muted" style="left:20%;top:76%;">List order</span>';
+    if(preview.length){
+      html+=preview.map(function(item,index){
+        return '<span class="st-map-marker" style="'+mapPinStyle(index)+'" aria-hidden="true"></span>';
+      }).join("");
+    }else{
+      html+='<span class="st-map-empty">No preview highlights. Clear filters or try a broader search.</span>';
+    }
+    map.innerHTML=html;
+    mapSummary.textContent=mapSummaryText(matched,preview);
+    mapTextSummary.textContent=mapTextSummaryText(matched,preview);
+  }
+  function updateSearchClear(){
+    searchClear.hidden=!filters.query;
+  }
+  function render(){
+    var shown=sortResults(stockists.filter(matches));
+    var visible=shown.slice(0,visibleLimit);
+    title.textContent=titleText();
+    count.textContent=shown.length?("Showing "+visible.length+" of "+shown.length+" stockists. 204 total; 7 need client confirmation."):("No stockists shown. 204 total; 7 need client confirmation.");
+    results.setAttribute("aria-label",title.textContent+". "+count.textContent);
+    renderActiveFilters();
+    clear.hidden=!activeDescriptions().length;
+    updateSearchClear();
+    results.hidden=!visible.length;
+    empty.hidden=!!shown.length;
+    emptyCopy.textContent=emptyText();
+    finderShell.classList.toggle("is-empty",!shown.length);
+    results.innerHTML=visible.map(function(item,index){return resultCard(item,index);}).join("");
+    showMore.hidden=shown.length<=visibleLimit;
+    showMore.textContent=shown.length>visibleLimit?"Load more stockists ("+(shown.length-visibleLimit)+" remaining)":"Load more stockists";
+    showMore.setAttribute("aria-label",shown.length>visibleLimit?"Load "+Math.min(PAGE_INCREMENT,shown.length-visibleLimit)+" more stockists; "+(shown.length-visibleLimit)+" remaining":"Load more stockists");
+    resultsSpacer.hidden=showMore.hidden||!visible.length;
+    renderMapMarkers(shown,visible);
+    setPressed();
+  }
+
+  document.addEventListener("click",function(e){
+    var remove=e.target.closest("[data-remove]");
+    if(remove){
+      if(remove.dataset.remove==="state")filters.state="ALL";
+      if(remove.dataset.remove==="type")filters.type="ALL";
+      if(remove.dataset.remove==="review")filters.review="ALL";
+      if(remove.dataset.remove==="area")filters.area="";
+      if(remove.dataset.remove==="query"){filters.query="";q.value="";}
+      resetForNewFilter();
+      render();
+      return;
+    }
+    var filter=e.target.closest("[data-filter]");
+    if(filter){
+      filters[filter.dataset.filter]=filter.dataset.value;
+      resetForNewFilter();
+      render();
+      return;
+    }
+    var area=e.target.closest("[data-area]");
+    if(area){
+      filters={state:"ALL",type:"ALL",review:"ALL",area:area.dataset.area,query:""};
+      q.value="";
+      resetForNewFilter();
+      render();
+      return;
+    }
+  });
+  q.addEventListener("input",function(){filters.query=q.value.trim();resetForNewFilter();render();});
+  q.addEventListener("keydown",function(e){
+    if(e.key==="Escape"&&q.value){
+      e.preventDefault();
+      filters.query="";
+      q.value="";
+      resetForNewFilter();
+      render();
+    }
+  });
+  searchClear.addEventListener("click",function(){
+    filters.query="";
+    q.value="";
+    resetForNewFilter();
+    render();
+    q.focus();
+  });
+  clear.addEventListener("click",function(){resetAll(true);});
+  emptyClear.addEventListener("click",function(){resetAll(true);});
+  showMore.addEventListener("click",function(){
+    visibleLimit+=PAGE_INCREMENT;
+    render();
+  });
+  if(popularAreas){
+    var summary=popularAreas.querySelector("summary");
+    if(summary)summary.addEventListener("click",function(){popularAreas.dataset.touched="true";});
+  }
+  function tuneMobileAreas(){
+    if(!popularAreas||popularAreas.dataset.touched)return;
+    popularAreas.removeAttribute("open");
+  }
+  var resizeTimer;
+  window.addEventListener("resize",function(){
+    clearTimeout(resizeTimer);
+    resizeTimer=setTimeout(function(){tuneMobileAreas();render();},120);
+  });
+  updateStateCounts();
+  tuneMobileAreas();
+  render();
+})();
+</script>
+<style>
+/* STOCKISTS LANE: keep finder states obvious without implying live map data. */
+.sp .sp-head{padding-top:88px;padding-bottom:54px;}
+.sp .sp-head h1{font-style:normal;}
+.sp .sp-head::after{content:"";position:absolute;z-index:-1;pointer-events:none;right:-3%;top:18px;width:min(720px,54vw);height:294px;background:url("assets/hero_shots/silhouette_closeup.webp") center 38% / cover no-repeat;opacity:.22;mix-blend-mode:multiply;filter:saturate(.72) contrast(.94);-webkit-mask-image:linear-gradient(90deg,transparent 0%,rgba(0,0,0,.42) 24%,#000 54%,rgba(0,0,0,.68) 78%,transparent 100%),linear-gradient(180deg,transparent 0%,#000 18%,#000 73%,transparent 100%);-webkit-mask-composite:source-in;mask-image:linear-gradient(90deg,transparent 0%,rgba(0,0,0,.42) 24%,#000 54%,rgba(0,0,0,.68) 78%,transparent 100%),linear-gradient(180deg,transparent 0%,#000 18%,#000 73%,transparent 100%);mask-composite:intersect;}
+.sp .wrap.st-finder{margin-top:8px;}
+.st-search-panel{position:relative;overflow:hidden;}
+.sp .st-search-panel{box-shadow:none;border-radius:0;margin-bottom:16px;padding-top:20px;padding-bottom:18px;}
+.st-finder-cue{margin-bottom:12px;}
+.st-filter-set{margin-top:10px;}
+.st-state-set{padding-top:10px;}
+.st-finder-type-row{margin:10px 32px 0;padding:12px 0 0;border-top:1px solid rgba(69,119,152,.12);}
+.st-finder-type-row .st-result-filter{border-radius:50px;text-align:center;}
+.st-type-label{display:flex;align-items:baseline;justify-content:space-between;gap:14px;margin:14px 32px 0;}
+.st-type-label span{font-size:.62rem;letter-spacing:0;text-transform:none;color:var(--ink-soft);}
+.st-search-panel::after{content:"";position:absolute;right:8%;bottom:-80px;width:240px;height:160px;border-radius:50%;background:radial-gradient(ellipse,rgba(69,119,152,.13),transparent 68%);pointer-events:none;}
+.st-search-panel>*{position:relative;z-index:1;}
+.st-results-head{border-bottom:1px solid rgba(69,119,152,.12);padding-top:16px;padding-bottom:14px;}
+.st-clear[hidden]{display:none;}
+.st-results:focus{outline:2px solid rgba(69,119,152,.62);outline-offset:4px;}
+.st-result.is-pending{background:linear-gradient(90deg,rgba(241,237,227,.48),rgba(251,250,247,.92));}
+.st-result-address{font-style:normal;}
+.st-result-note span{display:block;margin-bottom:2px;font-size:.54rem;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-faint);}
+.st-active-row:not([hidden]){padding:10px 16px 0;}
+.st-result{transition:background .22s,box-shadow .22s,transform .22s;}
+.st-result:hover{background:rgba(232,244,247,.46);}
+.st-result.is-map-highlight{background:rgba(231,228,202,.62);box-shadow:inset 3px 0 0 #457798;}
+.st-map-panel{overflow:hidden;padding:16px;background:rgba(251,250,247,.56);box-shadow:none;}
+.st-map-canvas{min-height:336px;opacity:.9;}
+.st-map-marker{border:0;background:transparent;box-shadow:none;}
+.st-map-marker::after{content:"";width:10px;height:10px;border-radius:50%;background:rgba(16,25,35,.74);box-shadow:0 0 0 5px rgba(69,119,152,.08);}
+.st-map-marker:hover,.st-map-marker:focus-visible{box-shadow:0 10px 20px rgba(16,25,35,.1);}
+.st-map-marker:hover::after,.st-map-marker:focus-visible::after{box-shadow:0 0 0 7px rgba(69,119,152,.12);}
+.st-map-note{padding-top:2px;border-top:1px solid rgba(69,119,152,.12);}
+.st-empty{padding:28px 18px 30px;background:rgba(251,250,247,.6);}
+@media(min-width:901px){
+  .st-finder-shell{grid-template-columns:repeat(2,minmax(0,1fr));gap:28px;align-items:stretch;}
+  .st-map-panel{position:relative;top:auto;align-self:stretch;display:flex;flex-direction:column;}
+  .st-map-canvas{flex:1;min-height:0;}
+}
+@media(max-width:560px){
+  .sp .sp-head{padding-top:42px;padding-bottom:34px;}
+  .sp .sp-head::after{display:none;}
+  .sp .wrap.st-finder{padding-top:20px;margin-top:0;}
+  .st-finder-type-row{grid-template-columns:repeat(2,minmax(0,1fr));margin-left:16px;margin-right:16px;}
+  .st-type-label{align-items:flex-start;flex-direction:column;gap:3px;margin-left:16px;margin-right:16px;}
+  .st-type-label span{font-size:.58rem;line-height:1.3;}
+  .st-map-canvas{min-height:300px;}
+  .st-search-panel::after{right:-24%;bottom:-96px;}
+  .st-active-row:not([hidden]){padding:8px 16px 0;}
+}
+</style>
+<script src="review-mode.js"></script>
+</body>
+</html>

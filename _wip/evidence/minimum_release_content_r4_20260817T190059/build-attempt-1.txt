@@ -1,0 +1,14 @@
+COMMAND
+python3 -B scripts/build-maplemoon-minimum-release-content-r4.py --output _wip/deploy/generated/maplemoon-minimum-release-content-r4-20260817T190059
+
+RESULT
+exit 1; no exact output directory created.
+
+ERROR
+RuntimeError: Expected 1 regex replacement(s), found 0: '  var cart=\\{.*?\\n  renderCart\\(\\);\\n  renderCart\\(\\);\\n'
+
+CLASSIFICATION
+Task-owned transform assertion assumed two consecutive Shop renderCart() calls.
+The pinned source contains one. No candidate/source/style/media/Shopify/deploy
+path changed. The assertion was corrected to match and remove the exact single
+cart block; content requirements were not weakened.

@@ -345,6 +345,11 @@ html{scroll-behavior:smooth;}
 /* Keep finder controls comfortable to use without changing the visual hierarchy. */
 .st-search input,.st-search-clear,.st-filter,.st-area-next,.st-result-filter,.st-active-chip,.st-empty-action,.st-show-more,.st-clear{min-width:44px;min-height:44px}
 </style>
+<style id="stockists-skip-link-20260816">
+.mm-review-skip{position:fixed;z-index:2147483001;top:10px;left:10px;min-height:44px;display:inline-flex;align-items:center;padding:10px 14px;border-radius:999px;color:#f4f2ed;background:#101923;font:650 .72rem/1.2 var(--mm-sans,'Neue Haas Grotesk Display Pro',Inter,'Helvetica Neue',Arial,sans-serif);letter-spacing:.08em;text-decoration:none;text-transform:uppercase;transform:translateY(-180%);transition:transform 180ms ease;}
+.mm-review-skip:focus{outline:3px solid #457798;outline-offset:3px;transform:translateY(0);}
+#main-content:focus{outline:2px solid #457798;outline-offset:6px;}
+</style>
 <link rel="stylesheet" href="/a11y_inner.css?v=20260723">
 <link rel="stylesheet" href="/design_refinement_20260723.css">
 
@@ -426,6 +431,7 @@ html{scroll-behavior:smooth;}
 <!--MM-A11Y-SAFE-->
 </head>
 <body>
+<a class="mm-review-skip" href="#main-content">Skip to main content</a>
 <div class="sp">
   <div class="sp-mist" aria-hidden="true"></div>
   <div class="sp-grain" aria-hidden="true"></div>
@@ -437,6 +443,8 @@ html{scroll-behavior:smooth;}
     <nav class="sp-nav r" aria-label="Utility navigation"><a href="/stockists.WIP.html" class="on">Stockists</a><span class="sp-currency" aria-label="Currency, Australian dollars">AUD $</span>
       <button class="sp-cart" type="button" aria-label="Cart, 0 items"><svg viewBox="0 0 24 24"><path d="M6 8h12l-1 12H7L6 8z"/><path d="M9 8a3 3 0 0 1 6 0"/></svg><b>0</b></button></nav>
   </div></header>
+
+  <main id="main-content" tabindex="-1">
 
   <div class="wrap sp-head">
     <span class="sp-kick">Stockists</span>
@@ -581,6 +589,8 @@ html{scroll-behavior:smooth;}
     </form>
     <p class="fine" id="stockists-news-demo-note">Demo only. This form does not collect or submit email addresses.</p>
   </section>
+
+  </main>
 
   <footer class="sp-ft"><div class="wrap">
     <div class="row">

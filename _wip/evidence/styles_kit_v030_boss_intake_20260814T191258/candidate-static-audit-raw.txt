@@ -1,0 +1,107 @@
+{
+  "schema": "maplemoon-candidate-static-audit/v1",
+  "rows": [
+    {
+      "file": "homepage.html",
+      "hash": "27921b2a466ccb670b2851a73043429763d3423bcaf651069e4e860dc01a78b1",
+      "hashPass": true,
+      "images": 16,
+      "intrinsic": 8,
+      "loading": 10,
+      "decoding": 12,
+      "srcset": 0,
+      "sizes": 0,
+      "onerror": 0,
+      "nonemptyAlt": 13
+    },
+    {
+      "file": "our-story.html",
+      "hash": "2db31868a9791f373f156e7cdeb8261e494d1d47e9418a94c28156e213df7711",
+      "hashPass": true,
+      "images": 15,
+      "intrinsic": 3,
+      "loading": 4,
+      "decoding": 15,
+      "srcset": 0,
+      "sizes": 0,
+      "onerror": 0,
+      "nonemptyAlt": 15
+    },
+    {
+      "file": "carob-story.html",
+      "hash": "4fd9ad0fabb9d60d0f391925f5a382ccfc8f705b60fca1c681f403a5cd9734bd",
+      "hashPass": true,
+      "images": 12,
+      "intrinsic": 12,
+      "loading": 5,
+      "decoding": 11,
+      "srcset": 0,
+      "sizes": 0,
+      "onerror": 0,
+      "nonemptyAlt": 9
+    },
+    {
+      "file": "shop.html",
+      "hash": "f111ad5123e34dadd46ac497fca286066efc67c05dd7e68f0d3e70c97c735038",
+      "hashPass": true,
+      "images": 8,
+      "intrinsic": 1,
+      "loading": 0,
+      "decoding": 1,
+      "srcset": 0,
+      "sizes": 0,
+      "onerror": 0,
+      "nonemptyAlt": 2
+    },
+    {
+      "file": "faq.html",
+      "hash": "c5ce7aaf0b9b3221f34eb2928fc2ff6732fc1a915ea80144a4ade2b94011fb6e",
+      "hashPass": true,
+      "images": 1,
+      "intrinsic": 1,
+      "loading": 0,
+      "decoding": 1,
+      "srcset": 0,
+      "sizes": 0,
+      "onerror": 0,
+      "nonemptyAlt": 1
+    },
+    {
+      "file": "stockists.html",
+      "hash": "4821adfe88680d4f174b7a8700c8d8a65594df2901bf3a7109d51b09040cb887",
+      "hashPass": true,
+      "images": 2,
+      "intrinsic": 1,
+      "loading": 1,
+      "decoding": 2,
+      "srcset": 0,
+      "sizes": 0,
+      "onerror": 0,
+      "nonemptyAlt": 2
+    },
+    {
+      "file": "pure-carob-bar.html",
+      "hash": "015cde27ecc60f3c444820a551c39f6e9c985fc5b2e59bdaea5f496c1c236b65",
+      "hashPass": true,
+      "images": 7,
+      "intrinsic": 2,
+      "loading": 5,
+      "decoding": 7,
+      "srcset": 0,
+      "sizes": 0,
+      "onerror": 0,
+      "nonemptyAlt": 7
+    }
+  ],
+  "references": {
+    "count": 56,
+    "nonblank": 56,
+    "missing": []
+  },
+  "media005": {
+    "status": "HOLD_TECHNICAL_EVIDENCE_INCOMPLETE",
+    "observation": "All viewport-requested images rendered without failure, but static markup does not consistently declare intrinsic dimensions, responsive srcset/sizes, lazy/eager policy, or explicit failure UI. Zero onerror attributes is recorded as absence of inline fallback, not proof of no central fallback."
+  },
+  "pass": true
+}
+RESULT PASS candidate_hashes=7/7 declared_assets=56/56

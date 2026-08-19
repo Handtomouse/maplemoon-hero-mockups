@@ -1,0 +1,105 @@
+{
+  "schema": "maplemoon-receipt/v2",
+  "receipt_id": "MAPLEMOON-PHOTO-REVIEW-BATCH-AUDIT-R2-20260814T153609-RECEIPT-001",
+  "packet_id": "MAPLEMOON-PHOTO-REVIEW-BATCH-AUDIT-R2-20260814T153609",
+  "worker_thread_id": "/root/recertify_updated_preview",
+  "worker": "Codex independent photography review auditor",
+  "started_at": "2026-08-14T15:36:09+10:00",
+  "completed_at": "2026-08-14T15:48:33+10:00",
+  "outcome": "PASS_MECHANICALLY_VERIFIED_REVIEW_ONLY_NATE_HOLDS",
+  "confidence": "high",
+  "checkpoint_path": "maplemoon-website/_wip/checkpoints/MAPLEMOON-PHOTO-REVIEW-BATCH-AUDIT-R2-20260814T153609_20260814_153609_AEST",
+  "files_read": [
+    "maplemoon-website/docs/orchestration/packets/MAPLEMOON-PHOTO-REVIEW-BATCH-AUDIT-R2-20260814T153609.md",
+    "maplemoon-website/docs/orchestration/packets/MAPLEMOON-PHOTO-REVIEW-BATCH-AUDIT-20260814T152749.md",
+    "maplemoon-website/docs/orchestration/reviews/MAPLEMOON-PHOTO-REVIEW-BATCH-AUDIT-20260814T152749.json",
+    "maplemoon-website/_wip/evidence/photo_review_batch_audit_20260814T152749",
+    ".codex/visualizations/2026/08/13/019ffd5b-edd2-7b23-8780-453f9b67a532/maplemoon-product-corrections-20260814/maplemoon_product_corrections_review_20260814.html",
+    ".codex/visualizations/2026/08/13/019ffd5b-edd2-7b23-8780-453f9b67a532/maplemoon-product-corrections-20260814/assets/carob_powder_isolated.png",
+    ".codex/visualizations/2026/08/13/019ffd5b-edd2-7b23-8780-453f9b67a532/maplemoon-product-corrections-20260814/assets/elixir_pure_isolated_equal-size.png",
+    ".codex/visualizations/2026/08/13/019ffd5b-edd2-7b23-8780-453f9b67a532/maplemoon-product-corrections-20260814/assets/elixir_spiced_isolated_equal-size.png",
+    ".codex/visualizations/2026/08/13/019ffd5b-edd2-7b23-8780-453f9b67a532/maplemoon-product-corrections-20260814/assets/five_item_bundle_low_angle_isolated.png",
+    "maplemoon-website/scripts/check-maplemoon-receipt.py",
+    "maplemoon-website",
+    "maplemoon_build_20260813"
+  ],
+  "files_changed": [
+    "maplemoon-website/_wip/evidence/photo_review_batch_audit_r2_20260814T153609",
+    "maplemoon-website/docs/orchestration/reviews/MAPLEMOON-PHOTO-REVIEW-BATCH-AUDIT-R2-20260814T153609.json"
+  ],
+  "pre_sha256": {
+    "maplemoon-website/_wip/evidence/photo_review_batch_audit_r2_20260814T153609": null,
+    "maplemoon-website/docs/orchestration/reviews/MAPLEMOON-PHOTO-REVIEW-BATCH-AUDIT-R2-20260814T153609.json": null
+  },
+  "post_sha256": {
+    "maplemoon-website/_wip/evidence/photo_review_batch_audit_r2_20260814T153609": "71b0b7a7627ec5ac615f46a62eb8c40dfce92ddcb584381a975afdf82bc91b25",
+    "maplemoon-website/docs/orchestration/reviews/MAPLEMOON-PHOTO-REVIEW-BATCH-AUDIT-R2-20260814T153609.json": null
+  },
+  "checks": [
+    {
+      "command": "python3 -B scripts/check-maplemoon-receipt.py verify --root /Users/handtomouse --packet docs/orchestration/packets/MAPLEMOON-PHOTO-REVIEW-BATCH-AUDIT-R2-20260814T153609.md --checkpoint _wip/checkpoints/MAPLEMOON-PHOTO-REVIEW-BATCH-AUDIT-R2-20260814T153609_20260814_153609_AEST --phase start",
+      "exit_code": 0,
+      "result": "PASS packet=MAPLEMOON-PHOTO-REVIEW-BATCH-AUDIT-R2-20260814T153609 phase=start scope=2"
+    },
+    {
+      "command": "python3 _wip/evidence/photo_review_batch_audit_r2_20260814T153609/final_assert.py",
+      "exit_code": 0,
+      "result": "R2_FINAL PASS predecessor_gate=3:preserved hashes=5/5 browser=True mechanical=True unwired=True production=7vjf2m50b:6197879a5ca9d3ed0452773abc0bbeb4 screenshots=3/3"
+    },
+    {
+      "command": "node _wip/evidence/photo_review_batch_audit_r2_20260814T153609/review_surface_r2_verify.cjs",
+      "exit_code": 0,
+      "result": "R2_BROWSER PASS widths=390:PASS,900:PASS,1440:PASS favicon_exact=1 source_refs=0 control_404=404 control_rejected=true"
+    },
+    {
+      "command": "python3 _wip/evidence/photo_review_batch_audit_r2_20260814T153609/mechanical_revalidate.py",
+      "exit_code": 0,
+      "result": "R2_MECHANICAL PASS hashes=5/5 rgba=4/4 alpha=4/4 elixir_bounds=True powder_primary=1 visual_spot_check=review-only"
+    },
+    {
+      "command": "independent rendered inspection of the three R2 screenshots plus predecessor light/dark mechanical contact sheet",
+      "exit_code": 0,
+      "result": "PASS within review-only scope: all three review surfaces are intact with no overflow or blank panels; powder is one isolated mound; bundle shows exactly five visually distinct bodies; no checkerboard is visible; elixir fine print and icons remain reconstructed and held. No SKU identity, composition acceptance or live-use approval granted."
+    },
+    {
+      "command": "python3 _wip/evidence/photo_review_batch_audit_r2_20260814T153609/unwired_search.py",
+      "exit_code": 0,
+      "result": "R2_UNWIRED PASS control=4/4 site_or_build_matches=0 files=9013 bytes=13259930300"
+    },
+    {
+      "command": "vercel inspect https://maplemoonbuild20260813.vercel.app",
+      "exit_code": 0,
+      "result": "Fetched deployment maplemoonbuild20260813-7vjf2m50b-handtomouses-projects.vercel.app; id=dpl_G2LER2awaqyFtGRCcTserXbNynct target=production status=Ready; alias=https://maplemoonbuild20260813.vercel.app"
+    },
+    {
+      "command": "vercel curl / --deployment https://maplemoonbuild20260813.vercel.app -- --silent --location | python3 _wip/evidence/photo_review_batch_audit_r2_20260814T153609/stream_md5.py",
+      "exit_code": 0,
+      "result": "PRODUCTION_HOME bytes=208556 md5=6197879a5ca9d3ed0452773abc0bbeb4 nonblank=true"
+    }
+  ],
+  "screenshots_or_urls": [
+    "maplemoon-website/_wip/evidence/photo_review_batch_audit_r2_20260814T153609/review_surface_r2_390.png",
+    "maplemoon-website/_wip/evidence/photo_review_batch_audit_r2_20260814T153609/review_surface_r2_900.png",
+    "maplemoon-website/_wip/evidence/photo_review_batch_audit_r2_20260814T153609/review_surface_r2_1440.png",
+    "maplemoon-website/_wip/evidence/photo_review_batch_audit_r2_20260814T153609/review_surface_r2_results.json",
+    "maplemoon-website/_wip/evidence/photo_review_batch_audit_r2_20260814T153609/mechanical_revalidation.json",
+    "maplemoon-website/_wip/evidence/photo_review_batch_audit_r2_20260814T153609/unwired_search_results.json",
+    "maplemoon-website/_wip/evidence/photo_review_batch_audit_r2_20260814T153609/production_freeze.json",
+    "maplemoon-website/_wip/evidence/photo_review_batch_audit_20260814T152749/mechanical_contact_sheet.png",
+    "https://maplemoonbuild20260813.vercel.app"
+  ],
+  "failures": [],
+  "unknowns": [],
+  "residual_risk": [
+    "All four assets remain review-only. Reconstructed elixir fine print and icons, exact bundle composition, exact SKU identity, client acceptance and live website binding remain Nate-only holds.",
+    "The R2 favicon correction is narrowly limited to one unauthored browser-default GET /favicon.ico 404 in the standalone review shell; all authored and non-favicon failures remain fail-closed."
+  ],
+  "resolved_notes": [
+    "An initial headless browser launch was blocked by the filesystem sandbox; the same evidence command was rerun with the required browser permission.",
+    "The first page-target-only trace did not expose the browser-chrome favicon response even though the normal static-server log did. The final harness uses an unmodified read-only static server whose request ledger proves the exact 404; it does not add a favicon or fake success."
+  ],
+  "forbidden_path_changes": [],
+  "proposed_next_state": "mechanically_verified_review_only_nate_holds",
+  "next_reviewer": "MapleMoon BOSS then Nate for visual/live-use decisions",
+  "ready_to_promote": true
+}

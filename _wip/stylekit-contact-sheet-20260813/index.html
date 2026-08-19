@@ -1,0 +1,504 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Maple Moon — Stylekit contact sheet</title>
+  <link rel="stylesheet" href="../../_wip/deploy/site-full/brand_kit.css">
+  <link rel="stylesheet" href="../../shared.css">
+  <link rel="stylesheet" href="../../assets/design-system/mm-tokens.css">
+  <link rel="stylesheet" href="../../assets/design-system/mm-base.css">
+  <link rel="stylesheet" href="../../assets/design-system/mm-chrome.css">
+  <link rel="stylesheet" href="../../assets/design-system/mm-primitives.css">
+  <script defer src="../../assets/design-system/mm-chrome.js"></script>
+  <style>
+    :root {
+      --kit-grid: rgba(44, 42, 38, 0.055);
+      --kit-rule: rgba(44, 42, 38, 0.13);
+      --kit-muted: #777168;
+      --kit-paper: #f4f2ed;
+      --kit-ink: #2c2a26;
+    }
+
+    html { scroll-behavior: smooth; }
+    body {
+      min-width: 320px;
+      overflow-x: hidden;
+      color: var(--kit-ink);
+      background:
+        linear-gradient(var(--kit-grid) 1px, transparent 1px),
+        linear-gradient(90deg, var(--kit-grid) 1px, transparent 1px),
+        var(--kit-paper);
+      background-size: 28px 28px;
+      font-family: var(--mm-font-sans);
+    }
+
+    .kit-shell { width: min(calc(100% - 48px), 1440px); margin: 0 auto; }
+    .kit-masthead { padding: 72px 0 42px; border-bottom: 1px solid var(--kit-rule); }
+    .kit-masthead__top { display: flex; justify-content: space-between; gap: 32px; align-items: flex-start; }
+    .kit-brand { display: flex; align-items: center; gap: 13px; }
+    .kit-brand img { width: 34px; height: 34px; }
+    .kit-kicker,
+    .kit-label,
+    .kit-source,
+    .kit-nav a,
+    .kit-token,
+    .kit-meta {
+      font-size: 10px;
+      font-weight: 500;
+      letter-spacing: .14em;
+      line-height: 1.35;
+      text-transform: uppercase;
+    }
+    .kit-kicker { color: var(--mm-color-blue-deep); }
+    .kit-title {
+      max-width: 980px;
+      margin: 38px 0 18px;
+      font-family: var(--mm-font-serif);
+      font-size: clamp(3.6rem, 8vw, 8.5rem);
+      font-weight: 400;
+      letter-spacing: -.045em;
+      line-height: .86;
+    }
+    .kit-intro { max-width: 720px; color: var(--kit-muted); font-size: 16px; line-height: 1.65; }
+    .kit-status { max-width: 345px; padding: 16px 18px; border: 1px solid var(--kit-rule); border-radius: 12px; background: rgba(251,250,247,.74); }
+    .kit-status strong { display: block; margin-bottom: 7px; font-family: var(--mm-font-serif); font-size: 17px; font-weight: 500; }
+    .kit-status p { margin: 0; color: var(--kit-muted); font-size: 12px; line-height: 1.5; }
+    .kit-nav { display: flex; flex-wrap: wrap; gap: 8px; padding-top: 28px; }
+    .kit-nav a { padding: 9px 13px; border: 1px solid var(--kit-rule); border-radius: 999px; color: inherit; text-decoration: none; background: rgba(251,250,247,.5); }
+    .kit-nav a:hover { border-color: var(--mm-color-blue-deep); color: var(--mm-color-blue-deep); }
+
+    .kit-section { padding: 64px 0 76px; border-bottom: 1px solid var(--kit-rule); }
+    .kit-section__head { display: grid; grid-template-columns: minmax(180px,.42fr) minmax(0,1fr); gap: 32px; margin-bottom: 38px; }
+    .kit-section__head h2 { font-family: var(--mm-font-serif); font-size: clamp(2.2rem,4vw,4rem); font-weight: 400; line-height: .98; }
+    .kit-section__head p { max-width: 660px; color: var(--kit-muted); line-height: 1.65; }
+    .kit-index { color: var(--mm-color-blue-deep); font-family: var(--mm-font-sans); font-size: 11px; letter-spacing: .15em; }
+    .kit-source { display: inline-block; margin-top: 10px; color: var(--kit-muted); letter-spacing: .08em; text-transform: none; }
+
+    .kit-grid { display: grid; grid-template-columns: repeat(12,minmax(0,1fr)); gap: 16px; }
+    .kit-card { grid-column: span 4; min-width: 0; border: 1px solid var(--kit-rule); border-radius: 12px; background: rgba(251,250,247,.84); overflow: hidden; }
+    .kit-card--wide { grid-column: span 8; }
+    .kit-card--full { grid-column: 1 / -1; }
+    .kit-card--half { grid-column: span 6; }
+    .kit-card__head { display: flex; justify-content: space-between; gap: 18px; align-items: flex-start; padding: 14px 16px; border-bottom: 1px solid var(--kit-rule); }
+    .kit-card__head h3 { margin: 0; font-family: var(--mm-font-sans); font-size: 12px; font-weight: 500; letter-spacing: .08em; text-transform: uppercase; }
+    .kit-card__body { padding: 24px; }
+    .kit-card__body--flush { padding: 0; }
+    .kit-meta { color: var(--kit-muted); font-size: 8px; letter-spacing: .1em; text-align: right; }
+    .kit-note { margin-top: 14px; color: var(--kit-muted); font-size: 11px; line-height: 1.55; }
+
+    .kit-swatches { display: grid; grid-template-columns: repeat(4,minmax(0,1fr)); }
+    .kit-swatch { min-height: 176px; display: flex; flex-direction: column; justify-content: flex-end; padding: 14px; border-right: 1px solid rgba(255,255,255,.22); border-bottom: 1px solid rgba(255,255,255,.22); }
+    .kit-swatch:nth-child(4n) { border-right: 0; }
+    .kit-swatch--light { color: #fff; }
+    .kit-swatch strong { font-size: 12px; font-weight: 500; }
+    .kit-swatch code { margin-top: 5px; font-family: ui-monospace,SFMono-Regular,Menlo,monospace; font-size: 10px; opacity: .74; }
+
+    .kit-type-row { display: grid; grid-template-columns: 160px minmax(0,1fr) 160px; gap: 24px; align-items: baseline; padding: 25px 0; border-bottom: 1px solid var(--kit-rule); }
+    .kit-type-row:last-child { border-bottom: 0; }
+    .kit-type-row__meta { color: var(--kit-muted); font-size: 10px; line-height: 1.5; }
+    .kit-type-row__meta code { font-family: ui-monospace,SFMono-Regular,Menlo,monospace; }
+    .kit-display { font-family: var(--mm-serif); font-size: clamp(3rem,6vw,5rem); font-weight: 400; letter-spacing: -.01em; line-height: 1.05; }
+    .kit-headline { font-family: var(--mm-serif); font-size: clamp(2rem,4vw,3.5rem); font-weight: 400; letter-spacing: -.005em; line-height: 1.15; }
+    .kit-subhead { font-family: var(--mm-serif); font-size: clamp(1.25rem,2vw,1.75rem); font-weight: 400; line-height: 1.15; }
+    .kit-body-lg { max-width: 58ch; font-family: var(--mm-sans); font-size: 1.125rem; font-weight: 300; line-height: 1.8; }
+    .kit-body { max-width: 66ch; font-family: var(--mm-sans); font-size: 1rem; font-weight: 300; line-height: 1.6; }
+    .kit-caption { font-family: var(--mm-sans); font-size: .75rem; font-weight: 400; line-height: 1.6; color: #9b8a7a; }
+    .kit-eyebrow { font-family: var(--mm-sans); font-size: .65rem; font-weight: 500; letter-spacing: .18em; line-height: 1.15; text-transform: uppercase; }
+    .kit-navtype { font-family: var(--mm-sans); font-size: .7rem; font-weight: 400; letter-spacing: .1em; line-height: 1.5; text-transform: uppercase; }
+    .kit-controltype { font-family: var(--mm-sans); font-size: .66rem; font-weight: 500; letter-spacing: .16em; line-height: 1; text-transform: uppercase; }
+    .kit-font-specimen { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    .kit-font-specimen > div { padding: 24px; border: 1px solid var(--kit-rule); border-radius: 10px; background: rgba(251,250,247,.8); }
+    .kit-font-specimen strong { display: block; margin-bottom: 18px; font-size: 11px; letter-spacing: .12em; text-transform: uppercase; }
+    .kit-font-serif { font-family: var(--mm-font-serif); }
+    .kit-font-sans { font-family: var(--mm-font-sans); }
+    .kit-characters { font-size: 31px; line-height: 1.35; word-break: break-word; }
+
+    .kit-stage { display: flex; min-height: 150px; flex-wrap: wrap; gap: 12px; align-items: center; padding: 24px; }
+    .kit-stage--paper { background: var(--mm-color-paper); color: var(--mm-color-ink); }
+    .kit-stage--blue { background: linear-gradient(135deg,var(--mm-blue-top),var(--mm-blue-bottom)); color: var(--mm-cream); }
+    .kit-stage--night { background: var(--mm-elixir-bg); color: var(--mm-cream); }
+    .kit-stage--cool { background: linear-gradient(145deg,#e8f2f8,#f8fbfc); color: #192b3e; }
+    .kit-state { display: grid; gap: 9px; justify-items: start; }
+    .kit-state small { color: currentColor; font-size: 8px; font-weight: 500; letter-spacing: .13em; opacity: .64; text-transform: uppercase; }
+    .kit-stage .btn { margin: 0; }
+    .kit-hover-primary { border-color: var(--accent-blue); background: transparent; color: var(--accent-blue); transform: translateY(-1px); }
+    .kit-hover-secondary { background: var(--text-primary); color: var(--cream-warm); transform: translateY(-1px); }
+    .kit-hover-ghost { border-color: var(--mm-cream); background: var(--mm-cream); color: var(--carob-warm); transform: translateY(-1px); }
+    .kit-hover-mm { border-color: var(--mm-color-blue-deep); background: var(--mm-color-blue-deep); color: var(--mm-color-paper); }
+    .kit-route-pill {
+      display: inline-flex; min-height: 44px; align-items: center; justify-content: center; gap: 9px;
+      padding: 13px 26px; border: 1px solid currentColor; border-radius: 50px; background: transparent;
+      color: inherit; font: 500 .66rem/1 var(--mm-font-sans); letter-spacing: .16em; text-decoration: none;
+      text-transform: uppercase;
+    }
+    .kit-route-pill--solid { border-color: var(--mm-color-ink); background: var(--mm-color-ink); color: var(--mm-color-paper); }
+    .kit-route-pill--hover { border-color: var(--mm-color-ink); background: var(--mm-color-ink); color: var(--mm-color-paper); }
+    .kit-route-pill--dark { border-color: rgba(231,228,202,.4); color: var(--mm-cream); }
+    .kit-route-pill--dark-hover { border-color: var(--mm-cream); background: var(--mm-cream); color: var(--carob-warm); }
+    .kit-route-pill--arrow::after { content: "\2192"; font-size: 1rem; line-height: 0; }
+    .kit-support-button { display: inline-flex; min-height: 47px; align-items: center; justify-content: center; padding: 0 21px; border: 1px solid #16395d; border-radius: 999px; background: #16395d; color: #fff; font: 600 .7rem/1 var(--mm-font-sans); letter-spacing: .13em; text-decoration: none; text-transform: uppercase; }
+    .kit-filter { min-height: 44px; padding: 9px 16px; border: 1px solid rgba(44,42,38,.12); border-radius: 50px; background: rgba(251,250,247,.58); color: #6f6a62; font: 500 .7rem/1 var(--mm-font-sans); letter-spacing: .08em; text-transform: uppercase; }
+    .kit-filter--active { border-color: rgba(69,119,152,.42); background: rgba(239,249,249,.9); color: #101923; }
+    .kit-segments { display: grid; min-width: min(100%,390px); min-height: 48px; grid-template-columns: repeat(3,1fr); border: 1px solid rgba(57,73,80,.3); border-radius: 999px; overflow: hidden; background: rgba(247,251,249,.54); }
+    .kit-segments button { min-height: 48px; border: 0; border-left: 1px solid rgba(57,73,80,.18); background: transparent; color: rgba(44,42,38,.66); font: inherit; font-size: .9rem; }
+    .kit-segments button:first-child { border-left: 0; }
+    .kit-segments button.is-active { background: #252a2c; color: #f5efd9; }
+    .kit-segments button[disabled] { color: rgba(55,68,73,.52); cursor: not-allowed; }
+    .kit-segments button[disabled]::after { content: "pending"; display: block; margin-top: 2px; color: rgba(155,131,82,.86); font-size: .54rem; letter-spacing: .12em; text-transform: uppercase; }
+    .kit-view { min-width: 44px; min-height: 44px; padding: 0 12px; border: 1px solid rgba(44,42,38,.14); border-radius: 8px; background: rgba(255,255,255,.42); color: var(--mm-color-ink); font-size: .62rem; }
+    .kit-view--active { border-color: var(--mm-color-blue-night); box-shadow: inset 0 -2px 0 rgba(201,186,150,.62); background: rgba(255,255,255,.76); }
+    .kit-icon { width: 44px; height: 44px; display: grid; place-items: center; border: 1px solid currentColor; border-radius: 50%; background: transparent; color: inherit; }
+    .kit-icon svg { width: 18px; height: 18px; fill: none; stroke: currentColor; stroke-width: 1.5; }
+
+    .kit-field-grid { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 16px; }
+    .kit-field-wrap { display: grid; gap: 8px; }
+    .kit-field-wrap label { font-size: 10px; font-weight: 500; letter-spacing: .12em; text-transform: uppercase; }
+    .kit-input { width: 100%; min-height: 48px; padding: 0 14px; border: 1px solid var(--mm-color-line); border-radius: var(--mm-radius-sm); background: var(--mm-color-card); color: var(--mm-color-ink); }
+    .kit-input::placeholder { color: var(--mm-color-ink-faint); }
+    .kit-input--focus { outline: var(--mm-focus-width) solid var(--mm-color-accent-blue); outline-offset: var(--mm-focus-offset); }
+    .kit-input[disabled] { opacity: .58; cursor: not-allowed; }
+    .kit-disclosure { border-top: 1px solid var(--kit-rule); }
+    .kit-disclosure details { border-bottom: 1px solid var(--kit-rule); }
+    .kit-disclosure summary { min-height: 54px; display: flex; align-items: center; justify-content: space-between; cursor: pointer; list-style: none; }
+    .kit-disclosure summary::after { content: "+"; font-size: 18px; }
+    .kit-disclosure details[open] summary::after { content: "−"; }
+    .kit-disclosure p { max-width: 65ch; padding: 0 0 20px; color: var(--kit-muted); line-height: 1.6; }
+
+    .kit-token-grid { display: grid; grid-template-columns: repeat(4,minmax(0,1fr)); gap: 14px; }
+    .kit-token-card { min-height: 126px; padding: 17px; border: 1px solid var(--kit-rule); border-radius: 10px; background: rgba(251,250,247,.78); }
+    .kit-radius-demo { width: 100%; height: 54px; margin-bottom: 13px; border: 1px solid rgba(44,42,38,.22); background: var(--mm-color-blue-haze); }
+    .kit-space-demo { height: 12px; margin: 17px 0 23px; border-radius: 999px; background: var(--mm-color-blue-deep); }
+    .kit-shadow-demo { width: 100%; height: 54px; margin-bottom: 13px; border-radius: var(--mm-radius-lg); background: var(--mm-color-card); box-shadow: var(--mm-shadow-cool-panel); }
+    .kit-token-card code { display: block; font-family: ui-monospace,SFMono-Regular,Menlo,monospace; font-size: 10px; color: var(--kit-muted); }
+    .kit-motion { height: 8px; margin: 26px 0 23px; border-radius: 999px; background: var(--mm-color-line); overflow: hidden; }
+    .kit-motion::after { content: ""; display: block; width: 34%; height: 100%; border-radius: inherit; background: var(--mm-color-blue-deep); animation: kit-motion var(--duration,1s) var(--mm-ease-ambient) infinite alternate; }
+    @keyframes kit-motion { to { transform: translateX(190%); } }
+
+    .kit-footer { padding: 34px 0 72px; color: var(--kit-muted); }
+    .kit-footer__row { display: flex; justify-content: space-between; gap: 24px; align-items: flex-start; }
+    .kit-footer p { max-width: 760px; font-size: 11px; line-height: 1.6; }
+    .kit-runtime { text-align: right; }
+
+    @media (max-width: 980px) {
+      .kit-card,.kit-card--wide,.kit-card--half { grid-column: span 6; }
+      .kit-card--full { grid-column: 1/-1; }
+      .kit-swatches { grid-template-columns: repeat(3,1fr); }
+      .kit-swatch:nth-child(4n) { border-right: 1px solid rgba(255,255,255,.22); }
+      .kit-swatch:nth-child(3n) { border-right: 0; }
+      .kit-token-grid { grid-template-columns: repeat(2,1fr); }
+    }
+    @media (max-width: 700px) {
+      .kit-shell { width: min(calc(100% - 32px),1440px); }
+      .kit-masthead { padding-top: 42px; }
+      .kit-masthead__top,.kit-footer__row { display: grid; }
+      .kit-status { max-width: none; }
+      .kit-title { font-size: clamp(3.4rem,18vw,6rem); }
+      .kit-section__head { grid-template-columns: 1fr; gap: 12px; }
+      .kit-card,.kit-card--wide,.kit-card--half { grid-column: 1/-1; }
+      .kit-swatches { grid-template-columns: repeat(2,1fr); }
+      .kit-swatch:nth-child(3n) { border-right: 1px solid rgba(255,255,255,.22); }
+      .kit-swatch:nth-child(2n) { border-right: 0; }
+      .kit-type-row { grid-template-columns: 1fr; gap: 10px; }
+      .kit-type-row__meta:last-child { display: none; }
+      .kit-font-specimen,.kit-field-grid { grid-template-columns: 1fr; }
+      .kit-token-grid { grid-template-columns: 1fr; }
+      .kit-runtime { text-align: left; }
+    }
+  </style>
+</head>
+<body>
+  <header class="kit-masthead">
+    <div class="kit-shell">
+      <div class="kit-masthead__top">
+        <div class="kit-brand">
+          <img src="../../assets/mm_logo_icon_blk.svg" alt="">
+          <span class="kit-kicker">Maple Moon / visual inventory / 13 Aug 2026</span>
+        </div>
+        <aside class="kit-status">
+          <strong>Global system · Homepage pilot</strong>
+          <p>Promoted tokens, chrome and primitives are live here. Only the Homepage WIP consumes the pilot cascade; the other five routes remain deliberately unmigrated.</p>
+        </aside>
+      </div>
+      <h1 class="kit-title">Stylekit<br>contact sheet</h1>
+      <p class="kit-intro">The promoted Maple Moon brand system in one test surface: semantic palette roles, typography, surfaces, chrome, buttons, links, fields, chips, segmented controls, cards, pending states, focus and motion.</p>
+      <nav class="kit-nav" aria-label="Contact sheet sections">
+        <a href="#colour">Colour</a><a href="#type">Type</a><a href="#chrome">Chrome</a><a href="#actions">Actions</a><a href="#controls">Controls</a><a href="#surfaces">Surfaces</a><a href="#tokens">Tokens</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="kit-section" id="colour">
+      <div class="kit-shell">
+        <div class="kit-section__head">
+          <div><span class="kit-index">01 / Colour</span><h2>Palette</h2></div>
+          <p>Every blue and warm neutral now has one job. #4074B6 is interaction and focus; #457798 is structural brand emphasis; #7B9DBF is atmospheric/editorial colour. #F1EDE3 is interface cream, #E7E4CA is Editorial Night cream, #F4F2ED is shared paper and #EEE9D3 is the Homepage editorial paper.<br><span class="kit-source">Authoritative source: assets/design-system/mm-tokens.css</span></p>
+        </div>
+        <div class="kit-grid">
+          <article class="kit-card kit-card--wide">
+            <div class="kit-card__head"><h3>Shared V1 colours</h3><span class="kit-meta">Formal Phase 0 tokens</span></div>
+            <div class="kit-card__body kit-card__body--flush">
+              <div class="kit-swatches">
+                <div class="kit-swatch kit-swatch--light" style="background:#2c2a26"><strong>Ink</strong><code>#2C2A26</code></div>
+                <div class="kit-swatch kit-swatch--light" style="background:#6f6a62"><strong>Ink soft</strong><code>#6F6A62</code></div>
+                <div class="kit-swatch" style="background:#a39d92"><strong>Ink faint</strong><code>#A39D92</code></div>
+                <div class="kit-swatch" style="background:#f4f2ed"><strong>Paper</strong><code>#F4F2ED</code></div>
+                <div class="kit-swatch" style="background:#fbfaf7"><strong>Card</strong><code>#FBFAF7</code></div>
+                <div class="kit-swatch" style="background:#f1ede3"><strong>Interface cream</strong><code>#F1EDE3</code></div>
+                <div class="kit-swatch" style="background:#eee9d3"><strong>Editorial paper</strong><code>#EEE9D3</code></div>
+                <div class="kit-swatch" style="background:#e7e4ca"><strong>Editorial cream</strong><code>#E7E4CA</code></div>
+                <div class="kit-swatch kit-swatch--light" style="background:#4074b6"><strong>Action / focus</strong><code>#4074B6</code></div>
+                <div class="kit-swatch" style="background:#7b9dbf"><strong>Atmosphere</strong><code>#7B9DBF</code></div>
+                <div class="kit-swatch" style="background:#b7c9d9"><strong>Blue flow</strong><code>#B7C9D9</code></div>
+                <div class="kit-swatch" style="background:#c8d5df"><strong>Blue bridge</strong><code>#C8D5DF</code></div>
+                <div class="kit-swatch" style="background:#d7e2ea"><strong>Blue haze</strong><code>#D7E2EA</code></div>
+                <div class="kit-swatch kit-swatch--light" style="background:#457798"><strong>Brand structure</strong><code>#457798</code></div>
+                <div class="kit-swatch kit-swatch--light" style="background:#101923"><strong>Blue night</strong><code>#101923</code></div>
+              </div>
+            </div>
+          </article>
+          <article class="kit-card">
+            <div class="kit-card__head"><h3>Warm brand language</h3><span class="kit-meta">Existing route sources</span></div>
+            <div class="kit-card__body kit-card__body--flush">
+              <div class="kit-swatches" style="grid-template-columns:repeat(2,1fr)">
+                <div class="kit-swatch kit-swatch--light" style="background:#1e2a1e"><strong>Elixir</strong><code>#1E2A1E</code></div>
+                <div class="kit-swatch" style="background:#e7e4ca"><strong>Cream</strong><code>#E7E4CA</code></div>
+                <div class="kit-swatch kit-swatch--light" style="background:#1e4366"><strong>Navy</strong><code>#1E4366</code></div>
+                <div class="kit-swatch" style="background:#7b9dbf"><strong>Cornflower</strong><code>#7B9DBF</code></div>
+                <div class="kit-swatch kit-swatch--light" style="background:#5c3d2e"><strong>Carob warm</strong><code>#5C3D2E</code></div>
+                <div class="kit-swatch" style="background:#c9ba96"><strong>Beige</strong><code>#C9BA96</code></div>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="kit-section" id="type">
+      <div class="kit-shell">
+        <div class="kit-section__head">
+          <div><span class="kit-index">02 / Typography</span><h2>Type styles</h2></div>
+          <p>The named utilities below reproduce the existing brand-kit type scale. The nav and control rows show the smaller shared V1 tokens used for interface language.<br><span class="kit-source">Sources: brand_kit.css type utilities · mm-tokens.css typography tokens</span></p>
+        </div>
+        <article class="kit-card kit-card--full">
+          <div class="kit-card__head"><h3>Hierarchy</h3><span class="kit-meta">Desktop scale shown · fluid where specified</span></div>
+          <div class="kit-card__body">
+            <div class="kit-type-row"><span class="kit-label">Display</span><div class="kit-display">A slower kind of sweet</div><span class="kit-type-row__meta"><code>.type-display</code><br>clamp 44.8–80 / 1.05</span></div>
+            <div class="kit-type-row"><span class="kit-label">Headline</span><div class="kit-headline">Carob, considered differently.</div><span class="kit-type-row__meta"><code>.type-headline</code><br>clamp 32–56 / 1.15</span></div>
+            <div class="kit-type-row"><span class="kit-label">Subhead</span><div class="kit-subhead">From pod to small-batch bar</div><span class="kit-type-row__meta"><code>.type-subhead</code><br>clamp 20–28 / 1.15</span></div>
+            <div class="kit-type-row"><span class="kit-label">Body large</span><p class="kit-body-lg">Grown under warm skies and made slowly in the Northern Rivers, our carob is mellow, layered and naturally caffeine-free.</p><span class="kit-type-row__meta"><code>.type-body-lg</code><br>18 / 1.8 · 300</span></div>
+            <div class="kit-type-row"><span class="kit-label">Body</span><p class="kit-body">A clear, relaxed paragraph style for product details, founder stories and useful information. The wide leading keeps longer passages calm and readable.</p><span class="kit-type-row__meta"><code>.type-body</code><br>16 / 1.6 · 300</span></div>
+            <div class="kit-type-row"><span class="kit-label">Caption</span><div class="kit-caption">Small-batch · Plant-based · Made in Byron Bay</div><span class="kit-type-row__meta"><code>.type-caption</code><br>12 / 1.6 · 400</span></div>
+            <div class="kit-type-row"><span class="kit-label">Eyebrow</span><div class="kit-eyebrow">The Maple Moon range</div><span class="kit-type-row__meta"><code>.type-eyebrow</code><br>10.4 / .18em · 500</span></div>
+            <div class="kit-type-row"><span class="kit-label">Navigation</span><div class="kit-navtype">Shop &nbsp;&nbsp; Our story &nbsp;&nbsp; What is carob</div><span class="kit-type-row__meta"><code>--mm-type-nav-size</code><br>11.2 / .10em</span></div>
+            <div class="kit-type-row"><span class="kit-label">Control</span><div class="kit-controltype">Add to bag &nbsp; →</div><span class="kit-type-row__meta"><code>--mm-type-control-size</code><br>10.56 / .16em · 500</span></div>
+          </div>
+        </article>
+        <div class="kit-font-specimen" style="margin-top:16px">
+          <div><strong>Serif · P22 Mackinac Pro · 400 / 500 only</strong><p class="kit-font-serif kit-characters">Aa Bb Cc Dd Ee<br>0123456789 &amp; ?!<br><em>Sweet, not simple.</em></p></div>
+          <div><strong>Sans · Neue Haas Grotesk Display Pro · 300 / 400 / 500 / 700</strong><p class="kit-font-sans kit-characters">Aa Bb Cc Dd Ee<br>0123456789 &amp; ?!<br>PLANT-BASED CAROB</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="kit-section" id="chrome">
+      <div class="kit-shell">
+        <div class="kit-section__head">
+          <div><span class="kit-index">03 / Chrome</span><h2>Shared navigation</h2></div>
+          <p>The live shared header and footer contract: one static five-route information architecture, a centred home link, a 44px mobile menu and cart, visible current state, keyboard focus and an Editorial Night modifier.<br><span class="kit-source">Sources: mm-chrome.css · mm-chrome.js · components.v1.json</span></p>
+        </div>
+        <article class="kit-card kit-card--full">
+          <div class="kit-card__head"><h3>Homepage night chrome</h3><span class="kit-meta">Resize below 900px to exercise the real menu</span></div>
+          <div class="kit-card__body kit-card__body--flush mm-surface--night">
+            <header class="mm-site-header" data-mm-chrome data-header-theme="night">
+              <div class="mm-header__bar mm-wrap">
+                <button class="mm-menu-toggle mm-icon-control" type="button" data-mm-menu-toggle aria-expanded="false" aria-label="Open menu" hidden>Menu</button>
+                <nav class="mm-header__nav" id="kit-primary-nav" aria-label="Primary navigation" data-mm-primary-nav><a href="#chrome">Shop</a><a href="#chrome">Our Story</a><a href="#chrome">What is Carob</a></nav>
+                <a class="mm-header__home" href="#chrome" data-mm-home-link aria-current="page">maple moon</a>
+                <div class="mm-header__right"><nav class="mm-header__utility-nav" id="kit-utility-nav" aria-label="Utility navigation" data-mm-utility-nav><a href="#chrome">Stockists</a><a href="#chrome">FAQ</a></nav><button class="mm-icon-control" type="button" aria-label="Cart, 0 items" data-mm-cart-toggle>0</button></div>
+              </div>
+            </header>
+          </div>
+          <div class="kit-card__body kit-card__body--flush mm-surface--paper">
+            <footer class="mm-site-footer"><div class="mm-site-footer__row mm-wrap"><a class="mm-site-footer__home" href="#chrome">maple moon</a><nav class="mm-site-footer__nav" aria-label="Footer navigation"><a href="#chrome">Shop</a><a href="#chrome">Our Story</a><a href="#chrome">What is Carob</a><a href="#chrome">Stockists</a><a href="#chrome">FAQ</a></nav></div></footer>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="kit-section" id="actions">
+      <div class="kit-shell">
+        <div class="kit-section__head">
+          <div><span class="kit-index">04 / Actions</span><h2>Buttons &amp; links</h2></div>
+          <p>Normal and hover treatments are shown side-by-side. The shared V1 primitives and the older brand utility variants are rendered from their actual stylesheets. Route families are exact visual transcriptions for comparison only.<br><span class="kit-source">Sources: mm-primitives.css · shared.css · six route HTML sources</span></p>
+        </div>
+        <div class="kit-grid">
+          <article class="kit-card kit-card--half">
+            <div class="kit-card__head"><h3>Shared V1 button</h3><span class="kit-meta">.mm-button</span></div>
+            <div class="kit-stage kit-stage--paper">
+              <div class="kit-state"><small>Outline</small><button class="mm-button" type="button">Learn more</button></div>
+              <div class="kit-state"><small>Primary</small><button class="mm-button mm-button--primary" type="button">Shop the range</button></div>
+              <div class="kit-state"><small>Hover</small><button class="mm-button mm-button--primary kit-hover-mm" type="button">Shop the range</button></div>
+              <div class="kit-state"><small>Disabled</small><button class="mm-button mm-button--primary" type="button" disabled>Unavailable</button></div>
+              <div class="kit-state"><small>Pending</small><button class="mm-button mm-button--primary" type="button" aria-busy="true">Saving</button></div>
+            </div>
+          </article>
+          <article class="kit-card kit-card--half">
+            <div class="kit-card__head"><h3>Shared utility variants</h3><span class="kit-meta">.btn · shared.css</span></div>
+            <div class="kit-stage kit-stage--paper">
+              <div class="kit-state"><small>Primary</small><button class="btn btn--primary" type="button">Shop now</button></div>
+              <div class="kit-state"><small>Primary hover</small><button class="btn btn--primary kit-hover-primary" type="button">Shop now</button></div>
+              <div class="kit-state"><small>Secondary</small><button class="btn btn--secondary" type="button">Discover</button></div>
+              <div class="kit-state"><small>Secondary hover</small><button class="btn btn--secondary kit-hover-secondary" type="button">Discover</button></div>
+            </div>
+          </article>
+          <article class="kit-card kit-card--half">
+            <div class="kit-card__head"><h3>Dark-surface action</h3><span class="kit-meta">.btn--ghost-dark</span></div>
+            <div class="kit-stage kit-stage--night">
+              <div class="kit-state"><small>Ghost dark</small><button class="btn btn--ghost-dark" type="button">Meet the elixir</button></div>
+              <div class="kit-state"><small>Hover</small><button class="btn btn--ghost-dark kit-hover-ghost" type="button">Meet the elixir</button></div>
+              <div class="kit-state"><small>Disabled</small><button class="btn btn--ghost-dark" type="button" disabled style="opacity:.58;cursor:not-allowed">Coming soon</button></div>
+            </div>
+          </article>
+          <article class="kit-card kit-card--half">
+            <div class="kit-card__head"><h3>Recurring route pill</h3><span class="kit-meta">.pill / .wf-pill</span></div>
+            <div class="kit-stage kit-stage--paper">
+              <div class="kit-state"><small>Outline</small><a class="kit-route-pill" href="#actions">View range</a></div>
+              <div class="kit-state"><small>Solid</small><a class="kit-route-pill kit-route-pill--solid" href="#actions">Shop now</a></div>
+              <div class="kit-state"><small>Hover</small><a class="kit-route-pill kit-route-pill--hover" href="#actions">View range</a></div>
+              <div class="kit-state"><small>With arrow</small><a class="kit-route-pill kit-route-pill--arrow" href="#actions">Our story</a></div>
+            </div>
+          </article>
+          <article class="kit-card kit-card--half">
+            <div class="kit-card__head"><h3>Route pill on dark</h3><span class="kit-meta">Carob CTA context</span></div>
+            <div class="kit-stage kit-stage--night">
+              <div class="kit-state"><small>Outline</small><a class="kit-route-pill kit-route-pill--dark" href="#actions">Explore carob</a></div>
+              <div class="kit-state"><small>Hover</small><a class="kit-route-pill kit-route-pill--dark-hover" href="#actions">Explore carob</a></div>
+              <div class="kit-state"><small>Arrow</small><a class="kit-route-pill kit-route-pill--dark kit-route-pill--arrow" href="#actions">Read the story</a></div>
+            </div>
+          </article>
+          <article class="kit-card kit-card--half">
+            <div class="kit-card__head"><h3>Inline &amp; support links</h3><span class="kit-meta">Shared + FAQ</span></div>
+            <div class="kit-stage kit-stage--cool">
+              <div class="kit-state"><small>Text link</small><a class="mm-text-link" href="#actions">Read the full story</a></div>
+              <div class="kit-state"><small>Support CTA</small><a class="kit-support-button" href="#actions">Email us</a></div>
+              <div class="kit-state"><small>Nav current</small><a href="#actions" style="color:#457798;text-decoration:underline;text-underline-offset:3px;font-size:.7rem;letter-spacing:.1em;text-transform:uppercase">Our story</a></div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="kit-section" id="controls">
+      <div class="kit-shell">
+        <div class="kit-section__head">
+          <div><span class="kit-index">05 / Controls</span><h2>Inputs &amp; states</h2></div>
+          <p>Core field and disclosure foundations sit beside the recurring filters, segmented control, view toggle and circular icon treatment found across the current routes.<br><span class="kit-source">Sources: mm-primitives.css · stockists.html · shop.html · homepage.html · faq.html</span></p>
+        </div>
+        <div class="kit-grid">
+          <article class="kit-card kit-card--wide">
+            <div class="kit-card__head"><h3>Fields</h3><span class="kit-meta">Default · focus · disabled</span></div>
+            <div class="kit-card__body">
+              <div class="kit-field-grid">
+                <div class="kit-field-wrap"><label for="field-default">Email address</label><input class="kit-input mm-field" id="field-default" type="email" placeholder="you@example.com"></div>
+                <div class="kit-field-wrap"><label for="field-focus">Search stockists</label><input class="kit-input kit-input--focus mm-field" id="field-focus" type="search" value="Byron Bay" data-state="results"></div>
+                <div class="kit-field-wrap"><label for="field-disabled">Postcode</label><input class="kit-input mm-field" id="field-disabled" type="text" placeholder="2481" disabled></div>
+              </div>
+            </div>
+          </article>
+          <article class="kit-card">
+            <div class="kit-card__head"><h3>Icon controls</h3><span class="kit-meta">44 × 44 minimum</span></div>
+            <div class="kit-stage kit-stage--paper">
+              <button class="mm-icon-control" type="button" aria-label="Open menu">☰</button>
+              <button class="kit-icon" type="button" aria-label="Search"><svg viewBox="0 0 24 24"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 4.5 4.5"/></svg></button>
+              <button class="kit-icon" type="button" aria-label="Cart"><svg viewBox="0 0 24 24"><path d="M6 8h12l-1 12H7L6 8z"/><path d="M9 8a3 3 0 0 1 6 0"/></svg></button>
+              <button class="kit-icon" type="button" aria-label="Close">×</button>
+            </div>
+          </article>
+          <article class="kit-card kit-card--half">
+            <div class="kit-card__head"><h3>Filter chips</h3><span class="kit-meta">Stockists pattern</span></div>
+            <div class="kit-stage kit-stage--cool mm-chip-rail">
+              <button class="mm-chip" type="button" aria-selected="true">All</button><button class="mm-chip" type="button" aria-selected="false">NSW</button><button class="mm-chip" type="button" aria-selected="false">VIC</button><button class="mm-chip" type="button" aria-selected="false">Online</button><button class="mm-chip" type="button" disabled>Pending</button>
+            </div>
+          </article>
+          <article class="kit-card kit-card--half">
+            <div class="kit-card__head"><h3>View toggle</h3><span class="kit-meta">Shop pattern</span></div>
+            <div class="kit-stage kit-stage--paper">
+              <div class="kit-state"><small>Active</small><button class="kit-view kit-view--active" type="button">Grid</button></div>
+              <div class="kit-state"><small>Rest</small><button class="kit-view" type="button">List</button></div>
+            </div>
+          </article>
+          <article class="kit-card kit-card--full">
+            <div class="kit-card__head"><h3>Segmented state control</h3><span class="kit-meta">Homepage comparison pattern</span></div>
+            <div class="kit-stage kit-stage--paper">
+              <div class="mm-segmented" style="min-width:min(100%,390px)"><button class="mm-segmented__option" type="button" aria-pressed="true">Carob</button><button class="mm-segmented__option" type="button" aria-pressed="false">Cacao</button><button class="mm-segmented__option" type="button" disabled>Chocolate</button></div>
+            </div>
+          </article>
+          <article class="kit-card kit-card--full">
+            <div class="kit-card__head"><h3>Disclosure</h3><span class="kit-meta">.mm-disclosure foundation</span></div>
+            <div class="kit-card__body">
+              <div class="kit-disclosure">
+                <details open><summary>What makes Maple Moon carob different?</summary><p>This row demonstrates the shared disclosure geometry and open state. Content and FAQ taxonomy remain route-owned.</p></details>
+                <details><summary>Does carob contain caffeine?</summary><p>Disclosure content is intentionally illustrative in this contact sheet.</p></details>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="kit-section" id="surfaces">
+      <div class="kit-shell">
+        <div class="kit-section__head">
+          <div><span class="kit-index">06 / Surfaces</span><h2>Cards &amp; pending</h2></div>
+          <p>Shared surfaces name context without flattening route art direction. The Homepage keeps its editorial paper and atmosphere roles; generic cards, product shells and pending states remain factual about their readiness.<br><span class="kit-source">Source: mm-primitives.css · Homepage pilot adapter</span></p>
+        </div>
+        <div class="kit-grid">
+          <article class="kit-card kit-card--half"><div class="kit-card__head"><h3>Surface contexts</h3><span class="kit-meta">Paper · editorial · atmosphere · night</span></div><div class="kit-card__body" style="display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px"><div class="mm-surface mm-surface--paper" style="min-height:120px;padding:16px">Shared paper<br><small>#F4F2ED</small></div><div class="mm-surface mm-surface--editorial" style="min-height:120px;padding:16px">Editorial paper<br><small>#EEE9D3</small></div><div class="mm-surface mm-surface--atmosphere" style="min-height:120px;padding:16px">Atmosphere<br><small>blue haze</small></div><div class="mm-surface mm-surface--night" style="min-height:120px;padding:16px">Editorial Night<br><small>#101923</small></div></div></article>
+          <article class="kit-card kit-card--half"><div class="kit-card__head"><h3>Cards</h3><span class="kit-meta">Default · hover/focus · pending</span></div><div class="kit-card__body" style="display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px"><a class="mm-card" href="#surfaces" style="min-height:130px;padding:18px;text-decoration:none"><strong>Story card</strong><br><small>Hover or tab here</small></a><div class="mm-product-card-shell" data-state="pending" aria-disabled="true" style="min-height:130px;padding:18px"><strong>Product shell</strong><br><small>Pending source truth</small></div></div></article>
+          <article class="kit-card kit-card--full"><div class="kit-card__head"><h3>Pending state</h3><span class="kit-meta">Explicit evidence/review status</span></div><div class="kit-card__body" style="display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:16px"><div class="mm-pending"><strong>Founder portrait</strong><span>Final image remains under review.</span></div><div class="mm-pending mm-pending__media"><strong>Product photography</strong><span>Identity-safe source confirmation is required.</span></div></div></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="kit-section" id="tokens">
+      <div class="kit-shell">
+        <div class="kit-section__head">
+          <div><span class="kit-index">07 / Foundations</span><h2>Shape, space &amp; motion</h2></div>
+          <p>The reusable geometry and behaviour tokens behind the interface. These are shown as visual measures—not new recommendations.<br><span class="kit-source">Source: assets/design-system/mm-tokens.css</span></p>
+        </div>
+        <div class="kit-token-grid">
+          <div class="kit-token-card"><div class="kit-radius-demo" style="border-radius:8px"></div><strong>Radius small</strong><code>--mm-radius-sm · 8px</code></div>
+          <div class="kit-token-card"><div class="kit-radius-demo" style="border-radius:12px"></div><strong>Radius large</strong><code>--mm-radius-lg · 12px</code></div>
+          <div class="kit-token-card"><div class="kit-radius-demo" style="border-radius:18px"></div><strong>Radius panel</strong><code>--mm-radius-panel · 18px</code></div>
+          <div class="kit-token-card"><div class="kit-radius-demo" style="border-radius:50px"></div><strong>Radius pill</strong><code>--mm-radius-pill · 50px</code></div>
+          <div class="kit-token-card"><div class="kit-space-demo" style="width:16px"></div><strong>Mobile gutter</strong><code>--mm-gutter-mobile · 16px</code></div>
+          <div class="kit-token-card"><div class="kit-space-demo" style="width:28px"></div><strong>Desktop gutter</strong><code>--mm-gutter-desktop · 28px</code></div>
+          <div class="kit-token-card"><div class="kit-space-demo" style="width:44px"></div><strong>Control minimum</strong><code>--mm-control-min · 44px</code></div>
+          <div class="kit-token-card"><div class="kit-shadow-demo"></div><strong>Cool panel</strong><code>0 14px 34px rgba(41,57,64,.08)</code></div>
+          <div class="kit-token-card"><div class="kit-motion" style="--duration:180ms"></div><strong>Fast</strong><code>--mm-motion-fast · 180ms</code></div>
+          <div class="kit-token-card"><div class="kit-motion" style="--duration:280ms"></div><strong>Button</strong><code>--mm-motion-button · 280ms</code></div>
+          <div class="kit-token-card"><div class="kit-motion" style="--duration:700ms"></div><strong>Reveal</strong><code>--mm-motion-reveal · 700ms</code></div>
+          <div class="kit-token-card"><div class="kit-motion" style="--duration:1500ms"></div><strong>Ambient sample</strong><code>token: 7.5s · preview accelerated</code></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="kit-footer">
+    <div class="kit-shell kit-footer__row">
+      <p>This sheet is authoritative for the promoted global tokens, chrome and primitives shown here. Homepage remains the only route wired to the pilot cascade; route art direction and the other five WIP files stay route-owned.</p>
+      <p class="kit-runtime" id="kit-runtime">Checking rendered fonts…</p>
+    </div>
+  </footer>
+  <script>
+    addEventListener('load', async () => {
+      if (document.fonts?.ready) await document.fonts.ready;
+      const serif = document.fonts?.check('16px "P22 Mackinac Pro"') ? 'P22 Mackinac loaded' : 'Serif fallback active';
+      const sans = document.fonts?.check('16px "Neue Haas Grotesk Display Pro"') ? 'Neue Haas loaded' : 'Sans fallback active';
+      document.getElementById('kit-runtime').textContent = `${serif} · ${sans} · ${innerWidth}px viewport`;
+    });
+  </script>
+</body>
+</html>

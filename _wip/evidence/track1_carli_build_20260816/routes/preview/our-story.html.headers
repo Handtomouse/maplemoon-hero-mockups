@@ -1,0 +1,11 @@
+HTTP/2 308 
+cache-control: public, max-age=0, must-revalidate
+content-type: text/plain
+date: Sun, 16 Aug 2026 08:09:09 GMT
+location: /our-story
+refresh: 0;url=/our-story
+server: Vercel
+strict-transport-security: max-age=63072000; includeSubDomains; preload
+x-robots-tag: noindex
+x-vercel-id: iad1::7f6dq-1786867749725-d5478cfebfd8
+

@@ -1,0 +1,83 @@
+{
+  "schema": "maplemoon-receipt/v2",
+  "receipt_id": "MAPLEMOON-NATE-DECISION-ADDENDUM-R3-20260815T043624-RECEIPT-001",
+  "packet_id": "MAPLEMOON-NATE-DECISION-ADDENDUM-R3-20260815T043624",
+  "worker_thread_id": "/root/dedup_risk_audit",
+  "worker": "Codex Nate-decision addendum recorder",
+  "started_at": "2026-08-15T04:38:27+10:00",
+  "completed_at": "2026-08-15T04:43:00+10:00",
+  "outcome": "PASS_R3_DECISION_ADDENDUM_READY_NO_IMPLEMENTATION",
+  "confidence": "high",
+  "checkpoint_path": "maplemoon-website/_wip/checkpoints/MAPLEMOON-NATE-DECISION-ADDENDUM-R3-20260815T043624_20260815_043624_AEST",
+  "files_read": [
+    "maplemoon-website/docs/orchestration/packets/MAPLEMOON-NATE-DECISION-ADDENDUM-R3-20260815T043624.md",
+    "maplemoon-website/docs/orchestration/reviews/MAPLEMOON-NATE-DECISION-GATE-R2-20260814T184422.md",
+    "maplemoon-website/docs/orchestration/reviews/MAPLEMOON-NATE-DECISION-GATE-R2-20260814T184422.json",
+    "Documents/Codex/2026-08-13/maple-moon-shared-site-styles-kit/outputs/version-lanes/v0.4-provisional/BOSS-HANDOFF.md",
+    "Documents/Codex/2026-08-13/maple-moon-shared-site-styles-kit/outputs/version-lanes/v0.4-provisional/VERIFICATION-RECEIPT.md",
+    "maplemoon_product_shots_20260814/eclipse_bite_bundle/openai_bundle_preflight_v8_manager.md",
+    "maplemoon_product_shots_20260814/eclipse_bite_bundle/openai_bundle_preflight_v8.html",
+    ".codex/visualizations/2026/08/13/019ffd5b-edd2-7b23-8780-453f9b67a532/maplemoon_photo_admission_01_43_20260815_041620/manifest.json",
+    ".codex/visualizations/2026/08/13/019ffd5b-edd2-7b23-8780-453f9b67a532/maplemoon_photo_admission_01_43_20260815_041620/maplemoon_photo_admission_review_20260815.html",
+    "maplemoon-website/scripts/check-maplemoon-receipt.py"
+  ],
+  "files_changed": [
+    "maplemoon-website/docs/orchestration/reviews/MAPLEMOON-NATE-DECISION-ADDENDUM-R3-20260815T043624.md",
+    "maplemoon-website/docs/orchestration/reviews/MAPLEMOON-NATE-DECISION-ADDENDUM-R3-20260815T043624.json"
+  ],
+  "pre_sha256": {
+    "maplemoon-website/docs/orchestration/reviews/MAPLEMOON-NATE-DECISION-ADDENDUM-R3-20260815T043624.md": null,
+    "maplemoon-website/docs/orchestration/reviews/MAPLEMOON-NATE-DECISION-ADDENDUM-R3-20260815T043624.json": null
+  },
+  "post_sha256": {
+    "maplemoon-website/docs/orchestration/reviews/MAPLEMOON-NATE-DECISION-ADDENDUM-R3-20260815T043624.md": "9984df98ed961000986925d3aef17c790c33e9e718690279eea88febf5ce1fdf",
+    "maplemoon-website/docs/orchestration/reviews/MAPLEMOON-NATE-DECISION-ADDENDUM-R3-20260815T043624.json": null
+  },
+  "checks": [
+    {
+      "command": "test ! -e /Users/handtomouse/maplemoon-website/_wip/checkpoints/MAPLEMOON-NATE-DECISION-ADDENDUM-R3-20260815T043624_20260815_043624_AEST",
+      "exit_code": 0,
+      "result": "CHECKPOINT_DESTINATION_ABSENT"
+    },
+    {
+      "command": "python3 -B scripts/check-maplemoon-receipt.py checkpoint --root /Users/handtomouse --packet docs/orchestration/packets/MAPLEMOON-NATE-DECISION-ADDENDUM-R3-20260815T043624.md --destination /Users/handtomouse/maplemoon-website/_wip/checkpoints/MAPLEMOON-NATE-DECISION-ADDENDUM-R3-20260815T043624_20260815_043624_AEST",
+      "exit_code": 0,
+      "result": "PASS checkpoint packet=MAPLEMOON-NATE-DECISION-ADDENDUM-R3-20260815T043624 files=2 path=/Users/handtomouse/maplemoon-website/_wip/checkpoints/MAPLEMOON-NATE-DECISION-ADDENDUM-R3-20260815T043624_20260815_043624_AEST"
+    },
+    {
+      "command": "python3 -B scripts/check-maplemoon-receipt.py verify --root /Users/handtomouse --packet docs/orchestration/packets/MAPLEMOON-NATE-DECISION-ADDENDUM-R3-20260815T043624.md --checkpoint /Users/handtomouse/maplemoon-website/_wip/checkpoints/MAPLEMOON-NATE-DECISION-ADDENDUM-R3-20260815T043624_20260815_043624_AEST --phase start",
+      "exit_code": 0,
+      "result": "PASS packet=MAPLEMOON-NATE-DECISION-ADDENDUM-R3-20260815T043624 phase=start scope=2"
+    },
+    {
+      "command": "shasum -a 256 [all eight packet-pinned predecessor files] at acquisition and close",
+      "exit_code": 0,
+      "result": "PASS hashes 8/8 at acquisition and close: nate_r2=87b7ab4fa3e189e9ddbb7346d4c0c83914ffbedf191640e5c25b7f9669d0a56b nate_r2_receipt=96e91efab97ce789fcd5cdbd174d621a04d2723d0bf496c2b4e7bb8ac8c13dfc v040_handoff=cf2cded755ede6064b54cc5966a7cda45e5e8e46d1314b612ba9037bffcd5932 v040_receipt=e727823094643a4800bb0ad6b36fe0282fd2b954a39029548b4d3bcfd6a82caa openai_manager=6b73d41854e750d992a1df444e9cb92613d35a4a13c092094724b8c65b7009be openai_review=dac0a0ef64d12538a68c0fc8458a39e8fc0ce8f799cd3ec030afeabd966619a9 photo_manifest=9414d10791cc7f6fab3d989b328e1cc02319add981ca96c294381a7d695cfb4d photo_review=e467ac9bbe194bd2dead621b2af209db2bac4cbe40ab81e72e2bfc6bb4494f77"
+    },
+    {
+      "command": "deterministic R3 addendum content comparison and invariant validation",
+      "exit_code": 0,
+      "result": "ADDENDUM_CONTENT=PASS checks=16/16 frame01_count=1 frame43_count=1 current36_count=1 scenario50_count=1; D01-D06 source/output SHA-256=2afb93fdd05a3ed7222329b4bafa126c978c6502d8fc258521da036dbf65cc82; exact v8 prompt source/output SHA-256=2694aa746e053c37f755f642997b187b3c2e729be1a05f45c483630e7fe60bd5"
+    }
+  ],
+  "screenshots_or_urls": [],
+  "failures": [],
+  "unknowns": [
+    "The built-in OpenAI generation price remains unknown; approval can enforce one call and no retries, but not a numeric spend cap.",
+    "Frame 01 exact blue-pouch flavour/SKU is unproved.",
+    "Frame 43 exact blue-pouch flavour and foreground-prop identity are unproved.",
+    "Nate has not yet selected any decision recorded by this addendum."
+  ],
+  "residual_risk": [
+    "Frames 01 and 43 remain mechanically eligible only and absent from the build; approval would still require separate governed export, copy, binding and responsive website QA.",
+    "Frame 55 remains HOLD and excluded.",
+    "Styles Kit v0.4 remains provisional planning guidance only with implementation on HOLD.",
+    "Current photo completion remains five of fourteen; seven of fourteen is conditional on both approvals, deliveries and verified bindings.",
+    "Production remains frozen on immutable token 7vjf2m50b and client contact remains forbidden."
+  ],
+  "forbidden_path_changes": [],
+  "proposed_next_state": "r3_decision_addendum_ready_for_boss_then_nate",
+  "next_reviewer": "MapleMoon root Boss for receipt replay, then Nate for the exact consolidated choices",
+  "ready_to_promote": true,
+  "promotion_boundary": "Decision-document admission only; no choice, implementation, generation, media movement, site/build change, Git action, deployment, production movement or client contact is authorized."
+}

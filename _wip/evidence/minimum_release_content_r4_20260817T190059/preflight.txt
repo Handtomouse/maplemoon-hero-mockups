@@ -1,0 +1,38 @@
+MapleMoon deploy preflight - ANONYMOUS fetch (no cookie, no token, no CLI auth)
+base: http://127.0.0.1:51839
+------------------------------------------------------------------------------
+PASS  control:matchers             all 11 matchers fired on canary; stripper verified
+PASS  guard:sso-wall               no Vercel login page (status 200, 911B)
+PASS  guard:bogus-control          /zzq-definitely-not-a-real-path-9471 -> 404/460B vs real 200/184850B (distinguishable)
+PASS  guard:bogus-control          /zzq-definitely-not-a-real-path-9471.html -> 404/460B vs real 200/184850B (distinguishable)
+------------------------------------------------------------------------------
+WAIVE root:homepage                served by /homepage.html, not /; --local waives it
+PASS  page:homepage                /homepage.html 200 184850B title+body anchors present
+PASS  page:our-story               /our-story.html 200 63150B title+body anchors present
+PASS  page:carob-story             /carob-story.html 200 54170B title+body anchors present
+PASS  page:shop                    /shop.html 200 43024B title+body anchors present
+PASS  page:faq                     /faq.html 200 31849B title+body anchors present
+PASS  page:stockists               /stockists.html 200 107917B title+body anchors present
+------------------------------------------------------------------------------
+PASS  leak:review-link             0 hits across 6 docs; control: pattern fires on canary [raw layer]
+PASS  leak:204-internal-count      0 hits across 6 docs; control: pattern fires on canary [raw layer]
+PASS  leak:bare-204-visitor-copy   0 hits across 6 docs; control: pattern fires on canary [text layer]; silent on real-data must-not canary
+PASS  leak:internal-ops-language   0 hits across 6 docs; control: pattern fires on canary [raw layer]; silent on real-data must-not canary
+PASS  leak:dev-placeholder-copy    0 hits across 6 docs; control: pattern fires on canary [text layer]; silent on real-data must-not canary
+REVW  leak:internal-status-review  6 hit(s) IN VISITOR-READABLE COPY - review tier, not auto-blocking; control: pattern fires on canary [text layer]; silent on real-data must-not canary
+        homepage           Nutrition tab and exact comparative values remain pending review. A sweeter kind
+        shop               ach(function(p,index){ var priced=!!PRICED[cat] && !p.pending; var cardId='product-'+cat+'-'+index; var clean
+        stockists          Ltd",type:"Independent store",state:"UNKNOWN",area:"Details pending",group:"Independent Stores",address:null,postcode:null,sour
+        stockists          ore",type:"Independent store",state:"UNKNOWN",area:"Details pending",group:"Independent Stores",address:null,postcode:null,sour
+PASS  leak:pending-consent-names   0 hits across 6 docs; control: pattern fires on canary [raw layer]
+PASS  leak:word-testimonial        0 hits across 6 docs; control: pattern fires on canary [text layer]
+REVW  leak:word-testimonial-hidden 3 hit(s) in shipped bytes but NOT in visitor copy; control: pattern fires on canary [raw layer]
+        homepage           -sp-xl:calc(64px * var(--rhythm)); /* large gap — ritual, testimonial */ --sp-lg:calc(56px * var(--rhythm)); /* standard gap
+        homepage           ;} .wf-si span{font-size:.76rem;color:var(--ink-soft);} /* testimonial (editorial pull-quote, real-data-gated placeholder) */ .wf-
+        homepage           an></a></section> <!-- REVIEWS (structure only; approved testimonials pending) --> <section class="wrap mm-reviews" id="review
+PASS  leak:em-dash                 0 hits across 6 docs; control: pattern fires on canary [text layer]
+PASS  leak:local-filesystem-path   0 hits across 6 docs; control: pattern fires on canary [raw layer]
+------------------------------------------------------------------------------
+VERDICT: PASS with 2 review-only hit(s) - leak:internal-status-review, leak:word-testimonial-hidden | WAIVED: root:homepage
+  Not visitor-readable, but they are shipped bytes. A human must clear them.
+  A waived root is NOT a cleared root. Re-run without --local on the deploy host.

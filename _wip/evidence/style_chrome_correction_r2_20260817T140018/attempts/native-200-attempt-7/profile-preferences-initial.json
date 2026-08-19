@@ -1,0 +1,35 @@
+{
+  "100": {
+    "factor_pow_1_2": 1.0,
+    "files_before_first_launch": [
+      "Default/Preferences"
+    ],
+    "initial_bytes_utf8": "{\"partition\":{\"default_zoom_level\":{\"x\":0.0}}}\n",
+    "initial_sha256": "0418430d7c2a6330b0449287dc2a49ec74a6f3ad56087d3654b1287bb233f925",
+    "level": 0.0,
+    "preference_file": "/private/tmp/maplemoon-style-chrome-r2-native-100/Default/Preferences",
+    "profile": "/private/tmp/maplemoon-style-chrome-r2-native-100"
+  },
+  "175": {
+    "factor_pow_1_2": 1.7499999999999998,
+    "files_before_first_launch": [
+      "Default/Preferences"
+    ],
+    "initial_bytes_utf8": "{\"partition\":{\"default_zoom_level\":{\"x\":3.069389038663465}}}\n",
+    "initial_sha256": "e30a85e97f0ac18b0500e83766fbb2898485d64acb402ce1adabde9c7496187c",
+    "level": 3.069389038663465,
+    "preference_file": "/private/tmp/maplemoon-style-chrome-r2-native-175/Default/Preferences",
+    "profile": "/private/tmp/maplemoon-style-chrome-r2-native-175"
+  },
+  "200": {
+    "factor_pow_1_2": 2.0,
+    "files_before_first_launch": [
+      "Default/Preferences"
+    ],
+    "initial_bytes_utf8": "{\"partition\":{\"default_zoom_level\":{\"x\":3.8017840169239308}}}\n",
+    "initial_sha256": "a7415902a34f468696e0595c6af4a266cd981e7d8afda724cff95b062dfc215c",
+    "level": 3.8017840169239308,
+    "preference_file": "/private/tmp/maplemoon-style-chrome-r2-native-200/Default/Preferences",
+    "profile": "/private/tmp/maplemoon-style-chrome-r2-native-200"
+  }
+}

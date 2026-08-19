@@ -1,0 +1,115 @@
+{
+  "schema": "maplemoon-design-system/exceptions/v1",
+  "version": 1,
+  "phase0_binding_rule": "A baseline exception resolves through exact route ID, frozen source path and baseline SHA-256. CSS marker binding begins only when a later packet creates intentional-exceptions.css or migrates the owning rule.",
+  "exceptions": [
+    {
+      "id":"MM-EXC-HOME-CAROB-SIGNATURE-001",
+      "status":"baseline_registered",
+      "route":"home",
+      "selector":".wf-pwm img",
+      "properties":[
+        {"name":"width","desktop":"clamp(330px,52vw,760px)","mobile":"min(342px,calc(100vw - 32px))"},
+        {"name":"max-width","desktop":"calc(100vw - 48px)"}
+      ],
+      "reason":"Protected CAROB signature is the Homepage hierarchy, not a generic logo.",
+      "binding":{"kind":"baseline","source":"_wip/homepage_real_1_lead_photo.WIP.html","source_sha256":"eeb7f73d0281932043d1af53aabcdb4c2689ab9aabdfd6244beb3684dd593e11","image_contract_id":"MM-IMG-HOME-CAROB-SIGNATURE-01"},
+      "owner":"Nate",
+      "introduced_at":null,
+      "review_on_change":true,
+      "expires_when":"never without Nate approval"
+    },
+    {
+      "id":"MM-EXC-HOME-SEAMS-001",
+      "status":"baseline_registered",
+      "route":"home",
+      "style_block_id":"homepage-seams-fades-20260803",
+      "selector":"style#homepage-seams-fades-20260803",
+      "properties":[
+        {"name":"mask family","desktop":"18 percent horizontal and 22 to 74 percent vertical stops","mobile":"20 to 82 percent vertical stops"},
+        {"name":"bridge family","value":"exact declarations inside the frozen named style block"}
+      ],
+      "reason":"Editorial Night imagery dissolves into the page wash; borders or generic section cards would change the design.",
+      "binding":{"kind":"baseline","source":"_wip/homepage_real_1_lead_photo.WIP.html","source_sha256":"eeb7f73d0281932043d1af53aabcdb4c2689ab9aabdfd6244beb3684dd593e11","image_contract_ids":["MM-IMG-HOME-HERO-01","MM-IMG-HOME-RITUAL-01","MM-IMG-HOME-STORY-FIELD-01"]},
+      "owner":"Claude Code Main · packet",
+      "introduced_at":null,
+      "review_on_change":true,
+      "expires_when":"only after four-width visual approval"
+    },
+    {
+      "id":"MM-EXC-OUR-STORY-SEAMS-001",
+      "status":"baseline_registered",
+      "route":"our-story",
+      "style_block_id":"our-story-seams-fades-20260803",
+      "selector":"style#our-story-seams-fades-20260803",
+      "properties":[{"name":"mask and page-wash bridge family","value":"exact declarations inside the frozen named style block"}],
+      "reason":"Hero, ingredient, source and craft fields intentionally use distinct crop and dissolve values.",
+      "binding":{"kind":"baseline","source":"_wip/our-story.WIP.html","source_sha256":"36fdc9d4f5b2992750e204db55d9cd6355f0f975a443d5885c4d0baffdedfec1","image_contract_ids":["MM-IMG-OUR-STORY-HERO-01","MM-IMG-OUR-STORY-FIELDS-01"]},
+      "owner":"Claude Code Main · packet",
+      "introduced_at":null,
+      "review_on_change":true,
+      "expires_when":"only after four-width visual and crop approval"
+    },
+    {
+      "id":"MM-EXC-OUR-STORY-FOUNDER-BIO-001",
+      "status":"baseline_registered",
+      "route":"our-story",
+      "selector":".os-founder-note__portrait img",
+      "properties":[{"name":"aspect-ratio","value":"4/5"},{"name":"object-fit","value":"cover"}],
+      "reason":"The founder bio slot is decided as 4:5; a height clamp is forbidden.",
+      "binding":{"kind":"baseline","source":"_wip/our-story.WIP.html","source_sha256":"36fdc9d4f5b2992750e204db55d9cd6355f0f975a443d5885c4d0baffdedfec1","image_contract_ids":["MM-IMG-FOUNDER-BIO-CARLI-01","MM-IMG-FOUNDER-BIO-DYLAN-01"]},
+      "owner":"Nate",
+      "introduced_at":null,
+      "review_on_change":true,
+      "expires_when":"never without Nate approval"
+    },
+    {
+      "id":"MM-EXC-CAROB-STORY-SEAMS-001",
+      "status":"baseline_registered",
+      "route":"carob-story",
+      "style_block_id":"carob-story-seams-fades-20260803",
+      "selector":"style#carob-story-seams-fades-20260803",
+      "properties":[{"name":"hero and CTA mask/bridge family","value":"exact declarations inside the frozen named style block"}],
+      "reason":"The educational route uses contained and dissolved imagery as distinct roles.",
+      "binding":{"kind":"baseline","source":"_wip/carob-story.WIP.html","source_sha256":"e4cc851c3b014cb2a13d487989088764a3a4d86fc10539aba9c7efa5b690e56b","image_contract_ids":["MM-IMG-CAROB-HERO-01","MM-IMG-CAROB-FIELDS-01"]},
+      "owner":"Claude Code Main · packet",
+      "introduced_at":null,
+      "review_on_change":true,
+      "expires_when":"only after four-width visual approval"
+    },
+    {
+      "id":"MM-EXC-CAROB-STORY-HEADER-001",
+      "status":"baseline_registered",
+      "route":"carob-story",
+      "selector":".cs .sp-top",
+      "properties":[{"name":"min-height","value":"64px"},{"name":"treatment","value":"translucent bordered blurred rail"},{"name":"navigation typography","value":"0.61rem at weight 600"}],
+      "reason":"The Carob education route's final chrome treatment is intentional route character.",
+      "binding":{"kind":"baseline","source":"_wip/carob-story.WIP.html","source_sha256":"e4cc851c3b014cb2a13d487989088764a3a4d86fc10539aba9c7efa5b690e56b","component_id":"MM-COMP-SITE-HEADER-01"},
+      "owner":"Claude Code Main · packet",
+      "introduced_at":null,
+      "review_on_change":true,
+      "expires_when":"only after Carob header visual approval"
+    },
+    {
+      "id":"MM-EXC-STOCKISTS-SEAMS-001",
+      "status":"baseline_registered",
+      "route":"stockists",
+      "style_block_id":"stockists-seams-fades-20260803",
+      "selector":"style#stockists-seams-fades-20260803",
+      "properties":[{"name":"wholesale field mask and bridge","value":"exact declarations inside the frozen named style block"}],
+      "reason":"The Stockists hero and wholesale imagery are illustrative fields, not generic cards or map data.",
+      "binding":{"kind":"baseline","source":"_wip/stockists.WIP.html","source_sha256":"a3b886db50d53c1997e3ca595db2f4f56c6cff1accfee6ebf4e413fc284c3b03","image_contract_ids":["MM-IMG-STOCKISTS-HERO-01","MM-IMG-STOCKISTS-WHOLESALE-01"]},
+      "owner":"Claude Code Main · packet",
+      "introduced_at":null,
+      "review_on_change":true,
+      "expires_when":"only after four-width visual approval"
+    }
+  ],
+  "registered_baseline_families": [
+    {"family":"route-specific section rhythm","binding":"six exact route source hashes","migration_rule":"Atomize selector/property/value records before moving a rule out of its frozen source."},
+    {"family":"page-root atmosphere and palette aliases","binding":"six exact route source hashes","migration_rule":"Preserve route character; never replace with one universal page wash."},
+    {"family":"narrow-width corrections","binding":"home 430px; Shop, Our Story, Carob Story and Stockists 400px source conditions","migration_rule":"Keep exact conditions until four-width evidence proves a replacement."},
+    {"family":"paired WebKit mask declarations","binding":"exact frozen source hashes and image contracts","migration_rule":"Preserve prefix/unprefixed parity wherever the contract requires it."}
+  ],
+  "invalid_exception_reasons": ["anonymous !important","arbitrary z-index","raw colour without a semantic role","duplicate selector override","temporary style block without an exact binding"]
+}

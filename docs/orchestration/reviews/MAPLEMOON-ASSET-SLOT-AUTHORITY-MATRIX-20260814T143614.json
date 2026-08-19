@@ -1,0 +1,88 @@
+{
+  "schema": "maplemoon-receipt/v2",
+  "receipt_id": "MAPLEMOON-ASSET-SLOT-AUTHORITY-MATRIX-20260814T143614-RECEIPT-001",
+  "packet_id": "MAPLEMOON-ASSET-SLOT-AUTHORITY-MATRIX-20260814T143614",
+  "worker_thread_id": "019ffe53-6243-73a2-9d75-e1a072cd07ce",
+  "worker": "MapleMoon BOSS read-only asset audit",
+  "started_at": "2026-08-14T14:36:14+10:00",
+  "completed_at": "2026-08-14T14:38:48+10:00",
+  "outcome": "HOLD_NEW_SWAPS_PRESERVE_CERTIFIED_BASELINE",
+  "confidence": "high",
+  "checkpoint_path": "_wip/checkpoints/MAPLEMOON-ASSET-SLOT-AUTHORITY-MATRIX-20260814T143614_20260814_143614_AEST",
+  "files_read": [
+    "/Users/handtomouse/maplemoon_build_20260813/shop.html",
+    "/Users/handtomouse/maplemoon_build_20260813/homepage.html",
+    "/Users/handtomouse/maplemoon_build_20260813/assets/product_shots",
+    "/Users/handtomouse/maplemoon_product_shots_20260814/product_master_18_sku_v7_manifest.md",
+    "/Users/handtomouse/maplemoon_product_shots_20260814/goji_carob_bites/client_confirmed_identity_receipt.md",
+    "assets/product_shots/w1-e-prepared-20260803/README.md",
+    "assets/product_shots/w1-e-prepared-20260803",
+    "docs/orchestration/packets/MAPLEMOON-ASSET-SLOT-AUTHORITY-MATRIX-20260814T143614.md"
+  ],
+  "files_changed": [
+    "docs/orchestration/reviews/MAPLEMOON-ASSET-SLOT-AUTHORITY-MATRIX-20260814T143614.md",
+    "docs/orchestration/reviews/MAPLEMOON-ASSET-SLOT-AUTHORITY-MATRIX-20260814T143614.json"
+  ],
+  "pre_sha256": {
+    "docs/orchestration/reviews/MAPLEMOON-ASSET-SLOT-AUTHORITY-MATRIX-20260814T143614.md": null,
+    "docs/orchestration/reviews/MAPLEMOON-ASSET-SLOT-AUTHORITY-MATRIX-20260814T143614.json": null
+  },
+  "post_sha256": {
+    "docs/orchestration/reviews/MAPLEMOON-ASSET-SLOT-AUTHORITY-MATRIX-20260814T143614.md": "8b68ad125353c57befd0f0035acae2530756cb52c9a242cbdd12a148becb40a0",
+    "docs/orchestration/reviews/MAPLEMOON-ASSET-SLOT-AUTHORITY-MATRIX-20260814T143614.json": null
+  },
+  "checks": [
+    {
+      "command": "python3 -B scripts/check-maplemoon-receipt.py checkpoint ... && verify ... --phase start",
+      "exit_code": 0,
+      "result": "PASS checkpoint packet=MAPLEMOON-ASSET-SLOT-AUTHORITY-MATRIX-20260814T143614 files=2; PASS phase=start scope=2 before matrix or receipt creation."
+    },
+    {
+      "command": "Node extraction of Shop product data objects plus current-asset existence check",
+      "exit_code": 0,
+      "result": "PASS: 24 objects, 24 unique product slots, zero missing current product_shots WebPs."
+    },
+    {
+      "command": "rg -c '^\\| [0-9]+ \\|' asset-slot matrix",
+      "exit_code": 0,
+      "result": "PASS: 24 numbered matrix rows."
+    },
+    {
+      "command": "cmp all 11 committed W1-E prepared exports against certified-candidate counterparts",
+      "exit_code": 0,
+      "result": "PASS: byte mismatches=0 for bananas, four W1-E Eclipses and six Moons."
+    },
+    {
+      "command": "parse v7 primary table and SHA-256 verify every selected file",
+      "exit_code": 0,
+      "result": "PASS: 18 primary rows, 18 verified files, zero missing or hash mismatches."
+    },
+    {
+      "command": "git diff --check -- packet and matrix",
+      "exit_code": 0,
+      "result": "PASS: no whitespace errors."
+    },
+    {
+      "command": "sha256sum packet and matrix",
+      "exit_code": 0,
+      "result": "PASS: packet de50c7ac73e430eda0ef78faa06e0e5947c867fb49c0eb403b6986c26d8dd568; matrix 8b68ad125353c57befd0f0035acae2530756cb52c9a242cbdd12a148becb40a0."
+    }
+  ],
+  "screenshots_or_urls": [],
+  "failures": [],
+  "unknowns": [
+    "Nate's three mapped Photoshop Crescent cuts have not been supplied to this lane.",
+    "Moon finish/binding authority is unresolved for five named conditions in the v7 and isolation records.",
+    "No blanket live-use approval exists for the v7 standardized derivatives.",
+    "The production bundle asset is not selected."
+  ],
+  "residual_risk": [
+    "The certified preview contains 11 binaries identical to the W1-E repository staging pack even though that pack's repository README describes it as unwired; this is candidate custody, not live approval.",
+    "Goji Carob Bites identity confirmation does not by itself approve the standardized v7 derivative.",
+    "Preserving a current preview asset must not be represented as final production-media approval."
+  ],
+  "forbidden_path_changes": [],
+  "proposed_next_state": "asset_decisions_required_no_integration_wave",
+  "next_reviewer": "MapleMoon BOSS, then Nate for individual asset approvals",
+  "ready_to_promote": false
+}

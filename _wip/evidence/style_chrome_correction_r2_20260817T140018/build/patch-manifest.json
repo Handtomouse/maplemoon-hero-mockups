@@ -1,0 +1,314 @@
+{
+  "baseline_root": "/private/tmp/maplemoon-style-chrome-r2-baseline-20260817T140406",
+  "packet_id": "MAPLEMOON-STYLE-CHROME-DERIVED-20260817T134139",
+  "routes": {
+    "carob-story.html": {
+      "baseline_bytes": 54352,
+      "baseline_sha256": "5bfc9842c36d9f093d193f21cc7ea11cc96f3565fe65925d023e6ce0380e0756",
+      "derived_bytes": 55436,
+      "derived_sha256": "54208ed66d3fee52f808c65cef78ab59461be955395f0ad6693efb14c480f471",
+      "operation_count": 3,
+      "operations": [
+        {
+          "label": "stylesheet-link",
+          "new": "<link rel=\"stylesheet\" href=\"/style-chrome-derived.css\" data-mm-style-chrome-generated>\n</head>",
+          "new_bytes": 95,
+          "new_sha256": "66a58562c3a3f8bcb06e913850346f837c3f71c109e4784568f7111b05d3b146",
+          "occurrences": 1,
+          "old": "</head>",
+          "old_bytes": 7,
+          "old_sha256": "69eb3111ab6500088bcc0f5cb043f452bd7b7801bdcd7b0e478c2fc454fdba0a"
+        },
+        {
+          "label": "mobile-header-after-skip",
+          "new": "<a class=\"skip-link\" href=\"#carob-story\">Skip to the carob story</a>\n<header class=\"mm-style-mobile-header\" data-mm-style-mobile-header data-mm-style-chrome-generated data-mm-style-route=\"carob-story\" data-mm-style-menu-state=\"closed\">\n  <div class=\"mm-style-mobile-bar\">\n    <button class=\"mm-style-mobile-menu\" type=\"button\" data-mm-style-menu-toggle aria-expanded=\"false\" aria-controls=\"mm-style-mobile-panel-carob-story\" aria-label=\"Open menu\">Menu</button>\n    <a class=\"mm-style-mobile-wordmark\" href=\"/homepage\">maple moon</a>\n    <a class=\"mm-style-mobile-contact\" href=\"mailto:info@maplemoon.com.au\">Contact</a>\n  </div>\n  <div class=\"mm-style-mobile-panel\" id=\"mm-style-mobile-panel-carob-story\" data-mm-style-menu-panel hidden>\n    <nav aria-label=\"Mobile navigation\"><a href=\"/shop\">Shop</a><a href=\"/our-story\">Our Story</a><a href=\"/carob-story\" aria-current=\"page\">What is Carob</a><a href=\"/stockists\">Stockists</a><a href=\"/faq\">FAQ</a></nav>\n  </div>\n</header>",
+          "new_bytes": 978,
+          "new_sha256": "8f817bc5134f65c3698f03bb1e5822bdc37a8faaa4488fc606684cfbe157702f",
+          "occurrences": 1,
+          "old": "<a class=\"skip-link\" href=\"#carob-story\">Skip to the carob story</a>",
+          "old_bytes": 68,
+          "old_sha256": "42d8d30e981eac220762048ee11300f3bd759fffe45b9d771641027d58d5ff34"
+        },
+        {
+          "label": "runtime-script",
+          "new": "<script defer src=\"/style-chrome-derived.js\" data-mm-style-chrome-generated></script>\n</body>",
+          "new_bytes": 93,
+          "new_sha256": "f14f3fd12fb2073b2b2caf81857cb8bc9049c15467ed0d8faf68e1e56fc8dc06",
+          "occurrences": 1,
+          "old": "</body>",
+          "old_bytes": 7,
+          "old_sha256": "124207d84bdc8a107cbcc04212a091e85157e09d7bf208f7afb4839498fef083"
+        }
+      ],
+      "reverse_equal": true,
+      "reverse_reconstructed_sha256": "5bfc9842c36d9f093d193f21cc7ea11cc96f3565fe65925d023e6ce0380e0756"
+    },
+    "faq.html": {
+      "baseline_bytes": 31865,
+      "baseline_sha256": "29c1fb87be58a0c8ac65e148201c7164143fe947122e11c819c0444956a4b601",
+      "derived_bytes": 32925,
+      "derived_sha256": "9c4aae65128b3f6f1dc040d913359edb3eb8b26a2036b3c314fe91676d62e303",
+      "operation_count": 3,
+      "operations": [
+        {
+          "label": "stylesheet-link",
+          "new": "<link rel=\"stylesheet\" href=\"/style-chrome-derived.css\" data-mm-style-chrome-generated>\n</head>",
+          "new_bytes": 95,
+          "new_sha256": "66a58562c3a3f8bcb06e913850346f837c3f71c109e4784568f7111b05d3b146",
+          "occurrences": 1,
+          "old": "</head>",
+          "old_bytes": 7,
+          "old_sha256": "69eb3111ab6500088bcc0f5cb043f452bd7b7801bdcd7b0e478c2fc454fdba0a"
+        },
+        {
+          "label": "mobile-header-after-skip",
+          "new": "<a class=\"skip-link\" href=\"#main-content\">Skip to main content</a>\n<header class=\"mm-style-mobile-header\" data-mm-style-mobile-header data-mm-style-chrome-generated data-mm-style-route=\"faq\" data-mm-style-menu-state=\"closed\">\n  <div class=\"mm-style-mobile-bar\">\n    <button class=\"mm-style-mobile-menu\" type=\"button\" data-mm-style-menu-toggle aria-expanded=\"false\" aria-controls=\"mm-style-mobile-panel-faq\" aria-label=\"Open menu\">Menu</button>\n    <a class=\"mm-style-mobile-wordmark\" href=\"/homepage\">maple moon</a>\n    <a class=\"mm-style-mobile-contact\" href=\"mailto:info@maplemoon.com.au\">Contact</a>\n  </div>\n  <div class=\"mm-style-mobile-panel\" id=\"mm-style-mobile-panel-faq\" data-mm-style-menu-panel hidden>\n    <nav aria-label=\"Mobile navigation\"><a href=\"/shop\">Shop</a><a href=\"/our-story\">Our Story</a><a href=\"/carob-story\">What is Carob</a><a href=\"/stockists\">Stockists</a><a href=\"/faq\" aria-current=\"page\">FAQ</a></nav>\n  </div>\n</header>",
+          "new_bytes": 952,
+          "new_sha256": "c8d9fefcb270239cf2705c19dae9db524559817b1d9da939827529c42d9a90f1",
+          "occurrences": 1,
+          "old": "<a class=\"skip-link\" href=\"#main-content\">Skip to main content</a>",
+          "old_bytes": 66,
+          "old_sha256": "b5abd350fcac0d0b5013ae651375ab5a42fc833e8cffcb842101e33274c20aa2"
+        },
+        {
+          "label": "runtime-script",
+          "new": "<script defer src=\"/style-chrome-derived.js\" data-mm-style-chrome-generated></script>\n</body>",
+          "new_bytes": 93,
+          "new_sha256": "f14f3fd12fb2073b2b2caf81857cb8bc9049c15467ed0d8faf68e1e56fc8dc06",
+          "occurrences": 1,
+          "old": "</body>",
+          "old_bytes": 7,
+          "old_sha256": "124207d84bdc8a107cbcc04212a091e85157e09d7bf208f7afb4839498fef083"
+        }
+      ],
+      "reverse_equal": true,
+      "reverse_reconstructed_sha256": "29c1fb87be58a0c8ac65e148201c7164143fe947122e11c819c0444956a4b601"
+    },
+    "homepage.html": {
+      "baseline_bytes": 190815,
+      "baseline_sha256": "9495d2eee0d81cbc8f86749df36b8f6532a9603c40638ffc728e55aae857cb89",
+      "derived_bytes": 191878,
+      "derived_sha256": "ad4fa970a8f0e9f549c841a52674fd9416e7e242f3db1d421e47ecd9e334e82f",
+      "operation_count": 3,
+      "operations": [
+        {
+          "label": "stylesheet-link",
+          "new": "<link rel=\"stylesheet\" href=\"/style-chrome-derived.css\" data-mm-style-chrome-generated>\n</head>",
+          "new_bytes": 95,
+          "new_sha256": "66a58562c3a3f8bcb06e913850346f837c3f71c109e4784568f7111b05d3b146",
+          "occurrences": 1,
+          "old": "</head>",
+          "old_bytes": 7,
+          "old_sha256": "69eb3111ab6500088bcc0f5cb043f452bd7b7801bdcd7b0e478c2fc454fdba0a"
+        },
+        {
+          "label": "mobile-header-after-skip",
+          "new": "<a class=\"skip-link mm-skip-link\" href=\"#main-content\">Skip to main content</a>\n<header class=\"mm-style-mobile-header\" data-mm-style-mobile-header data-mm-style-chrome-generated data-mm-style-route=\"home\" data-mm-style-menu-state=\"closed\">\n  <div class=\"mm-style-mobile-bar\">\n    <button class=\"mm-style-mobile-menu\" type=\"button\" data-mm-style-menu-toggle aria-expanded=\"false\" aria-controls=\"mm-style-mobile-panel-home\" aria-label=\"Open menu\">Menu</button>\n    <a class=\"mm-style-mobile-wordmark\" href=\"/homepage\" aria-current=\"page\">maple moon</a>\n    <a class=\"mm-style-mobile-contact\" href=\"mailto:info@maplemoon.com.au\">Contact</a>\n  </div>\n  <div class=\"mm-style-mobile-panel\" id=\"mm-style-mobile-panel-home\" data-mm-style-menu-panel hidden>\n    <nav aria-label=\"Mobile navigation\"><a href=\"/shop\">Shop</a><a href=\"/our-story\">Our Story</a><a href=\"/carob-story\">What is Carob</a><a href=\"/stockists\">Stockists</a><a href=\"/faq\">FAQ</a></nav>\n  </div>\n</header>",
+          "new_bytes": 968,
+          "new_sha256": "3f005bd6d978cca4120ef6439e730ee5511c3f30203515dd23e71f0d0007b4f4",
+          "occurrences": 1,
+          "old": "<a class=\"skip-link mm-skip-link\" href=\"#main-content\">Skip to main content</a>",
+          "old_bytes": 79,
+          "old_sha256": "2aefb22a81812ca86b472ff2f6251a348c5f3e3effc62ac021bc493de05e0782"
+        },
+        {
+          "label": "runtime-script",
+          "new": "<script defer src=\"/style-chrome-derived.js\" data-mm-style-chrome-generated></script>\n</body>",
+          "new_bytes": 93,
+          "new_sha256": "f14f3fd12fb2073b2b2caf81857cb8bc9049c15467ed0d8faf68e1e56fc8dc06",
+          "occurrences": 1,
+          "old": "</body>",
+          "old_bytes": 7,
+          "old_sha256": "124207d84bdc8a107cbcc04212a091e85157e09d7bf208f7afb4839498fef083"
+        }
+      ],
+      "reverse_equal": true,
+      "reverse_reconstructed_sha256": "9495d2eee0d81cbc8f86749df36b8f6532a9603c40638ffc728e55aae857cb89"
+    },
+    "our-story.html": {
+      "baseline_bytes": 63842,
+      "baseline_sha256": "0f00cb8beae8b911920f20f6e5976d60d0e94e70ed99f7d3557dbf9a1883c2b2",
+      "derived_bytes": 65080,
+      "derived_sha256": "08040cbac52e8fe1cf9eec1841b4bd8ddf9961c551b99298e9fa2abaa85dade6",
+      "operation_count": 5,
+      "operations": [
+        {
+          "label": "stylesheet-link",
+          "new": "<link rel=\"stylesheet\" href=\"/style-chrome-derived.css\" data-mm-style-chrome-generated>\n</head>",
+          "new_bytes": 95,
+          "new_sha256": "66a58562c3a3f8bcb06e913850346f837c3f71c109e4784568f7111b05d3b146",
+          "occurrences": 1,
+          "old": "</head>",
+          "old_bytes": 7,
+          "old_sha256": "69eb3111ab6500088bcc0f5cb043f452bd7b7801bdcd7b0e478c2fc454fdba0a"
+        },
+        {
+          "label": "our-story-skip-mobile-header",
+          "new": "<body>\n<a class=\"mm-style-skip-link\" href=\"#main-content\" data-mm-style-chrome-generated>Skip to main content</a>\n<header class=\"mm-style-mobile-header\" data-mm-style-mobile-header data-mm-style-chrome-generated data-mm-style-route=\"our-story\" data-mm-style-menu-state=\"closed\">\n  <div class=\"mm-style-mobile-bar\">\n    <button class=\"mm-style-mobile-menu\" type=\"button\" data-mm-style-menu-toggle aria-expanded=\"false\" aria-controls=\"mm-style-mobile-panel-our-story\" aria-label=\"Open menu\">Menu</button>\n    <a class=\"mm-style-mobile-wordmark\" href=\"/homepage\">maple moon</a>\n    <a class=\"mm-style-mobile-contact\" href=\"mailto:info@maplemoon.com.au\">Contact</a>\n  </div>\n  <div class=\"mm-style-mobile-panel\" id=\"mm-style-mobile-panel-our-story\" data-mm-style-menu-panel hidden>\n    <nav aria-label=\"Mobile navigation\"><a href=\"/shop\">Shop</a><a href=\"/our-story\" aria-current=\"page\">Our Story</a><a href=\"/carob-story\">What is Carob</a><a href=\"/stockists\">Stockists</a><a href=\"/faq\">FAQ</a></nav>\n  </div>\n</header>\n",
+          "new_bytes": 1018,
+          "new_sha256": "4f6e16f5f1455de4c6aba293cd7eaddeceee2e16495da683012d37f19eceb2de",
+          "occurrences": 1,
+          "old": "<body>\n",
+          "old_bytes": 7,
+          "old_sha256": "53133afb78c655e14c02dab40716d8ab299bf9ddfdf84b42ec2ae2596e0d3b30"
+        },
+        {
+          "label": "our-story-main-open",
+          "new": "  </div></header>\n\n  <main id=\"main-content\" tabindex=\"-1\">\n\n  <!-- Founders-first story opening.",
+          "new_bytes": 97,
+          "new_sha256": "861b500cffafdbe194a2c4a5db09eeaab9f7450c45ab28883c6e91ca4ada8553",
+          "occurrences": 1,
+          "old": "  </div></header>\n\n  <!-- Founders-first story opening.",
+          "old_bytes": 55,
+          "old_sha256": "df00e5754cf3ffcc73e6aade1104be62a2e2a5edad06a7fee6b00540f81b5dfa"
+        },
+        {
+          "label": "our-story-main-close",
+          "new": "\n  </main>\n\n  <footer class=\"os-ft\">",
+          "new_bytes": 36,
+          "new_sha256": "47b12f8f9400e3818a0276543b577a18acb217debe5b1d2b18c605d6875032f7",
+          "occurrences": 1,
+          "old": "\n  <footer class=\"os-ft\">",
+          "old_bytes": 25,
+          "old_sha256": "2cb341522109dcc76ea23ab4627387324d18471af9cd9d1f2c13d6096e18e8a7"
+        },
+        {
+          "label": "runtime-script",
+          "new": "<script defer src=\"/style-chrome-derived.js\" data-mm-style-chrome-generated></script>\n</body>",
+          "new_bytes": 93,
+          "new_sha256": "f14f3fd12fb2073b2b2caf81857cb8bc9049c15467ed0d8faf68e1e56fc8dc06",
+          "occurrences": 1,
+          "old": "</body>",
+          "old_bytes": 7,
+          "old_sha256": "124207d84bdc8a107cbcc04212a091e85157e09d7bf208f7afb4839498fef083"
+        }
+      ],
+      "reverse_equal": true,
+      "reverse_reconstructed_sha256": "0f00cb8beae8b911920f20f6e5976d60d0e94e70ed99f7d3557dbf9a1883c2b2"
+    },
+    "products/pure-carob-bar.html": {
+      "baseline_bytes": 25399,
+      "baseline_sha256": "2157a7ef9846c854a2565b9e1c4c4a3f934b8b2ab92dc1e119a31bb838109869",
+      "derived_bytes": 26492,
+      "derived_sha256": "526ac1dfc604561079b5cbd7c4a70b80b1312432fa4f07a4487ad1cefc91bef4",
+      "operation_count": 3,
+      "operations": [
+        {
+          "label": "stylesheet-link",
+          "new": "<link rel=\"stylesheet\" href=\"/style-chrome-derived.css\" data-mm-style-chrome-generated>\n</head>",
+          "new_bytes": 95,
+          "new_sha256": "66a58562c3a3f8bcb06e913850346f837c3f71c109e4784568f7111b05d3b146",
+          "occurrences": 1,
+          "old": "</head>",
+          "old_bytes": 7,
+          "old_sha256": "69eb3111ab6500088bcc0f5cb043f452bd7b7801bdcd7b0e478c2fc454fdba0a"
+        },
+        {
+          "label": "mobile-header-after-skip",
+          "new": "<a class=\"skip-link\" href=\"#product-title\">Skip to the product</a>\n<header class=\"mm-style-mobile-header\" data-mm-style-mobile-header data-mm-style-chrome-generated data-mm-style-route=\"pure-carob-bar\" data-mm-style-menu-state=\"closed\">\n  <div class=\"mm-style-mobile-bar\">\n    <button class=\"mm-style-mobile-menu\" type=\"button\" data-mm-style-menu-toggle aria-expanded=\"false\" aria-controls=\"mm-style-mobile-panel-pure-carob-bar\" aria-label=\"Open menu\">Menu</button>\n    <a class=\"mm-style-mobile-wordmark\" href=\"/homepage\">maple moon</a>\n    <a class=\"mm-style-mobile-contact\" href=\"mailto:info@maplemoon.com.au\">Contact</a>\n  </div>\n  <div class=\"mm-style-mobile-panel\" id=\"mm-style-mobile-panel-pure-carob-bar\" data-mm-style-menu-panel hidden>\n    <nav aria-label=\"Mobile navigation\"><a href=\"/shop\" aria-current=\"page\">Shop</a><a href=\"/our-story\">Our Story</a><a href=\"/carob-story\">What is Carob</a><a href=\"/stockists\">Stockists</a><a href=\"/faq\">FAQ</a></nav>\n  </div>\n</header>",
+          "new_bytes": 985,
+          "new_sha256": "9597e7075b1912b7f92ff06e72eeb85d9469a0e57aa8d383c0c48ac403b5c7df",
+          "occurrences": 1,
+          "old": "<a class=\"skip-link\" href=\"#product-title\">Skip to the product</a>",
+          "old_bytes": 66,
+          "old_sha256": "42f37865bbdc24f1c9328a8576ca639cb5d69fc9d6f8b8e243e1ef2636991c4a"
+        },
+        {
+          "label": "runtime-script",
+          "new": "<script defer src=\"/style-chrome-derived.js\" data-mm-style-chrome-generated></script>\n</body>",
+          "new_bytes": 93,
+          "new_sha256": "f14f3fd12fb2073b2b2caf81857cb8bc9049c15467ed0d8faf68e1e56fc8dc06",
+          "occurrences": 1,
+          "old": "</body>",
+          "old_bytes": 7,
+          "old_sha256": "124207d84bdc8a107cbcc04212a091e85157e09d7bf208f7afb4839498fef083"
+        }
+      ],
+      "reverse_equal": true,
+      "reverse_reconstructed_sha256": "2157a7ef9846c854a2565b9e1c4c4a3f934b8b2ab92dc1e119a31bb838109869"
+    },
+    "shop.html": {
+      "baseline_bytes": 50564,
+      "baseline_sha256": "a0c5c03c2aaf2b21307995a7b33843c5ffa0d5785ddf4a6dea252f40b8ab208a",
+      "derived_bytes": 51627,
+      "derived_sha256": "8e7746e7e13c775602c1695a8b00212f956efcabfb86093e5be1fe364cb36003",
+      "operation_count": 3,
+      "operations": [
+        {
+          "label": "stylesheet-link",
+          "new": "<link rel=\"stylesheet\" href=\"/style-chrome-derived.css\" data-mm-style-chrome-generated>\n</head>",
+          "new_bytes": 95,
+          "new_sha256": "66a58562c3a3f8bcb06e913850346f837c3f71c109e4784568f7111b05d3b146",
+          "occurrences": 1,
+          "old": "</head>",
+          "old_bytes": 7,
+          "old_sha256": "69eb3111ab6500088bcc0f5cb043f452bd7b7801bdcd7b0e478c2fc454fdba0a"
+        },
+        {
+          "label": "mobile-header-after-skip",
+          "new": "<a class=\"skip-link\" href=\"#catalogue-title\">Skip to the catalogue</a>\n<header class=\"mm-style-mobile-header\" data-mm-style-mobile-header data-mm-style-chrome-generated data-mm-style-route=\"shop\" data-mm-style-menu-state=\"closed\">\n  <div class=\"mm-style-mobile-bar\">\n    <button class=\"mm-style-mobile-menu\" type=\"button\" data-mm-style-menu-toggle aria-expanded=\"false\" aria-controls=\"mm-style-mobile-panel-shop\" aria-label=\"Open menu\">Menu</button>\n    <a class=\"mm-style-mobile-wordmark\" href=\"/homepage\">maple moon</a>\n    <a class=\"mm-style-mobile-contact\" href=\"mailto:info@maplemoon.com.au\">Contact</a>\n  </div>\n  <div class=\"mm-style-mobile-panel\" id=\"mm-style-mobile-panel-shop\" data-mm-style-menu-panel hidden>\n    <nav aria-label=\"Mobile navigation\"><a href=\"/shop\" aria-current=\"page\">Shop</a><a href=\"/our-story\">Our Story</a><a href=\"/carob-story\">What is Carob</a><a href=\"/stockists\">Stockists</a><a href=\"/faq\">FAQ</a></nav>\n  </div>\n</header>",
+          "new_bytes": 959,
+          "new_sha256": "cf4f68631b77bcb17a44020c7ce504be0a0132ab73673ca053603da5b2e79878",
+          "occurrences": 1,
+          "old": "<a class=\"skip-link\" href=\"#catalogue-title\">Skip to the catalogue</a>",
+          "old_bytes": 70,
+          "old_sha256": "93c775726784eb1a02be5254dfb028117b0dc31fd1b177d58216cf66e55ec99b"
+        },
+        {
+          "label": "runtime-script",
+          "new": "<script defer src=\"/style-chrome-derived.js\" data-mm-style-chrome-generated></script>\n</body>",
+          "new_bytes": 93,
+          "new_sha256": "f14f3fd12fb2073b2b2caf81857cb8bc9049c15467ed0d8faf68e1e56fc8dc06",
+          "occurrences": 1,
+          "old": "</body>",
+          "old_bytes": 7,
+          "old_sha256": "124207d84bdc8a107cbcc04212a091e85157e09d7bf208f7afb4839498fef083"
+        }
+      ],
+      "reverse_equal": true,
+      "reverse_reconstructed_sha256": "a0c5c03c2aaf2b21307995a7b33843c5ffa0d5785ddf4a6dea252f40b8ab208a"
+    },
+    "stockists.html": {
+      "baseline_bytes": 112138,
+      "baseline_sha256": "b93f676f6ebdf9edc8bef7a7e013a0ab9a8aa6d7f2a0662c6da516d2741e955a",
+      "derived_bytes": 113216,
+      "derived_sha256": "9be32057b9e1ddb7fe2255f0a851e50ac899eaccae581ac9356cb6aa52b13e57",
+      "operation_count": 3,
+      "operations": [
+        {
+          "label": "stylesheet-link",
+          "new": "<link rel=\"stylesheet\" href=\"/style-chrome-derived.css\" data-mm-style-chrome-generated>\n</head>",
+          "new_bytes": 95,
+          "new_sha256": "66a58562c3a3f8bcb06e913850346f837c3f71c109e4784568f7111b05d3b146",
+          "occurrences": 1,
+          "old": "</head>",
+          "old_bytes": 7,
+          "old_sha256": "69eb3111ab6500088bcc0f5cb043f452bd7b7801bdcd7b0e478c2fc454fdba0a"
+        },
+        {
+          "label": "mobile-header-after-skip",
+          "new": "<a class=\"mm-review-skip\" href=\"#main-content\">Skip to main content</a>\n<header class=\"mm-style-mobile-header\" data-mm-style-mobile-header data-mm-style-chrome-generated data-mm-style-route=\"stockists\" data-mm-style-menu-state=\"closed\">\n  <div class=\"mm-style-mobile-bar\">\n    <button class=\"mm-style-mobile-menu\" type=\"button\" data-mm-style-menu-toggle aria-expanded=\"false\" aria-controls=\"mm-style-mobile-panel-stockists\" aria-label=\"Open menu\">Menu</button>\n    <a class=\"mm-style-mobile-wordmark\" href=\"/homepage\">maple moon</a>\n    <a class=\"mm-style-mobile-contact\" href=\"mailto:info@maplemoon.com.au\">Contact</a>\n  </div>\n  <div class=\"mm-style-mobile-panel\" id=\"mm-style-mobile-panel-stockists\" data-mm-style-menu-panel hidden>\n    <nav aria-label=\"Mobile navigation\"><a href=\"/shop\">Shop</a><a href=\"/our-story\">Our Story</a><a href=\"/carob-story\">What is Carob</a><a href=\"/stockists\" aria-current=\"page\">Stockists</a><a href=\"/faq\">FAQ</a></nav>\n  </div>\n</header>",
+          "new_bytes": 975,
+          "new_sha256": "5018246d3afaf9454dba39c1a2d62e76678350ef3f8ddc7966a28383c8e56809",
+          "occurrences": 1,
+          "old": "<a class=\"mm-review-skip\" href=\"#main-content\">Skip to main content</a>",
+          "old_bytes": 71,
+          "old_sha256": "aeae0e2c625b5542ddf90bc09f6bf7b52ac73765bda33f3fdd5f9fefe509d1d2"
+        },
+        {
+          "label": "runtime-script",
+          "new": "<script defer src=\"/style-chrome-derived.js\" data-mm-style-chrome-generated></script>\n</body>",
+          "new_bytes": 93,
+          "new_sha256": "f14f3fd12fb2073b2b2caf81857cb8bc9049c15467ed0d8faf68e1e56fc8dc06",
+          "occurrences": 1,
+          "old": "</body>",
+          "old_bytes": 7,
+          "old_sha256": "124207d84bdc8a107cbcc04212a091e85157e09d7bf208f7afb4839498fef083"
+        }
+      ],
+      "reverse_equal": true,
+      "reverse_reconstructed_sha256": "b93f676f6ebdf9edc8bef7a7e013a0ab9a8aa6d7f2a0662c6da516d2741e955a"
+    }
+  },
+  "schema": "maplemoon-style-chrome-patch-manifest/v1"
+}

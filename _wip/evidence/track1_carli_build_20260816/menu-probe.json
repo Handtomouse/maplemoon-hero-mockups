@@ -1,0 +1,85 @@
+{
+  "state": "open",
+  "primary": {
+    "tag": "NAV",
+    "text": "ShopOur Story",
+    "hidden": false,
+    "display": "flex",
+    "rect": {
+      "x": 28,
+      "y": 12,
+      "width": 334,
+      "height": 45
+    },
+    "hit": "ShopOur Story"
+  },
+  "primaryChildren": [
+    {
+      "tag": "A",
+      "text": "Shop",
+      "hidden": false,
+      "display": "flex",
+      "rect": {
+        "x": 29,
+        "y": 13,
+        "width": 35,
+        "height": 44
+      },
+      "hit": "Shop"
+    },
+    {
+      "tag": "A",
+      "text": "Our Story",
+      "hidden": false,
+      "display": "flex",
+      "rect": {
+        "x": 92,
+        "y": 13,
+        "width": 71,
+        "height": 44
+      },
+      "hit": "Our Story"
+    }
+  ],
+  "utility": {
+    "tag": "NAV",
+    "text": "StockistsAUD $",
+    "hidden": false,
+    "display": "grid",
+    "rect": {
+      "x": 28,
+      "y": 144,
+      "width": 334,
+      "height": 45
+    },
+    "hit": "(function(){\n      var video=document.currentScript.previousElementSibling;\n      var motion=window.matchMedia('(prefers-reduced-motion: reduce)');\n      function syncHeroMotion(){\n        if(motion.matches){\n          video.pause();\n          return;\n        }\n        var playRequest=video.play();\n        if(playRequest&&typeof playRequest.catch==='function')playRequest.catch(function(){});\n      }\n      syncHeroMotion();\n      if(typeof motion.addEventListener==='function')motion.addEventListener('change',syncHeroMotion);\n      else if(typeof motion.addListener==='function')motion.addListener(syncHeroMotion);\n    })();\n    \n    \n    \n    \n    \n      \n      \n    \n\n    \n      Menu\n      ShopOur Story\n      maple moon\n      StockistsAUD $\n        0\n    \n\n    \n      \n        Australian organic carob\n        \n        Naturally Sweet, Nothing Added.\n        No CaffeineOrganic IngredientsVegan Friendly\n        \n          Shop the Range"
+  },
+  "utilityChildren": [
+    {
+      "tag": "A",
+      "text": "Stockists",
+      "hidden": false,
+      "display": "flex",
+      "rect": {
+        "x": 29,
+        "y": 144,
+        "width": 332,
+        "height": 44
+      },
+      "hit": "(function(){\n      var video=document.currentScript.previousElementSibling;\n      var motion=window.matchMedia('(prefers-reduced-motion: reduce)');\n      function syncHeroMotion(){\n        if(motion.matches){\n          video.pause();\n          return;\n        }\n        var playRequest=video.play();\n        if(playRequest&&typeof playRequest.catch==='function')playRequest.catch(function(){});\n      }\n      syncHeroMotion();\n      if(typeof motion.addEventListener==='function')motion.addEventListener('change',syncHeroMotion);\n      else if(typeof motion.addListener==='function')motion.addListener(syncHeroMotion);\n    })();\n    \n    \n    \n    \n    \n      \n      \n    \n\n    \n      Menu\n      ShopOur Story\n      maple moon\n      StockistsAUD $\n        0\n    \n\n    \n      \n        Australian organic carob\n        \n        Naturally Sweet, Nothing Added.\n        No CaffeineOrganic IngredientsVegan Friendly\n        \n          Shop the Range"
+    },
+    {
+      "tag": "SPAN",
+      "text": "AUD $",
+      "hidden": false,
+      "display": "none",
+      "rect": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      },
+      "hit": "Menu\n      ShopOur Story\n      maple moon\n      StockistsAUD $\n        0"
+    }
+  ]
+}

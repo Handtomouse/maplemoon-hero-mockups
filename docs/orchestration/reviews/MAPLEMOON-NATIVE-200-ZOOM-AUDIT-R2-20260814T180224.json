@@ -1,0 +1,120 @@
+{
+  "schema": "maplemoon-receipt/v2",
+  "receipt_id": "MAPLEMOON-NATIVE-200-ZOOM-AUDIT-R2-20260814T180224-RECEIPT",
+  "packet_id": "MAPLEMOON-NATIVE-200-ZOOM-AUDIT-R2-20260814T180224",
+  "worker_thread_id": "/root/recertify_updated_preview",
+  "worker": "Codex independent native 200 percent browser-zoom auditor",
+  "started_at": "2026-08-14T08:03:53Z",
+  "completed_at": "2026-08-14T08:41:14Z",
+  "files_read": [
+    "maplemoon-website/AGENTS.md",
+    "maplemoon-website/docs/orchestration/packets/MAPLEMOON-NATIVE-200-ZOOM-AUDIT-R2-20260814T180224.md",
+    "maplemoon-website/docs/orchestration/reviews/MAPLEMOON-NATIVE-200-ZOOM-AUDIT-20260814T174412.md",
+    "maplemoon-website/docs/orchestration/reviews/MAPLEMOON-NATIVE-200-ZOOM-AUDIT-20260814T174412.json",
+    "maplemoon-website/_wip/evidence/native_200_zoom_audit_20260814T174412",
+    "maplemoon-website/docs/orchestration/reviews/MAPLEMOON-INTEGRATED-HEADER-CART-CERT-R2-20260814T163003.json",
+    "maplemoon-website/docs/orchestration/reviews/MAPLEMOON-CERTIFIED-PREVIEW-DEPLOY-20260814T165853.json",
+    "maplemoon-website/scripts/check-maplemoon-receipt.py",
+    "maplemoon_build_20260813/homepage.html",
+    "maplemoon_build_20260813/our-story.html",
+    "maplemoon_build_20260813/carob-story.html",
+    "maplemoon_build_20260813/shop.html",
+    "maplemoon_build_20260813/faq.html",
+    "maplemoon_build_20260813/stockists.html",
+    "maplemoon_build_20260813/pure-carob-bar.html",
+    "maplemoon_build_20260813/assets/design-system/mm-chrome.js",
+    "maplemoon_build_20260813/assets/design-system/mm-chrome.css",
+    "maplemoon_build_20260813/mock-cart.js",
+    "maplemoon_build_20260813/mock-cart.css",
+    "https://chromium.googlesource.com/chromium/src/+/refs/heads/main/chrome/common/pref_names.h#868",
+    "https://chromium.googlesource.com/chromium/src/+/ee29dd0c3875d017f69f0be001756602b8b8f1e9/chrome/browser/ui/zoom/chrome_zoom_level_prefs.cc#35",
+    "https://chromium.googlesource.com/chromium/src/+/938b37a6d2886bf8335fc7db792f1eb46c65b2ae/third_party/blink/common/page/page_zoom.cc#23"
+  ],
+  "files_changed": [
+    "maplemoon-website/_wip/evidence/native_200_zoom_audit_r2_20260814T180224",
+    "maplemoon-website/docs/orchestration/reviews/MAPLEMOON-NATIVE-200-ZOOM-AUDIT-R2-20260814T180224.md",
+    "maplemoon-website/docs/orchestration/reviews/MAPLEMOON-NATIVE-200-ZOOM-AUDIT-R2-20260814T180224.json"
+  ],
+  "pre_sha256": {
+    "maplemoon-website/_wip/evidence/native_200_zoom_audit_r2_20260814T180224": null,
+    "maplemoon-website/docs/orchestration/reviews/MAPLEMOON-NATIVE-200-ZOOM-AUDIT-R2-20260814T180224.md": null,
+    "maplemoon-website/docs/orchestration/reviews/MAPLEMOON-NATIVE-200-ZOOM-AUDIT-R2-20260814T180224.json": null
+  },
+  "post_sha256": {
+    "maplemoon-website/_wip/evidence/native_200_zoom_audit_r2_20260814T180224": "b842d71dc735c5c3cee8fd1a9a9f3e698ddbdd6c11da27503efcdd732d99b30c",
+    "maplemoon-website/docs/orchestration/reviews/MAPLEMOON-NATIVE-200-ZOOM-AUDIT-R2-20260814T180224.md": "01173ba097490c2b3fa2902c1252e1ef2db61d3e1cef92845e5dde14e3b8c8fc",
+    "maplemoon-website/docs/orchestration/reviews/MAPLEMOON-NATIVE-200-ZOOM-AUDIT-R2-20260814T180224.json": null
+  },
+  "checks": [
+    {
+      "command": "python3 -B scripts/check-maplemoon-receipt.py checkpoint --root /Users/handtomouse --packet maplemoon-website/docs/orchestration/packets/MAPLEMOON-NATIVE-200-ZOOM-AUDIT-R2-20260814T180224.md --destination maplemoon-website/_wip/checkpoints/MAPLEMOON-NATIVE-200-ZOOM-AUDIT-R2-20260814T180224_20260814_180224_AEST; phase-start verify",
+      "exit_code": 0,
+      "result": "PASS checkpoint packet=MAPLEMOON-NATIVE-200-ZOOM-AUDIT-R2-20260814T180224 files=3 path=_wip/checkpoints/MAPLEMOON-NATIVE-200-ZOOM-AUDIT-R2-20260814T180224_20260814_180224_AEST; PASS packet=MAPLEMOON-NATIVE-200-ZOOM-AUDIT-R2-20260814T180224 phase=start scope=3"
+    },
+    {
+      "command": "verify Chromium primary-source preference name, default-partition key derivation, HostZoomMap initialization and pow(1.2, zoom_level) conversion",
+      "exit_code": 0,
+      "result": "PASS partition.default_zoom_level.x; exact zoom levels 0, 3.069389038663465, 3.8017840169239308; primary source excerpts and URLs preserved"
+    },
+    {
+      "command": "launch three isolated headed Chrome profiles at identical outer bounds and quantify native 100/175/200 percent controls",
+      "exit_code": 0,
+      "result": "PASS bounds=1200x900 all; DPR=2/3.5/4; innerWidth=1200/685/600; DPR ratios=1/1.75/2; inverse CSS width ratios=1/1.7518248175/2; visualViewport.scale=1 all; CSS zoom=1 all; 175 rejected and 200 passed"
+    },
+    {
+      "command": "native 200 percent effective-width proof at 390 and 720",
+      "exit_code": 0,
+      "result": "PASS effective390 outer=780 innerWidth=clientWidth=scrollWidth=390 DPR=4; effective720 outer=1440 innerWidth=clientWidth=scrollWidth=720 DPR=4; visualViewport.scale=1 and CSS zoom=1 both"
+    },
+    {
+      "command": "full seven-route native-200 HTTP, width, paint, authored-image, request/runtime and fixed-header matrix at effective 390 and 720",
+      "exit_code": 0,
+      "result": "R2_BROWSER PASS_PENDING_VISUAL_INSPECTION native_controls=3/3 routes=14/14 interactions=7/7; mechanical route matrix PASS 14/14"
+    },
+    {
+      "command": "seven-route effective-390 drawer, reduced-motion and cart interaction matrix plus Shop exact-option/integer/storage checks",
+      "exit_code": 0,
+      "result": "PASS interactions=7/7; six 44px rows and paint-order ownership on every route; cart inert/pointer/focus/close/balance controls passed; Shop 5 moons at 1219 cents persisted quantity 3 and subtotal $36.57"
+    },
+    {
+      "command": "record CDP method log and reject Emulation.*, Input.*, OS/UI input, focus and user-browser actions",
+      "exit_code": 0,
+      "result": "PASS forbidden CDP methods=[]; os_or_ui_input_events=0; user_browser_actions=0"
+    },
+    {
+      "command": "capture and visually inspect 14 whole-page, 42 no-clip viewport and two representative state screenshots",
+      "exit_code": 0,
+      "result": "PASS screenshots=58 nonblank; visual cases=14/14; viewport physical widths=1560 at effective390 and 2880 at effective720; no clipped text, authored overlap, lost content, unreadable notices or off-canvas UI"
+    },
+    {
+      "command": "verify pinned candidate, predecessor HOLD, integrated-certification and certified-preview hashes at acquisition and close",
+      "exit_code": 0,
+      "result": "PASS hashes=15/15 at acquisition and close; predecessor evidence files=6 sha256=1e26fd6e03c64ae5073780380b8ca495780e75b07f697cf32cfe585cae235c42"
+    },
+    {
+      "command": "close exact task-local Chrome/server PIDs and verify exact ports closed",
+      "exit_code": 0,
+      "result": "PASS closed Chrome PIDs 94567,94587,94603 and server PID 94566; ports 4422,9350,9351,9352 closed; no broad kill; task-local profiles preserved"
+    },
+    {
+      "command": "parse all evidence JSON and compute check-maplemoon-receipt.py-compatible evidence/review snapshots",
+      "exit_code": 0,
+      "result": "PASS JSON files=14; evidence files=99 sha256=b842d71dc735c5c3cee8fd1a9a9f3e698ddbdd6c11da27503efcdd732d99b30c; review sha256=01173ba097490c2b3fa2902c1252e1ef2db61d3e1cef92845e5dde14e3b8c8fc"
+    }
+  ],
+  "screenshots_or_urls": [
+    "maplemoon-website/_wip/evidence/native_200_zoom_audit_r2_20260814T180224/visual-overview-390.png",
+    "maplemoon-website/_wip/evidence/native_200_zoom_audit_r2_20260814T180224/visual-overview-720.png",
+    "maplemoon-website/_wip/evidence/native_200_zoom_audit_r2_20260814T180224/visual-segments-390.png",
+    "maplemoon-website/_wip/evidence/native_200_zoom_audit_r2_20260814T180224/visual-segments-720.png",
+    "maplemoon-website/_wip/evidence/native_200_zoom_audit_r2_20260814T180224/visual-open-states.png",
+    "maplemoon-website/_wip/evidence/native_200_zoom_audit_r2_20260814T180224/screenshots/390-faq-full.png",
+    "maplemoon-website/_wip/evidence/native_200_zoom_audit_r2_20260814T180224/screenshots/720-pure-carob-bar-full.png"
+  ],
+  "failures": [],
+  "unknowns": [],
+  "residual_risk": [],
+  "forbidden_path_changes": [],
+  "proposed_next_state": "accepted",
+  "next_reviewer": "MapleMoon BOSS to preserve R2 as native-zoom evidence and retain the first audit as the correct safe HOLD predecessor"
+}

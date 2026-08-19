@@ -1,0 +1,99 @@
+{
+  "source": {
+    "review": "file:///Users/handtomouse/maplemoon-website/_wip/evidence/founder73_pair_hero_feasibility_20260816/review.html"
+  },
+  "results": [
+    {
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "metrics": {
+        "clientWidth": 390,
+        "scrollWidth": 390,
+        "bodyHeight": 1524,
+        "specimens": [
+          {
+            "id": "current",
+            "naturalWidth": 1400,
+            "naturalHeight": 933,
+            "complete": true,
+            "frameWidth": 352,
+            "frameHeight": 234.65625,
+            "naturalRatio": 1.5005359056806002,
+            "frameRatio": 1.5000665867625516,
+            "cropAxis": "none",
+            "retainedFraction": 1
+          },
+          {
+            "id": "frame73",
+            "naturalWidth": 6000,
+            "naturalHeight": 4000,
+            "complete": true,
+            "frameWidth": 352,
+            "frameHeight": 234.65625,
+            "naturalRatio": 1.5,
+            "frameRatio": 1.5000665867625516,
+            "cropAxis": "none",
+            "retainedFraction": 1
+          }
+        ]
+      },
+      "telemetry": {
+        "console": [],
+        "page": [],
+        "request": []
+      },
+      "screenshot": "/Users/handtomouse/maplemoon-website/_wip/evidence/founder73_pair_hero_feasibility_20260816/comparison-390.png",
+      "failures": [],
+      "result": "PASS"
+    },
+    {
+      "viewport": {
+        "width": 1440,
+        "height": 1100
+      },
+      "metrics": {
+        "clientWidth": 1440,
+        "scrollWidth": 1440,
+        "bodyHeight": 1497,
+        "specimens": [
+          {
+            "id": "current",
+            "naturalWidth": 1400,
+            "naturalHeight": 933,
+            "complete": true,
+            "frameWidth": 739.875,
+            "frameHeight": 493.25,
+            "naturalRatio": 1.5005359056806002,
+            "frameRatio": 1.5,
+            "cropAxis": "none",
+            "retainedFraction": 1
+          },
+          {
+            "id": "frame73",
+            "naturalWidth": 6000,
+            "naturalHeight": 4000,
+            "complete": true,
+            "frameWidth": 739.875,
+            "frameHeight": 493.25,
+            "naturalRatio": 1.5,
+            "frameRatio": 1.5,
+            "cropAxis": "none",
+            "retainedFraction": 1
+          }
+        ]
+      },
+      "telemetry": {
+        "console": [],
+        "page": [],
+        "request": []
+      },
+      "screenshot": "/Users/handtomouse/maplemoon-website/_wip/evidence/founder73_pair_hero_feasibility_20260816/comparison-1440.png",
+      "failures": [],
+      "result": "PASS"
+    }
+  ],
+  "failures": [],
+  "result": "PASS"
+}

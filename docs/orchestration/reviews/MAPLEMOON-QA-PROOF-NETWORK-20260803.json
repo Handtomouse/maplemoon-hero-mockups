@@ -1,0 +1,64 @@
+{
+  "schema": "maplemoon-receipt/v2",
+  "receipt_id": "MAPLEMOON-QA-PROOF-NETWORK-20260803-RECEIPT-01",
+  "packet_id": "MAPLEMOON-QA-PROOF-NETWORK-20260803",
+  "worker_thread_id": "019fc349-4c3f-7f00-9202-e8de389db3d4",
+  "worker": "bounded isolated request-level network proof worker",
+  "started_at": "2026-08-02T16:24:26Z",
+  "completed_at": "2026-08-02T16:27:54Z",
+  "files_read": [
+    "docs/orchestration/packets/MAPLEMOON-QA-PROOF-NETWORK-20260803.md",
+    "docs/orchestration/SIDECHAT_RECEIPT_GATE.md",
+    "scripts/check-maplemoon-receipt.py",
+    "_wip/checkpoints/MAPLEMOON-QA-PROOF-NETWORK-20260803_20260803_022416_AEST/RECOVERY_MANIFEST.json",
+    "docs/client-review/2026-08-01-saturday-review/staging-v1/MANIFEST.json",
+    "docs/client-review/2026-08-01-saturday-review/staging-v1/clean/MANIFEST.json"
+  ],
+  "files_changed": [
+    "_wip/reviews/maplemoon-six-page-qa-20260803/proof-network",
+    "docs/orchestration/reviews/MAPLEMOON-QA-PROOF-NETWORK-20260803.json"
+  ],
+  "pre_sha256": {
+    "_wip/reviews/maplemoon-six-page-qa-20260803/proof-network": null,
+    "docs/orchestration/reviews/MAPLEMOON-QA-PROOF-NETWORK-20260803.json": null
+  },
+  "post_sha256": {
+    "_wip/reviews/maplemoon-six-page-qa-20260803/proof-network": "db0543e0a3c50b417af3eddbf53e79b61d5fdd02a178d769484c2aa591367ad3",
+    "docs/orchestration/reviews/MAPLEMOON-QA-PROOF-NETWORK-20260803.json": null
+  },
+  "checks": [
+    {
+      "command": "python3 -B scripts/check-maplemoon-receipt.py verify --packet docs/orchestration/packets/MAPLEMOON-QA-PROOF-NETWORK-20260803.md --checkpoint _wip/checkpoints/MAPLEMOON-QA-PROOF-NETWORK-20260803_20260803_022416_AEST --phase start",
+      "exit_code": 0,
+      "result": "PASS packet=MAPLEMOON-QA-PROOF-NETWORK-20260803 phase=start scope=2"
+    },
+    {
+      "command": "git branch --show-current; git rev-parse HEAD; git merge-base --is-ancestor PACKET_HEAD HEAD",
+      "exit_code": 0,
+      "result": "HOLD: branch matched, but packet HEAD 42d462ac4234ec2694f2eb256e6d80d13cd0bb0b did not equal observed HEAD a4b2efa6319c65156c9fa5b0faf1fe9902addb73. The packet HEAD is an ancestor of observed HEAD."
+    },
+    {
+      "command": "shasum -a 256 docs/client-review/2026-08-01-saturday-review/staging-v1/MANIFEST.json docs/client-review/2026-08-01-saturday-review/staging-v1/clean/MANIFEST.json",
+      "exit_code": 0,
+      "result": "PASS: package and clean manifest hashes exactly matched the packet."
+    },
+    {
+      "command": "python3 -B -m json.tool _wip/reviews/maplemoon-six-page-qa-20260803/proof-network/request-ledger.json",
+      "exit_code": 0,
+      "result": "PASS: HOLD ledger parsed and explicitly records that browser capture was not started."
+    }
+  ],
+  "screenshots_or_urls": [],
+  "failures": [
+    "Packet HEAD drifted from 42d462ac4234ec2694f2eb256e6d80d13cd0bb0b to a4b2efa6319c65156c9fa5b0faf1fe9902addb73, triggering the packet's mandatory pre-browser stop condition."
+  ],
+  "unknowns": [
+    "Actual request and response events, methods, resource types, destinations, status codes and failures remain unproven for all six routes because no browser session was started."
+  ],
+  "residual_risk": [
+    "A ledger captured against the unadmitted current HEAD could be misattributed to the exact frozen package."
+  ],
+  "forbidden_path_changes": [],
+  "proposed_next_state": "hold",
+  "next_reviewer": "Main independent verifier"
+}

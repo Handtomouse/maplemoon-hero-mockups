@@ -1,0 +1,133 @@
+{
+  "schema": "maplemoon-integrated-cart-inert-probe/v1",
+  "generatedAt": "2026-08-14T06:05:20.390Z",
+  "route": "/shop.html?cart-qa=1",
+  "viewport": {
+    "width": 390,
+    "height": 844,
+    "deviceScaleFactor": 1
+  },
+  "http": 200,
+  "agentBrowser": {
+    "available": false,
+    "fallback": "Bundled Playwright with system Google Chrome"
+  },
+  "quickVerification": {
+    "bodyTextLength": 5636,
+    "title": "Shop the Range | Maple Moon",
+    "errorOverlay": false,
+    "keyElements": {
+      "header": true,
+      "shopCards": 24,
+      "cartDialog": true
+    }
+  },
+  "runtime": {
+    "errors": [],
+    "failedRequests": [],
+    "badResponses": []
+  },
+  "opened": {
+    "dialog": {
+      "role": "dialog",
+      "ariaModal": "true",
+      "ariaHidden": "false",
+      "inertAttribute": false,
+      "openClass": true
+    },
+    "beforeProgrammaticFocus": "Close cart",
+    "activeAfterProgrammaticFocus": "Open menu",
+    "programmaticFocusEscaped": true,
+    "backgroundTarget": {
+      "tag": "button",
+      "text": "Menu",
+      "href": null,
+      "inertSelf": false,
+      "inertAncestor": false
+    },
+    "outsideBranches": [
+      {
+        "tag": "div",
+        "id": "",
+        "className": "sp",
+        "inertAttribute": false,
+        "inertProperty": false
+      },
+      {
+        "tag": "script",
+        "id": "",
+        "className": "",
+        "inertAttribute": false,
+        "inertProperty": false
+      },
+      {
+        "tag": "style",
+        "id": "",
+        "className": "",
+        "inertAttribute": false,
+        "inertProperty": false
+      },
+      {
+        "tag": "script",
+        "id": "",
+        "className": "",
+        "inertAttribute": false,
+        "inertProperty": false
+      },
+      {
+        "tag": "aside",
+        "id": "",
+        "className": "mm-cart-qa-bar mm-cart-qa-only",
+        "inertAttribute": false,
+        "inertProperty": false
+      },
+      {
+        "tag": "div",
+        "id": "",
+        "className": "mm-cart-sr-only",
+        "inertAttribute": false,
+        "inertProperty": false
+      },
+      {
+        "tag": "style",
+        "id": "mm-catdock-20260814",
+        "className": "",
+        "inertAttribute": false,
+        "inertProperty": false
+      }
+    ],
+    "outsideInertCount": 0,
+    "outsideCount": 7,
+    "buttons": [
+      {
+        "label": "Close cart",
+        "width": 44,
+        "height": 44
+      },
+      {
+        "label": "Continue to checkout",
+        "width": 346,
+        "height": 44
+      },
+      {
+        "label": "Continue shopping",
+        "width": 346,
+        "height": 44
+      }
+    ],
+    "controls44Pass": true,
+    "overflow": {
+      "clientWidth": 390,
+      "scrollWidth": 390,
+      "dialogClientWidth": 390,
+      "dialogScrollWidth": 390
+    }
+  },
+  "closeControls": {
+    "overlayReturn": true,
+    "initialFocus": "Close cart",
+    "escapeReturn": true
+  },
+  "requiredInertBackgroundPass": false,
+  "outcome": "FAIL_REQUIRED_INERT_BACKGROUND"
+}

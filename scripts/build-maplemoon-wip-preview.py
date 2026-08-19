@@ -1,13 +1,16 @@
 #!/usr/bin/env python3
-"""Build a deploy-safe preview from the six current MapleMoon WIP pages.
+"""Build a deploy-safe preview from the current MapleMoon seven-route candidate.
 
-The output is intentionally a self-contained static directory. It never copies
-the repository root, `_wip`, project-local evidence, or a Vercel project link.
+The candidate combines six current WIP pages with the separately certified Pure
+Carob product page. The output is intentionally a self-contained static
+directory. It never copies the repository root, `_wip`, project-local evidence,
+or a Vercel project link.
 """
 
 from __future__ import annotations
 
 import argparse
+import hashlib
 import json
 import re
 import shutil
@@ -28,6 +31,13 @@ PAGE_SOURCES = {
     "stockists.html": REPO / "_wip/stockists.WIP.html",
 }
 
+PINNED_PAGE_SOURCES = {
+    "products/pure-carob-bar.html": (
+        Path("/Users/handtomouse/maplemoon_build_20260813/pure-carob-bar.html"),
+        "015cde27ecc60f3c444820a551c39f6e9c985fc5b2e59bdaea5f496c1c236b65",
+    ),
+}
+
 ROUTE_REPLACEMENTS = {
     "homepage_real_1_lead_photo.WIP.html": "homepage",
     "shop.WIP.html": "shop",
@@ -37,12 +47,57 @@ ROUTE_REPLACEMENTS = {
     "stockists.WIP.html": "stockists",
 }
 
+CLEAN_ROUTE_REPLACEMENTS = {
+    '"/homepage.html#carob': '"/carob-story',
+    "'/homepage.html#carob": "'/carob-story",
+    '"/homepage.html': '"/homepage',
+    "'/homepage.html": "'/homepage",
+    '"/shop.html': '"/shop',
+    "'/shop.html": "'/shop",
+    '"/our-story.html': '"/our-story',
+    "'/our-story.html": "'/our-story",
+    '"/carob-story.html': '"/carob-story',
+    "'/carob-story.html": "'/carob-story",
+    '"/faq.html': '"/faq',
+    "'/faq.html": "'/faq",
+    '"/stockists.html': '"/stockists',
+    "'/stockists.html": "'/stockists",
+}
+
+HOMEPAGE_PURE_TARGET = "url:'products/pure-carob-bar.html'"
+HOMEPAGE_PURE_TARGET_CLEAN = "url:'/products/pure-carob-bar'"
+HOMEPAGE_SHOP_NOW_SEAM = """  if(pdpAdd)pdpAdd.addEventListener('click',function(){
+    var state=PRICE_STATE[currentCat]||{priced:false};
+    if(state.priced){
+      window.location.href=shopTarget(currentCat);
+      return;
+    }
+    var item=data[center];"""
+HOMEPAGE_SHOP_NOW_WITH_PRODUCT = """  if(pdpAdd)pdpAdd.addEventListener('click',function(){
+    var state=PRICE_STATE[currentCat]||{priced:false};
+    var item=data[center];
+    if(state.priced){
+      window.location.href=(item&&item.url)||shopTarget(currentCat);
+      return;
+    }"""
+
 SUPPORT_FILES = {
     "brand_kit.css": REPO / "brand_kit.css",
     "a11y_inner.css": REPO / "_wip/a11y_inner.css",
     "design_refinement_20260723.css": REPO
     / "_wip/design_refinement_20260723.css",
     "styles/homepage.css": REPO / "_wip/styles/homepage.css",
+}
+
+PINNED_SUPPORT_FILES = {
+    "mock-cart.js": (
+        Path("/Users/handtomouse/maplemoon_build_20260813/mock-cart.js"),
+        "36fb46b05a46ecf1c770991c6b9cf2eb8c08fda361c7176d37df081668f123aa",
+    ),
+    "mock-cart.css": (
+        Path("/Users/handtomouse/maplemoon_build_20260813/mock-cart.css"),
+        "c17deb1f972017d9790f2191360a457e54d7287730847f9f470c9de371603308",
+    ),
 }
 
 ASSET_RE = re.compile(
@@ -86,6 +141,8 @@ def transform_page(text: str) -> str:
     text = text.replace("/_wip/styles/homepage.css", "/styles/homepage.css")
     for source_name, route_name in ROUTE_REPLACEMENTS.items():
         text = text.replace(source_name, route_name)
+    for source_route, clean_route in CLEAN_ROUTE_REPLACEMENTS.items():
+        text = text.replace(source_route, clean_route)
     return text
 
 
@@ -110,6 +167,17 @@ def copy_file(source: Path, destination: Path) -> None:
     shutil.copy2(source, destination)
 
 
+def copy_pinned_file(source: Path, destination: Path, expected_sha256: str) -> None:
+    if not source.is_file():
+        raise BuildError(f"required pinned input is missing: {source}")
+    actual_sha256 = hashlib.sha256(source.read_bytes()).hexdigest()
+    if actual_sha256 != expected_sha256:
+        raise BuildError(
+            f"pinned input changed: {source} expected={expected_sha256} actual={actual_sha256}"
+        )
+    copy_file(source, destination)
+
+
 def build(output: Path) -> tuple[int, int]:
     output = checked_output(output)
     staging = output.with_name(f".{output.name}.building")
@@ -125,6 +193,21 @@ def build(output: Path) -> tuple[int, int]:
             if not source.is_file():
                 raise BuildError(f"page source is missing: {source}")
             page = transform_page(source.read_text(encoding="utf-8"))
+            if destination_name == "homepage.html":
+                if page.count(HOMEPAGE_PURE_TARGET) != 1:
+                    raise BuildError(
+                        "Homepage Pure product target seam was not found exactly once"
+                    )
+                page = page.replace(
+                    HOMEPAGE_PURE_TARGET, HOMEPAGE_PURE_TARGET_CLEAN
+                )
+                if page.count(HOMEPAGE_SHOP_NOW_SEAM) != 1:
+                    raise BuildError(
+                        "Homepage Shop Now navigation seam was not found exactly once"
+                    )
+                page = page.replace(
+                    HOMEPAGE_SHOP_NOW_SEAM, HOMEPAGE_SHOP_NOW_WITH_PRODUCT
+                )
             if ".WIP.html" in page:
                 raise BuildError(f"unrewritten WIP route remains in {source}")
             if re.search(r"(?:href|src)\s*=\s*['\"]/_wip/", page, re.I):
@@ -132,8 +215,47 @@ def build(output: Path) -> tuple[int, int]:
             transformed[destination_name] = page
             (staging / destination_name).write_text(page, encoding="utf-8")
 
+        for destination_name, (source, expected_sha256) in PINNED_PAGE_SOURCES.items():
+            if not source.is_file():
+                raise BuildError(f"pinned page source is missing: {source}")
+            actual_sha256 = hashlib.sha256(source.read_bytes()).hexdigest()
+            if actual_sha256 != expected_sha256:
+                raise BuildError(
+                    f"pinned page changed: {source} expected={expected_sha256} "
+                    f"actual={actual_sha256}"
+                )
+            page = transform_page(source.read_text(encoding="utf-8"))
+            if re.search(r"(?:href|src)\s*=\s*['\"]/_wip/", page, re.I):
+                raise BuildError(f"internal WIP URL remains in {source}")
+            transformed[destination_name] = page
+            destination = staging / destination_name
+            destination.parent.mkdir(parents=True, exist_ok=True)
+            destination.write_text(page, encoding="utf-8")
+
         for destination_name, source in SUPPORT_FILES.items():
             copy_file(source, staging / destination_name)
+
+        for destination_name, (source, expected_sha256) in PINNED_SUPPORT_FILES.items():
+            copy_pinned_file(source, staging / destination_name, expected_sha256)
+
+        cart_runtime = staging / "mock-cart.js"
+        cart_text = cart_runtime.read_text(encoding="utf-8")
+        route_leaf = (
+            'return new URL(normalizeHref(rawHref), window.location.href).pathname\n'
+            '        .split("/")\n'
+            '        .pop();'
+        )
+        route_leaf_normalized = (
+            'const leaf = new URL(normalizeHref(rawHref), window.location.href).pathname\n'
+            '        .split("/")\n'
+            '        .pop();\n'
+            '      return leaf && !leaf.endsWith(".html") ? `${leaf}.html` : leaf;'
+        )
+        if cart_text.count(route_leaf) != 1:
+            raise BuildError("certified cart route normalizer seam was not found exactly once")
+        cart_runtime.write_text(
+            cart_text.replace(route_leaf, route_leaf_normalized), encoding="utf-8"
+        )
 
         assets = referenced_assets(list(transformed.values()))
         for relative in sorted(assets):
@@ -178,7 +300,7 @@ def main() -> int:
         return 1
     print(
         f"BUILD PASS output={args.output.resolve()} files={file_count} bytes={byte_count} "
-        "pages=6 private_dirs=0 vercel_project_link=0"
+        "pages=7 private_dirs=0 vercel_project_link=0"
     )
     return 0
 

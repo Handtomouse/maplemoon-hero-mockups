@@ -1,0 +1,15 @@
+COMMAND
+python3 -B scripts/build-maplemoon-minimum-release-content-r4.py --output _wip/deploy/generated/maplemoon-minimum-release-content-r4-20260817T190059
+
+RESULT
+exit 1; no exact output directory created.
+
+ERROR
+Candidate validation counted one mock-cart comment, five unused placeholder CSS
+selectors and three free-shipping occurrences including metadata as if they were
+live controls/elements.
+
+CLASSIFICATION
+Verifier-only layer-selection error. Assertions are now scoped to reachable
+href/src references, rendered placeholder divs and the one exact visible Shop
+shipping block. No required value was weakened.

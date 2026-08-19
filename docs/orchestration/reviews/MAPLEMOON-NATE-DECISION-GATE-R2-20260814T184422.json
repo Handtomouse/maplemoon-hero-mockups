@@ -1,0 +1,93 @@
+{
+  "schema": "maplemoon-receipt/v2",
+  "receipt_id": "MAPLEMOON-NATE-DECISION-GATE-R2-20260814T184422-RECEIPT-001",
+  "packet_id": "MAPLEMOON-NATE-DECISION-GATE-R2-20260814T184422",
+  "worker_thread_id": "/root/dedup_risk_audit",
+  "worker": "Codex Nate-decision control-plane recorder",
+  "started_at": "2026-08-14T18:45:52+10:00",
+  "completed_at": "2026-08-14T18:55:00+10:00",
+  "outcome": "PASS_DECISION_SHEET_READY_D01_D06_D07_D09_WAIT",
+  "confidence": "high",
+  "checkpoint_path": "maplemoon-website/_wip/checkpoints/MAPLEMOON-NATE-DECISION-GATE-R2-20260814T184422_20260814_184422_AEST",
+  "files_read": [
+    "maplemoon-website/docs/orchestration/packets/MAPLEMOON-NATE-DECISION-GATE-R2-20260814T184422.md",
+    "maplemoon-website/docs/orchestration/reviews/MAPLEMOON-CONTENT-CATALOGUE-TRUTH-AUDIT-R2-20260814T164221.md",
+    "maplemoon-website/docs/orchestration/reviews/MAPLEMOON-CONTENT-CATALOGUE-TRUTH-AUDIT-R2-20260814T164221.json",
+    "maplemoon-website/docs/orchestration/reviews/MAPLEMOON-ASSET-AUTHORITY-ADDENDUM-R2-20260814T172612.md",
+    "maplemoon-website/docs/orchestration/reviews/MAPLEMOON-ASSET-AUTHORITY-ADDENDUM-R2-20260814T172612.json",
+    "maplemoon-website/docs/orchestration/reviews/MAPLEMOON-NATIVE-200-ZOOM-AUDIT-R2-20260814T180224.md",
+    "maplemoon-website/docs/orchestration/reviews/MAPLEMOON-NATIVE-200-ZOOM-AUDIT-R2-20260814T180224.json",
+    "maplemoon-website/docs/orchestration/reviews/MAPLEMOON-STYLES-KIT-V017-BOSS-INTAKE-20260814T171205.md",
+    "maplemoon-website/docs/orchestration/reviews/MAPLEMOON-STYLES-KIT-V017-BOSS-INTAKE-20260814T171205.json",
+    "maplemoon_build_20260813/homepage.html",
+    "maplemoon_build_20260813/our-story.html",
+    "maplemoon_build_20260813/carob-story.html",
+    "maplemoon_build_20260813/shop.html",
+    "maplemoon_build_20260813/faq.html",
+    "maplemoon_build_20260813/stockists.html",
+    "maplemoon_build_20260813/pure-carob-bar.html",
+    "maplemoon-website/scripts/check-maplemoon-receipt.py"
+  ],
+  "files_changed": [
+    "maplemoon-website/docs/orchestration/reviews/MAPLEMOON-NATE-DECISION-GATE-R2-20260814T184422.md",
+    "maplemoon-website/docs/orchestration/reviews/MAPLEMOON-NATE-DECISION-GATE-R2-20260814T184422.json"
+  ],
+  "pre_sha256": {
+    "maplemoon-website/docs/orchestration/reviews/MAPLEMOON-NATE-DECISION-GATE-R2-20260814T184422.md": null,
+    "maplemoon-website/docs/orchestration/reviews/MAPLEMOON-NATE-DECISION-GATE-R2-20260814T184422.json": null
+  },
+  "post_sha256": {
+    "maplemoon-website/docs/orchestration/reviews/MAPLEMOON-NATE-DECISION-GATE-R2-20260814T184422.md": "87b7ab4fa3e189e9ddbb7346d4c0c83914ffbedf191640e5c25b7f9669d0a56b",
+    "maplemoon-website/docs/orchestration/reviews/MAPLEMOON-NATE-DECISION-GATE-R2-20260814T184422.json": null
+  },
+  "checks": [
+    {
+      "command": "python3 -B scripts/check-maplemoon-receipt.py verify --root /Users/handtomouse --packet docs/orchestration/packets/MAPLEMOON-NATE-DECISION-GATE-R2-20260814T184422.md --checkpoint /Users/handtomouse/maplemoon-website/_wip/checkpoints/MAPLEMOON-NATE-DECISION-GATE-R2-20260814T184422_20260814_184422_AEST --phase start",
+      "exit_code": 0,
+      "result": "PASS packet=MAPLEMOON-NATE-DECISION-GATE-R2-20260814T184422 phase=start scope=2"
+    },
+    {
+      "command": "shasum -a 256 [eight packet-pinned review/receipt records] at acquisition and close",
+      "exit_code": 0,
+      "result": "PASS hashes 8/8: content=eee350fd321947cf5966818636cc68b6828ce6574a6d49c03f573ef360d70060 content_receipt=e18c11272f7b183e88e45d58ac2aca2db68ce9d28046bcc9fe70e39fdfc8d8a8 asset_r2=c1466768f82a8938acd6bbdf6d7ec33100b1326920f5d5669d260adeb52ed508 asset_receipt=a81987e8d976e9bfe436d9a28ece38b7a04484e18c11c3e811080df541c64780 native_r2=01173ba097490c2b3fa2902c1252e1ef2db61d3e1cef92845e5dde14e3b8c8fc native_receipt=2ce32f493fce151f91a8f7750f1141a99bea70167254cd081e9c080874ab87d5 styles_v017=2e5ac9d60c3b84dc1be5ec14b9bd658971ec0b9e8a6b47f349e9da088c01022b styles_receipt=02930940a11dc5eab0dc4205dd6892126faca3cc955b23e246a40b6ef680934a"
+    },
+    {
+      "command": "replay applicable completion and promotion gates for the four pinned predecessor packets",
+      "exit_code": 0,
+      "result": "PASS packet=MAPLEMOON-CONTENT-CATALOGUE-TRUTH-AUDIT-R2-20260814T164221 phase=complete changed=3; PASS packet=MAPLEMOON-CONTENT-CATALOGUE-TRUTH-AUDIT-R2-20260814T164221 phase=promote changed=3; PASS packet=MAPLEMOON-ASSET-AUTHORITY-ADDENDUM-R2-20260814T172612 phase=complete changed=2; PASS packet=MAPLEMOON-ASSET-AUTHORITY-ADDENDUM-R2-20260814T172612 phase=promote changed=2; PASS packet=MAPLEMOON-NATIVE-200-ZOOM-AUDIT-R2-20260814T180224 phase=complete changed=3; PASS packet=MAPLEMOON-NATIVE-200-ZOOM-AUDIT-R2-20260814T180224 phase=promote changed=3; PASS packet=MAPLEMOON-STYLES-KIT-V017-BOSS-INTAKE-20260814T171205 phase=complete changed=3; PASS packet=MAPLEMOON-STYLES-KIT-V017-BOSS-INTAKE-20260814T171205 phase=promote changed=3"
+    },
+    {
+      "command": "shasum -a 256 /Users/handtomouse/maplemoon_build_20260813/{homepage,our-story,carob-story,shop,faq,stockists,pure-carob-bar}.html at acquisition and close",
+      "exit_code": 0,
+      "result": "PASS unchanged candidate hashes 7/7: homepage=27921b2a466ccb670b2851a73043429763d3423bcaf651069e4e860dc01a78b1 our-story=2db31868a9791f373f156e7cdeb8261e494d1d47e9418a94c28156e213df7711 carob-story=4fd9ad0fabb9d60d0f391925f5a382ccfc8f705b60fca1c681f403a5cd9734bd shop=f111ad5123e34dadd46ac497fca286066efc67c05dd7e68f0d3e70c97c735038 faq=c5ce7aaf0b9b3221f34eb2928fc2ff6732fc1a915ea80144a4ade2b94011fb6e stockists=4821adfe88680d4f174b7a8700c8d8a65594df2901bf3a7109d51b09040cb887 pure-carob-bar=015cde27ecc60f3c444820a551c39f6e9c985fc5b2e59bdaea5f496c1c236b65"
+    },
+    {
+      "command": "deterministic decision-sheet content validation",
+      "exit_code": 0,
+      "result": "DECISION_SHEET_CONTENT=PASS checks=17/17 photo_36_count=1; D01-D06 all include choices, explicit RECOMMENDED label, impact and later file scope; D07-D09 are WAIT gates; exact FAQ boundary, CV unmapped state, both elixir SHA-256 values, production token and all seven candidate hashes are present; 80 percent is absent"
+    },
+    {
+      "command": "draft literal-label correction audit",
+      "exit_code": 0,
+      "result": "RESOLVED: initial draft validation was 16/17 because the D06 conservative recommendation was not literally labelled RECOMMENDED; only the D06 label was corrected, and the final validation passed 17/17"
+    }
+  ],
+  "screenshots_or_urls": [],
+  "failures": [],
+  "unknowns": [
+    "The pinned records do not map CV-014, CV-051 or CV-062 to current candidate occurrences; all remain WAIT FOR OCCURRENCE MAP.",
+    "The public stockist source owner and refresh cadence are not yet named; D03 recommends nonnumeric wording until they are.",
+    "Nate has not yet selected D01 through D06; this receipt records the decision surface, not a decision."
+  ],
+  "residual_risk": [
+    "D07 exact founder and product media dependencies remain held outside the already approved powder binding and the two exact D06 elixir decisions.",
+    "D08 remains held until the active Styles Kit v0.2.0 owner task closes and a fresh independent Claude result contains literal PASS and Safe to feed intended Codex Boss: YES.",
+    "D09 production movement remains a separate explicit Nate instruction after admitted corrections, integrated QA and a new protected private preview.",
+    "The only photography-completion figure used is 5 wired hero files divided by 14 eligible V9 frames, or 36 percent."
+  ],
+  "forbidden_path_changes": [],
+  "proposed_next_state": "decision_sheet_ready_d01_d06_d07_d09_wait",
+  "next_reviewer": "MapleMoon BOSS, then Nate for D01 through D06 only; D07 through D09 remain dependency/release gates",
+  "ready_to_promote": true,
+  "promotion_boundary": "Durable control-plane decision documentation only; no choice is made and no candidate, asset, Styles Kit, deployment, production or client action is authorized."
+}

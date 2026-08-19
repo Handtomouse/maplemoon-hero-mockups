@@ -1,0 +1,11 @@
+{
+  "deployed_at": "2026-08-14T15:02:16+10:00",
+  "command": "vercel deploy --yes",
+  "command_exit_code": 0,
+  "deployment_id": "dpl_6gGEYQfUuXZPYGLaasVDEo9KZrQD",
+  "url": "https://maplemoonbuild20260813-krftm36lg-handtomouses-projects.vercel.app",
+  "target": "preview",
+  "status": "Ready",
+  "protection_changed": false,
+  "production_action": false
+}

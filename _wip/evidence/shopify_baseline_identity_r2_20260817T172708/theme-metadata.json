@@ -1,0 +1,19 @@
+{
+  "store": "maplemooncarob.myshopify.com",
+  "theme_id": 154500595909,
+  "admin_name": "Ethereal",
+  "admin_role": "live",
+  "theme_family": "Etheryx",
+  "theme_version": "1.4.0",
+  "theme_author": "OpenThinking",
+  "theme_documentation_url": "https://docs.openthinking.net/themes/etheryx/",
+  "theme_support_url": "https://openthinking.net/support/",
+  "installed_preset_name": "Ethereal",
+  "identity_verdict": "RESOLVED",
+  "current_update_availability": "UNKNOWN_CLI_NOT_EXPOSED",
+  "historical_available_version_observation": "1.6.0",
+  "storefront_protection": "PASSWORD_PROTECTED",
+  "recovery_file_count": 246,
+  "recovery_bytes": 2866869,
+  "recovery_tree_sha256": "6f94b20a498fa0db7d3d4f602a04a783809689e75f95dbf234f802e8ec9c5dee"
+}

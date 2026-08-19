@@ -1,0 +1,98 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "type": "footer",
+  "name": "Footer",
+  "sections": {
+    "footer": {
+      "type": "footer",
+      "blocks": {
+        "image_xwceyr": {
+          "type": "image",
+          "settings": {
+            "imageSize": 155,
+            "alignment": "left",
+            "span": "1",
+            "spanMobile": "4"
+          }
+        },
+        "text_LigrpP": {
+          "type": "text",
+          "settings": {
+            "alignment": "left",
+            "span": "2",
+            "spanMobile": "8"
+          }
+        },
+        "menu": {
+          "type": "menu",
+          "settings": {
+            "menu": "footer",
+            "span": "3",
+            "alignment": "left",
+            "spanCell": "1",
+            "spanCellMobile": "8"
+          }
+        },
+        "socials_PpCxCK": {
+          "type": "socials",
+          "settings": {
+            "heading": "Follow",
+            "type": "icon",
+            "alignment": "left",
+            "span": "2",
+            "spanMobile": "8"
+          }
+        }
+      },
+      "block_order": [
+        "image_xwceyr",
+        "text_LigrpP",
+        "menu",
+        "socials_PpCxCK"
+      ],
+      "settings": {
+        "debug": true,
+        "marginTop": 5,
+        "marginBottom": 0,
+        "paddingTop": 0,
+        "paddingBottom": 0
+      }
+    },
+    "sub-footer": {
+      "type": "footer-bottom",
+      "blocks": {
+        "copyright": {
+          "type": "copyright",
+          "settings": {}
+        },
+        "policies": {
+          "type": "policies",
+          "disabled": true,
+          "settings": {}
+        },
+        "powered": {
+          "type": "powered",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "copyright",
+        "policies",
+        "powered"
+      ],
+      "settings": {}
+    }
+  },
+  "order": [
+    "footer",
+    "sub-footer"
+  ]
+}

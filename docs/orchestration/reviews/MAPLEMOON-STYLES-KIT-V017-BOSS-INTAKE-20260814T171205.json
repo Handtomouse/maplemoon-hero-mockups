@@ -1,0 +1,136 @@
+{
+  "schema": "maplemoon-receipt/v2",
+  "receipt_id": "MAPLEMOON-STYLES-KIT-V017-BOSS-INTAKE-20260814T171205-RECEIPT",
+  "packet_id": "MAPLEMOON-STYLES-KIT-V017-BOSS-INTAKE-20260814T171205",
+  "worker_thread_id": "/root/header_powder_update",
+  "worker": "Codex",
+  "started_at": "2026-08-14T07:14:23Z",
+  "completed_at": "2026-08-14T07:38:44Z",
+  "files_read": [
+    "maplemoon-website/docs/orchestration/packets/MAPLEMOON-STYLES-KIT-V017-BOSS-INTAKE-20260814T171205.md",
+    "Documents/Codex/2026-08-13/maple-moon-shared-site-styles-kit/outputs/CLAUDE-CHECK-TO-CODEX-BOSS-HANDOFF-20260814.md",
+    "Documents/Codex/2026-08-13/maple-moon-shared-site-styles-kit/outputs/README.md",
+    "Documents/Codex/2026-08-13/maple-moon-shared-site-styles-kit/outputs/STATUS.md",
+    "Documents/Codex/2026-08-13/maple-moon-shared-site-styles-kit/outputs/MAPLE-MOON-DESIGN-SYSTEM.md",
+    "Documents/Codex/2026-08-13/maple-moon-shared-site-styles-kit/outputs/DESIGN-TOKENS.json",
+    "Documents/Codex/2026-08-13/maple-moon-shared-site-styles-kit/outputs/maple-moon-tokens.css",
+    "Documents/Codex/2026-08-13/maple-moon-shared-site-styles-kit/outputs/COMPONENT-CONTRACTS.md",
+    "Documents/Codex/2026-08-13/maple-moon-shared-site-styles-kit/outputs/PAGE-ARCHETYPES.md",
+    "Documents/Codex/2026-08-13/maple-moon-shared-site-styles-kit/outputs/RESPONSIVE-ACCESSIBILITY.md",
+    "Documents/Codex/2026-08-13/maple-moon-shared-site-styles-kit/outputs/MEDIA-FOG-CROP-SPEC.md",
+    "Documents/Codex/2026-08-13/maple-moon-shared-site-styles-kit/outputs/CONTENT-SAFETY-AND-VOICE.md",
+    "Documents/Codex/2026-08-13/maple-moon-shared-site-styles-kit/outputs/AI-TEMPLATE-ANTI-PATTERNS.md",
+    "Documents/Codex/2026-08-13/maple-moon-shared-site-styles-kit/outputs/SHOPIFY-MAPPING.md",
+    "Documents/Codex/2026-08-13/maple-moon-shared-site-styles-kit/outputs/PAGE-COVERAGE-MATRIX.md",
+    "Documents/Codex/2026-08-13/maple-moon-shared-site-styles-kit/outputs/GOVERNANCE.md",
+    "Documents/Codex/2026-08-13/maple-moon-shared-site-styles-kit/outputs/CLAUDE-CODEX-INTAKE.md",
+    "Documents/Codex/2026-08-13/maple-moon-shared-site-styles-kit/outputs/AGENTS-SNIPPET.md",
+    "Documents/Codex/2026-08-13/maple-moon-shared-site-styles-kit/outputs/style-kit-playground.html",
+    "Documents/Codex/2026-08-13/maple-moon-shared-site-styles-kit/outputs/DECISIONS-NEEDED.md",
+    "Documents/Codex/2026-08-13/maple-moon-shared-site-styles-kit/outputs/CHANGELOG.md",
+    "Documents/Codex/2026-08-13/maple-moon-shared-site-styles-kit/outputs/SOURCE-REGISTER.md",
+    "Documents/Codex/2026-08-13/maple-moon-shared-site-styles-kit/outputs/ASSET-MANIFEST.json",
+    "Documents/Codex/2026-08-13/maple-moon-shared-site-styles-kit/outputs/playground.css",
+    "Documents/Codex/2026-08-13/maple-moon-shared-site-styles-kit/outputs/playground.js",
+    "Documents/Codex/2026-08-13/maple-moon-shared-site-styles-kit/outputs/VERIFICATION-RECEIPT.md",
+    "Documents/Codex/2026-08-13/maple-moon-shared-site-styles-kit/outputs/RULE-REGISTER.json",
+    "Documents/Codex/2026-08-13/maple-moon-shared-site-styles-kit/outputs/ALIGNMENT-AUDIT-20260813.md",
+    "Documents/Codex/2026-08-13/maple-moon-shared-site-styles-kit/outputs/COMPLETION-AUDIT.md",
+    "Documents/Codex/2026-08-13/maple-moon-shared-site-styles-kit/outputs/CLEANUP-AND-CUSTODY.md",
+    "Documents/Codex/2026-08-13/maple-moon-shared-site-styles-kit/outputs/CLEANUP-AUDIT-20260813.md",
+    "Documents/Codex/2026-08-13/maple-moon-shared-site-styles-kit/outputs/CLEANUP-CANDIDATES.json",
+    "Documents/Codex/2026-08-13/maple-moon-shared-site-styles-kit/outputs/verify-style-kit.mjs",
+    "maplemoon_build_20260813/homepage.html",
+    "maplemoon_build_20260813/our-story.html",
+    "maplemoon_build_20260813/carob-story.html",
+    "maplemoon_build_20260813/shop.html",
+    "maplemoon_build_20260813/faq.html",
+    "maplemoon_build_20260813/stockists.html",
+    "maplemoon_build_20260813/pure-carob-bar.html",
+    "maplemoon-website/docs/orchestration/reviews/MAPLEMOON-STYLES-KIT-BOSS-INTAKE-20260814T151331.md",
+    "maplemoon-website/scripts/check-maplemoon-receipt.py"
+  ],
+  "files_changed": [
+    "maplemoon-website/_wip/evidence/styles_kit_v017_boss_intake_20260814T171205",
+    "maplemoon-website/docs/orchestration/reviews/MAPLEMOON-STYLES-KIT-V017-BOSS-INTAKE-20260814T171205.md",
+    "maplemoon-website/docs/orchestration/reviews/MAPLEMOON-STYLES-KIT-V017-BOSS-INTAKE-20260814T171205.json"
+  ],
+  "pre_sha256": {
+    "maplemoon-website/_wip/evidence/styles_kit_v017_boss_intake_20260814T171205": null,
+    "maplemoon-website/docs/orchestration/reviews/MAPLEMOON-STYLES-KIT-V017-BOSS-INTAKE-20260814T171205.md": null,
+    "maplemoon-website/docs/orchestration/reviews/MAPLEMOON-STYLES-KIT-V017-BOSS-INTAKE-20260814T171205.json": null
+  },
+  "post_sha256": {
+    "maplemoon-website/_wip/evidence/styles_kit_v017_boss_intake_20260814T171205": "78e2e1dedd34f2e66dce17905704572fc8613b5158ec836c8d1134a282ecb261",
+    "maplemoon-website/docs/orchestration/reviews/MAPLEMOON-STYLES-KIT-V017-BOSS-INTAKE-20260814T171205.md": "2e5ac9d60c3b84dc1be5ec14b9bd658971ec0b9e8a6b47f349e9da088c01022b",
+    "maplemoon-website/docs/orchestration/reviews/MAPLEMOON-STYLES-KIT-V017-BOSS-INTAKE-20260814T171205.json": null
+  },
+  "checks": [
+    {
+      "command": "python3 scripts/check-maplemoon-receipt.py checkpoint --packet docs/orchestration/packets/MAPLEMOON-STYLES-KIT-V017-BOSS-INTAKE-20260814T171205.md --root /Users/handtomouse --destination _wip/checkpoints/MAPLEMOON-STYLES-KIT-V017-BOSS-INTAKE-20260814T171205_20260814_171417_AEST",
+      "exit_code": 0,
+      "result": "PASS checkpoint packet=MAPLEMOON-STYLES-KIT-V017-BOSS-INTAKE-20260814T171205 files=3"
+    },
+    {
+      "command": "python3 scripts/check-maplemoon-receipt.py verify --packet docs/orchestration/packets/MAPLEMOON-STYLES-KIT-V017-BOSS-INTAKE-20260814T171205.md --root /Users/handtomouse --checkpoint _wip/checkpoints/MAPLEMOON-STYLES-KIT-V017-BOSS-INTAKE-20260814T171205_20260814_171417_AEST --phase start",
+      "exit_code": 0,
+      "result": "PASS packet=MAPLEMOON-STYLES-KIT-V017-BOSS-INTAKE-20260814T171205 phase=start scope=3 before first output write"
+    },
+    {
+      "command": "node verify-style-kit.mjs",
+      "exit_code": 0,
+      "result": "PASS 30/30 required; 47/47 cleanup; 54 rules + 12 decisions; 59/59 tokens; 9/9 assets; 14/14 proofs; RESULT PASS"
+    },
+    {
+      "command": "node _wip/evidence/styles_kit_v017_boss_intake_20260814T171205/independent-package-audit.mjs",
+      "exit_code": 0,
+      "result": "30/30; 54 rules; 12 decisions; 59/59; 9/9; 14/14; links 0; JSON/JS/CSS parse PASS; 5/5 positive controls; RESULT PASS"
+    },
+    {
+      "command": "node _wip/evidence/styles_kit_v017_boss_intake_20260814T171205/candidate-asset-scan.mjs",
+      "exit_code": 0,
+      "result": "Story 18/18; Carob 16/16; FAQ 4/4; Shop 9/9; Stockists 5/5; positive control detected; RESULT PASS"
+    },
+    {
+      "command": "bundled Playwright + local HTTP render audit at kit 1440/1024/768/720/390 and five candidates 390/900/1440",
+      "exit_code": 0,
+      "result": "all main status 200; overflow 0; rendered broken images 0; console/page/request/bad responses 0; kit sub44 0; native zoom UNKNOWN; RESULT PASS"
+    },
+    {
+      "command": "ImageMagick contact sheets plus manual visual inspection",
+      "exit_code": 0,
+      "result": "390/900/1440 candidate contacts and 390 five-kit-header contact nonblank; no clipping, text/media overlap, hard exposed edge or Maple Moon name break; bounded RESP-008 gaps recorded"
+    },
+    {
+      "command": "sha256sum pinned handoff/register/receipt/status and seven candidate pages at close",
+      "exit_code": 0,
+      "result": "11/11 pinned hashes exact and unchanged"
+    }
+  ],
+  "screenshots_or_urls": [
+    "maplemoon-website/_wip/evidence/styles_kit_v017_boss_intake_20260814T171205/contact-kit-headers-390.png",
+    "maplemoon-website/_wip/evidence/styles_kit_v017_boss_intake_20260814T171205/contact-candidates-390.png",
+    "maplemoon-website/_wip/evidence/styles_kit_v017_boss_intake_20260814T171205/contact-candidates-900.png",
+    "maplemoon-website/_wip/evidence/styles_kit_v017_boss_intake_20260814T171205/contact-candidates-1440.png",
+    "maplemoon-website/_wip/evidence/styles_kit_v017_boss_intake_20260814T171205/kit-full-1440.png",
+    "maplemoon-website/_wip/evidence/styles_kit_v017_boss_intake_20260814T171205/kit-full-1024.png",
+    "maplemoon-website/_wip/evidence/styles_kit_v017_boss_intake_20260814T171205/kit-full-768.png",
+    "maplemoon-website/_wip/evidence/styles_kit_v017_boss_intake_20260814T171205/kit-full-720.png",
+    "maplemoon-website/_wip/evidence/styles_kit_v017_boss_intake_20260814T171205/kit-full-390.png"
+  ],
+  "failures": [],
+  "unknowns": [
+    "Native browser 200 percent zoom is UNKNOWN; the attempted Browser.setZoomLevel command is unavailable and viewport pressure was not substituted.",
+    "Exact headline numeric values remain provisional pending the handoff-required fresh Claude check.",
+    "Exact live media identity, crop and blend depth remain held by MEDIA-002, FOG-002 and FOG-004.",
+    "Font licensing/delivery remains a FND-002 dependency."
+  ],
+  "residual_risk": [
+    "Implementing directly from this Codex intake would bypass the handoff's required fresh Claude PASS and Safe-to-feed decision.",
+    "Future headline normalisation can regress Home's explicit exception or silently add Pure unless the packet keeps the five-route boundary exact.",
+    "FAQ mobile media relocation requires rendered control-obscuration and copy-first proof after implementation."
+  ],
+  "forbidden_path_changes": [],
+  "proposed_next_state": "hold_pending_fresh_claude_pass",
+  "next_reviewer": "Fresh independent Claude check, then MapleMoon BOSS only if PASS and Safe to feed intended Codex Boss: YES"
+}

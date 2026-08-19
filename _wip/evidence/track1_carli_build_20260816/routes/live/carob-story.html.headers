@@ -1,0 +1,10 @@
+HTTP/2 308 
+cache-control: public, max-age=0, must-revalidate
+content-type: text/plain
+date: Sun, 16 Aug 2026 08:10:20 GMT
+location: /carob-story
+refresh: 0;url=/carob-story
+server: Vercel
+strict-transport-security: max-age=63072000; includeSubDomains; preload
+x-vercel-id: iad1::sxgzq-1786867820737-4d12a35ee0e6
+

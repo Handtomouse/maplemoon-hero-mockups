@@ -1,0 +1,104 @@
+{
+  "schema": "maplemoon-receipt/v2",
+  "receipt_id": "MAPLEMOON-ELIXIR-V4-LIVE-USE-AUDIT-20260814T171205-RECEIPT-001",
+  "packet_id": "MAPLEMOON-ELIXIR-V4-LIVE-USE-AUDIT-20260814T171205",
+  "worker_thread_id": "/root/dedup_risk_audit",
+  "worker": "Codex independent elixir live-use auditor",
+  "started_at": "2026-08-14T17:15:31+10:00",
+  "completed_at": "2026-08-14T17:24:15+10:00",
+  "outcome": "PASS_EVIDENCE_COMPLETE_HOLD_LIVE_USE",
+  "confidence": "high",
+  "checkpoint_path": "maplemoon-website/_wip/checkpoints/MAPLEMOON-ELIXIR-V4-LIVE-USE-AUDIT-20260814T171205_20260814_171205_AEST",
+  "files_read": [
+    ".codex/visualizations/2026/08/13/019ffd5b-edd2-7b23-8780-453f9b67a532/maplemoon-product-corrections-20260814/assets/elixir_pure_same_size_clean_edges_v4.png",
+    ".codex/visualizations/2026/08/13/019ffd5b-edd2-7b23-8780-453f9b67a532/maplemoon-product-corrections-20260814/assets/elixir_spiced_same_size_clean_edges_v4.png",
+    ".codex/visualizations/2026/08/13/019ffd5b-edd2-7b23-8780-453f9b67a532/maplemoon-product-corrections-20260814/assets/elixir_clean_shared_alpha_v4.png",
+    ".codex/visualizations/2026/08/13/019ffd5b-edd2-7b23-8780-453f9b67a532/maplemoon-product-corrections-20260814/maplemoon_elixir_clean_edges_proof_v4.html",
+    "maplemoon_build_20260813/shop.html",
+    "maplemoon_build_20260813/assets/product_shots/elixir_plain.webp",
+    "maplemoon_build_20260813/assets/product_shots/elixir_spiced.webp",
+    "maplemoon-website/docs/orchestration/reviews/MAPLEMOON-ASSET-SLOT-AUTHORITY-MATRIX-20260814T143614.md",
+    "maplemoon-website/docs/orchestration/reviews/MAPLEMOON-ASSET-AUTHORITY-ADDENDUM-20260814T160123.md",
+    "maplemoon-website/docs/orchestration/packets/MAPLEMOON-PHOTO-REVIEW-BATCH-AUDIT-R2-20260814T153609.md",
+    "maplemoon-website/docs/orchestration/reviews/MAPLEMOON-PHOTO-REVIEW-BATCH-AUDIT-R2-20260814T153609.json",
+    "maplemoon-website/scripts/check-maplemoon-receipt.py"
+  ],
+  "files_changed": [
+    "maplemoon-website/_wip/evidence/elixir_v4_live_use_audit_20260814T171205",
+    "maplemoon-website/docs/orchestration/reviews/MAPLEMOON-ELIXIR-V4-LIVE-USE-AUDIT-20260814T171205.md",
+    "maplemoon-website/docs/orchestration/reviews/MAPLEMOON-ELIXIR-V4-LIVE-USE-AUDIT-20260814T171205.json"
+  ],
+  "pre_sha256": {
+    "maplemoon-website/_wip/evidence/elixir_v4_live_use_audit_20260814T171205": null,
+    "maplemoon-website/docs/orchestration/reviews/MAPLEMOON-ELIXIR-V4-LIVE-USE-AUDIT-20260814T171205.md": null,
+    "maplemoon-website/docs/orchestration/reviews/MAPLEMOON-ELIXIR-V4-LIVE-USE-AUDIT-20260814T171205.json": null
+  },
+  "post_sha256": {
+    "maplemoon-website/_wip/evidence/elixir_v4_live_use_audit_20260814T171205": "c06176ae5232178f75d389e7d8332627722864f782d15b626010d5719c0bcb6c",
+    "maplemoon-website/docs/orchestration/reviews/MAPLEMOON-ELIXIR-V4-LIVE-USE-AUDIT-20260814T171205.md": "2859892d6332eeae281dbe077c4acb66f9279c66a88745112e537eb07d338c32",
+    "maplemoon-website/docs/orchestration/reviews/MAPLEMOON-ELIXIR-V4-LIVE-USE-AUDIT-20260814T171205.json": null
+  },
+  "checks": [
+    {
+      "command": "python3 -B scripts/check-maplemoon-receipt.py verify --root /Users/handtomouse --packet docs/orchestration/packets/MAPLEMOON-ELIXIR-V4-LIVE-USE-AUDIT-20260814T171205.md --checkpoint /Users/handtomouse/maplemoon-website/_wip/checkpoints/MAPLEMOON-ELIXIR-V4-LIVE-USE-AUDIT-20260814T171205_20260814_171205_AEST --phase start",
+      "exit_code": 0,
+      "result": "PASS packet=MAPLEMOON-ELIXIR-V4-LIVE-USE-AUDIT-20260814T171205 phase=start scope=3"
+    },
+    {
+      "command": "shasum -a 256 [nine packet-pinned inputs]",
+      "exit_code": 0,
+      "result": "PASS acquisition hashes 9/9: pure=70f93f414902ae1b10e7ae1416954348aa20bd1d6950e37d05979b4e4aa9eb93 spiced=414f727e84ca0dc24749b10b1092f4618e9f9fc9b954304442a7a0a8779749bb mask=39d6ca8c5539d2662703dbe7fa4795c10a30172b39574c487c806ad2d7fe5850 proof=fab275c64ec07e69ec8a3acab4c4cd32f80592e05d67251ea81137d073042e0d shop=f111ad5123e34dadd46ac497fca286066efc67c05dd7e68f0d3e70c97c735038 wired_plain=4398f43fcc7ff571f4eea4643e078f8416e6921f4e979f5bf31e53338e04916a wired_spiced=9b92c0f0a0cc11b11aa9a5fa4cb7683b420db373e556c74adcb1ba576ffe1163 matrix=8b68ad125353c57befd0f0035acae2530756cb52c9a242cbdd12a148becb40a0 addendum=ccc4f3ca6991fd33b3f1348c051bc0cb6a7e6b920767ba0ca6c0581259f626f0"
+    },
+    {
+      "command": "python3 -B _wip/evidence/elixir_v4_live_use_audit_20260814T171205/mechanical_audit.py",
+      "exit_code": 0,
+      "result": "ELIXIR_V4_MECHANICAL PASS hashes=5/5 bbox=pure:[334, 107, 920, 1084] spiced:[334, 107, 920, 1084] size=586x977 alpha_equal=True components=1/1 holes=0/0 controls=True"
+    },
+    {
+      "command": "independent inspection of edge_backdrop_contact_sheet.png and review_surface_390.png/review_surface_900.png/review_surface_1440.png",
+      "exit_code": 0,
+      "result": "PASS mechanical/render scope: nonblank Pure and Spiced subjects remain intact on white, neutral-grey and black; no obvious halo, colour fringe, clipping or opaque-background contamination. Wired WebPs visibly differ in angle, crop, apparent scale and label presentation. Fine packaging text remains reconstructed and no label/compliance/live-use authority is granted."
+    },
+    {
+      "command": "python3 -B _wip/evidence/elixir_v4_live_use_audit_20260814T171205/binding_scan.py",
+      "exit_code": 0,
+      "result": "ELIXIR_V4_BINDING_SCAN PASS control=True filenames=0 equivalent_bytes=0 runtime_refs=0 files=4949 bytes=5870034730 errors=0 unwired=True"
+    },
+    {
+      "command": "env NODE_PATH=[bundled-runtime-node-modules] [bundled-node] _wip/evidence/elixir_v4_live_use_audit_20260814T171205/browser_verify.cjs http://127.0.0.1:8766",
+      "exit_code": 0,
+      "result": "ELIXIR_V4_BROWSER PASS widths=390:PASS,900:PASS,1440:PASS images=4/4/4 console=0 page=0 request=0 overflow=false"
+    },
+    {
+      "command": "python3 -B _wip/evidence/elixir_v4_live_use_audit_20260814T171205/final_assert.py",
+      "exit_code": 0,
+      "result": "ELIXIR_V4_FINAL_ASSERT PASS close_hashes=9/9 mechanical=True browser=True unwired=True authority=True screenshots=3/3 live_use=HOLD"
+    }
+  ],
+  "screenshots_or_urls": [
+    "maplemoon-website/_wip/evidence/elixir_v4_live_use_audit_20260814T171205/edge_backdrop_contact_sheet.png",
+    "maplemoon-website/_wip/evidence/elixir_v4_live_use_audit_20260814T171205/review_surface_390.png",
+    "maplemoon-website/_wip/evidence/elixir_v4_live_use_audit_20260814T171205/review_surface_900.png",
+    "maplemoon-website/_wip/evidence/elixir_v4_live_use_audit_20260814T171205/review_surface_1440.png",
+    "maplemoon-website/_wip/evidence/elixir_v4_live_use_audit_20260814T171205/mechanical_results.json",
+    "maplemoon-website/_wip/evidence/elixir_v4_live_use_audit_20260814T171205/browser_results.json",
+    "maplemoon-website/_wip/evidence/elixir_v4_live_use_audit_20260814T171205/binding_scan_results.json",
+    "maplemoon-website/_wip/evidence/elixir_v4_live_use_audit_20260814T171205/final_assert_results.json"
+  ],
+  "failures": [],
+  "unknowns": [],
+  "residual_risk": [
+    "Fine packaging text is reconstructed. No label, ingredient, nutrition, compliance or fine-print fidelity is certified.",
+    "Nate has not approved either exact SHA-pinned v4 file for its named live slot; the currently wired candidate WebPs remain KEEP current.",
+    "The binding scan does not follow symlink targets and text-scans regular files only up to 8 MiB; exact-byte detection hashes all files matching either pinned v4 byte size."
+  ],
+  "resolved_notes": [
+    "A pre-write phase=start gate passed against the original checkpoint. A later BOSS recheck after evidence creation correctly reported source changed; it does not invalidate the preserved pre-write PASS.",
+    "The first browser harness assertion expected eight network responses for eight repeated image elements. It observed four unique image 200s and no runtime errors; the assertion was corrected to require all four unique URLs at 200, after which 390/900/1440 passed."
+  ],
+  "forbidden_path_changes": [],
+  "proposed_next_state": "hold_live_use_pending_nate_reconstructed_label_and_exact_slot_approval",
+  "next_reviewer": "MapleMoon BOSS, then Nate only for any reconstructed-label or live-use decision",
+  "ready_to_promote": true,
+  "promotion_boundary": "Evidence completeness only. Promotion must not be interpreted as live-use approval."
+}

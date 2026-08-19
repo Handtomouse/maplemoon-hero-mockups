@@ -1,0 +1,45 @@
+COMMAND
+python3 /Users/handtomouse/UFC/ops/bus/maplemoon/tools_20260813/preflight_deploy.py http://127.0.0.1:4402 --local
+
+EXIT 0
+MapleMoon deploy preflight - ANONYMOUS fetch (no cookie, no token, no CLI auth)
+base: http://127.0.0.1:4402
+------------------------------------------------------------------------------
+PASS  control:matchers             all 11 matchers fired on canary; stripper verified
+PASS  guard:sso-wall               no Vercel login page (status 200, 12345B)
+PASS  guard:bogus-control          /zzq-definitely-not-a-real-path-9471 -> 404/460B vs real 200/209295B (distinguishable)
+PASS  guard:bogus-control          /zzq-definitely-not-a-real-path-9471.html -> 404/460B vs real 200/209295B (distinguishable)
+------------------------------------------------------------------------------
+WAIVE root:homepage                served by /homepage.html, not /; --local waives it
+PASS  page:homepage                /homepage.html 200 209295B title+body anchors present
+PASS  page:our-story               /our-story.html 200 90572B title+body anchors present
+PASS  page:carob-story             /carob-story.html 200 62273B title+body anchors present
+PASS  page:shop                    /shop.html 200 82545B title+body anchors present
+PASS  page:faq                     /faq.html 200 42132B title+body anchors present
+PASS  page:stockists               /stockists.html 200 119551B title+body anchors present
+------------------------------------------------------------------------------
+PASS  leak:review-link             0 hits across 8 docs; control: pattern fires on canary [raw layer]
+PASS  leak:204-internal-count      0 hits across 8 docs; control: pattern fires on canary [raw layer]
+PASS  leak:bare-204-visitor-copy   0 hits across 8 docs; control: pattern fires on canary [text layer]; silent on real-data must-not canary
+PASS  leak:internal-ops-language   0 hits across 8 docs; control: pattern fires on canary [raw layer]; silent on real-data must-not canary
+PASS  leak:dev-placeholder-copy    0 hits across 8 docs; control: pattern fires on canary [text layer]; silent on real-data must-not canary
+REVW  leak:internal-status-review  16 hit(s) IN VISITOR-READABLE COPY - review tier, not auto-blocking; control: pattern fires on canary [text layer]; silent on real-data must-not canary
+        mock-cart.js       erySelectorAll(".wf-ti").forEach((item) => { if (/pending/i.test(item.textContent || "")) item.classList.add("mm-hide
+        mock-cart.js       ts = () => { document.querySelectorAll(".st-result.is-pending").forEach((element) => { element.hidden = true;
+        mock-cart.js       ults ? results.querySelectorAll(".st-result:not(.is-pending)").length : 0; if (incomingQuery && !confirme
+        mock-cart.js       (subtotalCents()); elements.subtotal.textContent = subtotal; elements.checkoutSubtotal.textContent = subtotal;
+PASS  leak:pending-consent-names   0 hits across 8 docs; control: pattern fires on canary [raw layer]
+PASS  leak:word-testimonial        0 hits across 8 docs; control: pattern fires on canary [text layer]
+REVW  leak:word-testimonial-hidden 3 hit(s) in shipped bytes but NOT in visitor copy; control: pattern fires on canary [raw layer]
+        homepage           -sp-xl:calc(64px * var(--rhythm)); /* large gap — ritual, testimonial */ --sp-lg:calc(56px * var(--rhythm)); /* standard gap
+        homepage           ;} .wf-si span{font-size:.76rem;color:var(--ink-soft);} /* testimonial (editorial pull-quote, real-data-gated placeholder) */ .wf-
+        homepage           an></a> </section> <!-- REVIEWS (structure only; approved testimonials pending) --> <!-- SAMPLER (starter box band) --> <div cl
+PASS  leak:em-dash                 0 hits across 8 docs; control: pattern fires on canary [text layer]
+PASS  leak:local-filesystem-path   0 hits across 8 docs; control: pattern fires on canary [raw layer]
+------------------------------------------------------------------------------
+VERDICT: PASS with 2 review-only hit(s) - leak:internal-status-review, leak:word-testimonial-hidden | WAIVED: root:homepage
+  Not visitor-readable, but they are shipped bytes. A human must clear them.
+  A waived root is NOT a cleared root. Re-run without --local on the deploy host.
+
+STDERR
+(empty)

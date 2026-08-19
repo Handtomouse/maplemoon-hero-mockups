@@ -1,0 +1,86 @@
+{
+  "schema": "maplemoon-receipt/v2",
+  "receipt_id": "MAPLEMOON-PHOTO-REVIEW-BATCH-AUDIT-20260814T152749-RECEIPT-001",
+  "packet_id": "MAPLEMOON-PHOTO-REVIEW-BATCH-AUDIT-20260814T152749",
+  "worker_thread_id": "/root/recertify_updated_preview",
+  "worker": "Codex independent photography review auditor",
+  "started_at": "2026-08-14T15:28:37+10:00",
+  "completed_at": "2026-08-14T15:34:45+10:00",
+  "outcome": "FAIL_REQUIRED_RENDER_CHECK_FAVICON_404",
+  "confidence": "high",
+  "checkpoint_path": "maplemoon-website/_wip/checkpoints/MAPLEMOON-PHOTO-REVIEW-BATCH-AUDIT-20260814T152749_20260814_152749_AEST",
+  "files_read": [
+    "maplemoon-website/docs/orchestration/packets/MAPLEMOON-PHOTO-REVIEW-BATCH-AUDIT-20260814T152749.md",
+    "maplemoon-website/docs/orchestration/reviews/MAPLEMOON-ASSET-SLOT-AUTHORITY-MATRIX-20260814T143614.md",
+    ".codex/visualizations/2026/08/13/019ffd5b-edd2-7b23-8780-453f9b67a532/maplemoon-product-corrections-20260814/maplemoon_product_corrections_review_20260814.html",
+    ".codex/visualizations/2026/08/13/019ffd5b-edd2-7b23-8780-453f9b67a532/maplemoon-product-corrections-20260814/assets/carob_powder_isolated.png",
+    ".codex/visualizations/2026/08/13/019ffd5b-edd2-7b23-8780-453f9b67a532/maplemoon-product-corrections-20260814/assets/elixir_pure_isolated_equal-size.png",
+    ".codex/visualizations/2026/08/13/019ffd5b-edd2-7b23-8780-453f9b67a532/maplemoon-product-corrections-20260814/assets/elixir_spiced_isolated_equal-size.png",
+    ".codex/visualizations/2026/08/13/019ffd5b-edd2-7b23-8780-453f9b67a532/maplemoon-product-corrections-20260814/assets/five_item_bundle_low_angle_isolated.png",
+    "maplemoon-website/scripts/check-maplemoon-receipt.py"
+  ],
+  "files_changed": [
+    "maplemoon-website/_wip/evidence/photo_review_batch_audit_20260814T152749",
+    "maplemoon-website/docs/orchestration/reviews/MAPLEMOON-PHOTO-REVIEW-BATCH-AUDIT-20260814T152749.json"
+  ],
+  "pre_sha256": {
+    "maplemoon-website/_wip/evidence/photo_review_batch_audit_20260814T152749": null,
+    "maplemoon-website/docs/orchestration/reviews/MAPLEMOON-PHOTO-REVIEW-BATCH-AUDIT-20260814T152749.json": null
+  },
+  "post_sha256": {
+    "maplemoon-website/_wip/evidence/photo_review_batch_audit_20260814T152749": "88e2555b96f4d8b5e951c1b32b17bec9317f9a677357cfcbdb7bf30e18701520",
+    "maplemoon-website/docs/orchestration/reviews/MAPLEMOON-PHOTO-REVIEW-BATCH-AUDIT-20260814T152749.json": null
+  },
+  "checks": [
+    {
+      "command": "python3 -B scripts/check-maplemoon-receipt.py verify --root /Users/handtomouse --packet docs/orchestration/packets/MAPLEMOON-PHOTO-REVIEW-BATCH-AUDIT-20260814T152749.md --checkpoint _wip/checkpoints/MAPLEMOON-PHOTO-REVIEW-BATCH-AUDIT-20260814T152749_20260814_152749_AEST --phase start",
+      "exit_code": 0,
+      "result": "PASS packet=MAPLEMOON-PHOTO-REVIEW-BATCH-AUDIT-20260814T152749 phase=start scope=2"
+    },
+    {
+      "command": "python3 _wip/evidence/photo_review_batch_audit_20260814T152749/pixel_audit.py",
+      "exit_code": 0,
+      "result": "PASS all_mechanical_pass=true: all five acquisition hashes matched; all four PNGs decoded at 1254x1254 RGBA with alpha extrema 0..255, transparent and opaque pixels, transparent corners, nonempty subjects and no full-canvas baked checkerboard. Powder bounds are 878x408 with one primary alpha component. Both elixirs have identical x335/y108/right919/bottom1083 bounds, 584x975 size, centreline 627 and baseline 1083."
+    },
+    {
+      "command": "independent native/light/dark pixel inspection",
+      "exit_code": 0,
+      "result": "PASS within mechanical review scope: powder is one loose mound with no pack, label, rectangular packaging silhouette, bowl, scoop, prop or second primary object. Bundle shows exactly five visually distinct bodies: three separately topped domes, one orange-dusted rectangular body and one layered rectangular fudge form. These forms are distinguishable consistently with the review labels, but no authoritative SKU identity or live-use approval is granted. No checkerboard is visible. Elixir fine print remains reconstructed and held."
+    },
+    {
+      "command": "node _wip/evidence/photo_review_batch_audit_20260814T152749/review_surface_verify.cjs",
+      "exit_code": 1,
+      "result": "FAIL allPass=false: at measured 390 the page and all five images returned 200, clientWidth=scrollWidth=390 and every required label/image was visible, but Chrome emitted CONSOLE Failed to load resource: 404. The server log identifies GET /favicon.ico HTTP/1.1 404. Measured 900 and 1440 passed, but the packet requires zero console/page/request/image errors at every width."
+    },
+    {
+      "command": "final acquisition shasum -a 256 and nonblank evidence file inspection",
+      "exit_code": 0,
+      "result": "PASS: the review HTML and four source PNGs retained their packet hashes. Seven screenshots/composites are nonblank PNGs with real dimensions; no source/photo/website/build/deployment file was changed."
+    }
+  ],
+  "screenshots_or_urls": [
+    "maplemoon-website/_wip/evidence/photo_review_batch_audit_20260814T152749/mechanical_contact_sheet.png",
+    "maplemoon-website/_wip/evidence/photo_review_batch_audit_20260814T152749/powder_on_white.png",
+    "maplemoon-website/_wip/evidence/photo_review_batch_audit_20260814T152749/bundle_on_light.png",
+    "maplemoon-website/_wip/evidence/photo_review_batch_audit_20260814T152749/bundle_on_dark.png",
+    "maplemoon-website/_wip/evidence/photo_review_batch_audit_20260814T152749/review_surface_390.png",
+    "maplemoon-website/_wip/evidence/photo_review_batch_audit_20260814T152749/review_surface_900.png",
+    "maplemoon-website/_wip/evidence/photo_review_batch_audit_20260814T152749/review_surface_1440.png",
+    "maplemoon-website/_wip/evidence/photo_review_batch_audit_20260814T152749/pixel_geometry_results.json",
+    "maplemoon-website/_wip/evidence/photo_review_batch_audit_20260814T152749/review_surface_results.json",
+    "maplemoon-website/_wip/evidence/photo_review_batch_audit_20260814T152749/render_failure.json"
+  ],
+  "failures": [
+    "Required zero-console-error review-surface check failed because the supplied review page requests /favicon.ico and receives HTTP 404 at measured 390. The packet forbids editing the review source, so this worker stopped."
+  ],
+  "unknowns": [
+    "The positive-controlled two-tree unwired search and production-freeze check were not executed after the required render stop condition."
+  ],
+  "residual_risk": [
+    "All four assets remain review-only. Reconstructed elixir fine print and icons, exact bundle composition, exact SKU identity, client acceptance and live website binding remain Nate-only holds."
+  ],
+  "forbidden_path_changes": [],
+  "proposed_next_state": "fail_pending_review_surface_favicon_correction_or_explicit_check_waiver",
+  "next_reviewer": "MapleMoon BOSS then Nate",
+  "ready_to_promote": false
+}

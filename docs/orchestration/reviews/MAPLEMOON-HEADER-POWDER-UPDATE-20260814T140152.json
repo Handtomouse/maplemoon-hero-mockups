@@ -1,0 +1,129 @@
+{
+  "schema": "maplemoon-receipt/v2",
+  "receipt_id": "MAPLEMOON-HEADER-POWDER-UPDATE-20260814T140152-RECEIPT-001",
+  "packet_id": "MAPLEMOON-HEADER-POWDER-UPDATE-20260814T140152",
+  "worker_thread_id": "/root/header_powder_update",
+  "worker": "Codex delegated MapleMoon header and powder worker",
+  "started_at": "2026-08-14T14:01:52+10:00",
+  "completed_at": "2026-08-14T14:13:20+10:00",
+  "outcome": "PASS_READY_FOR_INDEPENDENT_CERTIFICATION",
+  "confidence": "high",
+  "checkpoint_path": "maplemoon-website/_wip/checkpoints/MAPLEMOON-HEADER-POWDER-UPDATE-20260814T140152_20260814_140152_AEST",
+  "files_read": [
+    "maplemoon-website/AGENTS.md",
+    "maplemoon-website/docs/orchestration/SIDECHAT_RECEIPT_GATE.md",
+    "UFC/ops/bus/maplemoon/TREE_OWNERSHIP_20260814.md",
+    "UFC/ops/bus/maplemoon/CHECKPOINT_20260814_0830_photography.md",
+    "maplemoon_cutouts_20260814/png/carob_powder_PILE.png",
+    "maplemoon_build_20260813/shop.html",
+    "maplemoon_build_20260813/stockists.html",
+    "maplemoon_build_20260813/carob-story.html"
+  ],
+  "files_changed": [
+    "maplemoon-website/docs/orchestration/reviews/MAPLEMOON-HEADER-POWDER-UPDATE-20260814T140152.json",
+    "maplemoon-website/_wip/evidence/header_powder_update_20260814T140152",
+    "maplemoon_build_20260813/stockists.html",
+    "maplemoon_build_20260813/carob-story.html",
+    "maplemoon_build_20260813/assets/product_shots/powder_roasted.webp"
+  ],
+  "pre_sha256": {
+    "maplemoon-website/docs/orchestration/reviews/MAPLEMOON-HEADER-POWDER-UPDATE-20260814T140152.json": null,
+    "maplemoon-website/_wip/evidence/header_powder_update_20260814T140152": null,
+    "maplemoon_build_20260813/stockists.html": "f92cb4e78dfa535f9de2613e312c3d73d4638a9855f6f90fc5334136e9a69ff2",
+    "maplemoon_build_20260813/carob-story.html": "de81beddb3251f799b600d994072b98298a334174a71db2fc62acfc5bdc11593",
+    "maplemoon_build_20260813/assets/product_shots/powder_roasted.webp": "d1afebddd399e24dcb14efae93b4fde33b588ce7de6dae07d88a43886b489cf9"
+  },
+  "post_sha256": {
+    "maplemoon-website/docs/orchestration/reviews/MAPLEMOON-HEADER-POWDER-UPDATE-20260814T140152.json": null,
+    "maplemoon-website/_wip/evidence/header_powder_update_20260814T140152": "0e8be37e6b0d8690a29cb102832c63a0b8bb1d0af91d4ab45e5cf4c9061a1ae1",
+    "maplemoon_build_20260813/stockists.html": "4821adfe88680d4f174b7a8700c8d8a65594df2901bf3a7109d51b09040cb887",
+    "maplemoon_build_20260813/carob-story.html": "4fd9ad0fabb9d60d0f391925f5a382ccfc8f705b60fca1c681f403a5cd9734bd",
+    "maplemoon_build_20260813/assets/product_shots/powder_roasted.webp": "40efa1836bffcf69b44084291b1996f8dc7a70d6f4bcef22e658904fa8a26eaf"
+  },
+  "checks": [
+    {
+      "command": "python3 -B scripts/check-maplemoon-receipt.py checkpoint ... && python3 -B scripts/check-maplemoon-receipt.py verify ... --phase start",
+      "exit_code": 0,
+      "result": "PASS checkpoint packet=MAPLEMOON-HEADER-POWDER-UPDATE-20260814T140152 files=6; PASS phase=start scope=6, before the first build-file write."
+    },
+    {
+      "command": "headless local Chrome render-verify.cjs at measured 390, 900 and 1440 CSS px",
+      "exit_code": 0,
+      "result": "PASS: 9/9 route-viewport renders returned page HTTP 200 and required image HTTP 200; clientWidth exactly 390/900/1440; scrollWidth equalled clientWidth; zero console/page errors; no error overlays. Eighteen nonblank full-page/detail screenshots were saved."
+    },
+    {
+      "command": "Carob Story computed-style and geometry assertions",
+      "exit_code": 0,
+      "result": "PASS: image fields measured 390x304, 900x330 and 700x452; natural image 1536x1024; border 0px none, radius 0px, shadow none, CSS gradient mask present, and textImageOverlap=false at all three widths."
+    },
+    {
+      "command": "Stockists computed pseudo-element and visual assertions",
+      "exit_code": 0,
+      "result": "PASS: photograph display=block at all widths; 390 treatment measured 354x126 at opacity .24 below the copy; 900 measured 486x294 at .18 after right-shift; 1440 measured 720x294 at .22. Title/search remain unobstructed."
+    },
+    {
+      "command": "Shop powder lazy-load, actual-card render and source/alpha controls",
+      "exit_code": 0,
+      "result": "PASS: powder request 200; complete=true; natural 3640x2078; rendered 292.15625x194.21875 at 390, 361.671875x240.421875 at 900, and 232.3125x154.4375 at 1440 on the actual Shop gradient; source SHA-256 eb7787ec...; alpha-plane AE=0; output channels=srgba and opaque=False."
+    },
+    {
+      "command": "independent MapleMoon Boss pixel review of Stockists, Carob Story and powder details at 390/900/1440",
+      "exit_code": 0,
+      "result": "PASS: independent pixel review accepted all nine detailed renders."
+    },
+    {
+      "command": "python3 tools_20260813/preflight_deploy.py http://127.0.0.1:4390 --local",
+      "exit_code": 0,
+      "result": "VERDICT: PASS with 2 pre-existing review-only hits (internal-status-review and word-testimonial-hidden); local root waiver; six guarded pages 200; both bogus-path controls 404 and distinguishable."
+    },
+    {
+      "command": "explicit seven-route loopback fetch for homepage, shop, our-story, carob-story, faq, stockists and pure-carob-bar",
+      "exit_code": 0,
+      "result": "PASS: homepage 200 209295B; shop 200 82545B; our-story 200 90572B; carob-story 200 62273B; faq 200 41964B; stockists 200 119551B; pure-carob-bar 200 25507B."
+    },
+    {
+      "command": "Python html.parser on both changed HTML files plus unchanged Shop binding hash",
+      "exit_code": 0,
+      "result": "PASS: stockists.html parsed at 119551B; carob-story.html parsed at 62273B; shop.html remained SHA-256 f111ad5123e34dadd46ac497fca286066efc67c05dd7e68f0d3e70c97c735038."
+    },
+    {
+      "command": "checkpoint manifest and exact pre/post SHA-256 comparison",
+      "exit_code": 0,
+      "result": "PASS: packet stayed 7dc651ea...; only the receipt, one evidence directory, two admitted HTML files and one admitted image file differ from the checkpoint."
+    }
+  ],
+  "screenshots_or_urls": [
+    "maplemoon-website/_wip/evidence/header_powder_update_20260814T140152/stockists_390.png",
+    "maplemoon-website/_wip/evidence/header_powder_update_20260814T140152/stockists_390_detail.png",
+    "maplemoon-website/_wip/evidence/header_powder_update_20260814T140152/stockists_900.png",
+    "maplemoon-website/_wip/evidence/header_powder_update_20260814T140152/stockists_900_detail.png",
+    "maplemoon-website/_wip/evidence/header_powder_update_20260814T140152/stockists_1440.png",
+    "maplemoon-website/_wip/evidence/header_powder_update_20260814T140152/stockists_1440_detail.png",
+    "maplemoon-website/_wip/evidence/header_powder_update_20260814T140152/carob-story_390.png",
+    "maplemoon-website/_wip/evidence/header_powder_update_20260814T140152/carob-story_390_detail.png",
+    "maplemoon-website/_wip/evidence/header_powder_update_20260814T140152/carob-story_900.png",
+    "maplemoon-website/_wip/evidence/header_powder_update_20260814T140152/carob-story_900_detail.png",
+    "maplemoon-website/_wip/evidence/header_powder_update_20260814T140152/carob-story_1440.png",
+    "maplemoon-website/_wip/evidence/header_powder_update_20260814T140152/carob-story_1440_detail.png",
+    "maplemoon-website/_wip/evidence/header_powder_update_20260814T140152/shop_390.png",
+    "maplemoon-website/_wip/evidence/header_powder_update_20260814T140152/shop_390_detail.png",
+    "maplemoon-website/_wip/evidence/header_powder_update_20260814T140152/shop_900.png",
+    "maplemoon-website/_wip/evidence/header_powder_update_20260814T140152/shop_900_detail.png",
+    "maplemoon-website/_wip/evidence/header_powder_update_20260814T140152/shop_1440.png",
+    "maplemoon-website/_wip/evidence/header_powder_update_20260814T140152/shop_1440_detail.png"
+  ],
+  "instrument_fallbacks": [
+    "The requested agent-browser CLI was absent (command not found). The bundled Playwright browser binary was also absent, and the first sandboxed system-Chrome launch aborted. The verified fallback was bundled Playwright driving the installed Google Chrome headlessly with approved escalation.",
+    "An initial full-colour ImageMagick comparison was incorrectly labelled as an alpha comparison and discarded. The corrected alpha-plane-only comparison returned AE=0.",
+    "A post-write re-run of the phase=start gate correctly returned HOLD because admitted sources had changed; the authoritative phase=start PASS was captured before the first mutation, and phase=complete is the applicable final gate."
+  ],
+  "failures": [],
+  "unknowns": [],
+  "residual_risk": [
+    "This receipt certifies only the undeployed candidate implementation and evidence. Production, alias movement, deployment, client messaging and acceptance remain outside this worker's authority."
+  ],
+  "forbidden_path_changes": [],
+  "proposed_next_state": "ready_for_independent_certification",
+  "next_reviewer": "MapleMoon Boss",
+  "ready_to_promote": false
+}

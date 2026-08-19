@@ -1,0 +1,95 @@
+PASS required_nonblank: 31/31
+PASS json_parse: DESIGN-TOKENS, RULE-REGISTER, ASSET-MANIFEST, CLEANUP-CANDIDATES
+PASS version_parity: 0.3.0-provisional | 0.3.0-provisional | 0.3.0-provisional
+PASS rule_decision_schema: 68 rules + 12 decisions
+PASS human_machine_mirror: 68/68 rules, 12/12 decisions
+PASS json_css_tokens: 66/66 JSON; 66/66 CSS
+PASS small_gold_contrast: color.surface.blue=5.80:1 color.surface.ivory=5.93:1 color.surface.paper=6.47:1
+PASS governed_asset_hashes: 9/9
+PASS proof_pngs: 31/31 signature and nonzero dimensions
+PASS internal_links_assets: all resolve
+PASS javascript_css_parse: JavaScript=parse; CSS braces=balanced
+PASS anti_patterns_containment: anti=12; scrimContained=true
+PASS positive_controls: missingRequired=DETECTED malformedRule=DETECTED malformedToken=DETECTED malformedAsset=DETECTED brokenLink=DETECTED brokenAsset=DETECTED escapedScrim=DETECTED
+RESULT PASS
+{
+  "schema": "maplemoon-styles-kit-independent-audit/v1",
+  "root": "/Users/handtomouse/Documents/Codex/2026-08-13/maple-moon-shared-site-styles-kit/outputs",
+  "result": "PASS",
+  "checks": [
+    {
+      "name": "required_nonblank",
+      "pass": true,
+      "detail": "31/31"
+    },
+    {
+      "name": "json_parse",
+      "pass": true,
+      "detail": "DESIGN-TOKENS, RULE-REGISTER, ASSET-MANIFEST, CLEANUP-CANDIDATES"
+    },
+    {
+      "name": "version_parity",
+      "pass": true,
+      "detail": "0.3.0-provisional | 0.3.0-provisional | 0.3.0-provisional"
+    },
+    {
+      "name": "rule_decision_schema",
+      "pass": true,
+      "detail": "68 rules + 12 decisions"
+    },
+    {
+      "name": "human_machine_mirror",
+      "pass": true,
+      "detail": "68/68 rules, 12/12 decisions"
+    },
+    {
+      "name": "json_css_tokens",
+      "pass": true,
+      "detail": "66/66 JSON; 66/66 CSS"
+    },
+    {
+      "name": "small_gold_contrast",
+      "pass": true,
+      "detail": "color.surface.blue=5.80:1 color.surface.ivory=5.93:1 color.surface.paper=6.47:1"
+    },
+    {
+      "name": "governed_asset_hashes",
+      "pass": true,
+      "detail": "9/9"
+    },
+    {
+      "name": "proof_pngs",
+      "pass": true,
+      "detail": "31/31 signature and nonzero dimensions"
+    },
+    {
+      "name": "internal_links_assets",
+      "pass": true,
+      "detail": "all resolve"
+    },
+    {
+      "name": "javascript_css_parse",
+      "pass": true,
+      "detail": "JavaScript=parse; CSS braces=balanced"
+    },
+    {
+      "name": "anti_patterns_containment",
+      "pass": true,
+      "detail": "anti=12; scrimContained=true"
+    },
+    {
+      "name": "positive_controls",
+      "pass": true,
+      "detail": "missingRequired=DETECTED malformedRule=DETECTED malformedToken=DETECTED malformedAsset=DETECTED brokenLink=DETECTED brokenAsset=DETECTED escapedScrim=DETECTED"
+    }
+  ],
+  "positiveControls": {
+    "missingRequired": true,
+    "malformedRule": true,
+    "malformedToken": true,
+    "malformedAsset": true,
+    "brokenLink": true,
+    "brokenAsset": true,
+    "escapedScrim": true
+  }
+}

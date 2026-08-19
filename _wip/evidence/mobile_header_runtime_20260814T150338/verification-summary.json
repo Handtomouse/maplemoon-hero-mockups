@@ -1,0 +1,55 @@
+{
+  "packet_id": "MAPLEMOON-MOBILE-HEADER-RUNTIME-20260814T150338",
+  "worker_thread_id": "/root/header_powder_update",
+  "candidate_base_url": "http://127.0.0.1:4391",
+  "browser_instrument": "Bundled Playwright with system Google Chrome (headless)",
+  "browser_matrix": {
+    "regular_mobile_cases": 14,
+    "reduced_motion_mobile_cases": 14,
+    "desktop_cases": 7,
+    "screenshots": 11,
+    "failures": []
+  },
+  "page_fetches": {
+    "homepage": { "http": 200, "bytes": 209295 },
+    "shop": { "http": 200, "bytes": 82545 },
+    "our-story": { "http": 200, "bytes": 90572 },
+    "carob-story": { "http": 200, "bytes": 62273 },
+    "faq": { "http": 200, "bytes": 42132 },
+    "stockists": { "http": 200, "bytes": 119551 },
+    "pure-carob-bar": { "http": 200, "bytes": 25507 }
+  },
+  "page_sha256_unchanged": {
+    "homepage.html": "27921b2a466ccb670b2851a73043429763d3423bcaf651069e4e860dc01a78b1",
+    "our-story.html": "2db31868a9791f373f156e7cdeb8261e494d1d47e9418a94c28156e213df7711",
+    "carob-story.html": "4fd9ad0fabb9d60d0f391925f5a382ccfc8f705b60fca1c681f403a5cd9734bd",
+    "shop.html": "f111ad5123e34dadd46ac497fca286066efc67c05dd7e68f0d3e70c97c735038",
+    "faq.html": "c5ce7aaf0b9b3221f34eb2928fc2ff6732fc1a915ea80144a4ade2b94011fb6e",
+    "stockists.html": "4821adfe88680d4f174b7a8700c8d8a65594df2901bf3a7109d51b09040cb887",
+    "pure-carob-bar.html": "015cde27ecc60f3c444820a551c39f6e9c985fc5b2e59bdaea5f496c1c236b65"
+  },
+  "shared_chrome_sha256": {
+    "mm-chrome.js": "063fe11d5f5ed5d90c724868f1ffb8f3536aed73cc2f7fb9bc6e4791eb192d18",
+    "mm-chrome.css": "2d7414a8994ae11414cb269f4ca335293b409eb9da956ca3b625e716c26080ba"
+  },
+  "local_preflight": {
+    "exit_code": 0,
+    "verdict": "PASS with 2 review-only hit(s) - leak:internal-status-review, leak:word-testimonial-hidden | WAIVED: root:homepage"
+  },
+  "production_freeze": {
+    "alias": "https://maplemoonbuild20260813.vercel.app",
+    "immutable_url": "https://maplemoonbuild20260813-7vjf2m50b-handtomouses-projects.vercel.app",
+    "deployment_id": "dpl_G2LER2awaqyFtGRCcTserXbNynct",
+    "target": "production",
+    "status": "Ready",
+    "homepage_http": 200,
+    "homepage_bytes": 208556,
+    "homepage_md5": "6197879a5ca9d3ed0452773abc0bbeb4",
+    "pass": true
+  },
+  "resolved_findings": [
+    "A true pointer click at scrolled FAQ initially showed the fixed header was below unlayered page content. Shared mobile header z-index was raised through mm-chrome.css only, then the full matrix and paint-order hit-target assertions passed.",
+    "The agent-browser CLI was unavailable, so the approved local browser verification used bundled Playwright with system Google Chrome. A looping homepage video required load rather than networkidle, and lazy images were explicitly brought in-view before final image assertions."
+  ],
+  "forbidden_actions_performed": []
+}

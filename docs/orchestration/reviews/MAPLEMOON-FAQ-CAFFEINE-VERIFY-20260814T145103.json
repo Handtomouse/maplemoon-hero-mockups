@@ -1,0 +1,97 @@
+{
+  "schema": "maplemoon-receipt/v2",
+  "receipt_id": "MAPLEMOON-FAQ-CAFFEINE-VERIFY-20260814T145103-RECEIPT-001",
+  "packet_id": "MAPLEMOON-FAQ-CAFFEINE-VERIFY-20260814T145103",
+  "worker_thread_id": "/root/recertify_updated_preview",
+  "worker": "Codex independent verification worker",
+  "started_at": "2026-08-14T14:52:15+10:00",
+  "completed_at": "2026-08-14T14:57:03+10:00",
+  "outcome": "PASS_VERIFIED_READY_FOR_BOSS_ACCEPTANCE",
+  "confidence": "high",
+  "checkpoint_path": "maplemoon-website/_wip/checkpoints/MAPLEMOON-FAQ-CAFFEINE-VERIFY-20260814T145103_20260814_145103_AEST",
+  "files_read": [
+    "maplemoon-website/docs/orchestration/packets/MAPLEMOON-FAQ-CAFFEINE-VERIFY-20260814T145103.md",
+    "maplemoon-website/docs/orchestration/packets/MAPLEMOON-FAQ-CAFFEINE-EXACT-20260814T144235.md",
+    "maplemoon-website/docs/orchestration/reviews/MAPLEMOON-FAQ-CAFFEINE-EXACT-20260814T144235.json",
+    "maplemoon-website/_wip/checkpoints/MAPLEMOON-FAQ-CAFFEINE-EXACT-20260814T144235_20260814_144235_AEST/files/maplemoon_build_20260813/faq.html",
+    "maplemoon_build_20260813/homepage.html",
+    "maplemoon_build_20260813/our-story.html",
+    "maplemoon_build_20260813/carob-story.html",
+    "maplemoon_build_20260813/shop.html",
+    "maplemoon_build_20260813/faq.html",
+    "maplemoon_build_20260813/stockists.html",
+    "maplemoon_build_20260813/pure-carob-bar.html",
+    "maplemoon_build_20260813/assets",
+    "maplemoon_build_20260813/mock-cart.js",
+    "maplemoon_build_20260813/mock-cart.css",
+    "maplemoon-website/scripts/check-maplemoon-receipt.py"
+  ],
+  "files_changed": [
+    "maplemoon-website/_wip/evidence/faq_caffeine_verify_20260814T145103",
+    "maplemoon-website/docs/orchestration/reviews/MAPLEMOON-FAQ-CAFFEINE-VERIFY-20260814T145103.json"
+  ],
+  "pre_sha256": {
+    "maplemoon-website/_wip/evidence/faq_caffeine_verify_20260814T145103": null,
+    "maplemoon-website/docs/orchestration/reviews/MAPLEMOON-FAQ-CAFFEINE-VERIFY-20260814T145103.json": null
+  },
+  "post_sha256": {
+    "maplemoon-website/_wip/evidence/faq_caffeine_verify_20260814T145103": "538b5db0ec5db85f5beaecd2cecdb23952f3d8d62b58aa775802351bf69c79d8",
+    "maplemoon-website/docs/orchestration/reviews/MAPLEMOON-FAQ-CAFFEINE-VERIFY-20260814T145103.json": null
+  },
+  "checks": [
+    {
+      "command": "python3 -B scripts/check-maplemoon-receipt.py verify --root /Users/handtomouse --packet docs/orchestration/packets/MAPLEMOON-FAQ-CAFFEINE-VERIFY-20260814T145103.md --checkpoint _wip/checkpoints/MAPLEMOON-FAQ-CAFFEINE-VERIFY-20260814T145103_20260814_145103_AEST --phase start",
+      "exit_code": 0,
+      "result": "PASS packet=MAPLEMOON-FAQ-CAFFEINE-VERIFY-20260814T145103 phase=start scope=2"
+    },
+    {
+      "command": "node _wip/evidence/faq_caffeine_verify_20260814T145103/source-verify.cjs",
+      "exit_code": 0,
+      "result": "PASS: all seven acquisition SHA-256 values matched; predecessor packet SHA-256 c200dcc30535332494291fd401ebd88de4446aac6ea92336ed4a2b0dc17dc94d, predecessor receipt SHA-256 5c9ef6fc5da14d102728df3a0f2c2b17a0e7ffe79f9a5cb3b9b40f0dbb98a4d5 and predecessor FAQ SHA-256 99dcafedaf8e812ffd2a55fdb028e27529dd47506ca8be68cc2dab0634afd493 were captured; the pre-edit FAQ becomes the current c5ce7aaf0b9b3221f34eb2928fc2ff6732fc1a915ea80144a4ade2b94011fb6e by exactly one caffeine object replacement; both old strings occur zero times, both approved strings occur once, the cacao-butter object is byte-unchanged, and all 16 local FAQ references returned 200 with nonzero bodies. Output allPass=true."
+    },
+    {
+      "command": "node _wip/evidence/faq_caffeine_verify_20260814T145103/verify.cjs",
+      "exit_code": 0,
+      "result": "PASS allPass=true: at measured 390 and 1440, the dynamic #caffeine item opened with the exact approved question and answer, HTTP 200, clientWidth=scrollWidth=innerWidth=bodyScrollWidth, answer scroll dimensions equalled client dimensions, zero console/page/request errors, and zero broken images. At 390 the drawer measured full width with six 44px rows and every row centre hit its own element."
+    },
+    {
+      "command": "verification script local fetch matrix",
+      "exit_code": 0,
+      "result": "PASS: seven routes returned 200 with exact packet hashes; 12 required shared/FAQ assets returned 200 with nonzero bodies; /zzq-faq-caffeine-not-real-145103 and its .html control both returned 404/460B and differed from FAQ 200/42132B."
+    },
+    {
+      "command": "independent pixel inspection plus file(1) and nonzero-byte check of rendered evidence",
+      "exit_code": 0,
+      "result": "PASS: exact copy is fully visible without clipping at 390 and 1440; the 390 drawer is opaque and cleanly stacked. Five PNGs are nonblank: 390 full 390x2846, 390 detail 358x219, 1440 full 1440x2347, 1440 detail 858x181, and drawer 390x844."
+    },
+    {
+      "command": "vercel inspect production alias; authenticated vercel curl of alias and immutable 7vjf2m50b homepage; md5, sha256 and cmp",
+      "exit_code": 0,
+      "result": "PASS: alias resolves https://maplemoonbuild20260813-7vjf2m50b-handtomouses-projects.vercel.app, deployment dpl_G2LER2awaqyFtGRCcTserXbNynct, target production, status Ready. Alias and immutable homepage both returned 200/208556B, MD5 6197879a5ca9d3ed0452773abc0bbeb4, SHA-256 b936b5bb4856cdd6134e5b15bce5dfc3b353c1d442fd1a418180b35b8fa10356, and cmp exit 0."
+    },
+    {
+      "command": "final seven-file shasum -a 256 recheck after browser and production checks",
+      "exit_code": 0,
+      "result": "PASS: all seven candidate files still match packet acquisition hashes; no website, asset or deployment file changed."
+    }
+  ],
+  "screenshots_or_urls": [
+    "maplemoon-website/_wip/evidence/faq_caffeine_verify_20260814T145103/faq-caffeine-open-390.png",
+    "maplemoon-website/_wip/evidence/faq_caffeine_verify_20260814T145103/faq-caffeine-open-390-detail.png",
+    "maplemoon-website/_wip/evidence/faq_caffeine_verify_20260814T145103/faq-caffeine-open-1440.png",
+    "maplemoon-website/_wip/evidence/faq_caffeine_verify_20260814T145103/faq-caffeine-open-1440-detail.png",
+    "maplemoon-website/_wip/evidence/faq_caffeine_verify_20260814T145103/faq-drawer-open-390.png",
+    "maplemoon-website/_wip/evidence/faq_caffeine_verify_20260814T145103/browser-results.json",
+    "maplemoon-website/_wip/evidence/faq_caffeine_verify_20260814T145103/source-results.json",
+    "maplemoon-website/_wip/evidence/faq_caffeine_verify_20260814T145103/production-freeze-results.json"
+  ],
+  "failures": [],
+  "unknowns": [],
+  "residual_risk": [
+    "This packet verifies the isolated FAQ correction in the undeployed candidate only. The production alias intentionally remains on the frozen 08:54 deployment, and the separate cacao-butter answer remains unchanged and outside this packet."
+  ],
+  "forbidden_path_changes": [],
+  "proposed_next_state": "verified_ready_for_boss_acceptance",
+  "next_reviewer": "MapleMoon BOSS",
+  "ready_to_promote": false
+}

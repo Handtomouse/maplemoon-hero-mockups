@@ -1,0 +1,97 @@
+{
+  "schema": "maplemoon-receipt/v2",
+  "receipt_id": "MAPLEMOON-QA-PROOF-REDUCED-MOTION-R2-20260803-RECEIPT-001",
+  "packet_id": "MAPLEMOON-QA-PROOF-REDUCED-MOTION-R2-20260803",
+  "worker_thread_id": "019fc349-4ed4-77f0-9858-5015dbdf1ec7",
+  "worker": "runtime reduced-motion verifier",
+  "started_at": "2026-08-03T02:31:53+10:00",
+  "completed_at": "2026-08-03T02:44:29+10:00",
+  "outcome": "HOLD",
+  "confidence": "high for unsupported-runtime HOLD; no six-route runtime claim",
+  "phase": "complete",
+  "status": "HOLD",
+  "ready_to_promote": false,
+  "checkpoint_path": "_wip/checkpoints/MAPLEMOON-QA-PROOF-REDUCED-MOTION-R2-20260803_20260803_023153_AEST",
+  "files_changed": [
+    "_wip/reviews/maplemoon-six-page-qa-20260803/proof-reduced-motion-r2",
+    "docs/orchestration/reviews/MAPLEMOON-QA-PROOF-REDUCED-MOTION-R2-20260803.json"
+  ],
+  "files_read": [
+    "docs/orchestration/packets/MAPLEMOON-QA-PROOF-REDUCED-MOTION-R2-20260803.md",
+    "docs/orchestration/SIDECHAT_RECEIPT_GATE.md",
+    "_wip/checkpoints/MAPLEMOON-QA-PROOF-REDUCED-MOTION-R2-20260803_20260803_023153_AEST/RECOVERY_MANIFEST.json",
+    "docs/client-review/2026-08-01-saturday-review/staging-v1/MANIFEST.json",
+    "docs/client-review/2026-08-01-saturday-review/staging-v1/clean/MANIFEST.json"
+  ],
+  "pre_sha256": {
+    "_wip/reviews/maplemoon-six-page-qa-20260803/proof-reduced-motion-r2": null,
+    "docs/orchestration/reviews/MAPLEMOON-QA-PROOF-REDUCED-MOTION-R2-20260803.json": null
+  },
+  "post_sha256": {
+    "_wip/reviews/maplemoon-six-page-qa-20260803/proof-reduced-motion-r2": "282553a6b119c74bb25eeccdfe984ba7bfe8e3f1175060f09b4fca8998ae7d21",
+    "docs/orchestration/reviews/MAPLEMOON-QA-PROOF-REDUCED-MOTION-R2-20260803.json": null
+  },
+  "verified_subject_sha256": {
+    "docs/client-review/2026-08-01-saturday-review/staging-v1/MANIFEST.json": "d0d834b9b9173a497d0b03e39e4c282a7d5247f51484ebfd7ba3a64e8416bf7c",
+    "docs/client-review/2026-08-01-saturday-review/staging-v1/clean/MANIFEST.json": "d1c66b1d5937e9956d1806dbbbff4faf4f950def046aa642ae52f809c3d52d20"
+  },
+  "screenshots_or_urls": [],
+  "failures": [
+    "No supported isolated browser surface available to this worker produced runtime reduced-motion evidence; correction gate stopped further probing."
+  ],
+  "unknowns": [
+    "Runtime matchMedia reduce=true remains unverified on all six routes.",
+    "Normal-versus-reduced animations, transitions, video and carousel auto-motion remain unverified on all six routes.",
+    "Normal-versus-reduced keyboard focus behavior remains unverified on all six routes."
+  ],
+  "residual_risk": [
+    "The exact frozen six-page package still lacks runtime prefers-reduced-motion proof.",
+    "Static CSS observations cannot substitute for the missing runtime emulation proof.",
+    "No screenshot or deterministic rendered evidence exists for this held run."
+  ],
+  "forbidden_path_changes": [],
+  "proposed_next_state": "HOLD",
+  "next_reviewer": "Main independent verifier",
+  "checks": [
+    {
+      "command": "phase-start gate before first R2 write",
+      "exit_code": 0,
+      "result": "PASS packet=MAPLEMOON-QA-PROOF-REDUCED-MOTION-R2-20260803 phase=start scope=2"
+    },
+    {
+      "command": "git branch --show-current",
+      "exit_code": 0,
+      "result": "PASS: codex-maplemoon-section-review"
+    },
+    {
+      "command": "R2 refined HEAD-drift diff from c05914ceb7f48dfe773e680ebbe7f392464f2dfa to be0576600c06d2ceb9f36b0a589037dbfd7771b5",
+      "exit_code": 0,
+      "result": "PASS: empty diff for the served clean package, packet-protected paths, R2 writable paths and tested manifests"
+    },
+    {
+      "command": "shasum -a 256 docs/client-review/2026-08-01-saturday-review/staging-v1/MANIFEST.json",
+      "exit_code": 0,
+      "result": "PASS: d0d834b9b9173a497d0b03e39e4c282a7d5247f51484ebfd7ba3a64e8416bf7c"
+    },
+    {
+      "command": "shasum -a 256 docs/client-review/2026-08-01-saturday-review/staging-v1/clean/MANIFEST.json",
+      "exit_code": 0,
+      "result": "PASS: d1c66b1d5937e9956d1806dbbbff4faf4f950def046aa642ae52f809c3d52d20"
+    },
+    {
+      "command": "supported isolated reduced-motion runtime availability assessment",
+      "exit_code": 0,
+      "result": "HOLD: no supported surface established runtime emulation; routes tested=0, screenshots=0, browser.log=0 bytes"
+    },
+    {
+      "command": "scope and preservation audit",
+      "exit_code": 0,
+      "result": "PASS: only R2 evidence and receipt paths changed; no OS setting, package, manifest, commit, or first-HOLD evidence change"
+    }
+  ],
+  "blockers": [
+    "A supported isolated browser/CDP surface with standards-based reduced-motion emulation is required."
+  ],
+  "ownership": "Released after exact R2 HOLD evidence and receipt; no runtime acceptance, package, OS-setting, promotion, or client ownership.",
+  "next_action": "Main independent verifier should reroute the unchanged hash-bound package to a specialist with a supported isolated Playwright or CDP reduced-motion surface."
+}

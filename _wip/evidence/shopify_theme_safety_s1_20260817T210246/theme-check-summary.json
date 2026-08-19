@@ -1,0 +1,34 @@
+{
+  "theme_id": 160076628165,
+  "command": "shopify theme check --path <duplicate-recovery> --fail-level error --no-color",
+  "exit_code": 1,
+  "files_inspected": 181,
+  "files_with_offenses": 48,
+  "offense_count": 198,
+  "error_count": 3,
+  "warning_count": 195,
+  "errors": [
+    {
+      "path": "assets/c-slider.js.liquid",
+      "check": "LiquidHTMLSyntaxError",
+      "message": "SyntaxError: expected svg, style, or script"
+    },
+    {
+      "path": "snippets/inc-socials.liquid",
+      "check": "TranslationKeyExists",
+      "message": "openthinking.socials. has no matching entry in locales/en.default.json"
+    },
+    {
+      "path": "sections/t-giftcard.liquid",
+      "check": "ParserBlockingScript",
+      "message": "script_tag is parser-blocking"
+    }
+  ],
+  "strict_settings_schema_json": {
+    "command": "jq empty config/settings_schema.json",
+    "exit_code": 5,
+    "result": "jq: parse error: Expected another array element at line 470, column 9"
+  },
+  "comparison_to_s0": "MATCHES inherited 3 errors and 195 warnings; jq exit-code detail differs from the prior report, but the parse defect and exact bytes are unchanged",
+  "disposition": "INHERITED_BASELINE_DEFECTS_UNREPAIRED_DUPLICATE_NOT_YET_IMPLEMENTATION_BASE"
+}

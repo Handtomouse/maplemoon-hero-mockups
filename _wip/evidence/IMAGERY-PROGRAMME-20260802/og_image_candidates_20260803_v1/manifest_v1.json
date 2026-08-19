@@ -1,0 +1,241 @@
+{
+  "schema": "maplemoon-og-image-candidate-manifest/v1",
+  "packet_id": "OG-IMAGE-CANDIDATES-20260803-V1",
+  "worker_thread_id": "019fc360-a934-7a52-b410-b72865ce6533",
+  "generation_route": "Built-in OpenAI image generation workflow, one asset per prompt, using approved local references only; no Fal, external upload or pasted source-photo cutout.",
+  "candidate_only": true,
+  "wired_to_pages": false,
+  "approval_status": "pending_human_review",
+  "ready_to_promote": false,
+  "lp_03_status": "HOLD",
+  "master_spec": {
+    "dimensions": [1200, 630],
+    "aspect_ratio": "1.9048:1",
+    "processing": "Centered aspect crop from accepted source generation, then Pillow LANCZOS resize to 1200 by 630 and PNG output.",
+    "crop_proofs": ["wide_1.91_to_1", "centered_1_to_1", "small_thumbnail"]
+  },
+  "authority": {
+    "path": "_wip/evidence/IMAGERY-PROGRAMME-20260802/OG-IMAGE-CANDIDATE-BRIEF-20260803.md",
+    "sha256": "ce44995da1ede99cebb383e0f8587050928b0ef9fee68dd0d72907a9565b1a4e"
+  },
+  "frozen_clean_manifest": {
+    "path": "docs/client-review/2026-08-01-saturday-review/staging-v1/clean/MANIFEST.json",
+    "sha256": "d1c66b1d5937e9956d1806dbbbff4faf4f950def046aa642ae52f809c3d52d20"
+  },
+  "references": [
+    {
+      "path": "/Users/handtomouse/UFC/clients/maplemoon/deliverables/hero_raws_ORIGINAL_wetransfer_20260603/Heros-24.jpg",
+      "sha256": "6b0373e490e1270d6b327e5f505aff2b2453c57c20884c741da2fe17afedc86e",
+      "dimensions": [4000, 6000],
+      "provenance": "Verified Mitch/client photograph of genuine naked Moon pieces and rough ochre aggregate rocks; sole exact product-identity reference."
+    },
+    {
+      "path": "assets/licensed/carob_pods_macro.jpg",
+      "sha256": "0426510e9b7446415af8884ad7969d99d26de7a3cbcbedb0c7ca121379f31922",
+      "dimensions": [7360, 4912],
+      "provenance": "Licensed botanical appearance reference for generic carob pods only."
+    },
+    {
+      "path": "assets/hero_shots/bg_v4_range.png",
+      "sha256": "b075aa7c46d3d1811c7eb10f061084303a179007dbbcc68438e922d276e8383b",
+      "dimensions": [1536, 1024],
+      "provenance": "Local website-blue palette and tonal atmosphere reference."
+    }
+  ],
+  "supplementary_form_references": [
+    {
+      "path": "/Users/handtomouse/UFC/spins/maplemoon_bites_moodboard_export_20260516/output_PNG/moons-group-01.png",
+      "sha256": "07534c11f6307eda0f651ece4eedb514ee154c234372262fc14656f4c25370eb",
+      "dimensions": [2160, 2160],
+      "provenance": "AI moodboard export, form reference only, never client photography or exact product identity."
+    },
+    {
+      "path": "/Users/handtomouse/UFC/spins/maplemoon_bites_moodboard_export_20260516/output_PNG/moons-group-02.png",
+      "sha256": "b694c14c36937abc1ed4a72454af3ef0568c3b046e11e12fc8a16b304fac7434",
+      "dimensions": [2160, 2160],
+      "provenance": "AI moodboard export, form reference only, never client photography or exact product identity."
+    },
+    {
+      "path": "/Users/handtomouse/UFC/spins/maplemoon_bites_moodboard_export_20260516/output_PNG/moons-group-03.png",
+      "sha256": "543f02aca0c020c8ead905a22bb42b1e3e83e0d5f4757b158bfab1c72daf284b",
+      "dimensions": [2160, 2160],
+      "provenance": "AI moodboard export, form reference only, never client photography or exact product identity."
+    },
+    {
+      "path": "/Users/handtomouse/UFC/spins/maplemoon_bites_moodboard_export_20260516/output_PNG/moons-pure-main.png",
+      "sha256": "1fb60731f90b23434754e5687a08dbd72055d47a1a5fbf749d8d61c297880b1f",
+      "dimensions": [2160, 2160],
+      "provenance": "AI moodboard export, form reference only, never client photography or exact product identity."
+    },
+    {
+      "path": "/Users/handtomouse/UFC/spins/maplemoon_bites_moodboard_export_20260516/output_PNG/moons-pure-close-top.png",
+      "sha256": "2cc6b80366138f2e1c5f98e9a48588cfb502e8be10538c6518c2f1986f36ecc0",
+      "dimensions": [2160, 2160],
+      "provenance": "AI moodboard export, form reference only, never client photography or exact product identity."
+    }
+  ],
+  "candidates": [
+    {
+      "id": "A1",
+      "family": "atmosphere_only",
+      "variant": "brand_default",
+      "intended_surface": "General MapleMoon link preview candidate",
+      "master_path": "masters/atmosphere_default_v1.png",
+      "master_sha256": "3b4d233c3516b506ba459fed2bc9eba534a8cd852c027c4834c05403175de036",
+      "master_dimensions": [1200, 630],
+      "source_path": "source_generations/atmosphere_default_source_v1.png",
+      "source_sha256": "fbfee1f3d17d17b3a7954c86557206bd12dda81af5aa2678dc5a677ba7d20230",
+      "source_dimensions": [1734, 907],
+      "source_references": ["assets/licensed/carob_pods_macro.jpg", "assets/hero_shots/bg_v4_range.png"],
+      "final_prompt": "Use case: photorealistic natural website share image. Asset type: 1.91:1 Open Graph candidate, atmosphere-only brand default. Primary request: create a refined studio still life of exactly three genuine-looking dried carob pods on a seamless pale powder-blue surface and matching pale-blue background. Reference use: use the botanical reference only for dry irregular pod morphology and the blue reference only for palette and tonal atmosphere. Do not reproduce the powder, wood or rustic set from the botanical reference. Composition: wide horizontal frame with an asymmetrical central cluster, one pod crossing lightly behind another, broad quiet negative space, and a strong silhouette that survives a tiny thumbnail and a centered square crop. Lighting: cool restrained directional light from upper left, long elegant soft-edged shadows, low glare. Materials: pods are dry dark natural brown, wrinkled, unevenly ridged, scarred, subtly chipped and naturally asymmetrical, with almost no specular sheen. Constraints: no product pieces, packaging, wrappers, labels, logos, text, claims, people, faces, hands, branches, foliage, flowers, powder, linen, wood, patterns, marble, resin, glossy plastic, accessories, watermark or border. No duplicated pods. Photographic realism, not CGI.",
+      "visual_qa": "Full-resolution source and 1200 by 630 master inspected; wide, centered square and thumbnail crops preserve the main pod cluster.",
+      "known_limitations": ["Studio highlights make the foremost pod slightly shinier than an ideal fully dry matte pod."],
+      "approval_status": "pending_human_review"
+    },
+    {
+      "id": "A2",
+      "family": "atmosphere_only",
+      "variant": "homepage",
+      "intended_surface": "Homepage link preview candidate",
+      "master_path": "masters/atmosphere_homepage_v1.png",
+      "master_sha256": "0f8d9bf0eb34b20887e83daf6234b55f567be66d435b8607861795461d43e380",
+      "master_dimensions": [1200, 630],
+      "source_path": "source_generations/atmosphere_homepage_source_v1.png",
+      "source_sha256": "e1d632273247bbc281ba8cd9e96f28c7ed4e112188dde9d1543ef9b4a39daae6",
+      "source_dimensions": [1734, 907],
+      "source_references": ["assets/licensed/carob_pods_macro.jpg", "assets/hero_shots/bg_v4_range.png"],
+      "final_prompt": "Use case: photorealistic natural website share image. Asset type: 1.91:1 Open Graph candidate, atmosphere-only Homepage variant. Primary request: create a bold editorial still life of three botanically real dried carob pods on a seamless light MapleMoon powder-blue set. Reference use: botanical reference controls only dry irregular pod morphology. Blue reference controls only the lighter website palette. Exclude all reference powder, wood and rustic styling. Composition: one large curved pod enters from the lower left foreground, with two much smaller distinct pods offset in the midground to the right. Strong scale contrast, asymmetric balance, generous pale-blue negative space, clear center-safe subject for a square crop, instantly readable at thumbnail size. Lighting: refined cool directional light from upper left with one long graphic shadow and restrained contrast. Materials: dark natural brown pods with irregular wrinkles, uneven ridges, tiny scars, varied tapering, dry matte skin and minimal highlights. Every pod must differ. Constraints: no product pieces, packaging, wrappers, labels, logos, text, claims, people, faces, hands, branches, foliage, flowers, powder, linen, wood, patterns, marble, resin, glossy plastic, accessories, watermark or border. Avoid CGI, lacquer and duplicated forms.",
+      "visual_qa": "Full-resolution source and 1200 by 630 master inspected; the scale contrast remains clear in wide and thumbnail crops, while the square crop retains the large hero and one supporting pod.",
+      "known_limitations": ["The large foreground pod has stronger surface highlights than the preferred driest botanical finish."],
+      "approval_status": "pending_human_review"
+    },
+    {
+      "id": "A3",
+      "family": "atmosphere_only",
+      "variant": "our_story",
+      "intended_surface": "Our Story link preview candidate",
+      "master_path": "masters/atmosphere_our_story_v1.png",
+      "master_sha256": "e6e48dcc6e478e5e32c9b178a425d8cef2e23e7ea25e2e0c78a501cdcdfdc484",
+      "master_dimensions": [1200, 630],
+      "source_path": "source_generations/atmosphere_our_story_source_v1.png",
+      "source_sha256": "f0648f40c03cfd893dfea75bb5b2cfea3e521fc51abc87bd0e7eeb9ac1dd5408",
+      "source_dimensions": [1733, 908],
+      "source_references": ["assets/licensed/carob_pods_macro.jpg", "assets/hero_shots/bg_v4_range.png"],
+      "final_prompt": "Use case: photorealistic natural website share image. Asset type: 1.91:1 Open Graph candidate, atmosphere-only Our Story variant. Primary request: create a quiet sculptural narrative still life of five botanically real dried carob pods on a seamless pale website-blue studio surface. Reference use: botanical reference controls only dry irregular pod anatomy. Blue reference controls the pale powder-blue palette. Do not copy the powder, wood or rustic styling. Composition: arrange five individually different pods in a loose low arc that moves from a small paired cluster at left to one isolated pod at right, with subtle overlaps, varied angles and natural spacing. Keep the overall silhouette broad and readable, with important forms retained in a centered square crop and thumbnail. Lighting: cool refined directional side light, long restrained shadows, soft falloff, quiet editorial mood. Materials: natural deep brown, dry, wrinkled, scarred and asymmetrical pods with uneven ridges, varied tapering, tiny chips and subdued matte highlights. Constraints: no product pieces, packaging, wrappers, labels, logos, text, claims, people, faces, hands, branches, foliage, flowers, powder, linen, wood, patterns, marble, resin, glossy plastic, cups, dishes, spoons, accessories, watermark or border. Avoid duplicated shapes, lacquer and CGI.",
+      "visual_qa": "Full-resolution source and 1200 by 630 master inspected; the full arc reads in the wide card and thumbnail, with the central pod grouping retained in the square crop.",
+      "known_limitations": ["The paired left pods are compositionally close and may read as a tighter cluster than intended at very small size."],
+      "approval_status": "pending_human_review"
+    },
+    {
+      "id": "P1",
+      "family": "product_led_generic_form_study",
+      "variant": "brand_default",
+      "intended_surface": "General MapleMoon link preview candidate",
+      "master_path": "masters/product_default_v1.png",
+      "master_sha256": "ed6be06fe24599b6ac43a2567fb7830093925e2a28546b7f5c67213d0fa590f6",
+      "master_dimensions": [1200, 630],
+      "source_path": "source_generations/product_default_source_v1.png",
+      "source_sha256": "496d3318b562eb1e112a76b45813ecaba6dfde90472a3ead6bb9913eb06c3027",
+      "source_dimensions": [1733, 908],
+      "source_references": ["/Users/handtomouse/UFC/clients/maplemoon/deliverables/hero_raws_ORIGINAL_wetransfer_20260603/Heros-24.jpg", "assets/hero_shots/bg_v4_range.png"],
+      "final_prompt": "Use case: photorealistic natural website share image. Asset type: 1.91:1 Open Graph candidate, product-led brand default. Status intent: generic generated form study based on a verified real photograph, never exact product photography. Primary request: make a new wide studio still life of five intact unwrapped crescent-shaped edible pieces arranged on two staggered rough ochre-tan porous mineral blocks, re-lit in a pale MapleMoon website-blue world. Reference authority: use Heros-24 as the sole authority for actual Moon geometry, real scale, dark reddish-brown colour, hand-finished faceted coating, restrained sheen and the exact rough aggregate rock material language. Use the blue reference only to lighten the background and floor into the current website palette. Moon geometry: short chunky open-C pieces, thick broad outer body, compact inner opening, softly tapered rounded tips, subtle handmade irregularity and small faceted planes. They must resemble the intact forms in Heros-24, not smooth idealised crescents. Composition: balanced low group, three pieces along the lower rock, two raised behind, all intact and each clearly visible. Maintain square-safe center and thumbnail readability. Lighting: cool directional upper-left light, crisp refined shadows, controlled low highlights. Constraints: no cut pieces, bites, fillings, nuts, flavour cues, packaging, wrappers, labels, logos, text, claims, people, hands, pods, plants, cups, dishes, extra props, white plinths, marble, watermark or border.",
+      "visual_qa": "Full-resolution source and 1200 by 630 master inspected and compared on moon_geometry_comparison_v1.png against verified Heros-24 product and rock material.",
+      "known_limitations": ["Generated pieces are generic studies, not exact MapleMoon product photography.", "The five silhouettes are more uniform than the handmade variation visible in Heros-24.", "Tip taper remains slightly rounder than the strict proprietary-form brief and requires Nate review."],
+      "approval_status": "pending_human_review"
+    },
+    {
+      "id": "P2",
+      "family": "product_led_generic_form_study",
+      "variant": "homepage",
+      "intended_surface": "Homepage link preview candidate",
+      "master_path": "masters/product_homepage_v1.png",
+      "master_sha256": "1a90086f1426427ea9047f9c2919c3bd396be13cf47c6237aed6a3343ddf0857",
+      "master_dimensions": [1200, 630],
+      "source_path": "source_generations/product_homepage_source_v1.png",
+      "source_sha256": "e88a111a6ad83b583945f8d667b52a44e93b169f19f44e6f01eac7ec8a81f9a7",
+      "source_dimensions": [1731, 909],
+      "source_references": ["/Users/handtomouse/UFC/clients/maplemoon/deliverables/hero_raws_ORIGINAL_wetransfer_20260603/Heros-24.jpg", "assets/hero_shots/bg_v4_range.png"],
+      "final_prompt": "Use case: photorealistic natural website share image. Asset type: 1.91:1 Open Graph candidate, product-led Homepage variant. Status intent: generic generated form study based on verified real photography, never exact product photography. Primary request: create a wide editorial studio scene of three intact unwrapped Moon-form pieces with one close hero beside a low rough ochre-tan porous mineral block and two smaller pieces arranged farther back on the block, all re-lit against pale website blue. Reference authority: Heros-24 alone controls actual Moon geometry, real scale, dark reddish-brown colour, hand-finished faceted coating, subdued sheen and the same coarse aggregate rock language. The blue reference controls only the lighter website background. Moon geometry: short chunky open C, broad thick body, compact opening, softly tapered rounded tips, faceted handmade variation. Match the intact Heros-24 forms, not smooth symbolic crescents. Make the three pieces subtly different in stance and contour. Composition: large hero lower left, two smaller at staggered depth right, rough rock visually supporting but quieter, generous negative space, center-square safe and strong at thumbnail. Lighting: cool upper-left directional light, refined long shadows, low controlled highlights. Constraints: all pieces intact; no cuts, bites, fillings, nuts, flavour cues, packaging, labels, logos, text, claims, people, hands, pods, plants, cups, dishes, white plinths, marble, watermark or border.",
+      "visual_qa": "Full-resolution source and 1200 by 630 master inspected; large hero, supporting pieces and rock remain visible in the wide and thumbnail crops and the square crop preserves the hero plus supporting context.",
+      "known_limitations": ["Generated pieces are generic studies, not exact MapleMoon product photography.", "The two background pieces are very similar and may read as duplicated at close inspection.", "Tip taper remains slightly rounder than the strict proprietary-form brief and requires Nate review."],
+      "approval_status": "pending_human_review"
+    },
+    {
+      "id": "P3",
+      "family": "product_led_generic_form_study",
+      "variant": "shop",
+      "intended_surface": "Shop link preview candidate",
+      "master_path": "masters/product_shop_v1.png",
+      "master_sha256": "400062c916c2a88158f22b45c2fcc705728df7e029f1a3df12318f22e0588290",
+      "master_dimensions": [1200, 630],
+      "source_path": "source_generations/product_shop_source_v1.png",
+      "source_sha256": "2b3725da69c69c9454cda403add79f76180d39d178a1eac439a8950948edf0c2",
+      "source_dimensions": [1733, 908],
+      "source_references": ["/Users/handtomouse/UFC/clients/maplemoon/deliverables/hero_raws_ORIGINAL_wetransfer_20260603/Heros-24.jpg", "assets/hero_shots/bg_v4_range.png"],
+      "final_prompt": "Use case: photorealistic natural website share image. Asset type: 1.91:1 Open Graph candidate, product-led Shop variant. Status intent: generic generated form study based on verified real photography, never exact product photography. Primary request: create a precise editorial arrangement of four intact unwrapped Moon-form pieces standing across one low rough ochre-tan porous aggregate block, re-lit against a seamless pale website-blue background and surface. Reference authority: Heros-24 alone controls actual Moon geometry, real scale, deep reddish-brown colour, hand-finished faceted coating, restrained soft sheen and the same rough rock material. The blue reference only supplies the lighter site palette. Moon geometry: each is a short chunky open C with a broad thick spine, compact inner opening and softly tapered rounded tips. Preserve one product family but vary slight lean, opening width and handmade facets. Do not make thin, smooth or symbolic crescents. Composition: low horizontal cadence of four pieces, alternating subtle lean and spacing, centered square-safe cluster, strong silhouette at thumbnail. Rock block is visible but secondary. Lighting: cool directional upper-left studio light, crisp repeated shadows, controlled highlights. Constraints: all intact; no cuts, bites, fillings, nuts, flavours, packaging, labels, logos, text, claims, people, hands, pods, plants, white plinths, marble, accessories, watermark or border.",
+      "visual_qa": "Full-resolution source and 1200 by 630 master inspected; the lineup reads clearly at thumbnail size and the center square preserves three full pieces plus two edge fragments.",
+      "known_limitations": ["Generated pieces are generic studies, not exact MapleMoon product photography.", "The lineup has stronger repetition and less handmade variation than Heros-24.", "The square crop trims the first and fourth pieces, making this option weaker for square-only surfaces."],
+      "approval_status": "pending_human_review"
+    },
+    {
+      "id": "P4",
+      "family": "product_led_generic_form_study",
+      "variant": "our_story",
+      "intended_surface": "Our Story link preview candidate",
+      "master_path": "masters/product_our_story_v1.png",
+      "master_sha256": "6a5e7d0e36c21627c60fe229ad537463f73a8453f399e564b3c9cc01af80f136",
+      "master_dimensions": [1200, 630],
+      "source_path": "source_generations/product_our_story_source_v1.png",
+      "source_sha256": "61fbcd4005ab7fc78e50e23527cd51138983ebfd6799cfaf736eb2ad905a4d7d",
+      "source_dimensions": [1729, 910],
+      "source_references": ["/Users/handtomouse/UFC/clients/maplemoon/deliverables/hero_raws_ORIGINAL_wetransfer_20260603/Heros-24.jpg", "assets/hero_shots/bg_v4_range.png"],
+      "final_prompt": "Use case: photorealistic natural website share image. Asset type: 1.91:1 Open Graph candidate, product-led Our Story variant. Status intent: generic generated form study based on verified real photography, never exact product photography. Primary request: create a quiet narrative studio still life of three intact unwrapped Moon-form pieces at different heights across two staggered rough ochre-tan porous aggregate rocks, re-lit in a pale MapleMoon website-blue set. Reference authority: Heros-24 alone controls actual Moon geometry, scale, dark reddish-brown colour, hand-finished faceted coating, restrained sheen and the same coarse rock material. Blue reference controls only the lighter background and floor. Moon geometry: short chunky open C forms, broad thick spine, compact opening, softly tapered rounded tips, small handmade differences and visible faceted planes. Match intact pieces in Heros-24 rather than idealised smooth crescents. Composition: one lower foreground piece, one middle piece on the lower rock and one raised piece on the rear rock, each with a different orientation; broad quiet negative space and centered square-safe storytelling silhouette. Rocks stay supporting and tactile. Lighting: cool upper-left directional light, refined long shadows, low controlled highlights. Constraints: all intact; no cuts, bites, fillings, nuts, flavours, packaging, labels, logos, text, claims, people, hands, pods, plants, cups, dishes, white plinths, marble, extra props, watermark or border.",
+      "visual_qa": "Full-resolution source and 1200 by 630 master inspected; all three pieces and both rocks remain readable in wide, square and thumbnail treatments.",
+      "known_limitations": ["Generated pieces are generic studies, not exact MapleMoon product photography.", "The composition tracks Heros-24 rock staging closely and therefore offers less novelty than the atmosphere family.", "Tip taper remains slightly rounder than the strict proprietary-form brief and requires Nate review."],
+      "approval_status": "pending_human_review"
+    }
+  ],
+  "rejected_preserved_evidence": [
+    {
+      "reason": "Rejected after Nate requested direct Heros-24 geometry and the same rock language; this draft is too smooth and uses no rock.",
+      "master_path": "masters/rejected_product_default_smooth_v0.png",
+      "master_sha256": "09efc283a54917f817b9e633552f9542c66c87babcad129fafe390895d0ae9ea",
+      "source_path": "source_generations/rejected_product_default_smooth_source_v0.png",
+      "source_sha256": "c97e0de965d3c176d3b47233742a87f67ab950002e282ac3862eb4db7f8ac6a1"
+    },
+    {
+      "reason": "Rejected after Nate requested direct Heros-24 geometry and the same rock language; this draft is too smooth and uses no rock.",
+      "master_path": "masters/rejected_product_homepage_smooth_v0.png",
+      "master_sha256": "06a2ed5c4f5e83e1a522f2e2bd1d98b69e7e4f907e24ee001952a2c3d2a664df",
+      "source_path": "source_generations/rejected_product_homepage_smooth_source_v0.png",
+      "source_sha256": "20df4dd830c15e1a21586416ad70ec3201cd600676ecd6d8c926d7ee3b9adda7"
+    },
+    {
+      "reason": "Rejected after Nate requested direct Heros-24 geometry and the same rock language; repeated smooth forms do not carry the real faceted material.",
+      "master_path": "masters/rejected_product_shop_smooth_v0.png",
+      "master_sha256": "88593b4955596bd1df5d8c88bcf66fb4b084fd80afc4b13d0f00b17d82858d8e",
+      "source_path": "source_generations/rejected_product_shop_smooth_source_v0.png",
+      "source_sha256": "ff3da502a2a910d6b83117546c8d4dabff2a43180507e1d7f16a6171345e8597"
+    },
+    {
+      "reason": "Rejected after Nate requested the same Heros-24 rock language; white plinth material is incorrect.",
+      "master_path": "masters/rejected_product_our_story_white_plinth_v0.png",
+      "master_sha256": "2b7ab9e6db45ad970d8d928c7bfe7ab51b0d7008133fd26185412988cd9cec7b",
+      "source_path": "source_generations/rejected_product_our_story_white_plinth_source_v0.png",
+      "source_sha256": "6e0a20c88a70cd42ee264aecf70d97550a5c835a00752c0537dd4cf200c26755"
+    }
+  ],
+  "review_evidence": [
+    {
+      "path": "og_share_candidates_contact_sheet_v1.png",
+      "sha256": "0fb5171fc4d78cab7318b567d719ceb6c90131a3860695d96461134fb31fa212",
+      "dimensions": [1700, 3540]
+    },
+    {
+      "path": "moon_geometry_comparison_v1.png",
+      "sha256": "492dd9f9b0ca353af904f6effab9df6803fbf8171c19b4a5177310872d0deb2c",
+      "dimensions": [1600, 1160]
+    }
+  ],
+  "decision_gate": "Nate must select or reject a candidate. Any implementation additionally requires approved copy, canonical URLs and a separate code/access packet. LP-03 remains HOLD."
+}

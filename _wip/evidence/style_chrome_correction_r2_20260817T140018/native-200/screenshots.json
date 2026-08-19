@@ -1,0 +1,119 @@
+{
+  "all_nonblank": true,
+  "count": 14,
+  "screenshots": [
+    {
+      "bytes": 2759532,
+      "file": "screenshots/390-homepage.png",
+      "full_page": false,
+      "height_px": 1984,
+      "nonblank": true,
+      "width_px": 1560
+    },
+    {
+      "bytes": 1968636,
+      "file": "screenshots/390-shop.png",
+      "full_page": false,
+      "height_px": 1984,
+      "nonblank": true,
+      "width_px": 1560
+    },
+    {
+      "bytes": 975590,
+      "file": "screenshots/390-our-story.png",
+      "full_page": false,
+      "height_px": 1984,
+      "nonblank": true,
+      "width_px": 1560
+    },
+    {
+      "bytes": 2775057,
+      "file": "screenshots/390-carob-story.png",
+      "full_page": false,
+      "height_px": 1984,
+      "nonblank": true,
+      "width_px": 1560
+    },
+    {
+      "bytes": 1650048,
+      "file": "screenshots/390-faq.png",
+      "full_page": false,
+      "height_px": 1984,
+      "nonblank": true,
+      "width_px": 1560
+    },
+    {
+      "bytes": 2252454,
+      "file": "screenshots/390-stockists.png",
+      "full_page": false,
+      "height_px": 1984,
+      "nonblank": true,
+      "width_px": 1560
+    },
+    {
+      "bytes": 1345614,
+      "file": "screenshots/390-products-pure-carob-bar.png",
+      "full_page": false,
+      "height_px": 1984,
+      "nonblank": true,
+      "width_px": 1560
+    },
+    {
+      "bytes": 5280350,
+      "file": "screenshots/720-homepage.png",
+      "full_page": false,
+      "height_px": 1984,
+      "nonblank": true,
+      "width_px": 2880
+    },
+    {
+      "bytes": 2930686,
+      "file": "screenshots/720-shop.png",
+      "full_page": false,
+      "height_px": 1984,
+      "nonblank": true,
+      "width_px": 2880
+    },
+    {
+      "bytes": 1662273,
+      "file": "screenshots/720-our-story.png",
+      "full_page": false,
+      "height_px": 1984,
+      "nonblank": true,
+      "width_px": 2880
+    },
+    {
+      "bytes": 4182859,
+      "file": "screenshots/720-carob-story.png",
+      "full_page": false,
+      "height_px": 1984,
+      "nonblank": true,
+      "width_px": 2880
+    },
+    {
+      "bytes": 2499901,
+      "file": "screenshots/720-faq.png",
+      "full_page": false,
+      "height_px": 1984,
+      "nonblank": true,
+      "width_px": 2880
+    },
+    {
+      "bytes": 4548681,
+      "file": "screenshots/720-stockists.png",
+      "full_page": false,
+      "height_px": 1984,
+      "nonblank": true,
+      "width_px": 2880
+    },
+    {
+      "bytes": 2446941,
+      "file": "screenshots/720-products-pure-carob-bar.png",
+      "full_page": false,
+      "height_px": 1984,
+      "nonblank": true,
+      "width_px": 2880
+    }
+  ],
+  "verdict": "PASS"
+}

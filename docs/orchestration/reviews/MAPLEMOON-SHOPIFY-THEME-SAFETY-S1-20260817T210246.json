@@ -1,0 +1,116 @@
+{
+  "schema": "maplemoon-receipt/v2",
+  "receipt_id": "MAPLEMOON-SHOPIFY-THEME-SAFETY-S1-20260817T210246-RECEIPT",
+  "packet_id": "MAPLEMOON-SHOPIFY-THEME-SAFETY-S1-20260817T210246",
+  "worker_thread_id": "/root",
+  "worker": "MapleMoon root Boss",
+  "started_at": "2026-08-17T11:05:21Z",
+  "completed_at": "2026-08-17T11:14:02Z",
+  "files_read": [
+    "maplemoon-website/docs/orchestration/packets/MAPLEMOON-SHOPIFY-THEME-SAFETY-S1-20260817T210246.md",
+    "maplemoon-website/docs/orchestration/packets/MAPLEMOON-SHOPIFY-BASELINE-IDENTITY-R2-20260817T172708.md",
+    "maplemoon-website/docs/orchestration/reviews/MAPLEMOON-SHOPIFY-BASELINE-IDENTITY-R2-20260817T172708.md",
+    "maplemoon-website/docs/orchestration/reviews/MAPLEMOON-SHOPIFY-BASELINE-IDENTITY-R2-20260817T172708.json",
+    "maplemoon-website/docs/orchestration/packets/MAPLEMOON-SHOPIFY-EXECUTION-PROGRAM-20260817T165719.md",
+    "maplemoon-website/docs/orchestration/MAPLEMOON_BOSS_EXECUTION_LEDGER_20260816.md",
+    "maplemoon-website/.planning/MAPLEMOON_PRIVATE_SHOPIFY_REVIEW_GOAL_20260817.md",
+    "maplemoon-website/_wip/recovery/shopify_baseline_identity_r2_20260817T172708/theme-154500595909",
+    "maplemoon-website/scripts/check-maplemoon-receipt.py"
+  ],
+  "files_changed": [
+    "maplemoon-website/_wip/evidence/shopify_theme_safety_s1_20260817T210246",
+    "maplemoon-website/_wip/recovery/shopify_theme_safety_s1_20260817T210246",
+    "maplemoon-website/docs/orchestration/reviews/MAPLEMOON-SHOPIFY-THEME-SAFETY-S1-20260817T210246.md",
+    "maplemoon-website/docs/orchestration/reviews/MAPLEMOON-SHOPIFY-THEME-SAFETY-S1-20260817T210246.json"
+  ],
+  "pre_sha256": {
+    "maplemoon-website/_wip/evidence/shopify_theme_safety_s1_20260817T210246": null,
+    "maplemoon-website/_wip/recovery/shopify_theme_safety_s1_20260817T210246": null,
+    "maplemoon-website/docs/orchestration/reviews/MAPLEMOON-SHOPIFY-THEME-SAFETY-S1-20260817T210246.md": null,
+    "maplemoon-website/docs/orchestration/reviews/MAPLEMOON-SHOPIFY-THEME-SAFETY-S1-20260817T210246.json": null
+  },
+  "post_sha256": {
+    "maplemoon-website/_wip/evidence/shopify_theme_safety_s1_20260817T210246": "a58510e62f66994d7d5725c9810c77fc7562a227321975f67ee407e8c24f5ee4",
+    "maplemoon-website/_wip/recovery/shopify_theme_safety_s1_20260817T210246": "7c25fe88bd299242db40896d42d328a1e7855731f3d4e4dbf9fb8f356eaaf08b",
+    "maplemoon-website/docs/orchestration/reviews/MAPLEMOON-SHOPIFY-THEME-SAFETY-S1-20260817T210246.md": "dbfef71470bc3f1cbd1b68b01dac0b101fab1f474748c0ce028b6703802fd382",
+    "maplemoon-website/docs/orchestration/reviews/MAPLEMOON-SHOPIFY-THEME-SAFETY-S1-20260817T210246.json": null
+  },
+  "checks": [
+    {
+      "command": "check-maplemoon-receipt.py checkpoint",
+      "exit_code": 0,
+      "result": "PASS checkpoint packet=MAPLEMOON-SHOPIFY-THEME-SAFETY-S1-20260817T210246 files=4 path=/Users/handtomouse/maplemoon-website/_wip/checkpoints/MAPLEMOON-SHOPIFY-THEME-SAFETY-S1-20260817T210246_20260817_210521_AEST"
+    },
+    {
+      "command": "check-maplemoon-receipt.py verify --phase start",
+      "exit_code": 0,
+      "result": "PASS packet=MAPLEMOON-SHOPIFY-THEME-SAFETY-S1-20260817T210246 phase=start scope=4"
+    },
+    {
+      "command": "six pinned local SHA-256 checks at acquisition and close",
+      "exit_code": 0,
+      "result": "PASS S0 packet=0a97e991... report=b2761c71... receipt=780a629b... execution-program=8b6dd8c6... Boss-ledger=bc23e18d... private-review-goal=81c07970..."
+    },
+    {
+      "command": "shopify theme list/info pre-state",
+      "exit_code": 0,
+      "result": "PASS exactly one theme before write: id=154500595909 name=Ethereal role=live processing=false; target duplicate absent"
+    },
+    {
+      "command": "shopify theme duplicate --store maplemooncarob.myshopify.com --theme 154500595909 --name 'MapleMoon Private Review 20260817 S1' --json --force --no-color",
+      "exit_code": 0,
+      "result": "PASS exactly one duplicate command returned id=160076628165 name=MapleMoon Private Review 20260817 S1 role=unpublished"
+    },
+    {
+      "command": "shopify theme list/info post-state",
+      "exit_code": 0,
+      "result": "PASS exactly two themes after write: unchanged source 154500595909/Ethereal/live plus 160076628165/MapleMoon Private Review 20260817 S1/unpublished; both processing=false"
+    },
+    {
+      "command": "shopify theme pull source and duplicate --nodelete",
+      "exit_code": 0,
+      "result": "PASS both exact recovery pulls completed; initial source-pull attempt exited before acquisition because the explicit destination directory was absent, then the created packet-owned directory rerun passed; no remote/source mutation"
+    },
+    {
+      "command": "tree counts, bytes, gate digests and pairwise diff -qr",
+      "exit_code": 0,
+      "result": "PASS S0/fresh-source/duplicate each files=246 bytes=2866869 gate_directory_sha256=e48a21dc...; both pairwise diff exits=0; exact equality retains S0 relative_tree_sha256=6f94b20a..."
+    },
+    {
+      "command": "Shopify Theme Check inherited-baseline diagnostic",
+      "exit_code": 0,
+      "result": "PASS expected inherited diagnostic reproduced: underlying theme-check exit=1, files=181, offenses=198 across 48 files, errors=3, warnings=195; no repair attempted"
+    },
+    {
+      "command": "jq strict settings_schema.json inherited-baseline diagnostic",
+      "exit_code": 0,
+      "result": "PASS expected inherited defect reproduced: underlying jq exit=5, Expected another array element at line 470 column 9; bytes unchanged"
+    },
+    {
+      "command": "curl sanitized anonymous storefront redirect check",
+      "exit_code": 0,
+      "result": "PASS final_url=https://maplemooncarob.myshopify.com/password http_code=200 redirects=1"
+    },
+    {
+      "command": "remote-write boundary and secret-output audit",
+      "exit_code": 0,
+      "result": "PASS only one theme duplicate remote write; no update/edit/repair/push/publish/delete/rename-after-creation or other Shopify object mutation; no secret/customer/payout data retained"
+    }
+  ],
+  "screenshots_or_urls": [
+    "https://maplemooncarob.myshopify.com/password",
+    "https://maplemooncarob.myshopify.com?preview_theme_id=160076628165"
+  ],
+  "failures": [],
+  "unknowns": [
+    "This packet did not query or change official Etheryx update availability; the historical 1.6.0 observation remains unrefreshed.",
+    "No theme-editor visual review was required or performed because S1 is a duplication and recovery safety gate only."
+  ],
+  "residual_risk": [
+    "The unpublished duplicate is byte-faithful but inherits strict-invalid settings schema JSON, 3 Theme Check errors and 195 warnings; it must not be treated as a clean implementation base until a separate S1B update-or-repair packet passes.",
+    "The live theme remains live and password-protected by design; S1 grants no authority to publish or remove storefront protection."
+  ],
+  "forbidden_path_changes": [],
+  "proposed_next_state": "s1_complete_unpublished_duplicate_ready_for_separate_s1b_update_or_repair_decision",
+  "next_reviewer": "MapleMoon root Boss for S1 receipt review and a separate S1B update/repair decision"
+}

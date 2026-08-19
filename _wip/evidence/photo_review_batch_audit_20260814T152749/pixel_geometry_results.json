@@ -1,0 +1,230 @@
+{
+  "review_html": {
+    "path": "/Users/handtomouse/.codex/visualizations/2026/08/13/019ffd5b-edd2-7b23-8780-453f9b67a532/maplemoon-product-corrections-20260814/maplemoon_product_corrections_review_20260814.html",
+    "sha256_expected": "ed859eaa0d62a97d19bc2c377bf78084a9b3799d50b7eb47a0ecd7201ba90167",
+    "sha256_actual": "ed859eaa0d62a97d19bc2c377bf78084a9b3799d50b7eb47a0ecd7201ba90167",
+    "pass": true
+  },
+  "assets": {
+    "powder": {
+      "filename": "carob_powder_isolated.png",
+      "sha256_expected": "e935a9c6783f0fe0fed7659692d2cea0f4056afa4734a75e4dcba7b629966a27",
+      "sha256_actual": "e935a9c6783f0fe0fed7659692d2cea0f4056afa4734a75e4dcba7b629966a27",
+      "hash_pass": true,
+      "format": "PNG",
+      "mode": "RGBA",
+      "canvas": {
+        "width": 1254,
+        "height": 1254
+      },
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "transparent_pixels": 1385505,
+      "opaque_pixels": 182823,
+      "partially_transparent_pixels": 4188,
+      "subject_pixels_alpha_gt_zero": 187011,
+      "subject_bounds": {
+        "x": 188,
+        "y": 423,
+        "right_exclusive": 1066,
+        "bottom_exclusive": 831,
+        "width": 878,
+        "height": 408
+      },
+      "corner_alpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "components_alpha_gt_127_total": 5,
+      "components_alpha_gt_127_over_100_pixels": 1,
+      "largest_components_alpha_gt_127": [
+        184857
+      ],
+      "genuine_alpha_pass": true,
+      "nonempty_subject_pass": true,
+      "transparent_border_pass": true,
+      "baked_full_canvas_checkerboard_absent": true,
+      "mechanical_pass": true
+    },
+    "elixir_pure": {
+      "filename": "elixir_pure_isolated_equal-size.png",
+      "sha256_expected": "d3bda575c320bc42ca69b5ddd0ba806e392f9b7694d31f7ea0310c501fcbd18a",
+      "sha256_actual": "d3bda575c320bc42ca69b5ddd0ba806e392f9b7694d31f7ea0310c501fcbd18a",
+      "hash_pass": true,
+      "format": "PNG",
+      "mode": "RGBA",
+      "canvas": {
+        "width": 1254,
+        "height": 1254
+      },
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "transparent_pixels": 1021997,
+      "opaque_pixels": 546783,
+      "partially_transparent_pixels": 3736,
+      "subject_pixels_alpha_gt_zero": 550519,
+      "subject_bounds": {
+        "x": 335,
+        "y": 108,
+        "right_exclusive": 919,
+        "bottom_exclusive": 1083,
+        "width": 584,
+        "height": 975
+      },
+      "corner_alpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "components_alpha_gt_127_total": 1,
+      "components_alpha_gt_127_over_100_pixels": 1,
+      "largest_components_alpha_gt_127": [
+        548738
+      ],
+      "genuine_alpha_pass": true,
+      "nonempty_subject_pass": true,
+      "transparent_border_pass": true,
+      "baked_full_canvas_checkerboard_absent": true,
+      "mechanical_pass": true
+    },
+    "elixir_spiced": {
+      "filename": "elixir_spiced_isolated_equal-size.png",
+      "sha256_expected": "210aab110c8682d6140a50b3ee1621aec0ffe43a9d86841433a8852512c86bba",
+      "sha256_actual": "210aab110c8682d6140a50b3ee1621aec0ffe43a9d86841433a8852512c86bba",
+      "hash_pass": true,
+      "format": "PNG",
+      "mode": "RGBA",
+      "canvas": {
+        "width": 1254,
+        "height": 1254
+      },
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "transparent_pixels": 1018891,
+      "opaque_pixels": 553625,
+      "partially_transparent_pixels": 0,
+      "subject_pixels_alpha_gt_zero": 553625,
+      "subject_bounds": {
+        "x": 335,
+        "y": 108,
+        "right_exclusive": 919,
+        "bottom_exclusive": 1083,
+        "width": 584,
+        "height": 975
+      },
+      "corner_alpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "components_alpha_gt_127_total": 1,
+      "components_alpha_gt_127_over_100_pixels": 1,
+      "largest_components_alpha_gt_127": [
+        553625
+      ],
+      "genuine_alpha_pass": true,
+      "nonempty_subject_pass": true,
+      "transparent_border_pass": true,
+      "baked_full_canvas_checkerboard_absent": true,
+      "mechanical_pass": true
+    },
+    "bundle": {
+      "filename": "five_item_bundle_low_angle_isolated.png",
+      "sha256_expected": "ac87e7c1a5b6e96cc40d607e69a841f0b9987f642f3b32e4128dacad2c3814d6",
+      "sha256_actual": "ac87e7c1a5b6e96cc40d607e69a841f0b9987f642f3b32e4128dacad2c3814d6",
+      "hash_pass": true,
+      "format": "PNG",
+      "mode": "RGBA",
+      "canvas": {
+        "width": 1254,
+        "height": 1254
+      },
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "transparent_pixels": 1268669,
+      "opaque_pixels": 295860,
+      "partially_transparent_pixels": 7987,
+      "subject_pixels_alpha_gt_zero": 303847,
+      "subject_bounds": {
+        "x": 175,
+        "y": 381,
+        "right_exclusive": 1078,
+        "bottom_exclusive": 873,
+        "width": 903,
+        "height": 492
+      },
+      "corner_alpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "components_alpha_gt_127_total": 7,
+      "components_alpha_gt_127_over_100_pixels": 3,
+      "largest_components_alpha_gt_127": [
+        181665,
+        116959,
+        1229
+      ],
+      "genuine_alpha_pass": true,
+      "nonempty_subject_pass": true,
+      "transparent_border_pass": true,
+      "baked_full_canvas_checkerboard_absent": true,
+      "mechanical_pass": true
+    }
+  },
+  "elixir_geometry": {
+    "pure_bounds": {
+      "x": 335,
+      "y": 108,
+      "right_exclusive": 919,
+      "bottom_exclusive": 1083,
+      "width": 584,
+      "height": 975
+    },
+    "spiced_bounds": {
+      "x": 335,
+      "y": 108,
+      "right_exclusive": 919,
+      "bottom_exclusive": 1083,
+      "width": 584,
+      "height": 975
+    },
+    "pure_centerline": 627.0,
+    "spiced_centerline": 627.0,
+    "pure_baseline": 1083,
+    "spiced_baseline": 1083,
+    "pass": true
+  },
+  "powder_mechanical": {
+    "bounds": {
+      "x": 188,
+      "y": 423,
+      "right_exclusive": 1066,
+      "bottom_exclusive": 831,
+      "width": 878,
+      "height": 408
+    },
+    "large_component_count": 1,
+    "single_primary_alpha_component_pass": true
+  },
+  "rendered_checks": {
+    "powder_on_white": "powder_on_white.png",
+    "bundle_on_light": "bundle_on_light.png",
+    "bundle_on_dark": "bundle_on_dark.png",
+    "contact_sheet": "mechanical_contact_sheet.png"
+  },
+  "all_mechanical_pass": true
+}

@@ -1,0 +1,1553 @@
+{
+  "schema": "maplemoon-track1-delta/v1",
+  "routes": {
+    "homepage": {
+      "live": {
+        "sha256": "b936b5bb4856cdd6134e5b15bce5dfc3b353c1d442fd1a418180b35b8fa10356",
+        "bytes": 208556
+      },
+      "preview": {
+        "sha256": "2af70bca097967faa124c5f4e2887658b3d67a56e1cc2db8963de39e03a3106c",
+        "bytes": 188362
+      },
+      "visible_copy": {
+        "removed": [
+          "Eclipses",
+          "Bites",
+          "View Range",
+          "What is Carob,",
+          "actually?",
+          "Carob is a naturally sweet pod that grows in the warm Australian sun. It is not a bean, and it is naturally caffeine free.",
+          "A pod, not a bean",
+          "A moment of your own",
+          "When do you",
+          "moon?",
+          "01 · After Dinner",
+          "For the slow end of dinner.",
+          "02 · Afternoon",
+          "For the space between one thing and the next.",
+          "03 · Night-time",
+          "Tea, low lights and a little moon.",
+          "Farm photography by Nigel Young, The Australian Carob Co",
+          "Born from Nighttime Cravings",
+          "Find Maple Moon near you",
+          "Search by store, suburb, postcode or state, then continue to matching locations in the full directory.",
+          "Where should we look?",
+          "Find stockists",
+          "View full directory",
+          "·",
+          "·",
+          "·",
+          "·",
+          "·",
+          "Free Shipping",
+          "Orders over $99",
+          "Secure payments",
+          "Safe and easy checkout",
+          "Join"
+        ],
+        "added": [
+          "maple moon",
+          "What is Carob?",
+          "Carob is a naturally sweet pod that grows in the warm Australian sun. Naturally caffeine free and high in fibre. Sourced from the Australian Carob Co. in South Australia, roasted and finely ground there before reaching the kitchen.",
+          "High in fibre",
+          "01",
+          "02",
+          "02",
+          "The honest comparison",
+          "Why not",
+          "cacao?",
+          "Compare",
+          "Nutrition",
+          "Taste",
+          "&",
+          "&",
+          "&",
+          "Feel",
+          "The old default",
+          "Cacao chocolate",
+          "□",
+          "□",
+          "Sweetness",
+          "Sweetness",
+          "Naturally bitter",
+          "ϟ",
+          "Caffeine",
+          "Caffeine",
+          "Contains caffeine and theobromine",
+          "◷",
+          "◷",
+          "Moment",
+          "Moment",
+          "Stimulating and activating",
+          "vs",
+          "The Maple Moon switch",
+          "Maple Moon carob",
+          "Sweet from the pod itself, no added sugar",
+          "✓",
+          "✓",
+          "✓",
+          "☾",
+          "☾",
+          "Naturally caffeine free, any hour you like",
+          "Stimulant free, making it perfect for arvos and slow evenings",
+          "Nutrition tab and exact comparative values remain pending review.",
+          "A sweeter kind of ritual",
+          "What is",
+          "Maple Mooning?",
+          "A sweet ending without the stimulants",
+          "A 3:33pm pick me up without the nasties",
+          "03",
+          "A warm drink without the activation",
+          "Born from Night-time Cravings",
+          "Byron Bay",
+          "The Maple Moon kitchen.",
+          "The heart behind Maple Moon",
+          "Carli",
+          "Carli",
+          "Carli",
+          "Dylan",
+          "Dylan",
+          "Dylan",
+          "Dylan",
+          "Meet the people behind Maple Moon and the ideas shaping its slow, thoughtful rituals.",
+          "Founder portraits and final story details remain in review.",
+          "portrait pending",
+          "portrait pending",
+          "Co-founder",
+          "Co-founder",
+          "Meet Carli",
+          "Explore the story and values behind Maple Moon.",
+          "Read our story",
+          "→",
+          "200+ stockists across Australia",
+          "Browse the directory while individual store details continue through final verification.",
+          "List",
+          "Map",
+          "All states",
+          "NSW",
+          "VIC",
+          "QLD",
+          "WA",
+          "SA",
+          "Representative stockist",
+          "Representative stockist",
+          "Representative stockist",
+          "Details pending verification",
+          "Details pending verification",
+          "Details pending verification",
+          "+ more",
+          "Verified directory pending",
+          "View full stockist list",
+          "Reviews · consent pending",
+          "Customer reviews",
+          "Real experiences, shared with care. These WIP quotes remain noindexed until Carli confirms consent.",
+          "“",
+          "“",
+          "“",
+          "With a huge reaction to high histamine food + being dairy & gluten free, your two carob bars (almond/mint) are life saving for me!”",
+          "Maple Moon customer 01, Sydney",
+          "Already given my daughter, loves it and we love it because it's nut free, dairy free!!",
+          "Maple Moon customer 02",
+          "I'm absolutely LOVING everything you are doing with your carob. I personally am OBSESSED with carob. I far prefer it over cacao... in fact in most of my recipes I use it... even when I say 'add dark chocolate' I stir carob through it myself.",
+          "Maple Moon customer 03",
+          "Consent and final testimonial selection pending before go-live.",
+          "maple moon · the starter box",
+          "Inside the box",
+          "Shipping",
+          "Final delivery terms pending",
+          "Checkout",
+          "Final payment details pending",
+          "Demo only",
+          "Demo only. This form does not collect or submit email addresses."
+        ]
+      },
+      "references": {
+        "removed": [
+          {
+            "url": "/assets/hero_shots/hero_poster_wetsand2_loop.webp",
+            "kinds": [
+              "link[href]",
+              "video[poster]"
+            ]
+          },
+          {
+            "url": "/assets/hero_videos/gen/finalists/graded_blue/finalist_wetsand2_loop.mp4",
+            "kinds": [
+              "source[src]"
+            ]
+          },
+          {
+            "url": "/assets/mm_wordmark_blk.svg",
+            "kinds": [
+              "img[src]"
+            ]
+          },
+          {
+            "url": "/assets/ritual/ritual_after_dinner.webp",
+            "kinds": [
+              "img[src]"
+            ]
+          },
+          {
+            "url": "/assets/ritual/ritual_afternoon.webp",
+            "kinds": [
+              "img[src]"
+            ]
+          },
+          {
+            "url": "/assets/ritual/ritual_tea_night.webp",
+            "kinds": [
+              "img[src]"
+            ]
+          },
+          {
+            "url": "/design_refinement_20260723.css",
+            "kinds": [
+              "link[href]"
+            ]
+          },
+          {
+            "url": "/mock-cart.css",
+            "kinds": [
+              "link[href]"
+            ]
+          },
+          {
+            "url": "/mock-cart.js",
+            "kinds": [
+              "script[src]"
+            ]
+          }
+        ],
+        "added": [
+          {
+            "url": "/assets/design-system/mm-base.css",
+            "kinds": [
+              "link[href]"
+            ]
+          },
+          {
+            "url": "/assets/hero_videos/gen/finalists/graded_blue/finalist_wetsand2.mp4",
+            "kinds": [
+              "source[src]"
+            ]
+          },
+          {
+            "url": "/assets/licensed/scene_after_dinner.jpg",
+            "kinds": [
+              "img[src]"
+            ]
+          },
+          {
+            "url": "/assets/licensed/scene_afternoon.jpg",
+            "kinds": [
+              "img[src]"
+            ]
+          },
+          {
+            "url": "/assets/licensed/scene_tea_night.jpg",
+            "kinds": [
+              "img[src]"
+            ]
+          },
+          {
+            "url": "/styles/homepage.css",
+            "kinds": [
+              "link[href]"
+            ]
+          },
+          {
+            "url": "https://maplemoon.com.au/",
+            "kinds": [
+              "link[href]"
+            ]
+          },
+          {
+            "url": "https://maplemoon.com.au/assets/social/mm_logo_social.jpg",
+            "kinds": [
+              "jsonld[asset]",
+              "script[file-ref]"
+            ]
+          },
+          {
+            "url": "https://maplemoon.com.au/assets/social/og-homepage.jpg",
+            "kinds": [
+              "meta[image]"
+            ]
+          }
+        ]
+      },
+      "anchors": {
+        "removed": [
+          {
+            "href": "/shop.html",
+            "label": "Shop"
+          },
+          {
+            "href": "/shop.html",
+            "label": "Shop"
+          },
+          {
+            "href": "/our-story.html",
+            "label": "Our Story"
+          },
+          {
+            "href": "/our-story.html",
+            "label": "Our Story"
+          },
+          {
+            "href": "/stockists.html",
+            "label": "Stockists"
+          },
+          {
+            "href": "/stockists.html",
+            "label": "Stockists"
+          },
+          {
+            "href": "/shop.html",
+            "label": "View Range"
+          },
+          {
+            "href": "/carob-story.html",
+            "label": "The full carob story"
+          },
+          {
+            "href": "/our-story.html",
+            "label": "Read the Full Story"
+          },
+          {
+            "href": "/stockists.html",
+            "label": "View full directory →"
+          },
+          {
+            "href": "/shop.html#bars",
+            "label": "View bar flavours"
+          },
+          {
+            "href": "/stockists.html",
+            "label": "Stockists 200+ locations across Australia"
+          },
+          {
+            "href": "#top",
+            "label": ""
+          }
+        ],
+        "added": [
+          {
+            "href": "/shop",
+            "label": "Shop"
+          },
+          {
+            "href": "/shop",
+            "label": "Shop"
+          },
+          {
+            "href": "/our-story",
+            "label": "Our Story"
+          },
+          {
+            "href": "/our-story",
+            "label": "Our Story"
+          },
+          {
+            "href": "#top",
+            "label": "maple moon"
+          },
+          {
+            "href": "/stockists",
+            "label": "Stockists"
+          },
+          {
+            "href": "/stockists",
+            "label": "Stockists"
+          },
+          {
+            "href": "/carob-story",
+            "label": "The full carob story"
+          },
+          {
+            "href": "/our-story",
+            "label": "Read the Full Story"
+          },
+          {
+            "href": "/our-story",
+            "label": "Read our story →"
+          },
+          {
+            "href": "/stockists",
+            "label": "View full stockist list →"
+          },
+          {
+            "href": "/shop#bars",
+            "label": "View bar flavours"
+          },
+          {
+            "href": "/stockists",
+            "label": "Stockists 200+ locations across Australia"
+          }
+        ]
+      }
+    },
+    "shop": {
+      "live": {
+        "sha256": "a17f10d6a7c34a65be3097862c3b104b349b0c165dbfe3175a98ca7c69dad3c6",
+        "bytes": 75557
+      },
+      "preview": {
+        "sha256": "a0c5c03c2aaf2b21307995a7b33843c5ffa0d5785ddf4a6dea252f40b8ab208a",
+        "bytes": 50564
+      },
+      "visible_copy": {
+        "removed": [
+          "Every flavour, right to your door, for every type of ritual",
+          "Bars, eclipses, elixirs, powder",
+          "bananas priced · selected moon and bite products by enquiry",
+          "Eclipses",
+          "The full-size 90g bar, six flavours. Naturally sweet carob.",
+          "Hand-moulded 12g crescents. The one-square treat, in every flavour.",
+          "Bite-sized carob for the bowl on the counter. Five Eclipse Bites and the bundle.",
+          "Small carob bites made for grazing. Available by enquiry.",
+          "Warm drinking carob, naturally sweet and caffeine free. The nightcap that behaves.",
+          "Dehydrated banana coated in carob. The newest moon in the sky."
+        ],
+        "added": [
+          "maple moon",
+          "Bars, moons, bites, elixirs and carob bananas. All made from Australian organic carob, naturally sweet with nothing added.",
+          "Bars, bites, elixirs, powder",
+          "&",
+          "&",
+          "bananas priced · selected moon products by enquiry",
+          "Choose your next step",
+          "Add to cart",
+          "keeps a local subtotal while you browse.",
+          "Enquire",
+          "opens an email for availability or unpriced items.",
+          "Cart subtotal",
+          "$0.00",
+          "0 items",
+          "Eclipse",
+          "The full-size 90g bar, six flavours.",
+          "Little bite sized treats in every flavour for any moment",
+          "The perfect treats for those that desire a healthy clean creation made with whole ingredients.",
+          "The nightcap with benefits",
+          "Spray Free Australian Grown Bananas coated in our pure carob for the perfect chewy treat."
+        ]
+      },
+      "references": {
+        "removed": [
+          {
+            "url": "/assets/mm_wordmark_blk.svg",
+            "kinds": [
+              "img[src]"
+            ]
+          },
+          {
+            "url": "/mock-cart.css",
+            "kinds": [
+              "link[href]"
+            ]
+          },
+          {
+            "url": "/mock-cart.js",
+            "kinds": [
+              "script[src]"
+            ]
+          }
+        ],
+        "added": [
+          {
+            "url": "https://maplemoon.com.au/assets/mm_logo_icon_blk.svg",
+            "kinds": [
+              "jsonld[asset]",
+              "script[file-ref]"
+            ]
+          },
+          {
+            "url": "https://maplemoon.com.au/collections/all",
+            "kinds": [
+              "link[href]"
+            ]
+          }
+        ]
+      },
+      "anchors": {
+        "removed": [
+          {
+            "href": "/shop.html",
+            "label": "Shop"
+          },
+          {
+            "href": "/shop.html",
+            "label": "Shop"
+          },
+          {
+            "href": "/our-story.html",
+            "label": "Our Story"
+          },
+          {
+            "href": "/our-story.html",
+            "label": "Our Story"
+          },
+          {
+            "href": "/homepage.html#carob",
+            "label": "What is Carob"
+          },
+          {
+            "href": "/homepage.html",
+            "label": "maple moon"
+          },
+          {
+            "href": "/stockists.html",
+            "label": "Stockists"
+          },
+          {
+            "href": "/stockists.html",
+            "label": "Stockists"
+          },
+          {
+            "href": "#eclipses",
+            "label": "Eclipses"
+          },
+          {
+            "href": "#bites",
+            "label": "Bites"
+          },
+          {
+            "href": "/homepage.html",
+            "label": ""
+          }
+        ],
+        "added": [
+          {
+            "href": "/shop",
+            "label": "Shop"
+          },
+          {
+            "href": "/shop",
+            "label": "Shop"
+          },
+          {
+            "href": "/our-story",
+            "label": "Our Story"
+          },
+          {
+            "href": "/our-story",
+            "label": "Our Story"
+          },
+          {
+            "href": "/homepage#carob",
+            "label": "What is Carob"
+          },
+          {
+            "href": "/homepage",
+            "label": "maple moon"
+          },
+          {
+            "href": "/homepage",
+            "label": "maple moon"
+          },
+          {
+            "href": "/stockists",
+            "label": "Stockists"
+          },
+          {
+            "href": "/stockists",
+            "label": "Stockists"
+          },
+          {
+            "href": "#bites",
+            "label": "Bites & Eclipse"
+          }
+        ]
+      }
+    },
+    "our-story": {
+      "live": {
+        "sha256": "fa6d7e2ae50086db3df2d0d135046c62170719488ae67e116ac2826b46a58cf0",
+        "bytes": 86634
+      },
+      "preview": {
+        "sha256": "0f00cb8beae8b911920f20f6e5976d60d0e94e70ed99f7d3557dbf9a1883c2b2",
+        "bytes": 63842
+      },
+      "visible_copy": {
+        "removed": [
+          "The makers",
+          "&",
+          "We aren't corporate, but we are intentional. And we believe everyone deserves a healthy, guilt-free treat they can enjoy themselves and confidently share with their children.",
+          "Coastal beginnings",
+          "Our story",
+          "Founders",
+          "Ingredient",
+          "How it began",
+          "The source",
+          "The craft",
+          "The craft",
+          "The place",
+          "The place",
+          "The range",
+          "The range",
+          "Our beginning",
+          "The people, then the ingredient, then the place.",
+          "Shared story",
+          "Together, they began creating flavours that are rich, joyful, and deeply satisfying, an explosion of sensation without caffeine or guilt.",
+          "Pair portrait and shared story.",
+          "Two notes",
+          "Carli and Dylan, in their own words.",
+          "03",
+          "03",
+          "Pod to place",
+          "From the ingredient to the farm.",
+          "Two individual notes.",
+          "Each founder in their own words, on how Maple Moon began and what they bring to it.",
+          "The ingredient",
+          "The ingredient",
+          "Carob, on its",
+          "own",
+          "terms.",
+          "Naturally sweet, caffeine free, and grown right here in Australia.",
+          "Began",
+          "So she asked a different question: Why should indulgence come at the cost of rest?",
+          "So she asked a different question: Why should indulgence come at the cost of rest?",
+          "Carob, in the grove.",
+          "A closer look at the tree-grown pod at the heart of Maple Moon.",
+          "Farm photography by The Australian Carob Co",
+          "The range,",
+          "together.",
+          "Bars, moons and elixirs share one naturally sweet ingredient and a distinctly Maple Moon point of view.",
+          "From Brunswick Heads, far north coast",
+          "NSW.",
+          "We are beach babies. Earthlings at heart. People who love quiet days, salty air, bare feet and the gentle hum of nature. Maple Moon reflects how we live, simple, clean, organic, and guided by nature's rhythm rather than trends.",
+          "From the studio",
+          "The range, in its own",
+          "light.",
+          "Photographed at the Maple Moon studio session, May 2026."
+        ],
+        "added": [
+          "maple moon",
+          "Personal profiles pending",
+          "The people",
+          "The Range",
+          "The Range",
+          "The people behind the product",
+          "The people behind the product",
+          "The people behind the",
+          "product.",
+          "They began creating flavours that are rich, joyful, and deeply satisfying, an explosion of sensation without caffeine or guilt.",
+          "Born in Bondi but now residing in the Brunswick Heads, Northern Rivers.",
+          "Meet Carli and Dylan.",
+          "How Maple Moon began",
+          "How Maple Moon began",
+          "A craving became Maple Moon.",
+          "Founder portrait pending",
+          "Founder portrait pending",
+          "Nate selection required",
+          "Nate selection required",
+          "began."
+        ]
+      },
+      "references": {
+        "removed": [
+          {
+            "url": "/assets/hero_shots/silhouette_closeup.webp",
+            "kinds": [
+              "style[url]"
+            ]
+          },
+          {
+            "url": "/assets/licensed/carob_farm/australian-carob-0205-16x9.jpg",
+            "kinds": [
+              "img[src]"
+            ]
+          },
+          {
+            "url": "/assets/licensed/carob_farm/australian-carob-0205-mobile.jpg",
+            "kinds": [
+              "source[srcset]"
+            ]
+          },
+          {
+            "url": "/assets/mm_wordmark_blk.svg",
+            "kinds": [
+              "img[src]"
+            ]
+          },
+          {
+            "url": "/assets/our_story/01_founders_hero_v03.webp",
+            "kinds": [
+              "img[src]",
+              "style[url]"
+            ]
+          },
+          {
+            "url": "/assets/our_story/ai_ritual_afternoon.png",
+            "kinds": [
+              "img[src]"
+            ]
+          },
+          {
+            "url": "/assets/our_story/founder_carli.webp",
+            "kinds": [
+              "img[src]"
+            ]
+          },
+          {
+            "url": "/assets/our_story/founder_dylan.webp",
+            "kinds": [
+              "img[src]"
+            ]
+          },
+          {
+            "url": "/assets/our_story/founders_hands.webp",
+            "kinds": [
+              "img[src]"
+            ]
+          },
+          {
+            "url": "/assets/our_story/studio_bar_almond.webp",
+            "kinds": [
+              "img[src]"
+            ]
+          },
+          {
+            "url": "/assets/our_story/studio_bar_rock.webp",
+            "kinds": [
+              "img[src]"
+            ]
+          },
+          {
+            "url": "/assets/our_story/studio_moons_brick.webp",
+            "kinds": [
+              "img[src]"
+            ]
+          },
+          {
+            "url": "/assets/our_story/studio_moons_trail.webp",
+            "kinds": [
+              "img[src]"
+            ]
+          },
+          {
+            "url": "/assets/photo_finals/maplemoon_heros21_brandmatched.webp",
+            "kinds": [
+              "img[src]"
+            ]
+          },
+          {
+            "url": "/assets/photo_finals/maplemoon_heros55_brandmatched.webp",
+            "kinds": [
+              "img[src]"
+            ]
+          },
+          {
+            "url": "/assets/photo_finals/maplemoon_heros55_brandmatched_atmospheric.webp",
+            "kinds": [
+              "img[src]"
+            ]
+          },
+          {
+            "url": "/mock-cart.css",
+            "kinds": [
+              "link[href]"
+            ]
+          },
+          {
+            "url": "/mock-cart.js",
+            "kinds": [
+              "script[src]"
+            ]
+          }
+        ],
+        "added": [
+          {
+            "url": "/assets/our_story/founders_portrait_h212.webp",
+            "kinds": [
+              "img[src]",
+              "style[url]"
+            ]
+          },
+          {
+            "url": "https://maplemoon.com.au/pages/our-story",
+            "kinds": [
+              "link[href]"
+            ]
+          }
+        ]
+      },
+      "anchors": {
+        "removed": [
+          {
+            "href": "/shop.html",
+            "label": "Shop"
+          },
+          {
+            "href": "/shop.html",
+            "label": "Shop"
+          },
+          {
+            "href": "/our-story.html",
+            "label": "Our Story"
+          },
+          {
+            "href": "/our-story.html",
+            "label": "Our Story"
+          },
+          {
+            "href": "/homepage.html#carob",
+            "label": "What is Carob"
+          },
+          {
+            "href": "/homepage.html",
+            "label": "maple moon"
+          },
+          {
+            "href": "/stockists.html",
+            "label": "Stockists"
+          },
+          {
+            "href": "/stockists.html",
+            "label": "Stockists"
+          },
+          {
+            "href": "#story",
+            "label": "Read our story"
+          },
+          {
+            "href": "/shop.html",
+            "label": "Shop the range"
+          },
+          {
+            "href": "#story",
+            "label": "Our story"
+          },
+          {
+            "href": "#founders",
+            "label": "Founders"
+          },
+          {
+            "href": "#ingredient",
+            "label": "Ingredient"
+          },
+          {
+            "href": "#carob",
+            "label": "How it began"
+          },
+          {
+            "href": "#source",
+            "label": "The source"
+          },
+          {
+            "href": "#craft",
+            "label": "The craft"
+          },
+          {
+            "href": "#place",
+            "label": "The place"
+          },
+          {
+            "href": "#range",
+            "label": "The range"
+          },
+          {
+            "href": "/shop.html",
+            "label": "Try Maple Moon"
+          },
+          {
+            "href": "/homepage.html",
+            "label": ""
+          }
+        ],
+        "added": [
+          {
+            "href": "/shop",
+            "label": "Shop"
+          },
+          {
+            "href": "/shop",
+            "label": "Shop"
+          },
+          {
+            "href": "/our-story",
+            "label": "Our Story"
+          },
+          {
+            "href": "/our-story",
+            "label": "Our Story"
+          },
+          {
+            "href": "/homepage#carob",
+            "label": "What is Carob"
+          },
+          {
+            "href": "/homepage",
+            "label": "maple moon"
+          },
+          {
+            "href": "/homepage",
+            "label": "maple moon"
+          },
+          {
+            "href": "/stockists",
+            "label": "Stockists"
+          },
+          {
+            "href": "/stockists",
+            "label": "Stockists"
+          },
+          {
+            "href": "#people",
+            "label": "Read our story"
+          },
+          {
+            "href": "/shop",
+            "label": "Shop the range"
+          },
+          {
+            "href": "#people",
+            "label": "The people"
+          },
+          {
+            "href": "#beginning",
+            "label": "How it began"
+          },
+          {
+            "href": "#range",
+            "label": "The Range"
+          },
+          {
+            "href": "/shop",
+            "label": "The Range"
+          },
+          {
+            "href": "/shop",
+            "label": "Try Maple Moon"
+          }
+        ]
+      }
+    },
+    "carob-story": {
+      "live": {
+        "sha256": "0aa7cbfcf857e99884d6d75e537ca3f43d4058a11c3b46fe68897eb5e8f7c8b4",
+        "bytes": 56303
+      },
+      "preview": {
+        "sha256": "5bfc9842c36d9f093d193f21cc7ea11cc96f3565fe65925d023e6ce0380e0756",
+        "bytes": 54352
+      },
+      "visible_copy": {
+        "removed": [
+          "What is Carob,",
+          "actually?",
+          "Carob is a naturally sweet pod, not a bean. Maple Moon uses Australian-grown carob.",
+          "Carob and cacao are different ingredients. Maple Moon uses carob for its own naturally sweet character.",
+          "Carob",
+          "Maple Moon Carob",
+          "Maple Moon Carob",
+          "Contains caffeine",
+          "Naturally sweet with a roasted character",
+          "Character",
+          "A different ingredient with a different character",
+          "From the grove",
+          "The pod,",
+          "up close.",
+          "1",
+          "The grove",
+          "Grown in Australia",
+          "2",
+          "A closer look",
+          "3",
+          "4",
+          "The bars · Maple Moon bars",
+          "Farm photography · The Australian Carob Co",
+          "From crunchy to creamy",
+          "From crunchy to creamy, fruity to delightfully salty, there’s something for every craving. Explore the range and see what calls you.",
+          "Good questions",
+          "Asked,",
+          "answered.",
+          "The four things everyone asks at the market stall.",
+          "Does carob taste like chocolate?",
+          "Carob is naturally sweet, with a gentle toasted warmth of its own. If you come to it expecting carob rather than chocolate, it wins you over on its own terms.",
+          "Is there any caffeine?",
+          "Carob is naturally caffeine free.",
+          "What is in a bar?",
+          "Each product label lists its exact ingredients."
+        ],
+        "added": [
+          "maple moon",
+          "What is Carob?",
+          "Carob is a naturally sweet pod grown on the carob tree. The pods are deseeded, ground and roasted into a fine powder. Maple Moon used organic Australia grown carob in all its products. It is naturally sweet, so we never add refined sugars or sweeteners to our products.",
+          "While they may look similar, carob powder and cacao powder come from completely different plants.",
+          "Carob / Maple Moon Carob",
+          "Naturally sweet",
+          "Sweetness",
+          "Naturally bitter",
+          "Contains caffeine and theobromine",
+          "Stimulant free, making it perfect for arvos and slow evenings",
+          "Moment",
+          "Stimulating and activating",
+          "The making of it",
+          "From pod",
+          "to",
+          "bar.",
+          "From a tree-grown pod to a Maple Moon bar, the making stays close to the ingredient.",
+          "01",
+          "Australian-grown carob.",
+          "02",
+          "Roasted for depth.",
+          "03",
+          "The Base",
+          "Mixed with premium cacao butter for chocolatey undertones",
+          "04",
+          "our maple moon signature carob",
+          "FROM CRUNCHY TO CREAMY"
+        ]
+      },
+      "references": {
+        "removed": [
+          {
+            "url": "/assets/ai/carob_branch_hero.webp",
+            "kinds": [
+              "img[src]",
+              "style[url]"
+            ]
+          },
+          {
+            "url": "/assets/ai/carob_pods.webp",
+            "kinds": [
+              "img[src]"
+            ]
+          },
+          {
+            "url": "/assets/ai/carob_powder_roast.webp",
+            "kinds": [
+              "img[src]"
+            ]
+          },
+          {
+            "url": "/assets/ai/origin_carob_tree.webp",
+            "kinds": [
+              "img[src]"
+            ]
+          },
+          {
+            "url": "/assets/ai/study_cacao.webp",
+            "kinds": [
+              "img[src]"
+            ]
+          },
+          {
+            "url": "/assets/ai/study_carob.webp",
+            "kinds": [
+              "img[src]"
+            ]
+          },
+          {
+            "url": "/assets/brand/icon_caffeine_free.svg",
+            "kinds": [
+              "img[src]"
+            ]
+          },
+          {
+            "url": "/assets/brand/icon_made_in_aus.svg",
+            "kinds": [
+              "img[src]"
+            ]
+          },
+          {
+            "url": "/assets/brand/icon_no_artificial.svg",
+            "kinds": [
+              "img[src]"
+            ]
+          },
+          {
+            "url": "/assets/mm_wordmark_blk.svg",
+            "kinds": [
+              "img[src]"
+            ]
+          },
+          {
+            "url": "/assets/photo_finals/maplemoon_heros55_brandmatched_atmospheric.webp",
+            "kinds": [
+              "img[src]"
+            ]
+          },
+          {
+            "url": "/assets/photo_finals/mm23_xmp_blue_hero_2400.webp",
+            "kinds": [
+              "img[src]"
+            ]
+          },
+          {
+            "url": "/mock-cart.css",
+            "kinds": [
+              "link[href]"
+            ]
+          },
+          {
+            "url": "/mock-cart.js",
+            "kinds": [
+              "script[src]"
+            ]
+          }
+        ],
+        "added": [
+          {
+            "url": "/assets/licensed/carob_farm/australian-carob-0205-mobile.jpg",
+            "kinds": [
+              "source[srcset]"
+            ]
+          },
+          {
+            "url": "/assets/photo_finals/maplemoon_heros41_brandmatched.webp",
+            "kinds": [
+              "img[src]"
+            ]
+          },
+          {
+            "url": "https://maplemoon.com.au/assets/social/mm_logo_social.jpg",
+            "kinds": [
+              "jsonld[asset]",
+              "script[file-ref]"
+            ]
+          },
+          {
+            "url": "https://maplemoon.com.au/assets/social/og-carob-story.jpg",
+            "kinds": [
+              "jsonld[asset]",
+              "meta[image]",
+              "script[file-ref]"
+            ]
+          },
+          {
+            "url": "https://maplemoon.com.au/pages/carob-story",
+            "kinds": [
+              "link[href]"
+            ]
+          }
+        ]
+      },
+      "anchors": {
+        "removed": [
+          {
+            "href": "/shop.html",
+            "label": "Shop"
+          },
+          {
+            "href": "/shop.html",
+            "label": "Shop"
+          },
+          {
+            "href": "/our-story.html",
+            "label": "Our Story"
+          },
+          {
+            "href": "/our-story.html",
+            "label": "Our Story"
+          },
+          {
+            "href": "/carob-story.html",
+            "label": "What is Carob"
+          },
+          {
+            "href": "/homepage.html",
+            "label": "maple moon"
+          },
+          {
+            "href": "/stockists.html",
+            "label": "Stockists"
+          },
+          {
+            "href": "/stockists.html",
+            "label": "Stockists"
+          },
+          {
+            "href": "/shop.html",
+            "label": "Shop the range"
+          },
+          {
+            "href": "/homepage.html",
+            "label": ""
+          }
+        ],
+        "added": [
+          {
+            "href": "/shop",
+            "label": "Shop"
+          },
+          {
+            "href": "/shop",
+            "label": "Shop"
+          },
+          {
+            "href": "/our-story",
+            "label": "Our Story"
+          },
+          {
+            "href": "/our-story",
+            "label": "Our Story"
+          },
+          {
+            "href": "/carob-story",
+            "label": "What is Carob"
+          },
+          {
+            "href": "/homepage",
+            "label": "maple moon"
+          },
+          {
+            "href": "/homepage",
+            "label": "maple moon"
+          },
+          {
+            "href": "/stockists",
+            "label": "Stockists"
+          },
+          {
+            "href": "/stockists",
+            "label": "Stockists"
+          },
+          {
+            "href": "/shop",
+            "label": "Shop the range"
+          }
+        ]
+      }
+    },
+    "faq": {
+      "live": {
+        "sha256": "47129bc62dbbf8216cf89a15cfeeca58b684e9ff9f4b9069919a368c447e6faa",
+        "bytes": 36425
+      },
+      "preview": {
+        "sha256": "29c1fb87be58a0c8ac65e148201c7164143fe947122e11c819c0444956a4b601",
+        "bytes": 31865
+      },
+      "visible_copy": {
+        "removed": [
+          "Shipping & returns",
+          "Contact"
+        ],
+        "added": [
+          "maple moon"
+        ]
+      },
+      "references": {
+        "removed": [
+          {
+            "url": "/assets/faq_hero_ritual.webp",
+            "kinds": [
+              "style[url]"
+            ]
+          },
+          {
+            "url": "/assets/mm_wordmark_blk.svg",
+            "kinds": [
+              "img[src]"
+            ]
+          },
+          {
+            "url": "/mock-cart.css",
+            "kinds": [
+              "link[href]"
+            ]
+          },
+          {
+            "url": "/mock-cart.js",
+            "kinds": [
+              "script[src]"
+            ]
+          }
+        ],
+        "added": []
+      },
+      "anchors": {
+        "removed": [
+          {
+            "href": "/shop.html",
+            "label": "Shop"
+          },
+          {
+            "href": "/shop.html",
+            "label": "Shop"
+          },
+          {
+            "href": "/our-story.html",
+            "label": "Our Story"
+          },
+          {
+            "href": "/our-story.html",
+            "label": "Our Story"
+          },
+          {
+            "href": "/homepage.html#carob",
+            "label": "What is Carob"
+          },
+          {
+            "href": "/homepage.html",
+            "label": "maple moon"
+          },
+          {
+            "href": "/stockists.html",
+            "label": "Stockists"
+          },
+          {
+            "href": "/stockists.html",
+            "label": "Stockists"
+          },
+          {
+            "href": "/faq.html",
+            "label": "FAQ"
+          },
+          {
+            "href": "/faq.html",
+            "label": "FAQ"
+          },
+          {
+            "href": "/stockists.html",
+            "label": "Find stockists"
+          },
+          {
+            "href": "mailto:info@maplemoon.com.au?subject=Shipping%20and%20returns",
+            "label": "Shipping & returns"
+          },
+          {
+            "href": "/homepage.html",
+            "label": ""
+          },
+          {
+            "href": "mailto:info@maplemoon.com.au",
+            "label": "Contact"
+          }
+        ],
+        "added": [
+          {
+            "href": "/shop",
+            "label": "Shop"
+          },
+          {
+            "href": "/shop",
+            "label": "Shop"
+          },
+          {
+            "href": "/our-story",
+            "label": "Our Story"
+          },
+          {
+            "href": "/our-story",
+            "label": "Our Story"
+          },
+          {
+            "href": "/homepage#carob",
+            "label": "What is Carob"
+          },
+          {
+            "href": "/homepage",
+            "label": "maple moon"
+          },
+          {
+            "href": "/homepage",
+            "label": "maple moon"
+          },
+          {
+            "href": "/stockists",
+            "label": "Stockists"
+          },
+          {
+            "href": "/stockists",
+            "label": "Stockists"
+          },
+          {
+            "href": "/faq",
+            "label": "FAQ"
+          },
+          {
+            "href": "/faq",
+            "label": "FAQ"
+          },
+          {
+            "href": "/stockists",
+            "label": "Find stockists"
+          }
+        ]
+      }
+    },
+    "stockists": {
+      "live": {
+        "sha256": "a49d5c5c157ad235e8c01225c298b3b4c077bdffa958dc1a9eb92eec4bbe54c0",
+        "bytes": 111421
+      },
+      "preview": {
+        "sha256": "fb021843a5429cf74abf2a6ca399e3636767e841c5b716b206d2997fa9c9a27d",
+        "bytes": 111371
+      },
+      "visible_copy": {
+        "removed": [
+          "Skip to main content",
+          "Search the current Maple Moon stockist directory by store, suburb, postcode or state.",
+          "Search the directory by store, suburb, postcode or state.",
+          "Stock maple moon.",
+          "Leave your email and we will let you know when new stockist details are added.",
+          "Stockist news first, nothing else"
+        ],
+        "added": [
+          "maple moon",
+          "204 parsed · 7 need confirmation",
+          "Search the current Maple Moon stockist directory by store, suburb, postcode or state. Seven entries still need client confirmation.",
+          "Search the source directory; store-type labels are provisional pending client sign-off.",
+          "Needs confirmation",
+          "WIP directory status",
+          "204 entries are in this source parse. Seven entries have incomplete location details and need client confirmation before launch.",
+          "204 source entries",
+          "7 location details pending",
+          "Directory preview only",
+          "Stock maple",
+          "moon.",
+          "This newsletter form is a non-collecting review demo.",
+          "Demo only. This form does not collect or submit email addresses."
+        ]
+      },
+      "references": {
+        "removed": [
+          {
+            "url": "/assets/mm_wordmark_blk.svg",
+            "kinds": [
+              "img[src]"
+            ]
+          },
+          {
+            "url": "/mock-cart.css",
+            "kinds": [
+              "link[href]"
+            ]
+          },
+          {
+            "url": "/mock-cart.js",
+            "kinds": [
+              "script[src]"
+            ]
+          }
+        ],
+        "added": [
+          {
+            "url": "https://maplemoon.com.au/assets/social/mm_logo_social.jpg",
+            "kinds": [
+              "jsonld[asset]",
+              "script[file-ref]"
+            ]
+          },
+          {
+            "url": "https://maplemoon.com.au/assets/social/og-stockists.jpg",
+            "kinds": [
+              "meta[image]"
+            ]
+          },
+          {
+            "url": "https://maplemoon.com.au/pages/stockists",
+            "kinds": [
+              "link[href]"
+            ]
+          }
+        ]
+      },
+      "anchors": {
+        "removed": [
+          {
+            "href": "#main-content",
+            "label": "Skip to main content"
+          },
+          {
+            "href": "/shop.html",
+            "label": "Shop"
+          },
+          {
+            "href": "/shop.html",
+            "label": "Shop"
+          },
+          {
+            "href": "/our-story.html",
+            "label": "Our Story"
+          },
+          {
+            "href": "/our-story.html",
+            "label": "Our Story"
+          },
+          {
+            "href": "/homepage.html#carob",
+            "label": "What is Carob"
+          },
+          {
+            "href": "/homepage.html",
+            "label": "maple moon"
+          },
+          {
+            "href": "/stockists.html",
+            "label": "Stockists"
+          },
+          {
+            "href": "/stockists.html",
+            "label": "Stockists"
+          },
+          {
+            "href": "/shop.html",
+            "label": "Shop online"
+          },
+          {
+            "href": "/shop.html",
+            "label": "Can't find a listed store? Shop online while store details are confirmed. >"
+          },
+          {
+            "href": "/homepage.html",
+            "label": ""
+          }
+        ],
+        "added": [
+          {
+            "href": "/shop",
+            "label": "Shop"
+          },
+          {
+            "href": "/shop",
+            "label": "Shop"
+          },
+          {
+            "href": "/our-story",
+            "label": "Our Story"
+          },
+          {
+            "href": "/our-story",
+            "label": "Our Story"
+          },
+          {
+            "href": "/homepage#carob",
+            "label": "What is Carob"
+          },
+          {
+            "href": "/homepage",
+            "label": "maple moon"
+          },
+          {
+            "href": "/homepage",
+            "label": "maple moon"
+          },
+          {
+            "href": "/stockists",
+            "label": "Stockists"
+          },
+          {
+            "href": "/stockists",
+            "label": "Stockists"
+          },
+          {
+            "href": "/shop",
+            "label": "Shop online"
+          },
+          {
+            "href": "/shop",
+            "label": "Can't find a listed store? Shop online while store details are confirmed. >"
+          }
+        ]
+      }
+    }
+  }
+}

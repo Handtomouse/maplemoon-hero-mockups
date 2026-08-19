@@ -1,0 +1,114 @@
+{
+  "schema": "maplemoon-receipt/v2",
+  "receipt_id": "MAPLEMOON-CART-OPTION-SUBTOTAL-FIX-20260814T152958-RECEIPT",
+  "packet_id": "MAPLEMOON-CART-OPTION-SUBTOTAL-FIX-20260814T152958",
+  "worker_thread_id": "/root/dedup_risk_audit",
+  "worker": "Codex delegated correction worker",
+  "started_at": "2026-08-14T05:31:24Z",
+  "completed_at": "2026-08-14T05:51:12Z",
+  "files_read": [
+    "maplemoon-website/docs/orchestration/packets/MAPLEMOON-CART-OPTION-SUBTOTAL-FIX-20260814T152958.md",
+    "maplemoon-website/docs/orchestration/packets/MAPLEMOON-COMMERCE-INTERACTION-AUDIT-20260814T150722.md",
+    "maplemoon-website/docs/orchestration/reviews/MAPLEMOON-COMMERCE-INTERACTION-AUDIT-20260814T150722.json",
+    "maplemoon-website/_wip/evidence/commerce_interaction_audit_20260814T150722/results/static-commerce-gate.json",
+    "maplemoon-website/scripts/check-maplemoon-receipt.py",
+    "maplemoon_build_20260813/homepage.html",
+    "maplemoon_build_20260813/our-story.html",
+    "maplemoon_build_20260813/carob-story.html",
+    "maplemoon_build_20260813/shop.html",
+    "maplemoon_build_20260813/faq.html",
+    "maplemoon_build_20260813/stockists.html",
+    "maplemoon_build_20260813/pure-carob-bar.html",
+    "maplemoon_build_20260813/mock-cart.js",
+    "maplemoon_build_20260813/mock-cart.css"
+  ],
+  "files_changed": [
+    "maplemoon_build_20260813/mock-cart.js",
+    "maplemoon_build_20260813/mock-cart.css",
+    "maplemoon-website/_wip/evidence/cart_option_subtotal_fix_20260814T152958",
+    "maplemoon-website/docs/orchestration/reviews/MAPLEMOON-CART-OPTION-SUBTOTAL-FIX-20260814T152958.json"
+  ],
+  "pre_sha256": {
+    "maplemoon_build_20260813/mock-cart.js": "5eea3ac3c707964f878b5221c0f001902dc4f6c84d56457fac1455a4e1844816",
+    "maplemoon_build_20260813/mock-cart.css": "0ebf64caa50e0650778e3bbb84718d0bb9dd716531c02fbd4ee01c9c5cf1df7c",
+    "maplemoon-website/_wip/evidence/cart_option_subtotal_fix_20260814T152958": null,
+    "maplemoon-website/docs/orchestration/reviews/MAPLEMOON-CART-OPTION-SUBTOTAL-FIX-20260814T152958.json": null
+  },
+  "post_sha256": {
+    "maplemoon_build_20260813/mock-cart.js": "5776f8d628710970e81cf704ae0673ff69988d46952778f5624772db335b8b1a",
+    "maplemoon_build_20260813/mock-cart.css": "c17deb1f972017d9790f2191360a457e54d7287730847f9f470c9de371603308",
+    "maplemoon-website/_wip/evidence/cart_option_subtotal_fix_20260814T152958": "8ffece7f5e215fb3b78b094a8070d69518ffc95e3185fcd498e513d5753ae03c",
+    "maplemoon-website/docs/orchestration/reviews/MAPLEMOON-CART-OPTION-SUBTOTAL-FIX-20260814T152958.json": null
+  },
+  "checks": [
+    {
+      "command": "python3 -B scripts/check-maplemoon-receipt.py verify --root /Users/handtomouse --packet docs/orchestration/packets/MAPLEMOON-CART-OPTION-SUBTOTAL-FIX-20260814T152958.md --checkpoint _wip/checkpoints/MAPLEMOON-CART-OPTION-SUBTOTAL-FIX-20260814T152958_20260814_152958_AEST --phase start",
+      "exit_code": 0,
+      "result": "PASS packet=MAPLEMOON-CART-OPTION-SUBTOTAL-FIX-20260814T152958 phase=start scope=4"
+    },
+    {
+      "command": "base SHA-256 and predecessor completion HOLD gates",
+      "exit_code": 0,
+      "result": "PASS: mock-cart.js=5eea3ac3c707964f878b5221c0f001902dc4f6c84d56457fac1455a4e1844816, mock-cart.css=0ebf64caa50e0650778e3bbb84718d0bb9dd716531c02fbd4ee01c9c5cf1df7c, shop.html=f111ad5123e34dadd46ac497fca286066efc67c05dd7e68f0d3e70c97c735038; predecessor completion gate returned required HOLD because its receipt reports unresolved failures."
+    },
+    {
+      "command": "static inspection of existing Shop selector contract",
+      "exit_code": 0,
+      "result": "PASS: .size-select selected options expose authored data-label and data-quantity; Shop change listener updates pcard dataset.unitPrice and dataset.unitQuantity; no Shop/page edit required."
+    },
+    {
+      "command": "node --check /Users/handtomouse/maplemoon_build_20260813/mock-cart.js",
+      "exit_code": 0,
+      "result": "PASS node--check mock-cart.js"
+    },
+    {
+      "command": "node _wip/evidence/cart_option_subtotal_fix_20260814T152958/static-contract.cjs",
+      "exit_code": 0,
+      "result": "PASS: all four predecessor probes had positive_control_detected=true and candidate_detected=true; strict migration, integer-cents field, distinct line key, DOM-safe item rendering, subtotal CSS and no-Shop-write checks all true."
+    },
+    {
+      "command": "node _wip/evidence/cart_option_subtotal_fix_20260814T152958/runtime-audit.cjs",
+      "exit_code": 0,
+      "result": "PASS: measured 390/900/1440 runtime; Moon 10=$23.75, Banana 20=$50.99, Eclipse Value pack=$59.99 and separate Moon 5=$12.19 produced exact independent lines; mixed subtotal sequence $23.75/$74.74/$134.73/$146.92/$159.11, increment $182.86, decrement $159.11, remove $108.12; reload/cross-route/fresh/corrupt/legacy storage, focus/Escape/trap, 44px, 200% zoom, overflow, runtime, image, request, navigation, cookie and localStorage gates passed."
+    },
+    {
+      "command": "visual inspection and nonblank byte-size control for measured rendered screenshots",
+      "exit_code": 0,
+      "result": "PASS: cart-390-mixed.png=66357B, cart-900-option.png=143255B, cart-1440-option.png=233256B; each render is nonblank, fully settled in its viewport, readable and unclipped."
+    },
+    {
+      "command": "shasum -a 256 of all seven page HTML files after implementation",
+      "exit_code": 0,
+      "result": "PASS unchanged: homepage 27921b2a466ccb670b2851a73043429763d3423bcaf651069e4e860dc01a78b1; our-story 2db31868a9791f373f156e7cdeb8261e494d1d47e9418a94c28156e213df7711; carob-story 4fd9ad0fabb9d60d0f391925f5a382ccfc8f705b60fca1c681f403a5cd9734bd; shop f111ad5123e34dadd46ac497fca286066efc67c05dd7e68f0d3e70c97c735038; faq c5ce7aaf0b9b3221f34eb2928fc2ff6732fc1a915ea80144a4ade2b94011fb6e; stockists 4821adfe88680d4f174b7a8700c8d8a65594df2901bf3a7109d51b09040cb887; pure-carob-bar 015cde27ecc60f3c444820a551c39f6e9c985fc5b2e59bdaea5f496c1c236b65."
+    },
+    {
+      "command": "pre-write vercel inspect production alias and authenticated production homepage MD5",
+      "exit_code": 0,
+      "result": "PASS: alias resolved immutable 7vjf2m50b / deployment dpl_G2LER2awaqyFtGRCcTserXbNynct, target production, Ready; homepage MD5 6197879a5ca9d3ed0452773abc0bbeb4."
+    },
+    {
+      "command": "candidate-local preflight verifier availability check",
+      "exit_code": 0,
+      "result": "HOLD trigger confirmed: /Users/handtomouse/maplemoon_build_20260813/tools_20260813/preflight_deploy.py is absent. BOSS directed that /Users/handtomouse/UFC/ops/bus/maplemoon/tools_20260813/preflight_deploy.py must not be read or run because it is outside this packet's readable authority."
+    }
+  ],
+  "screenshots_or_urls": [
+    "maplemoon-website/_wip/evidence/cart_option_subtotal_fix_20260814T152958/screenshots/cart-390-mixed.png",
+    "maplemoon-website/_wip/evidence/cart_option_subtotal_fix_20260814T152958/screenshots/cart-900-option.png",
+    "maplemoon-website/_wip/evidence/cart_option_subtotal_fix_20260814T152958/screenshots/cart-1440-option.png",
+    "maplemoon-website/_wip/evidence/cart_option_subtotal_fix_20260814T152958/results/static-contract.json",
+    "maplemoon-website/_wip/evidence/cart_option_subtotal_fix_20260814T152958/results/runtime-audit.json"
+  ],
+  "failures": [
+    "Required existing local preflight was not run: the candidate-local verifier is absent and the known UFC verifier is outside this packet's readable authority. Certification must remain HOLD."
+  ],
+  "unknowns": [
+    "The exact fail-tier result of the UFC preflight against this corrected candidate is unknown under this packet."
+  ],
+  "residual_risk": [
+    "The two source corrections have passing static/runtime/rendered evidence but are not admission-ready until a verification-only successor authorizes and passes the exact UFC preflight plus production-freeze recheck."
+  ],
+  "forbidden_path_changes": [],
+  "proposed_next_state": "hold_for_authorized_preflight",
+  "next_reviewer": "MapleMoon BOSS then verification-only successor"
+}

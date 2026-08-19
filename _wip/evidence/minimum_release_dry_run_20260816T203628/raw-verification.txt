@@ -1,0 +1,22 @@
+STATIC_SCOPE_SCAN routes=7/7 positive_control=PASS
+homepage forms=1 mailto=3 cart_triggers=0 mock_includes=2 claims=37 internal=0
+shop forms=0 mailto=2 cart_triggers=0 mock_includes=0 claims=13 internal=0
+our-story forms=0 mailto=1 cart_triggers=0 mock_includes=0 claims=12 internal=2
+carob-story forms=0 mailto=1 cart_triggers=0 mock_includes=0 claims=10 internal=0
+faq forms=0 mailto=8 cart_triggers=0 mock_includes=0 claims=3 internal=0
+stockists forms=1 mailto=4 cart_triggers=0 mock_includes=0 claims=5 internal=6
+products/pure-carob-bar forms=0 mailto=3 cart_triggers=0 mock_includes=3 claims=5 internal=0
+
+PASS route=products/pure-carob-bar width=390 http=200 client=390 scroll=390 failures=none
+PASS route=our-story width=390 http=200 client=390 scroll=390 failures=none
+PASS route=faq width=390 http=200 client=390 scroll=390 failures=none
+PASS route=stockists width=390 http=200 client=390 scroll=390 failures=none
+PASS route=shop width=390 http=200 client=390 scroll=390 failures=none
+PASS route=products/pure-carob-bar width=1440 http=200 client=1440 scroll=1440 failures=none
+PASS route=our-story width=1440 http=200 client=1440 scroll=1440 failures=none
+PASS route=faq width=1440 http=200 client=1440 scroll=1440 failures=none
+PASS route=stockists width=1440 http=200 client=1440 scroll=1440 failures=none
+PASS route=shop width=1440 http=200 client=1440 scroll=1440 failures=none
+SUMMARY pass=10 fail=0 total=10
+
+SHOP_COUNTS status=200 cards=22 categories={"bars":6,"moons":6,"bites":6,"elixirs":2,"bananas":1,"powder":1} add=20 enquire=2 positive_control=PASS

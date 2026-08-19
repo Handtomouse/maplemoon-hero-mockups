@@ -1,0 +1,4 @@
+final_url=https://maplemooncarob.myshopify.com/password
+http_code=200
+redirects=1
+result=PASS_PASSWORD_PROTECTION_REMAINS_ACTIVE

@@ -1,0 +1,30 @@
+{
+  "algorithm_note": "Gate-compatible directory digest is relative path, NUL, lowercase file SHA-256, newline, over sorted files. S0 relative-path theme-tree identity is additionally inherited by exact byte equality to the sealed S0 recovery.",
+  "sealed_s0": {
+    "path": "maplemoon-website/_wip/recovery/shopify_baseline_identity_r2_20260817T172708/theme-154500595909",
+    "files": 246,
+    "bytes": 2866869,
+    "gate_directory_sha256": "e48a21dc289c2534aaf06711e1e4b653a7b4b54ce7a11406f8d78027a147ccc4",
+    "s0_relative_tree_sha256": "6f94b20a498fa0db7d3d4f602a04a783809689e75f95dbf234f802e8ec9c5dee"
+  },
+  "fresh_live_source": {
+    "path": "maplemoon-website/_wip/recovery/shopify_theme_safety_s1_20260817T210246/source-154500595909",
+    "files": 246,
+    "bytes": 2866869,
+    "gate_directory_sha256": "e48a21dc289c2534aaf06711e1e4b653a7b4b54ce7a11406f8d78027a147ccc4",
+    "byte_identical_to_sealed_s0": true,
+    "s0_relative_tree_sha256_by_identity": "6f94b20a498fa0db7d3d4f602a04a783809689e75f95dbf234f802e8ec9c5dee"
+  },
+  "fresh_duplicate": {
+    "path": "maplemoon-website/_wip/recovery/shopify_theme_safety_s1_20260817T210246/duplicate-160076628165",
+    "files": 246,
+    "bytes": 2866869,
+    "gate_directory_sha256": "e48a21dc289c2534aaf06711e1e4b653a7b4b54ce7a11406f8d78027a147ccc4",
+    "byte_identical_to_sealed_s0": true,
+    "byte_identical_to_fresh_live_source": true,
+    "s0_relative_tree_sha256_by_identity": "6f94b20a498fa0db7d3d4f602a04a783809689e75f95dbf234f802e8ec9c5dee"
+  },
+  "diff_qr_sealed_s0_vs_fresh_live_exit": 0,
+  "diff_qr_fresh_live_vs_duplicate_exit": 0,
+  "result": "PASS"
+}

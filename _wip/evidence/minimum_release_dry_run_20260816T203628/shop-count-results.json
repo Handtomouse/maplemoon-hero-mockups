@@ -1,0 +1,38 @@
+{
+  "httpStatus": 200,
+  "cards": 22,
+  "byCategory": {
+    "bars": 6,
+    "moons": 6,
+    "bites": 6,
+    "elixirs": 2,
+    "bananas": 1,
+    "powder": 1
+  },
+  "addToCart": 20,
+  "enquire": 2,
+  "productNames": [
+    "Coconut & Goji",
+    "Cayenne Chilli",
+    "Pure Carob & Cacao Butter",
+    "Almond & Celtic Salt",
+    "Peppermint & Buckwheat",
+    "Roasted Hazelnut",
+    "Coconut & Goji Moon",
+    "Cayenne Moon",
+    "Pure Carob Moon",
+    "Almond Moon",
+    "Peppermint Moon",
+    "Roasted Hazelnut Moon",
+    "Pecan Nut Eclipse Bite",
+    "Salted Almond Eclipse Bite",
+    "Hazelnut Eclipse Bite",
+    "Goji Ripe Eclipse Bite",
+    "Salted Caramel Fudge",
+    "Eclipse Bite Bundle",
+    "Pure Carob Elixir",
+    "Spiced Carob Elixir",
+    "Carob Bananas",
+    "Carob Powder"
+  ]
+}

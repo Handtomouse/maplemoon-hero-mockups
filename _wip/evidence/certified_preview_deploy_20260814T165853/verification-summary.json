@@ -1,0 +1,57 @@
+{
+  "schema": "maplemoon-certified-preview-deploy-summary/v1",
+  "packet_id": "MAPLEMOON-CERTIFIED-PREVIEW-DEPLOY-20260814T165853",
+  "worker_thread_id": "/root/recertify_updated_preview",
+  "completed_at": "2026-08-14T07:04:46Z",
+  "outcome": "PASS",
+  "deployment": {
+    "command": "vercel deploy --yes",
+    "invocation_count": 1,
+    "exit_code": 0,
+    "preview_url": "https://maplemoonbuild20260813-28up3uqbm-handtomouses-projects.vercel.app",
+    "deployment_id": "dpl_4okANTnDW3BkRCp3SehpVyzgdyfc",
+    "target": "preview",
+    "status": "Ready",
+    "production_flag_used": false,
+    "promote_alias_rollback_or_protection_actions": []
+  },
+  "anonymous_preflight": {
+    "exit_code": 1,
+    "literal_verdict": "VERDICT: FAIL - VERCEL SSO WALL.",
+    "qualification": "Expected Vercel Authentication per packet; preview is authenticated/private-review-only.",
+    "protection_changed": false
+  },
+  "authenticated_verification": {
+    "routes_and_assets": "13/13 HTTP 200, nonblank and byte-for-byte equal",
+    "bogus_controls": "2/2 genuine 404, nonblank and distinct from homepage bytes",
+    "faq_question_count": 1,
+    "faq_answer_count": 1,
+    "mock_cart_sha256": "36fb46b05a46ecf1c770991c6b9cf2eb8c08fda361c7176d37df081668f123aa",
+    "mm_chrome_js_sha256": "063fe11d5f5ed5d90c724868f1ffb8f3536aed73cc2f7fb9bc6e4791eb192d18",
+    "mm_chrome_css_sha256": "2d7414a8994ae11414cb269f4ca335293b409eb9da956ca3b625e716c26080ba"
+  },
+  "certification": {
+    "completion_gate": "PASS",
+    "promotion_gate": "PASS",
+    "receipt_sha256": "9eb39d99d6d3504db2d3e798bbd6b1c1941b40127f2c152bd028edb844077695",
+    "candidate_hashes": "11/11 exact before and after deployment"
+  },
+  "production_freeze": {
+    "pre_post_equal": true,
+    "immutable_token": "7vjf2m50b",
+    "deployment_id": "dpl_G2LER2awaqyFtGRCcTserXbNynct",
+    "target": "production",
+    "status": "Ready",
+    "homepage_bytes": 208556,
+    "homepage_md5": "6197879a5ca9d3ed0452773abc0bbeb4"
+  },
+  "source_edits": [],
+  "client_contacts": [],
+  "failures": [],
+  "unknowns": [],
+  "residual_risk": [
+    "Vercel Authentication blocks anonymous/client access; protection was intentionally left unchanged."
+  ],
+  "forbidden_path_changes": [],
+  "proposed_next_state": "preview_ready_private_review_production_frozen"
+}

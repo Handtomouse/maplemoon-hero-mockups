@@ -1,0 +1,78 @@
+{
+  "schema": "maplemoon-receipt/v2",
+  "receipt_id": "MAPLEMOON-FOUNDER73-PAIR-HERO-FEASIBILITY-20260816-RECEIPT-01",
+  "packet_id": "MAPLEMOON-FOUNDER73-PAIR-HERO-FEASIBILITY-20260816",
+  "worker_thread_id": "/root",
+  "worker": "Codex /root",
+  "started_at": "2026-08-16T09:47:45Z",
+  "completed_at": "2026-08-16T09:54:47Z",
+  "files_read": [
+    "/Users/handtomouse/maplemoon-website/_wip/HANDOFF-FOUNDER-IMAGERY-20260803.md",
+    "/Users/handtomouse/maplemoon-website/_wip/our-story.WIP.html",
+    "/Users/handtomouse/maplemoon-website/assets/our_story/founders_portrait_h212.webp",
+    "/Users/handtomouse/Projects/maplemoon/downloads/wetransfer_website-hero-raws_2026-06-03_1315/Heros-73.jpg",
+    "/Users/handtomouse/maplemoon_rebuild_20260815/FOUNDER_FRAMES.md"
+  ],
+  "files_changed": [
+    "maplemoon-website/_wip/evidence/founder73_pair_hero_feasibility_20260816",
+    "maplemoon-website/docs/orchestration/reviews/MAPLEMOON-FOUNDER73-PAIR-HERO-FEASIBILITY-20260816.json"
+  ],
+  "pre_sha256": {
+    "maplemoon-website/_wip/evidence/founder73_pair_hero_feasibility_20260816": null,
+    "maplemoon-website/docs/orchestration/reviews/MAPLEMOON-FOUNDER73-PAIR-HERO-FEASIBILITY-20260816.json": null
+  },
+  "post_sha256": {
+    "maplemoon-website/_wip/evidence/founder73_pair_hero_feasibility_20260816": "88929bf6254d4edeebc28ac6b5e63da5d61312eba5aa3bc156b1dd95dd563c7a",
+    "maplemoon-website/docs/orchestration/reviews/MAPLEMOON-FOUNDER73-PAIR-HERO-FEASIBILITY-20260816.json": null
+  },
+  "checks": [
+    {
+      "command": "python3 -B scripts/check-maplemoon-receipt.py checkpoint and verify phase=start",
+      "exit_code": 0,
+      "result": "PASS checkpoint packet=MAPLEMOON-FOUNDER73-PAIR-HERO-FEASIBILITY-20260816 files=2; PASS packet=MAPLEMOON-FOUNDER73-PAIR-HERO-FEASIBILITY-20260816 phase=start scope=2"
+    },
+    {
+      "command": "SHA-256 and dimension acquisition/close for Our Story WIP, current pair asset and Heros-73.jpg",
+      "exit_code": 0,
+      "result": "PASS unchanged: Our Story 6beef3f9449804e800ad7883c311c957637d12a5e05c69beb7ed912e49b36e23; current 1400x933 pair asset 67a56d7c1b7e27973f86f7fe705ec48a963f8c22402bc46f60eb24e155a44e88; source 6000x4000 frame 73 b31b11b0aec41cb9461a74e906a84979162d34b691a27fcef72a3b153e1e6d93."
+    },
+    {
+      "command": "isolated real Chrome verify.mjs at measured 390 and 1440",
+      "exit_code": 0,
+      "result": "PASS width=390 client=390 scroll=390 frame73=6000x4000 frame=352.00x234.66 crop=none retained=1.000000 console=0 page=0 request=0; PASS width=1440 client=1440 scroll=1440 frame73=6000x4000 frame=739.88x493.25 crop=none retained=1.000000 console=0 page=0 request=0; SUMMARY result=PASS pass=2 fail=0 total=2"
+    },
+    {
+      "command": "manual visual inspection of final 390 and 1440 comparisons",
+      "exit_code": 0,
+      "result": "PASS: both founders' heads, faces and seated upper bodies remain intact at both widths. Frame 73 and the current WebP are visibly the same underlying capture/pose; the current asset carries substantially more softening and baked haze."
+    },
+    {
+      "command": "evidence inventory and receipt-compatible directory hash",
+      "exit_code": 0,
+      "result": "PASS: 12 files, zero zero-byte files, zero symlinks, evidence SHA-256 88929bf6254d4edeebc28ac6b5e63da5d61312eba5aa3bc156b1dd95dd563c7a."
+    },
+    {
+      "command": "vercel inspect maplemoonbuild20260813.vercel.app",
+      "exit_code": 0,
+      "result": "PASS read-only freeze: alias still resolves to immutable 7vjf2m50b, deployment dpl_G2LER2awaqyFtGRCcTserXbNynct, target production, status Ready."
+    }
+  ],
+  "screenshots_or_urls": [
+    "/Users/handtomouse/maplemoon-website/_wip/evidence/founder73_pair_hero_feasibility_20260816/comparison-390.png",
+    "/Users/handtomouse/maplemoon-website/_wip/evidence/founder73_pair_hero_feasibility_20260816/comparison-1440.png"
+  ],
+  "failures": [],
+  "unknowns": [
+    "Nate has not selected frame 73 or decided whether the current artificial-looking treatment, rather than the underlying pose, is the client concern.",
+    "The two separate 4:5 founder biography portrait slots still have no selected real-shoot inputs.",
+    "No genuinely different smiling pair pose exists in the supplied 75 JPEGs."
+  ],
+  "residual_risk": [
+    "The first sandboxed Chrome launch failed due process permissions; it produced no site conclusion. Preserved attempt 1 used the wrong Playwright viewport option and correctly failed at 1280/1280. Preserved attempt 2 exposed a default review-harness figure margin at 390. Both harness defects were corrected before the clean full rerun.",
+    "Frame 73 is mechanically compatible but not a new composition. If the client rejects the pose, further processing will not satisfy the request; Mitch must supply more founder frames.",
+    "This packet created review evidence only and authorises no export, WIP binding, preview deploy or production movement."
+  ],
+  "forbidden_path_changes": [],
+  "proposed_next_state": "mechanically_eligible_same_capture_needs_nate_selection",
+  "next_reviewer": "Nate to decide whether to review the unprocessed frame-73 treatment or request a genuinely different founder pose from Mitch"
+}

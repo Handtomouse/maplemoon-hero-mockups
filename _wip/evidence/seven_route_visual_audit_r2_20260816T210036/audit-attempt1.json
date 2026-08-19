@@ -1,0 +1,6 @@
+{
+  "outcome": "HARNESS_ONLY_FAILURE",
+  "acquisition": "PASS matched=7/7",
+  "failure": "Homepage did not reach Playwright global networkidle within 30 seconds; no route screenshot or visual verdict was produced.",
+  "correction": "Navigate to DOMContentLoaded, allow the load event briefly, then settle every authored image explicitly before measurement. Route, width, hash, runtime and image assertions are unchanged."
+}

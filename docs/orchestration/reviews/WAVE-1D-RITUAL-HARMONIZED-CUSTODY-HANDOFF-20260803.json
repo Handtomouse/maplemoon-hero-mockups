@@ -1,0 +1,185 @@
+{
+  "schema": "maplemoon-receipt/v2",
+  "receipt_id": "WAVE-1D-RITUAL-HARMONIZED-CUSTODY-HANDOFF-20260803-RECEIPT-001",
+  "packet_id": "WAVE-1D-RITUAL-HARMONIZED-CUSTODY-HANDOFF-20260803",
+  "worker_thread_id": "019fb5b5-de62-7862-a5fe-06bc59395c21",
+  "worker": "Wave 1D ritual imagery custody worker",
+  "started_at": "2026-08-03T17:01:49+10:00",
+  "completed_at": "2026-08-03T17:15:00+10:00",
+  "outcome": "HOLD",
+  "confidence": "high for durable custody and byte identity; high for coordinator-acceptance HOLD; high that concurrent WIP drift is outside this packet but global no-WIP-change cannot be certified",
+  "phase": "complete",
+  "status": "HOLD",
+  "ready_to_promote": false,
+  "checkpoint_path": "_wip/checkpoints/WAVE-1D-RITUAL-HARMONIZED-CUSTODY-HANDOFF-20260803_20260803_170124_AEST",
+  "files_read": [
+    "/Users/handtomouse/.codex/visualizations/2026/08/02/019fc360-a934-7a52-b410-b72865ce6533/maplemoon_ritual_frame_safe_goal_v1/frame_safe_candidates_v1",
+    "docs/orchestration/packets/MAPLEMOON-MAIN-BOSS-HANDOFF-20260803.md",
+    "docs/orchestration/SIDECHAT_RECEIPT_GATE.md",
+    "docs/orchestration/LOCK_MANIFEST.json",
+    "docs/client-review/2026-08-01-saturday-review/staging-v1/MANIFEST.json",
+    "docs/client-review/2026-08-01-saturday-review/staging-v1/clean/MANIFEST.json",
+    "docs/client-review/2026-08-01-saturday-review/staging-v1/annotated/MANIFEST.json",
+    "docs/client-review/2026-08-01-saturday-review/staging-v1/clean/homepage.html"
+  ],
+  "files_changed": [
+    "docs/orchestration/reviews/WAVE-1D-RITUAL-HARMONIZED-CUSTODY-HANDOFF-20260803.json",
+    "docs/client-review/2026-08-01-saturday-review/generated-candidates/ritual-harmonized-approved-20260803-v2/harmonized_slot_1_after_dinner_v2.png",
+    "docs/client-review/2026-08-01-saturday-review/generated-candidates/ritual-harmonized-approved-20260803-v2/harmonized_slot_2_afternoon_reset_v2.png",
+    "docs/client-review/2026-08-01-saturday-review/generated-candidates/ritual-harmonized-approved-20260803-v2/harmonized_slot_3_tea_at_night_v2.png",
+    "docs/client-review/2026-08-01-saturday-review/generated-candidates/ritual-harmonized-approved-20260803-v2/harmonized_site_treatment_desktop_v2.png",
+    "docs/client-review/2026-08-01-saturday-review/generated-candidates/ritual-harmonized-approved-20260803-v2/harmonized_site_treatment_mobile_true390_v2.png",
+    "docs/client-review/2026-08-01-saturday-review/generated-candidates/ritual-harmonized-approved-20260803-v2/harmonized_site_treatment_v2.html",
+    "docs/client-review/2026-08-01-saturday-review/generated-candidates/ritual-harmonized-approved-20260803-v2/harmonized_chrome_qa_v2.json",
+    "docs/client-review/2026-08-01-saturday-review/generated-candidates/ritual-harmonized-approved-20260803-v2/harmonized_slot_2_afternoon_reset_v2_raw_1671.png",
+    "docs/client-review/2026-08-01-saturday-review/generated-candidates/ritual-harmonized-approved-20260803-v2/harmonized_slot_3_tea_at_night_v2_raw_1671.png",
+    "docs/client-review/2026-08-01-saturday-review/generated-candidates/ritual-harmonized-approved-20260803-v2/harmonized_manifest_v2.json",
+    "docs/client-review/2026-08-01-saturday-review/generated-candidates/ritual-harmonized-approved-20260803-v2/harmonized_receipt_v2.json",
+    "docs/client-review/2026-08-01-saturday-review/generated-candidates/ritual-harmonized-approved-20260803-v2/render_harmonized_proofs_v2.py"
+  ],
+  "pre_sha256": {
+    "docs/orchestration/reviews/WAVE-1D-RITUAL-HARMONIZED-CUSTODY-HANDOFF-20260803.json": null,
+    "docs/client-review/2026-08-01-saturday-review/generated-candidates/ritual-harmonized-approved-20260803-v2/harmonized_slot_1_after_dinner_v2.png": null,
+    "docs/client-review/2026-08-01-saturday-review/generated-candidates/ritual-harmonized-approved-20260803-v2/harmonized_slot_2_afternoon_reset_v2.png": null,
+    "docs/client-review/2026-08-01-saturday-review/generated-candidates/ritual-harmonized-approved-20260803-v2/harmonized_slot_3_tea_at_night_v2.png": null,
+    "docs/client-review/2026-08-01-saturday-review/generated-candidates/ritual-harmonized-approved-20260803-v2/harmonized_site_treatment_desktop_v2.png": null,
+    "docs/client-review/2026-08-01-saturday-review/generated-candidates/ritual-harmonized-approved-20260803-v2/harmonized_site_treatment_mobile_true390_v2.png": null,
+    "docs/client-review/2026-08-01-saturday-review/generated-candidates/ritual-harmonized-approved-20260803-v2/harmonized_site_treatment_v2.html": null,
+    "docs/client-review/2026-08-01-saturday-review/generated-candidates/ritual-harmonized-approved-20260803-v2/harmonized_chrome_qa_v2.json": null,
+    "docs/client-review/2026-08-01-saturday-review/generated-candidates/ritual-harmonized-approved-20260803-v2/harmonized_slot_2_afternoon_reset_v2_raw_1671.png": null,
+    "docs/client-review/2026-08-01-saturday-review/generated-candidates/ritual-harmonized-approved-20260803-v2/harmonized_slot_3_tea_at_night_v2_raw_1671.png": null,
+    "docs/client-review/2026-08-01-saturday-review/generated-candidates/ritual-harmonized-approved-20260803-v2/harmonized_manifest_v2.json": null,
+    "docs/client-review/2026-08-01-saturday-review/generated-candidates/ritual-harmonized-approved-20260803-v2/harmonized_receipt_v2.json": null,
+    "docs/client-review/2026-08-01-saturday-review/generated-candidates/ritual-harmonized-approved-20260803-v2/render_harmonized_proofs_v2.py": null
+  },
+  "post_sha256": {
+    "docs/orchestration/reviews/WAVE-1D-RITUAL-HARMONIZED-CUSTODY-HANDOFF-20260803.json": null,
+    "docs/client-review/2026-08-01-saturday-review/generated-candidates/ritual-harmonized-approved-20260803-v2/harmonized_slot_1_after_dinner_v2.png": "87dab0ec03364b8caabdb268d07e5f70b729c8a9085c3489cf0c6d808ab9918c",
+    "docs/client-review/2026-08-01-saturday-review/generated-candidates/ritual-harmonized-approved-20260803-v2/harmonized_slot_2_afternoon_reset_v2.png": "0aa937e353879ad437646c1b3c1a68805236aa77092d09786f521a0728365931",
+    "docs/client-review/2026-08-01-saturday-review/generated-candidates/ritual-harmonized-approved-20260803-v2/harmonized_slot_3_tea_at_night_v2.png": "55977de64770eff776f634dd8d2b7e7cc4bcee62eb903a09da4dde541d0492ec",
+    "docs/client-review/2026-08-01-saturday-review/generated-candidates/ritual-harmonized-approved-20260803-v2/harmonized_site_treatment_desktop_v2.png": "402ffdb65b29a9b11b767a03e862c377697c142ffc105003850c60e2eb7a8e9f",
+    "docs/client-review/2026-08-01-saturday-review/generated-candidates/ritual-harmonized-approved-20260803-v2/harmonized_site_treatment_mobile_true390_v2.png": "3dab026bd95c2d848e25f4ff178647c5513b50c2bd37d0f73cf3c405d879d0e5",
+    "docs/client-review/2026-08-01-saturday-review/generated-candidates/ritual-harmonized-approved-20260803-v2/harmonized_site_treatment_v2.html": "3fcc4bb30b0fc701856e2013e09db6473d62609579d51c88eb904130a599a08e",
+    "docs/client-review/2026-08-01-saturday-review/generated-candidates/ritual-harmonized-approved-20260803-v2/harmonized_chrome_qa_v2.json": "e0db57f381cdbbf58fa02fd7f51e011fccb17f9767bb237358a8008bbf1be7a0",
+    "docs/client-review/2026-08-01-saturday-review/generated-candidates/ritual-harmonized-approved-20260803-v2/harmonized_slot_2_afternoon_reset_v2_raw_1671.png": "f062816528ac82ffe6a4f13965ef2b3271247aeadbe8123c3986bec92d74435a",
+    "docs/client-review/2026-08-01-saturday-review/generated-candidates/ritual-harmonized-approved-20260803-v2/harmonized_slot_3_tea_at_night_v2_raw_1671.png": "b7ca4e7acf447ec5cf0b2e01dd8fc92fcffee3a7f33d51336496d69a1e159245",
+    "docs/client-review/2026-08-01-saturday-review/generated-candidates/ritual-harmonized-approved-20260803-v2/harmonized_manifest_v2.json": "b13bc9a860028deac2fbf7d43bbe76177f8f6a6f10b7e0befe3c86f2fcbfcedc",
+    "docs/client-review/2026-08-01-saturday-review/generated-candidates/ritual-harmonized-approved-20260803-v2/harmonized_receipt_v2.json": "c4cc1e88925672f22e5c9d2481d723bd09df261e65f7e6026ee0d6f1e3a79b76",
+    "docs/client-review/2026-08-01-saturday-review/generated-candidates/ritual-harmonized-approved-20260803-v2/render_harmonized_proofs_v2.py": "e05f0f0b5b1d80093c7fbe7a95f27442c8a01e65c75f3a239174716d802319c8"
+  },
+  "verified_subject_sha256": {
+    "docs/orchestration/packets/WAVE-1D-RITUAL-HARMONIZED-CUSTODY-HANDOFF-20260803.md": "d50e39ba0ed6c256be26d7d7c5390fd143a98566dc8a910fd1c1bad4e3eb6b56",
+    "docs/client-review/2026-08-01-saturday-review/staging-v1/MANIFEST.json": "d0d834b9b9173a497d0b03e39e4c282a7d5247f51484ebfd7ba3a64e8416bf7c",
+    "docs/client-review/2026-08-01-saturday-review/staging-v1/clean/MANIFEST.json": "d1c66b1d5937e9956d1806dbbbff4faf4f950def046aa642ae52f809c3d52d20",
+    "docs/client-review/2026-08-01-saturday-review/staging-v1/annotated/MANIFEST.json": "3be3c0f2df4658558c667b3e9cc6d55966d6a1d7ce9fa9874c46a0afc44244c7",
+    "docs/client-review/2026-08-01-saturday-review/staging-v1/clean/homepage.html": "0d102050395b79f4add5d9ddb7f75e962d7e41e11a78cd7f88c35ce4a947ef0c",
+    "staging-v1-tree-aggregate": "b74dcdb60f4baeee0d2db312bf8054fae80b9763989e4a65e20c8d082253b33e"
+  },
+  "screenshots_or_urls": [
+    "docs/client-review/2026-08-01-saturday-review/generated-candidates/ritual-harmonized-approved-20260803-v2/harmonized_site_treatment_desktop_v2.png",
+    "docs/client-review/2026-08-01-saturday-review/generated-candidates/ritual-harmonized-approved-20260803-v2/harmonized_site_treatment_mobile_true390_v2.png"
+  ],
+  "failures": [],
+  "unknowns": [
+    "No currently accepted sole Main coordinator is tool-proven. Proposed Main task 019fc4f2-d00e-7863-8907-9b81c1cd9ccd remains unaccepted, so no cross-task message was sent.",
+    "A global no-WIP-change assertion cannot be certified because another task committed _wip/our-story.WIP.html while custody work was running, moving the shared branch HEAD from 0f533b6f4438dbc80e1a75e856c672b52d5f41ca to 76a626d53e27eae4ad1b8485e404de1bf1b3819b."
+  ],
+  "residual_risk": [
+    "The approved trio remains candidate-only, unwired and pending a separately admitted page-integration decision.",
+    "Concurrent unrelated branch movement means repository-wide preservation must be independently reconciled before any promotion or integration."
+  ],
+  "forbidden_path_changes": [],
+  "proposed_next_state": "HOLD",
+  "next_reviewer": "Proposed Main 019fc4f2-d00e-7863-8907-9b81c1cd9ccd only after it explicitly accepts sole coordination; otherwise Nate",
+  "checks": [
+    {
+      "command": "receipt checkpoint creation",
+      "exit_code": 0,
+      "result": "PASS checkpoint packet=WAVE-1D-RITUAL-HARMONIZED-CUSTODY-HANDOFF-20260803 files=14 path=_wip/checkpoints/WAVE-1D-RITUAL-HARMONIZED-CUSTODY-HANDOFF-20260803_20260803_170124_AEST"
+    },
+    {
+      "command": "phase-start gate",
+      "exit_code": 0,
+      "result": "PASS packet=WAVE-1D-RITUAL-HARMONIZED-CUSTODY-HANDOFF-20260803 phase=start scope=14"
+    },
+    {
+      "command": "free-space preflight",
+      "exit_code": 0,
+      "result": "PASS: 53 GiB available; no render or generation performed"
+    },
+    {
+      "command": "re-hash all 12 approved source artifacts immediately before copy",
+      "exit_code": 0,
+      "result": "PASS: every source SHA-256 matched the packet source_sha256 map"
+    },
+    {
+      "command": "cmp each of 12 source and destination artifacts",
+      "exit_code": 0,
+      "result": "PASS source_destination_cmp_12"
+    },
+    {
+      "command": "validate copied JSON",
+      "exit_code": 0,
+      "result": "PASS destination_json_3"
+    },
+    {
+      "command": "image dimension inspection",
+      "exit_code": 0,
+      "result": "PASS: masters 1672x941; desktop proof 1440x1240; mobile proof 390x2053"
+    },
+    {
+      "command": "copied browser-QA metric inspection",
+      "exit_code": 0,
+      "result": "PASS: mobile innerWidth/clientWidth/scrollWidth=390/390/390 with 334x330 cards; desktop=1440/1440/1440 with approximately 362.66x432 cards; all images loaded"
+    },
+    {
+      "command": "full-resolution visual inspection of copied desktop and true-390 mobile proofs",
+      "exit_code": 0,
+      "result": "PASS: all three harmonized slots render visibly, copy remains readable, mobile cards are full-width with natural wrapping, and no clipped controls or horizontal shrink-to-fit defect is visible"
+    },
+    {
+      "command": "source preservation re-hash after copy",
+      "exit_code": 0,
+      "result": "PASS: all 12 approved source artifacts remained byte-identical"
+    },
+    {
+      "command": "frozen staging-v1 tree and key-hash recheck",
+      "exit_code": 0,
+      "result": "PASS: aggregate b74dcdb60f4baeee0d2db312bf8054fae80b9763989e4a65e20c8d082253b33e; staging d0d834b9...; clean d1c66b1d...; annotated 3be3c0f2...; clean Homepage 0d102050..."
+    },
+    {
+      "command": "exact packet write-scope audit",
+      "exit_code": 0,
+      "result": "PASS for packet-owned writes: packet plus 12 destination files and this receipt only; no page, staging-v1, Shop, source-asset, integration, commit, deploy, send or external action"
+    },
+    {
+      "command": "shared branch HEAD reconciliation",
+      "exit_code": 0,
+      "result": "HOLD: shared branch moved concurrently from 0f533b6f4438dbc80e1a75e856c672b52d5f41ca to 76a626d53e27eae4ad1b8485e404de1bf1b3819b at 2026-08-03T17:08:13+10:00; frozen staging hashes and admitted candidate files remain unchanged"
+    },
+    {
+      "command": "coordinator acceptance check",
+      "exit_code": 0,
+      "result": "HOLD: proposed Main 019fc4f2-d00e-7863-8907-9b81c1cd9ccd has not explicitly accepted sole coordination; coordinator message not sent"
+    }
+  ],
+  "concurrent_external_drift": {
+    "path": "_wip/our-story.WIP.html",
+    "branch": "codex-maplemoon-section-review",
+    "preflight_head": "0f533b6f4438dbc80e1a75e856c672b52d5f41ca",
+    "current_head": "76a626d53e27eae4ad1b8485e404de1bf1b3819b",
+    "concurrent_commit_time": "2026-08-03T17:08:13+10:00",
+    "concurrent_commit_subject": "feat(our-story): add Carli's and Dylan's bios to the founder cards",
+    "authority_baseline_sha256": "f3a72926931b7cbb2ec625a87654059a0bf2a6d34764949ec298725bccde9a06",
+    "intermediate_observed_sha256": "1a70bc383f95fb597e1da7769808a30f4436b632837fc5e657d3167e1929ca5e",
+    "final_observed_sha256": "36fdc9d4f5b2992750e204db55d9cd6355f0f975a443d5885c4d0baffdedfec1",
+    "attribution": "Not written or committed by this packet; changed repeatedly and was committed by another task during the bounded custody run. The file and commit were preserved without intervention."
+  },
+  "blockers": [
+    "No tool-proven accepted sole Main coordinator exists for the handoff message.",
+    "Concurrent unrelated branch commit 76a626d53e27eae4ad1b8485e404de1bf1b3819b prevents a repository-wide no-WIP-change and stable-HEAD certification."
+  ],
+  "ownership": "Durable candidate folder is complete; this worker owns no page or integration path and releases the custody write lane after this receipt.",
+  "ready_to_send_coordinator_message": "P1 custody complete: WAVE-1D-RITUAL-HARMONIZED-CUSTODY-HANDOFF-20260803. Durable candidate package: docs/client-review/2026-08-01-saturday-review/generated-candidates/ritual-harmonized-approved-20260803-v2/. Receipt: docs/orchestration/reviews/WAVE-1D-RITUAL-HARMONIZED-CUSTODY-HANDOFF-20260803.json. Candidate-only Nate approval; integration remains closed. Start and completion gates passed. Please independently verify after explicitly accepting sole coordination.",
+  "next_action": "Nate should designate or confirm the sole Main coordinator; that coordinator can independently verify this receipt and separately decide whether to admit page integration."
+}

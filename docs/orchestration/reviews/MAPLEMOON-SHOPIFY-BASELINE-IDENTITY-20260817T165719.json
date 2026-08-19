@@ -1,0 +1,102 @@
+{
+  "schema": "maplemoon-receipt/v2",
+  "receipt_id": "MAPLEMOON-SHOPIFY-BASELINE-IDENTITY-20260817T165719-RECEIPT",
+  "packet_id": "MAPLEMOON-SHOPIFY-BASELINE-IDENTITY-20260817T165719",
+  "worker_thread_id": "/root",
+  "worker": "MapleMoon root Boss",
+  "started_at": "2026-08-17T07:19:41Z",
+  "completed_at": "2026-08-17T07:23:52Z",
+  "files_read": [
+    "maplemoon-website/docs/orchestration/packets/MAPLEMOON-SHOPIFY-BASELINE-IDENTITY-20260817T165719.md",
+    "maplemoon-website/docs/orchestration/packets/MAPLEMOON-SHOPIFY-EXECUTION-PROGRAM-20260817T165719.md",
+    "maplemoon-website/docs/orchestration/MAPLEMOON_BOSS_EXECUTION_LEDGER_20260816.md",
+    "/Users/handtomouse/maplemoon_shopify_groundwork_20260815/PLAN.md",
+    "/Users/handtomouse/maplemoon_shopify_groundwork_20260815/THEME_MAP.md",
+    "/Users/handtomouse/maplemoon_shopify_groundwork_20260815/DATA_GAP.md",
+    "/Users/handtomouse/maplemoon_shopify_groundwork_20260815/NATE_CHECKLIST.md",
+    "/Users/handtomouse/maplemoon_shopify_groundwork_20260815/BLOCKED.md",
+    "/Users/handtomouse/maplemoon_cat01a_20260815/LEDGER.md",
+    "/Users/handtomouse/maplemoon_cat01a_20260815/ledger.csv",
+    "/Users/handtomouse/maplemoon_cat01a_20260815/CONFLICTS.md",
+    "/Users/handtomouse/maplemoon_cat01a_20260815/NEEDED.md",
+    "/Users/handtomouse/Library/Messages/Attachments/e0/00/3631B118-5A32-487A-8E55-C0533B3B96CB/Maple Moon Store CSV File Export.csv",
+    "maplemoon-website/scripts/check-maplemoon-receipt.py"
+  ],
+  "files_changed": [
+    "maplemoon-website/_wip/evidence/shopify_baseline_identity_20260817T165719",
+    "maplemoon-website/_wip/recovery/shopify_baseline_identity_20260817T165719",
+    "maplemoon-website/docs/orchestration/reviews/MAPLEMOON-SHOPIFY-BASELINE-IDENTITY-20260817T165719.md",
+    "maplemoon-website/docs/orchestration/reviews/MAPLEMOON-SHOPIFY-BASELINE-IDENTITY-20260817T165719.json"
+  ],
+  "pre_sha256": {
+    "maplemoon-website/_wip/evidence/shopify_baseline_identity_20260817T165719": null,
+    "maplemoon-website/_wip/recovery/shopify_baseline_identity_20260817T165719": null,
+    "maplemoon-website/docs/orchestration/reviews/MAPLEMOON-SHOPIFY-BASELINE-IDENTITY-20260817T165719.md": null,
+    "maplemoon-website/docs/orchestration/reviews/MAPLEMOON-SHOPIFY-BASELINE-IDENTITY-20260817T165719.json": null
+  },
+  "post_sha256": {
+    "maplemoon-website/_wip/evidence/shopify_baseline_identity_20260817T165719": "860e2b54027852f8d2c42a242681a6d1d54851602b13640cb52025038f5bd976",
+    "maplemoon-website/_wip/recovery/shopify_baseline_identity_20260817T165719": "a7c1c1d92e52bc33f01a4a5475e49ca0962a7efb5d4ed55bb380b817876cdaa5",
+    "maplemoon-website/docs/orchestration/reviews/MAPLEMOON-SHOPIFY-BASELINE-IDENTITY-20260817T165719.md": "e72f10e5fd83f291ac3d044508f44606dd4ed07df8a1059dba8b474cc4d446c8",
+    "maplemoon-website/docs/orchestration/reviews/MAPLEMOON-SHOPIFY-BASELINE-IDENTITY-20260817T165719.json": null
+  },
+  "checks": [
+    {
+      "command": "check-maplemoon-receipt.py checkpoint",
+      "exit_code": 0,
+      "result": "PASS checkpoint packet=MAPLEMOON-SHOPIFY-BASELINE-IDENTITY-20260817T165719 files=4 path=/Users/handtomouse/maplemoon-website/_wip/checkpoints/MAPLEMOON-SHOPIFY-BASELINE-IDENTITY-20260817T165719_20260817_171933_AEST"
+    },
+    {
+      "command": "check-maplemoon-receipt.py verify --phase start",
+      "exit_code": 0,
+      "result": "PASS packet=MAPLEMOON-SHOPIFY-BASELINE-IDENTITY-20260817T165719 phase=start scope=4"
+    },
+    {
+      "command": "shasum -a 256 -c acquisition-hashes.sha256",
+      "exit_code": 0,
+      "result": "PASS all 12 pinned authority files matched at acquisition and close"
+    },
+    {
+      "command": "full named-input read",
+      "exit_code": 0,
+      "result": "PASS ledger, execution program, five Shopify groundwork files, four CAT files, complete Woo CSV and receipt verifier read"
+    },
+    {
+      "command": "Woo CSV full parse",
+      "exit_code": 0,
+      "result": "PASS 119 records, 82 columns, types variable=20 variation=91 simple=8, published=119, SKU nonblank=0, catalogue PII detected=false"
+    },
+    {
+      "command": "shopify version and local theme command inspection",
+      "exit_code": 0,
+      "result": "PASS Shopify CLI 3.92.1 installed; theme list and pull commands available"
+    },
+    {
+      "command": "shopify theme list --store maplemooncarob.myshopify.com --json --no-color",
+      "exit_code": 0,
+      "result": "PASS stop detection: existing authentication unavailable; CLI requested a new login; login was not followed; no authenticated store response or remote mutation occurred"
+    },
+    {
+      "command": "forbidden-action and secret-output audit",
+      "exit_code": 0,
+      "result": "PASS no theme pull/duplicate/update/publish, product or setting mutation, browser-admin continuation, client contact, Git, deploy or production action; no credentials, verification codes, activation URLs, tokens or customer data recorded"
+    }
+  ],
+  "screenshots_or_urls": [],
+  "failures": [
+    "Required exact installed-theme identity and recoverable theme-byte baseline were not obtained because Shopify CLI had no existing authenticated session."
+  ],
+  "unknowns": [
+    "Current exact store ID and current theme list/role/name/version/vendor/update metadata were not refreshed in S0.",
+    "Ethereal-versus-Etheryx identity remains unresolved.",
+    "Exact installed theme file count and tree SHA-256 remain unknown.",
+    "Current before/after Shopify external-state values could not be independently compared in this run."
+  ],
+  "residual_risk": [
+    "Proceeding to S1 without an exact theme backup could mutate the wrong theme or lose the only recoverable installed state.",
+    "Historical Boss-ledger admin observations may have drifted and remain evidence only until freshly acquired."
+  ],
+  "forbidden_path_changes": [],
+  "proposed_next_state": "hold_for_explicit_cli_login_or_exact_theme_archive_successor",
+  "next_reviewer": "MapleMoon root Boss, then Nate for the bounded Shopify CLI login acquisition choice"
+}

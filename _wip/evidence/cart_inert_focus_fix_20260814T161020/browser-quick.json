@@ -1,0 +1,24 @@
+{
+  "schema": "maplemoon-browser-quick/v1",
+  "outcome": "PASS",
+  "agent_browser": {
+    "available": false,
+    "fallback": "Bundled Playwright with system Google Chrome"
+  },
+  "shop_http": 200,
+  "home_http": 200,
+  "shop": {
+    "status": "complete",
+    "content": 5636,
+    "overlay": false,
+    "cards": 24,
+    "dialog": true,
+    "header": true
+  },
+  "home": {
+    "content": 2292,
+    "heading": "Carob",
+    "overlay": false
+  },
+  "errors": []
+}

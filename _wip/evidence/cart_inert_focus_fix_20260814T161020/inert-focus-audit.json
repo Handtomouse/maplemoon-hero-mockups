@@ -1,0 +1,744 @@
+{
+  "schema": "maplemoon-cart-inert-focus-runtime/v1",
+  "started_at": "2026-08-14T06:22:38.696Z",
+  "agent_browser": {
+    "available": false,
+    "fallback": "Bundled Playwright with system Google Chrome"
+  },
+  "widths": [
+    {
+      "width": 390,
+      "preseed": "div",
+      "before": {
+        "branches": [
+          {
+            "id": "branch-1-div",
+            "tag": "div",
+            "inert": true
+          },
+          {
+            "id": "branch-2-script",
+            "tag": "script",
+            "inert": false
+          },
+          {
+            "id": "branch-3-style",
+            "tag": "style",
+            "inert": false
+          },
+          {
+            "id": "branch-4-script",
+            "tag": "script",
+            "inert": false
+          },
+          {
+            "id": "branch-5-aside",
+            "tag": "aside",
+            "inert": false
+          },
+          {
+            "id": "branch-6-div",
+            "tag": "div",
+            "inert": false
+          },
+          {
+            "id": "branch-7-style",
+            "tag": "style",
+            "inert": false
+          }
+        ]
+      },
+      "opened": {
+        "outsideCount": 7,
+        "outsideInert": 7,
+        "outsideBranches": [
+          {
+            "id": "branch-1-div",
+            "tag": "div",
+            "inert": true
+          },
+          {
+            "id": "branch-2-script",
+            "tag": "script",
+            "inert": true
+          },
+          {
+            "id": "branch-3-style",
+            "tag": "style",
+            "inert": true
+          },
+          {
+            "id": "branch-4-script",
+            "tag": "script",
+            "inert": true
+          },
+          {
+            "id": "branch-5-aside",
+            "tag": "aside",
+            "inert": true
+          },
+          {
+            "id": "branch-6-div",
+            "tag": "div",
+            "inert": true
+          },
+          {
+            "id": "branch-7-style",
+            "tag": "style",
+            "inert": true
+          }
+        ],
+        "programmaticFocus": {
+          "escaped": false,
+          "activeInsideDialog": true,
+          "targetInertAncestor": true
+        },
+        "dynamicBranch": {
+          "nativeAttempt": {
+            "inert": true,
+            "escaped": false,
+            "activeInsideDialog": true
+          },
+          "fallbackAttempt": {
+            "redirected": true,
+            "activeLabel": "Close cart"
+          }
+        },
+        "initialFocus": "Close cart",
+        "dialog": {
+          "role": "dialog",
+          "modal": "true",
+          "hidden": "false",
+          "inert": false,
+          "rect": {
+            "top": 101.28125,
+            "right": 390,
+            "bottom": 844,
+            "left": 0
+          }
+        },
+        "buttons": [
+          {
+            "label": "Close cart",
+            "width": 44,
+            "height": 44
+          },
+          {
+            "label": "Continue to checkout",
+            "width": 346,
+            "height": 44
+          },
+          {
+            "label": "Continue shopping",
+            "width": 346,
+            "height": 44
+          }
+        ],
+        "overflow": {
+          "document": 0,
+          "dialog": 0,
+          "body": 0
+        },
+        "lifecycle": {
+          "observerActive": 1,
+          "bodyObserveCalls": 1,
+          "bodyDisconnectCalls": 0,
+          "containmentActive": 1,
+          "containmentAdds": 1,
+          "containmentRemoves": 0
+        }
+      },
+      "trap": {
+        "shiftWrap": true,
+        "forwardWrap": true,
+        "zoom": {
+          "document": 0,
+          "dialog": 0,
+          "body": 0
+        }
+      },
+      "restoration": {
+        "preseedStillInert": true,
+        "dynamicRestoredNotInert": true,
+        "openerReturned": true,
+        "dialogClosedInert": true
+      },
+      "lifecycle": {
+        "observerActive": 0,
+        "bodyObserveCalls": 1,
+        "bodyDisconnectCalls": 1,
+        "containmentActive": 0,
+        "containmentAdds": 1,
+        "containmentRemoves": 1
+      },
+      "screenshot": {
+        "path": "screenshots/cart-inert-390.png",
+        "bytes": 43527
+      },
+      "trace": {
+        "consoleErrors": [],
+        "pageErrors": [],
+        "failedRequests": [],
+        "badResponses": []
+      }
+    },
+    {
+      "width": 900,
+      "preseed": "div",
+      "before": {
+        "branches": [
+          {
+            "id": "branch-1-div",
+            "tag": "div",
+            "inert": true
+          },
+          {
+            "id": "branch-2-script",
+            "tag": "script",
+            "inert": false
+          },
+          {
+            "id": "branch-3-style",
+            "tag": "style",
+            "inert": false
+          },
+          {
+            "id": "branch-4-script",
+            "tag": "script",
+            "inert": false
+          },
+          {
+            "id": "branch-5-aside",
+            "tag": "aside",
+            "inert": false
+          },
+          {
+            "id": "branch-6-div",
+            "tag": "div",
+            "inert": false
+          },
+          {
+            "id": "branch-7-style",
+            "tag": "style",
+            "inert": false
+          }
+        ]
+      },
+      "opened": {
+        "outsideCount": 7,
+        "outsideInert": 7,
+        "outsideBranches": [
+          {
+            "id": "branch-1-div",
+            "tag": "div",
+            "inert": true
+          },
+          {
+            "id": "branch-2-script",
+            "tag": "script",
+            "inert": true
+          },
+          {
+            "id": "branch-3-style",
+            "tag": "style",
+            "inert": true
+          },
+          {
+            "id": "branch-4-script",
+            "tag": "script",
+            "inert": true
+          },
+          {
+            "id": "branch-5-aside",
+            "tag": "aside",
+            "inert": true
+          },
+          {
+            "id": "branch-6-div",
+            "tag": "div",
+            "inert": true
+          },
+          {
+            "id": "branch-7-style",
+            "tag": "style",
+            "inert": true
+          }
+        ],
+        "programmaticFocus": {
+          "escaped": false,
+          "activeInsideDialog": true,
+          "targetInertAncestor": true
+        },
+        "dynamicBranch": null,
+        "initialFocus": "Close cart",
+        "dialog": {
+          "role": "dialog",
+          "modal": "true",
+          "hidden": "false",
+          "inert": false,
+          "rect": {
+            "top": 0,
+            "right": 900,
+            "bottom": 900,
+            "left": 380
+          }
+        },
+        "buttons": [
+          {
+            "label": "Close cart",
+            "width": 44,
+            "height": 44
+          },
+          {
+            "label": "Continue to checkout",
+            "width": 476,
+            "height": 44
+          },
+          {
+            "label": "Continue shopping",
+            "width": 476,
+            "height": 44
+          }
+        ],
+        "overflow": {
+          "document": 0,
+          "dialog": 0,
+          "body": 0
+        },
+        "lifecycle": {
+          "observerActive": 1,
+          "bodyObserveCalls": 1,
+          "bodyDisconnectCalls": 0,
+          "containmentActive": 1,
+          "containmentAdds": 1,
+          "containmentRemoves": 0
+        }
+      },
+      "trap": {
+        "shiftWrap": true,
+        "forwardWrap": true,
+        "zoom": {
+          "document": 0,
+          "dialog": 0,
+          "body": 0
+        }
+      },
+      "restoration": {
+        "preseedStillInert": true,
+        "dynamicRestoredNotInert": null,
+        "openerReturned": true,
+        "dialogClosedInert": true
+      },
+      "lifecycle": {
+        "observerActive": 0,
+        "bodyObserveCalls": 1,
+        "bodyDisconnectCalls": 1,
+        "containmentActive": 0,
+        "containmentAdds": 1,
+        "containmentRemoves": 1
+      },
+      "screenshot": {
+        "path": "screenshots/cart-inert-900.png",
+        "bytes": 118460
+      },
+      "trace": {
+        "consoleErrors": [],
+        "pageErrors": [],
+        "failedRequests": [],
+        "badResponses": []
+      }
+    },
+    {
+      "width": 1440,
+      "preseed": "div",
+      "before": {
+        "branches": [
+          {
+            "id": "branch-1-div",
+            "tag": "div",
+            "inert": true
+          },
+          {
+            "id": "branch-2-script",
+            "tag": "script",
+            "inert": false
+          },
+          {
+            "id": "branch-3-style",
+            "tag": "style",
+            "inert": false
+          },
+          {
+            "id": "branch-4-script",
+            "tag": "script",
+            "inert": false
+          },
+          {
+            "id": "branch-5-aside",
+            "tag": "aside",
+            "inert": false
+          },
+          {
+            "id": "branch-6-div",
+            "tag": "div",
+            "inert": false
+          },
+          {
+            "id": "branch-7-style",
+            "tag": "style",
+            "inert": false
+          }
+        ]
+      },
+      "opened": {
+        "outsideCount": 7,
+        "outsideInert": 7,
+        "outsideBranches": [
+          {
+            "id": "branch-1-div",
+            "tag": "div",
+            "inert": true
+          },
+          {
+            "id": "branch-2-script",
+            "tag": "script",
+            "inert": true
+          },
+          {
+            "id": "branch-3-style",
+            "tag": "style",
+            "inert": true
+          },
+          {
+            "id": "branch-4-script",
+            "tag": "script",
+            "inert": true
+          },
+          {
+            "id": "branch-5-aside",
+            "tag": "aside",
+            "inert": true
+          },
+          {
+            "id": "branch-6-div",
+            "tag": "div",
+            "inert": true
+          },
+          {
+            "id": "branch-7-style",
+            "tag": "style",
+            "inert": true
+          }
+        ],
+        "programmaticFocus": {
+          "escaped": false,
+          "activeInsideDialog": true,
+          "targetInertAncestor": true
+        },
+        "dynamicBranch": null,
+        "initialFocus": "Close cart",
+        "dialog": {
+          "role": "dialog",
+          "modal": "true",
+          "hidden": "false",
+          "inert": false,
+          "rect": {
+            "top": 0,
+            "right": 1440.06884765625,
+            "bottom": 900,
+            "left": 920.0689086914062
+          }
+        },
+        "buttons": [
+          {
+            "label": "Close cart",
+            "width": 44,
+            "height": 44
+          },
+          {
+            "label": "Continue to checkout",
+            "width": 475.99993896484375,
+            "height": 44
+          },
+          {
+            "label": "Continue shopping",
+            "width": 475.99993896484375,
+            "height": 44
+          }
+        ],
+        "overflow": {
+          "document": 0,
+          "dialog": 0,
+          "body": 0
+        },
+        "lifecycle": {
+          "observerActive": 1,
+          "bodyObserveCalls": 1,
+          "bodyDisconnectCalls": 0,
+          "containmentActive": 1,
+          "containmentAdds": 1,
+          "containmentRemoves": 0
+        }
+      },
+      "trap": {
+        "shiftWrap": true,
+        "forwardWrap": true,
+        "zoom": {
+          "document": 0,
+          "dialog": 0,
+          "body": 0
+        }
+      },
+      "restoration": {
+        "preseedStillInert": true,
+        "dynamicRestoredNotInert": null,
+        "openerReturned": true,
+        "dialogClosedInert": true
+      },
+      "lifecycle": {
+        "observerActive": 0,
+        "bodyObserveCalls": 1,
+        "bodyDisconnectCalls": 1,
+        "containmentActive": 0,
+        "containmentAdds": 1,
+        "containmentRemoves": 1
+      },
+      "screenshot": {
+        "path": "screenshots/cart-inert-1440.png",
+        "bytes": 206321
+      },
+      "trace": {
+        "consoleErrors": [],
+        "pageErrors": [],
+        "failedRequests": [],
+        "badResponses": []
+      }
+    }
+  ],
+  "close_routes": [
+    {
+      "route": "x",
+      "pointerBackgroundClicks": null,
+      "closed": {
+        "openerReturned": true,
+        "cartCount": 0,
+        "stored": [],
+        "lifecycle": {
+          "observerActive": 0,
+          "bodyObserveCalls": 1,
+          "bodyDisconnectCalls": 1,
+          "containmentActive": 0,
+          "containmentAdds": 1,
+          "containmentRemoves": 1
+        }
+      },
+      "trace": {
+        "consoleErrors": [],
+        "pageErrors": [],
+        "failedRequests": [],
+        "badResponses": []
+      }
+    },
+    {
+      "route": "overlay",
+      "pointerBackgroundClicks": 0,
+      "closed": {
+        "openerReturned": true,
+        "cartCount": 0,
+        "stored": [],
+        "lifecycle": {
+          "observerActive": 0,
+          "bodyObserveCalls": 1,
+          "bodyDisconnectCalls": 1,
+          "containmentActive": 0,
+          "containmentAdds": 1,
+          "containmentRemoves": 1
+        }
+      },
+      "trace": {
+        "consoleErrors": [],
+        "pageErrors": [],
+        "failedRequests": [],
+        "badResponses": []
+      }
+    },
+    {
+      "route": "escape",
+      "pointerBackgroundClicks": null,
+      "closed": {
+        "openerReturned": true,
+        "cartCount": 0,
+        "stored": [],
+        "lifecycle": {
+          "observerActive": 0,
+          "bodyObserveCalls": 1,
+          "bodyDisconnectCalls": 1,
+          "containmentActive": 0,
+          "containmentAdds": 1,
+          "containmentRemoves": 1
+        }
+      },
+      "trace": {
+        "consoleErrors": [],
+        "pageErrors": [],
+        "failedRequests": [],
+        "badResponses": []
+      }
+    },
+    {
+      "route": "secondary",
+      "pointerBackgroundClicks": null,
+      "closed": {
+        "openerReturned": true,
+        "cartCount": 0,
+        "stored": [],
+        "lifecycle": {
+          "observerActive": 0,
+          "bodyObserveCalls": 1,
+          "bodyDisconnectCalls": 1,
+          "containmentActive": 0,
+          "containmentAdds": 1,
+          "containmentRemoves": 1
+        }
+      },
+      "trace": {
+        "consoleErrors": [],
+        "pageErrors": [],
+        "failedRequests": [],
+        "badResponses": []
+      }
+    },
+    {
+      "route": "complete",
+      "pointerBackgroundClicks": null,
+      "closed": {
+        "openerReturned": true,
+        "cartCount": 0,
+        "stored": [],
+        "lifecycle": {
+          "observerActive": 0,
+          "bodyObserveCalls": 1,
+          "bodyDisconnectCalls": 1,
+          "containmentActive": 0,
+          "containmentAdds": 1,
+          "containmentRemoves": 1
+        }
+      },
+      "trace": {
+        "consoleErrors": [],
+        "pageErrors": [],
+        "failedRequests": [],
+        "badResponses": []
+      }
+    }
+  ],
+  "header_ownership": {
+    "before": {
+      "menuState": "closed",
+      "primaryInert": true,
+      "utilityInert": true
+    },
+    "after": {
+      "menuState": "closed",
+      "primaryInert": true,
+      "utilityInert": true,
+      "openerReturned": true,
+      "lifecycle": {
+        "observerActive": 0,
+        "bodyObserveCalls": 1,
+        "bodyDisconnectCalls": 1,
+        "containmentActive": 0,
+        "containmentAdds": 1,
+        "containmentRemoves": 1
+      }
+    },
+    "trace": {
+      "consoleErrors": [],
+      "pageErrors": [],
+      "failedRequests": [],
+      "badResponses": []
+    }
+  },
+  "repeated_cycles": {
+    "cycles": [
+      {
+        "cycle": 1,
+        "lifecycleOpen": {
+          "observerActive": 1,
+          "bodyObserveCalls": 1,
+          "bodyDisconnectCalls": 0,
+          "containmentActive": 1,
+          "containmentAdds": 1,
+          "containmentRemoves": 0
+        },
+        "alreadyOpen": {
+          "observerActive": 1,
+          "bodyObserveCalls": 1,
+          "bodyDisconnectCalls": 0,
+          "containmentActive": 1,
+          "containmentAdds": 1,
+          "containmentRemoves": 0
+        },
+        "lifecycleClosed": {
+          "observerActive": 0,
+          "bodyObserveCalls": 1,
+          "bodyDisconnectCalls": 1,
+          "containmentActive": 0,
+          "containmentAdds": 1,
+          "containmentRemoves": 1
+        },
+        "openerReturned": true
+      },
+      {
+        "cycle": 2,
+        "lifecycleOpen": {
+          "observerActive": 1,
+          "bodyObserveCalls": 2,
+          "bodyDisconnectCalls": 1,
+          "containmentActive": 1,
+          "containmentAdds": 2,
+          "containmentRemoves": 1
+        },
+        "alreadyOpen": null,
+        "lifecycleClosed": {
+          "observerActive": 0,
+          "bodyObserveCalls": 2,
+          "bodyDisconnectCalls": 2,
+          "containmentActive": 0,
+          "containmentAdds": 2,
+          "containmentRemoves": 2
+        },
+        "openerReturned": true
+      },
+      {
+        "cycle": 3,
+        "lifecycleOpen": {
+          "observerActive": 1,
+          "bodyObserveCalls": 3,
+          "bodyDisconnectCalls": 2,
+          "containmentActive": 1,
+          "containmentAdds": 3,
+          "containmentRemoves": 2
+        },
+        "alreadyOpen": null,
+        "lifecycleClosed": {
+          "observerActive": 0,
+          "bodyObserveCalls": 3,
+          "bodyDisconnectCalls": 3,
+          "containmentActive": 0,
+          "containmentAdds": 3,
+          "containmentRemoves": 3
+        },
+        "openerReturned": true
+      }
+    ],
+    "trace": {
+      "consoleErrors": [],
+      "pageErrors": [],
+      "failedRequests": [],
+      "badResponses": []
+    }
+  },
+  "outcome": "PASS",
+  "completed_at": "2026-08-14T06:22:53.718Z"
+}

@@ -1,0 +1,82 @@
+{
+  "390": {
+    "bodyTextLength": 2620,
+    "browserBounds": {
+      "height": 1079,
+      "left": 30,
+      "top": 38,
+      "width": 780,
+      "windowState": "normal"
+    },
+    "calibratedOuterBounds": {
+      "height": 1079,
+      "left": 30,
+      "top": 38,
+      "width": 780,
+      "windowState": "normal"
+    },
+    "clientWidth": 390,
+    "devicePixelRatio": 4,
+    "innerHeight": 496,
+    "innerWidth": 390,
+    "outerHeight": 1079,
+    "outerWidth": 780,
+    "pageScaleIndicators": {
+      "rootTransform": "none",
+      "rootTransformOrigin": "195px 3440.22px"
+    },
+    "readyState": "complete",
+    "rootComputedZoom": "1",
+    "rootInlineZoom": "",
+    "scrollWidth": 390,
+    "targetInnerWidth": 390,
+    "url": "http://127.0.0.1:8804/homepage.html",
+    "visualViewport": {
+      "height": 496,
+      "offsetLeft": 0,
+      "offsetTop": 0,
+      "scale": 1,
+      "width": 390
+    }
+  },
+  "720": {
+    "bodyTextLength": 1496,
+    "browserBounds": {
+      "height": 1079,
+      "left": 30,
+      "top": 38,
+      "width": 1440,
+      "windowState": "normal"
+    },
+    "calibratedOuterBounds": {
+      "height": 1079,
+      "left": 30,
+      "top": 38,
+      "width": 1440,
+      "windowState": "normal"
+    },
+    "clientWidth": 720,
+    "devicePixelRatio": 4,
+    "innerHeight": 496,
+    "innerWidth": 720,
+    "outerHeight": 1079,
+    "outerWidth": 1440,
+    "pageScaleIndicators": {
+      "rootTransform": "none",
+      "rootTransformOrigin": "360px 1225.99px"
+    },
+    "readyState": "complete",
+    "rootComputedZoom": "1",
+    "rootInlineZoom": "",
+    "scrollWidth": 720,
+    "targetInnerWidth": 720,
+    "url": "http://127.0.0.1:8804/products/pure-carob-bar.html#product-title",
+    "visualViewport": {
+      "height": 496,
+      "offsetLeft": 0,
+      "offsetTop": 0,
+      "scale": 1,
+      "width": 720
+    }
+  }
+}

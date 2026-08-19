@@ -1,0 +1,129 @@
+{
+  "schema": "maplemoon-receipt/v2",
+  "receipt_id": "MAPLEMOON-CART-INERT-FOCUS-FIX-20260814T161020-RECEIPT",
+  "packet_id": "MAPLEMOON-CART-INERT-FOCUS-FIX-20260814T161020",
+  "worker_thread_id": "/root/dedup_risk_audit",
+  "worker": "Codex delegated cart modal-boundary correction worker",
+  "started_at": "2026-08-14T06:12:12Z",
+  "completed_at": "2026-08-14T06:28:06Z",
+  "files_read": [
+    "maplemoon-website/docs/orchestration/packets/MAPLEMOON-CART-INERT-FOCUS-FIX-20260814T161020.md",
+    "maplemoon-website/docs/orchestration/packets/MAPLEMOON-CART-OPTION-SUBTOTAL-FIX-20260814T152958.md",
+    "maplemoon-website/docs/orchestration/reviews/MAPLEMOON-CART-OPTION-SUBTOTAL-FIX-20260814T152958.json",
+    "maplemoon-website/docs/orchestration/packets/MAPLEMOON-CART-PREFLIGHT-VERIFY-20260814T155246.md",
+    "maplemoon-website/docs/orchestration/reviews/MAPLEMOON-CART-PREFLIGHT-VERIFY-20260814T155246.json",
+    "maplemoon-website/docs/orchestration/packets/MAPLEMOON-INTEGRATED-HEADER-CART-CERT-20260814T155822.md",
+    "maplemoon-website/docs/orchestration/reviews/MAPLEMOON-INTEGRATED-HEADER-CART-CERT-20260814T155822.json",
+    "maplemoon-website/_wip/evidence/integrated_header_cart_cert_20260814T155822",
+    "maplemoon-website/scripts/check-maplemoon-receipt.py",
+    "UFC/ops/bus/maplemoon/tools_20260813/preflight_deploy.py",
+    "maplemoon_build_20260813/homepage.html",
+    "maplemoon_build_20260813/our-story.html",
+    "maplemoon_build_20260813/carob-story.html",
+    "maplemoon_build_20260813/shop.html",
+    "maplemoon_build_20260813/faq.html",
+    "maplemoon_build_20260813/stockists.html",
+    "maplemoon_build_20260813/pure-carob-bar.html",
+    "maplemoon_build_20260813/mock-cart.js",
+    "maplemoon_build_20260813/mock-cart.css",
+    "maplemoon_build_20260813/assets/design-system/mm-chrome.js",
+    "maplemoon_build_20260813/assets/design-system/mm-chrome.css"
+  ],
+  "files_changed": [
+    "maplemoon_build_20260813/mock-cart.js",
+    "maplemoon-website/_wip/evidence/cart_inert_focus_fix_20260814T161020",
+    "maplemoon-website/docs/orchestration/reviews/MAPLEMOON-CART-INERT-FOCUS-FIX-20260814T161020.json"
+  ],
+  "pre_sha256": {
+    "maplemoon_build_20260813/mock-cart.js": "5776f8d628710970e81cf704ae0673ff69988d46952778f5624772db335b8b1a",
+    "maplemoon-website/_wip/evidence/cart_inert_focus_fix_20260814T161020": null,
+    "maplemoon-website/docs/orchestration/reviews/MAPLEMOON-CART-INERT-FOCUS-FIX-20260814T161020.json": null
+  },
+  "post_sha256": {
+    "maplemoon_build_20260813/mock-cart.js": "36fb46b05a46ecf1c770991c6b9cf2eb8c08fda361c7176d37df081668f123aa",
+    "maplemoon-website/_wip/evidence/cart_inert_focus_fix_20260814T161020": "b6d2438fd35bd3dd4b534715a91c393d63f2aa3b322f5e41e1b657e98a1b1606",
+    "maplemoon-website/docs/orchestration/reviews/MAPLEMOON-CART-INERT-FOCUS-FIX-20260814T161020.json": null
+  },
+  "checks": [
+    {
+      "command": "python3 -B scripts/check-maplemoon-receipt.py checkpoint --root /Users/handtomouse --packet docs/orchestration/packets/MAPLEMOON-CART-INERT-FOCUS-FIX-20260814T161020.md --destination _wip/checkpoints/MAPLEMOON-CART-INERT-FOCUS-FIX-20260814T161020_20260814_161020_AEST; phase-start verify",
+      "exit_code": 0,
+      "result": "PASS checkpoint packet=MAPLEMOON-CART-INERT-FOCUS-FIX-20260814T161020 files=3; PASS packet=MAPLEMOON-CART-INERT-FOCUS-FIX-20260814T161020 phase=start scope=3."
+    },
+    {
+      "command": "base-hash, predecessor and integrated-failure admission gates",
+      "exit_code": 0,
+      "result": "PASS: mock-cart.js 5776f8d628710970e81cf704ae0673ff69988d46952778f5624772db335b8b1a; mock-cart.css c17deb1f972017d9790f2191360a457e54d7287730847f9f470c9de371603308; mm-chrome.js 063fe11d5f5ed5d90c724868f1ffb8f3536aed73cc2f7fb9bc6e4791eb192d18; mm-chrome.css 2d7414a8994ae11414cb269f4ca335293b409eb9da956ca3b625e716c26080ba; all seven page hashes exact; cart-preflight successor promotion PASS; integrated failure receipt SHA-256 78c2e183699be5483125dbc0fc8a3bd4d5274a173cc11614188b0f7893f7ee10 and literal failure outside_inert=0/7, programmatic_focus_escaped=true confirmed."
+    },
+    {
+      "command": "pre-write vercel inspect and protected immutable homepage byte fetch",
+      "exit_code": 0,
+      "result": "PASS: production alias resolved immutable 7vjf2m50b / dpl_G2LER2awaqyFtGRCcTserXbNynct, target production, Ready; homepage 208556 bytes, MD5 6197879a5ca9d3ed0452773abc0bbeb4."
+    },
+    {
+      "command": "node --check /Users/handtomouse/maplemoon_build_20260813/mock-cart.js",
+      "exit_code": 0,
+      "result": "PASS node--check mock-cart.js"
+    },
+    {
+      "command": "node _wip/evidence/cart_inert_focus_fix_20260814T161020/static-contract.cjs",
+      "exit_code": 0,
+      "result": "PASS: seven positive-controlled static probes detected the candidate contracts for already-open guard/opener ordering, direct body capture, dynamic body observation, focusin containment, exact inert ownership restore, teardown ordering and guarded deferred focus; no background aria-hidden expansion."
+    },
+    {
+      "command": "node _wip/evidence/cart_inert_focus_fix_20260814T161020/browser-quick.cjs",
+      "exit_code": 0,
+      "result": "PASS via bundled Playwright/system Chrome because agent-browser is unavailable: Shop and homepage HTTP 200, 5636/2292 visible-text characters, 24 product cards, cart dialog/header present, no blank page/error overlay/console error. The first evidence-only run assumed a text h1 and failed because the real homepage h1 is an image wordmark; the assertion was corrected to its existing accessible image alt and rerun PASS without source changes."
+    },
+    {
+      "command": "node _wip/evidence/cart_inert_focus_fix_20260814T161020/inert-focus-audit.cjs",
+      "exit_code": 0,
+      "result": "PASS: measured 390/900/1440 each had 7/7 current non-modal direct body branches inert; dynamic branch inerted and native/programmatic/fallback focus stayed inside; X/overlay/Escape/secondary/completed-demo-order routes restored exact state and opener; overlay pointer test produced zero background clicks; pre-seeded and header-owned inert survived; cart-owned inert cleared; three cycles balanced observer 3/3 and containment listener 3/3; already-open dispatch remained one observer/listener and preserved original opener; dialog semantics, 44px, Tab/Shift-Tab, 200% zoom, overflow, console/page/request/image gates passed. The first evidence-only run stopped before opening because it assumed main/footer was a direct body child; the selector was corrected to the actual direct wrapper and the full audit reran PASS without source changes."
+    },
+    {
+      "command": "node _wip/evidence/cart_inert_focus_fix_20260814T161020/cart-regression-audit.cjs",
+      "exit_code": 0,
+      "result": "PASS: complete prior option/subtotal matrix retained Moon 10=$23.75, Banana 20=$50.99, Eclipse Value pack=$59.99, separate Moon 5=$12.19, mixed subtotal $108.12, exact line identity/totals, quantity/remove/empty/bag/reload/cross-route/fresh/corrupt/legacy session behavior, no cookie/localStorage/network/navigation/order/payment/email side effects, focus/target/zoom/overflow/runtime/request/image gates and settled 390/900/1440 renders."
+    },
+    {
+      "command": "visual inspection and nonblank byte control for inert and regression renders",
+      "exit_code": 0,
+      "result": "PASS: inert 390/900/1440 screenshots 43527/118460/206321 bytes and regression 390/900/1440 screenshots 67738/143251/233274 bytes; each is nonblank, readable, settled and horizontally unclipped."
+    },
+    {
+      "command": "python3 /Users/handtomouse/UFC/ops/bus/maplemoon/tools_20260813/preflight_deploy.py http://127.0.0.1:4402 --local",
+      "exit_code": 0,
+      "result": "VERDICT: PASS with 2 review-only hit(s) - leak:internal-status-review, leak:word-testimonial-hidden | WAIVED: root:homepage | Not visitor-readable, but they are shipped bytes. A human must clear them. A waived root is NOT a cleared root. Re-run without --local on the deploy host."
+    },
+    {
+      "command": "post-change shasum -a 256 of mock-cart.js, mock-cart.css, mm-chrome.js/css, seven pages and integrated failure receipt",
+      "exit_code": 0,
+      "result": "PASS: mock-cart.js post SHA-256 36fb46b05a46ecf1c770991c6b9cf2eb8c08fda361c7176d37df081668f123aa; mock-cart.css, mm-chrome.js/css, all seven HTML files and integrated-failure receipt retained every exact admitted base hash."
+    },
+    {
+      "command": "post-write vercel inspect; protected immutable homepage fetch; wc -c, md5 and cmp against pre-write bytes",
+      "exit_code": 0,
+      "result": "PASS: production still resolves immutable 7vjf2m50b / dpl_G2LER2awaqyFtGRCcTserXbNynct, target production, Ready; homepage remains 208556 bytes, MD5 6197879a5ca9d3ed0452773abc0bbeb4; pre/post production homepage cmp exit 0."
+    },
+    {
+      "command": "jq verification-summary.json and exact preflight-verdict control",
+      "exit_code": 0,
+      "result": "PASS: outcome PASS; no programmatic focus escape; dynamic branch and ownership gates true; mixed subtotal $108.12; production MD5 exact; failures=[], unknowns=[], forbidden_path_changes=[]."
+    }
+  ],
+  "screenshots_or_urls": [
+    "maplemoon-website/_wip/evidence/cart_inert_focus_fix_20260814T161020/screenshots/cart-inert-390.png",
+    "maplemoon-website/_wip/evidence/cart_inert_focus_fix_20260814T161020/screenshots/cart-inert-900.png",
+    "maplemoon-website/_wip/evidence/cart_inert_focus_fix_20260814T161020/screenshots/cart-inert-1440.png",
+    "maplemoon-website/_wip/evidence/cart_inert_focus_fix_20260814T161020/screenshots/cart-390-mixed.png",
+    "maplemoon-website/_wip/evidence/cart_inert_focus_fix_20260814T161020/screenshots/cart-900-option.png",
+    "maplemoon-website/_wip/evidence/cart_inert_focus_fix_20260814T161020/screenshots/cart-1440-option.png",
+    "maplemoon-website/_wip/evidence/cart_inert_focus_fix_20260814T161020/verification-summary.json"
+  ],
+  "failures": [],
+  "unknowns": [],
+  "residual_risk": [],
+  "forbidden_path_changes": [],
+  "proposed_next_state": "ready_for_independent_integrated_certification_r2",
+  "next_reviewer": "MapleMoon BOSS then independent integrated certification R2"
+}

@@ -1,0 +1,46 @@
+{
+  "schema": "maplemoon-integrated-header-cart-cert-r2-summary/v1",
+  "packet_id": "MAPLEMOON-INTEGRATED-HEADER-CART-CERT-R2-20260814T163003",
+  "worker_thread_id": "/root/recertify_updated_preview",
+  "completed_at": "2026-08-14T06:55:31Z",
+  "outcome": "PASS",
+  "admission": {
+    "predecessor_gates": "6/6 PASS",
+    "first_cert_failure_preserved": true,
+    "acquisition_hashes": "11/11 exact before and after",
+    "cart_inert_receipt_sha256": "946cd78c94acbba76265a0bf88e6126a7e6c39b3873751dc85c590c8ad395fdd"
+  },
+  "header_faq_assets": {
+    "regular_mobile": "14/14 PASS",
+    "reduced_motion_mobile": "14/14 PASS",
+    "desktop_reset": "7/7 PASS",
+    "faq_exact_copy": "2/2 PASS",
+    "authored_assets_runtime_overflow": "all required routes and widths PASS",
+    "screenshots": 6
+  },
+  "cart": {
+    "widths": "3/3 PASS at measured 390, 900 and 1440",
+    "exact_option_arithmetic": "$23.75 + $50.99 + $59.99 + $12.19 = $146.92; re-add = $159.11; increment = $182.86; decrement = $159.11; Banana removal = $108.12",
+    "reload_cross_route": "$108.12 / 4 items / 3 lines PASS at all widths",
+    "storage": "fresh $0.00; corrupt reset []; legacy 2 x $12.95 = $25.90 with integer migration",
+    "modal": "role/modal semantics, initial Close focus, Tab/Shift-Tab, X/overlay/Escape/secondary/completed-order closes, opener return, 44px and 200% containment PASS",
+    "inert_ownership": "all direct background branches, pointer block, programmatic focus redirect, dynamic branch, preseed/header ownership and 3-cycle observer/listener balance PASS at all widths",
+    "side_effects": "positive controls fired; zero forbidden cart cookie/localStorage/network/navigation/form/order/payment/email effects"
+  },
+  "preflight": "VERDICT: PASS with 2 review-only hit(s) - leak:internal-status-review, leak:word-testimonial-hidden | WAIVED: root:homepage",
+  "production_freeze": "7vjf2m50b / dpl_G2LER2awaqyFtGRCcTserXbNynct / production / Ready / 208556 bytes / MD5 6197879a5ca9d3ed0452773abc0bbeb4",
+  "visual_inspection": "9/9 representative renders nonblank, readable and unclipped",
+  "browser_method": "Fresh Playwright harness with bundled runtime and system Chrome; agent-browser CLI was unavailable, so the documented verification fallback was used.",
+  "source_edits": [],
+  "deployments": [],
+  "production_mutations": [],
+  "client_contacts": [],
+  "failures": [],
+  "unknowns": [],
+  "residual_risk": [
+    "Exact UFC preflight retains two established review-only shipped-byte hits.",
+    "Local preflight waives the root route; deploy-host preflight must run without --local in any later deployment packet."
+  ],
+  "forbidden_path_changes": [],
+  "proposed_next_state": "ready_for_boss_preview_only_deployment_packet"
+}

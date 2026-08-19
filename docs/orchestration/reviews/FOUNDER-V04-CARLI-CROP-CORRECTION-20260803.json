@@ -1,0 +1,103 @@
+{
+  "schema": "maplemoon-receipt/v2",
+  "receipt_id": "FOUNDER-V04-CARLI-CROP-CORRECTION-20260803-RECEIPT-001",
+  "packet_id": "FOUNDER-V04-CARLI-CROP-CORRECTION-20260803",
+  "candidate_id": "FOUNDER-V04-CARLI-CROP-CORRECTION-CANDIDATE-001",
+  "worker_thread_id": "019f9c36-83e1-7941-92e5-a3b134212288",
+  "worker": "Current Codex photo task",
+  "started_at": "2026-08-02T16:29:04Z",
+  "completed_at": "2026-08-02T16:44:11Z",
+  "outcome": "PASS",
+  "confidence": "high",
+  "files_read": [
+    "_wip/evidence/founder_v04_main_imac_qa_export_20260803/founders_portrait_v04_review.png",
+    "_wip/evidence/founder_v04_main_imac_qa_export_20260803/dylan_bio_v01.png",
+    "_wip/evidence/founder_v04_main_imac_qa_export_20260803/carli_bio_v01.png",
+    "_wip/reviews/founder_photo_v04_bios_20260802/founders_portrait_v04.psd",
+    "_wip/our-story.WIP.html"
+  ],
+  "files_changed": [
+    "docs/orchestration/reviews/FOUNDER-V04-CARLI-CROP-CORRECTION-20260803.json",
+    "_wip/evidence/founder_v04_main_imac_qa_export_20260803/carli_bio_v02.png",
+    "_wip/evidence/founder_v04_main_imac_qa_export_20260803/source_selection.md",
+    "_wip/evidence/founder_v04_main_imac_qa_export_20260803/our_story_v04_review.html",
+    "_wip/evidence/founder_v04_main_imac_qa_export_20260803/qa/our_story_v04_desktop_1440.png",
+    "_wip/evidence/founder_v04_main_imac_qa_export_20260803/qa/our_story_v04_mobile_390.png"
+  ],
+  "files_confirmed_untouched": [
+    "Carli v01 failed evidence",
+    "Dylan v01 and full candidate",
+    "saved founder v04 PSD",
+    "verified Heros-73 source and custody master",
+    "canonical WIP, frozen pages, live references and unrelated repository work"
+  ],
+  "pre_sha256": {
+    "docs/orchestration/packets/FOUNDER-V04-CARLI-CROP-CORRECTION-20260803.md": "7dcb3e286a785c2761bf0b4e51d927776ac3700d2706a543fb9f423a107dac3a",
+    "docs/orchestration/reviews/FOUNDER-V04-CARLI-CROP-CORRECTION-20260803.json": null,
+    "_wip/evidence/founder_v04_main_imac_qa_export_20260803/carli_bio_v02.png": null,
+    "_wip/evidence/founder_v04_main_imac_qa_export_20260803/source_selection.md": null,
+    "_wip/evidence/founder_v04_main_imac_qa_export_20260803/our_story_v04_review.html": null,
+    "_wip/evidence/founder_v04_main_imac_qa_export_20260803/qa/our_story_v04_desktop_1440.png": null,
+    "_wip/evidence/founder_v04_main_imac_qa_export_20260803/qa/our_story_v04_mobile_390.png": null
+  },
+  "post_sha256": {
+    "docs/orchestration/packets/FOUNDER-V04-CARLI-CROP-CORRECTION-20260803.md": "7dcb3e286a785c2761bf0b4e51d927776ac3700d2706a543fb9f423a107dac3a",
+    "docs/orchestration/reviews/FOUNDER-V04-CARLI-CROP-CORRECTION-20260803.json": null,
+    "_wip/evidence/founder_v04_main_imac_qa_export_20260803/carli_bio_v02.png": "5e6744f17105639cc55a30015bac5dee5f59faa90e25061610cf18ec3b5becfb",
+    "_wip/evidence/founder_v04_main_imac_qa_export_20260803/source_selection.md": "fb6443db40f1e002e5d1531896a7622cfea801706848b5a78d9cff9a7cb4f16d",
+    "_wip/evidence/founder_v04_main_imac_qa_export_20260803/our_story_v04_review.html": "27c58df59f72f762ddd9291319b5d6e5413db4f218ab0d3bfe0ba84c98bae33e",
+    "_wip/evidence/founder_v04_main_imac_qa_export_20260803/qa/our_story_v04_desktop_1440.png": "9b7eb75f02fb474c4ea95b131356f900d24aec7d41b83e9f3d3afaf7daa824ea",
+    "_wip/evidence/founder_v04_main_imac_qa_export_20260803/qa/our_story_v04_mobile_390.png": "47a46babc860c45fd929c8bfd16d68e63ca6d9a52aa39d94fdd8f0ab2aea2737"
+  },
+  "checkpoint_path": "_wip/checkpoints/FOUNDER-V04-CARLI-CROP-CORRECTION-20260803_20260803_022904_AEST",
+  "checks": [
+    {
+      "command": "check-maplemoon-receipt checkpoint and phase-start verify",
+      "exit_code": 0,
+      "result": "PASS checkpoint files=7 and PASS phase=start scope=7."
+    },
+    {
+      "command": "Photoshop Carli v02 literal crop",
+      "exit_code": 0,
+      "result": "PASS 2600x3250 output at tested bounds x=2750, y=400; no Dylan pixels remain and Carli hair, hand, fingers, elbow and seated pose are preserved."
+    },
+    {
+      "command": "magick compare tested crop and Photoshop v02 null:",
+      "exit_code": 0,
+      "result": "PASS exact pixel equality: 0 differing pixels."
+    },
+    {
+      "command": "headless Chrome desktop/mobile render loop",
+      "exit_code": 0,
+      "result": "PASS after one correction: desktop 1440/1440/1440 and mobile 390/390/390 inner/client/scroll widths; all three images loaded at native dimensions; no console or request errors."
+    },
+    {
+      "command": "visual inspection of desktop and mobile proofs",
+      "exit_code": 0,
+      "result": "PASS: pair remains cohesive with the pale website palette; individual crops are balanced, unclipped and clearly attributable."
+    },
+    {
+      "command": "protected input rehash and git diff --check",
+      "exit_code": 0,
+      "result": "PASS: Carli v01 5147a763..., Dylan v01 78e551e6..., full candidate d20b9e63..., PSD 53a9fe71..., source b31b11b0... and custody master f2db1e8c... unchanged; no whitespace errors."
+    }
+  ],
+  "screenshots_or_urls": [
+    "_wip/evidence/founder_v04_main_imac_qa_export_20260803/carli_bio_v02.png",
+    "_wip/evidence/founder_v04_main_imac_qa_export_20260803/qa/our_story_v04_desktop_1440.png",
+    "_wip/evidence/founder_v04_main_imac_qa_export_20260803/qa/our_story_v04_mobile_390.png",
+    "http://127.0.0.1:3131/_wip/evidence/founder_v04_main_imac_qa_export_20260803/our_story_v04_review.html"
+  ],
+  "failures": [],
+  "unknowns": [
+    "Nate has not visually approved the full pair image or either individual crop for integration."
+  ],
+  "residual_risk": [
+    "This is an isolated review surface, not the canonical Our Story page; integration still requires a separate reference-change and regression packet."
+  ],
+  "forbidden_path_changes": [],
+  "proposed_next_state": "needs_review",
+  "next_reviewer": "Nate",
+  "next_action": "Nate reviews the pair, Carli v02 and Dylan v01 in the isolated desktop/mobile surface and chooses Confirm, Fix or Reject before any website integration.",
+  "ready_to_promote": false
+}

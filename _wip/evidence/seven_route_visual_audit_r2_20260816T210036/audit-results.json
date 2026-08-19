@@ -1,0 +1,4943 @@
+{
+  "origin": "http://127.0.0.1:8792",
+  "acquisition": [
+    {
+      "route": "homepage",
+      "file": "/private/tmp/maplemoon-pdp-route-repair-20260816/homepage.html",
+      "bytes": 190815,
+      "expectedSha256": "9495d2eee0d81cbc8f86749df36b8f6532a9603c40638ffc728e55aae857cb89",
+      "actualSha256": "9495d2eee0d81cbc8f86749df36b8f6532a9603c40638ffc728e55aae857cb89",
+      "match": true
+    },
+    {
+      "route": "shop",
+      "file": "/private/tmp/maplemoon-pdp-route-repair-20260816/shop.html",
+      "bytes": 50564,
+      "expectedSha256": "a0c5c03c2aaf2b21307995a7b33843c5ffa0d5785ddf4a6dea252f40b8ab208a",
+      "actualSha256": "a0c5c03c2aaf2b21307995a7b33843c5ffa0d5785ddf4a6dea252f40b8ab208a",
+      "match": true
+    },
+    {
+      "route": "our-story",
+      "file": "/private/tmp/maplemoon-pdp-route-repair-20260816/our-story.html",
+      "bytes": 63842,
+      "expectedSha256": "0f00cb8beae8b911920f20f6e5976d60d0e94e70ed99f7d3557dbf9a1883c2b2",
+      "actualSha256": "0f00cb8beae8b911920f20f6e5976d60d0e94e70ed99f7d3557dbf9a1883c2b2",
+      "match": true
+    },
+    {
+      "route": "carob-story",
+      "file": "/private/tmp/maplemoon-pdp-route-repair-20260816/carob-story.html",
+      "bytes": 54352,
+      "expectedSha256": "5bfc9842c36d9f093d193f21cc7ea11cc96f3565fe65925d023e6ce0380e0756",
+      "actualSha256": "5bfc9842c36d9f093d193f21cc7ea11cc96f3565fe65925d023e6ce0380e0756",
+      "match": true
+    },
+    {
+      "route": "faq",
+      "file": "/private/tmp/maplemoon-pdp-route-repair-20260816/faq.html",
+      "bytes": 31865,
+      "expectedSha256": "29c1fb87be58a0c8ac65e148201c7164143fe947122e11c819c0444956a4b601",
+      "actualSha256": "29c1fb87be58a0c8ac65e148201c7164143fe947122e11c819c0444956a4b601",
+      "match": true
+    },
+    {
+      "route": "stockists",
+      "file": "/private/tmp/maplemoon-pdp-route-repair-20260816/stockists.html",
+      "bytes": 112138,
+      "expectedSha256": "b93f676f6ebdf9edc8bef7a7e013a0ab9a8aa6d7f2a0662c6da516d2741e955a",
+      "actualSha256": "b93f676f6ebdf9edc8bef7a7e013a0ab9a8aa6d7f2a0662c6da516d2741e955a",
+      "match": true
+    },
+    {
+      "route": "pure-carob-bar",
+      "file": "/private/tmp/maplemoon-pdp-route-repair-20260816/products/pure-carob-bar.html",
+      "bytes": 25399,
+      "expectedSha256": "2157a7ef9846c854a2565b9e1c4c4a3f934b8b2ab92dc1e119a31bb838109869",
+      "actualSha256": "2157a7ef9846c854a2565b9e1c4c4a3f934b8b2ab92dc1e119a31bb838109869",
+      "match": true
+    }
+  ],
+  "results": [
+    {
+      "route": "homepage",
+      "width": 390,
+      "httpStatus": 200,
+      "metrics": {
+        "title": "Maple Moon: Australian Organic Carob",
+        "clientWidth": 390,
+        "scrollWidth": 390,
+        "bodyHeight": 6881,
+        "header": {
+          "height": 70,
+          "position": "relative",
+          "zIndex": "2"
+        },
+        "footer": {
+          "height": 482,
+          "text": "Stay in the loop. Demo only Demo only. This form does not collect or submit email addresses. maple moon ShopOur StoryStockistsContactHomeWhat is CarobFAQ"
+        },
+        "heading": {
+          "text": "",
+          "width": 342,
+          "height": 81,
+          "fontFamily": "neue-haas-grotesk-display, \"Neue Haas Grotesk Display Pro\", Inter, \"Helvetica Neue\", sans-serif",
+          "fontSize": "32px",
+          "lineHeight": "0px"
+        },
+        "landmarks": {
+          "h1": 1,
+          "main": 1,
+          "nav": 3,
+          "footer": 2
+        },
+        "images": [
+          {
+            "alt": "",
+            "src": "http://127.0.0.1:8792/assets/product_shots/bar_pure_carob_hero.webp",
+            "complete": true,
+            "naturalWidth": 1200,
+            "naturalHeight": 1800,
+            "width": 0,
+            "height": 0,
+            "visible": false
+          },
+          {
+            "alt": "",
+            "src": "http://127.0.0.1:8792/assets/product_shots/moon_pure_carob.webp",
+            "complete": true,
+            "naturalWidth": 800,
+            "naturalHeight": 800,
+            "width": 0,
+            "height": 0,
+            "visible": false
+          },
+          {
+            "alt": "Carob",
+            "src": "http://127.0.0.1:8792/assets/carob_wordmark.svg",
+            "complete": true,
+            "naturalWidth": 300,
+            "naturalHeight": 71,
+            "width": 342,
+            "height": 81,
+            "visible": true
+          },
+          {
+            "alt": "Coconut & Goji",
+            "src": "http://127.0.0.1:8792/assets/product_shots/bar_goji_coconut.webp",
+            "complete": true,
+            "naturalWidth": 800,
+            "naturalHeight": 1200,
+            "width": 0,
+            "height": 0,
+            "visible": false
+          },
+          {
+            "alt": "Cayenne Chilli",
+            "src": "http://127.0.0.1:8792/assets/product_shots/bar_cayenne.webp",
+            "complete": true,
+            "naturalWidth": 800,
+            "naturalHeight": 1200,
+            "width": 126,
+            "height": 253,
+            "visible": true
+          },
+          {
+            "alt": "Pure Carob & Cacao Butter",
+            "src": "http://127.0.0.1:8792/assets/product_shots/bar_pure_carob.webp",
+            "complete": true,
+            "naturalWidth": 800,
+            "naturalHeight": 1200,
+            "width": 192,
+            "height": 305,
+            "visible": true
+          },
+          {
+            "alt": "Almond & Celtic Salt",
+            "src": "http://127.0.0.1:8792/assets/product_shots/bar_almond.webp",
+            "complete": true,
+            "naturalWidth": 800,
+            "naturalHeight": 1200,
+            "width": 126,
+            "height": 253,
+            "visible": true
+          },
+          {
+            "alt": "Peppermint & Buckwheat",
+            "src": "http://127.0.0.1:8792/assets/product_shots/bar_peppermint.webp",
+            "complete": true,
+            "naturalWidth": 800,
+            "naturalHeight": 1200,
+            "width": 0,
+            "height": 0,
+            "visible": false
+          },
+          {
+            "alt": "Roasted Hazelnut",
+            "src": "http://127.0.0.1:8792/assets/product_shots/bar_hazelnut.webp",
+            "complete": true,
+            "naturalWidth": 800,
+            "naturalHeight": 1200,
+            "width": 0,
+            "height": 0,
+            "visible": false
+          },
+          {
+            "alt": "Carob pods hanging from a branch against a dusk blue sky",
+            "src": "http://127.0.0.1:8792/assets/hero_shots/carob_branch_dusk.jpg",
+            "complete": true,
+            "naturalWidth": 2200,
+            "naturalHeight": 1228,
+            "width": 390,
+            "height": 260,
+            "visible": true
+          },
+          {
+            "alt": "Dark carob squares on a stone board in low light",
+            "src": "http://127.0.0.1:8792/assets/licensed/scene_after_dinner.jpg",
+            "complete": true,
+            "naturalWidth": 1600,
+            "naturalHeight": 1067,
+            "width": 332,
+            "height": 328,
+            "visible": true
+          },
+          {
+            "alt": "A teacup in soft afternoon light",
+            "src": "http://127.0.0.1:8792/assets/licensed/scene_afternoon.jpg",
+            "complete": true,
+            "naturalWidth": 1600,
+            "naturalHeight": 1067,
+            "width": 332,
+            "height": 328,
+            "visible": true
+          },
+          {
+            "alt": "A steaming cup against a blue evening window",
+            "src": "http://127.0.0.1:8792/assets/licensed/scene_tea_night.jpg",
+            "complete": true,
+            "naturalWidth": 1600,
+            "naturalHeight": 1067,
+            "width": 332,
+            "height": 328,
+            "visible": true
+          },
+          {
+            "alt": "Carob orchard",
+            "src": "http://127.0.0.1:8792/assets/licensed/carob_farm/australian-carob-0205-mobile.jpg",
+            "complete": true,
+            "naturalWidth": 1080,
+            "naturalHeight": 1350,
+            "width": 390,
+            "height": 270,
+            "visible": true
+          },
+          {
+            "alt": "Coconut and Goji bar",
+            "src": "http://127.0.0.1:8792/assets/product_shots/bar_goji_coconut.webp",
+            "complete": true,
+            "naturalWidth": 800,
+            "naturalHeight": 1200,
+            "width": 37,
+            "height": 56,
+            "visible": true
+          },
+          {
+            "alt": "Cayenne Chilli bar",
+            "src": "http://127.0.0.1:8792/assets/product_shots/bar_cayenne.webp",
+            "complete": true,
+            "naturalWidth": 800,
+            "naturalHeight": 1200,
+            "width": 37,
+            "height": 56,
+            "visible": true
+          },
+          {
+            "alt": "Pure Carob and Cacao Butter bar",
+            "src": "http://127.0.0.1:8792/assets/product_shots/bar_pure_carob.webp",
+            "complete": true,
+            "naturalWidth": 800,
+            "naturalHeight": 1200,
+            "width": 37,
+            "height": 56,
+            "visible": true
+          },
+          {
+            "alt": "Almond and Celtic Salt bar",
+            "src": "http://127.0.0.1:8792/assets/product_shots/bar_almond.webp",
+            "complete": true,
+            "naturalWidth": 800,
+            "naturalHeight": 1200,
+            "width": 37,
+            "height": 56,
+            "visible": true
+          },
+          {
+            "alt": "Peppermint and Buckwheat bar",
+            "src": "http://127.0.0.1:8792/assets/product_shots/bar_peppermint.webp",
+            "complete": true,
+            "naturalWidth": 800,
+            "naturalHeight": 1200,
+            "width": 37,
+            "height": 56,
+            "visible": true
+          },
+          {
+            "alt": "Roasted Hazelnut bar",
+            "src": "http://127.0.0.1:8792/assets/product_shots/bar_hazelnut.webp",
+            "complete": true,
+            "naturalWidth": 800,
+            "naturalHeight": 1200,
+            "width": 37,
+            "height": 56,
+            "visible": true
+          }
+        ],
+        "brokenImages": [],
+        "interactive": 19,
+        "sub44": [],
+        "internalOverflow": [
+          {
+            "tag": "DIV",
+            "id": "",
+            "className": "wf",
+            "clientWidth": 390,
+            "scrollWidth": 488,
+            "text": "(function(){ var video=document.currentScript.previousElementSibling; var motion=window.matchMedia('"
+          },
+          {
+            "tag": "DIV",
+            "id": "",
+            "className": "wf-pnav r mm-header__right",
+            "clientWidth": 106,
+            "scrollWidth": 109,
+            "text": "StockistsAUD $FAQ 0"
+          },
+          {
+            "tag": "BUTTON",
+            "id": "",
+            "className": "wf-pcart mm-icon-control",
+            "clientWidth": 42,
+            "scrollWidth": 46,
+            "text": "0"
+          },
+          {
+            "tag": "DIV",
+            "id": "",
+            "className": "wf-hero-copy",
+            "clientWidth": 358,
+            "scrollWidth": 362,
+            "text": "Australian organic carob Naturally Sweet, Nothing Added. No CaffeineOrganic IngredientsVegan Friendl"
+          },
+          {
+            "tag": "A",
+            "id": "",
+            "className": "wf-ppill primary",
+            "clientWidth": 138,
+            "scrollWidth": 141,
+            "text": "Shop the Range"
+          },
+          {
+            "tag": "MAIN",
+            "id": "main-content",
+            "className": "",
+            "clientWidth": 390,
+            "scrollWidth": 488,
+            "text": "Selected bar Pure Carob & Cacao Butter Crafted from only two wholefood ingredients for simple, natur"
+          },
+          {
+            "tag": "SECTION",
+            "id": "range",
+            "className": "wrap wf-line wf-line-dark is-visible",
+            "clientWidth": 390,
+            "scrollWidth": 488,
+            "text": "Selected bar Pure Carob & Cacao Butter Crafted from only two wholefood ingredients for simple, natur"
+          },
+          {
+            "tag": "DIV",
+            "id": "",
+            "className": "wf-stage-wrap",
+            "clientWidth": 334,
+            "scrollWidth": 460,
+            "text": ""
+          },
+          {
+            "tag": "DIV",
+            "id": "stage",
+            "className": "wf-cf",
+            "clientWidth": 334,
+            "scrollWidth": 352,
+            "text": ""
+          },
+          {
+            "tag": "BUTTON",
+            "id": "",
+            "className": "cf-item",
+            "clientWidth": 192,
+            "scrollWidth": 223,
+            "text": ""
+          },
+          {
+            "tag": "BUTTON",
+            "id": "",
+            "className": "cf-item",
+            "clientWidth": 192,
+            "scrollWidth": 223,
+            "text": ""
+          }
+        ],
+        "flaggedVisibleText": [],
+        "bodyBackground": "rgb(244, 242, 237)"
+      },
+      "screenshots": {
+        "top": {
+          "path": "/Users/handtomouse/maplemoon-website/_wip/evidence/seven_route_visual_audit_r2_20260816T210036/screenshots/homepage-390-top.png",
+          "width": 390,
+          "height": 844,
+          "bytes": 421993,
+          "nonblank": true
+        },
+        "middle": {
+          "path": "/Users/handtomouse/maplemoon-website/_wip/evidence/seven_route_visual_audit_r2_20260816T210036/screenshots/homepage-390-middle.png",
+          "width": 390,
+          "height": 844,
+          "bytes": 338443,
+          "nonblank": true
+        },
+        "bottom": {
+          "path": "/Users/handtomouse/maplemoon-website/_wip/evidence/seven_route_visual_audit_r2_20260816T210036/screenshots/homepage-390-bottom.png",
+          "width": 390,
+          "height": 844,
+          "bytes": 54379,
+          "nonblank": true
+        },
+        "full": {
+          "path": "/Users/handtomouse/maplemoon-website/_wip/evidence/seven_route_visual_audit_r2_20260816T210036/screenshots/homepage-390-full.png",
+          "width": 390,
+          "height": 6881,
+          "bytes": 1550494,
+          "nonblank": true
+        }
+      },
+      "consoleErrors": [],
+      "pageErrors": [],
+      "requestFailures": [],
+      "badResponses": [],
+      "semanticFlags": [
+        "footer-landmarks-2"
+      ],
+      "failures": [],
+      "result": "PASS"
+    },
+    {
+      "route": "shop",
+      "width": 390,
+      "httpStatus": 200,
+      "metrics": {
+        "title": "Shop the Range | Maple Moon",
+        "clientWidth": 390,
+        "scrollWidth": 390,
+        "bodyHeight": 15569,
+        "header": {
+          "height": 70,
+          "position": "relative",
+          "zIndex": "1"
+        },
+        "footer": {
+          "height": 181,
+          "text": "maple moon ShopOur StoryStockistsContact"
+        },
+        "heading": {
+          "text": "Shop the range.",
+          "width": 334,
+          "height": 39,
+          "fontFamily": "p22-mackinac-pro, \"P22 Mackinac Pro\", Georgia, serif",
+          "fontSize": "37.6px",
+          "lineHeight": "39.48px"
+        },
+        "landmarks": {
+          "h1": 1,
+          "main": 1,
+          "nav": 4,
+          "footer": 1
+        },
+        "images": [
+          {
+            "alt": "",
+            "src": "http://127.0.0.1:8792/assets/products_new/bar_pure_carob.png",
+            "complete": true,
+            "naturalWidth": 1024,
+            "naturalHeight": 1536,
+            "width": 46,
+            "height": 69,
+            "visible": true
+          },
+          {
+            "alt": "",
+            "src": "http://127.0.0.1:8792/assets/products_new/bar_peppermint.png",
+            "complete": true,
+            "naturalWidth": 1024,
+            "naturalHeight": 1536,
+            "width": 46,
+            "height": 69,
+            "visible": true
+          },
+          {
+            "alt": "",
+            "src": "http://127.0.0.1:8792/assets/products_new/bar_hazelnut.png",
+            "complete": true,
+            "naturalWidth": 1024,
+            "naturalHeight": 1536,
+            "width": 46,
+            "height": 69,
+            "visible": true
+          },
+          {
+            "alt": "",
+            "src": "http://127.0.0.1:8792/assets/products_new/bar_goji_coconut.png",
+            "complete": true,
+            "naturalWidth": 1024,
+            "naturalHeight": 1536,
+            "width": 46,
+            "height": 69,
+            "visible": true
+          },
+          {
+            "alt": "",
+            "src": "http://127.0.0.1:8792/assets/products_new/bar_cayenne.png",
+            "complete": true,
+            "naturalWidth": 1024,
+            "naturalHeight": 1536,
+            "width": 46,
+            "height": 69,
+            "visible": true
+          },
+          {
+            "alt": "",
+            "src": "http://127.0.0.1:8792/assets/products_new/bar_almond.png",
+            "complete": true,
+            "naturalWidth": 1024,
+            "naturalHeight": 1536,
+            "width": 46,
+            "height": 69,
+            "visible": true
+          },
+          {
+            "alt": "Coconut & Goji",
+            "src": "http://127.0.0.1:8792/assets/product_shots/bar_goji_coconut.webp",
+            "complete": true,
+            "naturalWidth": 800,
+            "naturalHeight": 1200,
+            "width": 173,
+            "height": 259,
+            "visible": true
+          },
+          {
+            "alt": "Cayenne Chilli",
+            "src": "http://127.0.0.1:8792/assets/product_shots/bar_cayenne.webp",
+            "complete": true,
+            "naturalWidth": 800,
+            "naturalHeight": 1200,
+            "width": 173,
+            "height": 259,
+            "visible": true
+          },
+          {
+            "alt": "Pure Carob & Cacao Butter",
+            "src": "http://127.0.0.1:8792/assets/product_shots/bar_pure_carob.webp",
+            "complete": true,
+            "naturalWidth": 800,
+            "naturalHeight": 1200,
+            "width": 173,
+            "height": 259,
+            "visible": true
+          },
+          {
+            "alt": "Almond & Celtic Salt",
+            "src": "http://127.0.0.1:8792/assets/product_shots/bar_almond.webp",
+            "complete": true,
+            "naturalWidth": 800,
+            "naturalHeight": 1200,
+            "width": 173,
+            "height": 259,
+            "visible": true
+          },
+          {
+            "alt": "Peppermint & Buckwheat",
+            "src": "http://127.0.0.1:8792/assets/product_shots/bar_peppermint.webp",
+            "complete": true,
+            "naturalWidth": 800,
+            "naturalHeight": 1200,
+            "width": 173,
+            "height": 259,
+            "visible": true
+          },
+          {
+            "alt": "Roasted Hazelnut",
+            "src": "http://127.0.0.1:8792/assets/product_shots/bar_hazelnut.webp",
+            "complete": true,
+            "naturalWidth": 800,
+            "naturalHeight": 1200,
+            "width": 173,
+            "height": 259,
+            "visible": true
+          },
+          {
+            "alt": "Coconut & Goji Moon",
+            "src": "http://127.0.0.1:8792/assets/product_shots/moon_goji_coconut.webp",
+            "complete": true,
+            "naturalWidth": 800,
+            "naturalHeight": 800,
+            "width": 216,
+            "height": 216,
+            "visible": true
+          },
+          {
+            "alt": "Cayenne Moon",
+            "src": "http://127.0.0.1:8792/assets/product_shots/moon_cayenne.webp",
+            "complete": true,
+            "naturalWidth": 800,
+            "naturalHeight": 800,
+            "width": 216,
+            "height": 216,
+            "visible": true
+          },
+          {
+            "alt": "Pure Carob Moon",
+            "src": "http://127.0.0.1:8792/assets/product_shots/moon_pure_carob.webp",
+            "complete": true,
+            "naturalWidth": 800,
+            "naturalHeight": 800,
+            "width": 216,
+            "height": 216,
+            "visible": true
+          },
+          {
+            "alt": "Almond Moon",
+            "src": "http://127.0.0.1:8792/assets/product_shots/moon_almond.webp",
+            "complete": true,
+            "naturalWidth": 800,
+            "naturalHeight": 800,
+            "width": 216,
+            "height": 216,
+            "visible": true
+          },
+          {
+            "alt": "Peppermint Moon",
+            "src": "http://127.0.0.1:8792/assets/product_shots/moon_peppermint.webp",
+            "complete": true,
+            "naturalWidth": 800,
+            "naturalHeight": 800,
+            "width": 216,
+            "height": 216,
+            "visible": true
+          },
+          {
+            "alt": "Roasted Hazelnut Moon",
+            "src": "http://127.0.0.1:8792/assets/product_shots/moon_hazelnut.webp",
+            "complete": true,
+            "naturalWidth": 800,
+            "naturalHeight": 800,
+            "width": 216,
+            "height": 216,
+            "visible": true
+          },
+          {
+            "alt": "Pecan Nut Eclipse Bite",
+            "src": "http://127.0.0.1:8792/assets/product_shots/eclipse_pecan.webp",
+            "complete": true,
+            "naturalWidth": 800,
+            "naturalHeight": 800,
+            "width": 216,
+            "height": 216,
+            "visible": true
+          },
+          {
+            "alt": "Salted Almond Eclipse Bite",
+            "src": "http://127.0.0.1:8792/assets/product_shots/eclipse_almond.webp",
+            "complete": true,
+            "naturalWidth": 800,
+            "naturalHeight": 800,
+            "width": 216,
+            "height": 216,
+            "visible": true
+          },
+          {
+            "alt": "Hazelnut Eclipse Bite",
+            "src": "http://127.0.0.1:8792/assets/product_shots/eclipse_hazelnut.webp",
+            "complete": true,
+            "naturalWidth": 800,
+            "naturalHeight": 800,
+            "width": 216,
+            "height": 216,
+            "visible": true
+          },
+          {
+            "alt": "Goji Ripe Eclipse Bite",
+            "src": "http://127.0.0.1:8792/assets/product_shots/eclipse_goji.webp",
+            "complete": true,
+            "naturalWidth": 2560,
+            "naturalHeight": 2560,
+            "width": 216,
+            "height": 216,
+            "visible": true
+          },
+          {
+            "alt": "Salted Caramel Fudge",
+            "src": "http://127.0.0.1:8792/assets/product_shots/eclipse_fudge.webp",
+            "complete": true,
+            "naturalWidth": 800,
+            "naturalHeight": 800,
+            "width": 216,
+            "height": 216,
+            "visible": true
+          },
+          {
+            "alt": "Eclipse Bite Bundle",
+            "src": "http://127.0.0.1:8792/assets/product_shots/eclipse_bundle.webp",
+            "complete": true,
+            "naturalWidth": 2048,
+            "naturalHeight": 2048,
+            "width": 216,
+            "height": 216,
+            "visible": true
+          },
+          {
+            "alt": "Pure Carob Elixir",
+            "src": "http://127.0.0.1:8792/assets/product_shots/elixir_plain.webp",
+            "complete": true,
+            "naturalWidth": 1024,
+            "naturalHeight": 1536,
+            "width": 173,
+            "height": 259,
+            "visible": true
+          },
+          {
+            "alt": "Spiced Carob Elixir",
+            "src": "http://127.0.0.1:8792/assets/product_shots/elixir_spiced.webp",
+            "complete": true,
+            "naturalWidth": 1024,
+            "naturalHeight": 1536,
+            "width": 173,
+            "height": 259,
+            "visible": true
+          },
+          {
+            "alt": "Carob Bananas",
+            "src": "http://127.0.0.1:8792/assets/product_shots/bananas.webp",
+            "complete": true,
+            "naturalWidth": 800,
+            "naturalHeight": 800,
+            "width": 216,
+            "height": 216,
+            "visible": true
+          },
+          {
+            "alt": "Carob Powder",
+            "src": "http://127.0.0.1:8792/assets/product_shots/powder_roasted.webp",
+            "complete": true,
+            "naturalWidth": 2560,
+            "naturalHeight": 2560,
+            "width": 216,
+            "height": 216,
+            "visible": true
+          }
+        ],
+        "brokenImages": [],
+        "interactive": 40,
+        "sub44": [
+          {
+            "tag": "BUTTON",
+            "text": "All",
+            "width": 34,
+            "height": 34
+          },
+          {
+            "tag": "BUTTON",
+            "text": "Pure",
+            "width": 34,
+            "height": 34
+          },
+          {
+            "tag": "BUTTON",
+            "text": "Peppermint",
+            "width": 34,
+            "height": 34
+          },
+          {
+            "tag": "BUTTON",
+            "text": "Hazelnut",
+            "width": 34,
+            "height": 34
+          },
+          {
+            "tag": "BUTTON",
+            "text": "Coconut & Goji",
+            "width": 34,
+            "height": 34
+          },
+          {
+            "tag": "BUTTON",
+            "text": "Cayenne",
+            "width": 34,
+            "height": 34
+          },
+          {
+            "tag": "BUTTON",
+            "text": "Almond",
+            "width": 34,
+            "height": 34
+          },
+          {
+            "tag": "SELECT",
+            "text": "Featured Name Priced first",
+            "width": 132,
+            "height": 34
+          },
+          {
+            "tag": "BUTTON",
+            "text": "Grid",
+            "width": 40.5,
+            "height": 34
+          },
+          {
+            "tag": "BUTTON",
+            "text": "List",
+            "width": 37.5,
+            "height": 34
+          },
+          {
+            "tag": "SELECT",
+            "text": "1 moon · $2.505 moons · $12.1910 moons · $23.7520 moons · $44.99",
+            "width": 138,
+            "height": 34
+          },
+          {
+            "tag": "SELECT",
+            "text": "1 moon · $2.505 moons · $12.1910 moons · $23.7520 moons · $44.99",
+            "width": 138,
+            "height": 34
+          },
+          {
+            "tag": "SELECT",
+            "text": "1 moon · $2.505 moons · $12.1910 moons · $23.7520 moons · $44.99",
+            "width": 138,
+            "height": 34
+          },
+          {
+            "tag": "SELECT",
+            "text": "1 moon · $2.505 moons · $12.1910 moons · $23.7520 moons · $44.99",
+            "width": 138,
+            "height": 34
+          },
+          {
+            "tag": "SELECT",
+            "text": "50g · $5.99Value pack · $59.99",
+            "width": 140,
+            "height": 34
+          },
+          {
+            "tag": "SELECT",
+            "text": "50g · $5.99Value pack · $59.99",
+            "width": 140,
+            "height": 34
+          },
+          {
+            "tag": "SELECT",
+            "text": "50g · $5.99Value pack · $59.99",
+            "width": 140,
+            "height": 34
+          },
+          {
+            "tag": "SELECT",
+            "text": "50g · $5.99Value pack · $59.99",
+            "width": 140,
+            "height": 34
+          },
+          {
+            "tag": "SELECT",
+            "text": "50g · $5.99Value pack · $59.99",
+            "width": 140,
+            "height": 34
+          }
+        ],
+        "internalOverflow": [
+          {
+            "tag": "NAV",
+            "id": "",
+            "className": "sp-nav r",
+            "clientWidth": 44,
+            "scrollWidth": 47,
+            "text": "StockistsAUD $ 0"
+          },
+          {
+            "tag": "BUTTON",
+            "id": "",
+            "className": "sp-cart",
+            "clientWidth": 42,
+            "scrollWidth": 46,
+            "text": "0"
+          }
+        ],
+        "flaggedVisibleText": [],
+        "bodyBackground": "rgba(0, 0, 0, 0)"
+      },
+      "screenshots": {
+        "top": {
+          "path": "/Users/handtomouse/maplemoon-website/_wip/evidence/seven_route_visual_audit_r2_20260816T210036/screenshots/shop-390-top.png",
+          "width": 390,
+          "height": 844,
+          "bytes": 222388,
+          "nonblank": true
+        },
+        "middle": {
+          "path": "/Users/handtomouse/maplemoon-website/_wip/evidence/seven_route_visual_audit_r2_20260816T210036/screenshots/shop-390-middle.png",
+          "width": 390,
+          "height": 844,
+          "bytes": 171769,
+          "nonblank": true
+        },
+        "bottom": {
+          "path": "/Users/handtomouse/maplemoon-website/_wip/evidence/seven_route_visual_audit_r2_20260816T210036/screenshots/shop-390-bottom.png",
+          "width": 390,
+          "height": 844,
+          "bytes": 151385,
+          "nonblank": true
+        },
+        "full": {
+          "path": "/Users/handtomouse/maplemoon-website/_wip/evidence/seven_route_visual_audit_r2_20260816T210036/screenshots/shop-390-full.png",
+          "width": 390,
+          "height": 15569,
+          "bytes": 3530301,
+          "nonblank": true
+        }
+      },
+      "consoleErrors": [],
+      "pageErrors": [],
+      "requestFailures": [],
+      "badResponses": [],
+      "semanticFlags": [],
+      "failures": [],
+      "result": "PASS"
+    },
+    {
+      "route": "our-story",
+      "width": 390,
+      "httpStatus": 200,
+      "metrics": {
+        "title": "Our Story | Maple Moon",
+        "clientWidth": 390,
+        "scrollWidth": 390,
+        "bodyHeight": 5245,
+        "header": {
+          "height": 70,
+          "position": "relative",
+          "zIndex": "3"
+        },
+        "footer": {
+          "height": 165,
+          "text": "maple moon ShopOur StoryStockistsContact"
+        },
+        "heading": {
+          "text": "Carli & Dylan.",
+          "width": 272,
+          "height": 100,
+          "fontFamily": "p22-mackinac-pro, \"P22 Mackinac Pro\", Georgia, serif",
+          "fontSize": "54.6px",
+          "lineHeight": "50.232px"
+        },
+        "landmarks": {
+          "h1": 1,
+          "main": 0,
+          "nav": 4,
+          "footer": 1
+        },
+        "images": [
+          {
+            "alt": "Carli and Dylan, the founders of Maple Moon",
+            "src": "http://127.0.0.1:8792/assets/our_story/founders_portrait_h212.webp",
+            "complete": true,
+            "naturalWidth": 1400,
+            "naturalHeight": 933,
+            "width": 334,
+            "height": 223,
+            "visible": true
+          },
+          {
+            "alt": "A cluster of ripe carob pods",
+            "src": "http://127.0.0.1:8792/assets/hero_shots/carob_pods_cluster.jpg",
+            "complete": true,
+            "naturalWidth": 1800,
+            "naturalHeight": 1004,
+            "width": 334,
+            "height": 418,
+            "visible": true
+          }
+        ],
+        "brokenImages": [],
+        "interactive": 3,
+        "sub44": [
+          {
+            "tag": "SUMMARY",
+            "text": "Read Carli's story",
+            "width": 139.5,
+            "height": 30.8
+          },
+          {
+            "tag": "SUMMARY",
+            "text": "Read Dylan's story",
+            "width": 143.3,
+            "height": 30.8
+          }
+        ],
+        "internalOverflow": [
+          {
+            "tag": "NAV",
+            "id": "",
+            "className": "os-nav r",
+            "clientWidth": 44,
+            "scrollWidth": 47,
+            "text": "StockistsAUD $ 0"
+          },
+          {
+            "tag": "BUTTON",
+            "id": "",
+            "className": "os-cart",
+            "clientWidth": 42,
+            "scrollWidth": 46,
+            "text": "0"
+          }
+        ],
+        "flaggedVisibleText": [
+          {
+            "tag": "SPAN",
+            "className": "",
+            "text": "Founder portrait pending"
+          },
+          {
+            "tag": "SMALL",
+            "className": "",
+            "text": "Nate selection required"
+          },
+          {
+            "tag": "SPAN",
+            "className": "",
+            "text": "Founder portrait pending"
+          },
+          {
+            "tag": "SMALL",
+            "className": "",
+            "text": "Nate selection required"
+          }
+        ],
+        "bodyBackground": "rgb(244, 242, 237)"
+      },
+      "screenshots": {
+        "top": {
+          "path": "/Users/handtomouse/maplemoon-website/_wip/evidence/seven_route_visual_audit_r2_20260816T210036/screenshots/our-story-390-top.png",
+          "width": 390,
+          "height": 844,
+          "bytes": 136244,
+          "nonblank": true
+        },
+        "middle": {
+          "path": "/Users/handtomouse/maplemoon-website/_wip/evidence/seven_route_visual_audit_r2_20260816T210036/screenshots/our-story-390-middle.png",
+          "width": 390,
+          "height": 844,
+          "bytes": 223597,
+          "nonblank": true
+        },
+        "bottom": {
+          "path": "/Users/handtomouse/maplemoon-website/_wip/evidence/seven_route_visual_audit_r2_20260816T210036/screenshots/our-story-390-bottom.png",
+          "width": 390,
+          "height": 844,
+          "bytes": 177327,
+          "nonblank": true
+        },
+        "full": {
+          "path": "/Users/handtomouse/maplemoon-website/_wip/evidence/seven_route_visual_audit_r2_20260816T210036/screenshots/our-story-390-full.png",
+          "width": 390,
+          "height": 5245,
+          "bytes": 1083562,
+          "nonblank": true
+        }
+      },
+      "consoleErrors": [],
+      "pageErrors": [],
+      "requestFailures": [],
+      "badResponses": [],
+      "semanticFlags": [
+        "main-landmarks-0"
+      ],
+      "failures": [],
+      "result": "PASS"
+    },
+    {
+      "route": "carob-story",
+      "width": 390,
+      "httpStatus": 200,
+      "metrics": {
+        "title": "What is Carob? | Maple Moon",
+        "clientWidth": 390,
+        "scrollWidth": 390,
+        "bodyHeight": 2690,
+        "header": {
+          "height": 65,
+          "position": "relative",
+          "zIndex": "5"
+        },
+        "footer": {
+          "height": 161,
+          "text": "maple moon ShopOur StoryStockistsContact"
+        },
+        "heading": {
+          "text": "What is Carob?",
+          "width": 358,
+          "height": 47,
+          "fontFamily": "p22-mackinac-pro, \"P22 Mackinac Pro\", Georgia, serif",
+          "fontSize": "42.9px",
+          "lineHeight": "47.19px"
+        },
+        "landmarks": {
+          "h1": 1,
+          "main": 1,
+          "nav": 3,
+          "footer": 1
+        },
+        "images": [
+          {
+            "alt": "Rows of carob trees in an Australian orchard",
+            "src": "http://127.0.0.1:8792/assets/licensed/carob_farm/australian-carob-0205-mobile.jpg",
+            "complete": true,
+            "naturalWidth": 1080,
+            "naturalHeight": 1350,
+            "width": 358,
+            "height": 274,
+            "visible": true
+          },
+          {
+            "alt": "Whole carob pods and carob powder, up close",
+            "src": "http://127.0.0.1:8792/assets/licensed/carob_pods_macro.jpg",
+            "complete": true,
+            "naturalWidth": 1600,
+            "naturalHeight": 1068,
+            "width": 131,
+            "height": 100,
+            "visible": true
+          },
+          {
+            "alt": "The full Maple Moon range in coloured wrappers on a blue backdrop",
+            "src": "http://127.0.0.1:8792/assets/photo_finals/maplemoon_heros41_brandmatched.webp",
+            "complete": true,
+            "naturalWidth": 2400,
+            "naturalHeight": 1600,
+            "width": 356,
+            "height": 298,
+            "visible": true
+          }
+        ],
+        "brokenImages": [],
+        "interactive": 1,
+        "sub44": [],
+        "internalOverflow": [
+          {
+            "tag": "A",
+            "id": "",
+            "className": "sp-logo",
+            "clientWidth": 44,
+            "scrollWidth": 79,
+            "text": "maple moon"
+          },
+          {
+            "tag": "NAV",
+            "id": "",
+            "className": "sp-nav r",
+            "clientWidth": 44,
+            "scrollWidth": 47,
+            "text": "StockistsAUD $ 0"
+          },
+          {
+            "tag": "BUTTON",
+            "id": "",
+            "className": "sp-cart",
+            "clientWidth": 42,
+            "scrollWidth": 46,
+            "text": "0"
+          },
+          {
+            "tag": "DIV",
+            "id": "",
+            "className": "",
+            "clientWidth": 122,
+            "scrollWidth": 132,
+            "text": "The Honest Comparison Carob and cacao, honestly."
+          },
+          {
+            "tag": "H2",
+            "id": "",
+            "className": "hd",
+            "clientWidth": 122,
+            "scrollWidth": 132,
+            "text": "Carob and cacao, honestly."
+          }
+        ],
+        "flaggedVisibleText": [],
+        "bodyBackground": "rgba(0, 0, 0, 0)"
+      },
+      "screenshots": {
+        "top": {
+          "path": "/Users/handtomouse/maplemoon-website/_wip/evidence/seven_route_visual_audit_r2_20260816T210036/screenshots/carob-story-390-top.png",
+          "width": 390,
+          "height": 844,
+          "bytes": 346777,
+          "nonblank": true
+        },
+        "middle": {
+          "path": "/Users/handtomouse/maplemoon-website/_wip/evidence/seven_route_visual_audit_r2_20260816T210036/screenshots/carob-story-390-middle.png",
+          "width": 390,
+          "height": 844,
+          "bytes": 230415,
+          "nonblank": true
+        },
+        "bottom": {
+          "path": "/Users/handtomouse/maplemoon-website/_wip/evidence/seven_route_visual_audit_r2_20260816T210036/screenshots/carob-story-390-bottom.png",
+          "width": 390,
+          "height": 844,
+          "bytes": 215849,
+          "nonblank": true
+        },
+        "full": {
+          "path": "/Users/handtomouse/maplemoon-website/_wip/evidence/seven_route_visual_audit_r2_20260816T210036/screenshots/carob-story-390-full.png",
+          "width": 390,
+          "height": 2647,
+          "bytes": 830626,
+          "nonblank": true
+        }
+      },
+      "consoleErrors": [],
+      "pageErrors": [],
+      "requestFailures": [],
+      "badResponses": [],
+      "semanticFlags": [],
+      "failures": [],
+      "result": "PASS"
+    },
+    {
+      "route": "faq",
+      "width": 390,
+      "httpStatus": 200,
+      "metrics": {
+        "title": "FAQ | Maple Moon",
+        "clientWidth": 390,
+        "scrollWidth": 390,
+        "bodyHeight": 2723,
+        "header": {
+          "height": 59,
+          "position": "relative",
+          "zIndex": "1"
+        },
+        "footer": {
+          "height": 167,
+          "text": "maple moonShopOur StoryStockistsFAQ"
+        },
+        "heading": {
+          "text": "Asked, answered.",
+          "width": 358,
+          "height": 94,
+          "fontFamily": "p22-mackinac-pro, \"P22 Mackinac Pro\", Georgia, serif",
+          "fontSize": "46.8px",
+          "lineHeight": "46.8px"
+        },
+        "landmarks": {
+          "h1": 1,
+          "main": 1,
+          "nav": 4,
+          "footer": 1
+        },
+        "images": [],
+        "brokenImages": [],
+        "interactive": 21,
+        "sub44": [
+          {
+            "tag": "INPUT",
+            "text": "",
+            "width": 303,
+            "height": 25.9
+          }
+        ],
+        "internalOverflow": [
+          {
+            "tag": "DIV",
+            "id": "",
+            "className": "sp",
+            "clientWidth": 390,
+            "scrollWidth": 650,
+            "text": "ShopOur StoryWhat is Carob maple moon StockistsFAQ0 Good questionsAsked, answered.Everything you nee"
+          },
+          {
+            "tag": "DIV",
+            "id": "",
+            "className": "wrap bar",
+            "clientWidth": 358,
+            "scrollWidth": 362,
+            "text": "ShopOur StoryWhat is Carob maple moon StockistsFAQ0"
+          },
+          {
+            "tag": "NAV",
+            "id": "",
+            "className": "sp-nav r",
+            "clientWidth": 121,
+            "scrollWidth": 125,
+            "text": "StockistsFAQ0"
+          },
+          {
+            "tag": "BUTTON",
+            "id": "",
+            "className": "sp-cart",
+            "clientWidth": 42,
+            "scrollWidth": 47,
+            "text": "0"
+          },
+          {
+            "tag": "SECTION",
+            "id": "",
+            "className": "wrap popular",
+            "clientWidth": 358,
+            "scrollWidth": 374,
+            "text": "Popular questionsWhat is carob?Is there any caffeine?Where can I buy Maple Moon?Can I get help with "
+          },
+          {
+            "tag": "SECTION",
+            "id": "",
+            "className": "wrap faq-workspace",
+            "clientWidth": 358,
+            "scrollWidth": 374,
+            "text": "BrowseThe things everyone asks.Choose a topic, or search for the words already on your mind.12 answe"
+          },
+          {
+            "tag": "ASIDE",
+            "id": "",
+            "className": "faq-sidebar",
+            "clientWidth": 358,
+            "scrollWidth": 374,
+            "text": "BrowseThe things everyone asks.Choose a topic, or search for the words already on your mind.12 answe"
+          }
+        ],
+        "flaggedVisibleText": [],
+        "bodyBackground": "rgb(232, 242, 248)"
+      },
+      "screenshots": {
+        "top": {
+          "path": "/Users/handtomouse/maplemoon-website/_wip/evidence/seven_route_visual_audit_r2_20260816T210036/screenshots/faq-390-top.png",
+          "width": 390,
+          "height": 844,
+          "bytes": 209666,
+          "nonblank": true
+        },
+        "middle": {
+          "path": "/Users/handtomouse/maplemoon-website/_wip/evidence/seven_route_visual_audit_r2_20260816T210036/screenshots/faq-390-middle.png",
+          "width": 390,
+          "height": 844,
+          "bytes": 75450,
+          "nonblank": true
+        },
+        "bottom": {
+          "path": "/Users/handtomouse/maplemoon-website/_wip/evidence/seven_route_visual_audit_r2_20260816T210036/screenshots/faq-390-bottom.png",
+          "width": 390,
+          "height": 844,
+          "bytes": 123505,
+          "nonblank": true
+        },
+        "full": {
+          "path": "/Users/handtomouse/maplemoon-website/_wip/evidence/seven_route_visual_audit_r2_20260816T210036/screenshots/faq-390-full.png",
+          "width": 390,
+          "height": 2723,
+          "bytes": 419995,
+          "nonblank": true
+        }
+      },
+      "consoleErrors": [],
+      "pageErrors": [],
+      "requestFailures": [],
+      "badResponses": [],
+      "semanticFlags": [],
+      "failures": [],
+      "result": "PASS"
+    },
+    {
+      "route": "stockists",
+      "width": 390,
+      "httpStatus": 200,
+      "metrics": {
+        "title": "Stockists | Maple Moon",
+        "clientWidth": 390,
+        "scrollWidth": 390,
+        "bodyHeight": 3767,
+        "header": {
+          "height": 70,
+          "position": "relative",
+          "zIndex": "1"
+        },
+        "footer": {
+          "height": 165,
+          "text": "maple moon ShopOur StoryStockistsContact"
+        },
+        "heading": {
+          "text": "Find Maple Moon.",
+          "width": 354,
+          "height": 33,
+          "fontFamily": "p22-mackinac-pro, \"P22 Mackinac Pro\", Georgia, serif",
+          "fontSize": "32px",
+          "lineHeight": "33.28px"
+        },
+        "landmarks": {
+          "h1": 1,
+          "main": 1,
+          "nav": 3,
+          "footer": 1
+        },
+        "images": [
+          {
+            "alt": "Maple Moon carob bars, moons and elixirs arranged in soft blue studio light",
+            "src": "http://127.0.0.1:8792/assets/photo_finals/maplemoon_heros55_brandmatched.webp",
+            "complete": true,
+            "naturalWidth": 2400,
+            "naturalHeight": 1600,
+            "width": 318,
+            "height": 212,
+            "visible": true
+          }
+        ],
+        "brokenImages": [],
+        "interactive": 20,
+        "sub44": [],
+        "internalOverflow": [
+          {
+            "tag": "A",
+            "id": "",
+            "className": "sp-logo",
+            "clientWidth": 32,
+            "scrollWidth": 73,
+            "text": "maple moon"
+          },
+          {
+            "tag": "NAV",
+            "id": "",
+            "className": "sp-nav r",
+            "clientWidth": 44,
+            "scrollWidth": 47,
+            "text": "StockistsAUD $ 0"
+          },
+          {
+            "tag": "BUTTON",
+            "id": "",
+            "className": "sp-cart",
+            "clientWidth": 42,
+            "scrollWidth": 46,
+            "text": "0"
+          },
+          {
+            "tag": "DIV",
+            "id": "",
+            "className": "st-search-panel",
+            "clientWidth": 354,
+            "scrollWidth": 439,
+            "text": "Find a stockist Search the source directory; store-type labels are provisional pending client sign-o"
+          }
+        ],
+        "flaggedVisibleText": [
+          {
+            "tag": "P",
+            "className": "st-count",
+            "text": "Showing 8 of 204 stockists. 204 total; 7 need client confirmation."
+          },
+          {
+            "tag": "STRONG",
+            "className": "",
+            "text": "WIP directory status"
+          },
+          {
+            "tag": "SPAN",
+            "className": "",
+            "text": "204 entries are in this source parse. Seven entries have incomplete location details and need client confirmation before launch."
+          },
+          {
+            "tag": "P",
+            "className": "",
+            "text": "This newsletter form is a non-collecting review demo."
+          },
+          {
+            "tag": "BUTTON",
+            "className": "pill",
+            "text": "Coming soon"
+          }
+        ],
+        "bodyBackground": "rgba(0, 0, 0, 0)"
+      },
+      "screenshots": {
+        "top": {
+          "path": "/Users/handtomouse/maplemoon-website/_wip/evidence/seven_route_visual_audit_r2_20260816T210036/screenshots/stockists-390-top.png",
+          "width": 390,
+          "height": 844,
+          "bytes": 230389,
+          "nonblank": true
+        },
+        "middle": {
+          "path": "/Users/handtomouse/maplemoon-website/_wip/evidence/seven_route_visual_audit_r2_20260816T210036/screenshots/stockists-390-middle.png",
+          "width": 390,
+          "height": 844,
+          "bytes": 87674,
+          "nonblank": true
+        },
+        "bottom": {
+          "path": "/Users/handtomouse/maplemoon-website/_wip/evidence/seven_route_visual_audit_r2_20260816T210036/screenshots/stockists-390-bottom.png",
+          "width": 390,
+          "height": 844,
+          "bytes": 112224,
+          "nonblank": true
+        },
+        "full": {
+          "path": "/Users/handtomouse/maplemoon-website/_wip/evidence/seven_route_visual_audit_r2_20260816T210036/screenshots/stockists-390-full.png",
+          "width": 390,
+          "height": 3767,
+          "bytes": 704950,
+          "nonblank": true
+        }
+      },
+      "consoleErrors": [],
+      "pageErrors": [],
+      "requestFailures": [],
+      "badResponses": [],
+      "semanticFlags": [],
+      "failures": [],
+      "result": "PASS"
+    },
+    {
+      "route": "pure-carob-bar",
+      "width": 390,
+      "httpStatus": 200,
+      "metrics": {
+        "title": "Pure Carob & Cacao Butter | Maple Moon",
+        "clientWidth": 390,
+        "scrollWidth": 390,
+        "bodyHeight": 3029,
+        "header": {
+          "height": 70,
+          "position": "relative",
+          "zIndex": "1"
+        },
+        "footer": {
+          "height": 157,
+          "text": "ShopOur StoryStockistsContactHomeWhat is CarobFAQ"
+        },
+        "heading": {
+          "text": "Pure Carob & Cacao Butter",
+          "width": 334,
+          "height": 67,
+          "fontFamily": "p22-mackinac-pro, \"P22 Mackinac Pro\", Georgia, serif",
+          "fontSize": "30.4px",
+          "lineHeight": "33.44px"
+        },
+        "landmarks": {
+          "h1": 1,
+          "main": 1,
+          "nav": 4,
+          "footer": 2
+        },
+        "images": [
+          {
+            "alt": "Pure Carob and Cacao Butter bar",
+            "src": "http://127.0.0.1:8792/assets/product_shots/bar_pure_carob_hero.webp",
+            "complete": true,
+            "naturalWidth": 1200,
+            "naturalHeight": 1800,
+            "width": 155,
+            "height": 232,
+            "visible": true
+          },
+          {
+            "alt": "Peppermint and Buckwheat bar",
+            "src": "http://127.0.0.1:8792/assets/product_shots/bar_peppermint.webp",
+            "complete": true,
+            "naturalWidth": 800,
+            "naturalHeight": 1200,
+            "width": 84,
+            "height": 127,
+            "visible": true
+          },
+          {
+            "alt": "Roasted Hazelnut bar",
+            "src": "http://127.0.0.1:8792/assets/product_shots/bar_hazelnut.webp",
+            "complete": true,
+            "naturalWidth": 800,
+            "naturalHeight": 1200,
+            "width": 84,
+            "height": 127,
+            "visible": true
+          },
+          {
+            "alt": "Coconut and Goji bar",
+            "src": "http://127.0.0.1:8792/assets/product_shots/bar_goji_coconut.webp",
+            "complete": true,
+            "naturalWidth": 800,
+            "naturalHeight": 1200,
+            "width": 84,
+            "height": 127,
+            "visible": true
+          },
+          {
+            "alt": "Cayenne Chilli bar",
+            "src": "http://127.0.0.1:8792/assets/product_shots/bar_cayenne.webp",
+            "complete": true,
+            "naturalWidth": 800,
+            "naturalHeight": 1200,
+            "width": 84,
+            "height": 127,
+            "visible": true
+          },
+          {
+            "alt": "Almond and Celtic Salt bar",
+            "src": "http://127.0.0.1:8792/assets/product_shots/bar_almond.webp",
+            "complete": true,
+            "naturalWidth": 800,
+            "naturalHeight": 1200,
+            "width": 84,
+            "height": 127,
+            "visible": true
+          },
+          {
+            "alt": "Maple Moon",
+            "src": "http://127.0.0.1:8792/assets/mm_wordmark_blk.svg",
+            "complete": true,
+            "naturalWidth": 300,
+            "naturalHeight": 57,
+            "width": 138,
+            "height": 26,
+            "visible": true
+          }
+        ],
+        "brokenImages": [],
+        "interactive": 5,
+        "sub44": [],
+        "internalOverflow": [
+          {
+            "tag": "DIV",
+            "id": "",
+            "className": "sp-nav r mm-header__right",
+            "clientWidth": 44,
+            "scrollWidth": 47,
+            "text": "StockistsAUD $FAQ 0"
+          },
+          {
+            "tag": "BUTTON",
+            "id": "",
+            "className": "sp-cart mm-icon-control",
+            "clientWidth": 42,
+            "scrollWidth": 46,
+            "text": "0"
+          }
+        ],
+        "flaggedVisibleText": [],
+        "bodyBackground": "rgba(0, 0, 0, 0)"
+      },
+      "screenshots": {
+        "top": {
+          "path": "/Users/handtomouse/maplemoon-website/_wip/evidence/seven_route_visual_audit_r2_20260816T210036/screenshots/pure-carob-bar-390-top.png",
+          "width": 390,
+          "height": 844,
+          "bytes": 183885,
+          "nonblank": true
+        },
+        "middle": {
+          "path": "/Users/handtomouse/maplemoon-website/_wip/evidence/seven_route_visual_audit_r2_20260816T210036/screenshots/pure-carob-bar-390-middle.png",
+          "width": 390,
+          "height": 844,
+          "bytes": 111168,
+          "nonblank": true
+        },
+        "bottom": {
+          "path": "/Users/handtomouse/maplemoon-website/_wip/evidence/seven_route_visual_audit_r2_20260816T210036/screenshots/pure-carob-bar-390-bottom.png",
+          "width": 390,
+          "height": 844,
+          "bytes": 90547,
+          "nonblank": true
+        },
+        "full": {
+          "path": "/Users/handtomouse/maplemoon-website/_wip/evidence/seven_route_visual_audit_r2_20260816T210036/screenshots/pure-carob-bar-390-full.png",
+          "width": 390,
+          "height": 3029,
+          "bytes": 415141,
+          "nonblank": true
+        }
+      },
+      "consoleErrors": [],
+      "pageErrors": [],
+      "requestFailures": [],
+      "badResponses": [],
+      "semanticFlags": [
+        "footer-landmarks-2"
+      ],
+      "failures": [],
+      "result": "PASS"
+    },
+    {
+      "route": "homepage",
+      "width": 900,
+      "httpStatus": 200,
+      "metrics": {
+        "title": "Maple Moon: Australian Organic Carob",
+        "clientWidth": 900,
+        "scrollWidth": 900,
+        "bodyHeight": 5990,
+        "header": {
+          "height": 70,
+          "position": "relative",
+          "zIndex": "2"
+        },
+        "footer": {
+          "height": 256,
+          "text": "Stay in the loop. Demo only Demo only. This form does not collect or submit email addresses. maple moon ShopOur StoryStockistsContactHomeWhat is CarobFAQ"
+        },
+        "heading": {
+          "text": "",
+          "width": 342,
+          "height": 81,
+          "fontFamily": "neue-haas-grotesk-display, \"Neue Haas Grotesk Display Pro\", Inter, \"Helvetica Neue\", sans-serif",
+          "fontSize": "32px",
+          "lineHeight": "0px"
+        },
+        "landmarks": {
+          "h1": 1,
+          "main": 1,
+          "nav": 3,
+          "footer": 2
+        },
+        "images": [
+          {
+            "alt": "",
+            "src": "http://127.0.0.1:8792/assets/product_shots/bar_pure_carob_hero.webp",
+            "complete": true,
+            "naturalWidth": 1200,
+            "naturalHeight": 1800,
+            "width": 0,
+            "height": 0,
+            "visible": false
+          },
+          {
+            "alt": "",
+            "src": "http://127.0.0.1:8792/assets/product_shots/moon_pure_carob.webp",
+            "complete": true,
+            "naturalWidth": 800,
+            "naturalHeight": 800,
+            "width": 0,
+            "height": 0,
+            "visible": false
+          },
+          {
+            "alt": "Carob",
+            "src": "http://127.0.0.1:8792/assets/carob_wordmark.svg",
+            "complete": true,
+            "naturalWidth": 300,
+            "naturalHeight": 71,
+            "width": 342,
+            "height": 81,
+            "visible": true
+          },
+          {
+            "alt": "Coconut & Goji",
+            "src": "http://127.0.0.1:8792/assets/product_shots/bar_goji_coconut.webp",
+            "complete": true,
+            "naturalWidth": 800,
+            "naturalHeight": 1200,
+            "width": 65,
+            "height": 189,
+            "visible": true
+          },
+          {
+            "alt": "Cayenne Chilli",
+            "src": "http://127.0.0.1:8792/assets/product_shots/bar_cayenne.webp",
+            "complete": true,
+            "naturalWidth": 800,
+            "naturalHeight": 1200,
+            "width": 122,
+            "height": 253,
+            "visible": true
+          },
+          {
+            "alt": "Pure Carob & Cacao Butter",
+            "src": "http://127.0.0.1:8792/assets/product_shots/bar_pure_carob.webp",
+            "complete": true,
+            "naturalWidth": 800,
+            "naturalHeight": 1200,
+            "width": 192,
+            "height": 305,
+            "visible": true
+          },
+          {
+            "alt": "Almond & Celtic Salt",
+            "src": "http://127.0.0.1:8792/assets/product_shots/bar_almond.webp",
+            "complete": true,
+            "naturalWidth": 800,
+            "naturalHeight": 1200,
+            "width": 122,
+            "height": 253,
+            "visible": true
+          },
+          {
+            "alt": "Peppermint & Buckwheat",
+            "src": "http://127.0.0.1:8792/assets/product_shots/bar_peppermint.webp",
+            "complete": true,
+            "naturalWidth": 800,
+            "naturalHeight": 1200,
+            "width": 65,
+            "height": 189,
+            "visible": true
+          },
+          {
+            "alt": "Roasted Hazelnut",
+            "src": "http://127.0.0.1:8792/assets/product_shots/bar_hazelnut.webp",
+            "complete": true,
+            "naturalWidth": 800,
+            "naturalHeight": 1200,
+            "width": 0,
+            "height": 0,
+            "visible": false
+          },
+          {
+            "alt": "Carob pods hanging from a branch against a dusk blue sky",
+            "src": "http://127.0.0.1:8792/assets/hero_shots/carob_branch_dusk.jpg",
+            "complete": true,
+            "naturalWidth": 2200,
+            "naturalHeight": 1228,
+            "width": 900,
+            "height": 320,
+            "visible": true
+          },
+          {
+            "alt": "Dark carob squares on a stone board in low light",
+            "src": "http://127.0.0.1:8792/assets/licensed/scene_after_dinner.jpg",
+            "complete": true,
+            "naturalWidth": 1600,
+            "naturalHeight": 1067,
+            "width": 842,
+            "height": 328,
+            "visible": true
+          },
+          {
+            "alt": "A teacup in soft afternoon light",
+            "src": "http://127.0.0.1:8792/assets/licensed/scene_afternoon.jpg",
+            "complete": true,
+            "naturalWidth": 1600,
+            "naturalHeight": 1067,
+            "width": 842,
+            "height": 328,
+            "visible": true
+          },
+          {
+            "alt": "A steaming cup against a blue evening window",
+            "src": "http://127.0.0.1:8792/assets/licensed/scene_tea_night.jpg",
+            "complete": true,
+            "naturalWidth": 1600,
+            "naturalHeight": 1067,
+            "width": 842,
+            "height": 328,
+            "visible": true
+          },
+          {
+            "alt": "Carob orchard",
+            "src": "http://127.0.0.1:8792/assets/licensed/carob_farm/australian-carob-0205-mobile.jpg",
+            "complete": true,
+            "naturalWidth": 1080,
+            "naturalHeight": 1350,
+            "width": 900,
+            "height": 340,
+            "visible": true
+          },
+          {
+            "alt": "Coconut and Goji bar",
+            "src": "http://127.0.0.1:8792/assets/product_shots/bar_goji_coconut.webp",
+            "complete": true,
+            "naturalWidth": 800,
+            "naturalHeight": 1200,
+            "width": 69,
+            "height": 104,
+            "visible": true
+          },
+          {
+            "alt": "Cayenne Chilli bar",
+            "src": "http://127.0.0.1:8792/assets/product_shots/bar_cayenne.webp",
+            "complete": true,
+            "naturalWidth": 800,
+            "naturalHeight": 1200,
+            "width": 69,
+            "height": 104,
+            "visible": true
+          },
+          {
+            "alt": "Pure Carob and Cacao Butter bar",
+            "src": "http://127.0.0.1:8792/assets/product_shots/bar_pure_carob.webp",
+            "complete": true,
+            "naturalWidth": 800,
+            "naturalHeight": 1200,
+            "width": 69,
+            "height": 104,
+            "visible": true
+          },
+          {
+            "alt": "Almond and Celtic Salt bar",
+            "src": "http://127.0.0.1:8792/assets/product_shots/bar_almond.webp",
+            "complete": true,
+            "naturalWidth": 800,
+            "naturalHeight": 1200,
+            "width": 69,
+            "height": 104,
+            "visible": true
+          },
+          {
+            "alt": "Peppermint and Buckwheat bar",
+            "src": "http://127.0.0.1:8792/assets/product_shots/bar_peppermint.webp",
+            "complete": true,
+            "naturalWidth": 800,
+            "naturalHeight": 1200,
+            "width": 69,
+            "height": 104,
+            "visible": true
+          },
+          {
+            "alt": "Roasted Hazelnut bar",
+            "src": "http://127.0.0.1:8792/assets/product_shots/bar_hazelnut.webp",
+            "complete": true,
+            "naturalWidth": 800,
+            "naturalHeight": 1200,
+            "width": 69,
+            "height": 104,
+            "visible": true
+          }
+        ],
+        "brokenImages": [],
+        "interactive": 22,
+        "sub44": [],
+        "internalOverflow": [
+          {
+            "tag": "DIV",
+            "id": "",
+            "className": "wf",
+            "clientWidth": 900,
+            "scrollWidth": 1125,
+            "text": "(function(){ var video=document.currentScript.previousElementSibling; var motion=window.matchMedia('"
+          },
+          {
+            "tag": "DIV",
+            "id": "",
+            "className": "wf-pnav r mm-header__right",
+            "clientWidth": 361,
+            "scrollWidth": 364,
+            "text": "StockistsAUD $FAQ 0"
+          },
+          {
+            "tag": "BUTTON",
+            "id": "",
+            "className": "wf-pcart mm-icon-control",
+            "clientWidth": 42,
+            "scrollWidth": 46,
+            "text": "0"
+          },
+          {
+            "tag": "A",
+            "id": "",
+            "className": "wf-ppill primary",
+            "clientWidth": 138,
+            "scrollWidth": 141,
+            "text": "Shop the Range"
+          },
+          {
+            "tag": "MAIN",
+            "id": "main-content",
+            "className": "",
+            "clientWidth": 900,
+            "scrollWidth": 1125,
+            "text": "Selected bar Pure Carob & Cacao Butter Crafted from only two wholefood ingredients for simple, natur"
+          },
+          {
+            "tag": "SECTION",
+            "id": "range",
+            "className": "wrap wf-line wf-line-dark is-visible",
+            "clientWidth": 900,
+            "scrollWidth": 1125,
+            "text": "Selected bar Pure Carob & Cacao Butter Crafted from only two wholefood ingredients for simple, natur"
+          },
+          {
+            "tag": "DIV",
+            "id": "",
+            "className": "wf-stage-wrap",
+            "clientWidth": 844,
+            "scrollWidth": 1097,
+            "text": ""
+          },
+          {
+            "tag": "DIV",
+            "id": "stage",
+            "className": "wf-cf",
+            "clientWidth": 844,
+            "scrollWidth": 857,
+            "text": ""
+          },
+          {
+            "tag": "BUTTON",
+            "id": "",
+            "className": "cf-item",
+            "clientWidth": 192,
+            "scrollWidth": 223,
+            "text": ""
+          },
+          {
+            "tag": "BUTTON",
+            "id": "",
+            "className": "cf-item",
+            "clientWidth": 192,
+            "scrollWidth": 223,
+            "text": ""
+          },
+          {
+            "tag": "BUTTON",
+            "id": "",
+            "className": "cf-item",
+            "clientWidth": 192,
+            "scrollWidth": 223,
+            "text": ""
+          },
+          {
+            "tag": "BUTTON",
+            "id": "",
+            "className": "cf-item",
+            "clientWidth": 192,
+            "scrollWidth": 223,
+            "text": ""
+          },
+          {
+            "tag": "SECTION",
+            "id": "sampler",
+            "className": "wrap q-sampler is-visible",
+            "clientWidth": 900,
+            "scrollWidth": 984,
+            "text": "The starter box Try every flavour. Six bars, one box. The whole range in a single starter set, ready"
+          },
+          {
+            "tag": "DIV",
+            "id": "",
+            "className": "sbox",
+            "clientWidth": 844,
+            "scrollWidth": 956,
+            "text": "maple moon · the starter box Inside the box Coconut & Goji Cayenne Chilli Pure Carob & Cacao Butter "
+          }
+        ],
+        "flaggedVisibleText": [],
+        "bodyBackground": "rgb(244, 242, 237)"
+      },
+      "screenshots": {
+        "top": {
+          "path": "/Users/handtomouse/maplemoon-website/_wip/evidence/seven_route_visual_audit_r2_20260816T210036/screenshots/homepage-900-top.png",
+          "width": 900,
+          "height": 900,
+          "bytes": 959490,
+          "nonblank": true
+        },
+        "middle": {
+          "path": "/Users/handtomouse/maplemoon-website/_wip/evidence/seven_route_visual_audit_r2_20260816T210036/screenshots/homepage-900-middle.png",
+          "width": 900,
+          "height": 900,
+          "bytes": 817485,
+          "nonblank": true
+        },
+        "bottom": {
+          "path": "/Users/handtomouse/maplemoon-website/_wip/evidence/seven_route_visual_audit_r2_20260816T210036/screenshots/homepage-900-bottom.png",
+          "width": 900,
+          "height": 900,
+          "bytes": 151028,
+          "nonblank": true
+        },
+        "full": {
+          "path": "/Users/handtomouse/maplemoon-website/_wip/evidence/seven_route_visual_audit_r2_20260816T210036/screenshots/homepage-900-full.png",
+          "width": 900,
+          "height": 5990,
+          "bytes": 3252027,
+          "nonblank": true
+        }
+      },
+      "consoleErrors": [],
+      "pageErrors": [],
+      "requestFailures": [],
+      "badResponses": [],
+      "semanticFlags": [
+        "footer-landmarks-2"
+      ],
+      "failures": [],
+      "result": "PASS"
+    },
+    {
+      "route": "shop",
+      "width": 900,
+      "httpStatus": 200,
+      "metrics": {
+        "title": "Shop the Range | Maple Moon",
+        "clientWidth": 900,
+        "scrollWidth": 900,
+        "bodyHeight": 10348,
+        "header": {
+          "height": 70,
+          "position": "relative",
+          "zIndex": "1"
+        },
+        "footer": {
+          "height": 113,
+          "text": "maple moon ShopOur StoryStockistsContact"
+        },
+        "heading": {
+          "text": "Shop the range.",
+          "width": 640,
+          "height": 41,
+          "fontFamily": "p22-mackinac-pro, \"P22 Mackinac Pro\", Georgia, serif",
+          "fontSize": "39.2px",
+          "lineHeight": "41.16px"
+        },
+        "landmarks": {
+          "h1": 1,
+          "main": 1,
+          "nav": 4,
+          "footer": 1
+        },
+        "images": [
+          {
+            "alt": "",
+            "src": "http://127.0.0.1:8792/assets/products_new/bar_pure_carob.png",
+            "complete": true,
+            "naturalWidth": 1024,
+            "naturalHeight": 1536,
+            "width": 47,
+            "height": 70,
+            "visible": true
+          },
+          {
+            "alt": "",
+            "src": "http://127.0.0.1:8792/assets/products_new/bar_peppermint.png",
+            "complete": true,
+            "naturalWidth": 1024,
+            "naturalHeight": 1536,
+            "width": 47,
+            "height": 70,
+            "visible": true
+          },
+          {
+            "alt": "",
+            "src": "http://127.0.0.1:8792/assets/products_new/bar_hazelnut.png",
+            "complete": true,
+            "naturalWidth": 1024,
+            "naturalHeight": 1536,
+            "width": 47,
+            "height": 70,
+            "visible": true
+          },
+          {
+            "alt": "",
+            "src": "http://127.0.0.1:8792/assets/products_new/bar_goji_coconut.png",
+            "complete": true,
+            "naturalWidth": 1024,
+            "naturalHeight": 1536,
+            "width": 47,
+            "height": 70,
+            "visible": true
+          },
+          {
+            "alt": "",
+            "src": "http://127.0.0.1:8792/assets/products_new/bar_cayenne.png",
+            "complete": true,
+            "naturalWidth": 1024,
+            "naturalHeight": 1536,
+            "width": 47,
+            "height": 70,
+            "visible": true
+          },
+          {
+            "alt": "",
+            "src": "http://127.0.0.1:8792/assets/products_new/bar_almond.png",
+            "complete": true,
+            "naturalWidth": 1024,
+            "naturalHeight": 1536,
+            "width": 47,
+            "height": 70,
+            "visible": true
+          },
+          {
+            "alt": "Coconut & Goji",
+            "src": "http://127.0.0.1:8792/assets/product_shots/bar_goji_coconut.webp",
+            "complete": true,
+            "naturalWidth": 800,
+            "naturalHeight": 1200,
+            "width": 222,
+            "height": 333,
+            "visible": true
+          },
+          {
+            "alt": "Cayenne Chilli",
+            "src": "http://127.0.0.1:8792/assets/product_shots/bar_cayenne.webp",
+            "complete": true,
+            "naturalWidth": 800,
+            "naturalHeight": 1200,
+            "width": 222,
+            "height": 333,
+            "visible": true
+          },
+          {
+            "alt": "Pure Carob & Cacao Butter",
+            "src": "http://127.0.0.1:8792/assets/product_shots/bar_pure_carob.webp",
+            "complete": true,
+            "naturalWidth": 800,
+            "naturalHeight": 1200,
+            "width": 222,
+            "height": 333,
+            "visible": true
+          },
+          {
+            "alt": "Almond & Celtic Salt",
+            "src": "http://127.0.0.1:8792/assets/product_shots/bar_almond.webp",
+            "complete": true,
+            "naturalWidth": 800,
+            "naturalHeight": 1200,
+            "width": 222,
+            "height": 333,
+            "visible": true
+          },
+          {
+            "alt": "Peppermint & Buckwheat",
+            "src": "http://127.0.0.1:8792/assets/product_shots/bar_peppermint.webp",
+            "complete": true,
+            "naturalWidth": 800,
+            "naturalHeight": 1200,
+            "width": 222,
+            "height": 333,
+            "visible": true
+          },
+          {
+            "alt": "Roasted Hazelnut",
+            "src": "http://127.0.0.1:8792/assets/product_shots/bar_hazelnut.webp",
+            "complete": true,
+            "naturalWidth": 800,
+            "naturalHeight": 1200,
+            "width": 222,
+            "height": 333,
+            "visible": true
+          },
+          {
+            "alt": "Coconut & Goji Moon",
+            "src": "http://127.0.0.1:8792/assets/product_shots/moon_goji_coconut.webp",
+            "complete": true,
+            "naturalWidth": 800,
+            "naturalHeight": 800,
+            "width": 277,
+            "height": 277,
+            "visible": true
+          },
+          {
+            "alt": "Cayenne Moon",
+            "src": "http://127.0.0.1:8792/assets/product_shots/moon_cayenne.webp",
+            "complete": true,
+            "naturalWidth": 800,
+            "naturalHeight": 800,
+            "width": 277,
+            "height": 277,
+            "visible": true
+          },
+          {
+            "alt": "Pure Carob Moon",
+            "src": "http://127.0.0.1:8792/assets/product_shots/moon_pure_carob.webp",
+            "complete": true,
+            "naturalWidth": 800,
+            "naturalHeight": 800,
+            "width": 277,
+            "height": 277,
+            "visible": true
+          },
+          {
+            "alt": "Almond Moon",
+            "src": "http://127.0.0.1:8792/assets/product_shots/moon_almond.webp",
+            "complete": true,
+            "naturalWidth": 800,
+            "naturalHeight": 800,
+            "width": 277,
+            "height": 277,
+            "visible": true
+          },
+          {
+            "alt": "Peppermint Moon",
+            "src": "http://127.0.0.1:8792/assets/product_shots/moon_peppermint.webp",
+            "complete": true,
+            "naturalWidth": 800,
+            "naturalHeight": 800,
+            "width": 277,
+            "height": 277,
+            "visible": true
+          },
+          {
+            "alt": "Roasted Hazelnut Moon",
+            "src": "http://127.0.0.1:8792/assets/product_shots/moon_hazelnut.webp",
+            "complete": true,
+            "naturalWidth": 800,
+            "naturalHeight": 800,
+            "width": 277,
+            "height": 277,
+            "visible": true
+          },
+          {
+            "alt": "Pecan Nut Eclipse Bite",
+            "src": "http://127.0.0.1:8792/assets/product_shots/eclipse_pecan.webp",
+            "complete": true,
+            "naturalWidth": 800,
+            "naturalHeight": 800,
+            "width": 277,
+            "height": 277,
+            "visible": true
+          },
+          {
+            "alt": "Salted Almond Eclipse Bite",
+            "src": "http://127.0.0.1:8792/assets/product_shots/eclipse_almond.webp",
+            "complete": true,
+            "naturalWidth": 800,
+            "naturalHeight": 800,
+            "width": 277,
+            "height": 277,
+            "visible": true
+          },
+          {
+            "alt": "Hazelnut Eclipse Bite",
+            "src": "http://127.0.0.1:8792/assets/product_shots/eclipse_hazelnut.webp",
+            "complete": true,
+            "naturalWidth": 800,
+            "naturalHeight": 800,
+            "width": 277,
+            "height": 277,
+            "visible": true
+          },
+          {
+            "alt": "Goji Ripe Eclipse Bite",
+            "src": "http://127.0.0.1:8792/assets/product_shots/eclipse_goji.webp",
+            "complete": true,
+            "naturalWidth": 2560,
+            "naturalHeight": 2560,
+            "width": 277,
+            "height": 277,
+            "visible": true
+          },
+          {
+            "alt": "Salted Caramel Fudge",
+            "src": "http://127.0.0.1:8792/assets/product_shots/eclipse_fudge.webp",
+            "complete": true,
+            "naturalWidth": 800,
+            "naturalHeight": 800,
+            "width": 277,
+            "height": 277,
+            "visible": true
+          },
+          {
+            "alt": "Eclipse Bite Bundle",
+            "src": "http://127.0.0.1:8792/assets/product_shots/eclipse_bundle.webp",
+            "complete": true,
+            "naturalWidth": 2048,
+            "naturalHeight": 2048,
+            "width": 277,
+            "height": 277,
+            "visible": true
+          },
+          {
+            "alt": "Pure Carob Elixir",
+            "src": "http://127.0.0.1:8792/assets/product_shots/elixir_plain.webp",
+            "complete": true,
+            "naturalWidth": 1024,
+            "naturalHeight": 1536,
+            "width": 222,
+            "height": 333,
+            "visible": true
+          },
+          {
+            "alt": "Spiced Carob Elixir",
+            "src": "http://127.0.0.1:8792/assets/product_shots/elixir_spiced.webp",
+            "complete": true,
+            "naturalWidth": 1024,
+            "naturalHeight": 1536,
+            "width": 222,
+            "height": 333,
+            "visible": true
+          },
+          {
+            "alt": "Carob Bananas",
+            "src": "http://127.0.0.1:8792/assets/product_shots/bananas.webp",
+            "complete": true,
+            "naturalWidth": 800,
+            "naturalHeight": 800,
+            "width": 277,
+            "height": 277,
+            "visible": true
+          },
+          {
+            "alt": "Carob Powder",
+            "src": "http://127.0.0.1:8792/assets/product_shots/powder_roasted.webp",
+            "complete": true,
+            "naturalWidth": 2560,
+            "naturalHeight": 2560,
+            "width": 277,
+            "height": 277,
+            "visible": true
+          }
+        ],
+        "brokenImages": [],
+        "interactive": 40,
+        "sub44": [
+          {
+            "tag": "BUTTON",
+            "text": "All",
+            "width": 34,
+            "height": 34
+          },
+          {
+            "tag": "BUTTON",
+            "text": "Pure",
+            "width": 34,
+            "height": 34
+          },
+          {
+            "tag": "BUTTON",
+            "text": "Peppermint",
+            "width": 34,
+            "height": 34
+          },
+          {
+            "tag": "BUTTON",
+            "text": "Hazelnut",
+            "width": 34,
+            "height": 34
+          },
+          {
+            "tag": "BUTTON",
+            "text": "Coconut & Goji",
+            "width": 34,
+            "height": 34
+          },
+          {
+            "tag": "BUTTON",
+            "text": "Cayenne",
+            "width": 34,
+            "height": 34
+          },
+          {
+            "tag": "BUTTON",
+            "text": "Almond",
+            "width": 34,
+            "height": 34
+          },
+          {
+            "tag": "SELECT",
+            "text": "Featured Name Priced first",
+            "width": 132,
+            "height": 34
+          },
+          {
+            "tag": "BUTTON",
+            "text": "Grid",
+            "width": 40.5,
+            "height": 34
+          },
+          {
+            "tag": "BUTTON",
+            "text": "List",
+            "width": 37.5,
+            "height": 34
+          },
+          {
+            "tag": "SELECT",
+            "text": "1 moon · $2.505 moons · $12.1910 moons · $23.7520 moons · $44.99",
+            "width": 138,
+            "height": 34
+          },
+          {
+            "tag": "SELECT",
+            "text": "1 moon · $2.505 moons · $12.1910 moons · $23.7520 moons · $44.99",
+            "width": 138,
+            "height": 34
+          },
+          {
+            "tag": "SELECT",
+            "text": "1 moon · $2.505 moons · $12.1910 moons · $23.7520 moons · $44.99",
+            "width": 138,
+            "height": 34
+          },
+          {
+            "tag": "SELECT",
+            "text": "1 moon · $2.505 moons · $12.1910 moons · $23.7520 moons · $44.99",
+            "width": 138,
+            "height": 34
+          },
+          {
+            "tag": "SELECT",
+            "text": "50g · $5.99Value pack · $59.99",
+            "width": 140,
+            "height": 34
+          },
+          {
+            "tag": "SELECT",
+            "text": "50g · $5.99Value pack · $59.99",
+            "width": 140,
+            "height": 34
+          },
+          {
+            "tag": "SELECT",
+            "text": "50g · $5.99Value pack · $59.99",
+            "width": 140,
+            "height": 34
+          },
+          {
+            "tag": "SELECT",
+            "text": "50g · $5.99Value pack · $59.99",
+            "width": 140,
+            "height": 34
+          },
+          {
+            "tag": "SELECT",
+            "text": "50g · $5.99Value pack · $59.99",
+            "width": 140,
+            "height": 34
+          }
+        ],
+        "internalOverflow": [
+          {
+            "tag": "NAV",
+            "id": "",
+            "className": "sp-nav r",
+            "clientWidth": 361,
+            "scrollWidth": 364,
+            "text": "StockistsAUD $ 0"
+          },
+          {
+            "tag": "BUTTON",
+            "id": "",
+            "className": "sp-cart",
+            "clientWidth": 42,
+            "scrollWidth": 46,
+            "text": "0"
+          }
+        ],
+        "flaggedVisibleText": [],
+        "bodyBackground": "rgba(0, 0, 0, 0)"
+      },
+      "screenshots": {
+        "top": {
+          "path": "/Users/handtomouse/maplemoon-website/_wip/evidence/seven_route_visual_audit_r2_20260816T210036/screenshots/shop-900-top.png",
+          "width": 900,
+          "height": 900,
+          "bytes": 291793,
+          "nonblank": true
+        },
+        "middle": {
+          "path": "/Users/handtomouse/maplemoon-website/_wip/evidence/seven_route_visual_audit_r2_20260816T210036/screenshots/shop-900-middle.png",
+          "width": 900,
+          "height": 900,
+          "bytes": 338774,
+          "nonblank": true
+        },
+        "bottom": {
+          "path": "/Users/handtomouse/maplemoon-website/_wip/evidence/seven_route_visual_audit_r2_20260816T210036/screenshots/shop-900-bottom.png",
+          "width": 900,
+          "height": 900,
+          "bytes": 230630,
+          "nonblank": true
+        },
+        "full": {
+          "path": "/Users/handtomouse/maplemoon-website/_wip/evidence/seven_route_visual_audit_r2_20260816T210036/screenshots/shop-900-full.png",
+          "width": 900,
+          "height": 10348,
+          "bytes": 4288795,
+          "nonblank": true
+        }
+      },
+      "consoleErrors": [],
+      "pageErrors": [],
+      "requestFailures": [],
+      "badResponses": [],
+      "semanticFlags": [],
+      "failures": [],
+      "result": "PASS"
+    },
+    {
+      "route": "our-story",
+      "width": 900,
+      "httpStatus": 200,
+      "metrics": {
+        "title": "Our Story | Maple Moon",
+        "clientWidth": 900,
+        "scrollWidth": 900,
+        "bodyHeight": 5483,
+        "header": {
+          "height": 70,
+          "position": "relative",
+          "zIndex": "3"
+        },
+        "footer": {
+          "height": 97,
+          "text": "maple moon ShopOur StoryStockistsContact"
+        },
+        "heading": {
+          "text": "Carli & Dylan.",
+          "width": 382,
+          "height": 141,
+          "fontFamily": "p22-mackinac-pro, \"P22 Mackinac Pro\", Georgia, serif",
+          "fontSize": "76.8px",
+          "lineHeight": "70.656px"
+        },
+        "landmarks": {
+          "h1": 1,
+          "main": 0,
+          "nav": 4,
+          "footer": 1
+        },
+        "images": [
+          {
+            "alt": "Carli and Dylan, the founders of Maple Moon",
+            "src": "http://127.0.0.1:8792/assets/our_story/founders_portrait_h212.webp",
+            "complete": true,
+            "naturalWidth": 1400,
+            "naturalHeight": 933,
+            "width": 844,
+            "height": 563,
+            "visible": true
+          },
+          {
+            "alt": "A cluster of ripe carob pods",
+            "src": "http://127.0.0.1:8792/assets/hero_shots/carob_pods_cluster.jpg",
+            "complete": true,
+            "naturalWidth": 1800,
+            "naturalHeight": 1004,
+            "width": 844,
+            "height": 1055,
+            "visible": true
+          }
+        ],
+        "brokenImages": [],
+        "interactive": 3,
+        "sub44": [
+          {
+            "tag": "SUMMARY",
+            "text": "Read Carli's story",
+            "width": 139.5,
+            "height": 30.8
+          },
+          {
+            "tag": "SUMMARY",
+            "text": "Read Dylan's story",
+            "width": 143.3,
+            "height": 30.8
+          }
+        ],
+        "internalOverflow": [
+          {
+            "tag": "NAV",
+            "id": "",
+            "className": "os-nav r",
+            "clientWidth": 361,
+            "scrollWidth": 364,
+            "text": "StockistsAUD $ 0"
+          },
+          {
+            "tag": "BUTTON",
+            "id": "",
+            "className": "os-cart",
+            "clientWidth": 42,
+            "scrollWidth": 46,
+            "text": "0"
+          }
+        ],
+        "flaggedVisibleText": [
+          {
+            "tag": "SPAN",
+            "className": "",
+            "text": "Founder portrait pending"
+          },
+          {
+            "tag": "SMALL",
+            "className": "",
+            "text": "Nate selection required"
+          },
+          {
+            "tag": "SPAN",
+            "className": "",
+            "text": "Founder portrait pending"
+          },
+          {
+            "tag": "SMALL",
+            "className": "",
+            "text": "Nate selection required"
+          }
+        ],
+        "bodyBackground": "rgb(244, 242, 237)"
+      },
+      "screenshots": {
+        "top": {
+          "path": "/Users/handtomouse/maplemoon-website/_wip/evidence/seven_route_visual_audit_r2_20260816T210036/screenshots/our-story-900-top.png",
+          "width": 900,
+          "height": 900,
+          "bytes": 580884,
+          "nonblank": true
+        },
+        "middle": {
+          "path": "/Users/handtomouse/maplemoon-website/_wip/evidence/seven_route_visual_audit_r2_20260816T210036/screenshots/our-story-900-middle.png",
+          "width": 900,
+          "height": 900,
+          "bytes": 445600,
+          "nonblank": true
+        },
+        "bottom": {
+          "path": "/Users/handtomouse/maplemoon-website/_wip/evidence/seven_route_visual_audit_r2_20260816T210036/screenshots/our-story-900-bottom.png",
+          "width": 900,
+          "height": 900,
+          "bytes": 425378,
+          "nonblank": true
+        },
+        "full": {
+          "path": "/Users/handtomouse/maplemoon-website/_wip/evidence/seven_route_visual_audit_r2_20260816T210036/screenshots/our-story-900-full.png",
+          "width": 900,
+          "height": 5483,
+          "bytes": 2692137,
+          "nonblank": true
+        }
+      },
+      "consoleErrors": [],
+      "pageErrors": [],
+      "requestFailures": [],
+      "badResponses": [],
+      "semanticFlags": [
+        "main-landmarks-0"
+      ],
+      "failures": [],
+      "result": "PASS"
+    },
+    {
+      "route": "carob-story",
+      "width": 900,
+      "httpStatus": 200,
+      "metrics": {
+        "title": "What is Carob? | Maple Moon",
+        "clientWidth": 900,
+        "scrollWidth": 900,
+        "bodyHeight": 2298,
+        "header": {
+          "height": 65,
+          "position": "relative",
+          "zIndex": "5"
+        },
+        "footer": {
+          "height": 93,
+          "text": "maple moon ShopOur StoryStockistsContact"
+        },
+        "heading": {
+          "text": "What is Carob?",
+          "width": 472,
+          "height": 62,
+          "fontFamily": "p22-mackinac-pro, \"P22 Mackinac Pro\", Georgia, serif",
+          "fontSize": "56.8px",
+          "lineHeight": "62.48px"
+        },
+        "landmarks": {
+          "h1": 1,
+          "main": 1,
+          "nav": 3,
+          "footer": 1
+        },
+        "images": [
+          {
+            "alt": "Rows of carob trees in an Australian orchard",
+            "src": "http://127.0.0.1:8792/assets/licensed/carob_farm/australian-carob-0205-mobile.jpg",
+            "complete": true,
+            "naturalWidth": 1080,
+            "naturalHeight": 1350,
+            "width": 860,
+            "height": 274,
+            "visible": true
+          },
+          {
+            "alt": "Whole carob pods and carob powder, up close",
+            "src": "http://127.0.0.1:8792/assets/licensed/carob_pods_macro.jpg",
+            "complete": true,
+            "naturalWidth": 1600,
+            "naturalHeight": 1068,
+            "width": 315,
+            "height": 100,
+            "visible": true
+          },
+          {
+            "alt": "The full Maple Moon range in coloured wrappers on a blue backdrop",
+            "src": "http://127.0.0.1:8792/assets/photo_finals/maplemoon_heros41_brandmatched.webp",
+            "complete": true,
+            "naturalWidth": 2400,
+            "naturalHeight": 1600,
+            "width": 858,
+            "height": 298,
+            "visible": true
+          }
+        ],
+        "brokenImages": [],
+        "interactive": 1,
+        "sub44": [],
+        "internalOverflow": [
+          {
+            "tag": "NAV",
+            "id": "",
+            "className": "sp-nav r",
+            "clientWidth": 361,
+            "scrollWidth": 364,
+            "text": "StockistsAUD $ 0"
+          },
+          {
+            "tag": "BUTTON",
+            "id": "",
+            "className": "sp-cart",
+            "clientWidth": 42,
+            "scrollWidth": 46,
+            "text": "0"
+          }
+        ],
+        "flaggedVisibleText": [],
+        "bodyBackground": "rgba(0, 0, 0, 0)"
+      },
+      "screenshots": {
+        "top": {
+          "path": "/Users/handtomouse/maplemoon-website/_wip/evidence/seven_route_visual_audit_r2_20260816T210036/screenshots/carob-story-900-top.png",
+          "width": 900,
+          "height": 900,
+          "bytes": 613203,
+          "nonblank": true
+        },
+        "middle": {
+          "path": "/Users/handtomouse/maplemoon-website/_wip/evidence/seven_route_visual_audit_r2_20260816T210036/screenshots/carob-story-900-middle.png",
+          "width": 900,
+          "height": 900,
+          "bytes": 455228,
+          "nonblank": true
+        },
+        "bottom": {
+          "path": "/Users/handtomouse/maplemoon-website/_wip/evidence/seven_route_visual_audit_r2_20260816T210036/screenshots/carob-story-900-bottom.png",
+          "width": 900,
+          "height": 900,
+          "bytes": 432477,
+          "nonblank": true
+        },
+        "full": {
+          "path": "/Users/handtomouse/maplemoon-website/_wip/evidence/seven_route_visual_audit_r2_20260816T210036/screenshots/carob-story-900-full.png",
+          "width": 900,
+          "height": 2298,
+          "bytes": 1294932,
+          "nonblank": true
+        }
+      },
+      "consoleErrors": [],
+      "pageErrors": [],
+      "requestFailures": [],
+      "badResponses": [],
+      "semanticFlags": [],
+      "failures": [],
+      "result": "PASS"
+    },
+    {
+      "route": "faq",
+      "width": 900,
+      "httpStatus": 200,
+      "metrics": {
+        "title": "FAQ | Maple Moon",
+        "clientWidth": 900,
+        "scrollWidth": 900,
+        "bodyHeight": 2637,
+        "header": {
+          "height": 70,
+          "position": "relative",
+          "zIndex": "1"
+        },
+        "footer": {
+          "height": 99,
+          "text": "maple moonShopOur StoryStockistsFAQ"
+        },
+        "heading": {
+          "text": "Asked, answered.",
+          "width": 844,
+          "height": 68,
+          "fontFamily": "p22-mackinac-pro, \"P22 Mackinac Pro\", Georgia, serif",
+          "fontSize": "68px",
+          "lineHeight": "68px"
+        },
+        "landmarks": {
+          "h1": 1,
+          "main": 1,
+          "nav": 4,
+          "footer": 1
+        },
+        "images": [],
+        "brokenImages": [],
+        "interactive": 21,
+        "sub44": [
+          {
+            "tag": "INPUT",
+            "text": "",
+            "width": 617,
+            "height": 25.9
+          },
+          {
+            "tag": "BUTTON",
+            "text": "Carob",
+            "width": 63.1,
+            "height": 42
+          },
+          {
+            "tag": "BUTTON",
+            "text": "Products",
+            "width": 77.6,
+            "height": 42
+          },
+          {
+            "tag": "BUTTON",
+            "text": "Support",
+            "width": 73.1,
+            "height": 42
+          }
+        ],
+        "internalOverflow": [
+          {
+            "tag": "DIV",
+            "id": "",
+            "className": "sp",
+            "clientWidth": 900,
+            "scrollWidth": 1160,
+            "text": "ShopOur StoryWhat is Carob maple moon StockistsFAQ0 Good questionsAsked, answered.Everything you nee"
+          },
+          {
+            "tag": "DIV",
+            "id": "",
+            "className": "wrap bar",
+            "clientWidth": 844,
+            "scrollWidth": 848,
+            "text": "ShopOur StoryWhat is Carob maple moon StockistsFAQ0"
+          },
+          {
+            "tag": "NAV",
+            "id": "",
+            "className": "sp-nav r",
+            "clientWidth": 358,
+            "scrollWidth": 362,
+            "text": "StockistsFAQ0"
+          },
+          {
+            "tag": "BUTTON",
+            "id": "",
+            "className": "sp-cart",
+            "clientWidth": 42,
+            "scrollWidth": 47,
+            "text": "0"
+          },
+          {
+            "tag": "SECTION",
+            "id": "",
+            "className": "wrap popular",
+            "clientWidth": 844,
+            "scrollWidth": 872,
+            "text": "Popular questionsWhat is carob?Is there any caffeine?Where can I buy Maple Moon?Can I get help with "
+          },
+          {
+            "tag": "SECTION",
+            "id": "",
+            "className": "wrap faq-workspace",
+            "clientWidth": 844,
+            "scrollWidth": 872,
+            "text": "BrowseThe things everyone asks.Choose a topic, or search for the words already on your mind.12 answe"
+          },
+          {
+            "tag": "ASIDE",
+            "id": "",
+            "className": "faq-sidebar",
+            "clientWidth": 844,
+            "scrollWidth": 872,
+            "text": "BrowseThe things everyone asks.Choose a topic, or search for the words already on your mind.12 answe"
+          }
+        ],
+        "flaggedVisibleText": [],
+        "bodyBackground": "rgb(232, 242, 248)"
+      },
+      "screenshots": {
+        "top": {
+          "path": "/Users/handtomouse/maplemoon-website/_wip/evidence/seven_route_visual_audit_r2_20260816T210036/screenshots/faq-900-top.png",
+          "width": 900,
+          "height": 900,
+          "bytes": 304917,
+          "nonblank": true
+        },
+        "middle": {
+          "path": "/Users/handtomouse/maplemoon-website/_wip/evidence/seven_route_visual_audit_r2_20260816T210036/screenshots/faq-900-middle.png",
+          "width": 900,
+          "height": 900,
+          "bytes": 88083,
+          "nonblank": true
+        },
+        "bottom": {
+          "path": "/Users/handtomouse/maplemoon-website/_wip/evidence/seven_route_visual_audit_r2_20260816T210036/screenshots/faq-900-bottom.png",
+          "width": 900,
+          "height": 900,
+          "bytes": 156140,
+          "nonblank": true
+        },
+        "full": {
+          "path": "/Users/handtomouse/maplemoon-website/_wip/evidence/seven_route_visual_audit_r2_20260816T210036/screenshots/faq-900-full.png",
+          "width": 900,
+          "height": 2637,
+          "bytes": 544089,
+          "nonblank": true
+        }
+      },
+      "consoleErrors": [],
+      "pageErrors": [],
+      "requestFailures": [],
+      "badResponses": [],
+      "semanticFlags": [],
+      "failures": [],
+      "result": "PASS"
+    },
+    {
+      "route": "stockists",
+      "width": 900,
+      "httpStatus": 200,
+      "metrics": {
+        "title": "Stockists | Maple Moon",
+        "clientWidth": 900,
+        "scrollWidth": 900,
+        "bodyHeight": 3883,
+        "header": {
+          "height": 70,
+          "position": "relative",
+          "zIndex": "1"
+        },
+        "footer": {
+          "height": 97,
+          "text": "maple moon ShopOur StoryStockistsContact"
+        },
+        "heading": {
+          "text": "Find Maple Moon.",
+          "width": 844,
+          "height": 43,
+          "fontFamily": "p22-mackinac-pro, \"P22 Mackinac Pro\", Georgia, serif",
+          "fontSize": "40.95px",
+          "lineHeight": "42.588px"
+        },
+        "landmarks": {
+          "h1": 1,
+          "main": 1,
+          "nav": 3,
+          "footer": 1
+        },
+        "images": [
+          {
+            "alt": "Maple Moon carob bars, moons and elixirs arranged in soft blue studio light",
+            "src": "http://127.0.0.1:8792/assets/photo_finals/maplemoon_heros55_brandmatched.webp",
+            "complete": true,
+            "naturalWidth": 2400,
+            "naturalHeight": 1600,
+            "width": 788,
+            "height": 525,
+            "visible": true
+          }
+        ],
+        "brokenImages": [],
+        "interactive": 27,
+        "sub44": [],
+        "internalOverflow": [
+          {
+            "tag": "DIV",
+            "id": "",
+            "className": "sp",
+            "clientWidth": 900,
+            "scrollWidth": 927,
+            "text": "ShopOur StoryWhat is Carob maple moon StockistsAUD $ 0 Stockists Find Maple Moon. Find Maple Moon at"
+          },
+          {
+            "tag": "NAV",
+            "id": "",
+            "className": "sp-nav r",
+            "clientWidth": 361,
+            "scrollWidth": 364,
+            "text": "StockistsAUD $ 0"
+          },
+          {
+            "tag": "BUTTON",
+            "id": "",
+            "className": "sp-cart",
+            "clientWidth": 42,
+            "scrollWidth": 46,
+            "text": "0"
+          },
+          {
+            "tag": "MAIN",
+            "id": "main-content",
+            "className": "",
+            "clientWidth": 900,
+            "scrollWidth": 927,
+            "text": "Stockists Find Maple Moon. Find Maple Moon at 200+ health food stores, pharmacies and grocers across"
+          },
+          {
+            "tag": "DIV",
+            "id": "",
+            "className": "wrap sp-head",
+            "clientWidth": 900,
+            "scrollWidth": 927,
+            "text": "Stockists Find Maple Moon. Find Maple Moon at 200+ health food stores, pharmacies and grocers across"
+          }
+        ],
+        "flaggedVisibleText": [
+          {
+            "tag": "P",
+            "className": "st-count",
+            "text": "Showing 8 of 204 stockists. 204 total; 7 need client confirmation."
+          },
+          {
+            "tag": "STRONG",
+            "className": "",
+            "text": "WIP directory status"
+          },
+          {
+            "tag": "SPAN",
+            "className": "",
+            "text": "204 entries are in this source parse. Seven entries have incomplete location details and need client confirmation before launch."
+          },
+          {
+            "tag": "P",
+            "className": "",
+            "text": "This newsletter form is a non-collecting review demo."
+          },
+          {
+            "tag": "BUTTON",
+            "className": "pill",
+            "text": "Coming soon"
+          }
+        ],
+        "bodyBackground": "rgba(0, 0, 0, 0)"
+      },
+      "screenshots": {
+        "top": {
+          "path": "/Users/handtomouse/maplemoon-website/_wip/evidence/seven_route_visual_audit_r2_20260816T210036/screenshots/stockists-900-top.png",
+          "width": 900,
+          "height": 900,
+          "bytes": 500549,
+          "nonblank": true
+        },
+        "middle": {
+          "path": "/Users/handtomouse/maplemoon-website/_wip/evidence/seven_route_visual_audit_r2_20260816T210036/screenshots/stockists-900-middle.png",
+          "width": 900,
+          "height": 900,
+          "bytes": 124131,
+          "nonblank": true
+        },
+        "bottom": {
+          "path": "/Users/handtomouse/maplemoon-website/_wip/evidence/seven_route_visual_audit_r2_20260816T210036/screenshots/stockists-900-bottom.png",
+          "width": 900,
+          "height": 900,
+          "bytes": 235405,
+          "nonblank": true
+        },
+        "full": {
+          "path": "/Users/handtomouse/maplemoon-website/_wip/evidence/seven_route_visual_audit_r2_20260816T210036/screenshots/stockists-900-full.png",
+          "width": 900,
+          "height": 3883,
+          "bytes": 1382521,
+          "nonblank": true
+        }
+      },
+      "consoleErrors": [],
+      "pageErrors": [],
+      "requestFailures": [],
+      "badResponses": [],
+      "semanticFlags": [],
+      "failures": [],
+      "result": "PASS"
+    },
+    {
+      "route": "pure-carob-bar",
+      "width": 900,
+      "httpStatus": 200,
+      "metrics": {
+        "title": "Pure Carob & Cacao Butter | Maple Moon",
+        "clientWidth": 900,
+        "scrollWidth": 900,
+        "bodyHeight": 2532,
+        "header": {
+          "height": 70,
+          "position": "relative",
+          "zIndex": "1"
+        },
+        "footer": {
+          "height": 79,
+          "text": "ShopOur StoryStockistsContactHomeWhat is CarobFAQ"
+        },
+        "heading": {
+          "text": "Pure Carob & Cacao Butter",
+          "width": 844,
+          "height": 33,
+          "fontFamily": "p22-mackinac-pro, \"P22 Mackinac Pro\", Georgia, serif",
+          "fontSize": "30.4px",
+          "lineHeight": "33.44px"
+        },
+        "landmarks": {
+          "h1": 1,
+          "main": 1,
+          "nav": 4,
+          "footer": 2
+        },
+        "images": [
+          {
+            "alt": "Pure Carob and Cacao Butter bar",
+            "src": "http://127.0.0.1:8792/assets/product_shots/bar_pure_carob_hero.webp",
+            "complete": true,
+            "naturalWidth": 1200,
+            "naturalHeight": 1800,
+            "width": 267,
+            "height": 400,
+            "visible": true
+          },
+          {
+            "alt": "Peppermint and Buckwheat bar",
+            "src": "http://127.0.0.1:8792/assets/product_shots/bar_peppermint.webp",
+            "complete": true,
+            "naturalWidth": 800,
+            "naturalHeight": 1200,
+            "width": 165,
+            "height": 248,
+            "visible": true
+          },
+          {
+            "alt": "Roasted Hazelnut bar",
+            "src": "http://127.0.0.1:8792/assets/product_shots/bar_hazelnut.webp",
+            "complete": true,
+            "naturalWidth": 800,
+            "naturalHeight": 1200,
+            "width": 165,
+            "height": 248,
+            "visible": true
+          },
+          {
+            "alt": "Coconut and Goji bar",
+            "src": "http://127.0.0.1:8792/assets/product_shots/bar_goji_coconut.webp",
+            "complete": true,
+            "naturalWidth": 800,
+            "naturalHeight": 1200,
+            "width": 165,
+            "height": 248,
+            "visible": true
+          },
+          {
+            "alt": "Cayenne Chilli bar",
+            "src": "http://127.0.0.1:8792/assets/product_shots/bar_cayenne.webp",
+            "complete": true,
+            "naturalWidth": 800,
+            "naturalHeight": 1200,
+            "width": 165,
+            "height": 248,
+            "visible": true
+          },
+          {
+            "alt": "Almond and Celtic Salt bar",
+            "src": "http://127.0.0.1:8792/assets/product_shots/bar_almond.webp",
+            "complete": true,
+            "naturalWidth": 800,
+            "naturalHeight": 1200,
+            "width": 165,
+            "height": 248,
+            "visible": true
+          },
+          {
+            "alt": "Maple Moon",
+            "src": "http://127.0.0.1:8792/assets/mm_wordmark_blk.svg",
+            "complete": true,
+            "naturalWidth": 300,
+            "naturalHeight": 57,
+            "width": 138,
+            "height": 26,
+            "visible": true
+          }
+        ],
+        "brokenImages": [],
+        "interactive": 5,
+        "sub44": [],
+        "internalOverflow": [
+          {
+            "tag": "DIV",
+            "id": "",
+            "className": "sp-nav r mm-header__right",
+            "clientWidth": 361,
+            "scrollWidth": 364,
+            "text": "StockistsAUD $FAQ 0"
+          },
+          {
+            "tag": "BUTTON",
+            "id": "",
+            "className": "sp-cart mm-icon-control",
+            "clientWidth": 42,
+            "scrollWidth": 46,
+            "text": "0"
+          }
+        ],
+        "flaggedVisibleText": [],
+        "bodyBackground": "rgba(0, 0, 0, 0)"
+      },
+      "screenshots": {
+        "top": {
+          "path": "/Users/handtomouse/maplemoon-website/_wip/evidence/seven_route_visual_audit_r2_20260816T210036/screenshots/pure-carob-bar-900-top.png",
+          "width": 900,
+          "height": 900,
+          "bytes": 278477,
+          "nonblank": true
+        },
+        "middle": {
+          "path": "/Users/handtomouse/maplemoon-website/_wip/evidence/seven_route_visual_audit_r2_20260816T210036/screenshots/pure-carob-bar-900-middle.png",
+          "width": 900,
+          "height": 900,
+          "bytes": 244807,
+          "nonblank": true
+        },
+        "bottom": {
+          "path": "/Users/handtomouse/maplemoon-website/_wip/evidence/seven_route_visual_audit_r2_20260816T210036/screenshots/pure-carob-bar-900-bottom.png",
+          "width": 900,
+          "height": 900,
+          "bytes": 262281,
+          "nonblank": true
+        },
+        "full": {
+          "path": "/Users/handtomouse/maplemoon-website/_wip/evidence/seven_route_visual_audit_r2_20260816T210036/screenshots/pure-carob-bar-900-full.png",
+          "width": 900,
+          "height": 2532,
+          "bytes": 694750,
+          "nonblank": true
+        }
+      },
+      "consoleErrors": [],
+      "pageErrors": [],
+      "requestFailures": [],
+      "badResponses": [],
+      "semanticFlags": [
+        "footer-landmarks-2"
+      ],
+      "failures": [],
+      "result": "PASS"
+    },
+    {
+      "route": "homepage",
+      "width": 1440,
+      "httpStatus": 200,
+      "metrics": {
+        "title": "Maple Moon: Australian Organic Carob",
+        "clientWidth": 1440,
+        "scrollWidth": 1440,
+        "bodyHeight": 5719,
+        "header": {
+          "height": 70,
+          "position": "relative",
+          "zIndex": "2"
+        },
+        "footer": {
+          "height": 188,
+          "text": "Stay in the loop. Demo only Demo only. This form does not collect or submit email addresses. maple moon ShopOur StoryStockistsContactHomeWhat is CarobFAQ"
+        },
+        "heading": {
+          "text": "",
+          "width": 749,
+          "height": 177,
+          "fontFamily": "neue-haas-grotesk-display, \"Neue Haas Grotesk Display Pro\", Inter, \"Helvetica Neue\", sans-serif",
+          "fontSize": "32px",
+          "lineHeight": "0px"
+        },
+        "landmarks": {
+          "h1": 1,
+          "main": 1,
+          "nav": 3,
+          "footer": 2
+        },
+        "images": [
+          {
+            "alt": "",
+            "src": "http://127.0.0.1:8792/assets/product_shots/bar_pure_carob_hero.webp",
+            "complete": true,
+            "naturalWidth": 1200,
+            "naturalHeight": 1800,
+            "width": 0,
+            "height": 0,
+            "visible": false
+          },
+          {
+            "alt": "",
+            "src": "http://127.0.0.1:8792/assets/product_shots/moon_pure_carob.webp",
+            "complete": true,
+            "naturalWidth": 800,
+            "naturalHeight": 800,
+            "width": 0,
+            "height": 0,
+            "visible": false
+          },
+          {
+            "alt": "Carob",
+            "src": "http://127.0.0.1:8792/assets/carob_wordmark.svg",
+            "complete": true,
+            "naturalWidth": 300,
+            "naturalHeight": 71,
+            "width": 749,
+            "height": 177,
+            "visible": true
+          },
+          {
+            "alt": "Coconut & Goji",
+            "src": "http://127.0.0.1:8792/assets/product_shots/bar_goji_coconut.webp",
+            "complete": true,
+            "naturalWidth": 800,
+            "naturalHeight": 1200,
+            "width": 109,
+            "height": 273,
+            "visible": true
+          },
+          {
+            "alt": "Cayenne Chilli",
+            "src": "http://127.0.0.1:8792/assets/product_shots/bar_cayenne.webp",
+            "complete": true,
+            "naturalWidth": 800,
+            "naturalHeight": 1200,
+            "width": 177,
+            "height": 366,
+            "visible": true
+          },
+          {
+            "alt": "Pure Carob & Cacao Butter",
+            "src": "http://127.0.0.1:8792/assets/product_shots/bar_pure_carob.webp",
+            "complete": true,
+            "naturalWidth": 800,
+            "naturalHeight": 1200,
+            "width": 278,
+            "height": 442,
+            "visible": true
+          },
+          {
+            "alt": "Almond & Celtic Salt",
+            "src": "http://127.0.0.1:8792/assets/product_shots/bar_almond.webp",
+            "complete": true,
+            "naturalWidth": 800,
+            "naturalHeight": 1200,
+            "width": 177,
+            "height": 366,
+            "visible": true
+          },
+          {
+            "alt": "Peppermint & Buckwheat",
+            "src": "http://127.0.0.1:8792/assets/product_shots/bar_peppermint.webp",
+            "complete": true,
+            "naturalWidth": 800,
+            "naturalHeight": 1200,
+            "width": 109,
+            "height": 273,
+            "visible": true
+          },
+          {
+            "alt": "Roasted Hazelnut",
+            "src": "http://127.0.0.1:8792/assets/product_shots/bar_hazelnut.webp",
+            "complete": true,
+            "naturalWidth": 800,
+            "naturalHeight": 1200,
+            "width": 0,
+            "height": 0,
+            "visible": false
+          },
+          {
+            "alt": "Carob pods hanging from a branch against a dusk blue sky",
+            "src": "http://127.0.0.1:8792/assets/hero_shots/carob_branch_dusk.jpg",
+            "complete": true,
+            "naturalWidth": 2200,
+            "naturalHeight": 1228,
+            "width": 1440,
+            "height": 691,
+            "visible": true
+          },
+          {
+            "alt": "Dark carob squares on a stone board in low light",
+            "src": "http://127.0.0.1:8792/assets/licensed/scene_after_dinner.jpg",
+            "complete": true,
+            "naturalWidth": 1600,
+            "naturalHeight": 1067,
+            "width": 253,
+            "height": 430,
+            "visible": true
+          },
+          {
+            "alt": "A teacup in soft afternoon light",
+            "src": "http://127.0.0.1:8792/assets/licensed/scene_afternoon.jpg",
+            "complete": true,
+            "naturalWidth": 1600,
+            "naturalHeight": 1067,
+            "width": 253,
+            "height": 430,
+            "visible": true
+          },
+          {
+            "alt": "A steaming cup against a blue evening window",
+            "src": "http://127.0.0.1:8792/assets/licensed/scene_tea_night.jpg",
+            "complete": true,
+            "naturalWidth": 1600,
+            "naturalHeight": 1067,
+            "width": 253,
+            "height": 430,
+            "visible": true
+          },
+          {
+            "alt": "Carob orchard",
+            "src": "http://127.0.0.1:8792/assets/licensed/carob_farm/australian-carob-0205-16x9.jpg",
+            "complete": true,
+            "naturalWidth": 1600,
+            "naturalHeight": 900,
+            "width": 1440,
+            "height": 660,
+            "visible": true
+          },
+          {
+            "alt": "Coconut and Goji bar",
+            "src": "http://127.0.0.1:8792/assets/product_shots/bar_goji_coconut.webp",
+            "complete": true,
+            "naturalWidth": 800,
+            "naturalHeight": 1200,
+            "width": 74,
+            "height": 111,
+            "visible": true
+          },
+          {
+            "alt": "Cayenne Chilli bar",
+            "src": "http://127.0.0.1:8792/assets/product_shots/bar_cayenne.webp",
+            "complete": true,
+            "naturalWidth": 800,
+            "naturalHeight": 1200,
+            "width": 74,
+            "height": 111,
+            "visible": true
+          },
+          {
+            "alt": "Pure Carob and Cacao Butter bar",
+            "src": "http://127.0.0.1:8792/assets/product_shots/bar_pure_carob.webp",
+            "complete": true,
+            "naturalWidth": 800,
+            "naturalHeight": 1200,
+            "width": 74,
+            "height": 111,
+            "visible": true
+          },
+          {
+            "alt": "Almond and Celtic Salt bar",
+            "src": "http://127.0.0.1:8792/assets/product_shots/bar_almond.webp",
+            "complete": true,
+            "naturalWidth": 800,
+            "naturalHeight": 1200,
+            "width": 74,
+            "height": 111,
+            "visible": true
+          },
+          {
+            "alt": "Peppermint and Buckwheat bar",
+            "src": "http://127.0.0.1:8792/assets/product_shots/bar_peppermint.webp",
+            "complete": true,
+            "naturalWidth": 800,
+            "naturalHeight": 1200,
+            "width": 74,
+            "height": 111,
+            "visible": true
+          },
+          {
+            "alt": "Roasted Hazelnut bar",
+            "src": "http://127.0.0.1:8792/assets/product_shots/bar_hazelnut.webp",
+            "complete": true,
+            "naturalWidth": 800,
+            "naturalHeight": 1200,
+            "width": 74,
+            "height": 111,
+            "visible": true
+          }
+        ],
+        "brokenImages": [],
+        "interactive": 21,
+        "sub44": [],
+        "internalOverflow": [
+          {
+            "tag": "DIV",
+            "id": "",
+            "className": "wf",
+            "clientWidth": 1440,
+            "scrollWidth": 1800,
+            "text": "(function(){ var video=document.currentScript.previousElementSibling; var motion=window.matchMedia('"
+          },
+          {
+            "tag": "DIV",
+            "id": "",
+            "className": "wf-pnav r mm-header__right",
+            "clientWidth": 501,
+            "scrollWidth": 504,
+            "text": "StockistsAUD $FAQ 0"
+          },
+          {
+            "tag": "BUTTON",
+            "id": "",
+            "className": "wf-pcart mm-icon-control",
+            "clientWidth": 42,
+            "scrollWidth": 46,
+            "text": "0"
+          },
+          {
+            "tag": "A",
+            "id": "",
+            "className": "wf-ppill primary",
+            "clientWidth": 170,
+            "scrollWidth": 173,
+            "text": "Shop the Range"
+          },
+          {
+            "tag": "MAIN",
+            "id": "main-content",
+            "className": "",
+            "clientWidth": 1440,
+            "scrollWidth": 1800,
+            "text": "Selected bar Pure Carob & Cacao Butter Crafted from only two wholefood ingredients for simple, natur"
+          },
+          {
+            "tag": "SECTION",
+            "id": "range",
+            "className": "wrap wf-line wf-line-dark is-visible",
+            "clientWidth": 1440,
+            "scrollWidth": 1800,
+            "text": "Selected bar Pure Carob & Cacao Butter Crafted from only two wholefood ingredients for simple, natur"
+          },
+          {
+            "tag": "DIV",
+            "id": "",
+            "className": "wf-stage-wrap",
+            "clientWidth": 1384,
+            "scrollWidth": 1772,
+            "text": ""
+          },
+          {
+            "tag": "BUTTON",
+            "id": "",
+            "className": "cf-item",
+            "clientWidth": 278,
+            "scrollWidth": 322,
+            "text": ""
+          },
+          {
+            "tag": "BUTTON",
+            "id": "",
+            "className": "cf-item",
+            "clientWidth": 278,
+            "scrollWidth": 322,
+            "text": ""
+          },
+          {
+            "tag": "BUTTON",
+            "id": "",
+            "className": "cf-item",
+            "clientWidth": 278,
+            "scrollWidth": 322,
+            "text": ""
+          },
+          {
+            "tag": "BUTTON",
+            "id": "",
+            "className": "cf-item",
+            "clientWidth": 278,
+            "scrollWidth": 322,
+            "text": ""
+          },
+          {
+            "tag": "SECTION",
+            "id": "why",
+            "className": "wrap q-why is-visible",
+            "clientWidth": 1240,
+            "scrollWidth": 1340,
+            "text": "The honest comparison Why not cacao? Compare Nutrition Taste & Feel The old default Cacao chocolate "
+          },
+          {
+            "tag": "SECTION",
+            "id": "ritual",
+            "className": "wrap q-when is-visible",
+            "clientWidth": 1180,
+            "scrollWidth": 1310,
+            "text": "A sweeter kind of ritual What is Maple Mooning? A small pause after dinner, A quiet reset in the aft"
+          },
+          {
+            "tag": "SECTION",
+            "id": "stockists",
+            "className": "wrap mm-stockists is-visible",
+            "clientWidth": 1180,
+            "scrollWidth": 1310,
+            "text": "Stockists200+ stockists across AustraliaBrowse the directory while individual store details continue"
+          },
+          {
+            "tag": "SECTION",
+            "id": "trust",
+            "className": "wrap wf-trust is-visible mm-clean-single",
+            "clientWidth": 1180,
+            "scrollWidth": 1310,
+            "text": "ShippingFinal delivery terms pending CheckoutFinal payment details pending Stockists200+ locations a"
+          }
+        ],
+        "flaggedVisibleText": [],
+        "bodyBackground": "rgb(244, 242, 237)"
+      },
+      "screenshots": {
+        "top": {
+          "path": "/Users/handtomouse/maplemoon-website/_wip/evidence/seven_route_visual_audit_r2_20260816T210036/screenshots/homepage-1440-top.png",
+          "width": 1440,
+          "height": 900,
+          "bytes": 1385811,
+          "nonblank": true
+        },
+        "middle": {
+          "path": "/Users/handtomouse/maplemoon-website/_wip/evidence/seven_route_visual_audit_r2_20260816T210036/screenshots/homepage-1440-middle.png",
+          "width": 1440,
+          "height": 900,
+          "bytes": 642482,
+          "nonblank": true
+        },
+        "bottom": {
+          "path": "/Users/handtomouse/maplemoon-website/_wip/evidence/seven_route_visual_audit_r2_20260816T210036/screenshots/homepage-1440-bottom.png",
+          "width": 1440,
+          "height": 900,
+          "bytes": 181559,
+          "nonblank": true
+        },
+        "full": {
+          "path": "/Users/handtomouse/maplemoon-website/_wip/evidence/seven_route_visual_audit_r2_20260816T210036/screenshots/homepage-1440-full.png",
+          "width": 1440,
+          "height": 5719,
+          "bytes": 5186579,
+          "nonblank": true
+        }
+      },
+      "consoleErrors": [],
+      "pageErrors": [],
+      "requestFailures": [],
+      "badResponses": [],
+      "semanticFlags": [
+        "footer-landmarks-2"
+      ],
+      "failures": [],
+      "result": "PASS"
+    },
+    {
+      "route": "shop",
+      "width": 1440,
+      "httpStatus": 200,
+      "metrics": {
+        "title": "Shop the Range | Maple Moon",
+        "clientWidth": 1440,
+        "scrollWidth": 1440,
+        "bodyHeight": 6826,
+        "header": {
+          "height": 70,
+          "position": "relative",
+          "zIndex": "1"
+        },
+        "footer": {
+          "height": 113,
+          "text": "maple moon ShopOur StoryStockistsContact"
+        },
+        "heading": {
+          "text": "Shop the range.",
+          "width": 760,
+          "height": 55,
+          "fontFamily": "p22-mackinac-pro, \"P22 Mackinac Pro\", Georgia, serif",
+          "fontSize": "51.84px",
+          "lineHeight": "54.432px"
+        },
+        "landmarks": {
+          "h1": 1,
+          "main": 1,
+          "nav": 4,
+          "footer": 1
+        },
+        "images": [
+          {
+            "alt": "",
+            "src": "http://127.0.0.1:8792/assets/products_new/bar_pure_carob.png",
+            "complete": true,
+            "naturalWidth": 1024,
+            "naturalHeight": 1536,
+            "width": 45,
+            "height": 68,
+            "visible": true
+          },
+          {
+            "alt": "",
+            "src": "http://127.0.0.1:8792/assets/products_new/bar_peppermint.png",
+            "complete": true,
+            "naturalWidth": 1024,
+            "naturalHeight": 1536,
+            "width": 45,
+            "height": 68,
+            "visible": true
+          },
+          {
+            "alt": "",
+            "src": "http://127.0.0.1:8792/assets/products_new/bar_hazelnut.png",
+            "complete": true,
+            "naturalWidth": 1024,
+            "naturalHeight": 1536,
+            "width": 45,
+            "height": 68,
+            "visible": true
+          },
+          {
+            "alt": "",
+            "src": "http://127.0.0.1:8792/assets/products_new/bar_goji_coconut.png",
+            "complete": true,
+            "naturalWidth": 1024,
+            "naturalHeight": 1536,
+            "width": 45,
+            "height": 68,
+            "visible": true
+          },
+          {
+            "alt": "",
+            "src": "http://127.0.0.1:8792/assets/products_new/bar_cayenne.png",
+            "complete": true,
+            "naturalWidth": 1024,
+            "naturalHeight": 1536,
+            "width": 45,
+            "height": 68,
+            "visible": true
+          },
+          {
+            "alt": "",
+            "src": "http://127.0.0.1:8792/assets/products_new/bar_almond.png",
+            "complete": true,
+            "naturalWidth": 1024,
+            "naturalHeight": 1536,
+            "width": 45,
+            "height": 68,
+            "visible": true
+          },
+          {
+            "alt": "Coconut & Goji",
+            "src": "http://127.0.0.1:8792/assets/product_shots/bar_goji_coconut.webp",
+            "complete": true,
+            "naturalWidth": 800,
+            "naturalHeight": 1200,
+            "width": 189,
+            "height": 284,
+            "visible": true
+          },
+          {
+            "alt": "Cayenne Chilli",
+            "src": "http://127.0.0.1:8792/assets/product_shots/bar_cayenne.webp",
+            "complete": true,
+            "naturalWidth": 800,
+            "naturalHeight": 1200,
+            "width": 189,
+            "height": 284,
+            "visible": true
+          },
+          {
+            "alt": "Pure Carob & Cacao Butter",
+            "src": "http://127.0.0.1:8792/assets/product_shots/bar_pure_carob.webp",
+            "complete": true,
+            "naturalWidth": 800,
+            "naturalHeight": 1200,
+            "width": 189,
+            "height": 284,
+            "visible": true
+          },
+          {
+            "alt": "Almond & Celtic Salt",
+            "src": "http://127.0.0.1:8792/assets/product_shots/bar_almond.webp",
+            "complete": true,
+            "naturalWidth": 800,
+            "naturalHeight": 1200,
+            "width": 189,
+            "height": 284,
+            "visible": true
+          },
+          {
+            "alt": "Peppermint & Buckwheat",
+            "src": "http://127.0.0.1:8792/assets/product_shots/bar_peppermint.webp",
+            "complete": true,
+            "naturalWidth": 800,
+            "naturalHeight": 1200,
+            "width": 189,
+            "height": 284,
+            "visible": true
+          },
+          {
+            "alt": "Roasted Hazelnut",
+            "src": "http://127.0.0.1:8792/assets/product_shots/bar_hazelnut.webp",
+            "complete": true,
+            "naturalWidth": 800,
+            "naturalHeight": 1200,
+            "width": 189,
+            "height": 284,
+            "visible": true
+          },
+          {
+            "alt": "Coconut & Goji Moon",
+            "src": "http://127.0.0.1:8792/assets/product_shots/moon_goji_coconut.webp",
+            "complete": true,
+            "naturalWidth": 800,
+            "naturalHeight": 800,
+            "width": 164,
+            "height": 164,
+            "visible": true
+          },
+          {
+            "alt": "Cayenne Moon",
+            "src": "http://127.0.0.1:8792/assets/product_shots/moon_cayenne.webp",
+            "complete": true,
+            "naturalWidth": 800,
+            "naturalHeight": 800,
+            "width": 164,
+            "height": 164,
+            "visible": true
+          },
+          {
+            "alt": "Pure Carob Moon",
+            "src": "http://127.0.0.1:8792/assets/product_shots/moon_pure_carob.webp",
+            "complete": true,
+            "naturalWidth": 800,
+            "naturalHeight": 800,
+            "width": 164,
+            "height": 164,
+            "visible": true
+          },
+          {
+            "alt": "Almond Moon",
+            "src": "http://127.0.0.1:8792/assets/product_shots/moon_almond.webp",
+            "complete": true,
+            "naturalWidth": 800,
+            "naturalHeight": 800,
+            "width": 164,
+            "height": 164,
+            "visible": true
+          },
+          {
+            "alt": "Peppermint Moon",
+            "src": "http://127.0.0.1:8792/assets/product_shots/moon_peppermint.webp",
+            "complete": true,
+            "naturalWidth": 800,
+            "naturalHeight": 800,
+            "width": 164,
+            "height": 164,
+            "visible": true
+          },
+          {
+            "alt": "Roasted Hazelnut Moon",
+            "src": "http://127.0.0.1:8792/assets/product_shots/moon_hazelnut.webp",
+            "complete": true,
+            "naturalWidth": 800,
+            "naturalHeight": 800,
+            "width": 164,
+            "height": 164,
+            "visible": true
+          },
+          {
+            "alt": "Pecan Nut Eclipse Bite",
+            "src": "http://127.0.0.1:8792/assets/product_shots/eclipse_pecan.webp",
+            "complete": true,
+            "naturalWidth": 800,
+            "naturalHeight": 800,
+            "width": 237,
+            "height": 237,
+            "visible": true
+          },
+          {
+            "alt": "Salted Almond Eclipse Bite",
+            "src": "http://127.0.0.1:8792/assets/product_shots/eclipse_almond.webp",
+            "complete": true,
+            "naturalWidth": 800,
+            "naturalHeight": 800,
+            "width": 237,
+            "height": 237,
+            "visible": true
+          },
+          {
+            "alt": "Hazelnut Eclipse Bite",
+            "src": "http://127.0.0.1:8792/assets/product_shots/eclipse_hazelnut.webp",
+            "complete": true,
+            "naturalWidth": 800,
+            "naturalHeight": 800,
+            "width": 237,
+            "height": 237,
+            "visible": true
+          },
+          {
+            "alt": "Goji Ripe Eclipse Bite",
+            "src": "http://127.0.0.1:8792/assets/product_shots/eclipse_goji.webp",
+            "complete": true,
+            "naturalWidth": 2560,
+            "naturalHeight": 2560,
+            "width": 237,
+            "height": 237,
+            "visible": true
+          },
+          {
+            "alt": "Salted Caramel Fudge",
+            "src": "http://127.0.0.1:8792/assets/product_shots/eclipse_fudge.webp",
+            "complete": true,
+            "naturalWidth": 800,
+            "naturalHeight": 800,
+            "width": 237,
+            "height": 237,
+            "visible": true
+          },
+          {
+            "alt": "Eclipse Bite Bundle",
+            "src": "http://127.0.0.1:8792/assets/product_shots/eclipse_bundle.webp",
+            "complete": true,
+            "naturalWidth": 2048,
+            "naturalHeight": 2048,
+            "width": 237,
+            "height": 237,
+            "visible": true
+          },
+          {
+            "alt": "Pure Carob Elixir",
+            "src": "http://127.0.0.1:8792/assets/product_shots/elixir_plain.webp",
+            "complete": true,
+            "naturalWidth": 1024,
+            "naturalHeight": 1536,
+            "width": 131,
+            "height": 197,
+            "visible": true
+          },
+          {
+            "alt": "Spiced Carob Elixir",
+            "src": "http://127.0.0.1:8792/assets/product_shots/elixir_spiced.webp",
+            "complete": true,
+            "naturalWidth": 1024,
+            "naturalHeight": 1536,
+            "width": 131,
+            "height": 197,
+            "visible": true
+          },
+          {
+            "alt": "Carob Bananas",
+            "src": "http://127.0.0.1:8792/assets/product_shots/bananas.webp",
+            "complete": true,
+            "naturalWidth": 800,
+            "naturalHeight": 800,
+            "width": 164,
+            "height": 164,
+            "visible": true
+          },
+          {
+            "alt": "Carob Powder",
+            "src": "http://127.0.0.1:8792/assets/product_shots/powder_roasted.webp",
+            "complete": true,
+            "naturalWidth": 2560,
+            "naturalHeight": 2560,
+            "width": 164,
+            "height": 164,
+            "visible": true
+          }
+        ],
+        "brokenImages": [],
+        "interactive": 40,
+        "sub44": [
+          {
+            "tag": "BUTTON",
+            "text": "All",
+            "width": 34,
+            "height": 34
+          },
+          {
+            "tag": "BUTTON",
+            "text": "Pure",
+            "width": 34,
+            "height": 34
+          },
+          {
+            "tag": "BUTTON",
+            "text": "Peppermint",
+            "width": 34,
+            "height": 34
+          },
+          {
+            "tag": "BUTTON",
+            "text": "Hazelnut",
+            "width": 34,
+            "height": 34
+          },
+          {
+            "tag": "BUTTON",
+            "text": "Coconut & Goji",
+            "width": 34,
+            "height": 34
+          },
+          {
+            "tag": "BUTTON",
+            "text": "Cayenne",
+            "width": 34,
+            "height": 34
+          },
+          {
+            "tag": "BUTTON",
+            "text": "Almond",
+            "width": 34,
+            "height": 34
+          },
+          {
+            "tag": "SELECT",
+            "text": "Featured Name Priced first",
+            "width": 132,
+            "height": 34
+          },
+          {
+            "tag": "BUTTON",
+            "text": "Grid",
+            "width": 40.5,
+            "height": 34
+          },
+          {
+            "tag": "BUTTON",
+            "text": "List",
+            "width": 37.5,
+            "height": 34
+          },
+          {
+            "tag": "SELECT",
+            "text": "1 moon · $2.505 moons · $12.1910 moons · $23.7520 moons · $44.99",
+            "width": 138,
+            "height": 34
+          },
+          {
+            "tag": "SELECT",
+            "text": "1 moon · $2.505 moons · $12.1910 moons · $23.7520 moons · $44.99",
+            "width": 138,
+            "height": 34
+          },
+          {
+            "tag": "SELECT",
+            "text": "1 moon · $2.505 moons · $12.1910 moons · $23.7520 moons · $44.99",
+            "width": 138,
+            "height": 34
+          },
+          {
+            "tag": "SELECT",
+            "text": "1 moon · $2.505 moons · $12.1910 moons · $23.7520 moons · $44.99",
+            "width": 138,
+            "height": 34
+          },
+          {
+            "tag": "SELECT",
+            "text": "50g · $5.99Value pack · $59.99",
+            "width": 140,
+            "height": 34
+          },
+          {
+            "tag": "SELECT",
+            "text": "50g · $5.99Value pack · $59.99",
+            "width": 140,
+            "height": 34
+          },
+          {
+            "tag": "SELECT",
+            "text": "50g · $5.99Value pack · $59.99",
+            "width": 140,
+            "height": 34
+          },
+          {
+            "tag": "SELECT",
+            "text": "50g · $5.99Value pack · $59.99",
+            "width": 140,
+            "height": 34
+          },
+          {
+            "tag": "SELECT",
+            "text": "50g · $5.99Value pack · $59.99",
+            "width": 140,
+            "height": 34
+          }
+        ],
+        "internalOverflow": [
+          {
+            "tag": "NAV",
+            "id": "",
+            "className": "sp-nav r",
+            "clientWidth": 501,
+            "scrollWidth": 504,
+            "text": "StockistsAUD $ 0"
+          },
+          {
+            "tag": "BUTTON",
+            "id": "",
+            "className": "sp-cart",
+            "clientWidth": 42,
+            "scrollWidth": 46,
+            "text": "0"
+          }
+        ],
+        "flaggedVisibleText": [],
+        "bodyBackground": "rgba(0, 0, 0, 0)"
+      },
+      "screenshots": {
+        "top": {
+          "path": "/Users/handtomouse/maplemoon-website/_wip/evidence/seven_route_visual_audit_r2_20260816T210036/screenshots/shop-1440-top.png",
+          "width": 1440,
+          "height": 900,
+          "bytes": 497938,
+          "nonblank": true
+        },
+        "middle": {
+          "path": "/Users/handtomouse/maplemoon-website/_wip/evidence/seven_route_visual_audit_r2_20260816T210036/screenshots/shop-1440-middle.png",
+          "width": 1440,
+          "height": 900,
+          "bytes": 455314,
+          "nonblank": true
+        },
+        "bottom": {
+          "path": "/Users/handtomouse/maplemoon-website/_wip/evidence/seven_route_visual_audit_r2_20260816T210036/screenshots/shop-1440-bottom.png",
+          "width": 1440,
+          "height": 900,
+          "bytes": 159422,
+          "nonblank": true
+        },
+        "full": {
+          "path": "/Users/handtomouse/maplemoon-website/_wip/evidence/seven_route_visual_audit_r2_20260816T210036/screenshots/shop-1440-full.png",
+          "width": 1440,
+          "height": 6826,
+          "bytes": 3833794,
+          "nonblank": true
+        }
+      },
+      "consoleErrors": [],
+      "pageErrors": [],
+      "requestFailures": [],
+      "badResponses": [],
+      "semanticFlags": [],
+      "failures": [],
+      "result": "PASS"
+    },
+    {
+      "route": "our-story",
+      "width": 1440,
+      "httpStatus": 200,
+      "metrics": {
+        "title": "Our Story | Maple Moon",
+        "clientWidth": 1440,
+        "scrollWidth": 1440,
+        "bodyHeight": 4153,
+        "header": {
+          "height": 70,
+          "position": "relative",
+          "zIndex": "3"
+        },
+        "footer": {
+          "height": 97,
+          "text": "maple moon ShopOur StoryStockistsContact"
+        },
+        "heading": {
+          "text": "Carli & Dylan.",
+          "width": 459,
+          "height": 170,
+          "fontFamily": "p22-mackinac-pro, \"P22 Mackinac Pro\", Georgia, serif",
+          "fontSize": "92.16px",
+          "lineHeight": "84.7872px"
+        },
+        "landmarks": {
+          "h1": 1,
+          "main": 0,
+          "nav": 4,
+          "footer": 1
+        },
+        "images": [
+          {
+            "alt": "Carli and Dylan, the founders of Maple Moon",
+            "src": "http://127.0.0.1:8792/assets/our_story/founders_portrait_h212.webp",
+            "complete": true,
+            "naturalWidth": 1400,
+            "naturalHeight": 933,
+            "width": 560,
+            "height": 374,
+            "visible": true
+          },
+          {
+            "alt": "A cluster of ripe carob pods",
+            "src": "http://127.0.0.1:8792/assets/hero_shots/carob_pods_cluster.jpg",
+            "complete": true,
+            "naturalWidth": 1800,
+            "naturalHeight": 1004,
+            "width": 548,
+            "height": 685,
+            "visible": true
+          }
+        ],
+        "brokenImages": [],
+        "interactive": 3,
+        "sub44": [
+          {
+            "tag": "SUMMARY",
+            "text": "Read Carli's story",
+            "width": 139.5,
+            "height": 30.8
+          },
+          {
+            "tag": "SUMMARY",
+            "text": "Read Dylan's story",
+            "width": 143.3,
+            "height": 30.8
+          }
+        ],
+        "internalOverflow": [
+          {
+            "tag": "NAV",
+            "id": "",
+            "className": "os-nav r",
+            "clientWidth": 501,
+            "scrollWidth": 504,
+            "text": "StockistsAUD $ 0"
+          },
+          {
+            "tag": "BUTTON",
+            "id": "",
+            "className": "os-cart",
+            "clientWidth": 42,
+            "scrollWidth": 46,
+            "text": "0"
+          }
+        ],
+        "flaggedVisibleText": [
+          {
+            "tag": "SPAN",
+            "className": "",
+            "text": "Founder portrait pending"
+          },
+          {
+            "tag": "SMALL",
+            "className": "",
+            "text": "Nate selection required"
+          },
+          {
+            "tag": "SPAN",
+            "className": "",
+            "text": "Founder portrait pending"
+          },
+          {
+            "tag": "SMALL",
+            "className": "",
+            "text": "Nate selection required"
+          }
+        ],
+        "bodyBackground": "rgb(244, 242, 237)"
+      },
+      "screenshots": {
+        "top": {
+          "path": "/Users/handtomouse/maplemoon-website/_wip/evidence/seven_route_visual_audit_r2_20260816T210036/screenshots/our-story-1440-top.png",
+          "width": 1440,
+          "height": 900,
+          "bytes": 349479,
+          "nonblank": true
+        },
+        "middle": {
+          "path": "/Users/handtomouse/maplemoon-website/_wip/evidence/seven_route_visual_audit_r2_20260816T210036/screenshots/our-story-1440-middle.png",
+          "width": 1440,
+          "height": 900,
+          "bytes": 533919,
+          "nonblank": true
+        },
+        "bottom": {
+          "path": "/Users/handtomouse/maplemoon-website/_wip/evidence/seven_route_visual_audit_r2_20260816T210036/screenshots/our-story-1440-bottom.png",
+          "width": 1440,
+          "height": 900,
+          "bytes": 465521,
+          "nonblank": true
+        },
+        "full": {
+          "path": "/Users/handtomouse/maplemoon-website/_wip/evidence/seven_route_visual_audit_r2_20260816T210036/screenshots/our-story-1440-full.png",
+          "width": 1440,
+          "height": 4153,
+          "bytes": 2031792,
+          "nonblank": true
+        }
+      },
+      "consoleErrors": [],
+      "pageErrors": [],
+      "requestFailures": [],
+      "badResponses": [],
+      "semanticFlags": [
+        "main-landmarks-0"
+      ],
+      "failures": [],
+      "result": "PASS"
+    },
+    {
+      "route": "carob-story",
+      "width": 1440,
+      "httpStatus": 200,
+      "metrics": {
+        "title": "What is Carob? | Maple Moon",
+        "clientWidth": 1440,
+        "scrollWidth": 1440,
+        "bodyHeight": 1767,
+        "header": {
+          "height": 65,
+          "position": "relative",
+          "zIndex": "5"
+        },
+        "footer": {
+          "height": 93,
+          "text": "maple moon ShopOur StoryStockistsContact"
+        },
+        "heading": {
+          "text": "What is Carob?",
+          "width": 472,
+          "height": 67,
+          "fontFamily": "p22-mackinac-pro, \"P22 Mackinac Pro\", Georgia, serif",
+          "fontSize": "60.48px",
+          "lineHeight": "66.528px"
+        },
+        "landmarks": {
+          "h1": 1,
+          "main": 1,
+          "nav": 3,
+          "footer": 1
+        },
+        "images": [
+          {
+            "alt": "Rows of carob trees in an Australian orchard",
+            "src": "http://127.0.0.1:8792/assets/licensed/carob_farm/australian-carob-0205-16x9.jpg",
+            "complete": true,
+            "naturalWidth": 1600,
+            "naturalHeight": 900,
+            "width": 572,
+            "height": 398,
+            "visible": true
+          },
+          {
+            "alt": "Whole carob pods and carob powder, up close",
+            "src": "http://127.0.0.1:8792/assets/licensed/carob_pods_macro.jpg",
+            "complete": true,
+            "naturalWidth": 1600,
+            "naturalHeight": 1068,
+            "width": 430,
+            "height": 100,
+            "visible": true
+          },
+          {
+            "alt": "The full Maple Moon range in coloured wrappers on a blue backdrop",
+            "src": "http://127.0.0.1:8792/assets/photo_finals/maplemoon_heros41_brandmatched.webp",
+            "complete": true,
+            "naturalWidth": 2400,
+            "naturalHeight": 1600,
+            "width": 1158,
+            "height": 284,
+            "visible": true
+          }
+        ],
+        "brokenImages": [],
+        "interactive": 1,
+        "sub44": [],
+        "internalOverflow": [
+          {
+            "tag": "NAV",
+            "id": "",
+            "className": "sp-nav r",
+            "clientWidth": 511,
+            "scrollWidth": 514,
+            "text": "StockistsAUD $ 0"
+          },
+          {
+            "tag": "BUTTON",
+            "id": "",
+            "className": "sp-cart",
+            "clientWidth": 42,
+            "scrollWidth": 46,
+            "text": "0"
+          }
+        ],
+        "flaggedVisibleText": [],
+        "bodyBackground": "rgba(0, 0, 0, 0)"
+      },
+      "screenshots": {
+        "top": {
+          "path": "/Users/handtomouse/maplemoon-website/_wip/evidence/seven_route_visual_audit_r2_20260816T210036/screenshots/carob-story-1440-top.png",
+          "width": 1440,
+          "height": 900,
+          "bytes": 918785,
+          "nonblank": true
+        },
+        "middle": {
+          "path": "/Users/handtomouse/maplemoon-website/_wip/evidence/seven_route_visual_audit_r2_20260816T210036/screenshots/carob-story-1440-middle.png",
+          "width": 1440,
+          "height": 900,
+          "bytes": 653862,
+          "nonblank": true
+        },
+        "bottom": {
+          "path": "/Users/handtomouse/maplemoon-website/_wip/evidence/seven_route_visual_audit_r2_20260816T210036/screenshots/carob-story-1440-bottom.png",
+          "width": 1440,
+          "height": 900,
+          "bytes": 580138,
+          "nonblank": true
+        },
+        "full": {
+          "path": "/Users/handtomouse/maplemoon-website/_wip/evidence/seven_route_visual_audit_r2_20260816T210036/screenshots/carob-story-1440-full.png",
+          "width": 1440,
+          "height": 1767,
+          "bytes": 1479305,
+          "nonblank": true
+        }
+      },
+      "consoleErrors": [],
+      "pageErrors": [],
+      "requestFailures": [],
+      "badResponses": [],
+      "semanticFlags": [],
+      "failures": [],
+      "result": "PASS"
+    },
+    {
+      "route": "faq",
+      "width": 1440,
+      "httpStatus": 200,
+      "metrics": {
+        "title": "FAQ | Maple Moon",
+        "clientWidth": 1440,
+        "scrollWidth": 1440,
+        "bodyHeight": 2318,
+        "header": {
+          "height": 70,
+          "position": "relative",
+          "zIndex": "1"
+        },
+        "footer": {
+          "height": 99,
+          "text": "maple moonShopOur StoryStockistsFAQ"
+        },
+        "heading": {
+          "text": "Asked, answered.",
+          "width": 490,
+          "height": 157,
+          "fontFamily": "p22-mackinac-pro, \"P22 Mackinac Pro\", Georgia, serif",
+          "fontSize": "81.6px",
+          "lineHeight": "78.336px"
+        },
+        "landmarks": {
+          "h1": 1,
+          "main": 1,
+          "nav": 4,
+          "footer": 1
+        },
+        "images": [],
+        "brokenImages": [],
+        "interactive": 21,
+        "sub44": [
+          {
+            "tag": "INPUT",
+            "text": "",
+            "width": 535.1,
+            "height": 25.9
+          }
+        ],
+        "internalOverflow": [
+          {
+            "tag": "DIV",
+            "id": "",
+            "className": "sp",
+            "clientWidth": 1440,
+            "scrollWidth": 1700,
+            "text": "ShopOur StoryWhat is Carob maple moon StockistsFAQ0 Good questionsAsked, answered.Everything you nee"
+          },
+          {
+            "tag": "DIV",
+            "id": "",
+            "className": "wrap bar",
+            "clientWidth": 1200,
+            "scrollWidth": 1204,
+            "text": "ShopOur StoryWhat is Carob maple moon StockistsFAQ0"
+          },
+          {
+            "tag": "NAV",
+            "id": "",
+            "className": "sp-nav r",
+            "clientWidth": 536,
+            "scrollWidth": 540,
+            "text": "StockistsFAQ0"
+          },
+          {
+            "tag": "BUTTON",
+            "id": "",
+            "className": "sp-cart",
+            "clientWidth": 42,
+            "scrollWidth": 47,
+            "text": "0"
+          }
+        ],
+        "flaggedVisibleText": [],
+        "bodyBackground": "rgb(232, 242, 248)"
+      },
+      "screenshots": {
+        "top": {
+          "path": "/Users/handtomouse/maplemoon-website/_wip/evidence/seven_route_visual_audit_r2_20260816T210036/screenshots/faq-1440-top.png",
+          "width": 1440,
+          "height": 900,
+          "bytes": 385300,
+          "nonblank": true
+        },
+        "middle": {
+          "path": "/Users/handtomouse/maplemoon-website/_wip/evidence/seven_route_visual_audit_r2_20260816T210036/screenshots/faq-1440-middle.png",
+          "width": 1440,
+          "height": 900,
+          "bytes": 168271,
+          "nonblank": true
+        },
+        "bottom": {
+          "path": "/Users/handtomouse/maplemoon-website/_wip/evidence/seven_route_visual_audit_r2_20260816T210036/screenshots/faq-1440-bottom.png",
+          "width": 1440,
+          "height": 900,
+          "bytes": 163325,
+          "nonblank": true
+        },
+        "full": {
+          "path": "/Users/handtomouse/maplemoon-website/_wip/evidence/seven_route_visual_audit_r2_20260816T210036/screenshots/faq-1440-full.png",
+          "width": 1440,
+          "height": 2318,
+          "bytes": 624347,
+          "nonblank": true
+        }
+      },
+      "consoleErrors": [],
+      "pageErrors": [],
+      "requestFailures": [],
+      "badResponses": [],
+      "semanticFlags": [],
+      "failures": [],
+      "result": "PASS"
+    },
+    {
+      "route": "stockists",
+      "width": 1440,
+      "httpStatus": 200,
+      "metrics": {
+        "title": "Stockists | Maple Moon",
+        "clientWidth": 1440,
+        "scrollWidth": 1440,
+        "bodyHeight": 3282,
+        "header": {
+          "height": 70,
+          "position": "relative",
+          "zIndex": "1"
+        },
+        "footer": {
+          "height": 97,
+          "text": "maple moon ShopOur StoryStockistsContact"
+        },
+        "heading": {
+          "text": "Find Maple Moon.",
+          "width": 616,
+          "height": 68,
+          "fontFamily": "p22-mackinac-pro, \"P22 Mackinac Pro\", Georgia, serif",
+          "fontSize": "65.52px",
+          "lineHeight": "68.1408px"
+        },
+        "landmarks": {
+          "h1": 1,
+          "main": 1,
+          "nav": 3,
+          "footer": 1
+        },
+        "images": [
+          {
+            "alt": "Maple Moon carob bars, moons and elixirs arranged in soft blue studio light",
+            "src": "http://127.0.0.1:8792/assets/photo_finals/maplemoon_heros55_brandmatched.webp",
+            "complete": true,
+            "naturalWidth": 2400,
+            "naturalHeight": 1600,
+            "width": 390,
+            "height": 330,
+            "visible": true
+          }
+        ],
+        "brokenImages": [],
+        "interactive": 27,
+        "sub44": [],
+        "internalOverflow": [
+          {
+            "tag": "NAV",
+            "id": "",
+            "className": "sp-nav r",
+            "clientWidth": 501,
+            "scrollWidth": 504,
+            "text": "StockistsAUD $ 0"
+          },
+          {
+            "tag": "BUTTON",
+            "id": "",
+            "className": "sp-cart",
+            "clientWidth": 42,
+            "scrollWidth": 46,
+            "text": "0"
+          },
+          {
+            "tag": "DIV",
+            "id": "",
+            "className": "wrap sp-head",
+            "clientWidth": 1180,
+            "scrollWidth": 1215,
+            "text": "Stockists Find Maple Moon. Find Maple Moon at 200+ health food stores, pharmacies and grocers across"
+          }
+        ],
+        "flaggedVisibleText": [
+          {
+            "tag": "P",
+            "className": "st-count",
+            "text": "Showing 8 of 204 stockists. 204 total; 7 need client confirmation."
+          },
+          {
+            "tag": "STRONG",
+            "className": "",
+            "text": "WIP directory status"
+          },
+          {
+            "tag": "SPAN",
+            "className": "",
+            "text": "204 entries are in this source parse. Seven entries have incomplete location details and need client confirmation before launch."
+          },
+          {
+            "tag": "P",
+            "className": "",
+            "text": "This newsletter form is a non-collecting review demo."
+          },
+          {
+            "tag": "BUTTON",
+            "className": "pill",
+            "text": "Coming soon"
+          }
+        ],
+        "bodyBackground": "rgba(0, 0, 0, 0)"
+      },
+      "screenshots": {
+        "top": {
+          "path": "/Users/handtomouse/maplemoon-website/_wip/evidence/seven_route_visual_audit_r2_20260816T210036/screenshots/stockists-1440-top.png",
+          "width": 1440,
+          "height": 900,
+          "bytes": 727040,
+          "nonblank": true
+        },
+        "middle": {
+          "path": "/Users/handtomouse/maplemoon-website/_wip/evidence/seven_route_visual_audit_r2_20260816T210036/screenshots/stockists-1440-middle.png",
+          "width": 1440,
+          "height": 900,
+          "bytes": 250743,
+          "nonblank": true
+        },
+        "bottom": {
+          "path": "/Users/handtomouse/maplemoon-website/_wip/evidence/seven_route_visual_audit_r2_20260816T210036/screenshots/stockists-1440-bottom.png",
+          "width": 1440,
+          "height": 900,
+          "bytes": 377889,
+          "nonblank": true
+        },
+        "full": {
+          "path": "/Users/handtomouse/maplemoon-website/_wip/evidence/seven_route_visual_audit_r2_20260816T210036/screenshots/stockists-1440-full.png",
+          "width": 1440,
+          "height": 3282,
+          "bytes": 1612209,
+          "nonblank": true
+        }
+      },
+      "consoleErrors": [],
+      "pageErrors": [],
+      "requestFailures": [],
+      "badResponses": [],
+      "semanticFlags": [],
+      "failures": [],
+      "result": "PASS"
+    },
+    {
+      "route": "pure-carob-bar",
+      "width": 1440,
+      "httpStatus": 200,
+      "metrics": {
+        "title": "Pure Carob & Cacao Butter | Maple Moon",
+        "clientWidth": 1440,
+        "scrollWidth": 1440,
+        "bodyHeight": 1682,
+        "header": {
+          "height": 70,
+          "position": "relative",
+          "zIndex": "1"
+        },
+        "footer": {
+          "height": 79,
+          "text": "ShopOur StoryStockistsContactHomeWhat is CarobFAQ"
+        },
+        "heading": {
+          "text": "Pure Carob & Cacao Butter",
+          "width": 530,
+          "height": 96,
+          "fontFamily": "p22-mackinac-pro, \"P22 Mackinac Pro\", Georgia, serif",
+          "fontSize": "43.2px",
+          "lineHeight": "47.52px"
+        },
+        "landmarks": {
+          "h1": 1,
+          "main": 1,
+          "nav": 4,
+          "footer": 2
+        },
+        "images": [
+          {
+            "alt": "Pure Carob and Cacao Butter bar",
+            "src": "http://127.0.0.1:8792/assets/product_shots/bar_pure_carob_hero.webp",
+            "complete": true,
+            "naturalWidth": 1200,
+            "naturalHeight": 1800,
+            "width": 297,
+            "height": 446,
+            "visible": true
+          },
+          {
+            "alt": "Peppermint and Buckwheat bar",
+            "src": "http://127.0.0.1:8792/assets/product_shots/bar_peppermint.webp",
+            "complete": true,
+            "naturalWidth": 800,
+            "naturalHeight": 1200,
+            "width": 122,
+            "height": 182,
+            "visible": true
+          },
+          {
+            "alt": "Roasted Hazelnut bar",
+            "src": "http://127.0.0.1:8792/assets/product_shots/bar_hazelnut.webp",
+            "complete": true,
+            "naturalWidth": 800,
+            "naturalHeight": 1200,
+            "width": 122,
+            "height": 182,
+            "visible": true
+          },
+          {
+            "alt": "Coconut and Goji bar",
+            "src": "http://127.0.0.1:8792/assets/product_shots/bar_goji_coconut.webp",
+            "complete": true,
+            "naturalWidth": 800,
+            "naturalHeight": 1200,
+            "width": 122,
+            "height": 182,
+            "visible": true
+          },
+          {
+            "alt": "Cayenne Chilli bar",
+            "src": "http://127.0.0.1:8792/assets/product_shots/bar_cayenne.webp",
+            "complete": true,
+            "naturalWidth": 800,
+            "naturalHeight": 1200,
+            "width": 122,
+            "height": 182,
+            "visible": true
+          },
+          {
+            "alt": "Almond and Celtic Salt bar",
+            "src": "http://127.0.0.1:8792/assets/product_shots/bar_almond.webp",
+            "complete": true,
+            "naturalWidth": 800,
+            "naturalHeight": 1200,
+            "width": 122,
+            "height": 182,
+            "visible": true
+          },
+          {
+            "alt": "Maple Moon",
+            "src": "http://127.0.0.1:8792/assets/mm_wordmark_blk.svg",
+            "complete": true,
+            "naturalWidth": 300,
+            "naturalHeight": 57,
+            "width": 138,
+            "height": 26,
+            "visible": true
+          }
+        ],
+        "brokenImages": [],
+        "interactive": 4,
+        "sub44": [],
+        "internalOverflow": [
+          {
+            "tag": "DIV",
+            "id": "",
+            "className": "sp-nav r mm-header__right",
+            "clientWidth": 501,
+            "scrollWidth": 504,
+            "text": "StockistsAUD $FAQ 0"
+          },
+          {
+            "tag": "BUTTON",
+            "id": "",
+            "className": "sp-cart mm-icon-control",
+            "clientWidth": 42,
+            "scrollWidth": 46,
+            "text": "0"
+          }
+        ],
+        "flaggedVisibleText": [],
+        "bodyBackground": "rgba(0, 0, 0, 0)"
+      },
+      "screenshots": {
+        "top": {
+          "path": "/Users/handtomouse/maplemoon-website/_wip/evidence/seven_route_visual_audit_r2_20260816T210036/screenshots/pure-carob-bar-1440-top.png",
+          "width": 1440,
+          "height": 900,
+          "bytes": 437550,
+          "nonblank": true
+        },
+        "middle": {
+          "path": "/Users/handtomouse/maplemoon-website/_wip/evidence/seven_route_visual_audit_r2_20260816T210036/screenshots/pure-carob-bar-1440-middle.png",
+          "width": 1440,
+          "height": 900,
+          "bytes": 403339,
+          "nonblank": true
+        },
+        "bottom": {
+          "path": "/Users/handtomouse/maplemoon-website/_wip/evidence/seven_route_visual_audit_r2_20260816T210036/screenshots/pure-carob-bar-1440-bottom.png",
+          "width": 1440,
+          "height": 900,
+          "bytes": 284189,
+          "nonblank": true
+        },
+        "full": {
+          "path": "/Users/handtomouse/maplemoon-website/_wip/evidence/seven_route_visual_audit_r2_20260816T210036/screenshots/pure-carob-bar-1440-full.png",
+          "width": 1440,
+          "height": 1682,
+          "bytes": 685494,
+          "nonblank": true
+        }
+      },
+      "consoleErrors": [],
+      "pageErrors": [],
+      "requestFailures": [],
+      "badResponses": [],
+      "semanticFlags": [
+        "footer-landmarks-2"
+      ],
+      "failures": [],
+      "result": "PASS"
+    }
+  ],
+  "contacts": [
+    "/Users/handtomouse/maplemoon-website/_wip/evidence/seven_route_visual_audit_r2_20260816T210036/contacts/contact-390-top.png",
+    "/Users/handtomouse/maplemoon-website/_wip/evidence/seven_route_visual_audit_r2_20260816T210036/contacts/contact-390-middle.png",
+    "/Users/handtomouse/maplemoon-website/_wip/evidence/seven_route_visual_audit_r2_20260816T210036/contacts/contact-390-bottom.png",
+    "/Users/handtomouse/maplemoon-website/_wip/evidence/seven_route_visual_audit_r2_20260816T210036/contacts/contact-390-full.png",
+    "/Users/handtomouse/maplemoon-website/_wip/evidence/seven_route_visual_audit_r2_20260816T210036/contacts/contact-900-top.png",
+    "/Users/handtomouse/maplemoon-website/_wip/evidence/seven_route_visual_audit_r2_20260816T210036/contacts/contact-900-middle.png",
+    "/Users/handtomouse/maplemoon-website/_wip/evidence/seven_route_visual_audit_r2_20260816T210036/contacts/contact-900-bottom.png",
+    "/Users/handtomouse/maplemoon-website/_wip/evidence/seven_route_visual_audit_r2_20260816T210036/contacts/contact-900-full.png",
+    "/Users/handtomouse/maplemoon-website/_wip/evidence/seven_route_visual_audit_r2_20260816T210036/contacts/contact-1440-top.png",
+    "/Users/handtomouse/maplemoon-website/_wip/evidence/seven_route_visual_audit_r2_20260816T210036/contacts/contact-1440-middle.png",
+    "/Users/handtomouse/maplemoon-website/_wip/evidence/seven_route_visual_audit_r2_20260816T210036/contacts/contact-1440-bottom.png",
+    "/Users/handtomouse/maplemoon-website/_wip/evidence/seven_route_visual_audit_r2_20260816T210036/contacts/contact-1440-full.png"
+  ],
+  "failures": []
+}

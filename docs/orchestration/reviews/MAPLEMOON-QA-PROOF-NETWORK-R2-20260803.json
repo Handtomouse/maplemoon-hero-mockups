@@ -1,0 +1,76 @@
+{
+  "schema": "maplemoon-receipt/v2",
+  "receipt_id": "MAPLEMOON-QA-PROOF-NETWORK-R2-20260803-RECEIPT-01",
+  "packet_id": "MAPLEMOON-QA-PROOF-NETWORK-R2-20260803",
+  "worker_thread_id": "019fc349-4c3f-7f00-9202-e8de389db3d4",
+  "worker": "bounded isolated request-level network proof specialist",
+  "started_at": "2026-08-02T16:32:02Z",
+  "completed_at": "2026-08-02T16:38:08Z",
+  "files_read": [
+    "docs/orchestration/packets/MAPLEMOON-QA-PROOF-NETWORK-R2-20260803.md",
+    "docs/orchestration/SIDECHAT_RECEIPT_GATE.md",
+    "scripts/check-maplemoon-receipt.py",
+    "_wip/checkpoints/MAPLEMOON-QA-PROOF-NETWORK-R2-20260803_20260803_023153_AEST/RECOVERY_MANIFEST.json",
+    "docs/client-review/2026-08-01-saturday-review/staging-v1/MANIFEST.json",
+    "docs/client-review/2026-08-01-saturday-review/staging-v1/clean/MANIFEST.json"
+  ],
+  "files_changed": [
+    "_wip/reviews/maplemoon-six-page-qa-20260803/proof-network-r2",
+    "docs/orchestration/reviews/MAPLEMOON-QA-PROOF-NETWORK-R2-20260803.json"
+  ],
+  "pre_sha256": {
+    "_wip/reviews/maplemoon-six-page-qa-20260803/proof-network-r2": null,
+    "docs/orchestration/reviews/MAPLEMOON-QA-PROOF-NETWORK-R2-20260803.json": null
+  },
+  "post_sha256": {
+    "_wip/reviews/maplemoon-six-page-qa-20260803/proof-network-r2": "9efd70b05c8f9eb6c795ab5f1324ce09fbf251be9fcc52fc254e3fc71372a298",
+    "docs/orchestration/reviews/MAPLEMOON-QA-PROOF-NETWORK-R2-20260803.json": null
+  },
+  "checks": [
+    {
+      "command": "python3 -B scripts/check-maplemoon-receipt.py verify --packet docs/orchestration/packets/MAPLEMOON-QA-PROOF-NETWORK-R2-20260803.md --checkpoint _wip/checkpoints/MAPLEMOON-QA-PROOF-NETWORK-R2-20260803_20260803_023153_AEST --phase start",
+      "exit_code": 0,
+      "result": "PASS packet=MAPLEMOON-QA-PROOF-NETWORK-R2-20260803 phase=start scope=2"
+    },
+    {
+      "command": "git branch --show-current; git rev-parse HEAD; shasum -a 256 packet-bound manifests",
+      "exit_code": 0,
+      "result": "PASS: exact branch and admission HEAD c05914ceb7f48dfe773e680ebbe7f392464f2dfa; both packet-bound manifest hashes matched."
+    },
+    {
+      "command": "fresh isolated in-app browser tab capability and homepage capture probe",
+      "exit_code": 0,
+      "result": "HOLD: page loaded and exposed 19 observed asset references, but the supported surface exposed no direct request/response events, HTTP methods, status codes or failure events; read-only evaluation exposed no Performance API."
+    },
+    {
+      "command": "git rev-parse HEAD; git diff --name-only admission_HEAD..HEAD on refined-policy paths; shasum -a 256 packet-bound manifests",
+      "exit_code": 0,
+      "result": "PASS: no later HEAD movement, no admitted-path diff, and both manifest hashes remained exact."
+    },
+    {
+      "command": "path_snapshot on preserved R1 proof-network evidence directory",
+      "exit_code": 0,
+      "result": "PASS: R1 evidence remained present at directory SHA-256 db0543e0a3c50b417af3eddbf53e79b61d5fdd02a178d769484c2aa591367ad3."
+    },
+    {
+      "command": "python3 -B -m json.tool _wip/reviews/maplemoon-six-page-qa-20260803/proof-network-r2/request-ledger.json",
+      "exit_code": 0,
+      "result": "PASS: machine-readable HOLD ledger parsed."
+    }
+  ],
+  "screenshots_or_urls": [
+    "http://127.0.0.1:3011/homepage.html"
+  ],
+  "failures": [
+    "The supported isolated browser surface cannot directly capture the packet-required request/response events, methods, resource types, destinations, status codes and failures."
+  ],
+  "unknowns": [
+    "The actual six-route request ledger remains unproven; the homepage asset inventory is explicitly not promoted as a request/response ledger."
+  ],
+  "residual_risk": [
+    "Inferring successful requests or status codes from observed asset references would overstate the available browser evidence."
+  ],
+  "forbidden_path_changes": [],
+  "proposed_next_state": "hold",
+  "next_reviewer": "Main independent verifier"
+}

@@ -1,0 +1,14 @@
+COMMAND
+python3 -B scripts/build-maplemoon-minimum-release-content-r4.py --output _wip/deploy/generated/maplemoon-minimum-release-content-r4-20260817T190059
+
+RESULT
+exit 1; no exact output directory created.
+
+ERROR
+RuntimeError: Expected 1 occurrence(s), found 2 for the repeated Stockists
+OpenGraph/Twitter description.
+
+CLASSIFICATION
+Task-owned occurrence assertion. The identical authority string exists exactly
+twice, once for OpenGraph and once for Twitter. The correction requires exactly
+two replacements; wording and scope are unchanged.

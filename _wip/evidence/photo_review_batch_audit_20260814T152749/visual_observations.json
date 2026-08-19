@@ -1,0 +1,19 @@
+{
+  "scope": "mechanical review only; no SKU identity, live-use, client or integration approval",
+  "powder": {
+    "white_background_inspection": "One loose powder mound is visible. No pack, label, rectangular packaging silhouette, bowl, scoop, prop or second primary object is visible.",
+    "checkerboard_visible": false,
+    "mechanical_review_pass": true
+  },
+  "bundle": {
+    "native_and_light_dark_inspection": "Exactly five visually distinct product bodies are visible: three separately topped domes, one orange-dusted rectangular body, and one visibly layered rectangular fudge form with a dark top and light drizzle.",
+    "intended_differentiation_only": "The toppings and forms are visually distinguishable in a way consistent with the review labels pecan, almond, hazelnut, goji and layered fudge, but this audit does not assert authoritative SKU identity or composition.",
+    "checkerboard_visible": false,
+    "mechanical_review_pass": true
+  },
+  "elixirs": {
+    "scale_geometry_review_pass": true,
+    "fine_print_status": "HOLD. Label fine print and icons are reconstructed and were not approved."
+  },
+  "live_use_status": "HOLD. No asset is approved for website binding or production use by this audit."
+}

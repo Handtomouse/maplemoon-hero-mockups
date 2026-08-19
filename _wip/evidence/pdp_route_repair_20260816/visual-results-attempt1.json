@@ -1,0 +1,586 @@
+{
+  "source": "http://127.0.0.1:8786",
+  "contacts": [
+    "/Users/handtomouse/maplemoon-website/_wip/evidence/pdp_route_repair_20260816/screenshots/contact-390.png",
+    "/Users/handtomouse/maplemoon-website/_wip/evidence/pdp_route_repair_20260816/screenshots/contact-1440.png"
+  ],
+  "results": [
+    {
+      "route": "homepage",
+      "path": "/homepage",
+      "width": "390",
+      "httpStatus": 200,
+      "metrics": {
+        "clientWidth": 390,
+        "scrollWidth": 390,
+        "bodyHeight": 6880,
+        "textLength": 2614,
+        "brokenImages": []
+      },
+      "screenshot": "/Users/handtomouse/maplemoon-website/_wip/evidence/pdp_route_repair_20260816/screenshots/homepage-390.png",
+      "interactions": {
+        "menu": {
+          "expanded": "true",
+          "state": "open",
+          "bodyOpen": true,
+          "rows": [
+            {
+              "text": "Shop",
+              "width": 388,
+              "height": 44,
+              "display": "flex",
+              "visibility": "visible",
+              "hitOwn": true
+            },
+            {
+              "text": "Our Story",
+              "width": 388,
+              "height": 44,
+              "display": "flex",
+              "visibility": "visible",
+              "hitOwn": true
+            },
+            {
+              "text": "What is Carob",
+              "width": 388,
+              "height": 44,
+              "display": "flex",
+              "visibility": "visible",
+              "hitOwn": true
+            },
+            {
+              "text": "Stockists",
+              "width": 388,
+              "height": 44,
+              "display": "flex",
+              "visibility": "visible",
+              "hitOwn": true
+            },
+            {
+              "text": "AUD $",
+              "width": 388,
+              "height": 44,
+              "display": "flex",
+              "visibility": "visible",
+              "hitOwn": true
+            },
+            {
+              "text": "FAQ",
+              "width": 388,
+              "height": 44,
+              "display": "flex",
+              "visibility": "visible",
+              "hitOwn": true
+            }
+          ]
+        },
+        "menuScreenshot": "/Users/handtomouse/maplemoon-website/_wip/evidence/pdp_route_repair_20260816/screenshots/homepage-390-menu-open.png",
+        "homeCart": {
+          "dialogCount": 1,
+          "bodyOpen": false,
+          "cartText": true
+        },
+        "cartScreenshot": "/Users/handtomouse/maplemoon-website/_wip/evidence/pdp_route_repair_20260816/screenshots/homepage-390-cart-open.png"
+      },
+      "consoleErrors": [],
+      "pageErrors": [],
+      "requestFailures": [],
+      "badResponses": [],
+      "failures": [],
+      "result": "PASS"
+    },
+    {
+      "route": "homepage",
+      "path": "/homepage",
+      "width": "1440",
+      "httpStatus": 200,
+      "metrics": {
+        "clientWidth": 1440,
+        "scrollWidth": 1440,
+        "bodyHeight": 5718,
+        "textLength": 2765,
+        "brokenImages": []
+      },
+      "screenshot": "/Users/handtomouse/maplemoon-website/_wip/evidence/pdp_route_repair_20260816/screenshots/homepage-1440.png",
+      "interactions": {},
+      "consoleErrors": [],
+      "pageErrors": [],
+      "requestFailures": [],
+      "badResponses": [],
+      "failures": [],
+      "result": "PASS"
+    },
+    {
+      "route": "shop",
+      "path": "/shop",
+      "width": "390",
+      "httpStatus": 200,
+      "metrics": {
+        "clientWidth": 390,
+        "scrollWidth": 390,
+        "bodyHeight": 15570,
+        "textLength": 5182,
+        "brokenImages": []
+      },
+      "screenshot": "/Users/handtomouse/maplemoon-website/_wip/evidence/pdp_route_repair_20260816/screenshots/shop-390.png",
+      "interactions": {
+        "shopCart": {
+          "before": "CART SUBTOTAL\n$0.00\n0 ITEMS",
+          "after": "CART SUBTOTAL\n$12.95\n1 ITEM",
+          "count": "1",
+          "label": "Cart, 1 item, subtotal $12.95"
+        }
+      },
+      "consoleErrors": [],
+      "pageErrors": [],
+      "requestFailures": [],
+      "badResponses": [],
+      "failures": [],
+      "result": "PASS"
+    },
+    {
+      "route": "shop",
+      "path": "/shop",
+      "width": "1440",
+      "httpStatus": 200,
+      "metrics": {
+        "clientWidth": 1440,
+        "scrollWidth": 1440,
+        "bodyHeight": 6826,
+        "textLength": 5227,
+        "brokenImages": []
+      },
+      "screenshot": "/Users/handtomouse/maplemoon-website/_wip/evidence/pdp_route_repair_20260816/screenshots/shop-1440.png",
+      "interactions": {
+        "shopCart": {
+          "before": "CART SUBTOTAL\n$0.00\n0 ITEMS",
+          "after": "CART SUBTOTAL\n$12.95\n1 ITEM",
+          "count": "1",
+          "label": "Cart, 1 item, subtotal $12.95"
+        }
+      },
+      "consoleErrors": [],
+      "pageErrors": [],
+      "requestFailures": [],
+      "badResponses": [],
+      "failures": [],
+      "result": "PASS"
+    },
+    {
+      "route": "our-story",
+      "path": "/our-story",
+      "width": "390",
+      "httpStatus": 200,
+      "metrics": {
+        "clientWidth": 390,
+        "scrollWidth": 390,
+        "bodyHeight": 5246,
+        "textLength": 3100,
+        "brokenImages": []
+      },
+      "screenshot": "/Users/handtomouse/maplemoon-website/_wip/evidence/pdp_route_repair_20260816/screenshots/our-story-390.png",
+      "interactions": {},
+      "consoleErrors": [],
+      "pageErrors": [],
+      "requestFailures": [],
+      "badResponses": [],
+      "failures": [],
+      "result": "PASS"
+    },
+    {
+      "route": "our-story",
+      "path": "/our-story",
+      "width": "1440",
+      "httpStatus": 200,
+      "metrics": {
+        "clientWidth": 1440,
+        "scrollWidth": 1440,
+        "bodyHeight": 4154,
+        "textLength": 3145,
+        "brokenImages": []
+      },
+      "screenshot": "/Users/handtomouse/maplemoon-website/_wip/evidence/pdp_route_repair_20260816/screenshots/our-story-1440.png",
+      "interactions": {},
+      "consoleErrors": [],
+      "pageErrors": [],
+      "requestFailures": [],
+      "badResponses": [],
+      "failures": [],
+      "result": "PASS"
+    },
+    {
+      "route": "carob-story",
+      "path": "/carob-story",
+      "width": "390",
+      "httpStatus": 200,
+      "metrics": {
+        "clientWidth": 390,
+        "scrollWidth": 390,
+        "bodyHeight": 2691,
+        "textLength": 1338,
+        "brokenImages": []
+      },
+      "screenshot": "/Users/handtomouse/maplemoon-website/_wip/evidence/pdp_route_repair_20260816/screenshots/carob-story-390.png",
+      "interactions": {},
+      "consoleErrors": [],
+      "pageErrors": [],
+      "requestFailures": [],
+      "badResponses": [],
+      "failures": [],
+      "result": "PASS"
+    },
+    {
+      "route": "carob-story",
+      "path": "/carob-story",
+      "width": "1440",
+      "httpStatus": 200,
+      "metrics": {
+        "clientWidth": 1440,
+        "scrollWidth": 1440,
+        "bodyHeight": 1767,
+        "textLength": 1414,
+        "brokenImages": []
+      },
+      "screenshot": "/Users/handtomouse/maplemoon-website/_wip/evidence/pdp_route_repair_20260816/screenshots/carob-story-1440.png",
+      "interactions": {},
+      "consoleErrors": [],
+      "pageErrors": [],
+      "requestFailures": [],
+      "badResponses": [],
+      "failures": [],
+      "result": "PASS"
+    },
+    {
+      "route": "faq",
+      "path": "/faq",
+      "width": "390",
+      "httpStatus": 200,
+      "metrics": {
+        "clientWidth": 390,
+        "scrollWidth": 390,
+        "bodyHeight": 2724,
+        "textLength": 1321,
+        "brokenImages": []
+      },
+      "screenshot": "/Users/handtomouse/maplemoon-website/_wip/evidence/pdp_route_repair_20260816/screenshots/faq-390.png",
+      "interactions": {
+        "faq": {
+          "count": 1,
+          "expanded": "true",
+          "visible": true
+        }
+      },
+      "consoleErrors": [],
+      "pageErrors": [],
+      "requestFailures": [],
+      "badResponses": [],
+      "failures": [],
+      "result": "PASS"
+    },
+    {
+      "route": "faq",
+      "path": "/faq",
+      "width": "1440",
+      "httpStatus": 200,
+      "metrics": {
+        "clientWidth": 1440,
+        "scrollWidth": 1440,
+        "bodyHeight": 2318,
+        "textLength": 1425,
+        "brokenImages": []
+      },
+      "screenshot": "/Users/handtomouse/maplemoon-website/_wip/evidence/pdp_route_repair_20260816/screenshots/faq-1440.png",
+      "interactions": {
+        "faq": {
+          "count": 1,
+          "expanded": "true",
+          "visible": true
+        }
+      },
+      "consoleErrors": [],
+      "pageErrors": [],
+      "requestFailures": [],
+      "badResponses": [],
+      "failures": [],
+      "result": "PASS"
+    },
+    {
+      "route": "stockists",
+      "path": "/stockists",
+      "width": "390",
+      "httpStatus": 200,
+      "metrics": {
+        "clientWidth": 390,
+        "scrollWidth": 390,
+        "bodyHeight": 3768,
+        "textLength": 2407,
+        "brokenImages": []
+      },
+      "screenshot": "/Users/handtomouse/maplemoon-website/_wip/evidence/pdp_route_repair_20260816/screenshots/stockists-390.png",
+      "interactions": {
+        "skip": {
+          "count": 1,
+          "targetCount": 1,
+          "mainTag": "MAIN"
+        }
+      },
+      "consoleErrors": [],
+      "pageErrors": [],
+      "requestFailures": [],
+      "badResponses": [],
+      "failures": [],
+      "result": "PASS"
+    },
+    {
+      "route": "stockists",
+      "path": "/stockists",
+      "width": "1440",
+      "httpStatus": 200,
+      "metrics": {
+        "clientWidth": 1440,
+        "scrollWidth": 1440,
+        "bodyHeight": 3283,
+        "textLength": 2547,
+        "brokenImages": []
+      },
+      "screenshot": "/Users/handtomouse/maplemoon-website/_wip/evidence/pdp_route_repair_20260816/screenshots/stockists-1440.png",
+      "interactions": {
+        "skip": {
+          "count": 1,
+          "targetCount": 1,
+          "mainTag": "MAIN"
+        }
+      },
+      "consoleErrors": [],
+      "pageErrors": [],
+      "requestFailures": [],
+      "badResponses": [],
+      "failures": [],
+      "result": "PASS"
+    },
+    {
+      "route": "pure-carob-bar",
+      "path": "/products/pure-carob-bar",
+      "width": "390",
+      "httpStatus": 200,
+      "metrics": {
+        "clientWidth": 390,
+        "scrollWidth": 390,
+        "bodyHeight": 3029,
+        "textLength": 1490,
+        "brokenImages": []
+      },
+      "screenshot": "/Users/handtomouse/maplemoon-website/_wip/evidence/pdp_route_repair_20260816/screenshots/pure-carob-bar-390.png",
+      "interactions": {
+        "menu": {
+          "expanded": "true",
+          "state": "open",
+          "bodyOpen": true,
+          "rows": [
+            {
+              "text": "Shop",
+              "width": 388,
+              "height": 44,
+              "display": "flex",
+              "visibility": "visible",
+              "hitOwn": true
+            },
+            {
+              "text": "Our Story",
+              "width": 388,
+              "height": 44,
+              "display": "flex",
+              "visibility": "visible",
+              "hitOwn": true
+            },
+            {
+              "text": "What is Carob",
+              "width": 388,
+              "height": 44,
+              "display": "flex",
+              "visibility": "visible",
+              "hitOwn": true
+            },
+            {
+              "text": "What is Carob",
+              "width": 388,
+              "height": 44,
+              "display": "flex",
+              "visibility": "visible",
+              "hitOwn": false
+            },
+            {
+              "text": "Stockists",
+              "width": 388,
+              "height": 44,
+              "display": "flex",
+              "visibility": "visible",
+              "hitOwn": true
+            },
+            {
+              "text": "AUD $",
+              "width": 388,
+              "height": 44,
+              "display": "flex",
+              "visibility": "visible",
+              "hitOwn": true
+            },
+            {
+              "text": "FAQ",
+              "width": 388,
+              "height": 44,
+              "display": "flex",
+              "visibility": "visible",
+              "hitOwn": true
+            }
+          ]
+        },
+        "menuScreenshot": "/Users/handtomouse/maplemoon-website/_wip/evidence/pdp_route_repair_20260816/screenshots/pure-carob-bar-390-menu-open.png",
+        "pureCart": {
+          "title": "Pure Carob & Cacao Butter",
+          "dialogCount": 1,
+          "cartText": true
+        },
+        "cartScreenshot": "/Users/handtomouse/maplemoon-website/_wip/evidence/pdp_route_repair_20260816/screenshots/pure-carob-bar-390-cart-open.png"
+      },
+      "consoleErrors": [],
+      "pageErrors": [],
+      "requestFailures": [],
+      "badResponses": [],
+      "failures": [
+        "pure-menu-rows"
+      ],
+      "result": "FAIL"
+    },
+    {
+      "route": "pure-carob-bar",
+      "path": "/products/pure-carob-bar",
+      "width": "1440",
+      "httpStatus": 200,
+      "metrics": {
+        "clientWidth": 1440,
+        "scrollWidth": 1440,
+        "bodyHeight": 1681,
+        "textLength": 1548,
+        "brokenImages": []
+      },
+      "screenshot": "/Users/handtomouse/maplemoon-website/_wip/evidence/pdp_route_repair_20260816/screenshots/pure-carob-bar-1440.png",
+      "interactions": {},
+      "consoleErrors": [],
+      "pageErrors": [],
+      "requestFailures": [],
+      "badResponses": [],
+      "failures": [],
+      "result": "PASS"
+    }
+  ],
+  "journey": {
+    "url": "http://127.0.0.1:8786/products/pure-carob-bar",
+    "pathname": "/products/pure-carob-bar",
+    "title": "Pure Carob & Cacao Butter",
+    "httpStatus": 200,
+    "consoleErrors": [],
+    "pageErrors": [],
+    "requestFailures": [],
+    "badResponses": [],
+    "screenshot": "/Users/handtomouse/maplemoon-website/_wip/evidence/pdp_route_repair_20260816/screenshots/homepage-to-pure-journey-390.png",
+    "failures": [],
+    "result": "PASS"
+  },
+  "failures": [
+    {
+      "route": "pure-carob-bar",
+      "path": "/products/pure-carob-bar",
+      "width": "390",
+      "httpStatus": 200,
+      "metrics": {
+        "clientWidth": 390,
+        "scrollWidth": 390,
+        "bodyHeight": 3029,
+        "textLength": 1490,
+        "brokenImages": []
+      },
+      "screenshot": "/Users/handtomouse/maplemoon-website/_wip/evidence/pdp_route_repair_20260816/screenshots/pure-carob-bar-390.png",
+      "interactions": {
+        "menu": {
+          "expanded": "true",
+          "state": "open",
+          "bodyOpen": true,
+          "rows": [
+            {
+              "text": "Shop",
+              "width": 388,
+              "height": 44,
+              "display": "flex",
+              "visibility": "visible",
+              "hitOwn": true
+            },
+            {
+              "text": "Our Story",
+              "width": 388,
+              "height": 44,
+              "display": "flex",
+              "visibility": "visible",
+              "hitOwn": true
+            },
+            {
+              "text": "What is Carob",
+              "width": 388,
+              "height": 44,
+              "display": "flex",
+              "visibility": "visible",
+              "hitOwn": true
+            },
+            {
+              "text": "What is Carob",
+              "width": 388,
+              "height": 44,
+              "display": "flex",
+              "visibility": "visible",
+              "hitOwn": false
+            },
+            {
+              "text": "Stockists",
+              "width": 388,
+              "height": 44,
+              "display": "flex",
+              "visibility": "visible",
+              "hitOwn": true
+            },
+            {
+              "text": "AUD $",
+              "width": 388,
+              "height": 44,
+              "display": "flex",
+              "visibility": "visible",
+              "hitOwn": true
+            },
+            {
+              "text": "FAQ",
+              "width": 388,
+              "height": 44,
+              "display": "flex",
+              "visibility": "visible",
+              "hitOwn": true
+            }
+          ]
+        },
+        "menuScreenshot": "/Users/handtomouse/maplemoon-website/_wip/evidence/pdp_route_repair_20260816/screenshots/pure-carob-bar-390-menu-open.png",
+        "pureCart": {
+          "title": "Pure Carob & Cacao Butter",
+          "dialogCount": 1,
+          "cartText": true
+        },
+        "cartScreenshot": "/Users/handtomouse/maplemoon-website/_wip/evidence/pdp_route_repair_20260816/screenshots/pure-carob-bar-390-cart-open.png"
+      },
+      "consoleErrors": [],
+      "pageErrors": [],
+      "requestFailures": [],
+      "badResponses": [],
+      "failures": [
+        "pure-menu-rows"
+      ],
+      "result": "FAIL"
+    }
+  ]
+}

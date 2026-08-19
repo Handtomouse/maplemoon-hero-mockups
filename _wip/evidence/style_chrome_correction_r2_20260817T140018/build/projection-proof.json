@@ -1,0 +1,446 @@
+{
+  "routes": {
+    "carob-story.html": {
+      "baseline": {
+        "customer_text": {
+          "count": 59,
+          "sha256": "2b038fc70f85f23ef097bd08c624ec910f74fe536795dc5e0f5455e77cb50b8f"
+        },
+        "footer_bytes": {
+          "count": 1,
+          "sha256": "99d21f1e9b4ebed584784bddfc480b5b23c951eb97b3a49a12e020b7c03b5a62"
+        },
+        "forms": {
+          "count": 0,
+          "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+        },
+        "media_bindings": {
+          "count": 4,
+          "sha256": "3519fd7abbd7a1028dd92a715cfb01b1fb8799c55127b261391c9ae574b4f906"
+        },
+        "non_header_links": {
+          "count": 7,
+          "sha256": "3443c54a1a99541e46b187e7d545ef2859d7a2e3d1f57b7af69f7f37e5e51bb4"
+        },
+        "script_blocks": {
+          "count": 4,
+          "sha256": "e2a6b64250b701a2b5bc8eecefd56059352e0529534284def7f74281ca67be0a"
+        },
+        "title_meta_social": {
+          "count": 15,
+          "sha256": "841fcba82d172a64e2d8263ca2bb787b90a1f4870f3951ad019d18df39d45d54"
+        }
+      },
+      "derived": {
+        "customer_text": {
+          "count": 59,
+          "sha256": "2b038fc70f85f23ef097bd08c624ec910f74fe536795dc5e0f5455e77cb50b8f"
+        },
+        "footer_bytes": {
+          "count": 1,
+          "sha256": "99d21f1e9b4ebed584784bddfc480b5b23c951eb97b3a49a12e020b7c03b5a62"
+        },
+        "forms": {
+          "count": 0,
+          "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+        },
+        "media_bindings": {
+          "count": 4,
+          "sha256": "3519fd7abbd7a1028dd92a715cfb01b1fb8799c55127b261391c9ae574b4f906"
+        },
+        "non_header_links": {
+          "count": 7,
+          "sha256": "3443c54a1a99541e46b187e7d545ef2859d7a2e3d1f57b7af69f7f37e5e51bb4"
+        },
+        "script_blocks": {
+          "count": 4,
+          "sha256": "e2a6b64250b701a2b5bc8eecefd56059352e0529534284def7f74281ca67be0a"
+        },
+        "title_meta_social": {
+          "count": 15,
+          "sha256": "841fcba82d172a64e2d8263ca2bb787b90a1f4870f3951ad019d18df39d45d54"
+        }
+      },
+      "equal": true
+    },
+    "faq.html": {
+      "baseline": {
+        "customer_text": {
+          "count": 33,
+          "sha256": "b200cf503046af82e8be2ca8b3c4dbd3b594deb20b444676538a8e07d1202373"
+        },
+        "footer_bytes": {
+          "count": 1,
+          "sha256": "5b53da0ec0b75f0247117a96535dcd3cfbcf2bc4fcedc0668e1c717f560425cb"
+        },
+        "forms": {
+          "count": 0,
+          "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+        },
+        "media_bindings": {
+          "count": 0,
+          "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+        },
+        "non_header_links": {
+          "count": 12,
+          "sha256": "f127fd0f27ad017b806919f6ea83c224a20ca2459b4e52615b6c81ee5a6a3023"
+        },
+        "script_blocks": {
+          "count": 1,
+          "sha256": "513a9db701eb1213c8623a796363b23e9e9d1c89232fa674479722c762f7ac37"
+        },
+        "title_meta_social": {
+          "count": 6,
+          "sha256": "458d59982c9d82b320e71a3c29c68bbdcfeb9d5414956011a7e26ffddb09270b"
+        }
+      },
+      "derived": {
+        "customer_text": {
+          "count": 33,
+          "sha256": "b200cf503046af82e8be2ca8b3c4dbd3b594deb20b444676538a8e07d1202373"
+        },
+        "footer_bytes": {
+          "count": 1,
+          "sha256": "5b53da0ec0b75f0247117a96535dcd3cfbcf2bc4fcedc0668e1c717f560425cb"
+        },
+        "forms": {
+          "count": 0,
+          "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+        },
+        "media_bindings": {
+          "count": 0,
+          "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+        },
+        "non_header_links": {
+          "count": 12,
+          "sha256": "f127fd0f27ad017b806919f6ea83c224a20ca2459b4e52615b6c81ee5a6a3023"
+        },
+        "script_blocks": {
+          "count": 1,
+          "sha256": "513a9db701eb1213c8623a796363b23e9e9d1c89232fa674479722c762f7ac37"
+        },
+        "title_meta_social": {
+          "count": 6,
+          "sha256": "458d59982c9d82b320e71a3c29c68bbdcfeb9d5414956011a7e26ffddb09270b"
+        }
+      },
+      "equal": true
+    },
+    "homepage.html": {
+      "baseline": {
+        "customer_text": {
+          "count": 188,
+          "sha256": "d09926cacc86ef50faef73a7369822649876f71360b83cc7a447ea02bad19860"
+        },
+        "footer_bytes": {
+          "count": 1,
+          "sha256": "0d83d1d7f350ba1f412f15f911c9357149f71dc6c5c39d77e8fc853504304a5c"
+        },
+        "forms": {
+          "count": 1,
+          "sha256": "9f9d2274324c35cb0047a906163d16dbedc959cf8dd495feb59ed180e3cf36d3"
+        },
+        "media_bindings": {
+          "count": 17,
+          "sha256": "27c09978fc4e2176b4d83fa493926bc7ac321eab267952f1703418f7d0476416"
+        },
+        "non_header_links": {
+          "count": 16,
+          "sha256": "064809df3328c69886636717b3c1fbb0d266c6fc38e196082746313367c26e2a"
+        },
+        "script_blocks": {
+          "count": 11,
+          "sha256": "6cde049fed574e15271dbb6fde065a9f9048c9b029ad2e1e38a1af50db80d01f"
+        },
+        "title_meta_social": {
+          "count": 15,
+          "sha256": "1d33d318c80b43d11a190cd13ba706f1c50e6c98c4efd726636786cc2ec47f80"
+        }
+      },
+      "derived": {
+        "customer_text": {
+          "count": 188,
+          "sha256": "d09926cacc86ef50faef73a7369822649876f71360b83cc7a447ea02bad19860"
+        },
+        "footer_bytes": {
+          "count": 1,
+          "sha256": "0d83d1d7f350ba1f412f15f911c9357149f71dc6c5c39d77e8fc853504304a5c"
+        },
+        "forms": {
+          "count": 1,
+          "sha256": "9f9d2274324c35cb0047a906163d16dbedc959cf8dd495feb59ed180e3cf36d3"
+        },
+        "media_bindings": {
+          "count": 17,
+          "sha256": "27c09978fc4e2176b4d83fa493926bc7ac321eab267952f1703418f7d0476416"
+        },
+        "non_header_links": {
+          "count": 16,
+          "sha256": "064809df3328c69886636717b3c1fbb0d266c6fc38e196082746313367c26e2a"
+        },
+        "script_blocks": {
+          "count": 11,
+          "sha256": "6cde049fed574e15271dbb6fde065a9f9048c9b029ad2e1e38a1af50db80d01f"
+        },
+        "title_meta_social": {
+          "count": 15,
+          "sha256": "1d33d318c80b43d11a190cd13ba706f1c50e6c98c4efd726636786cc2ec47f80"
+        }
+      },
+      "equal": true
+    },
+    "our-story.html": {
+      "baseline": {
+        "customer_text": {
+          "count": 77,
+          "sha256": "123863b2cf0c0cff2fd4fb382284c63a9b49687b418a230e81e24c8261256ea0"
+        },
+        "footer_bytes": {
+          "count": 1,
+          "sha256": "1b3576b903aa8e9c26fceb607c8a68ba390ac8ca9280cbac30a777f1e2ff8689"
+        },
+        "forms": {
+          "count": 0,
+          "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+        },
+        "media_bindings": {
+          "count": 2,
+          "sha256": "e93017902effd89e8612f290f12184ca3c060cdc47f4468f32e1daa7e1c7d83a"
+        },
+        "non_header_links": {
+          "count": 12,
+          "sha256": "098fee967133a76fc656d5e2d796646a584631ed14c369aaffbd3826d782aceb"
+        },
+        "script_blocks": {
+          "count": 4,
+          "sha256": "ae57f883ab741282ed791bd186a53ae5102682b5e717fe9c629bbd3bf407e196"
+        },
+        "title_meta_social": {
+          "count": 15,
+          "sha256": "33d9e990e1893dd8d1e5804838427990b50fc5566ea812deb62f39b70c49e151"
+        }
+      },
+      "derived": {
+        "customer_text": {
+          "count": 77,
+          "sha256": "123863b2cf0c0cff2fd4fb382284c63a9b49687b418a230e81e24c8261256ea0"
+        },
+        "footer_bytes": {
+          "count": 1,
+          "sha256": "1b3576b903aa8e9c26fceb607c8a68ba390ac8ca9280cbac30a777f1e2ff8689"
+        },
+        "forms": {
+          "count": 0,
+          "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+        },
+        "media_bindings": {
+          "count": 2,
+          "sha256": "e93017902effd89e8612f290f12184ca3c060cdc47f4468f32e1daa7e1c7d83a"
+        },
+        "non_header_links": {
+          "count": 12,
+          "sha256": "098fee967133a76fc656d5e2d796646a584631ed14c369aaffbd3826d782aceb"
+        },
+        "script_blocks": {
+          "count": 4,
+          "sha256": "ae57f883ab741282ed791bd186a53ae5102682b5e717fe9c629bbd3bf407e196"
+        },
+        "title_meta_social": {
+          "count": 15,
+          "sha256": "33d9e990e1893dd8d1e5804838427990b50fc5566ea812deb62f39b70c49e151"
+        }
+      },
+      "equal": true
+    },
+    "products/pure-carob-bar.html": {
+      "baseline": {
+        "customer_text": {
+          "count": 65,
+          "sha256": "eb202c549aa0898bf2b52741d58f435fd2acda8a981f467d18f39981189ed057"
+        },
+        "footer_bytes": {
+          "count": 1,
+          "sha256": "78afcf010c373f6a1b5daa8da706b33875c544d0cf69d14a547756cff60865bb"
+        },
+        "forms": {
+          "count": 0,
+          "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+        },
+        "media_bindings": {
+          "count": 7,
+          "sha256": "b69a77894c2bdf386ab52561af484e34efd2327d898eb5fadc3d809f6914030b"
+        },
+        "non_header_links": {
+          "count": 20,
+          "sha256": "448eb4284d021c4f9a6dee05b5c4a306628317dccfa682db6b21d2e41b840dd8"
+        },
+        "script_blocks": {
+          "count": 3,
+          "sha256": "0cb40996e074c9ea958d1d3c3f4665b3399dcff7f147b11b470a756236e311f7"
+        },
+        "title_meta_social": {
+          "count": 2,
+          "sha256": "fbf1a79e93cd530d135cba49e080a4c434984719af4e88c4f4c768422585ef4a"
+        }
+      },
+      "derived": {
+        "customer_text": {
+          "count": 65,
+          "sha256": "eb202c549aa0898bf2b52741d58f435fd2acda8a981f467d18f39981189ed057"
+        },
+        "footer_bytes": {
+          "count": 1,
+          "sha256": "78afcf010c373f6a1b5daa8da706b33875c544d0cf69d14a547756cff60865bb"
+        },
+        "forms": {
+          "count": 0,
+          "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+        },
+        "media_bindings": {
+          "count": 7,
+          "sha256": "b69a77894c2bdf386ab52561af484e34efd2327d898eb5fadc3d809f6914030b"
+        },
+        "non_header_links": {
+          "count": 20,
+          "sha256": "448eb4284d021c4f9a6dee05b5c4a306628317dccfa682db6b21d2e41b840dd8"
+        },
+        "script_blocks": {
+          "count": 3,
+          "sha256": "0cb40996e074c9ea958d1d3c3f4665b3399dcff7f147b11b470a756236e311f7"
+        },
+        "title_meta_social": {
+          "count": 2,
+          "sha256": "fbf1a79e93cd530d135cba49e080a4c434984719af4e88c4f4c768422585ef4a"
+        }
+      },
+      "equal": true
+    },
+    "shop.html": {
+      "baseline": {
+        "customer_text": {
+          "count": 67,
+          "sha256": "54e2ea5abcc41e5591cd47fafe1f97d6694a8b398cf775a26433961a03fc970d"
+        },
+        "footer_bytes": {
+          "count": 1,
+          "sha256": "99d21f1e9b4ebed584784bddfc480b5b23c951eb97b3a49a12e020b7c03b5a62"
+        },
+        "forms": {
+          "count": 0,
+          "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+        },
+        "media_bindings": {
+          "count": 7,
+          "sha256": "eb4791d7bb522a1886a491eef22eeeb39cdccbc15c5b74951190e9fd3b21523a"
+        },
+        "non_header_links": {
+          "count": 13,
+          "sha256": "422a35e28d5b92fc9456dbd0c0ebcac7d250031e40b99405818a2bfc84107c2b"
+        },
+        "script_blocks": {
+          "count": 4,
+          "sha256": "8f5ba46691f1f512cbf5f7d6fe3696b33a7f2639c72fa3086bf73c335642ef7e"
+        },
+        "title_meta_social": {
+          "count": 11,
+          "sha256": "fd472ad08608e435d2008814b3cf4d51e80e73742ca4dc630a02348bb5e271ac"
+        }
+      },
+      "derived": {
+        "customer_text": {
+          "count": 67,
+          "sha256": "54e2ea5abcc41e5591cd47fafe1f97d6694a8b398cf775a26433961a03fc970d"
+        },
+        "footer_bytes": {
+          "count": 1,
+          "sha256": "99d21f1e9b4ebed584784bddfc480b5b23c951eb97b3a49a12e020b7c03b5a62"
+        },
+        "forms": {
+          "count": 0,
+          "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+        },
+        "media_bindings": {
+          "count": 7,
+          "sha256": "eb4791d7bb522a1886a491eef22eeeb39cdccbc15c5b74951190e9fd3b21523a"
+        },
+        "non_header_links": {
+          "count": 13,
+          "sha256": "422a35e28d5b92fc9456dbd0c0ebcac7d250031e40b99405818a2bfc84107c2b"
+        },
+        "script_blocks": {
+          "count": 4,
+          "sha256": "8f5ba46691f1f512cbf5f7d6fe3696b33a7f2639c72fa3086bf73c335642ef7e"
+        },
+        "title_meta_social": {
+          "count": 11,
+          "sha256": "fd472ad08608e435d2008814b3cf4d51e80e73742ca4dc630a02348bb5e271ac"
+        }
+      },
+      "equal": true
+    },
+    "stockists.html": {
+      "baseline": {
+        "customer_text": {
+          "count": 77,
+          "sha256": "70d1ceb3c36d580aa8523d227d5d8454e827902b179bfa81814225ae9d4ea0da"
+        },
+        "footer_bytes": {
+          "count": 1,
+          "sha256": "99d21f1e9b4ebed584784bddfc480b5b23c951eb97b3a49a12e020b7c03b5a62"
+        },
+        "forms": {
+          "count": 1,
+          "sha256": "c9300a05e8cb0dca8bbd54bd0617812cd8b1476a782d031032af5572ce48692e"
+        },
+        "media_bindings": {
+          "count": 1,
+          "sha256": "8c074d959b0406a2c1e185ad82a97ad5a671e72c0caccb368a141bf262f9cd97"
+        },
+        "non_header_links": {
+          "count": 12,
+          "sha256": "c1790369c31cdf58f50524f0efafa9e3ed0de92fa4e12ce231a047eef73eb4a4"
+        },
+        "script_blocks": {
+          "count": 4,
+          "sha256": "26ceea675308a7a0a60f65bf71c148f240fa8816cdb765393d4571f31a24c75a"
+        },
+        "title_meta_social": {
+          "count": 15,
+          "sha256": "775360c1b850fca8f10403681bec6e9341747f150fff30ea42d64e0c89be0286"
+        }
+      },
+      "derived": {
+        "customer_text": {
+          "count": 77,
+          "sha256": "70d1ceb3c36d580aa8523d227d5d8454e827902b179bfa81814225ae9d4ea0da"
+        },
+        "footer_bytes": {
+          "count": 1,
+          "sha256": "99d21f1e9b4ebed584784bddfc480b5b23c951eb97b3a49a12e020b7c03b5a62"
+        },
+        "forms": {
+          "count": 1,
+          "sha256": "c9300a05e8cb0dca8bbd54bd0617812cd8b1476a782d031032af5572ce48692e"
+        },
+        "media_bindings": {
+          "count": 1,
+          "sha256": "8c074d959b0406a2c1e185ad82a97ad5a671e72c0caccb368a141bf262f9cd97"
+        },
+        "non_header_links": {
+          "count": 12,
+          "sha256": "c1790369c31cdf58f50524f0efafa9e3ed0de92fa4e12ce231a047eef73eb4a4"
+        },
+        "script_blocks": {
+          "count": 4,
+          "sha256": "26ceea675308a7a0a60f65bf71c148f240fa8816cdb765393d4571f31a24c75a"
+        },
+        "title_meta_social": {
+          "count": 15,
+          "sha256": "775360c1b850fca8f10403681bec6e9341747f150fff30ea42d64e0c89be0286"
+        }
+      },
+      "equal": true
+    }
+  },
+  "schema": "maplemoon-style-chrome-projection-proof/v1"
+}

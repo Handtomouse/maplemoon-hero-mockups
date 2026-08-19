@@ -1,0 +1,45 @@
+{
+  "schema": "maplemoon-cart-option-subtotal-static/v1",
+  "outcome": "PASS",
+  "hashes": {
+    "mock_cart_js_sha256": "5776f8d628710970e81cf704ae0673ff69988d46952778f5624772db335b8b1a",
+    "mock_cart_css_sha256": "c17deb1f972017d9790f2191360a457e54d7287730847f9f470c9de371603308",
+    "shop_html_sha256": "f111ad5123e34dadd46ac497fca286066efc67c05dd7e68f0d3e70c97c735038"
+  },
+  "predecessor_probes": [
+    {
+      "id": "cart_subtotal_label",
+      "positive_control_detected": true,
+      "candidate_detected": true
+    },
+    {
+      "id": "cart_subtotal_target",
+      "positive_control_detected": true,
+      "candidate_detected": true
+    },
+    {
+      "id": "cart_monetary_arithmetic",
+      "positive_control_detected": true,
+      "candidate_detected": true
+    },
+    {
+      "id": "selected_option_price_capture",
+      "positive_control_detected": true,
+      "candidate_detected": true
+    }
+  ],
+  "shop_contract": {
+    "dataset_unit_price": true,
+    "dataset_unit_quantity": true,
+    "selected_option_control": true,
+    "authored_option_label": true
+  },
+  "additional": {
+    "strict_dollar_migration": true,
+    "integer_cents_field": true,
+    "distinct_line_key": true,
+    "dom_safe_item_rendering": true,
+    "subtotal_css": true,
+    "no_shop_write_required": true
+  }
+}

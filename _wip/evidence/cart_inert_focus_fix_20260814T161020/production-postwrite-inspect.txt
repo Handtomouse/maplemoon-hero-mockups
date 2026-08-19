@@ -1,0 +1,22 @@
+COMMAND
+vercel inspect https://maplemoonbuild20260813.vercel.app
+
+EXIT 0
+Fetching deployment "maplemoonbuild20260813.vercel.app" in handtomouses-projects
+> Fetched deployment "maplemoonbuild20260813-7vjf2m50b-handtomouses-projects.vercel.app" in handtomouses-projects [626ms]
+
+General
+id: dpl_G2LER2awaqyFtGRCcTserXbNynct
+name: maplemoon_build_20260813
+target: production
+status: Ready
+url: https://maplemoonbuild20260813-7vjf2m50b-handtomouses-projects.vercel.app
+
+Aliases
+https://maplemoonbuild20260813.vercel.app
+https://maplemoonbuild20260813-handtomouses-projects.vercel.app
+
+HOMEPAGE BYTE CONTROL
+bytes: 208556
+MD5: 6197879a5ca9d3ed0452773abc0bbeb4
+prewrite/postwrite cmp exit: 0

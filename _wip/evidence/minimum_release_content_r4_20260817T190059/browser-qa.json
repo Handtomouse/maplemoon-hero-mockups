@@ -1,0 +1,1547 @@
+{
+  "outcome": "FAIL",
+  "cases": 35,
+  "screenshots": 14,
+  "failures": [
+    "homepage@390:console=2",
+    "homepage@390:request=1",
+    "homepage@768:console=2",
+    "homepage@768:request=1",
+    "homepage@900:console=2",
+    "homepage@900:request=1",
+    "homepage@1024:console=2",
+    "homepage@1024:request=1",
+    "homepage@1440:console=2",
+    "homepage@1440:request=1",
+    "shop@390:console=1",
+    "shop@390:request=1",
+    "shop@768:console=1",
+    "shop@768:request=1",
+    "shop@900:console=1",
+    "shop@900:request=1",
+    "shop@1024:console=1",
+    "shop@1024:request=1",
+    "shop@1440:console=1",
+    "shop@1440:request=1",
+    "our-story@390:console=1",
+    "our-story@390:request=1",
+    "our-story@768:console=1",
+    "our-story@768:request=1",
+    "our-story@900:console=1",
+    "our-story@900:request=1",
+    "our-story@1024:console=1",
+    "our-story@1024:request=1",
+    "our-story@1440:console=1",
+    "our-story@1440:request=1",
+    "carob-story@390:console=1",
+    "carob-story@390:request=1",
+    "carob-story@1440:console=1",
+    "carob-story@1440:request=1",
+    "faq@390:console=1",
+    "faq@390:request=1",
+    "faq@390:faq-interaction",
+    "faq@768:console=1",
+    "faq@768:request=1",
+    "faq@768:faq-interaction",
+    "faq@900:console=1",
+    "faq@900:request=1",
+    "faq@900:faq-interaction",
+    "faq@1024:console=1",
+    "faq@1024:request=1",
+    "faq@1024:faq-interaction",
+    "faq@1440:console=1",
+    "faq@1440:request=1",
+    "faq@1440:faq-interaction",
+    "stockists@390:console=1",
+    "stockists@390:request=1",
+    "stockists@768:console=1",
+    "stockists@768:request=1",
+    "stockists@900:console=1",
+    "stockists@900:request=1",
+    "stockists@1024:console=1",
+    "stockists@1024:request=1",
+    "stockists@1440:console=1",
+    "stockists@1440:request=1",
+    "pure-carob-bar@390:console=2",
+    "pure-carob-bar@390:request=1",
+    "pure-carob-bar@768:console=2",
+    "pure-carob-bar@768:request=1",
+    "pure-carob-bar@900:console=2",
+    "pure-carob-bar@900:request=1",
+    "pure-carob-bar@1024:console=2",
+    "pure-carob-bar@1024:request=1",
+    "pure-carob-bar@1440:console=2",
+    "pure-carob-bar@1440:request=1"
+  ],
+  "results": [
+    {
+      "name": "homepage",
+      "route": "/homepage.html",
+      "width": 390,
+      "status": 200,
+      "metrics": {
+        "clientWidth": 390,
+        "scrollWidth": 390,
+        "bodyText": 3083,
+        "brokenImages": [],
+        "incompleteImages": [],
+        "overlay": false
+      },
+      "interaction": {
+        "firstFocus": {
+          "tag": "A",
+          "text": "Skip to main content",
+          "href": "#main-content"
+        },
+        "mobileMenu": {
+          "applicable": false
+        },
+        "range": {
+          "before": "Pure Carob & Cacao Butter",
+          "after": "Almond & Celtic Salt",
+          "changed": true
+        },
+        "reviews": {
+          "cards": 3,
+          "internalVisible": false
+        }
+      },
+      "consoleErrors": [
+        "Failed to load resource: net::ERR_NAME_NOT_RESOLVED",
+        "MapleMoon chrome: mount contract is incomplete; navigation left visible."
+      ],
+      "pageErrors": [],
+      "requestFailures": [
+        "GET https://p.typekit.net/p.css?s=1&k=dvz0xjs&ht=tk&f=28225.28226.28227.28238.39492&a=8195009&app=typekit&e=css net::ERR_NAME_NOT_RESOLVED"
+      ],
+      "badResponses": [],
+      "screenshot": "/Users/handtomouse/maplemoon-website/_wip/evidence/minimum_release_content_r4_20260817T190059/screenshots/homepage-390.png",
+      "failures": [
+        "console=2",
+        "request=1"
+      ]
+    },
+    {
+      "name": "homepage",
+      "route": "/homepage.html",
+      "width": 768,
+      "status": 200,
+      "metrics": {
+        "clientWidth": 768,
+        "scrollWidth": 768,
+        "bodyText": 3103,
+        "brokenImages": [],
+        "incompleteImages": [],
+        "overlay": false
+      },
+      "interaction": {
+        "firstFocus": {
+          "tag": "A",
+          "text": "Skip to main content",
+          "href": "#main-content"
+        },
+        "mobileMenu": {
+          "applicable": false
+        },
+        "range": {
+          "before": "Pure Carob & Cacao Butter",
+          "after": "Almond & Celtic Salt",
+          "changed": true
+        },
+        "reviews": {
+          "cards": 3,
+          "internalVisible": false
+        }
+      },
+      "consoleErrors": [
+        "Failed to load resource: net::ERR_NAME_NOT_RESOLVED",
+        "MapleMoon chrome: mount contract is incomplete; navigation left visible."
+      ],
+      "pageErrors": [],
+      "requestFailures": [
+        "GET https://p.typekit.net/p.css?s=1&k=dvz0xjs&ht=tk&f=28225.28226.28227.28238.39492&a=8195009&app=typekit&e=css net::ERR_NAME_NOT_RESOLVED"
+      ],
+      "badResponses": [],
+      "screenshot": null,
+      "failures": [
+        "console=2",
+        "request=1"
+      ]
+    },
+    {
+      "name": "homepage",
+      "route": "/homepage.html",
+      "width": 900,
+      "status": 200,
+      "metrics": {
+        "clientWidth": 900,
+        "scrollWidth": 900,
+        "bodyText": 3103,
+        "brokenImages": [],
+        "incompleteImages": [],
+        "overlay": false
+      },
+      "interaction": {
+        "firstFocus": {
+          "tag": "A",
+          "text": "Skip to main content",
+          "href": "#main-content"
+        },
+        "mobileMenu": {
+          "applicable": false
+        },
+        "range": {
+          "before": "Pure Carob & Cacao Butter",
+          "after": "Almond & Celtic Salt",
+          "changed": true
+        },
+        "reviews": {
+          "cards": 3,
+          "internalVisible": false
+        }
+      },
+      "consoleErrors": [
+        "Failed to load resource: net::ERR_NAME_NOT_RESOLVED",
+        "MapleMoon chrome: mount contract is incomplete; navigation left visible."
+      ],
+      "pageErrors": [],
+      "requestFailures": [
+        "GET https://p.typekit.net/p.css?s=1&k=dvz0xjs&ht=tk&f=28225.28226.28227.28238.39492&a=8195009&app=typekit&e=css net::ERR_NAME_NOT_RESOLVED"
+      ],
+      "badResponses": [],
+      "screenshot": null,
+      "failures": [
+        "console=2",
+        "request=1"
+      ]
+    },
+    {
+      "name": "homepage",
+      "route": "/homepage.html",
+      "width": 1024,
+      "status": 200,
+      "metrics": {
+        "clientWidth": 1024,
+        "scrollWidth": 1024,
+        "bodyText": 3197,
+        "brokenImages": [],
+        "incompleteImages": [],
+        "overlay": false
+      },
+      "interaction": {
+        "firstFocus": {
+          "tag": "A",
+          "text": "Skip to main content",
+          "href": "#main-content"
+        },
+        "mobileMenu": {
+          "applicable": false
+        },
+        "range": {
+          "before": "Pure Carob & Cacao Butter",
+          "after": "Almond & Celtic Salt",
+          "changed": true
+        },
+        "reviews": {
+          "cards": 3,
+          "internalVisible": false
+        }
+      },
+      "consoleErrors": [
+        "Failed to load resource: net::ERR_NAME_NOT_RESOLVED",
+        "MapleMoon chrome: mount contract is incomplete; navigation left visible."
+      ],
+      "pageErrors": [],
+      "requestFailures": [
+        "GET https://p.typekit.net/p.css?s=1&k=dvz0xjs&ht=tk&f=28225.28226.28227.28238.39492&a=8195009&app=typekit&e=css net::ERR_NAME_NOT_RESOLVED"
+      ],
+      "badResponses": [],
+      "screenshot": null,
+      "failures": [
+        "console=2",
+        "request=1"
+      ]
+    },
+    {
+      "name": "homepage",
+      "route": "/homepage.html",
+      "width": 1440,
+      "status": 200,
+      "metrics": {
+        "clientWidth": 1440,
+        "scrollWidth": 1440,
+        "bodyText": 3197,
+        "brokenImages": [],
+        "incompleteImages": [],
+        "overlay": false
+      },
+      "interaction": {
+        "firstFocus": {
+          "tag": "A",
+          "text": "Skip to main content",
+          "href": "#main-content"
+        },
+        "mobileMenu": {
+          "applicable": false
+        },
+        "range": {
+          "before": "Pure Carob & Cacao Butter",
+          "after": "Almond & Celtic Salt",
+          "changed": true
+        },
+        "reviews": {
+          "cards": 3,
+          "internalVisible": false
+        }
+      },
+      "consoleErrors": [
+        "Failed to load resource: net::ERR_NAME_NOT_RESOLVED",
+        "MapleMoon chrome: mount contract is incomplete; navigation left visible."
+      ],
+      "pageErrors": [],
+      "requestFailures": [
+        "GET https://p.typekit.net/p.css?s=1&k=dvz0xjs&ht=tk&f=28225.28226.28227.28238.39492&a=8195009&app=typekit&e=css net::ERR_NAME_NOT_RESOLVED"
+      ],
+      "badResponses": [],
+      "screenshot": "/Users/handtomouse/maplemoon-website/_wip/evidence/minimum_release_content_r4_20260817T190059/screenshots/homepage-1440.png",
+      "failures": [
+        "console=2",
+        "request=1"
+      ]
+    },
+    {
+      "name": "shop",
+      "route": "/shop.html",
+      "width": 390,
+      "status": 200,
+      "metrics": {
+        "clientWidth": 390,
+        "scrollWidth": 390,
+        "bodyText": 953,
+        "brokenImages": [],
+        "incompleteImages": [],
+        "overlay": false
+      },
+      "interaction": {
+        "firstFocus": {
+          "tag": "A",
+          "text": "Skip to the catalogue",
+          "href": "#catalogue-title"
+        },
+        "mobileMenu": {
+          "applicable": false
+        },
+        "shop": {
+          "cards": 6,
+          "enquiries": 6,
+          "cartControls": 0,
+          "filteredVisible": 1
+        }
+      },
+      "consoleErrors": [
+        "Failed to load resource: net::ERR_NAME_NOT_RESOLVED"
+      ],
+      "pageErrors": [],
+      "requestFailures": [
+        "GET https://p.typekit.net/p.css?s=1&k=dvz0xjs&ht=tk&f=28225.28226.28227.28238.39492&a=8195009&app=typekit&e=css net::ERR_NAME_NOT_RESOLVED"
+      ],
+      "badResponses": [],
+      "screenshot": "/Users/handtomouse/maplemoon-website/_wip/evidence/minimum_release_content_r4_20260817T190059/screenshots/shop-390.png",
+      "failures": [
+        "console=1",
+        "request=1"
+      ]
+    },
+    {
+      "name": "shop",
+      "route": "/shop.html",
+      "width": 768,
+      "status": 200,
+      "metrics": {
+        "clientWidth": 768,
+        "scrollWidth": 768,
+        "bodyText": 992,
+        "brokenImages": [],
+        "incompleteImages": [],
+        "overlay": false
+      },
+      "interaction": {
+        "firstFocus": {
+          "tag": "A",
+          "text": "Skip to the catalogue",
+          "href": "#catalogue-title"
+        },
+        "mobileMenu": {
+          "applicable": false
+        },
+        "shop": {
+          "cards": 6,
+          "enquiries": 6,
+          "cartControls": 0,
+          "filteredVisible": 1
+        }
+      },
+      "consoleErrors": [
+        "Failed to load resource: net::ERR_NAME_NOT_RESOLVED"
+      ],
+      "pageErrors": [],
+      "requestFailures": [
+        "GET https://p.typekit.net/p.css?s=1&k=dvz0xjs&ht=tk&f=28225.28226.28227.28238.39492&a=8195009&app=typekit&e=css net::ERR_NAME_NOT_RESOLVED"
+      ],
+      "badResponses": [],
+      "screenshot": null,
+      "failures": [
+        "console=1",
+        "request=1"
+      ]
+    },
+    {
+      "name": "shop",
+      "route": "/shop.html",
+      "width": 900,
+      "status": 200,
+      "metrics": {
+        "clientWidth": 900,
+        "scrollWidth": 900,
+        "bodyText": 992,
+        "brokenImages": [],
+        "incompleteImages": [],
+        "overlay": false
+      },
+      "interaction": {
+        "firstFocus": {
+          "tag": "A",
+          "text": "Skip to the catalogue",
+          "href": "#catalogue-title"
+        },
+        "mobileMenu": {
+          "applicable": false
+        },
+        "shop": {
+          "cards": 6,
+          "enquiries": 6,
+          "cartControls": 0,
+          "filteredVisible": 1
+        }
+      },
+      "consoleErrors": [
+        "Failed to load resource: net::ERR_NAME_NOT_RESOLVED"
+      ],
+      "pageErrors": [],
+      "requestFailures": [
+        "GET https://p.typekit.net/p.css?s=1&k=dvz0xjs&ht=tk&f=28225.28226.28227.28238.39492&a=8195009&app=typekit&e=css net::ERR_NAME_NOT_RESOLVED"
+      ],
+      "badResponses": [],
+      "screenshot": null,
+      "failures": [
+        "console=1",
+        "request=1"
+      ]
+    },
+    {
+      "name": "shop",
+      "route": "/shop.html",
+      "width": 1024,
+      "status": 200,
+      "metrics": {
+        "clientWidth": 1024,
+        "scrollWidth": 1024,
+        "bodyText": 998,
+        "brokenImages": [],
+        "incompleteImages": [],
+        "overlay": false
+      },
+      "interaction": {
+        "firstFocus": {
+          "tag": "A",
+          "text": "Skip to the catalogue",
+          "href": "#catalogue-title"
+        },
+        "mobileMenu": {
+          "applicable": false
+        },
+        "shop": {
+          "cards": 6,
+          "enquiries": 6,
+          "cartControls": 0,
+          "filteredVisible": 1
+        }
+      },
+      "consoleErrors": [
+        "Failed to load resource: net::ERR_NAME_NOT_RESOLVED"
+      ],
+      "pageErrors": [],
+      "requestFailures": [
+        "GET https://p.typekit.net/p.css?s=1&k=dvz0xjs&ht=tk&f=28225.28226.28227.28238.39492&a=8195009&app=typekit&e=css net::ERR_NAME_NOT_RESOLVED"
+      ],
+      "badResponses": [],
+      "screenshot": null,
+      "failures": [
+        "console=1",
+        "request=1"
+      ]
+    },
+    {
+      "name": "shop",
+      "route": "/shop.html",
+      "width": 1440,
+      "status": 200,
+      "metrics": {
+        "clientWidth": 1440,
+        "scrollWidth": 1440,
+        "bodyText": 998,
+        "brokenImages": [],
+        "incompleteImages": [],
+        "overlay": false
+      },
+      "interaction": {
+        "firstFocus": {
+          "tag": "A",
+          "text": "Skip to the catalogue",
+          "href": "#catalogue-title"
+        },
+        "mobileMenu": {
+          "applicable": false
+        },
+        "shop": {
+          "cards": 6,
+          "enquiries": 6,
+          "cartControls": 0,
+          "filteredVisible": 1
+        }
+      },
+      "consoleErrors": [
+        "Failed to load resource: net::ERR_NAME_NOT_RESOLVED"
+      ],
+      "pageErrors": [],
+      "requestFailures": [
+        "GET https://p.typekit.net/p.css?s=1&k=dvz0xjs&ht=tk&f=28225.28226.28227.28238.39492&a=8195009&app=typekit&e=css net::ERR_NAME_NOT_RESOLVED"
+      ],
+      "badResponses": [],
+      "screenshot": "/Users/handtomouse/maplemoon-website/_wip/evidence/minimum_release_content_r4_20260817T190059/screenshots/shop-1440.png",
+      "failures": [
+        "console=1",
+        "request=1"
+      ]
+    },
+    {
+      "name": "our-story",
+      "route": "/our-story.html",
+      "width": 390,
+      "status": 200,
+      "metrics": {
+        "clientWidth": 390,
+        "scrollWidth": 390,
+        "bodyText": 4766,
+        "brokenImages": [],
+        "incompleteImages": [],
+        "overlay": false
+      },
+      "interaction": {
+        "firstFocus": {
+          "tag": "A",
+          "text": "maple moon",
+          "href": "/homepage"
+        },
+        "mobileMenu": {
+          "applicable": false
+        },
+        "founders": {
+          "cards": 2,
+          "placeholders": 0,
+          "pairHero": 1
+        }
+      },
+      "consoleErrors": [
+        "Failed to load resource: net::ERR_NAME_NOT_RESOLVED"
+      ],
+      "pageErrors": [],
+      "requestFailures": [
+        "GET https://p.typekit.net/p.css?s=1&k=dvz0xjs&ht=tk&f=28225.28226.28227.28238.39492&a=8195009&app=typekit&e=css net::ERR_NAME_NOT_RESOLVED"
+      ],
+      "badResponses": [],
+      "screenshot": "/Users/handtomouse/maplemoon-website/_wip/evidence/minimum_release_content_r4_20260817T190059/screenshots/our-story-390.png",
+      "failures": [
+        "console=1",
+        "request=1"
+      ]
+    },
+    {
+      "name": "our-story",
+      "route": "/our-story.html",
+      "width": 768,
+      "status": 200,
+      "metrics": {
+        "clientWidth": 768,
+        "scrollWidth": 768,
+        "bodyText": 4805,
+        "brokenImages": [],
+        "incompleteImages": [],
+        "overlay": false
+      },
+      "interaction": {
+        "firstFocus": {
+          "tag": "A",
+          "text": "Shop",
+          "href": "/shop"
+        },
+        "mobileMenu": {
+          "applicable": false
+        },
+        "founders": {
+          "cards": 2,
+          "placeholders": 0,
+          "pairHero": 1
+        }
+      },
+      "consoleErrors": [
+        "Failed to load resource: net::ERR_NAME_NOT_RESOLVED"
+      ],
+      "pageErrors": [],
+      "requestFailures": [
+        "GET https://p.typekit.net/p.css?s=1&k=dvz0xjs&ht=tk&f=28225.28226.28227.28238.39492&a=8195009&app=typekit&e=css net::ERR_NAME_NOT_RESOLVED"
+      ],
+      "badResponses": [],
+      "screenshot": null,
+      "failures": [
+        "console=1",
+        "request=1"
+      ]
+    },
+    {
+      "name": "our-story",
+      "route": "/our-story.html",
+      "width": 900,
+      "status": 200,
+      "metrics": {
+        "clientWidth": 900,
+        "scrollWidth": 900,
+        "bodyText": 4805,
+        "brokenImages": [],
+        "incompleteImages": [],
+        "overlay": false
+      },
+      "interaction": {
+        "firstFocus": {
+          "tag": "A",
+          "text": "Shop",
+          "href": "/shop"
+        },
+        "mobileMenu": {
+          "applicable": false
+        },
+        "founders": {
+          "cards": 2,
+          "placeholders": 0,
+          "pairHero": 1
+        }
+      },
+      "consoleErrors": [
+        "Failed to load resource: net::ERR_NAME_NOT_RESOLVED"
+      ],
+      "pageErrors": [],
+      "requestFailures": [
+        "GET https://p.typekit.net/p.css?s=1&k=dvz0xjs&ht=tk&f=28225.28226.28227.28238.39492&a=8195009&app=typekit&e=css net::ERR_NAME_NOT_RESOLVED"
+      ],
+      "badResponses": [],
+      "screenshot": null,
+      "failures": [
+        "console=1",
+        "request=1"
+      ]
+    },
+    {
+      "name": "our-story",
+      "route": "/our-story.html",
+      "width": 1024,
+      "status": 200,
+      "metrics": {
+        "clientWidth": 1024,
+        "scrollWidth": 1024,
+        "bodyText": 4811,
+        "brokenImages": [],
+        "incompleteImages": [],
+        "overlay": false
+      },
+      "interaction": {
+        "firstFocus": {
+          "tag": "A",
+          "text": "Shop",
+          "href": "/shop"
+        },
+        "mobileMenu": {
+          "applicable": false
+        },
+        "founders": {
+          "cards": 2,
+          "placeholders": 0,
+          "pairHero": 1
+        }
+      },
+      "consoleErrors": [
+        "Failed to load resource: net::ERR_NAME_NOT_RESOLVED"
+      ],
+      "pageErrors": [],
+      "requestFailures": [
+        "GET https://p.typekit.net/p.css?s=1&k=dvz0xjs&ht=tk&f=28225.28226.28227.28238.39492&a=8195009&app=typekit&e=css net::ERR_NAME_NOT_RESOLVED"
+      ],
+      "badResponses": [],
+      "screenshot": null,
+      "failures": [
+        "console=1",
+        "request=1"
+      ]
+    },
+    {
+      "name": "our-story",
+      "route": "/our-story.html",
+      "width": 1440,
+      "status": 200,
+      "metrics": {
+        "clientWidth": 1440,
+        "scrollWidth": 1440,
+        "bodyText": 4811,
+        "brokenImages": [],
+        "incompleteImages": [],
+        "overlay": false
+      },
+      "interaction": {
+        "firstFocus": {
+          "tag": "A",
+          "text": "Shop",
+          "href": "/shop"
+        },
+        "mobileMenu": {
+          "applicable": false
+        },
+        "founders": {
+          "cards": 2,
+          "placeholders": 0,
+          "pairHero": 1
+        }
+      },
+      "consoleErrors": [
+        "Failed to load resource: net::ERR_NAME_NOT_RESOLVED"
+      ],
+      "pageErrors": [],
+      "requestFailures": [
+        "GET https://p.typekit.net/p.css?s=1&k=dvz0xjs&ht=tk&f=28225.28226.28227.28238.39492&a=8195009&app=typekit&e=css net::ERR_NAME_NOT_RESOLVED"
+      ],
+      "badResponses": [],
+      "screenshot": "/Users/handtomouse/maplemoon-website/_wip/evidence/minimum_release_content_r4_20260817T190059/screenshots/our-story-1440.png",
+      "failures": [
+        "console=1",
+        "request=1"
+      ]
+    },
+    {
+      "name": "carob-story",
+      "route": "/carob-story.html",
+      "width": 390,
+      "status": 200,
+      "metrics": {
+        "clientWidth": 390,
+        "scrollWidth": 390,
+        "bodyText": 1336,
+        "brokenImages": [],
+        "incompleteImages": [],
+        "overlay": false
+      },
+      "interaction": {
+        "firstFocus": {
+          "tag": "A",
+          "text": "Skip to the carob story",
+          "href": "#carob-story"
+        },
+        "mobileMenu": {
+          "applicable": false
+        }
+      },
+      "consoleErrors": [
+        "Failed to load resource: net::ERR_NAME_NOT_RESOLVED"
+      ],
+      "pageErrors": [],
+      "requestFailures": [
+        "GET https://p.typekit.net/p.css?s=1&k=dvz0xjs&ht=tk&f=28225.28226.28227.28238.39492&a=8195009&app=typekit&e=css net::ERR_NAME_NOT_RESOLVED"
+      ],
+      "badResponses": [],
+      "screenshot": "/Users/handtomouse/maplemoon-website/_wip/evidence/minimum_release_content_r4_20260817T190059/screenshots/carob-story-390.png",
+      "failures": [
+        "console=1",
+        "request=1"
+      ]
+    },
+    {
+      "name": "carob-story",
+      "route": "/carob-story.html",
+      "width": 768,
+      "status": 200,
+      "metrics": {
+        "clientWidth": 768,
+        "scrollWidth": 768,
+        "bodyText": 1406,
+        "brokenImages": [],
+        "incompleteImages": [],
+        "overlay": false
+      },
+      "interaction": {
+        "firstFocus": {
+          "tag": "A",
+          "text": "Skip to the carob story",
+          "href": "#carob-story"
+        },
+        "mobileMenu": {
+          "applicable": false
+        }
+      },
+      "consoleErrors": [],
+      "pageErrors": [],
+      "requestFailures": [],
+      "badResponses": [],
+      "screenshot": null,
+      "failures": []
+    },
+    {
+      "name": "carob-story",
+      "route": "/carob-story.html",
+      "width": 900,
+      "status": 200,
+      "metrics": {
+        "clientWidth": 900,
+        "scrollWidth": 900,
+        "bodyText": 1406,
+        "brokenImages": [],
+        "incompleteImages": [],
+        "overlay": false
+      },
+      "interaction": {
+        "firstFocus": {
+          "tag": "A",
+          "text": "Skip to the carob story",
+          "href": "#carob-story"
+        },
+        "mobileMenu": {
+          "applicable": false
+        }
+      },
+      "consoleErrors": [],
+      "pageErrors": [],
+      "requestFailures": [],
+      "badResponses": [],
+      "screenshot": null,
+      "failures": []
+    },
+    {
+      "name": "carob-story",
+      "route": "/carob-story.html",
+      "width": 1024,
+      "status": 200,
+      "metrics": {
+        "clientWidth": 1024,
+        "scrollWidth": 1024,
+        "bodyText": 1412,
+        "brokenImages": [],
+        "incompleteImages": [],
+        "overlay": false
+      },
+      "interaction": {
+        "firstFocus": {
+          "tag": "A",
+          "text": "Skip to the carob story",
+          "href": "#carob-story"
+        },
+        "mobileMenu": {
+          "applicable": false
+        }
+      },
+      "consoleErrors": [],
+      "pageErrors": [],
+      "requestFailures": [],
+      "badResponses": [],
+      "screenshot": null,
+      "failures": []
+    },
+    {
+      "name": "carob-story",
+      "route": "/carob-story.html",
+      "width": 1440,
+      "status": 200,
+      "metrics": {
+        "clientWidth": 1440,
+        "scrollWidth": 1440,
+        "bodyText": 1412,
+        "brokenImages": [],
+        "incompleteImages": [],
+        "overlay": false
+      },
+      "interaction": {
+        "firstFocus": {
+          "tag": "A",
+          "text": "Skip to the carob story",
+          "href": "#carob-story"
+        },
+        "mobileMenu": {
+          "applicable": false
+        }
+      },
+      "consoleErrors": [
+        "Failed to load resource: net::ERR_NAME_NOT_RESOLVED"
+      ],
+      "pageErrors": [],
+      "requestFailures": [
+        "GET https://p.typekit.net/p.css?s=1&k=dvz0xjs&ht=tk&f=28225.28226.28227.28238.39492&a=8195009&app=typekit&e=css net::ERR_NAME_NOT_RESOLVED"
+      ],
+      "badResponses": [],
+      "screenshot": "/Users/handtomouse/maplemoon-website/_wip/evidence/minimum_release_content_r4_20260817T190059/screenshots/carob-story-1440.png",
+      "failures": [
+        "console=1",
+        "request=1"
+      ]
+    },
+    {
+      "name": "faq",
+      "route": "/faq.html",
+      "width": 390,
+      "status": 200,
+      "metrics": {
+        "clientWidth": 390,
+        "scrollWidth": 390,
+        "bodyText": 859,
+        "brokenImages": [],
+        "incompleteImages": [],
+        "overlay": false
+      },
+      "interaction": {
+        "firstFocus": {
+          "tag": "A",
+          "text": "Skip to main content",
+          "href": "#main-content"
+        },
+        "mobileMenu": {
+          "applicable": false
+        },
+        "faq": {
+          "opened": true,
+          "matches": 12,
+          "exactQuestion": 2
+        }
+      },
+      "consoleErrors": [
+        "Failed to load resource: net::ERR_NAME_NOT_RESOLVED"
+      ],
+      "pageErrors": [],
+      "requestFailures": [
+        "GET https://p.typekit.net/p.css?s=1&k=dvz0xjs&ht=tk&f=28225.28226.28227.28238.39492&a=8195009&app=typekit&e=css net::ERR_NAME_NOT_RESOLVED"
+      ],
+      "badResponses": [],
+      "screenshot": "/Users/handtomouse/maplemoon-website/_wip/evidence/minimum_release_content_r4_20260817T190059/screenshots/faq-390.png",
+      "failures": [
+        "console=1",
+        "request=1",
+        "faq-interaction"
+      ]
+    },
+    {
+      "name": "faq",
+      "route": "/faq.html",
+      "width": 768,
+      "status": 200,
+      "metrics": {
+        "clientWidth": 768,
+        "scrollWidth": 768,
+        "bodyText": 859,
+        "brokenImages": [],
+        "incompleteImages": [],
+        "overlay": false
+      },
+      "interaction": {
+        "firstFocus": {
+          "tag": "A",
+          "text": "Skip to main content",
+          "href": "#main-content"
+        },
+        "mobileMenu": {
+          "applicable": false
+        },
+        "faq": {
+          "opened": true,
+          "matches": 12,
+          "exactQuestion": 2
+        }
+      },
+      "consoleErrors": [
+        "Failed to load resource: net::ERR_NAME_NOT_RESOLVED"
+      ],
+      "pageErrors": [],
+      "requestFailures": [
+        "GET https://p.typekit.net/p.css?s=1&k=dvz0xjs&ht=tk&f=28225.28226.28227.28238.39492&a=8195009&app=typekit&e=css net::ERR_NAME_NOT_RESOLVED"
+      ],
+      "badResponses": [],
+      "screenshot": null,
+      "failures": [
+        "console=1",
+        "request=1",
+        "faq-interaction"
+      ]
+    },
+    {
+      "name": "faq",
+      "route": "/faq.html",
+      "width": 900,
+      "status": 200,
+      "metrics": {
+        "clientWidth": 900,
+        "scrollWidth": 900,
+        "bodyText": 859,
+        "brokenImages": [],
+        "incompleteImages": [],
+        "overlay": false
+      },
+      "interaction": {
+        "firstFocus": {
+          "tag": "A",
+          "text": "Skip to main content",
+          "href": "#main-content"
+        },
+        "mobileMenu": {
+          "applicable": false
+        },
+        "faq": {
+          "opened": true,
+          "matches": 12,
+          "exactQuestion": 2
+        }
+      },
+      "consoleErrors": [
+        "Failed to load resource: net::ERR_NAME_NOT_RESOLVED"
+      ],
+      "pageErrors": [],
+      "requestFailures": [
+        "GET https://p.typekit.net/p.css?s=1&k=dvz0xjs&ht=tk&f=28225.28226.28227.28238.39492&a=8195009&app=typekit&e=css net::ERR_NAME_NOT_RESOLVED"
+      ],
+      "badResponses": [],
+      "screenshot": null,
+      "failures": [
+        "console=1",
+        "request=1",
+        "faq-interaction"
+      ]
+    },
+    {
+      "name": "faq",
+      "route": "/faq.html",
+      "width": 1024,
+      "status": 200,
+      "metrics": {
+        "clientWidth": 1024,
+        "scrollWidth": 1024,
+        "bodyText": 962,
+        "brokenImages": [],
+        "incompleteImages": [],
+        "overlay": false
+      },
+      "interaction": {
+        "firstFocus": {
+          "tag": "A",
+          "text": "Skip to main content",
+          "href": "#main-content"
+        },
+        "mobileMenu": {
+          "applicable": false
+        },
+        "faq": {
+          "opened": true,
+          "matches": 12,
+          "exactQuestion": 2
+        }
+      },
+      "consoleErrors": [
+        "Failed to load resource: net::ERR_NAME_NOT_RESOLVED"
+      ],
+      "pageErrors": [],
+      "requestFailures": [
+        "GET https://p.typekit.net/p.css?s=1&k=dvz0xjs&ht=tk&f=28225.28226.28227.28238.39492&a=8195009&app=typekit&e=css net::ERR_NAME_NOT_RESOLVED"
+      ],
+      "badResponses": [],
+      "screenshot": null,
+      "failures": [
+        "console=1",
+        "request=1",
+        "faq-interaction"
+      ]
+    },
+    {
+      "name": "faq",
+      "route": "/faq.html",
+      "width": 1440,
+      "status": 200,
+      "metrics": {
+        "clientWidth": 1440,
+        "scrollWidth": 1440,
+        "bodyText": 962,
+        "brokenImages": [],
+        "incompleteImages": [],
+        "overlay": false
+      },
+      "interaction": {
+        "firstFocus": {
+          "tag": "A",
+          "text": "Skip to main content",
+          "href": "#main-content"
+        },
+        "mobileMenu": {
+          "applicable": false
+        },
+        "faq": {
+          "opened": true,
+          "matches": 12,
+          "exactQuestion": 2
+        }
+      },
+      "consoleErrors": [
+        "Failed to load resource: net::ERR_NAME_NOT_RESOLVED"
+      ],
+      "pageErrors": [],
+      "requestFailures": [
+        "GET https://p.typekit.net/p.css?s=1&k=dvz0xjs&ht=tk&f=28225.28226.28227.28238.39492&a=8195009&app=typekit&e=css net::ERR_NAME_NOT_RESOLVED"
+      ],
+      "badResponses": [],
+      "screenshot": "/Users/handtomouse/maplemoon-website/_wip/evidence/minimum_release_content_r4_20260817T190059/screenshots/faq-1440.png",
+      "failures": [
+        "console=1",
+        "request=1",
+        "faq-interaction"
+      ]
+    },
+    {
+      "name": "stockists",
+      "route": "/stockists.html",
+      "width": 390,
+      "status": 200,
+      "metrics": {
+        "clientWidth": 390,
+        "scrollWidth": 390,
+        "bodyText": 1465,
+        "brokenImages": [],
+        "incompleteImages": [],
+        "overlay": false
+      },
+      "interaction": {
+        "firstFocus": {
+          "tag": "A",
+          "text": "Skip to main content",
+          "href": "#main-content"
+        },
+        "mobileMenu": {
+          "applicable": false
+        },
+        "stockists": {
+          "countBefore": "Showing 8 of 204 stockists.",
+          "countAfter": "Showing 6 of 6 stockists.",
+          "renderedAfter": 6,
+          "internalVisible": false
+        }
+      },
+      "consoleErrors": [
+        "Failed to load resource: net::ERR_NAME_NOT_RESOLVED"
+      ],
+      "pageErrors": [],
+      "requestFailures": [
+        "GET https://p.typekit.net/p.css?s=1&k=dvz0xjs&ht=tk&f=28225.28226.28227.28238.39492&a=8195009&app=typekit&e=css net::ERR_NAME_NOT_RESOLVED"
+      ],
+      "badResponses": [],
+      "screenshot": "/Users/handtomouse/maplemoon-website/_wip/evidence/minimum_release_content_r4_20260817T190059/screenshots/stockists-390.png",
+      "failures": [
+        "console=1",
+        "request=1"
+      ]
+    },
+    {
+      "name": "stockists",
+      "route": "/stockists.html",
+      "width": 768,
+      "status": 200,
+      "metrics": {
+        "clientWidth": 768,
+        "scrollWidth": 768,
+        "bodyText": 1508,
+        "brokenImages": [],
+        "incompleteImages": [],
+        "overlay": false
+      },
+      "interaction": {
+        "firstFocus": {
+          "tag": "A",
+          "text": "Skip to main content",
+          "href": "#main-content"
+        },
+        "mobileMenu": {
+          "applicable": false
+        },
+        "stockists": {
+          "countBefore": "Showing 8 of 204 stockists.",
+          "countAfter": "Showing 6 of 6 stockists.",
+          "renderedAfter": 6,
+          "internalVisible": false
+        }
+      },
+      "consoleErrors": [
+        "Failed to load resource: net::ERR_NAME_NOT_RESOLVED"
+      ],
+      "pageErrors": [],
+      "requestFailures": [
+        "GET https://p.typekit.net/p.css?s=1&k=dvz0xjs&ht=tk&f=28225.28226.28227.28238.39492&a=8195009&app=typekit&e=css net::ERR_NAME_NOT_RESOLVED"
+      ],
+      "badResponses": [],
+      "screenshot": null,
+      "failures": [
+        "console=1",
+        "request=1"
+      ]
+    },
+    {
+      "name": "stockists",
+      "route": "/stockists.html",
+      "width": 900,
+      "status": 200,
+      "metrics": {
+        "clientWidth": 900,
+        "scrollWidth": 900,
+        "bodyText": 1508,
+        "brokenImages": [],
+        "incompleteImages": [],
+        "overlay": false
+      },
+      "interaction": {
+        "firstFocus": {
+          "tag": "A",
+          "text": "Skip to main content",
+          "href": "#main-content"
+        },
+        "mobileMenu": {
+          "applicable": false
+        },
+        "stockists": {
+          "countBefore": "Showing 8 of 204 stockists.",
+          "countAfter": "Showing 6 of 6 stockists.",
+          "renderedAfter": 6,
+          "internalVisible": false
+        }
+      },
+      "consoleErrors": [
+        "Failed to load resource: net::ERR_NAME_NOT_RESOLVED"
+      ],
+      "pageErrors": [],
+      "requestFailures": [
+        "GET https://p.typekit.net/p.css?s=1&k=dvz0xjs&ht=tk&f=28225.28226.28227.28238.39492&a=8195009&app=typekit&e=css net::ERR_NAME_NOT_RESOLVED"
+      ],
+      "badResponses": [],
+      "screenshot": null,
+      "failures": [
+        "console=1",
+        "request=1"
+      ]
+    },
+    {
+      "name": "stockists",
+      "route": "/stockists.html",
+      "width": 1024,
+      "status": 200,
+      "metrics": {
+        "clientWidth": 1024,
+        "scrollWidth": 1024,
+        "bodyText": 1514,
+        "brokenImages": [],
+        "incompleteImages": [],
+        "overlay": false
+      },
+      "interaction": {
+        "firstFocus": {
+          "tag": "A",
+          "text": "Skip to main content",
+          "href": "#main-content"
+        },
+        "mobileMenu": {
+          "applicable": false
+        },
+        "stockists": {
+          "countBefore": "Showing 8 of 204 stockists.",
+          "countAfter": "Showing 6 of 6 stockists.",
+          "renderedAfter": 6,
+          "internalVisible": false
+        }
+      },
+      "consoleErrors": [
+        "Failed to load resource: net::ERR_NAME_NOT_RESOLVED"
+      ],
+      "pageErrors": [],
+      "requestFailures": [
+        "GET https://p.typekit.net/p.css?s=1&k=dvz0xjs&ht=tk&f=28225.28226.28227.28238.39492&a=8195009&app=typekit&e=css net::ERR_NAME_NOT_RESOLVED"
+      ],
+      "badResponses": [],
+      "screenshot": null,
+      "failures": [
+        "console=1",
+        "request=1"
+      ]
+    },
+    {
+      "name": "stockists",
+      "route": "/stockists.html",
+      "width": 1440,
+      "status": 200,
+      "metrics": {
+        "clientWidth": 1440,
+        "scrollWidth": 1440,
+        "bodyText": 1514,
+        "brokenImages": [],
+        "incompleteImages": [],
+        "overlay": false
+      },
+      "interaction": {
+        "firstFocus": {
+          "tag": "A",
+          "text": "Skip to main content",
+          "href": "#main-content"
+        },
+        "mobileMenu": {
+          "applicable": false
+        },
+        "stockists": {
+          "countBefore": "Showing 8 of 204 stockists.",
+          "countAfter": "Showing 6 of 6 stockists.",
+          "renderedAfter": 6,
+          "internalVisible": false
+        }
+      },
+      "consoleErrors": [
+        "Failed to load resource: net::ERR_NAME_NOT_RESOLVED"
+      ],
+      "pageErrors": [],
+      "requestFailures": [
+        "GET https://p.typekit.net/p.css?s=1&k=dvz0xjs&ht=tk&f=28225.28226.28227.28238.39492&a=8195009&app=typekit&e=css net::ERR_NAME_NOT_RESOLVED"
+      ],
+      "badResponses": [],
+      "screenshot": "/Users/handtomouse/maplemoon-website/_wip/evidence/minimum_release_content_r4_20260817T190059/screenshots/stockists-1440.png",
+      "failures": [
+        "console=1",
+        "request=1"
+      ]
+    },
+    {
+      "name": "pure-carob-bar",
+      "route": "/products/pure-carob-bar.html",
+      "width": 390,
+      "status": 200,
+      "metrics": {
+        "clientWidth": 390,
+        "scrollWidth": 390,
+        "bodyText": 1154,
+        "brokenImages": [],
+        "incompleteImages": [],
+        "overlay": false
+      },
+      "interaction": {
+        "firstFocus": {
+          "tag": "A",
+          "text": "Skip to the product",
+          "href": "#product-title"
+        },
+        "mobileMenu": {
+          "applicable": false
+        },
+        "pure": {
+          "enquiry": 1,
+          "cartControls": 0,
+          "relatedImages": 0
+        }
+      },
+      "consoleErrors": [
+        "Failed to load resource: net::ERR_NAME_NOT_RESOLVED",
+        "MapleMoon chrome: mount contract is incomplete; navigation left visible."
+      ],
+      "pageErrors": [],
+      "requestFailures": [
+        "GET https://p.typekit.net/p.css?s=1&k=dvz0xjs&ht=tk&f=28225.28226.28227.28238.39492&a=8195009&app=typekit&e=css net::ERR_NAME_NOT_RESOLVED"
+      ],
+      "badResponses": [],
+      "screenshot": "/Users/handtomouse/maplemoon-website/_wip/evidence/minimum_release_content_r4_20260817T190059/screenshots/pure-carob-bar-390.png",
+      "failures": [
+        "console=2",
+        "request=1"
+      ]
+    },
+    {
+      "name": "pure-carob-bar",
+      "route": "/products/pure-carob-bar.html",
+      "width": 768,
+      "status": 200,
+      "metrics": {
+        "clientWidth": 768,
+        "scrollWidth": 768,
+        "bodyText": 1154,
+        "brokenImages": [],
+        "incompleteImages": [],
+        "overlay": false
+      },
+      "interaction": {
+        "firstFocus": {
+          "tag": "A",
+          "text": "Skip to the product",
+          "href": "#product-title"
+        },
+        "mobileMenu": {
+          "applicable": false
+        },
+        "pure": {
+          "enquiry": 1,
+          "cartControls": 0,
+          "relatedImages": 0
+        }
+      },
+      "consoleErrors": [
+        "Failed to load resource: net::ERR_NAME_NOT_RESOLVED",
+        "MapleMoon chrome: mount contract is incomplete; navigation left visible."
+      ],
+      "pageErrors": [],
+      "requestFailures": [
+        "GET https://p.typekit.net/p.css?s=1&k=dvz0xjs&ht=tk&f=28225.28226.28227.28238.39492&a=8195009&app=typekit&e=css net::ERR_NAME_NOT_RESOLVED"
+      ],
+      "badResponses": [],
+      "screenshot": null,
+      "failures": [
+        "console=2",
+        "request=1"
+      ]
+    },
+    {
+      "name": "pure-carob-bar",
+      "route": "/products/pure-carob-bar.html",
+      "width": 900,
+      "status": 200,
+      "metrics": {
+        "clientWidth": 900,
+        "scrollWidth": 900,
+        "bodyText": 1154,
+        "brokenImages": [],
+        "incompleteImages": [],
+        "overlay": false
+      },
+      "interaction": {
+        "firstFocus": {
+          "tag": "A",
+          "text": "Skip to the product",
+          "href": "#product-title"
+        },
+        "mobileMenu": {
+          "applicable": false
+        },
+        "pure": {
+          "enquiry": 1,
+          "cartControls": 0,
+          "relatedImages": 0
+        }
+      },
+      "consoleErrors": [
+        "Failed to load resource: net::ERR_NAME_NOT_RESOLVED",
+        "MapleMoon chrome: mount contract is incomplete; navigation left visible."
+      ],
+      "pageErrors": [],
+      "requestFailures": [
+        "GET https://p.typekit.net/p.css?s=1&k=dvz0xjs&ht=tk&f=28225.28226.28227.28238.39492&a=8195009&app=typekit&e=css net::ERR_NAME_NOT_RESOLVED"
+      ],
+      "badResponses": [],
+      "screenshot": null,
+      "failures": [
+        "console=2",
+        "request=1"
+      ]
+    },
+    {
+      "name": "pure-carob-bar",
+      "route": "/products/pure-carob-bar.html",
+      "width": 1024,
+      "status": 200,
+      "metrics": {
+        "clientWidth": 1024,
+        "scrollWidth": 1024,
+        "bodyText": 1199,
+        "brokenImages": [],
+        "incompleteImages": [],
+        "overlay": false
+      },
+      "interaction": {
+        "firstFocus": {
+          "tag": "A",
+          "text": "Skip to the product",
+          "href": "#product-title"
+        },
+        "mobileMenu": {
+          "applicable": false
+        },
+        "pure": {
+          "enquiry": 1,
+          "cartControls": 0,
+          "relatedImages": 0
+        }
+      },
+      "consoleErrors": [
+        "Failed to load resource: net::ERR_NAME_NOT_RESOLVED",
+        "MapleMoon chrome: mount contract is incomplete; navigation left visible."
+      ],
+      "pageErrors": [],
+      "requestFailures": [
+        "GET https://p.typekit.net/p.css?s=1&k=dvz0xjs&ht=tk&f=28225.28226.28227.28238.39492&a=8195009&app=typekit&e=css net::ERR_NAME_NOT_RESOLVED"
+      ],
+      "badResponses": [],
+      "screenshot": null,
+      "failures": [
+        "console=2",
+        "request=1"
+      ]
+    },
+    {
+      "name": "pure-carob-bar",
+      "route": "/products/pure-carob-bar.html",
+      "width": 1440,
+      "status": 200,
+      "metrics": {
+        "clientWidth": 1440,
+        "scrollWidth": 1440,
+        "bodyText": 1199,
+        "brokenImages": [],
+        "incompleteImages": [],
+        "overlay": false
+      },
+      "interaction": {
+        "firstFocus": {
+          "tag": "A",
+          "text": "Skip to the product",
+          "href": "#product-title"
+        },
+        "mobileMenu": {
+          "applicable": false
+        },
+        "pure": {
+          "enquiry": 1,
+          "cartControls": 0,
+          "relatedImages": 0
+        }
+      },
+      "consoleErrors": [
+        "Failed to load resource: net::ERR_NAME_NOT_RESOLVED",
+        "MapleMoon chrome: mount contract is incomplete; navigation left visible."
+      ],
+      "pageErrors": [],
+      "requestFailures": [
+        "GET https://p.typekit.net/p.css?s=1&k=dvz0xjs&ht=tk&f=28225.28226.28227.28238.39492&a=8195009&app=typekit&e=css net::ERR_NAME_NOT_RESOLVED"
+      ],
+      "badResponses": [],
+      "screenshot": "/Users/handtomouse/maplemoon-website/_wip/evidence/minimum_release_content_r4_20260817T190059/screenshots/pure-carob-bar-1440.png",
+      "failures": [
+        "console=2",
+        "request=1"
+      ]
+    }
+  ]
+}

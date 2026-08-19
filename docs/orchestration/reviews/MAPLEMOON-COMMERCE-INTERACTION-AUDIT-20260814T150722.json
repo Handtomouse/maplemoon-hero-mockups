@@ -1,0 +1,110 @@
+{
+  "schema": "maplemoon-receipt/v2",
+  "receipt_id": "MAPLEMOON-COMMERCE-INTERACTION-AUDIT-20260814T150722-RECEIPT-001",
+  "packet_id": "MAPLEMOON-COMMERCE-INTERACTION-AUDIT-20260814T150722",
+  "worker_thread_id": "/root/dedup_risk_audit",
+  "worker": "Codex immutable-preview commerce interaction auditor",
+  "started_at": "2026-08-14T15:07:22+10:00",
+  "completed_at": "2026-08-14T15:28:09+10:00",
+  "outcome": "HOLD_COMMERCE_RUNTIME",
+  "confidence": "high",
+  "checkpoint_path": "maplemoon-website/_wip/checkpoints/MAPLEMOON-COMMERCE-INTERACTION-AUDIT-20260814T150722_20260814_150722_AEST",
+  "files_read": [
+    "maplemoon-website/docs/orchestration/packets/MAPLEMOON-COMMERCE-INTERACTION-AUDIT-20260814T150722.md",
+    "maplemoon-website/docs/orchestration/reviews/MAPLEMOON-FAQ-CORRECTED-PREVIEW-20260814T145952.json",
+    "maplemoon-website/docs/orchestration/reviews/MAPLEMOON-CONTENT-CATALOGUE-TRUTH-20260814T145247.md",
+    "maplemoon-website/scripts/check-maplemoon-receipt.py",
+    "maplemoon_build_20260813/homepage.html",
+    "maplemoon_build_20260813/our-story.html",
+    "maplemoon_build_20260813/carob-story.html",
+    "maplemoon_build_20260813/shop.html",
+    "maplemoon_build_20260813/faq.html",
+    "maplemoon_build_20260813/stockists.html",
+    "maplemoon_build_20260813/pure-carob-bar.html",
+    "maplemoon_build_20260813/mock-cart.js",
+    "maplemoon_build_20260813/mock-cart.css",
+    "maplemoon_build_20260813/assets/design-system/mm-chrome.js",
+    "maplemoon_build_20260813/assets/design-system/mm-chrome.css",
+    "maplemoon_build_20260813/assets/design-system/mm-tokens.css",
+    "maplemoon_build_20260813/assets/design-system/mm-primitives.css",
+    "maplemoon-website/_wip/evidence/commerce_interaction_audit_20260814T150722/snapshot/index.html",
+    "maplemoon-website/_wip/evidence/commerce_interaction_audit_20260814T150722/snapshot/our-story.html",
+    "maplemoon-website/_wip/evidence/commerce_interaction_audit_20260814T150722/snapshot/carob-story.html",
+    "maplemoon-website/_wip/evidence/commerce_interaction_audit_20260814T150722/snapshot/shop.html",
+    "maplemoon-website/_wip/evidence/commerce_interaction_audit_20260814T150722/snapshot/faq.html",
+    "maplemoon-website/_wip/evidence/commerce_interaction_audit_20260814T150722/snapshot/stockists.html",
+    "maplemoon-website/_wip/evidence/commerce_interaction_audit_20260814T150722/snapshot/pure-carob-bar.html",
+    "maplemoon-website/_wip/evidence/commerce_interaction_audit_20260814T150722/snapshot/mock-cart.js",
+    "maplemoon-website/_wip/evidence/commerce_interaction_audit_20260814T150722/snapshot/mock-cart.css"
+  ],
+  "files_changed": [
+    "maplemoon-website/_wip/evidence/commerce_interaction_audit_20260814T150722",
+    "maplemoon-website/docs/orchestration/reviews/MAPLEMOON-COMMERCE-INTERACTION-AUDIT-20260814T150722.json"
+  ],
+  "pre_sha256": {
+    "maplemoon-website/_wip/evidence/commerce_interaction_audit_20260814T150722": null,
+    "maplemoon-website/docs/orchestration/reviews/MAPLEMOON-COMMERCE-INTERACTION-AUDIT-20260814T150722.json": null
+  },
+  "post_sha256": {
+    "maplemoon-website/_wip/evidence/commerce_interaction_audit_20260814T150722": "d1099bd68490f47f803190974e47476dd873708bdc4932d01f975c1afbeef381",
+    "maplemoon-website/docs/orchestration/reviews/MAPLEMOON-COMMERCE-INTERACTION-AUDIT-20260814T150722.json": null
+  },
+  "checks": [
+    {
+      "command": "shasum -a 256 packet; python3 scripts/check-maplemoon-receipt.py verify ... --phase start",
+      "exit_code": 0,
+      "result": "Packet SHA-256 61f61de84acb4e752836d52d49ffdcd3601e0d9cd8c1790ef46e2615b3f29e64; PASS packet=MAPLEMOON-COMMERCE-INTERACTION-AUDIT-20260814T150722 phase=start scope=2."
+    },
+    {
+      "command": "completion and promotion gates for MAPLEMOON-FAQ-CORRECTED-PREVIEW-20260814T145952",
+      "exit_code": 0,
+      "result": "PASS phase=complete changed=2; PASS phase=promote changed=2."
+    },
+    {
+      "command": "vercel inspect immutable corrected-FAQ preview",
+      "exit_code": 0,
+      "result": "PASS deployment=dpl_6gGEYQfUuXZPYGLaasVDEo9KZrQD target=preview status=Ready."
+    },
+    {
+      "command": "vercel inspect https://maplemoonbuild20260813.vercel.app",
+      "exit_code": 0,
+      "result": "PASS production alias still resolves dpl_G2LER2awaqyFtGRCcTserXbNynct / immutable 7vjf2m50b, target=production, status=Ready."
+    },
+    {
+      "command": "13 authenticated vercel curl GETs with --location into the exact evidence snapshot",
+      "exit_code": 0,
+      "result": "PASS seven routes, mock-cart.js, mock-cart.css and four design-system runtime assets each returned HTTP 200 with nonzero bodies."
+    },
+    {
+      "command": "snapshot SHA-256 and cmp verification",
+      "exit_code": 0,
+      "result": "PASS all seven acquired route bodies cmp=true against the packet-readable candidate routes; pinned mock-cart.js and mock-cart.css hashes exactly match the packet."
+    },
+    {
+      "command": "node static-commerce-gate.cjs; verify expected exit 2, outcome HOLD and controls_pass=true",
+      "exit_code": 0,
+      "result": "PASS expected HOLD detected: all four positive controls detected their fixture constructs; immutable mock-cart detected no subtotal label, subtotal target, monetary price-times-quantity arithmetic or selected-option price capture."
+    }
+  ],
+  "screenshots_or_urls": [
+    "https://maplemoonbuild20260813-krftm36lg-handtomouses-projects.vercel.app",
+    "maplemoon-website/_wip/evidence/commerce_interaction_audit_20260814T150722/results/static-commerce-gate.json",
+    "maplemoon-website/_wip/evidence/commerce_interaction_audit_20260814T150722/results/acquisition.json",
+    "maplemoon-website/_wip/evidence/commerce_interaction_audit_20260814T150722/results/hash-verification.json"
+  ],
+  "failures": [
+    "COMMERCE-01: The immutable cart has no subtotal label, output target or monetary calculation. It computes only total quantity, so the packet's required subtotal-arithmetic proof cannot pass.",
+    "COMMERCE-02: Shop offers multi-option price selectors, but mock-cart.js snapshots price from .pr and size from .pr .g once at startup and contains no selected-option listener/read path. A selected Moon, Banana or Eclipse option cannot be captured with exact option identity and price."
+  ],
+  "unknowns": [
+    "Browser interaction, form/network instrumentation, focus, 44px, 200 percent zoom and multi-width runtime gates were not run because the packet requires immediate stop on the first real arithmetic/identity HOLD."
+  ],
+  "residual_risk": [
+    "Production identity remained frozen by authenticated inspect. The production homepage MD5 was not re-fetched after the early commerce HOLD.",
+    "Changing candidate shared-header bytes were not used for runtime testing; no header-scroll or navigation conclusion is made."
+  ],
+  "forbidden_path_changes": [],
+  "proposed_next_state": "hold_commerce_runtime_fix_required_no_source_mutation",
+  "next_reviewer": "MapleMoon BOSS",
+  "ready_to_promote": false
+}

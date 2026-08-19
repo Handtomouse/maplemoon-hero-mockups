@@ -1,0 +1,73 @@
+{
+  "status": "PASS",
+  "scope": [
+    "/Users/handtomouse/maplemoon-website",
+    "/Users/handtomouse/maplemoon_build_20260813"
+  ],
+  "coverage": {
+    "/Users/handtomouse/maplemoon-website": {
+      "files": 4645,
+      "bytes": 5834560605
+    },
+    "/Users/handtomouse/maplemoon_build_20260813": {
+      "files": 304,
+      "bytes": 35474125
+    }
+  },
+  "positive_control": {
+    "path_found": true,
+    "name_found": true,
+    "token_found": true,
+    "hash_found": true,
+    "expected_sha256": "1948588d6c1c3a2a6b203eea45ddc9382da0b8e8faf2e2dfd43667e4de5b471c",
+    "actual_sha256": "1948588d6c1c3a2a6b203eea45ddc9382da0b8e8faf2e2dfd43667e4de5b471c",
+    "pass": true
+  },
+  "exact_filename_occurrences": [],
+  "exact_hash_equivalent_byte_occurrences": [],
+  "all_textual_occurrences": [
+    {
+      "path": "/Users/handtomouse/maplemoon-website/_wip/evidence/elixir_v4_live_use_audit_20260814T171205/binding_scan.py",
+      "hits": [
+        "elixir_pure_same_size_clean_edges_v4.png",
+        "elixir_spiced_same_size_clean_edges_v4.png",
+        "70f93f414902ae1b10e7ae1416954348aa20bd1d6950e37d05979b4e4aa9eb93",
+        "414f727e84ca0dc24749b10b1092f4618e9f9fc9b954304442a7a0a8779749bb"
+      ]
+    },
+    {
+      "path": "/Users/handtomouse/maplemoon-website/_wip/evidence/elixir_v4_live_use_audit_20260814T171205/mechanical_audit.py",
+      "hits": [
+        "elixir_pure_same_size_clean_edges_v4.png",
+        "elixir_spiced_same_size_clean_edges_v4.png",
+        "70f93f414902ae1b10e7ae1416954348aa20bd1d6950e37d05979b4e4aa9eb93",
+        "414f727e84ca0dc24749b10b1092f4618e9f9fc9b954304442a7a0a8779749bb"
+      ]
+    },
+    {
+      "path": "/Users/handtomouse/maplemoon-website/_wip/evidence/elixir_v4_live_use_audit_20260814T171205/review_surface.html",
+      "hits": [
+        "elixir_pure_same_size_clean_edges_v4.png",
+        "elixir_spiced_same_size_clean_edges_v4.png"
+      ]
+    },
+    {
+      "path": "/Users/handtomouse/maplemoon-website/docs/orchestration/packets/MAPLEMOON-ELIXIR-V4-LIVE-USE-AUDIT-20260814T171205.md",
+      "hits": [
+        "elixir_pure_same_size_clean_edges_v4.png",
+        "elixir_spiced_same_size_clean_edges_v4.png",
+        "70f93f414902ae1b10e7ae1416954348aa20bd1d6950e37d05979b4e4aa9eb93",
+        "414f727e84ca0dc24749b10b1092f4618e9f9fc9b954304442a7a0a8779749bb"
+      ]
+    }
+  ],
+  "runtime_textual_occurrences": [],
+  "classification": "docs/ and _wip/ references are control/evidence records, not runtime bindings; all other textual references are treated as runtime and fail closed.",
+  "errors": [],
+  "unwired": true,
+  "limitations": [
+    "Symlink targets are not followed.",
+    "Text reference search reads regular files up to 8 MiB; exact-byte search hashes every regular file whose byte size matches either pinned v4 asset.",
+    "The audit evidence directory necessarily contains control references and is classified as evidence, not runtime."
+  ]
+}

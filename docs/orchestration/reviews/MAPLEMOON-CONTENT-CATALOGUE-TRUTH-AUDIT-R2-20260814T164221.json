@@ -1,0 +1,94 @@
+{
+  "schema": "maplemoon-receipt/v2",
+  "receipt_id": "MAPLEMOON-CONTENT-CATALOGUE-TRUTH-AUDIT-R2-20260814T164221-RECEIPT",
+  "packet_id": "MAPLEMOON-CONTENT-CATALOGUE-TRUTH-AUDIT-R2-20260814T164221",
+  "worker_thread_id": "/root/header_powder_update",
+  "worker": "Codex",
+  "started_at": "2026-08-14T06:43:52Z",
+  "completed_at": "2026-08-14T06:51:49Z",
+  "files_read": [
+    "maplemoon-website/docs/orchestration/packets/MAPLEMOON-CONTENT-CATALOGUE-TRUTH-AUDIT-R2-20260814T164221.md",
+    "maplemoon_build_20260813/homepage.html",
+    "maplemoon_build_20260813/our-story.html",
+    "maplemoon_build_20260813/carob-story.html",
+    "maplemoon_build_20260813/shop.html",
+    "maplemoon_build_20260813/faq.html",
+    "maplemoon_build_20260813/stockists.html",
+    "maplemoon_build_20260813/pure-carob-bar.html",
+    "maplemoon_build_20260813/mock-cart.js",
+    "maplemoon_build_20260813/mock-cart.css",
+    "maplemoon-website/docs/orchestration/reviews/MAPLEMOON-CONTENT-CATALOGUE-TRUTH-AUDIT-20260814T161450.md",
+    "maplemoon-website/_wip/evidence/content_catalogue_truth_audit_20260814T161450",
+    "maplemoon-website/docs/orchestration/reviews/MAPLEMOON-ASSET-SLOT-AUTHORITY-MATRIX-20260814T143614.md",
+    "maplemoon-website/docs/orchestration/reviews/MAPLEMOON-ASSET-AUTHORITY-ADDENDUM-20260814T160123.md",
+    "maplemoon-website/docs/orchestration/reviews/MAPLEMOON-STYLES-KIT-BOSS-INTAKE-20260814T151331.md",
+    "Documents/Codex/2026-08-13/maple-moon-shared-site-styles-kit/outputs/CONTENT-SAFETY-AND-VOICE.md",
+    "Documents/Codex/2026-08-13/maple-moon-shared-site-styles-kit/outputs/DECISIONS-NEEDED.md",
+    "Documents/Codex/2026-08-13/maple-moon-shared-site-styles-kit/outputs/SOURCE-REGISTER.md",
+    "Documents/Codex/2026-08-13/maple-moon-shared-site-styles-kit/outputs/RULE-REGISTER.json",
+    "UFC/ops/bus/maplemoon/BOSS_20260814.md"
+  ],
+  "files_changed": [
+    "maplemoon-website/_wip/evidence/content_catalogue_truth_audit_r2_20260814T164221",
+    "maplemoon-website/docs/orchestration/reviews/MAPLEMOON-CONTENT-CATALOGUE-TRUTH-AUDIT-R2-20260814T164221.md",
+    "maplemoon-website/docs/orchestration/reviews/MAPLEMOON-CONTENT-CATALOGUE-TRUTH-AUDIT-R2-20260814T164221.json"
+  ],
+  "pre_sha256": {
+    "maplemoon-website/_wip/evidence/content_catalogue_truth_audit_r2_20260814T164221": null,
+    "maplemoon-website/docs/orchestration/reviews/MAPLEMOON-CONTENT-CATALOGUE-TRUTH-AUDIT-R2-20260814T164221.md": null,
+    "maplemoon-website/docs/orchestration/reviews/MAPLEMOON-CONTENT-CATALOGUE-TRUTH-AUDIT-R2-20260814T164221.json": null
+  },
+  "post_sha256": {
+    "maplemoon-website/_wip/evidence/content_catalogue_truth_audit_r2_20260814T164221": "46f232c4d4b19266acbcde8b54c27eefe1d6137e4ee1c5668368cf230c0c8df7",
+    "maplemoon-website/docs/orchestration/reviews/MAPLEMOON-CONTENT-CATALOGUE-TRUTH-AUDIT-R2-20260814T164221.md": "eee350fd321947cf5966818636cc68b6828ce6574a6d49c03f573ef360d70060",
+    "maplemoon-website/docs/orchestration/reviews/MAPLEMOON-CONTENT-CATALOGUE-TRUTH-AUDIT-R2-20260814T164221.json": null
+  },
+  "checks": [
+    {
+      "command": "python3 scripts/check-maplemoon-receipt.py checkpoint --packet ...R2...md --root /Users/handtomouse --destination ..._20260814_164345_AEST",
+      "exit_code": 0,
+      "result": "PASS checkpoint packet=MAPLEMOON-CONTENT-CATALOGUE-TRUTH-AUDIT-R2-20260814T164221 files=3"
+    },
+    {
+      "command": "python3 scripts/check-maplemoon-receipt.py verify --packet ...R2...md --root /Users/handtomouse --checkpoint ..._20260814_164345_AEST --phase start",
+      "exit_code": 0,
+      "result": "PASS phase=start scope=3 before first output write"
+    },
+    {
+      "command": "node _wip/evidence/content_catalogue_truth_audit_r2_20260814T164221/r2-verify.cjs acquisition",
+      "exit_code": 0,
+      "result": "19/19 fixed hashes; both material projections exact; 63 inherited PNGs; 11/11 controls; 14 browser + 14 default + 2 content-state cases; failures=[]"
+    },
+    {
+      "command": "magick identify -format ... visual-faq-home-pairs.png visual-shop-pairs.png plus manual visual inspection",
+      "exit_code": 0,
+      "result": "FAQ/Home pair 1008x1122 nonblank; Shop default/cart/checkout pair 700x1428 nonblank; inspected content legible at 390/1440 with state classifications matching machine evidence"
+    },
+    {
+      "command": "node _wip/evidence/content_catalogue_truth_audit_r2_20260814T164221/r2-verify.cjs close",
+      "exit_code": 0,
+      "result": "19/19 fixed hashes; both projections unchanged; exact FAQ 1/1 source and DOM; catalogue 24/18; stockists 204/7/197; photo truth 36; all visibility checks true; failures=[]"
+    }
+  ],
+  "screenshots_or_urls": [
+    "maplemoon-website/_wip/evidence/content_catalogue_truth_audit_r2_20260814T164221/visual-faq-home-pairs.png",
+    "maplemoon-website/_wip/evidence/content_catalogue_truth_audit_r2_20260814T164221/visual-shop-pairs.png",
+    "maplemoon-website/_wip/evidence/content_catalogue_truth_audit_20260814T161450"
+  ],
+  "failures": [],
+  "unknowns": [
+    "Nate has not resolved six named bars versus the current 24-card production catalogue.",
+    "CV-014, CV-051 and CV-062 remain case-level Nate decisions without a current source-backed occurrence map.",
+    "No governed item-level source was found for prices, options, sizes, availability or broad product claims.",
+    "Stockist source ownership, refresh cadence and public numeric wording remain unverified.",
+    "Production commerce/newsletter mode and exact media live-use bindings remain decision-bound."
+  ],
+  "residual_risk": [
+    "The protected preview can remain under review, but unchanged production promotion would expose unsupported claims, catalogue breadth, commerce language and stockist-number assertions.",
+    "Broader finished-product caffeine claims remain outside the exact CNT-005/DEC-011 approval.",
+    "The first audit's old whole-file-drift failure is intentionally preserved; R2 supersedes its verification basis through stable material projections."
+  ],
+  "forbidden_path_changes": [],
+  "proposed_next_state": "ready_for_boss_decision_review",
+  "next_reviewer": "MapleMoon BOSS, then Nate only for decision-bound content"
+}

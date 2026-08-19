@@ -1,0 +1,42 @@
+{
+  "schema": "maplemoon-cart-inert-focus-static/v1",
+  "outcome": "PASS",
+  "probes": [
+    {
+      "id": "already_open_guard_before_opener",
+      "positive_control_detected": true,
+      "candidate_detected": true
+    },
+    {
+      "id": "direct_body_capture",
+      "positive_control_detected": true,
+      "candidate_detected": true
+    },
+    {
+      "id": "dynamic_body_observer",
+      "positive_control_detected": true,
+      "candidate_detected": true
+    },
+    {
+      "id": "focusin_containment",
+      "positive_control_detected": true,
+      "candidate_detected": true
+    },
+    {
+      "id": "exact_inert_ownership_restore",
+      "positive_control_detected": true,
+      "candidate_detected": true
+    },
+    {
+      "id": "teardown_before_restore",
+      "positive_control_detected": true,
+      "candidate_detected": true
+    },
+    {
+      "id": "guarded_deferred_focus",
+      "positive_control_detected": true,
+      "candidate_detected": true
+    }
+  ],
+  "no_background_aria_hidden_expansion": true
+}

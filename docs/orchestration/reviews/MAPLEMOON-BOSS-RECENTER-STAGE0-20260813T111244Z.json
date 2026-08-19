@@ -1,0 +1,111 @@
+{
+  "schema": "maplemoon-receipt/v2",
+  "receipt_id": "MAPLEMOON-BOSS-RECENTER-STAGE0-20260813T111244Z-RECEIPT-001",
+  "packet_id": "MAPLEMOON-BOSS-RECENTER-STAGE0-20260813T111244Z",
+  "worker_thread_id": "019ffabc-e7e4-71c3-b769-3563efcc8cac",
+  "worker": "persistent pinned MapleMoon Boss",
+  "started_at": "2026-08-13T11:12:44Z",
+  "completed_at": "2026-08-13T11:55:00Z",
+  "phase": "complete",
+  "outcome": "PASS_STAGE0_CONTROL_HOLD_DELIVERY",
+  "ready_to_promote": false,
+  "checkpoint_path": "_wip/checkpoints/MAPLEMOON-BOSS-RECENTER-STAGE0-20260813T111244Z_20260813_211244_AEST",
+  "files_read": [
+    "/Users/handtomouse/Desktop/CODEX_BOSS_RECENTER_STAGE0.md",
+    "AGENTS.md",
+    "CLAUDE.md",
+    "docs/orchestration/CONTROL_PLANE_INTERFACES.md",
+    "docs/orchestration/SIDECHAT_RECEIPT_GATE.md",
+    "docs/orchestration/LOCK_MANIFEST.json",
+    "live Git, worktree, process, port, disk and bounded-size evidence",
+    "75 app-ledger entries and 15 worker reports",
+    "Claude background-job state and timeline for e675f15e",
+    "rendered DOM at http://127.0.0.1:4330/shop.html and /stockists.html",
+    "read-only Vercel deployment metadata and fetched artifact bytes"
+  ],
+  "files_changed": [
+    "docs/orchestration/packets/MAPLEMOON-BOSS-RECENTER-STAGE0-20260813T111244Z.md",
+    "docs/orchestration/reviews/MAPLEMOON-BOSS-RECENTER-STAGE0-20260813T111244Z.json"
+  ],
+  "pre_sha256": {
+    "docs/orchestration/packets/MAPLEMOON-BOSS-RECENTER-STAGE0-20260813T111244Z.md": null,
+    "docs/orchestration/reviews/MAPLEMOON-BOSS-RECENTER-STAGE0-20260813T111244Z.json": null
+  },
+  "post_sha256": {
+    "docs/orchestration/packets/MAPLEMOON-BOSS-RECENTER-STAGE0-20260813T111244Z.md": "67bf2417532dcc4baf44fdd18eeb1e7b5b73453ee573c8713c77898bc9df62b7",
+    "docs/orchestration/reviews/MAPLEMOON-BOSS-RECENTER-STAGE0-20260813T111244Z.json": null
+  },
+  "checks": [
+    {
+      "command": "app ledger inventory plus one bounded worker directive and wait cycle",
+      "exit_code": 0,
+      "result": "75 ledger entries scanned; 20 MapleMoon tasks accounted; 15/15 contacted workers reported and ended HOLD; four historical tasks were not woken"
+    },
+    {
+      "command": "git branch, HEAD, porcelain, cached diff and diff stat",
+      "exit_code": 0,
+      "result": "fix/trailing-slash-and-w1e-assets-20260812 at b5d385d5ae9db04438fde17a5a7cc1275b0ed07a; 143 porcelain records before this receipt and 144 after adding it; 14 tracked modified; zero staged; 92 insertions and 84 deletions plus binary changes"
+    },
+    {
+      "command": "ps/lsof/server-root and Claude background-job state audit",
+      "exit_code": 0,
+      "result": "all current ports mapped; e675f15e proved as post-checkpoint external writer and retained as FAIL/HOLD"
+    },
+    {
+      "command": "blind rendered-DOM probes with positive and negative controls",
+      "exit_code": 0,
+      "result": "Stockists rendered 200+ twice and no 204; Shop rendered both sections but omitted #eclipses from the category rail"
+    },
+    {
+      "command": "vercel whoami, ls, inspect and authenticated curl with byte comparison",
+      "exit_code": 0,
+      "result": "latest Ready Production deployment is from 2026-08-03; deployed pages match neither current site nor site-full"
+    },
+    {
+      "command": "quarantine path, line, mtime and SHA-256 audit",
+      "exit_code": 0,
+      "result": "harmful originals remain preserved in timestamped backups; warning-header current copies and exact icon/reconcile-brief hashes are recorded"
+    },
+    {
+      "command": "packet control JSON, recovery JSON and exact writable-scope comparison",
+      "exit_code": 0,
+      "result": "one control block parsed; schemas valid; recovery file set exactly matches packet writable paths"
+    }
+  ],
+  "screenshots_or_urls": [
+    "http://127.0.0.1:4330/shop.html",
+    "http://127.0.0.1:4330/stockists.html",
+    "http://127.0.0.1:8788/index.html",
+    "https://maplemoon-preview-carli-3jqyy8hww-handtomouses-projects.vercel.app"
+  ],
+  "failures": [],
+  "unknowns": [
+    "Any older unpinned MapleMoon task beyond the app ledger's maximum 50 recent non-pinned entries.",
+    "Whether Nate intentionally wants Claude job e675f15e to continue as the sole delivery writer.",
+    "Whether an unauthenticated client sees the old Vercel deployment or an SSO wall.",
+    "Which current copy, founder imagery and product imagery Nate accepts.",
+    "Which post-checkpoint live-build snapshot should become the Stage 1 baseline."
+  ],
+  "residual_risk": [
+    "Claude job e675f15e remained tempo=active with two local agents in flight at the 21:55 evidence cut-off and may change files after this receipt.",
+    "The main repository is heavily dirty with unattributed overlapping historical work.",
+    "The rendered Shop category split is incomplete even though source markup appears split.",
+    "No deploy, external client access, content acceptance or promotion is proved by this Stage 0 receipt."
+  ],
+  "forbidden_path_changes": [],
+  "control_exception": "The recovery manifest is the checkpoint itself and was extended, before the receipt's first write, only to admit the still-absent receipt path. External Claude writes are itemised evidence and are not attributed to this Boss.",
+  "external_mutations_observed": [
+    "/Users/handtomouse/maplemoon_build_20260813/pure-carob-bar.html",
+    "/Users/handtomouse/maplemoon_build_20260813/shop.html",
+    "/Users/handtomouse/maplemoon_build_20260813/homepage.html",
+    "/Users/handtomouse/maplemoon_build_20260813/faq.html",
+    "/Users/handtomouse/maplemoon_build_20260813/carob-story.html",
+    "/Users/handtomouse/maplemoon_build_20260813/mock-cart.js",
+    "/Users/handtomouse/UFC/ops/bus/maplemoon/CHECKPOINT_20260813_NIGHT2.md",
+    "/Users/handtomouse/UFC/ops/bus/maplemoon/tools_20260813/preflight_deploy.py",
+    "/Users/handtomouse/UFC/ops/bus/maplemoon/WHATS_NEXT_MAPLEMOON.html",
+    "four quarantined Desktop briefs, each with an original-byte timestamped backup"
+  ],
+  "proposed_next_state": "hold_for_nate",
+  "next_reviewer": "Nate"
+}

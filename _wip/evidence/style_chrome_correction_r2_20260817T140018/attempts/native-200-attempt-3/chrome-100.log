@@ -1,0 +1,7 @@
+
+DevTools listening on ws://127.0.0.1:9360/devtools/browser/6cafb354-db6c-405d-89c0-f8dfe8a2dc02
+Trying to load the allocator multiple times. This is *not* supported.
+2026-08-17 14:43:01.897 Google Chrome Helper[13124:4017351] XPC error for connection com.apple.backupd.sandbox.xpc: Connection invalid
+2026-08-17 14:43:01.897 Google Chrome Helper[13124:4017347] XPC error for connection com.apple.backupd.sandbox.xpc: Connection invalid
+2026-08-17 14:43:01.897 Google Chrome Helper[13124:4017349] XPC error for connection com.apple.backupd.sandbox.xpc: Connection invalid
+2026-08-17 14:43:01.897 Google Chrome Helper[13124:4017344] XPC error for connection com.apple.backupd.sandbox.xpc: Connection invalid

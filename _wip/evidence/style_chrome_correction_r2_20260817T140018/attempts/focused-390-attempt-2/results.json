@@ -1,0 +1,2793 @@
+{
+  "schema": "maplemoon-style-chrome-r2-focused-390/v1",
+  "rows": [
+    {
+      "route": "homepage",
+      "baseline": {
+        "clientWidth": 390,
+        "scrollWidth": 390,
+        "headerHeight": 0,
+        "headerVisible": false,
+        "wordmark": "",
+        "wordmarkCentreDelta": null,
+        "targets": [],
+        "overflow": [
+          {
+            "selector": "body>div.wf:nth-of-type(1)",
+            "generated": false,
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 390,
+              "height": 6879.546875,
+              "right": 390,
+              "bottom": 6879.546875
+            },
+            "clientWidth": 390,
+            "scrollWidth": 488,
+            "boxSizing": "border-box",
+            "minWidth": "0px",
+            "overflowX": "hidden",
+            "clipChain": [
+              {
+                "selector": "body>",
+                "overflowX": "hidden",
+                "overflowY": "auto"
+              }
+            ],
+            "contained": true
+          },
+          {
+            "selector": "body>div.wf:nth-of-type(1)>section.wf-phero>header.top.wf-ptop.mm-site-header>div.wrap.bar.mm-wrap>div.wf-pnav.r.mm-header__right",
+            "generated": false,
+            "rect": {
+              "x": 255.59375,
+              "y": 17,
+              "width": 106.40625,
+              "height": 44,
+              "right": 362,
+              "bottom": 61
+            },
+            "clientWidth": 106,
+            "scrollWidth": 109,
+            "boxSizing": "border-box",
+            "minWidth": "auto",
+            "overflowX": "visible",
+            "clipChain": [
+              {
+                "selector": "body>div.wf:nth-of-type(1)>section.wf-phero>header.top.wf-ptop.mm-site-header",
+                "overflowX": "hidden",
+                "overflowY": "hidden"
+              },
+              {
+                "selector": "#top",
+                "overflowX": "hidden",
+                "overflowY": "hidden"
+              },
+              {
+                "selector": "body>div.wf:nth-of-type(1)",
+                "overflowX": "hidden",
+                "overflowY": "hidden"
+              },
+              {
+                "selector": "body>",
+                "overflowX": "hidden",
+                "overflowY": "auto"
+              }
+            ],
+            "contained": true
+          },
+          {
+            "selector": "body>section.wf-phero>header.top.wf-ptop.mm-site-header>div.wrap.bar.mm-wrap>div.wf-pnav.r.mm-header__right>button.wf-pcart.mm-icon-control",
+            "generated": false,
+            "rect": {
+              "x": 318,
+              "y": 17,
+              "width": 44,
+              "height": 44,
+              "right": 362,
+              "bottom": 61
+            },
+            "clientWidth": 42,
+            "scrollWidth": 46,
+            "boxSizing": "border-box",
+            "minWidth": "44px",
+            "overflowX": "visible",
+            "clipChain": [
+              {
+                "selector": "body>div.wf:nth-of-type(1)>section.wf-phero>header.top.wf-ptop.mm-site-header",
+                "overflowX": "hidden",
+                "overflowY": "hidden"
+              },
+              {
+                "selector": "#top",
+                "overflowX": "hidden",
+                "overflowY": "hidden"
+              },
+              {
+                "selector": "body>div.wf:nth-of-type(1)",
+                "overflowX": "hidden",
+                "overflowY": "hidden"
+              },
+              {
+                "selector": "body>",
+                "overflowX": "hidden",
+                "overflowY": "auto"
+              }
+            ],
+            "contained": true
+          },
+          {
+            "selector": "body>div.wf:nth-of-type(1)>section.wf-phero>div.center.wf-pcenter.wrap:nth-of-type(6)>div.wf-hero-copy",
+            "generated": false,
+            "rect": {
+              "x": 16,
+              "y": 92,
+              "width": 358,
+              "height": 264.984375,
+              "right": 374,
+              "bottom": 356.984375
+            },
+            "clientWidth": 358,
+            "scrollWidth": 362,
+            "boxSizing": "border-box",
+            "minWidth": "auto",
+            "overflowX": "visible",
+            "clipChain": [
+              {
+                "selector": "body>div.wf:nth-of-type(1)>section.wf-phero>div.center.wf-pcenter.wrap:nth-of-type(6)",
+                "overflowX": "hidden",
+                "overflowY": "hidden"
+              },
+              {
+                "selector": "#top",
+                "overflowX": "hidden",
+                "overflowY": "hidden"
+              },
+              {
+                "selector": "body>div.wf:nth-of-type(1)",
+                "overflowX": "hidden",
+                "overflowY": "hidden"
+              },
+              {
+                "selector": "body>",
+                "overflowX": "hidden",
+                "overflowY": "auto"
+              }
+            ],
+            "contained": true
+          },
+          {
+            "selector": "body>section.wf-phero>div.center.wf-pcenter.wrap:nth-of-type(6)>div.wf-hero-copy>div.wf-pactions:nth-of-type(2)>a.wf-ppill.primary",
+            "generated": false,
+            "rect": {
+              "x": 124.921875,
+              "y": 311.21875,
+              "width": 140.15625,
+              "height": 45.765625,
+              "right": 265.078125,
+              "bottom": 356.984375
+            },
+            "clientWidth": 138,
+            "scrollWidth": 141,
+            "boxSizing": "border-box",
+            "minWidth": "auto",
+            "overflowX": "visible",
+            "clipChain": [
+              {
+                "selector": "body>div.wf:nth-of-type(1)>section.wf-phero>div.center.wf-pcenter.wrap:nth-of-type(6)",
+                "overflowX": "hidden",
+                "overflowY": "hidden"
+              },
+              {
+                "selector": "#top",
+                "overflowX": "hidden",
+                "overflowY": "hidden"
+              },
+              {
+                "selector": "body>div.wf:nth-of-type(1)",
+                "overflowX": "hidden",
+                "overflowY": "hidden"
+              },
+              {
+                "selector": "body>",
+                "overflowX": "hidden",
+                "overflowY": "auto"
+              }
+            ],
+            "contained": true
+          },
+          {
+            "selector": "#main-content",
+            "generated": false,
+            "rect": {
+              "x": 0,
+              "y": 374.984375,
+              "width": 390,
+              "height": 6022.15625,
+              "right": 390,
+              "bottom": 6397.140625
+            },
+            "clientWidth": 390,
+            "scrollWidth": 488,
+            "boxSizing": "border-box",
+            "minWidth": "0px",
+            "overflowX": "visible",
+            "clipChain": [
+              {
+                "selector": "body>div.wf:nth-of-type(1)",
+                "overflowX": "hidden",
+                "overflowY": "hidden"
+              },
+              {
+                "selector": "body>",
+                "overflowX": "hidden",
+                "overflowY": "auto"
+              }
+            ],
+            "contained": true
+          },
+          {
+            "selector": "#range",
+            "generated": false,
+            "rect": {
+              "x": 0,
+              "y": 374.984375,
+              "width": 390,
+              "height": 815.796875,
+              "right": 390,
+              "bottom": 1190.78125
+            },
+            "clientWidth": 390,
+            "scrollWidth": 488,
+            "boxSizing": "border-box",
+            "minWidth": "0px",
+            "overflowX": "visible",
+            "clipChain": [
+              {
+                "selector": "body>div.wf:nth-of-type(1)",
+                "overflowX": "hidden",
+                "overflowY": "hidden"
+              },
+              {
+                "selector": "body>",
+                "overflowX": "hidden",
+                "overflowY": "auto"
+              }
+            ],
+            "contained": true
+          },
+          {
+            "selector": "body>div.wf:nth-of-type(1)>main>section.wrap.wf-line.wf-line-dark:nth-of-type(1)>div.wf-stage-wrap:nth-of-type(1)",
+            "generated": false,
+            "rect": {
+              "x": 28,
+              "y": 450.984375,
+              "width": 334,
+              "height": 326,
+              "right": 362,
+              "bottom": 776.984375
+            },
+            "clientWidth": 334,
+            "scrollWidth": 460,
+            "boxSizing": "border-box",
+            "minWidth": "auto",
+            "overflowX": "visible",
+            "clipChain": [
+              {
+                "selector": "body>div.wf:nth-of-type(1)",
+                "overflowX": "hidden",
+                "overflowY": "hidden"
+              },
+              {
+                "selector": "body>",
+                "overflowX": "hidden",
+                "overflowY": "auto"
+              }
+            ],
+            "contained": true
+          },
+          {
+            "selector": "#stage",
+            "generated": false,
+            "rect": {
+              "x": 28,
+              "y": 450.984375,
+              "width": 334,
+              "height": 326,
+              "right": 362,
+              "bottom": 776.984375
+            },
+            "clientWidth": 334,
+            "scrollWidth": 345,
+            "boxSizing": "border-box",
+            "minWidth": "0px",
+            "overflowX": "visible",
+            "clipChain": [
+              {
+                "selector": "body>div.wf:nth-of-type(1)",
+                "overflowX": "hidden",
+                "overflowY": "hidden"
+              },
+              {
+                "selector": "body>",
+                "overflowX": "hidden",
+                "overflowY": "auto"
+              }
+            ],
+            "contained": true
+          },
+          {
+            "selector": "body>main>section.wrap.wf-line.wf-line-dark:nth-of-type(1)>div.wf-stage-wrap:nth-of-type(1)>div.wf-cf>button.cf-item:nth-of-type(2)",
+            "generated": false,
+            "rect": {
+              "x": 40.157630920410156,
+              "y": 494.5779113769531,
+              "width": 138.86776733398438,
+              "height": 262.1505432128906,
+              "right": 179.02539825439453,
+              "bottom": 756.7284545898438
+            },
+            "clientWidth": 192,
+            "scrollWidth": 223,
+            "boxSizing": "border-box",
+            "minWidth": "0px",
+            "overflowX": "visible",
+            "clipChain": [
+              {
+                "selector": "body>div.wf:nth-of-type(1)",
+                "overflowX": "hidden",
+                "overflowY": "hidden"
+              },
+              {
+                "selector": "body>",
+                "overflowX": "hidden",
+                "overflowY": "auto"
+              }
+            ],
+            "contained": true
+          },
+          {
+            "selector": "body>main>section.wrap.wf-line.wf-line-dark:nth-of-type(1)>div.wf-stage-wrap:nth-of-type(1)>div.wf-cf>button.cf-item:nth-of-type(4)",
+            "generated": false,
+            "rect": {
+              "x": 210.97459411621094,
+              "y": 494.5779113769531,
+              "width": 138.86778259277344,
+              "height": 262.1505432128906,
+              "right": 349.8423767089844,
+              "bottom": 756.7284545898438
+            },
+            "clientWidth": 192,
+            "scrollWidth": 223,
+            "boxSizing": "border-box",
+            "minWidth": "0px",
+            "overflowX": "visible",
+            "clipChain": [
+              {
+                "selector": "body>div.wf:nth-of-type(1)",
+                "overflowX": "hidden",
+                "overflowY": "hidden"
+              },
+              {
+                "selector": "body>",
+                "overflowX": "hidden",
+                "overflowY": "auto"
+              }
+            ],
+            "contained": true
+          }
+        ],
+        "generatedOverflow": [],
+        "uncontainedOverflow": [],
+        "mainCount": 1
+      },
+      "observed": {
+        "clientWidth": 390,
+        "scrollWidth": 390,
+        "headerHeight": 70,
+        "headerVisible": true,
+        "wordmark": "maple moon",
+        "wordmarkCentreDelta": -0.0078125,
+        "targets": [
+          {
+            "text": "Menu",
+            "rect": {
+              "x": 16,
+              "y": 13,
+              "width": 44,
+              "height": 44,
+              "right": 60,
+              "bottom": 57
+            },
+            "boxSizing": "border-box"
+          },
+          {
+            "text": "maple moon",
+            "rect": {
+              "x": 128.765625,
+              "y": 13,
+              "width": 132.453125,
+              "height": 44,
+              "right": 261.21875,
+              "bottom": 57
+            },
+            "boxSizing": "border-box"
+          },
+          {
+            "text": "Contact",
+            "rect": {
+              "x": 318.3125,
+              "y": 13,
+              "width": 55.6875,
+              "height": 44,
+              "right": 374,
+              "bottom": 57
+            },
+            "boxSizing": "border-box"
+          }
+        ],
+        "overflow": [
+          {
+            "selector": "body>div.wf:nth-of-type(1)",
+            "generated": false,
+            "rect": {
+              "x": 0,
+              "y": 70,
+              "width": 390,
+              "height": 6809.546875,
+              "right": 390,
+              "bottom": 6879.546875
+            },
+            "clientWidth": 390,
+            "scrollWidth": 488,
+            "boxSizing": "border-box",
+            "minWidth": "0px",
+            "overflowX": "hidden",
+            "clipChain": [
+              {
+                "selector": "body>",
+                "overflowX": "hidden",
+                "overflowY": "auto"
+              }
+            ],
+            "contained": true
+          },
+          {
+            "selector": "body>div.wf:nth-of-type(1)>section.wf-phero>div.center.wf-pcenter.wrap:nth-of-type(6)>div.wf-hero-copy",
+            "generated": false,
+            "rect": {
+              "x": 16,
+              "y": 92,
+              "width": 358,
+              "height": 264.984375,
+              "right": 374,
+              "bottom": 356.984375
+            },
+            "clientWidth": 358,
+            "scrollWidth": 362,
+            "boxSizing": "border-box",
+            "minWidth": "auto",
+            "overflowX": "visible",
+            "clipChain": [
+              {
+                "selector": "body>div.wf:nth-of-type(1)>section.wf-phero>div.center.wf-pcenter.wrap:nth-of-type(6)",
+                "overflowX": "hidden",
+                "overflowY": "hidden"
+              },
+              {
+                "selector": "#top",
+                "overflowX": "hidden",
+                "overflowY": "hidden"
+              },
+              {
+                "selector": "body>div.wf:nth-of-type(1)",
+                "overflowX": "hidden",
+                "overflowY": "hidden"
+              },
+              {
+                "selector": "body>",
+                "overflowX": "hidden",
+                "overflowY": "auto"
+              }
+            ],
+            "contained": true
+          },
+          {
+            "selector": "body>section.wf-phero>div.center.wf-pcenter.wrap:nth-of-type(6)>div.wf-hero-copy>div.wf-pactions:nth-of-type(2)>a.wf-ppill.primary",
+            "generated": false,
+            "rect": {
+              "x": 124.921875,
+              "y": 311.21875,
+              "width": 140.15625,
+              "height": 45.765625,
+              "right": 265.078125,
+              "bottom": 356.984375
+            },
+            "clientWidth": 138,
+            "scrollWidth": 141,
+            "boxSizing": "border-box",
+            "minWidth": "auto",
+            "overflowX": "visible",
+            "clipChain": [
+              {
+                "selector": "body>div.wf:nth-of-type(1)>section.wf-phero>div.center.wf-pcenter.wrap:nth-of-type(6)",
+                "overflowX": "hidden",
+                "overflowY": "hidden"
+              },
+              {
+                "selector": "#top",
+                "overflowX": "hidden",
+                "overflowY": "hidden"
+              },
+              {
+                "selector": "body>div.wf:nth-of-type(1)",
+                "overflowX": "hidden",
+                "overflowY": "hidden"
+              },
+              {
+                "selector": "body>",
+                "overflowX": "hidden",
+                "overflowY": "auto"
+              }
+            ],
+            "contained": true
+          },
+          {
+            "selector": "#main-content",
+            "generated": false,
+            "rect": {
+              "x": 0,
+              "y": 374.984375,
+              "width": 390,
+              "height": 6022.15625,
+              "right": 390,
+              "bottom": 6397.140625
+            },
+            "clientWidth": 390,
+            "scrollWidth": 488,
+            "boxSizing": "border-box",
+            "minWidth": "0px",
+            "overflowX": "visible",
+            "clipChain": [
+              {
+                "selector": "body>div.wf:nth-of-type(1)",
+                "overflowX": "hidden",
+                "overflowY": "hidden"
+              },
+              {
+                "selector": "body>",
+                "overflowX": "hidden",
+                "overflowY": "auto"
+              }
+            ],
+            "contained": true
+          },
+          {
+            "selector": "#range",
+            "generated": false,
+            "rect": {
+              "x": 0,
+              "y": 374.984375,
+              "width": 390,
+              "height": 815.796875,
+              "right": 390,
+              "bottom": 1190.78125
+            },
+            "clientWidth": 390,
+            "scrollWidth": 488,
+            "boxSizing": "border-box",
+            "minWidth": "0px",
+            "overflowX": "visible",
+            "clipChain": [
+              {
+                "selector": "body>div.wf:nth-of-type(1)",
+                "overflowX": "hidden",
+                "overflowY": "hidden"
+              },
+              {
+                "selector": "body>",
+                "overflowX": "hidden",
+                "overflowY": "auto"
+              }
+            ],
+            "contained": true
+          },
+          {
+            "selector": "body>div.wf:nth-of-type(1)>main>section.wrap.wf-line.wf-line-dark:nth-of-type(1)>div.wf-stage-wrap:nth-of-type(1)",
+            "generated": false,
+            "rect": {
+              "x": 28,
+              "y": 450.984375,
+              "width": 334,
+              "height": 326,
+              "right": 362,
+              "bottom": 776.984375
+            },
+            "clientWidth": 334,
+            "scrollWidth": 460,
+            "boxSizing": "border-box",
+            "minWidth": "auto",
+            "overflowX": "visible",
+            "clipChain": [
+              {
+                "selector": "body>div.wf:nth-of-type(1)",
+                "overflowX": "hidden",
+                "overflowY": "hidden"
+              },
+              {
+                "selector": "body>",
+                "overflowX": "hidden",
+                "overflowY": "auto"
+              }
+            ],
+            "contained": true
+          },
+          {
+            "selector": "#stage",
+            "generated": false,
+            "rect": {
+              "x": 28,
+              "y": 450.984375,
+              "width": 334,
+              "height": 326,
+              "right": 362,
+              "bottom": 776.984375
+            },
+            "clientWidth": 334,
+            "scrollWidth": 347,
+            "boxSizing": "border-box",
+            "minWidth": "0px",
+            "overflowX": "visible",
+            "clipChain": [
+              {
+                "selector": "body>div.wf:nth-of-type(1)",
+                "overflowX": "hidden",
+                "overflowY": "hidden"
+              },
+              {
+                "selector": "body>",
+                "overflowX": "hidden",
+                "overflowY": "auto"
+              }
+            ],
+            "contained": true
+          },
+          {
+            "selector": "body>main>section.wrap.wf-line.wf-line-dark:nth-of-type(1)>div.wf-stage-wrap:nth-of-type(1)>div.wf-cf>button.cf-item:nth-of-type(2)",
+            "generated": false,
+            "rect": {
+              "x": 38.657958984375,
+              "y": 494.5836181640625,
+              "width": 138.7577667236328,
+              "height": 262.143798828125,
+              "right": 177.4157257080078,
+              "bottom": 756.7274169921875
+            },
+            "clientWidth": 192,
+            "scrollWidth": 223,
+            "boxSizing": "border-box",
+            "minWidth": "0px",
+            "overflowX": "visible",
+            "clipChain": [
+              {
+                "selector": "body>div.wf:nth-of-type(1)",
+                "overflowX": "hidden",
+                "overflowY": "hidden"
+              },
+              {
+                "selector": "body>",
+                "overflowX": "hidden",
+                "overflowY": "auto"
+              }
+            ],
+            "contained": true
+          },
+          {
+            "selector": "body>main>section.wrap.wf-line.wf-line-dark:nth-of-type(1)>div.wf-stage-wrap:nth-of-type(1)>div.wf-cf>button.cf-item:nth-of-type(4)",
+            "generated": false,
+            "rect": {
+              "x": 212.5842742919922,
+              "y": 494.5836181640625,
+              "width": 138.7577667236328,
+              "height": 262.143798828125,
+              "right": 351.342041015625,
+              "bottom": 756.7274169921875
+            },
+            "clientWidth": 192,
+            "scrollWidth": 223,
+            "boxSizing": "border-box",
+            "minWidth": "0px",
+            "overflowX": "visible",
+            "clipChain": [
+              {
+                "selector": "body>div.wf:nth-of-type(1)",
+                "overflowX": "hidden",
+                "overflowY": "hidden"
+              },
+              {
+                "selector": "body>",
+                "overflowX": "hidden",
+                "overflowY": "auto"
+              }
+            ],
+            "contained": true
+          }
+        ],
+        "generatedOverflow": [],
+        "uncontainedOverflow": [],
+        "mainCount": 1
+      },
+      "skip": {
+        "focused": {
+          "tag": "A",
+          "text": "Skip to main content",
+          "href": "#main-content",
+          "targetExists": true,
+          "visible": false,
+          "rect": {
+            "x": 8,
+            "y": -734.25,
+            "width": 130.359375,
+            "height": 44
+          }
+        },
+        "activated": {
+          "targetRect": {
+            "x": 0,
+            "y": 105.984375,
+            "width": 390,
+            "height": 6022.265625
+          },
+          "reached": true,
+          "activeId": null
+        },
+        "pass": false
+      },
+      "errors": {
+        "console": [],
+        "page": [],
+        "request": [],
+        "response": []
+      },
+      "screenshot": "/Users/handtomouse/maplemoon-website/_wip/evidence/style_chrome_correction_r2_20260817T140018/focused-390-proofs/homepage-390.png",
+      "screenshotBytes": 337013,
+      "screenshotSha256": "780eaed4c219b9e438bd0753f8903c9228115d09492dfbd50cea3180249c1d03",
+      "proofNonblank": true,
+      "failures": [
+        "skip-main"
+      ],
+      "result": "FAIL"
+    },
+    {
+      "route": "shop",
+      "baseline": {
+        "clientWidth": 390,
+        "scrollWidth": 390,
+        "headerHeight": 0,
+        "headerVisible": false,
+        "wordmark": "",
+        "wordmarkCentreDelta": null,
+        "targets": [],
+        "overflow": [
+          {
+            "selector": "body>div.sp>header.sp-top>div.wrap.bar>nav.sp-nav.r:nth-of-type(2)",
+            "generated": false,
+            "rect": {
+              "x": 318,
+              "y": 16.5,
+              "width": 44,
+              "height": 44,
+              "right": 362,
+              "bottom": 60.5
+            },
+            "clientWidth": 44,
+            "scrollWidth": 47,
+            "boxSizing": "border-box",
+            "minWidth": "auto",
+            "overflowX": "visible",
+            "clipChain": [
+              {
+                "selector": "body>div.sp",
+                "overflowX": "hidden",
+                "overflowY": "auto"
+              },
+              {
+                "selector": "body>",
+                "overflowX": "hidden",
+                "overflowY": "auto"
+              }
+            ],
+            "contained": true
+          },
+          {
+            "selector": "body>div.sp>header.sp-top>div.wrap.bar>nav.sp-nav.r:nth-of-type(2)>button.sp-cart",
+            "generated": false,
+            "rect": {
+              "x": 318,
+              "y": 16.5,
+              "width": 44,
+              "height": 44,
+              "right": 362,
+              "bottom": 60.5
+            },
+            "clientWidth": 42,
+            "scrollWidth": 46,
+            "boxSizing": "border-box",
+            "minWidth": "44px",
+            "overflowX": "visible",
+            "clipChain": [
+              {
+                "selector": "body>div.sp",
+                "overflowX": "hidden",
+                "overflowY": "auto"
+              },
+              {
+                "selector": "body>",
+                "overflowX": "hidden",
+                "overflowY": "auto"
+              }
+            ],
+            "contained": true
+          },
+          {
+            "selector": "body>div.sp>main.sp-main>div.sp-range-nav:nth-of-type(2)>nav.wrap.sp-cats",
+            "generated": false,
+            "rect": {
+              "x": 16,
+              "y": 1001.171875,
+              "width": 358,
+              "height": 56,
+              "right": 374,
+              "bottom": 1057.171875
+            },
+            "clientWidth": 356,
+            "scrollWidth": 576,
+            "boxSizing": "border-box",
+            "minWidth": "0px",
+            "overflowX": "auto",
+            "clipChain": [
+              {
+                "selector": "body>div.sp",
+                "overflowX": "hidden",
+                "overflowY": "auto"
+              },
+              {
+                "selector": "body>",
+                "overflowX": "hidden",
+                "overflowY": "auto"
+              }
+            ],
+            "contained": true
+          },
+          {
+            "selector": "body>div.sp>main.sp-main>div.sp-range-nav:nth-of-type(2)>nav.wrap.sp-cats>a:nth-of-type(4)",
+            "generated": false,
+            "rect": {
+              "x": 305,
+              "y": 1002.171875,
+              "width": 96,
+              "height": 54,
+              "right": 401,
+              "bottom": 1056.171875
+            },
+            "clientWidth": 95,
+            "scrollWidth": 95,
+            "boxSizing": "border-box",
+            "minWidth": "96px",
+            "overflowX": "visible",
+            "clipChain": [
+              {
+                "selector": "body>div.sp>main.sp-main>div.sp-range-nav:nth-of-type(2)>nav.wrap.sp-cats",
+                "overflowX": "auto",
+                "overflowY": "hidden"
+              },
+              {
+                "selector": "body>div.sp",
+                "overflowX": "hidden",
+                "overflowY": "auto"
+              },
+              {
+                "selector": "body>",
+                "overflowX": "hidden",
+                "overflowY": "auto"
+              }
+            ],
+            "contained": true
+          },
+          {
+            "selector": "body>div.sp>main.sp-main>div.sp-range-nav:nth-of-type(2)>nav.wrap.sp-cats>a:nth-of-type(5)",
+            "generated": false,
+            "rect": {
+              "x": 401,
+              "y": 1002.171875,
+              "width": 96,
+              "height": 54,
+              "right": 497,
+              "bottom": 1056.171875
+            },
+            "clientWidth": 95,
+            "scrollWidth": 95,
+            "boxSizing": "border-box",
+            "minWidth": "96px",
+            "overflowX": "visible",
+            "clipChain": [
+              {
+                "selector": "body>div.sp>main.sp-main>div.sp-range-nav:nth-of-type(2)>nav.wrap.sp-cats",
+                "overflowX": "auto",
+                "overflowY": "hidden"
+              },
+              {
+                "selector": "body>div.sp",
+                "overflowX": "hidden",
+                "overflowY": "auto"
+              },
+              {
+                "selector": "body>",
+                "overflowX": "hidden",
+                "overflowY": "auto"
+              }
+            ],
+            "contained": true
+          },
+          {
+            "selector": "body>div.sp>main.sp-main>div.sp-range-nav:nth-of-type(2)>nav.wrap.sp-cats>a:nth-of-type(6)",
+            "generated": false,
+            "rect": {
+              "x": 497,
+              "y": 1002.171875,
+              "width": 96,
+              "height": 54,
+              "right": 593,
+              "bottom": 1056.171875
+            },
+            "clientWidth": 95,
+            "scrollWidth": 95,
+            "boxSizing": "border-box",
+            "minWidth": "96px",
+            "overflowX": "visible",
+            "clipChain": [
+              {
+                "selector": "body>div.sp>main.sp-main>div.sp-range-nav:nth-of-type(2)>nav.wrap.sp-cats",
+                "overflowX": "auto",
+                "overflowY": "hidden"
+              },
+              {
+                "selector": "body>div.sp",
+                "overflowX": "hidden",
+                "overflowY": "auto"
+              },
+              {
+                "selector": "body>",
+                "overflowX": "hidden",
+                "overflowY": "auto"
+              }
+            ],
+            "contained": true
+          }
+        ],
+        "generatedOverflow": [],
+        "uncontainedOverflow": [],
+        "mainCount": 1
+      },
+      "observed": {
+        "clientWidth": 390,
+        "scrollWidth": 390,
+        "headerHeight": 70,
+        "headerVisible": true,
+        "wordmark": "maple moon",
+        "wordmarkCentreDelta": 0,
+        "targets": [
+          {
+            "text": "Menu",
+            "rect": {
+              "x": 16,
+              "y": 13,
+              "width": 48.578125,
+              "height": 44,
+              "right": 64.578125,
+              "bottom": 57
+            },
+            "boxSizing": "border-box"
+          },
+          {
+            "text": "maple moon",
+            "rect": {
+              "x": 127.953125,
+              "y": 13,
+              "width": 134.09375,
+              "height": 44,
+              "right": 262.046875,
+              "bottom": 57
+            },
+            "boxSizing": "border-box"
+          },
+          {
+            "text": "Contact",
+            "rect": {
+              "x": 308.515625,
+              "y": 13,
+              "width": 65.484375,
+              "height": 44,
+              "right": 374,
+              "bottom": 57
+            },
+            "boxSizing": "border-box"
+          }
+        ],
+        "overflow": [
+          {
+            "selector": "body>div.sp>main.sp-main>div.sp-range-nav:nth-of-type(2)>nav.wrap.sp-cats",
+            "generated": false,
+            "rect": {
+              "x": 16,
+              "y": 1001.171875,
+              "width": 358,
+              "height": 56,
+              "right": 374,
+              "bottom": 1057.171875
+            },
+            "clientWidth": 356,
+            "scrollWidth": 576,
+            "boxSizing": "border-box",
+            "minWidth": "0px",
+            "overflowX": "auto",
+            "clipChain": [
+              {
+                "selector": "body>div.sp",
+                "overflowX": "hidden",
+                "overflowY": "auto"
+              },
+              {
+                "selector": "body>",
+                "overflowX": "hidden",
+                "overflowY": "auto"
+              }
+            ],
+            "contained": true
+          },
+          {
+            "selector": "body>div.sp>main.sp-main>div.sp-range-nav:nth-of-type(2)>nav.wrap.sp-cats>a:nth-of-type(4)",
+            "generated": false,
+            "rect": {
+              "x": 305,
+              "y": 1002.171875,
+              "width": 96,
+              "height": 54,
+              "right": 401,
+              "bottom": 1056.171875
+            },
+            "clientWidth": 95,
+            "scrollWidth": 95,
+            "boxSizing": "border-box",
+            "minWidth": "96px",
+            "overflowX": "visible",
+            "clipChain": [
+              {
+                "selector": "body>div.sp>main.sp-main>div.sp-range-nav:nth-of-type(2)>nav.wrap.sp-cats",
+                "overflowX": "auto",
+                "overflowY": "hidden"
+              },
+              {
+                "selector": "body>div.sp",
+                "overflowX": "hidden",
+                "overflowY": "auto"
+              },
+              {
+                "selector": "body>",
+                "overflowX": "hidden",
+                "overflowY": "auto"
+              }
+            ],
+            "contained": true
+          },
+          {
+            "selector": "body>div.sp>main.sp-main>div.sp-range-nav:nth-of-type(2)>nav.wrap.sp-cats>a:nth-of-type(5)",
+            "generated": false,
+            "rect": {
+              "x": 401,
+              "y": 1002.171875,
+              "width": 96,
+              "height": 54,
+              "right": 497,
+              "bottom": 1056.171875
+            },
+            "clientWidth": 95,
+            "scrollWidth": 95,
+            "boxSizing": "border-box",
+            "minWidth": "96px",
+            "overflowX": "visible",
+            "clipChain": [
+              {
+                "selector": "body>div.sp>main.sp-main>div.sp-range-nav:nth-of-type(2)>nav.wrap.sp-cats",
+                "overflowX": "auto",
+                "overflowY": "hidden"
+              },
+              {
+                "selector": "body>div.sp",
+                "overflowX": "hidden",
+                "overflowY": "auto"
+              },
+              {
+                "selector": "body>",
+                "overflowX": "hidden",
+                "overflowY": "auto"
+              }
+            ],
+            "contained": true
+          },
+          {
+            "selector": "body>div.sp>main.sp-main>div.sp-range-nav:nth-of-type(2)>nav.wrap.sp-cats>a:nth-of-type(6)",
+            "generated": false,
+            "rect": {
+              "x": 497,
+              "y": 1002.171875,
+              "width": 96,
+              "height": 54,
+              "right": 593,
+              "bottom": 1056.171875
+            },
+            "clientWidth": 95,
+            "scrollWidth": 95,
+            "boxSizing": "border-box",
+            "minWidth": "96px",
+            "overflowX": "visible",
+            "clipChain": [
+              {
+                "selector": "body>div.sp>main.sp-main>div.sp-range-nav:nth-of-type(2)>nav.wrap.sp-cats",
+                "overflowX": "auto",
+                "overflowY": "hidden"
+              },
+              {
+                "selector": "body>div.sp",
+                "overflowX": "hidden",
+                "overflowY": "auto"
+              },
+              {
+                "selector": "body>",
+                "overflowX": "hidden",
+                "overflowY": "auto"
+              }
+            ],
+            "contained": true
+          }
+        ],
+        "generatedOverflow": [],
+        "uncontainedOverflow": [],
+        "mainCount": 1
+      },
+      "skip": {
+        "focused": {
+          "tag": "A",
+          "text": "Skip to the catalogue",
+          "href": "#catalogue-title",
+          "targetExists": true,
+          "visible": false,
+          "rect": {
+            "x": 8,
+            "y": -21.8383846282959,
+            "width": 136.046875,
+            "height": 44
+          }
+        },
+        "activated": {
+          "targetRect": {
+            "x": -1,
+            "y": 321.171875,
+            "width": 1,
+            "height": 1
+          },
+          "reached": true,
+          "activeId": "catalogue-title"
+        },
+        "pass": false
+      },
+      "errors": {
+        "console": [],
+        "page": [],
+        "request": [],
+        "response": []
+      },
+      "screenshot": "/Users/handtomouse/maplemoon-website/_wip/evidence/style_chrome_correction_r2_20260817T140018/focused-390-proofs/shop-390.png",
+      "screenshotBytes": 208101,
+      "screenshotSha256": "b8293afe53ea2a97c291fe949cc22130a66213543c751e1f9f08d9af669849da",
+      "proofNonblank": true,
+      "failures": [
+        "skip-main"
+      ],
+      "result": "FAIL"
+    },
+    {
+      "route": "our-story",
+      "baseline": {
+        "clientWidth": 390,
+        "scrollWidth": 390,
+        "headerHeight": 0,
+        "headerVisible": false,
+        "wordmark": "",
+        "wordmarkCentreDelta": null,
+        "targets": [],
+        "overflow": [
+          {
+            "selector": "body>div.os>header.os-top>div.wrap.bar>nav.os-nav.r:nth-of-type(2)",
+            "generated": false,
+            "rect": {
+              "x": 318,
+              "y": 16.5,
+              "width": 44,
+              "height": 44,
+              "right": 362,
+              "bottom": 60.5
+            },
+            "clientWidth": 44,
+            "scrollWidth": 47,
+            "boxSizing": "border-box",
+            "minWidth": "auto",
+            "overflowX": "visible",
+            "clipChain": [
+              {
+                "selector": "body>div.os",
+                "overflowX": "hidden",
+                "overflowY": "auto"
+              }
+            ],
+            "contained": true
+          },
+          {
+            "selector": "body>div.os>header.os-top>div.wrap.bar>nav.os-nav.r:nth-of-type(2)>button.os-cart",
+            "generated": false,
+            "rect": {
+              "x": 318,
+              "y": 16.5,
+              "width": 44,
+              "height": 44,
+              "right": 362,
+              "bottom": 60.5
+            },
+            "clientWidth": 42,
+            "scrollWidth": 46,
+            "boxSizing": "border-box",
+            "minWidth": "44px",
+            "overflowX": "visible",
+            "clipChain": [
+              {
+                "selector": "body>div.os",
+                "overflowX": "hidden",
+                "overflowY": "auto"
+              }
+            ],
+            "contained": true
+          }
+        ],
+        "generatedOverflow": [],
+        "uncontainedOverflow": [],
+        "mainCount": 0
+      },
+      "observed": {
+        "clientWidth": 390,
+        "scrollWidth": 390,
+        "headerHeight": 70,
+        "headerVisible": true,
+        "wordmark": "maple moon",
+        "wordmarkCentreDelta": 0,
+        "targets": [
+          {
+            "text": "Menu",
+            "rect": {
+              "x": 16,
+              "y": 13,
+              "width": 48.578125,
+              "height": 44,
+              "right": 64.578125,
+              "bottom": 57
+            },
+            "boxSizing": "border-box"
+          },
+          {
+            "text": "maple moon",
+            "rect": {
+              "x": 127.953125,
+              "y": 13,
+              "width": 134.09375,
+              "height": 44,
+              "right": 262.046875,
+              "bottom": 57
+            },
+            "boxSizing": "border-box"
+          },
+          {
+            "text": "Contact",
+            "rect": {
+              "x": 308.515625,
+              "y": 13,
+              "width": 65.484375,
+              "height": 44,
+              "right": 374,
+              "bottom": 57
+            },
+            "boxSizing": "border-box"
+          }
+        ],
+        "overflow": [],
+        "generatedOverflow": [],
+        "uncontainedOverflow": [],
+        "mainCount": 1
+      },
+      "skip": {
+        "focused": {
+          "tag": "A",
+          "text": "Skip to main content",
+          "href": "#main-content",
+          "targetExists": true,
+          "visible": true,
+          "rect": {
+            "x": 8,
+            "y": 8,
+            "width": 156.875,
+            "height": 60
+          }
+        },
+        "activated": {
+          "targetRect": {
+            "x": 0,
+            "y": 70,
+            "width": 390,
+            "height": 5010.4375
+          },
+          "reached": true,
+          "activeId": "main-content"
+        },
+        "pass": true
+      },
+      "errors": {
+        "console": [],
+        "page": [],
+        "request": [],
+        "response": []
+      },
+      "screenshot": "/Users/handtomouse/maplemoon-website/_wip/evidence/style_chrome_correction_r2_20260817T140018/focused-390-proofs/our-story-390.png",
+      "screenshotBytes": 136487,
+      "screenshotSha256": "6887a8653b48af8b04acb664b6e026507ba025e02022e8c098d160219765977f",
+      "proofNonblank": true,
+      "failures": [],
+      "result": "PASS"
+    },
+    {
+      "route": "carob-story",
+      "baseline": {
+        "clientWidth": 390,
+        "scrollWidth": 390,
+        "headerHeight": 0,
+        "headerVisible": false,
+        "wordmark": "",
+        "wordmarkCentreDelta": null,
+        "targets": [],
+        "overflow": [
+          {
+            "selector": "body>div.cs>header.sp-top>div.wrap.bar>a.sp-logo",
+            "generated": false,
+            "rect": {
+              "x": 264.078125,
+              "y": 9.5,
+              "width": 55.921875,
+              "height": 44,
+              "right": 320,
+              "bottom": 53.5
+            },
+            "clientWidth": 56,
+            "scrollWidth": 85,
+            "boxSizing": "border-box",
+            "minWidth": "auto",
+            "overflowX": "visible",
+            "clipChain": [
+              {
+                "selector": "body>div.cs",
+                "overflowX": "hidden",
+                "overflowY": "auto"
+              },
+              {
+                "selector": "body>",
+                "overflowX": "hidden",
+                "overflowY": "auto"
+              }
+            ],
+            "contained": true
+          },
+          {
+            "selector": "body>div.cs>header.sp-top>div.wrap.bar>nav.sp-nav.r:nth-of-type(2)",
+            "generated": false,
+            "rect": {
+              "x": 330,
+              "y": 9.5,
+              "width": 44,
+              "height": 44,
+              "right": 374,
+              "bottom": 53.5
+            },
+            "clientWidth": 44,
+            "scrollWidth": 47,
+            "boxSizing": "border-box",
+            "minWidth": "auto",
+            "overflowX": "visible",
+            "clipChain": [
+              {
+                "selector": "body>div.cs",
+                "overflowX": "hidden",
+                "overflowY": "auto"
+              },
+              {
+                "selector": "body>",
+                "overflowX": "hidden",
+                "overflowY": "auto"
+              }
+            ],
+            "contained": true
+          },
+          {
+            "selector": "body>div.cs>header.sp-top>div.wrap.bar>nav.sp-nav.r:nth-of-type(2)>button.sp-cart",
+            "generated": false,
+            "rect": {
+              "x": 330,
+              "y": 9.5,
+              "width": 44,
+              "height": 44,
+              "right": 374,
+              "bottom": 53.5
+            },
+            "clientWidth": 42,
+            "scrollWidth": 46,
+            "boxSizing": "border-box",
+            "minWidth": "44px",
+            "overflowX": "visible",
+            "clipChain": [
+              {
+                "selector": "body>div.cs",
+                "overflowX": "hidden",
+                "overflowY": "auto"
+              },
+              {
+                "selector": "body>",
+                "overflowX": "hidden",
+                "overflowY": "auto"
+              }
+            ],
+            "contained": true
+          },
+          {
+            "selector": "body>section.cmp:nth-of-type(2)>div.wrap>div.cmp-panel>header.cmp-head>div",
+            "generated": false,
+            "rect": {
+              "x": 37,
+              "y": 800.171875,
+              "width": 121.90625,
+              "height": 183.4375,
+              "right": 158.90625,
+              "bottom": 983.609375
+            },
+            "clientWidth": 122,
+            "scrollWidth": 132,
+            "boxSizing": "border-box",
+            "minWidth": "auto",
+            "overflowX": "visible",
+            "clipChain": [
+              {
+                "selector": "body>div.cs>main>section.cmp:nth-of-type(2)>div.wrap>div.cmp-panel",
+                "overflowX": "hidden",
+                "overflowY": "hidden"
+              },
+              {
+                "selector": "body>div.cs",
+                "overflowX": "hidden",
+                "overflowY": "auto"
+              },
+              {
+                "selector": "body>",
+                "overflowX": "hidden",
+                "overflowY": "auto"
+              }
+            ],
+            "contained": true
+          },
+          {
+            "selector": "body>div.wrap>div.cmp-panel>header.cmp-head>div>h2.hd",
+            "generated": false,
+            "rect": {
+              "x": 37,
+              "y": 842.859375,
+              "width": 121.90625,
+              "height": 140.75,
+              "right": 158.90625,
+              "bottom": 983.609375
+            },
+            "clientWidth": 122,
+            "scrollWidth": 132,
+            "boxSizing": "border-box",
+            "minWidth": "0px",
+            "overflowX": "visible",
+            "clipChain": [
+              {
+                "selector": "body>div.cs>main>section.cmp:nth-of-type(2)>div.wrap>div.cmp-panel",
+                "overflowX": "hidden",
+                "overflowY": "hidden"
+              },
+              {
+                "selector": "body>div.cs",
+                "overflowX": "hidden",
+                "overflowY": "auto"
+              },
+              {
+                "selector": "body>",
+                "overflowX": "hidden",
+                "overflowY": "auto"
+              }
+            ],
+            "contained": true
+          }
+        ],
+        "generatedOverflow": [],
+        "uncontainedOverflow": [],
+        "mainCount": 1
+      },
+      "observed": {
+        "clientWidth": 390,
+        "scrollWidth": 390,
+        "headerHeight": 70,
+        "headerVisible": true,
+        "wordmark": "maple moon",
+        "wordmarkCentreDelta": 0,
+        "targets": [
+          {
+            "text": "Menu",
+            "rect": {
+              "x": 16,
+              "y": 13,
+              "width": 48.578125,
+              "height": 44,
+              "right": 64.578125,
+              "bottom": 57
+            },
+            "boxSizing": "border-box"
+          },
+          {
+            "text": "maple moon",
+            "rect": {
+              "x": 127.953125,
+              "y": 13,
+              "width": 134.09375,
+              "height": 44,
+              "right": 262.046875,
+              "bottom": 57
+            },
+            "boxSizing": "border-box"
+          },
+          {
+            "text": "Contact",
+            "rect": {
+              "x": 308.515625,
+              "y": 13,
+              "width": 65.484375,
+              "height": 44,
+              "right": 374,
+              "bottom": 57
+            },
+            "boxSizing": "border-box"
+          }
+        ],
+        "overflow": [
+          {
+            "selector": "body>section.cmp:nth-of-type(2)>div.wrap>div.cmp-panel>header.cmp-head>div",
+            "generated": false,
+            "rect": {
+              "x": 37,
+              "y": 805.171875,
+              "width": 121.90625,
+              "height": 183.4375,
+              "right": 158.90625,
+              "bottom": 988.609375
+            },
+            "clientWidth": 122,
+            "scrollWidth": 132,
+            "boxSizing": "border-box",
+            "minWidth": "auto",
+            "overflowX": "visible",
+            "clipChain": [
+              {
+                "selector": "body>div.cs>main>section.cmp:nth-of-type(2)>div.wrap>div.cmp-panel",
+                "overflowX": "hidden",
+                "overflowY": "hidden"
+              },
+              {
+                "selector": "body>div.cs",
+                "overflowX": "hidden",
+                "overflowY": "auto"
+              },
+              {
+                "selector": "body>",
+                "overflowX": "hidden",
+                "overflowY": "auto"
+              }
+            ],
+            "contained": true
+          },
+          {
+            "selector": "body>div.wrap>div.cmp-panel>header.cmp-head>div>h2.hd",
+            "generated": false,
+            "rect": {
+              "x": 37,
+              "y": 847.859375,
+              "width": 121.90625,
+              "height": 140.75,
+              "right": 158.90625,
+              "bottom": 988.609375
+            },
+            "clientWidth": 122,
+            "scrollWidth": 132,
+            "boxSizing": "border-box",
+            "minWidth": "0px",
+            "overflowX": "visible",
+            "clipChain": [
+              {
+                "selector": "body>div.cs>main>section.cmp:nth-of-type(2)>div.wrap>div.cmp-panel",
+                "overflowX": "hidden",
+                "overflowY": "hidden"
+              },
+              {
+                "selector": "body>div.cs",
+                "overflowX": "hidden",
+                "overflowY": "auto"
+              },
+              {
+                "selector": "body>",
+                "overflowX": "hidden",
+                "overflowY": "auto"
+              }
+            ],
+            "contained": true
+          }
+        ],
+        "generatedOverflow": [],
+        "uncontainedOverflow": [],
+        "mainCount": 1
+      },
+      "skip": {
+        "focused": {
+          "tag": "A",
+          "text": "Skip to the carob story",
+          "href": "#carob-story",
+          "targetExists": true,
+          "visible": false,
+          "rect": {
+            "x": 8,
+            "y": -50.91364669799805,
+            "width": 180.71875,
+            "height": 44
+          }
+        },
+        "activated": {
+          "targetRect": {
+            "x": 0,
+            "y": 70,
+            "width": 390,
+            "height": 2393.34375
+          },
+          "reached": true,
+          "activeId": "carob-story"
+        },
+        "pass": false
+      },
+      "errors": {
+        "console": [],
+        "page": [],
+        "request": [],
+        "response": []
+      },
+      "screenshot": "/Users/handtomouse/maplemoon-website/_wip/evidence/style_chrome_correction_r2_20260817T140018/focused-390-proofs/carob-story-390.png",
+      "screenshotBytes": 344288,
+      "screenshotSha256": "d6a8b807373aeb7702e523a2b529bdef9ec734d5846fc3f93f6f22a9f3606d12",
+      "proofNonblank": true,
+      "failures": [
+        "skip-main"
+      ],
+      "result": "FAIL"
+    },
+    {
+      "route": "faq",
+      "baseline": {
+        "clientWidth": 390,
+        "scrollWidth": 390,
+        "headerHeight": 0,
+        "headerVisible": false,
+        "wordmark": "",
+        "wordmarkCentreDelta": null,
+        "targets": [],
+        "overflow": [
+          {
+            "selector": "body>div.sp",
+            "generated": false,
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 390,
+              "height": 2723.15625,
+              "right": 390,
+              "bottom": 2723.15625
+            },
+            "clientWidth": 390,
+            "scrollWidth": 650,
+            "boxSizing": "border-box",
+            "minWidth": "0px",
+            "overflowX": "hidden",
+            "clipChain": [
+              {
+                "selector": "body>",
+                "overflowX": "hidden",
+                "overflowY": "auto"
+              }
+            ],
+            "contained": true
+          },
+          {
+            "selector": "body>div.sp>header.sp-top>div.wrap.bar",
+            "generated": false,
+            "rect": {
+              "x": 16,
+              "y": 2,
+              "width": 358,
+              "height": 57,
+              "right": 374,
+              "bottom": 59
+            },
+            "clientWidth": 358,
+            "scrollWidth": 362,
+            "boxSizing": "border-box",
+            "minWidth": "0px",
+            "overflowX": "visible",
+            "clipChain": [
+              {
+                "selector": "body>div.sp",
+                "overflowX": "hidden",
+                "overflowY": "hidden"
+              },
+              {
+                "selector": "body>",
+                "overflowX": "hidden",
+                "overflowY": "auto"
+              }
+            ],
+            "contained": true
+          },
+          {
+            "selector": "body>div.sp>header.sp-top>div.wrap.bar>nav.sp-nav.r:nth-of-type(2)",
+            "generated": false,
+            "rect": {
+              "x": 252.84375,
+              "y": 8,
+              "width": 121.15625,
+              "height": 44,
+              "right": 374,
+              "bottom": 52
+            },
+            "clientWidth": 121,
+            "scrollWidth": 125,
+            "boxSizing": "border-box",
+            "minWidth": "auto",
+            "overflowX": "visible",
+            "clipChain": [
+              {
+                "selector": "body>div.sp",
+                "overflowX": "hidden",
+                "overflowY": "hidden"
+              },
+              {
+                "selector": "body>",
+                "overflowX": "hidden",
+                "overflowY": "auto"
+              }
+            ],
+            "contained": true
+          },
+          {
+            "selector": "body>div.sp>header.sp-top>div.wrap.bar>nav.sp-nav.r:nth-of-type(2)>button.sp-cart",
+            "generated": false,
+            "rect": {
+              "x": 330,
+              "y": 8,
+              "width": 44,
+              "height": 44,
+              "right": 374,
+              "bottom": 52
+            },
+            "clientWidth": 42,
+            "scrollWidth": 47,
+            "boxSizing": "border-box",
+            "minWidth": "44px",
+            "overflowX": "visible",
+            "clipChain": [
+              {
+                "selector": "body>div.sp",
+                "overflowX": "hidden",
+                "overflowY": "hidden"
+              },
+              {
+                "selector": "body>",
+                "overflowX": "hidden",
+                "overflowY": "auto"
+              }
+            ],
+            "contained": true
+          },
+          {
+            "selector": "body>div.sp>main>section.wrap.popular:nth-of-type(2)",
+            "generated": false,
+            "rect": {
+              "x": 16,
+              "y": 486.90625,
+              "width": 358,
+              "height": 124.84375,
+              "right": 374,
+              "bottom": 611.75
+            },
+            "clientWidth": 358,
+            "scrollWidth": 374,
+            "boxSizing": "border-box",
+            "minWidth": "0px",
+            "overflowX": "visible",
+            "clipChain": [
+              {
+                "selector": "body>div.sp",
+                "overflowX": "hidden",
+                "overflowY": "hidden"
+              },
+              {
+                "selector": "body>",
+                "overflowX": "hidden",
+                "overflowY": "auto"
+              }
+            ],
+            "contained": true
+          },
+          {
+            "selector": "#popular-list",
+            "generated": false,
+            "rect": {
+              "x": 16,
+              "y": 518.75,
+              "width": 374,
+              "height": 54,
+              "right": 390,
+              "bottom": 572.75
+            },
+            "clientWidth": 374,
+            "scrollWidth": 645,
+            "boxSizing": "border-box",
+            "minWidth": "0px",
+            "overflowX": "auto",
+            "clipChain": [
+              {
+                "selector": "body>div.sp",
+                "overflowX": "hidden",
+                "overflowY": "hidden"
+              },
+              {
+                "selector": "body>",
+                "overflowX": "hidden",
+                "overflowY": "auto"
+              }
+            ],
+            "contained": true
+          },
+          {
+            "selector": "body>div.sp>main>section.wrap.popular:nth-of-type(2)>div.popular-row>button.popular-chip:nth-of-type(3)",
+            "generated": false,
+            "rect": {
+              "x": 282.390625,
+              "y": 520.75,
+              "width": 188.953125,
+              "height": 44,
+              "right": 471.34375,
+              "bottom": 564.75
+            },
+            "clientWidth": 187,
+            "scrollWidth": 187,
+            "boxSizing": "border-box",
+            "minWidth": "auto",
+            "overflowX": "visible",
+            "clipChain": [
+              {
+                "selector": "#popular-list",
+                "overflowX": "auto",
+                "overflowY": "auto"
+              },
+              {
+                "selector": "body>div.sp",
+                "overflowX": "hidden",
+                "overflowY": "hidden"
+              },
+              {
+                "selector": "body>",
+                "overflowX": "hidden",
+                "overflowY": "auto"
+              }
+            ],
+            "contained": true
+          },
+          {
+            "selector": "body>div.sp>main>section.wrap.popular:nth-of-type(2)>div.popular-row>button.popular-chip:nth-of-type(4)",
+            "generated": false,
+            "rect": {
+              "x": 481.34375,
+              "y": 520.75,
+              "width": 177.46875,
+              "height": 44,
+              "right": 658.8125,
+              "bottom": 564.75
+            },
+            "clientWidth": 175,
+            "scrollWidth": 175,
+            "boxSizing": "border-box",
+            "minWidth": "auto",
+            "overflowX": "visible",
+            "clipChain": [
+              {
+                "selector": "#popular-list",
+                "overflowX": "auto",
+                "overflowY": "auto"
+              },
+              {
+                "selector": "body>div.sp",
+                "overflowX": "hidden",
+                "overflowY": "hidden"
+              },
+              {
+                "selector": "body>",
+                "overflowX": "hidden",
+                "overflowY": "auto"
+              }
+            ],
+            "contained": true
+          },
+          {
+            "selector": "body>div.sp>main>section.wrap.faq-workspace:nth-of-type(3)",
+            "generated": false,
+            "rect": {
+              "x": 16,
+              "y": 611.75,
+              "width": 358,
+              "height": 1597.609375,
+              "right": 374,
+              "bottom": 2209.359375
+            },
+            "clientWidth": 358,
+            "scrollWidth": 374,
+            "boxSizing": "border-box",
+            "minWidth": "0px",
+            "overflowX": "visible",
+            "clipChain": [
+              {
+                "selector": "body>div.sp",
+                "overflowX": "hidden",
+                "overflowY": "hidden"
+              },
+              {
+                "selector": "body>",
+                "overflowX": "hidden",
+                "overflowY": "auto"
+              }
+            ],
+            "contained": true
+          },
+          {
+            "selector": "body>div.sp>main>section.wrap.faq-workspace:nth-of-type(3)>aside.faq-sidebar",
+            "generated": false,
+            "rect": {
+              "x": 16,
+              "y": 611.75,
+              "width": 358,
+              "height": 380.828125,
+              "right": 374,
+              "bottom": 992.578125
+            },
+            "clientWidth": 358,
+            "scrollWidth": 374,
+            "boxSizing": "border-box",
+            "minWidth": "auto",
+            "overflowX": "visible",
+            "clipChain": [
+              {
+                "selector": "body>div.sp",
+                "overflowX": "hidden",
+                "overflowY": "hidden"
+              },
+              {
+                "selector": "body>",
+                "overflowX": "hidden",
+                "overflowY": "auto"
+              }
+            ],
+            "contained": true
+          }
+        ],
+        "generatedOverflow": [],
+        "uncontainedOverflow": [],
+        "mainCount": 1
+      },
+      "observed": {
+        "clientWidth": 390,
+        "scrollWidth": 390,
+        "headerHeight": 70,
+        "headerVisible": true,
+        "wordmark": "maple moon",
+        "wordmarkCentreDelta": 0,
+        "targets": [
+          {
+            "text": "Menu",
+            "rect": {
+              "x": 16,
+              "y": 13,
+              "width": 48.578125,
+              "height": 44,
+              "right": 64.578125,
+              "bottom": 57
+            },
+            "boxSizing": "border-box"
+          },
+          {
+            "text": "maple moon",
+            "rect": {
+              "x": 127.953125,
+              "y": 13,
+              "width": 134.09375,
+              "height": 44,
+              "right": 262.046875,
+              "bottom": 57
+            },
+            "boxSizing": "border-box"
+          },
+          {
+            "text": "Contact",
+            "rect": {
+              "x": 308.515625,
+              "y": 13,
+              "width": 65.484375,
+              "height": 44,
+              "right": 374,
+              "bottom": 57
+            },
+            "boxSizing": "border-box"
+          }
+        ],
+        "overflow": [
+          {
+            "selector": "body>div.sp",
+            "generated": false,
+            "rect": {
+              "x": 0,
+              "y": 70,
+              "width": 390,
+              "height": 2664.15625,
+              "right": 390,
+              "bottom": 2734.15625
+            },
+            "clientWidth": 390,
+            "scrollWidth": 650,
+            "boxSizing": "border-box",
+            "minWidth": "0px",
+            "overflowX": "hidden",
+            "clipChain": [
+              {
+                "selector": "body>",
+                "overflowX": "hidden",
+                "overflowY": "auto"
+              }
+            ],
+            "contained": true
+          },
+          {
+            "selector": "body>div.sp>main>section.wrap.popular:nth-of-type(2)",
+            "generated": false,
+            "rect": {
+              "x": 16,
+              "y": 497.90625,
+              "width": 358,
+              "height": 124.84375,
+              "right": 374,
+              "bottom": 622.75
+            },
+            "clientWidth": 358,
+            "scrollWidth": 374,
+            "boxSizing": "border-box",
+            "minWidth": "0px",
+            "overflowX": "visible",
+            "clipChain": [
+              {
+                "selector": "body>div.sp",
+                "overflowX": "hidden",
+                "overflowY": "hidden"
+              },
+              {
+                "selector": "body>",
+                "overflowX": "hidden",
+                "overflowY": "auto"
+              }
+            ],
+            "contained": true
+          },
+          {
+            "selector": "#popular-list",
+            "generated": false,
+            "rect": {
+              "x": 16,
+              "y": 529.75,
+              "width": 374,
+              "height": 54,
+              "right": 390,
+              "bottom": 583.75
+            },
+            "clientWidth": 374,
+            "scrollWidth": 645,
+            "boxSizing": "border-box",
+            "minWidth": "0px",
+            "overflowX": "auto",
+            "clipChain": [
+              {
+                "selector": "body>div.sp",
+                "overflowX": "hidden",
+                "overflowY": "hidden"
+              },
+              {
+                "selector": "body>",
+                "overflowX": "hidden",
+                "overflowY": "auto"
+              }
+            ],
+            "contained": true
+          },
+          {
+            "selector": "body>div.sp>main>section.wrap.popular:nth-of-type(2)>div.popular-row>button.popular-chip:nth-of-type(3)",
+            "generated": false,
+            "rect": {
+              "x": 282.390625,
+              "y": 531.75,
+              "width": 188.953125,
+              "height": 44,
+              "right": 471.34375,
+              "bottom": 575.75
+            },
+            "clientWidth": 187,
+            "scrollWidth": 187,
+            "boxSizing": "border-box",
+            "minWidth": "auto",
+            "overflowX": "visible",
+            "clipChain": [
+              {
+                "selector": "#popular-list",
+                "overflowX": "auto",
+                "overflowY": "auto"
+              },
+              {
+                "selector": "body>div.sp",
+                "overflowX": "hidden",
+                "overflowY": "hidden"
+              },
+              {
+                "selector": "body>",
+                "overflowX": "hidden",
+                "overflowY": "auto"
+              }
+            ],
+            "contained": true
+          },
+          {
+            "selector": "body>div.sp>main>section.wrap.popular:nth-of-type(2)>div.popular-row>button.popular-chip:nth-of-type(4)",
+            "generated": false,
+            "rect": {
+              "x": 481.34375,
+              "y": 531.75,
+              "width": 177.46875,
+              "height": 44,
+              "right": 658.8125,
+              "bottom": 575.75
+            },
+            "clientWidth": 175,
+            "scrollWidth": 175,
+            "boxSizing": "border-box",
+            "minWidth": "auto",
+            "overflowX": "visible",
+            "clipChain": [
+              {
+                "selector": "#popular-list",
+                "overflowX": "auto",
+                "overflowY": "auto"
+              },
+              {
+                "selector": "body>div.sp",
+                "overflowX": "hidden",
+                "overflowY": "hidden"
+              },
+              {
+                "selector": "body>",
+                "overflowX": "hidden",
+                "overflowY": "auto"
+              }
+            ],
+            "contained": true
+          },
+          {
+            "selector": "body>div.sp>main>section.wrap.faq-workspace:nth-of-type(3)",
+            "generated": false,
+            "rect": {
+              "x": 16,
+              "y": 622.75,
+              "width": 358,
+              "height": 1597.609375,
+              "right": 374,
+              "bottom": 2220.359375
+            },
+            "clientWidth": 358,
+            "scrollWidth": 374,
+            "boxSizing": "border-box",
+            "minWidth": "0px",
+            "overflowX": "visible",
+            "clipChain": [
+              {
+                "selector": "body>div.sp",
+                "overflowX": "hidden",
+                "overflowY": "hidden"
+              },
+              {
+                "selector": "body>",
+                "overflowX": "hidden",
+                "overflowY": "auto"
+              }
+            ],
+            "contained": true
+          },
+          {
+            "selector": "body>div.sp>main>section.wrap.faq-workspace:nth-of-type(3)>aside.faq-sidebar",
+            "generated": false,
+            "rect": {
+              "x": 16,
+              "y": 622.75,
+              "width": 358,
+              "height": 380.828125,
+              "right": 374,
+              "bottom": 1003.578125
+            },
+            "clientWidth": 358,
+            "scrollWidth": 374,
+            "boxSizing": "border-box",
+            "minWidth": "auto",
+            "overflowX": "visible",
+            "clipChain": [
+              {
+                "selector": "body>div.sp",
+                "overflowX": "hidden",
+                "overflowY": "hidden"
+              },
+              {
+                "selector": "body>",
+                "overflowX": "hidden",
+                "overflowY": "auto"
+              }
+            ],
+            "contained": true
+          }
+        ],
+        "generatedOverflow": [],
+        "uncontainedOverflow": [],
+        "mainCount": 1
+      },
+      "skip": {
+        "focused": {
+          "tag": "A",
+          "text": "Skip to main content",
+          "href": "#main-content",
+          "targetExists": true,
+          "visible": false,
+          "rect": {
+            "x": 8,
+            "y": -92.953125,
+            "width": 172.53125,
+            "height": 44
+          }
+        },
+        "activated": {
+          "targetRect": {
+            "x": 0,
+            "y": 70,
+            "width": 390,
+            "height": 2455.15625
+          },
+          "reached": true,
+          "activeId": null
+        },
+        "pass": false
+      },
+      "errors": {
+        "console": [],
+        "page": [],
+        "request": [],
+        "response": []
+      },
+      "screenshot": "/Users/handtomouse/maplemoon-website/_wip/evidence/style_chrome_correction_r2_20260817T140018/focused-390-proofs/faq-390.png",
+      "screenshotBytes": 201977,
+      "screenshotSha256": "6ef3a792dfee9febae5b3406b2fee707d8ca665771e1e791665c8a77a219886d",
+      "proofNonblank": true,
+      "failures": [
+        "skip-main"
+      ],
+      "result": "FAIL"
+    },
+    {
+      "route": "stockists",
+      "baseline": {
+        "clientWidth": 390,
+        "scrollWidth": 390,
+        "headerHeight": 0,
+        "headerVisible": false,
+        "wordmark": "",
+        "wordmarkCentreDelta": null,
+        "targets": [],
+        "overflow": [
+          {
+            "selector": "body>div.sp>header.sp-top>div.wrap.bar>a.sp-logo",
+            "generated": false,
+            "rect": {
+              "x": 286.453125,
+              "y": 16.5,
+              "width": 31.546875,
+              "height": 44,
+              "right": 318,
+              "bottom": 60.5
+            },
+            "clientWidth": 32,
+            "scrollWidth": 73,
+            "boxSizing": "border-box",
+            "minWidth": "auto",
+            "overflowX": "visible",
+            "clipChain": [
+              {
+                "selector": "body>div.sp",
+                "overflowX": "hidden",
+                "overflowY": "auto"
+              },
+              {
+                "selector": "body>",
+                "overflowX": "hidden",
+                "overflowY": "auto"
+              }
+            ],
+            "contained": true
+          },
+          {
+            "selector": "body>div.sp>header.sp-top>div.wrap.bar>nav.sp-nav.r:nth-of-type(2)",
+            "generated": false,
+            "rect": {
+              "x": 328,
+              "y": 16.5,
+              "width": 44,
+              "height": 44,
+              "right": 372,
+              "bottom": 60.5
+            },
+            "clientWidth": 44,
+            "scrollWidth": 47,
+            "boxSizing": "border-box",
+            "minWidth": "auto",
+            "overflowX": "visible",
+            "clipChain": [
+              {
+                "selector": "body>div.sp",
+                "overflowX": "hidden",
+                "overflowY": "auto"
+              },
+              {
+                "selector": "body>",
+                "overflowX": "hidden",
+                "overflowY": "auto"
+              }
+            ],
+            "contained": true
+          },
+          {
+            "selector": "body>div.sp>header.sp-top>div.wrap.bar>nav.sp-nav.r:nth-of-type(2)>button.sp-cart",
+            "generated": false,
+            "rect": {
+              "x": 328,
+              "y": 16.5,
+              "width": 44,
+              "height": 44,
+              "right": 372,
+              "bottom": 60.5
+            },
+            "clientWidth": 42,
+            "scrollWidth": 46,
+            "boxSizing": "border-box",
+            "minWidth": "44px",
+            "overflowX": "visible",
+            "clipChain": [
+              {
+                "selector": "body>div.sp",
+                "overflowX": "hidden",
+                "overflowY": "auto"
+              },
+              {
+                "selector": "body>",
+                "overflowX": "hidden",
+                "overflowY": "auto"
+              }
+            ],
+            "contained": true
+          },
+          {
+            "selector": "body>div.sp>main>section.wrap.st-finder:nth-of-type(1)>div.st-search-panel:nth-of-type(2)",
+            "generated": false,
+            "rect": {
+              "x": 18,
+              "y": 283.046875,
+              "width": 354,
+              "height": 659.765625,
+              "right": 372,
+              "bottom": 942.8125
+            },
+            "clientWidth": 354,
+            "scrollWidth": 439,
+            "boxSizing": "border-box",
+            "minWidth": "0px",
+            "overflowX": "hidden",
+            "clipChain": [
+              {
+                "selector": "body>div.sp",
+                "overflowX": "hidden",
+                "overflowY": "auto"
+              },
+              {
+                "selector": "body>",
+                "overflowX": "hidden",
+                "overflowY": "auto"
+              }
+            ],
+            "contained": true
+          }
+        ],
+        "generatedOverflow": [],
+        "uncontainedOverflow": [],
+        "mainCount": 1
+      },
+      "observed": {
+        "clientWidth": 390,
+        "scrollWidth": 390,
+        "headerHeight": 70,
+        "headerVisible": true,
+        "wordmark": "maple moon",
+        "wordmarkCentreDelta": 0,
+        "targets": [
+          {
+            "text": "Menu",
+            "rect": {
+              "x": 16,
+              "y": 13,
+              "width": 48.578125,
+              "height": 44,
+              "right": 64.578125,
+              "bottom": 57
+            },
+            "boxSizing": "border-box"
+          },
+          {
+            "text": "maple moon",
+            "rect": {
+              "x": 127.953125,
+              "y": 13,
+              "width": 134.09375,
+              "height": 44,
+              "right": 262.046875,
+              "bottom": 57
+            },
+            "boxSizing": "border-box"
+          },
+          {
+            "text": "Contact",
+            "rect": {
+              "x": 308.515625,
+              "y": 13,
+              "width": 65.484375,
+              "height": 44,
+              "right": 374,
+              "bottom": 57
+            },
+            "boxSizing": "border-box"
+          }
+        ],
+        "overflow": [
+          {
+            "selector": "body>div.sp>main>section.wrap.st-finder:nth-of-type(1)>div.st-search-panel:nth-of-type(2)",
+            "generated": false,
+            "rect": {
+              "x": 18,
+              "y": 283.046875,
+              "width": 354,
+              "height": 659.765625,
+              "right": 372,
+              "bottom": 942.8125
+            },
+            "clientWidth": 354,
+            "scrollWidth": 439,
+            "boxSizing": "border-box",
+            "minWidth": "0px",
+            "overflowX": "hidden",
+            "clipChain": [
+              {
+                "selector": "body>div.sp",
+                "overflowX": "hidden",
+                "overflowY": "auto"
+              },
+              {
+                "selector": "body>",
+                "overflowX": "hidden",
+                "overflowY": "auto"
+              }
+            ],
+            "contained": true
+          }
+        ],
+        "generatedOverflow": [],
+        "uncontainedOverflow": [],
+        "mainCount": 1
+      },
+      "skip": {
+        "focused": {
+          "tag": "A",
+          "text": "Skip to main content",
+          "href": "#main-content",
+          "targetExists": true,
+          "visible": false,
+          "rect": {
+            "x": 8,
+            "y": -58.277854919433594,
+            "width": 161.109375,
+            "height": 44
+          }
+        },
+        "activated": {
+          "targetRect": {
+            "x": 0,
+            "y": 70,
+            "width": 390,
+            "height": 3496.296875
+          },
+          "reached": true,
+          "activeId": "main-content"
+        },
+        "pass": false
+      },
+      "errors": {
+        "console": [],
+        "page": [],
+        "request": [],
+        "response": []
+      },
+      "screenshot": "/Users/handtomouse/maplemoon-website/_wip/evidence/style_chrome_correction_r2_20260817T140018/focused-390-proofs/stockists-390.png",
+      "screenshotBytes": 208528,
+      "screenshotSha256": "33c4d231598f8aebe882f02ae8e6259c3d0428dd9e87abba10dadd41efeff5dd",
+      "proofNonblank": true,
+      "failures": [
+        "skip-main"
+      ],
+      "result": "FAIL"
+    },
+    {
+      "route": "pure-carob-bar",
+      "baseline": {
+        "clientWidth": 390,
+        "scrollWidth": 390,
+        "headerHeight": 0,
+        "headerVisible": false,
+        "wordmark": "",
+        "wordmarkCentreDelta": null,
+        "targets": [],
+        "overflow": [
+          {
+            "selector": "body>div.sp:nth-of-type(1)>header.sp-top.mm-site-header>div.wrap.bar.mm-header__bar>div.sp-nav.r.mm-header__right",
+            "generated": false,
+            "rect": {
+              "x": 318,
+              "y": 17,
+              "width": 44,
+              "height": 44,
+              "right": 362,
+              "bottom": 61
+            },
+            "clientWidth": 44,
+            "scrollWidth": 47,
+            "boxSizing": "border-box",
+            "minWidth": "auto",
+            "overflowX": "visible",
+            "clipChain": [
+              {
+                "selector": "body>div.sp:nth-of-type(1)",
+                "overflowX": "hidden",
+                "overflowY": "auto"
+              },
+              {
+                "selector": "body>",
+                "overflowX": "hidden",
+                "overflowY": "auto"
+              }
+            ],
+            "contained": true
+          },
+          {
+            "selector": "body>div.sp:nth-of-type(1)>header.sp-top.mm-site-header>div.wrap.bar.mm-header__bar>div.sp-nav.r.mm-header__right>button.sp-cart.mm-icon-control",
+            "generated": false,
+            "rect": {
+              "x": 318,
+              "y": 17,
+              "width": 44,
+              "height": 44,
+              "right": 362,
+              "bottom": 61
+            },
+            "clientWidth": 42,
+            "scrollWidth": 46,
+            "boxSizing": "border-box",
+            "minWidth": "44px",
+            "overflowX": "visible",
+            "clipChain": [
+              {
+                "selector": "body>div.sp:nth-of-type(1)",
+                "overflowX": "hidden",
+                "overflowY": "auto"
+              },
+              {
+                "selector": "body>",
+                "overflowX": "hidden",
+                "overflowY": "auto"
+              }
+            ],
+            "contained": true
+          }
+        ],
+        "generatedOverflow": [],
+        "uncontainedOverflow": [],
+        "mainCount": 1
+      },
+      "observed": {
+        "clientWidth": 390,
+        "scrollWidth": 390,
+        "headerHeight": 70,
+        "headerVisible": true,
+        "wordmark": "maple moon",
+        "wordmarkCentreDelta": -0.0078125,
+        "targets": [
+          {
+            "text": "Menu",
+            "rect": {
+              "x": 16,
+              "y": 13,
+              "width": 44,
+              "height": 44,
+              "right": 60,
+              "bottom": 57
+            },
+            "boxSizing": "border-box"
+          },
+          {
+            "text": "maple moon",
+            "rect": {
+              "x": 128.765625,
+              "y": 13,
+              "width": 132.453125,
+              "height": 44,
+              "right": 261.21875,
+              "bottom": 57
+            },
+            "boxSizing": "border-box"
+          },
+          {
+            "text": "Contact",
+            "rect": {
+              "x": 318.3125,
+              "y": 13,
+              "width": 55.6875,
+              "height": 44,
+              "right": 374,
+              "bottom": 57
+            },
+            "boxSizing": "border-box"
+          }
+        ],
+        "overflow": [],
+        "generatedOverflow": [],
+        "uncontainedOverflow": [],
+        "mainCount": 1
+      },
+      "skip": {
+        "focused": {
+          "tag": "A",
+          "text": "Skip to the product",
+          "href": "#product-title",
+          "targetExists": true,
+          "visible": false,
+          "rect": {
+            "x": 8,
+            "y": -57.49347686767578,
+            "width": 124.5,
+            "height": 44
+          }
+        },
+        "activated": {
+          "targetRect": {
+            "x": 28,
+            "y": 121.65625,
+            "width": 334,
+            "height": 66.875
+          },
+          "reached": true,
+          "activeId": null
+        },
+        "pass": false
+      },
+      "errors": {
+        "console": [],
+        "page": [],
+        "request": [],
+        "response": []
+      },
+      "screenshot": "/Users/handtomouse/maplemoon-website/_wip/evidence/style_chrome_correction_r2_20260817T140018/focused-390-proofs/pure-carob-bar-390.png",
+      "screenshotBytes": 136887,
+      "screenshotSha256": "45b4077a494dc3913102648426f9c246328596b1817eeb4b4020d96dd49e5526",
+      "proofNonblank": true,
+      "failures": [
+        "skip-main"
+      ],
+      "result": "FAIL"
+    }
+  ],
+  "positiveControls": {
+    "rootCaught": true,
+    "sub44Caught": true,
+    "generatedCaught": true,
+    "uncontainedCaught": true,
+    "hiddenSkipCaught": true,
+    "result": "PASS"
+  },
+  "failures": [
+    {
+      "route": "homepage",
+      "failures": [
+        "skip-main"
+      ]
+    },
+    {
+      "route": "shop",
+      "failures": [
+        "skip-main"
+      ]
+    },
+    {
+      "route": "carob-story",
+      "failures": [
+        "skip-main"
+      ]
+    },
+    {
+      "route": "faq",
+      "failures": [
+        "skip-main"
+      ]
+    },
+    {
+      "route": "stockists",
+      "failures": [
+        "skip-main"
+      ]
+    },
+    {
+      "route": "pure-carob-bar",
+      "failures": [
+        "skip-main"
+      ]
+    }
+  ]
+}

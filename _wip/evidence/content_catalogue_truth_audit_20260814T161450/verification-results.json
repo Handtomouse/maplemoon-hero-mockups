@@ -1,0 +1,502 @@
+{
+  "schema": "maplemoon-content-truth-verification/v1",
+  "hashes": {
+    "Documents/Codex/2026-08-13/maple-moon-shared-site-styles-kit/outputs/CONTENT-SAFETY-AND-VOICE.md": {
+      "expected": "f93775ee1d96f518100dc6cd036ea85edc3414ea8110abc8e95fdf2d88269403",
+      "actual": "f93775ee1d96f518100dc6cd036ea85edc3414ea8110abc8e95fdf2d88269403",
+      "matches": true
+    },
+    "Documents/Codex/2026-08-13/maple-moon-shared-site-styles-kit/outputs/DECISIONS-NEEDED.md": {
+      "expected": "a410c87bcdef46ecfa5a41a98c81c157ff482d02a252756faf5d61b8c9541969",
+      "actual": "ed1bc299ed203b20d5b50ab19ecdf868a1d520721973dc767480af704d6ec08b",
+      "matches": false
+    },
+    "Documents/Codex/2026-08-13/maple-moon-shared-site-styles-kit/outputs/SOURCE-REGISTER.md": {
+      "expected": "f04cd18d640378938caace711a7fb2b3b5ebbc7c691df42adc80f9b386f7928c",
+      "actual": "656d7fdbe2abf44b0a679d188f94d6f9f84fbb676aa6ed7b667c271678c1d6f6",
+      "matches": false
+    },
+    "Documents/Codex/2026-08-13/maple-moon-shared-site-styles-kit/outputs/RULE-REGISTER.json": {
+      "expected": "728960a4fb87978741730990ddee3319eebb15bfa791cce45edf81b60baf621f",
+      "actual": "98a67138c800cad65f49845fad812f9b2c518f725806cfb7c691ad36f340d516",
+      "matches": false
+    },
+    "UFC/ops/bus/maplemoon/BOSS_20260814.md": {
+      "expected": "3f1e51db694cd53f43bde0d0783b262a526e200ea3657d521c313d97c0e2e4db",
+      "actual": "3f1e51db694cd53f43bde0d0783b262a526e200ea3657d521c313d97c0e2e4db",
+      "matches": true
+    },
+    "maplemoon-website/docs/orchestration/reviews/MAPLEMOON-ASSET-SLOT-AUTHORITY-MATRIX-20260814T143614.md": {
+      "expected": "8b68ad125353c57befd0f0035acae2530756cb52c9a242cbdd12a148becb40a0",
+      "actual": "8b68ad125353c57befd0f0035acae2530756cb52c9a242cbdd12a148becb40a0",
+      "matches": true
+    },
+    "maplemoon-website/docs/orchestration/reviews/MAPLEMOON-STYLES-KIT-BOSS-INTAKE-20260814T151331.md": {
+      "expected": "f476f207550fc44dca08638a486ae071105a79a56f48250b8e96e5dcc4a2d2ed",
+      "actual": "f476f207550fc44dca08638a486ae071105a79a56f48250b8e96e5dcc4a2d2ed",
+      "matches": true
+    },
+    "maplemoon_build_20260813/homepage.html": {
+      "expected": "27921b2a466ccb670b2851a73043429763d3423bcaf651069e4e860dc01a78b1",
+      "actual": "27921b2a466ccb670b2851a73043429763d3423bcaf651069e4e860dc01a78b1",
+      "matches": true
+    },
+    "maplemoon_build_20260813/our-story.html": {
+      "expected": "2db31868a9791f373f156e7cdeb8261e494d1d47e9418a94c28156e213df7711",
+      "actual": "2db31868a9791f373f156e7cdeb8261e494d1d47e9418a94c28156e213df7711",
+      "matches": true
+    },
+    "maplemoon_build_20260813/carob-story.html": {
+      "expected": "4fd9ad0fabb9d60d0f391925f5a382ccfc8f705b60fca1c681f403a5cd9734bd",
+      "actual": "4fd9ad0fabb9d60d0f391925f5a382ccfc8f705b60fca1c681f403a5cd9734bd",
+      "matches": true
+    },
+    "maplemoon_build_20260813/shop.html": {
+      "expected": "f111ad5123e34dadd46ac497fca286066efc67c05dd7e68f0d3e70c97c735038",
+      "actual": "f111ad5123e34dadd46ac497fca286066efc67c05dd7e68f0d3e70c97c735038",
+      "matches": true
+    },
+    "maplemoon_build_20260813/faq.html": {
+      "expected": "c5ce7aaf0b9b3221f34eb2928fc2ff6732fc1a915ea80144a4ade2b94011fb6e",
+      "actual": "c5ce7aaf0b9b3221f34eb2928fc2ff6732fc1a915ea80144a4ade2b94011fb6e",
+      "matches": true
+    },
+    "maplemoon_build_20260813/stockists.html": {
+      "expected": "4821adfe88680d4f174b7a8700c8d8a65594df2901bf3a7109d51b09040cb887",
+      "actual": "4821adfe88680d4f174b7a8700c8d8a65594df2901bf3a7109d51b09040cb887",
+      "matches": true
+    },
+    "maplemoon_build_20260813/pure-carob-bar.html": {
+      "expected": "015cde27ecc60f3c444820a551c39f6e9c985fc5b2e59bdaea5f496c1c236b65",
+      "actual": "015cde27ecc60f3c444820a551c39f6e9c985fc5b2e59bdaea5f496c1c236b65",
+      "matches": true
+    }
+  },
+  "cases": {
+    "browser": 14,
+    "defaults": 14,
+    "contentStates": 2
+  },
+  "screenshots": {
+    "count": 63,
+    "files": [
+      {
+        "name": "carob-story_1440_cart.png",
+        "bytes": 458248,
+        "width": 1440,
+        "height": 1000
+      },
+      {
+        "name": "carob-story_1440_default.png",
+        "bytes": 1238028,
+        "width": 1440,
+        "height": 1000
+      },
+      {
+        "name": "carob-story_1440_full.png",
+        "bytes": 1813845,
+        "width": 1440,
+        "height": 2432
+      },
+      {
+        "name": "carob-story_390_cart.png",
+        "bytes": 106798,
+        "width": 390,
+        "height": 1000
+      },
+      {
+        "name": "carob-story_390_default.png",
+        "bytes": 410721,
+        "width": 390,
+        "height": 1000
+      },
+      {
+        "name": "carob-story_390_drawer.png",
+        "bytes": 298611,
+        "width": 390,
+        "height": 1000
+      },
+      {
+        "name": "carob-story_390_full.png",
+        "bytes": 735320,
+        "width": 390,
+        "height": 4078
+      },
+      {
+        "name": "contact-content-states.png",
+        "bytes": 981239,
+        "width": 1008,
+        "height": 467
+      },
+      {
+        "name": "contact-default-1440.png",
+        "bytes": 2178062,
+        "width": 752,
+        "height": 1144
+      },
+      {
+        "name": "contact-default-390.png",
+        "bytes": 2664307,
+        "width": 844,
+        "height": 1072
+      },
+      {
+        "name": "contact-dynamic-390.png",
+        "bytes": 1249146,
+        "width": 633,
+        "height": 1072
+      },
+      {
+        "name": "faq_1440_caffeine-open.png",
+        "bytes": 37236,
+        "width": 858,
+        "height": 181
+      },
+      {
+        "name": "faq_1440_cart.png",
+        "bytes": 333855,
+        "width": 1440,
+        "height": 1000
+      },
+      {
+        "name": "faq_1440_default.png",
+        "bytes": 460788,
+        "width": 1440,
+        "height": 1000
+      },
+      {
+        "name": "faq_1440_full.png",
+        "bytes": 685025,
+        "width": 1440,
+        "height": 2319
+      },
+      {
+        "name": "faq_390_caffeine-open.png",
+        "bytes": 28128,
+        "width": 358,
+        "height": 219
+      },
+      {
+        "name": "faq_390_cart.png",
+        "bytes": 113500,
+        "width": 390,
+        "height": 1000
+      },
+      {
+        "name": "faq_390_default.png",
+        "bytes": 230738,
+        "width": 390,
+        "height": 1000
+      },
+      {
+        "name": "faq_390_drawer.png",
+        "bytes": 148460,
+        "width": 390,
+        "height": 1000
+      },
+      {
+        "name": "faq_390_full.png",
+        "bytes": 392260,
+        "width": 390,
+        "height": 2768
+      },
+      {
+        "name": "homepage_1440_cart.png",
+        "bytes": 723768,
+        "width": 1440,
+        "height": 1000
+      },
+      {
+        "name": "homepage_1440_default.png",
+        "bytes": 1620023,
+        "width": 1440,
+        "height": 1000
+      },
+      {
+        "name": "homepage_1440_full.png",
+        "bytes": 4465944,
+        "width": 1440,
+        "height": 5176
+      },
+      {
+        "name": "homepage_1440_newsletter-review.png",
+        "bytes": 16096,
+        "width": 1124,
+        "height": 96
+      },
+      {
+        "name": "homepage_390_cart.png",
+        "bytes": 138981,
+        "width": 390,
+        "height": 1000
+      },
+      {
+        "name": "homepage_390_default.png",
+        "bytes": 460607,
+        "width": 390,
+        "height": 1000
+      },
+      {
+        "name": "homepage_390_drawer.png",
+        "bytes": 335032,
+        "width": 390,
+        "height": 1000
+      },
+      {
+        "name": "homepage_390_full.png",
+        "bytes": 1401888,
+        "width": 390,
+        "height": 5803
+      },
+      {
+        "name": "homepage_390_newsletter-review.png",
+        "bytes": 13772,
+        "width": 334,
+        "height": 195
+      },
+      {
+        "name": "our-story_1440_cart.png",
+        "bytes": 349308,
+        "width": 1440,
+        "height": 1000
+      },
+      {
+        "name": "our-story_1440_default.png",
+        "bytes": 685690,
+        "width": 1440,
+        "height": 1000
+      },
+      {
+        "name": "our-story_1440_full.png",
+        "bytes": 2674659,
+        "width": 1440,
+        "height": 10208
+      },
+      {
+        "name": "our-story_390_cart.png",
+        "bytes": 78773,
+        "width": 390,
+        "height": 1000
+      },
+      {
+        "name": "our-story_390_default.png",
+        "bytes": 249517,
+        "width": 390,
+        "height": 1000
+      },
+      {
+        "name": "our-story_390_drawer.png",
+        "bytes": 169206,
+        "width": 390,
+        "height": 1000
+      },
+      {
+        "name": "our-story_390_full.png",
+        "bytes": 1112504,
+        "width": 390,
+        "height": 9984
+      },
+      {
+        "name": "pure-carob-bar_1440_cart.png",
+        "bytes": 334140,
+        "width": 1440,
+        "height": 1000
+      },
+      {
+        "name": "pure-carob-bar_1440_default.png",
+        "bytes": 438605,
+        "width": 1440,
+        "height": 1000
+      },
+      {
+        "name": "pure-carob-bar_1440_full.png",
+        "bytes": 670173,
+        "width": 1440,
+        "height": 1682
+      },
+      {
+        "name": "pure-carob-bar_390_cart.png",
+        "bytes": 83940,
+        "width": 390,
+        "height": 1000
+      },
+      {
+        "name": "pure-carob-bar_390_default.png",
+        "bytes": 185201,
+        "width": 390,
+        "height": 1000
+      },
+      {
+        "name": "pure-carob-bar_390_drawer.png",
+        "bytes": 144177,
+        "width": 390,
+        "height": 1000
+      },
+      {
+        "name": "pure-carob-bar_390_full.png",
+        "bytes": 324166,
+        "width": 390,
+        "height": 3029
+      },
+      {
+        "name": "shop_1440_cart-item.png",
+        "bytes": 270880,
+        "width": 1440,
+        "height": 1000
+      },
+      {
+        "name": "shop_1440_cart.png",
+        "bytes": 394528,
+        "width": 1440,
+        "height": 1000
+      },
+      {
+        "name": "shop_1440_checkout.png",
+        "bytes": 250710,
+        "width": 1440,
+        "height": 1000
+      },
+      {
+        "name": "shop_1440_complete.png",
+        "bytes": 238873,
+        "width": 1440,
+        "height": 1000
+      },
+      {
+        "name": "shop_1440_default.png",
+        "bytes": 653164,
+        "width": 1440,
+        "height": 1000
+      },
+      {
+        "name": "shop_1440_full.png",
+        "bytes": 3040393,
+        "width": 1440,
+        "height": 5950
+      },
+      {
+        "name": "shop_390_cart-item.png",
+        "bytes": 100109,
+        "width": 390,
+        "height": 1000
+      },
+      {
+        "name": "shop_390_cart.png",
+        "bytes": 103464,
+        "width": 390,
+        "height": 1000
+      },
+      {
+        "name": "shop_390_checkout.png",
+        "bytes": 78713,
+        "width": 390,
+        "height": 1000
+      },
+      {
+        "name": "shop_390_complete.png",
+        "bytes": 66925,
+        "width": 390,
+        "height": 1000
+      },
+      {
+        "name": "shop_390_default.png",
+        "bytes": 222369,
+        "width": 390,
+        "height": 1000
+      },
+      {
+        "name": "shop_390_drawer.png",
+        "bytes": 152946,
+        "width": 390,
+        "height": 1000
+      },
+      {
+        "name": "shop_390_full.png",
+        "bytes": 3244811,
+        "width": 390,
+        "height": 16406
+      },
+      {
+        "name": "stockists_1440_cart.png",
+        "bytes": 316297,
+        "width": 1440,
+        "height": 1000
+      },
+      {
+        "name": "stockists_1440_default.png",
+        "bytes": 734303,
+        "width": 1440,
+        "height": 1000
+      },
+      {
+        "name": "stockists_1440_full.png",
+        "bytes": 1267949,
+        "width": 1440,
+        "height": 2758
+      },
+      {
+        "name": "stockists_390_cart.png",
+        "bytes": 95690,
+        "width": 390,
+        "height": 1000
+      },
+      {
+        "name": "stockists_390_default.png",
+        "bytes": 261819,
+        "width": 390,
+        "height": 1000
+      },
+      {
+        "name": "stockists_390_drawer.png",
+        "bytes": 180064,
+        "width": 390,
+        "height": 1000
+      },
+      {
+        "name": "stockists_390_full.png",
+        "bytes": 558117,
+        "width": 390,
+        "height": 3435
+      }
+    ]
+  },
+  "controls": {
+    "health_diet": true,
+    "origin": true,
+    "manufacturing": true,
+    "availability_commerce": true,
+    "caffeine": true,
+    "internal_vocabulary": true,
+    "testimonials": true,
+    "superlative_sensory": true,
+    "prices": true,
+    "placeholder_links": true,
+    "personal_data_fields": true
+  },
+  "catalogue": {
+    "total": 24,
+    "beyondSix": 18,
+    "enquiry": 4,
+    "cart": 20,
+    "bitesDistinct": true
+  },
+  "caffeine": {
+    "exactQuestionSource": 1,
+    "exactAnswerSource": 1,
+    "exactQuestionDom": 1,
+    "exactAnswerDom": 1,
+    "broaderClaimsDetected": true
+  },
+  "stockists": {
+    "source": 204,
+    "withheld": 7,
+    "publicEligible": 197
+  },
+  "photographyPercent": 36,
+  "reviewSha256": "86b86437447de056293a960f6f9ca53bd92fdf20312b2eaf5c1b56e86d3d12e0",
+  "failures": [
+    "hash Documents/Codex/2026-08-13/maple-moon-shared-site-styles-kit/outputs/DECISIONS-NEEDED.md",
+    "hash Documents/Codex/2026-08-13/maple-moon-shared-site-styles-kit/outputs/SOURCE-REGISTER.md",
+    "hash Documents/Codex/2026-08-13/maple-moon-shared-site-styles-kit/outputs/RULE-REGISTER.json"
+  ]
+}

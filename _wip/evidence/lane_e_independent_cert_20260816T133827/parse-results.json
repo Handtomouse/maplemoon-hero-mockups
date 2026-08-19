@@ -1,0 +1,65 @@
+{
+  "results": [
+    {
+      "label": "home",
+      "relative": "_wip/homepage_real_1_lead_photo.WIP.html",
+      "inline": 7,
+      "expectedInline": 7,
+      "jsonLd": 2,
+      "expectedJsonLd": 2,
+      "errors": [],
+      "result": "PASS"
+    },
+    {
+      "label": "shop",
+      "relative": "_wip/shop.WIP.html",
+      "inline": 1,
+      "expectedInline": 1,
+      "jsonLd": 3,
+      "expectedJsonLd": 3,
+      "errors": [],
+      "result": "PASS"
+    },
+    {
+      "label": "our-story",
+      "relative": "_wip/our-story.WIP.html",
+      "inline": 0,
+      "expectedInline": 0,
+      "jsonLd": 4,
+      "expectedJsonLd": 4,
+      "errors": [],
+      "result": "PASS"
+    },
+    {
+      "label": "carob-story",
+      "relative": "_wip/carob-story.WIP.html",
+      "inline": 0,
+      "expectedInline": 0,
+      "jsonLd": 4,
+      "expectedJsonLd": 4,
+      "errors": [],
+      "result": "PASS"
+    },
+    {
+      "label": "faq",
+      "relative": "_wip/faq.WIP.html",
+      "inline": 1,
+      "expectedInline": 1,
+      "jsonLd": 0,
+      "expectedJsonLd": 0,
+      "errors": [],
+      "result": "PASS"
+    },
+    {
+      "label": "stockists",
+      "relative": "_wip/stockists.WIP.html",
+      "inline": 1,
+      "expectedInline": 1,
+      "jsonLd": 3,
+      "expectedJsonLd": 3,
+      "errors": [],
+      "result": "PASS"
+    }
+  ],
+  "failures": []
+}

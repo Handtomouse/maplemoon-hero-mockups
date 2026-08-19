@@ -1,0 +1,56 @@
+{
+  "schema": "maplemoon-native-zoom-visual-inspection/v1",
+  "packet_id": "MAPLEMOON-NATIVE-200-ZOOM-AUDIT-R2-20260814T180224",
+  "inspected_at": "2026-08-14T18:38:00+10:00",
+  "method": {
+    "whole_page_cases": 14,
+    "whole_page_coordinate_space": "Page.getLayoutMetrics.contentSize",
+    "no_clip_detail_cases": 42,
+    "detail_positions_per_case": ["top", "middle", "bottom"],
+    "detail_physical_widths": {
+      "effective_390": 1560,
+      "effective_720": 2880
+    },
+    "contact_sheets": [
+      "visual-overview-390.png",
+      "visual-overview-720.png",
+      "visual-segments-390.png",
+      "visual-segments-720.png",
+      "visual-open-states.png"
+    ],
+    "preserved_false_positive": "screenshot-coordinate-artifact"
+  },
+  "criteria": [
+    "nonblank paint",
+    "complete horizontal page width",
+    "no clipped text",
+    "no authored overlap",
+    "no lost content",
+    "notices readable",
+    "no off-canvas UI"
+  ],
+  "rows": [
+    {"route": "homepage.html", "effective_width": 390, "whole_page": "screenshots/390-homepage-full.png", "detail_stem": "screenshots/390-homepage-segment-", "observation": "Hero, ritual panels, product callouts and footer remain within the page width; text and controls are readable.", "verdict": "PASS"},
+    {"route": "our-story.html", "effective_width": 390, "whole_page": "screenshots/390-our-story-full.png", "detail_stem": "screenshots/390-our-story-segment-", "observation": "Founder story, imagery, calls to action and footer remain legible without horizontal clipping or lost content.", "verdict": "PASS"},
+    {"route": "carob-story.html", "effective_width": 390, "whole_page": "screenshots/390-carob-story-full.png", "detail_stem": "screenshots/390-carob-story-segment-", "observation": "Headline, benefit icons, grove cards, FAQ rows and footer remain fully contained and readable.", "verdict": "PASS"},
+    {"route": "shop.html", "effective_width": 390, "whole_page": "screenshots/390-shop-full.png", "detail_stem": "screenshots/390-shop-segment-", "observation": "Catalogue notice, starter card, filters, product imagery, selectors and action controls remain within the measured width.", "verdict": "PASS"},
+    {"route": "faq.html", "effective_width": 390, "whole_page": "screenshots/390-faq-full.png", "detail_stem": "screenshots/390-faq-segment-", "observation": "FAQ title, search/help copy, accordion rows, contact card and footer remain readable and unclipped.", "verdict": "PASS"},
+    {"route": "stockists.html", "effective_width": 390, "whole_page": "screenshots/390-stockists-full.png", "detail_stem": "screenshots/390-stockists-segment-", "observation": "Finder, location list, retailer callout and footer remain contained without off-canvas UI.", "verdict": "PASS"},
+    {"route": "pure-carob-bar.html", "effective_width": 390, "whole_page": "screenshots/390-pure-carob-bar-full.png", "detail_stem": "screenshots/390-pure-carob-bar-segment-", "observation": "Product image, product copy, information cards, related range and footer remain legible and contained.", "verdict": "PASS"},
+    {"route": "homepage.html", "effective_width": 720, "whole_page": "screenshots/720-homepage-full.png", "detail_stem": "screenshots/720-homepage-segment-", "observation": "Hero, ritual panels, product callouts and footer retain complete width and readable type.", "verdict": "PASS"},
+    {"route": "our-story.html", "effective_width": 720, "whole_page": "screenshots/720-our-story-full.png", "detail_stem": "screenshots/720-our-story-segment-", "observation": "Founder copy, portrait/crop regions, calls to action and footer show no clipping, overlap or lost content.", "verdict": "PASS"},
+    {"route": "carob-story.html", "effective_width": 720, "whole_page": "screenshots/720-carob-story-full.png", "detail_stem": "screenshots/720-carob-story-segment-", "observation": "Headline, benefit row, grove imagery/cards, FAQ and footer stay within the measured page width.", "verdict": "PASS"},
+    {"route": "shop.html", "effective_width": 720, "whole_page": "screenshots/720-shop-full.png", "detail_stem": "screenshots/720-shop-segment-", "observation": "Catalogue copy, starter offer, product grid, option controls and footer remain readable without off-canvas content.", "verdict": "PASS"},
+    {"route": "faq.html", "effective_width": 720, "whole_page": "screenshots/720-faq-full.png", "detail_stem": "screenshots/720-faq-segment-", "observation": "FAQ search, questions, expanded answer, contact card and footer remain fully visible and readable.", "verdict": "PASS"},
+    {"route": "stockists.html", "effective_width": 720, "whole_page": "screenshots/720-stockists-full.png", "detail_stem": "screenshots/720-stockists-segment-", "observation": "Finder, retailer records, stocking callout and footer remain contained and legible.", "verdict": "PASS"},
+    {"route": "pure-carob-bar.html", "effective_width": 720, "whole_page": "screenshots/720-pure-carob-bar-full.png", "detail_stem": "screenshots/720-pure-carob-bar-segment-", "observation": "Product hero, product facts, information cards, related products and footer retain complete width without clipping.", "verdict": "PASS"}
+  ],
+  "representative_states": [
+    {"file": "screenshots/390-homepage-menu-open.png", "observation": "Full-width drawer visibly contains all six rows; labels and borders are readable and the underlying page does not intrude into the panel.", "verdict": "PASS"},
+    {"file": "screenshots/390-shop-cart-open.png", "observation": "Cart drawer, overlay and selection heading are visibly present; the inert background remains behind the modal layer without off-canvas spill.", "verdict": "PASS"}
+  ],
+  "qualification": "The arbitrary middle and bottom detail captures retain the expected fixed header over the scroll viewport; whole-page evidence confirms no authored content is lost beneath it. The earlier cssContentSize capture artifact is preserved and excluded from candidate classification.",
+  "passed": 14,
+  "expected": 14,
+  "verdict": "PASS"
+}

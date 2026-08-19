@@ -1,0 +1,71 @@
+{
+  "schema": "maplemoon-integrated-header-cart-cert-summary/v1",
+  "packet_id": "MAPLEMOON-INTEGRATED-HEADER-CART-CERT-20260814T155822",
+  "completed_at": "2026-08-14T16:06:06+10:00",
+  "outcome": "FAIL_REQUIRED_CART_INERT_BACKGROUND",
+  "decision": "STOP_NO_FIX_NO_FURTHER_CERTIFICATION",
+  "phase_start": "PASS packet=MAPLEMOON-INTEGRATED-HEADER-CART-CERT-20260814T155822 phase=start scope=2",
+  "predecessor_gates": [
+    "PASS packet=MAPLEMOON-MOBILE-HEADER-RUNTIME-20260814T150338 phase=complete changed=4",
+    "PASS packet=MAPLEMOON-MOBILE-HEADER-RUNTIME-20260814T150338 phase=promote changed=4",
+    "PASS packet=MAPLEMOON-CART-PREFLIGHT-VERIFY-20260814T155246 phase=complete changed=2",
+    "PASS packet=MAPLEMOON-CART-PREFLIGHT-VERIFY-20260814T155246 phase=promote changed=2"
+  ],
+  "acquisition_hashes": {
+    "maplemoon_build_20260813/homepage.html": "27921b2a466ccb670b2851a73043429763d3423bcaf651069e4e860dc01a78b1",
+    "maplemoon_build_20260813/our-story.html": "2db31868a9791f373f156e7cdeb8261e494d1d47e9418a94c28156e213df7711",
+    "maplemoon_build_20260813/carob-story.html": "4fd9ad0fabb9d60d0f391925f5a382ccfc8f705b60fca1c681f403a5cd9734bd",
+    "maplemoon_build_20260813/shop.html": "f111ad5123e34dadd46ac497fca286066efc67c05dd7e68f0d3e70c97c735038",
+    "maplemoon_build_20260813/faq.html": "c5ce7aaf0b9b3221f34eb2928fc2ff6732fc1a915ea80144a4ade2b94011fb6e",
+    "maplemoon_build_20260813/stockists.html": "4821adfe88680d4f174b7a8700c8d8a65594df2901bf3a7109d51b09040cb887",
+    "maplemoon_build_20260813/pure-carob-bar.html": "015cde27ecc60f3c444820a551c39f6e9c985fc5b2e59bdaea5f496c1c236b65",
+    "maplemoon_build_20260813/mock-cart.js": "5776f8d628710970e81cf704ae0673ff69988d46952778f5624772db335b8b1a",
+    "maplemoon_build_20260813/mock-cart.css": "c17deb1f972017d9790f2191360a457e54d7287730847f9f470c9de371603308",
+    "maplemoon_build_20260813/assets/design-system/mm-chrome.js": "063fe11d5f5ed5d90c724868f1ffb8f3536aed73cc2f7fb9bc6e4791eb192d18",
+    "maplemoon_build_20260813/assets/design-system/mm-chrome.css": "2d7414a8994ae11414cb269f4ca335293b409eb9da956ca3b625e716c26080ba"
+  },
+  "all_acquisition_hashes_match": true,
+  "candidate_unchanged_after_probe": true,
+  "browser_quick_verification": {
+    "agent_browser_available": false,
+    "fallback": "Bundled Playwright with system Google Chrome",
+    "http": 200,
+    "body_text_length": 5636,
+    "error_overlay": false,
+    "header_present": true,
+    "shop_cards": 24,
+    "cart_dialog_present": true,
+    "runtime_console_request_page_errors": 0
+  },
+  "failed_boundary": {
+    "requirement": "cart dialog inert background",
+    "outside_inert_branches": 0,
+    "outside_branch_count": 7,
+    "programmatic_background_focus_escaped_dialog": true,
+    "escaped_focus_target": "Open menu",
+    "escaped_target_inert_self": false,
+    "escaped_target_inert_ancestor": false,
+    "dialog_role": "dialog",
+    "dialog_aria_modal": "true",
+    "initial_focus": "Close cart",
+    "overlay_close_returned_to_opener": true,
+    "escape_close_returned_to_opener": true,
+    "controls_44px_pass": true,
+    "client_width": 390,
+    "scroll_width": 390,
+    "evidence": "cart_inert_probe.json and cart_inert_failure_390.png"
+  },
+  "not_run_after_stop": [
+    "seven-route regular, reduced-motion and desktop header matrices",
+    "remaining Shop exact-option, arithmetic, persistence, zoom and no-side-effect matrix",
+    "FAQ exact-copy browser matrix",
+    "all-route authored-asset and overflow matrix",
+    "exact UFC local preflight",
+    "production immutable and homepage MD5 freeze recheck",
+    "promotion receipt gate"
+  ],
+  "source_changes": [],
+  "deployment_changes": [],
+  "client_contact": false,
+  "forbidden_path_changes": []
+}

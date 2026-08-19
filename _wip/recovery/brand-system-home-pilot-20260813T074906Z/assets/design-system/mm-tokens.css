@@ -1,0 +1,79 @@
+@layer reset, tokens, base, chrome, primitives, pages, exceptions;
+
+/*
+ * MapleMoon shared tokens v1.
+ * Source-resolved from the six admitted WIP routes; these are not claimed as
+ * live-computed values. Route-specific art direction remains in contracts.
+ */
+@layer tokens {
+  :root {
+    --mm-color-ink: #2c2a26;
+    --mm-color-ink-soft: #6f6a62;
+    --mm-color-ink-faint: #a39d92;
+    --mm-color-paper: #f4f2ed;
+    --mm-color-card: #fbfaf7;
+    --mm-color-cream: #f1ede3;
+    --mm-color-line: rgba(44, 42, 38, 0.14);
+    --mm-color-line-soft: rgba(44, 42, 38, 0.08);
+    --mm-color-accent-blue: #4074b6;
+    --mm-color-blue-flow: #b7c9d9;
+    --mm-color-blue-bridge: #c8d5df;
+    --mm-color-blue-haze: #d7e2ea;
+    --mm-color-blue-deep: #457798;
+    --mm-color-blue-night: #101923;
+    --mm-color-beige: #c9ba96;
+
+    --mm-font-serif: "p22-mackinac-pro", "P22 Mackinac Pro", Georgia, serif;
+    --mm-font-sans: "neue-haas-grotesk-display", "Neue Haas Grotesk Display Pro", Inter, "Helvetica Neue", sans-serif;
+    --mm-font-weight-regular: 400;
+    --mm-font-weight-medium: 500;
+    --mm-font-weight-semibold: 600;
+    --mm-type-body-size: 1rem;
+    --mm-type-body-leading: 1.5;
+    --mm-type-control-size: 0.66rem;
+    --mm-type-nav-size: 0.7rem;
+    --mm-type-logo-size: 1.3rem;
+    --mm-tracking-nav: 0.1em;
+    --mm-tracking-control: 0.16em;
+
+    --mm-container-max: 1180px;
+    --mm-gutter-desktop: 28px;
+    --mm-gutter-mobile: 16px;
+    --mm-header-height: 62px;
+    --mm-control-min: 44px;
+    --mm-nav-gap: 28px;
+    --mm-utility-gap: 22px;
+    --mm-control-gap: 9px;
+    --mm-control-padding-block: 13px;
+    --mm-control-padding-inline: 26px;
+
+    --mm-radius-sm: 8px;
+    --mm-radius-md: 10px;
+    --mm-radius-lg: 12px;
+    --mm-radius-control: 14px;
+    --mm-radius-panel: 18px;
+    --mm-radius-pill: 50px;
+    --mm-radius-full: 999px;
+    --mm-radius-circle: 50%;
+
+    --mm-border-width: 1px;
+    --mm-focus-width: 2px;
+    --mm-focus-offset: 3px;
+    --mm-shadow-cool-panel: 0 14px 34px rgba(41, 57, 64, 0.08);
+
+    --mm-motion-fast: 180ms;
+    --mm-motion-control: 200ms;
+    --mm-motion-state: 220ms;
+    --mm-motion-nav: 250ms;
+    --mm-motion-button: 280ms;
+    --mm-motion-emphasis: 300ms;
+    --mm-motion-image: 500ms;
+    --mm-motion-reveal: 700ms;
+    --mm-motion-ambient: 7.5s;
+    --mm-motion-reduced: 0.01ms;
+    --mm-ease-standard: ease;
+    --mm-ease-ambient: ease-in-out;
+
+    --mm-z-chrome: 20;
+  }
+}

@@ -1,0 +1,59 @@
+{
+  "schema": "maplemoon-receipt/v2",
+  "receipt_id": "MAPLEMOON-ASSET-AUTHORITY-ADDENDUM-20260814T160123-RECEIPT-001",
+  "packet_id": "MAPLEMOON-ASSET-AUTHORITY-ADDENDUM-20260814T160123",
+  "worker_thread_id": "019ffe53-6243-73a2-9d75-e1a072cd07ce",
+  "worker": "MapleMoon BOSS control plane",
+  "started_at": "2026-08-14T16:01:23+10:00",
+  "completed_at": "2026-08-14T16:03:02+10:00",
+  "outcome": "PASS_REVIEW_ASSETS_RECORDED_WITH_HOLDS",
+  "confidence": "high",
+  "checkpoint_path": "maplemoon-website/_wip/checkpoints/MAPLEMOON-ASSET-AUTHORITY-ADDENDUM-20260814T160123_20260814_160123_AEST",
+  "files_read": [
+    "maplemoon-website/docs/orchestration/reviews/MAPLEMOON-ASSET-SLOT-AUTHORITY-MATRIX-20260814T143614.md",
+    "maplemoon-website/docs/orchestration/packets/MAPLEMOON-PHOTO-REVIEW-BATCH-AUDIT-20260814T152749.md",
+    "maplemoon-website/docs/orchestration/reviews/MAPLEMOON-PHOTO-REVIEW-BATCH-AUDIT-20260814T152749.json",
+    "maplemoon-website/docs/orchestration/packets/MAPLEMOON-PHOTO-REVIEW-BATCH-AUDIT-R2-20260814T153609.md",
+    "maplemoon-website/docs/orchestration/reviews/MAPLEMOON-PHOTO-REVIEW-BATCH-AUDIT-R2-20260814T153609.json",
+    "maplemoon-website/scripts/check-maplemoon-receipt.py"
+  ],
+  "files_changed": [
+    "maplemoon-website/docs/orchestration/reviews/MAPLEMOON-ASSET-AUTHORITY-ADDENDUM-20260814T160123.md",
+    "maplemoon-website/docs/orchestration/reviews/MAPLEMOON-ASSET-AUTHORITY-ADDENDUM-20260814T160123.json"
+  ],
+  "pre_sha256": {
+    "maplemoon-website/docs/orchestration/reviews/MAPLEMOON-ASSET-AUTHORITY-ADDENDUM-20260814T160123.md": null,
+    "maplemoon-website/docs/orchestration/reviews/MAPLEMOON-ASSET-AUTHORITY-ADDENDUM-20260814T160123.json": null
+  },
+  "post_sha256": {
+    "maplemoon-website/docs/orchestration/reviews/MAPLEMOON-ASSET-AUTHORITY-ADDENDUM-20260814T160123.md": "ccc4f3ca6991fd33b3f1348c051bc0cb6a7e6b920767ba0ca6c0581259f626f0",
+    "maplemoon-website/docs/orchestration/reviews/MAPLEMOON-ASSET-AUTHORITY-ADDENDUM-20260814T160123.json": null
+  },
+  "checks": [
+    {
+      "command": "python3 -B scripts/check-maplemoon-receipt.py verify --root /Users/handtomouse --packet docs/orchestration/packets/MAPLEMOON-ASSET-AUTHORITY-ADDENDUM-20260814T160123.md --checkpoint _wip/checkpoints/MAPLEMOON-ASSET-AUTHORITY-ADDENDUM-20260814T160123_20260814_160123_AEST --phase start",
+      "exit_code": 0,
+      "result": "PASS packet=MAPLEMOON-ASSET-AUTHORITY-ADDENDUM-20260814T160123 phase=start scope=2"
+    },
+    {
+      "command": "R2 receipt SHA-256 plus completion and promotion gates",
+      "exit_code": 0,
+      "result": "PASS: receipt SHA-256 4905a01b01775f3560bb506b1620b88e80da8c11f1034e818b21e30fa2090444; completion and promotion gates both PASS changed=2."
+    },
+    {
+      "command": "authority reconciliation against R2 evidence and existing slot matrix",
+      "exit_code": 0,
+      "result": "PASS: all four assets recorded as mechanically verified, review-only and unwired; reconstructed labels, exact identity, bundle acceptance and live-use remain held; existing powder binding unchanged; 36 percent working figure unchanged."
+    }
+  ],
+  "screenshots_or_urls": [],
+  "failures": [],
+  "unknowns": [],
+  "residual_risk": [
+    "No new product-image integration can proceed until Nate names and approves an exact asset-to-slot binding."
+  ],
+  "forbidden_path_changes": [],
+  "proposed_next_state": "review_assets_verified_unwired_waiting_nate",
+  "next_reviewer": "Nate for exact visual/live-use decisions",
+  "ready_to_promote": false
+}

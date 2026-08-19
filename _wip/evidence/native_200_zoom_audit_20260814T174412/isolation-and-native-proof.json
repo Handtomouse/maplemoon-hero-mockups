@@ -1,0 +1,90 @@
+{
+  "schema": "maplemoon-native-zoom-isolation-proof/v1",
+  "outcome": "HOLD",
+  "server": {
+    "pid": 34109,
+    "port": 4412,
+    "candidate_root": "/Users/handtomouse/maplemoon_build_20260813",
+    "homepage_http": 200
+  },
+  "attempts": [
+    {
+      "launch": "direct Chrome executable",
+      "chrome_pid": 34563,
+      "profile": "/tmp/maplemoon-native-zoom.QA32LU",
+      "remote_debugging_port": 9347,
+      "chrome": "Chrome/151.0.7922.139",
+      "page_targets": 1,
+      "page_url": "http://127.0.0.1:4412/homepage.html",
+      "window_bounds_api": {"left": 50, "top": 50, "width": 1200, "height": 900, "windowState": "normal"},
+      "baseline_100": {
+        "innerWidth": 1200,
+        "innerHeight": 813,
+        "outerWidth": 1200,
+        "outerHeight": 900,
+        "devicePixelRatio": 2,
+        "visualViewport": {"width": 1200, "height": 813, "scale": 1},
+        "visibility": "visible"
+      },
+      "global_frontmost_safety_check": {
+        "result": "REJECTED_BEFORE_KEYSTROKE",
+        "literal": "isolated Chrome did not become frontmost",
+        "global_zoom_keystrokes_sent": 0
+      },
+      "process_directed_control": {
+        "target_pid": 34563,
+        "bundle_identifier": "com.google.Chrome",
+        "native_events": ["Command-0", "Command-Plus"],
+        "delivery_scope": "CGEvent.postToPid(34563)",
+        "before": {"innerWidth": 1200, "outerWidth": 1200, "devicePixelRatio": 2, "visualViewportWidth": 1200},
+        "after_command_plus": {"innerWidth": 1200, "outerWidth": 1200, "devicePixelRatio": 2, "visualViewportWidth": 1200},
+        "result": "REJECTED: Chrome ignored native zoom input while not active; detector cannot distinguish this from 100 percent"
+      },
+      "cleanup": "exact PID 34563 terminated; profile preserved"
+    },
+    {
+      "launch": "macOS Launch Services open -na Google Chrome",
+      "chrome_pid": 44151,
+      "parent_pid": 1,
+      "profile": "/tmp/maplemoon-native-zoom-ls.KrEwK2",
+      "remote_debugging_port": 9348,
+      "chrome": "Chrome/151.0.7922.139",
+      "page_targets": 1,
+      "page_url": "http://127.0.0.1:4412/homepage.html",
+      "window_id": 1198244055,
+      "window_bounds_api": {"left": 50, "top": 50, "width": 1200, "height": 900, "windowState": "normal"},
+      "baseline_100": {
+        "innerWidth": 1200,
+        "innerHeight": 813,
+        "outerWidth": 1200,
+        "outerHeight": 900,
+        "devicePixelRatio": 2,
+        "visualViewport": {"width": 1200, "height": 813, "scale": 1},
+        "visibility": "visible"
+      },
+      "frontmost_check": {
+        "isolated_pid": 44151,
+        "actual_frontmost_pid": 79920,
+        "actual_frontmost_application": "Messages",
+        "result": "REJECTED_BEFORE_KEYSTROKE",
+        "native_zoom_keystrokes_sent": 0
+      },
+      "cleanup": "exact PID 44151 terminated; profile preserved"
+    }
+  ],
+  "native_zoom_detector": {
+    "required_100_to_200": "unchanged Browser.getWindowBounds, DPR ratio approximately 2, CSS inner-width ratio approximately 0.5",
+    "required_positive_control": "175 percent must be rejected, then 200 percent re-proved",
+    "observed": "100 percent only; the sole process-directed Command-Plus did not change DPR or CSS width",
+    "result": "UNAVAILABLE"
+  },
+  "safety": {
+    "user_chrome_pid": 57385,
+    "user_chrome_input_or_window_actions": 0,
+    "global_keystrokes_sent": 0,
+    "css_zoom_used": false,
+    "device_emulation_used": false,
+    "page_scale_used": false,
+    "candidate_or_deployment_changes": []
+  }
+}

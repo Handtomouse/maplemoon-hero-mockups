@@ -1,0 +1,12 @@
+Read this report in full before acting:
+
+/Users/handtomouse/maplemoon-website/out/20260817-0941/CLAUDE_FULL_REPORT.md
+
+Act as a read-only MapleMoon reviewer first. Reconcile it against the durable sources it cites. Do not edit the website, WIPs, build, media, Styles Kit, Git, Vercel, Shopify or production. Do not infer Nate's recommended D01-D06, Our Story or mobile-header values as approved.
+
+Return exactly:
+1. Material contradictions or stale claims, with source paths.
+2. Whether the proposed Nate decision line is complete enough to approve or edit.
+3. The exact bounded packet sequence after Nate's decision, keeping the Styles Kit/token reconciliation separate from the release builder.
+4. Remaining client-copy, media-approval, commerce and production gates.
+5. SAFE TO START AFTER NATE DECISION: YES or NO, with one-sentence reason.

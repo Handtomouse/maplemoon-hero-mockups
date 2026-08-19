@@ -1,0 +1,85 @@
+{
+  "schema": "maplemoon-receipt/v2",
+  "receipt_id": "MAPLEMOON-LANE-E-LOCK-RELEASE-20260816T140508-RECEIPT-01",
+  "packet_id": "MAPLEMOON-LANE-E-LOCK-RELEASE-20260816T140508",
+  "worker_thread_id": "/root",
+  "worker": "MapleMoon root Boss /root",
+  "started_at": "2026-08-16T04:05:08Z",
+  "completed_at": "2026-08-16T04:09:06Z",
+  "files_read": [
+    "/Users/handtomouse/maplemoon-website/docs/orchestration/LOCK_MANIFEST.json",
+    "/Users/handtomouse/maplemoon-website/docs/orchestration/packets/MAPLEMOON-LANE-E-APPLY-20260815T213337.md",
+    "/Users/handtomouse/maplemoon-website/docs/orchestration/reviews/MAPLEMOON-LANE-E-APPLY-20260815T213337.json",
+    "/Users/handtomouse/maplemoon-website/docs/orchestration/packets/MAPLEMOON-LANE-E-INDEPENDENT-CERT-20260816T133827.md",
+    "/Users/handtomouse/maplemoon-website/docs/orchestration/reviews/MAPLEMOON-LANE-E-INDEPENDENT-CERT-20260816T133827.json",
+    "/Users/handtomouse/maplemoon-website/_wip/homepage_real_1_lead_photo.WIP.html",
+    "/Users/handtomouse/maplemoon-website/_wip/shop.WIP.html",
+    "/Users/handtomouse/maplemoon-website/_wip/our-story.WIP.html",
+    "/Users/handtomouse/maplemoon-website/_wip/carob-story.WIP.html",
+    "/Users/handtomouse/maplemoon-website/_wip/faq.WIP.html",
+    "/Users/handtomouse/maplemoon-website/_wip/stockists.WIP.html",
+    "/Users/handtomouse/maplemoon-website/scripts/check-maplemoon-receipt.py"
+  ],
+  "files_changed": [
+    "maplemoon-website/docs/orchestration/LOCK_MANIFEST.json",
+    "maplemoon-website/docs/orchestration/reviews/MAPLEMOON-LANE-E-LOCK-RELEASE-20260816T140508.json"
+  ],
+  "pre_sha256": {
+    "maplemoon-website/docs/orchestration/LOCK_MANIFEST.json": "00f6c0fdabc54b9cfcd98624ee5c34460571b607cbeb78bd0bdc33dd61305094",
+    "maplemoon-website/docs/orchestration/reviews/MAPLEMOON-LANE-E-LOCK-RELEASE-20260816T140508.json": null
+  },
+  "post_sha256": {
+    "maplemoon-website/docs/orchestration/LOCK_MANIFEST.json": "2bd9e43b3678837b1f86d30fb6404ff033d5a2d5e04c58c93e793bc877721776",
+    "maplemoon-website/docs/orchestration/reviews/MAPLEMOON-LANE-E-LOCK-RELEASE-20260816T140508.json": null
+  },
+  "checks": [
+    {
+      "command": "python3 -B scripts/check-maplemoon-receipt.py checkpoint and verify --phase start --root /Users/handtomouse",
+      "exit_code": 0,
+      "result": "PASS checkpoint packet=MAPLEMOON-LANE-E-LOCK-RELEASE-20260816T140508 files=2; PASS phase=start scope=2"
+    },
+    {
+      "command": "replay MAPLEMOON-LANE-E-INDEPENDENT-CERT-20260816T133827 completion and promotion gates",
+      "exit_code": 0,
+      "result": "PASS phase=complete changed=2; PASS phase=promote changed=2; receipt SHA-256 0597af27459f57bdb19fa25b5aed83f22aa0357e844814128eee5012eef0416e"
+    },
+    {
+      "command": "six-row Lane E lock precheck",
+      "exit_code": 0,
+      "result": "LOCK_RELEASE_PRECHECK PASS rows=6 errors=0; all rows held by /root/dedup_risk_audit, all base hashes and six current certified page hashes exact"
+    },
+    {
+      "command": "six-row Lane E lock postcheck plus JSON parse",
+      "exit_code": 0,
+      "result": "LOCK_RELEASE_POSTCHECK PASS rows=6 errors=0; each row released by MapleMoon root Boss /root with exact certified post_sha256 and independent-cert receipt reference; manifest JSON valid"
+    },
+    {
+      "command": "SHA-256 close of six WIP pages",
+      "exit_code": 0,
+      "result": "PASS unchanged: homepage d097392f..., shop b444b0da..., our-story f861ae24..., carob-story 0ad6ea9b..., FAQ 4540ef31..., stockists 1cc8b4e5..."
+    },
+    {
+      "command": "production boundary",
+      "exit_code": 0,
+      "result": "PASS by fresh independent-cert close: production remained immutable 7vjf2m50b / dpl_G2LER2awaqyFtGRCcTserXbNynct / Ready and byte-identical; this release ran no Vercel command"
+    }
+  ],
+  "screenshots_or_urls": [
+    "/Users/handtomouse/maplemoon-website/_wip/evidence/lane_e_independent_cert_20260816T133827/contact-390.png",
+    "/Users/handtomouse/maplemoon-website/_wip/evidence/lane_e_independent_cert_20260816T133827/contact-1440.png"
+  ],
+  "failures": [],
+  "unknowns": [
+    "Exact authorised pseudonym mapping remains absent; Lane E lock release does not resolve that content HOLD.",
+    "Two cacao-butter fact occurrences remain held pending exact named authority.",
+    "The approved v4 elixirs remain unwired pending a matched no-upscale export."
+  ],
+  "residual_risk": [
+    "Lane F is not admitted by this receipt and requires a fresh successor packet and new locks on Our Story and Carob Story.",
+    "Frame 55 remains HOLD and is still wired twice in the current Our Story WIP; the Lane F successor must prevent those bindings from surviving into its output.",
+    "Production remains frozen; this receipt does not authorise deployment or client contact."
+  ],
+  "forbidden_path_changes": [],
+  "proposed_next_state": "complete",
+  "next_reviewer": "MapleMoon root Boss for Lane F successor admission after founder-photo evidence and Frame 55 boundary are pinned"
+}

@@ -1,0 +1,89 @@
+{
+  "schema": "maplemoon-receipt/v2",
+  "receipt_id": "MAPLEMOON-NATIVE-200-ZOOM-AUDIT-20260814T174412-RECEIPT",
+  "packet_id": "MAPLEMOON-NATIVE-200-ZOOM-AUDIT-20260814T174412",
+  "worker_thread_id": "/root/recertify_updated_preview",
+  "worker": "Codex independent native 200 percent browser-zoom auditor",
+  "started_at": "2026-08-14T07:44:12Z",
+  "completed_at": "2026-08-14T07:56:21Z",
+  "files_read": [
+    "maplemoon-website/AGENTS.md",
+    "maplemoon-website/docs/orchestration/packets/MAPLEMOON-NATIVE-200-ZOOM-AUDIT-20260814T174412.md",
+    "maplemoon-website/docs/orchestration/reviews/MAPLEMOON-INTEGRATED-HEADER-CART-CERT-R2-20260814T163003.json",
+    "maplemoon-website/docs/orchestration/reviews/MAPLEMOON-CERTIFIED-PREVIEW-DEPLOY-20260814T165853.json",
+    "maplemoon-website/scripts/check-maplemoon-receipt.py",
+    "maplemoon_build_20260813/homepage.html",
+    "maplemoon_build_20260813/our-story.html",
+    "maplemoon_build_20260813/carob-story.html",
+    "maplemoon_build_20260813/shop.html",
+    "maplemoon_build_20260813/faq.html",
+    "maplemoon_build_20260813/stockists.html",
+    "maplemoon_build_20260813/pure-carob-bar.html",
+    "maplemoon_build_20260813/assets/design-system/mm-chrome.js",
+    "maplemoon_build_20260813/assets/design-system/mm-chrome.css",
+    "maplemoon_build_20260813/mock-cart.js",
+    "maplemoon_build_20260813/mock-cart.css"
+  ],
+  "files_changed": [
+    "maplemoon-website/_wip/evidence/native_200_zoom_audit_20260814T174412",
+    "maplemoon-website/docs/orchestration/reviews/MAPLEMOON-NATIVE-200-ZOOM-AUDIT-20260814T174412.md",
+    "maplemoon-website/docs/orchestration/reviews/MAPLEMOON-NATIVE-200-ZOOM-AUDIT-20260814T174412.json"
+  ],
+  "pre_sha256": {
+    "maplemoon-website/_wip/evidence/native_200_zoom_audit_20260814T174412": null,
+    "maplemoon-website/docs/orchestration/reviews/MAPLEMOON-NATIVE-200-ZOOM-AUDIT-20260814T174412.md": null,
+    "maplemoon-website/docs/orchestration/reviews/MAPLEMOON-NATIVE-200-ZOOM-AUDIT-20260814T174412.json": null
+  },
+  "post_sha256": {
+    "maplemoon-website/_wip/evidence/native_200_zoom_audit_20260814T174412": "1e26fd6e03c64ae5073780380b8ca495780e75b07f697cf32cfe585cae235c42",
+    "maplemoon-website/docs/orchestration/reviews/MAPLEMOON-NATIVE-200-ZOOM-AUDIT-20260814T174412.md": "22edc54049fcf28a864de8ca913657bb0ab7c09620275e0d99a57aea206b926f",
+    "maplemoon-website/docs/orchestration/reviews/MAPLEMOON-NATIVE-200-ZOOM-AUDIT-20260814T174412.json": null
+  },
+  "checks": [
+    {
+      "command": "python3 -B scripts/check-maplemoon-receipt.py checkpoint --root /Users/handtomouse --packet docs/orchestration/packets/MAPLEMOON-NATIVE-200-ZOOM-AUDIT-20260814T174412.md --destination _wip/checkpoints/MAPLEMOON-NATIVE-200-ZOOM-AUDIT-20260814T174412_20260814_174412_AEST; phase-start verify",
+      "exit_code": 0,
+      "result": "PASS checkpoint packet=MAPLEMOON-NATIVE-200-ZOOM-AUDIT-20260814T174412 files=3 path=_wip/checkpoints/MAPLEMOON-NATIVE-200-ZOOM-AUDIT-20260814T174412_20260814_174412_AEST; PASS packet=MAPLEMOON-NATIVE-200-ZOOM-AUDIT-20260814T174412 phase=start scope=3"
+    },
+    {
+      "command": "sha256 verification of both predecessor receipts, all seven candidate HTML pages and four shared runtime/style files at acquisition and close",
+      "exit_code": 0,
+      "result": "PASS hashes=13/13 at acquisition and close; integrated receipt=9eb39d99d6d3504db2d3e798bbd6b1c1941b40127f2c152bd028edb844077695; preview receipt=e6610d6e4c0b51f3770b5361948693e3bd5006dd8805470e498f7c47007c9bda"
+    },
+    {
+      "command": "serve exact candidate on 127.0.0.1:4412; launch isolated headed Chrome profiles on CDP ports 9347 and 9348; record exact PIDs and page targets",
+      "exit_code": 0,
+      "result": "PASS isolation acquisition: server PID=34109; direct Chrome PID=34563 profile=/tmp/maplemoon-native-zoom.QA32LU target_count=1; Launch Services Chrome PID=44151 profile=/tmp/maplemoon-native-zoom-ls.KrEwK2 target_count=1; both targets were the exact local candidate homepage"
+    },
+    {
+      "command": "native frontmost and zoom classifier with unchanged outer bounds, DPR/CSS-width ratios and 175 percent reject control",
+      "exit_code": 0,
+      "result": "HOLD observed safely: global input was rejected before keypress because isolated Chrome was not frontmost; the only CGEvent.postToPid native Command-Plus to PID 34563 was ignored, with innerWidth 1200->1200, DPR 2->2 and visualViewport.width 1200->1200. Native 175/200 percent proof was unavailable and no emulation substitute was used."
+    },
+    {
+      "command": "exact-PID and exact-port cleanup verification",
+      "exit_code": 0,
+      "result": "PASS closed exact PIDs 34563, 44151 and 34109; preserved both temporary profiles; no matching audit process or listener remained on ports 4412, 9347 or 9348; user Chrome PID 57385 was untouched"
+    },
+    {
+      "command": "parse all evidence JSON and compute check-maplemoon-receipt.py-compatible evidence path snapshot",
+      "exit_code": 0,
+      "result": "PASS JSON files=3; EVIDENCE_PATH files=6 sha256=1e26fd6e03c64ae5073780380b8ca495780e75b07f697cf32cfe585cae235c42; review SHA-256=22edc54049fcf28a864de8ca913657bb0ab7c09620275e0d99a57aea206b926f"
+    }
+  ],
+  "screenshots_or_urls": [],
+  "failures": [
+    "Native 200 percent proof is unavailable because the isolated Chrome processes could not be made frontmost without risking the user's existing application or browser state."
+  ],
+  "unknowns": [
+    "Native 175 percent reject control and native 200 percent quantitative proof.",
+    "Effective CSS widths 390 and 720 while native browser zoom remains 200 percent.",
+    "Seven-route native-200 navigation, cart, focus, inertness, screenshot and visual matrices."
+  ],
+  "residual_risk": [
+    "The native 200 percent release-boundary evidence gap remains open for the otherwise unchanged certified candidate."
+  ],
+  "forbidden_path_changes": [],
+  "proposed_next_state": "hold_until_isolated_chrome_can_be_made_frontmost_without_touching_user_state",
+  "next_reviewer": "MapleMoon BOSS for an honest HOLD and a successor audit in a safely isolated GUI session"
+}

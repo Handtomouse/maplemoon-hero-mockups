@@ -1,0 +1,167 @@
+{
+  "schema": "maplemoon-design-system/components/v1",
+  "version": 1,
+  "components": [
+    {
+      "id":"MM-COMP-SITE-HEADER-01",
+      "layer":"chrome",
+      "phase0_implementation":"assets/design-system/mm-chrome.css",
+      "selectors":[".mm-site-header",".mm-header__bar",".mm-header__nav",".mm-header__utility-nav",".mm-menu-toggle"],
+      "proven_consumers":["home","shop","our-story","carob-story","stockists","faq"],
+      "target_consumers":["home","shop","our-story","carob-story","stockists","faq"],
+      "states":["default","hover","focus-visible","current","mobile-closed","mobile-open"],
+      "contract":"One static DOM, five route links exactly once, centred home link, 44px mobile menu and cart, exactly one aria-current. Night and Carob treatments are modifiers or registered exceptions."
+    },
+    {
+      "id":"MM-COMP-SITE-FOOTER-01",
+      "layer":"chrome",
+      "phase0_implementation":"assets/design-system/mm-chrome.css",
+      "selectors":[".mm-site-footer",".mm-site-footer__row",".mm-site-footer__nav"],
+      "proven_consumers":["home","shop","our-story","carob-story","stockists","faq"],
+      "target_consumers":["home","shop","our-story","carob-story","stockists","faq"],
+      "states":["default","hover","focus-visible","current"],
+      "contract":"Identical information architecture and focus order; route tone may vary through a modifier."
+    },
+    {
+      "id":"MM-COMP-SKIP-LINK-01",
+      "layer":"chrome",
+      "phase0_implementation":"assets/design-system/mm-chrome.css",
+      "selectors":[".mm-skip-link"],
+      "proven_consumers":["home","shop","carob-story","faq"],
+      "target_consumers":["home","shop","our-story","carob-story","stockists","faq"],
+      "states":["rest","focus-visible"],
+      "current_debt":["our-story missing","stockists missing","shop target is not its main"],
+      "contract":"First focusable element, transformed out of view only at rest, targeting the route's single main."
+    },
+    {
+      "id":"MM-COMP-WRAP-01",
+      "layer":"primitives",
+      "phase0_implementation":"assets/design-system/mm-primitives.css",
+      "selectors":[".mm-wrap"],
+      "proven_consumers":["home","shop","our-story","carob-story","stockists","faq"],
+      "target_consumers":["home","shop","our-story","carob-story","stockists","faq"],
+      "states":["default","narrow"],
+      "contract":"Container width and gutters only; never section rhythm, background or art direction."
+    },
+    {
+      "id":"MM-COMP-EYEBROW-01",
+      "layer":"primitives",
+      "phase0_implementation":"assets/design-system/mm-primitives.css",
+      "selectors":[".mm-eyebrow"],
+      "proven_consumers":["home","shop","our-story","carob-story","stockists","faq"],
+      "target_consumers":["home","shop","our-story","carob-story","stockists","faq"],
+      "states":["default"],
+      "contract":"Typography only; context supplies colour."
+    },
+    {
+      "id":"MM-COMP-BUTTON-01",
+      "layer":"primitives",
+      "phase0_implementation":"assets/design-system/mm-primitives.css",
+      "selectors":[".mm-button",".mm-button--primary",".mm-text-link"],
+      "proven_consumers":["home","shop","our-story","carob-story","stockists","faq"],
+      "target_consumers":["home","shop","our-story","carob-story","stockists","faq"],
+      "states":["default","hover","focus-visible","active","disabled","pending"],
+      "contract":"Presentation only. No fake checkout, data capture, price, availability or claim behavior."
+    },
+    {
+      "id":"MM-COMP-ICON-CONTROL-01",
+      "layer":"primitives",
+      "phase0_implementation":"assets/design-system/mm-primitives.css",
+      "selectors":[".mm-icon-control"],
+      "proven_consumers":["home","shop","our-story","carob-story","stockists","faq"],
+      "target_consumers":["home","shop","our-story","carob-story","stockists","faq"],
+      "states":["default","hover","focus-visible","pressed","current","disabled"],
+      "contract":"Non-inline icon controls are at least 44 by 44 CSS pixels and have accessible names."
+    },
+    {
+      "id":"MM-COMP-FIELD-01",
+      "layer":"primitives",
+      "phase0_implementation":"assets/design-system/mm-primitives.css",
+      "selectors":[".mm-field"],
+      "proven_consumers":["home","shop","stockists","faq"],
+      "target_consumers":["home","shop","stockists","faq"],
+      "states":["default","focus-visible","disabled","empty","results","error"],
+      "contract":"Programmatic label and help/error association required; no form destination is invented."
+    },
+    {
+      "id":"MM-COMP-DISCLOSURE-01",
+      "layer":"primitives",
+      "phase0_implementation":"assets/design-system/mm-primitives.css",
+      "selectors":[".mm-disclosure"],
+      "proven_consumers":["our-story","carob-story","stockists","faq"],
+      "target_consumers":["our-story","carob-story","stockists","faq"],
+      "states":["closed","open","hover","focus-visible"],
+      "contract":"Summary/region linkage, unique IDs, aria-expanded and keyboard reachability."
+    },
+    {
+      "id":"MM-COMP-CHIP-RAIL-01",
+      "layer":"primitives",
+      "phase0_implementation":"assets/design-system/mm-primitives.css",
+      "selectors":[".mm-chip-rail",".mm-chip"],
+      "proven_consumers":["home","shop","stockists","faq"],
+      "target_consumers":["home","shop","stockists","faq"],
+      "states":["default","hover","focus-visible","selected","current","disabled"],
+      "contract":"Horizontal overflow mechanism only; context owns selected colour and taxonomy."
+    },
+    {
+      "id":"MM-COMP-PENDING-01",
+      "layer":"primitives",
+      "phase0_implementation":"assets/design-system/mm-primitives.css",
+      "selectors":[".mm-pending",".mm-pending__media"],
+      "proven_consumers":["home","shop","stockists","faq"],
+      "target_consumers":["home","shop","stockists","faq"],
+      "states":["pending"],
+      "contract":"Evidence/review-only state; forbidden from a manifest-marked clean public profile."
+    },
+    {
+      "id":"MM-COMP-PRODUCT-CARD-SHELL-01",
+      "layer":"primitives",
+      "phase0_implementation":"assets/design-system/mm-primitives.css",
+      "selectors":[".mm-product-card-shell"],
+      "proven_consumers":["home","shop"],
+      "target_consumers":["home","shop"],
+      "states":["default","hover","focus-within","disabled","pending"],
+      "contract":"Image/title/meta/action slots only after catalogue fields are admitted; owns no product truth."
+    },
+    {
+      "id":"MM-COMP-SEGMENTED-01",
+      "layer":"primitives",
+      "phase0_implementation":"assets/design-system/mm-primitives.css",
+      "selectors":[".mm-segmented",".mm-segmented__option"],
+      "proven_consumers":["home","shop","stockists"],
+      "target_consumers":["home","shop","stockists"],
+      "states":["default","hover","focus-visible","selected","disabled"],
+      "contract":"Presentation and state styling only; labels, taxonomy and behavior remain route-owned."
+    },
+    {
+      "id":"MM-COMP-SURFACE-CARD-01",
+      "layer":"primitives",
+      "phase0_implementation":"assets/design-system/mm-primitives.css",
+      "selectors":[".mm-surface",".mm-card"],
+      "proven_consumers":["home","shop","our-story","carob-story","stockists","faq"],
+      "target_consumers":["home","shop","our-story","carob-story","stockists","faq"],
+      "states":["paper","editorial","atmosphere","night","hover","focus-within"],
+      "contract":"Semantic surface and card framing only; route imagery, rhythm, copy and art direction remain local."
+    },
+    {
+      "id":"MM-COMP-DISSOLVE-FIELD-01",
+      "layer":"primitives",
+      "phase0_implementation":"contract_only",
+      "selectors":[".mm-dissolve-field"],
+      "proven_consumers":["home","our-story","carob-story","stockists"],
+      "target_consumers":["home","our-story","carob-story","stockists"],
+      "states":["default","narrow"],
+      "contract":"Mask/bridge mechanism only; every asset, crop, stop and wash remains image-contract-specific."
+    }
+  ],
+  "deliberately_not_shared": [
+    "generic section spacing or background",
+    "page hero layouts",
+    "Homepage CAROB signature, hero, carousel and ritual composition",
+    "Shop catalogue logic, cart behavior, prices and product actions",
+    "Our Story biographies and founder presentation",
+    "Carob Story comparison and claim content",
+    "Stockists data, filtering and map semantics",
+    "FAQ search, numbering and support layout"
+  ]
+}

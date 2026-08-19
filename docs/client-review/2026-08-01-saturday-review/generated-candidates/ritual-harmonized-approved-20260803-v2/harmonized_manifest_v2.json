@@ -1,0 +1,104 @@
+{
+  "schema": "maplemoon-ritual-harmonized-candidates/v2",
+  "created_at": "2026-08-03T16:35:02+10:00",
+  "status": "approved_by_nate_candidate_only",
+  "ready_to_integrate": false,
+  "wired_to_pages": false,
+  "approval_evidence": {
+    "decision": "Nate selected option A after reviewing the original and harmonized desktop and true-390 boards.",
+    "scope": "Visual approval of the isolated harmonized three-image candidate set only.",
+    "not_authorized": [
+      "page integration",
+      "staging mutation",
+      "commit",
+      "push",
+      "deploy",
+      "upload",
+      "send or client contact",
+      "Shopify or production action"
+    ]
+  },
+  "frozen_authority": {
+    "homepage": "/Users/handtomouse/maplemoon-website/docs/client-review/2026-08-01-saturday-review/staging-v1/clean/homepage.html",
+    "homepage_sha256": "0d102050395b79f4add5d9ddb7f75e962d7e41e11a78cd7f88c35ce4a947ef0c",
+    "site_filter": "saturate(.72) contrast(.91) brightness(.82)",
+    "site_overlay": "linear-gradient(180deg,rgba(24,51,68,.04) 12%,rgba(25,51,66,.06) 42%,rgba(15,36,49,.70) 100%)",
+    "object_positions": ["center 58%", "center 44%", "center 62%"]
+  },
+  "reference_sources": [
+    {
+      "path": "/Users/handtomouse/.codex/visualizations/2026/08/02/019fc22d-074e-7453-8544-c3a09238af2b/maplemoon_on_brand_ritual_study_20260802/references/mitch_heros_70.jpg",
+      "sha256": "df95e461c58a6fde4b542b9e531a984b9f77e21ad5e9f1858df9658e98b97a68",
+      "role": "Mitch art direction, directional light and natural editing"
+    },
+    {
+      "path": "/Users/handtomouse/maplemoon-website/assets/hero_shots/bg_v4_range.png",
+      "sha256": "b075aa7c46d3d1811c7eb10f061084303a179007dbbcc68438e922d276e8383b",
+      "role": "lighter website-blue family"
+    },
+    {
+      "path": "/Users/handtomouse/.codex/worktrees/27ab/maplemoon-website/assets/licensed/carob_pods_macro.jpg",
+      "sha256": "0426510e9b7446415af8884ad7969d99d26de7a3cbcbedb0c7ca121379f31922",
+      "role": "dry natural carob morphology only"
+    }
+  ],
+  "candidates": [
+    {
+      "slot": "After dinner",
+      "file": "harmonized_slot_1_after_dinner_v2.png",
+      "sha256": "87dab0ec03364b8caabdb268d07e5f70b729c8a9085c3489cf0c6d808ab9918c",
+      "dimensions": {"width": 1672, "height": 941},
+      "source": "final_slot_1_after_dinner_v1.png",
+      "source_sha256": "87dab0ec03364b8caabdb268d07e5f70b729c8a9085c3489cf0c6d808ab9918c",
+      "method": "Byte-identical high-key set anchor; no regeneration.",
+      "measured_lower_field": "#C8D8EA",
+      "approval_status": "approved_by_nate_candidate_only",
+      "limitations": ["Generic generated botanical and accessory forms are not client photography or exact MapleMoon products."]
+    },
+    {
+      "slot": "Afternoon reset",
+      "file": "harmonized_slot_2_afternoon_reset_v2.png",
+      "sha256": "0aa937e353879ad437646c1b3c1a68805236aa77092d09786f521a0728365931",
+      "dimensions": {"width": 1672, "height": 941},
+      "source": "final_slot_2_afternoon_reset_v1.png",
+      "source_sha256": "0c34281271c0d26f6974b363ddd2bf2483356ddf775711462d66d3cf938c7c75",
+      "built_in_archive": "/Users/handtomouse/.codex/generated_images/019fb5b5-de62-7862-a5fe-06bc59395c21/exec-8ddde146-0402-4e27-82ab-ef5a6ee56c50.png",
+      "raw_editor_file": "harmonized_slot_2_afternoon_reset_v2_raw_1671.png",
+      "raw_editor_sha256": "f062816528ac82ffe6a4f13965ef2b3271247aeadbe8123c3986bec92d74435a",
+      "final_prompt": "Use case: lighting-weather edit. Image 1 is the edit target. Image 2 is the approved set-wide grade anchor. Image 3 supplies the lighter website-blue family. Image 4 governs restrained Mitch-style directional light and natural editing. Image 5 governs dry carob morphology only. Harmonize only the colour grade, exposure, shadow density and fine matte grain of Image 1. Preserve its exact 1672x941 canvas, shallow camera, dish, pod, object geometry, scale, positions, crop, negative space and lower 40% safe field. Bring the empty lower blue field toward a pale powder blue around #C2D7E8, with muted saturation, clean highlights, medium-low contrast and no vignette. Preserve one soft upper-left afternoon shadow. Keep the pod dry dark natural brown, the dish desaturated grey-blue and all surfaces matte. Do not add, remove, reshape or reposition anything. No text, packaging, people, foliage, watermark or border.",
+      "normalization": "The built-in editor returned 1671x941. The raw file was preserved and one background-matched pixel was added at the far-right edge to restore 1672x941 without moving subject pixels.",
+      "measured_lower_field": "#C8DAEB",
+      "approval_status": "approved_by_nate_candidate_only",
+      "limitations": ["The lighting edit regenerated fine pod and dish surface detail; it is not a pixel-identical colour transform.", "Generic generated forms are not client photography or exact MapleMoon products."]
+    },
+    {
+      "slot": "With tea, at night",
+      "file": "harmonized_slot_3_tea_at_night_v2.png",
+      "sha256": "55977de64770eff776f634dd8d2b7e7cc4bcee62eb903a09da4dde541d0492ec",
+      "dimensions": {"width": 1672, "height": 941},
+      "source": "final_slot_3_tea_at_night_v1.png",
+      "source_sha256": "3d6f46a82da16754f2200d32b6d5b87e74913e80bb9011026894de2cba982de4",
+      "built_in_archive": "/Users/handtomouse/.codex/generated_images/019fb5b5-de62-7862-a5fe-06bc59395c21/exec-fe54c9cc-846d-4220-adf6-ab67ebae0e7a.png",
+      "raw_editor_file": "harmonized_slot_3_tea_at_night_v2_raw_1671.png",
+      "raw_editor_sha256": "b7ca4e7acf447ec5cf0b2e01dd8fc92fcffee3a7f33d51336496d69a1e159245",
+      "final_prompt": "Use case: lighting-weather edit. Image 1 is the edit target. Images 2 and 3 define the approved set-wide pale powder-blue grade and matte texture. Image 4 governs restrained Mitch-style directional light and natural editing. Image 5 governs dry carob morphology only. Harmonize only the colour grade, exposure, shadow density and fine matte grain of Image 1. Preserve its exact 1672x941 canvas, eye-level camera, cup, pod, object geometry, scale, positions, crop, negative space and lower 40% safe field. Lift the empty blue field substantially from dark cyan into a muted dusk powder blue around #B5CCDD. Keep it only modestly darker than the other two cards, with medium-low contrast, clean highlights and no vignette. Preserve gentle side/back night light and readable cup separation. Keep the pod dry dark natural brown, the cup desaturated chalk-grey and all surfaces matte. Do not add, remove, reshape or reposition anything. No drink, steam, text, packaging, people, foliage, watermark or border.",
+      "normalization": "The built-in editor returned 1671x941. The raw file was preserved and one background-matched pixel was added at the far-right edge to restore 1672x941 without moving subject pixels.",
+      "measured_lower_field": "#BCCEDE",
+      "approval_status": "approved_by_nate_candidate_only",
+      "limitations": ["The lighting edit regenerated fine cup and pod surface detail; it is not a pixel-identical colour transform.", "Generic generated forms are not client photography or exact MapleMoon products."]
+    }
+  ],
+  "site_treatment_qa": {
+    "html": {"file": "harmonized_site_treatment_v2.html", "sha256": "3fcc4bb30b0fc701856e2013e09db6473d62609579d51c88eb904130a599a08e"},
+    "desktop": {"file": "harmonized_site_treatment_desktop_v2.png", "sha256": "402ffdb65b29a9b11b767a03e862c377697c142ffc105003850c60e2eb7a8e9f", "dimensions": {"width": 1440, "height": 1240}, "viewport": "1440/1440/1440", "cards": "362.656,362.672,362.656 x 432"},
+    "mobile": {"file": "harmonized_site_treatment_mobile_true390_v2.png", "sha256": "3dab026bd95c2d848e25f4ff178647c5513b50c2bd37d0f73cf3c405d879d0e5", "dimensions": {"width": 390, "height": 2053}, "viewport": "390/390/390", "cards": "334 x 330"},
+    "metrics": {"file": "harmonized_chrome_qa_v2.json", "sha256": "e0db57f381cdbbf58fa02fd7f51e011fccb17f9767bb237358a8008bbf1be7a0"},
+    "all_images_loaded": true,
+    "horizontal_overflow": false,
+    "full_resolution_visually_inspected": true,
+    "desktop_visually_inspected": true,
+    "mobile_visually_inspected": true
+  },
+  "provenance": "The harmonized set contains generic AI-generated botanical and accessory imagery. It is not client photography, verified product photography, an exact MapleMoon product, a recipe or a serving instruction.",
+  "decision": "Approved by Nate as the final isolated harmonized candidate trio. Integration remains a separate recovery-gated decision."
+}

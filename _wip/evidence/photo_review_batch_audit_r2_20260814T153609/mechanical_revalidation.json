@@ -1,0 +1,181 @@
+{
+  "review_html": {
+    "path": "/Users/handtomouse/.codex/visualizations/2026/08/13/019ffd5b-edd2-7b23-8780-453f9b67a532/maplemoon-product-corrections-20260814/maplemoon_product_corrections_review_20260814.html",
+    "sha256": "ed859eaa0d62a97d19bc2c377bf78084a9b3799d50b7eb47a0ecd7201ba90167",
+    "expected_sha256": "ed859eaa0d62a97d19bc2c377bf78084a9b3799d50b7eb47a0ecd7201ba90167",
+    "pass": true
+  },
+  "predecessor": {
+    "path": "/Users/handtomouse/maplemoon-website/_wip/evidence/photo_review_batch_audit_20260814T152749/pixel_geometry_results.json",
+    "all_mechanical_pass": true,
+    "reused_only_after_revalidation": true
+  },
+  "assets": {
+    "powder": {
+      "filename": "carob_powder_isolated.png",
+      "sha256": "e935a9c6783f0fe0fed7659692d2cea0f4056afa4734a75e4dcba7b629966a27",
+      "expected_sha256": "e935a9c6783f0fe0fed7659692d2cea0f4056afa4734a75e4dcba7b629966a27",
+      "mode": "RGBA",
+      "canvas": [
+        1254,
+        1254
+      ],
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "transparent_pixels": 1385505,
+      "opaque_pixels": 182823,
+      "bounds": {
+        "x": 188,
+        "y": 423,
+        "right_exclusive": 1066,
+        "bottom_exclusive": 831,
+        "width": 878,
+        "height": 408
+      },
+      "predecessor_bounds": {
+        "x": 188,
+        "y": 423,
+        "right_exclusive": 1066,
+        "bottom_exclusive": 831,
+        "width": 878,
+        "height": 408
+      },
+      "pass": true
+    },
+    "elixir_pure": {
+      "filename": "elixir_pure_isolated_equal-size.png",
+      "sha256": "d3bda575c320bc42ca69b5ddd0ba806e392f9b7694d31f7ea0310c501fcbd18a",
+      "expected_sha256": "d3bda575c320bc42ca69b5ddd0ba806e392f9b7694d31f7ea0310c501fcbd18a",
+      "mode": "RGBA",
+      "canvas": [
+        1254,
+        1254
+      ],
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "transparent_pixels": 1021997,
+      "opaque_pixels": 546783,
+      "bounds": {
+        "x": 335,
+        "y": 108,
+        "right_exclusive": 919,
+        "bottom_exclusive": 1083,
+        "width": 584,
+        "height": 975
+      },
+      "predecessor_bounds": {
+        "x": 335,
+        "y": 108,
+        "right_exclusive": 919,
+        "bottom_exclusive": 1083,
+        "width": 584,
+        "height": 975
+      },
+      "pass": true
+    },
+    "elixir_spiced": {
+      "filename": "elixir_spiced_isolated_equal-size.png",
+      "sha256": "210aab110c8682d6140a50b3ee1621aec0ffe43a9d86841433a8852512c86bba",
+      "expected_sha256": "210aab110c8682d6140a50b3ee1621aec0ffe43a9d86841433a8852512c86bba",
+      "mode": "RGBA",
+      "canvas": [
+        1254,
+        1254
+      ],
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "transparent_pixels": 1018891,
+      "opaque_pixels": 553625,
+      "bounds": {
+        "x": 335,
+        "y": 108,
+        "right_exclusive": 919,
+        "bottom_exclusive": 1083,
+        "width": 584,
+        "height": 975
+      },
+      "predecessor_bounds": {
+        "x": 335,
+        "y": 108,
+        "right_exclusive": 919,
+        "bottom_exclusive": 1083,
+        "width": 584,
+        "height": 975
+      },
+      "pass": true
+    },
+    "bundle": {
+      "filename": "five_item_bundle_low_angle_isolated.png",
+      "sha256": "ac87e7c1a5b6e96cc40d607e69a841f0b9987f642f3b32e4128dacad2c3814d6",
+      "expected_sha256": "ac87e7c1a5b6e96cc40d607e69a841f0b9987f642f3b32e4128dacad2c3814d6",
+      "mode": "RGBA",
+      "canvas": [
+        1254,
+        1254
+      ],
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "transparent_pixels": 1268669,
+      "opaque_pixels": 295860,
+      "bounds": {
+        "x": 175,
+        "y": 381,
+        "right_exclusive": 1078,
+        "bottom_exclusive": 873,
+        "width": 903,
+        "height": 492
+      },
+      "predecessor_bounds": {
+        "x": 175,
+        "y": 381,
+        "right_exclusive": 1078,
+        "bottom_exclusive": 873,
+        "width": 903,
+        "height": 492
+      },
+      "pass": true
+    }
+  },
+  "geometry": {
+    "elixir_expected_bounds": {
+      "x": 335,
+      "y": 108,
+      "right_exclusive": 919,
+      "bottom_exclusive": 1083,
+      "width": 584,
+      "height": 975
+    },
+    "elixir_centerline": 627,
+    "elixir_baseline": 1083,
+    "powder_expected_bounds": {
+      "x": 188,
+      "y": 423,
+      "right_exclusive": 1066,
+      "bottom_exclusive": 831,
+      "width": 878,
+      "height": 408
+    },
+    "powder_large_component_count": 1,
+    "pass": true
+  },
+  "visual_spot_check": {
+    "evidence_reused": [
+      "/Users/handtomouse/maplemoon-website/_wip/evidence/photo_review_batch_audit_20260814T152749/mechanical_contact_sheet.png",
+      "/Users/handtomouse/maplemoon-website/_wip/evidence/photo_review_batch_audit_20260814T152749/powder_on_white.png",
+      "/Users/handtomouse/maplemoon-website/_wip/evidence/photo_review_batch_audit_20260814T152749/bundle_on_light.png",
+      "/Users/handtomouse/maplemoon-website/_wip/evidence/photo_review_batch_audit_20260814T152749/bundle_on_dark.png"
+    ],
+    "finding": "Independent spot-check retained: isolated powder is one loose mound; bundle shows exactly five visually distinct bodies (three separately topped domes, one orange-dusted rectangular body, one layered fudge form). No checkerboard is visible on light or dark composites.",
+    "qualification": "Visual distinction only. Exact SKU identity, reconstructed elixir fine print and icons, bundle composition acceptance, and live-use approval remain Nate-only holds.",
+    "pass_within_review_scope": true
+  },
+  "all_pass": true
+}

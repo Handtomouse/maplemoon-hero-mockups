@@ -1,0 +1,19 @@
+COMMAND: python3 -B /Users/handtomouse/UFC/ops/bus/maplemoon/tools_20260813/preflight_deploy.py https://maplemoonbuild20260813-28up3uqbm-handtomouses-projects.vercel.app
+EXIT_CODE: 1
+QUALIFICATION: EXPECTED_VERCEL_AUTHENTICATION_WALL; packet authorises continued authenticated verification and forbids altering protection.
+
+MapleMoon deploy preflight - ANONYMOUS fetch (no cookie, no token, no CLI auth)
+base: https://maplemoonbuild20260813-28up3uqbm-handtomouses-projects.vercel.app
+------------------------------------------------------------------------------
+PASS  control:matchers             all 11 matchers fired on canary; stripper verified
+FAIL  guard:sso-wall               login page served (final_url=https://vercel.com/login?next=%2Fsso-api%3Furl%3Dhttps%253A%, 477663B)
+------------------------------------------------------------------------------
+VERDICT: FAIL - VERCEL SSO WALL. The deployment is behind Vercel
+  Authentication, so Carli and Dylan would see a login page, not the site.
+  REMEDIATION: disable Vercel Authentication on the PROJECT
+    Vercel dashboard > Project > Settings > Deployment Protection
+    > Vercel Authentication > Disabled  (team default is Enabled)
+  DO NOT 'fix' this by adding a token or cookie to this script. An
+  authenticated fetch passes through the wall and hides the failure.
+
+No protection change or bypass was attempted. The preview is classified authenticated/private-review-only.

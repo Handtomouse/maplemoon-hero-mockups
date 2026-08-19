@@ -1,0 +1,958 @@
+--- _wip/evidence/track1_carli_build_20260816/fetch/live/shop.html	2026-08-16 18:04:59
++++ _wip/evidence/track1_carli_build_20260816/fetch/preview/shop.html	2026-08-16 18:04:59
+@@ -35,7 +35,7 @@
+ .sp-top{padding-top:8px;}
+ .sp-top .bar{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;height:62px;}
+ .sp-nav{display:flex;gap:28px;}.sp-nav.r{justify-content:flex-end;gap:22px;align-items:center;}
+-.sp-nav a{font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;color:#3F4A56;transition:color .25s;}
++.sp-nav a{font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-soft);transition:color .25s;}
+ .sp-nav a:hover,.sp-nav a.on{color:var(--ink);}
+ .sp-logo{font-family:var(--mm-serif);font-size:1.3rem;text-align:center;color:var(--ink);}
+ .sp-cart{display:inline-flex;align-items:center;justify-content:center;width:32px;height:32px;border:1px solid var(--line);border-radius:50%;position:relative;}
+@@ -141,54 +141,79 @@
+ <link rel="stylesheet" href="/a11y_inner.css?v=20260723">
+ <link rel="stylesheet" href="/design_refinement_20260723.css">
+ 
++<!-- MM-SEO-BLOCK (social share imagery stays withheld until an approved 1200x630 asset exists) -->
++<link rel="canonical" href="https://maplemoon.com.au/collections/all">
++<meta name="robots" content="index, follow, max-image-preview:large">
+ <meta name="theme-color" content="#457798">
+-
+-<!--MM-A11Y-SAFE-->
+-<meta name="robots" content="noindex,nofollow">
+-<script>
+-(() => {
+-  const params = new URLSearchParams(window.location.search);
+-  document.documentElement.classList.toggle("mm-annotated-review", params.get("review") === "1");
+-  document.documentElement.classList.toggle("mm-cart-qa", params.get("cart-qa") === "1");
+-})();
++<meta property="og:site_name" content="Maple Moon">
++<meta property="og:type" content="website">
++<meta property="og:url" content="https://maplemoon.com.au/collections/all">
++<meta property="og:title" content="Shop the Range | Maple Moon">
++<meta property="og:description" content="Browse carob bars, moons, bites, elixirs and carob bananas. Australian organic carob, vegan, gluten free and caffeine free. Free shipping over $99.">
++<meta property="og:locale" content="en_AU">
++<meta name="twitter:card" content="summary">
++<meta name="twitter:title" content="Shop the Range | Maple Moon">
++<meta name="twitter:description" content="Browse carob bars, moons, bites, elixirs and carob bananas. Australian organic carob, vegan, gluten free and caffeine free. Free shipping over $99.">
++<script type="application/ld+json">
++{
++ "@context": "https://schema.org",
++ "@type": "Organization",
++ "@id": "https://maplemoon.com.au/#organization",
++ "name": "Maple Moon",
++ "url": "https://maplemoon.com.au",
++ "logo": {
++  "@type": "ImageObject",
++  "url": "https://maplemoon.com.au/assets/mm_logo_icon_blk.svg",
++  "width": 252,
++  "height": 416
++ },
++ "description": "Maple Moon makes Australian organic carob bars, moons, bites and elixirs. Vegan, gluten free, caffeine free. Far north coast of NSW.",
++ "email": "info@maplemoon.com.au",
++ "areaServed": {
++  "@type": "Country",
++  "name": "Australia"
++ },
++ "foundingLocation": {
++  "@type": "Place",
++  "name": "Far North Coast, New South Wales, Australia"
++ }
++}
+ </script>
+-<link rel="stylesheet" href="/mock-cart.css">
+-
+-<style id="mm-footer-20260813">
+-/* FOOTER LOGO + STYLES - 13 Aug 2026
+-   Nate's ruling "add logo svg" on shop S10, our-story S15, carob-story S09,
+-   faq S11, stockists S05, and "FIX STYLES" on homepage S11.
+-   The footer brand was a plain text node reading "maple moon". It is now the
+-   real wordmark asset, mm_wordmark_blk.svg, copied in from the main site repo.
+-   Brand rule from the stockists ruling, applied globally: never split "maple"
+-   from "moon" across a line, and never italicise one word of the pair. */
+-.mm-ftmark{
+-  display:block;
+-  width:auto;
+-  height:26px;
+-  max-width:210px;
+-  opacity:.82;
+-  transition:opacity .2s ease;
++<script type="application/ld+json">
++{
++ "@context": "https://schema.org",
++ "@type": "WebSite",
++ "@id": "https://maplemoon.com.au/#website",
++ "url": "https://maplemoon.com.au",
++ "name": "Maple Moon",
++ "description": "Australian organic carob bars, moons, bites and elixirs. Vegan, gluten free, caffeine free.",
++ "publisher": {
++  "@id": "https://maplemoon.com.au/#organization"
++ },
++ "inLanguage": "en-AU"
+ }
+-a:hover > .mm-ftmark{opacity:1;}
+-.sp-ft .row, .os-ft .row, .wf-ft .row{align-items:center;}
+-/* never break the brand across lines, never italicise half of it */
+-.mm-brand-lock, .mm-ftmark{white-space:nowrap;}
+-.mm-brand-lock em, .mm-brand-lock i{font-style:normal;}
+-</style>
+-
+-<style id="mm-legibility-20260813">
+-/* EYEBROW LEGIBILITY - 13 Aug 2026, applied site-wide.
+-   Measured on homepage: .qkick rendered 10.24px w400 rgb(169,159,135),
+-   contrast 2.63:1. Six instances failed WCAG AA (4.5 needed). carob-story
+-   uses the same pattern under .kick at rgb(88,112,141).
+-   After: 12px, weight 600, rgb(104,94,74) = 6.39:1 on the resolved backdrop.
+-   Dark bands are EXCLUDED - gold on dark is already legible there. */
+-.qkick,.kick,.sp-flag{font-size:.75rem;letter-spacing:.16em;font-weight:600;color:rgb(104,94,74);}
+-.wf-what1 .qkick,.wf-line-head .qkick,.wf-quote.pending .qkick,.wf-marq .qkick{color:rgb(104,94,74);}
+-.wf-line-dark .qkick,.wf-line-dark .pdp-eyebrow,.wf-line-dark .wf-line-head .qkick{
+-  color:#c9aa70;font-weight:600;letter-spacing:.16em;font-size:.75rem;}
+-</style>
++</script>
++<script type="application/ld+json">
++{
++ "@context": "https://schema.org",
++ "@type": "BreadcrumbList",
++ "itemListElement": [
++  {
++   "@type": "ListItem",
++   "position": 1,
++   "name": "Home",
++   "item": "https://maplemoon.com.au/"
++  },
++  {
++   "@type": "ListItem",
++   "position": 2,
++   "name": "Shop",
++   "item": "https://maplemoon.com.au/collections/all"
++  }
++ ]
++}
++</script>
++<!--MM-A11Y-SAFE-->
+ </head>
+ <body>
+ <div class="sp">
+@@ -198,10 +223,10 @@
+   <a class="skip-link" href="#catalogue-title">Skip to the catalogue</a>
+ 
+   <header class="sp-top"><div class="wrap bar">
+-    <nav class="sp-nav" aria-label="Primary navigation"><a href="/shop.html" class="on">Shop</a><a href="/our-story.html">Our Story</a><a href="/homepage.html#carob">What is Carob</a></nav>
+-    <a class="sp-logo" href="/homepage.html">maple moon</a>
+-    <nav class="sp-nav r" aria-label="Utility navigation"><a href="/stockists.html">Stockists</a><span class="sp-currency" aria-label="Currency, Australian dollars">AUD $</span>
+-      <button class="sp-cart" type="button" aria-label="Cart, 0 items"><svg viewBox="0 0 24 24"><path d="M6 8h12l-1 12H7L6 8z"/><path d="M9 8a3 3 0 0 1 6 0"/></svg><b>0</b></button></nav>
++    <nav class="sp-nav" aria-label="Primary navigation"><a href="/shop" class="on">Shop</a><a href="/our-story">Our Story</a><a href="/homepage#carob">What is Carob</a></nav>
++    <a class="sp-logo" href="/homepage">maple moon</a>
++    <nav class="sp-nav r" aria-label="Utility navigation"><a href="/stockists">Stockists</a><span class="sp-currency" aria-label="Currency, Australian dollars">AUD $</span>
++      <button class="sp-cart" data-cart-toggle type="button" aria-label="Cart, 0 items, subtotal $0.00"><svg viewBox="0 0 24 24"><path d="M6 8h12l-1 12H7L6 8z"/><path d="M9 8a3 3 0 0 1 6 0"/></svg><b data-cart-count>0</b></button></nav>
+   </div></header>
+ 
+   <main class="sp-main" id="shop-main">
+@@ -209,8 +234,8 @@
+     <div class="sp-head">
+       <span class="sp-kick">The full range</span>
+       <h1 class="serif" style="font-weight:500;font-size:clamp(2rem,3.4vw,2.9rem);line-height:1.1;margin:0 0 14px;">Shop the <em style="font-weight:400">range.</em></h1>
+-      <p>Every flavour, right to your door, for every type of ritual</p>
+-      <div class="sp-flag">Bars, eclipses, elixirs, powder <span class="amp">&amp;</span> bananas priced &middot; selected moon and bite products by enquiry</div>
++      <p>Bars, moons, bites, elixirs and carob bananas. All made from Australian organic carob, naturally sweet with nothing added.</p>
++      <div class="sp-flag">Bars, bites, elixirs, powder <span class="amp">&amp;</span> bananas priced &middot; selected moon products by enquiry</div>
+     </div>
+     <div class="sp-sampler" id="packs">
+       <div class="minirow" aria-hidden="true">
+@@ -224,7 +249,7 @@
+ 
+   </div>
+ 
+-  <section class="wrap sp-tools" aria-labelledby="catalogue-controls-title" aria-describedby="catalogue-status">
++  <section class="wrap sp-tools is-quiet" aria-labelledby="catalogue-controls-title" aria-describedby="catalogue-status">
+     <div class="catalogue-toolbar-heading">
+       <h2 id="catalogue-controls-title">Find your flavour</h2>
+       <button class="reset-tool" id="catalogue-reset" type="button" hidden>Reset filters</button>
+@@ -251,49 +276,49 @@
+       <button type="button" class="view-btn is-active" data-view="grid" aria-pressed="true" aria-label="Grid view">Grid</button>
+       <button type="button" class="view-btn" data-view="list" aria-pressed="false" aria-label="List view">List</button>
+     </div>
++    <aside class="purchase-guide" data-purchase-legend aria-label="Choosing an action">
++      <strong>Choose your next step</strong>
++      <span><b>Add to cart</b> keeps a local subtotal while you browse.</span>
++      <span><b>Enquire</b> opens an email for availability or unpriced items.</span>
++    </aside>
++    <p class="cart-summary" id="cart-summary" data-cart-subtotal role="status" aria-live="polite"><span>Cart subtotal</span><strong>$0.00</strong><small>0 items</small></p>
+     <p class="catalogue-status" id="catalogue-status" aria-live="polite"></p>
+   </section>
+ 
+   <div class="sp-range-nav" id="catalogue">
+     <h2 id="catalogue-title" class="sr-only" tabindex="-1">Shop all products</h2>
+     <nav class="wrap sp-cats" aria-label="Categories">
+-      <a href="#bars" aria-current="location">Bars</a><a href="#moons">Moons</a><a href="#bananas">Bananas</a><a href="#eclipses">Eclipses</a><a href="#bites">Bites</a><a href="#elixirs">Elixirs</a><a href="#powder">Powder</a>
++      <a href="#bars" aria-current="location">Bars</a><a href="#moons">Moons</a><a href="#bananas">Bananas</a><a href="#bites">Bites <span class="amp">&amp;</span> Eclipse</a><a href="#elixirs">Elixirs</a><a href="#powder">Powder</a>
+     </nav>
+   </div>
+ 
+   <section class="wrap sp-sec" id="bars">
+     <h2 class="serif">Bars</h2>
+-    <p class="sub">The full-size 90g bar, six flavours. Naturally sweet carob.</p>
++    <p class="sub">The full-size 90g bar, six flavours.</p>
+     <div class="grid" data-cat="bars"></div>
+   </section>
+ 
+   <section class="wrap sp-sec" id="moons">
+     <h2 class="serif">Moons</h2>
+-    <p class="sub">Hand-moulded 12g crescents. The one-square treat, in every flavour.</p>
++    <p class="sub">Little bite sized treats in every flavour for any moment</p>
+     <div class="grid" data-cat="moons"></div>
+   </section>
+ 
+-  <section class="wrap sp-sec" id="eclipses">
+-    <h2 class="serif">Eclipses</h2>
+-    <p class="sub">Bite-sized carob for the bowl on the counter. Five Eclipse Bites and the bundle.</p>
+-    <div class="grid" data-cat="eclipses"></div>
+-  </section>
+-
+   <section class="wrap sp-sec" id="bites">
+-    <h2 class="serif">Bites</h2>
+-    <p class="sub">Small carob bites made for grazing. Available by enquiry.</p>
++    <h2 class="serif">Bites <span class="amp">&amp;</span> Eclipses</h2>
++    <p class="sub">The perfect treats for those that desire a healthy clean creation made with whole ingredients.</p>
+     <div class="grid" data-cat="bites"></div>
+   </section>
+ 
+   <section class="wrap sp-sec" id="elixirs">
+     <h2 class="serif">Elixirs</h2>
+-    <p class="sub">Warm drinking carob, naturally sweet and caffeine free. The nightcap that behaves.</p>
++    <p class="sub">The nightcap with benefits</p>
+     <div class="grid" data-cat="elixirs"></div>
+   </section>
+ 
+   <section class="wrap sp-sec" id="bananas">
+     <h2 class="serif">Bananas</h2>
+-    <p class="sub">Dehydrated banana coated in carob. The newest moon in the sky.</p>
++    <p class="sub">Spray Free Australian Grown Bananas coated in our pure carob for the perfect chewy treat.</p>
+     <div class="grid" data-cat="bananas"></div>
+   </section>
+ 
+@@ -306,8 +331,8 @@
+ 
+   <footer class="sp-ft"><div class="wrap">
+     <div class="row">
+-      <a class="serif" href="/homepage.html" style="font-size:1.15rem"><img class="mm-ftmark" src="/assets/mm_wordmark_blk.svg" alt="Maple Moon" width="910" height="172" decoding="async"></a>
+-      <nav class="fnav" aria-label="Footer navigation"><a href="/shop.html">Shop</a><a href="/our-story.html">Our Story</a><a href="/stockists.html">Stockists</a><a href="mailto:info@maplemoon.com.au">Contact</a></nav>
++      <a class="serif" href="/homepage" style="font-size:1.15rem">maple moon</a>
++      <nav class="fnav" aria-label="Footer navigation"><a href="/shop">Shop</a><a href="/our-story">Our Story</a><a href="/stockists">Stockists</a><a href="mailto:info@maplemoon.com.au">Contact</a></nav>
+     </div>
+   </div></footer>
+ 
+@@ -315,65 +340,50 @@
+ <script>
+ (function(){
+   var PS='/assets/product_shots/';
+-  /* SAT-SHOP-POLISH-R1 + selectors (13 Aug): the moon pack tiers and eclipse size
+-     options carried over from the later WIP. Only the option data and the price-update
+-     calculation are imported; the WIP's simpler subtotal-only cart is deliberately NOT
+-     imported, so the candidate's accessible mock-cart stays the single cart system. */
+-  var ECLIPSE_SIZES=[{label:'50g',price:5.99,quantity:1},{label:'Value pack',price:59.99,quantity:1}];
+-  /* Verbatim from the existing bananas price string: 1 $2.99 / 5 $14.25 / 10 $26.99 / 20 $50.99.
+-     No figure is authored here; the four tiers are moved into the control so the price line
+-     stops wrapping to two lines and squeezing the button. */
+-  var BANANA_TIERS=[{label:'1 banana',price:2.99,quantity:1},{label:'5 bananas',price:14.25,quantity:5},{label:'10 bananas',price:26.99,quantity:10},{label:'20 bananas',price:50.99,quantity:20}];
++  var ECLIPSE_SIZES=[{label:'50g',price:5.99},{label:'Value pack',price:59.99}];
+   var MOON_TIERS=[{label:'1 moon',price:2.50,quantity:1},{label:'5 moons',price:12.19,quantity:5},{label:'10 moons',price:23.75,quantity:10},{label:'20 moons',price:44.99,quantity:20}];
+-  function money(amount){return '$'+Number(amount).toFixed(2);}
+-  function priceNumber(price){var match=String(price).match(/\d+(?:\.\d{1,2})?/);return match?Number(match[0]):0;}
+   // same trusted catalog as the homepage; bars and elixirs priced from Carli's doc
+   var CAT={
+     bars:[
+-      {n:'Pure Carob & Cacao Butter',img:'bar_pure_carob',d:'Crafted from only two wholefood ingredients for simple, naturally sweet, guilt-free perfection.',price:'$12.95',size:'90g'},
+-      {n:'Peppermint & Buckwheat',img:'bar_peppermint',d:'Refreshing premium peppermint meets the satisfying crunch of activated buckwheat.',price:'$12.95',size:'90g'},
+-      {n:'Roasted Hazelnut',img:'bar_hazelnut',d:'Whole roasted hazelnuts deliver an irresistibly indulgent, crunchy carob experience.',price:'$12.95',size:'90g'},
+       {n:'Coconut & Goji',img:'bar_goji_coconut',d:'Shredded coconut and goji berries through naturally sweet carob.',price:'$12.95',size:'90g'},
+       {n:'Cayenne Chilli',img:'bar_cayenne',d:'Rich, naturally sweet carob with a gentle hint of cayenne and a touch of Celtic sea salt for the perfect balance of sweet and spice.',price:'$12.95',size:'90g'},
+-      {n:'Almond & Celtic Salt',img:'bar_almond',d:'The perfect harmony of crunchy whole roasted almonds, natural sweetness and a touch of saltiness.',price:'$12.95',size:'90g'}
++      {n:'Pure Carob & Cacao Butter',img:'bar_pure_carob',d:'Crafted from only two wholefood ingredients for simple, naturally sweet, guilt-free perfection.',price:'$12.95',size:'90g'},
++      {n:'Almond & Celtic Salt',img:'bar_almond',d:'The perfect harmony of crunchy whole roasted almonds, natural sweetness and a touch of saltiness.',price:'$12.95',size:'90g'},
++      {n:'Peppermint & Buckwheat',img:'bar_peppermint',d:'Refreshing premium peppermint meets the satisfying crunch of activated buckwheat.',price:'$12.95',size:'90g'},
++      {n:'Roasted Hazelnut',img:'bar_hazelnut',d:'Whole roasted hazelnuts deliver an irresistibly indulgent, crunchy carob experience.',price:'$12.95',size:'90g'}
+     ],
+     moons:[
+-      {n:'Pure Carob Moon',img:'moon_pure_carob',d:'A hand-moulded crescent of pure carob and cacao butter.',price:'1 $2.50 / 5 $12.19 / 10 $23.75 / 20 $44.99',pending:true,size:'12g',sizes:MOON_TIERS,optionLabel:'Pack'},
+-      {n:'Peppermint Moon',img:'moon_peppermint',d:'A cool peppermint pick-me-up with the perfect crunch.',price:'1 $2.50 / 5 $12.19 / 10 $23.75 / 20 $44.99',size:'12g',sizes:MOON_TIERS,optionLabel:'Pack'},
+-      {n:'Roasted Hazelnut Moon',img:'moon_hazelnut',d:'Roasted whole hazelnuts in each crescent bite.',price:'1 $2.50 / 5 $12.19 / 10 $23.75 / 20 $44.99',size:'12g',sizes:MOON_TIERS,optionLabel:'Pack'},
+       {n:'Coconut & Goji Moon',img:'moon_goji_coconut',d:'The perfect balance of sweetness and texture in every bite.',price:'1 $2.50 / 5 $12.19 / 10 $23.75 / 20 $44.99',size:'12g',sizes:MOON_TIERS,optionLabel:'Pack'},
+       {n:'Cayenne Moon',img:'moon_cayenne',d:'A slow warmth of cayenne in a carob crescent.',price:'1 $2.50 / 5 $12.19 / 10 $23.75 / 20 $44.99',pending:true,size:'12g',sizes:MOON_TIERS,optionLabel:'Pack'},
+-      {n:'Almond Moon',img:'moon_almond',d:'Whole almonds and a touch of sea salt in each crescent bite.',price:'1 $2.50 / 5 $12.19 / 10 $23.75 / 20 $44.99',size:'12g',sizes:MOON_TIERS,optionLabel:'Pack'}
+-    ],
+-    eclipses:[
+-      {n:'Pecan Nut Eclipse Bite',img:'eclipse_pecan',d:'Carob-dipped Medjool dates and pecans.',price:'$5.99–$59.99',size:'50g',sizes:ECLIPSE_SIZES,optionLabel:'Size'},
+-      {n:'Salted Almond Eclipse Bite',img:'eclipse_almond',d:'The perfect blend of sweetness, crunch and saltiness to satisfy every sweet and savoury craving.',price:'$5.99–$59.99',size:'50g',sizes:ECLIPSE_SIZES,optionLabel:'Size'},
+-      {n:'Hazelnut Eclipse Bite',img:'eclipse_hazelnut',d:'Crunchy, rich hazelnut bites crafted for the perfect indulgent pick-me-up.',price:'$5.99–$59.99',size:'50g',sizes:ECLIPSE_SIZES,optionLabel:'Size'},
+-      {n:'Goji Ripe Eclipse Bite',img:'eclipse_goji',d:'Medjool dates, almonds, cashews, coconut and goji berries in carob.',price:'$5.99–$59.99',size:'50g',sizes:ECLIPSE_SIZES,optionLabel:'Size'},
+-      {n:'Salted Caramel Fudge',img:'eclipse_fudge',d:'A rich fudgy texture with a satisfying crunch, finished with a generous indulgent slab of carob on top.',price:'$5.99–$59.99',size:'50g',sizes:ECLIPSE_SIZES,optionLabel:'Size'},
+-      {n:'Eclipse Bite Bundle',img:'eclipse_bundle',d:'All five Eclipse Bites together.',price:'$24.99',size:'5 x 50g'}
++      {n:'Pure Carob Moon',img:'moon_pure_carob',d:'A crescent of pure carob and cacao butter',price:'1 $2.50 / 5 $12.19 / 10 $23.75 / 20 $44.99',pending:true,size:'12g',sizes:MOON_TIERS,optionLabel:'Pack'},
++      {n:'Almond Moon',img:'moon_almond',d:'Whole almonds and a touch of sea salt in each crescent bite.',price:'1 $2.50 / 5 $12.19 / 10 $23.75 / 20 $44.99',size:'12g',sizes:MOON_TIERS,optionLabel:'Pack'},
++      {n:'Peppermint Moon',img:'moon_peppermint',d:'A cool peppermint pick-me-up with the perfect crunch.',price:'1 $2.50 / 5 $12.19 / 10 $23.75 / 20 $44.99',size:'12g',sizes:MOON_TIERS,optionLabel:'Pack'},
++      {n:'Roasted Hazelnut Moon',img:'moon_hazelnut',d:'Roasted whole hazelnuts in each crescent bite.',price:'1 $2.50 / 5 $12.19 / 10 $23.75 / 20 $44.99',size:'12g',sizes:MOON_TIERS,optionLabel:'Pack'}
+     ],
+-    /* Carob Bites are a SEPARATE category from Eclipse Bites. Copy and names lifted
+-       verbatim from homepage.html so the two pages agree. Unpriced by enquiry; no
+-       weight is invented, size stays empty and the render guards the () span. */
+     bites:[
+-      {n:'Goji Carob Bites',img:'bite_goji',d:'Small carob bites with a bright goji finish.',price:null,size:''},
+-      {n:'Coconut Carob Bites',img:'bite_coconut',d:'Coconut carob bites made for grazing.',price:null,size:''}
++      {n:'Pecan Nut Eclipse Bite',img:'eclipse_pecan',d:'A blend of pecans and dates for a fudgy inside, coated in our pure carob',price:'$5.99–$59.99',size:'50g',sizes:ECLIPSE_SIZES},
++      {n:'Salted Almond Eclipse Bite',img:'eclipse_almond',d:'The perfect blend of sweetness, crunch and saltiness to satisfy every sweet and savoury craving.',price:'$5.99–$59.99',size:'50g',sizes:ECLIPSE_SIZES},
++      {n:'Hazelnut Eclipse Bite',img:'eclipse_hazelnut',d:'Crunchy, rich hazelnut bites crafted for the perfect indulgent pick-me-up.',price:'$5.99–$59.99',size:'50g',sizes:ECLIPSE_SIZES},
++      {n:'Goji Ripe Eclipse Bite',img:'eclipse_goji',d:'Two layers for a fruit indulgence. Goji berries, dates and almonds blended together and layered on coconut and cashews.',price:'$5.99–$59.99',size:'50g',sizes:ECLIPSE_SIZES},
++      {n:'Salted Caramel Fudge',img:'eclipse_fudge',d:'A rich fudgy texture with a satisfying crunch, finished with a generous indulgent slab of carob on top.',price:'$5.99–$59.99',size:'50g',sizes:ECLIPSE_SIZES},
++      {n:'Eclipse Bite Bundle',img:'eclipse_bundle',d:'Can\'t decide? Try the range. All 5 bites to satisfy your cravings and curiosity.',price:'$24.99',size:'5 x 50g'}
+     ],
+     elixirs:[
+-      {n:'Pure Carob Elixir',img:'elixir_plain',d:'A warm carob drink, naturally sweet and caffeine free.',price:'$23.95',size:'150g'},
+-      {n:'Spiced Carob Elixir',img:'elixir_spiced',d:'Carob elixir with a gentle warmth of spice.',price:'$26.95',size:'150g'}
++      {n:'Pure Carob Elixir',img:'elixir_plain',d:'A warm carob drink with only two ingredients, naturally sweet and caffeine free.',price:'$23.95',size:'150g'},
++      {n:'Spiced Carob Elixir',img:'elixir_spiced',d:'A warm carob drink with an Ayurvedic inspired spice blend',price:'$26.95',size:'150g'}
+     ],
+     bananas:[
+-      {n:'Carob Bananas',img:'bananas',d:'Dehydrated banana, coated in naturally sweet carob.',price:'1 $2.99 / 5 $14.25 / 10 $26.99 / 20 $50.99',size:'20g',sizes:BANANA_TIERS,optionLabel:'Pack'}
++      {n:'Carob Bananas',img:'bananas',d:'Spray Free Australian Grown Bananas coated in our pure carob for the perfect chewy treat.',price:'1 $2.99 / 5 $14.25 / 10 $26.99 / 20 $50.99',size:'20g'}
+     ],
+     powder:[
+       {n:'Carob Powder',img:'powder_roasted',d:'Roasted organic carob powder. Caffeine free and naturally sweet, for baking, drinks and raw treats.',price:'$14.95',size:'300g'}
+     ]
+   };
+   var DIET=['Vegan','GF','No Caffeine'];
+-  var PRICED={bars:true,elixirs:true,moons:true,eclipses:true,bites:false,bananas:true,powder:true};
++  var PRICED={bars:true,elixirs:true,moons:true,bites:true,bananas:true,powder:true};
+   function amp(s){return s.replace(/&/g,'<span class="amp">&amp;</span>');}
++  function money(amount){return '$'+Number(amount).toFixed(2);}
++  function priceNumber(price){var match=String(price).match(/\d+(?:\.\d{1,2})?/);return match?Number(match[0]):0;}
+   function flavourOf(p){
+     var hay=(p.n+' '+p.d).toLowerCase();
+     if(hay.indexOf('peppermint')>-1)return 'peppermint';
+@@ -389,90 +399,50 @@
+       var priced=!!PRICED[cat] && !p.pending;
+       var cardId='product-'+cat+'-'+index;
+       var cleanName=p.n.replace(/"/g,'');
+-      var imageAttrs=(cat==='bites'||cat==='eclipses')?' loading="eager" decoding="async"':' loading="lazy" decoding="async"';
++      var imageAttrs=cat==='bites'?' loading="eager" decoding="sync"':' loading="lazy" decoding="async"';
+       var hasSizePicker=priced&&Array.isArray(p.sizes);
+       var unitPrice=hasSizePicker?p.sizes[0].price:priceNumber(p.price);
+       var unitQuantity=hasSizePicker?(p.sizes[0].quantity||1):1;
+-      /* the label mock-cart snapshots must stay true for EVERY option, so priced
+-         multi-option products show a range/from string, never one option's price. */
+-      var displayPrice=(cat==='moons'&&priced)?'From $2.50 each':((cat==='bananas'&&priced)?'From $2.99':p.price);
+-      var pickerLabel=p.optionLabel||'Size';
++      var displayPrice=cat==='moons'&&priced?'From $2.50 each':p.price;
+       var pickerAttribute=cat==='moons'?' data-tier-picker="moon"':' data-size-picker="eclipse"';
+-      var sizePicker=hasSizePicker?'<label class="size-picker"'+pickerAttribute+'><span>'+pickerLabel+'</span><select class="size-select" aria-label="'+pickerLabel+' for '+cleanName+'">'+p.sizes.map(function(option){return '<option value="'+option.price+'" data-quantity="'+(option.quantity||1)+'" data-label="'+option.label+'">'+option.label+' &middot; '+money(option.price)+'</option>';}).join('')+'</select></label>':'';
+-      /* Unpriced products still carry a sizes[] array, so without this the picker row
+-         collapses and the card renders a bare gap above the enquiry row. Fill that slot
+-         with an honest status line. NO price is surfaced: p.price is deliberately masked
+-         by pending:true and must stay masked. */
+-      if(!hasSizePicker&&!priced){
+-        sizePicker='<div class="size-picker is-made-to-order"><span>'+pickerLabel+'</span><span class="mto">Made to order</span></div>';
+-      }
++      var pickerLabel=p.optionLabel||'Size';
++      var sizePicker=hasSizePicker?'<label class="size-picker"'+pickerAttribute+'><span>'+pickerLabel+'</span><select class="size-select" aria-label="'+pickerLabel+' for '+cleanName+'">'+p.sizes.map(function(option){return '<option value="'+option.price+'" data-quantity="'+(option.quantity||1)+'">'+option.label+' &middot; '+money(option.price)+'</option>';}).join('')+'</select></label>':'';
++      var action=priced?'<button class="add" data-add-to-cart type="button" aria-label="Add '+cleanName+' to cart">Add to cart</button>':'<a class="add" aria-label="Enquire about '+cleanName+'" href="mailto:info@maplemoon.com.au?subject=Enquiry%20about%20'+encodeURIComponent(p.n)+'">Enquire</a>';
+       var el=document.createElement('article');el.className='pcard';el.setAttribute('aria-labelledby',cardId);
+       el.dataset.cat=cat;el.dataset.flavour=flavourOf(p);el.dataset.name=p.n.toLowerCase();el.dataset.priced=priced?'1':'0';el.dataset.order=String(index);el.dataset.unitPrice=String(unitPrice);el.dataset.unitQuantity=String(unitQuantity);
+       el.innerHTML='<div class="ph"><img src="'+PS+p.img+'.webp" alt="'+cleanName+'"'+imageAttrs+'></div>'+
+         '<div class="tx"><h3 id="'+cardId+'">'+amp(p.n)+'</h3><div class="chips">'+DIET.map(function(c){return '<span>'+c+'</span>';}).join('')+'</div>'+
+         '<p class="d">'+p.d+'</p>'+
+-        sizePicker+
+-        '<div class="row"><div class="price-wrap"><span class="pr'+(priced?'':' pending')+'"><span data-price-label>'+(priced?displayPrice:'Enquire for details')+'</span>'+(p.size?'<span class="g" data-size-note>('+p.size+')</span>':'')+'</span>'+(hasSizePicker?'<span class="sel-price" data-selected-price>Selected: '+money(unitPrice)+'</span>':'')+'</div><a class="add" aria-label="'+(priced?'Ask about ':'Enquire about ')+cleanName+'" href="mailto:info@maplemoon.com.au?subject=Enquiry%20about%20'+encodeURIComponent(p.n)+'">'+(priced?'Ask about this item':'Enquire')+'</a></div></div>';
++        sizePicker+'<div class="row"><div class="price-wrap"><span class="pr'+(priced?'':' pending')+'"><span data-price-label>'+ (priced?displayPrice:'Enquire for details')+'</span><span class="g">('+p.size+')</span></span></div>'+action+'</div></div>';
+       grid.appendChild(el);
+     });
+   });
+ 
+-  /* Selector -> price update. The .pr label is left on its range/"from" string so the
+-     snapshot mock-cart.js takes at load is true for every option; the live selected
+-     price rides in [data-selected-price] beside it. */
+-  function selectionOf(card){
+-    var sel=card&&card.querySelector('.size-select');
+-    if(!sel||!sel.options.length)return null;
+-    var opt=sel.options[sel.selectedIndex];
+-    return {price:Number(sel.value),quantity:Number(opt.dataset.quantity||1),label:opt.dataset.label||opt.textContent};
++  var state={flavour:'all',sort:'featured',view:'grid'};
++  var cards=Array.prototype.slice.call(document.querySelectorAll('.pcard'));
++  var cart={items:0,subtotal:0};
++  var cartSummary=document.querySelector('[data-cart-subtotal]');
++  var cartCount=document.querySelector('[data-cart-count]');
++  var cartToggle=document.querySelector('[data-cart-toggle]');
++  function renderCart(){
++    var itemLabel=cart.items===1?'item':'items';
++    if(cartSummary){cartSummary.querySelector('strong').textContent=money(cart.subtotal);cartSummary.querySelector('small').textContent=cart.items+' '+itemLabel;}
++    if(cartCount)cartCount.textContent=String(cart.items);
++    if(cartToggle)cartToggle.setAttribute('aria-label','Cart, '+cart.items+' '+itemLabel+', subtotal '+money(cart.subtotal));
+   }
+   document.addEventListener('change',function(event){
+-    if(!event.target.matches||!event.target.matches('.size-select'))return;
++    if(!event.target.matches('.size-select'))return;
+     var card=event.target.closest('.pcard');if(!card)return;
+-    var pick=selectionOf(card);if(!pick)return;
+-    card.dataset.unitPrice=String(pick.price);
+-    card.dataset.unitQuantity=String(pick.quantity);
+-    var live=card.querySelector('[data-selected-price]');
+-    if(live)live.textContent='Selected: '+pick.label+' \u00b7 '+money(pick.price);
+-    /* Nate 14 Aug: the static (50g) was rendered for EVERY option, so Value pack read as
+-       $59.99 for 50g, about $1200/kg. No weight is authored here. If the chosen option is
+-       itself a weight we show that; otherwise the weight is hidden rather than guessed. */
+-    var note=card.querySelector('[data-size-note]');
+-    if(note){
+-      /* quantity is the real signal, not the label: option labels here are "1 moon" /
+-         "20 moons", never weights, so testing the label hid the weight permanently after
+-         any interaction. Unit weight is true at quantity 1 and meaningless above it. */
+-      if(!note.dataset.base) note.dataset.base=note.textContent;
+-      var single=Number(pick.quantity||1)===1;
+-      note.textContent=single?note.dataset.base:'';
+-      note.style.display=single?'':'none';
+-    }
+-    syncCartMeta();
++    var nextPrice=Number(event.target.value);card.dataset.unitPrice=String(nextPrice);card.dataset.unitQuantity=event.target.options[event.target.selectedIndex].dataset.quantity||'1';
++    var label=card.querySelector('[data-price-label]');if(label)label.textContent=money(nextPrice);
+   });
+-  /* Bridge: mock-cart.js snapshots each product once at load, so its cart lines cannot
+-     see a later selector change. Rather than fork the cart (which would break the
+-     candidate's focus trap / Escape behaviour), rewrite the rendered line meta in place
+-     from the card's current selection. mock-cart owns the dialog; this owns one string. */
+-  function syncCartMeta(){
+-    document.querySelectorAll('#mmCartDialog [data-mm-remove]').forEach(function(btn){
+-      var id=btn.dataset.mmRemove||'';
+-      var split=id.lastIndexOf('-');if(split<1)return;
+-      var card=document.querySelector('.pcard[data-cat="'+id.slice(0,split)+'"][data-order="'+id.slice(split+1)+'"]');
+-      if(!card)return;
+-      var pick=selectionOf(card);if(!pick)return;
+-      var article=btn.closest('article');if(!article)return;
+-      var meta=article.querySelector('.mm-cart-item-meta');if(!meta)return;
+-      var size=(card.querySelector('.pr .g')||{}).textContent||'';
+-      meta.textContent=[size.replace(/[()]/g,'').trim(),pick.label,money(pick.price)].filter(Boolean).join(' \u00b7 ');
+-    });
+-  }
+-  if('MutationObserver' in window){
+-    var bridgeTarget=document.body;
+-    new MutationObserver(function(){window.setTimeout(syncCartMeta,0);}).observe(bridgeTarget,{childList:true,subtree:true});
+-  }
+-
+-  var state={flavour:'all',sort:'featured',view:'grid'};
+-  var cards=Array.prototype.slice.call(document.querySelectorAll('.pcard'));
++  document.addEventListener('click',function(event){
++    var add=event.target.closest('[data-add-to-cart]');if(!add)return;
++    var card=add.closest('.pcard');if(!card)return;
++    cart.items+=Number(card.dataset.unitQuantity)||1;cart.subtotal+=Number(card.dataset.unitPrice)||0;renderCart();
++  });
++  if(cartToggle)cartToggle.addEventListener('click',function(){var summary=document.getElementById('cart-summary');if(summary)summary.scrollIntoView({behavior:'smooth',block:'center'});});
++  renderCart();
+   var status=document.getElementById('catalogue-status');
+   var reset=document.getElementById('catalogue-reset');
+   var flavourLabels={all:'all flavours',pure:'Pure',peppermint:'Peppermint',hazelnut:'Hazelnut',goji:'Coconut and Goji',cayenne:'Cayenne',almond:'Almond'};
+@@ -516,33 +486,6 @@
+     syncQuery();
+   }
+   var params=new URLSearchParams(window.location.search);
+-  var cvParam=params.get('compact-variant');
+-  /* SAT-SHOP-POLISH-R1: Variant F is now the DEFAULT presentation. No query string => F.
+-     QA override retained: ?compact-variant=f forces F on, any other value (e.g. ?compact-variant=off
+-     or bare ?compact-variant=) forces F off. */
+-  var selectedFRegular=(cvParam===null)?true:(cvParam==='f');
+-  if(selectedFRegular){
+-    document.body.classList.add('compact-variant-f');
+-    var selectedFBand=document.createElement('div');
+-    selectedFBand.className='wrap sp-compact-band';
+-    selectedFBand.setAttribute('aria-label','Compact secondary ranges');
+-    var selectedFSections=[
+-      {id:'elixirs',className:'sp-compact-elixirs'},
+-      {id:'bananas',className:'sp-compact-bananas'},
+-      {id:'powder',className:'sp-compact-powder'}
+-    ];
+-    var selectedFFirst=document.getElementById('elixirs');
+-    if(selectedFFirst)selectedFFirst.parentNode.insertBefore(selectedFBand,selectedFFirst);
+-    selectedFSections.forEach(function(item){
+-      var section=document.getElementById(item.id);
+-      if(!section)return;
+-      section.classList.remove('wrap');
+-      section.classList.add('sp-compact-module',item.className);
+-      var sectionGrid=section.querySelector('.grid');
+-      if(sectionGrid)sectionGrid.classList.add('compact-grid');
+-      selectedFBand.appendChild(section);
+-    });
+-  }
+   if(['all','pure','peppermint','hazelnut','goji','cayenne','almond'].indexOf(params.get('flavour'))>-1)state.flavour=params.get('flavour');
+   if(['featured','name','priced'].indexOf(params.get('sort'))>-1)state.sort=params.get('sort');
+   if(['grid','list'].indexOf(params.get('view'))>-1)state.view=params.get('view');
+@@ -551,60 +494,6 @@
+   var sort=document.getElementById('shop-sort');if(sort)sort.addEventListener('change',function(){state.sort=sort.value;applyState();});
+   if(reset)reset.addEventListener('click',function(){state.flavour='all';state.sort='featured';state.view='grid';applyState();});
+   applyState();
+-  var selectedFSetCurrent;
+-  if(selectedFRegular){
+-    var selectedFCatNav=document.querySelector('.sp-range-nav .sp-cats');
+-    if(selectedFCatNav){
+-      var selectedFLinks=Array.prototype.slice.call(selectedFCatNav.querySelectorAll('a'));
+-      var selectedFByTarget={};
+-      selectedFLinks.forEach(function(link){selectedFByTarget[link.getAttribute('href')]=link;});
+-      var selectedFAll=document.createElement('a');
+-      selectedFAll.href='#catalogue';
+-      selectedFAll.className='sp-all-products';
+-      selectedFAll.textContent='Shop all';
+-      selectedFCatNav.replaceChildren(selectedFAll);
+-      ['#bars','#moons','#bananas','#eclipses','#bites','#elixirs','#powder'].forEach(function(target){if(selectedFByTarget[target])selectedFCatNav.appendChild(selectedFByTarget[target]);});
+-      selectedFAll.addEventListener('click',function(){state.flavour='all';applyState();});
+-      selectedFLinks=Array.prototype.slice.call(selectedFCatNav.querySelectorAll('a'));
+-      selectedFSetCurrent=function(id){selectedFLinks.forEach(function(link){if(link.getAttribute('href')==='#'+id)link.setAttribute('aria-current','location');else link.removeAttribute('aria-current');});};
+-      var updateSelectedFCurrent=function(){
+-        var current=Array.prototype.slice.call(document.querySelectorAll('.sp-sec[id]')).filter(function(section){return !section.hidden;}).sort(function(a,b){return Math.abs(a.getBoundingClientRect().top-124)-Math.abs(b.getBoundingClientRect().top-124);})[0];
+-        if(current)selectedFSetCurrent(current.id);
+-      };
+-      selectedFLinks.forEach(function(link){link.addEventListener('click',function(){window.setTimeout(function(){selectedFSetCurrent(link.getAttribute('href').slice(1));},0);});});
+-      window.addEventListener('scroll',updateSelectedFCurrent,{passive:true});
+-      var selectedFRangeNav=selectedFCatNav.closest('.sp-range-nav');
+-      var updateSelectedFRailEdges=function(){
+-        var maxScroll=Math.max(0,selectedFCatNav.scrollWidth-selectedFCatNav.clientWidth);
+-        selectedFRangeNav.classList.toggle('is-scrollable',maxScroll>2);
+-        selectedFRangeNav.classList.toggle('is-at-start',selectedFCatNav.scrollLeft<=2);
+-        selectedFRangeNav.classList.toggle('is-at-end',selectedFCatNav.scrollLeft>=maxScroll-2);
+-      };
+-      var revealSelectedFLink=function(link){
+-        var padding=12;
+-        var maxScroll=Math.max(0,selectedFCatNav.scrollWidth-selectedFCatNav.clientWidth);
+-        var left=link.offsetLeft;
+-        var right=left+link.offsetWidth;
+-        var visibleLeft=selectedFCatNav.scrollLeft+padding;
+-        var visibleRight=selectedFCatNav.scrollLeft+selectedFCatNav.clientWidth-padding;
+-        if(left<visibleLeft)selectedFCatNav.scrollLeft=Math.max(0,left-padding);
+-        else if(right>visibleRight)selectedFCatNav.scrollLeft=Math.min(maxScroll,right-selectedFCatNav.clientWidth+padding);
+-        updateSelectedFRailEdges();
+-      };
+-      selectedFCatNav.addEventListener('scroll',updateSelectedFRailEdges,{passive:true});
+-      selectedFCatNav.addEventListener('focusin',function(event){if(event.target.matches('a'))revealSelectedFLink(event.target);});
+-      window.addEventListener('resize',updateSelectedFRailEdges);
+-      if('ResizeObserver' in window)new ResizeObserver(updateSelectedFRailEdges).observe(selectedFCatNav);
+-      if(document.readyState==='complete')updateSelectedFRailEdges();else window.addEventListener('load',updateSelectedFRailEdges,{once:true});
+-      window.setTimeout(updateSelectedFRailEdges,0);
+-    }
+-  }
+-  if(selectedFRegular&&window.location.hash){
+-    var initialAnchor=document.getElementById(window.location.hash.slice(1));
+-    var settleInitialAnchor=function(){if(initialAnchor&&window.location.hash.slice(1)===initialAnchor.id){var priorScrollBehavior=document.documentElement.style.scrollBehavior;document.documentElement.style.scrollBehavior='auto';window.scrollTo({top:Math.max(0,window.scrollY+initialAnchor.getBoundingClientRect().top-124),behavior:'auto'});document.documentElement.style.scrollBehavior=priorScrollBehavior;if(selectedFSetCurrent)selectedFSetCurrent(initialAnchor.id);}};
+-    var queueInitialAnchor=function(){window.setTimeout(settleInitialAnchor,450);};
+-    if(document.readyState==='complete')queueInitialAnchor();else window.addEventListener('load',queueInitialAnchor,{once:true});
+-  }
+ 
+   var catLinks=Array.prototype.slice.call(document.querySelectorAll('.sp-range-nav .sp-cats a'));
+   if('IntersectionObserver' in window){
+@@ -634,24 +523,38 @@
+ .sp .sp-range-nav .sp-cats.is-filtered{grid-template-columns:repeat(auto-fit,minmax(110px,1fr));}
+ .sp{--blue-flow:#b7c9d9;--blue-bridge:#c8d5df;--blue-haze:#d7e2ea;--blue-deep:#457798;--blue-night:#101923;--beige:#c9ba96;--acc:#4074b6;background:linear-gradient(180deg,var(--blue-flow) 0%,#c7d6e3 18%,var(--blue-haze) 44%,#e2e5df 70%,var(--paper) 100%);}
+ .sp-main{min-width:0;}
+-.sp-tools{display:grid;grid-template-columns:minmax(0,1fr) minmax(170px,220px) auto;gap:14px;align-items:center;margin:12px auto 10px;padding:16px 18px;border:1px solid rgba(69,119,152,.14);border-radius:8px;background:rgba(251,250,247,.68);box-shadow:0 8px 18px rgba(41,57,64,.045);}
+-.catalogue-toolbar-heading{grid-column:1/-1;display:flex;align-items:baseline;justify-content:space-between;gap:16px;padding-bottom:12px;border-bottom:1px solid rgba(69,119,152,.14);}
++.sp-tools{display:grid;grid-template-columns:minmax(0,1fr) minmax(170px,220px) auto;grid-template-areas:"heading heading heading" "flavour sort view" "guide guide cart" "status status status";gap:14px;align-items:center;margin:12px auto 10px;padding:16px 18px;border:1px solid rgba(69,119,152,.14);border-radius:8px;background:rgba(251,250,247,.68);box-shadow:0 8px 18px rgba(41,57,64,.045);}
++.catalogue-toolbar-heading{grid-area:heading;display:flex;align-items:baseline;justify-content:space-between;gap:16px;padding-bottom:12px;border-bottom:1px solid rgba(69,119,152,.14);}
+ .catalogue-toolbar-heading h2{margin:0;font:500 1.04rem/1.2 var(--mm-serif);color:var(--ink);}
+ .reset-tool{min-height:36px;padding:6px 11px;border:0;border-bottom:1px solid currentColor;background:transparent;color:var(--ink-soft);font:500 .63rem/1 var(--mm-sans);letter-spacing:.12em;text-transform:uppercase;cursor:pointer;}
+ .reset-tool:hover{color:var(--ink);}
+ .tool-group{display:flex;align-items:center;gap:10px;min-width:0;color:rgba(44,42,38,.66);font-size:.62rem;letter-spacing:.13em;text-transform:uppercase;}
+-.flavour-tools{flex-wrap:wrap;}
++.flavour-tools{grid-area:flavour;flex-wrap:wrap;}
+ .swatch,.view-btn{min-width:44px;min-height:44px;border:1px solid rgba(44,42,38,.14);border-radius:8px;background:rgba(255,255,255,.42);color:var(--ink);font:inherit;cursor:pointer;touch-action:manipulation;}
+ .swatch{position:relative;display:grid;place-items:center;padding:5px;}
+ .swatch i{display:block;width:24px;height:24px;border-radius:5px;background:var(--sw);border:1px solid rgba(44,42,38,.10);}
+ .swatch b{position:absolute;inline-size:1px;block-size:1px;overflow:hidden;clip-path:inset(50%);}
+ .swatch.is-active,.view-btn.is-active{border-color:var(--blue-night);box-shadow:inset 0 -2px 0 rgba(201,186,150,.62);background:rgba(255,255,255,.76);}
+-.sort-tool{justify-content:flex-end;}
++.sort-tool{grid-area:sort;justify-content:flex-end;}
+ .sort-tool select{min-height:44px;width:150px;padding:0 36px 0 14px;border:1px solid rgba(44,42,38,.16);border-radius:8px;background:rgba(255,255,255,.48);color:var(--ink);font:500 .78rem var(--mm-sans);}
+-.view-tools{justify-content:flex-end;}
++.view-tools{grid-area:view;justify-content:flex-end;}
+ .view-btn{padding:0 12px;font-size:.62rem;}
+-.catalogue-status{grid-column:1/-1;margin:0;padding-top:2px;color:var(--ink-soft);font-size:.78rem;line-height:1.35;}
+-.sp-tools :is(.swatch,.view-btn,.sort-tool select,.reset-tool):focus-visible{outline:2px solid var(--acc);outline-offset:3px;}
++.purchase-guide{grid-area:guide;display:flex;align-items:baseline;gap:9px;min-width:0;color:var(--ink-soft);font-size:.74rem;line-height:1.42;}
++.purchase-guide strong{color:var(--ink);font:500 .82rem/1.2 var(--mm-serif);white-space:nowrap;}
++.purchase-guide b{color:var(--ink);font-weight:500;}
++.cart-summary{grid-area:cart;display:grid;grid-template-columns:auto auto;justify-content:end;align-items:baseline;gap:0 8px;margin:0;padding:9px 0 9px 14px;border-left:1px solid rgba(69,119,152,.18);color:var(--ink-soft);font-size:.63rem;letter-spacing:.1em;text-transform:uppercase;}
++.cart-summary strong{color:var(--ink);font:500 1rem/1 var(--mm-serif);letter-spacing:0;text-transform:none;}
++.cart-summary small{grid-column:1/-1;justify-self:end;font-size:.58rem;letter-spacing:.08em;}
++.catalogue-status{grid-area:status;margin:0;padding-top:2px;color:var(--ink-soft);font-size:.78rem;line-height:1.35;}
++.sp-tools :is(.swatch,.view-btn,.sort-tool select,.reset-tool,.size-select):focus-visible{outline:2px solid var(--acc);outline-offset:3px;}
++.sp-tools.is-quiet{padding:13px 0 12px;border-width:0 0 1px;border-radius:0;background:transparent;box-shadow:none;}
++.sp-tools.is-quiet .catalogue-toolbar-heading{padding-bottom:4px;border:0;}
++.sp-tools.is-quiet .tool-group{gap:7px;color:rgba(44,42,38,.54);}
++.sp-tools.is-quiet .swatch,.sp-tools.is-quiet .view-btn{min-width:34px;min-height:34px;border:0;border-radius:0;background:transparent;box-shadow:none;}
++.sp-tools.is-quiet .swatch i{width:19px;height:7px;border:0;border-radius:999px;opacity:.58;}
++.sp-tools.is-quiet .swatch.is-active,.sp-tools.is-quiet .view-btn.is-active{border-color:transparent;background:transparent;box-shadow:inset 0 -1px 0 var(--ink);}
++.sp-tools.is-quiet .swatch.is-active i{opacity:1;}
++.sp-tools.is-quiet .sort-tool select{min-height:34px;width:132px;padding-left:9px;border-width:0 0 1px;border-radius:0;background:transparent;}
+ .sp-sec{scroll-margin-top:94px;padding:46px 0 10px;}
+ .sp-range-nav + .sp-sec{padding-top:28px;}
+ .sp-sec:not(#bars){border-top:1px solid rgba(69,119,152,.22);margin-top:34px;}
+@@ -675,6 +578,10 @@
+ .chips span{font-size:.5rem;color:rgba(111,106,98,.64);border-color:rgba(44,42,38,.08);padding:3px 6px;}
+ .pcard .row{min-height:54px;margin-top:auto;padding-top:10px;border-top:1px solid rgba(44,42,38,.09);}
+ .pcard .pr{min-width:0;line-height:1.28;}
++.pcard .price-wrap{display:flex;flex-direction:column;gap:3px;min-width:0;}
++.pcard .moon-tier{color:var(--ink-faint);font-size:.58rem;letter-spacing:.08em;text-transform:uppercase;}
++.size-picker{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:8px 0 0;border-top:1px solid rgba(44,42,38,.09);color:var(--ink-soft);font-size:.58rem;letter-spacing:.1em;text-transform:uppercase;}
++.size-select{min-height:34px;max-width:168px;padding:0 26px 0 9px;border:0;border-bottom:1px solid rgba(44,42,38,.24);border-radius:0;background:transparent;color:var(--ink);font:500 .72rem var(--mm-sans);}
+ .pcard .add{display:inline-flex;align-items:center;justify-content:center;text-decoration:none;min-height:44px;}
+ .pcard .add:not([disabled]){border-color:var(--blue-night);background:var(--blue-night);color:var(--cream);box-shadow:inset 0 -2px 0 rgba(201,186,150,.58);}
+ .pcard .add:not([disabled]):hover{background:var(--blue-deep);border-color:var(--blue-deep);color:var(--cream);}
+@@ -683,48 +590,6 @@
+ .pcard:hover,.pcard:focus-within{box-shadow:0 12px 28px rgba(41,57,64,.10);transform:translateY(-1px);}
+ .pcard:hover .ph img,.pcard:focus-within .ph img{transform:scale(1.015);}
+ .sp-sec[hidden],.sp-range-nav .sp-cats a[hidden]{display:none!important;}
+-.sp-compact-band{display:grid;grid-template-columns:1fr;gap:18px;align-items:stretch;margin-top:36px;padding-top:16px;border-top:1px solid rgba(69,119,152,.22);}
+-.sp-compact-module.sp-sec{display:flex;flex-direction:column;min-width:0;margin:0;padding:22px;border:1px solid rgba(69,119,152,.14);border-radius:14px;background:rgba(251,250,247,.64);box-shadow:0 8px 18px rgba(41,57,64,.035);scroll-margin-top:124px;}
+-.sp-compact-module h2{margin-bottom:5px;font-size:clamp(1.55rem,2.4vw,2.1rem);}
+-.sp-compact-module .sub{max-width:68ch;min-height:0;margin-bottom:16px;font-size:.8rem;line-height:1.4;}
+-.sp-compact-module .grid{display:grid;grid-template-columns:1fr;gap:12px;}
+-.sp-compact-module .pcard{display:grid;grid-template-columns:clamp(280px,30vw,340px) minmax(0,1fr);min-width:0;min-height:316px;overflow:hidden;border-radius:10px;border-color:rgba(69,119,152,.14);background:rgba(251,250,247,.88);box-shadow:none;transform:none;}
+-.sp-compact-bananas .pcard{grid-template-columns:clamp(320px,33vw,388px) minmax(0,1fr);min-height:324px;}
+-.sp-compact-powder .pcard{grid-template-columns:clamp(350px,36vw,416px) minmax(0,1fr);min-height:300px;}
+-.sp-compact-module .pcard .ph{display:grid;place-items:center;align-self:stretch;aspect-ratio:auto;padding:20px;background:linear-gradient(145deg,rgba(231,237,243,.78),rgba(248,246,239,.92));}
+-.sp-compact-module .pcard .ph img{width:auto;height:auto;max-width:88%;max-height:296px;object-fit:contain;}
+-.sp-compact-bananas .pcard .ph img{max-width:86%;max-height:310px;}
+-.sp-compact-powder .pcard .ph img{max-width:95%;max-height:272px;}
+-.sp-compact-module .pcard .tx{min-width:0;align-content:start;padding:18px 20px;gap:6px;}
+-.sp-compact-module .pcard h3{font-size:1rem;line-height:1.18;}
+-.sp-compact-module .pcard .chips{display:none;}
+-.sp-compact-module .pcard .d{max-width:58ch;margin:2px 0 0;font-size:.76rem;line-height:1.4;-webkit-line-clamp:3;}
+-.sp-compact-module .pcard .row{align-items:center;min-height:54px;margin-top:auto;padding-top:10px;gap:16px;}
+-.sp-compact-module .pcard .pr{font-size:.78rem;}
+-.sp-compact-module .pcard .add{min-height:44px;padding:8px 14px;font-size:.6rem;}
+-.sp-compact-module .pcard .g{font-size:.6rem;}
+-.sp-compact-module .pcard:focus-within{outline:2px solid var(--acc);outline-offset:3px;}
+-@media(max-width:560px){
+-  .sp-compact-module.sp-sec{padding:16px;}
+-  .sp-compact-module .pcard{grid-template-columns:238px minmax(0,1fr);min-height:238px;}
+-  .sp-compact-bananas .pcard{grid-template-columns:230px minmax(0,1fr);min-height:218px;}
+-  .sp-compact-powder .pcard{grid-template-columns:252px minmax(0,1fr);min-height:218px;}
+-  .sp-compact-module .pcard .ph{padding:8px;}
+-  .sp-compact-module .pcard .ph img{max-height:218px;}
+-  .sp-compact-bananas .pcard .ph img{max-width:90%;max-height:196px;}
+-  .sp-compact-powder .pcard .ph img{max-width:92%;}
+-  .sp-compact-module .pcard .tx{padding:12px 14px;}
+-}
+-@media(max-width:420px){
+-  .sp-compact-band{gap:14px;margin-top:28px;padding-top:12px;}
+-  .sp-compact-module.sp-sec{padding:14px;}
+-  .sp-compact-module .pcard,.sp-compact-bananas .pcard,.sp-compact-powder .pcard{grid-template-columns:1fr;grid-template-rows:190px auto;min-height:0;}
+-  .sp-compact-module .pcard .ph{width:100%;aspect-ratio:auto;min-height:190px;padding:16px;}
+-  .sp-compact-module .pcard .ph img{width:clamp(108px,34vw,112px);height:auto;max-width:calc(100% - 32px);max-height:168px;object-fit:contain;}
+-  .sp-compact-module .pcard .tx{padding:13px 14px 14px;}
+-  .sp-compact-module .pcard .row{min-height:44px;margin-top:8px;gap:10px;flex-direction:column;align-items:stretch;}
+-  .sp-compact-module .pcard .add{width:100%;min-width:0;}
+-}
+ .sp-ft{margin-top:82px;background:linear-gradient(180deg,rgba(226,229,223,.34),rgba(244,242,237,.72));border-top-color:rgba(69,119,152,.16);}
+ .sp-ft .row{padding-top:34px;padding-bottom:34px;}
+ .sp-opening{display:grid;grid-template-columns:minmax(0,1fr);gap:16px;padding:38px 0 8px;}
+@@ -748,7 +613,7 @@
+   .sp-opening .sp-sampler{grid-template-columns:minmax(220px,.8fr) minmax(0,1fr);grid-template-areas:"packs details" "packs action";gap:14px 20px;padding:18px 20px;}
+   .sp-opening .sp-sampler .pill{justify-self:start;}
+   .grid{grid-template-columns:repeat(3,minmax(0,1fr));}
+-  .sp-tools{grid-template-columns:1fr 1fr;grid-template-areas:"heading heading" "flavour flavour" "sort view" "status status";}
++  .sp-tools{grid-template-columns:1fr 1fr;grid-template-areas:"heading heading" "flavour flavour" "sort view" "guide cart" "status status";}
+   .catalogue-toolbar-heading{grid-area:heading;}.catalogue-status{grid-area:status;}
+   .flavour-tools{grid-area:flavour;}.sort-tool{grid-area:sort;justify-content:flex-start;}.view-tools{grid-area:view;}
+ }
+@@ -777,9 +642,11 @@
+   .sp .sp-range-nav .sp-cats a[aria-current="location"]::after{bottom:10px;width:20px;}
+   .sp-sec{padding-top:38px;}
+   .sp-range-nav + .sp-sec{padding-top:26px;}
+-  .sp-tools{grid-template-columns:1fr;margin-top:10px;padding:14px 16px;}
++  .sp-tools{grid-template-columns:1fr;grid-template-areas:"heading" "flavour" "sort" "view" "guide" "cart" "status";margin-top:10px;padding:14px 0;}
+   .catalogue-toolbar-heading{align-items:center;}
+   .sort-tool,.view-tools{justify-content:flex-start;}
++  .purchase-guide{align-items:flex-start;flex-direction:column;gap:3px;}
++  .cart-summary{justify-content:start;padding:10px 0;border-width:1px 0 0;}
+   .grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;}
+   .pcard .row{align-items:stretch;flex-direction:column;}
+   .pcard .add{width:100%;}
+@@ -806,284 +673,6 @@
+   .sp-top .bar{grid-template-columns:auto minmax(0,1fr) auto;column-gap:10px;}
+   .sp-nav.r{gap:12px;}
+ }
+-/* Selected-F regular Shop controls: a calm, keyboard-legible category rail without altering default Shop. */
+-body.compact-variant-f .sp-range-nav{top:10px;padding:8px 0;}
+-body.compact-variant-f .sp-range-nav .sp-cats{width:min(930px,calc(100% - 48px));min-height:58px;border-color:rgba(69,119,152,.24);background:rgba(238,248,249,.38);box-shadow:0 8px 20px rgba(41,57,64,.055);grid-template-columns:repeat(8,minmax(0,1fr));}
+-body.compact-variant-f .sp-range-nav .sp-cats a{min-height:58px;padding:10px 14px;color:rgba(44,42,38,.58);font-size:.64rem;letter-spacing:.09em;}
+-body.compact-variant-f .sp-range-nav .sp-cats a[aria-current="location"]{color:var(--ink);background:rgba(251,250,247,.78);box-shadow:inset 0 -2px 0 #9b8352;}
+-body.compact-variant-f .sp-range-nav .sp-cats a[aria-current="location"]::after{bottom:7px;width:28px;background:#9b8352;}
+-body.compact-variant-f .sp-range-nav .sp-cats a:focus-visible{z-index:1;outline:2px solid var(--acc);outline-offset:-4px;color:var(--ink);background:rgba(251,250,247,.86);}
+-body.compact-variant-f .sp-range-nav .sp-cats.is-filtered{grid-template-columns:repeat(auto-fit,minmax(120px,1fr));}
+-body.compact-variant-f .sp-sec[id]{scroll-margin-top:124px;}
+-body.compact-variant-f .sp-range-nav.is-scrollable::before,
+-body.compact-variant-f .sp-range-nav.is-scrollable::after{content:"";position:absolute;z-index:2;top:8px;bottom:8px;width:34px;pointer-events:none;transition:opacity .18s ease;}
+-body.compact-variant-f .sp-range-nav.is-scrollable::before{left:12px;background:linear-gradient(90deg,rgba(222,231,235,.96),rgba(222,231,235,0));}
+-body.compact-variant-f .sp-range-nav.is-scrollable::after{right:12px;background:linear-gradient(270deg,rgba(222,231,235,.96),rgba(222,231,235,0));}
+-body.compact-variant-f .sp-range-nav.is-at-start::before,
+-body.compact-variant-f .sp-range-nav.is-at-end::after{opacity:0;}
+-body.compact-variant-f .sp-opening{gap:12px;padding-top:28px;}
+-body.compact-variant-f .sp-opening .sp-sampler{gap:16px;padding:14px 18px;box-shadow:0 5px 14px rgba(41,57,64,.035);}
+-body.compact-variant-f .sp-opening .sp-sampler .pill{min-height:44px;}
+-body.compact-variant-f .sp-tools{gap:12px;margin-top:8px;padding:14px 16px;}
+-body.compact-variant-f .catalogue-toolbar-heading{padding-bottom:9px;}
+-body.compact-variant-f .flavour-tools{gap:8px;}
+-body.compact-variant-f .swatch{display:inline-flex;grid-auto-flow:unset;align-items:center;justify-content:center;gap:7px;min-width:0;padding:6px 9px;text-transform:none;letter-spacing:.02em;}
+-body.compact-variant-f .swatch i{flex:0 0 auto;width:20px;height:20px;}
+-body.compact-variant-f .swatch b{position:static;inline-size:auto;block-size:auto;overflow:visible;clip-path:none;font-size:.66rem;font-weight:500;line-height:1.15;white-space:nowrap;}
+-@media(max-width:900px){
+-  body.compact-variant-f .sp-range-nav .sp-cats{width:calc(100% - 32px);min-height:60px;justify-content:flex-start;scroll-padding-inline:12px;}
+-  body.compact-variant-f .sp-range-nav .sp-cats a{min-width:104px;min-height:60px;padding:10px 14px;}
+-  body.compact-variant-f .sp-opening{width:calc(100% - 32px);margin-inline:auto;padding:22px 0 8px;}
+-  body.compact-variant-f .sp-opening .sp-head h1{font-size:2.25rem!important;margin-bottom:10px!important;}
+-  body.compact-variant-f .sp-opening .sp-head p{max-width:36ch;font-size:.92rem;line-height:1.44;}
+-  body.compact-variant-f .sp-opening .sp-sampler{grid-template-columns:112px minmax(0,1fr);grid-template-areas:"packs details" "action action";gap:10px 14px;margin-bottom:6px;padding:14px;text-align:left;}
+-  body.compact-variant-f .sp-opening .sp-sampler .minirow{display:grid;grid-template-columns:repeat(3,1fr);align-items:end;justify-items:center;gap:5px;width:112px;margin:0;padding:0;}
+-  body.compact-variant-f .sp-opening .sp-sampler .minirow img{width:auto;max-width:29px;max-height:48px;}
+-  body.compact-variant-f .sp-opening .sp-sampler .t{text-align:left;}
+-  body.compact-variant-f .sp-opening .sp-sampler strong{font-size:1.08rem;line-height:1.12;margin-bottom:4px;}
+-  body.compact-variant-f .sp-opening .sp-sampler .t>span:not(.deal){display:-webkit-box;overflow:hidden;font-size:.78rem;line-height:1.3;-webkit-box-orient:vertical;-webkit-line-clamp:2;}
+-  body.compact-variant-f .sp-opening .sp-sampler .deal{margin-top:5px;font-size:.8rem;}
+-  body.compact-variant-f .sp-opening .sp-sampler .pill{justify-self:stretch;width:100%;min-width:0;}
+-  body.compact-variant-f .sp-tools{grid-template-columns:minmax(0,1fr) auto;grid-template-areas:"heading heading" "flavour flavour" "sort view" "status status";width:calc(100% - 32px);margin:6px auto 8px;padding:12px 14px;}
+-  body.compact-variant-f .catalogue-toolbar-heading{grid-area:heading;}
+-  body.compact-variant-f .flavour-tools{grid-area:flavour;flex-wrap:nowrap;justify-content:flex-start;overflow-x:auto;padding-bottom:4px;scrollbar-width:none;-webkit-overflow-scrolling:touch;}
+-  body.compact-variant-f .flavour-tools::-webkit-scrollbar{display:none;}
+-  body.compact-variant-f .flavour-tools>span,
+-  body.compact-variant-f .flavour-tools .swatch{flex:0 0 auto;}
+-  body.compact-variant-f .sort-tool{grid-area:sort;justify-content:flex-start;}
+-  body.compact-variant-f .sort-tool select{width:min(100%,180px);}
+-  body.compact-variant-f .view-tools{grid-area:view;justify-content:flex-end;}
+-  body.compact-variant-f .catalogue-status{grid-area:status;}
+-}
+-@media(max-width:560px){
+-  body.compact-variant-f .sp-opening .sp-head h1{font-size:2.15rem!important;}
+-  body.compact-variant-f .sp-opening .sp-sampler{grid-template-columns:92px minmax(0,1fr);gap:8px 12px;padding:12px;}
+-  body.compact-variant-f .sp-opening .sp-sampler .minirow{width:92px;gap:4px;}
+-  body.compact-variant-f .sp-opening .sp-sampler .minirow img{max-width:25px;max-height:42px;}
+-  body.compact-variant-f .sp-opening .sp-sampler strong{font-size:1rem;}
+-  body.compact-variant-f .sp-opening .sp-sampler .deal{font-size:.75rem;}
+-  body.compact-variant-f .sp-tools{gap:9px;}
+-  body.compact-variant-f .catalogue-toolbar-heading h2{font-size:1rem;}
+-  body.compact-variant-f .catalogue-status{font-size:.7rem;}
+-}
+-
+-/* SAT-SHOP-POLISH-R1: canonical opening and four-card secondary-range rhythm. */
+-body.compact-variant-f .sp-opening{
+-  grid-template-columns:380px minmax(0,1fr);
+-  align-items:end;
+-  gap:44px;
+-  padding:42px 0 18px;
+-}
+-body.compact-variant-f .sp-opening .sp-head{max-width:440px;}
+-body.compact-variant-f .sp-opening .sp-head p{max-width:34ch;color:rgba(44,42,38,.78);font-size:1rem;line-height:1.58;}
+-body.compact-variant-f .sp-opening .sp-flag{color:rgba(44,42,38,.72);font-size:.67rem;letter-spacing:.11em;}
+-body.compact-variant-f .sp-opening .sp-sampler{
+-  grid-template-columns:minmax(210px,.72fr) minmax(220px,1fr) minmax(156px,auto);
+-  grid-template-areas:"packs details action";
+-  gap:18px;
+-  margin:0;
+-  padding:20px 22px;
+-  border-color:rgba(69,119,152,.18);
+-  background:rgba(251,250,247,.82);
+-  box-shadow:0 12px 28px rgba(41,57,64,.06);
+-}
+-body.compact-variant-f .sp-opening .sp-sampler .deal{color:rgba(44,42,38,.72);font-size:.82rem;letter-spacing:.04em;}
+-body.compact-variant-f .sp-tools{margin-top:6px;background:rgba(251,250,247,.76);}
+-body.compact-variant-f .sp-sec>h2{margin-bottom:7px;font-size:clamp(1.95rem,2.4vw,2.45rem);line-height:1.08;}
+-body.compact-variant-f .sp-sec>.sub{max-width:62ch;margin-bottom:22px;color:rgba(44,42,38,.72);font-size:.92rem;line-height:1.5;}
+-body.compact-variant-f .sp-compact-band{
+-  display:grid;
+-  grid-template-columns:repeat(4,minmax(0,1fr));
+-  gap:20px;
+-  align-items:stretch;
+-  margin-top:48px;
+-  padding-top:28px;
+-}
+-body.compact-variant-f .sp-compact-module.sp-sec{
+-  display:flex;
+-  flex-direction:column;
+-  min-width:0;
+-  margin:0;
+-  padding:0;
+-  border:0;
+-  border-radius:0;
+-  background:transparent;
+-  box-shadow:none;
+-}
+-body.compact-variant-f .sp-compact-elixirs{grid-column:span 2;}
+-body.compact-variant-f .sp-compact-bananas,
+-body.compact-variant-f .sp-compact-powder{grid-column:span 1;}
+-body.compact-variant-f .sp-compact-module>h2{
+-  margin:0 0 5px;
+-  font-size:1.48rem;
+-  line-height:1.12;
+-}
+-body.compact-variant-f .sp-compact-module>.sub{
+-  min-height:2.8em;
+-  margin:0 0 14px;
+-  color:rgba(44,42,38,.70);
+-  font-size:.79rem;
+-  line-height:1.4;
+-}
+-body.compact-variant-f .sp-compact-module .grid{
+-  display:grid;
+-  grid-template-columns:1fr;
+-  gap:20px;
+-  height:100%;
+-}
+-body.compact-variant-f .sp-compact-elixirs .grid{grid-template-columns:repeat(2,minmax(0,1fr));}
+-body.compact-variant-f .sp-compact-module .pcard,
+-body.compact-variant-f .sp-compact-bananas .pcard,
+-body.compact-variant-f .sp-compact-powder .pcard{
+-  display:flex;
+-  flex-direction:column;
+-  min-width:0;
+-  min-height:100%;
+-  overflow:hidden;
+-  border-radius:9px;
+-  background:rgba(251,250,247,.9);
+-}
+-body.compact-variant-f .sp-compact-module .pcard .ph{
+-  width:100%;
+-  min-height:0;
+-  aspect-ratio:4/3;
+-  padding:18px;
+-}
+-body.compact-variant-f .sp-compact-module .pcard .ph img,
+-body.compact-variant-f .sp-compact-bananas .pcard .ph img,
+-body.compact-variant-f .sp-compact-powder .pcard .ph img{
+-  width:auto;
+-  height:78%;
+-  max-width:88%;
+-  max-height:78%;
+-  object-fit:contain;
+-}
+-body.compact-variant-f .sp-compact-module .pcard .tx{
+-  display:flex;
+-  flex:1;
+-  flex-direction:column;
+-  padding:16px 17px 17px;
+-}
+-body.compact-variant-f .sp-compact-module .pcard .d{font-size:.78rem;line-height:1.45;}
+-body.compact-variant-f .sp-compact-module .pcard .row{margin-top:auto;}
+-@media(max-width:1050px){
+-  body.compact-variant-f .sp-opening{
+-    grid-template-columns:1fr;
+-    align-items:start;
+-    gap:18px;
+-    width:calc(100% - 56px);
+-    margin-inline:auto;
+-    padding:34px 0 14px;
+-  }
+-  body.compact-variant-f .sp-opening .sp-head{max-width:620px;}
+-  body.compact-variant-f .sp-opening .sp-head p{max-width:46ch;}
+-  body.compact-variant-f .sp-opening .sp-sampler{
+-    grid-template-columns:minmax(190px,.72fr) minmax(220px,1fr) minmax(156px,auto);
+-    grid-template-areas:"packs details action";
+-  }
+-}
+-@media(max-width:900px){
+-  body.compact-variant-f .sp-compact-band{grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;}
+-  body.compact-variant-f .sp-compact-elixirs{grid-column:span 2;}
+-  body.compact-variant-f .sp-compact-bananas,
+-  body.compact-variant-f .sp-compact-powder{grid-column:span 1;}
+-}
+-@media(max-width:760px){
+-  body.compact-variant-f .sp-opening{width:calc(100% - 32px);padding:26px 0 10px;}
+-  body.compact-variant-f .sp-opening .sp-sampler{
+-    grid-template-columns:112px minmax(0,1fr);
+-    grid-template-areas:"packs details" "action action";
+-    gap:12px 16px;
+-    padding:16px;
+-  }
+-  body.compact-variant-f .sp-opening .sp-sampler .pill{justify-self:stretch;width:100%;}
+-  body.compact-variant-f .sp-compact-band{grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;}
+-  body.compact-variant-f .sp-compact-elixirs{grid-column:span 2;}
+-  body.compact-variant-f .sp-compact-bananas,
+-  body.compact-variant-f .sp-compact-powder{grid-column:span 1;}
+-}
+-@media(max-width:560px){
+-  body.compact-variant-f .sp-opening .sp-sampler{
+-    grid-template-columns:92px minmax(0,1fr);
+-    grid-template-areas:"packs details" "action action";
+-  }
+-  body.compact-variant-f .sp-compact-band{grid-template-columns:1fr;gap:24px;}
+-  body.compact-variant-f .sp-compact-elixirs,
+-  body.compact-variant-f .sp-compact-bananas,
+-  body.compact-variant-f .sp-compact-powder{grid-column:span 1;}
+-  body.compact-variant-f .sp-compact-elixirs .grid{grid-template-columns:1fr;}
+-  body.compact-variant-f .sp-compact-module>.sub{min-height:0;}
+-  body.compact-variant-f .sp-compact-module .pcard,
+-  body.compact-variant-f .sp-compact-bananas .pcard,
+-  body.compact-variant-f .sp-compact-powder .pcard{display:flex;min-height:0;}
+-  body.compact-variant-f .sp-compact-module .pcard .ph{min-height:210px;aspect-ratio:4/3;}
+-}
+-
+-/* SAT-SHOP-POLISH-R1 (render fix, 13 Aug): the block above declares
+-   max-height:78% on the compact-band product image, but a percentage does not
+-   resolve against a height derived from aspect-ratio, so the rule was inert.
+-   Tall portrait shots (elixirs, 1024x1536) rendered 235px inside a 198px panel
+-   and covered the product title by 88px at 1440. Anchoring the image box makes
+-   A's own 78% rule take effect. Design intent unchanged; square shots
+-   (bananas, powder) measured identically before and after. */
+-body.compact-variant-f .sp-compact-module .pcard .ph{position:relative;}
+-body.compact-variant-f .sp-compact-module .pcard .ph img,
+-body.compact-variant-f .sp-compact-bananas .pcard .ph img,
+-body.compact-variant-f .sp-compact-powder .pcard .ph img{
+-  position:absolute;
+-  inset:0;
+-  margin:auto;
+-  width:auto;
+-  height:78%;
+-  max-width:88%;
+-  max-height:78%;
+-  object-fit:contain;
+-}
+-
+-/* SAT-SHOP-POLISH-R1 + selectors (13 Aug): moon pack / eclipse size controls.
+-   Sits between the description and the price row so the card's existing
+-   title -> chips -> copy -> price -> action hierarchy is unchanged. */
+-.pcard .price-wrap{display:flex;flex-direction:column;gap:3px;min-width:0;}
+-.pcard .sel-price{color:var(--ink-faint);font-size:.62rem;letter-spacing:.07em;text-transform:uppercase;line-height:1.25;}
+-.size-picker{display:flex;align-items:center;justify-content:space-between;gap:10px;min-width:0;margin-top:2px;padding:8px 0 0;border-top:1px solid rgba(44,42,38,.09);color:var(--ink-soft);font-size:.58rem;letter-spacing:.1em;text-transform:uppercase;}
+-.size-picker>span{flex:0 0 auto;}
+-.size-picker.is-made-to-order{justify-content:space-between;}
+-.size-picker .mto{flex:0 0 auto;font-style:normal;opacity:.72;letter-spacing:.06em;text-transform:none;font-size:.72rem;}
+-.size-select{flex:0 1 auto;min-width:0;min-height:34px;max-width:100%;padding:0 26px 0 9px;border:0;border-bottom:1px solid rgba(44,42,38,.24);border-radius:0;background:transparent;color:var(--ink);font:500 .72rem var(--mm-sans);}
+-.sp-tools :is(.swatch,.view-btn,.sort-tool select,.reset-tool):focus-visible,
+-.size-select:focus-visible{outline:2px solid var(--acc);outline-offset:3px;}
+-body.compact-variant-f .size-picker{padding-top:7px;font-size:.56rem;}
+-body.compact-variant-f .size-select{min-height:34px;font-size:.7rem;}
+-body.compact-variant-f .sp-compact-module .size-picker{margin-top:auto;}
+-@media(max-width:560px){
+-  .pcard .row{align-items:stretch;}
+-  .size-picker{flex-wrap:wrap;gap:6px;}
+-  .size-select{width:100%;max-width:100%;}
+-}
+-
+ </style>
+-<script src="/mock-cart.js"></script>
+-<style id="mm-catdock-20260814">
+-/* Category dock. It is a FIXED N-column grid (repeat(8,minmax(0,1fr))) inside a track of
+-   min(930px, 100% - 48px). At 390 that is ~43px per column against labels like "SHOP ALL"
+-   and "BANANAS", so every label clipped mid-word and the row read as broken. It already
+-   hides its own scrollbar, so scrolling was always the intent. Let each item take its
+-   natural width and snap. Verified pre-existing: the same clipping is present in the
+-   pre-change backup, so this is not a regression from restoring #eclipses. */
+-@media(max-width:760px){
+-  .sp-range-nav .sp-cats,
+-  body.compact-variant-f .sp-range-nav .sp-cats{
+-    grid-template-columns:none!important;
+-    grid-auto-flow:column;
+-    grid-auto-columns:max-content;
+-    overflow-x:auto;
+-    -webkit-overflow-scrolling:touch;
+-    scroll-snap-type:x proximity;
+-    scroll-padding-left:12px;
+-  }
+-  .sp-range-nav .sp-cats>*{scroll-snap-align:start;padding-left:18px;padding-right:18px;
+-    white-space:nowrap;}
+-}
+-</style>
+ </body>
+ </html>

@@ -1,0 +1,48 @@
+{
+  "schema": "maplemoon-commerce-static-gate/v1",
+  "outcome": "HOLD",
+  "reason": "Immutable preview cart has no subtotal UI/calculation and does not read selected multi-option price state.",
+  "snapshot": {
+    "mock_cart_js_sha256": "5eea3ac3c707964f878b5221c0f001902dc4f6c84d56457fac1455a4e1844816",
+    "shop_html_sha256": "f111ad5123e34dadd46ac497fca286066efc67c05dd7e68f0d3e70c97c735038"
+  },
+  "controls_pass": true,
+  "required_constructs_pass": false,
+  "probes": [
+    {
+      "id": "cart_subtotal_label",
+      "requirement": "The cart runtime exposes a subtotal label or target.",
+      "positive_control_detected": true,
+      "immutable_cart_detected": false
+    },
+    {
+      "id": "cart_subtotal_target",
+      "requirement": "The cart runtime contains a subtotal output target.",
+      "positive_control_detected": true,
+      "immutable_cart_detected": false
+    },
+    {
+      "id": "cart_monetary_arithmetic",
+      "requirement": "The cart runtime computes a monetary total from item price and quantity.",
+      "positive_control_detected": true,
+      "immutable_cart_detected": false
+    },
+    {
+      "id": "selected_option_price_capture",
+      "requirement": "The cart runtime reads the selected catalogue option or its selected price.",
+      "positive_control_detected": true,
+      "immutable_cart_detected": false
+    }
+  ],
+  "facts": {
+    "shop_has_option_controls": true,
+    "shop_updates_selected_price": true,
+    "cart_captures_price_from_static_pr": true,
+    "cart_captures_size_from_static_pr_child": true,
+    "cart_summary_rows": [
+      "Items",
+      "Calculated in the live store"
+    ],
+    "cart_total_quantity_only": true
+  }
+}

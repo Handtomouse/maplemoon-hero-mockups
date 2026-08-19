@@ -1,0 +1,20 @@
+{
+  "store": "maplemooncarob.myshopify.com",
+  "themes": [
+    {
+      "id": 154500595909,
+      "name": "Ethereal",
+      "processing": false,
+      "role": "live"
+    },
+    {
+      "id": 160076628165,
+      "name": "MapleMoon Private Review 20260817 S1",
+      "processing": false,
+      "role": "unpublished"
+    }
+  ],
+  "unexpected_themes": 0,
+  "source_unchanged": true,
+  "result": "PASS"
+}

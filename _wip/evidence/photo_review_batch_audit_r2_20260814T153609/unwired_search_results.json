@@ -1,0 +1,489 @@
+{
+  "targets": [
+    "carob_powder_isolated.png",
+    "elixir_pure_isolated_equal-size.png",
+    "elixir_spiced_isolated_equal-size.png",
+    "five_item_bundle_low_angle_isolated.png"
+  ],
+  "roots": [
+    "/Users/handtomouse/maplemoon-website",
+    "/Users/handtomouse/maplemoon_build_20260813"
+  ],
+  "method": "Recursive path-name and raw-byte filename search; .git and node_modules excluded. Control-plane packet, receipt and named audit evidence paths are classified separately from website/build wiring.",
+  "files_scanned": 9013,
+  "bytes_scanned": 13259930300,
+  "positive_control": {
+    "path": "/Users/handtomouse/maplemoon-website/_wip/evidence/photo_review_batch_audit_r2_20260814T153609/unwired_search_positive_control.txt",
+    "counts": {
+      "carob_powder_isolated.png": 1,
+      "elixir_pure_isolated_equal-size.png": 1,
+      "elixir_spiced_isolated_equal-size.png": 1,
+      "five_item_bundle_low_angle_isolated.png": 1
+    },
+    "pass": true
+  },
+  "by_root": {
+    "/Users/handtomouse/maplemoon-website": {
+      "all_match_records": 56,
+      "control_plane_match_records": 56,
+      "website_or_build_match_records": 0
+    },
+    "/Users/handtomouse/maplemoon_build_20260813": {
+      "all_match_records": 0,
+      "control_plane_match_records": 0,
+      "website_or_build_match_records": 0
+    }
+  },
+  "all_matches": [
+    {
+      "root": "/Users/handtomouse/maplemoon-website",
+      "path": "/Users/handtomouse/maplemoon-website/_wip/evidence/photo_review_batch_audit_20260814T152749/unwired_positive_control.txt",
+      "target": "carob_powder_isolated.png",
+      "kind": "content",
+      "occurrences": 1,
+      "allowed_control_plane": true
+    },
+    {
+      "root": "/Users/handtomouse/maplemoon-website",
+      "path": "/Users/handtomouse/maplemoon-website/_wip/evidence/photo_review_batch_audit_20260814T152749/unwired_positive_control.txt",
+      "target": "elixir_pure_isolated_equal-size.png",
+      "kind": "content",
+      "occurrences": 1,
+      "allowed_control_plane": true
+    },
+    {
+      "root": "/Users/handtomouse/maplemoon-website",
+      "path": "/Users/handtomouse/maplemoon-website/_wip/evidence/photo_review_batch_audit_20260814T152749/unwired_positive_control.txt",
+      "target": "elixir_spiced_isolated_equal-size.png",
+      "kind": "content",
+      "occurrences": 1,
+      "allowed_control_plane": true
+    },
+    {
+      "root": "/Users/handtomouse/maplemoon-website",
+      "path": "/Users/handtomouse/maplemoon-website/_wip/evidence/photo_review_batch_audit_20260814T152749/unwired_positive_control.txt",
+      "target": "five_item_bundle_low_angle_isolated.png",
+      "kind": "content",
+      "occurrences": 1,
+      "allowed_control_plane": true
+    },
+    {
+      "root": "/Users/handtomouse/maplemoon-website",
+      "path": "/Users/handtomouse/maplemoon-website/_wip/evidence/photo_review_batch_audit_20260814T152749/review_surface_results.json",
+      "target": "carob_powder_isolated.png",
+      "kind": "content",
+      "occurrences": 10,
+      "allowed_control_plane": true
+    },
+    {
+      "root": "/Users/handtomouse/maplemoon-website",
+      "path": "/Users/handtomouse/maplemoon-website/_wip/evidence/photo_review_batch_audit_20260814T152749/review_surface_results.json",
+      "target": "elixir_pure_isolated_equal-size.png",
+      "kind": "content",
+      "occurrences": 10,
+      "allowed_control_plane": true
+    },
+    {
+      "root": "/Users/handtomouse/maplemoon-website",
+      "path": "/Users/handtomouse/maplemoon-website/_wip/evidence/photo_review_batch_audit_20260814T152749/review_surface_results.json",
+      "target": "elixir_spiced_isolated_equal-size.png",
+      "kind": "content",
+      "occurrences": 10,
+      "allowed_control_plane": true
+    },
+    {
+      "root": "/Users/handtomouse/maplemoon-website",
+      "path": "/Users/handtomouse/maplemoon-website/_wip/evidence/photo_review_batch_audit_20260814T152749/review_surface_results.json",
+      "target": "five_item_bundle_low_angle_isolated.png",
+      "kind": "content",
+      "occurrences": 10,
+      "allowed_control_plane": true
+    },
+    {
+      "root": "/Users/handtomouse/maplemoon-website",
+      "path": "/Users/handtomouse/maplemoon-website/_wip/evidence/photo_review_batch_audit_20260814T152749/pixel_audit.py",
+      "target": "carob_powder_isolated.png",
+      "kind": "content",
+      "occurrences": 1,
+      "allowed_control_plane": true
+    },
+    {
+      "root": "/Users/handtomouse/maplemoon-website",
+      "path": "/Users/handtomouse/maplemoon-website/_wip/evidence/photo_review_batch_audit_20260814T152749/pixel_audit.py",
+      "target": "elixir_pure_isolated_equal-size.png",
+      "kind": "content",
+      "occurrences": 1,
+      "allowed_control_plane": true
+    },
+    {
+      "root": "/Users/handtomouse/maplemoon-website",
+      "path": "/Users/handtomouse/maplemoon-website/_wip/evidence/photo_review_batch_audit_20260814T152749/pixel_audit.py",
+      "target": "elixir_spiced_isolated_equal-size.png",
+      "kind": "content",
+      "occurrences": 1,
+      "allowed_control_plane": true
+    },
+    {
+      "root": "/Users/handtomouse/maplemoon-website",
+      "path": "/Users/handtomouse/maplemoon-website/_wip/evidence/photo_review_batch_audit_20260814T152749/pixel_audit.py",
+      "target": "five_item_bundle_low_angle_isolated.png",
+      "kind": "content",
+      "occurrences": 1,
+      "allowed_control_plane": true
+    },
+    {
+      "root": "/Users/handtomouse/maplemoon-website",
+      "path": "/Users/handtomouse/maplemoon-website/_wip/evidence/photo_review_batch_audit_20260814T152749/review_surface_verify.cjs",
+      "target": "carob_powder_isolated.png",
+      "kind": "content",
+      "occurrences": 1,
+      "allowed_control_plane": true
+    },
+    {
+      "root": "/Users/handtomouse/maplemoon-website",
+      "path": "/Users/handtomouse/maplemoon-website/_wip/evidence/photo_review_batch_audit_20260814T152749/review_surface_verify.cjs",
+      "target": "elixir_pure_isolated_equal-size.png",
+      "kind": "content",
+      "occurrences": 1,
+      "allowed_control_plane": true
+    },
+    {
+      "root": "/Users/handtomouse/maplemoon-website",
+      "path": "/Users/handtomouse/maplemoon-website/_wip/evidence/photo_review_batch_audit_20260814T152749/review_surface_verify.cjs",
+      "target": "elixir_spiced_isolated_equal-size.png",
+      "kind": "content",
+      "occurrences": 1,
+      "allowed_control_plane": true
+    },
+    {
+      "root": "/Users/handtomouse/maplemoon-website",
+      "path": "/Users/handtomouse/maplemoon-website/_wip/evidence/photo_review_batch_audit_20260814T152749/review_surface_verify.cjs",
+      "target": "five_item_bundle_low_angle_isolated.png",
+      "kind": "content",
+      "occurrences": 1,
+      "allowed_control_plane": true
+    },
+    {
+      "root": "/Users/handtomouse/maplemoon-website",
+      "path": "/Users/handtomouse/maplemoon-website/_wip/evidence/photo_review_batch_audit_20260814T152749/pixel_geometry_results.json",
+      "target": "carob_powder_isolated.png",
+      "kind": "content",
+      "occurrences": 1,
+      "allowed_control_plane": true
+    },
+    {
+      "root": "/Users/handtomouse/maplemoon-website",
+      "path": "/Users/handtomouse/maplemoon-website/_wip/evidence/photo_review_batch_audit_20260814T152749/pixel_geometry_results.json",
+      "target": "elixir_pure_isolated_equal-size.png",
+      "kind": "content",
+      "occurrences": 1,
+      "allowed_control_plane": true
+    },
+    {
+      "root": "/Users/handtomouse/maplemoon-website",
+      "path": "/Users/handtomouse/maplemoon-website/_wip/evidence/photo_review_batch_audit_20260814T152749/pixel_geometry_results.json",
+      "target": "elixir_spiced_isolated_equal-size.png",
+      "kind": "content",
+      "occurrences": 1,
+      "allowed_control_plane": true
+    },
+    {
+      "root": "/Users/handtomouse/maplemoon-website",
+      "path": "/Users/handtomouse/maplemoon-website/_wip/evidence/photo_review_batch_audit_20260814T152749/pixel_geometry_results.json",
+      "target": "five_item_bundle_low_angle_isolated.png",
+      "kind": "content",
+      "occurrences": 1,
+      "allowed_control_plane": true
+    },
+    {
+      "root": "/Users/handtomouse/maplemoon-website",
+      "path": "/Users/handtomouse/maplemoon-website/_wip/evidence/photo_review_batch_audit_r2_20260814T153609/review_surface_r2_verify.cjs",
+      "target": "carob_powder_isolated.png",
+      "kind": "content",
+      "occurrences": 1,
+      "allowed_control_plane": true
+    },
+    {
+      "root": "/Users/handtomouse/maplemoon-website",
+      "path": "/Users/handtomouse/maplemoon-website/_wip/evidence/photo_review_batch_audit_r2_20260814T153609/review_surface_r2_verify.cjs",
+      "target": "elixir_pure_isolated_equal-size.png",
+      "kind": "content",
+      "occurrences": 1,
+      "allowed_control_plane": true
+    },
+    {
+      "root": "/Users/handtomouse/maplemoon-website",
+      "path": "/Users/handtomouse/maplemoon-website/_wip/evidence/photo_review_batch_audit_r2_20260814T153609/review_surface_r2_verify.cjs",
+      "target": "elixir_spiced_isolated_equal-size.png",
+      "kind": "content",
+      "occurrences": 1,
+      "allowed_control_plane": true
+    },
+    {
+      "root": "/Users/handtomouse/maplemoon-website",
+      "path": "/Users/handtomouse/maplemoon-website/_wip/evidence/photo_review_batch_audit_r2_20260814T153609/review_surface_r2_verify.cjs",
+      "target": "five_item_bundle_low_angle_isolated.png",
+      "kind": "content",
+      "occurrences": 1,
+      "allowed_control_plane": true
+    },
+    {
+      "root": "/Users/handtomouse/maplemoon-website",
+      "path": "/Users/handtomouse/maplemoon-website/_wip/evidence/photo_review_batch_audit_r2_20260814T153609/review_surface_r2_results.json",
+      "target": "carob_powder_isolated.png",
+      "kind": "content",
+      "occurrences": 24,
+      "allowed_control_plane": true
+    },
+    {
+      "root": "/Users/handtomouse/maplemoon-website",
+      "path": "/Users/handtomouse/maplemoon-website/_wip/evidence/photo_review_batch_audit_r2_20260814T153609/review_surface_r2_results.json",
+      "target": "elixir_pure_isolated_equal-size.png",
+      "kind": "content",
+      "occurrences": 24,
+      "allowed_control_plane": true
+    },
+    {
+      "root": "/Users/handtomouse/maplemoon-website",
+      "path": "/Users/handtomouse/maplemoon-website/_wip/evidence/photo_review_batch_audit_r2_20260814T153609/review_surface_r2_results.json",
+      "target": "elixir_spiced_isolated_equal-size.png",
+      "kind": "content",
+      "occurrences": 24,
+      "allowed_control_plane": true
+    },
+    {
+      "root": "/Users/handtomouse/maplemoon-website",
+      "path": "/Users/handtomouse/maplemoon-website/_wip/evidence/photo_review_batch_audit_r2_20260814T153609/review_surface_r2_results.json",
+      "target": "five_item_bundle_low_angle_isolated.png",
+      "kind": "content",
+      "occurrences": 24,
+      "allowed_control_plane": true
+    },
+    {
+      "root": "/Users/handtomouse/maplemoon-website",
+      "path": "/Users/handtomouse/maplemoon-website/_wip/evidence/photo_review_batch_audit_r2_20260814T153609/mechanical_revalidate.py",
+      "target": "carob_powder_isolated.png",
+      "kind": "content",
+      "occurrences": 1,
+      "allowed_control_plane": true
+    },
+    {
+      "root": "/Users/handtomouse/maplemoon-website",
+      "path": "/Users/handtomouse/maplemoon-website/_wip/evidence/photo_review_batch_audit_r2_20260814T153609/mechanical_revalidate.py",
+      "target": "elixir_pure_isolated_equal-size.png",
+      "kind": "content",
+      "occurrences": 1,
+      "allowed_control_plane": true
+    },
+    {
+      "root": "/Users/handtomouse/maplemoon-website",
+      "path": "/Users/handtomouse/maplemoon-website/_wip/evidence/photo_review_batch_audit_r2_20260814T153609/mechanical_revalidate.py",
+      "target": "elixir_spiced_isolated_equal-size.png",
+      "kind": "content",
+      "occurrences": 1,
+      "allowed_control_plane": true
+    },
+    {
+      "root": "/Users/handtomouse/maplemoon-website",
+      "path": "/Users/handtomouse/maplemoon-website/_wip/evidence/photo_review_batch_audit_r2_20260814T153609/mechanical_revalidate.py",
+      "target": "five_item_bundle_low_angle_isolated.png",
+      "kind": "content",
+      "occurrences": 1,
+      "allowed_control_plane": true
+    },
+    {
+      "root": "/Users/handtomouse/maplemoon-website",
+      "path": "/Users/handtomouse/maplemoon-website/_wip/evidence/photo_review_batch_audit_r2_20260814T153609/unwired_search_positive_control.txt",
+      "target": "carob_powder_isolated.png",
+      "kind": "content",
+      "occurrences": 1,
+      "allowed_control_plane": true
+    },
+    {
+      "root": "/Users/handtomouse/maplemoon-website",
+      "path": "/Users/handtomouse/maplemoon-website/_wip/evidence/photo_review_batch_audit_r2_20260814T153609/unwired_search_positive_control.txt",
+      "target": "elixir_pure_isolated_equal-size.png",
+      "kind": "content",
+      "occurrences": 1,
+      "allowed_control_plane": true
+    },
+    {
+      "root": "/Users/handtomouse/maplemoon-website",
+      "path": "/Users/handtomouse/maplemoon-website/_wip/evidence/photo_review_batch_audit_r2_20260814T153609/unwired_search_positive_control.txt",
+      "target": "elixir_spiced_isolated_equal-size.png",
+      "kind": "content",
+      "occurrences": 1,
+      "allowed_control_plane": true
+    },
+    {
+      "root": "/Users/handtomouse/maplemoon-website",
+      "path": "/Users/handtomouse/maplemoon-website/_wip/evidence/photo_review_batch_audit_r2_20260814T153609/unwired_search_positive_control.txt",
+      "target": "five_item_bundle_low_angle_isolated.png",
+      "kind": "content",
+      "occurrences": 1,
+      "allowed_control_plane": true
+    },
+    {
+      "root": "/Users/handtomouse/maplemoon-website",
+      "path": "/Users/handtomouse/maplemoon-website/_wip/evidence/photo_review_batch_audit_r2_20260814T153609/mechanical_revalidation.json",
+      "target": "carob_powder_isolated.png",
+      "kind": "content",
+      "occurrences": 1,
+      "allowed_control_plane": true
+    },
+    {
+      "root": "/Users/handtomouse/maplemoon-website",
+      "path": "/Users/handtomouse/maplemoon-website/_wip/evidence/photo_review_batch_audit_r2_20260814T153609/mechanical_revalidation.json",
+      "target": "elixir_pure_isolated_equal-size.png",
+      "kind": "content",
+      "occurrences": 1,
+      "allowed_control_plane": true
+    },
+    {
+      "root": "/Users/handtomouse/maplemoon-website",
+      "path": "/Users/handtomouse/maplemoon-website/_wip/evidence/photo_review_batch_audit_r2_20260814T153609/mechanical_revalidation.json",
+      "target": "elixir_spiced_isolated_equal-size.png",
+      "kind": "content",
+      "occurrences": 1,
+      "allowed_control_plane": true
+    },
+    {
+      "root": "/Users/handtomouse/maplemoon-website",
+      "path": "/Users/handtomouse/maplemoon-website/_wip/evidence/photo_review_batch_audit_r2_20260814T153609/mechanical_revalidation.json",
+      "target": "five_item_bundle_low_angle_isolated.png",
+      "kind": "content",
+      "occurrences": 1,
+      "allowed_control_plane": true
+    },
+    {
+      "root": "/Users/handtomouse/maplemoon-website",
+      "path": "/Users/handtomouse/maplemoon-website/_wip/evidence/photo_review_batch_audit_r2_20260814T153609/unwired_search.py",
+      "target": "carob_powder_isolated.png",
+      "kind": "content",
+      "occurrences": 1,
+      "allowed_control_plane": true
+    },
+    {
+      "root": "/Users/handtomouse/maplemoon-website",
+      "path": "/Users/handtomouse/maplemoon-website/_wip/evidence/photo_review_batch_audit_r2_20260814T153609/unwired_search.py",
+      "target": "elixir_pure_isolated_equal-size.png",
+      "kind": "content",
+      "occurrences": 1,
+      "allowed_control_plane": true
+    },
+    {
+      "root": "/Users/handtomouse/maplemoon-website",
+      "path": "/Users/handtomouse/maplemoon-website/_wip/evidence/photo_review_batch_audit_r2_20260814T153609/unwired_search.py",
+      "target": "elixir_spiced_isolated_equal-size.png",
+      "kind": "content",
+      "occurrences": 1,
+      "allowed_control_plane": true
+    },
+    {
+      "root": "/Users/handtomouse/maplemoon-website",
+      "path": "/Users/handtomouse/maplemoon-website/_wip/evidence/photo_review_batch_audit_r2_20260814T153609/unwired_search.py",
+      "target": "five_item_bundle_low_angle_isolated.png",
+      "kind": "content",
+      "occurrences": 1,
+      "allowed_control_plane": true
+    },
+    {
+      "root": "/Users/handtomouse/maplemoon-website",
+      "path": "/Users/handtomouse/maplemoon-website/docs/orchestration/packets/MAPLEMOON-PHOTO-REVIEW-BATCH-AUDIT-20260814T152749.md",
+      "target": "carob_powder_isolated.png",
+      "kind": "content",
+      "occurrences": 1,
+      "allowed_control_plane": true
+    },
+    {
+      "root": "/Users/handtomouse/maplemoon-website",
+      "path": "/Users/handtomouse/maplemoon-website/docs/orchestration/packets/MAPLEMOON-PHOTO-REVIEW-BATCH-AUDIT-20260814T152749.md",
+      "target": "elixir_pure_isolated_equal-size.png",
+      "kind": "content",
+      "occurrences": 1,
+      "allowed_control_plane": true
+    },
+    {
+      "root": "/Users/handtomouse/maplemoon-website",
+      "path": "/Users/handtomouse/maplemoon-website/docs/orchestration/packets/MAPLEMOON-PHOTO-REVIEW-BATCH-AUDIT-20260814T152749.md",
+      "target": "elixir_spiced_isolated_equal-size.png",
+      "kind": "content",
+      "occurrences": 1,
+      "allowed_control_plane": true
+    },
+    {
+      "root": "/Users/handtomouse/maplemoon-website",
+      "path": "/Users/handtomouse/maplemoon-website/docs/orchestration/packets/MAPLEMOON-PHOTO-REVIEW-BATCH-AUDIT-20260814T152749.md",
+      "target": "five_item_bundle_low_angle_isolated.png",
+      "kind": "content",
+      "occurrences": 1,
+      "allowed_control_plane": true
+    },
+    {
+      "root": "/Users/handtomouse/maplemoon-website",
+      "path": "/Users/handtomouse/maplemoon-website/docs/orchestration/packets/MAPLEMOON-PHOTO-REVIEW-BATCH-AUDIT-R2-20260814T153609.md",
+      "target": "carob_powder_isolated.png",
+      "kind": "content",
+      "occurrences": 1,
+      "allowed_control_plane": true
+    },
+    {
+      "root": "/Users/handtomouse/maplemoon-website",
+      "path": "/Users/handtomouse/maplemoon-website/docs/orchestration/packets/MAPLEMOON-PHOTO-REVIEW-BATCH-AUDIT-R2-20260814T153609.md",
+      "target": "elixir_pure_isolated_equal-size.png",
+      "kind": "content",
+      "occurrences": 1,
+      "allowed_control_plane": true
+    },
+    {
+      "root": "/Users/handtomouse/maplemoon-website",
+      "path": "/Users/handtomouse/maplemoon-website/docs/orchestration/packets/MAPLEMOON-PHOTO-REVIEW-BATCH-AUDIT-R2-20260814T153609.md",
+      "target": "elixir_spiced_isolated_equal-size.png",
+      "kind": "content",
+      "occurrences": 1,
+      "allowed_control_plane": true
+    },
+    {
+      "root": "/Users/handtomouse/maplemoon-website",
+      "path": "/Users/handtomouse/maplemoon-website/docs/orchestration/packets/MAPLEMOON-PHOTO-REVIEW-BATCH-AUDIT-R2-20260814T153609.md",
+      "target": "five_item_bundle_low_angle_isolated.png",
+      "kind": "content",
+      "occurrences": 1,
+      "allowed_control_plane": true
+    },
+    {
+      "root": "/Users/handtomouse/maplemoon-website",
+      "path": "/Users/handtomouse/maplemoon-website/docs/orchestration/reviews/MAPLEMOON-PHOTO-REVIEW-BATCH-AUDIT-20260814T152749.json",
+      "target": "carob_powder_isolated.png",
+      "kind": "content",
+      "occurrences": 1,
+      "allowed_control_plane": true
+    },
+    {
+      "root": "/Users/handtomouse/maplemoon-website",
+      "path": "/Users/handtomouse/maplemoon-website/docs/orchestration/reviews/MAPLEMOON-PHOTO-REVIEW-BATCH-AUDIT-20260814T152749.json",
+      "target": "elixir_pure_isolated_equal-size.png",
+      "kind": "content",
+      "occurrences": 1,
+      "allowed_control_plane": true
+    },
+    {
+      "root": "/Users/handtomouse/maplemoon-website",
+      "path": "/Users/handtomouse/maplemoon-website/docs/orchestration/reviews/MAPLEMOON-PHOTO-REVIEW-BATCH-AUDIT-20260814T152749.json",
+      "target": "elixir_spiced_isolated_equal-size.png",
+      "kind": "content",
+      "occurrences": 1,
+      "allowed_control_plane": true
+    },
+    {
+      "root": "/Users/handtomouse/maplemoon-website",
+      "path": "/Users/handtomouse/maplemoon-website/docs/orchestration/reviews/MAPLEMOON-PHOTO-REVIEW-BATCH-AUDIT-20260814T152749.json",
+      "target": "five_item_bundle_low_angle_isolated.png",
+      "kind": "content",
+      "occurrences": 1,
+      "allowed_control_plane": true
+    }
+  ],
+  "forbidden_website_or_build_matches": [],
+  "all_pass": true
+}

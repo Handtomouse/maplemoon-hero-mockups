@@ -1,0 +1,19 @@
+{
+  "source_sha256": "eeea19fd89b30052bd4c4cf28519f56f1195e4595c92485fb186a66719e6b114",
+  "bytes": 109468,
+  "records": 119,
+  "columns": 82,
+  "type_counts": {
+    "variable": 20,
+    "variation": 91,
+    "simple": 8
+  },
+  "published_rows": 119,
+  "sku_nonblank": 0,
+  "sku_unique_nonblank": 0,
+  "first_id": "2395",
+  "last_id": "6227",
+  "catalogue_pii_detected": false,
+  "note": "Backorders and customer-review configuration columns are product settings, not customer records."
+}
+

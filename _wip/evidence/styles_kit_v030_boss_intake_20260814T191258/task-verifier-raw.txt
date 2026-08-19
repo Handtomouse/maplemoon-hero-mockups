@@ -1,0 +1,29 @@
+PASS required files non-empty: 31/31
+PASS DESIGN-TOKENS.json parses
+PASS ASSET-MANIFEST.json parses
+PASS RULE-REGISTER.json parses
+PASS CLEANUP-CANDIDATES.json parses
+PASS package version parity: 0.3.0-provisional
+PASS cleanup candidate schema/classification integrity: 47/47
+PASS rule register schema/status/source integrity: 68 rules + 12 decisions
+PASS human↔machine rule mirror: 68/68 rules, 12/12 decisions
+PASS Markdown rule references resolve to RULE-REGISTER.json
+PASS 13 August claim/FAQ/base-neutrality correction invariants
+PASS JSON↔CSS token consistency: 66/66
+PASS small gold text contrast: color.surface.blue=5.80:1 color.surface.ivory=5.93:1 color.surface.paper=6.47:1
+PASS asset manifest hashes: 9/9
+PASS visual proofs and dimensions: 31/31
+PASS internal HTML/Markdown links and local assets resolve
+PASS no accidental forbidden/internal implementation paths
+PASS playground includes exactly the six permitted preview names
+PASS shell/navigation and shared page-header specimens present
+PASS sections/media/control specimens: roles=7 mediaStates=4 integrations=4 effects=4 overlays=3 systemStates=7 delivery=3 controlStates=6 icons=6
+PASS anti-pattern comparisons: 12
+PASS playground.js JavaScript parses
+PASS playground CSS brace balance
+PASS contrast scrim is contained to its media box
+RESULT PASS
+
+Command: node verify-style-kit.mjs
+Working directory: /Users/handtomouse/Documents/Codex/2026-08-13/maple-moon-shared-site-styles-kit/outputs
+Exit: 0

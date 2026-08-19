@@ -1,0 +1,3 @@
+jq harness attempt 2 exit 5
+Cannot index array with string source: the first pipeline needed explicit parentheses inside the aggregate array.
+This was a task-owned acceptance-harness error, not a source-package result.

@@ -1,0 +1,18 @@
+{
+  "schema": "maplemoon-visual-inspection/v1",
+  "inspected_at": "2026-08-14T06:55:31Z",
+  "outcome": "PASS",
+  "files": [
+    {"path": "homepage_night_drawer_390.png", "bytes": 314861, "observation": "Night header and six-row drawer are nonblank, full-width, readable and visually settled."},
+    {"path": "shop_light_drawer_390.png", "bytes": 159487, "observation": "Light header and six-row drawer are nonblank, readable and visually settled."},
+    {"path": "homepage_reduced_drawer_390.png", "bytes": 302542, "observation": "Reduced-motion drawer state is nonblank, full-width and settled."},
+    {"path": "faq_exact_drawer_390.png", "bytes": 84920, "observation": "Correct caffeine item is open, readable and unclipped below the clean mobile drawer."},
+    {"path": "faq_exact_1440.png", "bytes": 436026, "observation": "Correct caffeine item is open, readable and unclipped in desktop layout."},
+    {"path": "shop_desktop_reset_1440.png", "bytes": 544205, "observation": "Desktop header/navigation reset is nonblank and has no stale mobile drawer state."},
+    {"path": "screenshots/cart-mixed-390.png", "bytes": 67079, "observation": "Mobile cart is contained, readable, nonblank and shows exact Moon/Banana option prices."},
+    {"path": "screenshots/cart-mixed-900.png", "bytes": 149491, "observation": "Breakpoint cart is contained, readable and shows four exact option lines."},
+    {"path": "screenshots/cart-mixed-1440.png", "bytes": 207956, "observation": "Desktop cart is contained, readable and shows four distinct exact option lines."}
+  ],
+  "blank_or_unreadable": [],
+  "clipping_or_horizontal_overflow": []
+}

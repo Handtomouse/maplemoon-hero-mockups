@@ -1,0 +1,12 @@
+{
+  "baseline_files": 73,
+  "derived_files": 75,
+  "projections_equal": true,
+  "reverse_equal": true,
+  "routes": 7,
+  "runtime_assets": [
+    "style-chrome-derived.css",
+    "style-chrome-derived.js"
+  ],
+  "schema": "maplemoon-style-chrome-build-summary/v1"
+}

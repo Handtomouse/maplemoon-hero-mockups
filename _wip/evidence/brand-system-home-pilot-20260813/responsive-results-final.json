@@ -1,0 +1,61 @@
+{
+  "widths": [
+    {
+      "width": 320,
+      "height": 844,
+      "scrollWidth": 320,
+      "clientWidth": 320,
+      "scrollHeight": 10078,
+      "brokenImages": [],
+      "videoErrors": [],
+      "chromeMounts": 1,
+      "currentCount": 1,
+      "consoleErrors": [],
+      "badResponses": [],
+      "pass": true
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "scrollWidth": 390,
+      "clientWidth": 390,
+      "scrollHeight": 9734,
+      "brokenImages": [],
+      "videoErrors": [],
+      "chromeMounts": 1,
+      "currentCount": 1,
+      "consoleErrors": [],
+      "badResponses": [],
+      "pass": true
+    },
+    {
+      "width": 834,
+      "height": 1112,
+      "scrollWidth": 834,
+      "clientWidth": 834,
+      "scrollHeight": 8710,
+      "brokenImages": [],
+      "videoErrors": [],
+      "chromeMounts": 1,
+      "currentCount": 1,
+      "consoleErrors": [],
+      "badResponses": [],
+      "pass": true
+    },
+    {
+      "width": 1440,
+      "height": 900,
+      "scrollWidth": 1440,
+      "clientWidth": 1440,
+      "scrollHeight": 7403,
+      "brokenImages": [],
+      "videoErrors": [],
+      "chromeMounts": 1,
+      "currentCount": 1,
+      "consoleErrors": [],
+      "badResponses": [],
+      "pass": true
+    }
+  ],
+  "pass": true
+}

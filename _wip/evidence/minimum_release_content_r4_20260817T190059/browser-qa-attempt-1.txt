@@ -1,0 +1,10 @@
+HARNESS-ONLY FAILURE — no site case executed.
+
+Command exited 1 before browser launch because Node ESM did not resolve the bundled
+Playwright package from NODE_PATH:
+
+Error [ERR_MODULE_NOT_FOUND]: Cannot find package 'playwright' imported from
+/Users/handtomouse/maplemoon-website/_wip/evidence/minimum_release_content_r4_20260817T190059/browser-qa.mjs
+
+Correction: import the exact bundled Playwright index.mjs path. Site assertions and
+candidate bytes remain unchanged.

@@ -1,0 +1,113 @@
+{
+  "schema": "maplemoon-receipt/v2",
+  "receipt_id": "MAPLEMOON-DESIGN-SYSTEM-GAP-AUDIT-CLOSE-R3-20260817T181126-RECEIPT-FAIL-01",
+  "packet_id": "MAPLEMOON-DESIGN-SYSTEM-GAP-AUDIT-CLOSE-R3-20260817T181126",
+  "worker_thread_id": "019ff65f-fd33-7e51-8a83-360ba2f8d665",
+  "worker": "Maple Moon shared site styles kit task",
+  "started_at": "2026-08-17T08:13:57.620592Z",
+  "completed_at": "2026-08-17T08:32:00Z",
+  "files_read": [
+    "maplemoon-website/docs/orchestration/packets/MAPLEMOON-DESIGN-SYSTEM-GAP-AUDIT-CLOSE-R3-20260817T181126.md",
+    "maplemoon-website/docs/orchestration/packets/MAPLEMOON-DESIGN-SYSTEM-GAP-AUDIT-CLOSE-R2-20260817T175534.md",
+    "maplemoon-website/docs/orchestration/packets/MAPLEMOON-DESIGN-SYSTEM-GAP-AUDIT-20260817T153140.md",
+    "maplemoon-website/docs/orchestration/reviews/MAPLEMOON-DESIGN-SYSTEM-GAP-AUDIT-20260817T153140.md",
+    "maplemoon-website/docs/orchestration/reviews/MAPLEMOON-DESIGN-SYSTEM-GAP-AUDIT-20260817T153140.json",
+    "maplemoon-website/_wip/evidence/design_system_gap_audit_20260817T153140",
+    "maplemoon-website/_wip/evidence/design_system_gap_audit_close_r2_20260817T175534",
+    "maplemoon-website/docs/orchestration/MAPLEMOON_BOSS_EXECUTION_LEDGER_20260816.md",
+    "maplemoon-website/docs/orchestration/reviews/MAPLEMOON-STYLES-KIT-V031-BOSS-REINTAKE-20260814T204321.md",
+    "maplemoon-website/docs/orchestration/reviews/MAPLEMOON-SEVEN-ROUTE-VISUAL-AUDIT-R2-20260816T210036.md",
+    "maplemoon-website/docs/orchestration/reviews/MAPLEMOON-SEVEN-ROUTE-VISUAL-AUDIT-R2-20260816T210036.json",
+    "maplemoon-website/_wip/evidence/seven_route_visual_audit_r2_20260816T210036",
+    "maplemoon-website/_wip/deploy/generated/maplemoon-style-chrome-derived-r2-20260817T140018",
+    "maplemoon-website/_wip/evidence/style_chrome_correction_r2_20260817T140018",
+    "maplemoon-website/docs/orchestration/reviews/MAPLEMOON-STYLE-CHROME-CORRECTION-R2-20260817T140018.json",
+    "maplemoon-website/docs/orchestration/packets/MAPLEMOON-STYLE-CHROME-R2-HOLD-DISPOSITION-20260817T151159.md",
+    "Documents/Codex/2026-08-13/maple-moon-shared-site-styles-kit/outputs",
+    "Documents/Codex/2026-08-11/referenced-chatgpt-conversation-this-is-an/outputs/maple-moon-recovery",
+    "UFC/ops/day/20260813/MORNING_BRIEF.html",
+    "/private/tmp/maplemoon-pdp-route-repair-20260816",
+    "maplemoon-website/scripts/check-maplemoon-receipt.py"
+  ],
+  "files_changed": [
+    "maplemoon-website/_wip/evidence/design_system_gap_audit_close_r3_20260817T181126",
+    "maplemoon-website/docs/orchestration/reviews/MAPLEMOON-DESIGN-SYSTEM-GAP-AUDIT-CLOSE-R3-20260817T181126.md",
+    "maplemoon-website/docs/orchestration/reviews/MAPLEMOON-DESIGN-SYSTEM-GAP-AUDIT-CLOSE-R3-20260817T181126.json"
+  ],
+  "pre_sha256": {
+    "maplemoon-website/_wip/evidence/design_system_gap_audit_close_r3_20260817T181126": null,
+    "maplemoon-website/docs/orchestration/reviews/MAPLEMOON-DESIGN-SYSTEM-GAP-AUDIT-CLOSE-R3-20260817T181126.md": null,
+    "maplemoon-website/docs/orchestration/reviews/MAPLEMOON-DESIGN-SYSTEM-GAP-AUDIT-CLOSE-R3-20260817T181126.json": null
+  },
+  "post_sha256": {
+    "maplemoon-website/_wip/evidence/design_system_gap_audit_close_r3_20260817T181126": "f4b00443db84d65e9bd08841236209b0911ffc7423076c4ebe50f4426e19b0d8",
+    "maplemoon-website/docs/orchestration/reviews/MAPLEMOON-DESIGN-SYSTEM-GAP-AUDIT-CLOSE-R3-20260817T181126.md": "5e778cc0afa5d5d0611a15ef87150176b594dbb7f946ff7868a732b3358f53aa",
+    "maplemoon-website/docs/orchestration/reviews/MAPLEMOON-DESIGN-SYSTEM-GAP-AUDIT-CLOSE-R3-20260817T181126.json": null
+  },
+  "checks": [
+    {
+      "command": "python3 -B scripts/check-maplemoon-receipt.py checkpoint --root /Users/handtomouse --packet docs/orchestration/packets/MAPLEMOON-DESIGN-SYSTEM-GAP-AUDIT-CLOSE-R3-20260817T181126.md --destination _wip/checkpoints/MAPLEMOON-DESIGN-SYSTEM-GAP-AUDIT-CLOSE-R3-20260817T181126_20260817_181348_AEST",
+      "exit_code": 0,
+      "result": "PASS checkpoint packet=MAPLEMOON-DESIGN-SYSTEM-GAP-AUDIT-CLOSE-R3-20260817T181126 files=3 path=/Users/handtomouse/maplemoon-website/_wip/checkpoints/MAPLEMOON-DESIGN-SYSTEM-GAP-AUDIT-CLOSE-R3-20260817T181126_20260817_181348_AEST"
+    },
+    {
+      "command": "python3 -B scripts/check-maplemoon-receipt.py verify --root /Users/handtomouse --packet docs/orchestration/packets/MAPLEMOON-DESIGN-SYSTEM-GAP-AUDIT-CLOSE-R3-20260817T181126.md --checkpoint _wip/checkpoints/MAPLEMOON-DESIGN-SYSTEM-GAP-AUDIT-CLOSE-R3-20260817T181126_20260817_181348_AEST --phase start",
+      "exit_code": 0,
+      "result": "PASS packet=MAPLEMOON-DESIGN-SYSTEM-GAP-AUDIT-CLOSE-R3-20260817T181126 phase=start scope=3"
+    },
+    {
+      "command": "fresh R3 acquisition pin replay",
+      "exit_code": 0,
+      "result": "PASS R3 packet, original packet/report/receipt/matrix/source, failed-R2 evidence tree, R2 packet/verifiers, Boss ledger, candidate routes and original authority pins matched the packet"
+    },
+    {
+      "command": "node --check verify-current-site-browser-r3.mjs and Python AST parse for both R3 Python verifiers",
+      "exit_code": 0,
+      "result": "SYNTAX PASS node=1 python=2"
+    },
+    {
+      "command": "python3 -B /Users/handtomouse/maplemoon-website/_wip/evidence/design_system_gap_audit_close_r3_20260817T181126/verify-readonly-close-r3.py",
+      "exit_code": 0,
+      "result": "READONLY_CLOSE_R3 PASS file_pins=37 directory_pins=4 directory_files=933 routes=7 counts=68/12/70; BROWSER_PARITY PASS changed_constants=OUT,PORT changed_lines=2 port=8799; POSITIVE_CONTROL PASS mutated_read_only_pin=true"
+    },
+    {
+      "command": "node /Users/handtomouse/maplemoon-website/_wip/evidence/design_system_gap_audit_close_r3_20260817T181126/verify-current-site-browser-r3.mjs --url https://maplemoonbuild20260813-m49nihfds-handtomouses-projects.vercel.app --widths 1440,1024,768,390",
+      "exit_code": 1,
+      "result": "FAIL rows=1 controls=PASS; homepage/1024 request http://127.0.0.1:8799/assets/licensed/carob_farm/australian-carob-0205-mobile.jpg net::ERR_ABORTED; runtime-request-errors; 27/28 rows PASS; 56 screenshots and 4 contact sheets produced"
+    },
+    {
+      "command": "visual inspection of four R3 contact sheets and all 56 R3 screenshots",
+      "exit_code": 0,
+      "result": "INSPECTED contacts=4 screenshots=56 routes=7 widths=4; all proofs visibly nonblank and recognisable; findings recorded without changing harness semantics"
+    }
+  ],
+  "screenshots_or_urls": [
+    "https://maplemoonbuild20260813-m49nihfds-handtomouses-projects.vercel.app",
+    "/Users/handtomouse/maplemoon-website/_wip/evidence/design_system_gap_audit_close_r3_20260817T181126/VISUAL-QA.json",
+    "/Users/handtomouse/maplemoon-website/_wip/evidence/design_system_gap_audit_close_r3_20260817T181126/VISUAL-INSPECTION.md",
+    "/Users/handtomouse/maplemoon-website/_wip/evidence/design_system_gap_audit_close_r3_20260817T181126/screenshots/local",
+    "/Users/handtomouse/maplemoon-website/_wip/evidence/design_system_gap_audit_close_r3_20260817T181126/contacts/contact-1440-local-full.png",
+    "/Users/handtomouse/maplemoon-website/_wip/evidence/design_system_gap_audit_close_r3_20260817T181126/contacts/contact-1024-local-full.png",
+    "/Users/handtomouse/maplemoon-website/_wip/evidence/design_system_gap_audit_close_r3_20260817T181126/contacts/contact-768-local-full.png",
+    "/Users/handtomouse/maplemoon-website/_wip/evidence/design_system_gap_audit_close_r3_20260817T181126/contacts/contact-390-local-full.png"
+  ],
+  "failures": [
+    "The single permitted R3 browser run failed Home at 1024 because australian-carob-0205-mobile.jpg produced net::ERR_ABORTED; the row is runtime-request-errors and the command exited 1.",
+    "The R3 design-gap verifier and PASS-only positive-control sequence were not run after acquisition because the packet requires browser failure to close FAIL without retry.",
+    "The R3 recovery close does not admit the preserved 40-finding audit and receives no promotion."
+  ],
+  "unknowns": [
+    "The root cause of the Home/1024 aborted mobile orchard request is not determined in this read-only recovery close.",
+    "It is unknown whether a separately authorised successor run would reproduce the abort; this packet forbids retry.",
+    "The candidate's existing visual and accessibility gaps remain those of the preserved audit; this close changes none of them."
+  ],
+  "residual_risk": [
+    "The failed R3 browser evidence is not candidate approval, implementation authority or deployment evidence.",
+    "The Home 768 starter-box detail column is visibly clipped beyond the right edge despite no document-root overflow; several 390 headers visibly crowd the centred wordmark and cart control; FAQ mobile chips are internally clipped.",
+    "The default editorial section composition remains paused and unanswered; no Nate choice was inferred.",
+    "All 68 rules, 12 decisions and 70 tokens retain their prior statuses, including every provisional and NEEDS NATE hold."
+  ],
+  "forbidden_path_changes": [],
+  "proposed_next_state": "failed",
+  "next_reviewer": "MapleMoon root BOSS for independent replay of this failed R3 receipt and decision on a separately checkpointed successor"
+}
