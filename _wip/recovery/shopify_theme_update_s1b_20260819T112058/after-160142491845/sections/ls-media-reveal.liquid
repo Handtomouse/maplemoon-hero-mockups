@@ -1,0 +1,274 @@
+{%- render 'inc-stylesheet', src: 's-sections.css' -%}
+
+{%- capture style -%}
+padding-block:{{ section.settings.paddingTop | prepend: 'var(--space-' | append: ')' }} {{ section.settings.paddingBottom | prepend: 'var(--space-' | append: ')' }};
+margin-block:{{ section.settings.marginTop | prepend: 'var(--space-' | append: ')' }} {{ section.settings.marginBottom | prepend: 'var(--space-' | append: ')' }};
+{%- endcapture -%}
+
+<section     
+    class="content-reveal"
+	style="{{- style | strip_newlines | strip -}}"
+	{% unless section.settings.global_color_scheme %}color-scheme="{{ section.settings.color_scheme }}"{% endunless %}
+	data-section-id="{{ section.id }}"
+>
+    {%- liquid
+        # Section heading 
+        assign heading = section.settings.heading
+        assign stealth = section.settings.stealthMode
+        render 'c-section-head', heading: heading, stealth: stealth
+    -%}
+
+    <component-loader><coretex-reveal data-section-id="{{ section.id }}" data-default="0" data-activation="{{ section.settings.activation }}" data-hover-intent="{{ section.settings.hover_intent }}">
+        <x-grid {% if section.settings.overlayContent %}columns="stack"{% else %}columns="1"{% endif %} columns-s="1f" ai="start">
+
+            <x-cell class="content" order-s="1">
+                <x-flex direction="column" class="triggers" role="tablist">
+                    {%- for block in section.blocks -%}
+                        <x-cell class="trigger" data-reveal-trigger="item-{{ block.id }}" {{ block.shopify_attributes }}>
+                            <x-grid columns="10" columns-s="3" class="meta">
+                                <x-cell span="2" span-s="1" class="title">{%- if block.settings.heading != blank -%}<h3 class="h6">{{ block.settings.heading }}</h3>{%- endif -%}</x-cell>
+                                <x-cell span="2" span-s="1" js-s="center" class="subtitle">{%- if block.settings.subheading != blank -%}<span>{{ block.settings.subheading }}</span>{%- endif -%}</x-cell>
+                                <x-cell span="1" span-s="1" js-s="end" class="cta">{%- if block.settings.label != blank and block.settings.url != blank -%}<a href="{{ block.settings.url }}">{{ block.settings.label }}</a>{%- endif -%}</x-cell>
+                                <x-cell span="5" class="description large-only">{%- if block.settings.description != blank -%}<p>{{ block.settings.description }}</p>{%- endif -%}</x-cell>
+                            </x-grid>
+                        </x-cell>
+                    {%- endfor -%}
+                </x-flex>
+            </x-cell>
+
+            <x-cell order="2" order-s="2" as="end" as-s="center" js="end" js-s="center">
+                <div class="stage">
+                    {%- for block in section.blocks -%}
+                        <div data-reveal-panel="item-{{ block.id }}" aria-hidden="true">
+                            {%- liquid
+                                if block.settings.media_type == 'video' and block.settings.video != blank
+                                    render 'inc-video', vid: block.settings.video, vidMobile: block.settings.video_mobile, loop: true, autoplay: true, muted: true, clickToPlay: true
+                                else 
+                                    # Optimize first section hero image
+                                    assign fetchpriority = nil
+                                    assign preload = false
+                                    assign loading = 'lazy'
+                                    assign widths = '480,640,768,900,1024'
+
+                                    if section.index <= 2
+                                        assign fetchpriority = 'high'
+                                        assign preload = true
+                                        assign loading = 'eager'
+                                    endif
+
+                                    render 'inc-img', img: block.settings.image, imgMob: block.settings.image_mobile, widths: widths, loading: loading, fetchpriority: fetchpriority, preload: preload, dynamic: true, fallback: true
+                                endif 
+                            -%}
+                        </div>
+                    {%- endfor -%}
+                </div>
+            </x-cell>
+        </x-grid>
+    </coretex-reveal></component-loader>
+</section>
+
+{% schema %}
+{
+    "name": "Content reveal",
+    "disabled_on": { "groups": ["header", "footer", "aside"] },
+    "max_blocks": 12,
+    "presets": [
+        {
+            "name": "Content reveal",
+            "category": "Content",
+            "blocks": [
+                { "type": "item" },
+                { "type": "item" },
+                { "type": "item" }
+            ]
+        }
+    ],
+    "settings": [
+        {
+            "type": "header",
+            "content": "Header"
+        },
+        {
+            "type": "checkbox",
+            "id": "stealthMode",
+            "label": "Show header on hover - desktop",
+            "default": false
+        },
+        {
+            "type": "text",
+            "id": "heading",
+            "label": "Heading",
+            "default": "Content reveal"
+        },
+        {
+            "type": "header",
+            "content": "Behavior"
+        },
+        {
+            "type": "checkbox",
+            "id": "overlayContent",
+            "label": "Overlay content",
+            "default": true
+        },
+        {
+            "type": "select",
+            "id": "activation",
+            "label": "Activation mode",
+            "default": "auto",
+            "options": [
+                { "value": "auto", "label": "Auto (hover on desktop, click on mobile)" },
+                { "value": "hover", "label": "Hover" },
+                { "value": "click", "label": "Click" }
+            ]
+        },
+        {
+            "type": "range",
+            "id": "hover_intent",
+            "label": "Hover delay",
+            "info": "Milliseconds before switching on hover.",
+            "min": 0,
+            "max": 500,
+            "step": 10,
+            "unit": "ms",
+            "default": 120
+        },
+        {
+            "type": "header",
+            "content": "Spacing"
+        },
+        {
+            "type": "range",
+            "id": "paddingTop",
+            "label": "Padding top",
+            "min": 0,
+            "max": 30,
+            "step": 1,
+            "default": 2
+        },
+        {
+            "type": "range",
+            "id": "paddingBottom",
+            "label": "Padding bottom",
+            "min": 0,
+            "max": 30,
+            "step": 1,
+            "default": 2
+        },
+        {
+            "type": "range",
+            "id": "marginTop",
+            "label": "Margin top",
+            "min": 0,
+            "max": 30,
+            "step": 1,
+            "default": 2
+        },
+        {
+            "type": "range",
+            "id": "marginBottom",
+            "label": "Margin bottom",
+            "min": 0,
+            "max": 30,
+            "step": 1,
+            "default": 2
+        },
+        {
+            "type": "header",
+            "content": "Appearance"
+        },
+        {
+            "type": "checkbox",
+            "id": "global_color_scheme",
+            "label": "Use global color scheme",
+            "default": true
+        },
+        {
+            "type": "color_scheme",
+            "id": "color_scheme",
+            "label": "Color scheme",
+            "default": "coretex-1",
+            "visible_if": "{{ section.settings.global_color_scheme == false }}"
+        }
+    ],
+    "blocks": [
+        {
+            "type": "item",
+            "name": "Entry",
+            "settings": [
+                {
+                    "type": "text",
+                    "id": "heading",
+                    "label": "Heading",
+                    "default": "Heading"
+                },
+                {
+                    "type": "text",
+                    "id": "subheading",
+                    "label": "Subheading",
+                    "default": "Subheading",
+                    "info": "Leave blank to remove"
+                },
+                {
+                    "type": "textarea",
+                    "id": "description",
+                    "label": "Description",
+                    "info": "Leave blank to remove"
+                },
+                {
+                    "type": "header",
+                    "content": "Link"
+                },
+                {
+                    "type": "text",
+                    "id": "label",
+                    "label": "Label",
+                    "default": "View"
+                },
+                {
+                    "type": "url",
+                    "id": "url",
+                    "label": "URL"
+                },
+                {
+                    "type": "header",
+                    "content": "Media"
+                },
+                {
+                    "type": "select",
+                    "id": "media_type",
+                    "label": "Media type",
+                    "default": "image",
+                    "options": [
+                        { "value": "image", "label": "Image" },
+                        { "value": "video", "label": "Video" }
+                    ]
+                },
+                {
+                    "type": "image_picker",
+                    "id": "image",
+                    "label": "Desktop",
+                    "visible_if": "{{ block.settings.media_type == 'image' }}"
+                },
+                {
+                    "type": "image_picker",
+                    "id": "image_mobile",
+                    "label": "Mobile",
+                    "visible_if": "{{ block.settings.media_type == 'image' }}"
+                },
+                {
+                    "type": "video",
+                    "id": "video",
+                    "label": "Desktop",
+                    "visible_if": "{{ block.settings.media_type == 'video' }}"
+                },
+                {
+                    "type": "video",
+                    "id": "video_mobile",
+                    "label": "Mobile",
+                    "visible_if": "{{ block.settings.media_type == 'video' }}"
+                }
+            ]
+        }
+    ]
+}
+{% endschema %}

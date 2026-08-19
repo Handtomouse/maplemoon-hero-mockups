@@ -1,0 +1,87 @@
+{%- comment -%} 
+    Replace the code below with the code provided from 
+    a third party provider such as MailChimp, Klaviyo etc.
+{%- endcomment -%}
+{%- assign autofocus = focus | default: true -%}
+<div {% if form.posted_successfully? %}submit-success{% endif %}>
+    {%- form 'customer', class: 'newsletter-form', id: 'NewsletterPopupForm' -%}
+    {%- if template.name == 'password' -%}
+        <input type="hidden" name="contact[tags]" value="prospect, password page">
+    {%- else -%}
+        <input type="hidden" name="contact[tags]" value="newsletter">
+    {%- endif -%}
+    
+    {% if show_name or show_terms %}<x-flex direction="column" style="gap:var(--space-1)">{% endif %}
+
+    {%- if show_name -%}
+    <x-field class="fullwidth name">
+        <input id="NewsletterFormName--{{ section.id }}" class="fullwidth"
+            type="text"
+            name="contact[first_name]"
+            placeholder="{{ 'templates.contact.form.name' | t }}"
+            autocomplete="given-name"
+            aria-label="{{ 'templates.contact.form.name' | t }}"
+            required aria-required="true"
+        >
+        <label for="NewsletterFormName--{{ section.id }}">{{ 'templates.contact.form.name' | t }}</label>
+    </x-field>    
+    {%- endif -%}
+
+    <x-stack presuffix no-style class="fullwidth {% if form.errors %}is-red{%- endif -%}">
+        <x-field class="fullwidth">
+            <input id="NewsletterForm--{{ section.id }}" class="is-blank fullwidth {% if form.errors %}is-red{%- endif -%}"
+                type="email"
+                name="contact[email]"
+                value="{{ form.email }}"
+                placeholder="{{ 'newsletter.label' | t }}"
+                autocorrect="off"
+                autocapitalize="off"
+                autocomplete="email"
+                {% if autofocus and show_name == false %}autofocus{% endif %}
+                pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$"
+                required aria-required="true"
+                {% if form.errors %}
+                aria-invalid="true"
+                aria-describedby="Newsletter-error--{{ section.id }}"
+                {% elsif form.posted_successfully? %}
+                aria-describedby="Newsletter-success--{{ section.id }}"
+                {% endif %}
+            >
+            <label for="NewsletterForm--{{ section.id }}">{{ 'newsletter.label' | t }}</label>
+        </x-field>
+
+        <button id="Subscribe" class="is-blank has-icon text-normal" style="width: fit-content" type="submit" name="commit">
+            <span class="visually-hidden">{{ 'newsletter.button_label' | t }}</span>
+            {%- render 'inc-icon', icon: 'arrow-right' -%}
+        </button>
+    </x-stack>
+
+    {%- if show_terms -%}
+    <x-flex class="terms" style="gap:var(--space-1)">
+        <input type="checkbox" id="NewsletterFormTerms--{{ section.id }}" required>
+        <label for="NewsletterFormTerms--{{ section.id }}" class="rte text-normal" style="font-size:var(--type-1)">{{ 'openthinking.dictionary.sentence.cart_terms_html' | t: link: terms_url }}</label>
+    </x-flex>
+    {%- endif -%}
+
+    {% if show_name or show_terms %}</x-flex>{% endif %}
+
+    {%- if form.errors -%}
+    <x-flex ai="center" jc="center" id="newsletter-error" data-form-status>
+        <x-cell>{%- render 'inc-icon', icon: 'o-error' -%}</x-cell>
+        <x-cell><p><strong>{{ form.errors.translated_fields.email | capitalize }}</strong> {{ form.errors.messages.email }}</p></x-cell>
+    </x-flex>
+    {%- endif -%}
+
+    {%- if form.posted_successfully? -%}
+    <style>#newsletter-form-block :is(.title, .description, .disclaimer, .terms, .name, x-stack[presuffix]) { display: none }</style>
+    <x-flex ai="center" jc="center" id="newsletter-success" data-form-status>
+        <x-cell>{%- render 'inc-icon', icon: 'o-success' -%}</x-cell>
+        <x-cell><h2 class="h5">{{ 'newsletter.success' | t }}</h2></x-cell>
+    </x-flex>
+    {%- endif -%}
+
+    {% endform %}
+</div>
+{%- comment -%} 
+    stop editing here. 
+{%- endcomment -%}

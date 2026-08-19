@@ -1,0 +1,1587 @@
+/**** 
+ * general
+ * 
+ */
+[color-scheme] {
+    background: var(--bg);
+    background-attachment: fixed;
+    color: var(--color);
+}
+
+.is-link { --buttonPadding: var(--space-2) var(--space-0) }
+
+cart-notice#cartNotice {
+    position: fixed;
+    inset-block-start: var(--headerGroupHeight);
+    inset-inline-end: var(--padding);
+    z-index: 9999;
+    width: min(30rem, calc(100vw - var(--space-5)));
+    pointer-events: none;
+    &:empty { display: none }
+
+    .cartNotice-item {
+        --gap: var(--space-1) var(--space-2);
+        --linkColor: var(--color);
+
+        padding: var(--space-2);
+        background: var(--bg);
+        color: var(--color);
+        box-shadow: var(--globalShadow);
+        border-radius: var(--space-2);
+        border: 1px solid var(--border);
+        pointer-events: auto;
+        animation: cartNotice-in var(--globalAnimeTime) var(--globalAnimeEase) forwards;
+        &[data-hiding] { animation: cartNotice-out var(--globalAnimeTime) var(--globalAnimeEase) forwards }
+
+        img { max-width: 5.2rem; aspect-ratio: 1 / 1; object-fit: cover; border-radius: var(--space-1) }
+    }
+
+    .title { line-height: 1 }
+}
+
+@keyframes cartNotice-in {
+    from { opacity: 0; transform: translateX(100%) }
+    to   { opacity: 1; transform: translateX(0) }
+}
+
+@keyframes cartNotice-out {
+    from { opacity: 1; transform: translateX(0) }
+    to   { opacity: 0; transform: translateX(100%) }
+}
+
+/* Details */
+details-content { display: block }
+
+details.closex summary { 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+    cursor: pointer;
+    position: relative;
+    padding-block: var(--space-1)
+}
+
+details.closex > summary::-webkit-details-marker { display: none }
+
+input:where([type="checkbox"],[type="radio"]):not([type="switch"]) {
+    --checkSize: 1.2rem;
+    --checkBorderColor: currentColor;
+    --checkActiveColor: currentColor;
+    --checkBorderColor: currentColor;
+    --checkRadius: var(--globalRadiusFull) !important;
+
+    vertical-align: middle;
+    margin-block: auto;
+}
+
+input:where([type="checkbox"],[type="radio"]):not([type="switch"])::after { content: none }
+
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration {
+    display: none;
+    -webkit-appearance: none;
+    appearance: none;
+}
+
+input[type="number"]{ -moz-appearance: textfield; appearance: textfield }
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+label, legend { --labelColor: var(--colorFaded); --labelWeight: 400; margin: 0; padding: 0; }
+table { --tableBorder: none }
+
+ul { list-style-type: "\00B7\00a0" }
+
+s { color: var(--colorFaded) }
+
+/* Scroll bars */
+* { scrollbar-color: rgb(var(--colorRGB) / .4) rgb(0 0 0 / 0); scrollbar-width: thin }
+
+price-unit { color: var(--labelTitleColor, var(--colorFaded)); font-size: var(--type-2) }
+
+/*** Image lazy preload */
+component-loader, media-loader, picture { display: block }
+
+html.js media-loader:has(img:not([src*=".png"]):not([src*=".gif"])) picture {
+    transition: background 500ms ease-in-out;
+    transition-delay: 250ms;
+}
+html.js media-loader[ready] picture { background-color: transparent!important }
+
+html.js media-loader img { opacity: 0; transition: opacity 500ms ease-in-out }
+html.js media-loader[ready] img { opacity: 1 }
+
+html.js media-loader:has(:not(.noRadius)) { border-radius: var(--globalRadiusImg, 0px) }
+:is(img,video,iframe):not(.noRadius) { border-radius: var(--globalRadiusImg, 0px) }
+
+.mixBlend { --color: #FFF; --linkColor: #FFF; --linkHover: #FFF; --hColor: #FFF; color: var(--color)!important; mix-blend-mode: difference }
+
+/* RTE */
+.rte { --tablePadding: 0 var(--space-2); --hLine: 1.2; --hMargin: 0 0 .3em; --hSpace: 0px }
+.rte :is(h1,h2,h3,h4,h5,h6) { word-break: break-all }
+.rte :is(ol,ul,li,p,strong,blockquote) { all: revert }
+.rte table { display: block; margin: 0; padding: 0 }
+.rte > ul, .rte ul li > ul, 
+.rte ol, .rte ol li > ol { padding-inline: var(--space-4) }
+.rte p:empty { display: none }
+.rte p:first-of-type { margin-block-start: 0 }
+.rte p:last-of-type { margin-block-end: 0 }
+.rte a { text-decoration: underline; }
+.rte iframe { max-width: 100%; width: 100%; height: auto; aspect-ratio: 16 / 9; border-radius: var(--space-5) }
+
+:where(button,.button).is-custom { --buttonPadding: var(--space-2); --buttonMargin: 0; --buttonGap: var(--space-1) } 
+
+
+.custom.toggle-token {
+    --tokenBg: transparent;
+    --tokenBgHover: transparent;
+    --tokenBgActive: transparent;
+    --tokenBorderColor: transparent;
+    --tokenBorderHover: transparent;
+    --tokenBorderActive: transparent;
+    --tokenColor: currentColor;
+    --tokenColorHover: currentColor;
+    --tokenColorActive: currentColor;
+    --tokenDecorationHover: underline;
+    --tokenDecorationActive: underline;
+    --tokenPadding: var(--space-1);
+    --tokenMargin: 0;
+    --gap: var(--space-1) var(--space-3);
+}
+
+/* Main */
+body { --headSpace: var(--headerGroupHeight); background-attachment: fixed }
+body:has(coretex-header:where([mode="initial"],[mode="absolute"],[location="center"])) { --headSpace: 0px }
+
+.grecaptcha-badge, div#shop-hcaptcha-badge-container { display: none!important }
+.captcha-disclaimer { font-size: 70%; color: var(--colorFaded) }
+
+/* iOS zoom fix */
+@media screen and (max-width: 777px) {
+    html.ios :is(textarea,input):focus-visible { font-size: 16px }
+}
+
+coretex-fetch { display: block; position: relative }
+
+coretex-fetch.is-loading:before {
+    content: attr(coretex-loading);
+    position: absolute;
+    inset: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(5px);
+    z-index: 9;
+}
+
+/** Add to cart button (Product page + Product card) */
+ajax-cart-product-form[processing] .add-2-cart > .cta { color: transparent }
+.add-2-cart.fullwidth .loading__spinner { justify-self: var(--buttonAlign) }
+ajax-cart-product-form[processing] .add-2-cart > .loading__spinner { display: block!important } 
+
+[data-ajax-cart-errors] { color: var(--red) }
+[data-ajax-cart-errors]:empty { display: none }
+[data-ajax-cart-errors="form"]:not(:empty) { display: block; padding-block: var(--padding) }
+
+/* Mask */
+.mask { -webkit-mask-image: var(--maskImage); mask-image: var(--maskImage) }
+@media (max-width: 777px) { .mask-s { -webkit-mask-image: var(--maskImage); mask-image: var(--maskImage) } }
+@media (min-width: 778px) { .mask-l { -webkit-mask-image: var(--maskImage); mask-image: var(--maskImage) } }
+
+[class*="mask"].inline-start { --maskImage: linear-gradient(to left, #000000 var(--maskStart, 70%), transparent var(--maskEnd, 100%)) }
+[class*="mask"].inline-end { --maskImage: linear-gradient(to right, #000000 var(--maskStart, 70%), transparent var(--maskEnd, 100%)) }
+[class*="mask"].inline-both { --maskImage: linear-gradient(90deg, transparent, #000000 var(--maskStart, 10%), #000000 var(--maskCenter, 90%), transparent var(--maskEnd, 100%)) }
+[class*="mask"].block-start { --maskImage: linear-gradient(to top, #000000 var(--maskStart, 80%), transparent var(--maskEnd, 100%)) }
+[class*="mask"].block-end { --maskImage: linear-gradient(to bottom, #000000 var(--maskStart, 80%), transparent var(--maskEnd, 100%)) }
+
+[class*="mask"].blur {
+    -webkit-backdrop-filter: blur(var(--maskBlur, 10px));
+    backdrop-filter: blur(var(--maskBlur, 10px));
+}
+
+.payment-icons i svg > path[opacity] { opacity: 0!important }
+
+/* Social networks links */
+.social .meta {
+    .socialNets { 
+        --buttonWeight: 400; 
+        --iconSize: inherit;
+
+        &[data-icons="icons"] span { display: none }
+        &[data-icons="text"] i { display: none }
+    }
+}
+
+/** 
+    Utilities */
+.title { word-wrap: break-word; word-break: break-word }
+
+.labeler {
+    text-transform: uppercase;
+
+    &:before { content: '('; padding-inline-end: var(--space-1) }
+    &:after { content: ')'; padding-inline-start: var(--space-1) }
+}
+
+/* General page, Blog post */
+.general-page { --gap: var(--layoutInline) }
+.general-page .container { padding: var(--layoutInline) }
+
+:where(.general-page,.article) .content.rte > .full-width, .general-page .content.rte > .full-width :where(img,video,iframe) { width: 100% }
+
+@media (min-width: 777px) { .general-page x-flex[direction="row"] .title { max-width: 36rem } }
+@media (max-width: 777px) { .general-page { --charWidth: 100% !important } }
+
+/* Switch between hide/show */
+.onHover {
+    .on { opacity: 1 }
+    .off { opacity: 0 }
+
+    &:is(:hover,:focus,:focus-visible,:focus-within) {
+        .on { opacity: 0 }
+        .off { opacity: 1 }
+    }
+}
+
+/* [A] Auto, activates hover on devices that have hover state */
+@media (hover: hover) {
+    .onHover-a {
+        .on { opacity: 1 }
+        .off { opacity: 0 }
+
+        &:is(:hover,:focus,:focus-visible,:focus-within) {
+            .on { opacity: 0 }
+            .off { opacity: 1 }
+        }
+    }
+}
+
+/* [S] activates hover on Mobile */
+@media (width <= 777px) {
+    .onHover-s {
+        .on { opacity: 1 }
+        .off { opacity: 0 }
+    
+        &:is(:hover,:focus,:focus-visible,:focus-within) {
+            .on { opacity: 0 }
+            .off { opacity: 1 }
+        }
+    }
+}
+
+/* [M] activates hover on tablet and desktop */
+@media (width >= 778px) {
+    .onHover-m {
+        .on { opacity: 1 }
+        .off { opacity: 0 }
+
+        &:is(:hover,:focus,:focus-visible,:focus-within) {
+            .on { opacity: 0 }
+            .off { opacity: 1 }
+        }
+    }
+}
+
+.loading__spinner {
+    width: 4rem;
+    height: var(--fontSize);
+    background: radial-gradient(circle closest-side, currentColor 90%, transparent) 0% 50%, 
+                radial-gradient(circle closest-side, currentColor 90%, transparent) 50% 50%, 
+                radial-gradient(circle closest-side, currentColor 90%, transparent) 100% 50%;
+    background-size: calc(100% / 3) .6em;
+    background-repeat: no-repeat;
+    animation: loading-dots 1s infinite linear
+}
+
+@keyframes loading-dots {
+   20% { background-position: 0% 0%, 50% 50%, 100% 50% } 40% { background-position: 0% 100%, 50% 0%, 100% 50% } 
+   60% { background-position: 0% 50%, 50% 100%, 100% 0% } 80% { background-position: 0% 50%, 50% 50%, 100% 100% }
+}
+
+/* Accordion */
+coretex-accordion {
+    display: block;
+    margin-block: var(--blockMargin);
+
+    &:has(+ coretex-accordion) {
+        details summary { padding-block-end: var(--space-3) }
+    }
+
+    details-content {
+        position: relative;
+        margin-block: var(--space-1) var(--space-5);
+
+        &::before {
+            content: var(--openSymbol);
+            position: absolute;
+            inset-block-start: -2px;
+            inset-inline-start: 1px;
+            display: inline;
+        }
+
+        &:has(.rte:empty) { display: none }
+
+        .rte { margin-inline-start: var(--space-4) }
+    }
+
+    details summary {
+        justify-content: start;
+        color: var(--color);
+
+        &:is(:hover,:focus-visible) {
+            padding-inline-start: 1rem;
+            padding-block: var(--space-1);
+            text-transform: uppercase;
+
+            &:before {
+                content: var(--hoverSymbol);
+                position: absolute;
+                inset-inline-start: 0;
+                inset-block-start: 0.15em;
+                font-family: var(--fontFallback);
+                font-size: var(--type-5);
+            }
+        }
+    }
+
+    details[open] summary {
+        text-decoration: underline;
+        color: var(--color);
+        position: sticky;
+        top: 0;
+        padding-inline-start: 1rem;
+        padding-block: var(--space-1);
+        text-transform: uppercase;
+
+        &:before {
+            content: var(--hoverSymbol);
+            position: absolute;
+            inset-inline-start: 0;
+            inset-block-start: 0.15em;
+            font-family: var(--fontFallback);
+            font-size: var(--type-5);
+        }
+    }
+}
+
+/* [C] Product card */
+.products { --gap: var(--prodGap) }
+@media (max-width: 777px) { .products { --gap: var(--prodGapMob) } }
+.products :is([columns="10"],[columns="fit"]) .meta { display: none }
+product-card { --hMargin: 0; --gap: var(--space-3); position: relative }
+product-card[in-stock="false"][fade-out="true"] > .media { opacity: 0.5 }
+product-card[medialess] .meta { margin-block-start: auto; width: 100% }
+[scroll-area] li:has(product-card[medialess]) { align-self: center }
+product-card[clip-meta] :is(.vendor h3, .title a, .subtitle) { display: inline-block; text-overflow: ellipsis; max-width: 100cqi; white-space: nowrap; overflow: clip }
+product-card[clip-meta][compact="true"] :is(.vendor h3, .title a, .subtitle) { max-width: 71cqi }
+product-card[overlay-badges="true"] .badgesGroup {
+    position: absolute;
+    inset-block-start: 0px;
+    z-index: 1;
+    width: fit-content;
+    padding: var(--space-2);
+    pointer-events: none;
+
+    color: white!important;
+    mix-blend-mode: exclusion;
+
+    &:empty { display: none!important }
+}
+product-card .meta { --gap: var(--space-1); container: prod-card / inline-size }
+product-card:not([compact="true"]) .meta > * { display: block; width: 100% }
+product-card .meta > *:empty { display: none }
+product-card .meta .titles { 
+    overflow: clip; 
+
+    :is(.title,.subtitle,.vendor) { --hSize: var(--fontSize); --hWeight: var(--fontWeight); --hFontFamily: var(--fontFamily); }
+    .subtitle { color: var(--colorFaded) }
+    .vendor { display: block }
+}
+
+product-card:not([compact="true"]) .meta :is(.prices,.badges) { padding-block-start: var(--space-0) }
+product-card:not([medialess])[compact="true"] .meta .badges { display: none }
+product-card .meta x-cell:empty { display: none }
+
+product-card .meta .sizes { overflow: hidden }
+product-card .meta .sizes-list { --gap: 0 var(--space-2) }
+product-card .meta .sizes-list li { cursor: default }
+product-card .meta .sizes-list li s { opacity: 0.5  }
+
+product-card .meta coretex-price { display: block; gap: 0px }
+product-card .meta.text-start [x-flex] { justify-content: start }
+product-card .meta.text-center [x-flex] { justify-content: center }
+product-card .meta.text-end [x-flex] { justify-content: end }
+
+product-card[compact="true"] {
+    :where(button,.button).is-custom { --buttonPadding: 0px 0px 0px var(--space-2) }
+    .meta.meta [x-flex] { justify-content: end }
+
+    /*** Overlay meta on media */
+    &[overlay="true"] .meta {
+        position: absolute;
+        inset-inline: 0px;
+        inset-block-end: 0px;
+        z-index: 1;
+        padding: var(--space-2) var(--padding);
+    } 
+}
+
+product-card .media { 
+    &:has(video) {
+        width: 100% !important;
+        aspect-ratio: var(--prodCardRatio, 1 / 1); 
+    }
+
+    :is(img,video,iframe) { user-select: none } 
+}
+
+product-card[crop="true"] .media :is(img,video,iframe) {
+    aspect-ratio: var(--prodCardRatio, 1 / 1);
+    object-fit: var(--prodCardFit, cover);
+    object-position: var(--prodCardPosition, center);
+    height: var(--prodCardHeight, initial);
+}
+
+@media (min-width: 777px) {
+    product-card[stealth="true"]:not([medialess]) .meta { opacity: 0 }
+    :is(.products,component-loader):not([columns="10"],[columns="fit"]) product-card[stealth="true"]:is(:hover,:focus-visible,:focus-within) .meta { opacity: 1 }
+}
+
+product-card .quick-buyer[id*="quickBuy-"] { display: none }
+product-card:has(input[id*="quickToggle-"]:checked) [id^="quickBuy-"] { display: block }
+
+product-card .quick-buyer :is(button.is-custom,select) {
+    --inputBorderColor: none;
+    --inputBorderHover: none;
+    --inputBorderActive: none;
+    --inputBg: transparent;
+    --inputBgHover: transparent;
+    --inputBgActive: transparent;
+    --inputColor: currentColor;
+
+    padding: var(--space-2) 0;
+    width: 100%;
+    text-align: inherit;
+}
+
+product-card .quick-buyer button { 
+    --buttonPadding: var(--space-2) var(--space-3); 
+    text-align: inherit;
+    width: 100%; 
+}
+
+product-card x-select[data-pop] {
+    border-radius: var(--buttonRadius);
+    background: var(--buttonBg);
+
+    x-cell { background: var(--buttonBg); }
+    select { padding: var(--space-2) var(--space-3)!important; }
+}
+
+product-card .quick-buyer button.is-custom > .cta { text-decoration: underline }
+
+product-card:has(input[id*="quickToggle-"]:checked) .quickBuyPrice { display: none!important }
+product-card .quickBuyPrice label { all: unset; cursor: pointer }
+
+product-card .quickBuyToggle:has(input:focus-visible) {
+    --a11yOutline: 2px var(--a11yStyle) var(--a11yColor); outline: var(--a11yOutline); box-shadow: var(--a11yStyle) var(--a11yColor)
+}
+
+/* Onboarding **/
+product-card.onboarding :where(.media,.svgph) { width: 100% }
+
+x-select { display: block; position: relative }
+x-select > select { width: 100% }
+
+x-select > x-cell {
+    position: absolute;
+    inset-block-start: 0;
+    inset-inline-end: 0;
+    padding: var(--space-2);
+    background: var(--bgColor);
+    pointer-events: none;
+    border-radius: var(--inputRadius);
+}
+
+/* [C] Rating coretex-rating component */
+coretex-rating {
+    display: block;
+
+    rating-bar {
+        --fontSpace: 0.4;
+        --fontSize: 2;
+        --percent: calc((var(--rating) / var(--rating-max) + var(--rating-decimal) * var(--fontSize) / (var(--rating-max) * (var(--fontSpace) + var(--fontSize)))) * 100%);
+
+        display: inline-block;
+        vertical-align: text-top;
+        -webkit-user-select: none;
+                user-select: none;
+        font-family: monospace;
+        letter-spacing: calc(var(--fontSpace) * 1rem);
+        background-image: linear-gradient(90deg, var(--ratingsColor, currentColor) var(--percent), color-mix(in oklch, var(--ratingsColor, currentColor), transparent 55%) var(--percent));
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        
+    }
+}
+
+/* [C] Coretex Hover display */
+coretex-hover {
+    display: block;
+
+    [hover-spotlight] {
+        min-height: 20px;
+        opacity: 0;
+        filter: blur(5px);
+        transform: translateY(30%);
+        transition: all 500ms var(--easeOutQuint);
+        transform-origin: bottom;
+    }
+    
+    [hover-spotlight].active { opacity: 1; transform: none; filter: none }
+
+    /* .spotlight-item { }
+    .spotlight-value { } */
+
+    .spotlight-key { text-transform: capitalize; font-weight: 700 }
+    &[display-key="false"] .spotlight-key { display: none }
+}
+
+/* Fieldset */
+fieldset { padding: 0; margin: 0; border: none }
+fieldset button { margin-inline: 0 }
+
+/* Float inputs label */
+x-field { 
+    display: grid;
+    align-items: center;
+    position: relative; 
+    isolation: isolate; 
+    max-width: 100%;
+    margin: var(--inputMargin) 0;
+    padding: 0!important;
+} 
+
+x-field > input {
+    --inputMargin: 0;
+    --a11yOffset: calc(var(--inputBorderWidth) * 2);
+    padding: calc(var(--inputPadding) * 1.5) 0px calc(var(--inputPadding) / 1.5) calc(var(--inputPadding) + var(--globalRadius) / 9) !important;
+}
+
+x-field > input::placeholder { color: transparent!important; user-select: none; }
+
+x-field > input::-webkit-contacts-auto-fill-button {
+    position: absolute;
+    visibility: hidden;
+    pointer-events: none;
+    user-select: none;
+}
+
+x-field > label {
+    position: absolute;
+    inset-block-start: calc(8% + var(--inputPadding));
+    margin: 0;
+    padding-inline-start: calc(var(--inputPadding) + var(--globalRadius) / 5);
+    font-weight: normal;
+    line-height: 1;
+    color: var(--inputPlaceholderColor);
+    pointer-events: none;
+    user-select: none;
+    transition: all 150ms var(--easeOutQuad);
+    transform-origin: left center;
+}
+
+x-field > input:focus-visible + label,
+x-field > input:not(:placeholder-shown) + label {
+    inset-block-start: calc(var(--inputPadding) / 2);
+    color: var(--colorFaded);
+    scale: 0.82;
+    z-index: 1;
+}
+
+select { margin-inline: 0 }
+
+/** 
+    Pages */
+
+/* General page */
+.pageTitle {
+    --hMargin: var(--space-2) 0 var(--space-8);
+    display: block;
+    width: var(--layoutMaxWidth);
+    margin-inline: var(--layoutCenter, 0);
+}
+
+/* Collection list page */
+.collections-list .description { max-width: 60ch }
+.collections-list #ajaxContainer { gap: var(--space-11) }
+
+/*** 
+    Header 
+***/
+
+/* Sticky header + Header overlay */
+#headerGroup {
+    anchor-name: --headerGroup-anchor;
+    position: var(--headerPosition, initial);
+    inset-block-start: 0;
+    inset-inline: 0; 
+    z-index: 99;
+}
+
+#headerGroup coretex-header[color-scheme] { background: var(--headerBg, transparent) }
+#headerGroup nav.breadcrumb { background: var(--headerBg, transparent) }
+
+#headerGroup [page-current] { text-decoration: underline }
+
+/* Invert header contents */
+#headerGroup:has(coretex-header[mix-blend="true"]):not(:has(details.lv1[open],#menuDrawerBox:where([open],[closing]))) {
+    --color: #FFF;
+    --linkColor: #FFF;
+    --linkHover: #FFF;
+    --hColor: #FFF;
+    mix-blend-mode: exclusion; 
+    color: var(--color)!important;
+
+    coretex-ticker { 
+        --color: #FFF; --linkColor: #FFF; --linkHover: #FFF;
+        background: transparent; color: white; border-color: transparent; mix-blend-mode: normal;
+        
+        button.is-custom { --buttonBg: transparent; --buttonColor: #FFF }
+    }
+
+    .logo { filter: grayscale(1) invert(1); }
+}
+
+#headerGroup:has(coretex-header[dropdown-bg="true"][mix-blend="true"]) details.lv1[open] summary { background: var(--headerBg) }
+
+/* Minimal mode */
+@media (min-width: 777px) {
+    coretex-header[stealth="true"] {
+        .header > *:not(.logo) { opacity: 0; transition: opacity var(--globalAnimeTime) var(--globalAnimeEase) }
+
+        &:is(:hover,:focus-visible,:focus-within) {
+            .header > * { opacity: 1 }
+        }
+    }
+}
+
+coretex-header {
+    --buttonWeight: 400;
+    --linkColor: var(--color);
+    --linkHover: var(--color);
+    --buttonColor: var(--color);
+    --buttonColorHover: var(--color);
+
+    anchor-name: --coretexHeader-anchor;
+
+    display: block;
+    background: var(--bg);
+    background-attachment: fixed;
+    color: var(--color);
+    border-block: var(--globalBorderWidth) solid var(--border);
+    padding-inline: var(--layoutInline);
+}
+
+coretex-header :where(.menuContent) { max-width: 100% }
+
+/* Location of the header */
+coretex-header:is([location="center"]) { position: absolute!important; inset-inline: 0px; inset-block: 50vh; height: fit-content; }
+
+/* Icons */
+coretex-header[content-type="icons"] .txtState {
+    position: absolute !important;
+    width: 1px !important;
+    height: 1px !important;
+    padding: 0 !important;
+    margin: -1px !important;
+    overflow: hidden !important;
+    clip: rect(0, 0, 0, 0) !important;
+    white-space: nowrap !important;
+    border: 0 !important;
+}
+
+coretex-header[content-type="text"] :where(.tools,.mobileTrigger) i { display: none }
+coretex-header .noHide > i { display: block }
+
+/* Header blur (translucent state) */
+header-blur {
+    --background: var(--bg);
+
+    display: block;
+    mask-image: linear-gradient(180deg, var(--background) 0%, color-mix(in srgb, var(--background) 99%, transparent) 6.67%, color-mix(in srgb, var(--background) 96%, transparent) 13.33%, color-mix(in srgb, var(--background) 92%, transparent) 20%, color-mix(in srgb, var(--background) 85%, transparent) 26.67%, color-mix(in srgb, var(--background) 77%, transparent) 33.33%, color-mix(in srgb, var(--background) 67%, transparent) 40%, color-mix(in srgb, var(--background) 56%, transparent) 46.67%, color-mix(in srgb, var(--background) 44%, transparent) 53.33%, color-mix(in srgb, var(--background) 33%, transparent) 60%, color-mix(in srgb, var(--background) 23%, transparent) 66.67%, color-mix(in srgb, var(--background) 15%, transparent) 73.33%, color-mix(in srgb, var(--background) 8%, transparent) 80%, color-mix(in srgb, var(--background) 4%, transparent) 86.67%, color-mix(in srgb, var(--background) 1%, transparent) 93.33%, transparent 100%);
+    background: color-mix(in srgb, var(--background) 80%, transparent);
+    backdrop-filter: blur(3px);
+    width: 100%;
+    position: fixed;
+    height: calc(var(--headerHeight, 5rem) + 5rem);
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
+}
+
+/* Logo */
+coretex-header .header .logo { padding-block: var(--space-2) }
+coretex-header .header .logo:first-child { padding-inline-end: var(--padding) }
+coretex-header .header .logo:not(:first-child) { padding-inline: var(--space-2) }
+coretex-header .header .logo img { height: var(--logoImageSize); width: fit-content }
+coretex-header .header .logo .has-text-logo { padding-block: var(--space-2) }
+coretex-header .header .logo .text-logo { 
+    font-size: var(--logoSize); 
+    font-weight: var(--logoFontWeight); 
+    font-style: var(--logoFontStyle); 
+    font-family: var(--logoFontFamily); 
+    line-height: 1;
+    word-break: break-word;
+}
+
+@media (max-width: 777px) { coretex-header .logo { padding: var(--space-2) } }
+
+/* Cart */
+html.js-ajax-cart-empty coretex-header cart-count { display: none }
+
+coretex-header :where(button,.button).is-custom {
+    --buttonBg: transparent;
+    --buttonBgHover: transparent;
+    --buttonMargin: 0;
+    --buttonPadding: var(--space-2);
+    --buttonGap: var(--space-1);
+}
+
+coretex-header :is(button.cartBubble) { gap: var(--space-1) }
+
+cart-footer .cart-notes details[open] i { transform: rotate(180deg) }
+
+
+/* Localization */
+coretex-header .localization {
+    container: localization / inline-size;
+    width: 100%;
+}
+
+/* Hide the country name if the container width is too small. */
+@container localization (width < 200px) {
+    coretex-header .localization country-name { display: none }
+}
+
+/* localization icons */
+coretex-header .crl i { padding-inline-end: var(--space-1) }
+coretex-header[content-type="icons"] .crl span:not(.noHide) { display: none }
+
+/* Menus */
+coretex-header details.closex summary.button.is-custom { padding-block: var(--buttonPadding) }
+/* === [ CORETEX FYI ] === menus: drop & mega are only needed on desktops */
+@media (width >= 778px) {
+/** General styles */
+    coretex-header { 
+        --gap: 0;
+        --hoverSymbolInline: -0.4em;
+
+        &:not([coretex-menu="drawer"]):not([coretex-menu="panel"]) :where(.mobileTrigger,drawer-header) { display: none }
+        &:not([coretex-menu="drawer"]):not([coretex-menu="panel"]) details[open] > summary i { transform: rotate(180deg) }
+        &[coretex-menu] drawer-footer { display: none }
+        .bdotfx { display: flex; place-items: center }
+    }
+
+/** Menu: dropdown (default) */
+    coretex-header[coretex-menu="drop"] ul:where([data-level="2"],[data-level="3"]) {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        margin: 0px;
+        color: var(--color);
+        padding: var(--padding);
+    }
+
+    coretex-header[coretex-menu="drop"] ul[data-level="2"] { 
+        position: absolute; 
+        z-index: 1;
+        max-height: 85dvh;
+        overflow-y: auto;
+        border-radius: var(--globalRadiusSafe);
+        margin-block-start: var(--space-2);
+    }
+
+    coretex-header[coretex-menu="drop"][dropdown-bg="true"] {
+        ul[data-level="2"] {
+            background: var(--bg);
+            background-attachment: fixed;
+            border: var(--globalBorderWidth) solid var(--border);
+        }
+
+        details[open].lv1 > summary {
+            background: var(--bgColor);
+            background-attachment: fixed;
+        }
+    }
+
+    coretex-header[coretex-menu="drop"] ul[data-level="3"] {
+        padding-block-start: 0;
+        padding-inline-start: var(--margin);
+    }
+
+    coretex-header[coretex-menu="drop"] ul[data-level="3"]:before { 
+        content: var(--openSymbol);
+        display: inline;
+        position: absolute;
+        inset-block-start: 0.3em;
+        inset-inline-start: -0.2em;
+    }
+
+    coretex-header[coretex-menu="drop"] ul:where([data-level="2"],[data-level="3"]) li.bdotfx:is(:hover,:focus-visible,:focus-within) > a:before,
+    coretex-header[coretex-menu="drop"] ul:where([data-level="2"],[data-level="3"]) li.bdotfx:is(:hover,:focus-visible,:focus-within) > details > summary:before,
+    coretex-header[coretex-menu="drop"] ul:where([data-level="2"],[data-level="3"]) li.bdotfx details[open] > summary:before { 
+        content: var(--hoverSymbol); position: absolute; inset-inline-start: var(--hoverSymbolInline); 
+    }
+
+/** Menu: mega */
+    coretex-header[coretex-menu="mega"]  { position: relative }
+
+    coretex-header[coretex-menu="mega"] ul[data-level="2"] {
+        position: absolute;
+        inset-inline: 0;
+        inset-block-start: calc(var(--headerHeight, 102px) - 2px); 
+        z-index: 100;
+        margin: 0;
+        margin-block-start: calc(-1 * var(--globalBorderWidth));
+        border-block: var(--globalBorderWidth) solid var(--border);
+        /* margin-block-start: calc(var(--space-4) * 1.4); */
+        padding: var(--space-5) var(--layoutInline) var(--padding);
+        max-height: 80vh;
+        overflow: auto;
+        background: var(--headerBg);
+        background-attachment: fixed;
+        /* This will be ignored in Chrome (bug #356891480) */
+        -webkit-backdrop-filter: var(--overlayBlur); 
+                backdrop-filter: var(--overlayBlur);
+    }
+
+    html.chrome coretex-header[coretex-menu="mega"] details-menu > ul[data-level="2"] { background: var(--bg) } /* Since the backdrop-filter is ignored in Chrome, we need to set a solid background color */
+    /* coretex-header[coretex-menu="mega"] details-menu > ul[data-level="2"]:before {
+        content: var(--openSymbol);
+        margin-block-start: 3px;
+        line-height: 1lh;
+    }
+
+    coretex-header[coretex-menu="mega"] details-menu > ul[data-level="2"]:not(:has([data-level="3"])):before {
+        position: absolute;
+        inset-inline-start: calc(var(--layoutInline) - 0.5vw);
+    } */
+
+    coretex-header[coretex-menu="mega"] ul[data-level="2"] summary { pointer-events: none; color: var(--colorFaded); margin-block-end: var(--space-2) }
+    coretex-header[coretex-menu="mega"] ul[data-level="2"] summary i { display: none }
+
+    coretex-header[coretex-menu="mega"] ul[data-level="2"] > li { width: max(150px, 100%); height: fit-content }
+    coretex-header[coretex-menu="mega"] nav.firstElevated ul[data-level="2"]:has(ul[data-level="3"]) > li:first-of-type a { font-size: var(--type-6); line-height: calc(2px + 1ex + 2px); font-weight: 600; letter-spacing: .009em }
+
+    coretex-header[coretex-menu="mega"] ul[data-level="3"] { margin: 0; padding: 0 }
+    coretex-header[coretex-menu="mega"] ul[data-level="3"] > li { max-width: 99% }
+
+    coretex-header[coretex-menu="mega"] ul:where([data-level="2"],[data-level="3"]) li.bdotfx:is(:hover,:focus-visible) > a:before { content: var(--hoverSymbol); position: absolute; inset-inline-start: var(--hoverSymbolInline) }
+
+    /* in case there are no level 3 items. */
+    coretex-header[coretex-menu="mega"] details-menu > ul[data-level="2"]:not(:has(ul[data-level="3"])) {  display: block }
+
+    /* Add a shadow to end of mega menu */
+    coretex-header[coretex-menu="mega"][mega-shadow="true"] details-menu > ul[data-level="2"] { box-shadow: 0 4rem 5rem rgb(0 0 0 / .12) }
+
+/** Menu: Panel & Drawer (shared) */
+    coretex-header:is([coretex-menu="panel"],[coretex-menu="drawer"]) {
+        coretex-drawer {
+            display: block;
+            position: absolute;
+
+            &[closed] { display: none }
+        }
+
+        .menuContent {
+            --gap: 0;
+
+            position: fixed;
+            inset-inline: 0;
+            inset-block-start: 0;
+            z-index: 100;
+            overflow: auto;
+            overscroll-behavior: contain;
+            padding: var(--padding);
+            background: var(--bg);
+            background-attachment: fixed;
+            border: 1px solid rgb(var(--colorRGB) / .15);
+
+            /* This will be ignored in Chrome (/issue/356891480) */
+            -webkit-backdrop-filter: var(--overlayBlur);
+                    backdrop-filter: var(--overlayBlur);
+            /* Since the backdrop-filter is ignored in Chrome,
+                we need to set a solid background color */
+            html.chrome & { background: var(--bg) }
+        }
+
+        drawer-header {
+            --buttonPadding: var(--space-1);
+            --buttonMargin: 0;
+            margin-block-end: var(--space-1);
+        }
+
+        details {
+            & > summary i { transform: rotate(270deg) }
+            &[open] > summary i { transform: rotate(90deg) }
+        }
+
+        ul { margin: var(--space-1); margin-inline-end: 0; flex-direction: column }
+
+        /* When a details is open, blur its sibling menu items.
+           Works at every nesting level since each ul scopes its own :has(). */
+        ul:has(> li.bdotfx > details[open]) > li.bdotfx:not(:has(> details[open])) {
+            opacity: 0.5;
+            transition: opacity 250ms var(--easeInOutQuint);
+        }
+
+        [data-level="1"] { margin: 0 }
+
+        li.bdotfx {
+            &:is(:hover,:focus-visible) > a:before,
+            &:is(:hover,:focus-visible,:focus-within) > details > summary:before,
+            details[open] > summary:before { content: var(--hoverSymbol); position: absolute; inset-inline-start: var(--hoverSymbolInline) }
+        }
+    }
+
+/** Menu: panel */
+    coretex-header[coretex-menu="panel"] {
+        /* Closed drawer */
+        coretex-drawer .menuContent {
+            transform: translateY(-150vh);
+            opacity: 0;
+            transition: transform 800ms var(--easeInOutQuint), opacity 1s var(--easeInOutQuint);
+        }
+
+        /* Open drawer */
+        coretex-drawer[open] .menuContent {
+            transform: none;
+            opacity: 1;
+            transition: transform 800ms var(--easeInOutQuint), opacity 0s var(--easeInOutQuint);
+        }
+    }
+
+    /* Panel */
+    coretex-header[coretex-menu="panel"] {
+        .menuContent {
+            max-height: var(--drawerHeight, 95vh);
+            max-width: var(--drawerWidth, 450px);
+            margin: var(--padding) var(--layoutInline);
+            border-radius: var(--globalRadiusSafe);
+        }
+    }
+
+/** Menu: drawer w/o mobile */
+    coretex-header[coretex-menu="drawer"] {
+        /* Closed drawer */
+        coretex-drawer .menuContent {
+            transform: translateX(-101vh);
+            opacity: 0;
+            transition: transform 500ms var(--easeInOutQuint), opacity 1s var(--easeInOutQuint);
+        }
+
+        /* Open drawer */
+        coretex-drawer[open] .menuContent {
+            transform: none;
+            opacity: 1;
+            transition: transform 500ms var(--easeInOutQuint), opacity 250ms var(--easeInOutQuint);
+        }
+    }
+
+    /* Drawer */
+    coretex-header[coretex-menu="drawer"] {
+        .menuContent {
+            display: flex;
+            flex-direction: column;
+            height: var(--drawerHeight, 100vh);
+            width: var(--drawerWidth, 400px);
+            border-start-end-radius: var(--globalRadiusSafe);
+            border-end-end-radius: var(--globalRadiusSafe);
+        }
+    }
+}
+
+/* Mobile */
+@media (width <= 777px) {
+    :is(.mobileTrigger, .tools) { transition: opacity 500ms var(--easeInOutQuint) } 
+    body.do-menuDrawerBox :is(.mobileTrigger, .tools) { opacity: 0; pointer-events: none }
+    coretex-header[coretex-menu] .menuContent nav.menuPrimary .button { text-align: start; white-space: break-spaces; line-height: initial }
+
+    coretex-header coretex-drawer { position: absolute }
+    coretex-header .logo[order-s="1"] { justify-content: start }
+
+    /* 
+        === [ CORETEX FYI ] ===  
+        You need to keep all code below in sync with the drawer menu code above.
+    */
+    /** Menu: drawer mobile */
+    coretex-header[content-type="text"] .menuContent drawer-footer *:not(.noHide) > i { display: none } 
+
+    /** Menu: drawer mobile */
+    coretex-header[coretex-menu] {
+        /* Closed drawer */
+        coretex-drawer .menuContent {
+            transform: translateY(101vh);
+            opacity: 0;
+            transition: transform 500ms var(--easeInOutQuint), opacity 1s var(--easeInOutQuint);
+        }
+
+        /* Open drawer */
+        coretex-drawer[open] .menuContent {
+            transform: none;
+            opacity: 1;
+            transition: transform 500ms var(--easeInOutQuint), opacity 250ms var(--easeInOutQuint);
+        }
+    }
+
+/** Menu: Drawer */
+    coretex-header[coretex-menu] {
+        coretex-drawer {
+            display: block;
+            position: absolute;
+
+            &[closed] { display: none }
+        }
+
+        .menuContent {
+            --gap: 0;
+
+            position: fixed;
+            inset-inline: 0px;
+            inset-block-start: 0px;
+            z-index: 100;
+            overflow: auto;
+            overscroll-behavior: contain;
+            padding: var(--padding);
+            background: var(--bg);
+            background-attachment: fixed;
+
+            display: flex;
+            flex-direction: column;
+            height: var(--drawerHeight, 100dvh);
+            width: var(--drawerWidth, 100%);
+            border-block-start: var(--globalBorder);
+
+            /* This will be ignored in Chrome (/issue/356891480) */
+            -webkit-backdrop-filter: var(--overlayBlur);
+                    backdrop-filter: var(--overlayBlur);
+            /* Since the backdrop-filter is ignored in Chrome,
+                we need to set a solid background color */
+            html.chrome & { background: var(--bg) }
+        }
+
+        drawer-header {
+            --buttonPadding: var(--space-1);
+            --buttonMargin: 0;
+            margin-block-end: var(--space-1);
+        }
+
+        drawer-footer { margin-block-start: auto }
+
+        details {
+            & > summary i { transform: rotate(270deg) }
+            &[open] > summary i { transform: rotate(90deg) }
+        }
+
+        ul { margin: var(--space-1); margin-inline-end: 0; flex-direction: column }
+
+        /* When a details is open, blur its sibling menu items.
+           Works at every nesting level since each ul scopes its own :has(). */
+        ul:has(> li.bdotfx > details[open]) > li.bdotfx:not(:has(> details[open])) {
+            opacity: 0.5;
+            transition: opacity 250ms var(--easeInOutQuint);
+        }
+
+        [data-level="1"] { margin: 0 }
+    }
+    /* === / end === */
+
+    /* Mobile drawer menu specifics */
+    coretex-header[coretex-menu] .menuContent a { display: block }
+
+}
+
+/* Breadcrumb */
+.breadcrumb { padding-inline: var(--layoutInline) } 
+.breadcrumb > * { padding: var(--space-1); white-space: nowrap }
+.breadcrumb > a:first-child { margin-inline-start: 0px; padding-inline-start: 0px } 
+
+/* [C] Predictive search */
+coretex-dialog#searchBox { --dialogH: fit-content; --dialogMaxH: 90dvh }
+
+/* Safari doesn't properly handle fit-content in this context - using fallback */
+html.mq-desktop.safari coretex-dialog#searchBox { --dialogH: max(100%, 600px); --dialogMaxH: min(90dvh, 600px) }
+
+/* // === [ CORETEX FYI ] ===
+ * iOS Safari keyboard fix: 
+ * When the virtual keyboard appears, Safari automatically removes overflow:hidden 
+ * from the document body, which causes unwanted page scrolling behind modals/dialogs.
+ * This creates a poor UX where users can scroll both the dialog content and the 
+ * background page simultaneously.
+ */
+@media screen and (max-width: 777px) {
+    coretex-dialog#searchBox { 
+        --dialogH: 95dvh; --dialogH: 95dvh;
+        --dialogMaxH: 95dvh; --dialogMaxH: 95dvh;
+    }
+}
+
+/* // === [ CORETEX FYI ] ===
+* Search bar positioning fix:
+* Ensures the search bar remains visible and accessible when the iOS keyboard
+* is active, preventing it from being hidden behind the virtual keyboard.
+*/
+search-engine .search-section {
+    .search-bar { position: sticky; inset-block-end: 0; z-index: 1; order: 99 }
+    .predictive-search-area { order: 1 }
+}
+
+@media (width < 777px) {
+    html.ios {
+        .search-bar { position: sticky; inset-block-start: var(--space-6); z-index: 1; order: 1 }
+        .predictive-search-area { order: 99 }
+    }
+}
+
+coretex-dialog#searchBox predictive-search [data-predictive-search] { display: none; overflow: hidden }
+
+coretex-dialog#searchBox predictive-search[results="true"] [data-predictive-search] { display: block }
+
+coretex-dialog#searchBox x-stack[presuffix] { --inputMargin: 0 }
+
+coretex-dialog#searchBox dialog-wrapper { height: 100% }
+coretex-dialog#searchBox main-search form { display: block; height: 100% }
+
+coretex-dialog#searchBox :where(search-engine,main-search) { 
+    display: block;
+    @media (width >= 777px) { height: 100% }
+}
+
+coretex-dialog#searchBox .title { font-size: var(--fontSize); font-family: var(--fontFamily) }
+
+coretex-dialog#searchBox a.search-section { height: 100%; justify-content: end }
+coretex-dialog#searchBox a.search-item { gap: var(--gap) }
+coretex-dialog#searchBox a.search-item coretex-price { gap:0px }
+
+
+coretex-dialog#searchBox :where(.media,img) { 
+    max-width: 65px;
+    height: 65px;
+    aspect-ratio: 1 / 1;
+    object-fit: var(--prodCardFit, cover);
+    object-position: var(--prodCardPosition, center);
+}
+
+predictive-search:not([loading]) .predictive-search__loading-state, predictive-search:not([loading]) .predictive-search-status__loading { display: none }
+predictive-search[loading] .predictive-search__loading-state, predictive-search[loading] .predictive-search-status__loading { display: block }
+
+coretex-dialog#searchBox #predictive-search-option-search-keywords { margin-block: var(--padding) }
+
+search-engine { --hMargin: 0 0 var(--space-2) }
+
+search-engine .price .price-sale { flex-wrap: wrap; gap: 0 var(--padding)!important }
+search-engine .meta .title { --hMargin: 0; line-height: 1.26 }
+
+search-engine .search-list .item:not(.suggest) .button { --buttonWeight: 400; --buttonMargin: 0; --buttonPadding: var(--space-2) }
+search-engine .search-list .item.suggest .button { --buttonWeight: 400; --buttonMargin: 0; --buttonPadding: var(--space-2) 0 }
+
+search-engine x-stack { --a11yOffset: 1px }
+search-engine x-stack label i { color: var(--inputColor) }
+
+search-engine suggested-links {
+    display: block;
+    margin-block-start: var(--margin);
+
+    .linkList { gap: var(--space-0) var(--space-2) }
+}
+
+/** Login **/
+coretex-dialog#loginBox {
+    --dialogH: fit-content;
+    --dialogMaxH: 90dvh;
+}
+
+/***
+    Footer 
+***/
+
+/* Stealth footer */
+html:not(.shopify-design-mode) body[coretex-footer="stealth"] #footerGroup { 
+    position: fixed; 
+    inset-block-end: 0px;
+    z-index: 100;
+    width: 100%;
+    transform: translateY(100vh);
+    transition: transform 800ms var(--easeInOutQuint);
+    max-height: calc(100vh - var(--headSpace));
+    overflow-y: auto;
+    overscroll-behavior: contain;
+}
+
+html:not(.shopify-design-mode) body[coretex-footer="stealth"] #footerGroup:target { transform: none }
+
+body[coretex-footer="stealth"] #footerGroup .main-footer { background: var(--bg); background-attachment: fixed; color: var(--color) }
+body[coretex-footer="stealth"] #footerGroup .main-footer:first-of-type { border-block-start: 1px solid rgb(var(--colorRGB) / .15) }
+
+body[coretex-footer="stealth"] .stealthFooterOpen { 
+    position: fixed; 
+    inset-block-end: 0; 
+    inset-inline: 0; 
+    z-index: 100; 
+    display: block; 
+    margin-inline: auto; 
+    transition: all 500ms var(--easeInOutQuint);
+}
+body[coretex-footer="stealth"]:has(#footerGroup:target) .stealthFooterOpen { opacity: 0; transform: translateY(50vh); pointer-events: none }
+
+body[coretex-footer="stealth"] #footerGroup .stealthFooterClose { display: block; margin: var(--space-1) auto }
+
+.labelTitle {
+    color: var(--labelTitleColor,var(--colorFaded));
+    font-size: var(--labelTitleSize, var(--type-3));
+    font-weight: var(--labelTitleWeight, 400);
+    word-wrap: break-word;
+}
+
+#primaryFooter, #secondaryFooter {
+    background: var(--bg);
+    background-attachment: fixed;
+    color: var(--color);
+    padding: var(--space-3) var(--layoutInline);
+}
+
+#primaryFooter { --gap: var(--space-4) }
+
+/* #primaryFooter > * > section > * { height: 100% } */
+
+#primaryFooter .menu { --gap: 0 var(--space-2) }
+#primaryFooter .menu a { display: block; padding-block: var(--space-1); word-break: break-word }
+
+#primaryFooter .socialNets { --iconSize: 1.5rem; gap: var(--space-3); height: 100% }
+#primaryFooter .payment-icons { --iconSize: 2.5rem }
+#primaryFooter .payment-icons [x-flex] { justify-content: var(--paymentJustify) }
+#primaryFooter .follow-on-shop { margin-block: var(--padding) }
+
+#primaryFooter .newsletter {
+    --hMargin: 0;
+    --pMargin: 0;
+    --gap: var(--space-1)
+}
+
+#primaryFooter .i18n-selectors { --gap: var(--space-1) var(--space-3); --labelTitleSize: var(--fontSize); }
+
+#primaryFooter :where(.newsletter,.i18n-selectors) button.is-custom { 
+    --buttonPadding: var(--space-1); 
+    --buttonMargin: 0; 
+    --buttonGap: var(--space-1); 
+    --buttonWeight: 400
+}
+
+#primaryFooter .image img { height: var(--imageSize, 150px); width: fit-content }
+
+@media screen and (max-width: 777px) {
+    #primaryFooter { --gap: var(--space-6) var(--space-2) }
+}
+
+#secondaryFooter {
+    --linkColor: var(--linkColorFaded);
+    --gap: var(--space-2) var(--space-8);
+
+    color: var(--colorFaded);
+    font-size: 85%;
+}
+
+#secondaryFooter .policies { --gap: var(--space-1) var(--space-3) }
+#secondaryFooter a { padding-block: var(--space-2) }
+
+/* [C] Localization component */
+#languageBox, #countryBox { --dialogH: fit-content }
+/*  fixing an annoying iOS problem, 
+    where when the keyboard is open, safari removes the `overflow:hidden` from the page 
+    creating a scrollable page mess, because you can scroll the dialog but also the page.
+*/
+@media (width < 777px) { 
+    html.ios country-search { display: none} 
+}
+
+country-search button[type="reset"] { width: fit-content }
+country-search .popular-list li { margin-block: var(--globalBorderWidth) }
+
+.localization-list { gap: var(--globalBorderWidth) }
+.localization-list > li { margin-bottom: 0 }
+
+.localization-item { order: 2 }
+.localization-item[aria-current="true"] { order: 1 }
+.localization-item > a { display: flex; justify-content: space-between; padding: var(--space-1); position: relative }
+
+.localization-item > a:not([aria-current="true"]) .currency .isoCode { opacity: 0 }
+.localization-item > a:not([aria-current="true"]):is(:hover,:focus-visible) .currency .isoCode { opacity: 1 }
+
+.localization-item a[aria-current="true"] { text-decoration: underline; font-weight: 600 }
+.localization-item a:where([aria-current="true"],:is(:hover,:focus-visible)):before { content: var(--hoverSymbol); position: absolute; inset-inline-start: -0.4em }
+
+localization-form form { display: flex; flex-direction: column; gap: var(--margin) }
+
+/* Numbered pagination */
+nav.pagination { 
+    --gap: var(--space-2);
+    margin-block-start: var(--space-9);
+    
+    :where(a,ul li > *) { display: inline-block; padding: var(--space-3) }
+    [data-current="page"] { text-decoration: underline overline }
+    [inert] > * { text-decoration: line-through }
+    
+    @media (width <= 777px) { --gap: 0px }
+}
+
+/* Shopify Policies pages */
+.shopify-policy__title { display: block; text-align: inherit; width: fit-content; margin-inline: var(--layoutCenter, 0) } 
+
+.shopify-policy__container { 
+    width: 100%;
+    max-width: var(--layoutMaxWidth);
+    margin: var(--margin) var(--layoutCenter, 0);
+    padding: 0 var(--layoutInline) var(--margin);
+}
+
+.shopify-policy__body :is(h1,h2,h3,h4,h5,h6) { 
+    --hLine: 1.1;
+    --hSpace: 0px;
+    margin-block: 1.5em .3em;
+}
+
+/* Shopify Marketing confirmation page */
+.shopify-email-marketing-confirmation__container {
+    padding: 0;
+    margin: var(--layoutInline);
+
+    a { text-decoration: underline }
+}
+
+/** Cart */
+/* Dynamic checkout */
+shopify-accelerated-checkout-cart {
+    --shopify-accelerated-checkout-button-block-size: 42px;
+    --shopify-accelerated-checkout-button-inline-size: 42px;
+    --shopify-accelerated-checkout-button-border-radius: var(--globalRadius);
+    --shopify-accelerated-checkout-button-box-shadow: none;
+    --shopify-accelerated-checkout-inline-alignment: flex-start;
+    --shopify-accelerated-checkout-row-gap: var(--margin);
+    --shopify-accelerated-checkout-skeleton-background-color: rgb(128 128 128 / 0.4);
+    --shopify-accelerated-checkout-skeleton-animation-opacity-start: 1;
+    --shopify-accelerated-checkout-skeleton-animation-opacity-end: 0.5;
+    --shopify-accelerated-checkout-skeleton-animation-duration: 4s;
+    --shopify-accelerated-checkout-skeleton-animation-timing-function: ease;
+    display: block;
+    margin-block: var(--margin);
+}
+
+coretex-cart cart-item ul.product-components {
+    margin: 0;
+
+    li:last-child { margin: 0 }
+    li { margin-block-end: var(--space-1) }
+}
+
+/***
+    Home page 
+***/
+
+/* Recommended products, recently viewed, and products by vendor */
+[coretex-page="product"] .suggested :where(coretex-fetch,product-recommendations) { 
+    background: var(--bg);
+    background-attachment: fixed;
+    color: var(--color)
+}
+
+.suggested :where(coretex-fetch,product-recommendations) coretex-scroll product-card {
+    --scrollChildMinWidth: 250px;
+    --scrollChildMaxWidth: var(--prodCardSlideRatio);
+
+    height: 100%;
+    width: var(--scrollChildMinWidth);
+}
+
+.suggested.recently-viewed:has(coretex-fetch:not([loading="lazy"])[loaded="false"]) { padding: 0!important; opacity: 0 }
+
+/* Onboarding */
+svg.svgph { fill: var(--color); background: rgb(var(--colorRGB) / .1) }
+
+/* Cookies banner */
+:is(#shopify-pc__banner.shopify-pc__banner__dialog) {
+    box-shadow: none;
+    border-radius: var(--globalRadius) var(--globalRadius) 0 0;
+    border: var(--globalBorder);
+    padding: var(--padding);
+    margin: 0 var(--layoutInline);
+    max-width: calc(100vw - (var(--layoutInline) * 2));
+}
+
+:is(#shopify-pc__banner.shopify-pc__banner__dialog) button:is(.shopify-pc__banner__btn-accept,.shopify-pc__banner__btn-decline,.shopify-pc__banner__btn-manage-prefs) {
+    display: block;
+    padding: var(--buttonPadding);
+    border: none;
+    border-radius: var(--buttonRadius);
+    text-decoration: none;
+    text-align: var(--buttonAlign);
+}
+
+:is(#shopify-pc__banner.shopify-pc__banner__dialog) button:is(.shopify-pc__banner__btn-manage-prefs) { font-weight: 400 }
+
+body[class^="o-"] .shopify-pc__banner__dialog { z-index: 5 }
+
+.gs-title { --hMargin: 0 }
+
+/* [C] Coretex mouse tracker */
+coretex-mouse-tracker { 
+    display: block; 
+    position: relative; 
+    z-index: 2;
+    isolation: isolate;
+
+    .featImg img { width: 100%; max-height: 400px; object-fit: contain; object-position: center }
+
+    @media (width >= 777px) {
+        [data-track] {
+            position: absolute;
+            inset: 0;
+            z-index: 1;
+            width: 100%;
+            opacity: 0;
+            scale: 0.9;
+            transform-origin: center;
+            transform: translate(var(--mouse-x, 0px), var(--mouse-y, 0px));
+            will-change: transform;
+            pointer-events: none;
+        }
+
+        [data-track="animate"], [data-track*="animate"] { transition: scale 200ms var(--easeOutQuart), opacity 200ms var(--easeOutQuart) }
+        [data-track*="show"] { opacity: 1; scale: 1 }
+        [data-track*="smooth"] { transition: scale 200ms var(--easeOutQuart), opacity 200ms var(--easeOutQuart) }
+        [data-track*="instant"] { transition: scale 200ms var(--easeOutQuart), opacity 200ms var(--easeOutQuart) }
+    }
+}
+
+/* [S] Coretex scroll snap slider styles */
+coretex-scroll { display: block; max-width: 100% }
+coretex-scroll[scrollable] [scroll-area] { contain: content; scrollbar-width: none; user-select: none; cursor: grab; scroll-padding-left: var(--layoutInline) }
+coretex-scroll[scrollable] [scroll-area] [scroll-slide] { user-select: none }
+coretex-scroll[scrollable] [scroll-area]::-webkit-scrollbar { display: none }
+coretex-scroll:not([scrollable-left]) [scroll-button-prev], 
+coretex-scroll:not([scrollable-right]) [scroll-button-next] { opacity: 0.2; cursor: not-allowed }
+[dir="rtl"] coretex-scroll [scroll-button-prev] { order: 1 }
+coretex-scroll :where([scroll-button-prev],[scroll-button-next]) { display: none }
+coretex-scroll[scrollable] :where([scroll-button-prev],[scroll-button-next]) { display: block }
+
+coretex-scroll .coretex-scroll-nav { opacity: 0; transition: opacity 500ms ease-in-out }
+coretex-scroll:where(:hover,:focus-within) .coretex-scroll-nav { opacity: 1 }
+
+coretex-scroll:not([scrollable]) .coretex-scroll-nav { display: none!important }
+@media (max-width: 777px) { coretex-scroll .coretex-scroll-nav { display: none!important } }
+
+coretex-scroll [scroll-area] [scroll-slide]:first-child { margin-inline-start: var(--layoutInline) }
+coretex-scroll [scroll-area] [scroll-slide]:last-child { margin-inline-end: var(--layoutInline) }
+
+/* Coretex slider */
+coretex-slider [slider-viewport] { display: block; position: relative; overflow: hidden }
+coretex-slider [slider-container] { display: flex; touch-action: pan-y pinch-zoom; will-change: transform; backface-visibility: hidden; scrollbar-width: none; user-select: none; cursor: grab }
+coretex-slider [slider-slide] { flex: 0 0 100%; user-select: none }
+
+/* [S] Sections general */
+.listOfProds { 
+    --scrollChildMinWidth: var(--prodCardSlideRatio); 
+    --scrollChildMaxWidth: var(--prodCardSlideRatio);
+
+    [scrollable] .onboarding:first-child { margin-inline-start: var(--layoutInline) }
+    
+    /* Layout type grid */
+    &[layout-type="grid"] { 
+        padding-inline: var(--layoutInline); 
+
+        .product-grid {
+            gap: var(--gridGap); 
+            @media (width < 777px) { gap: var(--gridGapMob) }
+        }
+    }
+}
+
+@media (width < 777px) {
+    .listOfProds { --scrollChildMinWidth: 250px; --scrollChildMaxWidth: 250px }
+    .recently-viewed.listOfProds { --scrollChildMinWidth: fit-content; --scrollChildMaxWidth: fit-content }
+}
+
+
+/* [S] Sections heading */
+.section-heading { --hMargin: 0; --pMargin: 0; margin-block-end: var(--space-4) }
+.section-heading .description { max-width: 62ch }
+.section-heading:empty { display: none }
+coretex-scroll .section-heading { padding-inline: var(--layoutInline) }
+.section-heading :where(.coretex-scroll-nav,.cta[js="end"]) { margin-inline-start: auto }
+.section-heading[addpad] { padding-inline: var(--layoutInline) }
+
+@media(min-width: 777px) {
+    .shopify-section .section-heading[stealth="true"] { opacity: 0; transition: opacity 500ms ease-in-out }
+    .shopify-section:where(:hover,:focus-within) .section-heading[stealth="true"] { opacity: 1 }
+}
+
+/* [C] Autoscroll slider */
+[autoscroll-toggle][aria-pressed="true"] [autoscroll-play-text],
+[autoscroll-toggle][aria-pressed="false"] [autoscroll-pause-text] { display: none }
+
+/* Grid to act like a flex container */
+[flow="horizontal"] { display: grid; grid-auto-flow: column }
+[flow="vertical"] { display: grid; grid-auto-flow: row }
+
+/* [S] Used for Hero Banner alignments */
+x-flex[pi="top left"] { align-items: flex-start; justify-content: flex-start }
+x-flex[pi="top center"] { align-items: flex-start; justify-content: center }
+x-flex[pi="top right"] { align-items: flex-start; justify-content: flex-end }
+x-flex[pi="top between"] { align-items: flex-start; width: 100%; }
+
+x-flex[pi="center left"] { align-items: center; justify-content: flex-start }
+x-flex[pi="center"] { align-items: center; justify-content: center }
+x-flex[pi="center right"] { align-items: center; justify-content: flex-end }
+x-flex[pi="center between"] { align-items: center; width: 100%; }
+
+x-flex[pi="bottom left"] { align-items: flex-end; justify-content: flex-start }
+x-flex[pi="bottom center"] { align-items: flex-end; justify-content: center }
+x-flex[pi="bottom right"] { align-items: flex-end; justify-content: flex-end }
+x-flex[pi="bottom between"] { align-items: flex-end; width: 100%; }
+
+x-flex[pi*="between"] x-cell.content { width: 100% }
+x-flex[pi*="between"] x-cell.content x-flex { justify-content: space-between }
+
+x-flex[pi*="between"][orientation="column"] x-cell.content { height: 100% }
+x-flex[pi*="between"][orientation="column"] x-cell.content x-flex { height: 100%; justify-content: space-between }
+
+@media (max-width: 777px) {
+    x-flex[pi-s="top left"] { align-items: flex-start; justify-content: flex-start }
+    x-flex[pi-s="top center"] { align-items: flex-start; justify-content: center }
+    x-flex[pi-s="top right"] { align-items: flex-start; justify-content: flex-end }
+    x-flex[pi-s="top between"] { align-items: flex-start; width: 100%; }
+
+    x-flex[pi-s="center left"] { align-items: center; justify-content: flex-start }
+    x-flex[pi-s="center"] { align-items: center; justify-content: center }
+    x-flex[pi-s="center right"] { align-items: center; justify-content: flex-end }
+    x-flex[pi-s="center between"] { align-items: center; width: 100%; }
+
+    x-flex[pi-s="bottom left"] { align-items: flex-end; justify-content: flex-start }
+    x-flex[pi-s="bottom center"] { align-items: flex-end; justify-content: center }
+    x-flex[pi-s="bottom right"] { align-items: flex-end; justify-content: flex-end }
+    x-flex[pi-s="bottom between"] { align-items: flex-end; width: 100%; }
+
+    x-flex[pi-s*="between"] x-cell.content { width: 100% }
+    x-flex[pi-s*="between"] x-cell.content x-flex { justify-content: space-between }
+
+    x-flex[pi-s*="between"][orientation-s="column"] .content { height: 100% }
+    x-flex[pi-s*="between"][orientation-s="column"] .content x-flex { height: 100%; justify-content: space-between }
+}

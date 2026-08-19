@@ -1,0 +1,156 @@
+{% doc %}
+    Renders a overlay two cells.
+
+    @example
+    {% content_for 'block', type: 'g-overlay' %}
+{% enddoc %}
+
+{%- capture style -%}
+margin-block:{{ block.settings.marginTop | prepend: 'var(--space-' | append: ')' }} {{ block.settings.marginBottom | prepend: 'var(--space-' | append: ')' }};
+{%- endcapture -%}
+
+<x-grid 
+    columns="stack" 
+    ai="{{ block.settings.align_items }}" ai-s="{{ block.settings.align_items_s }}"
+    ji="{{ block.settings.justify_items }}" ji-s="{{ block.settings.justify_items_s }}"
+    style="{{- style | strip_newlines | strip -}}"
+    class="sb-overlay"
+    {{ block.shopify_attributes }}
+>
+    {%- liquid 
+        content_for "block", type: "g-cell", id: "cell-1" 
+        content_for "block", type: "g-cell", id: "cell-2" 
+    -%}
+</x-grid>
+
+{% stylesheet %}
+/*** [SB] Overlay */
+.sb-overlay {
+    & > x-cell {
+        grid-column-end: span 1!important;
+        &:last-child { width: 100% } 
+    }
+}
+{% endstylesheet %}
+
+{% schema %}
+{
+	"name": "Overlay content",
+	"tag": null,
+	"settings": [
+		{
+			"type": "header",
+			"content": "Desktop"
+		},
+        {
+            "type": "select",
+            "id": "align_items",
+            "label": "Vertical alignment",
+            "default": "start",
+            "info": "Applies when cell heights vary. Controls how cells align vertically.",
+            "options": [
+                { "value": "start", "label": "Start" },
+                { "value": "center", "label": "Center" },
+                { "value": "end", "label": "End" },
+                { "value": "stretch", "label": "Stretch" }
+            ]
+        },
+        {
+            "type": "select",
+            "id": "justify_items",
+            "label": "Horizontal alignment",
+            "default": "start",
+            "options": [
+                { "value": "start", "label": "Start" },
+                { "value": "center", "label": "Center" },
+                { "value": "end", "label": "End" },
+                { "value": "stretch", "label": "Stretch" },
+                { "value": "around", "label": "Space around" },
+                { "value": "between", "label": "Space between" },
+                { "value": "evenly", "label": "Space evenly" }
+            ]
+        },
+		{
+			"type": "header",
+			"content": "Mobile"
+		},
+        {
+            "type": "select",
+            "id": "align_items_s",
+            "label": "Vertical alignment",
+            "default": "start",
+            "info": "Applies when cell heights vary. Controls how cells align vertically.",
+            "options": [
+                { "value": "start", "label": "Start" },
+                { "value": "center", "label": "Center" },
+                { "value": "end", "label": "End" },
+                { "value": "stretch", "label": "Stretch" }
+            ]
+        },
+        {
+            "type": "select",
+            "id": "justify_items_s",
+            "label": "Horizontal alignment",
+            "default": "start",
+            "options": [
+                { "value": "start", "label": "Start" },
+                { "value": "center", "label": "Center" },
+                { "value": "end", "label": "End" },
+                { "value": "stretch", "label": "Stretch" },
+                { "value": "around", "label": "Space around" },
+                { "value": "between", "label": "Space between" },
+                { "value": "evenly", "label": "Space evenly" }
+            ]
+        },
+		{
+			"type": "header",
+			"content": "Margin"
+		},
+		{
+			"type": "range",
+			"id": "marginTop",
+			"label": "Top",
+			"min": 0,
+			"max": 30,
+			"step": 1,
+			"default": 0
+		},
+		{
+			"type": "range",
+			"id": "marginBottom",
+			"label": "Bottom",
+			"min": 0,
+			"max": 30,
+			"step": 1,
+			"default": 0
+		}
+	],
+	"presets": [
+		{
+			"name": "Overlay content",
+			"category": "Layout",
+            "blocks": [
+                {
+                    "type": "g-cell",
+                    "id": "cell-1",
+                    "static": true,
+                    "name": "Foreground",
+                    "blocks": [
+                        { "type": "a-text" }
+                    ]
+                },
+                {
+                    "type": "g-cell",
+                    "id": "cell-2",
+                    "static": true,
+                    "name": "Background",
+                    "blocks": [
+                        { "type": "a-image" }
+                    ]
+                }
+            ],
+            "settings": { }
+		}
+	]
+}
+{% endschema %}

@@ -1,0 +1,73 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "type": "header",
+  "name": "Header",
+  "sections": {
+    "header": {
+      "type": "header",
+      "blocks": {
+        "logo": {
+          "type": "logo",
+          "settings": {
+            "hideOnHome": false,
+            "image": "shopify://shop_images/maplemoon-logo.svg",
+            "logoImageSize": 40,
+            "mobilePosition": "3"
+          }
+        },
+        "menu": {
+          "type": "menu",
+          "settings": {
+            "linklist": "main-menu",
+            "type": "mega",
+            "alignment": "left",
+            "openOnHover": false,
+            "firstElevated": true,
+            "showShadow": false
+          }
+        },
+        "cart": {
+          "type": "cart",
+          "settings": {
+            "showCart": true,
+            "showSearch": true,
+            "showAccounts": false,
+            "showCountry": false,
+            "showLanguage": false,
+            "alignment": "right"
+          }
+        }
+      },
+      "block_order": [
+        "logo",
+        "menu",
+        "cart"
+      ],
+      "settings": {
+        "stealthMode": false,
+        "stickyMode": false,
+        "overlayOnHomepage": false,
+        "overlayOnProducts": true,
+        "overlayOnCollections": false,
+        "overlayOnArticles": false,
+        "overlayOnPages": false,
+        "contentDisplay": "icons",
+        "cartIcon": "cart",
+        "textTransform": "none",
+        "bgFill": "transparent",
+        "mixBlend": true
+      }
+    }
+  },
+  "order": [
+    "header"
+  ]
+}

@@ -1,0 +1,95 @@
+{% doc %}
+    Renders a richtext block.
+
+    @example
+    {% content_for 'block', type: 'a-richtext' %}
+{% enddoc %}
+
+{%- capture block_style -%}
+{%- if block.settings.color %}{{ block.settings.color_custom | prepend: '--_color:' | append: ';' }}{% endif -%}
+padding:{{- block.settings.paddingTop | prepend: 'var(--space-' | append: ')' }} {{- block.settings.paddingRight | prepend: 'var(--space-' | append: ')' }} {{ block.settings.paddingBottom | prepend: 'var(--space-' | append: ')' }} {{- block.settings.paddingLeft | prepend: 'var(--space-' | append: ')' }};
+{%- endcapture -%}
+
+<div class="sb-richtext contents atomic" {{ block.shopify_attributes }}>
+    <div class="content rte" style="{{ block_style | strip_newlines | strip }}">{{ block.settings.text }}</div>
+</div>
+
+{% schema %}
+{
+	"name": "Richtext",
+	"tag": null,
+	"settings": [
+		{
+			"type": "richtext",
+			"id": "text",
+			"label": "Text",
+			"default": "<p>Add your content here. Use the editor to format text, add links, and create lists that match your brand.</p>"
+		},
+		{
+			"type": "header",
+			"content": "Padding"
+		},
+		{
+			"type": "range",
+			"id": "paddingTop",
+			"label": "Top",
+			"min": 0,
+			"max": 30,
+			"step": 1,
+			"default": 0
+		},
+		{
+			"type": "range",
+			"id": "paddingRight",
+			"label": "Right",
+			"min": 0,
+			"max": 30,
+			"step": 1,
+			"default": 0
+		},
+		{
+			"type": "range",
+			"id": "paddingBottom",
+			"label": "Bottom",
+			"min": 0,
+			"max": 30,
+			"step": 1,
+			"default": 0
+		},
+		{
+			"type": "range",
+			"id": "paddingLeft",
+			"label": "Left",
+			"min": 0,
+			"max": 30,
+			"step": 1,
+			"default": 0
+		},
+		{
+			"type": "header",
+			"content": "Appearance"
+		},
+		{
+			"type": "checkbox",
+			"id": "color",
+			"label": "Enable custom color",
+			"default": false,
+			"info": "Enable to use a custom text color"
+		},
+		{
+			"type": "color",
+			"id": "color_custom",
+			"label": "Text color",
+			"default": "#000000",
+			"visible_if": "{{ block.settings.color }}"
+		}
+	],
+	"presets": [
+		{
+			"name": "Richtext",
+			"category": "Basic",
+			"settings": { }
+		}
+	]
+}
+{% endschema %}

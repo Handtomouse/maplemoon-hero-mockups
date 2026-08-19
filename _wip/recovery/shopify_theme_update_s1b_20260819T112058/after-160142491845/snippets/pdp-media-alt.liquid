@@ -1,0 +1,29 @@
+{% doc %}
+Returns accessible media alt text without a valid variant gallery identifier.
+
+@param {media} media - Product media whose alt text should be rendered.
+@param {string} fallback - Text used when the media has no description.
+@param {boolean} variant_gallery - Whether variant gallery identifiers should be removed.
+{% enddoc %}
+
+{%- liquid
+  assign media_alt = media.alt | default: fallback | strip
+
+  if variant_gallery
+    capture media_group
+      render 'pdp-media-group', media: media
+    endcapture
+    assign media_group = media_group | strip
+
+    if media_group != '__shared__' and media_group != '__invalid__'
+      assign group_token = media_alt | split: ' ' | last
+      assign media_alt = media_alt | remove_last: group_token | strip
+    endif
+  endif
+
+  if media_alt == blank
+    assign media_alt = fallback
+  endif
+
+  echo media_alt
+-%}

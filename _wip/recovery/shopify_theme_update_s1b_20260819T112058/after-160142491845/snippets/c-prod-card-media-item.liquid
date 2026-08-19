@@ -1,0 +1,36 @@
+{% doc %}
+  Renders a single media on a product card, as an image or a video.
+
+  @param media - The product media object to render.
+  @param card_media_type - 'multimedia' to render videos as videos, anything else renders a preview image.
+  @param class - Class passed to the rendered media, used for the hover swap ('on' / 'off').
+  @param width - The max width of the image.
+  @param widths - List of sizes for the srcset.
+  @param sizes - Used for srcset.
+  @param fallback - Show a fallback image when the media is empty.
+  @param ph - Show a placeholder image.
+  @param mediaLoader - Listens to the media-loader component to know when the image is loaded.
+  @param loading - 'eager', 'lazy' or 'auto'.
+
+  @example
+  {%- render 'c-prod-card-media-item', media: media, card_media_type: card_media_type, class: class, width: width, widths: widths, sizes: sizes, fallback: fallback, ph: ph, mediaLoader: mediaLoader, loading: loading -%}
+{% enddoc %}
+
+{%- liquid
+  if card_media_type == 'multimedia'
+    case media.media_type
+      when 'image'
+        assign img = media.image
+        render 'inc-img', img: img, width: width, widths: widths, sizes: sizes, fallback: fallback, ph: ph, mediaLoader: mediaLoader, pclass: class, loading: loading
+      when 'video'
+        assign vid = media
+        render 'inc-video', vid: vid, loop: true, autoplay: true, controls: false, class: class
+      else
+        assign img = media.preview_image
+        render 'inc-img', img: img, width: width, widths: widths, sizes: sizes, fallback: fallback, ph: ph, mediaLoader: mediaLoader, pclass: class, loading: loading
+    endcase
+  else
+    assign img = media.preview_image
+    render 'inc-img', img: img, width: width, widths: widths, sizes: sizes, fallback: fallback, ph: ph, mediaLoader: mediaLoader, pclass: class, loading: loading
+  endif
+-%}

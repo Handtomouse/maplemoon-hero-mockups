@@ -1,0 +1,85 @@
+<!doctype html>
+<html class="no-js" lang="{{ request.locale.iso_code }}" dir="{%- render 'inc-dir' -%}">
+<head>
+    {%- liquid 
+        render 'inc-imap'
+        render 'global-meta'
+        render 'global-preload'
+    -%}
+
+    {%- if settings.favicon != blank -%}
+    <link rel="shortcut icon" href="{{ settings.favicon | image_url: width: 32, height: 32 }}">
+    <link rel="apple-touch-icon-precomposed" href="{{ settings.favicon | image_url: width: 250, height: 250 }}">
+    {%- endif -%}
+
+    <!-- START content_for_header -->
+    {{ content_for_header }}
+    <!-- END content_for_header -->
+
+    {%- liquid
+        echo 'skelet.css' | asset_url | stylesheet_tag: preload: true
+        render 'global-css'
+
+        if settings.useCustomFonts
+            render 'global-fonts'
+        endif
+
+        echo 'app.css' | asset_url | stylesheet_tag: preload: true
+
+        if request.design_mode
+            render 'inc-script', src: 'h-editor.js'
+            echo 'h-editor.css' | asset_url | stylesheet_tag
+        endif
+
+        render 'inc-script', src: 'app.js'
+    -%}
+
+    {% # theme-check-disable %}
+    {%- if settings.coretexCSS != blank -%}<style id="userCSS">{{ settings.coretexCSS }}</style>{%- endif -%}
+    {% # theme-check-enable %}
+
+    <!-- ADDITIONAL CODE INJECTED BY SHOPIFY -->
+    {% # Shopify injects tracking + other code here before the closing of the head tag. %}
+</head>
+<body id="pageBody" class="{{ settings.a11y }}"
+      coretex-page="{{ template.name }}"
+      coretex-path="{{ request.path }}"
+      {%- if settings.footer_stealth -%}coretex-footer="stealth"{%- endif -%}
+>
+    <a href="#mainContent" class="button visually-hidden-focus skipTo">{%- liquid
+        if template contains 'product'
+            echo 'accessibility.skip_to_product_info' | t
+        else
+            echo 'accessibility.skip_to_text' | t 
+        endif
+    -%}</a>
+
+    <component-loader id="app">
+        <header id="headerGroup">{%- sections 'header-group' -%}</header>
+        <script>(() => { const headerElements = document.querySelectorAll('[class*="group-header-group"]'); const header = document.querySelector('#mainHeader'); let headerGroupHeight = 0; for (const el of headerElements) { headerGroupHeight += el?.offsetHeight || 0 } document.body.style.setProperty('--headerGroupHeight', `${headerGroupHeight}px`); document.body.style.setProperty('--headerHeight', `${header?.offsetHeight || 0}px`); })();</script>
+        <main id="mainContent">{{ content_for_layout }}</main>
+        {%- if settings.footer_stealth -%}<a href="#footerGroup" class="button is-custom has-icon xbrk stealthFooterOpen" tableindex="0">{%- render 'inc-icon', icon: 'chevron-up' -%}<span class="visually-hidden">{{ 'openthinking.dictionary.phrase.open_footer' | t }}</span></a>{%- endif -%}
+        <footer id="footerGroup">{%- if settings.footer_stealth -%}<a href="#!" type="button" class="button has-icon xbrk stealthFooterClose">{%- render 'inc-icon', icon: 'chevron-down' -%}<span class="visually-hidden">{{ 'accessibility.close' | t }}</span></a>{%- endif -%}{%- sections 'footer-group' -%}</footer>
+        <aside id="overlayGroup">{%- sections 'overlay-group' -%}</aside>
+    </component-loader>
+
+    {%- liquid
+        # Loading the Language dialog
+        if localization.available_languages.size > 1
+            render 'global-localization', component: 'dialog', type: 'language', icons: false
+        endif 
+
+        # Loading the Country/region dialog
+        if localization.available_countries.size > 1
+            render 'global-localization', component: 'dialog', type: 'country', icons: false
+        endif
+
+        # Loading the Login dialog
+        if shop.customer_accounts_enabled
+            render 'global-login'
+        endif
+
+        render 'global-js' 
+    -%}
+</body>
+</html>

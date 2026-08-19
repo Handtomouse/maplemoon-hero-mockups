@@ -1,0 +1,23 @@
+# Untouched proof, 2026-08-19T11:32:40+1000
+## live 154500595909 fresh pull vs sealed recoveries
+path=/private/tmp/claude-501/-Users-handtomouse/28992ad5-c089-435c-b426-48d1da21e3de/scratchpad/verify/live-154500595909
+files=246
+bytes=2866869
+gate_directory_sha256=e48a21dc289c2534aaf06711e1e4b653a7b4b54ce7a11406f8d78027a147ccc4
+relative_tree_sha256=6f94b20a498fa0db7d3d4f602a04a783809689e75f95dbf234f802e8ec9c5dee
+diff_qr_exit_vs_s1b_live=0
+diff_qr_exit_vs_s1_source=0
+## sealed S1 160076628165 fresh pull vs sealed recoveries
+path=/private/tmp/claude-501/-Users-handtomouse/28992ad5-c089-435c-b426-48d1da21e3de/scratchpad/verify/s1-160076628165
+files=246
+bytes=2866869
+gate_directory_sha256=e48a21dc289c2534aaf06711e1e4b653a7b4b54ce7a11406f8d78027a147ccc4
+relative_tree_sha256=6f94b20a498fa0db7d3d4f602a04a783809689e75f95dbf234f802e8ec9c5dee
+diff_qr_exit_vs_s1b_before=0
+diff_qr_exit_vs_s1_duplicate=0
+## new 160142491845
+path=/private/tmp/claude-501/-Users-handtomouse/28992ad5-c089-435c-b426-48d1da21e3de/scratchpad/verify/new-160142491845
+files=270
+bytes=3046532
+gate_directory_sha256=a8aa2c2d8eb252d83bc700a8ec0567300a910f1571fe9f26208cde9ba23c3b1d
+relative_tree_sha256=4f281bb3683fd58750db478490ac2b13a90b0b06ee583565386ebad097476179

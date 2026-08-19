@@ -1,0 +1,25 @@
+/*** General */
+.customer { display: block; max-width: var(--layoutMaxWidth); margin-inline: var(--layoutCenter, 0); padding-inline: var(--layoutInline) }
+.customer form { --buttonMargin: var(--space-1) 0; --inputMargin: var(--space-1) 0 }
+
+/*** Login page */
+#customer_login_guest button { margin-top: 0 }
+#recover, #recover + div { display: none }
+#recover:target { display: block }
+#recover:target + div { display: block }
+#recover:target ~ #login, #recover:target ~ #login + div { display: none }
+#recover, #login { scroll-margin-top: 20rem }
+#recover { margin-bottom: 0 }
+
+coretex-shop-login {
+    display: block;
+    width: 100%;
+    &:empty { display: none }
+
+    shop-login-button {
+        --button-padding-block: var(--space-2);
+        --button-padding-inline: var(--space-2);
+        --shop-pay-button-border-radius: var(--globalRadius);
+        --font-paragraph--size: var(--fontSize);
+    }
+}

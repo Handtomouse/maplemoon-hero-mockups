@@ -1,0 +1,82 @@
+{% comment %}
+  This is responsible for displaying the media of the product card.
+
+  Usage:
+  {%- render 'c-prod-card-media',
+      product: product,
+      card_media_type: card_media_type,
+      show_secondary: show_secondary,
+      loading: loading
+  -%}
+{% endcomment %}
+
+{%- liquid
+  # Global assign for images
+  if product.featured_media
+    assign widths = widths | default: '480,640,768,1024,1280,1536'
+    assign sizes = sizes | default: '(min-width: 777px) 450px, 78.75vw'
+    assign ph = false
+    assign fallback = true
+    assign mediaLoader = true
+    assign loading = loading | default: nil
+  endif
+-%}
+
+{%- liquid
+  if product.featured_media
+    # === [ CORETEX FYI ] ===
+    # `product.featured_media` resolves to the media of the selected or first
+    # available variant, so it already reflects the variant chosen by a
+    # collection filter, a search term, or a `?variant=` URL. `product.media[0]`
+    # does not — it is a fixed position in the array. Sorting the media so the
+    # featured one comes first makes the card show the relevant image.
+    assign featured_media_id = product.featured_media.id
+    assign other_media = product.media | reject: 'id', featured_media_id
+    assign sorted_media = product.featured_media | concat: other_media
+
+    # Media attached to a variant belongs to that variant alone. Using one as the
+    # secondary media would reveal an unrelated colorway on hover, so the featured
+    # media is kept and the remaining variant media are skipped.
+    assign variant_images = product.images | where: 'attached_to_variant?', true | map: 'src'
+
+    # Pick the primary media, and the secondary one used for the hover swap
+    assign primary_media = null
+    assign secondary_media = null
+
+    for media in sorted_media
+      assign is_variant_media = false
+      if variant_images contains media.src
+        assign is_variant_media = true
+      endif
+
+      if primary_media == null
+        assign primary_media = media
+      elsif is_variant_media == false
+        assign secondary_media = media
+        break
+      endif
+    endfor
+
+    if show_secondary != true
+      assign secondary_media = null
+    endif
+  endif
+-%}
+
+{%- liquid
+  # Primary media. Only flag it for the hover swap when a secondary exists.
+  if primary_media
+    assign class = null
+    if secondary_media
+      assign class = 'on'
+    endif
+
+    render 'c-prod-card-media-item', media: primary_media, card_media_type: card_media_type, class: class, width: width, widths: widths, sizes: sizes, fallback: fallback, ph: ph, mediaLoader: mediaLoader, loading: loading
+  endif
+
+  # Secondary media, revealed on hover
+  if secondary_media
+    assign class = 'off'
+    render 'c-prod-card-media-item', media: secondary_media, card_media_type: card_media_type, class: class, width: width, widths: widths, sizes: sizes, fallback: fallback, ph: ph, mediaLoader: mediaLoader, loading: loading
+  endif
+-%}

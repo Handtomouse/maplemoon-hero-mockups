@@ -1,0 +1,30 @@
+{% doc %}
+Returns true when product media should appear in the current variant gallery.
+
+@param {media} media - Product media to evaluate.
+@param {boolean} variant_gallery - Whether variant gallery filtering is enabled.
+@param {string} variant_gallery_group - Selected variant gallery identifier.
+{% enddoc %}
+
+{%- liquid
+  assign media_visible = false
+
+  unless variant_gallery
+    assign media_visible = true
+  else
+    if variant_gallery_group != '__shared__' and variant_gallery_group != '__invalid__'
+      capture media_group
+        render 'pdp-media-group', media: media
+      endcapture
+      assign media_group = media_group | strip
+
+      if media_group == '__shared__' or media_group == variant_gallery_group
+        assign media_visible = true
+      endif
+    else
+      assign media_visible = true
+    endif
+  endunless
+
+  echo media_visible
+-%}

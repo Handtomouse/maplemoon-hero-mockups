@@ -1,0 +1,769 @@
+{%- liquid
+  # Count blocks
+  assign block_count = section.blocks.size
+
+  # Loop through blocks
+  for block in section.blocks
+    # Check for 'logo' block type
+    if block.type == 'logo' and block.settings.image == blank and settings.useCustomFonts != true
+      assign logo_font = block.settings.logo_font
+      assign logo_font_bold = logo_font | font_modify: 'weight', 'bold'
+      assign logo_font_italic = logo_font | font_modify: 'style', 'italic'
+      assign logo_font_bold_italic = logo_font_bold | font_modify: 'style', 'italic'
+
+      # Comunicate to the header that the logo is text
+      capture isTextLogo
+        echo true
+      endcapture
+    
+      capture logo_block
+        echo logo_font | font_face: font_display: 'swap'
+        echo logo_font_bold | font_face: font_display: 'swap'
+        echo logo_font_italic | font_face: font_display: 'swap'
+        echo logo_font_bold_italic | font_face: font_display: 'swap'
+      endcapture
+    endif
+
+    # Menu type: drop | mega | drawer | panel
+    if block.type == 'menu'
+        capture menuType 
+            echo block.settings.type
+        endcapture
+
+        # Mega menu shadow
+        assign megaShadow = false 
+        if block.settings.type == 'mega' and block.settings.showShadow
+            assign megaShadow = true
+        endif
+
+        # Dropdown background
+        assign showDropdownBg = false
+        if block.settings.type == 'drop' and block.settings.dropdownBackground
+            assign showDropdownBg = true
+        endif
+    endif
+
+  endfor
+
+  # Header mode {{ style }}
+# theme-check-disable
+
+    # Checking where we should overlay the header
+    assign overlayMode = false
+    assign pageType = template.name | default: request.page_type
+    if section.settings.overlayOnHomepage and pageType == 'index'
+        assign overlayMode = true
+    elsif section.settings.overlayOnProducts and pageType == 'product' 
+        assign overlayMode = true 
+    elsif section.settings.overlayOnCollections and pageType == 'collection' 
+        assign overlayMode = true 
+    elsif section.settings.overlayOnArticles and pageType == 'article' 
+        assign overlayMode = true 
+    elsif section.settings.overlayOnPages and pageType == 'page' 
+        assign overlayMode = true 
+    endif 
+
+    # Applying styles for sticky header
+    # Applying styles to overlay the header
+    if section.settings.stickyMode and overlayMode == false
+        # If sticky enabled, but overlay disabled.
+        assign mode_type = 'sticky'
+    elsif section.settings.stickyMode and overlayMode
+        # if sticky enabled, and overlay enabled.
+        assign mode_type = 'fixed'
+    elsif section.settings.stickyMode == false and overlayMode
+        # if sticky disabled, but overlay enabled.
+        assign mode_type = 'absolute'
+    else
+        assign mode_type = 'initial'
+    endif
+
+    # Content blend mode only applies to a transparent (overlay) header.
+    # Guards against a stale mixBlend value left over from when bgFill was transparent.
+    assign useMixBlend = false
+    if section.settings.bgFill == 'transparent' and section.settings.mixBlend
+        assign useMixBlend = true
+    endif
+
+  # Inline
+  capture header_style
+    # Background fill mode
+    if section.settings.bgFill == 'translucent'
+      echo '--headerBg:transparent; background:var(--headerBg); border:none;'
+    elsif section.settings.bgFill == 'transparent'
+      echo '--headerBg:var(--bg); background:transparent!important; border:none;'
+    else
+      echo '--headerBg:var(--bg);'
+    endif
+
+    # Text capitalization
+    assign textTransform = section.settings.textTransform
+    if textTransform == 'capitalize'
+        echo '--buttonTransform:lowercase;text-transform:lowercase;'
+    endif
+    echo textTransform | prepend: '--buttonTransform:' | append: ';'
+    echo textTransform | prepend: 'text-transform:' | append: ';'
+  endcapture
+# theme-check-enable
+
+  # Print styles {{ style }}
+  style
+    echo mode_type | prepend: '#headerGroup{--headerPosition:' | append: '}'
+    echo header_style | prepend: 'coretex-header {' | append: '}'
+  endstyle
+
+
+    # Variables for cart options
+    # used both here and in the `header-menu.liquid`
+    for block in section.blocks
+    if block.type == 'cart'
+        # Country selector
+        if block.settings.showCountry and localization.available_countries.size > 1
+            assign showCountry = true
+        endif
+
+        # Language selector
+        if block.settings.showLanguage and localization.available_languages.size > 1
+            assign showLanguage = true
+        endif
+
+        # Search
+        if block.settings.showSearch
+            assign showSearch = true
+        endif
+
+        # Accounts
+        if block.settings.showAccounts and shop.customer_accounts_enabled
+            assign showAccounts = true
+        endif
+
+        # Cart
+        if block.settings.showCart
+            assign showCart = true
+        endif
+    endif
+    endfor
+
+    # Localization Icons
+    if section.settings.contentDisplay == 'icons' or section.settings.contentDisplay == 'both'
+        assign localizationIcons = true
+    else 
+        assign localizationIcons = false
+    endif
+
+  # Classes
+-%}
+
+{%- comment -%} 
+    If Logo: text, add font styles.
+{% endcomment %}
+{%- if isTextLogo -%}
+{%- style -%}
+{{ logo_block }}
+:where(html) { --logoFontFamily:{{ logo_font.family }},{{ logo_font.fallback_families }}; --logoFontWeight:{{ logo_font.weight }}; --logoFontStyle:{{ logo_font.style }}; }
+{%- endstyle -%}
+{%- endif %}
+
+<coretex-header
+    id="mainHeader"
+    data-section-id="{{ section.id }}"
+    mode="{{ mode_type }}"
+    location="{{ section.settings.location }}"
+    {% if overlayMode %}overlay="true"{% endif %}
+    content-type="{{ section.settings.contentDisplay }}"
+    stealth="{{ section.settings.stealthMode }}"
+    mix-blend="{{ useMixBlend }}"
+    {% unless section.settings.global_color_scheme %}color-scheme="{{ section.settings.color_scheme }}"{% endunless %}
+    coretex-menu="{{ menuType }}"
+    {%- if menuType == 'drop' -%}dropdown-bg="{{ showDropdownBg }}"{%- endif -%}
+    mega-shadow="{{ megaShadow }}"
+>
+  <x-flex ai="center" class="header" block-count="{{ block_count }}">
+    {%- for block in section.blocks -%}
+      {%- case block.type -%}
+        {%- when 'menu' -%}
+          <coretex-menu open-on-hover="{{ block.settings.openOnHover }}" 
+            x-flex order-s="2"
+            {% if block.settings.span %}span="1"{% endif %} span-s="1"
+            jc="{{ block.settings.alignment | replace: 'left', 'start' | replace: 'right', 'end' }}" jc-s="start"
+            class="menu" 
+            {{ block.shopify_attributes }}
+        >
+          <!-- Mobile trigger button -->
+            <x-cell class="mobileTrigger">
+                <button role="button" class="button is-custom has-icon" data-open="#menuDrawerBox">
+                    {%- render 'inc-icon', icon: 'menu' -%}
+                    <span class="txtState">{{ 'sections.header.menu' | t }}</span>
+                </button>
+            </x-cell>
+
+            <coretex-drawer class="filters" id="menuDrawerBox" data-nobdc role="dialog" aria-modal="true" aria-label="{{ 'sections.header.menu' | t }}">
+                <x-cell class="menuContent">
+                    {%- render 'header-menu', 
+                        block: block,
+                        showCountry: showCountry,
+                        showLanguage: showLanguage,
+                        showSearch: showSearch,
+                        showAccounts: showAccounts
+                    -%}
+                </x-cell>
+            </coretex-drawer>
+
+            {%- if block.settings.type == 'drawer' or block.settings.type == 'panel' -%}
+            {%- if block.settings.quickLinks -%}
+                <x-flex class="quickLinks large-only" ai="center">
+                {%- for link in linklists[block.settings.quickLinks].links limit: 4 -%}
+                    <x-cell><a href="{{ link.url }}" {% if link.active %}aria-current="page"{% endif %} class="button is-custom" data-name="{{ link.title | escape }}">{{ link.title }}</a></x-cell>
+                {%- endfor -%}
+                </x-flex>
+            {%- endif -%}
+            {%- endif -%}
+          </coretex-menu>
+
+        {%- when 'logo' -%}
+        {%- unless block.settings.hideOnHome and template.name == 'index' -%}
+            <x-flex
+                order-s="{{ block.settings.mobilePosition }}"
+                {% if block.settings.span %}span="1"{% endif %}
+                jc="{{ block.settings.alignment | replace: 'left', 'start' | replace: 'right', 'end' }}" jc-s="start"
+                class="logo"
+                {{ block.shopify_attributes }}
+            >
+                {%- style -%}:root{ {{ block.settings.logoImageSize | prepend: '--logoImageSize:' | append: 'px' }} }{%- endstyle -%}
+                <a href="{{ routes.root_url }}" tabindex="0" {%- if isTextLogo -%}class="has-text-logo"{%- endif -%}>
+                {%- if block.settings.image != blank -%}
+                    {%- liquid
+                    assign img = block.settings.image
+                    assign width = 800
+                    assign widths = '100,200,400,600,800'
+                    assign alt = shop.name | escape
+                    assign class = 'noRadius'
+
+                    render 'inc-img', img: img, width: width, widths: widths, alt: alt, mediaLoader: false, class: class
+                    -%}
+                {%- else -%}
+                    <div
+                    class="text-logo"
+                    style="{{ block.settings.logoFontSize | prepend: '--logoSize:' | append: 'px' }}"
+                    >
+                    {%- liquid
+                        if block.settings.logoName != blank
+                        echo block.settings.logoName
+                        else
+                        echo shop.name
+                        endif
+                    -%}
+                    </div>
+                {%- endif -%}
+                </a>
+            </x-flex>
+        {%- endunless -%}
+
+        {%- when 'cart' -%}
+        <x-flex wrap="wrap" order-s="last"
+            {% if block.settings.span %}span="1"{% endif %} span-s="1"
+            jc="{{ block.settings.alignment | replace: 'left', 'start' | replace: 'right', 'end' }}" jc-s="end"
+            class="tools"
+            {{ block.shopify_attributes }}
+        >
+
+            <x-cell class="contents">
+
+            {%- # Country/region selector -%}
+            {%- if showCountry or showLanguage -%}
+            <x-cell class="contents large-only localization" x-flex ai="center" jc="end" wrap="wrap" style="gap: 0 var(--space-2)">
+
+                {%- if showCountry  -%}
+                <x-cell class="localization-country">
+                    {%- render 'global-localization', component: 'button', type: 'country', icons: localizationIcons -%}
+                </x-cell>
+                {%- endif -%}
+
+                {% # Language selector %}
+                {%- if showLanguage -%}
+                <x-cell class="localization-language">
+                    {%- render 'global-localization', component: 'button', type: 'language', icons: localizationIcons -%}
+                </x-cell>
+                {%- endif -%}
+
+            </x-cell>
+            {%- endif -%}
+
+            {%- # Accounts -%}
+              {%- if showAccounts -%}
+                <x-cell class="large-only">
+                    <button class="is-custom has-icon" data-open="#loginBox">
+                    {%- render 'inc-icon', icon: 'o-account' -%}
+                    <span class="txtState">
+                      {%- liquid
+                        if customer
+                          echo 'customer.account.title' | t
+                        else
+                          echo 'customer.log_in' | t
+                        endif
+                      -%}
+                    </span>
+                    </button>
+
+                    
+                </x-cell>
+              {%- endif -%}
+
+              {%- # Search -%}
+              {%- if showSearch -%}
+                <x-cell class="large-only">
+                  <button class="is-custom has-icon" data-open="#searchBox">
+                    {%- render 'inc-icon', icon: 'search' -%}
+                    <span class="txtState">{{ 'general.search.search' | t }}</span>
+                  </button>
+                </x-cell>
+              {%- endif -%}
+
+              {%- # Cart -%}
+              {%- if showCart -%}
+                <x-cell>
+                  <button
+                    class="cartBubble is-custom has-icon"
+                    {%- if settings.cart_type != 'redirect' -%}
+                    data-open="#cartBox"
+                    {%- else -%}
+                    onclick="window.location.href='{{ routes.cart_url }}'"
+                    {%- endif -%}
+                  >
+                    {%- render 'inc-icon', icon: section.settings.cartIcon -%}
+                    <span class="txtState">{{ 'templates.cart.cart' | t }}</span>
+                    <cart-count>
+                      <span aria-hidden="true" data-ajax-cart-bind="item_count" class="counter">
+                        {{- cart.item_count -}}
+                      </span>
+                      <span class="visually-hidden">
+                        {{- 'sections.header.cart_count' | t: count: cart.item_count -}}
+                      </span>
+                    </cart-count>
+                  </button>
+                </x-cell>
+              {%- endif -%}
+            </x-cell>
+        </x-flex>
+      {%- endcase -%}
+    {%- endfor -%}
+  </x-flex>
+
+{%- if section.settings.bgFill == 'translucent' -%}<header-blur></header-blur>{%- endif -%}
+</coretex-header>
+
+ 
+{% schema %}
+{
+  "name": "Header",
+  "class": "main-header",
+  "settings": [
+    {
+        "type": "select",
+        "id": "location",
+        "label": "Location",
+        "default": "top",
+        "info": "Selects the position of the header.",
+        "options": [
+            { "value": "top", "label": "Top" },
+            { "value": "center", "label": "Center" }
+        ]
+    },
+    {
+      "type": "checkbox",
+      "id": "stealthMode",
+      "label": "Show header on hover - desktop",
+      "default": false,
+      "info": "Header content will be hidden, except for the logo. Revealed again when hovered over."
+    },
+    {
+      "type": "checkbox",
+      "id": "stickyMode",
+      "label": "Enable sticky header",
+      "default": true,
+      "info": "The header will remain fixed and visible as you scroll."
+    },
+    {
+        "type": "header",
+        "content": "Overlay",
+        "info": "The header will overlay content underneath.",
+        "visible_if": "{{ section.settings.location == 'top' }}"
+    },
+    {
+      "type": "checkbox",
+      "id": "overlayOnHomepage",
+      "label": "Enable on home page",
+      "default": false,
+      "visible_if": "{{ section.settings.location == 'top' }}"
+    },
+    {
+        "type": "checkbox",
+        "id": "overlayOnProducts",
+        "label": "Enable on products",
+        "default": false,
+        "visible_if": "{{ section.settings.location == 'top' }}"
+    },
+    {
+        "type": "checkbox",
+        "id": "overlayOnCollections",
+        "label": "Enable on collections",
+        "default": false,
+        "visible_if": "{{ section.settings.location == 'top' }}"
+    },
+    {
+        "type": "checkbox",
+        "id": "overlayOnArticles",
+        "label": "Enable on blog articles",
+        "default": false,
+        "visible_if": "{{ section.settings.location == 'top' }}"
+    },
+    {
+        "type": "checkbox",
+        "id": "overlayOnPages",
+        "label": "Enable on pages",
+        "default": false,
+        "visible_if": "{{ section.settings.location == 'top' }}"
+    },
+    {
+      "type": "header",
+      "content": "Content"
+    },
+    {
+      "type": "select",
+      "id": "contentDisplay",
+      "label": "Type",
+      "default": "text",
+      "options": [
+        {
+          "value": "text",
+          "label": "Text"
+        },
+        {
+          "value": "icons",
+          "label": "Icons"
+        },
+        {
+          "value": "both",
+          "label": "Both"
+        }
+      ]
+    },
+    {
+        "type": "select",
+        "id": "cartIcon",
+        "label": "Cart icon",
+        "default": "cart",
+        "visible_if": "{{ section.settings.contentDisplay == 'icons' or section.settings.contentDisplay == 'both' }}",
+        "options": [
+          { "value": "bag", "label": "Bag" },
+          { "value": "cart", "label": "Cart" }
+        ]
+    },
+    {
+      "type": "select",
+      "id": "textTransform",
+      "label": "Text capitalization",
+      "default": "none",
+      "visible_if": "{{ section.settings.contentDisplay == 'text' or section.settings.contentDisplay == 'both' }}",
+      "options": [
+        {
+          "value": "none",
+          "label": "Auto"
+        },
+        {
+          "value": "uppercase",
+          "label": "Uppercase"
+        },
+        {
+          "value": "lowercase",
+          "label": "Lowercase"
+        },
+        {
+          "value": "capitalize",
+          "label": "Capitalize"
+        }
+      ]
+    },
+    {
+      "type": "header",
+      "content": "Appearance"
+    },
+    {
+        "type": "select",
+        "id": "bgFill",
+        "label": "Background fill",
+        "default": "transparent",
+        "options": [
+          {
+            "value": "solid",
+            "label": "Solid"
+          },
+          {
+            "value": "translucent",
+            "label": "Translucent"
+          },
+          {
+            "value": "transparent",
+            "label": "Transparent"
+          }
+        ]
+    },
+    {
+        "type": "checkbox",
+        "id": "mixBlend",
+        "label": "Enable content blend mode",
+        "info": "When enabled, this option will make the text color look different depending on the colors behind it.",
+        "default": false,
+        "visible_if": "{{ section.settings.bgFill == 'transparent' }}"
+    },
+    {
+        "type": "checkbox",
+        "id": "global_color_scheme",
+        "label": "Use global color scheme",
+        "default": true
+    },
+    {
+        "type": "color_scheme",
+        "id": "color_scheme",
+        "label": "Color scheme",
+        "default": "coretex-1",
+        "visible_if": "{{ section.settings.global_color_scheme == false }}"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "menu",
+      "name": "Navigation",
+      "limit": 1,
+      "settings": [
+        {
+            "type": "link_list",
+            "id": "linklist",
+            "label": "Menu",
+            "default": "main-menu"
+        },
+        {
+            "type": "select",
+            "id": "type",
+            "label": "Menu type",
+            "default": "drop",
+            "info": "Menu type is automatically optimized for mobile.",
+            "options": [
+                { "value": "drop", "label": "Dropdown" },
+                { "value": "mega", "label": "Mega menu" },
+                { "value": "drawer", "label": "Drawer" },
+                { "value": "panel", "label": "Panel" }
+            ]
+        },
+        {
+            "type": "link_list",
+            "id": "quickLinks",
+            "label": "Quick links - desktop",
+            "info": "Displays up to four first-level links beside the panel menu button on desktop. Nested links are not shown.",
+            "visible_if": "{{ block.settings.type == 'drawer' or block.settings.type == 'panel' }}"
+        },
+        {
+            "type": "checkbox",
+            "id": "span",
+            "label": "Expand to fill space - desktop",
+            "default": true
+        },
+        {
+            "type": "text_alignment",
+            "id": "alignment",
+            "label": "Alignment",
+            "default": "left",
+            "visible_if": "{{ block.settings.span }}"
+        },
+        {
+            "type": "header",
+            "content": "Dropdown ",
+            "visible_if": "{{ block.settings.type == 'drop' }}"
+        },
+        {
+            "type": "checkbox",
+            "id": "dropdownBackground",
+            "label": "Show background",
+            "info": "Add a background behind the dropdown menu.",
+            "default": true,
+            "visible_if": "{{ block.settings.type == 'drop' }}"
+        },
+        {
+            "type": "header",
+            "content": "Mega menu",
+            "info": "The mega menu option requires a specific menu structure. [Learn more](https://docs.openthinking.net/themes/etheryx/editor/sections/header#megamenu)",
+            "visible_if": "{{ block.settings.type == 'mega' }}"
+        },
+        {
+            "type": "checkbox",
+            "id": "openOnHover",
+            "label": "Open on hover",
+            "info": "Will open the menu when the mouse hovers over.",
+            "default": false,
+            "visible_if": "{{ block.settings.type == 'mega' }}"
+        },   
+        {
+            "type": "checkbox",
+            "id": "firstElevated",
+            "label": "Highlight first column",
+            "info": "The text in the first column will be enlarged.",
+            "default": false,
+            "visible_if": "{{ block.settings.type == 'mega' }}"
+        },
+        {
+            "type": "checkbox",
+            "id": "showShadow",
+            "label": "Show shadow",
+            "default": false,
+            "visible_if": "{{ block.settings.type == 'mega' }}"
+        }
+      ]
+    },
+    {
+      "type": "logo",
+      "name": "Logo",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "header",
+          "content": "Image"
+        },
+        {
+          "type": "checkbox",
+          "id": "hideOnHome",
+          "label": "Hide on home page",
+          "default": false
+        },
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Logo"
+        },
+        {
+          "type": "range",
+          "id": "logoImageSize",
+          "min": 20,
+          "max": 250,
+          "step": 5,
+          "unit": "px",
+          "label": "Size",
+          "default": 25,
+          "visible_if": "{{ block.settings.image != nil }}"
+        },
+        {
+          "type": "header",
+          "content": "Text logo",
+          "info": "Text logo will not be visible if an image logo is present.",
+          "visible_if": "{{ block.settings.image == nil }}"
+        },
+        {
+          "type": "text",
+          "id": "logoName",
+          "label": "Text",
+          "visible_if": "{{ block.settings.image == nil }}"
+        },
+        {
+          "type": "font_picker",
+          "label": "Font",
+          "id": "logo_font",
+          "default": "inter_n4",
+          "info": "Selecting a different font can affect the speed of your store. [Learn more about system fonts.](https://help.shopify.com/en/manual/online-store/store-speed/improving-speed#fonts)",
+          "visible_if": "{{ block.settings.image == nil }}"
+        },
+        {
+          "type": "range",
+          "id": "logoFontSize",
+          "min": 10,
+          "max": 30,
+          "step": 1,
+          "unit": "px",
+          "label": "Size",
+          "default": 15,
+          "visible_if": "{{ block.settings.image == nil }}"
+        },
+        {
+            "type": "checkbox",
+            "id": "span",
+            "label": "Expand to fill space - desktop",
+            "default": false
+        },
+        {
+            "type": "text_alignment",
+            "id": "alignment",
+            "label": "Alignment",
+            "default": "center",
+            "visible_if": "{{ block.settings.span }}"
+        },
+        {
+          "type": "header",
+          "content": "Position - mobile"
+        },
+        {
+            "type": "select",
+            "id": "mobilePosition",
+            "label": "Logo",
+            "info": "Select the position of the logo on mobile devices.",
+            "default": "3",
+            "options": [
+                { "value": "1", "label": "At the beginning" },
+                { "value": "3", "label": "In the center" } 
+            ]
+        }
+      ]
+    },
+    {
+      "type": "cart",
+      "name": "Utility links",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "checkbox",
+          "id": "showCart",
+          "label": "Show cart",
+          "default": true
+        },
+        {
+          "type": "checkbox",
+          "id": "showSearch",
+          "label": "Show search",
+          "default": true
+        },
+        {
+          "type": "checkbox",
+          "id": "showAccounts",
+          "label": "Show customer account",
+          "info": "[Activate customer accounts first](/admin/settings/customer_accounts)",
+          "default": true
+        },
+          {
+            "type": "checkbox",
+            "id": "showCountry",
+            "label": "Country/region selector",
+            "info": "[Manage countries/regions](/admin/settings/markets)",
+            "default": false
+        },
+        {
+            "type": "checkbox",
+            "id": "showLanguage",
+            "label": "Language selector",
+            "info": "[Manage languages](/admin/settings/languages)",
+            "default": false
+        },
+        {
+            "type": "checkbox",
+            "id": "span",
+            "label": "Expand to fill space - desktop",
+            "default": true
+        },
+        {
+            "type": "text_alignment",
+            "id": "alignment",
+            "label": "Alignment",
+            "default": "right",
+            "visible_if": "{{ block.settings.span }}"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,207 @@
+{% doc %}
+    Renders a CSS Flexbox with configurable direction, gap and alignment.
+
+    @example
+    {%- content_for 'block', type: 'g-flexbox' -%}
+{% enddoc %}
+
+{%- capture style -%}
+--gap:{{ block.settings.rowGap | prepend: 'var(--space-' | append: ')' }} {{ block.settings.columnGap | prepend: 'var(--space-' | append: ')' }}; 
+{% if block.settings.mobile_gap %}--gap-s:{{ block.settings.rowGap_s | prepend: 'var(--space-' | append: ')' }} {{ block.settings.columnGap_s | prepend: 'var(--space-' | append: ')' }};{% endif %}
+{%- endcapture -%}
+
+<x-flex 
+    direction="{{ block.settings.direction }}" direction-s="{{ block.settings.direction_s }}" 
+    ai="{{ block.settings.align_items }}" ai-s="{{ block.settings.align_items_s }}" 
+    jc="{{ block.settings.justify_content }}" jc-s="{{ block.settings.justify_content_s }}"
+    {% if block.settings.wrap %}wrap="wrap"{% endif %} {% if block.settings.wrap_s %}wrap-s="wrap"{% endif %}
+    style="{{- style | strip_newlines | strip -}}"
+    class="sb-flexbox"
+    {{ block.shopify_attributes }}
+>
+  {% content_for 'blocks' %}
+</x-flex>
+
+{% stylesheet %}
+/*** [SB] Flexbox */
+.sb-flexbox {
+    svg { max-width: 100% }
+}
+{% endstylesheet %}
+
+{% schema %}
+{
+	"name": "Flexbox",
+	"blocks": [{ "type": "@theme" }],
+	"tag": null,
+	"settings": [
+		{
+			"type": "header",
+			"content": "Desktop"
+		},
+        {
+            "type": "select",
+            "id": "direction",
+            "label": "Direction",
+            "default": "row",
+            "info": "Controls the direction of the main axis.",
+            "options": [
+                { "value": "row", "label": "Row" },
+                { "value": "row-reverse", "label": "Row reverse" },
+                { "value": "column", "label": "Column" },
+                { "value": "column-reverse", "label": "Column reverse" }
+            ]
+        },
+        {
+            "type": "checkbox",
+            "id": "wrap",
+            "label": "Allow items to wrap",
+            "default": true,
+            "visible_if": "{{ block.settings.direction == 'row' or block.settings.direction == 'row-reverse' }}"
+        },
+		{
+			"type": "range",
+			"label": "Column gap",
+			"id": "columnGap",
+			"min": 0,
+			"max": 30,
+			"step": 1,
+			"default": 1,
+			"info": "Spacing between columns on desktop"
+		},
+		{
+			"type": "range",
+			"label": "Row gap",
+			"id": "rowGap",
+			"min": 0,
+			"max": 30,
+			"step": 1,
+			"default": 1,
+			"info": "Spacing between rows on desktop"
+		},
+        {
+            "type": "select",
+            "id": "align_items",
+            "label": "Align items",
+            "default": "start",
+            "info": "Applies when cell heights vary. Controls how cells align vertically.",
+            "options": [
+                { "value": "start", "label": "Start" },
+                { "value": "center", "label": "Center" },
+                { "value": "end", "label": "End" },
+                { "value": "stretch", "label": "Stretch" }
+            ]
+        },
+        {
+            "type": "select",
+            "id": "justify_content",
+            "label": "Justify content",
+            "default": "start",
+            "info": "Controls the alignment of items on the main axis.",
+            "options": [
+                { "value": "start", "label": "Start" },
+                { "value": "end", "label": "End" },
+                { "value": "center", "label": "Center" },
+                { "value": "between", "label": "Space between" },
+                { "value": "around", "label": "Space around" },
+                { "value": "evenly", "label": "Space evenly" }
+            ]
+        },
+		{
+			"type": "header",
+			"content": "Mobile"
+		},
+       {
+            "type": "select",
+            "id": "direction_s",
+            "label": "Direction",
+            "default": "row",
+            "info": "Controls the direction of the main axis.",
+            "options": [
+                { "value": "row", "label": "Row" },
+                { "value": "row-reverse", "label": "Row reverse" },
+                { "value": "column", "label": "Column" },
+                { "value": "column-reverse", "label": "Column reverse" }
+            ]
+        },
+        {
+            "type": "checkbox",
+            "id": "wrap_s",
+            "label": "Wrap",
+            "default": false,
+            "info": "Allow items to wrap.",
+            "visible_if": "{{ block.settings.direction == 'row' or block.settings.direction == 'row-reverse' }}"
+        },
+		{
+			"type": "checkbox",
+			"id": "mobile_gap",
+			"label": "Custom gap",
+			"info": "Use different spacing for mobile layout. If disabled, desktop gap settings will apply.",
+			"default": false
+		},
+		{
+			"type": "range",
+			"label": "Column gap",
+			"id": "columnGap_s",
+			"min": 0,
+			"max": 30,
+			"step": 1,
+			"default": 1,
+			"visible_if": "{{ block.settings.mobile_gap }}",
+			"info": "Spacing between columns on mobile"
+		},
+		{
+			"type": "range",
+			"label": "Row gap",
+			"id": "rowGap_s",
+			"min": 0,
+			"max": 30,
+			"step": 1,
+			"default": 1,
+			"visible_if": "{{ block.settings.mobile_gap }}",
+			"info": "Spacing between rows on mobile"
+		},
+        {
+            "type": "select",
+            "id": "align_items_s",
+            "label": "Align items",
+            "default": "start",
+            "info": "Applies when cell heights vary. Controls how cells align vertically.",
+            "options": [
+                { "value": "start", "label": "Start" },
+                { "value": "center", "label": "Center" },
+                { "value": "end", "label": "End" },
+                { "value": "stretch", "label": "Stretch" }
+            ]
+        },
+        {
+            "type": "select",
+            "id": "justify_content_s",
+            "label": "Justify content",
+            "default": "start",
+            "info": "Controls the alignment of items on the main axis.",
+            "options": [
+                { "value": "start", "label": "Start" },
+                { "value": "end", "label": "End" },
+                { "value": "center", "label": "Center" },
+                { "value": "between", "label": "Space between" },
+                { "value": "around", "label": "Space around" },
+                { "value": "evenly", "label": "Space evenly" }
+            ]
+        },
+	],
+	"presets": [
+		{
+			"name": "Flexbox",
+			"category": "Layout",
+            "blocks": [
+                { "type": "g-cell" },
+                { "type": "g-cell" },
+                { "type": "g-cell" },
+                { "type": "g-cell" }
+            ],
+            "settings": { }
+		}
+	]
+}
+{% endschema %}

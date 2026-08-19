@@ -1,0 +1,131 @@
+{% doc %}
+    Renders a cell to be used inside a Grid or Flexbox with configurable span, and alignment.
+
+    @example
+    {% content_for 'block', type: 'g-grid-cell' %}
+{% enddoc %}
+
+{%- liquid
+# Span
+assign span = block.settings.span
+if block.settings.spanRow    
+    assign span = 'row'
+endif
+assign show_span = false
+if span == 'row'
+    assign show_span = true
+elsif span > 0
+    assign show_span = true
+endif
+
+# Span Small
+assign span_s = block.settings.span_s
+if block.settings.spanRow_s
+    assign span_s = 'row'
+endif
+assign show_span_s = false
+if span_s == 'row'
+    assign show_span_s = true
+elsif span_s > 0
+    assign show_span_s = true
+endif
+
+# Block Styles
+capture block_style
+echo '--sticky:var(--headSpace);'
+echo block.settings.padding | prepend: 'padding:var(--space-' | append: ');'
+endcapture
+-%}
+
+<x-cell {% if show_span %}span="{{ span }}"{% endif %} {% if show_span_s %}span-s="{{ span_s }}"{% endif %}
+    style="{{ block_style | strip_newlines | strip }}"
+    class="sb-cell{% if block.settings.sticky %} sticky{% endif %}"
+    {{ block.shopify_attributes }}
+>
+  {% content_for 'blocks' %}
+</x-cell>
+
+{% schema %}
+{
+	"name": "Cell",
+	"blocks": [{ "type": "@theme" }],
+	"tag": null,
+	"settings": [
+		{
+			"type": "header",
+			"content": "Desktop"
+		},
+		{
+			"type": "checkbox",
+			"id": "spanRow",
+			"label": "Span row",
+			"default": false,
+			"info": "Makes the cell span the entire row."
+		},
+		{
+			"type": "range",
+			"label": "Span",
+			"id": "span",
+			"min": 0,
+			"max": 12,
+			"step": 1,
+			"default": 0,
+			"info": "Number of columns this block spans on desktop",
+            "visible_if": "{{ block.settings.spanRow == false }}"
+		},
+		{
+			"type": "header",
+			"content": "Mobile"
+		},
+		{
+			"type": "checkbox",
+			"id": "spanRow_s",
+			"label": "Span row",
+			"default": false,
+			"info": "Makes the cell span the entire row."
+		},
+		{
+			"type": "range",
+			"label": "Span",
+			"id": "span_s",
+			"min": 0,
+			"max": 12,
+			"step": 1,
+			"default": 0,
+			"info": "Number of columns this block spans on mobile",
+            "visible_if": "{{ block.settings.spanRow_s == false }}"
+		},
+		{
+			"type": "header",
+			"content": "Position"
+		},
+		{
+			"type": "checkbox",
+			"id": "sticky",
+			"label": "Sticky",
+			"default": false,
+			"info": "Sticks the cell to the top of the viewport while scrolling."
+		},
+		{
+			"type": "header",
+			"content": "Spacing"
+		},
+		{
+			"type": "range",
+			"id": "padding",
+			"label": "Padding",
+			"min": 0,
+			"max": 30,
+			"step": 1,
+			"default": 0
+		}
+	],
+	"presets": [
+		{
+			"name": "Cell",
+			"category": "Layout",
+			"settings": { }
+		}
+	]
+}
+{% endschema %}

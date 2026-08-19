@@ -1,0 +1,111 @@
+{% doc %}
+    Renders a link element styled as button.
+
+    @example
+    {%- content_for 'block', type: 'a-link' -%}
+{% enddoc %}
+
+{%- liquid 
+    # Block class
+    capture block_class
+        echo block.settings.style
+        if block.settings.fullwidth
+            echo 'fullwidth'
+        endif
+    endcapture
+
+    # Block style
+    capture block_style
+        echo block.settings.alignment | replace: 'left', 'start' | replace: 'right', 'end' | prepend: '--buttonAlign:' | append: ';'
+    endcapture
+-%}
+
+<div class="sb-button contents atom" 
+    style="{{ block_style | strip_newlines | strip }}"
+    {% unless block.settings.global_color_scheme %}color-scheme="{{ block.settings.color_scheme }}"{% endunless %} 
+    {{ block.shopify_attributes }}
+>
+    <a {% if block.settings.url != blank %}href="{{ block.settings.url }}"{% else %}role="link" aria-disabled="true"{% endif %}
+        class="button {{ block_class }}"
+        {%- if block.settings.open_in_new_tab %}target="_blank" rel="noopener noreferrer nofollow"{% endif %}
+    >{{ block.settings.label }}</a>
+</div>
+
+{% schema %}
+{
+	"name": "Button",
+	"tag": null,
+	"settings": [
+		{
+			"type": "text",
+			"id": "label",
+			"label": "Label",
+			"default": "Label"
+		},
+		{
+			"type": "url",
+			"id": "url",
+			"label": "Link"
+		},
+		{
+			"type": "checkbox",
+			"id": "open_in_new_tab",
+			"label": "Open link in new tab",
+			"default": false,
+			"visible_if": "{{ block.settings.url != nil }}"
+		},
+		{
+			"type": "select",
+			"id": "style",
+			"label": "Style",
+			"default": "button",
+			"options": [
+				{ "value": "button", "label": "Primary" },
+				{ "value": "is-outline", "label": "Outline" },
+				{ "value": "is-link", "label": "Link" },
+				{ "value": "is-blank", "label": "Blank" }
+			]
+		},
+		{
+			"type": "checkbox",
+			"id": "fullwidth",
+			"label": "Full width",
+			"default": false
+		},
+		{
+			"type": "text_alignment",
+			"id": "alignment",
+			"label": "Alignment",
+			"default": "center",
+			"visible_if": "{{ block.settings.fullwidth == true }}"
+		},
+		{
+			"type": "header",
+			"content": "Appearance"
+		},
+		{
+			"type": "checkbox",
+			"id": "global_color_scheme",
+			"label": "Use global color scheme",
+			"default": true
+		},
+		{
+			"type": "color_scheme",
+			"id": "color_scheme",
+			"label": "Color scheme",
+			"default": "coretex-1",
+			"visible_if": "{{ block.settings.global_color_scheme == false }}"
+		}
+	],
+	"presets": [
+		{
+			"name": "Button",
+			"category": "Basic",
+			"settings": {
+				"url": "shopify://collections/all"
+			}
+		}
+	]
+}
+
+{% endschema %}

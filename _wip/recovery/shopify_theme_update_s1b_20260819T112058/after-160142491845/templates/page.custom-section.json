@@ -1,0 +1,892 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "t-page",
+      "disabled": true,
+      "settings": {}
+    },
+    "s_custom_eHjjYq": {
+      "type": "s-custom",
+      "blocks": {
+        "g_grid_Uc4fbg": {
+          "type": "g-grid",
+          "name": "Grid",
+          "settings": {
+            "debug": false,
+            "columns": 6,
+            "columnGap": 1,
+            "rowGap": 1,
+            "align_items": "start",
+            "justify_items": "start",
+            "columns_s": 1,
+            "mobile_gap": false,
+            "rowGap_s": 1,
+            "columnGap_s": 1,
+            "align_items_s": "start",
+            "justify_items_s": "start",
+            "marginTop": 0,
+            "marginBottom": 0
+          },
+          "blocks": {
+            "g_cell_nhcgpk": {
+              "type": "g-cell",
+              "settings": {
+                "spanRow": false,
+                "span": 4,
+                "spanRow_s": false,
+                "span_s": 1,
+                "sticky": false,
+                "padding": 0
+              },
+              "blocks": {
+                "a_text_m6XRWi": {
+                  "type": "a-text",
+                  "name": "Text",
+                  "settings": {
+                    "text": "Add your message here. Use HTML for formatting, then adjust font, size, spacing, and alignment to match your brand.",
+                    "tag": "h2",
+                    "enable_custom_typography": true,
+                    "font_family": "hFontFamily",
+                    "font_weight": "normal",
+                    "font_size": 12,
+                    "font_size_s": 8,
+                    "line_height": 1,
+                    "letter_spacing": 0,
+                    "text_align": "left",
+                    "text_transform": "none",
+                    "text_indent": 0,
+                    "paddingTop": 0,
+                    "paddingRight": 0,
+                    "paddingBottom": 0,
+                    "paddingLeft": 0,
+                    "color": false,
+                    "color_custom": "#000000"
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "a_text_m6XRWi"
+              ]
+            },
+            "g_cell_fn9KNp": {
+              "type": "g-cell",
+              "name": "Cell",
+              "settings": {
+                "spanRow": false,
+                "span": 2,
+                "spanRow_s": false,
+                "span_s": 1,
+                "sticky": false,
+                "padding": 0
+              },
+              "blocks": {
+                "g_flexbox_daQiha": {
+                  "type": "g-flexbox",
+                  "name": "Flexbox",
+                  "settings": {
+                    "direction": "column",
+                    "wrap": true,
+                    "columnGap": 1,
+                    "rowGap": 1,
+                    "align_items": "start",
+                    "justify_content": "start",
+                    "direction_s": "column",
+                    "wrap_s": false,
+                    "columnGap_s": 1,
+                    "rowGap_s": 1,
+                    "align_items_s": "start",
+                    "justify_content_s": "start"
+                  },
+                  "blocks": {
+                    "g_cell_9Mc9wh": {
+                      "type": "g-cell",
+                      "settings": {
+                        "spanRow": false,
+                        "span": 1,
+                        "spanRow_s": false,
+                        "span_s": 1,
+                        "sticky": false,
+                        "padding": 0
+                      },
+                      "blocks": {
+                        "a_text_hMCrYk": {
+                          "type": "a-text",
+                          "name": "Text",
+                          "settings": {
+                            "text": "Add your message here. Use HTML for formatting, then adjust font, size, spacing, and alignment to match your brand.",
+                            "tag": "p",
+                            "enable_custom_typography": false,
+                            "font_family": "fontFamily",
+                            "font_weight": "normal",
+                            "font_size": 8,
+                            "font_size_s": 4,
+                            "line_height": 1,
+                            "letter_spacing": 0,
+                            "text_align": "left",
+                            "text_transform": "none",
+                            "text_indent": 0,
+                            "paddingTop": 0,
+                            "paddingRight": 0,
+                            "paddingBottom": 0,
+                            "paddingLeft": 0,
+                            "color": false,
+                            "color_custom": "#000000"
+                          },
+                          "blocks": {}
+                        }
+                      },
+                      "block_order": [
+                        "a_text_hMCrYk"
+                      ]
+                    },
+                    "g_cell_HRL4Jj": {
+                      "type": "g-cell",
+                      "settings": {
+                        "spanRow": false,
+                        "span": 1,
+                        "spanRow_s": false,
+                        "span_s": 1,
+                        "sticky": false,
+                        "padding": 0
+                      },
+                      "blocks": {
+                        "a_text_Tikf9f": {
+                          "type": "a-text",
+                          "name": "Text",
+                          "settings": {
+                            "text": "Add your message here. Use HTML for formatting, then adjust font, size, spacing, and alignment to match your brand.",
+                            "tag": "p",
+                            "enable_custom_typography": false,
+                            "font_family": "fontFamily",
+                            "font_weight": "normal",
+                            "font_size": 8,
+                            "font_size_s": 4,
+                            "line_height": 1,
+                            "letter_spacing": 0,
+                            "text_align": "left",
+                            "text_transform": "none",
+                            "text_indent": 0,
+                            "paddingTop": 0,
+                            "paddingRight": 0,
+                            "paddingBottom": 0,
+                            "paddingLeft": 0,
+                            "color": false,
+                            "color_custom": "#000000"
+                          },
+                          "blocks": {}
+                        }
+                      },
+                      "block_order": [
+                        "a_text_Tikf9f"
+                      ]
+                    },
+                    "g_cell_WTHGrp": {
+                      "type": "g-cell",
+                      "settings": {
+                        "spanRow": false,
+                        "span": 1,
+                        "spanRow_s": false,
+                        "span_s": 1,
+                        "sticky": false,
+                        "padding": 0
+                      },
+                      "blocks": {
+                        "a_text_8kXAAf": {
+                          "type": "a-text",
+                          "name": "Text",
+                          "settings": {
+                            "text": "Add your message here. Use HTML for formatting, then adjust font, size, spacing, and alignment to match your brand.",
+                            "tag": "p",
+                            "enable_custom_typography": false,
+                            "font_family": "fontFamily",
+                            "font_weight": "normal",
+                            "font_size": 8,
+                            "font_size_s": 4,
+                            "line_height": 1,
+                            "letter_spacing": 0,
+                            "text_align": "left",
+                            "text_transform": "none",
+                            "text_indent": 0,
+                            "paddingTop": 0,
+                            "paddingRight": 0,
+                            "paddingBottom": 0,
+                            "paddingLeft": 0,
+                            "color": false,
+                            "color_custom": "#000000"
+                          },
+                          "blocks": {}
+                        }
+                      },
+                      "block_order": [
+                        "a_text_8kXAAf"
+                      ]
+                    }
+                  },
+                  "block_order": [
+                    "g_cell_9Mc9wh",
+                    "g_cell_HRL4Jj",
+                    "g_cell_WTHGrp"
+                  ]
+                }
+              },
+              "block_order": [
+                "g_flexbox_daQiha"
+              ]
+            }
+          },
+          "block_order": [
+            "g_cell_nhcgpk",
+            "g_cell_fn9KNp"
+          ]
+        }
+      },
+      "block_order": [
+        "g_grid_Uc4fbg"
+      ],
+      "name": "Custom section",
+      "settings": {
+        "paddingInline": true,
+        "marginTop": 6,
+        "marginBottom": 0,
+        "paddingTop": 0,
+        "paddingBottom": 0,
+        "global_color_scheme": true,
+        "color_scheme": ""
+      }
+    },
+    "s_custom_t8fFMM": {
+      "type": "s-custom",
+      "blocks": {
+        "g_flexbox_fUpC9x": {
+          "type": "g-flexbox",
+          "name": "Flexbox",
+          "settings": {
+            "direction": "row",
+            "wrap": true,
+            "columnGap": 1,
+            "rowGap": 1,
+            "align_items": "start",
+            "justify_content": "start",
+            "direction_s": "row",
+            "wrap_s": false,
+            "columnGap_s": 1,
+            "rowGap_s": 1,
+            "align_items_s": "start",
+            "justify_content_s": "start"
+          },
+          "blocks": {
+            "g_cell_pkR6we": {
+              "type": "g-cell",
+              "settings": {
+                "spanRow": true,
+                "span": 0,
+                "spanRow_s": true,
+                "span_s": 1,
+                "sticky": false,
+                "padding": 0
+              },
+              "blocks": {
+                "a_image_wwcjyT": {
+                  "type": "a-image",
+                  "name": "Image",
+                  "settings": {
+                    "link": "",
+                    "image_ratio": "none",
+                    "image_height": 50,
+                    "image_width_custom": false,
+                    "image_width": 100,
+                    "image_fit": "cover",
+                    "image_position": "center",
+                    "radius_custom": false,
+                    "radius": 0,
+                    "marginTop": 0,
+                    "marginRight": 0,
+                    "marginBottom": 0,
+                    "marginLeft": 0
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "a_image_wwcjyT"
+              ]
+            },
+            "g_cell_wYWqjX": {
+              "type": "g-cell",
+              "settings": {
+                "spanRow": true,
+                "span": 1,
+                "spanRow_s": true,
+                "span_s": 1,
+                "sticky": false,
+                "padding": 0
+              },
+              "blocks": {
+                "g_grid_9UjCaB": {
+                  "type": "g-grid",
+                  "name": "Grid",
+                  "settings": {
+                    "debug": false,
+                    "columns": 7,
+                    "columnGap": 1,
+                    "rowGap": 1,
+                    "align_items": "start",
+                    "justify_items": "start",
+                    "columns_s": 2,
+                    "mobile_gap": false,
+                    "rowGap_s": 1,
+                    "columnGap_s": 1,
+                    "align_items_s": "start",
+                    "justify_items_s": "start",
+                    "marginTop": 0,
+                    "marginBottom": 0
+                  },
+                  "blocks": {
+                    "g_cell_kwnxgN": {
+                      "type": "g-cell",
+                      "settings": {
+                        "spanRow": false,
+                        "span": 2,
+                        "spanRow_s": true,
+                        "span_s": 1,
+                        "sticky": false,
+                        "padding": 0
+                      },
+                      "blocks": {
+                        "a_text_UmTkBw": {
+                          "type": "a-text",
+                          "name": "Text",
+                          "settings": {
+                            "text": "Add your message here. Use HTML for formatting, then adjust font, size, spacing, and alignment to match your brand.",
+                            "tag": "p",
+                            "enable_custom_typography": false,
+                            "font_family": "fontFamily",
+                            "font_weight": "normal",
+                            "font_size": 8,
+                            "font_size_s": 4,
+                            "line_height": 1,
+                            "letter_spacing": 0,
+                            "text_align": "left",
+                            "text_transform": "none",
+                            "text_indent": 0,
+                            "paddingTop": 0,
+                            "paddingRight": 0,
+                            "paddingBottom": 0,
+                            "paddingLeft": 0,
+                            "color": false,
+                            "color_custom": "#000000"
+                          },
+                          "blocks": {}
+                        }
+                      },
+                      "block_order": [
+                        "a_text_UmTkBw"
+                      ]
+                    },
+                    "g_cell_KwRLxj": {
+                      "type": "g-cell",
+                      "settings": {
+                        "spanRow": false,
+                        "span": 1,
+                        "spanRow_s": false,
+                        "span_s": 1,
+                        "sticky": false,
+                        "padding": 0
+                      },
+                      "blocks": {}
+                    },
+                    "g_cell_UpcjAJ": {
+                      "type": "g-cell",
+                      "settings": {
+                        "spanRow": false,
+                        "span": 2,
+                        "spanRow_s": true,
+                        "span_s": 1,
+                        "sticky": false,
+                        "padding": 0
+                      },
+                      "blocks": {
+                        "a_richtext_GFe9RP": {
+                          "type": "a-richtext",
+                          "name": "Richtext",
+                          "settings": {
+                            "text": "<p>Add your content here. Use the editor to format text, add links, and create lists that match your brand.</p>",
+                            "paddingTop": 0,
+                            "paddingRight": 0,
+                            "paddingBottom": 0,
+                            "paddingLeft": 0,
+                            "color": false,
+                            "color_custom": "#000000"
+                          },
+                          "blocks": {}
+                        }
+                      },
+                      "block_order": [
+                        "a_richtext_GFe9RP"
+                      ]
+                    },
+                    "g_cell_mRWA3h": {
+                      "type": "g-cell",
+                      "settings": {
+                        "spanRow": false,
+                        "span": 2,
+                        "spanRow_s": true,
+                        "span_s": 1,
+                        "sticky": false,
+                        "padding": 0
+                      },
+                      "blocks": {
+                        "a_richtext_T6erPq": {
+                          "type": "a-richtext",
+                          "name": "Richtext",
+                          "settings": {
+                            "text": "<p>Add your content here. Use the editor to format text, add links, and create lists that match your brand.</p>",
+                            "paddingTop": 0,
+                            "paddingRight": 0,
+                            "paddingBottom": 0,
+                            "paddingLeft": 0,
+                            "color": false,
+                            "color_custom": "#000000"
+                          },
+                          "blocks": {}
+                        }
+                      },
+                      "block_order": [
+                        "a_richtext_T6erPq"
+                      ]
+                    }
+                  },
+                  "block_order": [
+                    "g_cell_kwnxgN",
+                    "g_cell_KwRLxj",
+                    "g_cell_UpcjAJ",
+                    "g_cell_mRWA3h"
+                  ]
+                }
+              },
+              "block_order": [
+                "g_grid_9UjCaB"
+              ]
+            },
+            "g_cell_c9W4wb": {
+              "type": "g-cell",
+              "settings": {
+                "spanRow": false,
+                "span": 1,
+                "spanRow_s": false,
+                "span_s": 1,
+                "sticky": false,
+                "padding": 0
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "g_cell_pkR6we",
+            "g_cell_wYWqjX",
+            "g_cell_c9W4wb"
+          ]
+        }
+      },
+      "block_order": [
+        "g_flexbox_fUpC9x"
+      ],
+      "name": "Custom section",
+      "settings": {
+        "paddingInline": true,
+        "marginTop": 6,
+        "marginBottom": 0,
+        "paddingTop": 0,
+        "paddingBottom": 0,
+        "global_color_scheme": true,
+        "color_scheme": ""
+      }
+    },
+    "s_custom_rpe6Xa": {
+      "type": "s-custom",
+      "blocks": {
+        "g_flexbox_qYJmNQ": {
+          "type": "g-flexbox",
+          "name": "Flexbox",
+          "settings": {
+            "direction": "row",
+            "wrap": true,
+            "columnGap": 1,
+            "rowGap": 1,
+            "align_items": "start",
+            "justify_content": "between",
+            "direction_s": "row",
+            "wrap_s": false,
+            "columnGap_s": 1,
+            "rowGap_s": 1,
+            "align_items_s": "start",
+            "justify_content_s": "start"
+          },
+          "blocks": {
+            "g_cell_tPaMeg": {
+              "type": "g-cell",
+              "settings": {
+                "spanRow": false,
+                "span": 1,
+                "spanRow_s": true,
+                "span_s": 1,
+                "sticky": false,
+                "padding": 0
+              },
+              "blocks": {
+                "a_text_PbGKPz": {
+                  "type": "a-text",
+                  "name": "Text",
+                  "settings": {
+                    "text": "Add your message here. Use HTML for formatting, then adjust font, size, spacing, and alignment to match your brand.",
+                    "tag": "h2",
+                    "enable_custom_typography": true,
+                    "font_family": "hFontFamily",
+                    "font_weight": "normal",
+                    "font_size": 8,
+                    "font_size_s": 4,
+                    "line_height": 1,
+                    "letter_spacing": 0,
+                    "text_align": "left",
+                    "text_transform": "none",
+                    "text_indent": 0,
+                    "paddingTop": 0,
+                    "paddingRight": 0,
+                    "paddingBottom": 0,
+                    "paddingLeft": 0,
+                    "color": false,
+                    "color_custom": "#000000"
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "a_text_PbGKPz"
+              ]
+            },
+            "g_cell_ck6Fyd": {
+              "type": "g-cell",
+              "settings": {
+                "spanRow": false,
+                "span": 1,
+                "spanRow_s": true,
+                "span_s": 1,
+                "sticky": false,
+                "padding": 0
+              },
+              "blocks": {
+                "g_flexbox_R9Hdyc": {
+                  "type": "g-flexbox",
+                  "name": "Flexbox",
+                  "settings": {
+                    "direction": "row-reverse",
+                    "wrap": true,
+                    "columnGap": 1,
+                    "rowGap": 1,
+                    "align_items": "end",
+                    "justify_content": "end",
+                    "direction_s": "row",
+                    "wrap_s": false,
+                    "columnGap_s": 1,
+                    "rowGap_s": 1,
+                    "align_items_s": "center",
+                    "justify_content_s": "center"
+                  },
+                  "blocks": {
+                    "g_cell_Efc97E": {
+                      "type": "g-cell",
+                      "settings": {
+                        "spanRow": false,
+                        "span": 0,
+                        "spanRow_s": false,
+                        "span_s": 0,
+                        "sticky": false,
+                        "padding": 0
+                      },
+                      "blocks": {
+                        "a_link_KzdzCX": {
+                          "type": "a-link",
+                          "name": "Button",
+                          "settings": {
+                            "label": "Label",
+                            "url": "shopify://collections/all",
+                            "open_in_new_tab": false,
+                            "style": "is-blank",
+                            "fullwidth": false,
+                            "alignment": "center",
+                            "global_color_scheme": true,
+                            "color_scheme": ""
+                          },
+                          "blocks": {}
+                        }
+                      },
+                      "block_order": [
+                        "a_link_KzdzCX"
+                      ]
+                    },
+                    "g_cell_Rb44xQ": {
+                      "type": "g-cell",
+                      "settings": {
+                        "spanRow": false,
+                        "span": 0,
+                        "spanRow_s": false,
+                        "span_s": 0,
+                        "sticky": false,
+                        "padding": 0
+                      },
+                      "blocks": {
+                        "a_link_qbTfN7": {
+                          "type": "a-link",
+                          "name": "Button",
+                          "settings": {
+                            "label": "Label",
+                            "url": "shopify://collections/all",
+                            "open_in_new_tab": false,
+                            "style": "button",
+                            "fullwidth": false,
+                            "alignment": "center",
+                            "global_color_scheme": true,
+                            "color_scheme": ""
+                          },
+                          "blocks": {}
+                        }
+                      },
+                      "block_order": [
+                        "a_link_qbTfN7"
+                      ]
+                    }
+                  },
+                  "block_order": [
+                    "g_cell_Efc97E",
+                    "g_cell_Rb44xQ"
+                  ]
+                }
+              },
+              "block_order": [
+                "g_flexbox_R9Hdyc"
+              ]
+            }
+          },
+          "block_order": [
+            "g_cell_tPaMeg",
+            "g_cell_ck6Fyd"
+          ]
+        }
+      },
+      "block_order": [
+        "g_flexbox_qYJmNQ"
+      ],
+      "name": "Custom section",
+      "settings": {
+        "paddingInline": true,
+        "marginTop": 6,
+        "marginBottom": 0,
+        "paddingTop": 0,
+        "paddingBottom": 0,
+        "global_color_scheme": true,
+        "color_scheme": ""
+      }
+    },
+    "s_custom_339pNW": {
+      "type": "s-custom",
+      "blocks": {
+        "g_overlay_gBGgtf": {
+          "type": "g-overlay",
+          "name": "Overlay content",
+          "settings": {
+            "align_items": "center",
+            "justify_items": "around",
+            "align_items_s": "end",
+            "justify_items_s": "between",
+            "marginTop": 0,
+            "marginBottom": 0
+          },
+          "blocks": {
+            "cell-1": {
+              "type": "g-cell",
+              "name": "Foreground",
+              "static": true,
+              "settings": {
+                "spanRow": true,
+                "span": 0,
+                "spanRow_s": true,
+                "span_s": 0,
+                "sticky": true,
+                "padding": 4
+              },
+              "blocks": {
+                "g_flexbox_YqW3NQ": {
+                  "type": "g-flexbox",
+                  "name": "Flexbox",
+                  "settings": {
+                    "direction": "row",
+                    "wrap": true,
+                    "columnGap": 1,
+                    "rowGap": 1,
+                    "align_items": "center",
+                    "justify_content": "between",
+                    "direction_s": "column",
+                    "wrap_s": false,
+                    "columnGap_s": 1,
+                    "rowGap_s": 1,
+                    "align_items_s": "center",
+                    "justify_content_s": "center"
+                  },
+                  "blocks": {
+                    "g_cell_qVkECX": {
+                      "type": "g-cell",
+                      "settings": {
+                        "spanRow": false,
+                        "span": 0,
+                        "spanRow_s": false,
+                        "span_s": 0,
+                        "sticky": false,
+                        "padding": 0
+                      },
+                      "blocks": {
+                        "a_text_yjTr93": {
+                          "type": "a-text",
+                          "name": "Text",
+                          "settings": {
+                            "text": "Heading",
+                            "tag": "h2",
+                            "enable_custom_typography": false,
+                            "font_family": "fontFamily",
+                            "font_weight": "normal",
+                            "font_size": 8,
+                            "font_size_s": 4,
+                            "line_height": 1,
+                            "letter_spacing": 0,
+                            "text_align": "left",
+                            "text_transform": "none",
+                            "text_indent": 0,
+                            "paddingTop": 0,
+                            "paddingRight": 0,
+                            "paddingBottom": 0,
+                            "paddingLeft": 0,
+                            "color": false,
+                            "color_custom": "#000000"
+                          },
+                          "blocks": {}
+                        }
+                      },
+                      "block_order": [
+                        "a_text_yjTr93"
+                      ]
+                    },
+                    "g_cell_hwzMP8": {
+                      "type": "g-cell",
+                      "settings": {
+                        "spanRow": false,
+                        "span": 0,
+                        "spanRow_s": false,
+                        "span_s": 0,
+                        "sticky": false,
+                        "padding": 0
+                      },
+                      "blocks": {
+                        "a_link_ppBttH": {
+                          "type": "a-link",
+                          "name": "Button",
+                          "settings": {
+                            "label": "Label",
+                            "url": "shopify://collections/all",
+                            "open_in_new_tab": false,
+                            "style": "is-blank",
+                            "fullwidth": true,
+                            "alignment": "center",
+                            "global_color_scheme": true,
+                            "color_scheme": ""
+                          },
+                          "blocks": {}
+                        }
+                      },
+                      "block_order": [
+                        "a_link_ppBttH"
+                      ]
+                    }
+                  },
+                  "block_order": [
+                    "g_cell_qVkECX",
+                    "g_cell_hwzMP8"
+                  ]
+                }
+              },
+              "block_order": [
+                "g_flexbox_YqW3NQ"
+              ]
+            },
+            "cell-2": {
+              "type": "g-cell",
+              "name": "Background",
+              "static": true,
+              "settings": {
+                "spanRow": false,
+                "span": 0,
+                "spanRow_s": false,
+                "span_s": 0,
+                "sticky": false,
+                "padding": 0
+              },
+              "blocks": {
+                "a_image_P938VG": {
+                  "type": "a-image",
+                  "settings": {
+                    "link": "",
+                    "image_ratio": "none",
+                    "image_height": 50,
+                    "image_width_custom": false,
+                    "image_width": 100,
+                    "image_fit": "cover",
+                    "image_position": "center",
+                    "radius_custom": false,
+                    "radius": 0,
+                    "marginTop": 0,
+                    "marginRight": 0,
+                    "marginBottom": 0,
+                    "marginLeft": 0
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "a_image_P938VG"
+              ]
+            }
+          },
+          "block_order": []
+        }
+      },
+      "block_order": [
+        "g_overlay_gBGgtf"
+      ],
+      "name": "Custom section",
+      "settings": {
+        "paddingInline": true,
+        "marginTop": 0,
+        "marginBottom": 0,
+        "paddingTop": 0,
+        "paddingBottom": 0,
+        "global_color_scheme": true,
+        "color_scheme": ""
+      }
+    }
+  },
+  "order": [
+    "main",
+    "s_custom_eHjjYq",
+    "s_custom_t8fFMM",
+    "s_custom_rpe6Xa",
+    "s_custom_339pNW"
+  ]
+}

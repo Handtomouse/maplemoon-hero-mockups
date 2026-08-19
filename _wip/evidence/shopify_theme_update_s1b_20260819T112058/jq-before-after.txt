@@ -1,0 +1,15 @@
+# Strict JSON gates, jq jq-1.8.1
+## AFTER, theme 160142491845 (1.6.0)
+== config/settings_schema.json ==
+jq: parse error: Expected another array element at line 495, column 9
+jq_exit=5
+== config/settings_data.json ==
+jq: parse error: Invalid numeric literal at line 2, column 0
+jq_exit=5
+## BEFORE, theme 160076628165 (1.4.0), rerun this session
+== config/settings_schema.json ==
+jq: parse error: Expected another array element at line 470, column 9
+jq_exit=5
+== config/settings_data.json ==
+jq: parse error: Invalid numeric literal at line 2, column 0
+jq_exit=5

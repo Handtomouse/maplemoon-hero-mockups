@@ -1,0 +1,8 @@
+# Source determination, 'Updated copy of Ethereal' 160142491845
+## Both candidate sources are byte-identical to each other at this moment
+diff_qr_live_vs_s1_exit=0
+## File classification of NEW against each candidate source
+32a71e498de275ff88e6ab090a80fb905fcaa9d5a3d0605b7be744dfbe28a8aa  /private/tmp/claude-501/-Users-handtomouse/28992ad5-c089-435c-b426-48d1da21e3de/scratchpad/diff_vs_s1.json
+32a71e498de275ff88e6ab090a80fb905fcaa9d5a3d0605b7be744dfbe28a8aa  /private/tmp/claude-501/-Users-handtomouse/28992ad5-c089-435c-b426-48d1da21e3de/scratchpad/diff_vs_live.json
+diff_of_diffs_exit=0
+## Verdict: UNDETERMINED from bytes. The two classifications are the same object.

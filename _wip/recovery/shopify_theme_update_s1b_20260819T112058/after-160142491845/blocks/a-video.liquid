@@ -1,0 +1,143 @@
+{% doc %}
+    Renders a video block.
+
+    @example
+    {%- content_for 'block', type: 'a-video' -%}
+{% enddoc %}
+
+{%- liquid
+    # Styles
+    capture block_style
+        echo 'margin:var(--space-' | append: block.settings.marginTop | append: ') var(--space-' | append: block.settings.marginRight | append: ') var(--space-' | append: block.settings.marginBottom | append: ') var(--space-' | append: block.settings.marginLeft | append: ');'
+    endcapture
+
+    # Video params
+    assign vid = block.settings.video
+    assign vidMobile = block.settings.videoMob
+    assign loop = block.settings.video_loop
+    assign autoplay = block.settings.video_autoplay
+    assign muted = block.settings.video_muted
+    if autoplay
+        assign muted = true
+    endif
+    assign controls = block.settings.video_controls
+    assign clickToPlay = block.settings.video_click
+-%}
+
+<div class="sb-video contents atom"
+    style="{{ block_style | strip_newlines | strip }}"
+    {{ block.shopify_attributes }}
+>
+    {%- render 'inc-video',
+        vid: vid,
+        vidMobile: vidMobile,
+        loop: loop,
+        autoplay: autoplay,
+        muted: muted,
+        controls: controls,
+        clickToPlay: clickToPlay,
+        fallback: true
+    -%}
+</div>
+
+{% schema %}
+{
+    "name": "Video",
+    "tag": null,
+    "settings": [
+        {
+            "type": "video",
+            "id": "video",
+            "label": "Video - desktop"
+        },
+        {
+            "type": "video",
+            "id": "videoMob",
+            "label": "Video - mobile"
+        },
+        {
+            "type": "header",
+            "content": "Playback"
+        },
+        {
+            "type": "checkbox",
+            "id": "video_autoplay",
+            "label": "Autoplay",
+            "default": true,
+            "info": "Autoplay is not supported on mobile devices and disabled by default in many browsers."
+        },
+        {
+            "type": "checkbox",
+            "id": "video_loop",
+            "label": "Loop",
+            "default": true
+        },
+        {
+            "type": "checkbox",
+            "id": "video_muted",
+            "label": "Muted",
+            "default": true,
+            "info": "Video is always muted when autoplay is enabled.",
+            "visible_if": "{{ block.settings.video_autoplay == false }}"
+        },
+        {
+            "type": "checkbox",
+            "id": "video_controls",
+            "label": "Show play/pause button",
+            "default": false
+        },
+        {
+            "type": "checkbox",
+            "id": "video_click",
+            "label": "Click to play/pause",
+            "default": true
+        },
+        {
+            "type": "header",
+            "content": "Margin"
+        },
+        {
+            "type": "range",
+            "id": "marginTop",
+            "label": "Top",
+            "min": 0,
+            "max": 30,
+            "step": 1,
+            "default": 0
+        },
+        {
+            "type": "range",
+            "id": "marginRight",
+            "label": "Right",
+            "min": 0,
+            "max": 30,
+            "step": 1,
+            "default": 0
+        },
+        {
+            "type": "range",
+            "id": "marginBottom",
+            "label": "Bottom",
+            "min": 0,
+            "max": 30,
+            "step": 1,
+            "default": 0
+        },
+        {
+            "type": "range",
+            "id": "marginLeft",
+            "label": "Left",
+            "min": 0,
+            "max": 30,
+            "step": 1,
+            "default": 0
+        }
+    ],
+    "presets": [
+        {
+            "name": "Video",
+            "category": "Basic"
+        }
+    ]
+}
+{% endschema %}

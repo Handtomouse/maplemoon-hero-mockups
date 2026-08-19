@@ -1,0 +1,29 @@
+schema unique ids: old=137 new=147
+schema ids ADDED in 1.6.0 (10): ['card_badges_overlay', 'cart_upsells_collection', 'cart_upsells_limit', 'cart_upsells_title', 'cart_upsells_visibility', 'page_transition_speed', 'page_transition_style', 'search_suggested_links', 'search_suggested_links_direction', 'search_suggested_links_title']
+schema ids REMOVED in 1.6.0 (0): []
+
+installed_preset_name: old='Ethereal' new=None
+presets: old={'Etheryx': 11, 'Ethereal': 20, 'Ethernity': 24} new={'Etheryx': 11, 'Ethereal': 20, 'Ethernity': 24}
+current merchant keys: old=20 new=20
+
+KEY                                STATUS     DETAIL
+body_strikethrough_links_hover     PRESERVED  in_1.6.0_schema=True
+button_alignment                   PRESERVED  in_1.6.0_schema=True
+card_crop_fit                      PRESERVED  in_1.6.0_schema=True
+card_crop_position                 PRESERVED  in_1.6.0_schema=True
+card_crop_ratio                    PRESERVED  in_1.6.0_schema=True
+card_media_type                    PRESERVED  in_1.6.0_schema=True
+card_quick_buy                     PRESERVED  in_1.6.0_schema=True
+card_show_color_list               PRESERVED  in_1.6.0_schema=True
+card_show_secondary                PRESERVED  in_1.6.0_schema=True
+card_show_size_list                PRESERVED  in_1.6.0_schema=True
+card_stealth_meta                  PRESERVED  in_1.6.0_schema=True
+card_text_align                    PRESERVED  in_1.6.0_schema=True
+color_schemes                      PRESERVED  in_1.6.0_schema=True
+footer_stealth                     PRESERVED  in_1.6.0_schema=True
+heading_as_body                    PRESERVED  in_1.6.0_schema=True
+media_radius                       PRESERVED  in_1.6.0_schema=True
+themeName                          PRESERVED  in_1.6.0_schema=True
+themePreset                        PRESERVED  in_1.6.0_schema=True
+type_body_font                     PRESERVED  in_1.6.0_schema=True
+type_heading_font                  PRESERVED  in_1.6.0_schema=True

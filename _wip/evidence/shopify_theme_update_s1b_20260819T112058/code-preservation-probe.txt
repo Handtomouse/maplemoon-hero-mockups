@@ -1,0 +1,29 @@
+# Code-preservation probe: was the 1.4.0 tree ever code-customised?
+## grep -ril 'maplemoon|maple moon|carob' over 1.4.0 CODE files (*.liquid *.js *.css)
+grep_exit=1 (1 = no match)
+## same grep over ALL 246 files of the 1.4.0 tree
+sections/header-group.json
+templates/index.json
+grep_exit=0
+## same grep over the 270 files of the 1.6.0 copy
+sections/header-group.json
+templates/index.json
+grep_exit=0
+## store-uploaded bespoke assets, status in the migration
+assets/maplemoon-logo.svg          unchanged
+assets/brand-story.jpg             unchanged
+assets/hero-editorial.jpg          unchanged
+assets/lifestyle-1.jpg             unchanged
+assets/lifestyle-2.jpg             unchanged
+assets/feature-bar.jpg             unchanged
+assets/feature-glow.jpg            unchanged
+## removed lines across the whole migration diff that reference store assets
+-        "image": "shopify://shop_images/hero-editorial.jpg"
+-        "image": "shopify://shop_images/brand-story.jpg"
+-            "image": "shopify://shop_images/lifestyle-1.jpg"
+-            "image": "shopify://shop_images/lifestyle-2.jpg"
+grep_exit=0
+## but templates/index.json and sections/header-group.json are semantically identical (key order only)
+sections/header-group.json     semantically_equal=True
+templates/index.json           semantically_equal=True
+templates/product.json         semantically_equal=False

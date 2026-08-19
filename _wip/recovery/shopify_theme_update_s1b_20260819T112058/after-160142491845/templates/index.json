@@ -1,0 +1,388 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "ls_hero_4jQJxQ": {
+      "type": "ls-hero",
+      "blocks": {
+        "text_heading": {
+          "type": "text",
+          "settings": {
+            "text": "Australian Wholefood Carob",
+            "fontFamily": "fontFamily",
+            "fontBold": true,
+            "alignment": "center",
+            "fontSize": 15,
+            "fontSizeMob": 7,
+            "letterSpacing": 0,
+            "lineHeight": 0.9,
+            "textIndent": 10,
+            "enableCharWidth": true,
+            "charWidth": 62,
+            "marginTop": 0,
+            "marginBottom": 0
+          }
+        },
+        "text_subheading": {
+          "type": "text",
+          "settings": {
+            "text": "Naturally sweet. Caffeine free. Crafted with care.",
+            "fontFamily": "fontFamily",
+            "fontBold": false,
+            "alignment": "center",
+            "fontSize": 4,
+            "fontSizeMob": 3,
+            "letterSpacing": 0,
+            "lineHeight": 1.3,
+            "textIndent": 0,
+            "enableCharWidth": true,
+            "charWidth": 62,
+            "marginTop": 1,
+            "marginBottom": 0
+          }
+        },
+        "button_shop": {
+          "type": "button",
+          "settings": {
+            "label": "Shop Now",
+            "url": "/collections/all-products",
+            "linkAsButton": true
+          }
+        }
+      },
+      "block_order": [
+        "text_heading",
+        "text_subheading",
+        "button_shop"
+      ],
+      "name": "Hero banner",
+      "settings": {
+        "mediaType": "image",
+        "image": "shopify://shop_images/hero-editorial.jpg",
+        "video_autoplay": true,
+        "video_loop": true,
+        "video_muted": true,
+        "video_controls": false,
+        "media_height_uncropped": false,
+        "media_height": 80,
+        "media_width_full": false,
+        "media_center": true,
+        "media_height_uncropped_mob": false,
+        "media_height_mob": 90,
+        "url": "/collections/all-products",
+        "sticky": false,
+        "overlay": true,
+        "metaOrder": "3",
+        "direction": "row",
+        "position": "center",
+        "directionMob": "row",
+        "positionMob": "center",
+        "paddingInline": true,
+        "marginTop": 0,
+        "marginBottom": 2,
+        "paddingTop": 0,
+        "paddingBottom": 0,
+        "mixBlend": true,
+        "global_color_scheme": false,
+        "color_scheme": "coretex-1"
+      }
+    },
+    "ls_feat_collections_aJRixm": {
+      "type": "ls-feat-collections",
+      "name": "Our Range",
+      "settings": {
+        "stealthMode": false,
+        "heading": "Our Range",
+        "description": "",
+        "url": "/collections",
+        "label": "View all",
+        "grid_columns": 4,
+        "grid_gap": 2,
+        "card_crop_ratio": "4/5",
+        "card_crop_fit": "cover",
+        "card_crop_position": "center",
+        "overlayContent": false,
+        "collection_list": [
+          "carob-bars",
+          "carob-moons",
+          "carob-bananas",
+          "carob-elixirs"
+        ],
+        "paddingInline": true,
+        "marginTop": 4,
+        "marginBottom": 4,
+        "paddingTop": 2,
+        "paddingBottom": 2,
+        "mixBlend": false,
+        "global_color_scheme": true,
+        "color_scheme": ""
+      }
+    },
+    "ls_heading_text_6tKq7t": {
+      "type": "ls-heading-text",
+      "blocks": {
+        "text_brand": {
+          "type": "text",
+          "settings": {
+            "text": "MapleMoon crafts premium carob products in Australia using organic, wholefood ingredients. Every bar, moon, and elixir is vegan, gluten-free, and made with love — because real food should taste incredible without compromise.",
+            "fontFamily": "fontFamily",
+            "alignment": "left",
+            "fontSize": 4,
+            "fontSizeMob": 3,
+            "letterSpacing": 0,
+            "lineHeight": 1.4,
+            "textIndent": 0,
+            "enableCharWidth": true,
+            "charWidth": 62,
+            "direction": "row",
+            "alignmentAI": "start",
+            "alignmentJC": "start",
+            "marginTop": 0,
+            "marginBottom": 0
+          }
+        }
+      },
+      "block_order": [
+        "text_brand"
+      ],
+      "name": "Naturally Sweet, Caffeine Free",
+      "settings": {
+        "direction": "column",
+        "paddingInline": true,
+        "marginTop": 8,
+        "marginBottom": 4,
+        "paddingTop": 0,
+        "paddingBottom": 0,
+        "global_color_scheme": true,
+        "color_scheme": ""
+      }
+    },
+    "ls_image_text_99xxXn": {
+      "type": "ls-image-text",
+      "blocks": {
+        "heading_story": {
+          "type": "heading",
+          "settings": {
+            "heading": "Our Story"
+          }
+        },
+        "text_story": {
+          "type": "text",
+          "settings": {
+            "text": "What started as a family's love for carob has grown into something special. We believe nature got it right — carob is naturally sweet, packed with nutrients, and completely caffeine-free. We just make it irresistible.",
+            "enableCharWidth": false,
+            "charWidth": 62,
+            "textIndent": 0,
+            "fontSize": 4,
+            "fontSizeMob": 2
+          }
+        },
+        "button_story": {
+          "type": "button",
+          "settings": {
+            "label": "Read More",
+            "url": "/pages/our-story",
+            "linkAsButton": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_story",
+        "text_story",
+        "button_story"
+      ],
+      "name": "Our Story",
+      "settings": {
+        "debug": false,
+        "gap": 2,
+        "mediaSpan": 4,
+        "metaSpan": 4,
+        "mediaType": "image",
+        "image": "shopify://shop_images/brand-story.jpg",
+        "imagePosition": "3",
+        "textPosition": "end",
+        "textAlignment": "left",
+        "paddingInline": true,
+        "marginTop": 2,
+        "marginBottom": 2,
+        "paddingTop": 3,
+        "paddingBottom": 2,
+        "global_color_scheme": true,
+        "color_scheme": ""
+      }
+    },
+    "ls_feat_collection_HJa4MT": {
+      "type": "ls-feat-collection",
+      "name": "Featured collection",
+      "settings": {
+        "stealthMode": false,
+        "heading": "Shop All",
+        "description": "",
+        "product_limit": 10,
+        "layoutType": "grid",
+        "card_grid_columns": "4",
+        "card_grid_columns_m": "2",
+        "card_grid_columns_s": "2",
+        "card_grid_gap": 3,
+        "card_grid_gap_s": 2,
+        "useLocalCardSize": false,
+        "card_size": 250,
+        "marginTop": 4,
+        "marginBottom": 4,
+        "paddingTop": 2,
+        "paddingBottom": 2,
+        "global_color_scheme": true,
+        "color_scheme": ""
+      }
+    },
+    "ls_multicolumn_list_tkrqF8": {
+      "type": "ls-multicolumn-list",
+      "blocks": {
+        "column_vegan": {
+          "type": "column",
+          "settings": {
+            "showImage": true,
+            "icon": "leaf",
+            "heading": "Vegan",
+            "text": "100% plant-based, always",
+            "url": "",
+            "label": "",
+            "linkAsButton": false
+          }
+        },
+        "column_organic": {
+          "type": "column",
+          "settings": {
+            "showImage": true,
+            "icon": "plant",
+            "heading": "Organic",
+            "text": "Certified organic ingredients",
+            "url": "",
+            "label": "",
+            "linkAsButton": false
+          }
+        },
+        "column_caffeine": {
+          "type": "column",
+          "settings": {
+            "showImage": true,
+            "icon": "face-content",
+            "heading": "Caffeine Free",
+            "text": "Naturally caffeine-free carob",
+            "url": "",
+            "label": "",
+            "linkAsButton": false
+          }
+        },
+        "column_gluten": {
+          "type": "column",
+          "settings": {
+            "showImage": true,
+            "icon": "shield-tick",
+            "heading": "Gluten Free",
+            "text": "Safe for coeliac diets",
+            "url": "",
+            "label": "",
+            "linkAsButton": false
+          }
+        },
+        "column_aus": {
+          "type": "column",
+          "settings": {
+            "showImage": true,
+            "icon": "map-pin",
+            "heading": "Australian Made",
+            "text": "Crafted in Australia",
+            "url": "",
+            "label": "",
+            "linkAsButton": false
+          }
+        }
+      },
+      "block_order": [
+        "column_vegan",
+        "column_organic",
+        "column_caffeine",
+        "column_gluten",
+        "column_aus"
+      ],
+      "name": "Trust Badges",
+      "settings": {
+        "columns": "5",
+        "columnsMob": "2",
+        "gap": 2,
+        "alignment": "center",
+        "uniformMedia": true,
+        "paddingInline": true,
+        "marginTop": 6,
+        "marginBottom": 4,
+        "paddingTop": 3,
+        "paddingBottom": 3,
+        "global_color_scheme": false,
+        "color_scheme": "coretex-1"
+      }
+    },
+    "ls_multicolumn_VjxwG6": {
+      "type": "ls-multicolumn",
+      "blocks": {
+        "image_lifestyle1": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/lifestyle-1.jpg",
+            "fontSize": 3,
+            "fontSizeMob": 2,
+            "fontBold": true,
+            "sticky": true,
+            "contentPosition": "bottom left",
+            "mixBlend": false
+          }
+        },
+        "image_lifestyle2": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/lifestyle-2.jpg",
+            "fontSize": 3,
+            "fontSizeMob": 2,
+            "fontBold": false,
+            "sticky": true,
+            "contentPosition": "bottom left",
+            "mixBlend": false
+          }
+        }
+      },
+      "block_order": [
+        "image_lifestyle1",
+        "image_lifestyle2"
+      ],
+      "name": "Lifestyle imagery",
+      "settings": {
+        "columns": "2",
+        "columnsMob": "1",
+        "gap": 1,
+        "overlayContent": true,
+        "uniformMedia": true,
+        "paddingInline": true,
+        "marginTop": 2,
+        "marginBottom": 4,
+        "paddingTop": 0,
+        "paddingBottom": 0
+      }
+    }
+  },
+  "order": [
+    "ls_hero_4jQJxQ",
+    "ls_feat_collections_aJRixm",
+    "ls_heading_text_6tKq7t",
+    "ls_image_text_99xxXn",
+    "ls_feat_collection_HJa4MT",
+    "ls_multicolumn_list_tkrqF8",
+    "ls_multicolumn_VjxwG6"
+  ]
+}

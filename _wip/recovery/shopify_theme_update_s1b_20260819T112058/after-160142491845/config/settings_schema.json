@@ -1,0 +1,1385 @@
+[
+    {
+        "name": "theme_info",
+        "theme_name": "Etheryx",
+        "theme_version": "1.6.0",
+        "theme_author": "OpenThinking",
+        "theme_documentation_url": "https://docs.openthinking.net/themes/etheryx/",
+        "theme_support_url": "https://openthinking.net/support/?src=etheryx"
+    },
+    {
+        "name": "Layout",
+        "settings": [
+            {
+                "type": "header",
+                "content": "Site content"
+            },
+            {
+                "type": "range",
+                "label": "Max width on desktop",
+                "id": "global_wrapper_width",
+                "default": 62,
+                "min": 60,
+                "max": 85,
+                "step": 1
+            },
+            {
+                "type": "checkbox",
+                "id": "global_wrapper_center",
+                "label": "Center main content",
+                "default": false,
+                "info": "Center the main content of the page."
+            },
+            {
+                "type": "range",
+                "label": "Global corner roundness",
+                "id": "global_radius",
+                "min": 0,
+                "max": 7,
+                "step": 1,
+                "default": 3,
+                "info": "Adjust how rounded the corners of elements are."
+            },
+            {
+                "type": "header",
+                "content": "Custom cursors"
+            },
+            {
+                "type": "checkbox",
+                "id": "custom_cursor",
+                "label": "Enable",
+                "info": "Change the default cursor on desktop. [Learn more](https://docs.openthinking.net/themes/etheryx/editor/ts/#cursors)",
+                "default": false
+            },
+            {
+                "type": "image_picker",
+                "id": "custom_cursor_default",
+                "label": "Default",
+                "info": "32 x 32 px recommended",
+                "visible_if": "{{ settings.custom_cursor }}"
+            },
+            {
+                "type": "image_picker",
+                "id": "custom_cursor_pointer",
+                "label": "Pointer",
+                "info": "Displayed when hovering over links or buttons. 32 x 32 px recommended",
+                "visible_if": "{{ settings.custom_cursor }}"
+            },
+            {
+                "type": "header",
+                "content": "Page transition"
+            },
+            {
+                "type": "checkbox",
+                "id": "page_transition",
+                "label": "Enable",
+                "info": "Applies a page transition animation when navigating between pages. Available on supported browsers only.",
+                "default": true
+            },
+            {
+                "type": "select",
+                "id": "page_transition_style",
+                "label": "Style",
+                "default": "rise",
+                "options": [
+                    { "value": "rise", "label": "Soft rise" },
+                    { "value": "zoom", "label": "Soft zoom" },
+                    { "value": "blur", "label": "Blur focus" }
+                ],
+                "visible_if": "{{ settings.page_transition }}"
+            },
+            {
+                "type": "select",
+                "id": "page_transition_speed",
+                "label": "Speed",
+                "default": "normal",
+                "options": [
+                    { "value": "instant", "label": "Instant" },
+                    { "value": "fast", "label": "Fast" },
+                    { "value": "normal", "label": "Normal" },
+                    { "value": "slow", "label": "Slow" }
+                ],
+                "visible_if": "{{ settings.page_transition }}"
+            },
+            {
+                "type": "header",
+                "content": "Footers"
+            },
+            {
+                "type": "checkbox",
+                "id": "footer_stealth",
+                "label": "Hide footer by default",
+                "info": "When enabled, the footer is hidden by default with an icon to toggle its visibility. Clicking the icon will reveal the footer.",
+                "default": false
+            },
+            {
+                "type": "header",
+                "content": "Accessibility"
+            },
+            {
+                "type": "select",
+                "id": "a11y",
+                "label": "Focus indicators",
+                "default": "a11y-all",
+                "info": "Manages visibility of focus outline indicators for improved keyboard navigation.",
+                "options": [
+                    {
+                        "value": "a11y-off",
+                        "label": "None"
+                    },
+                    {
+                        "value": "a11y-all",
+                        "label": "All focusable elements"
+                    },
+                    {
+                        "value": "a11y-inputs-off",
+                        "label": "Exclude inputs"
+                    }
+                ]
+            },
+            {
+                "type": "paragraph",
+                "content": "Not recommended. Disabling focus outline indicators can negatively impact accessibility for users relying on assistive technologies.",
+                "visible_if": "{{ settings.a11y == 'a11y-off' }}"
+            }
+        ]
+    },
+    {
+        "name": "Colors",
+        "settings": [
+            {
+                "type": "color_scheme_group",
+                "id": "color_schemes",
+                "definition": [
+                    {
+                        "type": "header",
+                        "content": "General"
+                    },
+                    {
+                        "type": "color",
+                        "id": "background",
+                        "label": "Background"
+                    },
+                    {
+                        "type": "color_background",
+                        "id": "background_gradient",
+                        "label": "Background gradient",
+                        "info": "Replaces background where possible."
+                    },
+                    {
+                        "type": "color",
+                        "id": "text",
+                        "label": "Text"
+                    },
+                    {
+                        "type": "color",
+                        "id": "text_faded",
+                        "label": "Text faded"
+                    },
+                    {
+                        "type": "color",
+                        "id": "link",
+                        "label": "Links"
+                    },
+                    {
+                        "type": "color",
+                        "id": "link_faded",
+                        "label": "Links faded"
+                    },
+                    {
+                        "type": "color",
+                        "id": "link_hover",
+                        "label": "Links on interaction"
+                    },
+                    {
+                        "type": "color",
+                        "id": "border",
+                        "label": "Border",
+                        "alpha": true
+                    },
+                    {
+                        "type": "header",
+                        "content": "Inputs"
+                    },
+                    {
+                        "type": "color",
+                        "id": "input_bg",
+                        "label": "Background",
+                        "alpha": true
+                    },
+                    {
+                        "type": "color",
+                        "id": "input_bg_hover",
+                        "label": "Background on interaction",
+                        "alpha": true
+                    },
+                    {
+                        "type": "color",
+                        "id": "input_color",
+                        "label": "Text"
+                    },
+                    {
+                        "type": "color",
+                        "id": "input_color_hover",
+                        "label": "Text on interaction"
+                    },
+                    {
+                        "type": "color",
+                        "id": "input_border",
+                        "label": "Border",
+                        "alpha": true
+                    },
+                    {
+                        "type": "color",
+                        "id": "input_border_hover",
+                        "label": "Border on interaction",
+                        "alpha": true
+                    },
+                    {
+                        "type": "header",
+                        "content": "Buttons"
+                    },
+                    {
+                        "type": "color",
+                        "id": "button_bg",
+                        "label": "Background",
+                        "alpha": true
+                    },
+                    {
+                        "type": "color",
+                        "id": "button_bg_hover",
+                        "label": "Background on interaction",
+                        "alpha": true
+                    },
+                    {
+                        "type": "color",
+                        "id": "button_color",
+                        "label": "Text"
+                    },
+                    {
+                        "type": "color",
+                        "id": "button_color_hover",
+                        "label": "Text on interaction"
+                    },
+                    {
+                        "type": "color",
+                        "id": "button_border",
+                        "label": "Border",
+                        "alpha": true
+                    },
+                    {
+                        "type": "color",
+                        "id": "button_border_hover",
+                        "label": "Border on interaction",
+                        "alpha": true
+                    },
+                    {
+                        "type": "header",
+                        "content": "Accents"
+                    },
+                    {
+                        "type": "color",
+                        "id": "accent_bg",
+                        "label": "Background",
+                        "alpha": true
+                    },
+                    {
+                        "type": "color",
+                        "id": "accent_color",
+                        "label": "Text"
+                    },
+                    {
+                        "type": "color",
+                        "id": "accent_border",
+                        "label": "Border",
+                        "alpha": true
+                    }
+                ],
+                "role": {
+                    "background": {
+                        "solid": "background",
+                        "gradient": "background_gradient"
+                    },
+                    "text": "text",
+                    "icons": "text",
+                    "links": "link",
+                    "primary_button": "button_bg",
+                    "on_primary_button": "button_color",
+                    "primary_button_border": "button_border",
+                    "secondary_button": "input_bg",
+                    "on_secondary_button": "input_color",
+                    "secondary_button_border": "input_border"
+                }
+            },
+            {
+                "type": "header",
+                "content": "Global",
+                "info": "Default color scheme is applied to all elements across your online store."
+            },
+            {
+                "type": "color_scheme",
+                "id": "global_color_scheme",
+                "default": "coretex-1",
+                "label": "Color scheme"
+            },
+            {
+                "type": "header",
+                "content": "Overlay backdrop",
+                "info": "This setting is applied to all backdrop elements across your online store."
+            },
+            {
+                "type": "color",
+                "id": "overlayBg",
+                "label": "Background",
+                "default": "#FFFFFFD4",
+                "alpha": true
+            },
+            {
+                "type": "range",
+                "label": "Blur",
+                "id": "overlayBlur",
+                "min": 0,
+                "max": 40,
+                "step": 1,
+                "default": 10
+            }
+        ]
+    },
+    {
+        "name": "Typography",
+        "settings": [
+            {
+                "type": "header",
+                "content": "Body"
+            },
+            {
+                "type": "font_picker",
+                "id": "type_body_font",
+                "default": "inter_n4",
+                "label": "Font"
+            },
+            {
+                "type": "range",
+                "id": "body_scale",
+                "min": 60,
+                "max": 120,
+                "step": 5,
+                "unit": "%",
+                "label": "Font size scale",
+                "default": 70
+            },
+            {
+                "type": "checkbox",
+                "id": "body_underline_links",
+                "label": "Underline links",
+                "default": false
+            },
+            {
+                "type": "checkbox",
+                "id": "body_strikethrough_links_hover",
+                "label": "Strikethrough links on hover",
+                "default": false
+            },
+            {
+                "type": "header",
+                "content": "Headings"
+            },
+            {
+                "type": "font_picker",
+                "id": "type_heading_font",
+                "default": "inter_n7",
+                "label": "Font"
+            },
+            {
+                "type": "checkbox",
+                "id": "heading_uppercase",
+                "label": "Uppercase",
+                "default": false
+            },
+            {
+                "type": "checkbox",
+                "id": "heading_as_body",
+                "label": "Match body size",
+                "default": false,
+                "info": "Uses the same text size for headings as body text."
+            },
+            {
+                "type": "range",
+                "id": "heading_scale",
+                "min": 50,
+                "max": 150,
+                "step": 5,
+                "unit": "%",
+                "label": "Font size scale",
+                "default": 100,
+                "visible_if": "{{ settings.heading_as_body == false }}"
+            },
+            {
+                "type": "header",
+                "content": "Custom fonts"
+            },
+            {
+                "type": "checkbox",
+                "id": "useCustomFonts",
+                "label": "Enable",
+                "default": false,
+                "info": "Allows you to upload and use your own fonts. [Learn more](https://docs.openthinking.net/themes/etheryx/kb/fonts/)."
+            },
+            {
+                "type": "header",
+                "content": "Inputs"
+            },
+            {
+                "type": "range",
+                "label": "Padding",
+                "id": "input_padding",
+                "min": 1,
+                "max": 5,
+                "step": 1,
+                "default": 3,
+                "info": "Controls spacing inside buttons and input fields."
+            },
+            {
+                "type": "text_alignment",
+                "id": "button_alignment",
+                "label": "Alignment",
+                "default": "center",
+                "info": "Applies when buttons are set to full width."
+            },
+            {
+                "type": "select",
+                "id": "button_text_transform",
+                "label": "Capitalization",
+                "default": "none",
+                "options": [
+                    {
+                        "value": "none",
+                        "label": "Auto"
+                    },
+                    {
+                        "value": "uppercase",
+                        "label": "Uppercase"
+                    },
+                    {
+                        "value": "lowercase",
+                        "label": "Lowercase"
+                    },
+                    {
+                        "value": "capitalize",
+                        "label": "Capitalize"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "name": "Media",
+        "settings": [
+            {
+                "type": "checkbox",
+                "id": "media_radius",
+                "label": "Round corners",
+                "info": "Applies rounded corners to image and video elements.",
+                "default": false
+            },
+            {
+                "type": "header",
+                "content": "Favicon"
+            },
+            {
+                "type": "image_picker",
+                "id": "favicon",
+                "label": "Image",
+                "info": "Will be scaled down to 32 x 32 px"
+            },
+        ]
+    },
+    {
+        "name": "Search",
+        "settings": [
+            {
+                "type": "paragraph",
+                "content": "Control the appearance of your search dialog from the search section in the overlay area."
+            },
+			{
+				"type": "header",
+				"content": "Suggested links",
+				"info": "Displayed before any search input."
+			},
+			{
+				"type": "text",
+				"id": "search_suggested_links_title",
+				"label": "Heading",
+                "default": "Suggested links",
+				"visible_if": "{{ settings.search_suggested_links != blank }}"
+			},
+			{
+				"type": "link_list",
+				"id": "search_suggested_links",
+				"label": "Links",
+				"info": "Dropdown items won't appear in this menu."
+			},
+			{
+				"type": "select",
+				"id": "search_suggested_links_direction",
+				"label": "Layout",
+				"options": [
+					{ "value": "row", "label": "Row" },
+					{ "value": "column", "label": "Column" }
+				],
+				"default": "row",
+				"visible_if": "{{ settings.search_suggested_links != blank }}"
+			},
+            {
+                "type": "header",
+                "content": "Predictive search"
+            },
+            {
+                "type": "checkbox",
+                "id": "predictive_search_enabled",
+                "label": "Enable",
+                "default": true
+            },
+            {
+                "type": "checkbox",
+                "id": "predictive_search_show_vendor",
+                "label": "Show vendor",
+                "info": "Visible when search suggestions enabled.",
+                "default": true,
+                "visible_if": "{{ settings.predictive_search_enabled }}"
+            },
+            {
+                "type": "checkbox",
+                "id": "predictive_search_show_price",
+                "label": "Show price",
+                "info": "Visible when search suggestions enabled.",
+                "default": true,
+                "visible_if": "{{ settings.predictive_search_enabled }}"
+            }
+        ]
+    },
+    {
+        "name": "Product card",
+        "settings": [
+            {
+                "type": "header",
+                "content": "Media"
+            },
+            {
+                "type": "select",
+                "id": "card_media_type",
+                "label": "Type",
+                "info": "Using videos in cards may reduce website speed and performance. Videos might not autoplay in certain situations.",
+                "default": "image",
+                "options": [
+                    {
+                        "value": "image",
+                        "label": "Image"
+                    },
+                    {
+                        "value": "multimedia",
+                        "label": "Image and video"
+                    }
+                ]
+            },
+            {
+                "type": "checkbox",
+                "id": "card_show_secondary",
+                "label": "Secondary media on hover",
+                "info": "Displays alternate product media when hovering over the card.",
+                "default": false
+            },
+            {
+                "type": "select",
+                "id": "card_show_secondary_onHover",
+                "label": "Device display",
+                "info": "Choose where to show secondary media on hover.",
+                "visible_if": "{{ settings.card_show_secondary }}",
+                "default": "both",
+                "options": [
+                    {
+                        "value": "both",
+                        "label": "Mobile and desktop"
+                    },
+                    {
+                        "value": "desktop",
+                        "label": "Desktop only"
+                    }
+                ]
+            },
+            {
+                "type": "checkbox",
+                "id": "card_crop",
+                "label": "Crop media to fit",
+                "info": "Automatically crop media to fit the selected aspect ratio.",
+                "default": true
+            },
+            {
+                "type": "select",
+                "id": "card_crop_ratio",
+                "label": "Aspect ratio",
+                "default": "4/5",
+                "options": [
+                    {
+                        "value": "1/1",
+                        "label": "1:1 (square)"
+                    },
+                    {
+                        "value": "4/5",
+                        "label": "4:5 (vertical)"
+                    },
+                    {
+                        "value": "3/4",
+                        "label": "3:4 (standard portrait)"
+                    },
+                    {
+                        "value": "2/3",
+                        "label": "2:3 (portrait photo)"
+                    },
+                    {
+                        "value": "auto",
+                        "label": "Custom"
+                    }
+                ]
+            },
+            {
+                "type": "range",
+                "label": "Custom aspect ratio",
+                "id": "card_crop_height",
+                "min": 100,
+                "max": 700,
+                "step": 10,
+                "unit": "px",
+                "default": 400,
+                "visible_if": "{{ settings.card_crop_ratio == 'auto' }}"
+            },
+            {
+                "type": "select",
+                "id": "card_crop_fit",
+                "label": "Crop style",
+                "info": "Choose how the media fits within the card: 'Wide' crops to fill the space, 'None' keeps the original media dimensions.",
+                "default": "cover",
+                "options": [
+                    {
+                        "value": "cover",
+                        "label": "Wide"
+                    },
+                    {
+                        "value": "contain",
+                        "label": "None"
+                    }
+                ]
+            },
+            {
+                "type": "select",
+                "id": "card_crop_position",
+                "label": "Crop position",
+                "info": "Select the focal point for cropping the media within the card.",
+                "default": "center",
+                "options": [
+                    {
+                        "value": "center top",
+                        "label": "Top"
+                    },
+                    {
+                        "value": "center",
+                        "label": "Center"
+                    },
+                    {
+                        "value": "center bottom",
+                        "label": "Bottom"
+                    }
+                ]
+            },
+            {
+                "type": "header",
+                "content": "Content"
+            },
+            {
+                "type": "checkbox",
+                "id": "card_single_line",
+                "label": "Single line layout",
+                "info": "Displays only the product title and price on one line. Hides all other content.",
+                "default": false
+            },
+            {
+                "type": "checkbox",
+                "id": "card_overlay_meta",
+                "label": "Content overlay",
+                "info": "Displays the content area on top of the media.",
+                "default": false,
+                "visible_if": "{{ settings.card_single_line }}"
+            },
+            {
+                "type": "checkbox",
+                "id": "card_stealth_meta",
+                "label": "Show content on hover - desktop",
+                "info": "Show product information on hover.",
+                "default": false
+            },
+            {
+                "type": "checkbox",
+                "id": "card_clip_meta",
+                "label": "Enable text clipping",
+                "info": "Restrict titles, subtitles, and vendor names to one line.",
+                "default": false
+            },
+            {
+                "type": "checkbox",
+                "id": "card_show_vendor",
+                "label": "Show vendor",
+                "default": true,
+                "visible_if": "{{ settings.card_single_line == false }}"
+            },
+            {
+                "type": "checkbox",
+                "id": "card_show_subtitle",
+                "label": "Show subtitle",
+                "info": "[Standard metafield](https://help.shopify.com/en/manual/custom-data/metafields/metafield-definitions/adding-standard-metafield-definitions) is used.",
+                "default": false,
+                "visible_if": "{{ settings.card_single_line == false }}"
+            },
+            {
+                "type": "checkbox",
+                "id": "card_show_price",
+                "label": "Show price",
+                "default": true,
+                "visible_if": "{{ settings.card_single_line == false }}"
+            },
+            {
+                "type": "checkbox",
+                "id": "card_show_size_list",
+                "label": "Show available sizes",
+                "info": "Show a list of available variant sizes for the product on hover. Will replace the product title on hover.",
+                "default": false,
+                "visible_if": "{{ settings.card_single_line == false }}"
+            },
+            {
+                "type": "checkbox",
+                "id": "card_show_color_list",
+                "label": "Show available colors",
+                "info": "Show a counter of available colors for the product on hover. Will replace the product title on hover.",
+                "default": false,
+                "visible_if": "{{ settings.card_single_line == false }}"
+            },
+            {
+                "type": "checkbox",
+                "id": "card_show_rating",
+                "label": "Show rating",
+                "info": "Show a rating of the product.",
+                "default": false,
+                "visible_if": "{{ settings.card_single_line == false }}"
+            },
+            {
+                "type": "checkbox",
+                "id": "card_soldout_opacity",
+                "label": "Fade out sold out products",
+                "info": "Fade out the product card if the product is sold out.",
+                "default": true,
+                "visible_if": "{{ settings.card_single_line == false }}"
+            },
+            {
+                "type": "text_alignment",
+                "id": "card_text_align",
+                "label": "Text alignment",
+                "default": "left",
+                "visible_if": "{{ settings.card_single_line == false }}"
+            },
+            {
+                "type": "header",
+                "content": "Quick buy",
+            },
+            {
+                "type": "checkbox",
+                "id": "card_quick_buy",
+                "label": "Enable",
+                "default": false
+            },
+            {
+                "type": "checkbox",
+                "id": "card_quick_buy_pop",
+                "label": "Show 'add to cart' as button",
+                "info": "Adds a background color to the 'Add to Cart' button for better visibility.",
+                "default": false
+            },
+            {
+                "type": "header",
+                "content": "Badges",
+                "visible_if": "{{ settings.card_single_line == false }}"
+            },
+            {
+                "type": "checkbox",
+                "id": "card_show_badges",
+                "label": "Show",
+                "default": true,
+                "info": "See which badges you can show and how to display them. [Learn more](https://docs.openthinking.net/themes/etheryx/editor/ts/#product-cards-badges).",
+                "visible_if": "{{ settings.card_single_line == false }}"
+            },
+            {
+                "type": "checkbox",
+                "id": "card_badges_overlay",
+                "label": "Overlay badges",
+                "default": false,
+                "info": "Overlay badges on top of the product media.",
+                "visible_if": "{{ settings.card_show_badges and settings.card_single_line == false }}"
+            },
+            {
+                "type": "checkbox",
+                "id": "card_preorder_label",
+                "label": "Pre-order badge",
+                "default": true,
+                "visible_if": "{{ settings.card_show_badges and settings.card_single_line == false }}"
+            },
+            {
+                "type": "select",
+                "id": "card_sale_type",
+                "label": "Sale badge",
+                "default": "both",
+                "visible_if": "{{ settings.card_show_badges and settings.card_single_line == false }}",
+                "options": [
+                    {
+                        "value": "none",
+                        "label": "None"
+                    },
+                    {
+                        "value": "label",
+                        "label": "Label"
+                    },
+                    {
+                        "value": "percentage",
+                        "label": "Percentage"
+                    },
+                    {
+                        "value": "both",
+                        "label": "Both"
+                    }
+                ]
+            },
+            {
+                "type": "select",
+                "id": "card_new_type",
+                "label": "New badge",
+                "info": "Choose how to display the 'New' badge. 'Collection': Applies if the product is in a collection containing 'new' in the handle. 'Tag': Applies if the product has the 'new' tag.",
+                "visible_if": "{{ settings.card_show_badges and settings.card_single_line == false }}",
+                "default": "none",
+                "options": [
+                    {
+                        "value": "none",
+                        "label": "None"
+                    },
+                    {
+                        "value": "tag",
+                        "label": "Tag"
+                    },
+                    {
+                        "value": "collection",
+                        "label": "Collection"
+                    },
+                    {
+                        "value": "date",
+                        "label": "Date"
+                    }
+                ]
+            },
+            {
+                "type": "range",
+                "id": "card_badge_new_limit",
+                "min": 2,
+                "max": 100,
+                "step": 1,
+                "label": "New badge duration",
+                "default": 7,
+                "unit": "day",
+                "visible_if": "{{ settings.card_show_badges and settings.card_new_type == 'date' and settings.card_single_line == false }}",
+                "info": "Displays the 'New' badge for products created within the specified number of days. This requires the 'Date' option to be selected above."
+            }
+        ]
+    },
+    {
+        "name": "Cart",
+        "settings": [
+            {
+                "type": "paragraph",
+                "content": "Control the appearance of the cart dialog from the cart section in the overlay area."
+            },
+            {
+                "type": "select",
+                "id": "cart_type",
+                "label": "Type",
+                "default": "drawer",
+                "options": [
+                    {
+                        "value": "drawer",
+                        "label": "Drawer"
+                    },
+                    {
+                        "value": "notice",
+                        "label": "Notification"
+                    },
+                    {
+                        "value": "redirect",
+                        "label": "Page"
+                    }
+                ],
+            },
+            {
+                "type": "checkbox",
+                "id": "cart_auto_open_drawer",
+                "label": "Auto-open drawer",
+                "info": "Opens the cart drawer automatically when a product is added.",
+                "default": true,
+                "visible_if": "{{ settings.cart_type == 'drawer' }}"
+            },
+            {
+                "type": "header",
+                "content": "Layout"
+            },
+            {
+                "type": "checkbox",
+                "id": "cart_image",
+                "label": "Show image",
+                "default": true
+            },
+            {
+                "type": "checkbox",
+                "id": "cart_vendor",
+                "label": "Show vendor",
+                "default": true
+            },
+            {
+                "type": "checkbox",
+                "id": "cart_preorder_label",
+                "label": "Show preorder label",
+                "info": "Displays a label for preorder products.",
+                "default": true
+            },
+            {
+                "type": "checkbox",
+                "id": "cart_tax",
+                "label": "Show tax disclaimer",
+                "default": true
+            },
+            {
+                "type": "checkbox",
+                "id": "cart_icons",
+                "label": "Show payment methods",
+                "default": true
+            },
+            {
+                "type": "checkbox",
+                "id": "cart_icons_grey",
+                "label": "Monochrome payment method icons",
+                "default": false
+            },
+            {
+                "type": "checkbox",
+                "id": "cart_continue",
+                "label": "Show \"Continue shopping\" button",
+                "default": true
+            },
+            {
+                "type": "checkbox",
+                "id": "cart_viewButton",
+                "label": "Show \"View cart\" button",
+                "default": true
+            },
+            {
+                "type": "checkbox",
+                "id": "cart_dynamicButtons",
+                "label": "Show dynamic checkout buttons",
+                "default": true
+            },
+            {
+                "type": "checkbox",
+                "id": "cart_notes",
+                "label": "Show cart notes",
+                "default": true
+            },
+            {
+                "type": "checkbox",
+                "id": "cart_discount",
+                "label": "Show discount input",
+                "default": true
+            },
+            {
+                "type": "checkbox",
+                "id": "cart_total_savings",
+                "label": "Show total savings",
+                "info": "Displays the total amount saved from discounts.",
+                "default": false
+            },
+            {
+                "type": "checkbox",
+                "id": "cart_termsCheckbox",
+                "label": "Show terms agreement",
+                "info": "Display a terms agreement checkbox in cart. To customize the text, [learn more](https://docs.openthinking.net/themes/etheryx/editor/os/#cart-terms-checkbox).",
+                "default": false
+            },
+            {
+                "type": "url",
+                "id": "cart_empty_url",
+                "label": "Empty cart button link",
+                "default": "/collections/all"
+            },
+            {
+                "type": "header",
+                "content": "Currency codes"
+            },
+            {
+                "type": "checkbox",
+                "id": "currency_code_enabled",
+                "label": "Show",
+                "info": "Cart and checkout prices always show currency codes. Example: $1.00 USD.",
+                "default": false
+            },
+            {
+                "type": "header",
+                "content": "Free shipping"
+            },
+            {
+                "type": "checkbox",
+                "id": "cart_free_shipping",
+                "label": "Enable",
+                "default": true
+            },
+            {
+                "type": "number",
+                "id": "cart_free_shipping_threshold",
+                "label": "Threshold",
+                "default": 100,
+                "info": "Write the minumum amount in the main currency of your store, without the currency code."
+            },
+            {
+                "type": "checkbox",
+                "id": "cart_free_shipping_threshold_market",
+                "label": "Enable per-market threshold",
+                "default": false,
+                "info": "Enable this option to set different thresholds for each market/currency. [Learn more](https://docs.openthinking.net/themes/etheryx/editor/os/#free-shipping-bar-threshold) on how to set this up."
+            },
+            {
+                "type": "color",
+                "id": "cart_free_shipping_color",
+                "label": "Color",
+                "info": "Select the color for the progress bar.",
+                "default": "#0000FF"
+            },
+            {
+                "type": "header",
+                "content": "Upsells"
+            },
+            {
+                "type": "collection",
+                "id": "cart_upsells_collection",
+                "label": "Collection",
+                "info": "Products from this collection will be shown as upsells in the cart. Leave empty to disable."
+            },
+            {
+                "type": "text",
+                "id": "cart_upsells_title",
+                "label": "Heading",
+                "default": "You might also like",
+                "visible_if": "{{ settings.cart_upsells_collection != blank }}"
+            },
+            {
+                "type": "range",
+                "id": "cart_upsells_limit",
+                "label": "Number of products",
+                "min": 2,
+                "max": 12,
+                "step": 1,
+                "default": 6,
+                "visible_if": "{{ settings.cart_upsells_collection != blank }}"
+            },
+            {
+                "type": "select",
+                "id": "cart_upsells_visibility",
+                "label": "Show on",
+                "default": "both",
+                "options": [
+                    { "value": "empty", "label": "Empty cart" },
+                    { "value": "full", "label": "Full cart" },
+                    { "value": "both", "label": "Empty and full carts" },
+                ],
+                "visible_if": "{{ settings.cart_upsells_collection != blank }}"
+            },
+            {
+                "type": "header",
+                "content": "Announcement bar"
+            },
+            {
+                "type": "checkbox",
+                "id": "cart_announcement",
+                "label": "Enable",
+                "default": false
+            },
+            {
+                "type": "checkbox",
+                "id": "cart_announcement_highlight",
+                "label": "Highlight message",
+                "default": false,
+                "visible_if": "{{ settings.cart_announcement }}"
+            },
+            {
+                "type": "inline_richtext",
+                "id": "cart_announcement_message",
+                "label": "Message",
+                "info": "[Learn more](https://docs.openthinking.net/themes/etheryx/editor/os/#cart-announcement) how set different announcements for each language.",
+                "visible_if": "{{ settings.cart_announcement }}"
+            }
+        ]
+    },
+    {
+        "name": "Social",
+        "settings": [
+            {
+                "type": "select",
+                "id": "show_social_type",
+                "label": "Type",
+                "default": "icon",
+                "options": [
+                    {
+                        "value": "text",
+                        "label": "Text"
+                    },
+                    {
+                        "value": "icon",
+                        "label": "Icon"
+                    }
+                ]
+            },
+            {
+                "type": "header",
+                "content": "Social accounts"
+            },
+            {
+                "type": "text",
+                "id": "social-instagram",
+                "label": "Instagram",
+                "placeholder": "https://instagram.com/shopify"
+            },
+            {
+                "type": "text",
+                "id": "social-twitter",
+                "label": "𝕏 (Twitter)",
+                "placeholder": "https://x.com/shopify"
+            },
+            {
+                "type": "text",
+                "id": "social-tiktok",
+                "label": "TikTok",
+                "placeholder": "https://tiktok.com/@shopify"
+            },
+            {
+                "type": "text",
+                "id": "social-snapchat",
+                "label": "Snapchat",
+                "placeholder": "https://snapchat.com/add/shopify"
+            },
+            {
+                "type": "text",
+                "id": "social-pinterest",
+                "label": "Pinterest",
+                "placeholder": "https://pinterest.com/shopify"
+            },
+            {
+                "type": "text",
+                "id": "social-tumblr",
+                "label": "Tumblr",
+                "placeholder": "https://shopify.tumblr.com/"
+            },
+            {
+                "type": "text",
+                "id": "social-vk",
+                "label": "VK",
+                "placeholder": "https://vk.com/"
+            },
+            {
+                "type": "text",
+                "id": "social-facebook",
+                "label": "Facebook",
+                "placeholder": "https://facebook.com/shopify"
+            },
+            {
+                "type": "text",
+                "id": "social-reddit",
+                "label": "Reddit",
+                "placeholder": "https://reddit.com/user/shopify"
+            },
+            {
+                "type": "text",
+                "id": "social-discord",
+                "label": "Discord",
+                "placeholder": "https://discord.com/"
+            },
+            {
+                "type": "text",
+                "id": "social-twitch",
+                "label": "Twitch",
+                "placeholder": "https://twitch.tv/"
+            },
+            {
+                "type": "text",
+                "id": "social-linkedin",
+                "label": "LinkedIn",
+                "placeholder": "https://linkedin.com/"
+            },
+            {
+                "type": "text",
+                "id": "social-trustpilot",
+                "label": "Trustpilot",
+                "placeholder": "https://trustpilot.com/review/shopify.com"
+            },
+            {
+                "type": "text",
+                "id": "social-tripadvisor",
+                "label": "Tripadvisor",
+                "placeholder": "https://tripadvisor.com/"
+            },
+            {
+                "type": "text",
+                "id": "social-telegram",
+                "label": "Telegram",
+                "placeholder": "https://t.me/"
+            },
+            {
+                "type": "text",
+                "id": "social-wechat",
+                "label": "WeChat",
+                "placeholder": "https://wechat.com/"
+            },
+            {
+                "type": "text",
+                "id": "social-line",
+                "label": "Line",
+                "placeholder": "https://line.me/"
+            },
+            {
+                "type": "text",
+                "id": "social-whatsapp",
+                "label": "WhatsApp",
+                "placeholder": "https://wa.me/"
+            },
+            {
+                "type": "text",
+                "id": "social-weibo",
+                "label": "Weibo"
+            },
+            {
+                "type": "text",
+                "id": "social-youtube",
+                "label": "YouTube",
+                "placeholder": "https://youtube.com/channel/shopify"
+            },
+            {
+                "type": "text",
+                "id": "social-vimeo",
+                "label": "Vimeo",
+                "placeholder": "https://vimeo.com/"
+            },
+            {
+                "type": "text",
+                "id": "social-spotify",
+                "label": "Spotify",
+                "placeholder": "https://open.spotify.com/artist/shopify"
+            },
+            {
+                "type": "text",
+                "id": "social-applemusic",
+                "label": "Apple music",
+                "placeholder": "https://music.apple.com/artist/shopify"
+            },
+            {
+                "type": "text",
+                "id": "social-soundcloud",
+                "label": "Soundcloud",
+                "placeholder": "https://soundcloud.com/shopify"
+            }
+        ]
+    },
+    {
+        "name": "Analytics",
+        "settings": [
+            {
+                "type": "paragraph",
+                "content": "Enable Google analytics and Facebook pixel through the Shopify admin [Online store > Preferences](https://admin.shopify.com/online_store/preferences)"
+            },
+            {
+                "type": "header",
+                "content": "Other trackers",
+                "info": "Trackers will slow down your website."
+            },
+            {
+                "type": "html",
+                "id": "pixelPinterest",
+                "label": "Pinterest pixel"
+            },
+            {
+                "type": "html",
+                "id": "pixelTikTok",
+                "label": "TikTok pixel"
+            },
+            {
+                "type": "html",
+                "id": "pixelOther",
+                "label": "Other"
+            },
+            {
+                "type": "select",
+                "id": "themeName",
+                "label": "Name",
+                "default": "Etheryx",
+                "visible_if": "{{ false }}",
+                "options": [ { "value": "Etheryx", "label": "Etheryx" } ]
+            },
+            {
+                "type": "select",
+                "id": "themePreset",
+                "label": "Preset",
+                "default": "Etheryx",
+                "visible_if": "{{ false }}",
+                "options": [
+                    { "value": "Etheryx", "label": "Etheryx" },
+                    { "value": "Ethereal", "label": "Ethereal" },
+                    { "value": "Ethernity", "label": "Ethernity" }
+                ]
+            },
+            {
+                "type": "text",
+                "id": "themeVersion",
+                "label": "Version",
+                "default": "1.6.0",
+                "visible_if": "{{ false }}"
+            }
+        ]
+    },
+    {
+        "name": "Custom code",
+        "settings": [
+            {
+                "type": "paragraph",
+                "content": "If you want to update this theme in the future, we suggest that you do not edit theme files manually or you might lose your edits. Instead use this section for your custom code."
+            },
+            {
+                "type": "header",
+                "content": "CSS"
+            },
+            {
+                "type": "liquid",
+                "id": "coretexCSS",
+                "label": "Code",
+                "info": "Do not include <style></style> tag."
+            },
+            {
+                "type": "header",
+                "content": "JavaScript",
+                "info": "Your inline JavaScript will be loaded in site's footer and will be available sitewide on all pages."
+            },
+            {
+                "type": "liquid",
+                "id": "coretexJS",
+                "label": "Code",
+                "info": "Do not include <script></script> tag."
+            }
+        ]
+    }
+]

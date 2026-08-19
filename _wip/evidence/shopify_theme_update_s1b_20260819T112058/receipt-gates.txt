@@ -1,0 +1,21 @@
+# Receipt gate runs, instrument scripts/check-maplemoon-receipt.py
+# Written to a scratch path and copied into evidence afterwards, so the gate output
+# does not mutate the very directory the checkpoint is measuring.
+== checkpoint ==
+PASS checkpoint packet=MAPLEMOON-SHOPIFY-THEME-UPDATE-S1B-20260819T112058 files=5 path=/private/tmp/claude-501/-Users-handtomouse/28992ad5-c089-435c-b426-48d1da21e3de/scratchpad/cp3
+== verify --phase start ==
+PASS packet=MAPLEMOON-SHOPIFY-THEME-UPDATE-S1B-20260819T112058 phase=start scope=5
+== verify --phase complete ==
+FAIL packet=MAPLEMOON-SHOPIFY-THEME-UPDATE-S1B-20260819T112058 reason=receipt contains a failed or malformed check
+
+NOTE 1: the completion gate rejects any check whose exit_code is not 0 (line 276 of the
+script). This receipt truthfully records 'shopify theme check' exit 1, 'jq' exit 5 and a
+'grep' exit 1 (no match, which is the PASS condition for that probe). Those codes were
+left as they really were rather than rewritten to 0 to make the gate go green. The FAIL
+is the gate's rule meeting an inherited nonzero baseline, not an unresolved defect in
+this lane. The 10:49 receipt carries the same nonzero codes and was only ever run
+through --phase start, which does not inspect them.
+
+NOTE 2, ordering: this file is copied into the evidence directory after the checkpoint
+above was taken, so a checkpoint retaken now would see one extra file. Disclosed rather
+than hidden by backdating.

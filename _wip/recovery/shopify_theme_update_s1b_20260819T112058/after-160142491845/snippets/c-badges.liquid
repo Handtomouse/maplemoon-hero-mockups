@@ -1,0 +1,142 @@
+{%- comment -%}
+  Renders product badges (sold out, sale, new, preorder, custom tags).
+
+  @param {object} product - The product object
+  @param {boolean} [card_mode=false] - When true, wraps the badges container in an x-cell for product card layout
+  @param {string} [sale_type] - Sale badge style: 'label', 'percentage', 'both' (defaults to settings.card_sale_type)
+  @param {string} [new_type] - New badge detection: 'date', 'collection', 'tag' (defaults to settings.card_new_type)
+  @param {number} [badge_new_limit] - Days threshold for date-based new badge (defaults to settings.card_badge_new_limit)
+  @param {boolean} [show_preorder_label] - Show pre-order badge (defaults to settings.card_preorder_label)
+  @param {boolean} [show_sale=true] - Show sale badge
+  @param {boolean} [show_new=true] - Show new badge
+  @param {boolean} [show_custom_tags=true] - Show custom tag badges (badge:xxx)
+{%- endcomment -%}
+
+{%- liquid
+    # Defaults
+    if sale_type == blank
+        assign sale_type = settings.card_sale_type
+    endif
+    if new_type == blank
+        assign new_type = settings.card_new_type
+    endif
+    if badge_new_limit == blank
+        assign badge_new_limit = settings.card_badge_new_limit
+    endif
+    if show_preorder_label == null
+        assign show_preorder_label = settings.card_preorder_label
+    endif
+    if show_sale == null
+        assign show_sale = true
+    endif
+    if show_new == null
+        assign show_new = true
+    endif
+    if show_custom_tags == null
+        assign show_custom_tags = true
+    endif
+
+    # Sold out
+    assign is_sold_out = false
+    unless product.available
+        assign is_sold_out = true
+    endunless
+
+    # New badge
+    assign show_new_in = false
+    if show_new
+        case new_type
+            when 'date'
+                assign now_s = 'now' | date: '%s' | plus: 0
+                assign pub_s = product.created_at | date: '%s' | plus: 0
+                assign diff_days = now_s | minus: pub_s | divided_by: 86400
+                if diff_days < badge_new_limit
+                    assign show_new_in = true
+                endif
+            when 'collection'
+                for collection in product.collections
+                    assign split_collection_handle = collection.handle | split: '-'
+                    if split_collection_handle contains 'new'
+                        assign show_new_in = true
+                        break
+                    endif
+                endfor
+            when 'tag'
+                if product.tags contains 'new'
+                    assign show_new_in = true
+                endif
+        endcase
+    endif
+
+    # Sale badge
+    assign show_if_sale = false
+    if show_sale and product.compare_at_price > product.price and product.available
+        assign show_if_sale = true
+        capture sale_percentage
+            if sale_type == 'label' or sale_type == 'both'
+                echo 'products.product.on_sale' | t
+            endif
+            if sale_type == 'percentage' or sale_type == 'both'
+                echo '&nbsp;'
+                echo product.compare_at_price | minus: product.price | times: 100 | divided_by: product.compare_at_price | prepend: '-' | append: '%'
+            endif
+        endcapture
+    endif
+
+    # Preorder badge
+    assign pre_order = false
+    assign tags_csv = product.tags | join: ',' | downcase
+    if tags_csv contains 'preorder' or tags_csv contains 'pre-order' or tags_csv contains 'pre order'
+        assign pre_order = true
+    endif
+    assign show_if_preorder = false
+    if pre_order and show_preorder_label and product.available
+        assign show_if_preorder = true
+    endif
+-%}
+
+{%- if is_sold_out -%}
+    {%- if card_mode -%}<x-cell class="badges">{%- endif -%}
+    {%- if product.metafields.openthinking.custom_badge != blank -%}
+        <span class="badge custom labeler">{{ product.metafields.openthinking.custom_badge }}</span>
+    {%- else -%}
+        <span class="badge soldout labeler">{{ 'products.product.sold_out' | t }}</span>
+    {%- endif -%}
+    {%- if card_mode -%}</x-cell>{%- endif -%}
+{%- else -%}
+    {%- if show_new_in or show_if_sale or show_if_preorder -%}
+        {%- if card_mode -%}<x-cell class="badges">{%- endif -%}
+
+        {%- if show_new_in -%}
+            <span class="badge new labeler">{{ 'openthinking.dictionary.word.new' | t }}</span>
+        {%- endif -%}
+
+        {%- if show_if_sale -%}
+            <span class="badge sale labeler">{{ sale_percentage }}</span>
+        {%- endif -%}
+
+        {%- if show_if_preorder -%}
+            <span class="badge preorder labeler">{{ 'openthinking.dictionary.word.preorder' | t }}</span>
+        {%- endif -%}
+
+        {%- if card_mode -%}</x-cell>{%- endif -%}
+    {%- endif -%}
+
+    {%- # Custom badges from tags (badge:xxx) — skip if already shown as a first-class badge -%}
+    {%- # Compare against fixed English strings since tags are always English -%}
+    {%- if show_custom_tags -%}
+        {%- for tag in product.tags -%}
+            {%- if tag contains 'badge:' -%}
+                {%- assign badge_text = tag | split: 'badge:' | last | strip -%}
+                {%- assign badge_text_lower = badge_text | downcase -%}
+                {%- if show_new_in and badge_text_lower == 'new' -%}{%- continue -%}{%- endif -%}
+                {%- if show_if_preorder and badge_text_lower == 'preorder' -%}{%- continue -%}{%- endif -%}
+                {%- if show_if_preorder and badge_text_lower == 'pre-order' -%}{%- continue -%}{%- endif -%}
+                {%- if show_if_preorder and badge_text_lower == 'pre order' -%}{%- continue -%}{%- endif -%}
+                {%- if card_mode -%}<x-cell class="badges">{%- endif -%}
+                <span class="badge custom labeler" data-badge="{{ badge_text }}">{{ badge_text }}</span>
+                {%- if card_mode -%}</x-cell>{%- endif -%}
+            {%- endif -%}
+        {%- endfor -%}
+    {%- endif -%}
+{%- endif -%}

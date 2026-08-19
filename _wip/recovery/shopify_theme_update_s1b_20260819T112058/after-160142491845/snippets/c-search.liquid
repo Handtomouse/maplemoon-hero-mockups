@@ -1,0 +1,83 @@
+{%- liquid
+    assign suggested_links_list = settings.search_suggested_links
+    assign suggested_links_title = settings.search_suggested_links_title
+    assign suggested_links_direction = settings.search_suggested_links_direction | default: 'row'
+    # theme-check-disable
+    assign sort_by = search.sort_by | default: search.default_sort_by
+    assign terms = search.terms | escape
+    assign search_url = '?q=' | append: terms | append: '&options%5Bprefix%5D=last&sort_by=' | append: sort_by
+    # theme-check-enable
+-%}
+
+<search-engine id="searchbar">
+
+    {%- if settings.predictive_search_enabled -%}<predictive-search data-loading-text="{{ 'accessibility.loading' | t }}">{%- endif -%}
+    <main-search>
+
+        <form action="{{ routes.search_url }}" method="get" role="search" class="search">
+        <x-flex direction="column" class="search-section">
+            <x-cell class="search-bar fullwidth" tableindex="1">
+                <x-stack no-style presuffix tableindex="-1">
+                    <label for="Search-In-Template" style="border: none; padding-inline-start: var(--inputPadding)">
+                        <span class="visually-hidden">{{ 'general.search.search' | t }}</span>
+                        {%- render 'inc-icon', icon: 'search' -%}
+                    </label>
+
+                    <x-cell class="s-input fullwidth">
+                        <input id="Search-In-Template" class="fullwidth"
+                            type="search"
+                            name="q"
+                            value="{{ search.terms | escape }}"
+                            placeholder="{{ 'general.search.search' | t }}"
+                            autofocus
+                            {% if settings.predictive_search_enabled %}
+                                aria-owns="predictive-search-results"
+                                aria-controls="predictive-search-results"
+                                aria-haspopup="listbox"
+                                aria-autocomplete="list"
+                                autocorrect="off"
+                                autocomplete="off"
+                                autocapitalize="off"
+                                spellcheck="false"
+                            {% endif %}
+                        >
+                        <input type="hidden" name="options[prefix]" value="last">
+                    </x-cell>
+
+                    <x-cell class="s-buttons">
+                        <button type="reset" class="is-blank reset__button field__button {% if search.terms == blank %} hidden{% endif %}" aria-label="{{ 'general.search.reset' | t }}">
+                            <span>{%- render 'inc-icon', icon: 'x-close' -%}</span>
+                        </button>
+                        <button type="submit" class="is-blank visually-hidden" aria-label="{{ 'general.search.search' | t }}"><span>{{ 'general.search.search' | t }}</span></button>
+                    </x-cell>
+                </x-stack>
+            </x-cell>
+
+            {%- if settings.predictive_search_enabled -%}
+            <x-cell class="predictive-search-area" hidden>
+                <div class="predictive-search predictive-search--search-template" tabindex="-1" data-predictive-search>
+                    <div class="predictive-search__loading-state">{{ 'accessibility.loading' | t }}</div>
+                </div>
+                <span class="predictive-search-status visually-hidden" role="status" aria-hidden="true"></span>
+            </x-cell>
+            {%- endif -%}
+
+        </x-flex>
+        </form>
+    </main-search>
+    {%- if settings.predictive_search_enabled -%}</predictive-search>{%- endif -%}
+
+    {%- if linklists[suggested_links_list].links != empty -%}
+    <suggested-links class="predictive-search-area">
+        {%- if suggested_links_title != blank -%}
+        <h2 class="h6">{{ suggested_links_title }}</h2>
+        {%- endif -%}
+        <x-flex direction="{{ suggested_links_direction }}" wrap="wrap" class="linkList">
+            {%- for link in linklists[suggested_links_list].links -%}
+            <x-cell><a href="{{ link.url }}" class="button is-link">{{ link.title }}</a></x-cell>
+            {%- endfor -%}
+        </x-flex>
+    </suggested-links>
+    {%- endif -%}
+
+</search-engine>

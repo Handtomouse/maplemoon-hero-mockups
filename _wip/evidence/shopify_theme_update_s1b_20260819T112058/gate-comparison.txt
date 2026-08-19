@@ -1,0 +1,29 @@
+# Shopify Theme Check, 1.4.0 baseline vs 1.6.0 copy
+instrument: shopify CLI 3.92.1 'shopify theme check --path <dir>'
+
+BEFORE 160076628165 (1.4.0): exit 1
+  181 files inspected with 198 total offenses found across 48 files.
+  3 errors.
+  195 warnings.
+
+AFTER 160142491845 (1.6.0): exit 1
+  197 files inspected with 218 total offenses found across 48 files.
+  3 errors.
+  215 warnings.
+
+SEV        CHECK                      BEFORE  AFTER   DELTA
+error      LiquidHTMLSyntaxError           1      1      +0
+error      ParserBlockingScript            1      1      +0
+error      TranslationKeyExists            1      1      +0
+warning    UnusedAssign                    4      2      -2
+warning    VariableName                  191    213     +22
+           TOTAL                         198    218     +20
+
+errors BEFORE:
+  assets/c-slider.js.liquid  LiquidHTMLSyntaxError
+  sections/t-giftcard.liquid  ParserBlockingScript
+  snippets/inc-socials.liquid  TranslationKeyExists
+errors AFTER:
+  sections/ls-slideshow.liquid  LiquidHTMLSyntaxError
+  sections/t-giftcard.liquid  ParserBlockingScript
+  snippets/inc-socials.liquid  TranslationKeyExists

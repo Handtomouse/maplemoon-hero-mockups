@@ -1,0 +1,252 @@
+{% doc %}
+    Renders an image block.
+
+    @example
+    {%- content_for 'block', type: 'a-image' -%}
+{% enddoc %}
+
+{%- liquid
+    # Image ratio
+	assign image_ratio = false
+	assign image_height = false
+	if block.settings.image_ratio == 'auto'
+		assign image_height = block.settings.image_height | append: 'vh'
+    elsif block.settings.image_ratio == 'none'
+        assign image_ratio = false
+    else
+        assign image_ratio = block.settings.image_ratio
+    endif
+
+    # Object fit / position — only relevant when image is cropped
+	assign object_fit = block.settings.image_fit
+	assign object_position = block.settings.image_position
+
+    # Styles
+	capture block_style
+		if image_ratio != false
+        echo image_ratio | prepend: '--_imageRatio:' | append: ';'
+        endif
+		if image_height != false
+        echo image_height | prepend: '--_height:' | append: 'vh;'
+        endif
+		echo object_fit | prepend: '--_imageFit:' | append: ';'
+		echo object_position | prepend: '--_imagePos:' | append: ';'
+		if block.settings.image_width_custom
+		echo block.settings.image_width | prepend: '--_width:' | append: 'vw;'
+		endif
+		if block.settings.radius_custom
+		echo block.settings.radius | prepend: 'var(--space-' | append: ');'
+		endif
+		echo '--_margin:var(--space-' | append: block.settings.marginTop | append: ') var(--space-' | append: block.settings.marginRight | append: ') var(--space-' | append: block.settings.marginBottom | append: ') var(--space-' | append: block.settings.marginLeft | append: ');'
+	endcapture
+
+    # Optimize first section hero image
+    assign fetchpriority = nil
+    assign preload = false
+    assign loading = 'lazy'
+
+    if section.index == 1
+    	assign fetchpriority = 'high'
+    	assign preload = true
+    	assign loading = 'eager'
+    endif
+
+    capture image_markup
+    	render 'inc-img', dynamic: true, img: block.settings.image, imgMob: block.settings.imageMob, mediaLoader: true, fallback: true, fetchpriority: fetchpriority, preload: preload, loading: loading
+    endcapture
+-%}
+
+<div class="sb-image contents atom"
+    style="{{ block_style | strip_newlines | strip }}"
+    {{ block.shopify_attributes }}
+>
+
+	{%- if block.settings.link != blank -%}<a href="{{ block.settings.link }}">{% endif %}
+		{{ image_markup }}
+    {%- if block.settings.link != blank -%}</a>{%- endif -%}
+
+</div>
+
+{%- stylesheet -%}
+/*** [SB] Image */
+.sb-image {
+    :is(component-loader,media-loader,picture) { display: contents }
+
+	:is(img,svg) {
+        display: block;
+        aspect-ratio: var(--_imageRatio);
+		object-fit: var(--_imageFit);
+        object-position: var(--_imagePos, center);
+        height: var(--_height, auto);
+        width: var(--_width, auto);
+        margin: var(--_margin);
+        border-radius: var(--_radius, var(--globalRadiusImg))!important;
+	}
+
+    svg { width: 100%; height: 100% }
+}
+{%- endstylesheet -%}
+
+{% schema %}
+{
+	"name": "Image",
+	"tag": null,
+	"settings": [
+		{
+			"type": "image_picker",
+			"id": "image",
+			"label": "Image - desktop"
+		},
+		{
+			"type": "image_picker",
+			"id": "imageMob",
+			"label": "Image - mobile"
+		},
+		{
+			"type": "url",
+			"id": "link",
+			"label": "Link"
+		},
+		{
+			"type": "header",
+			"content": "Media"
+		},
+		{
+			"type": "select",
+			"id": "image_ratio",
+			"label": "Aspect ratio",
+			"default": "none",
+			"options": [
+                { "value": "none", "label": "None" },
+				{ "value": "1/1", "label": "1:1 (square)" },
+				{ "value": "4/5", "label": "4:5 (vertical)" },
+				{ "value": "3/4", "label": "3:4 (standard portrait)" },
+				{ "value": "2/3", "label": "2:3 (portrait photo)" },
+				{ "value": "16/9", "label": "16:9 (landscape)" },
+				{ "value": "auto", "label": "Custom" }
+			]
+		},
+		{
+			"type": "range",
+			"id": "image_height",
+			"label": "Custom height",
+			"min": 10,
+			"max": 100,
+			"step": 5,
+			"unit": "vh",
+			"default": 50,
+			"visible_if": "{{ block.settings.image_ratio == 'auto' }}"
+		},
+		{
+			"type": "checkbox",
+			"id": "image_width_custom",
+			"label": "Custom width",
+			"default": false
+		},
+		{
+			"type": "range",
+			"id": "image_width",
+			"label": "Width",
+			"min": 5,
+			"max": 100,
+			"step": 1,
+			"unit": "%",
+			"default": 100,
+			"visible_if": "{{ block.settings.image_width_custom }}"
+		},
+		{
+			"type": "select",
+			"id": "image_fit",
+			"label": "Crop style",
+			"info": "Choose how the media fits within the frame: 'Wide' crops to fill, 'None' keeps the original dimensions.",
+			"default": "cover",
+			"options": [
+				{ "value": "cover", "label": "Wide" },
+				{ "value": "contain", "label": "None" }
+			],
+            "visible_if": "{{ block.settings.image_ratio != 'none' }}"
+		},
+		{
+			"type": "select",
+			"id": "image_position",
+			"label": "Crop position",
+			"info": "Select the focal point for cropping the media.",
+			"default": "center",
+			"options": [
+				{ "value": "center top", "label": "Top" },
+				{ "value": "center", "label": "Center" },
+				{ "value": "center bottom", "label": "Bottom" }
+			],
+			"visible_if": "{{ block.settings.image_ratio != 'none' and block.settings.image_fit == 'cover' }}"
+		},
+		{
+			"type": "header",
+			"content": "Borders"
+		},
+		{
+			"type": "checkbox",
+			"id": "radius_custom",
+			"label": "Custom radius",
+			"default": false,
+			"info": "Override the global image radius set in Theme settings."
+		},
+		{
+			"type": "range",
+			"id": "radius",
+			"label": "Radius",
+			"min": 0,
+			"max": 30,
+			"step": 1,
+			"default": 0,
+			"visible_if": "{{ block.settings.radius_custom }}"
+		},
+		{
+			"type": "header",
+			"content": "margin"
+		},
+		{
+			"type": "range",
+			"id": "marginTop",
+			"label": "Top",
+			"min": 0,
+			"max": 30,
+			"step": 1,
+			"default": 0
+		},
+		{
+			"type": "range",
+			"id": "marginRight",
+			"label": "Right",
+			"min": 0,
+			"max": 30,
+			"step": 1,
+			"default": 0
+		},
+		{
+			"type": "range",
+			"id": "marginBottom",
+			"label": "Bottom",
+			"min": 0,
+			"max": 30,
+			"step": 1,
+			"default": 0
+		},
+		{
+			"type": "range",
+			"id": "marginLeft",
+			"label": "Left",
+			"min": 0,
+			"max": 30,
+			"step": 1,
+			"default": 0
+		}
+	],
+	"presets": [
+		{
+			"name": "Image",
+			"category": "Basic"
+		}
+	]
+}
+
+{% endschema %}

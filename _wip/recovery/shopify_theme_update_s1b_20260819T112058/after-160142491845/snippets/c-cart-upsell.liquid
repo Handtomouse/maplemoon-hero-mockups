@@ -1,0 +1,42 @@
+{%- comment -%}
+    Renders cart upsells using the selected collection.
+    Products already in the cart are excluded from the list.
+
+    Usage:
+    {%- render 'c-cart-upsell' -%}
+{%- endcomment -%}
+
+{%- if settings.cart_upsells_collection != blank -%}
+{%- liquid
+    assign cart_product_ids = cart.items | map: 'product_id'
+    assign upsell_collection = collections[settings.cart_upsells_collection]
+    assign upsell_limit = settings.cart_upsells_limit | default: 6
+
+    assign upsell_count = 0
+    for product in upsell_collection.products limit: upsell_limit
+        unless cart_product_ids contains product.id
+            assign upsell_count = upsell_count | plus: 1
+        endunless
+    endfor
+-%}
+
+{%- if upsell_count > 0 -%}
+<cart-upsells><component-loader><coretex-scroll>
+    {%- liquid
+        assign heading = settings.cart_upsells_title
+        render 'c-section-head', heading: heading, nav: true
+    -%} 
+    
+        <ul direction="row" role="list" class="no-style inside scroll-snap mandatory" scroll-area>
+            {%- for product in upsell_collection.products limit: upsell_limit -%}
+                {%- unless cart_product_ids contains product.id -%}
+                    <li as="start" scroll-slide>
+                        {%- render 'c-prod-card', product: product, loading: 'lazy' -%}
+                    </li>
+                {%- endunless -%}
+            {%- endfor -%}
+        </ul>
+    </coretex-scroll>
+</component-loader></cart-upsells>
+{%- endif -%}
+{%- endif -%}

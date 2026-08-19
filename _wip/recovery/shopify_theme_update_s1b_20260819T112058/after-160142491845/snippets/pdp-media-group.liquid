@@ -1,0 +1,30 @@
+{% doc %}
+Returns the normalized variant gallery identifier from a media alt text.
+
+@param {media} media - Product media to inspect.
+{% enddoc %}
+
+{%- liquid
+  assign media_alt = media.alt | default: '' | strip
+  assign media_group = '__shared__'
+
+  if media_alt contains '#'
+    assign media_group = '__invalid__'
+    assign group_token = media_alt | split: ' ' | last
+    assign group_token_first_character = group_token | slice: 0, 1
+    assign media_alt_without_first_hash = media_alt | remove_first: '#'
+
+    if group_token_first_character == '#'
+      unless media_alt_without_first_hash contains '#'
+        assign group_value = group_token | remove_first: '#' | downcase | replace: '_', '-'
+        assign normalized_group_value = group_value | handleize
+
+        if group_value != blank and group_value == normalized_group_value
+          assign media_group = normalized_group_value
+        endif
+      endunless
+    endif
+  endif
+
+  echo media_group
+-%}
