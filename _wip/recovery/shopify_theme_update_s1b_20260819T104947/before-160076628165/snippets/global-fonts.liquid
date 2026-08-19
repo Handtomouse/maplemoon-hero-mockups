@@ -1,0 +1,27 @@
+{%- comment -%}
+    Use this file to add your custom fonts.
+    Follow the step-by-step guide at https://docs.openthinking.net/themes/etheryx/kb/fonts/
+
+    The code below must be modified to work with your selected font.
+    Use our Font Face Generator to generate the necessary code: https://openthinking.app/x/font-face-generator/
+
+    Be sure to enable "Enable custom fonts" under "Typography", in the Theme settings.
+{%- endcomment -%}
+
+<style>
+@font-face {
+    font-family: "Your-Font-Name";
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+    src: url("font-URL-eot") format("embedded-opentype"),
+         url("font-URL-ttf") format("truetype"),
+         url("font-URL-woff") format("woff"),
+         url("font-URL-woff2") format("woff2");
+}
+    
+:root { 
+    --fontFamily: "Your-Font-Name"; /* Body font */
+    --hFontFamily: "Your-Font-Name"; /* Headings font */
+}
+</style>

@@ -1,0 +1,58 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "p-faq",
+      "blocks": {
+        "faqGroup1": {
+          "type": "heading",
+          "settings": {
+            "heading": "FAQ group 1"
+          }
+        },
+        "faq1": {
+          "type": "question",
+          "settings": {}
+        },
+        "faq2": {
+          "type": "question",
+          "settings": {}
+        },
+        "faq3": {
+          "type": "question",
+          "settings": {}
+        },
+        "faqGroup2": {
+          "type": "heading",
+          "settings": {
+            "heading": "FAQ group 2"
+          }
+        },
+        "faq4": {
+          "type": "question",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "faqGroup1",
+        "faq1",
+        "faq2",
+        "faq3",
+        "faqGroup2",
+        "faq4"
+      ],
+      "settings": {}
+    }
+  },
+  "order": [
+    "main"
+  ]
+}

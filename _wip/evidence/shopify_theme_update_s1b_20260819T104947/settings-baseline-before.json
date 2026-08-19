@@ -1,0 +1,58 @@
+{
+  "note": "Before-side settings baseline for the 1.4.0 duplicate. settings_schema.json is strict-invalid so schema ids are extracted by regex; a nonzero count is asserted before any diff is reported.",
+  "settings_schema_json": {
+    "strict_json_valid": false,
+    "strict_error": "jq exit 5: Expected another array element at line 470, column 9",
+    "unique_setting_ids_regex": 137
+  },
+  "settings_data_json": {
+    "strict_json_valid": false,
+    "strict_error": "leading /* */ comment block; parses only after comment strip",
+    "installed_preset_name": "Ethereal",
+    "current_setting_keys": 20,
+    "current_setting_ids": [
+      "body_strikethrough_links_hover",
+      "button_alignment",
+      "card_crop_fit",
+      "card_crop_position",
+      "card_crop_ratio",
+      "card_media_type",
+      "card_quick_buy",
+      "card_show_color_list",
+      "card_show_secondary",
+      "card_show_size_list",
+      "card_stealth_meta",
+      "card_text_align",
+      "color_schemes",
+      "footer_stealth",
+      "heading_as_body",
+      "media_radius",
+      "themeName",
+      "themePreset",
+      "type_body_font",
+      "type_heading_font"
+    ],
+    "presets": {
+      "Etheryx": 11,
+      "Ethereal": 20,
+      "Ethernity": 24
+    }
+  },
+  "schema_ids_sample": [
+    "a11y",
+    "accent_bg",
+    "accent_border",
+    "accent_color",
+    "background",
+    "background_gradient",
+    "body_scale",
+    "body_strikethrough_links_hover",
+    "body_underline_links",
+    "border",
+    "button_alignment",
+    "button_bg",
+    "button_bg_hover",
+    "button_border",
+    "button_border_hover"
+  ]
+}

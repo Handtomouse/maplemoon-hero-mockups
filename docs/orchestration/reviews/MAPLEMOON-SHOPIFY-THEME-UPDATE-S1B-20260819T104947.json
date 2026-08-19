@@ -1,0 +1,151 @@
+{
+  "schema": "maplemoon-receipt/v2",
+  "receipt_id": "MAPLEMOON-SHOPIFY-THEME-UPDATE-S1B-20260819T104947-RECEIPT",
+  "packet_id": "MAPLEMOON-SHOPIFY-THEME-UPDATE-S1B-20260819T104947",
+  "worker_thread_id": "/root",
+  "worker": "MapleMoon Shopify S1B lane",
+  "started_at": "2026-08-19T00:49:47Z",
+  "completed_at": "2026-08-19T01:07:00Z",
+  "files_read": [
+    "UFC/ops/state/HANDOFF_MAPLEMOON_SHOPIFY_S1B_20260819.md",
+    "maplemoon-website/.planning/MAPLEMOON_PRIVATE_SHOPIFY_REVIEW_GOAL_20260817.md",
+    "maplemoon-website/docs/orchestration/MAPLEMOON_BOSS_EXECUTION_LEDGER_20260816.md",
+    "maplemoon-website/docs/orchestration/packets/MAPLEMOON-SHOPIFY-EXECUTION-PROGRAM-20260817T165719.md",
+    "maplemoon-website/docs/orchestration/packets/MAPLEMOON-SHOPIFY-THEME-SAFETY-S1-20260817T210246.md",
+    "maplemoon-website/docs/orchestration/reviews/MAPLEMOON-SHOPIFY-THEME-SAFETY-S1-20260817T210246.md",
+    "maplemoon-website/docs/orchestration/reviews/MAPLEMOON-SHOPIFY-THEME-SAFETY-S1-20260817T210246.json",
+    "maplemoon-website/_wip/evidence/shopify_theme_safety_s1_20260817T210246",
+    "maplemoon-website/_wip/recovery/shopify_baseline_identity_r2_20260817T172708/theme-154500595909",
+    "maplemoon-website/scripts/check-maplemoon-receipt.py"
+  ],
+  "files_changed": [
+    "maplemoon-website/_wip/evidence/shopify_theme_update_s1b_20260819T104947",
+    "maplemoon-website/_wip/recovery/shopify_theme_update_s1b_20260819T104947",
+    "maplemoon-website/docs/orchestration/reviews/MAPLEMOON-SHOPIFY-THEME-UPDATE-S1B-20260819T104947.md",
+    "maplemoon-website/docs/orchestration/reviews/MAPLEMOON-SHOPIFY-THEME-UPDATE-S1B-20260819T104947.json"
+  ],
+  "pre_sha256": {
+    "maplemoon-website/_wip/evidence/shopify_theme_update_s1b_20260819T104947": null,
+    "maplemoon-website/_wip/recovery/shopify_theme_update_s1b_20260819T104947": null,
+    "maplemoon-website/docs/orchestration/reviews/MAPLEMOON-SHOPIFY-THEME-UPDATE-S1B-20260819T104947.md": null,
+    "maplemoon-website/docs/orchestration/reviews/MAPLEMOON-SHOPIFY-THEME-UPDATE-S1B-20260819T104947.json": null
+  },
+  "post_sha256": {
+    "maplemoon-website/_wip/evidence/shopify_theme_update_s1b_20260819T104947": "2afef7ade8ef42dc3462f00b3a79ffa2bff35b18bf4ba490ac273b157634de3d",
+    "maplemoon-website/_wip/recovery/shopify_theme_update_s1b_20260819T104947": "6190cad36ae30050983578d1316b7e23c5c72d713cc0ab0cde9a295778e91a3c",
+    "maplemoon-website/docs/orchestration/reviews/MAPLEMOON-SHOPIFY-THEME-UPDATE-S1B-20260819T104947.md": "aa7d32ce28d294e71c3476fb1bc86a3c00509a3d5c49aea5e9ecdc46dbf1a974",
+    "maplemoon-website/docs/orchestration/reviews/MAPLEMOON-SHOPIFY-THEME-UPDATE-S1B-20260819T104947.json": null
+  },
+  "checks": [
+    {
+      "command": "PIN: recompute gate directory digest and relative tree SHA-256 on the sealed S0 and S1 recovery trees",
+      "exit_code": 0,
+      "result": "PASS 246 files, 2866869 bytes, gate=e48a21dc289c2534aaf06711e1e4b653a7b4b54ce7a11406f8d78027a147ccc4, relative_tree=6f94b20a498fa0db7d3d4f602a04a783809689e75f95dbf234f802e8ec9c5dee. Relative tree algorithm was undocumented and was recovered by exact reproduction: SHA-256 over '<file-sha256>  ./<relative-path>\\n' lines sorted by relative path."
+    },
+    {
+      "command": "shopify theme list --store maplemooncarob.myshopify.com --json (pre-state)",
+      "exit_code": 0,
+      "result": "PASS exactly two themes: 154500595909/Ethereal/live and 160076628165/MapleMoon Private Review 20260817 S1/unpublished; both processing=false"
+    },
+    {
+      "command": "shopify theme pull --theme 160076628165 --nodelete (BEFORE BYTES)",
+      "exit_code": 0,
+      "result": "PASS 246 files, 2866869 bytes, gate=e48a21dc..., relative_tree=6f94b20a...; diff -qr against sealed S0 recovery exit 0"
+    },
+    {
+      "command": "check-maplemoon-receipt.py checkpoint",
+      "exit_code": 0,
+      "result": "PASS checkpoint packet=MAPLEMOON-SHOPIFY-THEME-UPDATE-S1B-20260819T104947 files=4 path=/Users/handtomouse/maplemoon-website/_wip/checkpoints/MAPLEMOON-SHOPIFY-THEME-UPDATE-S1B-20260819T104947_20260819_105947_AEST"
+    },
+    {
+      "command": "check-maplemoon-receipt.py verify --phase start",
+      "exit_code": 0,
+      "result": "PASS packet=MAPLEMOON-SHOPIFY-THEME-UPDATE-S1B-20260819T104947 phase=start scope=4"
+    },
+    {
+      "command": "shopify theme --help (full command list, read past the earlier truncation point)",
+      "exit_code": 0,
+      "result": "PASS no update command exists in CLI 3.92.1. Complete list: check, console, delete, dev, duplicate, info, init, language-server, list, metafields, open, package, profile, publish, pull, push, rename, share."
+    },
+    {
+      "command": "official update route availability check (Shopify Theme Store listing plus theme bytes)",
+      "exit_code": 0,
+      "result": "PASS Etheryx is a genuine Shopify Theme Store theme at themes.shopify.com/themes/etheryx/presets/ethereal; current version 1.6.0 released 2026-07-21, author OpenThinking. settings_data.json carries installed_preset_name=Ethereal with presets Etheryx/Ethereal/Ethernity, closing the Ethereal-versus-Etheryx question from the theme's own bytes. Installed version 1.4.0."
+    },
+    {
+      "command": "OFFICIAL 1.6.0 UPDATE on theme 160076628165",
+      "exit_code": null,
+      "result": "NOT RUN. Shopify's update route is an admin interface action inside a cross-origin iframe served from online-store-web.shopifyapps.com within admin.shopify.com. Page scripting reaches only the host frame; loading the iframe source top-level is redirected back by App Bridge; the legacy shop-domain admin URL redirects to the same embedded page. The GUI takeover gate denies window automation pending a gogo token, the browser-extension instrument requires an interactive browser selection this background session cannot present, and a window-id screen capture of the occluded Chrome window returned a blank frame. No vendor zip was substituted and no undocumented internal endpoint was called."
+    },
+    {
+      "command": "AFTER BYTES",
+      "exit_code": null,
+      "result": "NOT RUN. No update occurred, so no after state exists. The empty after directory was removed rather than left to imply an acquisition that never happened."
+    },
+    {
+      "command": "1.4.0 to 1.6.0 file and settings migration diff",
+      "exit_code": null,
+      "result": "NOT PRODUCED. Requires the update. No partial or inferred diff is offered."
+    },
+    {
+      "command": "settings preservation baseline (before side only)",
+      "exit_code": 0,
+      "result": "PASS baseline captured with nonzero key counts asserted. settings_schema.json is strict-invalid so 137 unique setting ids were extracted by regex. settings_data.json is ALSO not strict JSON, a newly recorded fact: it opens with a /* */ comment block and parses only after comment stripping; installed_preset_name=Ethereal, 20 merchant setting values under current, presets Etheryx=11 Ethereal=20 Ethernity=24. Comparison itself NOT RUN."
+    },
+    {
+      "command": "shopify theme check --path before-160076628165",
+      "exit_code": 1,
+      "result": "PASS identical to baseline: '181 files inspected with 198 total offenses found across 48 files. 3 errors. 195 warnings.'"
+    },
+    {
+      "command": "jq -e . config/settings_schema.json",
+      "exit_code": 5,
+      "result": "PASS identical to baseline: 'jq: parse error: Expected another array element at line 470, column 9'"
+    },
+    {
+      "command": "updated duplicate preview render inspection",
+      "exit_code": null,
+      "result": "NOT RUN. Anonymous curl of ?preview_theme_id=160076628165 ends at https://maplemooncarob.myshopify.com/password http_code=200 redirects=2, which proves the password gate and nothing about rendering. The authenticated admin session also landed on /password because the admin cookie does not carry storefront preview access. The storefront password was not entered. No rendering claim is made."
+    },
+    {
+      "command": "shopify theme pull --theme 154500595909 --nodelete plus diff -qr against sealed S0 recovery (untouched-live proof)",
+      "exit_code": 0,
+      "result": "PASS live theme byte-identical: 246 files, 2866869 bytes, gate=e48a21dc..., relative_tree=6f94b20a..., diff -qr exit 0"
+    },
+    {
+      "command": "shopify theme list --json (close state)",
+      "exit_code": 0,
+      "result": "PASS exactly two themes, unchanged: 154500595909/Ethereal/live and 160076628165/MapleMoon Private Review 20260817 S1/unpublished. No third or backup theme appeared."
+    },
+    {
+      "command": "curl sanitized anonymous storefront redirect check (close)",
+      "exit_code": 0,
+      "result": "PASS final_url=https://maplemooncarob.myshopify.com/password http_code=200 redirects=1"
+    },
+    {
+      "command": "remote-write boundary and secret-output audit",
+      "exit_code": 0,
+      "result": "PASS zero Shopify write operations of any kind. No theme update, edit, repair, push, publish, delete, rename, product, collection, metaobject, app, payment, domain, DNS, ownership, password-protection or client mutation. Two Chrome tabs were opened read-only against the store admin and closed again. No credential, token, cookie, storefront password, verification URL, customer record or payout detail entered evidence."
+    }
+  ],
+  "screenshots_or_urls": [
+    "https://maplemooncarob.myshopify.com/password",
+    "https://themes.shopify.com/themes/etheryx/presets/ethereal"
+  ],
+  "failures": [],
+  "unknowns": [
+    "Whether Shopify's admin update route creates an additional pre-update backup theme for this store was not observed, because the update was not run. The next lane must capture the theme list immediately before and immediately after the click, and must not delete any backup theme that appears.",
+    "Whether 1.6.0 preserves each of the 20 merchant setting values in settings_data.json is unknown until the update runs.",
+    "Whether the duplicate renders is unknown; the render check could not be run without the storefront password."
+  ],
+  "residual_risk": [
+    "The unpublished duplicate remains exactly 1.4.0 and still carries a strict-invalid settings_schema.json, 3 Theme Check errors and 195 warnings. It is not yet a clean implementation base.",
+    "config/settings_data.json is also not strict JSON. Any future tooling that json.load()s it will throw, and a swallowed exception there would produce a clean-looking but empty settings diff.",
+    "When the update does run, the Theme Check 'files inspected' count will move because 1.6.0 ships a different file count. That is expected and must not be reported as a regression.",
+    "Settings preservation is not the same as settings_data.json being unchanged. A merchant value surviving in the data file with no matching id in the 1.6.0 schema is orphaned and silently never read again; templates/*.json and sections/*.json orphan the same way."
+  ],
+  "forbidden_path_changes": [],
+  "ordering_deviation": "The before-state pull and evidence writes preceded the packet, so the checkpoint gate ran after those two directories already held content and their pre_sha256 entries are non-null rather than absent. Both gates still passed. Recorded rather than reordered.",
+  "proposed_next_state": "s1b_held_official_update_route_requires_admin_interface_instrument",
+  "next_reviewer": "MapleMoon root Boss, then Nate for the instrument decision"
+}

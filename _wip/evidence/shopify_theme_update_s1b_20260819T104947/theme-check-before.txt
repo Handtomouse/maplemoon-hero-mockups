@@ -1,0 +1,1498 @@
+╭─ info ───────────────────────────────────────────────────────────────────────╮
+│                                                                              │
+│  assets/c-slider.js.liquid                                                   │
+│                                                                              │
+│                                                                              │
+│  [error]: LiquidHTMLSyntaxError                                              │
+│  SyntaxError: expected "svg", "style", or "script"                           │
+│                                                                              │
+│  291  for (let i = 0; i < numberOfSlides; i++) {                             │
+│                                                                              │
+╰──────────────────────────────────────────────────────────────────────────────╯
+
+╭─ info ───────────────────────────────────────────────────────────────────────╮
+│                                                                              │
+│  sections/footer.liquid                                                      │
+│                                                                              │
+│                                                                              │
+│  [warning]: VariableName                                                     │
+│  The variable 'hasSublinks' uses wrong naming format                         │
+│                                                                              │
+│  90  assign hasSublinks = false                                              │
+│                                                                              │
+│                                                                              │
+│  [warning]: VariableName                                                     │
+│  The variable 'hasSublinks' uses wrong naming format                         │
+│                                                                              │
+│  94  assign hasSublinks = true                                               │
+│                                                                              │
+│                                                                              │
+│  [warning]: VariableName                                                     │
+│  The variable 'aiDirection' uses wrong naming format                         │
+│                                                                              │
+│  180  assign aiDirection = block.settings.alignment | replace: 'left',       │
+│  'start' | replace: 'right', 'end'                                           │
+│                                                                              │
+│                                                                              │
+│  [warning]: VariableName                                                     │
+│  The variable 'aiDirection' uses wrong naming format                         │
+│                                                                              │
+│  182  assign aiDirection = 'center'                                          │
+│                                                                              │
+╰──────────────────────────────────────────────────────────────────────────────╯
+
+╭─ info ───────────────────────────────────────────────────────────────────────╮
+│                                                                              │
+│  sections/header.liquid                                                      │
+│                                                                              │
+│                                                                              │
+│  [warning]: VariableName                                                     │
+│  The variable 'isTextLogo' uses wrong naming format                          │
+│                                                                              │
+│  15  capture isTextLogo                                                      │
+│                                                                              │
+│                                                                              │
+│  [warning]: VariableName                                                     │
+│  The variable 'menuType' uses wrong naming format                            │
+│                                                                              │
+│  29  capture menuType                                                        │
+│                                                                              │
+│                                                                              │
+│  [warning]: VariableName                                                     │
+│  The variable 'megaShadow' uses wrong naming format                          │
+│                                                                              │
+│  34  assign megaShadow = false                                               │
+│                                                                              │
+│                                                                              │
+│  [warning]: VariableName                                                     │
+│  The variable 'megaShadow' uses wrong naming format                          │
+│                                                                              │
+│  36  assign megaShadow = true                                                │
+│                                                                              │
+│                                                                              │
+│  [warning]: VariableName                                                     │
+│  The variable 'showDropdownBg' uses wrong naming format                      │
+│                                                                              │
+│  40  assign showDropdownBg = false                                           │
+│                                                                              │
+│                                                                              │
+│  [warning]: VariableName                                                     │
+│  The variable 'showDropdownBg' uses wrong naming format                      │
+│                                                                              │
+│  42  assign showDropdownBg = true                                            │
+│                                                                              │
+│                                                                              │
+│  [warning]: VariableName                                                     │
+│  The variable 'showCountry' uses wrong naming format                         │
+│                                                                              │
+│  115  assign showCountry = true                                              │
+│                                                                              │
+│                                                                              │
+│  [warning]: VariableName                                                     │
+│  The variable 'showLanguage' uses wrong naming format                        │
+│                                                                              │
+│  120  assign showLanguage = true                                             │
+│                                                                              │
+│                                                                              │
+│  [warning]: VariableName                                                     │
+│  The variable 'showSearch' uses wrong naming format                          │
+│                                                                              │
+│  125  assign showSearch = true                                               │
+│                                                                              │
+│                                                                              │
+│  [warning]: VariableName                                                     │
+│  The variable 'showAccounts' uses wrong naming format                        │
+│                                                                              │
+│  130  assign showAccounts = true                                             │
+│                                                                              │
+│                                                                              │
+│  [warning]: VariableName                                                     │
+│  The variable 'showCart' uses wrong naming format                            │
+│                                                                              │
+│  135  assign showCart = true                                                 │
+│                                                                              │
+│                                                                              │
+│  [warning]: VariableName                                                     │
+│  The variable 'localizationIcons' uses wrong naming format                   │
+│                                                                              │
+│  142  assign localizationIcons = true                                        │
+│                                                                              │
+│                                                                              │
+│  [warning]: VariableName                                                     │
+│  The variable 'localizationIcons' uses wrong naming format                   │
+│                                                                              │
+│  144  assign localizationIcons = false                                       │
+│                                                                              │
+╰──────────────────────────────────────────────────────────────────────────────╯
+
+╭─ info ───────────────────────────────────────────────────────────────────────╮
+│                                                                              │
+│  sections/ls-breadcrumbs.liquid                                              │
+│                                                                              │
+│                                                                              │
+│  [warning]: VariableName                                                     │
+│  The variable 'genieCollection' uses wrong naming format                     │
+│                                                                              │
+│  5  assign genieCollection = collection                                      │
+│                                                                              │
+│                                                                              │
+│  [warning]: VariableName                                                     │
+│  The variable 'genieCollection' uses wrong naming format                     │
+│                                                                              │
+│  7  assign genieCollection = product.collections[0]                          │
+│                                                                              │
+│                                                                              │
+│  [warning]: VariableName                                                     │
+│  The variable 'genieCollection' uses wrong naming format                     │
+│                                                                              │
+│  9  assign genieCollection = false                                           │
+│                                                                              │
+│                                                                              │
+│  [warning]: VariableName                                                     │
+│  The variable 'geniePath' uses wrong naming format                           │
+│                                                                              │
+│  13  assign geniePath = routes.collections_url | append: '/' | append:       │
+│  genieCollection.handle                                                      │
+│                                                                              │
+│                                                                              │
+│  [warning]: VariableName                                                     │
+│  The variable 'geniePath' uses wrong naming format                           │
+│                                                                              │
+│  15  assign geniePath = false                                                │
+│                                                                              │
+╰──────────────────────────────────────────────────────────────────────────────╯
+
+╭─ info ───────────────────────────────────────────────────────────────────────╮
+│                                                                              │
+│  sections/ls-collage.liquid                                                  │
+│                                                                              │
+│                                                                              │
+│  [warning]: VariableName                                                     │
+│  The variable 'desktopPercent' uses wrong naming format                      │
+│                                                                              │
+│  58  assign desktopPercent = block.settings.span | times: 100 | divided_by:  │
+│   8.0                                                                        │
+│                                                                              │
+│                                                                              │
+│  [warning]: VariableName                                                     │
+│  The variable 'mediaLoader' uses wrong naming format                         │
+│                                                                              │
+│  67  assign mediaLoader = true                                               │
+│                                                                              │
+╰──────────────────────────────────────────────────────────────────────────────╯
+
+╭─ info ───────────────────────────────────────────────────────────────────────╮
+│                                                                              │
+│  sections/ls-comparison.liquid                                               │
+│                                                                              │
+│                                                                              │
+│  [warning]: VariableName                                                     │
+│  The variable 'blockNum' uses wrong naming format                            │
+│                                                                              │
+│  26  assign blockNum = 'imageBefore'                                         │
+│                                                                              │
+│                                                                              │
+│  [warning]: VariableName                                                     │
+│  The variable 'blockNum' uses wrong naming format                            │
+│                                                                              │
+│  29  assign blockNum = "imageAfter"                                          │
+│                                                                              │
+╰──────────────────────────────────────────────────────────────────────────────╯
+
+╭─ info ───────────────────────────────────────────────────────────────────────╮
+│                                                                              │
+│  sections/ls-events.liquid                                                   │
+│                                                                              │
+│                                                                              │
+│  [warning]: VariableName                                                     │
+│  The variable 'mediaLoader' uses wrong naming format                         │
+│                                                                              │
+│  47  assign mediaLoader = true                                               │
+│                                                                              │
+╰──────────────────────────────────────────────────────────────────────────────╯
+
+╭─ info ───────────────────────────────────────────────────────────────────────╮
+│                                                                              │
+│  sections/ls-feat-collection.liquid                                          │
+│                                                                              │
+│                                                                              │
+│  [warning]: VariableName                                                     │
+│  The variable 'layoutType' uses wrong naming format                          │
+│                                                                              │
+│  10  assign layoutType = section.settings.layoutType                         │
+│                                                                              │
+│                                                                              │
+│  [warning]: VariableName                                                     │
+│  The variable 'collectionUrl' uses wrong naming format                       │
+│                                                                              │
+│  14  assign collectionUrl = collections[section.settings.product_list].url   │
+│                                                                              │
+│                                                                              │
+│  [warning]: VariableName                                                     │
+│  The variable 'collectionTitle' uses wrong naming format                     │
+│                                                                              │
+│  16  assign collectionTitle =                                                │
+│  collections[section.settings.product_list].title                            │
+│                                                                              │
+│                                                                              │
+│  [warning]: VariableName                                                     │
+│  The variable 'collectionUrl' uses wrong naming format                       │
+│                                                                              │
+│  19  assign collectionUrl = routes.all_products_collection_url               │
+│                                                                              │
+╰──────────────────────────────────────────────────────────────────────────────╯
+
+╭─ info ───────────────────────────────────────────────────────────────────────╮
+│                                                                              │
+│  sections/ls-feat-collections.liquid                                         │
+│                                                                              │
+│                                                                              │
+│  [warning]: VariableName                                                     │
+│  The variable 'overlayContent' uses wrong naming format                      │
+│                                                                              │
+│  18  assign overlayContent = 'stack'                                         │
+│                                                                              │
+│                                                                              │
+│  [warning]: VariableName                                                     │
+│  The variable 'overlayContent' uses wrong naming format                      │
+│                                                                              │
+│  20  assign overlayContent = '1'                                             │
+│                                                                              │
+│                                                                              │
+│  [warning]: VariableName                                                     │
+│  The variable 'mixBlend' uses wrong naming format                            │
+│                                                                              │
+│  24  assign mixBlend = nil                                                   │
+│                                                                              │
+│                                                                              │
+│  [warning]: VariableName                                                     │
+│  The variable 'mixBlend' uses wrong naming format                            │
+│                                                                              │
+│  26  assign mixBlend = 'mixBlend'                                            │
+│                                                                              │
+╰──────────────────────────────────────────────────────────────────────────────╯
+
+╭─ info ───────────────────────────────────────────────────────────────────────╮
+│                                                                              │
+│  sections/ls-feat-products.liquid                                            │
+│                                                                              │
+│                                                                              │
+│  [warning]: VariableName                                                     │
+│  The variable 'layoutType' uses wrong naming format                          │
+│                                                                              │
+│  9  {%- assign layoutType = section.settings.layoutType -%}                  │
+│                                                                              │
+╰──────────────────────────────────────────────────────────────────────────────╯
+
+╭─ info ───────────────────────────────────────────────────────────────────────╮
+│                                                                              │
+│  sections/ls-hero-logo.liquid                                                │
+│                                                                              │
+│                                                                              │
+│  [warning]: VariableName                                                     │
+│  The variable 'mediaLoader' uses wrong naming format                         │
+│                                                                              │
+│  32  assign mediaLoader = false                                              │
+│                                                                              │
+╰──────────────────────────────────────────────────────────────────────────────╯
+
+╭─ info ───────────────────────────────────────────────────────────────────────╮
+│                                                                              │
+│  sections/ls-hero.liquid                                                     │
+│                                                                              │
+│                                                                              │
+│  [warning]: VariableName                                                     │
+│  The variable 'stickyState' uses wrong naming format                         │
+│                                                                              │
+│  24  capture stickyState                                                     │
+│                                                                              │
+╰──────────────────────────────────────────────────────────────────────────────╯
+
+╭─ info ───────────────────────────────────────────────────────────────────────╮
+│                                                                              │
+│  sections/ls-image-text.liquid                                               │
+│                                                                              │
+│                                                                              │
+│  [warning]: VariableName                                                     │
+│  The variable 'imgMob' uses wrong naming format                              │
+│                                                                              │
+│  59  assign imgMob = section.settings.imageMob                               │
+│                                                                              │
+│                                                                              │
+│  [warning]: VariableName                                                     │
+│  The variable 'mediaLoader' uses wrong naming format                         │
+│                                                                              │
+│  63  assign mediaLoader = true                                               │
+│                                                                              │
+╰──────────────────────────────────────────────────────────────────────────────╯
+
+╭─ info ───────────────────────────────────────────────────────────────────────╮
+│                                                                              │
+│  sections/ls-logolist.liquid                                                 │
+│                                                                              │
+│                                                                              │
+│  [warning]: VariableName                                                     │
+│  The variable 'mediaLoader' uses wrong naming format                         │
+│                                                                              │
+│  36  assign mediaLoader = true                                               │
+│                                                                              │
+╰──────────────────────────────────────────────────────────────────────────────╯
+
+╭─ info ───────────────────────────────────────────────────────────────────────╮
+│                                                                              │
+│  sections/ls-multicolumn-list.liquid                                         │
+│                                                                              │
+│                                                                              │
+│  [warning]: VariableName                                                     │
+│  The variable 'mediaLoader' uses wrong naming format                         │
+│                                                                              │
+│  33  assign mediaLoader = true                                               │
+│                                                                              │
+╰──────────────────────────────────────────────────────────────────────────────╯
+
+╭─ info ───────────────────────────────────────────────────────────────────────╮
+│                                                                              │
+│  sections/ls-multicolumn.liquid                                              │
+│                                                                              │
+│                                                                              │
+│  [warning]: VariableName                                                     │
+│  The variable 'overlayContent' uses wrong naming format                      │
+│                                                                              │
+│  13  assign overlayContent = 'stack'                                         │
+│                                                                              │
+│                                                                              │
+│  [warning]: VariableName                                                     │
+│  The variable 'overlayContent' uses wrong naming format                      │
+│                                                                              │
+│  15  assign overlayContent = 1                                               │
+│                                                                              │
+│                                                                              │
+│  [warning]: VariableName                                                     │
+│  The variable 'mediaType' uses wrong naming format                           │
+│                                                                              │
+│  35  assign mediaType = 'image'                                              │
+│                                                                              │
+│                                                                              │
+│  [warning]: VariableName                                                     │
+│  The variable 'mediaType' uses wrong naming format                           │
+│                                                                              │
+│  37  assign mediaType = 'video'                                              │
+│                                                                              │
+│                                                                              │
+│  [warning]: VariableName                                                     │
+│  The variable 'hideOnMobile' uses wrong naming format                        │
+│                                                                              │
+│  41  assign hideOnMobile = ''                                                │
+│                                                                              │
+│                                                                              │
+│  [warning]: VariableName                                                     │
+│  The variable 'hideOnMobile' uses wrong naming format                        │
+│                                                                              │
+│  43  assign hideOnMobile = 'class="large-only"'                              │
+│                                                                              │
+│                                                                              │
+│  [warning]: VariableName                                                     │
+│  The variable 'stickyState' uses wrong naming format                         │
+│                                                                              │
+│  63  capture stickyState                                                     │
+│                                                                              │
+│                                                                              │
+│  [warning]: VariableName                                                     │
+│  The variable 'desktopColumns' uses wrong naming format                      │
+│                                                                              │
+│  101  assign desktopColumns = section.settings.columns | times: 1.0          │
+│                                                                              │
+│                                                                              │
+│  [warning]: VariableName                                                     │
+│  The variable 'mobileColumns' uses wrong naming format                       │
+│                                                                              │
+│  102  assign mobileColumns = section.settings.columnsMob | times: 1.0        │
+│                                                                              │
+│                                                                              │
+│  [warning]: VariableName                                                     │
+│  The variable 'desktopPercent' uses wrong naming format                      │
+│                                                                              │
+│  103  assign desktopPercent = 100 | divided_by: desktopColumns               │
+│                                                                              │
+│                                                                              │
+│  [warning]: VariableName                                                     │
+│  The variable 'mobilePercent' uses wrong naming format                       │
+│                                                                              │
+│  104  assign mobilePercent = 100 | divided_by: mobileColumns                 │
+│                                                                              │
+╰──────────────────────────────────────────────────────────────────────────────╯
+
+╭─ info ───────────────────────────────────────────────────────────────────────╮
+│                                                                              │
+│  sections/ls-product.liquid                                                  │
+│                                                                              │
+│                                                                              │
+│  [warning]: VariableName                                                     │
+│  The variable 'pdpLayoutClassic' uses wrong naming format                    │
+│                                                                              │
+│  47  assign pdpLayoutClassic = true                                          │
+│                                                                              │
+│                                                                              │
+│  [warning]: VariableName                                                     │
+│  The variable 'layoutType' uses wrong naming format                          │
+│                                                                              │
+│  48  assign layoutType = 'triptych'                                          │
+│                                                                              │
+│                                                                              │
+│  [warning]: VariableName                                                     │
+│  The variable 'pdpLayoutClassic' uses wrong naming format                    │
+│                                                                              │
+│  50  assign pdpLayoutClassic = false                                         │
+│                                                                              │
+│                                                                              │
+│  [warning]: VariableName                                                     │
+│  The variable 'layoutType' uses wrong naming format                          │
+│                                                                              │
+│  51  assign layoutType = 'diptych'                                           │
+│                                                                              │
+│                                                                              │
+│  [warning]: VariableName                                                     │
+│  The variable 'metaSpan' uses wrong naming format                            │
+│                                                                              │
+│  59  assign metaSpan = 2                                                     │
+│                                                                              │
+│                                                                              │
+│  [warning]: VariableName                                                     │
+│  The variable 'mediaSpan' uses wrong naming format                           │
+│                                                                              │
+│  60  assign mediaSpan = 6                                                    │
+│                                                                              │
+│                                                                              │
+│  [warning]: VariableName                                                     │
+│  The variable 'actionSpan' uses wrong naming format                          │
+│                                                                              │
+│  61  assign actionSpan = 2                                                   │
+│                                                                              │
+│                                                                              │
+│  [warning]: VariableName                                                     │
+│  The variable 'metaSpan' uses wrong naming format                            │
+│                                                                              │
+│  64  assign metaSpan = 2                                                     │
+│                                                                              │
+│                                                                              │
+│  [warning]: VariableName                                                     │
+│  The variable 'mediaSpan' uses wrong naming format                           │
+│                                                                              │
+│  65  assign mediaSpan = 5                                                    │
+│                                                                              │
+│                                                                              │
+│  [warning]: VariableName                                                     │
+│  The variable 'actionSpan' uses wrong naming format                          │
+│                                                                              │
+│  66  assign actionSpan = 3                                                   │
+│                                                                              │
+│                                                                              │
+│  [warning]: VariableName                                                     │
+│  The variable 'metaSpan' uses wrong naming format                            │
+│                                                                              │
+│  72  assign metaSpan = 3                                                     │
+│                                                                              │
+│                                                                              │
+│  [warning]: VariableName                                                     │
+│  The variable 'mediaSpan' uses wrong naming format                           │
+│                                                                              │
+│  73  assign mediaSpan = 4                                                    │
+│                                                                              │
+│                                                                              │
+│  [warning]: VariableName                                                     │
+│  The variable 'actionSpan' uses wrong naming format                          │
+│                                                                              │
+│  74  assign actionSpan = 3                                                   │
+│                                                                              │
+│                                                                              │
+│  [warning]: VariableName                                                     │
+│  The variable 'metaSpan' uses wrong naming format                            │
+│                                                                              │
+│  77  assign metaSpan = 3                                                     │
+│                                                                              │
+│                                                                              │
+│  [warning]: VariableName                                                     │
+│  The variable 'mediaSpan' uses wrong naming format                           │
+│                                                                              │
+│  78  assign mediaSpan = 4                                                    │
+│                                                                              │
+│                                                                              │
+│  [warning]: VariableName                                                     │
+│  The variable 'actionSpan' uses wrong naming format                          │
+│                                                                              │
+│  79  assign actionSpan = 3                                                   │
+│                                                                              │
+│                                                                              │
+│  [warning]: VariableName                                                     │
+│  The variable 'mediaFirst' uses wrong naming format                          │
+│                                                                              │
+│  87  assign mediaFirst = 1                                                   │
+│                                                                              │
+│                                                                              │
+│  [warning]: VariableName                                                     │
+│  The variable 'mediaFirst' uses wrong naming format                          │
+│                                                                              │
+│  89  assign mediaFirst = 3                                                   │
+│                                                                              │
+│                                                                              │
+│  [warning]: VariableName                                                     │
+│  The variable 'columnOrderMob' uses wrong naming format                      │
+│                                                                              │
+│  93  assign columnOrderMob = 2                                               │
+│                                                                              │
+│                                                                              │
+│  [warning]: VariableName                                                     │
+│  The variable 'columnOrderMob' uses wrong naming format                      │
+│                                                                              │
+│  95  assign columnOrderMob = 4                                               │
+│                                                                              │
+╰──────────────────────────────────────────────────────────────────────────────╯
+
+╭─ info ───────────────────────────────────────────────────────────────────────╮
+│                                                                              │
+│  sections/ls-scroll-logolist.liquid                                          │
+│                                                                              │
+│                                                                              │
+│  [warning]: VariableName                                                     │
+│  The variable 'mediaLoader' uses wrong naming format                         │
+│                                                                              │
+│  58  assign mediaLoader = true                                               │
+│                                                                              │
+╰──────────────────────────────────────────────────────────────────────────────╯
+
+╭─ info ───────────────────────────────────────────────────────────────────────╮
+│                                                                              │
+│  sections/ls-scroll-text.liquid                                              │
+│                                                                              │
+│                                                                              │
+│  [warning]: VariableName                                                     │
+│  The variable 'mediaLoader' uses wrong naming format                         │
+│                                                                              │
+│  44  assign mediaLoader = true                                               │
+│                                                                              │
+╰──────────────────────────────────────────────────────────────────────────────╯
+
+╭─ info ───────────────────────────────────────────────────────────────────────╮
+│                                                                              │
+│  sections/ls-slideshow.liquid                                                │
+│                                                                              │
+│                                                                              │
+│  [warning]: VariableName                                                     │
+│  The variable 'moreThanOne' uses wrong naming format                         │
+│                                                                              │
+│  3  assign moreThanOne = true                                                │
+│                                                                              │
+│                                                                              │
+│  [warning]: VariableName                                                     │
+│  The variable 'moreThanOne' uses wrong naming format                         │
+│                                                                              │
+│  5  assign moreThanOne = false                                               │
+│                                                                              │
+│                                                                              │
+│  [warning]: VariableName                                                     │
+│  The variable 'slideshowOptions' uses wrong naming format                    │
+│                                                                              │
+│  9  capture slideshowOptions                                                 │
+│                                                                              │
+│                                                                              │
+│  [warning]: VariableName                                                     │
+│  The variable 'slideshowStyles' uses wrong naming format                     │
+│                                                                              │
+│  32  capture slideshowStyles                                                 │
+│                                                                              │
+╰──────────────────────────────────────────────────────────────────────────────╯
+
+╭─ info ───────────────────────────────────────────────────────────────────────╮
+│                                                                              │
+│  sections/ls-splash.liquid                                                   │
+│                                                                              │
+│                                                                              │
+│  [warning]: VariableName                                                     │
+│  The variable 'globalDirection' uses wrong naming format                     │
+│                                                                              │
+│  1  {%- assign globalDirection = section.settings.direction -%}              │
+│                                                                              │
+╰──────────────────────────────────────────────────────────────────────────────╯
+
+╭─ info ───────────────────────────────────────────────────────────────────────╮
+│                                                                              │
+│  sections/ls-testimonials.liquid                                             │
+│                                                                              │
+│                                                                              │
+│  [warning]: VariableName                                                     │
+│  The variable 'mediaLoader' uses wrong naming format                         │
+│                                                                              │
+│  40  assign mediaLoader = true                                               │
+│                                                                              │
+╰──────────────────────────────────────────────────────────────────────────────╯
+
+╭─ info ───────────────────────────────────────────────────────────────────────╮
+│                                                                              │
+│  sections/overlay-newsletter.liquid                                          │
+│                                                                              │
+│                                                                              │
+│  [warning]: VariableName                                                     │
+│  The variable 'dialogMaxW' uses wrong naming format                          │
+│                                                                              │
+│  3  assign dialogMaxW = '--dialogMaxW: calc(100% - var(--layoutInline));     │
+│  margin-inline: auto;'                                                       │
+│                                                                              │
+│                                                                              │
+│  [warning]: VariableName                                                     │
+│  The variable 'dialogMaxW' uses wrong naming format                          │
+│                                                                              │
+│  5  assign dialogMaxW = null                                                 │
+│                                                                              │
+╰──────────────────────────────────────────────────────────────────────────────╯
+
+╭─ info ───────────────────────────────────────────────────────────────────────╮
+│                                                                              │
+│  sections/overlay-preload.liquid                                             │
+│                                                                              │
+│                                                                              │
+│  [warning]: VariableName                                                     │
+│  The variable 'hasImg' uses wrong naming format                              │
+│                                                                              │
+│  19  {%- assign hasImg = false -%}                                           │
+│                                                                              │
+│                                                                              │
+│  [warning]: VariableName                                                     │
+│  The variable 'mediaLoader' uses wrong naming format                         │
+│                                                                              │
+│  31  assign mediaLoader = false                                              │
+│                                                                              │
+│                                                                              │
+│  [warning]: VariableName                                                     │
+│  The variable 'hasImg' uses wrong naming format                              │
+│                                                                              │
+│  37  assign hasImg = true                                                    │
+│                                                                              │
+╰──────────────────────────────────────────────────────────────────────────────╯
+
+╭─ info ───────────────────────────────────────────────────────────────────────╮
+│                                                                              │
+│  sections/pdp-recommend.liquid                                               │
+│                                                                              │
+│                                                                              │
+│  [warning]: VariableName                                                     │
+│  The variable 'layoutType' uses wrong naming format                          │
+│                                                                              │
+│  2  {%- assign layoutType = section.settings.layoutType -%}                  │
+│                                                                              │
+╰──────────────────────────────────────────────────────────────────────────────╯
+
+╭─ info ───────────────────────────────────────────────────────────────────────╮
+│                                                                              │
+│  sections/t-giftcard.liquid                                                  │
+│                                                                              │
+│                                                                              │
+│  [error]: ParserBlockingScript                                               │
+│  The script_tag filter is parser-blocking. Use a <script> tag with async or  │
+│   defer for better performance                                               │
+│                                                                              │
+│  218  {{ 'vendor/qrcode.js' | shopify_asset_url | script_tag }}              │
+│                                                                              │
+╰──────────────────────────────────────────────────────────────────────────────╯
+
+╭─ info ───────────────────────────────────────────────────────────────────────╮
+│                                                                              │
+│  sections/t-password-header.liquid                                           │
+│                                                                              │
+│                                                                              │
+│  [warning]: VariableName                                                     │
+│  The variable 'isTextLogo' uses wrong naming format                          │
+│                                                                              │
+│  12  capture isTextLogo                                                      │
+│                                                                              │
+╰──────────────────────────────────────────────────────────────────────────────╯
+
+╭─ info ───────────────────────────────────────────────────────────────────────╮
+│                                                                              │
+│  sections/t-product.liquid                                                   │
+│                                                                              │
+│                                                                              │
+│  [warning]: VariableName                                                     │
+│  The variable 'pdpLayoutClassic' uses wrong naming format                    │
+│                                                                              │
+│  31  assign pdpLayoutClassic = true                                          │
+│                                                                              │
+│                                                                              │
+│  [warning]: VariableName                                                     │
+│  The variable 'layoutType' uses wrong naming format                          │
+│                                                                              │
+│  32  assign layoutType = 'triptych'                                          │
+│                                                                              │
+│                                                                              │
+│  [warning]: VariableName                                                     │
+│  The variable 'pdpLayoutClassic' uses wrong naming format                    │
+│                                                                              │
+│  34  assign pdpLayoutClassic = false                                         │
+│                                                                              │
+│                                                                              │
+│  [warning]: VariableName                                                     │
+│  The variable 'layoutType' uses wrong naming format                          │
+│                                                                              │
+│  35  assign layoutType = 'diptych'                                           │
+│                                                                              │
+│                                                                              │
+│  [warning]: VariableName                                                     │
+│  The variable 'metaSpan' uses wrong naming format                            │
+│                                                                              │
+│  43  assign metaSpan = 2                                                     │
+│                                                                              │
+│                                                                              │
+│  [warning]: VariableName                                                     │
+│  The variable 'mediaSpan' uses wrong naming format                           │
+│                                                                              │
+│  44  assign mediaSpan = 6                                                    │
+│                                                                              │
+│                                                                              │
+│  [warning]: VariableName                                                     │
+│  The variable 'actionSpan' uses wrong naming format                          │
+│                                                                              │
+│  45  assign actionSpan = 2                                                   │
+│                                                                              │
+│                                                                              │
+│  [warning]: VariableName                                                     │
+│  The variable 'metaSpan' uses wrong naming format                            │
+│                                                                              │
+│  48  assign metaSpan = 2                                                     │
+│                                                                              │
+│                                                                              │
+│  [warning]: VariableName                                                     │
+│  The variable 'mediaSpan' uses wrong naming format                           │
+│                                                                              │
+│  49  assign mediaSpan = 5                                                    │
+│                                                                              │
+│                                                                              │
+│  [warning]: VariableName                                                     │
+│  The variable 'actionSpan' uses wrong naming format                          │
+│                                                                              │
+│  50  assign actionSpan = 3                                                   │
+│                                                                              │
+│                                                                              │
+│  [warning]: VariableName                                                     │
+│  The variable 'metaSpan' uses wrong naming format                            │
+│                                                                              │
+│  56  assign metaSpan = 3                                                     │
+│                                                                              │
+│                                                                              │
+│  [warning]: VariableName                                                     │
+│  The variable 'mediaSpan' uses wrong naming format                           │
+│                                                                              │
+│  57  assign mediaSpan = 4                                                    │
+│                                                                              │
+│                                                                              │
+│  [warning]: VariableName                                                     │
+│  The variable 'actionSpan' uses wrong naming format                          │
+│                                                                              │
+│  58  assign actionSpan = 3                                                   │
+│                                                                              │
+│                                                                              │
+│  [warning]: VariableName                                                     │
+│  The variable 'metaSpan' uses wrong naming format                            │
+│                                                                              │
+│  61  assign metaSpan = 3                                                     │
+│                                                                              │
+│                                                                              │
+│  [warning]: VariableName                                                     │
+│  The variable 'mediaSpan' uses wrong naming format                           │
+│                                                                              │
+│  62  assign mediaSpan = 4                                                    │
+│                                                                              │
+│                                                                              │
+│  [warning]: VariableName                                                     │
+│  The variable 'actionSpan' uses wrong naming format                          │
+│                                                                              │
+│  63  assign actionSpan = 3                                                   │
+│                                                                              │
+│                                                                              │
+│  [warning]: VariableName                                                     │
+│  The variable 'mediaFirst' uses wrong naming format                          │
+│                                                                              │
+│  71  assign mediaFirst = 1                                                   │
+│                                                                              │
+│                                                                              │
+│  [warning]: VariableName                                                     │
+│  The variable 'mediaFirst' uses wrong naming format                          │
+│                                                                              │
+│  73  assign mediaFirst = 3                                                   │
+│                                                                              │
+│                                                                              │
+│  [warning]: VariableName                                                     │
+│  The variable 'columnOrderMob' uses wrong naming format                      │
+│                                                                              │
+│  77  assign columnOrderMob = 2                                               │
+│                                                                              │
+│                                                                              │
+│  [warning]: VariableName                                                     │
+│  The variable 'columnOrderMob' uses wrong naming format                      │
+│                                                                              │
+│  79  assign columnOrderMob = 4                                               │
+│                                                                              │
+╰──────────────────────────────────────────────────────────────────────────────╯
+
+╭─ info ───────────────────────────────────────────────────────────────────────╮
+│                                                                              │
+│  snippets/c-cart.liquid                                                      │
+│                                                                              │
+│                                                                              │
+│  [warning]: VariableName                                                     │
+│  The variable 'cartLocation' uses wrong naming format                        │
+│                                                                              │
+│  16  assign cartLocation = location | default: 'page'                        │
+│                                                                              │
+│                                                                              │
+│  [warning]: VariableName                                                     │
+│  The variable 'cartFormId' uses wrong naming format                          │
+│                                                                              │
+│  19  assign cartFormId = 'coretex-cart-form'                                 │
+│                                                                              │
+│                                                                              │
+│  [warning]: VariableName                                                     │
+│  The variable 'cartFormId' uses wrong naming format                          │
+│                                                                              │
+│  22  assign cartFormId = 'coretex-cart-form-drawer'                          │
+│                                                                              │
+│                                                                              │
+│  [warning]: VariableName                                                     │
+│  The variable 'showImage' uses wrong naming format                           │
+│                                                                              │
+│  25  assign showImage = settings.cart_image                                  │
+│                                                                              │
+│                                                                              │
+│  [warning]: VariableName                                                     │
+│  The variable 'showVendor' uses wrong naming format                          │
+│                                                                              │
+│  26  assign showVendor = settings.cart_vendor                                │
+│                                                                              │
+│                                                                              │
+│  [warning]: VariableName                                                     │
+│  The variable 'showTax' uses wrong naming format                             │
+│                                                                              │
+│  27  assign showTax = settings.cart_tax                                      │
+│                                                                              │
+│                                                                              │
+│  [warning]: VariableName                                                     │
+│  The variable 'showContinue' uses wrong naming format                        │
+│                                                                              │
+│  28  assign showContinue = settings.cart_continue                            │
+│                                                                              │
+│                                                                              │
+│  [warning]: VariableName                                                     │
+│  The variable 'showViewCart' uses wrong naming format                        │
+│                                                                              │
+│  29  assign showViewCart = settings.cart_viewButton                          │
+│                                                                              │
+│                                                                              │
+│  [warning]: VariableName                                                     │
+│  The variable 'showExtraButtons' uses wrong naming format                    │
+│                                                                              │
+│  30  assign showExtraButtons = settings.cart_dynamicButtons                  │
+│                                                                              │
+│                                                                              │
+│  [warning]: VariableName                                                     │
+│  The variable 'showNotes' uses wrong naming format                           │
+│                                                                              │
+│  31  assign showNotes = settings.cart_notes                                  │
+│                                                                              │
+│                                                                              │
+│  [warning]: VariableName                                                     │
+│  The variable 'showDiscount' uses wrong naming format                        │
+│                                                                              │
+│  32  assign showDiscount = settings.cart_discount                            │
+│                                                                              │
+│                                                                              │
+│  [warning]: VariableName                                                     │
+│  The variable 'showPaymentIcons' uses wrong naming format                    │
+│                                                                              │
+│  33  assign showPaymentIcons = settings.cart_icons                           │
+│                                                                              │
+│                                                                              │
+│  [warning]: VariableName                                                     │
+│  The variable 'paymentIconsGrey' uses wrong naming format                    │
+│                                                                              │
+│  34  assign paymentIconsGrey = settings.cart_icons_grey                      │
+│                                                                              │
+│                                                                              │
+│  [warning]: VariableName                                                     │
+│  The variable 'freeShippingBar' uses wrong naming format                     │
+│                                                                              │
+│  35  assign freeShippingBar = settings.cart_free_shipping                    │
+│                                                                              │
+│                                                                              │
+│  [warning]: VariableName                                                     │
+│  The variable 'showAnnouncement' uses wrong naming format                    │
+│                                                                              │
+│  36  assign showAnnouncement = settings.cart_announcement                    │
+│                                                                              │
+│                                                                              │
+│  [warning]: VariableName                                                     │
+│  The variable 'preOrder' uses wrong naming format                            │
+│                                                                              │
+│  95  capture preOrder                                                        │
+│                                                                              │
+│                                                                              │
+│  [warning]: VariableName                                                     │
+│  The variable 'displayMoney' uses wrong naming format                        │
+│                                                                              │
+│  425  assign displayMoney = discount.total_allocated_amount | money          │
+│                                                                              │
+│                                                                              │
+│  [warning]: VariableName                                                     │
+│  The variable 'displayMoney' uses wrong naming format                        │
+│                                                                              │
+│  427  assign displayMoney = discount.total_allocated_amount |                │
+│  money_with_currency                                                         │
+│                                                                              │
+│                                                                              │
+│  [warning]: VariableName                                                     │
+│  The variable 'displayMoney' uses wrong naming format                        │
+│                                                                              │
+│  495  assign displayMoney = cart.total_price | money                         │
+│                                                                              │
+│                                                                              │
+│  [warning]: VariableName                                                     │
+│  The variable 'displayMoney' uses wrong naming format                        │
+│                                                                              │
+│  497  assign displayMoney = cart.total_price | money_with_currency           │
+│                                                                              │
+╰──────────────────────────────────────────────────────────────────────────────╯
+
+╭─ info ───────────────────────────────────────────────────────────────────────╮
+│                                                                              │
+│  snippets/c-facets.liquid                                                    │
+│                                                                              │
+│                                                                              │
+│  [warning]: VariableName                                                     │
+│  The variable 'hasActiveFilters' uses wrong naming format                    │
+│                                                                              │
+│  41  assign hasActiveFilters = false                                         │
+│                                                                              │
+│                                                                              │
+│  [warning]: VariableName                                                     │
+│  The variable 'hasActiveFilters' uses wrong naming format                    │
+│                                                                              │
+│  44  assign hasActiveFilters = true                                          │
+│                                                                              │
+│                                                                              │
+│  [warning]: UnusedAssign                                                     │
+│  The variable 'hasActiveFilters' is assigned but not used                    │
+│                                                                              │
+│  44  assign hasActiveFilters = true                                          │
+│                                                                              │
+│                                                                              │
+│  [warning]: UnusedAssign                                                     │
+│  The variable 'visual_layout_class' is assigned but not used                 │
+│                                                                              │
+│  124  assign visual_layout_class = 'facets-layout facets-layout-list         │
+│  facets-layout-list--' | append: presentation                                │
+│                                                                              │
+╰──────────────────────────────────────────────────────────────────────────────╯
+
+╭─ info ───────────────────────────────────────────────────────────────────────╮
+│                                                                              │
+│  snippets/c-menu-item.liquid                                                 │
+│                                                                              │
+│                                                                              │
+│  [warning]: VariableName                                                     │
+│  The variable 'nextLevel' uses wrong naming format                           │
+│                                                                              │
+│  16  assign nextLevel = level | plus: 1                                      │
+│                                                                              │
+│                                                                              │
+│  [warning]: VariableName                                                     │
+│  The variable 'hasChildren' uses wrong naming format                         │
+│                                                                              │
+│  17  assign hasChildren = false                                              │
+│                                                                              │
+│                                                                              │
+│  [warning]: VariableName                                                     │
+│  The variable 'hasChildren' uses wrong naming format                         │
+│                                                                              │
+│  19  assign hasChildren = true                                               │
+│                                                                              │
+╰──────────────────────────────────────────────────────────────────────────────╯
+
+╭─ info ───────────────────────────────────────────────────────────────────────╮
+│                                                                              │
+│  snippets/c-price.liquid                                                     │
+│                                                                              │
+│                                                                              │
+│  [warning]: VariableName                                                     │
+│  The variable 'displayMoney' uses wrong naming format                        │
+│                                                                              │
+│  39  assign displayMoney = compare_at_price | money                          │
+│                                                                              │
+│                                                                              │
+│  [warning]: VariableName                                                     │
+│  The variable 'displayMoney' uses wrong naming format                        │
+│                                                                              │
+│  41  assign displayMoney = compare_at_price | money_with_currency            │
+│                                                                              │
+╰──────────────────────────────────────────────────────────────────────────────╯
+
+╭─ info ───────────────────────────────────────────────────────────────────────╮
+│                                                                              │
+│  snippets/c-prod-card-media.liquid                                           │
+│                                                                              │
+│                                                                              │
+│  [warning]: VariableName                                                     │
+│  The variable 'mediaLoader' uses wrong naming format                         │
+│                                                                              │
+│  23  assign mediaLoader = true                                               │
+│                                                                              │
+╰──────────────────────────────────────────────────────────────────────────────╯
+
+╭─ info ───────────────────────────────────────────────────────────────────────╮
+│                                                                              │
+│  snippets/c-prod-card.liquid                                                 │
+│                                                                              │
+│                                                                              │
+│  [warning]: VariableName                                                     │
+│  The variable 'sectionIdLast' uses wrong naming format                       │
+│                                                                              │
+│  29  assign sectionIdLast = section.id | remove: 'template--' | split: '_'   │
+│  | last | prepend: '-'                                                       │
+│                                                                              │
+│                                                                              │
+│  [warning]: VariableName                                                     │
+│  The variable 'sectionId' uses wrong naming format                           │
+│                                                                              │
+│  30  assign sectionId = sectionIdFirst | append: sectionIdLast               │
+│                                                                              │
+│                                                                              │
+│  [warning]: VariableName                                                     │
+│  The variable 'flexDirection' uses wrong naming format                       │
+│                                                                              │
+│  111  assign flexDirection = 'column'                                        │
+│                                                                              │
+│                                                                              │
+│  [warning]: VariableName                                                     │
+│  The variable 'flexDirection' uses wrong naming format                       │
+│                                                                              │
+│  113  assign flexDirection = 'row'                                           │
+│                                                                              │
+│                                                                              │
+│  [warning]: VariableName                                                     │
+│  The variable 'collectionAwareUrl' uses wrong naming format                  │
+│                                                                              │
+│  128  capture collectionAwareUrl                                             │
+│                                                                              │
+│                                                                              │
+│  [warning]: VariableName                                                     │
+│  The variable 'variantCount' uses wrong naming format                        │
+│                                                                              │
+│  159  assign variantCount = product.variants | size                          │
+│                                                                              │
+│                                                                              │
+│  [warning]: VariableName                                                     │
+│  The variable 'preOrder' uses wrong naming format                            │
+│                                                                              │
+│  440  capture preOrder                                                       │
+│                                                                              │
+╰──────────────────────────────────────────────────────────────────────────────╯
+
+╭─ info ───────────────────────────────────────────────────────────────────────╮
+│                                                                              │
+│  snippets/c-search.liquid                                                    │
+│                                                                              │
+│                                                                              │
+│  [warning]: VariableName                                                     │
+│  The variable 'suggestedLinklist' uses wrong naming format                   │
+│                                                                              │
+│  2  assign suggestedLinklist = settings.suggestedLinklist                    │
+│                                                                              │
+╰──────────────────────────────────────────────────────────────────────────────╯
+
+╭─ info ───────────────────────────────────────────────────────────────────────╮
+│                                                                              │
+│  snippets/c-section-grid.liquid                                              │
+│                                                                              │
+│                                                                              │
+│  [warning]: VariableName                                                     │
+│  The variable 'layoutType' uses wrong naming format                          │
+│                                                                              │
+│  31  assign layoutType = layoutType | default: 'list'                        │
+│                                                                              │
+╰──────────────────────────────────────────────────────────────────────────────╯
+
+╭─ info ───────────────────────────────────────────────────────────────────────╮
+│                                                                              │
+│  snippets/global-meta.liquid                                                 │
+│                                                                              │
+│                                                                              │
+│  [warning]: VariableName                                                     │
+│  The variable 'SEOTitle' uses wrong naming format                            │
+│                                                                              │
+│  4  capture SEOTitle                                                         │
+│                                                                              │
+│                                                                              │
+│  [warning]: VariableName                                                     │
+│  The variable 'themeColor' uses wrong naming format                          │
+│                                                                              │
+│  39  capture themeColor                                                      │
+│                                                                              │
+╰──────────────────────────────────────────────────────────────────────────────╯
+
+╭─ info ───────────────────────────────────────────────────────────────────────╮
+│                                                                              │
+│  snippets/header-menu.liquid                                                 │
+│                                                                              │
+│                                                                              │
+│  [warning]: VariableName                                                     │
+│  The variable 'isMega' uses wrong naming format                              │
+│                                                                              │
+│  3  assign isMega = false                                                    │
+│                                                                              │
+│                                                                              │
+│  [warning]: VariableName                                                     │
+│  The variable 'level2FlexDirection' uses wrong naming format                 │
+│                                                                              │
+│  4  assign level2FlexDirection = 'column'                                    │
+│                                                                              │
+│                                                                              │
+│  [warning]: VariableName                                                     │
+│  The variable 'isMega' uses wrong naming format                              │
+│                                                                              │
+│  6  assign isMega = true                                                     │
+│                                                                              │
+│                                                                              │
+│  [warning]: VariableName                                                     │
+│  The variable 'detailState' uses wrong naming format                         │
+│                                                                              │
+│  7  assign detailState = ' open'                                             │
+│                                                                              │
+│                                                                              │
+│  [warning]: VariableName                                                     │
+│  The variable 'level2FlexDirection' uses wrong naming format                 │
+│                                                                              │
+│  8  assign level2FlexDirection = 'row'                                       │
+│                                                                              │
+│                                                                              │
+│  [warning]: VariableName                                                     │
+│  The variable 'firstElevated' uses wrong naming format                       │
+│                                                                              │
+│  12  assign firstElevated = ' firstElevated'                                 │
+│                                                                              │
+│                                                                              │
+│  [warning]: VariableName                                                     │
+│  The variable 'isDrawer' uses wrong naming format                            │
+│                                                                              │
+│  17  assign isDrawer = false                                                 │
+│                                                                              │
+│                                                                              │
+│  [warning]: VariableName                                                     │
+│  The variable 'level1FlexDirection' uses wrong naming format                 │
+│                                                                              │
+│  18  assign level1FlexDirection = 'row'                                      │
+│                                                                              │
+│                                                                              │
+│  [warning]: VariableName                                                     │
+│  The variable 'isDrawer' uses wrong naming format                            │
+│                                                                              │
+│  20  assign isDrawer = true                                                  │
+│                                                                              │
+│                                                                              │
+│  [warning]: VariableName                                                     │
+│  The variable 'level1FlexDirection' uses wrong naming format                 │
+│                                                                              │
+│  21  assign level1FlexDirection = 'column'                                   │
+│                                                                              │
+│                                                                              │
+│  [warning]: UnusedAssign                                                     │
+│  The variable 'isDrawer' is assigned but not used                            │
+│                                                                              │
+│  20  assign isDrawer = true                                                  │
+│                                                                              │
+╰──────────────────────────────────────────────────────────────────────────────╯
+
+╭─ info ───────────────────────────────────────────────────────────────────────╮
+│                                                                              │
+│  snippets/inc-compressor.liquid                                              │
+│                                                                              │
+│                                                                              │
+│  [warning]: VariableName                                                     │
+│  The variable '_content' uses wrong naming format                            │
+│                                                                              │
+│  21  assign _content = content | strip_newlines | strip | replace: '    ',   │
+│  '' | replace: '  ', ''                                                      │
+│                                                                              │
+╰──────────────────────────────────────────────────────────────────────────────╯
+
+╭─ info ───────────────────────────────────────────────────────────────────────╮
+│                                                                              │
+│  snippets/inc-img.liquid                                                     │
+│                                                                              │
+│                                                                              │
+│  [warning]: VariableName                                                     │
+│  The variable 'mediaLoader' uses wrong naming format                         │
+│                                                                              │
+│  61  assign mediaLoader = true                                               │
+│                                                                              │
+╰──────────────────────────────────────────────────────────────────────────────╯
+
+╭─ info ───────────────────────────────────────────────────────────────────────╮
+│                                                                              │
+│  snippets/inc-socials.liquid                                                 │
+│                                                                              │
+│                                                                              │
+│  [error]: TranslationKeyExists                                               │
+│  'openthinking.socials.' does not have a matching entry in                   │
+│  'locales/en.default.json'                                                   │
+│                                                                              │
+│  67  <span {{ textStyle }}>{{ 'openthinking.socials.' | append: platform |   │
+│  t }}</span>                                                                 │
+│                                                                              │
+│                                                                              │
+│  [warning]: VariableName                                                     │
+│  The variable 'showIcon' uses wrong naming format                            │
+│                                                                              │
+│  17  assign showIcon = true                                                  │
+│                                                                              │
+│                                                                              │
+│  [warning]: VariableName                                                     │
+│  The variable 'showText' uses wrong naming format                            │
+│                                                                              │
+│  18  assign showText = false                                                 │
+│                                                                              │
+│                                                                              │
+│  [warning]: VariableName                                                     │
+│  The variable 'showIcon' uses wrong naming format                            │
+│                                                                              │
+│  20  assign showIcon = false                                                 │
+│                                                                              │
+│                                                                              │
+│  [warning]: VariableName                                                     │
+│  The variable 'showText' uses wrong naming format                            │
+│                                                                              │
+│  21  assign showText = true                                                  │
+│                                                                              │
+│                                                                              │
+│  [warning]: VariableName                                                     │
+│  The variable 'showIcon' uses wrong naming format                            │
+│                                                                              │
+│  25  assign showIcon = true                                                  │
+│                                                                              │
+│                                                                              │
+│  [warning]: VariableName                                                     │
+│  The variable 'showText' uses wrong naming format                            │
+│                                                                              │
+│  26  assign showText = false                                                 │
+│                                                                              │
+│                                                                              │
+│  [warning]: VariableName                                                     │
+│  The variable 'showIcon' uses wrong naming format                            │
+│                                                                              │
+│  28  assign showIcon = false                                                 │
+│                                                                              │
+│                                                                              │
+│  [warning]: VariableName                                                     │
+│  The variable 'showText' uses wrong naming format                            │
+│                                                                              │
+│  29  assign showText = true                                                  │
+│                                                                              │
+│                                                                              │
+│  [warning]: VariableName                                                     │
+│  The variable 'showButton' uses wrong naming format                          │
+│                                                                              │
+│  33  assign showButton = button | default: false                             │
+│                                                                              │
+│                                                                              │
+│  [warning]: VariableName                                                     │
+│  The variable 'textStyle' uses wrong naming format                           │
+│                                                                              │
+│  37  capture textStyle                                                       │
+│                                                                              │
+│                                                                              │
+│  [warning]: VariableName                                                     │
+│  The variable 'buttonStyle' uses wrong naming format                         │
+│                                                                              │
+│  44  capture buttonStyle                                                     │
+│                                                                              │
+╰──────────────────────────────────────────────────────────────────────────────╯
+
+╭─ info ───────────────────────────────────────────────────────────────────────╮
+│                                                                              │
+│  snippets/inc-video.liquid                                                   │
+│                                                                              │
+│                                                                              │
+│  [warning]: VariableName                                                     │
+│  The variable 'vidMobile' uses wrong naming format                           │
+│                                                                              │
+│  28  assign vidMobile = vidMobile | default: nil                             │
+│                                                                              │
+│                                                                              │
+│  [warning]: VariableName                                                     │
+│  The variable 'clickToPlay' uses wrong naming format                         │
+│                                                                              │
+│  34  assign clickToPlay = clickToPlay                                        │
+│                                                                              │
+│                                                                              │
+│  [warning]: VariableName                                                     │
+│  The variable 'vidPoster' uses wrong naming format                           │
+│                                                                              │
+│  82  assign vidPoster = vid.preview_image | image_url: width: 1500           │
+│                                                                              │
+│                                                                              │
+│  [warning]: VariableName                                                     │
+│  The variable 'vidPoster' uses wrong naming format                           │
+│                                                                              │
+│  108  assign vidPoster = vid.preview_image | image_url: width: 1000          │
+│                                                                              │
+╰──────────────────────────────────────────────────────────────────────────────╯
+
+╭─ info ───────────────────────────────────────────────────────────────────────╮
+│                                                                              │
+│  snippets/pdp-actions.liquid                                                 │
+│                                                                              │
+│                                                                              │
+│  [warning]: VariableName                                                     │
+│  The variable 'showPrice' uses wrong naming format                           │
+│                                                                              │
+│  21  assign showPrice = true                                                 │
+│                                                                              │
+│                                                                              │
+│  [warning]: VariableName                                                     │
+│  The variable 'showPrice' uses wrong naming format                           │
+│                                                                              │
+│  23  assign showPrice = false                                                │
+│                                                                              │
+│                                                                              │
+│  [warning]: VariableName                                                     │
+│  The variable 'parentProductId' uses wrong naming format                     │
+│                                                                              │
+│  73  {%- assign parentProductId = product.id -%}                             │
+│                                                                              │
+│                                                                              │
+│  [warning]: VariableName                                                     │
+│  The variable 'mediaLoader' uses wrong naming format                         │
+│                                                                              │
+│  92  assign mediaLoader = false                                              │
+│                                                                              │
+│                                                                              │
+│  [warning]: UnusedAssign                                                     │
+│  The variable 'id_append' is assigned but not used                           │
+│                                                                              │
+│  8  assign id_append = section_id                                            │
+│                                                                              │
+╰──────────────────────────────────────────────────────────────────────────────╯
+
+╭─ info ───────────────────────────────────────────────────────────────────────╮
+│                                                                              │
+│  snippets/pdp-media-core.liquid                                              │
+│                                                                              │
+│                                                                              │
+│  [warning]: VariableName                                                     │
+│  The variable 'videoLoop' uses wrong naming format                           │
+│                                                                              │
+│  7  assign videoLoop = loop                                                  │
+│                                                                              │
+│                                                                              │
+│  [warning]: VariableName                                                     │
+│  The variable 'videoAutoplay' uses wrong naming format                       │
+│                                                                              │
+│  8  assign videoAutoplay = autoplay                                          │
+│                                                                              │
+│                                                                              │
+│  [warning]: VariableName                                                     │
+│  The variable 'videoControls' uses wrong naming format                       │
+│                                                                              │
+│  9  assign videoControls = controls                                          │
+│                                                                              │
+│                                                                              │
+│  [warning]: VariableName                                                     │
+│  The variable 'clickToPlay' uses wrong naming format                         │
+│                                                                              │
+│  10  assign clickToPlay = true                                               │
+│                                                                              │
+│                                                                              │
+│  [warning]: VariableName                                                     │
+│  The variable 'mediaLoader' uses wrong naming format                         │
+│                                                                              │
+│  29  assign mediaLoader = true                                               │
+│                                                                              │
+│                                                                              │
+│  [warning]: VariableName                                                     │
+│  The variable 'mediaLoader' uses wrong naming format                         │
+│                                                                              │
+│  81  assign mediaLoader = true                                               │
+│                                                                              │
+╰──────────────────────────────────────────────────────────────────────────────╯
+
+╭─ info ───────────────────────────────────────────────────────────────────────╮
+│                                                                              │
+│  snippets/pdp-media.liquid                                                   │
+│                                                                              │
+│                                                                              │
+│  [warning]: VariableName                                                     │
+│  The variable 'sliderState' uses wrong naming format                         │
+│                                                                              │
+│  19  assign sliderState = true                                               │
+│                                                                              │
+│                                                                              │
+│  [warning]: VariableName                                                     │
+│  The variable 'sliderState' uses wrong naming format                         │
+│                                                                              │
+│  21  assign sliderState = false                                              │
+│                                                                              │
+│                                                                              │
+│  [warning]: VariableName                                                     │
+│  The variable 'sliderStateMob' uses wrong naming format                      │
+│                                                                              │
+│  25  assign sliderStateMob = true                                            │
+│                                                                              │
+│                                                                              │
+│  [warning]: VariableName                                                     │
+│  The variable 'sliderStateMob' uses wrong naming format                      │
+│                                                                              │
+│  27  assign sliderStateMob = false                                           │
+│                                                                              │
+╰──────────────────────────────────────────────────────────────────────────────╯
+
+╭─ info ───────────────────────────────────────────────────────────────────────╮
+│                                                                              │
+│  snippets/pdp-popups.liquid                                                  │
+│                                                                              │
+│                                                                              │
+│  [warning]: VariableName                                                     │
+│  The variable 'mediaLoader' uses wrong naming format                         │
+│                                                                              │
+│  88  assign mediaLoader = true                                               │
+│                                                                              │
+╰──────────────────────────────────────────────────────────────────────────────╯
+
+╭─ info ───────────────────────────────────────────────────────────────────────╮
+│                                                                              │
+│  snippets/pdp-variant-options.liquid                                         │
+│                                                                              │
+│                                                                              │
+│  [warning]: VariableName                                                     │
+│  The variable 'optionType' uses wrong naming format                          │
+│                                                                              │
+│  69  {%- assign optionType = option.name | downcase | escape -%}             │
+│                                                                              │
+╰──────────────────────────────────────────────────────────────────────────────╯
+
+╭─ info ───────────────────────────────────────────────────────────────────────╮
+│                                                                              │
+│  snippets/pdp-variant-picker.liquid                                          │
+│                                                                              │
+│                                                                              │
+│  [warning]: VariableName                                                     │
+│  The variable 'sizeGuideTrigger' uses wrong naming format                    │
+│                                                                              │
+│  22  {%- capture sizeGuideTrigger -%}                                        │
+│                                                                              │
+╰──────────────────────────────────────────────────────────────────────────────╯
+
+╭─ info ───────────────────────────────────────────────────────────────────────╮
+│                                                                              │
+│  Theme Check Summary.                                                        │
+│                                                                              │
+│  181 files inspected with 198 total offenses found across 48 files.          │
+│  3 errors.                                                                   │
+│  195 warnings.                                                               │
+│                                                                              │
+╰──────────────────────────────────────────────────────────────────────────────╯
+
