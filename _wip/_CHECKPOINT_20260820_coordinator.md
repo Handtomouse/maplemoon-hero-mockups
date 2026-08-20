@@ -26,7 +26,9 @@ Mail store, account E00D516A, `All Mail.mbox/.../Data/8/1/1/Messages`:
 No date conflict with the brief. 14 Aug 23:11 UTC is 15 Aug 09:11 AEST, same message.
 
 Batched already-built check across shop, homepage and our-story WIP: **every unambiguous
-instruction in all four emails is already present in the WIP.** Nothing was queued or reapplied.
+instruction in the three in-scope emails is already present in the WIP.** Nothing was queued or
+reapplied. The fourth email, PAGE: WHAT IS CAROB, targets `carob-story.WIP.html`, which the spec
+puts out of scope. It was read and its state recorded below, not applied.
 Confirmed absent as she asked: "catalogue preview", "View range", "hand-moulded", "nightcap that
 behaves", "a pod, not a bean", "actually", "when do you moon", "shared story", "individual notes",
 "in their own words", "asked a different question", "the craft".
@@ -47,6 +49,8 @@ Her home email also bundles a second, separate ask: which bar the hero starts on
 
 ## Blockers
 - Our Story body copy. She deleted without replacing. No replacement prose exists. Not writable.
+- Our Story typography defect. She reported "Carli and Dylan: The font is different". Needs a
+  visual check at 1440 and 390 to locate and confirm before any fix. Not yet resolved.
 - Images. Every "too AI" / "where are the ones from the shoot" / "needs to change and match" /
   "remove background" ask is an asset-delivery blocker. She offered to send photos twice, in both
   emails, and nobody has answered.
@@ -67,15 +71,23 @@ Her home email also bundles a second, separate ask: which bar the hero starts on
 
 ## Out of scope, flagged not built
 Contact page with a name and message form; Wholesale account in the footer. Both new surfaces.
-WHAT IS CAROB page edits: `carob-story.WIP.html` is outside the scope list. Her edits are captured
-here but not applied.
+
+`carob-story.WIP.html` is outside the scope list, so nothing was applied there. State only, for
+whoever owns that page: her "from the grove" wording and "roasted character" are already gone, and
+her supplied "completely different plants" blurb is already in. Two items are still outstanding on
+that page: the word "FEATURE" still appears 4 times, and the FAQ block she asked to remove is still
+present. Her carob edits that also land on the in-scope homepage comparison panel are already
+built verbatim: "Naturally bitter" and "Contains caffeine and theobromine".
 
 ## Open questions for Carli, none inferable
 1. Bar order, quoting both her strings back.
 2. Coconut Carob Bites: on the live site, zero counterpart in WIP. Neither email mentions it.
 3. Label: "Eclipse Bites" as built, or plain "Eclipse". Two-string revert either way.
 4. Will she send the real product and banana photos she twice offered.
-5. Her four open asks awaiting Nate: what "FEATURE" means on the carob page; whether more smiley
+5. The studio images. She wrote that they feel random and out of place at the end of Our Story
+   and wondered about using them earlier or keeping just one to break up text, ending "I don't
+   know". Explicitly her call, not a defect to action.
+6. Her four open asks awaiting Nate: what "FEATURE" means on the carob page; whether more smiley
    non-AI founder frames exist; whether Our Story section 03 belongs; is "How it all began" 01 or 02
    (already built as 02, which matches her own suggestion).
 
