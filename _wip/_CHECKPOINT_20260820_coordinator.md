@@ -198,9 +198,9 @@ self-referential FAQ link and neither Wholesale nor Contact. All five WIP pages 
 - **Em dashes.** 26 occurrences across carob-story and homepage, and **zero are visible**.
   All sit inside `<style>`, `<script>` or comments. A raw `grep -c` overstates this badly.
   The `–` in `price:'$5.99–$59.99'` is an en dash, correct range typography, not a defect.
-- **Prices. Nothing changed, deliberately.** The wrong flat reading ($35.99 / $71.99) never
-  reached any WIP file. `$5.99` and `$59.99` bracket the bar range and match the corrected
-  12-pack figure. Price provenance stays unresolved, so no price was touched.
+- **Prices. Nothing changed in this pass.** Price provenance was still unresolved at the time.
+  CORRECTION to an earlier line here: `$5.99`-`$59.99` is the **Eclipse Bite** range, not the
+  bar range. Bars are $12.95 for one 90g bar. See pass 3 for the resolved position.
 
 ## FAQ page is orphaned, pre-existing, flagged not fixed
 No WIP page links `/faq.WIP.html` except faq itself, which marks its own utility nav with
@@ -222,3 +222,78 @@ The shop data carries a **1 / 5 / 10** pack ladder ("1 $2.50 / 5 $12.19 / 10 $23
 crescents. The Shopify correction describes the five products as variable on a **1 / 6 / 12**
 ladder, 6-pack $32.99, 12-pack $59.99. Two different pack structures, and the price source is
 already disputed between the 13 Jul brief and the 17 Aug ledger. Nothing was changed.
+
+---
+
+# COORDINATOR PASS 3, pricing unblocked
+
+Nate resolved price provenance: **the WooCommerce export governs and is retail truth.** The
+13 Jul "do not scrape, it is wholesale" warning is superseded.
+
+Also resolved, and it retires the earlier scare: **35.99 / 71.99 are the `Regular` column and
+32.99 / 59.99 are the `Sale` column of the same variations.** Sales are open-ended, no start or
+end date, so Sale is the live price and Regular is the compare-at. There was never a risk of
+silently raising prices. It was a column confusion.
+
+## Governing source, re-derived here rather than relayed
+`/Users/handtomouse/Downloads/Maple Moon Store CSV File Export.csv`
+sha256 `eeea19fd89b30052bd4c…`, matching the hash pinned in the 16 Aug ledger. 119 rows,
+20 variable + 91 variation + 8 simple.
+
+**There are FOUR pack ladders, not two.** Parsed directly from the CSV:
+
+| Line | Ladder (effective / compare-at) |
+|---|---|
+| Bars 90g | 1 $12.95 / 2 $25.25 (was $25.90) / 5 $61.51 (was $64.75) / 10 $116.55 (was $129.50) |
+| Crescent Moons 12g | 1 $2.50 / 5 $12.19 (was $12.50) / 10 $23.75 (was $24.99) / **20 $44.99** (was $49.99) |
+| Eclipse Bites 50g | 1 $5.99 / 6 $32.99 (was $35.99) / 12 $59.99 (was $71.99) |
+| Carob Bananas 20g | 1 $2.99 / 5 $14.25 / 10 $26.99 / 20 $50.99 |
+
+Simples: Eclipse Bite Bundle $24.99, Carob Elixir $23.95, Spiced Carob Elixir $26.95,
+Carob Powder 300g $14.95, Bundle of 6 Bars $73.82 (was $77.70).
+
+Do not normalise these ladders together. They are genuinely different product lines.
+
+## Full reconciliation: every existing WIP price already matched the export
+All 22 shop products checked value by value. Zero wrong prices. Nothing was rewritten.
+The `$5.99–$59.99` string uses an en dash and is correct range typography.
+
+## Built this pass
+
+`d4a8eb0 fix(shop): correct the Eclipse Bite pack ladder against the Woo export`
+
+The defect was in the tier data, not the prices.
+`ECLIPSE_SIZES=[{label:'50g',price:5.99},{label:'Value pack',price:59.99}]`
+
+1. **The 6-pack rung was absent**, so $32.99 could not be bought.
+2. **No rung carried a `quantity`.** The renderer reads `option.quantity||1`, so every
+   multipack entered the cart as one unit.
+3. Labels named the weight, not the pack. All five bites are 50g each, so "50g" did not
+   distinguish anything.
+
+Now `[{label:'1 bite',price:5.99,quantity:1},{label:'6 bites',price:32.99,quantity:6},
+{label:'12 bites',price:59.99,quantity:12}]`, with `optionLabel:'Pack'`, matching MOON_TIERS.
+
+### Verify evidence, control-tested against the pre-fix page
+Served HEAD's own copy at `/shop_before.html` and ran the identical script.
+
+    before   "Value pack · $59.99  q=1"   ->  Cart, 1 item,    subtotal $59.99
+    after    "6 bites · $32.99     q=6"   ->  Cart, 6 items,   subtotal $32.99
+    after    "12 bites · $59.99    q=12"  ->  Cart, 12 items,  subtotal $59.99
+
+All 5 eclipse pickers render three rungs. Parse OK, `diff --check` clean, no horizontal
+overflow at 1440 or 390, zero `a[href="#"]`.
+
+## Open, not built, needs Nate
+**The 90g bars carry no size picker at all.** They render a flat `$12.95`, which is the true
+1-bar price, so nothing on the page is wrong. But the export says bars are variable on
+1/2/5/10 and the 2/5/10 rungs are unreachable. Wiring a picker is new behaviour rather than a
+correction, so it was not built. Same question, smaller, for the bananas 20-rung.
+
+Still unanswered and left exactly as found: whether FAQ is promoted into the shared footer,
+and the FAQ header nav retarget of "What is Carob".
+
+## Note on authority files
+`REGISTRY_AUTHORITY_20260819.md` rules on design-system route registries, **not** card
+accounting. The card authority is the CAT ledger. This session never opened either file and
+never relied on card accounting, so nothing here inherits that confusion.
