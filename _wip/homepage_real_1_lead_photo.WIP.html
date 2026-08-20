@@ -1089,14 +1089,14 @@ a.wf-ti:focus-visible{outline:2px solid rgba(44,42,38,.55);outline-offset:6px;bo
   var CAT_ORDER=['bars','bananas','moons','elixirs'];
   var CAT_LABEL={bars:'Selected bar',moons:'Selected moon',elixirs:'Selected elixir',bananas:'Selected banana'};
   var CAT_FORMAT={bars:'Carob Bars',moons:'Carob Moons',elixirs:'Carob Elixirs',bananas:'Carob Bananas'};
-  var CAT_SHOP_TARGET={bars:'/shop.WIP.html#bars',moons:'/shop.WIP.html#moons',elixirs:'/shop.WIP.html#elixirs',bananas:'/shop.WIP.html#bananas'};
+  var CAT_SHOP_TARGET={bars:'/shop#bars',moons:'/shop#moons',elixirs:'/shop#elixirs',bananas:'/shop#bananas'};
   var NOTE_FALLBACK={
     bars:[['Texture','Smooth melt'],['Sweetness','Naturally sweet'],['Finish','Buttery carob'],['Proof','No caffeine']],
     moons:[['Texture','Small snap'],['Sweetness','Gentle carob'],['Finish','Clean finish'],['Details','Enquire']],
     elixirs:[['Texture','Silky drink'],['Sweetness','Naturally sweet'],['Finish','Mellow roast'],['Proof','Caffeine free']],
     bananas:[['Texture','Chewy fruit'],['Sweetness','Banana sweet'],['Finish','Soft carob'],['Details','Enquire']]
   };
-  function shopTarget(cat){return CAT_SHOP_TARGET[cat]||'/shop.WIP.html';}
+  function shopTarget(cat){return CAT_SHOP_TARGET[cat]||'/shop';}
   function catIndex(cat){var i=CAT_ORDER.indexOf(cat);return i<0?0:i;}
   function updateTabs(activeCat){
     [].slice.call(tabs.querySelectorAll('.wf-tab')).forEach(function(el){
