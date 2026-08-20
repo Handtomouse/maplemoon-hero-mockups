@@ -202,7 +202,24 @@ html{background:#f4f2ed;}
     if(missing.length){
       s.textContent='Please add: '+missing.join(', ')+'.';
     }else{
-      s.textContent='Thanks, that all looks right. We are taking enquiries by email at the moment, so nothing has been sent from this page. Please send your request to info@maplemoon.com.au and we will come straight back to you.';
+      var topicEl=document.getElementById('cf-topic');
+      var topicText=topicEl.options[topicEl.selectedIndex].text;
+      var g=function(id){return (document.getElementById(id).value||'').trim();};
+      var lines=['Name: '+g('cf-name'),'Email: '+g('cf-email')];
+      if(g('cf-phone')) lines.push('Phone: '+g('cf-phone'));
+      lines.push('About: '+topicText,'',g('cf-body'));
+      var url='mailto:info@maplemoon.com.au'
+        +'?subject='+encodeURIComponent('Website enquiry: '+topicText)
+        +'&body='+encodeURIComponent(lines.join('\n'));
+      /* Some mail clients truncate a mailto: URL past roughly 2000 characters, which would
+         silently cut the visitor's message in half. Anything longer is routed to plain
+         copy-and-paste instead of losing text. */
+      if(url.length>1900){
+        s.textContent='Thanks, that all looks right. Your message is long enough that an email link would cut it short, so please send it straight to info@maplemoon.com.au and we will come back to you.';
+      }else{
+        window.location.href=url;
+        s.textContent='We have opened a message in your email app with your details already filled in. Press send there and it comes straight to us. If nothing opened, email info@maplemoon.com.au.';
+      }
     }
     s.classList.add('on');
     s.scrollIntoView({behavior:'smooth',block:'nearest'});
