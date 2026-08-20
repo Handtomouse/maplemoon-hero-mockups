@@ -929,6 +929,7 @@ a.wf-ti:focus-visible{outline:2px solid rgba(44,42,38,.55);outline-offset:6px;bo
   <!-- WHERE (Brunswick origin band, real photo) -->
   <section class="wf-where1" id="story">
     <div class="pic"><picture><source media="(max-width: 900px)" srcset="/assets/licensed/carob_farm/australian-carob-0205-mobile.jpg"><img src="/assets/licensed/carob_farm/australian-carob-0205-16x9.jpg" alt="Carob orchard"></picture></div>
+    <p class="wf-photo-credit">Farm photography by Nigel Young, The Australian Carob Co</p>
     <div class="wrap inner">
       <div class="col">
         <span class="qkick">Our story</span>
@@ -3105,6 +3106,11 @@ html[data-cta="editorial"] .wf a.wf-ppill.secondary{
     linear-gradient(90deg,transparent 0%,#000 14%,#000 74%,transparent 100%),
     linear-gradient(180deg,transparent 0%,#000 16%,#000 84%,transparent 100%)!important;
 }
+.wf-photo-credit{
+  position:absolute;left:clamp(20px,3vw,44px);bottom:20px;z-index:2;margin:0;
+  color:#6f7b86;font-size:.62rem;letter-spacing:.09em;text-transform:uppercase;line-height:1.4;
+  text-shadow:0 1px 8px rgba(255,255,255,.6);
+}
 
 /* Soften the existing ritual cards without changing their imagery or copy. */
 .q-when .q-tile{
@@ -3147,6 +3153,10 @@ html[data-cta="editorial"] .wf a.wf-ppill.secondary{
   .wf-where1 .pic{
     -webkit-mask-image:linear-gradient(180deg,transparent 0%,#000 16%,#000 84%,transparent 100%)!important;
     mask-image:linear-gradient(180deg,transparent 0%,#000 16%,#000 84%,transparent 100%)!important;
+  }
+  .wf-photo-credit{
+    position:static;order:2;width:100%;margin:9px 0 26px;padding:0 clamp(20px,7vw,56px);
+    text-shadow:none;
   }
 }
 @media(max-width:720px){

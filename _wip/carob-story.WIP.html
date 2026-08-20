@@ -307,7 +307,7 @@ body{margin:0;}
   <main id="carob-story" tabindex="-1">
   <!-- hero: orchard-led introduction -->
   <section class="hero" id="top">
-    <div class="pic"><picture><source media="(max-width: 900px)" srcset="/assets/licensed/carob_farm/australian-carob-0205-mobile.jpg"><img src="/assets/licensed/carob_farm/australian-carob-0205-16x9.jpg" alt="Rows of carob trees in an Australian orchard" width="2560" height="1440" fetchpriority="high"></picture></div>
+    <div class="pic"><picture><source media="(max-width: 900px)" srcset="/assets/licensed/carob_farm/australian-carob-0205-mobile.jpg"><img src="/assets/licensed/carob_farm/australian-carob-0205-16x9.jpg" alt="Rows of carob trees in an Australian orchard" width="2560" height="1440" fetchpriority="high"></picture><p class="cs-photo-credit">Farm photography by Nigel Young, The Australian Carob Co</p></div>
     <div class="grain"></div>
     <div class="wrap inner">
       <div class="col">
@@ -600,6 +600,11 @@ body{margin:0;}
     linear-gradient(180deg, transparent 0, #000 22%, #000 74%, transparent 100%);
   -webkit-mask-composite:source-in;
   mask-composite:intersect;
+}
+.cs-photo-credit{
+  position:absolute;left:clamp(20px,3vw,44px);bottom:20px;z-index:2;margin:0;
+  color:#6f7b86;font-size:.62rem;letter-spacing:.09em;text-transform:uppercase;line-height:1.4;
+  text-shadow:0 1px 8px rgba(255,255,255,.6);
 }
 .cs .hero::before{
   content:"";
