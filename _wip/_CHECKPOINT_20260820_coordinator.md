@@ -150,3 +150,75 @@ pixel level too. No defect found, so nothing was guessed at. Needs her to point.
 
 ## Visual proof
 `~/UFC/ops/qa/mm_build_proof_20260820/index.html`
+
+---
+
+# COORDINATOR PASS 2, same day, afternoon
+
+Codex gate: CLEAR, and worth recording how. A codex session IS live (pid 21154, started
+13:35) and its rollout log matches `_wip/`. It is a false positive: cwd is `/Users/handtomouse`,
+not the repo, and the `_wip/` hits are its own *exclusion globs*. Its brief reads
+"Do not touch: the maplemoon-website repo, `_wip/`, or `docs/shopify/`. Other lanes own those."
+It is running the V9 classifier threshold sweep. Write mode was correct.
+Future gates should read the match context, not just the match count.
+
+## Named build scope was already complete
+carob-story (84bee4d), contact page (a6062a1, 4ca4c47, 0c179b6, fc50ed8) and the Wholesale
+footer (a6062a1) were all built this morning. Verified against live files, nothing reapplied.
+The 70-frame founder contact sheet also exists and is complete:
+`~/UFC/ops/qa/mm_founder_contactsheet_20260820/index.html`, 70 `<img>` entries.
+
+## Built this pass
+
+`83b8ae5 fix(contact): drop the unbacked POST, add a no-JS fallback`
+The form carried `method="post"` with no `action`. With JS the handler calls
+`preventDefault()`, confirmed in a real browser. Without JS it would have self-posted,
+reloading the page and silently discarding everything typed while looking like a send.
+Removed `method`, added a `<noscript>` notice pointing at info@maplemoon.com.au.
+No endpoint invented.
+
+`0627cd2 fix(faq): bring the footer into line with the other five pages`
+`faq.WIP.html` was the single page the a6062a1 footer rollout missed. It had a
+self-referential FAQ link and neither Wholesale nor Contact. All five WIP pages with an
+`sp-ft` footer now carry an identical link set.
+
+## Verify evidence
+- HTMLParser parse OK on both files; `git diff --check` clean.
+- Chrome over CDP against a local server rooted at `_wip` then repo root, port 3211.
+  JS on: submit leaves the URL unchanged, retains field values, shows the
+  "Sending is not connected yet" status.
+  JS off (`Emulation.setScriptExecutionDisabled`): no `method` attribute present,
+  noscript notice renders.
+- faq and contact at 1440 and 390: `clientWidth` correct, no horizontal overflow,
+  zero `a[href="#"]`, footer reads Shop, Our Story, Stockists, Wholesale, Contact.
+- Use `Emulation.setDeviceMetricsOverride`, not `--window-size`. It gives a true 390px
+  viewport and avoids the 500px clamp recorded in pass 1.
+
+## Checked and found clean, no action taken
+- **Em dashes.** 26 occurrences across carob-story and homepage, and **zero are visible**.
+  All sit inside `<style>`, `<script>` or comments. A raw `grep -c` overstates this badly.
+  The `–` in `price:'$5.99–$59.99'` is an en dash, correct range typography, not a defect.
+- **Prices. Nothing changed, deliberately.** The wrong flat reading ($35.99 / $71.99) never
+  reached any WIP file. `$5.99` and `$59.99` bracket the bar range and match the corrected
+  12-pack figure. Price provenance stays unresolved, so no price was touched.
+
+## FAQ page is orphaned, pre-existing, flagged not fixed
+No WIP page links `/faq.WIP.html` except faq itself, which marks its own utility nav with
+`aria-current="page"`. The other five pages have never linked FAQ from footer or header.
+So the FAQ page currently has no inbound route from anywhere in the WIP set.
+This predates today and was not introduced here. The footer fix above deliberately keeps
+faq's own FAQ link rather than swapping it out, so nothing regressed. Whether FAQ should be
+promoted into the shared footer or nav is a routing decision for Nate.
+
+## Not done, deliberately
+`faq.WIP.html` header nav still points "What is Carob" at
+`/homepage_real_1_lead_photo.WIP.html#carob` while carob-story, contact, shop and stockists
+all point at `/carob-story.WIP.html`. Retargeting is a routing decision on a page the spec
+fences off, and there is no evidence which destination is intended for FAQ readers.
+Left alone, raised as a question.
+
+## New question for Nate, not inferable
+The shop data carries a **1 / 5 / 10** pack ladder ("1 $2.50 / 5 $12.19 / 10 $23.75") for the
+crescents. The Shopify correction describes the five products as variable on a **1 / 6 / 12**
+ladder, 6-pack $32.99, 12-pack $59.99. Two different pack structures, and the price source is
+already disputed between the 13 Jul brief and the 17 Aug ledger. Nothing was changed.
