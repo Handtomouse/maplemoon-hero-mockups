@@ -1,0 +1,6 @@
+checkpoint_utc=20260820T080349Z
+authorized_path=/Users/handtomouse/maplemoon-website/docs/orchestration/reviews/MAPLEMOON-S1B-VERIFY-20260820.md
+state=absent
+authorized_path=/Users/handtomouse/maplemoon-website/_wip/evidence/s1b_verify_20260820/
+state=absent
+note=Both authorized output targets were absent before the first write.

@@ -1,0 +1,25 @@
+^D[?25l▆▆▅▅▄▄▃▃▂▂▁▁▁▁▂▂▃▃▄▄
+Downloading files from remote theme [98%] ...
+[?25h╭─ success ────────╮
+│                  │
+│  The theme       │
+│  'Updated copy   │
+│  of Ethereal' (  │
+│  #160142491845)  │
+│   has been       │
+│  pulled.         │
+│                  │
+│  Next steps      │
+│    • View your   │
+│      theme [1]   │
+│    • Customize   │
+│      your theme  │
+│      at the      │
+│      theme       │
+│      editor [2]  │
+│                  │
+╰──────────────────╯
+[1] https://maplemooncarob.myshopify.com?preview_theme_id=160142491845
+[2] https://maplemooncarob.myshopify.com/admin/themes/160142491845/editor
+
+[?25hexit=0

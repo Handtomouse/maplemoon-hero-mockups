@@ -1,0 +1,51 @@
+^Ddiff -r /private/tmp/maplemoon-s1b-140.ZHmdlb/assets/app.css /private/tmp/maplemoon-s1b-160.J8Dft5/assets/app.css
+12a13,51
+> cart-notice#cartNotice {
+>     position: fixed;
+>     inset-block-start: var(--headerGroupHeight);
+>     inset-inline-end: var(--padding);
+>     z-index: 9999;
+>     width: min(30rem, calc(100vw - var(--space-5)));
+>     pointer-events: none;
+>     &:empty { display: none }
+> 
+>     .cartNotice-item {
+>         --gap: var(--space-1) var(--space-2);
+>         --linkColor: var(--color);
+> 
+>         padding: var(--space-2);
+>         background: var(--bg);
+>         color: var(--color);
+>         box-shadow: var(--globalShadow);
+>         border-radius: var(--space-2);
+>         border: 1px solid var(--border);
+>         pointer-events: auto;
+>         animation: cartNotice-in var(--globalAnimeTime) var(--globalAnimeEase) forwards;
+>         &[data-hiding] { animation: cartNotice-out var(--globalAnimeTime) var(--globalAnimeEase) forwards }
+> 
+>         img { max-width: 5.2rem; aspect-ratio: 1 / 1; object-fit: cover; border-radius: var(--space-1) }
+>     }
+> 
+>     .title { line-height: 1 }
+> }
+> 
+> @keyframes cartNotice-in {
+>     from { opacity: 0; transform: translateX(100%) }
+>     to   { opacity: 1; transform: translateX(0) }
+> }
+> 
+> @keyframes cartNotice-out {
+>     from { opacity: 1; transform: translateX(0) }
+>     to   { opacity: 0; transform: translateX(100%) }
+> }
+> 
+29,32c68,72
+<     --inputHeight: 1.2rem;
+<     --inputActive: currentColor;
+<     --bc: currentColor;
+<     --br: var(--globalRadiusFull) !important;
+---
+>     --checkSize: 1.2rem;
+>     --checkBorderColor: currentColor;
+>     --checkActiveColor: currentColor;
+diff_exit=141

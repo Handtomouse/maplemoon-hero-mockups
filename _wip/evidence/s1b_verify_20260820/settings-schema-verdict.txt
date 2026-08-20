@@ -1,0 +1,21 @@
+=== strict jq parse: 1.4.0 ===
+jq: parse error: Expected another array element at line 470, column 9
+exit=5
+=== 1.4.0 lines 466-471 ===
+   466                  "id": "favicon",
+   467                  "label": "Image",
+   468                  "info": "Will be scaled down to 32 x 32 px"
+   469              },
+   470          ]
+   471      },
+=== strict jq parse: 1.6.0 ===
+jq: parse error: Expected another array element at line 495, column 9
+exit=5
+=== 1.6.0 lines 491-496 ===
+   491                  "id": "favicon",
+   492                  "label": "Image",
+   493                  "info": "Will be scaled down to 32 x 32 px"
+   494              },
+   495          ]
+   496      },
+verdict=PRESERVED_AND_MOVED_25_LINES

@@ -1,0 +1,94 @@
+^Dreport_nonempty_exit=0
+check_140_nonempty_exit=0
+check_160_nonempty_exit=0
+=== measured summaries and exits ===
+
+╭─ info ───────────╮
+│                  │
+│  Theme Check     │
+│  Summary.        │
+│                  │
+│  181 files       │
+│  inspected with  │
+│   198 total      │
+│  offenses found  │
+│   across 48      │
+│  files.          │
+│  3 errors.       │
+│  195 warnings.   │
+│                  │
+╰──────────────────╯
+
+exit=1
+
+╭─ info ───────────╮
+│                  │
+│  Theme Check     │
+│  Summary.        │
+│                  │
+│  197 files       │
+│  inspected with  │
+│   218 total      │
+│  offenses found  │
+│   across 48      │
+│  files.          │
+│  3 errors.       │
+│  215 warnings.   │
+│                  │
+╰──────────────────╯
+
+exit=1
+=== recovery comparisons ===
+fresh_140_vs_sealed_exit=0
+fresh_160_vs_sealed_exit=0
+=== evidence files ===
+_wip/evidence/s1b_verify_20260820/analyze-theme-check.mjs
+_wip/evidence/s1b_verify_20260820/customization-verdict.txt
+_wip/evidence/s1b_verify_20260820/final-local-verify.txt
+_wip/evidence/s1b_verify_20260820/live-theme-metadata-final.txt
+_wip/evidence/s1b_verify_20260820/live-theme-metadata-step1.json
+_wip/evidence/s1b_verify_20260820/read-theme-metadata.mjs
+_wip/evidence/s1b_verify_20260820/recovery-checkpoint-20260820T080349Z.txt
+_wip/evidence/s1b_verify_20260820/settings-schema-verdict.txt
+_wip/evidence/s1b_verify_20260820/shopify-homedir-preload.cjs
+_wip/evidence/s1b_verify_20260820/tamper-check.mjs
+_wip/evidence/s1b_verify_20260820/tamper-check.txt
+_wip/evidence/s1b_verify_20260820/theme-check-140.txt
+_wip/evidence/s1b_verify_20260820/theme-check-160.txt
+_wip/evidence/s1b_verify_20260820/theme-list-final.txt
+_wip/evidence/s1b_verify_20260820/theme-list-step1.txt
+_wip/evidence/s1b_verify_20260820/theme-pull-140.txt
+_wip/evidence/s1b_verify_20260820/theme-pull-160.txt
+_wip/evidence/s1b_verify_20260820/warning-delta.json
+    7070 docs/orchestration/reviews/MAPLEMOON-S1B-VERIFY-20260820.md
+    3299 _wip/evidence/s1b_verify_20260820/analyze-theme-check.mjs
+     984 _wip/evidence/s1b_verify_20260820/customization-verdict.txt
+       0 _wip/evidence/s1b_verify_20260820/final-local-verify.txt
+     860 _wip/evidence/s1b_verify_20260820/live-theme-metadata-final.txt
+    1049 _wip/evidence/s1b_verify_20260820/live-theme-metadata-step1.json
+     556 _wip/evidence/s1b_verify_20260820/read-theme-metadata.mjs
+     331 _wip/evidence/s1b_verify_20260820/recovery-checkpoint-20260820T080349Z.txt
+     723 _wip/evidence/s1b_verify_20260820/settings-schema-verdict.txt
+     213 _wip/evidence/s1b_verify_20260820/shopify-homedir-preload.cjs
+     852 _wip/evidence/s1b_verify_20260820/tamper-check.mjs
+     300 _wip/evidence/s1b_verify_20260820/tamper-check.txt
+   76916 _wip/evidence/s1b_verify_20260820/theme-check-140.txt
+   83156 _wip/evidence/s1b_verify_20260820/theme-check-160.txt
+     653 _wip/evidence/s1b_verify_20260820/theme-list-final.txt
+     847 _wip/evidence/s1b_verify_20260820/theme-list-step1.txt
+     865 _wip/evidence/s1b_verify_20260820/theme-pull-140.txt
+     840 _wip/evidence/s1b_verify_20260820/theme-pull-160.txt
+    1251 _wip/evidence/s1b_verify_20260820/warning-delta.json
+  180765 total
+=== tracked diffs ===
+tracked_diff_exit=0
+cached_diff_exit=0
+=== git status --porcelain ===
+?? _wip/evidence/s1b_verify_20260820/
+?? docs/orchestration/AUTHORITATIVE-SOURCE-PIN-20260820.md
+?? docs/orchestration/FIGMA-CONTRACT-SCOPE-20260820.md
+?? docs/orchestration/SHARED-CHROME-SHOP-VS-HOMEPAGE-20260820T175821.md
+?? docs/orchestration/packets/MAPLEMOON-CATALOGUE-RECONCILIATION-WOO-24-20260820T175821.md
+?? docs/orchestration/packets/MAPLEMOON-REGISTRY-REBASELINE-DRYRUN-20260820T175821.md
+?? docs/orchestration/packets/MAPLEMOON-SHOPIFY-THEME-INVENTORY-S1B-VERIFY-20260820T175821.md
+?? docs/orchestration/reviews/MAPLEMOON-S1B-VERIFY-20260820.md

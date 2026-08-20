@@ -1,0 +1,3131 @@
+^D╭─ info ───────────╮
+│                  │
+│  blocks/a-video  │
+│  .liquid         │
+│                  │
+│                  │
+│  [warning]:      │
+│  VariableName    │
+│  The variable    │
+│  'vidMobile'     │
+│  uses wrong      │
+│  naming format   │
+│                  │
+│  16  assign      │
+│  vidMobile =     │
+│  block.settings  │
+│  .videoMob       │
+│                  │
+│                  │
+│  [warning]:      │
+│  VariableName    │
+│  The variable    │
+│  'clickToPlay'   │
+│  uses wrong      │
+│  naming format   │
+│                  │
+│  24  assign      │
+│  clickToPlay =   │
+│  block.settings  │
+│  .video_click    │
+│                  │
+╰──────────────────╯
+
+╭─ info ───────────╮
+│                  │
+│  sections/foote  │
+│  r.liquid        │
+│                  │
+│                  │
+│  [warning]:      │
+│  VariableName    │
+│  The variable    │
+│  'hasSublinks'   │
+│  uses wrong      │
+│  naming format   │
+│                  │
+│  90  assign      │
+│  hasSublinks =   │
+│  false           │
+│                  │
+│                  │
+│  [warning]:      │
+│  VariableName    │
+│  The variable    │
+│  'hasSublinks'   │
+│  uses wrong      │
+│  naming format   │
+│                  │
+│  94  assign      │
+│  hasSublinks =   │
+│  true            │
+│                  │
+│                  │
+│  [warning]:      │
+│  VariableName    │
+│  The variable    │
+│  'aiDirection'   │
+│  uses wrong      │
+│  naming format   │
+│                  │
+│  180  assign     │
+│  aiDirection =   │
+│  block.settings  │
+│  .alignment |    │
+│  replace:        │
+│  'left',         │
+│  'start' |       │
+│  replace:        │
+│  'right', 'end'  │
+│                  │
+│                  │
+│                  │
+│  [warning]:      │
+│  VariableName    │
+│  The variable    │
+│  'aiDirection'   │
+│  uses wrong      │
+│  naming format   │
+│                  │
+│  182  assign     │
+│  aiDirection =   │
+│  'center'        │
+│                  │
+╰──────────────────╯
+
+╭─ info ───────────╮
+│                  │
+│  sections/heade  │
+│  r.liquid        │
+│                  │
+│                  │
+│  [warning]:      │
+│  VariableName    │
+│  The variable    │
+│  'isTextLogo'    │
+│  uses wrong      │
+│  naming format   │
+│                  │
+│  15  capture     │
+│  isTextLogo      │
+│                  │
+│                  │
+│  [warning]:      │
+│  VariableName    │
+│  The variable    │
+│  'menuType'      │
+│  uses wrong      │
+│  naming format   │
+│                  │
+│  29  capture     │
+│  menuType        │
+│                  │
+│                  │
+│  [warning]:      │
+│  VariableName    │
+│  The variable    │
+│  'megaShadow'    │
+│  uses wrong      │
+│  naming format   │
+│                  │
+│  34  assign      │
+│  megaShadow =    │
+│  false           │
+│                  │
+│                  │
+│  [warning]:      │
+│  VariableName    │
+│  The variable    │
+│  'megaShadow'    │
+│  uses wrong      │
+│  naming format   │
+│                  │
+│  36  assign      │
+│  megaShadow =    │
+│  true            │
+│                  │
+│                  │
+│  [warning]:      │
+│  VariableName    │
+│  The variable    │
+│  'showDropdownB  │
+│  g' uses wrong   │
+│  naming format   │
+│                  │
+│  40  assign      │
+│  showDropdownBg  │
+│   = false        │
+│                  │
+│                  │
+│  [warning]:      │
+│  VariableName    │
+│  The variable    │
+│  'showDropdownB  │
+│  g' uses wrong   │
+│  naming format   │
+│                  │
+│  42  assign      │
+│  showDropdownBg  │
+│   = true         │
+│                  │
+│                  │
+│  [warning]:      │
+│  VariableName    │
+│  The variable    │
+│  'showCountry'   │
+│  uses wrong      │
+│  naming format   │
+│                  │
+│  122  assign     │
+│  showCountry =   │
+│  true            │
+│                  │
+│                  │
+│  [warning]:      │
+│  VariableName    │
+│  The variable    │
+│  'showLanguage'  │
+│   uses wrong     │
+│  naming format   │
+│                  │
+│  127  assign     │
+│  showLanguage =  │
+│   true           │
+│                  │
+│                  │
+│  [warning]:      │
+│  VariableName    │
+│  The variable    │
+│  'showSearch'    │
+│  uses wrong      │
+│  naming format   │
+│                  │
+│  132  assign     │
+│  showSearch =    │
+│  true            │
+│                  │
+│                  │
+│  [warning]:      │
+│  VariableName    │
+│  The variable    │
+│  'showAccounts'  │
+│   uses wrong     │
+│  naming format   │
+│                  │
+│  137  assign     │
+│  showAccounts =  │
+│   true           │
+│                  │
+│                  │
+│  [warning]:      │
+│  VariableName    │
+│  The variable    │
+│  'showCart'      │
+│  uses wrong      │
+│  naming format   │
+│                  │
+│  142  assign     │
+│  showCart =      │
+│  true            │
+│                  │
+│                  │
+│  [warning]:      │
+│  VariableName    │
+│  The variable    │
+│  'localizationI  │
+│  cons' uses      │
+│  wrong naming    │
+│  format          │
+│                  │
+│  149  assign     │
+│  localizationIc  │
+│  ons = true      │
+│                  │
+│                  │
+│  [warning]:      │
+│  VariableName    │
+│  The variable    │
+│  'localizationI  │
+│  cons' uses      │
+│  wrong naming    │
+│  format          │
+│                  │
+│  151  assign     │
+│  localizationIc  │
+│  ons = false     │
+│                  │
+╰──────────────────╯
+
+╭─ info ───────────╮
+│                  │
+│  sections/ls-br  │
+│  eadcrumbs.liqu  │
+│  id              │
+│                  │
+│                  │
+│  [warning]:      │
+│  VariableName    │
+│  The variable    │
+│  'genieCollecti  │
+│  on' uses wrong  │
+│   naming format  │
+│                  │
+│                  │
+│  5  assign geni  │
+│  eCollection =   │
+│  collection      │
+│                  │
+│                  │
+│  [warning]:      │
+│  VariableName    │
+│  The variable    │
+│  'genieCollecti  │
+│  on' uses wrong  │
+│   naming format  │
+│                  │
+│                  │
+│  7  assign geni  │
+│  eCollection =   │
+│  product.collec  │
+│  tions[0]        │
+│                  │
+│                  │
+│  [warning]:      │
+│  VariableName    │
+│  The variable    │
+│  'genieCollecti  │
+│  on' uses wrong  │
+│   naming format  │
+│                  │
+│                  │
+│  9  assign geni  │
+│  eCollection =   │
+│  false           │
+│                  │
+│                  │
+│  [warning]:      │
+│  VariableName    │
+│  The variable    │
+│  'geniePath'     │
+│  uses wrong      │
+│  naming format   │
+│                  │
+│  13  assign      │
+│  geniePath =     │
+│  routes.collect  │
+│  ions_url |      │
+│  append: '/' |   │
+│  append:         │
+│  genieCollectio  │
+│  n.handle        │
+│                  │
+│                  │
+│  [warning]:      │
+│  VariableName    │
+│  The variable    │
+│  'geniePath'     │
+│  uses wrong      │
+│  naming format   │
+│                  │
+│  15  assign      │
+│  geniePath =     │
+│  false           │
+│                  │
+╰──────────────────╯
+
+╭─ info ───────────╮
+│                  │
+│  sections/ls-co  │
+│  llage.liquid    │
+│                  │
+│                  │
+│  [warning]:      │
+│  VariableName    │
+│  The variable    │
+│  'desktopPercen  │
+│  t' uses wrong   │
+│  naming format   │
+│                  │
+│  58  assign      │
+│  desktopPercent  │
+│   = block.setti  │
+│  ngs.span |      │
+│  times: 100 |    │
+│  divided_by:     │
+│  8.0             │
+│                  │
+│                  │
+│  [warning]:      │
+│  VariableName    │
+│  The variable    │
+│  'mediaLoader'   │
+│  uses wrong      │
+│  naming format   │
+│                  │
+│  67  assign      │
+│  mediaLoader =   │
+│  true            │
+│                  │
+╰──────────────────╯
+
+╭─ info ───────────╮
+│                  │
+│  sections/ls-co  │
+│  mparison.liqui  │
+│  d               │
+│                  │
+│                  │
+│  [warning]:      │
+│  VariableName    │
+│  The variable    │
+│  'blockNum'      │
+│  uses wrong      │
+│  naming format   │
+│                  │
+│  26  assign      │
+│  blockNum =      │
+│  'imageBefore'   │
+│                  │
+│                  │
+│  [warning]:      │
+│  VariableName    │
+│  The variable    │
+│  'blockNum'      │
+│  uses wrong      │
+│  naming format   │
+│                  │
+│  29  assign      │
+│  blockNum =      │
+│  "imageAfter"    │
+│                  │
+╰──────────────────╯
+
+╭─ info ───────────╮
+│                  │
+│  sections/ls-ev  │
+│  ents.liquid     │
+│                  │
+│                  │
+│  [warning]:      │
+│  VariableName    │
+│  The variable    │
+│  'mediaLoader'   │
+│  uses wrong      │
+│  naming format   │
+│                  │
+│  47  assign      │
+│  mediaLoader =   │
+│  true            │
+│                  │
+╰──────────────────╯
+
+╭─ info ───────────╮
+│                  │
+│  sections/ls-fe  │
+│  at-collection.  │
+│  liquid          │
+│                  │
+│                  │
+│  [warning]:      │
+│  VariableName    │
+│  The variable    │
+│  'layoutType'    │
+│  uses wrong      │
+│  naming format   │
+│                  │
+│  10  assign      │
+│  layoutType =    │
+│  section.settin  │
+│  gs.layoutType   │
+│                  │
+│                  │
+│  [warning]:      │
+│  VariableName    │
+│  The variable '  │
+│  collectionUrl'  │
+│   uses wrong     │
+│  naming format   │
+│                  │
+│  14  assign      │
+│  collectionUrl   │
+│  = collections[  │
+│  section.settin  │
+│  gs.product_lis  │
+│  t].url          │
+│                  │
+│                  │
+│  [warning]:      │
+│  VariableName    │
+│  The variable    │
+│  'collectionTit  │
+│  le' uses wrong  │
+│   naming format  │
+│                  │
+│                  │
+│  16  assign col  │
+│  lectionTitle =  │
+│   collections[s  │
+│  ection.setting  │
+│  s.product_list  │
+│  ].title         │
+│                  │
+│                  │
+│  [warning]:      │
+│  VariableName    │
+│  The variable '  │
+│  collectionUrl'  │
+│   uses wrong     │
+│  naming format   │
+│                  │
+│  19  assign      │
+│  collectionUrl   │
+│  = routes.all_p  │
+│  roducts_collec  │
+│  tion_url        │
+│                  │
+╰──────────────────╯
+
+╭─ info ───────────╮
+│                  │
+│  sections/ls-fe  │
+│  at-collections  │
+│  .liquid         │
+│                  │
+│                  │
+│  [warning]:      │
+│  VariableName    │
+│  The variable    │
+│  'overlayConten  │
+│  t' uses wrong   │
+│  naming format   │
+│                  │
+│  18  assign      │
+│  overlayContent  │
+│   = 'stack'      │
+│                  │
+│                  │
+│  [warning]:      │
+│  VariableName    │
+│  The variable    │
+│  'overlayConten  │
+│  t' uses wrong   │
+│  naming format   │
+│                  │
+│  20  assign      │
+│  overlayContent  │
+│   = '1'          │
+│                  │
+│                  │
+│  [warning]:      │
+│  VariableName    │
+│  The variable    │
+│  'mixBlend'      │
+│  uses wrong      │
+│  naming format   │
+│                  │
+│  24  assign      │
+│  mixBlend = nil  │
+│                  │
+│                  │
+│                  │
+│  [warning]:      │
+│  VariableName    │
+│  The variable    │
+│  'mixBlend'      │
+│  uses wrong      │
+│  naming format   │
+│                  │
+│  26  assign      │
+│  mixBlend =      │
+│  'mixBlend'      │
+│                  │
+╰──────────────────╯
+
+╭─ info ───────────╮
+│                  │
+│  sections/ls-fe  │
+│  at-products.li  │
+│  quid            │
+│                  │
+│                  │
+│  [warning]:      │
+│  VariableName    │
+│  The variable    │
+│  'layoutType'    │
+│  uses wrong      │
+│  naming format   │
+│                  │
+│  9  {%- assign   │
+│  layoutType =    │
+│  section.settin  │
+│  gs.layoutType   │
+│  -%}             │
+│                  │
+╰──────────────────╯
+
+╭─ info ───────────╮
+│                  │
+│  sections/ls-he  │
+│  ro-logo.liquid  │
+│                  │
+│                  │
+│  [warning]:      │
+│  VariableName    │
+│  The variable    │
+│  'mediaLoader'   │
+│  uses wrong      │
+│  naming format   │
+│                  │
+│  32  assign      │
+│  mediaLoader =   │
+│  false           │
+│                  │
+╰──────────────────╯
+
+╭─ info ───────────╮
+│                  │
+│  sections/ls-he  │
+│  ro.liquid       │
+│                  │
+│                  │
+│  [warning]:      │
+│  VariableName    │
+│  The variable    │
+│  'stickyState'   │
+│  uses wrong      │
+│  naming format   │
+│                  │
+│  24  capture     │
+│  stickyState     │
+│                  │
+╰──────────────────╯
+
+╭─ info ───────────╮
+│                  │
+│  sections/ls-im  │
+│  age-text.liqui  │
+│  d               │
+│                  │
+│                  │
+│  [warning]:      │
+│  VariableName    │
+│  The variable    │
+│  'imgMob' uses   │
+│  wrong naming    │
+│  format          │
+│                  │
+│  59  assign      │
+│  imgMob =        │
+│  section.settin  │
+│  gs.imageMob     │
+│                  │
+│                  │
+│  [warning]:      │
+│  VariableName    │
+│  The variable    │
+│  'mediaLoader'   │
+│  uses wrong      │
+│  naming format   │
+│                  │
+│  63  assign      │
+│  mediaLoader =   │
+│  true            │
+│                  │
+╰──────────────────╯
+
+╭─ info ───────────╮
+│                  │
+│  sections/ls-lo  │
+│  golist.liquid   │
+│                  │
+│                  │
+│  [warning]:      │
+│  VariableName    │
+│  The variable    │
+│  'mediaLoader'   │
+│  uses wrong      │
+│  naming format   │
+│                  │
+│  36  assign      │
+│  mediaLoader =   │
+│  true            │
+│                  │
+╰──────────────────╯
+
+╭─ info ───────────╮
+│                  │
+│  sections/ls-mu  │
+│  lticolumn-list  │
+│  .liquid         │
+│                  │
+│                  │
+│  [warning]:      │
+│  VariableName    │
+│  The variable    │
+│  'mediaLoader'   │
+│  uses wrong      │
+│  naming format   │
+│                  │
+│  45  assign      │
+│  mediaLoader =   │
+│  true            │
+│                  │
+╰──────────────────╯
+
+╭─ info ───────────╮
+│                  │
+│  sections/ls-mu  │
+│  lticolumn.liqu  │
+│  id              │
+│                  │
+│                  │
+│  [warning]:      │
+│  VariableName    │
+│  The variable    │
+│  'overlayConten  │
+│  t' uses wrong   │
+│  naming format   │
+│                  │
+│  13  assign      │
+│  overlayContent  │
+│   = 'stack'      │
+│                  │
+│                  │
+│  [warning]:      │
+│  VariableName    │
+│  The variable    │
+│  'overlayConten  │
+│  t' uses wrong   │
+│  naming format   │
+│                  │
+│  15  assign      │
+│  overlayContent  │
+│   = 1            │
+│                  │
+│                  │
+│  [warning]:      │
+│  VariableName    │
+│  The variable    │
+│  'mediaType'     │
+│  uses wrong      │
+│  naming format   │
+│                  │
+│  35  assign      │
+│  mediaType =     │
+│  'image'         │
+│                  │
+│                  │
+│  [warning]:      │
+│  VariableName    │
+│  The variable    │
+│  'mediaType'     │
+│  uses wrong      │
+│  naming format   │
+│                  │
+│  37  assign      │
+│  mediaType =     │
+│  'video'         │
+│                  │
+│                  │
+│  [warning]:      │
+│  VariableName    │
+│  The variable    │
+│  'hideOnMobile'  │
+│   uses wrong     │
+│  naming format   │
+│                  │
+│  41  assign      │
+│  hideOnMobile =  │
+│   ''             │
+│                  │
+│                  │
+│  [warning]:      │
+│  VariableName    │
+│  The variable    │
+│  'hideOnMobile'  │
+│   uses wrong     │
+│  naming format   │
+│                  │
+│  43  assign      │
+│  hideOnMobile =  │
+│   'class="large  │
+│  -only"'         │
+│                  │
+│                  │
+│  [warning]:      │
+│  VariableName    │
+│  The variable    │
+│  'stickyState'   │
+│  uses wrong      │
+│  naming format   │
+│                  │
+│  63  capture     │
+│  stickyState     │
+│                  │
+│                  │
+│  [warning]:      │
+│  VariableName    │
+│  The variable    │
+│  'desktopColumn  │
+│  s' uses wrong   │
+│  naming format   │
+│                  │
+│  101  assign     │
+│  desktopColumns  │
+│   = section.set  │
+│  tings.columns   │
+│  | times: 1.0    │
+│                  │
+│                  │
+│  [warning]:      │
+│  VariableName    │
+│  The variable '  │
+│  mobileColumns'  │
+│   uses wrong     │
+│  naming format   │
+│                  │
+│  102  assign     │
+│  mobileColumns   │
+│  =               │
+│  section.settin  │
+│  gs.columnsMob   │
+│  | times: 1.0    │
+│                  │
+│                  │
+│  [warning]:      │
+│  VariableName    │
+│  The variable    │
+│  'desktopPercen  │
+│  t' uses wrong   │
+│  naming format   │
+│                  │
+│  103  assign     │
+│  desktopPercent  │
+│   = 100 |        │
+│  divided_by:     │
+│  desktopColumns  │
+│                  │
+│                  │
+│                  │
+│  [warning]:      │
+│  VariableName    │
+│  The variable '  │
+│  mobilePercent'  │
+│   uses wrong     │
+│  naming format   │
+│                  │
+│  104  assign     │
+│  mobilePercent   │
+│  = 100 |         │
+│  divided_by:     │
+│  mobileColumns   │
+│                  │
+╰──────────────────╯
+
+╭─ info ───────────╮
+│                  │
+│  sections/ls-pr  │
+│  oduct.liquid    │
+│                  │
+│                  │
+│  [warning]:      │
+│  VariableName    │
+│  The variable    │
+│  'pdpLayoutClas  │
+│  sic' uses       │
+│  wrong naming    │
+│  format          │
+│                  │
+│  44  assign pdp  │
+│  LayoutClassic   │
+│  = true          │
+│                  │
+│                  │
+│  [warning]:      │
+│  VariableName    │
+│  The variable    │
+│  'layoutType'    │
+│  uses wrong      │
+│  naming format   │
+│                  │
+│  45  assign      │
+│  layoutType =    │
+│  'triptych'      │
+│                  │
+│                  │
+│  [warning]:      │
+│  VariableName    │
+│  The variable    │
+│  'fullBleed'     │
+│  uses wrong      │
+│  naming format   │
+│                  │
+│  46  assign      │
+│  fullBleed =     │
+│  false           │
+│                  │
+│                  │
+│  [warning]:      │
+│  VariableName    │
+│  The variable    │
+│  'pdpLayoutClas  │
+│  sic' uses       │
+│  wrong naming    │
+│  format          │
+│                  │
+│  48  assign pdp  │
+│  LayoutClassic   │
+│  = false         │
+│                  │
+│                  │
+│  [warning]:      │
+│  VariableName    │
+│  The variable    │
+│  'layoutType'    │
+│  uses wrong      │
+│  naming format   │
+│                  │
+│  49  assign      │
+│  layoutType =    │
+│  'diptych'       │
+│                  │
+│                  │
+│  [warning]:      │
+│  VariableName    │
+│  The variable    │
+│  'fullBleed'     │
+│  uses wrong      │
+│  naming format   │
+│                  │
+│  50  assign      │
+│  fullBleed =     │
+│  section.settin  │
+│  gs.section_ful  │
+│  lbleed          │
+│                  │
+│                  │
+│  [warning]:      │
+│  VariableName    │
+│  The variable    │
+│  'metaSpan'      │
+│  uses wrong      │
+│  naming format   │
+│                  │
+│  58  assign      │
+│  metaSpan = 2    │
+│                  │
+│                  │
+│  [warning]:      │
+│  VariableName    │
+│  The variable    │
+│  'mediaSpan'     │
+│  uses wrong      │
+│  naming format   │
+│                  │
+│  59  assign      │
+│  mediaSpan = 6   │
+│                  │
+│                  │
+│  [warning]:      │
+│  VariableName    │
+│  The variable    │
+│  'actionSpan'    │
+│  uses wrong      │
+│  naming format   │
+│                  │
+│  60  assign      │
+│  actionSpan = 2  │
+│                  │
+│                  │
+│                  │
+│  [warning]:      │
+│  VariableName    │
+│  The variable    │
+│  'metaSpan'      │
+│  uses wrong      │
+│  naming format   │
+│                  │
+│  63  assign      │
+│  metaSpan = 2    │
+│                  │
+│                  │
+│  [warning]:      │
+│  VariableName    │
+│  The variable    │
+│  'mediaSpan'     │
+│  uses wrong      │
+│  naming format   │
+│                  │
+│  64  assign      │
+│  mediaSpan = 6   │
+│                  │
+│                  │
+│  [warning]:      │
+│  VariableName    │
+│  The variable    │
+│  'actionSpan'    │
+│  uses wrong      │
+│  naming format   │
+│                  │
+│  65  assign      │
+│  actionSpan = 4  │
+│                  │
+│                  │
+│                  │
+│  [warning]:      │
+│  VariableName    │
+│  The variable    │
+│  'metaSpan'      │
+│  uses wrong      │
+│  naming format   │
+│                  │
+│  68  assign      │
+│  metaSpan = 2    │
+│                  │
+│                  │
+│  [warning]:      │
+│  VariableName    │
+│  The variable    │
+│  'mediaSpan'     │
+│  uses wrong      │
+│  naming format   │
+│                  │
+│  69  assign      │
+│  mediaSpan = 5   │
+│                  │
+│                  │
+│  [warning]:      │
+│  VariableName    │
+│  The variable    │
+│  'actionSpan'    │
+│  uses wrong      │
+│  naming format   │
+│                  │
+│  70  assign      │
+│  actionSpan = 3  │
+│                  │
+│                  │
+│                  │
+│  [warning]:      │
+│  VariableName    │
+│  The variable    │
+│  'metaSpan'      │
+│  uses wrong      │
+│  naming format   │
+│                  │
+│  76  assign      │
+│  metaSpan = 3    │
+│                  │
+│                  │
+│  [warning]:      │
+│  VariableName    │
+│  The variable    │
+│  'mediaSpan'     │
+│  uses wrong      │
+│  naming format   │
+│                  │
+│  77  assign      │
+│  mediaSpan = 4   │
+│                  │
+│                  │
+│  [warning]:      │
+│  VariableName    │
+│  The variable    │
+│  'actionSpan'    │
+│  uses wrong      │
+│  naming format   │
+│                  │
+│  78  assign      │
+│  actionSpan = 3  │
+│                  │
+│                  │
+│                  │
+│  [warning]:      │
+│  VariableName    │
+│  The variable    │
+│  'metaSpan'      │
+│  uses wrong      │
+│  naming format   │
+│                  │
+│  81  assign      │
+│  metaSpan = 2    │
+│                  │
+│                  │
+│  [warning]:      │
+│  VariableName    │
+│  The variable    │
+│  'mediaSpan'     │
+│  uses wrong      │
+│  naming format   │
+│                  │
+│  82  assign      │
+│  mediaSpan = 6   │
+│                  │
+│                  │
+│  [warning]:      │
+│  VariableName    │
+│  The variable    │
+│  'actionSpan'    │
+│  uses wrong      │
+│  naming format   │
+│                  │
+│  83  assign      │
+│  actionSpan = 4  │
+│                  │
+│                  │
+│                  │
+│  [warning]:      │
+│  VariableName    │
+│  The variable    │
+│  'metaSpan'      │
+│  uses wrong      │
+│  naming format   │
+│                  │
+│  86  assign      │
+│  metaSpan = 3    │
+│                  │
+│                  │
+│  [warning]:      │
+│  VariableName    │
+│  The variable    │
+│  'mediaSpan'     │
+│  uses wrong      │
+│  naming format   │
+│                  │
+│  87  assign      │
+│  mediaSpan = 4   │
+│                  │
+│                  │
+│  [warning]:      │
+│  VariableName    │
+│  The variable    │
+│  'actionSpan'    │
+│  uses wrong      │
+│  naming format   │
+│                  │
+│  88  assign      │
+│  actionSpan = 3  │
+│                  │
+│                  │
+│                  │
+│  [warning]:      │
+│  VariableName    │
+│  The variable    │
+│  'mediaFirst'    │
+│  uses wrong      │
+│  naming format   │
+│                  │
+│  96  assign      │
+│  mediaFirst = 1  │
+│                  │
+│                  │
+│                  │
+│  [warning]:      │
+│  VariableName    │
+│  The variable    │
+│  'mediaFirst'    │
+│  uses wrong      │
+│  naming format   │
+│                  │
+│  98  assign      │
+│  mediaFirst = 3  │
+│                  │
+│                  │
+│                  │
+│  [warning]:      │
+│  VariableName    │
+│  The variable    │
+│  'columnOrderMo  │
+│  b' uses wrong   │
+│  naming format   │
+│                  │
+│  102  assign     │
+│  columnOrderMob  │
+│   = 2            │
+│                  │
+│                  │
+│  [warning]:      │
+│  VariableName    │
+│  The variable    │
+│  'columnOrderMo  │
+│  b' uses wrong   │
+│  naming format   │
+│                  │
+│  104  assign     │
+│  columnOrderMob  │
+│   = 4            │
+│                  │
+╰──────────────────╯
+
+╭─ info ───────────╮
+│                  │
+│  sections/ls-sc  │
+│  roll-logolist.  │
+│  liquid          │
+│                  │
+│                  │
+│  [warning]:      │
+│  VariableName    │
+│  The variable    │
+│  'mediaLoader'   │
+│  uses wrong      │
+│  naming format   │
+│                  │
+│  58  assign      │
+│  mediaLoader =   │
+│  true            │
+│                  │
+╰──────────────────╯
+
+╭─ info ───────────╮
+│                  │
+│  sections/ls-sc  │
+│  roll-text.liqu  │
+│  id              │
+│                  │
+│                  │
+│  [warning]:      │
+│  VariableName    │
+│  The variable    │
+│  'mediaLoader'   │
+│  uses wrong      │
+│  naming format   │
+│                  │
+│  44  assign      │
+│  mediaLoader =   │
+│  true            │
+│                  │
+╰──────────────────╯
+
+╭─ info ───────────╮
+│                  │
+│  sections/ls-sl  │
+│  ideshow.liquid  │
+│                  │
+│                  │
+│  [error]:        │
+│  LiquidHTMLSynt  │
+│  axError         │
+│  Attempting to   │
+│  close           │
+│  HtmlElement     │
+│  'div' before    │
+│  it was opened   │
+│                  │
+│  93  </div>      │
+│                  │
+╰──────────────────╯
+
+╭─ info ───────────╮
+│                  │
+│  sections/ls-sp  │
+│  lash.liquid     │
+│                  │
+│                  │
+│  [warning]:      │
+│  VariableName    │
+│  The variable    │
+│  'globalDirecti  │
+│  on' uses wrong  │
+│   naming format  │
+│                  │
+│                  │
+│  1  {%- assign   │
+│  globalDirectio  │
+│  n =             │
+│  section.settin  │
+│  gs.direction    │
+│  -%}             │
+│                  │
+╰──────────────────╯
+
+╭─ info ───────────╮
+│                  │
+│  sections/ls-ta  │
+│  bbed-collectio  │
+│  ns.liquid       │
+│                  │
+│                  │
+│  [warning]:      │
+│  VariableName    │
+│  The variable    │
+│  'layoutType'    │
+│  uses wrong      │
+│  naming format   │
+│                  │
+│  6  assign       │
+│  layoutType =    │
+│  section.settin  │
+│  gs.layoutType   │
+│                  │
+│                  │
+│  [warning]:      │
+│  VariableName    │
+│  The variable '  │
+│  collectionUrl'  │
+│   uses wrong     │
+│  naming format   │
+│                  │
+│  60  assign      │
+│  collectionUrl   │
+│  = selected_col  │
+│  lection.url     │
+│                  │
+│                  │
+│  [warning]:      │
+│  VariableName    │
+│  The variable '  │
+│  collectionUrl'  │
+│   uses wrong     │
+│  naming format   │
+│                  │
+│  64  assign      │
+│  collectionUrl   │
+│  = routes.all_p  │
+│  roducts_collec  │
+│  tion_url        │
+│                  │
+╰──────────────────╯
+
+╭─ info ───────────╮
+│                  │
+│  sections/ls-te  │
+│  stimonials.liq  │
+│  uid             │
+│                  │
+│                  │
+│  [warning]:      │
+│  VariableName    │
+│  The variable    │
+│  'mediaLoader'   │
+│  uses wrong      │
+│  naming format   │
+│                  │
+│  40  assign      │
+│  mediaLoader =   │
+│  true            │
+│                  │
+╰──────────────────╯
+
+╭─ info ───────────╮
+│                  │
+│  sections/overl  │
+│  ay-newsletter.  │
+│  liquid          │
+│                  │
+│                  │
+│  [warning]:      │
+│  VariableName    │
+│  The variable    │
+│  'dialogMaxW'    │
+│  uses wrong      │
+│  naming format   │
+│                  │
+│  3  assign       │
+│  dialogMaxW =    │
+│  '--dialogMaxW:  │
+│   calc(100% -    │
+│  var(--layoutIn  │
+│  line));         │
+│  margin-inline:  │
+│   auto;'         │
+│                  │
+│                  │
+│  [warning]:      │
+│  VariableName    │
+│  The variable    │
+│  'dialogMaxW'    │
+│  uses wrong      │
+│  naming format   │
+│                  │
+│  5  assign       │
+│  dialogMaxW =    │
+│  null            │
+│                  │
+│                  │
+│  [warning]:      │
+│  VariableName    │
+│  The variable    │
+│  'scrollPositio  │
+│  n' uses wrong   │
+│  naming format   │
+│                  │
+│  9  assign       │
+│  scrollPosition  │
+│   =              │
+│  section.settin  │
+│  gs.scroll_px    │
+│                  │
+│                  │
+│  [warning]:      │
+│  VariableName    │
+│  The variable    │
+│  'scrollPositio  │
+│  n' uses wrong   │
+│  naming format   │
+│                  │
+│  11  assign      │
+│  scrollPosition  │
+│   = section.set  │
+│  tings.scroll_p  │
+│  ercent          │
+│                  │
+╰──────────────────╯
+
+╭─ info ───────────╮
+│                  │
+│  sections/overl  │
+│  ay-preload.liq  │
+│  uid             │
+│                  │
+│                  │
+│  [warning]:      │
+│  VariableName    │
+│  The variable    │
+│  'hasImg' uses   │
+│  wrong naming    │
+│  format          │
+│                  │
+│  19  {%- assign  │
+│   hasImg =       │
+│  false -%}       │
+│                  │
+│                  │
+│  [warning]:      │
+│  VariableName    │
+│  The variable    │
+│  'mediaLoader'   │
+│  uses wrong      │
+│  naming format   │
+│                  │
+│  31  assign      │
+│  mediaLoader =   │
+│  false           │
+│                  │
+│                  │
+│  [warning]:      │
+│  VariableName    │
+│  The variable    │
+│  'hasImg' uses   │
+│  wrong naming    │
+│  format          │
+│                  │
+│  38  assign      │
+│  hasImg = true   │
+│                  │
+╰──────────────────╯
+
+╭─ info ───────────╮
+│                  │
+│  sections/pdp-r  │
+│  ecommend.liqui  │
+│  d               │
+│                  │
+│                  │
+│  [warning]:      │
+│  VariableName    │
+│  The variable    │
+│  'layoutType'    │
+│  uses wrong      │
+│  naming format   │
+│                  │
+│  2  {%- assign   │
+│  layoutType =    │
+│  section.settin  │
+│  gs.layoutType   │
+│  -%}             │
+│                  │
+╰──────────────────╯
+
+╭─ info ───────────╮
+│                  │
+│  sections/t-gif  │
+│  tcard.liquid    │
+│                  │
+│                  │
+│  [error]:        │
+│  ParserBlocking  │
+│  Script          │
+│  The script_tag  │
+│   filter is par  │
+│  ser-blocking.   │
+│  Use a <script>  │
+│   tag with       │
+│  async or defer  │
+│   for better     │
+│  performance     │
+│                  │
+│  218  {{ 'vendo  │
+│  r/qrcode.js' |  │
+│   shopify_asset  │
+│  _url |          │
+│  script_tag }}   │
+│                  │
+╰──────────────────╯
+
+╭─ info ───────────╮
+│                  │
+│  sections/t-pas  │
+│  sword-header.l  │
+│  iquid           │
+│                  │
+│                  │
+│  [warning]:      │
+│  VariableName    │
+│  The variable    │
+│  'isTextLogo'    │
+│  uses wrong      │
+│  naming format   │
+│                  │
+│  12  capture     │
+│  isTextLogo      │
+│                  │
+╰──────────────────╯
+
+╭─ info ───────────╮
+│                  │
+│  sections/t-pro  │
+│  duct.liquid     │
+│                  │
+│                  │
+│  [warning]:      │
+│  VariableName    │
+│  The variable    │
+│  'pdpLayoutClas  │
+│  sic' uses       │
+│  wrong naming    │
+│  format          │
+│                  │
+│  36  assign pdp  │
+│  LayoutClassic   │
+│  = true          │
+│                  │
+│                  │
+│  [warning]:      │
+│  VariableName    │
+│  The variable    │
+│  'layoutType'    │
+│  uses wrong      │
+│  naming format   │
+│                  │
+│  37  assign      │
+│  layoutType =    │
+│  'triptych'      │
+│                  │
+│                  │
+│  [warning]:      │
+│  VariableName    │
+│  The variable    │
+│  'fullBleed'     │
+│  uses wrong      │
+│  naming format   │
+│                  │
+│  38  assign      │
+│  fullBleed =     │
+│  false           │
+│                  │
+│                  │
+│  [warning]:      │
+│  VariableName    │
+│  The variable    │
+│  'pdpLayoutClas  │
+│  sic' uses       │
+│  wrong naming    │
+│  format          │
+│                  │
+│  40  assign pdp  │
+│  LayoutClassic   │
+│  = false         │
+│                  │
+│                  │
+│  [warning]:      │
+│  VariableName    │
+│  The variable    │
+│  'layoutType'    │
+│  uses wrong      │
+│  naming format   │
+│                  │
+│  41  assign      │
+│  layoutType =    │
+│  'diptych'       │
+│                  │
+│                  │
+│  [warning]:      │
+│  VariableName    │
+│  The variable    │
+│  'fullBleed'     │
+│  uses wrong      │
+│  naming format   │
+│                  │
+│  42  assign      │
+│  fullBleed =     │
+│  section.settin  │
+│  gs.section_ful  │
+│  lbleed          │
+│                  │
+│                  │
+│  [warning]:      │
+│  VariableName    │
+│  The variable    │
+│  'metaSpan'      │
+│  uses wrong      │
+│  naming format   │
+│                  │
+│  50  assign      │
+│  metaSpan = 2    │
+│                  │
+│                  │
+│  [warning]:      │
+│  VariableName    │
+│  The variable    │
+│  'mediaSpan'     │
+│  uses wrong      │
+│  naming format   │
+│                  │
+│  51  assign      │
+│  mediaSpan = 6   │
+│                  │
+│                  │
+│  [warning]:      │
+│  VariableName    │
+│  The variable    │
+│  'actionSpan'    │
+│  uses wrong      │
+│  naming format   │
+│                  │
+│  52  assign      │
+│  actionSpan = 2  │
+│                  │
+│                  │
+│                  │
+│  [warning]:      │
+│  VariableName    │
+│  The variable    │
+│  'metaSpan'      │
+│  uses wrong      │
+│  naming format   │
+│                  │
+│  55  assign      │
+│  metaSpan = 2    │
+│                  │
+│                  │
+│  [warning]:      │
+│  VariableName    │
+│  The variable    │
+│  'mediaSpan'     │
+│  uses wrong      │
+│  naming format   │
+│                  │
+│  56  assign      │
+│  mediaSpan = 6   │
+│                  │
+│                  │
+│  [warning]:      │
+│  VariableName    │
+│  The variable    │
+│  'actionSpan'    │
+│  uses wrong      │
+│  naming format   │
+│                  │
+│  57  assign      │
+│  actionSpan = 4  │
+│                  │
+│                  │
+│                  │
+│  [warning]:      │
+│  VariableName    │
+│  The variable    │
+│  'metaSpan'      │
+│  uses wrong      │
+│  naming format   │
+│                  │
+│  60  assign      │
+│  metaSpan = 2    │
+│                  │
+│                  │
+│  [warning]:      │
+│  VariableName    │
+│  The variable    │
+│  'mediaSpan'     │
+│  uses wrong      │
+│  naming format   │
+│                  │
+│  61  assign      │
+│  mediaSpan = 5   │
+│                  │
+│                  │
+│  [warning]:      │
+│  VariableName    │
+│  The variable    │
+│  'actionSpan'    │
+│  uses wrong      │
+│  naming format   │
+│                  │
+│  62  assign      │
+│  actionSpan = 3  │
+│                  │
+│                  │
+│                  │
+│  [warning]:      │
+│  VariableName    │
+│  The variable    │
+│  'metaSpan'      │
+│  uses wrong      │
+│  naming format   │
+│                  │
+│  68  assign      │
+│  metaSpan = 3    │
+│                  │
+│                  │
+│  [warning]:      │
+│  VariableName    │
+│  The variable    │
+│  'mediaSpan'     │
+│  uses wrong      │
+│  naming format   │
+│                  │
+│  69  assign      │
+│  mediaSpan = 4   │
+│                  │
+│                  │
+│  [warning]:      │
+│  VariableName    │
+│  The variable    │
+│  'actionSpan'    │
+│  uses wrong      │
+│  naming format   │
+│                  │
+│  70  assign      │
+│  actionSpan = 3  │
+│                  │
+│                  │
+│                  │
+│  [warning]:      │
+│  VariableName    │
+│  The variable    │
+│  'metaSpan'      │
+│  uses wrong      │
+│  naming format   │
+│                  │
+│  73  assign      │
+│  metaSpan = 2    │
+│                  │
+│                  │
+│  [warning]:      │
+│  VariableName    │
+│  The variable    │
+│  'mediaSpan'     │
+│  uses wrong      │
+│  naming format   │
+│                  │
+│  74  assign      │
+│  mediaSpan = 6   │
+│                  │
+│                  │
+│  [warning]:      │
+│  VariableName    │
+│  The variable    │
+│  'actionSpan'    │
+│  uses wrong      │
+│  naming format   │
+│                  │
+│  75  assign      │
+│  actionSpan = 4  │
+│                  │
+│                  │
+│                  │
+│  [warning]:      │
+│  VariableName    │
+│  The variable    │
+│  'metaSpan'      │
+│  uses wrong      │
+│  naming format   │
+│                  │
+│  78  assign      │
+│  metaSpan = 3    │
+│                  │
+│                  │
+│  [warning]:      │
+│  VariableName    │
+│  The variable    │
+│  'mediaSpan'     │
+│  uses wrong      │
+│  naming format   │
+│                  │
+│  79  assign      │
+│  mediaSpan = 4   │
+│                  │
+│                  │
+│  [warning]:      │
+│  VariableName    │
+│  The variable    │
+│  'actionSpan'    │
+│  uses wrong      │
+│  naming format   │
+│                  │
+│  80  assign      │
+│  actionSpan = 3  │
+│                  │
+│                  │
+│                  │
+│  [warning]:      │
+│  VariableName    │
+│  The variable    │
+│  'mediaFirst'    │
+│  uses wrong      │
+│  naming format   │
+│                  │
+│  88  assign      │
+│  mediaFirst = 1  │
+│                  │
+│                  │
+│                  │
+│  [warning]:      │
+│  VariableName    │
+│  The variable    │
+│  'mediaFirst'    │
+│  uses wrong      │
+│  naming format   │
+│                  │
+│  90  assign      │
+│  mediaFirst = 3  │
+│                  │
+│                  │
+│                  │
+│  [warning]:      │
+│  VariableName    │
+│  The variable    │
+│  'columnOrderMo  │
+│  b' uses wrong   │
+│  naming format   │
+│                  │
+│  94  assign      │
+│  columnOrderMob  │
+│   = 2            │
+│                  │
+│                  │
+│  [warning]:      │
+│  VariableName    │
+│  The variable    │
+│  'columnOrderMo  │
+│  b' uses wrong   │
+│  naming format   │
+│                  │
+│  96  assign      │
+│  columnOrderMob  │
+│   = 4            │
+│                  │
+╰──────────────────╯
+
+╭─ info ───────────╮
+│                  │
+│  snippets/c-car  │
+│  t.liquid        │
+│                  │
+│                  │
+│  [warning]:      │
+│  VariableName    │
+│  The variable    │
+│  'cartLocation'  │
+│   uses wrong     │
+│  naming format   │
+│                  │
+│  16  assign      │
+│  cartLocation =  │
+│   location |     │
+│  default:        │
+│  'page'          │
+│                  │
+│                  │
+│  [warning]:      │
+│  VariableName    │
+│  The variable    │
+│  'cartFormId'    │
+│  uses wrong      │
+│  naming format   │
+│                  │
+│  19  assign      │
+│  cartFormId =    │
+│  'coretex-cart-  │
+│  form'           │
+│                  │
+│                  │
+│  [warning]:      │
+│  VariableName    │
+│  The variable    │
+│  'cartFormId'    │
+│  uses wrong      │
+│  naming format   │
+│                  │
+│  22  assign      │
+│  cartFormId =    │
+│  'coretex-cart-  │
+│  form-drawer'    │
+│                  │
+│                  │
+│  [warning]:      │
+│  VariableName    │
+│  The variable    │
+│  'showImage'     │
+│  uses wrong      │
+│  naming format   │
+│                  │
+│  25  assign      │
+│  showImage =     │
+│  settings.cart_  │
+│  image           │
+│                  │
+│                  │
+│  [warning]:      │
+│  VariableName    │
+│  The variable    │
+│  'showVendor'    │
+│  uses wrong      │
+│  naming format   │
+│                  │
+│  26  assign      │
+│  showVendor =    │
+│  settings.cart_  │
+│  vendor          │
+│                  │
+│                  │
+│  [warning]:      │
+│  VariableName    │
+│  The variable    │
+│  'showTax' uses  │
+│   wrong naming   │
+│  format          │
+│                  │
+│  27  assign      │
+│  showTax = sett  │
+│  ings.cart_tax   │
+│                  │
+│                  │
+│  [warning]:      │
+│  VariableName    │
+│  The variable    │
+│  'showContinue'  │
+│   uses wrong     │
+│  naming format   │
+│                  │
+│  28  assign      │
+│  showContinue =  │
+│   settings.cart  │
+│  _continue       │
+│                  │
+│                  │
+│  [warning]:      │
+│  VariableName    │
+│  The variable    │
+│  'showViewCart'  │
+│   uses wrong     │
+│  naming format   │
+│                  │
+│  29  assign      │
+│  showViewCart =  │
+│   settings.cart  │
+│  _viewButton     │
+│                  │
+│                  │
+│  [warning]:      │
+│  VariableName    │
+│  The variable    │
+│  'showExtraButt  │
+│  ons' uses       │
+│  wrong naming    │
+│  format          │
+│                  │
+│  30  assign sho  │
+│  wExtraButtons   │
+│  =               │
+│  settings.cart_  │
+│  dynamicButtons  │
+│                  │
+│                  │
+│                  │
+│  [warning]:      │
+│  VariableName    │
+│  The variable    │
+│  'showNotes'     │
+│  uses wrong      │
+│  naming format   │
+│                  │
+│  31  assign      │
+│  showNotes =     │
+│  settings.cart_  │
+│  notes           │
+│                  │
+│                  │
+│  [warning]:      │
+│  VariableName    │
+│  The variable    │
+│  'showDiscount'  │
+│   uses wrong     │
+│  naming format   │
+│                  │
+│  32  assign      │
+│  showDiscount =  │
+│   settings.cart  │
+│  _discount       │
+│                  │
+│                  │
+│  [warning]:      │
+│  VariableName    │
+│  The variable    │
+│  'showPaymentIc  │
+│  ons' uses       │
+│  wrong naming    │
+│  format          │
+│                  │
+│  33  assign sho  │
+│  wPaymentIcons   │
+│  = settings.car  │
+│  t_icons         │
+│                  │
+│                  │
+│  [warning]:      │
+│  VariableName    │
+│  The variable    │
+│  'paymentIconsG  │
+│  rey' uses       │
+│  wrong naming    │
+│  format          │
+│                  │
+│  34  assign pay  │
+│  mentIconsGrey   │
+│  = settings.car  │
+│  t_icons_grey    │
+│                  │
+│                  │
+│  [warning]:      │
+│  VariableName    │
+│  The variable    │
+│  'freeShippingB  │
+│  ar' uses wrong  │
+│   naming format  │
+│                  │
+│                  │
+│  35  assign fre  │
+│  eShippingBar =  │
+│   settings.cart  │
+│  _free_shipping  │
+│                  │
+│                  │
+│                  │
+│  [warning]:      │
+│  VariableName    │
+│  The variable    │
+│  'showAnnouncem  │
+│  ent' uses       │
+│  wrong naming    │
+│  format          │
+│                  │
+│  36  assign sho  │
+│  wAnnouncement   │
+│  = settings.car  │
+│  t_announcement  │
+│                  │
+│                  │
+│                  │
+│  [warning]:      │
+│  VariableName    │
+│  The variable    │
+│  'upsellVisibil  │
+│  ity' uses       │
+│  wrong naming    │
+│  format          │
+│                  │
+│  40  {%- assign  │
+│   upsellVisibil  │
+│  ity = settings  │
+│  .cart_upsells_  │
+│  visibility |    │
+│  default:        │
+│  'both' -%}      │
+│                  │
+│                  │
+│  [warning]:      │
+│  VariableName    │
+│  The variable    │
+│  'preOrder'      │
+│  uses wrong      │
+│  naming format   │
+│                  │
+│  99  capture     │
+│  preOrder        │
+│                  │
+│                  │
+│  [warning]:      │
+│  VariableName    │
+│  The variable    │
+│  'displayMoney'  │
+│   uses wrong     │
+│  naming format   │
+│                  │
+│  431  assign     │
+│  displayMoney =  │
+│   discount.tota  │
+│  l_allocated_am  │
+│  ount | money    │
+│                  │
+│                  │
+│  [warning]:      │
+│  VariableName    │
+│  The variable    │
+│  'displayMoney'  │
+│   uses wrong     │
+│  naming format   │
+│                  │
+│  433  assign     │
+│  displayMoney =  │
+│   discount.tota  │
+│  l_allocated_am  │
+│  ount | money_w  │
+│  ith_currency    │
+│                  │
+│                  │
+│  [warning]:      │
+│  VariableName    │
+│  The variable    │
+│  'displayMoney'  │
+│   uses wrong     │
+│  naming format   │
+│                  │
+│  501  assign     │
+│  displayMoney =  │
+│   cart.total_pr  │
+│  ice | money     │
+│                  │
+│                  │
+│  [warning]:      │
+│  VariableName    │
+│  The variable    │
+│  'displayMoney'  │
+│   uses wrong     │
+│  naming format   │
+│                  │
+│  503  assign     │
+│  displayMoney =  │
+│   cart.total_pr  │
+│  ice | money_wi  │
+│  th_currency     │
+│                  │
+╰──────────────────╯
+
+╭─ info ───────────╮
+│                  │
+│  snippets/c-men  │
+│  u-item.liquid   │
+│                  │
+│                  │
+│  [warning]:      │
+│  VariableName    │
+│  The variable    │
+│  'nextLevel'     │
+│  uses wrong      │
+│  naming format   │
+│                  │
+│  16  assign      │
+│  nextLevel =     │
+│  level | plus:   │
+│  1               │
+│                  │
+│                  │
+│  [warning]:      │
+│  VariableName    │
+│  The variable    │
+│  'hasChildren'   │
+│  uses wrong      │
+│  naming format   │
+│                  │
+│  17  assign      │
+│  hasChildren =   │
+│  false           │
+│                  │
+│                  │
+│  [warning]:      │
+│  VariableName    │
+│  The variable    │
+│  'hasChildren'   │
+│  uses wrong      │
+│  naming format   │
+│                  │
+│  19  assign      │
+│  hasChildren =   │
+│  true            │
+│                  │
+╰──────────────────╯
+
+╭─ info ───────────╮
+│                  │
+│  snippets/c-pri  │
+│  ce.liquid       │
+│                  │
+│                  │
+│  [warning]:      │
+│  VariableName    │
+│  The variable    │
+│  'displayMoney'  │
+│   uses wrong     │
+│  naming format   │
+│                  │
+│  39  assign      │
+│  displayMoney =  │
+│   compare_at_pr  │
+│  ice | money     │
+│                  │
+│                  │
+│  [warning]:      │
+│  VariableName    │
+│  The variable    │
+│  'displayMoney'  │
+│   uses wrong     │
+│  naming format   │
+│                  │
+│  41  assign      │
+│  displayMoney =  │
+│   compare_at_pr  │
+│  ice | money_wi  │
+│  th_currency     │
+│                  │
+╰──────────────────╯
+
+╭─ info ───────────╮
+│                  │
+│  snippets/c-pro  │
+│  d-card-media.l  │
+│  iquid           │
+│                  │
+│                  │
+│  [warning]:      │
+│  VariableName    │
+│  The variable    │
+│  'mediaLoader'   │
+│  uses wrong      │
+│  naming format   │
+│                  │
+│  20  assign      │
+│  mediaLoader =   │
+│  true            │
+│                  │
+╰──────────────────╯
+
+╭─ info ───────────╮
+│                  │
+│  snippets/c-pro  │
+│  d-card.liquid   │
+│                  │
+│                  │
+│  [warning]:      │
+│  VariableName    │
+│  The variable '  │
+│  sectionIdLast'  │
+│   uses wrong     │
+│  naming format   │
+│                  │
+│  29  assign      │
+│  sectionIdLast   │
+│  = section.id |  │
+│   remove:        │
+│  'template--' |  │
+│   split: '_' |   │
+│  last |          │
+│  prepend: '-'    │
+│                  │
+│                  │
+│  [warning]:      │
+│  VariableName    │
+│  The variable    │
+│  'sectionId'     │
+│  uses wrong      │
+│  naming format   │
+│                  │
+│  30  assign      │
+│  sectionId =     │
+│  sectionIdFirst  │
+│   | append:      │
+│  sectionIdLast   │
+│                  │
+│                  │
+│  [warning]:      │
+│  VariableName    │
+│  The variable '  │
+│  flexDirection'  │
+│   uses wrong     │
+│  naming format   │
+│                  │
+│  111  assign     │
+│  flexDirection   │
+│  = 'column'      │
+│                  │
+│                  │
+│  [warning]:      │
+│  VariableName    │
+│  The variable '  │
+│  flexDirection'  │
+│   uses wrong     │
+│  naming format   │
+│                  │
+│  113  assign     │
+│  flexDirection   │
+│  = 'row'         │
+│                  │
+│                  │
+│  [warning]:      │
+│  VariableName    │
+│  The variable    │
+│  'cardUrl' uses  │
+│   wrong naming   │
+│  format          │
+│                  │
+│  145  assign     │
+│  cardUrl =       │
+│  current_varian  │
+│  t.url |         │
+│  default:        │
+│  product.url     │
+│                  │
+│                  │
+│  [warning]:      │
+│  VariableName    │
+│  The variable    │
+│  'collectionAwa  │
+│  reUrl' uses     │
+│  wrong naming    │
+│  format          │
+│                  │
+│  148  capture    │
+│  collectionAwar  │
+│  eUrl            │
+│                  │
+│                  │
+│  [warning]:      │
+│  VariableName    │
+│  The variable    │
+│  'variantCount'  │
+│   uses wrong     │
+│  naming format   │
+│                  │
+│  166  assign     │
+│  variantCount =  │
+│   product.varia  │
+│  nts | size      │
+│                  │
+╰──────────────────╯
+
+╭─ info ───────────╮
+│                  │
+│  snippets/c-sec  │
+│  tion-grid.liqu  │
+│  id              │
+│                  │
+│                  │
+│  [warning]:      │
+│  VariableName    │
+│  The variable    │
+│  'layoutType'    │
+│  uses wrong      │
+│  naming format   │
+│                  │
+│  31  assign      │
+│  layoutType =    │
+│  layoutType |    │
+│  default:        │
+│  'list'          │
+│                  │
+╰──────────────────╯
+
+╭─ info ───────────╮
+│                  │
+│  snippets/globa  │
+│  l-css.liquid    │
+│                  │
+│                  │
+│  [warning]:      │
+│  VariableName    │
+│  The variable    │
+│  'ptDuration'    │
+│  uses wrong      │
+│  naming format   │
+│                  │
+│  181  assign     │
+│  ptDuration =    │
+│  125             │
+│                  │
+│                  │
+│  [warning]:      │
+│  VariableName    │
+│  The variable    │
+│  'ptDuration'    │
+│  uses wrong      │
+│  naming format   │
+│                  │
+│  183  assign     │
+│  ptDuration =    │
+│  320             │
+│                  │
+│                  │
+│  [warning]:      │
+│  VariableName    │
+│  The variable    │
+│  'ptDuration'    │
+│  uses wrong      │
+│  naming format   │
+│                  │
+│  185  assign     │
+│  ptDuration =    │
+│  600             │
+│                  │
+│                  │
+│  [warning]:      │
+│  VariableName    │
+│  The variable    │
+│  'ptDuration'    │
+│  uses wrong      │
+│  naming format   │
+│                  │
+│  187  assign     │
+│  ptDuration =    │
+│  500             │
+│                  │
+╰──────────────────╯
+
+╭─ info ───────────╮
+│                  │
+│  snippets/globa  │
+│  l-meta.liquid   │
+│                  │
+│                  │
+│  [warning]:      │
+│  VariableName    │
+│  The variable    │
+│  'SEOTitle'      │
+│  uses wrong      │
+│  naming format   │
+│                  │
+│  8  capture      │
+│  SEOTitle        │
+│                  │
+│                  │
+│  [warning]:      │
+│  VariableName    │
+│  The variable    │
+│  'themeColor'    │
+│  uses wrong      │
+│  naming format   │
+│                  │
+│  43  capture     │
+│  themeColor      │
+│                  │
+╰──────────────────╯
+
+╭─ info ───────────╮
+│                  │
+│  snippets/heade  │
+│  r-menu.liquid   │
+│                  │
+│                  │
+│  [warning]:      │
+│  VariableName    │
+│  The variable    │
+│  'isMega' uses   │
+│  wrong naming    │
+│  format          │
+│                  │
+│  3  assign       │
+│  isMega = false  │
+│                  │
+│                  │
+│                  │
+│  [warning]:      │
+│  VariableName    │
+│  The variable    │
+│  'level2FlexDir  │
+│  ection' uses    │
+│  wrong naming    │
+│  format          │
+│                  │
+│  4  assign       │
+│  level2FlexDire  │
+│  ction =         │
+│  'column'        │
+│                  │
+│                  │
+│  [warning]:      │
+│  VariableName    │
+│  The variable    │
+│  'isMega' uses   │
+│  wrong naming    │
+│  format          │
+│                  │
+│  6  assign       │
+│  isMega = true   │
+│                  │
+│                  │
+│  [warning]:      │
+│  VariableName    │
+│  The variable    │
+│  'detailState'   │
+│  uses wrong      │
+│  naming format   │
+│                  │
+│  7  assign       │
+│  detailState =   │
+│  ' open'         │
+│                  │
+│                  │
+│  [warning]:      │
+│  VariableName    │
+│  The variable    │
+│  'level2FlexDir  │
+│  ection' uses    │
+│  wrong naming    │
+│  format          │
+│                  │
+│  8  assign       │
+│  level2FlexDire  │
+│  ction = 'row'   │
+│                  │
+│                  │
+│  [warning]:      │
+│  VariableName    │
+│  The variable '  │
+│  firstElevated'  │
+│   uses wrong     │
+│  naming format   │
+│                  │
+│  12  assign      │
+│  firstElevated   │
+│  = '             │
+│  firstElevated'  │
+│                  │
+│                  │
+│                  │
+│  [warning]:      │
+│  VariableName    │
+│  The variable    │
+│  'isDrawer'      │
+│  uses wrong      │
+│  naming format   │
+│                  │
+│  17  assign      │
+│  isDrawer =      │
+│  false           │
+│                  │
+│                  │
+│  [warning]:      │
+│  VariableName    │
+│  The variable    │
+│  'level1FlexDir  │
+│  ection' uses    │
+│  wrong naming    │
+│  format          │
+│                  │
+│  18  assign      │
+│  level1FlexDire  │
+│  ction = 'row'   │
+│                  │
+│                  │
+│  [warning]:      │
+│  VariableName    │
+│  The variable    │
+│  'isDrawer'      │
+│  uses wrong      │
+│  naming format   │
+│                  │
+│  20  assign      │
+│  isDrawer =      │
+│  true            │
+│                  │
+│                  │
+│  [warning]:      │
+│  VariableName    │
+│  The variable    │
+│  'level1FlexDir  │
+│  ection' uses    │
+│  wrong naming    │
+│  format          │
+│                  │
+│  21  assign      │
+│  level1FlexDire  │
+│  ction =         │
+│  'column'        │
+│                  │
+│                  │
+│  [warning]:      │
+│  UnusedAssign    │
+│  The variable    │
+│  'isDrawer' is   │
+│  assigned but    │
+│  not used        │
+│                  │
+│  20  assign      │
+│  isDrawer =      │
+│  true            │
+│                  │
+╰──────────────────╯
+
+╭─ info ───────────╮
+│                  │
+│  snippets/inc-c  │
+│  ompressor.liqu  │
+│  id              │
+│                  │
+│                  │
+│  [warning]:      │
+│  VariableName    │
+│  The variable    │
+│  '_content'      │
+│  uses wrong      │
+│  naming format   │
+│                  │
+│  21  assign      │
+│  _content =      │
+│  content |       │
+│  strip_newlines  │
+│   | strip |      │
+│  replace: '      │
+│  ', '' |         │
+│  replace: '  ',  │
+│   ''             │
+│                  │
+╰──────────────────╯
+
+╭─ info ───────────╮
+│                  │
+│  snippets/inc-i  │
+│  mg.liquid       │
+│                  │
+│                  │
+│  [warning]:      │
+│  VariableName    │
+│  The variable    │
+│  'mediaLoader'   │
+│  uses wrong      │
+│  naming format   │
+│                  │
+│  61  assign      │
+│  mediaLoader =   │
+│  true            │
+│                  │
+╰──────────────────╯
+
+╭─ info ───────────╮
+│                  │
+│  snippets/inc-s  │
+│  ocials.liquid   │
+│                  │
+│                  │
+│  [error]:        │
+│  TranslationKey  │
+│  Exists          │
+│  'openthinking.  │
+│  socials.' does  │
+│   not have a     │
+│  matching entry  │
+│   in             │
+│  'locales/en.de  │
+│  fault.json'     │
+│                  │
+│  67  <span {{    │
+│  textStyle       │
+│  }}>{{           │
+│  'openthinking.  │
+│  socials.' |     │
+│  append:         │
+│  platform | t    │
+│  }}</span>       │
+│                  │
+│                  │
+│  [warning]:      │
+│  VariableName    │
+│  The variable    │
+│  'showIcon'      │
+│  uses wrong      │
+│  naming format   │
+│                  │
+│  17  assign      │
+│  showIcon =      │
+│  true            │
+│                  │
+│                  │
+│  [warning]:      │
+│  VariableName    │
+│  The variable    │
+│  'showText'      │
+│  uses wrong      │
+│  naming format   │
+│                  │
+│  18  assign      │
+│  showText =      │
+│  false           │
+│                  │
+│                  │
+│  [warning]:      │
+│  VariableName    │
+│  The variable    │
+│  'showIcon'      │
+│  uses wrong      │
+│  naming format   │
+│                  │
+│  20  assign      │
+│  showIcon =      │
+│  false           │
+│                  │
+│                  │
+│  [warning]:      │
+│  VariableName    │
+│  The variable    │
+│  'showText'      │
+│  uses wrong      │
+│  naming format   │
+│                  │
+│  21  assign      │
+│  showText =      │
+│  true            │
+│                  │
+│                  │
+│  [warning]:      │
+│  VariableName    │
+│  The variable    │
+│  'showIcon'      │
+│  uses wrong      │
+│  naming format   │
+│                  │
+│  25  assign      │
+│  showIcon =      │
+│  true            │
+│                  │
+│                  │
+│  [warning]:      │
+│  VariableName    │
+│  The variable    │
+│  'showText'      │
+│  uses wrong      │
+│  naming format   │
+│                  │
+│  26  assign      │
+│  showText =      │
+│  false           │
+│                  │
+│                  │
+│  [warning]:      │
+│  VariableName    │
+│  The variable    │
+│  'showIcon'      │
+│  uses wrong      │
+│  naming format   │
+│                  │
+│  28  assign      │
+│  showIcon =      │
+│  false           │
+│                  │
+│                  │
+│  [warning]:      │
+│  VariableName    │
+│  The variable    │
+│  'showText'      │
+│  uses wrong      │
+│  naming format   │
+│                  │
+│  29  assign      │
+│  showText =      │
+│  true            │
+│                  │
+│                  │
+│  [warning]:      │
+│  VariableName    │
+│  The variable    │
+│  'showButton'    │
+│  uses wrong      │
+│  naming format   │
+│                  │
+│  33  assign      │
+│  showButton =    │
+│  button |        │
+│  default: false  │
+│                  │
+│                  │
+│                  │
+│  [warning]:      │
+│  VariableName    │
+│  The variable    │
+│  'textStyle'     │
+│  uses wrong      │
+│  naming format   │
+│                  │
+│  37  capture     │
+│  textStyle       │
+│                  │
+│                  │
+│  [warning]:      │
+│  VariableName    │
+│  The variable    │
+│  'buttonStyle'   │
+│  uses wrong      │
+│  naming format   │
+│                  │
+│  44  capture     │
+│  buttonStyle     │
+│                  │
+╰──────────────────╯
+
+╭─ info ───────────╮
+│                  │
+│  snippets/inc-v  │
+│  ideo.liquid     │
+│                  │
+│                  │
+│  [warning]:      │
+│  VariableName    │
+│  The variable    │
+│  'vidMobile'     │
+│  uses wrong      │
+│  naming format   │
+│                  │
+│  28  assign      │
+│  vidMobile =     │
+│  vidMobile |     │
+│  default: nil    │
+│                  │
+│                  │
+│  [warning]:      │
+│  VariableName    │
+│  The variable    │
+│  'clickToPlay'   │
+│  uses wrong      │
+│  naming format   │
+│                  │
+│  34  assign      │
+│  clickToPlay =   │
+│  clickToPlay     │
+│                  │
+│                  │
+│  [warning]:      │
+│  VariableName    │
+│  The variable    │
+│  'vidPoster'     │
+│  uses wrong      │
+│  naming format   │
+│                  │
+│  82  assign      │
+│  vidPoster =     │
+│  vid.preview_im  │
+│  age |           │
+│  image_url:      │
+│  width: 1500     │
+│                  │
+│                  │
+│  [warning]:      │
+│  VariableName    │
+│  The variable    │
+│  'vidPoster'     │
+│  uses wrong      │
+│  naming format   │
+│                  │
+│  108  assign     │
+│  vidPoster =     │
+│  vid.preview_im  │
+│  age |           │
+│  image_url:      │
+│  width: 1000     │
+│                  │
+╰──────────────────╯
+
+╭─ info ───────────╮
+│                  │
+│  snippets/pdp-a  │
+│  ctions.liquid   │
+│                  │
+│                  │
+│  [warning]:      │
+│  VariableName    │
+│  The variable    │
+│  'showPrice'     │
+│  uses wrong      │
+│  naming format   │
+│                  │
+│  50  assign      │
+│  showPrice =     │
+│  true            │
+│                  │
+│                  │
+│  [warning]:      │
+│  VariableName    │
+│  The variable    │
+│  'showPrice'     │
+│  uses wrong      │
+│  naming format   │
+│                  │
+│  52  assign      │
+│  showPrice =     │
+│  false           │
+│                  │
+│                  │
+│  [warning]:      │
+│  VariableName    │
+│  The variable    │
+│  'parentProduct  │
+│  Id' uses wrong  │
+│   naming format  │
+│                  │
+│                  │
+│  135  {%-        │
+│  assign parentP  │
+│  roductId =      │
+│  product.id -%}  │
+│                  │
+│                  │
+│                  │
+│  [warning]:      │
+│  UnusedAssign    │
+│  The variable    │
+│  'id_append' is  │
+│   assigned but   │
+│  not used        │
+│                  │
+│  8  assign       │
+│  id_append =     │
+│  section_id      │
+│                  │
+╰──────────────────╯
+
+╭─ info ───────────╮
+│                  │
+│  snippets/pdp-m  │
+│  edia-core.liqu  │
+│  id              │
+│                  │
+│                  │
+│  [warning]:      │
+│  VariableName    │
+│  The variable    │
+│  'videoLoop'     │
+│  uses wrong      │
+│  naming format   │
+│                  │
+│  25  assign      │
+│  videoLoop =     │
+│  loop            │
+│                  │
+│                  │
+│  [warning]:      │
+│  VariableName    │
+│  The variable '  │
+│  videoAutoplay'  │
+│   uses wrong     │
+│  naming format   │
+│                  │
+│  26  assign      │
+│  videoAutoplay   │
+│  = autoplay      │
+│                  │
+│                  │
+│  [warning]:      │
+│  VariableName    │
+│  The variable '  │
+│  videoControls'  │
+│   uses wrong     │
+│  naming format   │
+│                  │
+│  27  assign      │
+│  videoControls   │
+│  = controls      │
+│                  │
+│                  │
+│  [warning]:      │
+│  VariableName    │
+│  The variable    │
+│  'videoMuted'    │
+│  uses wrong      │
+│  naming format   │
+│                  │
+│  28  assign      │
+│  videoMuted =    │
+│  muted           │
+│                  │
+│                  │
+│  [warning]:      │
+│  VariableName    │
+│  The variable    │
+│  'clickToPlay'   │
+│  uses wrong      │
+│  naming format   │
+│                  │
+│  29  assign      │
+│  clickToPlay =   │
+│  true            │
+│                  │
+│                  │
+│  [warning]:      │
+│  VariableName    │
+│  The variable    │
+│  'mediaLoader'   │
+│  uses wrong      │
+│  naming format   │
+│                  │
+│  48  assign      │
+│  mediaLoader =   │
+│  true            │
+│                  │
+│                  │
+│  [warning]:      │
+│  VariableName    │
+│  The variable    │
+│  'mediaLoader'   │
+│  uses wrong      │
+│  naming format   │
+│                  │
+│  101  assign     │
+│  mediaLoader =   │
+│  true            │
+│                  │
+╰──────────────────╯
+
+╭─ info ───────────╮
+│                  │
+│  snippets/pdp-m  │
+│  edia.liquid     │
+│                  │
+│                  │
+│  [warning]:      │
+│  VariableName    │
+│  The variable    │
+│  'sliderState'   │
+│  uses wrong      │
+│  naming format   │
+│                  │
+│  27  assign      │
+│  sliderState =   │
+│  true            │
+│                  │
+│                  │
+│  [warning]:      │
+│  VariableName    │
+│  The variable    │
+│  'sliderState'   │
+│  uses wrong      │
+│  naming format   │
+│                  │
+│  29  assign      │
+│  sliderState =   │
+│  false           │
+│                  │
+│                  │
+│  [warning]:      │
+│  VariableName    │
+│  The variable    │
+│  'sliderStateMo  │
+│  b' uses wrong   │
+│  naming format   │
+│                  │
+│  33  assign      │
+│  sliderStateMob  │
+│   = true         │
+│                  │
+│                  │
+│  [warning]:      │
+│  VariableName    │
+│  The variable    │
+│  'sliderStateMo  │
+│  b' uses wrong   │
+│  naming format   │
+│                  │
+│  35  assign      │
+│  sliderStateMob  │
+│   = false        │
+│                  │
+╰──────────────────╯
+
+╭─ info ───────────╮
+│                  │
+│  snippets/pdp-p  │
+│  opups.liquid    │
+│                  │
+│                  │
+│  [warning]:      │
+│  VariableName    │
+│  The variable    │
+│  'mediaLoader'   │
+│  uses wrong      │
+│  naming format   │
+│                  │
+│  106  assign     │
+│  mediaLoader =   │
+│  true            │
+│                  │
+│                  │
+│  [warning]:      │
+│  VariableName    │
+│  The variable    │
+│  'mediaLoader'   │
+│  uses wrong      │
+│  naming format   │
+│                  │
+│  136  assign     │
+│  mediaLoader =   │
+│  true            │
+│                  │
+╰──────────────────╯
+
+╭─ info ───────────╮
+│                  │
+│  snippets/pdp-v  │
+│  ariant-options  │
+│  .liquid         │
+│                  │
+│                  │
+│  [warning]:      │
+│  VariableName    │
+│  The variable    │
+│  'optionType'    │
+│  uses wrong      │
+│  naming format   │
+│                  │
+│  69  {%- assign  │
+│   optionType =   │
+│  option.name |   │
+│  downcase |      │
+│  escape -%}      │
+│                  │
+╰──────────────────╯
+
+╭─ info ───────────╮
+│                  │
+│  snippets/pdp-v  │
+│  ariant-picker.  │
+│  liquid          │
+│                  │
+│                  │
+│  [warning]:      │
+│  VariableName    │
+│  The variable    │
+│  'sizeGuideTrig  │
+│  ger' uses       │
+│  wrong naming    │
+│  format          │
+│                  │
+│  22  {%-         │
+│  capture sizeGu  │
+│  ideTrigger -%}  │
+│                  │
+│                  │
+╰──────────────────╯
+
+╭─ info ───────────╮
+│                  │
+│  Theme Check     │
+│  Summary.        │
+│                  │
+│  197 files       │
+│  inspected with  │
+│   218 total      │
+│  offenses found  │
+│   across 48      │
+│  files.          │
+│  3 errors.       │
+│  215 warnings.   │
+│                  │
+╰──────────────────╯
+
+exit=1

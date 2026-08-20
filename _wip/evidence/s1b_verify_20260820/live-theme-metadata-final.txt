@@ -1,0 +1,31 @@
+^D{
+  "themes": {
+    "nodes": [
+      {
+        "id": "gid://shopify/OnlineStoreTheme/154500595909",
+        "name": "Ethereal",
+        "role": "MAIN",
+        "updatedAt": "2026-02-19T21:36:27Z"
+      },
+      {
+        "id": "gid://shopify/OnlineStoreTheme/160076628165",
+        "name": "MapleMoon Private Review 20260817 S1",
+        "role": "UNPUBLISHED",
+        "updatedAt": "2026-08-17T11:07:39Z"
+      },
+      {
+        "id": "gid://shopify/OnlineStoreTheme/160142491845",
+        "name": "Updated copy of Ethereal",
+        "role": "UNPUBLISHED",
+        "updatedAt": "2026-08-19T01:19:02Z"
+      },
+      {
+        "id": "gid://shopify/OnlineStoreTheme/160184271045",
+        "name": "Liquid Console (3.92.1)",
+        "role": "DEVELOPMENT",
+        "updatedAt": "2026-08-20T00:58:14Z"
+      }
+    ]
+  }
+}
+exit=0

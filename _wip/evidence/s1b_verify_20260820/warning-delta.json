@@ -1,0 +1,33 @@
+{
+  "identity": ["relative file", "severity", "rule ID", "message"],
+  "line_column_excluded_reason": "Vendor edits can move an otherwise identical diagnostic; excluding position prevents moved warnings from being mislabeled as new.",
+  "before": {"exit": 1, "errors": 3, "warnings": 195, "total": 198},
+  "after": {"exit": 1, "errors": 3, "warnings": 215, "total": 218},
+  "warning_delta": {
+    "shared_pre_existing_re_reported": 184,
+    "vendor_160_introduced": 31,
+    "removed_from_140": 11,
+    "net": 20
+  },
+  "introduced_by_rule": {"VariableName": 31},
+  "introduced_by_file": {
+    "blocks/a-video.liquid": 2,
+    "sections/ls-product.liquid": 8,
+    "sections/ls-tabbed-collections.liquid": 3,
+    "sections/overlay-newsletter.liquid": 2,
+    "sections/t-product.liquid": 8,
+    "snippets/c-cart.liquid": 1,
+    "snippets/c-prod-card.liquid": 1,
+    "snippets/global-css.liquid": 4,
+    "snippets/pdp-media-core.liquid": 1,
+    "snippets/pdp-popups.liquid": 1
+  },
+  "removed_by_rule": {"UnusedAssign": 2, "VariableName": 9},
+  "removed_by_file": {
+    "sections/ls-slideshow.liquid": 4,
+    "snippets/c-facets.liquid": 4,
+    "snippets/c-prod-card.liquid": 1,
+    "snippets/c-search.liquid": 1,
+    "snippets/pdp-actions.liquid": 1
+  }
+}
