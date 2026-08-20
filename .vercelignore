@@ -68,4 +68,13 @@ _wip/*
 !_wip/styles/
 _wip/styles/*
 !_wip/styles/homepage.css
+!_wip/a11y_inner.css
+!_wip/design_refinement_20260723.css
+# mock-cart lives two levels down; re-include each parent before its child.
+!_wip/deploy/
+_wip/deploy/*
+!_wip/deploy/site/
+_wip/deploy/site/*
+!_wip/deploy/site/mock-cart.css
+!_wip/deploy/site/mock-cart.js
 variants/
