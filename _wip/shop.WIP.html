@@ -345,16 +345,20 @@ html{scroll-behavior:smooth;}
   // retail prices. The 6-pack rung was missing here, and no rung carried a quantity, so the
   // cart counted every multipack as a single unit.
   var ECLIPSE_SIZES=[{label:'1 bite',price:5.99,quantity:1},{label:'6 bites',price:32.99,quantity:6},{label:'12 bites',price:59.99,quantity:12}];
+  // Bars 90g, same export. 1 BAR $12.95 / 2 BARS $25.25 / 5 BARS $61.51 / 10 BARS $116.55.
+  var BAR_TIERS=[{label:'1 bar',price:12.95,quantity:1},{label:'2 bars',price:25.25,quantity:2},{label:'5 bars',price:61.51,quantity:5},{label:'10 bars',price:116.55,quantity:10}];
+  // Bananas 20g, same export. 1 $2.99 / 5 $14.25 / 10 $26.99 / 20 $50.99.
+  var BANANA_TIERS=[{label:'1 banana',price:2.99,quantity:1},{label:'5 bananas',price:14.25,quantity:5},{label:'10 bananas',price:26.99,quantity:10},{label:'20 bananas',price:50.99,quantity:20}];
   var MOON_TIERS=[{label:'1 moon',price:2.50,quantity:1},{label:'5 moons',price:12.19,quantity:5},{label:'10 moons',price:23.75,quantity:10},{label:'20 moons',price:44.99,quantity:20}];
   // same trusted catalog as the homepage; bars and elixirs priced from Carli's doc
   var CAT={
     bars:[
-      {n:'Coconut & Goji',img:'bar_goji_coconut',d:'Shredded coconut and goji berries through naturally sweet carob.',price:'$12.95',size:'90g'},
-      {n:'Cayenne Chilli',img:'bar_cayenne',d:'Rich, naturally sweet carob with a gentle hint of cayenne and a touch of Celtic sea salt for the perfect balance of sweet and spice.',price:'$12.95',size:'90g'},
-      {n:'Roasted Hazelnut',img:'bar_hazelnut',d:'Whole roasted hazelnuts deliver an irresistibly indulgent, crunchy carob experience.',price:'$12.95',size:'90g'},
-      {n:'Peppermint & Buckwheat',img:'bar_peppermint',d:'Refreshing premium peppermint meets the satisfying crunch of activated buckwheat.',price:'$12.95',size:'90g'},
-      {n:'Pure Carob & Cacao Butter',img:'bar_pure_carob',d:'Crafted from only two wholefood ingredients for simple, naturally sweet, guilt-free perfection.',price:'$12.95',size:'90g'},
-      {n:'Almond & Celtic Salt',img:'bar_almond',d:'The perfect harmony of crunchy whole roasted almonds, natural sweetness and a touch of saltiness.',price:'$12.95',size:'90g'}
+      {n:'Coconut & Goji',img:'bar_goji_coconut',d:'Shredded coconut and goji berries through naturally sweet carob.',price:'$12.95',size:'90g',sizes:BAR_TIERS,optionLabel:'Pack'},
+      {n:'Cayenne Chilli',img:'bar_cayenne',d:'Rich, naturally sweet carob with a gentle hint of cayenne and a touch of Celtic sea salt for the perfect balance of sweet and spice.',price:'$12.95',size:'90g',sizes:BAR_TIERS,optionLabel:'Pack'},
+      {n:'Roasted Hazelnut',img:'bar_hazelnut',d:'Whole roasted hazelnuts deliver an irresistibly indulgent, crunchy carob experience.',price:'$12.95',size:'90g',sizes:BAR_TIERS,optionLabel:'Pack'},
+      {n:'Peppermint & Buckwheat',img:'bar_peppermint',d:'Refreshing premium peppermint meets the satisfying crunch of activated buckwheat.',price:'$12.95',size:'90g',sizes:BAR_TIERS,optionLabel:'Pack'},
+      {n:'Pure Carob & Cacao Butter',img:'bar_pure_carob',d:'Crafted from only two wholefood ingredients for simple, naturally sweet, guilt-free perfection.',price:'$12.95',size:'90g',sizes:BAR_TIERS,optionLabel:'Pack'},
+      {n:'Almond & Celtic Salt',img:'bar_almond',d:'The perfect harmony of crunchy whole roasted almonds, natural sweetness and a touch of saltiness.',price:'$12.95',size:'90g',sizes:BAR_TIERS,optionLabel:'Pack'}
     ],
     moons:[
       {n:'Coconut & Goji Moon',img:'moon_goji_coconut',d:'The perfect balance of sweetness and texture in every bite.',price:'1 $2.50 / 5 $12.19 / 10 $23.75 / 20 $44.99',size:'12g',sizes:MOON_TIERS,optionLabel:'Pack'},
@@ -377,7 +381,7 @@ html{scroll-behavior:smooth;}
       {n:'Spiced Carob Elixir',img:'elixir_spiced',d:'A warm carob drink with an Ayurvedic inspired spice blend',price:'$26.95',size:'150g'}
     ],
     bananas:[
-      {n:'Carob Bananas',img:'bananas',d:'Spray Free Australian Grown Bananas coated in our pure carob for the perfect chewy treat.',price:'1 $2.99 / 5 $14.25 / 10 $26.99 / 20 $50.99',size:'20g'}
+      {n:'Carob Bananas',img:'bananas',d:'Spray Free Australian Grown Bananas coated in our pure carob for the perfect chewy treat.',price:'$2.99',size:'20g',sizes:BANANA_TIERS,optionLabel:'Pack'}
     ],
     powder:[
       {n:'Carob Powder',img:'powder_roasted',d:'Roasted organic carob powder. Caffeine free and naturally sweet, for baking, drinks and raw treats.',price:'$14.95',size:'300g'}
