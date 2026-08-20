@@ -214,19 +214,35 @@ html{scroll-behavior:smooth;}
 }
 </script>
 <!--MM-A11Y-SAFE-->
+<!-- MapleMoon system pilot cascade: tokens → base → chrome → primitives → registered route exceptions. -->
+<link rel="stylesheet" href="/assets/design-system/mm-tokens.css" data-mm-system-layer="tokens">
+<link rel="stylesheet" href="/assets/design-system/mm-base.css" data-mm-system-layer="base">
+<link rel="stylesheet" href="/assets/design-system/mm-chrome.css" data-mm-system-layer="chrome">
+<link rel="stylesheet" href="/assets/design-system/mm-primitives.css" data-mm-system-layer="primitives">
+<style id="mm-shop-chrome-graft-20260820">
+@media (max-width:900px){
+  .mm-site-header[data-mm-enhanced] :is(.mm-header__nav,.mm-header__utility-nav)[hidden]{display:none;}
+  .mm-site-header[data-mm-enhanced] :is(.mm-header__nav,.mm-header__utility-nav) a{display:flex;}
+}
+@media (max-width:560px){
+  body[data-mm-menu-open] .sp-top .bar>.sp-nav:first-child{visibility:visible;}
+}
+</style>
+<script defer src="/assets/design-system/mm-chrome.js"></script>
 </head>
-<body>
+<body data-mm-route="shop">
 <div class="sp">
   <div class="sp-mist" aria-hidden="true"></div>
   <div class="sp-grain" aria-hidden="true"></div>
   <div class="sp-moonwash" aria-hidden="true"></div>
-  <a class="skip-link" href="#catalogue-title">Skip to the catalogue</a>
+  <a class="skip-link mm-skip-link" href="#catalogue-title">Skip to the catalogue</a>
 
-  <header class="sp-top"><div class="wrap bar">
-    <nav class="sp-nav" aria-label="Primary navigation"><a href="/shop" class="on">Shop</a><a href="/our-story">Our Story</a><a href="/carob-story">What is Carob</a></nav>
-    <a class="sp-logo" href="/">maple moon</a>
-    <nav class="sp-nav r" aria-label="Utility navigation"><a href="/stockists">Stockists</a><span class="sp-currency" aria-label="Currency, Australian dollars">AUD $</span>
-      <button class="sp-cart" data-cart-toggle type="button" aria-label="Cart, 0 items, subtotal $0.00"><svg viewBox="0 0 24 24"><path d="M6 8h12l-1 12H7L6 8z"/><path d="M9 8a3 3 0 0 1 6 0"/></svg><b data-cart-count>0</b></button></nav>
+  <header class="sp-top mm-site-header" data-mm-chrome data-header-theme="paper" data-mm-menu-state="closed"><div class="wrap bar mm-wrap mm-header__bar">
+    <button class="mm-menu-toggle mm-icon-control" type="button" data-mm-menu-toggle aria-expanded="false" aria-label="Open menu" hidden>Menu</button>
+    <nav class="sp-nav mm-header__nav" id="mm-shop-primary-nav" aria-label="Primary navigation" data-mm-primary-nav><a href="/shop" class="on" aria-current="page">Shop</a><a href="/our-story">Our Story</a><a href="/carob-story">What is Carob</a></nav>
+    <a class="sp-logo mm-header__home" href="/" data-mm-home-link>maple moon</a>
+    <div class="mm-header__right"><nav class="sp-nav r mm-header__utility-nav" id="mm-shop-utility-nav" aria-label="Utility navigation" data-mm-utility-nav><a href="/stockists">Stockists</a><span class="sp-currency" aria-label="Currency, Australian dollars">AUD $</span></nav>
+      <button class="sp-cart mm-icon-control" data-cart-toggle data-mm-cart-toggle type="button" aria-label="Cart, 0 items, subtotal $0.00"><svg viewBox="0 0 24 24"><path d="M6 8h12l-1 12H7L6 8z"/><path d="M9 8a3 3 0 0 1 6 0"/></svg><b data-cart-count>0</b></button></div>
   </div></header>
 
   <main class="sp-main" id="shop-main">
@@ -329,10 +345,10 @@ html{scroll-behavior:smooth;}
   </section>
   </main>
 
-  <footer class="sp-ft"><div class="wrap">
-    <div class="row">
-      <a class="serif" href="/" style="font-size:1.15rem">maple moon</a>
-      <nav class="fnav" aria-label="Footer navigation"><a href="/shop">Shop</a><a href="/our-story">Our Story</a><a href="/stockists">Stockists</a><a href="mailto:info@maplemoon.com.au?subject=Wholesale%20enquiry">Wholesale</a><a href="/contact">Contact</a><a href="/faq">FAQ</a></nav>
+  <footer class="sp-ft mm-site-footer"><div class="wrap mm-wrap">
+    <div class="row mm-site-footer__row">
+      <a class="serif mm-site-footer__home" href="/" style="font-size:1.15rem">maple moon</a>
+      <nav class="fnav mm-site-footer__nav" aria-label="Footer navigation"><a href="/shop">Shop</a><a href="/our-story">Our Story</a><a href="/stockists">Stockists</a><a href="mailto:info@maplemoon.com.au?subject=Wholesale%20enquiry">Wholesale</a><a href="/contact">Contact</a><a href="/faq">FAQ</a></nav>
     </div>
   </div></footer>
 
