@@ -1,13 +1,16 @@
 {
   "buildCommand": "",
   "outputDirectory": ".",
-  "redirects": [
-    { "source": "/", "destination": "/homepage.html", "statusCode": 308 },
-    { "source": "/shop", "destination": "/shop.html", "statusCode": 302 },
-    { "source": "/stockists", "destination": "/stockists.html", "statusCode": 302 },
-    { "source": "/recipes", "destination": "/homepage.html", "statusCode": 302 },
-    { "source": "/contact", "destination": "/faq.html", "statusCode": 302 },
-    { "source": "/ingredients", "destination": "/homepage.html", "statusCode": 302 }
+  "rewrites": [
+    { "source": "/", "destination": "/_wip/homepage_real_1_lead_photo.WIP.html" },
+    { "source": "/shop", "destination": "/_wip/shop.WIP.html" },
+    { "source": "/our-story", "destination": "/_wip/our-story.WIP.html" },
+    { "source": "/stockists", "destination": "/_wip/stockists.WIP.html" },
+    { "source": "/carob-story", "destination": "/_wip/carob-story.WIP.html" },
+    { "source": "/contact", "destination": "/_wip/contact.WIP.html" },
+    { "source": "/faq", "destination": "/_wip/faq.WIP.html" },
+    { "source": "/recipes", "destination": "/_wip/homepage_real_1_lead_photo.WIP.html" },
+    { "source": "/ingredients", "destination": "/_wip/homepage_real_1_lead_photo.WIP.html" }
   ],
   "headers": [
     {

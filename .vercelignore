@@ -54,6 +54,18 @@ checkpoints/
 *.bak
 *.r20_*
 
-# WIP working copies + scaffolding (never deploy)
-_wip/
+# WIP working copies + scaffolding: deny by default, then allow only the seven
+# live page targets and their audited in-tree dependency. Do not collapse this
+# to `_wip/`: ignored parent directories cannot be safely re-included.
+_wip/*
+!_wip/homepage_real_1_lead_photo.WIP.html
+!_wip/shop.WIP.html
+!_wip/our-story.WIP.html
+!_wip/stockists.WIP.html
+!_wip/carob-story.WIP.html
+!_wip/contact.WIP.html
+!_wip/faq.WIP.html
+!_wip/styles/
+_wip/styles/*
+!_wip/styles/homepage.css
 variants/
