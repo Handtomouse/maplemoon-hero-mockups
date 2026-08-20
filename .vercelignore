@@ -47,6 +47,14 @@ _playground.html
 # Internal session docs + backups (never deploy)
 checkpoints/
 
+# Internal working trees and operational records (never deploy)
+_media-review/
+docs/
+explorations/
+review-20260724/
+scripts/
+out/
+
 # Design PDF backups at root — never deploy
 *.pdf
 
@@ -55,8 +63,9 @@ checkpoints/
 *.r20_*
 
 # WIP working copies + scaffolding: deny by default, then allow only the seven
-# live page targets and their audited in-tree dependency. Do not collapse this
-# to `_wip/`: ignored parent directories cannot be safely re-included.
+# live page targets and their audited one-level dependencies. Vercel's ignore
+# matcher does not support nested re-inclusion, so nested deploy assets live in
+# the flat assets/ directory instead; do not re-add nested negation rules here.
 _wip/*
 !_wip/homepage_real_1_lead_photo.WIP.html
 !_wip/shop.WIP.html
@@ -65,16 +74,6 @@ _wip/*
 !_wip/carob-story.WIP.html
 !_wip/contact.WIP.html
 !_wip/faq.WIP.html
-!_wip/styles/
-_wip/styles/*
-!_wip/styles/homepage.css
 !_wip/a11y_inner.css
 !_wip/design_refinement_20260723.css
-# mock-cart lives two levels down; re-include each parent before its child.
-!_wip/deploy/
-_wip/deploy/*
-!_wip/deploy/site/
-_wip/deploy/site/*
-!_wip/deploy/site/mock-cart.css
-!_wip/deploy/site/mock-cart.js
 variants/

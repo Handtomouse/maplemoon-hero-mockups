@@ -47,12 +47,16 @@
       "destination": "/_wip/design_refinement_20260723.css"
     },
     {
+      "source": "/_wip/styles/homepage.css",
+      "destination": "/assets/homepage.css"
+    },
+    {
       "source": "/mock-cart.css",
-      "destination": "/_wip/deploy/site/mock-cart.css"
+      "destination": "/assets/mock-cart.css"
     },
     {
       "source": "/mock-cart.js",
-      "destination": "/_wip/deploy/site/mock-cart.js"
+      "destination": "/assets/mock-cart.js"
     }
   ],
   "headers": [

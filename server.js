@@ -5,6 +5,21 @@ const os = require('os');
 const app = express();
 app.use(express.json({ limit: '256kb' }));
 
+// Keep localhost route QA aligned with the exact static rewrites Vercel ships.
+const localRewrites = new Map(
+  (require('./vercel.json').rewrites || [])
+    .filter(({ source }) => !/[()*:]/.test(source))
+    .map(({ source, destination }) => [source, destination])
+);
+app.use((req, res, next) => {
+  if (req.method !== 'GET' && req.method !== 'HEAD') return next();
+  const destination = localRewrites.get(req.path);
+  if (!destination) return next();
+  const queryIndex = req.url.indexOf('?');
+  req.url = destination + (queryIndex === -1 ? '' : req.url.slice(queryIndex));
+  next();
+});
+
 // Dev-only: the tuning playground POSTs changed CSS vars; we bake them into the .wf{} defaults of the lead file.
 // Hardened: explicit key allowlist + strict value charset (no ; { } < > so a value can't escape the CSS declaration
 // or the <style> element → prevents stored XSS), and localhost-only.
