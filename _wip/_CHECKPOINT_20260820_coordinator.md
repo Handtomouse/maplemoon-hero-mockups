@@ -297,3 +297,58 @@ and the FAQ header nav retarget of "What is Carob".
 `REGISTRY_AUTHORITY_20260819.md` rules on design-system route registries, **not** card
 accounting. The card authority is the CAT ledger. This session never opened either file and
 never relied on card accounting, so nothing here inherits that confusion.
+
+---
+
+# COORDINATOR PASS 4, pack pickers wired
+
+Nate approved wiring pack pickers for the 90g bars and the Carob Bananas, and asked me to
+check the Crescent Moons 20 rung rather than assume it.
+
+## Crescent Moons: checked, already correct, nothing done
+`MOON_TIERS` already carried `{label:'20 moons',price:44.99,quantity:20}`. The 20 rung was
+never missing. No change made.
+
+## Built: `137a80d feat(shop): wire pack pickers for the 90g bars and Carob Bananas`
+
+    BAR_TIERS     1 $12.95 / 2 $25.25 / 5 $61.51 / 10 $116.55
+    BANANA_TIERS  1 $2.99  / 5 $14.25 / 10 $26.99 / 20 $50.99
+
+Both taken from the governing export, both with per-rung `quantity`.
+
+### A live mispricing found and fixed on the way
+The banana `price` field held the ladder as a display string,
+`'1 $2.99 / 5 $14.25 / 10 $26.99 / 20 $50.99'`. With no `sizes` array the renderer fell back to
+`priceNumber()`, whose regex `\d+(?:\.\d{1,2})?` returns the **first** number in the string.
+That was the leading `1`, so the card carried `unitPrice 1` and **sold a $2.99 product for
+$1.00**. Confirmed in the browser before the change:
+
+    BEFORE  banana card  unitPrice="1"  ->  Cart, 1 item, subtotal $1.00
+
+The moons escaped this only because they already had `sizes`, which takes precedence.
+Any future product given a ladder string but no `sizes` array will hit the same trap.
+`price` is a display field; `sizes` is the commerce truth.
+
+## Verify evidence
+Every rung exercised in isolation, fresh page load each time, at 1440 and 390.
+All 15 rungs across four categories passed, cart item count equal to declared rung quantity:
+
+    bars     1/2/5/10   ->  1, 2, 5, 10 items   $12.95, $25.25, $61.51, $116.55
+    moons    1/5/10/20  ->  1, 5, 10, 20 items  $2.50, $12.19, $23.75, $44.99
+    bites    1/6/12     ->  1, 6, 12 items      $5.99, $32.99, $59.99
+    bananas  1/5/10/20  ->  1, 5, 10, 20 items  $2.99, $14.25, $26.99, $50.99
+
+Picker coverage is deliberately partial where products are pending or simple:
+bars 6/6, bananas 1/1, bites 5/6 (bundle is a simple), moons 4/6 (two are `pending:true`).
+Pending stays pending and gets an Enquire link, not a cart button.
+Parse OK, `diff --check` clean, no horizontal overflow at either width, zero `a[href="#"]`.
+
+## Deliberately not done
+`pickerAttribute` still emits `data-size-picker="eclipse"` for every non-moon category, so bar
+and banana cards carry an attribute named after a different product line. It is cosmetic:
+nothing in the CSS or JS selects on it. Renaming it was rejected because the frozen QA
+baselines under `_wip/evidence/` key on that exact string, and a rename would break diffing
+against them for no functional gain. Logged rather than fixed.
+
+No price value was invented or altered anywhere in this pass. Nothing pushed, nothing deployed.
+FAQ footer promotion and the FAQ nav retarget remain untouched.
