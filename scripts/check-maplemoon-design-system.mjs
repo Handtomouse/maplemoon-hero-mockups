@@ -383,7 +383,11 @@ if (mode === '--route-conformance') {
       if (!html.includes('data-mm-home-pilot')) failures.push('home: missing Homepage pilot scope');
       // The pilot must preserve the Homepage's admitted navigation copy; global IA
       // expansion belongs to a separately approved content migration.
-      for (const requiredRouteHref of ['/shop.WIP.html','/our-story.WIP.html','/stockists.WIP.html']) {
+      // Updated 20 Aug 2026: these were '/shop.WIP.html' etc. The site now serves clean
+      // routes via vercel.json rewrites (4c480b7) and every internal link was migrated
+      // (623a840), so the .WIP.html forms no longer appear in any page. The intent of the
+      // check is unchanged: the pilot must still link to these three routes.
+      for (const requiredRouteHref of ['/shop','/our-story','/stockists']) {
         if (!html.includes(`href="${requiredRouteHref}"`)) failures.push(`home: preserved chrome is missing ${requiredRouteHref}`);
       }
     }
