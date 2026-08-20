@@ -92,3 +92,61 @@ built verbatim: "Naturally bitter" and "Contains caffeine and theobromine".
    (already built as 02, which matches her own suggestion).
 
 Nothing sent. No client comms drafted or issued. Invoicing untouched.
+
+---
+
+# BUILD SESSION, same day, mode changed from report to build
+
+Nate: stop blocking on small things, log them and keep moving. Scope expanded to
+include carob-story, a contact page and the footer.
+
+## Built and verified
+- `84bee4d` carob-story: visible "FEATURE" removed from the comparison divider and
+  the table header, header keeps a visually hidden label for screen readers.
+  Cacao column now reads "Cacao powder" in header, specimen label and all four
+  mobile data-labels. Her other carob edits were already live.
+  The FAQ block she asked to drop was already out of the body. Only dead `.faq`
+  CSS remains, inside minified media queries, left alone deliberately: zero
+  visual effect, non-trivial breakage risk.
+- `a6062a1` new `_wip/contact.WIP.html`, plus Wholesale and a real Contact link in
+  the footer of all five existing pages. Shopify-native field names. No endpoint
+  invented; the form does not post and says so.
+- `4ca4c47` contact: page background fixed, grid overflow guards.
+- `8a23953` our-story: visible "Tone rewrite pending Carli's copy" chip.
+- `841b934` then `e1c4ab0` bar order.
+
+## Bar order, the correction that matters
+First pass mapped colours from the shop swatch hex chips. That was wrong.
+Measured off the real pack artwork instead:
+  almond   rgb(197,157,110) hue 32.4 sat 42.9%  desaturated tan  = brown
+  hazelnut rgb(217,171,79)  hue 40.0 sat 64.5%  saturated gold   = yellow
+Final order goji, cayenne, hazelnut, peppermint, pure, almond.
+Caught by rendering the proof, not by reading CSS. Swatch chips are not the pack.
+
+## Assumption logged, still needs Carli
+Built the HOME PAGE sequence on instruction. Note the premise was inverted in the
+brief: Shop PAGE (05:57 UTC) is the LATER email, not HOME PAGE (04:53 UTC), so
+"latest wins" would select the other order. Two strings either way.
+
+## Testing note worth keeping
+Chrome headless clamps its viewport to a 500px minimum. `--window-size=390`
+lays out at 500 and crops the image to 390, which fakes a horizontal overflow on
+any page. Confirmed with a control page reporting clientWidth 500. Use 500 or
+wider, or real device emulation. A previous "mobile overflow" finding made this
+way would be a false positive.
+
+## Founder photos
+Contact sheet of all 70 frames: `~/UFC/ops/qa/mm_founder_contactsheet_20260820/index.html`
+Frames 73 and 74 are absent from both raw deliveries, yet every shipped founder
+asset is a crop of Heros-73. That frame reached us by some other route. Nothing
+generated. Selection is Nate's, then Carli's.
+
+## Font mismatch, investigated, no fix made
+Her note "Carli and Dylan: The font is different". All WIP pages load the same
+Adobe kit dvz0xjs. Every heading on our-story resolves to p22-mackinac-pro via
+explicit rules, including both founder h3s. `.amp` is undefined site-wide and
+inert. The only variation is the deliberate italic on the ampersand. Checked at
+pixel level too. No defect found, so nothing was guessed at. Needs her to point.
+
+## Visual proof
+`~/UFC/ops/qa/mm_build_proof_20260820/index.html`
