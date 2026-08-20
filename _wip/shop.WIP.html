@@ -340,7 +340,11 @@ html{scroll-behavior:smooth;}
 <script>
 (function(){
   var PS='/assets/product_shots/';
-  var ECLIPSE_SIZES=[{label:'50g',price:5.99},{label:'Value pack',price:59.99}];
+  // Pack ladder from the governing WooCommerce export (sha256 eeea19fd89b3…, 119 rows):
+  // 1 BITE $5.99 / 6 BITES $32.99 / 12 BITES $59.99. Sale-column prices, which are the live
+  // retail prices. The 6-pack rung was missing here, and no rung carried a quantity, so the
+  // cart counted every multipack as a single unit.
+  var ECLIPSE_SIZES=[{label:'1 bite',price:5.99,quantity:1},{label:'6 bites',price:32.99,quantity:6},{label:'12 bites',price:59.99,quantity:12}];
   var MOON_TIERS=[{label:'1 moon',price:2.50,quantity:1},{label:'5 moons',price:12.19,quantity:5},{label:'10 moons',price:23.75,quantity:10},{label:'20 moons',price:44.99,quantity:20}];
   // same trusted catalog as the homepage; bars and elixirs priced from Carli's doc
   var CAT={
@@ -361,11 +365,11 @@ html{scroll-behavior:smooth;}
       {n:'Roasted Hazelnut Moon',img:'moon_hazelnut',d:'Roasted whole hazelnuts in each crescent bite.',price:'1 $2.50 / 5 $12.19 / 10 $23.75 / 20 $44.99',size:'12g',sizes:MOON_TIERS,optionLabel:'Pack'}
     ],
     bites:[
-      {n:'Pecan Nut Eclipse Bite',img:'eclipse_pecan',d:'A blend of pecans and dates for a fudgy inside, coated in our pure carob',price:'$5.99–$59.99',size:'50g',sizes:ECLIPSE_SIZES},
-      {n:'Salted Almond Eclipse Bite',img:'eclipse_almond',d:'The perfect blend of sweetness, crunch and saltiness to satisfy every sweet and savoury craving.',price:'$5.99–$59.99',size:'50g',sizes:ECLIPSE_SIZES},
-      {n:'Hazelnut Eclipse Bite',img:'eclipse_hazelnut',d:'Crunchy, rich hazelnut bites crafted for the perfect indulgent pick-me-up.',price:'$5.99–$59.99',size:'50g',sizes:ECLIPSE_SIZES},
-      {n:'Goji Ripe Eclipse Bite',img:'eclipse_goji',d:'Two layers for a fruit indulgence. Goji berries, dates and almonds blended together and layered on coconut and cashews.',price:'$5.99–$59.99',size:'50g',sizes:ECLIPSE_SIZES},
-      {n:'Salted Caramel Fudge',img:'eclipse_fudge',d:'A rich fudgy texture with a satisfying crunch, finished with a generous indulgent slab of carob on top.',price:'$5.99–$59.99',size:'50g',sizes:ECLIPSE_SIZES},
+      {n:'Pecan Nut Eclipse Bite',img:'eclipse_pecan',d:'A blend of pecans and dates for a fudgy inside, coated in our pure carob',price:'$5.99–$59.99',size:'50g',sizes:ECLIPSE_SIZES,optionLabel:'Pack'},
+      {n:'Salted Almond Eclipse Bite',img:'eclipse_almond',d:'The perfect blend of sweetness, crunch and saltiness to satisfy every sweet and savoury craving.',price:'$5.99–$59.99',size:'50g',sizes:ECLIPSE_SIZES,optionLabel:'Pack'},
+      {n:'Hazelnut Eclipse Bite',img:'eclipse_hazelnut',d:'Crunchy, rich hazelnut bites crafted for the perfect indulgent pick-me-up.',price:'$5.99–$59.99',size:'50g',sizes:ECLIPSE_SIZES,optionLabel:'Pack'},
+      {n:'Goji Ripe Eclipse Bite',img:'eclipse_goji',d:'Two layers for a fruit indulgence. Goji berries, dates and almonds blended together and layered on coconut and cashews.',price:'$5.99–$59.99',size:'50g',sizes:ECLIPSE_SIZES,optionLabel:'Pack'},
+      {n:'Salted Caramel Fudge',img:'eclipse_fudge',d:'A rich fudgy texture with a satisfying crunch, finished with a generous indulgent slab of carob on top.',price:'$5.99–$59.99',size:'50g',sizes:ECLIPSE_SIZES,optionLabel:'Pack'},
       {n:'Eclipse Bite Bundle',img:'eclipse_bundle',d:'Can\'t decide? Try the range. All 5 bites to satisfy your cravings and curiosity.',price:'$24.99',size:'5 x 50g'}
     ],
     elixirs:[
