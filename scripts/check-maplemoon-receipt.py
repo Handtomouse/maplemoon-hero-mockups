@@ -272,10 +272,33 @@ def validate_receipt(
         holds.append("receipt reports unresolved failures")
     if not receipt["checks"]:
         holds.append("receipt has no checks")
-    for check in receipt["checks"]:
-        if not isinstance(check, dict) or check.get("exit_code") != 0:
-            fails.append("receipt contains a failed or malformed check")
-            break
+    for index, check in enumerate(receipt["checks"], start=1):
+        if not isinstance(check, dict):
+            fails.append(f"receipt check {index} is malformed: expected an object, got {check!r}")
+            continue
+
+        declared = check.get("expected_exit_code", 0)
+        if isinstance(declared, int) and not isinstance(declared, bool):
+            expected = [declared]
+        elif (
+            isinstance(declared, list)
+            and declared
+            and all(isinstance(value, int) and not isinstance(value, bool) for value in declared)
+        ):
+            expected = declared
+        else:
+            fails.append(
+                f"receipt check {index} has malformed expected_exit_code: "
+                f"expected an integer or non-empty list of integers, got {declared!r}"
+            )
+            continue
+
+        actual = check.get("exit_code")
+        expected_text = str(expected[0]) if len(expected) == 1 else f"one of {expected}"
+        if not isinstance(actual, int) or isinstance(actual, bool) or actual not in expected:
+            fails.append(
+                f"receipt check {index} exit code mismatch: expected {expected_text}, got {actual!r}"
+            )
 
     try:
         changed = [normalise_relative(value) for value in receipt["files_changed"]]
