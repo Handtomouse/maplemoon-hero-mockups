@@ -13,7 +13,7 @@
         {"name":"max-width","desktop":"calc(100vw - 48px)"}
       ],
       "reason":"Protected CAROB signature is the Homepage hierarchy, not a generic logo.",
-      "binding":{"kind":"pilot","source":"_wip/homepage_real_1_lead_photo.WIP.html","source_sha256":"dd70c790301181fb54c4207083f5ecbad655e86fbb2d28490d3fd4d3080084b2","image_contract_id":"MM-IMG-HOME-CAROB-SIGNATURE-01"},
+      "binding":{"kind":"pilot","source":"_wip/homepage_real_1_lead_photo.WIP.html","source_sha256":"a2219fba244b7894be1fbe5ef40be94293f1a812751f211156981ec76b8c04a7","image_contract_id":"MM-IMG-HOME-CAROB-SIGNATURE-01"},
       "owner":"Nate",
       "introduced_at":null,
       "review_on_change":true,
@@ -30,7 +30,7 @@
         {"name":"bridge family","value":"exact declarations inside the frozen named style block"}
       ],
       "reason":"Editorial Night imagery dissolves into the page wash; borders or generic section cards would change the design.",
-      "binding":{"kind":"pilot","source":"_wip/homepage_real_1_lead_photo.WIP.html","source_sha256":"dd70c790301181fb54c4207083f5ecbad655e86fbb2d28490d3fd4d3080084b2","image_contract_ids":["MM-IMG-HOME-HERO-01","MM-IMG-HOME-RITUAL-01","MM-IMG-HOME-STORY-FIELD-01"]},
+      "binding":{"kind":"pilot","source":"_wip/homepage_real_1_lead_photo.WIP.html","source_sha256":"a2219fba244b7894be1fbe5ef40be94293f1a812751f211156981ec76b8c04a7","image_contract_ids":["MM-IMG-HOME-HERO-01","MM-IMG-HOME-RITUAL-01","MM-IMG-HOME-STORY-FIELD-01"]},
       "owner":"Claude Code Main · packet",
       "introduced_at":null,
       "review_on_change":true,
@@ -98,7 +98,7 @@
       "selector":"style#stockists-seams-fades-20260803",
       "properties":[{"name":"wholesale field mask and bridge","value":"exact declarations inside the frozen named style block"}],
       "reason":"The Stockists hero and wholesale imagery are illustrative fields, not generic cards or map data.",
-      "binding":{"kind":"pilot","source":"_wip/stockists.WIP.html","source_sha256":"c3cb75a9e4368082fbc45967fe50369b0f19ea272a9a43b358b280919cb95803","image_contract_ids":["MM-IMG-STOCKISTS-HERO-01","MM-IMG-STOCKISTS-WHOLESALE-01"]},
+      "binding":{"kind":"pilot","source":"_wip/stockists.WIP.html","source_sha256":"b7cb9f1963e53b70b279b0198aabddb528fddad74ad9763c9494c93e70346905","image_contract_ids":["MM-IMG-STOCKISTS-HERO-01","MM-IMG-STOCKISTS-WHOLESALE-01"]},
       "owner":"Claude Code Main · packet",
       "introduced_at":null,
       "review_on_change":true,

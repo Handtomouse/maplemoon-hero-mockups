@@ -1062,6 +1062,11 @@ html{scroll-behavior:smooth;}
     var summary=popularAreas.querySelector("summary");
     if(summary)summary.addEventListener("click",function(){popularAreas.dataset.touched="true";});
   }
+  var initialQuery=new URLSearchParams(location.search).get("q");
+  if(initialQuery){
+    q.value=initialQuery;
+    q.dispatchEvent(new Event("input",{bubbles:true}));
+  }
   function tuneMobileAreas(){
     if(!popularAreas||popularAreas.dataset.touched)return;
     popularAreas.removeAttribute("open");
