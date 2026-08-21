@@ -8,7 +8,9 @@ This is a build sheet for whoever holds Admin access.
 19 Aug 2026: the `Bites & Eclipses` heading becomes **`Eclipse Bites`**. **This is not ratified.**
 `docs/orchestration/REGISTRY_AUTHORITY_20260819.md` states the edit "has **not** been re-pinned or
 ratified", and the governed 24-card accounting still keeps `Bites 2` and `Eclipses 6` **separate**.
-Treat everything below as a build sheet pending ratification (question Q11), not an instruction.
+Q11 was **ratified by Nate on 21 Aug 2026**, so the build sheet below is no longer conditional
+on it: `Eclipse Bites` is the ratified name and there is no separate `bites` collection.
+Anything below still marked pending on another question remains pending on that question.
 
 The intended end state: the separate "Bites" grouping goes away and those products sit under one
 merged `Eclipse Bites` heading. The only source for it is the 19 Aug `_wip/shop.WIP.html` edit
@@ -47,7 +49,7 @@ All **manual** collections unless noted, so the merge cannot be re-broken by a s
 
 ## Do NOT create
 
-- No `bites` collection — pending Q11. The 19 Aug change removes it, but that change is unratified.
+- No `bites` collection — **settled. Q11 ratified by Nate 21 Aug 2026**, so the 19 Aug removal stands and `Eclipse Bites` is the ratified name.
 - No apparel/merch collection until someone rules on whether the tees, hoodie, cap and bucket
   hat are in scope for the new store at all (open question Q5).
 
