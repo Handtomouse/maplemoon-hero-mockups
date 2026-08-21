@@ -64,14 +64,30 @@ html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;text-size-adjust:100%}
 }
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.sp *{transition:none!important;animation:none!important}}
 </style>
+<!-- MapleMoon system pilot cascade: tokens → base → chrome → primitives → registered route exceptions. -->
+<link rel="stylesheet" href="/assets/design-system/mm-tokens.css" data-mm-system-layer="tokens">
+<link rel="stylesheet" href="/assets/design-system/mm-base.css" data-mm-system-layer="base">
+<link rel="stylesheet" href="/assets/design-system/mm-chrome.css" data-mm-system-layer="chrome">
+<link rel="stylesheet" href="/assets/design-system/mm-primitives.css" data-mm-system-layer="primitives">
+<style id="mm-faq-chrome-graft-20260821">
+@media (max-width:900px){
+  .mm-site-header[data-mm-enhanced] :is(.mm-header__nav,.mm-header__utility-nav)[hidden]{display:none;}
+  .mm-site-header[data-mm-enhanced] :is(.mm-header__nav,.mm-header__utility-nav) a{display:flex;}
+}
+@media (max-width:560px){
+  body[data-mm-menu-open] .sp-top .bar>.sp-nav:first-child{visibility:visible;}
+}
+</style>
+<script defer src="/assets/design-system/mm-chrome.js"></script>
 </head>
-<body>
-<a class="skip-link" href="#main-content">Skip to main content</a>
+<body data-mm-route="faq">
+<a class="skip-link mm-skip-link" href="#main-content">Skip to main content</a>
 <div class="sp">
-  <header class="sp-top"><div class="wrap bar">
-    <nav class="sp-nav" aria-label="Primary navigation"><a href="/shop">Shop</a><a href="/our-story">Our Story</a><a href="/carob-story">What is Carob</a></nav>
-    <a class="sp-logo" href="/">maple moon</a>
-    <nav class="sp-nav r" aria-label="Utility navigation"><a href="/stockists">Stockists</a><button class="sp-cart" type="button" aria-label="Cart, 0 items"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 8h12l-1 12H7L6 8z"/><path d="M9 8a3 3 0 0 1 6 0"/></svg><b>0</b></button></nav>
+  <header class="sp-top mm-site-header" data-mm-chrome data-header-theme="paper" data-mm-menu-state="closed"><div class="wrap bar mm-wrap mm-header__bar">
+    <button class="mm-menu-toggle mm-icon-control" type="button" data-mm-menu-toggle aria-expanded="false" aria-label="Open menu" hidden>Menu</button>
+    <nav class="sp-nav mm-header__nav" id="mm-faq-primary-nav" aria-label="Primary navigation" data-mm-primary-nav><a href="/shop">Shop</a><a href="/our-story">Our Story</a><a href="/carob-story">What is Carob</a></nav>
+    <a class="sp-logo mm-header__home" href="/" data-mm-home-link>maple moon</a>
+    <div class="mm-header__right"><nav class="sp-nav r mm-header__utility-nav" id="mm-faq-utility-nav" aria-label="Utility navigation" data-mm-utility-nav><a href="/stockists">Stockists</a></nav><button class="sp-cart mm-icon-control" data-mm-cart-toggle type="button" aria-label="Cart, 0 items"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 8h12l-1 12H7L6 8z"/><path d="M9 8a3 3 0 0 1 6 0"/></svg><b>0</b></button></div>
   </div></header>
   <main id="main-content">
     <section class="wrap faq-hero" aria-labelledby="faq-title">
@@ -85,7 +101,7 @@ html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;text-size-adjust:100%}
     </section>
     <section class="wrap support-panel" aria-labelledby="support-title"><div class="support-mark" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M18.5 15.5A8 8 0 0 1 8.5 5.5a8 8 0 1 0 10 10Z"/><path d="M18 4v4m-2-2h4"/></svg></div><div><span class="eyebrow">Still wondering</span><h2 id="support-title">Still have <em>questions?</em></h2><p>Send the Maple Moon team an email with the details. We’ll help point you in the right direction.</p></div><a class="button-link" href="mailto:info@maplemoon.com.au">Email us</a></section>
   </main>
-  <footer class="sp-ft"><div class="wrap row"><a class="serif" href="/">maple moon</a><nav class="fnav" aria-label="Footer navigation"><a href="/shop">Shop</a><a href="/our-story">Our Story</a><a href="/stockists">Stockists</a><a href="/faq">FAQ</a><a href="mailto:info@maplemoon.com.au?subject=Wholesale%20enquiry">Wholesale</a><a href="/contact">Contact</a></nav></div></footer>
+  <footer class="sp-ft mm-site-footer"><div class="wrap row mm-wrap mm-site-footer__row"><a class="serif mm-site-footer__home" href="/">maple moon</a><nav class="fnav mm-site-footer__nav" aria-label="Footer navigation"><a href="/shop">Shop</a><a href="/our-story">Our Story</a><a href="/stockists">Stockists</a><a href="/faq" aria-current="page">FAQ</a><a href="mailto:info@maplemoon.com.au?subject=Wholesale%20enquiry">Wholesale</a><a href="/contact">Contact</a></nav></div></footer>
 </div>
 <script>
 (() => {
