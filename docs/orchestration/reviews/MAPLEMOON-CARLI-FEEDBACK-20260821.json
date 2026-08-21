@@ -1,0 +1,69 @@
+{
+  "schema": "maplemoon-receipt/v2",
+  "receipt_id": "MAPLEMOON-CARLI-FEEDBACK-20260821-COMPLETE",
+  "packet_id": "MAPLEMOON-CARLI-FEEDBACK-20260821",
+  "worker_thread_id": "/root",
+  "worker": "Codex MapleMoon stream owner",
+  "started_at": "2026-08-21T03:01:34Z",
+  "completed_at": "2026-08-21T03:05:23Z",
+  "files_read": [
+    "_wip/our-story.WIP.html",
+    "_wip/carob-story.WIP.html",
+    "docs/design-system/contracts/routes.v1.json",
+    "docs/design-system/contracts/exceptions.v1.json",
+    "docs/shopify/BACKLOG-ASSUMPTIONS-QUESTIONS-20260820.md",
+    "docs/shopify/COLLECTIONS-PLAN-20260820.md"
+  ],
+  "files_changed": [
+    "_wip/our-story.WIP.html",
+    "_wip/carob-story.WIP.html",
+    "docs/design-system/contracts/routes.v1.json",
+    "docs/design-system/contracts/exceptions.v1.json",
+    "docs/orchestration/reviews/MAPLEMOON-CARLI-FEEDBACK-20260821.json"
+  ],
+  "pre_sha256": {
+    "_wip/our-story.WIP.html": "5ed71496b984c3df32363b3836ccadea7cba802efb5b7e3c42343cf7156f432e",
+    "_wip/carob-story.WIP.html": "df4a234bce67d785e4099094240b6b77451ce6a754fa0586eb5ffaadd6e2653c",
+    "docs/design-system/contracts/routes.v1.json": "b5d907a9d14ab1d17d7e06afa06505091d333a006dcde78a2433754442aba5b9",
+    "docs/design-system/contracts/exceptions.v1.json": "bbf421715f9c7908695f8ee2b2d544b7057161b842eb327386bbd2b749fc299c",
+    "docs/orchestration/reviews/MAPLEMOON-CARLI-FEEDBACK-20260821.json": null
+  },
+  "post_sha256": {
+    "_wip/our-story.WIP.html": "0158cca2a55d41e1156cde72c7ffd86e166fbf6efd82531999c78cff518ba2cf",
+    "_wip/carob-story.WIP.html": "2fafd3867233a01ce6af1f4dd0a1837cc83fb69563d35d29c293e8d1d379d9e0",
+    "docs/design-system/contracts/routes.v1.json": "7b439934d4db195480b0e746ff0a192a7763e8fecf5bdb13367e078b840d7338",
+    "docs/design-system/contracts/exceptions.v1.json": "8e267e5401ef73fca1b5c5804555556613e0fa851f408f6599c481ec25834530",
+    "docs/orchestration/reviews/MAPLEMOON-CARLI-FEEDBACK-20260821.json": null
+  },
+  "checks": [
+    {
+      "command": "git diff --check",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "result": "no whitespace errors"
+    },
+    {
+      "command": "node scripts/check-maplemoon-design-system.mjs --contracts-only",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "result": "PASS contracts-only tokens=75 routes=6 components=15 widths=4 images=14 exceptions=7 routeConformance=SKIPPED (flag not set)"
+    },
+    {
+      "command": "node scripts/check-maplemoon-design-system.mjs --route-conformance all",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "result": "PASS route-conformance tokens=75 routes=6 components=15 widths=4 images=14 exceptions=7 routeConformance=ALL_PASS"
+    }
+  ],
+  "screenshots_or_urls": [],
+  "failures": [],
+  "unknowns": [
+    "Carli and Dylan still need to supply natural smiling founder-photo options."
+  ],
+  "residual_risk": [
+    "Founder imagery remains a client-input hold and is not accepted for page lock."
+  ],
+  "forbidden_path_changes": [],
+  "proposed_next_state": "needs_review",
+  "next_reviewer": "Nate before any client-facing send"
+}
