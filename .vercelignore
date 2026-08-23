@@ -62,18 +62,9 @@ out/
 *.bak
 *.r20_*
 
-# WIP working copies + scaffolding: deny by default, then allow only the seven
-# live page targets and their audited one-level dependencies. Vercel's ignore
-# matcher does not support nested re-inclusion, so nested deploy assets live in
-# the flat assets/ directory instead; do not re-add nested negation rules here.
+# WIP working copies + scaffolding: deny page sources, retain only the two
+# audited stylesheets still served through explicit rewrites.
 _wip/*
-!_wip/homepage_real_1_lead_photo.WIP.html
-!_wip/shop.WIP.html
-!_wip/our-story.WIP.html
-!_wip/stockists.WIP.html
-!_wip/carob-story.WIP.html
-!_wip/contact.WIP.html
-!_wip/faq.WIP.html
 !_wip/a11y_inner.css
 !_wip/design_refinement_20260723.css
 variants/

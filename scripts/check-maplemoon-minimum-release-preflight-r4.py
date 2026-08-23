@@ -78,7 +78,7 @@ EM_DASH = "—"
 PAGES = [
     # slug,           extra candidate paths,  <title> anchor,                        body anchor
     ("homepage",     ["/", "/homepage", "/homepage.html", "/index.html"],
-     "Maple Moon: Australian Organic Carob", "Find a stockist"),
+     "Maple Moon: Australian Organic Carob", "Find stockists"),
     ("our-story",    ["/our-story", "/our-story.html"],
      "Our Story | Maple Moon", "The people behind the product"),
     ("carob-story",  ["/carob-story", "/carob-story.html"],

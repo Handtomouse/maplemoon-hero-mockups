@@ -4,39 +4,39 @@
   "rewrites": [
     {
       "source": "/",
-      "destination": "/_wip/homepage_real_1_lead_photo.WIP.html"
+      "destination": "/homepage.html"
     },
     {
       "source": "/shop",
-      "destination": "/_wip/shop.WIP.html"
+      "destination": "/shop.html"
     },
     {
       "source": "/our-story",
-      "destination": "/_wip/our-story.WIP.html"
+      "destination": "/our-story.html"
     },
     {
       "source": "/stockists",
-      "destination": "/_wip/stockists.WIP.html"
+      "destination": "/stockists.html"
     },
     {
       "source": "/carob-story",
-      "destination": "/_wip/carob-story.WIP.html"
+      "destination": "/carob-story.html"
     },
     {
       "source": "/contact",
-      "destination": "/_wip/contact.WIP.html"
+      "destination": "/contact.html"
     },
     {
       "source": "/faq",
-      "destination": "/_wip/faq.WIP.html"
+      "destination": "/faq.html"
     },
     {
       "source": "/recipes",
-      "destination": "/_wip/homepage_real_1_lead_photo.WIP.html"
+      "destination": "/homepage.html"
     },
     {
       "source": "/ingredients",
-      "destination": "/_wip/homepage_real_1_lead_photo.WIP.html"
+      "destination": "/homepage.html"
     },
     {
       "source": "/a11y_inner.css",

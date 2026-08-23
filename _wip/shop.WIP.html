@@ -255,7 +255,7 @@ html{scroll-behavior:smooth;}
     </div>
     <div class="sp-sampler" id="packs">
       <div class="minirow" aria-hidden="true">
-        <img src="/assets/products_new/bar_pure_carob.png" alt=""><img src="/assets/products_new/bar_peppermint.png" alt=""><img src="/assets/products_new/bar_hazelnut.png" alt=""><img src="/assets/products_new/bar_goji_coconut.png" alt=""><img src="/assets/products_new/bar_cayenne.png" alt=""><img src="/assets/products_new/bar_almond.png" alt="">
+        <img src="/assets/products_new/bar_goji_coconut.png" alt=""><img src="/assets/products_new/bar_cayenne.png" alt=""><img src="/assets/products_new/bar_peppermint.png" alt=""><img src="/assets/products_new/bar_hazelnut.png" alt=""><img src="/assets/products_new/bar_pure_carob.png" alt=""><img src="/assets/products_new/bar_almond.png" alt="">
       </div>
       <div class="t"><strong>New here? Start with every flavour.</strong>
       <span>The starter box: all six bars in one set, gift-ready. The easiest way in.</span>
@@ -321,7 +321,6 @@ html{scroll-behavior:smooth;}
   </section>
 
   <section class="wrap sp-sec" id="bites">
-    <h2 class="serif">Eclipse Bites</h2>
     <p class="sub">The perfect treats for those that desire a healthy clean creation made with whole ingredients.</p>
     <div class="grid" data-cat="bites"></div>
   </section>
@@ -371,8 +370,8 @@ html{scroll-behavior:smooth;}
     bars:[
       {n:'Coconut & Goji',img:'bar_goji_coconut',d:'Shredded coconut and goji berries through naturally sweet carob.',price:'$12.95',size:'90g',sizes:BAR_TIERS,optionLabel:'Pack'},
       {n:'Cayenne Chilli',img:'bar_cayenne',d:'Rich, naturally sweet carob with a gentle hint of cayenne and a touch of Celtic sea salt for the perfect balance of sweet and spice.',price:'$12.95',size:'90g',sizes:BAR_TIERS,optionLabel:'Pack'},
-      {n:'Roasted Hazelnut',img:'bar_hazelnut',d:'Whole roasted hazelnuts deliver an irresistibly indulgent, crunchy carob experience.',price:'$12.95',size:'90g',sizes:BAR_TIERS,optionLabel:'Pack'},
       {n:'Peppermint & Buckwheat',img:'bar_peppermint',d:'Refreshing premium peppermint meets the satisfying crunch of activated buckwheat.',price:'$12.95',size:'90g',sizes:BAR_TIERS,optionLabel:'Pack'},
+      {n:'Roasted Hazelnut',img:'bar_hazelnut',d:'Whole roasted hazelnuts deliver an irresistibly indulgent, crunchy carob experience.',price:'$12.95',size:'90g',sizes:BAR_TIERS,optionLabel:'Pack'},
       {n:'Pure Carob & Cacao Butter',img:'bar_pure_carob',d:'Crafted from only two wholefood ingredients for simple, naturally sweet, guilt-free perfection.',price:'$12.95',size:'90g',sizes:BAR_TIERS,optionLabel:'Pack'},
       {n:'Almond & Celtic Salt',img:'bar_almond',d:'The perfect harmony of crunchy whole roasted almonds, natural sweetness and a touch of saltiness.',price:'$12.95',size:'90g',sizes:BAR_TIERS,optionLabel:'Pack'}
     ],
@@ -400,7 +399,7 @@ html{scroll-behavior:smooth;}
       {n:'Carob Bananas',img:'bananas',d:'Spray Free Australian Grown Bananas coated in our pure carob for the perfect chewy treat.',price:'$2.99',size:'20g',sizes:BANANA_TIERS,optionLabel:'Pack'}
     ],
     powder:[
-      {n:'Carob Powder',img:'powder_roasted',d:'Roasted organic carob powder. Caffeine free and naturally sweet, for baking, drinks and raw treats.',price:'$14.95',size:'300g'}
+      {n:'Carob Powder',img:'powder_roasted',imagePath:'/out/image_candidates_20260823/powder_roasted_no_bg.png',d:'Roasted organic carob powder. Caffeine free and naturally sweet, for baking, drinks and raw treats.',price:'$14.95',size:'300g'}
     ]
   };
   var DIET=['Vegan','GF','No Caffeine'];
@@ -434,7 +433,8 @@ html{scroll-behavior:smooth;}
       var action=priced?'<button class="add" data-add-to-cart type="button" aria-label="Add '+cleanName+' to cart">Add to cart</button>':'<a class="add" aria-label="Enquire about '+cleanName+'" href="mailto:info@maplemoon.com.au?subject=Enquiry%20about%20'+encodeURIComponent(p.n)+'">Enquire</a>';
       var el=document.createElement('article');el.className='pcard';el.setAttribute('aria-labelledby',cardId);
       el.dataset.cat=cat;el.dataset.flavour=flavourOf(p);el.dataset.name=p.n.toLowerCase();el.dataset.priced=priced?'1':'0';el.dataset.order=String(index);el.dataset.unitPrice=String(unitPrice);el.dataset.unitQuantity=String(unitQuantity);
-      el.innerHTML='<div class="ph"><img src="'+PS+p.img+'.webp" alt="'+cleanName+'"'+imageAttrs+'></div>'+
+      var imageSrc=p.imagePath||PS+p.img+'.webp';
+      el.innerHTML='<div class="ph"><img src="'+imageSrc+'" alt="'+cleanName+'"'+imageAttrs+'></div>'+
         '<div class="tx"><h3 id="'+cardId+'">'+amp(p.n)+'</h3><div class="chips">'+DIET.map(function(c){return '<span>'+c+'</span>';}).join('')+'</div>'+
         '<p class="d">'+p.d+'</p>'+
         sizePicker+'<div class="row"><div class="price-wrap"><span class="pr'+(priced?'':' pending')+'"><span data-price-label>'+ (priced?displayPrice:'Enquire for details')+'</span><span class="g">('+p.size+')</span></span></div>'+action+'</div></div>';
