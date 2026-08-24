@@ -1,0 +1,91 @@
+{
+  "schema": "maplemoon-receipt/v2",
+  "receipt_id": "MAPLEMOON-PROMOTE-20260823-RECEIPT-001",
+  "packet_id": "MAPLEMOON-PROMOTE-20260823",
+  "worker_thread_id": "maplemoon-promote-20260823",
+  "worker": "Codex",
+  "started_at": "2026-08-23T05:57:19Z",
+  "completed_at": "2026-08-23T06:03:40Z",
+  "outcome": "HOLD",
+  "confidence": "high",
+  "files_read": [
+    "AGENTS.md",
+    "_wip/AGENTS.md",
+    "_wip/HANDOFF-FOUNDER-IMAGERY-20260803.md",
+    "_wip/homepage_real_1_lead_photo.WIP.html",
+    "_wip/shop.WIP.html",
+    "_wip/our-story.WIP.html",
+    "_wip/stockists.WIP.html",
+    "_wip/carob-story.WIP.html",
+    "_wip/contact.WIP.html",
+    "_wip/faq.WIP.html",
+    "out/final_images_20260823",
+    "out/image_candidates_20260823/powder_roasted_no_bg.png"
+  ],
+  "files_changed": [
+    ".vercelignore",
+    "vercel.json",
+    "homepage.html",
+    "homepage_real_1_lead_photo.html",
+    "shop.html",
+    "our-story.html",
+    "stockists.html",
+    "carob-story.html",
+    "contact.html",
+    "faq.html",
+    "assets/product_shots/final_20260823"
+  ],
+  "pre_sha256": {
+    ".vercelignore": "95dcf5d7f9b1b2892a24c4ab228f8ec44d7dfba73544d653a1357dd3bfab2fa6",
+    "vercel.json": "e3d7fb90cf647781c31f2209fb2b8b090bd70013932f0716e91713b17fbe86dc",
+    "homepage.html": "4cec4f61c1202b0f2a5938fda30d7b93744ff6132d29bdc7e95cd30f06cccac6",
+    "homepage_real_1_lead_photo.html": null,
+    "shop.html": "9d28b2811cb73dbc941d5eea7c2009bc488f63aeba71f01cf57bb3a2edc4dc5c",
+    "our-story.html": "f8309b5a2f1e6d65655248d5bb3e7a33f4bed4d9419e54038777ea2e5c5f22dc",
+    "stockists.html": "c61d7da6a146d456eaf5f6aafdaa3ad0f02c9704abd6a4c7868ef2912d650388",
+    "carob-story.html": "6b7b21ccfa2d2dfcd79ed1254db3c84987b6cdbfaee77457b34790323e1aef57",
+    "contact.html": null,
+    "faq.html": "9176210afe1e013cd65439fd8c5519817b8058864efae231307612d9a8f24833",
+    "assets/product_shots/final_20260823": null
+  },
+  "post_sha256": {
+    ".vercelignore": "16b9d8ae0c525ae5de293fd3fb8eddba0f210c7fba821c38a2ec3329b4dc2922",
+    "vercel.json": "6f15111cc44bc8c0c7cf00570e4827c155f7cde75d1cd9ad2612f7c8755870ed",
+    "homepage.html": "1a6267455381de54bbb17c344bb5c2deef02103dbcfb8cf588eaf9adb6d25562",
+    "homepage_real_1_lead_photo.html": "1a6267455381de54bbb17c344bb5c2deef02103dbcfb8cf588eaf9adb6d25562",
+    "shop.html": "e9f0fd489d571bc3ce0a7baf178087614cd13ec33488e7a2a13e4a676240e30a",
+    "our-story.html": "a3204890eb2cdb64a1c80d14ba50ea9820be113d315e86a85d63a9ffca5a637c",
+    "stockists.html": "edd114db62fa7da5d476230bfbcf7299a3ab4a082b0d7e2c0f90eef7393104d4",
+    "carob-story.html": "b2d31dbe33f3e6d887d2a0cb61cf89572e997139c09b5d679f77888e8dac2598",
+    "contact.html": "317ca88384b22853455cd019a8fb7009f12f8440981d7b94dcf65fe59bc7330e",
+    "faq.html": "9776ae8ac12853ef4630e804dc0971c0f2f43f18bd8b23e04b6ba5d40908b1e0",
+    "assets/product_shots/final_20260823": "88fbc2129aaae99211bc91d0be73744cc9f2f15c1b4ceddeac24843922833967"
+  },
+  "checks": [
+    {"command": "node scripts/check-maplemoon-cart.mjs", "exit_code": 0, "result": "PASS ordinary cart, enquiry, checkout, local form, accessibility and no-network checks"},
+    {"command": "node scripts/check-maplemoon-design-system.mjs --contracts-only", "exit_code": 2, "expected_exit_code": 2, "result": "HOLD existing Home and Shop frozen baseline hash drift"},
+    {"command": "node scripts/check-maplemoon-design-system.mjs --route-conformance all", "exit_code": 2, "expected_exit_code": 2, "result": "HOLD existing Home and Shop frozen baseline hash drift"},
+    {"command": "node scripts/check-maplemoon-homepage-motion.mjs", "exit_code": 0, "result": "PASS autoplay absent and reduced-motion behavior preserved"},
+    {"command": "python3 -B scripts/check-maplemoon-minimum-release-preflight-r4.py http://127.0.0.1:4319 --local", "exit_code": 1, "expected_exit_code": 1, "result": "FAIL four existing minimum-release blockers"},
+    {"command": "node scripts/check-maplemoon-portrait-crop.mjs", "exit_code": 0, "result": "PASS crop and mask guards"},
+    {"command": "python3 -B scripts/check-maplemoon-receipt.py --self-test", "exit_code": 0, "result": "PASS checkpoint, scope, hash and missing-receipt checks"},
+    {"command": "node scripts/check-maplemoon-responsive-overflow.mjs --self-test", "exit_code": 0, "result": "PASS rect overflow and scroll reachability self-test"},
+    {"command": "python3 -B scripts/check-maplemoon-review.py", "exit_code": 0, "result": "PASS 0 failures and 0 warnings"},
+    {"command": "live inline JavaScript compilation, asset fetches, robots and h212 greps, exceptions count and protected diff", "exit_code": 0, "result": "PASS all live scripts compile; six selected assets HTTP 200 and non-empty; robots/h212/protected diffs empty; exactly 7 exceptions"},
+    {"command": "browser render http://127.0.0.1:4319/our-story.html", "exit_code": 0, "result": "PASS founders_portrait.webp rendered visibly at natural size 1400x933 with no console errors"}
+  ],
+  "screenshots_or_urls": [
+    "http://127.0.0.1:4319/our-story.html"
+  ],
+  "failures": [
+    "Design-system contracts and route checks remain on HOLD because the pre-existing Home and Shop WIP changes drift frozen baseline hashes; protected contracts were not changed.",
+    "Minimum-release preflight fails on the existing Homepage body anchor, Stockists bare-204 visitor copy, Stockists internal-operations language, and Homepage testimonial wording."
+  ],
+  "unknowns": [],
+  "residual_risk": [
+    "The built promotion requires Nate review before any separate deploy action."
+  ],
+  "forbidden_path_changes": [],
+  "proposed_next_state": "needs_review",
+  "next_reviewer": "Nate"
+}

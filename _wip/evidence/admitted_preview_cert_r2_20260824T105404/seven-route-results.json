@@ -1,0 +1,361 @@
+{
+  "outcome": "PASS",
+  "baseUrl": "http://127.0.0.1:4323",
+  "cases": 14,
+  "rows": [
+    {
+      "route": "homepage",
+      "pathname": "/homepage.html",
+      "width": 390,
+      "status": 200,
+      "metrics": {
+        "clientWidth": 390,
+        "scrollWidth": 390,
+        "bodyHeight": 7216,
+        "textLength": 2840,
+        "images": 20,
+        "brokenImages": [],
+        "powder": null,
+        "founderImages": [],
+        "visibleTargets": 42
+      },
+      "consoleErrors": [],
+      "pageErrors": [],
+      "requestFailures": [],
+      "badResponses": [],
+      "failures": []
+    },
+    {
+      "route": "homepage",
+      "pathname": "/homepage.html",
+      "width": 1440,
+      "status": 200,
+      "metrics": {
+        "clientWidth": 1440,
+        "scrollWidth": 1440,
+        "bodyHeight": 5866,
+        "textLength": 2991,
+        "images": 20,
+        "brokenImages": [],
+        "powder": null,
+        "founderImages": [],
+        "visibleTargets": 49
+      },
+      "consoleErrors": [],
+      "pageErrors": [],
+      "requestFailures": [],
+      "badResponses": [],
+      "failures": []
+    },
+    {
+      "route": "shop",
+      "pathname": "/shop.html",
+      "width": 390,
+      "status": 200,
+      "metrics": {
+        "clientWidth": 390,
+        "scrollWidth": 390,
+        "bodyHeight": 15944,
+        "textLength": 5736,
+        "images": 28,
+        "brokenImages": [],
+        "powder": {
+          "src": "http://127.0.0.1:4323/assets/product_shots/powder_roasted.webp",
+          "naturalWidth": 3640,
+          "naturalHeight": 2078
+        },
+        "founderImages": [],
+        "visibleTargets": 66
+      },
+      "consoleErrors": [],
+      "pageErrors": [],
+      "requestFailures": [],
+      "badResponses": [],
+      "failures": []
+    },
+    {
+      "route": "shop",
+      "pathname": "/shop.html",
+      "width": 1440,
+      "status": 200,
+      "metrics": {
+        "clientWidth": 1440,
+        "scrollWidth": 1440,
+        "bodyHeight": 6917,
+        "textLength": 5776,
+        "images": 28,
+        "brokenImages": [],
+        "powder": {
+          "src": "http://127.0.0.1:4323/assets/product_shots/powder_roasted.webp",
+          "naturalWidth": 3640,
+          "naturalHeight": 2078
+        },
+        "founderImages": [],
+        "visibleTargets": 69
+      },
+      "consoleErrors": [],
+      "pageErrors": [],
+      "requestFailures": [],
+      "badResponses": [],
+      "failures": []
+    },
+    {
+      "route": "our-story",
+      "pathname": "/our-story.html",
+      "width": 390,
+      "status": 200,
+      "metrics": {
+        "clientWidth": 390,
+        "scrollWidth": 390,
+        "bodyHeight": 5290,
+        "textLength": 3002,
+        "images": 4,
+        "brokenImages": [],
+        "powder": null,
+        "founderImages": [
+          {
+            "src": "http://127.0.0.1:4323/assets/our_story/founders_frame701_pair_2400.webp",
+            "naturalWidth": 2400,
+            "naturalHeight": 1600
+          },
+          {
+            "src": "http://127.0.0.1:4323/assets/our_story/founder_carli_701_v2_2400.webp",
+            "naturalWidth": 1993,
+            "naturalHeight": 2400
+          },
+          {
+            "src": "http://127.0.0.1:4323/assets/our_story/founder_dylan_701_v2_2400.webp",
+            "naturalWidth": 2008,
+            "naturalHeight": 2400
+          }
+        ],
+        "visibleTargets": 18
+      },
+      "consoleErrors": [],
+      "pageErrors": [],
+      "requestFailures": [],
+      "badResponses": [],
+      "failures": []
+    },
+    {
+      "route": "our-story",
+      "pathname": "/our-story.html",
+      "width": 1440,
+      "status": 200,
+      "metrics": {
+        "clientWidth": 1440,
+        "scrollWidth": 1440,
+        "bodyHeight": 4154,
+        "textLength": 3042,
+        "images": 4,
+        "brokenImages": [],
+        "powder": null,
+        "founderImages": [
+          {
+            "src": "http://127.0.0.1:4323/assets/our_story/founders_frame701_pair_2400.webp",
+            "naturalWidth": 2400,
+            "naturalHeight": 1600
+          },
+          {
+            "src": "http://127.0.0.1:4323/assets/our_story/founder_carli_701_v2_2400.webp",
+            "naturalWidth": 1993,
+            "naturalHeight": 2400
+          },
+          {
+            "src": "http://127.0.0.1:4323/assets/our_story/founder_dylan_701_v2_2400.webp",
+            "naturalWidth": 2008,
+            "naturalHeight": 2400
+          }
+        ],
+        "visibleTargets": 21
+      },
+      "consoleErrors": [],
+      "pageErrors": [],
+      "requestFailures": [],
+      "badResponses": [],
+      "failures": []
+    },
+    {
+      "route": "carob-story",
+      "pathname": "/carob-story.html",
+      "width": 390,
+      "status": 200,
+      "metrics": {
+        "clientWidth": 390,
+        "scrollWidth": 390,
+        "bodyHeight": 2749,
+        "textLength": 1451,
+        "images": 3,
+        "brokenImages": [],
+        "powder": null,
+        "founderImages": [],
+        "visibleTargets": 12
+      },
+      "consoleErrors": [],
+      "pageErrors": [],
+      "requestFailures": [],
+      "badResponses": [],
+      "failures": []
+    },
+    {
+      "route": "carob-story",
+      "pathname": "/carob-story.html",
+      "width": 1440,
+      "status": 200,
+      "metrics": {
+        "clientWidth": 1440,
+        "scrollWidth": 1440,
+        "bodyHeight": 1767,
+        "textLength": 1534,
+        "images": 3,
+        "brokenImages": [],
+        "powder": null,
+        "founderImages": [],
+        "visibleTargets": 15
+      },
+      "consoleErrors": [],
+      "pageErrors": [],
+      "requestFailures": [
+        {
+          "url": "http://127.0.0.1:4323/assets/licensed/carob_farm/australian-carob-0205-mobile.jpg",
+          "error": "net::ERR_ABORTED"
+        }
+      ],
+      "badResponses": [],
+      "failures": []
+    },
+    {
+      "route": "faq",
+      "pathname": "/faq.html",
+      "width": 390,
+      "status": 200,
+      "metrics": {
+        "clientWidth": 390,
+        "scrollWidth": 390,
+        "bodyHeight": 2785,
+        "textLength": 1344,
+        "images": 0,
+        "brokenImages": [],
+        "powder": null,
+        "founderImages": [],
+        "visibleTargets": 36
+      },
+      "consoleErrors": [],
+      "pageErrors": [],
+      "requestFailures": [],
+      "badResponses": [],
+      "failures": []
+    },
+    {
+      "route": "faq",
+      "pathname": "/faq.html",
+      "width": 1440,
+      "status": 200,
+      "metrics": {
+        "clientWidth": 1440,
+        "scrollWidth": 1440,
+        "bodyHeight": 2319,
+        "textLength": 1439,
+        "images": 0,
+        "brokenImages": [],
+        "powder": null,
+        "founderImages": [],
+        "visibleTargets": 40
+      },
+      "consoleErrors": [],
+      "pageErrors": [],
+      "requestFailures": [],
+      "badResponses": [],
+      "failures": []
+    },
+    {
+      "route": "stockists",
+      "pathname": "/stockists.html",
+      "width": 390,
+      "status": 200,
+      "metrics": {
+        "clientWidth": 390,
+        "scrollWidth": 390,
+        "bodyHeight": 3837,
+        "textLength": 2426,
+        "images": 1,
+        "brokenImages": [],
+        "powder": null,
+        "founderImages": [],
+        "visibleTargets": 33
+      },
+      "consoleErrors": [],
+      "pageErrors": [],
+      "requestFailures": [],
+      "badResponses": [],
+      "failures": []
+    },
+    {
+      "route": "stockists",
+      "pathname": "/stockists.html",
+      "width": 1440,
+      "status": 200,
+      "metrics": {
+        "clientWidth": 1440,
+        "scrollWidth": 1440,
+        "bodyHeight": 3286,
+        "textLength": 2561,
+        "images": 1,
+        "brokenImages": [],
+        "powder": null,
+        "founderImages": [],
+        "visibleTargets": 43
+      },
+      "consoleErrors": [],
+      "pageErrors": [],
+      "requestFailures": [],
+      "badResponses": [],
+      "failures": []
+    },
+    {
+      "route": "pure-carob-bar",
+      "pathname": "/products/pure-carob-bar.html",
+      "width": 390,
+      "status": 200,
+      "metrics": {
+        "clientWidth": 390,
+        "scrollWidth": 390,
+        "bodyHeight": 3080,
+        "textLength": 1490,
+        "images": 7,
+        "brokenImages": [],
+        "powder": null,
+        "founderImages": [],
+        "visibleTargets": 30
+      },
+      "consoleErrors": [],
+      "pageErrors": [],
+      "requestFailures": [],
+      "badResponses": [],
+      "failures": []
+    },
+    {
+      "route": "pure-carob-bar",
+      "pathname": "/products/pure-carob-bar.html",
+      "width": 1440,
+      "status": 200,
+      "metrics": {
+        "clientWidth": 1440,
+        "scrollWidth": 1440,
+        "bodyHeight": 1683,
+        "textLength": 1534,
+        "images": 7,
+        "brokenImages": [],
+        "powder": null,
+        "founderImages": [],
+        "visibleTargets": 34
+      },
+      "consoleErrors": [],
+      "pageErrors": [],
+      "requestFailures": [],
+      "badResponses": [],
+      "failures": []
+    }
+  ],
+  "failures": []
+}

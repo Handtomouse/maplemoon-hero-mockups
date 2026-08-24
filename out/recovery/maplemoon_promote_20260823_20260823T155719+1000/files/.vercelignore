@@ -1,0 +1,79 @@
+assets/imagery/
+review/
+mockups/
+visual_audit/
+sections/
+templates/
+layout/
+locales/
+content/
+config/
+tools/
+snippets/
+*.py
+*.md
+server.js
+package*.json
+node_modules/
+paper_screenshots/
+outputs/
+.superpowers/
+.planning/
+_archive/
+assets/hero_shots/v9_gen/
+assets/hero_shots/v9_source/
+assets/hero_shots/moodboard/*.png
+assets/hero_shots/*.png.bak
+assets/moodboard/
+.DS_Store
+
+# Prototype HTML — keep in repo, exclude from deploy
+index.html
+hero_v*.html
+hero_photo_*.html
+product_v*.html
+client_review.html
+mockup_maker.html
+presentation.html
+review.html
+triage.html
+triage_paper.html
+
+# Dev scratch — design-comparison frames, mobile test harnesses, tuning playground (local only)
+_compare*.html
+_test*.html
+_playground.html
+
+# Internal session docs + backups (never deploy)
+checkpoints/
+
+# Internal working trees and operational records (never deploy)
+_media-review/
+docs/
+explorations/
+review-20260724/
+scripts/
+out/
+
+# Design PDF backups at root — never deploy
+*.pdf
+
+# Edit/backup artefacts
+*.bak
+*.r20_*
+
+# WIP working copies + scaffolding: deny by default, then allow only the seven
+# live page targets and their audited one-level dependencies. Vercel's ignore
+# matcher does not support nested re-inclusion, so nested deploy assets live in
+# the flat assets/ directory instead; do not re-add nested negation rules here.
+_wip/*
+!_wip/homepage_real_1_lead_photo.WIP.html
+!_wip/shop.WIP.html
+!_wip/our-story.WIP.html
+!_wip/stockists.WIP.html
+!_wip/carob-story.WIP.html
+!_wip/contact.WIP.html
+!_wip/faq.WIP.html
+!_wip/a11y_inner.css
+!_wip/design_refinement_20260723.css
+variants/

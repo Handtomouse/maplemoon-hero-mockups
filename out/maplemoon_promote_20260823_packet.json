@@ -1,0 +1,49 @@
+{
+  "schema": "maplemoon-packet/v2",
+  "packet_id": "MAPLEMOON-PROMOTE-20260823",
+  "worker_thread_id": "maplemoon-promote-20260823",
+  "state": "ready",
+  "objective": "Promote the seven-page WIP set to live HTML, route production URLs to live pages, remove production robots blocking, place the selected founder and product imagery, build, and verify without deployment.",
+  "readable_paths": [
+    "_wip/homepage_real_1_lead_photo.WIP.html",
+    "_wip/shop.WIP.html",
+    "_wip/our-story.WIP.html",
+    "_wip/stockists.WIP.html",
+    "_wip/carob-story.WIP.html",
+    "_wip/contact.WIP.html",
+    "_wip/faq.WIP.html",
+    "out/final_images_20260823",
+    "out/image_candidates_20260823/powder_roasted_no_bg.png",
+    "assets/our_story/founders_portrait.webp",
+    "scripts"
+  ],
+  "writable_paths": [
+    ".vercelignore",
+    "vercel.json",
+    "homepage.html",
+    "homepage_real_1_lead_photo.html",
+    "shop.html",
+    "our-story.html",
+    "stockists.html",
+    "carob-story.html",
+    "contact.html",
+    "faq.html",
+    "assets/product_shots/final_20260823"
+  ],
+  "verify": [
+    "git diff --stat",
+    "every scripts/check-* checker",
+    "contracts/exceptions.v1.json contains exactly 7 exceptions",
+    "promoted pages contain no noindex or nofollow",
+    "live pages contain no founders_portrait_h212",
+    "local Our Story render visibly contains the selected founder portrait"
+  ],
+  "stop": [
+    "any protected contract mutation",
+    "assets/mock-cart.js line 516 mutation",
+    "any Shopify, deployment, publish, email, or message action",
+    "ports 3005 and 4321"
+  ],
+  "requires_visual_evidence": true,
+  "next_reviewer": "Nate"
+}

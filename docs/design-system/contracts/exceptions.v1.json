@@ -13,7 +13,7 @@
         {"name":"max-width","desktop":"calc(100vw - 48px)"}
       ],
       "reason":"Protected CAROB signature is the Homepage hierarchy, not a generic logo.",
-      "binding":{"kind":"pilot","source":"_wip/homepage_real_1_lead_photo.WIP.html","source_sha256":"a2219fba244b7894be1fbe5ef40be94293f1a812751f211156981ec76b8c04a7","image_contract_id":"MM-IMG-HOME-CAROB-SIGNATURE-01"},
+      "binding":{"kind":"pilot","source":"_wip/homepage_real_1_lead_photo.WIP.html","source_sha256":"a06d1e19165c84065e96c14eafd1f8e8d7e5a4228d877f0017ca191d1341c174","image_contract_id":"MM-IMG-HOME-CAROB-SIGNATURE-01"},
       "owner":"Nate",
       "introduced_at":null,
       "review_on_change":true,
@@ -30,7 +30,7 @@
         {"name":"bridge family","value":"exact declarations inside the frozen named style block"}
       ],
       "reason":"Editorial Night imagery dissolves into the page wash; borders or generic section cards would change the design.",
-      "binding":{"kind":"pilot","source":"_wip/homepage_real_1_lead_photo.WIP.html","source_sha256":"a2219fba244b7894be1fbe5ef40be94293f1a812751f211156981ec76b8c04a7","image_contract_ids":["MM-IMG-HOME-HERO-01","MM-IMG-HOME-RITUAL-01","MM-IMG-HOME-STORY-FIELD-01"]},
+      "binding":{"kind":"pilot","source":"_wip/homepage_real_1_lead_photo.WIP.html","source_sha256":"a06d1e19165c84065e96c14eafd1f8e8d7e5a4228d877f0017ca191d1341c174","image_contract_ids":["MM-IMG-HOME-HERO-01","MM-IMG-HOME-RITUAL-01","MM-IMG-HOME-STORY-FIELD-01"]},
       "owner":"Claude Code Main · packet",
       "introduced_at":null,
       "review_on_change":true,

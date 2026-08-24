@@ -1,0 +1,142 @@
+{
+  "schema": "maplemoon-receipt/v2",
+  "receipt_id": "MAPLEMOON-CARLI-HOME-SHOP-IMAGERY-20260823-RECEIPT-001",
+  "packet_id": "MAPLEMOON-CARLI-HOME-SHOP-IMAGERY-20260823",
+  "worker_thread_id": "maplemoon-website-20260823",
+  "worker": "Codex",
+  "started_at": "2026-08-23T03:10:39Z",
+  "completed_at": "2026-08-23T03:49:04Z",
+  "outcome": "HOLD",
+  "confidence": "high",
+  "files_read": [
+    "_wip/HANDOFF-FOUNDER-IMAGERY-20260803.md",
+    "_wip/homepage_real_1_lead_photo.WIP.html",
+    "_wip/shop.WIP.html",
+    "_wip/our-story.WIP.html",
+    "_wip/carob-story.WIP.html",
+    "_wip/contact.WIP.html",
+    "docs/orchestration/SIDECHAT_RECEIPT_GATE.md",
+    "scripts/check-maplemoon-receipt.py"
+  ],
+  "files_changed": [
+    "_wip/homepage_real_1_lead_photo.WIP.html",
+    "_wip/shop.WIP.html",
+    "out/founder_ladder_20260823.png",
+    "out/image_candidates_20260823",
+    "out/maplemoon_lane_20260823_receipt.json"
+  ],
+  "files_confirmed_untouched": [
+    "assets",
+    "_wip/our-story.WIP.html",
+    "_wip/carob-story.WIP.html",
+    "docs/design-system/contracts/routes.v1.json",
+    "docs/design-system/contracts/exceptions.v1.json",
+    "docs/design-system/contracts/images.v1.json"
+  ],
+  "pre_sha256": {
+    "_wip/homepage_real_1_lead_photo.WIP.html": "a2219fba244b7894be1fbe5ef40be94293f1a812751f211156981ec76b8c04a7",
+    "_wip/shop.WIP.html": "035a66bb8915e35f636b856849b2ae1cea8666f5fb302aeaf04cf6e8c1db4fc5",
+    "out/founder_ladder_20260823.png": null,
+    "out/image_candidates_20260823": null,
+    "out/maplemoon_lane_20260823_receipt.json": null
+  },
+  "post_sha256": {
+    "_wip/homepage_real_1_lead_photo.WIP.html": "a06d1e19165c84065e96c14eafd1f8e8d7e5a4228d877f0017ca191d1341c174",
+    "_wip/shop.WIP.html": "f9d150dea283d43eb0a14e02dfeccf9ea1eb4eae87ec82a546ab6984f3fa5604",
+    "out/founder_ladder_20260823.png": "75e0702fdbf5ebc54271dd63df7d945a5d01bb32b024f6dd8c712e422a582f1f",
+    "out/image_candidates_20260823": "fd9b26cc357043cbb938e63b500fbe656f5afa5609f6e7f65eb2e5a708f6b3f1",
+    "out/maplemoon_lane_20260823_receipt.json": null
+  },
+  "checkpoint_path": "out/recovery/maplemoon_carli_home_shop_imagery_20260823T131035_AEST",
+  "checks": [
+    {
+      "command": "check-maplemoon-receipt.py checkpoint and phase-start verify",
+      "exit_code": 0,
+      "result": "PASS: non-overwriting recovery captured the exact five-path writable scope."
+    },
+    {
+      "command": "task copy/order/unplaced-candidate assertions",
+      "exit_code": 0,
+      "result": "PASS: exact page-specific bar orders, copy exclusions, retained products, footer/contact fields and unplaced generated candidates."
+    },
+    {
+      "command": "inline JavaScript syntax compilation for both changed templates",
+      "exit_code": 0,
+      "result": "PASS: Home 7 executable scripts; Shop 1 executable script."
+    },
+    {
+      "command": "node scripts/check-maplemoon-design-system.mjs --contracts-only",
+      "exit_code": 2,
+      "expected_exit_code": 2,
+      "result": "HOLD: protected frozen hashes for the intentionally changed Home and Shop pages were not promoted."
+    },
+    {
+      "command": "node scripts/check-maplemoon-design-system.mjs --route-conformance all",
+      "exit_code": 2,
+      "expected_exit_code": 2,
+      "result": "HOLD: protected frozen hashes for the intentionally changed Home and Shop pages were not promoted."
+    },
+    {
+      "command": "node scripts/check-maplemoon-homepage-motion.mjs",
+      "exit_code": 0,
+      "result": "PASS: autoplay absent and reduced-motion behavior preserved."
+    },
+    {
+      "command": "node scripts/check-maplemoon-portrait-crop.mjs",
+      "exit_code": 0,
+      "result": "PASS: crop and mask guards unchanged; no new portrait wired."
+    },
+    {
+      "command": "node scripts/check-maplemoon-responsive-overflow.mjs --self-test",
+      "exit_code": 0,
+      "result": "PASS: rect overflow and scroll reachability self-test."
+    },
+    {
+      "command": "python3 scripts/check-maplemoon-receipt.py --self-test",
+      "exit_code": 0,
+      "result": "PASS: checkpoint, scope, hash and missing-receipt checks."
+    },
+    {
+      "command": "node scripts/check-maplemoon-cart.mjs",
+      "exit_code": 0,
+      "result": "PASS: cart, enquiry, form, accessibility and no-network checks."
+    },
+    {
+      "command": "python3 scripts/check-maplemoon-review.py",
+      "exit_code": 0,
+      "result": "PASS: 0 failures and 0 warnings."
+    },
+    {
+      "command": "python3 scripts/check-maplemoon-minimum-release-preflight-r4.py http://127.0.0.1:4317 --local",
+      "exit_code": 1,
+      "expected_exit_code": 1,
+      "result": "FAIL: four existing release issues remain in Homepage and Stockists; this lane did not touch Stockists or the protected release baseline."
+    },
+    {
+      "command": "exceptions count, generated-image count and asset-status verification",
+      "exit_code": 0,
+      "result": "PASS: exactly 7 exceptions, 12 generated candidates, 4 candidate contact sheets, and no asset changes."
+    }
+  ],
+  "screenshots_or_urls": [
+    "out/founder_ladder_20260823.png",
+    "out/image_candidates_20260823/banana_contact_sheet.png",
+    "out/image_candidates_20260823/goji_moon_contact_sheet.png",
+    "out/image_candidates_20260823/goji_ripe_contact_sheet.png",
+    "out/image_candidates_20260823/eclipse_bites_contact_sheet.png"
+  ],
+  "failures": [
+    "Minimum-release preflight still fails on the existing missing Homepage body anchor, three Stockists leak families, and the existing Homepage testimonial wording."
+  ],
+  "unknowns": [
+    "Nate has not selected the Our Story hero or any generated product-image candidate."
+  ],
+  "residual_risk": [
+    "Generated candidates are review-only and deliberately unplaced.",
+    "Protected design-system frozen hashes remain on HOLD until a separate authorised promotion."
+  ],
+  "forbidden_path_changes": [],
+  "proposed_next_state": "needs_review",
+  "next_reviewer": "Nate",
+  "next_action": "Nate selects the founder portrait and product-image candidates; release blockers remain a separate authorised lane."
+}

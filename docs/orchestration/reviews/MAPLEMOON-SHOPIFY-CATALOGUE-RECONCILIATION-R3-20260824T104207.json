@@ -1,0 +1,77 @@
+{
+  "schema": "maplemoon-receipt/v2",
+  "receipt_id": "MAPLEMOON-SHOPIFY-CATALOGUE-RECONCILIATION-R3-20260824T104207-RECEIPT-01",
+  "packet_id": "MAPLEMOON-SHOPIFY-CATALOGUE-RECONCILIATION-R3-20260824T104207",
+  "worker_thread_id": "019ffe53-6243-73a2-9d75-e1a072cd07ce",
+  "worker": "Codex /root MapleMoon BOSS",
+  "started_at": "2026-08-24T00:42:07Z",
+  "completed_at": "2026-08-24T00:48:57Z",
+  "files_read": [
+    "maplemoon-website/docs/orchestration/packets/MAPLEMOON-SHOPIFY-CATALOGUE-RECONCILIATION-R3-20260824T104207.md",
+    "maplemoon-website/docs/orchestration/MAPLEMOON_BOSS_EXECUTION_LEDGER_20260816.md",
+    "maplemoon-website/docs/orchestration/CATALOGUE-RECONCILIATION-20260820.md",
+    "maplemoon-website/docs/orchestration/catalogue-reconciliation-20260820.csv",
+    "maplemoon-website/docs/orchestration/reviews/MAPLEMOON-CONTENT-CATALOGUE-TRUTH-AUDIT-R2-20260814T164221.md",
+    "maplemoon-website/_wip/shop.WIP.html",
+    "maplemoon-website/out/shopify_diff_20260823.md",
+    "maplemoon-website/out/shopify_create_spec_20260823.md",
+    "maplemoon-website/out/maplemoon_lane_20260823_receipt.json",
+    "/Users/handtomouse/Library/Messages/Attachments/e0/00/3631B118-5A32-487A-8E55-C0533B3B96CB/Maple Moon Store CSV File Export.csv"
+  ],
+  "files_changed": [
+    "maplemoon-website/docs/orchestration/reviews/MAPLEMOON-SHOPIFY-CATALOGUE-RECONCILIATION-R3-20260824T104207.md",
+    "maplemoon-website/_wip/evidence/shopify_catalogue_reconciliation_r3_20260824T104207",
+    "maplemoon-website/docs/orchestration/reviews/MAPLEMOON-SHOPIFY-CATALOGUE-RECONCILIATION-R3-20260824T104207.json"
+  ],
+  "pre_sha256": {
+    "maplemoon-website/docs/orchestration/reviews/MAPLEMOON-SHOPIFY-CATALOGUE-RECONCILIATION-R3-20260824T104207.md": null,
+    "maplemoon-website/_wip/evidence/shopify_catalogue_reconciliation_r3_20260824T104207": null,
+    "maplemoon-website/docs/orchestration/reviews/MAPLEMOON-SHOPIFY-CATALOGUE-RECONCILIATION-R3-20260824T104207.json": null
+  },
+  "post_sha256": {
+    "maplemoon-website/docs/orchestration/reviews/MAPLEMOON-SHOPIFY-CATALOGUE-RECONCILIATION-R3-20260824T104207.md": "14918d7716635a769eb67c501d03399487c5d2cb102aeba7ef49c4c2ea02672a",
+    "maplemoon-website/_wip/evidence/shopify_catalogue_reconciliation_r3_20260824T104207": "884d7c74aa040d77674520d4d99dd032ee2e773420da3ae549dab2c6d71b2b41",
+    "maplemoon-website/docs/orchestration/reviews/MAPLEMOON-SHOPIFY-CATALOGUE-RECONCILIATION-R3-20260824T104207.json": null
+  },
+  "checks": [
+    {
+      "command": "python3 -B scripts/check-maplemoon-receipt.py checkpoint ...; verify --phase start",
+      "exit_code": 0,
+      "result": "PASS checkpoint packet=MAPLEMOON-SHOPIFY-CATALOGUE-RECONCILIATION-R3-20260824T104207 files=3; PASS packet=MAPLEMOON-SHOPIFY-CATALOGUE-RECONCILIATION-R3-20260824T104207 phase=start scope=3"
+    },
+    {
+      "command": "python3 -B _wip/evidence/shopify_catalogue_reconciliation_r3_20260824T104207/build-and-verify-r3.py",
+      "exit_code": 0,
+      "result": "CATALOGUE_R3 PASS governed=24/24 families={'Bars': 6, 'Moons': 6, 'Eclipses': 6, 'Bites': 2, 'Elixirs': 2, 'Bananas': 1, 'Powder': 1} woo_mapped=20 no_woo=4 dispositions={'UPDATE': 13, 'CREATE': 11} shopify_snapshot=23/23 statuses={'ACTIVE': 13, 'DRAFT': 10} live_dispositions={'UPDATE': 13, 'ARCHIVE_PROPOSAL': 10} writes=0 refresh=HOLD_AUTH"
+    },
+    {
+      "command": "python3 -B _wip/evidence/shopify_catalogue_reconciliation_r3_20260824T104207/verify-r3-output.py",
+      "exit_code": 0,
+      "result": "R3_OUTPUT PASS report_rows=24 json_rows=24 live_rows=23 eclipse_products=5 eclipse_prices=5/5 identifiers_blank=ALL writes=0 external_refresh=HOLD"
+    },
+    {
+      "command": "jq empty evidence JSON; git diff --check; credential-pattern scan; source pins replay at close",
+      "exit_code": 0,
+      "result": "PASS: CATALOGUE-R3.json, SOURCE-CHECK.json and SCOPE-CLOSE.json parse; no whitespace errors; no credential or device-code material in outputs; all nine local input pins and the Woo SHA match at close."
+    },
+    {
+      "command": "git status --porcelain -- out",
+      "exit_code": 0,
+      "result": "PASS: the exact 20 preserved untracked out entries remain; no file was staged; preserved out status SHA-256 is 3c692eb22ff7d3e8e545c34d55b0c839019f1f8fb256aa736dd317140c4b0adc."
+    }
+  ],
+  "screenshots_or_urls": [],
+  "failures": [],
+  "unknowns": [
+    "A fresh 2026-08-24 Shopify catalogue read could not run because both the browser login and Shopify CLI authentication had expired. No credentials were guessed, saved or exposed in task outputs."
+  ],
+  "residual_risk": [
+    "The 23-product identity list was fully enumerated on 2026-08-20; the 2026-08-23 complete read revalidated totals and relevant identities, but a fresh backup/read is still required immediately before mutation.",
+    "Pure Carob Moon, Cayenne Moon, Goji Carob Bites and Coconut Carob Bites lack Woo commerce authority.",
+    "Woo provides no SKU, GTIN, stock quantity or structured shipping weight; these remain hard gaps.",
+    "Archive proposals are planning records only. No archive, create, update, image upload or publication action is authorised by this receipt."
+  ],
+  "forbidden_path_changes": [],
+  "proposed_next_state": "catalogue_spec_reconciled_external_refresh_and_write_hold",
+  "next_reviewer": "MapleMoon root BOSS, then a separately authenticated read-only backup gate before any Shopify write packet"
+}

@@ -1,0 +1,9 @@
+{
+  "tracked_head": "7c04f808e285acc116ae0f93c3d887ee1e96aea3",
+  "staged_diff_names": [],
+  "preserved_out_status_count": 20,
+  "preserved_out_status_sha256": "3c692eb22ff7d3e8e545c34d55b0c839019f1f8fb256aa736dd317140c4b0adc",
+  "shopify_writes": 0,
+  "shopify_refresh": "HOLD_EXPIRED_BROWSER_AND_CLI_AUTH",
+  "result": "PASS"
+}

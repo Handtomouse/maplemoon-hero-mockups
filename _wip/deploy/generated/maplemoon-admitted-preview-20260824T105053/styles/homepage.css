@@ -1,0 +1,52 @@
+@layer reset, tokens, base, chrome, primitives, pages, exceptions;
+
+/*
+ * Homepage pilot adapter.
+ *
+ * The Editorial Night route remains art-directed and unflattened. This file
+ * gives its existing local variables semantic global sources and exposes the
+ * shared primitives without re-authoring hero geometry, masks, fog, bridges,
+ * section dissolves, product facts, imagery or route interactions.
+ */
+@layer pages {
+  .wf[data-mm-home-pilot] {
+    --mm-home-ink: var(--mm-color-ink);
+    --mm-home-ink-soft: var(--mm-color-ink-editorial-soft);
+    --mm-home-ink-faint: var(--mm-color-ink-editorial-faint);
+    --mm-home-paper: var(--mm-color-paper-editorial);
+    --mm-home-paper-deep: var(--mm-color-paper-editorial-deep);
+    --mm-home-card: var(--mm-color-card-editorial);
+    --mm-home-cream: var(--mm-color-cream-editorial);
+    --mm-home-cream-soft: var(--mm-color-cream-editorial-soft);
+    --mm-home-cream-faint: var(--mm-color-cream-editorial-faint);
+    --mm-home-line: var(--mm-color-line-editorial);
+    --mm-home-line-soft: var(--mm-color-line-editorial-soft);
+    --mm-home-atmosphere: var(--mm-color-blue-atmosphere);
+    --mm-home-flow: var(--mm-color-blue-flow);
+    --mm-home-bridge: var(--mm-color-blue-bridge);
+    --mm-home-haze: var(--mm-color-blue-haze);
+  }
+
+  .wf[data-mm-home-pilot] .mm-site-header--home {
+    border-block-end: 0;
+    color: var(--mm-home-cream);
+  }
+
+  .wf[data-mm-home-pilot] .mm-home-editorial-surface {
+    border-color: var(--mm-home-line);
+    background: var(--mm-home-paper);
+    color: var(--mm-home-ink);
+  }
+
+  .wf[data-mm-home-pilot] .mm-home-atmosphere-surface {
+    border-color: var(--mm-home-bridge);
+    background: var(--mm-home-haze);
+    color: var(--mm-home-ink);
+  }
+
+  .wf[data-mm-home-pilot] .mm-home-pending {
+    border-color: var(--mm-color-blue-deep);
+    background: var(--mm-home-haze);
+    color: var(--mm-color-blue-night);
+  }
+}

@@ -1,0 +1,355 @@
+{
+  "probe_set": [
+    "bio_carli_701_masked_graded_master.png",
+    "bio_dylan_701_masked_graded_master.png",
+    "pair_592_masked_graded_master.png",
+    "pair_870_masked_graded_master.png"
+  ],
+  "background": "linear-gradient(180deg,#c5d5e5 0%,#d8e5f0 30%,#eef2f5 62%,#f4f2ed 100%)",
+  "outputs": [
+    {
+      "name": "bio_carli_701_masked",
+      "input_path": "/Users/handtomouse/maplemoon-website/out/masked_founders_20260823/graded_v4_20260823/bio_carli_701_masked_graded_master.png",
+      "input_sha256": "cf17a3f737b39d5281fb9e28815f02d1dbc3e57a7b60111716f1eba351c9f249",
+      "input_size": [
+        3240,
+        3902
+      ],
+      "outputs": [
+        {
+          "label": "master",
+          "path": "/Users/handtomouse/maplemoon-website/out/masked_founders_20260823/graded_v5_backgrounds_20260823/bio_carli_701_masked_graded_background_master.png",
+          "sha256": "ede3c33924b4e3d2260ce89c04068d190ff602926c6862ab845890112b5f2472",
+          "mode": "RGB",
+          "size": [
+            3240,
+            3902
+          ],
+          "bytes": 11725301,
+          "rgb_extrema": [
+            [
+              5,
+              253
+            ],
+            [
+              4,
+              255
+            ],
+            [
+              5,
+              254
+            ]
+          ]
+        },
+        {
+          "label": "2400",
+          "path": "/Users/handtomouse/maplemoon-website/out/masked_founders_20260823/graded_v5_backgrounds_20260823/bio_carli_701_masked_graded_background_2400.webp",
+          "sha256": "aa9d7a867dc6ce6c58e7e3f18a9d43f59c5dc9be22a5d98863309df30e63e6d6",
+          "mode": "RGB",
+          "size": [
+            1993,
+            2400
+          ],
+          "bytes": 817434,
+          "rgb_extrema": [
+            [
+              0,
+              255
+            ],
+            [
+              0,
+              255
+            ],
+            [
+              0,
+              255
+            ]
+          ]
+        },
+        {
+          "label": "1600",
+          "path": "/Users/handtomouse/maplemoon-website/out/masked_founders_20260823/graded_v5_backgrounds_20260823/bio_carli_701_masked_graded_background_1600.webp",
+          "sha256": "4a2601cacfdfd6e2caa0fcc26a585325343c9319aee695cdd550903bc7b2d11f",
+          "mode": "RGB",
+          "size": [
+            1329,
+            1600
+          ],
+          "bytes": 448284,
+          "rgb_extrema": [
+            [
+              0,
+              255
+            ],
+            [
+              0,
+              255
+            ],
+            [
+              0,
+              255
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "name": "bio_dylan_701_masked",
+      "input_path": "/Users/handtomouse/maplemoon-website/out/masked_founders_20260823/graded_v4_20260823/bio_dylan_701_masked_graded_master.png",
+      "input_sha256": "4aef04beb4ea9026f13de9f7b1e20a54a4e9b2b18e500979b81b6a26dc10b651",
+      "input_size": [
+        3240,
+        3872
+      ],
+      "outputs": [
+        {
+          "label": "master",
+          "path": "/Users/handtomouse/maplemoon-website/out/masked_founders_20260823/graded_v5_backgrounds_20260823/bio_dylan_701_masked_graded_background_master.png",
+          "sha256": "92e72283ecd6869ce22ae144817a8eb99314542eeea29201c14f99cf050bef0a",
+          "mode": "RGB",
+          "size": [
+            3240,
+            3872
+          ],
+          "bytes": 7218198,
+          "rgb_extrema": [
+            [
+              4,
+              253
+            ],
+            [
+              4,
+              255
+            ],
+            [
+              4,
+              254
+            ]
+          ]
+        },
+        {
+          "label": "2400",
+          "path": "/Users/handtomouse/maplemoon-website/out/masked_founders_20260823/graded_v5_backgrounds_20260823/bio_dylan_701_masked_graded_background_2400.webp",
+          "sha256": "c9ae9b547f772ea717fc797dc07f4fb461b21c0bbb35681d07b448cf893b11bd",
+          "mode": "RGB",
+          "size": [
+            2008,
+            2400
+          ],
+          "bytes": 293348,
+          "rgb_extrema": [
+            [
+              0,
+              255
+            ],
+            [
+              0,
+              255
+            ],
+            [
+              0,
+              255
+            ]
+          ]
+        },
+        {
+          "label": "1600",
+          "path": "/Users/handtomouse/maplemoon-website/out/masked_founders_20260823/graded_v5_backgrounds_20260823/bio_dylan_701_masked_graded_background_1600.webp",
+          "sha256": "46d1a64e66ba0d2783604d7507dfa4ea2180dc6fe518d5891ec0d8cf43fbb1df",
+          "mode": "RGB",
+          "size": [
+            1339,
+            1600
+          ],
+          "bytes": 162132,
+          "rgb_extrema": [
+            [
+              0,
+              255
+            ],
+            [
+              0,
+              255
+            ],
+            [
+              1,
+              255
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "name": "pair_592_masked",
+      "input_path": "/Users/handtomouse/maplemoon-website/out/masked_founders_20260823/graded_v4_20260823/pair_592_masked_graded_master.png",
+      "input_sha256": "afaea18c80f624f41e7d75477dfb39d58f26bd85b9a74ab0e4447cc7153a8717",
+      "input_size": [
+        4988,
+        3231
+      ],
+      "outputs": [
+        {
+          "label": "master",
+          "path": "/Users/handtomouse/maplemoon-website/out/masked_founders_20260823/graded_v5_backgrounds_20260823/pair_592_masked_graded_background_master.png",
+          "sha256": "b8ef53398807291149879df6ca2aea75eb46e789e1e47d9a5c0c3abad137a6e3",
+          "mode": "RGB",
+          "size": [
+            4988,
+            3231
+          ],
+          "bytes": 14437421,
+          "rgb_extrema": [
+            [
+              4,
+              244
+            ],
+            [
+              5,
+              242
+            ],
+            [
+              5,
+              254
+            ]
+          ]
+        },
+        {
+          "label": "2400",
+          "path": "/Users/handtomouse/maplemoon-website/out/masked_founders_20260823/graded_v5_backgrounds_20260823/pair_592_masked_graded_background_2400.webp",
+          "sha256": "05a552bcbed1c7032ff0610c472d8688236f21249ee5bacefb43fe6e9f887446",
+          "mode": "RGB",
+          "size": [
+            2400,
+            1555
+          ],
+          "bytes": 523512,
+          "rgb_extrema": [
+            [
+              0,
+              255
+            ],
+            [
+              0,
+              255
+            ],
+            [
+              0,
+              255
+            ]
+          ]
+        },
+        {
+          "label": "1600",
+          "path": "/Users/handtomouse/maplemoon-website/out/masked_founders_20260823/graded_v5_backgrounds_20260823/pair_592_masked_graded_background_1600.webp",
+          "sha256": "24c5a62bfae5936c95fc8955b8212048fbc8f4fd4ea270d8d7b5c4d7d56edea6",
+          "mode": "RGB",
+          "size": [
+            1600,
+            1036
+          ],
+          "bytes": 235076,
+          "rgb_extrema": [
+            [
+              0,
+              255
+            ],
+            [
+              0,
+              255
+            ],
+            [
+              0,
+              255
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "name": "pair_870_masked",
+      "input_path": "/Users/handtomouse/maplemoon-website/out/masked_founders_20260823/graded_v4_20260823/pair_870_masked_graded_master.png",
+      "input_sha256": "9e7f6da517dab53325c2fb825e48e64ffab78b604185c2eed35d45320c2b304c",
+      "input_size": [
+        4029,
+        2929
+      ],
+      "outputs": [
+        {
+          "label": "master",
+          "path": "/Users/handtomouse/maplemoon-website/out/masked_founders_20260823/graded_v5_backgrounds_20260823/pair_870_masked_graded_background_master.png",
+          "sha256": "627ce639be6bfb5aef13979f2eb53ce8e4b1eb6bcaf1d61cd5c9631b33f5029c",
+          "mode": "RGB",
+          "size": [
+            4029,
+            2929
+          ],
+          "bytes": 14813762,
+          "rgb_extrema": [
+            [
+              4,
+              245
+            ],
+            [
+              5,
+              242
+            ],
+            [
+              6,
+              245
+            ]
+          ]
+        },
+        {
+          "label": "2400",
+          "path": "/Users/handtomouse/maplemoon-website/out/masked_founders_20260823/graded_v5_backgrounds_20260823/pair_870_masked_graded_background_2400.webp",
+          "sha256": "87044a9334ea7dd54d040d0502858369c7231f392d3c684e98bf4f4b2b5e9c5a",
+          "mode": "RGB",
+          "size": [
+            2400,
+            1745
+          ],
+          "bytes": 1041202,
+          "rgb_extrema": [
+            [
+              0,
+              255
+            ],
+            [
+              0,
+              255
+            ],
+            [
+              0,
+              255
+            ]
+          ]
+        },
+        {
+          "label": "1600",
+          "path": "/Users/handtomouse/maplemoon-website/out/masked_founders_20260823/graded_v5_backgrounds_20260823/pair_870_masked_graded_background_1600.webp",
+          "sha256": "236d0590b52e895b069d5a1d179a774c008eb5851f8a0948def1dde41e554956",
+          "mode": "RGB",
+          "size": [
+            1600,
+            1163
+          ],
+          "bytes": 451886,
+          "rgb_extrema": [
+            [
+              0,
+              255
+            ],
+            [
+              0,
+              255
+            ],
+            [
+              0,
+              255
+            ]
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,274 @@
+{
+  "outcome": "PASS",
+  "baseUrl": "http://127.0.0.1:4318",
+  "cases": 14,
+  "rows": [
+    {
+      "route": "homepage",
+      "pathname": "/homepage.html",
+      "width": 390,
+      "status": 200,
+      "metrics": {
+        "clientWidth": 390,
+        "scrollWidth": 390,
+        "bodyHeight": 7344,
+        "textLength": 2907,
+        "images": 20,
+        "brokenImages": []
+      },
+      "consoleErrors": [],
+      "pageErrors": [],
+      "requestFailures": [],
+      "badResponses": [],
+      "failures": []
+    },
+    {
+      "route": "homepage",
+      "pathname": "/homepage.html",
+      "width": 1440,
+      "status": 200,
+      "metrics": {
+        "clientWidth": 1440,
+        "scrollWidth": 1440,
+        "bodyHeight": 6048,
+        "textLength": 3054,
+        "images": 20,
+        "brokenImages": []
+      },
+      "consoleErrors": [],
+      "pageErrors": [],
+      "requestFailures": [],
+      "badResponses": [],
+      "failures": []
+    },
+    {
+      "route": "shop",
+      "pathname": "/shop.html",
+      "width": 390,
+      "status": 200,
+      "metrics": {
+        "clientWidth": 390,
+        "scrollWidth": 390,
+        "bodyHeight": 15943,
+        "textLength": 5736,
+        "images": 28,
+        "brokenImages": []
+      },
+      "consoleErrors": [],
+      "pageErrors": [],
+      "requestFailures": [],
+      "badResponses": [],
+      "failures": []
+    },
+    {
+      "route": "shop",
+      "pathname": "/shop.html",
+      "width": 1440,
+      "status": 200,
+      "metrics": {
+        "clientWidth": 1440,
+        "scrollWidth": 1440,
+        "bodyHeight": 6917,
+        "textLength": 5776,
+        "images": 28,
+        "brokenImages": []
+      },
+      "consoleErrors": [],
+      "pageErrors": [],
+      "requestFailures": [],
+      "badResponses": [],
+      "failures": []
+    },
+    {
+      "route": "our-story",
+      "pathname": "/our-story.html",
+      "width": 390,
+      "status": 200,
+      "metrics": {
+        "clientWidth": 390,
+        "scrollWidth": 390,
+        "bodyHeight": 5290,
+        "textLength": 3002,
+        "images": 4,
+        "brokenImages": []
+      },
+      "consoleErrors": [],
+      "pageErrors": [],
+      "requestFailures": [],
+      "badResponses": [],
+      "failures": []
+    },
+    {
+      "route": "our-story",
+      "pathname": "/our-story.html",
+      "width": 1440,
+      "status": 200,
+      "metrics": {
+        "clientWidth": 1440,
+        "scrollWidth": 1440,
+        "bodyHeight": 4154,
+        "textLength": 3042,
+        "images": 4,
+        "brokenImages": []
+      },
+      "consoleErrors": [],
+      "pageErrors": [],
+      "requestFailures": [],
+      "badResponses": [],
+      "failures": []
+    },
+    {
+      "route": "carob-story",
+      "pathname": "/carob-story.html",
+      "width": 390,
+      "status": 200,
+      "metrics": {
+        "clientWidth": 390,
+        "scrollWidth": 390,
+        "bodyHeight": 2749,
+        "textLength": 1451,
+        "images": 3,
+        "brokenImages": []
+      },
+      "consoleErrors": [],
+      "pageErrors": [],
+      "requestFailures": [],
+      "badResponses": [],
+      "failures": []
+    },
+    {
+      "route": "carob-story",
+      "pathname": "/carob-story.html",
+      "width": 1440,
+      "status": 200,
+      "metrics": {
+        "clientWidth": 1440,
+        "scrollWidth": 1440,
+        "bodyHeight": 1767,
+        "textLength": 1534,
+        "images": 3,
+        "brokenImages": []
+      },
+      "consoleErrors": [],
+      "pageErrors": [],
+      "requestFailures": [],
+      "badResponses": [],
+      "failures": []
+    },
+    {
+      "route": "faq",
+      "pathname": "/faq.html",
+      "width": 390,
+      "status": 200,
+      "metrics": {
+        "clientWidth": 390,
+        "scrollWidth": 390,
+        "bodyHeight": 2810,
+        "textLength": 1344,
+        "images": 0,
+        "brokenImages": []
+      },
+      "consoleErrors": [],
+      "pageErrors": [],
+      "requestFailures": [],
+      "badResponses": [],
+      "failures": []
+    },
+    {
+      "route": "faq",
+      "pathname": "/faq.html",
+      "width": 1440,
+      "status": 200,
+      "metrics": {
+        "clientWidth": 1440,
+        "scrollWidth": 1440,
+        "bodyHeight": 2319,
+        "textLength": 1439,
+        "images": 0,
+        "brokenImages": []
+      },
+      "consoleErrors": [],
+      "pageErrors": [],
+      "requestFailures": [],
+      "badResponses": [],
+      "failures": []
+    },
+    {
+      "route": "stockists",
+      "pathname": "/stockists.html",
+      "width": 390,
+      "status": 200,
+      "metrics": {
+        "clientWidth": 390,
+        "scrollWidth": 390,
+        "bodyHeight": 3685,
+        "textLength": 2146,
+        "images": 1,
+        "brokenImages": []
+      },
+      "consoleErrors": [],
+      "pageErrors": [],
+      "requestFailures": [],
+      "badResponses": [],
+      "failures": []
+    },
+    {
+      "route": "stockists",
+      "pathname": "/stockists.html",
+      "width": 1440,
+      "status": 200,
+      "metrics": {
+        "clientWidth": 1440,
+        "scrollWidth": 1440,
+        "bodyHeight": 3215,
+        "textLength": 2248,
+        "images": 1,
+        "brokenImages": []
+      },
+      "consoleErrors": [],
+      "pageErrors": [],
+      "requestFailures": [],
+      "badResponses": [],
+      "failures": []
+    },
+    {
+      "route": "pure-carob-bar",
+      "pathname": "/products/pure-carob-bar.html",
+      "width": 390,
+      "status": 200,
+      "metrics": {
+        "clientWidth": 390,
+        "scrollWidth": 390,
+        "bodyHeight": 4006,
+        "textLength": 1026,
+        "images": 16,
+        "brokenImages": []
+      },
+      "consoleErrors": [],
+      "pageErrors": [],
+      "requestFailures": [],
+      "badResponses": [],
+      "failures": []
+    },
+    {
+      "route": "pure-carob-bar",
+      "pathname": "/products/pure-carob-bar.html",
+      "width": 1440,
+      "status": 200,
+      "metrics": {
+        "clientWidth": 1440,
+        "scrollWidth": 1440,
+        "bodyHeight": 3475,
+        "textLength": 1045,
+        "images": 16,
+        "brokenImages": []
+      },
+      "consoleErrors": [],
+      "pageErrors": [],
+      "requestFailures": [],
+      "badResponses": [],
+      "failures": []
+    }
+  ],
+  "failures": []
+}

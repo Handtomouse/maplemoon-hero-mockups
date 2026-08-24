@@ -1,0 +1,57 @@
+{
+  "created_at": "2026-08-23T05:57:19.610957Z",
+  "files": {
+    ".vercelignore": {
+      "kind": "file",
+      "sha256": "95dcf5d7f9b1b2892a24c4ab228f8ec44d7dfba73544d653a1357dd3bfab2fa6",
+      "state": "present"
+    },
+    "assets/product_shots/final_20260823": {
+      "state": "absent"
+    },
+    "carob-story.html": {
+      "kind": "file",
+      "sha256": "6b7b21ccfa2d2dfcd79ed1254db3c84987b6cdbfaee77457b34790323e1aef57",
+      "state": "present"
+    },
+    "contact.html": {
+      "state": "absent"
+    },
+    "faq.html": {
+      "kind": "file",
+      "sha256": "9176210afe1e013cd65439fd8c5519817b8058864efae231307612d9a8f24833",
+      "state": "present"
+    },
+    "homepage.html": {
+      "kind": "file",
+      "sha256": "4cec4f61c1202b0f2a5938fda30d7b93744ff6132d29bdc7e95cd30f06cccac6",
+      "state": "present"
+    },
+    "homepage_real_1_lead_photo.html": {
+      "state": "absent"
+    },
+    "our-story.html": {
+      "kind": "file",
+      "sha256": "f8309b5a2f1e6d65655248d5bb3e7a33f4bed4d9419e54038777ea2e5c5f22dc",
+      "state": "present"
+    },
+    "shop.html": {
+      "kind": "file",
+      "sha256": "9d28b2811cb73dbc941d5eea7c2009bc488f63aeba71f01cf57bb3a2edc4dc5c",
+      "state": "present"
+    },
+    "stockists.html": {
+      "kind": "file",
+      "sha256": "c61d7da6a146d456eaf5f6aafdaa3ad0f02c9704abd6a4c7868ef2912d650388",
+      "state": "present"
+    },
+    "vercel.json": {
+      "kind": "file",
+      "sha256": "e3d7fb90cf647781c31f2209fb2b8b090bd70013932f0716e91713b17fbe86dc",
+      "state": "present"
+    }
+  },
+  "packet_id": "MAPLEMOON-PROMOTE-20260823",
+  "repository": "/Users/handtomouse/maplemoon-website",
+  "schema": "maplemoon-recovery-checkpoint/v1"
+}

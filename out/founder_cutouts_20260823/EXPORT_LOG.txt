@@ -1,0 +1,1 @@
+start v2target MapleMoon_founder_options.psd 6580x4050 layers=2layers: Artboard 3 / Artboard 2Artboard 3 bounds 3340,178,6728,6571  -> 3388x6393  saved Artboard_3.png 3240x4050Artboard 2 bounds -238,148,4216,5942  -> 4454x5794  saved Artboard_2.png 3240x4050done

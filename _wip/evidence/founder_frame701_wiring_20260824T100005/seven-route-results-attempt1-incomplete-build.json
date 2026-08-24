@@ -1,0 +1,543 @@
+{
+  "outcome": "FAIL",
+  "baseUrl": "http://127.0.0.1:4318",
+  "cases": 14,
+  "rows": [
+    {
+      "route": "homepage",
+      "pathname": "/homepage.html",
+      "width": 390,
+      "status": 200,
+      "metrics": {
+        "clientWidth": 390,
+        "scrollWidth": 390,
+        "bodyHeight": 7328,
+        "textLength": 2907,
+        "images": 20,
+        "brokenImages": []
+      },
+      "consoleErrors": [
+        "Failed to load resource: the server responded with a status of 404 (File not found)"
+      ],
+      "pageErrors": [],
+      "requestFailures": [
+        {
+          "url": "http://127.0.0.1:4318/brand_kit.css",
+          "error": "net::ERR_ABORTED"
+        }
+      ],
+      "badResponses": [
+        {
+          "status": 404,
+          "url": "http://127.0.0.1:4318/brand_kit.css"
+        }
+      ],
+      "failures": [
+        "console errors [\"Failed to load resource: the server responded with a status of 404 (File not found)\"]",
+        "request failures [{\"url\":\"http://127.0.0.1:4318/brand_kit.css\",\"error\":\"net::ERR_ABORTED\"}]",
+        "bad responses [{\"status\":404,\"url\":\"http://127.0.0.1:4318/brand_kit.css\"}]"
+      ]
+    },
+    {
+      "route": "homepage",
+      "pathname": "/homepage.html",
+      "width": 1440,
+      "status": 200,
+      "metrics": {
+        "clientWidth": 1440,
+        "scrollWidth": 1440,
+        "bodyHeight": 6001,
+        "textLength": 3054,
+        "images": 20,
+        "brokenImages": []
+      },
+      "consoleErrors": [
+        "Failed to load resource: the server responded with a status of 404 (File not found)"
+      ],
+      "pageErrors": [],
+      "requestFailures": [
+        {
+          "url": "http://127.0.0.1:4318/brand_kit.css",
+          "error": "net::ERR_ABORTED"
+        }
+      ],
+      "badResponses": [
+        {
+          "status": 404,
+          "url": "http://127.0.0.1:4318/brand_kit.css"
+        }
+      ],
+      "failures": [
+        "console errors [\"Failed to load resource: the server responded with a status of 404 (File not found)\"]",
+        "request failures [{\"url\":\"http://127.0.0.1:4318/brand_kit.css\",\"error\":\"net::ERR_ABORTED\"}]",
+        "bad responses [{\"status\":404,\"url\":\"http://127.0.0.1:4318/brand_kit.css\"}]"
+      ]
+    },
+    {
+      "route": "shop",
+      "pathname": "/shop.html",
+      "width": 390,
+      "status": 200,
+      "metrics": {
+        "clientWidth": 390,
+        "scrollWidth": 390,
+        "bodyHeight": 16542,
+        "textLength": 5736,
+        "images": 28,
+        "brokenImages": []
+      },
+      "consoleErrors": [
+        "Failed to load resource: the server responded with a status of 404 (File not found)"
+      ],
+      "pageErrors": [],
+      "requestFailures": [
+        {
+          "url": "http://127.0.0.1:4318/brand_kit.css",
+          "error": "net::ERR_ABORTED"
+        }
+      ],
+      "badResponses": [
+        {
+          "status": 404,
+          "url": "http://127.0.0.1:4318/brand_kit.css"
+        }
+      ],
+      "failures": [
+        "console errors [\"Failed to load resource: the server responded with a status of 404 (File not found)\"]",
+        "request failures [{\"url\":\"http://127.0.0.1:4318/brand_kit.css\",\"error\":\"net::ERR_ABORTED\"}]",
+        "bad responses [{\"status\":404,\"url\":\"http://127.0.0.1:4318/brand_kit.css\"}]"
+      ]
+    },
+    {
+      "route": "shop",
+      "pathname": "/shop.html",
+      "width": 1440,
+      "status": 200,
+      "metrics": {
+        "clientWidth": 1440,
+        "scrollWidth": 1440,
+        "bodyHeight": 7162,
+        "textLength": 5776,
+        "images": 28,
+        "brokenImages": []
+      },
+      "consoleErrors": [
+        "Failed to load resource: the server responded with a status of 404 (File not found)"
+      ],
+      "pageErrors": [],
+      "requestFailures": [
+        {
+          "url": "http://127.0.0.1:4318/brand_kit.css",
+          "error": "net::ERR_ABORTED"
+        }
+      ],
+      "badResponses": [
+        {
+          "status": 404,
+          "url": "http://127.0.0.1:4318/brand_kit.css"
+        }
+      ],
+      "failures": [
+        "console errors [\"Failed to load resource: the server responded with a status of 404 (File not found)\"]",
+        "request failures [{\"url\":\"http://127.0.0.1:4318/brand_kit.css\",\"error\":\"net::ERR_ABORTED\"}]",
+        "bad responses [{\"status\":404,\"url\":\"http://127.0.0.1:4318/brand_kit.css\"}]"
+      ]
+    },
+    {
+      "route": "our-story",
+      "pathname": "/our-story.html",
+      "width": 390,
+      "status": 200,
+      "metrics": {
+        "clientWidth": 390,
+        "scrollWidth": 390,
+        "bodyHeight": 5290,
+        "textLength": 3002,
+        "images": 4,
+        "brokenImages": []
+      },
+      "consoleErrors": [],
+      "pageErrors": [],
+      "requestFailures": [],
+      "badResponses": [],
+      "failures": []
+    },
+    {
+      "route": "our-story",
+      "pathname": "/our-story.html",
+      "width": 1440,
+      "status": 200,
+      "metrics": {
+        "clientWidth": 1440,
+        "scrollWidth": 1440,
+        "bodyHeight": 4154,
+        "textLength": 3042,
+        "images": 4,
+        "brokenImages": []
+      },
+      "consoleErrors": [],
+      "pageErrors": [],
+      "requestFailures": [],
+      "badResponses": [],
+      "failures": []
+    },
+    {
+      "route": "carob-story",
+      "pathname": "/carob-story.html",
+      "width": 390,
+      "status": 200,
+      "metrics": {
+        "clientWidth": 390,
+        "scrollWidth": 390,
+        "bodyHeight": 2749,
+        "textLength": 1451,
+        "images": 3,
+        "brokenImages": []
+      },
+      "consoleErrors": [
+        "Failed to load resource: the server responded with a status of 404 (File not found)"
+      ],
+      "pageErrors": [],
+      "requestFailures": [
+        {
+          "url": "http://127.0.0.1:4318/brand_kit.css",
+          "error": "net::ERR_ABORTED"
+        }
+      ],
+      "badResponses": [
+        {
+          "status": 404,
+          "url": "http://127.0.0.1:4318/brand_kit.css"
+        }
+      ],
+      "failures": [
+        "console errors [\"Failed to load resource: the server responded with a status of 404 (File not found)\"]",
+        "request failures [{\"url\":\"http://127.0.0.1:4318/brand_kit.css\",\"error\":\"net::ERR_ABORTED\"}]",
+        "bad responses [{\"status\":404,\"url\":\"http://127.0.0.1:4318/brand_kit.css\"}]"
+      ]
+    },
+    {
+      "route": "carob-story",
+      "pathname": "/carob-story.html",
+      "width": 1440,
+      "status": 200,
+      "metrics": {
+        "clientWidth": 1440,
+        "scrollWidth": 1440,
+        "bodyHeight": 1767,
+        "textLength": 1534,
+        "images": 3,
+        "brokenImages": []
+      },
+      "consoleErrors": [
+        "Failed to load resource: the server responded with a status of 404 (File not found)"
+      ],
+      "pageErrors": [],
+      "requestFailures": [
+        {
+          "url": "http://127.0.0.1:4318/brand_kit.css",
+          "error": "net::ERR_ABORTED"
+        }
+      ],
+      "badResponses": [
+        {
+          "status": 404,
+          "url": "http://127.0.0.1:4318/brand_kit.css"
+        }
+      ],
+      "failures": [
+        "console errors [\"Failed to load resource: the server responded with a status of 404 (File not found)\"]",
+        "request failures [{\"url\":\"http://127.0.0.1:4318/brand_kit.css\",\"error\":\"net::ERR_ABORTED\"}]",
+        "bad responses [{\"status\":404,\"url\":\"http://127.0.0.1:4318/brand_kit.css\"}]"
+      ]
+    },
+    {
+      "route": "faq",
+      "pathname": "/faq.html",
+      "width": 390,
+      "status": 200,
+      "metrics": {
+        "clientWidth": 390,
+        "scrollWidth": 390,
+        "bodyHeight": 2810,
+        "textLength": 1344,
+        "images": 0,
+        "brokenImages": []
+      },
+      "consoleErrors": [
+        "Failed to load resource: the server responded with a status of 404 (File not found)"
+      ],
+      "pageErrors": [],
+      "requestFailures": [
+        {
+          "url": "http://127.0.0.1:4318/brand_kit.css",
+          "error": "net::ERR_ABORTED"
+        }
+      ],
+      "badResponses": [
+        {
+          "status": 404,
+          "url": "http://127.0.0.1:4318/brand_kit.css"
+        }
+      ],
+      "failures": [
+        "console errors [\"Failed to load resource: the server responded with a status of 404 (File not found)\"]",
+        "request failures [{\"url\":\"http://127.0.0.1:4318/brand_kit.css\",\"error\":\"net::ERR_ABORTED\"}]",
+        "bad responses [{\"status\":404,\"url\":\"http://127.0.0.1:4318/brand_kit.css\"}]"
+      ]
+    },
+    {
+      "route": "faq",
+      "pathname": "/faq.html",
+      "width": 1440,
+      "status": 200,
+      "metrics": {
+        "clientWidth": 1440,
+        "scrollWidth": 1440,
+        "bodyHeight": 2319,
+        "textLength": 1439,
+        "images": 0,
+        "brokenImages": []
+      },
+      "consoleErrors": [
+        "Failed to load resource: the server responded with a status of 404 (File not found)"
+      ],
+      "pageErrors": [],
+      "requestFailures": [
+        {
+          "url": "http://127.0.0.1:4318/brand_kit.css",
+          "error": "net::ERR_ABORTED"
+        }
+      ],
+      "badResponses": [
+        {
+          "status": 404,
+          "url": "http://127.0.0.1:4318/brand_kit.css"
+        }
+      ],
+      "failures": [
+        "console errors [\"Failed to load resource: the server responded with a status of 404 (File not found)\"]",
+        "request failures [{\"url\":\"http://127.0.0.1:4318/brand_kit.css\",\"error\":\"net::ERR_ABORTED\"}]",
+        "bad responses [{\"status\":404,\"url\":\"http://127.0.0.1:4318/brand_kit.css\"}]"
+      ]
+    },
+    {
+      "route": "stockists",
+      "pathname": "/stockists.html",
+      "width": 390,
+      "status": 200,
+      "metrics": {
+        "clientWidth": 390,
+        "scrollWidth": 390,
+        "bodyHeight": 3685,
+        "textLength": 2146,
+        "images": 1,
+        "brokenImages": []
+      },
+      "consoleErrors": [
+        "Failed to load resource: the server responded with a status of 404 (File not found)"
+      ],
+      "pageErrors": [],
+      "requestFailures": [
+        {
+          "url": "http://127.0.0.1:4318/brand_kit.css",
+          "error": "net::ERR_ABORTED"
+        }
+      ],
+      "badResponses": [
+        {
+          "status": 404,
+          "url": "http://127.0.0.1:4318/brand_kit.css"
+        }
+      ],
+      "failures": [
+        "console errors [\"Failed to load resource: the server responded with a status of 404 (File not found)\"]",
+        "request failures [{\"url\":\"http://127.0.0.1:4318/brand_kit.css\",\"error\":\"net::ERR_ABORTED\"}]",
+        "bad responses [{\"status\":404,\"url\":\"http://127.0.0.1:4318/brand_kit.css\"}]"
+      ]
+    },
+    {
+      "route": "stockists",
+      "pathname": "/stockists.html",
+      "width": 1440,
+      "status": 200,
+      "metrics": {
+        "clientWidth": 1440,
+        "scrollWidth": 1440,
+        "bodyHeight": 3210,
+        "textLength": 2248,
+        "images": 1,
+        "brokenImages": []
+      },
+      "consoleErrors": [
+        "Failed to load resource: the server responded with a status of 404 (File not found)"
+      ],
+      "pageErrors": [],
+      "requestFailures": [
+        {
+          "url": "http://127.0.0.1:4318/brand_kit.css",
+          "error": "net::ERR_ABORTED"
+        }
+      ],
+      "badResponses": [
+        {
+          "status": 404,
+          "url": "http://127.0.0.1:4318/brand_kit.css"
+        }
+      ],
+      "failures": [
+        "console errors [\"Failed to load resource: the server responded with a status of 404 (File not found)\"]",
+        "request failures [{\"url\":\"http://127.0.0.1:4318/brand_kit.css\",\"error\":\"net::ERR_ABORTED\"}]",
+        "bad responses [{\"status\":404,\"url\":\"http://127.0.0.1:4318/brand_kit.css\"}]"
+      ]
+    },
+    {
+      "route": "pure-carob-bar",
+      "pathname": "/products/pure-carob-bar.html",
+      "width": 390,
+      "status": 200,
+      "metrics": {
+        "clientWidth": 390,
+        "scrollWidth": 1876,
+        "bodyHeight": 7518,
+        "textLength": 1051,
+        "images": 16,
+        "brokenImages": []
+      },
+      "consoleErrors": [
+        "Failed to load resource: the server responded with a status of 404 (File not found)",
+        "Failed to load resource: the server responded with a status of 404 (File not found)",
+        "Failed to load resource: the server responded with a status of 404 (File not found)"
+      ],
+      "pageErrors": [],
+      "requestFailures": [
+        {
+          "url": "http://127.0.0.1:4318/brand_kit.css",
+          "error": "net::ERR_ABORTED"
+        },
+        {
+          "url": "http://127.0.0.1:4318/shared.css",
+          "error": "net::ERR_ABORTED"
+        },
+        {
+          "url": "http://127.0.0.1:4318/shared.js",
+          "error": "net::ERR_ABORTED"
+        }
+      ],
+      "badResponses": [
+        {
+          "status": 404,
+          "url": "http://127.0.0.1:4318/brand_kit.css"
+        },
+        {
+          "status": 404,
+          "url": "http://127.0.0.1:4318/shared.css"
+        },
+        {
+          "status": 404,
+          "url": "http://127.0.0.1:4318/shared.js"
+        }
+      ],
+      "failures": [
+        "overflow 390/1876",
+        "console errors [\"Failed to load resource: the server responded with a status of 404 (File not found)\",\"Failed to load resource: the server responded with a status of 404 (File not found)\",\"Failed to load resource: the server responded with a status of 404 (File not found)\"]",
+        "request failures [{\"url\":\"http://127.0.0.1:4318/brand_kit.css\",\"error\":\"net::ERR_ABORTED\"},{\"url\":\"http://127.0.0.1:4318/shared.css\",\"error\":\"net::ERR_ABORTED\"},{\"url\":\"http://127.0.0.1:4318/shared.js\",\"error\":\"net::ERR_ABORTED\"}]",
+        "bad responses [{\"status\":404,\"url\":\"http://127.0.0.1:4318/brand_kit.css\"},{\"status\":404,\"url\":\"http://127.0.0.1:4318/shared.css\"},{\"status\":404,\"url\":\"http://127.0.0.1:4318/shared.js\"}]"
+      ]
+    },
+    {
+      "route": "pure-carob-bar",
+      "pathname": "/products/pure-carob-bar.html",
+      "width": 1440,
+      "status": 200,
+      "metrics": {
+        "clientWidth": 1440,
+        "scrollWidth": 2934,
+        "bodyHeight": 11095,
+        "textLength": 1051,
+        "images": 16,
+        "brokenImages": []
+      },
+      "consoleErrors": [
+        "Failed to load resource: the server responded with a status of 404 (File not found)",
+        "Failed to load resource: the server responded with a status of 404 (File not found)",
+        "Failed to load resource: the server responded with a status of 404 (File not found)"
+      ],
+      "pageErrors": [],
+      "requestFailures": [
+        {
+          "url": "http://127.0.0.1:4318/brand_kit.css",
+          "error": "net::ERR_ABORTED"
+        },
+        {
+          "url": "http://127.0.0.1:4318/shared.css",
+          "error": "net::ERR_ABORTED"
+        },
+        {
+          "url": "http://127.0.0.1:4318/shared.js",
+          "error": "net::ERR_ABORTED"
+        }
+      ],
+      "badResponses": [
+        {
+          "status": 404,
+          "url": "http://127.0.0.1:4318/brand_kit.css"
+        },
+        {
+          "status": 404,
+          "url": "http://127.0.0.1:4318/shared.css"
+        },
+        {
+          "status": 404,
+          "url": "http://127.0.0.1:4318/shared.js"
+        }
+      ],
+      "failures": [
+        "overflow 1440/2934",
+        "console errors [\"Failed to load resource: the server responded with a status of 404 (File not found)\",\"Failed to load resource: the server responded with a status of 404 (File not found)\",\"Failed to load resource: the server responded with a status of 404 (File not found)\"]",
+        "request failures [{\"url\":\"http://127.0.0.1:4318/brand_kit.css\",\"error\":\"net::ERR_ABORTED\"},{\"url\":\"http://127.0.0.1:4318/shared.css\",\"error\":\"net::ERR_ABORTED\"},{\"url\":\"http://127.0.0.1:4318/shared.js\",\"error\":\"net::ERR_ABORTED\"}]",
+        "bad responses [{\"status\":404,\"url\":\"http://127.0.0.1:4318/brand_kit.css\"},{\"status\":404,\"url\":\"http://127.0.0.1:4318/shared.css\"},{\"status\":404,\"url\":\"http://127.0.0.1:4318/shared.js\"}]"
+      ]
+    }
+  ],
+  "failures": [
+    "homepage@390: console errors [\"Failed to load resource: the server responded with a status of 404 (File not found)\"]",
+    "homepage@390: request failures [{\"url\":\"http://127.0.0.1:4318/brand_kit.css\",\"error\":\"net::ERR_ABORTED\"}]",
+    "homepage@390: bad responses [{\"status\":404,\"url\":\"http://127.0.0.1:4318/brand_kit.css\"}]",
+    "homepage@1440: console errors [\"Failed to load resource: the server responded with a status of 404 (File not found)\"]",
+    "homepage@1440: request failures [{\"url\":\"http://127.0.0.1:4318/brand_kit.css\",\"error\":\"net::ERR_ABORTED\"}]",
+    "homepage@1440: bad responses [{\"status\":404,\"url\":\"http://127.0.0.1:4318/brand_kit.css\"}]",
+    "shop@390: console errors [\"Failed to load resource: the server responded with a status of 404 (File not found)\"]",
+    "shop@390: request failures [{\"url\":\"http://127.0.0.1:4318/brand_kit.css\",\"error\":\"net::ERR_ABORTED\"}]",
+    "shop@390: bad responses [{\"status\":404,\"url\":\"http://127.0.0.1:4318/brand_kit.css\"}]",
+    "shop@1440: console errors [\"Failed to load resource: the server responded with a status of 404 (File not found)\"]",
+    "shop@1440: request failures [{\"url\":\"http://127.0.0.1:4318/brand_kit.css\",\"error\":\"net::ERR_ABORTED\"}]",
+    "shop@1440: bad responses [{\"status\":404,\"url\":\"http://127.0.0.1:4318/brand_kit.css\"}]",
+    "carob-story@390: console errors [\"Failed to load resource: the server responded with a status of 404 (File not found)\"]",
+    "carob-story@390: request failures [{\"url\":\"http://127.0.0.1:4318/brand_kit.css\",\"error\":\"net::ERR_ABORTED\"}]",
+    "carob-story@390: bad responses [{\"status\":404,\"url\":\"http://127.0.0.1:4318/brand_kit.css\"}]",
+    "carob-story@1440: console errors [\"Failed to load resource: the server responded with a status of 404 (File not found)\"]",
+    "carob-story@1440: request failures [{\"url\":\"http://127.0.0.1:4318/brand_kit.css\",\"error\":\"net::ERR_ABORTED\"}]",
+    "carob-story@1440: bad responses [{\"status\":404,\"url\":\"http://127.0.0.1:4318/brand_kit.css\"}]",
+    "faq@390: console errors [\"Failed to load resource: the server responded with a status of 404 (File not found)\"]",
+    "faq@390: request failures [{\"url\":\"http://127.0.0.1:4318/brand_kit.css\",\"error\":\"net::ERR_ABORTED\"}]",
+    "faq@390: bad responses [{\"status\":404,\"url\":\"http://127.0.0.1:4318/brand_kit.css\"}]",
+    "faq@1440: console errors [\"Failed to load resource: the server responded with a status of 404 (File not found)\"]",
+    "faq@1440: request failures [{\"url\":\"http://127.0.0.1:4318/brand_kit.css\",\"error\":\"net::ERR_ABORTED\"}]",
+    "faq@1440: bad responses [{\"status\":404,\"url\":\"http://127.0.0.1:4318/brand_kit.css\"}]",
+    "stockists@390: console errors [\"Failed to load resource: the server responded with a status of 404 (File not found)\"]",
+    "stockists@390: request failures [{\"url\":\"http://127.0.0.1:4318/brand_kit.css\",\"error\":\"net::ERR_ABORTED\"}]",
+    "stockists@390: bad responses [{\"status\":404,\"url\":\"http://127.0.0.1:4318/brand_kit.css\"}]",
+    "stockists@1440: console errors [\"Failed to load resource: the server responded with a status of 404 (File not found)\"]",
+    "stockists@1440: request failures [{\"url\":\"http://127.0.0.1:4318/brand_kit.css\",\"error\":\"net::ERR_ABORTED\"}]",
+    "stockists@1440: bad responses [{\"status\":404,\"url\":\"http://127.0.0.1:4318/brand_kit.css\"}]",
+    "pure-carob-bar@390: overflow 390/1876",
+    "pure-carob-bar@390: console errors [\"Failed to load resource: the server responded with a status of 404 (File not found)\",\"Failed to load resource: the server responded with a status of 404 (File not found)\",\"Failed to load resource: the server responded with a status of 404 (File not found)\"]",
+    "pure-carob-bar@390: request failures [{\"url\":\"http://127.0.0.1:4318/brand_kit.css\",\"error\":\"net::ERR_ABORTED\"},{\"url\":\"http://127.0.0.1:4318/shared.css\",\"error\":\"net::ERR_ABORTED\"},{\"url\":\"http://127.0.0.1:4318/shared.js\",\"error\":\"net::ERR_ABORTED\"}]",
+    "pure-carob-bar@390: bad responses [{\"status\":404,\"url\":\"http://127.0.0.1:4318/brand_kit.css\"},{\"status\":404,\"url\":\"http://127.0.0.1:4318/shared.css\"},{\"status\":404,\"url\":\"http://127.0.0.1:4318/shared.js\"}]",
+    "pure-carob-bar@1440: overflow 1440/2934",
+    "pure-carob-bar@1440: console errors [\"Failed to load resource: the server responded with a status of 404 (File not found)\",\"Failed to load resource: the server responded with a status of 404 (File not found)\",\"Failed to load resource: the server responded with a status of 404 (File not found)\"]",
+    "pure-carob-bar@1440: request failures [{\"url\":\"http://127.0.0.1:4318/brand_kit.css\",\"error\":\"net::ERR_ABORTED\"},{\"url\":\"http://127.0.0.1:4318/shared.css\",\"error\":\"net::ERR_ABORTED\"},{\"url\":\"http://127.0.0.1:4318/shared.js\",\"error\":\"net::ERR_ABORTED\"}]",
+    "pure-carob-bar@1440: bad responses [{\"status\":404,\"url\":\"http://127.0.0.1:4318/brand_kit.css\"},{\"status\":404,\"url\":\"http://127.0.0.1:4318/shared.css\"},{\"status\":404,\"url\":\"http://127.0.0.1:4318/shared.js\"}]"
+  ]
+}

@@ -1,0 +1,153 @@
+{
+  "outcome": "PASS",
+  "url": "https://maplemoonbuild20260813-j9pef6x3q-handtomouses-projects.vercel.app",
+  "deployment_id": "dpl_9gAxXL2uxFu4tobNeSgRR69NqgQj",
+  "files": 16,
+  "rows": [
+    {
+      "path": "homepage.html",
+      "exit": 0,
+      "local_bytes": 192910,
+      "remote_bytes": 192910,
+      "local_sha256": "8ad9c5258edaa56c263f38c01b9d9ef0152af6fb6179e6c59f1641b7b59319a5",
+      "remote_sha256": "8ad9c5258edaa56c263f38c01b9d9ef0152af6fb6179e6c59f1641b7b59319a5",
+      "equal": true
+    },
+    {
+      "path": "shop.html",
+      "exit": 0,
+      "local_bytes": 53384,
+      "remote_bytes": 53384,
+      "local_sha256": "ec78b161c768f00850eaeeadbc86925e7e294cf5f6dfa9f792b2231d348cc05f",
+      "remote_sha256": "ec78b161c768f00850eaeeadbc86925e7e294cf5f6dfa9f792b2231d348cc05f",
+      "equal": true
+    },
+    {
+      "path": "our-story.html",
+      "exit": 0,
+      "local_bytes": 65230,
+      "remote_bytes": 65230,
+      "local_sha256": "8dc01af541712a54986270f5bdf51f41ea48fa5be2699fa3610182910668458f",
+      "remote_sha256": "8dc01af541712a54986270f5bdf51f41ea48fa5be2699fa3610182910668458f",
+      "equal": true
+    },
+    {
+      "path": "carob-story.html",
+      "exit": 0,
+      "local_bytes": 56573,
+      "remote_bytes": 56573,
+      "local_sha256": "2fafd3867233a01ce6af1f4dd0a1837cc83fb69563d35d29c293e8d1d379d9e0",
+      "remote_sha256": "2fafd3867233a01ce6af1f4dd0a1837cc83fb69563d35d29c293e8d1d379d9e0",
+      "equal": true
+    },
+    {
+      "path": "faq.html",
+      "exit": 0,
+      "local_bytes": 33541,
+      "remote_bytes": 33541,
+      "local_sha256": "354b556d01f36c60ff2bb902386bd86fb61a271ee6420b550fcce2192ec078e3",
+      "remote_sha256": "354b556d01f36c60ff2bb902386bd86fb61a271ee6420b550fcce2192ec078e3",
+      "equal": true
+    },
+    {
+      "path": "stockists.html",
+      "exit": 0,
+      "local_bytes": 110451,
+      "remote_bytes": 110451,
+      "local_sha256": "d5adc08c573483fe462708fc5c20a45485fae9d21ab36991653ec50036ee94ac",
+      "remote_sha256": "d5adc08c573483fe462708fc5c20a45485fae9d21ab36991653ec50036ee94ac",
+      "equal": true
+    },
+    {
+      "path": "products/pure-carob-bar.html",
+      "exit": 0,
+      "local_bytes": 25399,
+      "remote_bytes": 25399,
+      "local_sha256": "2157a7ef9846c854a2565b9e1c4c4a3f934b8b2ab92dc1e119a31bb838109869",
+      "remote_sha256": "2157a7ef9846c854a2565b9e1c4c4a3f934b8b2ab92dc1e119a31bb838109869",
+      "equal": true
+    },
+    {
+      "path": "mock-cart.js",
+      "exit": 0,
+      "local_bytes": 42570,
+      "remote_bytes": 42570,
+      "local_sha256": "b6ae73da51416a08a9aab3d23ada063132c32146ff215218fceef54534f03e24",
+      "remote_sha256": "b6ae73da51416a08a9aab3d23ada063132c32146ff215218fceef54534f03e24",
+      "equal": true
+    },
+    {
+      "path": "mock-cart.css",
+      "exit": 0,
+      "local_bytes": 13576,
+      "remote_bytes": 13576,
+      "local_sha256": "c17deb1f972017d9790f2191360a457e54d7287730847f9f470c9de371603308",
+      "remote_sha256": "c17deb1f972017d9790f2191360a457e54d7287730847f9f470c9de371603308",
+      "equal": true
+    },
+    {
+      "path": "assets/design-system/mm-chrome.js",
+      "exit": 0,
+      "local_bytes": 5025,
+      "remote_bytes": 5025,
+      "local_sha256": "cc72e22a121cbdb1ec695d181219ca696b0e020f82fedc243e1f407154c1316c",
+      "remote_sha256": "cc72e22a121cbdb1ec695d181219ca696b0e020f82fedc243e1f407154c1316c",
+      "equal": true
+    },
+    {
+      "path": "assets/design-system/mm-chrome.css",
+      "exit": 0,
+      "local_bytes": 5871,
+      "remote_bytes": 5871,
+      "local_sha256": "38ae8acbbdd30ebdfbe633ab1f042549fd2573c7e458e946cc2c53596b32349a",
+      "remote_sha256": "38ae8acbbdd30ebdfbe633ab1f042549fd2573c7e458e946cc2c53596b32349a",
+      "equal": true
+    },
+    {
+      "path": "assets/design-system/mm-tokens.css",
+      "exit": 0,
+      "local_bytes": 3073,
+      "remote_bytes": 3073,
+      "local_sha256": "cab9a32ee62a5a51d9297ab0320e666c1081a7a81c8c83a3bc48d1f1d2341908",
+      "remote_sha256": "cab9a32ee62a5a51d9297ab0320e666c1081a7a81c8c83a3bc48d1f1d2341908",
+      "equal": true
+    },
+    {
+      "path": "assets/product_shots/powder_roasted.webp",
+      "exit": 0,
+      "local_bytes": 545172,
+      "remote_bytes": 545172,
+      "local_sha256": "40efa1836bffcf69b44084291b1996f8dc7a70d6f4bcef22e658904fa8a26eaf",
+      "remote_sha256": "40efa1836bffcf69b44084291b1996f8dc7a70d6f4bcef22e658904fa8a26eaf",
+      "equal": true
+    },
+    {
+      "path": "assets/our_story/founders_frame701_pair_2400.webp",
+      "exit": 0,
+      "local_bytes": 571644,
+      "remote_bytes": 571644,
+      "local_sha256": "ec53b0faa3cec0e12e578395968e0605eeac5a64b191030d5c8661ed33ea608d",
+      "remote_sha256": "ec53b0faa3cec0e12e578395968e0605eeac5a64b191030d5c8661ed33ea608d",
+      "equal": true
+    },
+    {
+      "path": "assets/our_story/founder_carli_701_v2_2400.webp",
+      "exit": 0,
+      "local_bytes": 1087638,
+      "remote_bytes": 1087638,
+      "local_sha256": "48b7032778a8a492129290bed69054004decc3f93ffc2a8b9b71bd997b7e1f0b",
+      "remote_sha256": "48b7032778a8a492129290bed69054004decc3f93ffc2a8b9b71bd997b7e1f0b",
+      "equal": true
+    },
+    {
+      "path": "assets/our_story/founder_dylan_701_v2_2400.webp",
+      "exit": 0,
+      "local_bytes": 398396,
+      "remote_bytes": 398396,
+      "local_sha256": "34f7022d44a084d72ef6e05e4f3acf7cd64e26a8a08e3d1b555136dad267f942",
+      "remote_sha256": "34f7022d44a084d72ef6e05e4f3acf7cd64e26a8a08e3d1b555136dad267f942",
+      "equal": true
+    }
+  ],
+  "failures": []
+}

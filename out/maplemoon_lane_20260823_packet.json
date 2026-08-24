@@ -1,0 +1,38 @@
+{
+  "schema": "maplemoon-packet/v2",
+  "packet_id": "MAPLEMOON-CARLI-HOME-SHOP-IMAGERY-20260823",
+  "worker_thread_id": "maplemoon-website-20260823",
+  "state": "ready",
+  "objective": "Action Carli's Home and Shop feedback, build the founder portrait ladder, generate unplaced image candidates, and report remaining Our Story and What Is Carob gaps.",
+  "readable_paths": [
+    "_wip/HANDOFF-FOUNDER-IMAGERY-20260803.md",
+    "_wip/homepage_real_1_lead_photo.WIP.html",
+    "_wip/shop.WIP.html",
+    "_wip/our-story.WIP.html",
+    "_wip/carob-story.WIP.html",
+    "_wip/contact.WIP.html",
+    "assets/our_story",
+    "contracts/exceptions.v1.json",
+    "scripts"
+  ],
+  "writable_paths": [
+    "_wip/homepage_real_1_lead_photo.WIP.html",
+    "_wip/shop.WIP.html",
+    "out/founder_ladder_20260823.png",
+    "out/image_candidates_20260823",
+    "out/maplemoon_lane_20260823_receipt.json"
+  ],
+  "verify": [
+    "git diff --stat",
+    "all repository scripts/check-* checkers",
+    "contracts/exceptions.v1.json has exactly 7 exceptions",
+    "all tracked assets hashes unchanged"
+  ],
+  "stop": [
+    "any protected contract or asset mutation",
+    "any Our Story or What Is Carob mutation",
+    "any Shopify, deployment, email, or publish action"
+  ],
+  "requires_visual_evidence": true,
+  "next_reviewer": "Nate"
+}

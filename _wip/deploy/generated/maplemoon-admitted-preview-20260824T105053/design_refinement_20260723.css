@@ -1,0 +1,212 @@
+/* Maple Moon - 23 July design refinement.
+   Shared finishing layer for the active local WIP pages. */
+
+/* A quiet shared navigation rail keeps page transitions intentional. */
+.wf-ptop .bar,
+.sp-top .bar,
+.os-top .bar {
+  border-bottom: 1px solid rgba(44, 42, 38, .12);
+}
+
+.wf-ptop .bar {
+  border-bottom-color: rgba(231, 228, 202, .24);
+}
+
+.sp-top .bar,
+.os-top .bar {
+  box-shadow: 0 12px 30px rgba(69, 119, 152, .035);
+}
+
+.sp-nav a,
+.os-nav a,
+.wf-pnav a {
+  text-underline-offset: 6px;
+}
+
+.sp-nav a:hover,
+.os-nav a:hover,
+.wf-pnav a:hover {
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+}
+
+/* Homepage: retain the chosen branch hero while giving the range a deliberate handoff. */
+.wf .wf-hero-product {
+  bottom: -18px;
+}
+
+.wf .wf-line-dark {
+  border-radius: 8px;
+  box-shadow: 0 30px 84px rgba(14, 31, 47, .28), 0 2px 0 rgba(231, 228, 202, .08) inset;
+}
+
+.wf .wf-line-head {
+  margin-top: 22px;
+}
+
+/* Shop and Stockists: put the interface on a quieter, more tactile surface. */
+.sp-head {
+  padding-bottom: 22px;
+}
+
+.sp-head::after {
+  content: "";
+  display: block;
+  width: 44px;
+  height: 1px;
+  margin: 24px auto 0;
+  background: linear-gradient(90deg, transparent, rgba(44, 42, 38, .48), transparent);
+}
+
+.sp-sec {
+  padding-top: 56px;
+}
+
+.sp-sec h2 {
+  letter-spacing: .005em;
+}
+
+.pcard {
+  border-radius: 8px;
+  box-shadow: 0 10px 24px rgba(41, 57, 64, .045);
+}
+
+.pcard .ph {
+  background:
+    radial-gradient(ellipse at 50% 0%, rgba(255, 255, 255, .74), rgba(255, 255, 255, 0) 62%),
+    linear-gradient(160deg, #dce8ef, #f5f4ed 84%);
+}
+
+.pcard .tx {
+  padding: 20px;
+}
+
+.pcard .add,
+.pill.solid {
+  box-shadow: 0 7px 16px rgba(44, 42, 38, .10);
+}
+
+.st-search-panel,
+.st-results-panel,
+.st-map-panel,
+.st-mini-cta,
+.st-trade .inner {
+  border-radius: 8px;
+}
+
+.st-search-panel,
+.st-results-panel,
+.st-map-panel {
+  box-shadow: 0 16px 42px rgba(41, 57, 64, .075);
+}
+
+.st-map-canvas {
+  border-radius: 7px;
+}
+
+.st-filter-label {
+  display: flex;
+  align-items: center;
+  min-height: 44px;
+}
+
+/* FAQ: make the active answer easier to scan without turning it into a card stack. */
+.faq details[open] {
+  margin: 0 -14px;
+  padding: 0 14px;
+  border-color: rgba(69, 119, 152, .26);
+  background: rgba(251, 250, 247, .48);
+  box-shadow: 0 8px 22px rgba(69, 119, 152, .045);
+}
+
+.faq details[open] summary {
+  color: #1e4366;
+}
+
+.faq details[open] .ic {
+  border-color: rgba(30, 67, 102, .38);
+  background: rgba(231, 228, 202, .62);
+}
+
+.fq-cta .inner {
+  border-radius: 8px;
+  box-shadow: 0 20px 48px rgba(41, 57, 64, .09);
+}
+
+/* Story pages: reduce decorative rounding and let the imagery feel more editorial. */
+.os-fig-main,
+.os-fig-float,
+.os-founders .card,
+.os-gal .cell,
+.gal figure .ph,
+.stage2,
+.co .lab {
+  border-radius: 8px;
+}
+
+.os-hero .head {
+  margin-top: -58px;
+}
+
+.os-quote .rule,
+.cmp .rule {
+  width: 56px;
+  background: linear-gradient(90deg, rgba(44, 42, 38, .16), rgba(44, 42, 38, .72), rgba(44, 42, 38, .16));
+}
+
+.v2 .step.on {
+  background: linear-gradient(90deg, rgba(231, 228, 202, .46), rgba(231, 228, 202, 0));
+}
+
+@media (max-width: 900px) {
+  .wf .wf-hero-product { bottom: -8px; }
+  .sp-head { padding-bottom: 14px; }
+  .sp-head::after { margin-top: 18px; }
+  .sp-sec { padding-top: 46px; }
+  .os-hero .head { margin-top: -38px; }
+  .faq details[open] { margin: 0 -8px; padding: 0 8px; }
+}
+
+@media (max-width: 560px) {
+  .sp-top .bar,
+  .os-top .bar,
+  .wf-ptop .bar { border-bottom-color: transparent; }
+
+  /* Small screens prioritise the brand and cart over an unreadable nav cluster. */
+  .sp-top .bar > .sp-nav:first-child,
+  .os-top .bar > .os-nav:first-child {
+    visibility: hidden;
+  }
+
+  .sp-top .bar > .sp-nav.r,
+  .os-top .bar > .os-nav.r {
+    display: flex !important;
+    grid-column: 3;
+    grid-row: 1;
+    justify-content: flex-end;
+    gap: 0;
+  }
+
+  .sp-top .bar > .sp-nav.r > a,
+  .sp-top .bar > .sp-nav.r > .sp-currency,
+  .os-top .bar > .os-nav.r > a,
+  .os-top .bar > .os-nav.r > .os-currency {
+    display: none !important;
+  }
+
+  .sp-top .bar > .sp-logo,
+  .os-top .bar > .os-logo {
+    grid-column: 2;
+    grid-row: 1;
+    font-size: 1.22rem;
+    white-space: nowrap;
+  }
+
+  .sp-top .bar > .sp-cart,
+  .os-top .bar > .os-cart {
+    flex: 0 0 44px;
+  }
+
+  .pcard .tx { padding: 18px; }
+  .sp-sec { padding-top: 38px; }
+}

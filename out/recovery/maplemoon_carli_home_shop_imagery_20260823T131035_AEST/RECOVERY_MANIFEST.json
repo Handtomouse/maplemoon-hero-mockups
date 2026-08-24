@@ -1,0 +1,27 @@
+{
+  "created_at": "2026-08-23T03:10:39.840490Z",
+  "files": {
+    "_wip/homepage_real_1_lead_photo.WIP.html": {
+      "kind": "file",
+      "sha256": "a2219fba244b7894be1fbe5ef40be94293f1a812751f211156981ec76b8c04a7",
+      "state": "present"
+    },
+    "_wip/shop.WIP.html": {
+      "kind": "file",
+      "sha256": "035a66bb8915e35f636b856849b2ae1cea8666f5fb302aeaf04cf6e8c1db4fc5",
+      "state": "present"
+    },
+    "out/founder_ladder_20260823.png": {
+      "state": "absent"
+    },
+    "out/image_candidates_20260823": {
+      "state": "absent"
+    },
+    "out/maplemoon_lane_20260823_receipt.json": {
+      "state": "absent"
+    }
+  },
+  "packet_id": "MAPLEMOON-CARLI-HOME-SHOP-IMAGERY-20260823",
+  "repository": "/Users/handtomouse/maplemoon-website",
+  "schema": "maplemoon-recovery-checkpoint/v1"
+}

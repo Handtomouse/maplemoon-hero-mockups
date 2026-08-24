@@ -1,0 +1,101 @@
+/* Shared tap-target fixes for Maple Moon inner WIP pages. */
+.sp-logo,
+.os-logo,
+.sp-ft .serif,
+.os-ft .serif {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+}
+
+.sp-logo,
+.os-logo {
+  justify-content: center;
+}
+
+.sp-nav a,
+.os-nav a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 44px;
+  min-height: 44px;
+}
+
+.sp-cart,
+.os-cart {
+  -webkit-appearance: none;
+  appearance: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  min-width: 44px;
+  height: 44px;
+  min-height: 44px;
+  padding: 0;
+  border: 1px solid var(--line);
+  border-radius: 50%;
+  background: transparent;
+  color: var(--ink);
+  font: inherit;
+  cursor: pointer;
+}
+
+.sp-cart b,
+.os-cart b {
+  pointer-events: none;
+}
+
+.sp-cart:focus-visible,
+.os-cart:focus-visible,
+.sp-logo:focus-visible,
+.os-logo:focus-visible,
+.sp-ft .serif:focus-visible,
+.os-ft .serif:focus-visible,
+.sp-ft .fnav a:focus-visible,
+.os-ft .fnav a:focus-visible,
+.pill:focus-visible,
+.sp-cats a:focus-visible,
+.pcard .add:focus-visible,
+.st-form input:focus-visible {
+  outline: 2px solid rgba(44, 42, 38, .58);
+  outline-offset: 4px;
+}
+
+.sp-nav .sp-currency,
+.os-nav .os-currency {
+  font-size: .7rem;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+}
+
+.pill,
+.sp-cats a,
+.pcard .add,
+.st-form input {
+  min-height: 44px;
+}
+
+.sp-cats a,
+.pcard .add,
+.sp-ft .fnav a,
+.os-ft .fnav a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sp-ft .fnav a,
+.os-ft .fnav a {
+  min-width: 44px;
+  min-height: 44px;
+}
+
+@media (max-width: 900px) {
+  .sp-nav .sp-currency,
+  .os-nav .os-currency {
+    display: none;
+  }
+}

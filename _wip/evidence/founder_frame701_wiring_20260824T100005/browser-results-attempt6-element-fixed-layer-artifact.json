@@ -1,0 +1,181 @@
+{
+  "outcome": "PASS",
+  "baseUrl": "http://127.0.0.1:4318",
+  "cases": [
+    {
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "documentStatus": 200,
+      "metrics": {
+        "clientWidth": 1440,
+        "scrollWidth": 1440,
+        "heroFigure": {
+          "width": 560.31,
+          "height": 373.53
+        },
+        "hero": {
+          "src": "/assets/our_story/founders_frame701_pair_2400.webp",
+          "naturalWidth": 2400,
+          "naturalHeight": 1600,
+          "complete": true,
+          "width": 560.31,
+          "height": 373.53,
+          "objectFit": "cover",
+          "objectPosition": "50% 50%",
+          "maskImage": "linear-gradient(90deg, rgba(0, 0, 0, 0) 0px, rgb(0, 0, 0) 18%, rgb(0, 0, 0) 100%), linear-gradient(rgba(0, 0, 0, 0) 0px, rgb(0, 0, 0) 22%, rgb(0, 0, 0) 74%, rgba(0, 0, 0, 0) 100%)",
+          "webkitMaskImage": "linear-gradient(90deg, rgba(0, 0, 0, 0) 0px, rgb(0, 0, 0) 18%, rgb(0, 0, 0) 100%), linear-gradient(rgba(0, 0, 0, 0) 0px, rgb(0, 0, 0) 22%, rgb(0, 0, 0) 74%, rgba(0, 0, 0, 0) 100%)",
+          "visible": true
+        },
+        "carli": {
+          "src": "/assets/our_story/founder_carli_701_v2_2400.webp",
+          "naturalWidth": 1993,
+          "naturalHeight": 2400,
+          "complete": true,
+          "width": 296,
+          "height": 351,
+          "objectFit": "cover",
+          "objectPosition": "50% 35%",
+          "maskImage": "linear-gradient(rgba(0, 0, 0, 0) 0px, rgb(0, 0, 0) 8%, rgb(0, 0, 0) 92%, rgba(0, 0, 0, 0) 100%)",
+          "webkitMaskImage": "linear-gradient(rgba(0, 0, 0, 0) 0px, rgb(0, 0, 0) 8%, rgb(0, 0, 0) 92%, rgba(0, 0, 0, 0) 100%)",
+          "visible": true
+        },
+        "dylan": {
+          "src": "/assets/our_story/founder_dylan_701_v2_2400.webp",
+          "naturalWidth": 2008,
+          "naturalHeight": 2400,
+          "complete": true,
+          "width": 296,
+          "height": 351,
+          "objectFit": "cover",
+          "objectPosition": "50% 35%",
+          "maskImage": "linear-gradient(rgba(0, 0, 0, 0) 0px, rgb(0, 0, 0) 8%, rgb(0, 0, 0) 92%, rgba(0, 0, 0, 0) 100%)",
+          "webkitMaskImage": "linear-gradient(rgba(0, 0, 0, 0) 0px, rgb(0, 0, 0) 8%, rgb(0, 0, 0) 92%, rgba(0, 0, 0, 0) 100%)",
+          "visible": true
+        },
+        "bioContainers": [
+          {
+            "width": 296,
+            "height": 370,
+            "ratio": 0.8
+          },
+          {
+            "width": 296,
+            "height": 370,
+            "ratio": 0.8
+          }
+        ],
+        "expectedPaths": {
+          "hero": "/assets/our_story/founders_frame701_pair_2400.webp",
+          "carli": "/assets/our_story/founder_carli_701_v2_2400.webp",
+          "dylan": "/assets/our_story/founder_dylan_701_v2_2400.webp"
+        },
+        "placeholderCount": 0
+      },
+      "skipFocus": {
+        "className": "skip-link mm-skip-link",
+        "text": "Skip to the people",
+        "transform": "matrix(1, 0, 0, 1, 0, 0)"
+      },
+      "skipAfterBlur": {
+        "activeClassName": "",
+        "transform": "matrix(1, 0, 0, 1, 0, -48.4)"
+      },
+      "consoleErrors": [],
+      "pageErrors": [],
+      "requestFailures": [],
+      "badResponses": [],
+      "assetErrors": [],
+      "failures": []
+    },
+    {
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "documentStatus": 200,
+      "metrics": {
+        "clientWidth": 390,
+        "scrollWidth": 390,
+        "heroFigure": {
+          "width": 334,
+          "height": 222.66
+        },
+        "hero": {
+          "src": "/assets/our_story/founders_frame701_pair_2400.webp",
+          "naturalWidth": 2400,
+          "naturalHeight": 1600,
+          "complete": true,
+          "width": 334,
+          "height": 222.66,
+          "objectFit": "cover",
+          "objectPosition": "50% 50%",
+          "maskImage": "linear-gradient(rgba(0, 0, 0, 0) 0px, rgb(0, 0, 0) 20%, rgb(0, 0, 0) 82%, rgba(0, 0, 0, 0) 100%)",
+          "webkitMaskImage": "linear-gradient(rgba(0, 0, 0, 0) 0px, rgb(0, 0, 0) 20%, rgb(0, 0, 0) 82%, rgba(0, 0, 0, 0) 100%)",
+          "visible": true
+        },
+        "carli": {
+          "src": "/assets/our_story/founder_carli_701_v2_2400.webp",
+          "naturalWidth": 1993,
+          "naturalHeight": 2400,
+          "complete": true,
+          "width": 284,
+          "height": 336,
+          "objectFit": "cover",
+          "objectPosition": "50% 35%",
+          "maskImage": "linear-gradient(rgba(0, 0, 0, 0) 0px, rgb(0, 0, 0) 8%, rgb(0, 0, 0) 92%, rgba(0, 0, 0, 0) 100%)",
+          "webkitMaskImage": "linear-gradient(rgba(0, 0, 0, 0) 0px, rgb(0, 0, 0) 8%, rgb(0, 0, 0) 92%, rgba(0, 0, 0, 0) 100%)",
+          "visible": true
+        },
+        "dylan": {
+          "src": "/assets/our_story/founder_dylan_701_v2_2400.webp",
+          "naturalWidth": 2008,
+          "naturalHeight": 2400,
+          "complete": true,
+          "width": 284,
+          "height": 336,
+          "objectFit": "cover",
+          "objectPosition": "50% 35%",
+          "maskImage": "linear-gradient(rgba(0, 0, 0, 0) 0px, rgb(0, 0, 0) 8%, rgb(0, 0, 0) 92%, rgba(0, 0, 0, 0) 100%)",
+          "webkitMaskImage": "linear-gradient(rgba(0, 0, 0, 0) 0px, rgb(0, 0, 0) 8%, rgb(0, 0, 0) 92%, rgba(0, 0, 0, 0) 100%)",
+          "visible": true
+        },
+        "bioContainers": [
+          {
+            "width": 284,
+            "height": 355,
+            "ratio": 0.8
+          },
+          {
+            "width": 284,
+            "height": 355,
+            "ratio": 0.8
+          }
+        ],
+        "expectedPaths": {
+          "hero": "/assets/our_story/founders_frame701_pair_2400.webp",
+          "carli": "/assets/our_story/founder_carli_701_v2_2400.webp",
+          "dylan": "/assets/our_story/founder_dylan_701_v2_2400.webp"
+        },
+        "placeholderCount": 0
+      },
+      "skipFocus": {
+        "className": "skip-link mm-skip-link",
+        "text": "Skip to the people",
+        "transform": "matrix(1, 0, 0, 1, 0, 0)"
+      },
+      "skipAfterBlur": {
+        "activeClassName": "",
+        "transform": "matrix(1, 0, 0, 1, 0, -48.4)"
+      },
+      "consoleErrors": [],
+      "pageErrors": [],
+      "requestFailures": [],
+      "badResponses": [],
+      "assetErrors": [],
+      "failures": []
+    }
+  ],
+  "failures": []
+}

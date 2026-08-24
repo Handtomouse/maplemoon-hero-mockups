@@ -1,0 +1,50 @@
+{
+  "pins": {
+    "docs/orchestration/MAPLEMOON_BOSS_EXECUTION_LEDGER_20260816.md": {
+      "expected": "bc23e18da7b2e03d1d2eb4d9ab613b23fc226650870d848e9636fc1ddcca9c10",
+      "actual": "bc23e18da7b2e03d1d2eb4d9ab613b23fc226650870d848e9636fc1ddcca9c10",
+      "match": true
+    },
+    "docs/orchestration/CATALOGUE-RECONCILIATION-20260820.md": {
+      "expected": "b80cd3e8158d14d03f631cba79e1f3590e27587493b2dfbeef2ab1180afad7f1",
+      "actual": "b80cd3e8158d14d03f631cba79e1f3590e27587493b2dfbeef2ab1180afad7f1",
+      "match": true
+    },
+    "docs/orchestration/catalogue-reconciliation-20260820.csv": {
+      "expected": "b866aff0954963f81cf9515854fff06250a89b8cae6374f23d4c7f33b38c8281",
+      "actual": "b866aff0954963f81cf9515854fff06250a89b8cae6374f23d4c7f33b38c8281",
+      "match": true
+    },
+    "docs/orchestration/reviews/MAPLEMOON-CONTENT-CATALOGUE-TRUTH-AUDIT-R2-20260814T164221.md": {
+      "expected": "eee350fd321947cf5966818636cc68b6828ce6574a6d49c03f573ef360d70060",
+      "actual": "eee350fd321947cf5966818636cc68b6828ce6574a6d49c03f573ef360d70060",
+      "match": true
+    },
+    "_wip/shop.WIP.html": {
+      "expected": "f9d150dea283d43eb0a14e02dfeccf9ea1eb4eae87ec82a546ab6984f3fa5604",
+      "actual": "f9d150dea283d43eb0a14e02dfeccf9ea1eb4eae87ec82a546ab6984f3fa5604",
+      "match": true
+    },
+    "out/shopify_diff_20260823.md": {
+      "expected": "79a51d356295e1fa005123d4583f8248bc2bc6abc44449b04b00caa8a41d56bb",
+      "actual": "79a51d356295e1fa005123d4583f8248bc2bc6abc44449b04b00caa8a41d56bb",
+      "match": true
+    },
+    "out/shopify_create_spec_20260823.md": {
+      "expected": "65292dbbbbc7a55edf476784897313fc1bacb243c85f413b44368d2879916e99",
+      "actual": "65292dbbbbc7a55edf476784897313fc1bacb243c85f413b44368d2879916e99",
+      "match": true
+    },
+    "out/maplemoon_lane_20260823_receipt.json": {
+      "expected": "c8b5285191fe1fba5ab2f21c707aebe2923d669919a30f52a3a0540135900468",
+      "actual": "c8b5285191fe1fba5ab2f21c707aebe2923d669919a30f52a3a0540135900468",
+      "match": true
+    }
+  },
+  "woo": {
+    "expected": "eeea19fd89b30052bd4c4cf28519f56f1195e4595c92485fb186a66719e6b114",
+    "actual": "eeea19fd89b30052bd4c4cf28519f56f1195e4595c92485fb186a66719e6b114",
+    "match": true
+  },
+  "result": "PASS"
+}
