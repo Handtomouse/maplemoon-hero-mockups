@@ -1,0 +1,111 @@
+{
+  "schema": "maplemoon-receipt/v2",
+  "receipt_id": "MAPLEMOON-FOUNDER-FRAME701-WIRING-20260824T100005-RECEIPT-01",
+  "packet_id": "MAPLEMOON-FOUNDER-FRAME701-WIRING-20260824T100005",
+  "worker_thread_id": "019ffe53-6243-73a2-9d75-e1a072cd07ce",
+  "worker": "Codex /root MapleMoon BOSS",
+  "started_at": "2026-08-24T00:00:05Z",
+  "completed_at": "2026-08-24T01:09:00Z",
+  "files_read": [
+    "maplemoon-website/docs/orchestration/packets/MAPLEMOON-FOUNDER-FRAME701-WIRING-20260824T100005.md",
+    "maplemoon-website/_wip/HANDOFF-FOUNDER-IMAGERY-20260803.md",
+    "maplemoon-website/out/founder_cutouts_20260823/frame_701_CORRECT.jpg",
+    "maplemoon-website/out/masked_founders_20260823/graded_v2/GRADE_REPORT_V2.md",
+    "maplemoon-website/out/masked_founders_20260823/graded_v2/bio_carli_701_masked_graded_2400.webp",
+    "maplemoon-website/out/masked_founders_20260823/graded_v2/bio_dylan_701_masked_graded_2400.webp",
+    "maplemoon-website/our-story.html",
+    "maplemoon-website/scripts/check-maplemoon-portrait-crop.mjs",
+    "maplemoon-website/scripts/check-maplemoon-minimum-release-preflight-r4.py",
+    "maplemoon-website/scripts/check-maplemoon-design-system.mjs"
+  ],
+  "files_changed": [
+    "maplemoon-website/our-story.html",
+    "maplemoon-website/assets/our_story/founders_frame701_pair_2400.webp",
+    "maplemoon-website/assets/our_story/founder_carli_701_v2_2400.webp",
+    "maplemoon-website/assets/our_story/founder_dylan_701_v2_2400.webp",
+    "maplemoon-website/_wip/evidence/founder_frame701_wiring_20260824T100005",
+    "maplemoon-website/docs/orchestration/reviews/MAPLEMOON-FOUNDER-FRAME701-WIRING-20260824T100005.json"
+  ],
+  "pre_sha256": {
+    "maplemoon-website/our-story.html": "eb51f23e2124deb2cf11a8f5361db83b4bdb53e3cc432b4f7208fc4d3344a659",
+    "maplemoon-website/assets/our_story/founders_frame701_pair_2400.webp": null,
+    "maplemoon-website/assets/our_story/founder_carli_701_v2_2400.webp": null,
+    "maplemoon-website/assets/our_story/founder_dylan_701_v2_2400.webp": null,
+    "maplemoon-website/_wip/evidence/founder_frame701_wiring_20260824T100005": null,
+    "maplemoon-website/docs/orchestration/reviews/MAPLEMOON-FOUNDER-FRAME701-WIRING-20260824T100005.json": null
+  },
+  "post_sha256": {
+    "maplemoon-website/our-story.html": "8dc01af541712a54986270f5bdf51f41ea48fa5be2699fa3610182910668458f",
+    "maplemoon-website/assets/our_story/founders_frame701_pair_2400.webp": "ec53b0faa3cec0e12e578395968e0605eeac5a64b191030d5c8661ed33ea608d",
+    "maplemoon-website/assets/our_story/founder_carli_701_v2_2400.webp": "48b7032778a8a492129290bed69054004decc3f93ffc2a8b9b71bd997b7e1f0b",
+    "maplemoon-website/assets/our_story/founder_dylan_701_v2_2400.webp": "34f7022d44a084d72ef6e05e4f3acf7cd64e26a8a08e3d1b555136dad267f942",
+    "maplemoon-website/_wip/evidence/founder_frame701_wiring_20260824T100005": "608d3cdca229ff300298d44da3bcd2e760b86c538aa6bbcf5de2a4c657056131",
+    "maplemoon-website/docs/orchestration/reviews/MAPLEMOON-FOUNDER-FRAME701-WIRING-20260824T100005.json": null
+  },
+  "checks": [
+    {
+      "command": "python3 -B scripts/check-maplemoon-receipt.py checkpoint ...; verify --phase start",
+      "exit_code": 0,
+      "result": "PASS checkpoint packet=MAPLEMOON-FOUNDER-FRAME701-WIRING-20260824T100005 files=6; PASS packet=MAPLEMOON-FOUNDER-FRAME701-WIRING-20260824T100005 phase=start scope=6"
+    },
+    {
+      "command": "python3 -B _wip/evidence/founder_frame701_wiring_20260824T100005/verify-founder-source.py",
+      "exit_code": 0,
+      "result": "FOUNDER_SOURCE PASS hashes=6/6 counts={'old_hero': 0, 'wrong_592': 0, 'wrong_870': 0, 'hero': 2, 'carli': 1, 'dylan': 1, 'placeholder': 0} rebuild_equal=True scoped_page_delta=True"
+    },
+    {
+      "command": "bundled Playwright verify-founder-browser.mjs against the deployment-faithful local build",
+      "exit_code": 0,
+      "result": "FOUNDER_BROWSER PASS cases=2/2 failures=0. At 1440 and 390: root client/scroll widths exact; hero 2400x1600; bios 1993x2400 and 2008x2400; no founder asset, console, page, request or bad-response errors; keyboard skip focus and blur states passed."
+    },
+    {
+      "command": "manual visual inspection of 1440/390 hero and bio proofs cropped from final full-page renders",
+      "exit_code": 0,
+      "result": "PASS 4/4: frame-701 pair faces are visible and balanced; both v2 individual portraits are fully painted, correctly identified and naturally grounded in the 4:5 slots; no placeholder or superseded asset remains."
+    },
+    {
+      "command": "bundled Playwright verify-seven-routes.mjs against the deployment-faithful local build",
+      "exit_code": 0,
+      "result": "SEVEN_ROUTE_BROWSER PASS cases=14/14 failures=0. Seven routes at 390 and 1440 each returned 200 with exact root width, zero broken images, zero console/page/request/bad-response failures and nonblank text."
+    },
+    {
+      "command": "python3 -B scripts/check-maplemoon-minimum-release-preflight-r4.py http://127.0.0.1:4318 --local",
+      "exit_code": 0,
+      "result": "VERDICT: PASS with 2 review-only hit(s) - leak:internal-status-review, leak:word-testimonial-hidden | WAIVED: root:homepage"
+    },
+    {
+      "command": "node scripts/check-maplemoon-portrait-crop.mjs; python3 -B scripts/check-maplemoon-review.py; node scripts/check-maplemoon-cart.mjs; node scripts/check-maplemoon-homepage-motion.mjs",
+      "exit_code": 0,
+      "result": "PASS: existing portrait guard unchanged, review checker 0 failures/0 warnings, cart ordinary/enquiry/fake-checkout/local-form/accessibility/no-network checks pass, homepage autoplay absent and reduced-motion response passes. The existing portrait checker reports the old WIP-specific bio gate is not armed; the live founder contract is instead enforced by verify-founder-source.py and final browser evidence."
+    },
+    {
+      "command": "node scripts/check-maplemoon-design-system.mjs --contracts-only; --route-conformance all",
+      "exit_code": 2,
+      "expected_exit_code": 2,
+      "result": "HOLD holds=2 in both modes: only the previously admitted Home and Shop frozen baseline hashes drift. Founder route and assets are not a design-system hold. Contract reconciliation remains separately checkpointed."
+    },
+    {
+      "command": "git diff --check -- our-story.html; jq empty evidence JSON; deterministic evidence-tree scan",
+      "exit_code": 0,
+      "result": "PASS: no whitespace error; all required JSON parses; evidence has 52 files, 39 PNGs, zero zero-byte files, zero symlinks, SHA-256 608d3cdca229ff300298d44da3bcd2e760b86c538aa6bbcf5de2a4c657056131."
+    }
+  ],
+  "screenshots_or_urls": [
+    "maplemoon-website/_wip/evidence/founder_frame701_wiring_20260824T100005/contact-sheet.png",
+    "maplemoon-website/_wip/evidence/founder_frame701_wiring_20260824T100005/our-story-1440-hero.png",
+    "maplemoon-website/_wip/evidence/founder_frame701_wiring_20260824T100005/our-story-390-hero.png",
+    "maplemoon-website/_wip/evidence/founder_frame701_wiring_20260824T100005/our-story-1440-bios.png",
+    "maplemoon-website/_wip/evidence/founder_frame701_wiring_20260824T100005/our-story-390-bios.png"
+  ],
+  "failures": [],
+  "unknowns": [],
+  "residual_risk": [
+    "The local preflight root requirement is waived by --local and must be replayed without the waiver on a future preview URL.",
+    "Two review-only shipped-byte leak families remain for human review; neither is visitor-readable or a founder-media failure.",
+    "Home and Shop design-system contract baselines remain on the known separate HOLD pending the already-scoped reconciliation packet.",
+    "Intermediate verifier/build failures are preserved in evidence and explicitly classified; the final unchanged-source reruns pass."
+  ],
+  "forbidden_path_changes": [],
+  "proposed_next_state": "founder_certified_needs_contract_reconciliation",
+  "next_reviewer": "MapleMoon root BOSS for receipt replay, then separately checkpointed Home/Shop contract reconciliation"
+}

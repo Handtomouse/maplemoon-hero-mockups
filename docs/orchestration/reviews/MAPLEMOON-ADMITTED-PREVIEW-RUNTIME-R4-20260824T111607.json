@@ -1,0 +1,101 @@
+{
+  "schema": "maplemoon-receipt/v2",
+  "receipt_id": "MAPLEMOON-ADMITTED-PREVIEW-RUNTIME-R4-20260824T111607-RECEIPT-01",
+  "packet_id": "MAPLEMOON-ADMITTED-PREVIEW-RUNTIME-R4-20260824T111607",
+  "worker_thread_id": "019ffe53-6243-73a2-9d75-e1a072cd07ce",
+  "worker": "Codex /root MapleMoon BOSS",
+  "started_at": "2026-08-24T01:16:07Z",
+  "completed_at": "2026-08-24T01:20:30Z",
+  "files_read": [
+    "maplemoon-website/docs/orchestration/packets/MAPLEMOON-ADMITTED-PREVIEW-RUNTIME-R4-20260824T111607.md",
+    "maplemoon-website/docs/orchestration/MAPLEMOON_BOSS_EXECUTION_LEDGER_20260816.md",
+    "maplemoon-website/docs/orchestration/reviews/MAPLEMOON-ADMITTED-PREVIEW-CONTENT-R3-20260824T110528.json",
+    "maplemoon-website/_wip/evidence/admitted_preview_content_r3_20260824T110528/BROWSER-FAILURE.md",
+    "maplemoon-website/_wip/deploy/generated/maplemoon-admitted-preview-r3-20260824T110528"
+  ],
+  "files_changed": [
+    "maplemoon-website/_wip/deploy/generated/maplemoon-admitted-preview-r4-20260824T111607",
+    "maplemoon-website/_wip/evidence/admitted_preview_runtime_r4_20260824T111607",
+    "maplemoon-website/docs/orchestration/reviews/MAPLEMOON-ADMITTED-PREVIEW-RUNTIME-R4-20260824T111607.json"
+  ],
+  "pre_sha256": {
+    "maplemoon-website/_wip/deploy/generated/maplemoon-admitted-preview-r4-20260824T111607": null,
+    "maplemoon-website/_wip/evidence/admitted_preview_runtime_r4_20260824T111607": null,
+    "maplemoon-website/docs/orchestration/reviews/MAPLEMOON-ADMITTED-PREVIEW-RUNTIME-R4-20260824T111607.json": null
+  },
+  "post_sha256": {
+    "maplemoon-website/_wip/deploy/generated/maplemoon-admitted-preview-r4-20260824T111607": "5a649086667c7ed017e45b2cb97fdf6d356d1b4ad636a2d51b09b2b7321efe49",
+    "maplemoon-website/_wip/evidence/admitted_preview_runtime_r4_20260824T111607": "51d6f7b0aa32a913bffed5f5f52c3ba139a4ec95f1760ddd05c58e44f4a72009",
+    "maplemoon-website/docs/orchestration/reviews/MAPLEMOON-ADMITTED-PREVIEW-RUNTIME-R4-20260824T111607.json": null
+  },
+  "checks": [
+    {
+      "command": "python3 -B scripts/check-maplemoon-receipt.py checkpoint ...; verify --phase start",
+      "exit_code": 0,
+      "result": "PASS checkpoint packet=MAPLEMOON-ADMITTED-PREVIEW-RUNTIME-R4-20260824T111607 files=3 path=/Users/handtomouse/maplemoon-website/_wip/checkpoints/MAPLEMOON-ADMITTED-PREVIEW-RUNTIME-R4-20260824T111607_20260824_111648_AEST; PASS packet=MAPLEMOON-ADMITTED-PREVIEW-RUNTIME-R4-20260824T111607 phase=start scope=3"
+    },
+    {
+      "command": "python3 -B _wip/evidence/admitted_preview_runtime_r4_20260824T111607/build-runtime-r4.py",
+      "exit_code": 0,
+      "result": "RUNTIME_R4 PASS files=75 tree_sha256=5a649086667c7ed017e45b2cb97fdf6d356d1b4ad636a2d51b09b2b7321efe49 seam_removed=1 mock_pre=754ea8b1235a6329bfcbc32aae0f9e5e09c334bf26726bbff8c2c8653f54afe5 mock_post=b6ae73da51416a08a9aab3d23ada063132c32146ff215218fceef54534f03e24 other_files_equal=74/74"
+    },
+    {
+      "command": "node _wip/evidence/admitted_preview_runtime_r4_20260824T111607/verify-r4-browser.mjs http://127.0.0.1:4325",
+      "exit_code": 0,
+      "result": "R4_BROWSER PASS cases=14/14 failures=0; all documents 200; exact root widths 390/1440; broken images=0; console/page/request/bad responses=0; Shop powder 3640x2078; Our Story founders=3; Home quotes=3; Stockists cards=204 and UNKNOWN visible/neutral=7/7 at both widths"
+    },
+    {
+      "command": "critical rendered inspection: Stockists 390/1440, Home 390, Shop 1440",
+      "exit_code": 0,
+      "result": "PASS four full-page proofs are nonblank; Stockists directory is visibly populated through all results, Home and Shop render without obvious clipped root layout, and approved product imagery remains visible"
+    },
+    {
+      "command": "python3 -B scripts/check-maplemoon-minimum-release-preflight-r4.py http://127.0.0.1:4325 --local",
+      "exit_code": 0,
+      "result": "VERDICT: PASS with 2 review-only hit(s) - leak:internal-status-review, leak:word-testimonial-hidden | WAIVED: root:homepage; bare-204=0, internal-ops=0, word-testimonial=0"
+    },
+    {
+      "command": "node scripts/check-maplemoon-design-system.mjs --contracts-only",
+      "exit_code": 0,
+      "result": "PASS contracts-only tokens=75 routes=6 components=15 widths=4 images=14 exceptions=7 routeConformance=SKIPPED (flag not set)"
+    },
+    {
+      "command": "node scripts/check-maplemoon-design-system.mjs --route-conformance all",
+      "exit_code": 0,
+      "result": "PASS route-conformance tokens=75 routes=6 components=15 widths=4 images=14 exceptions=7 routeConformance=ALL_PASS"
+    },
+    {
+      "command": "python3 -B _wip/evidence/admitted_preview_runtime_r4_20260824T111607/verify-close-r4.py",
+      "exit_code": 0,
+      "result": "R4_CLOSE PASS r3_pins=4/4 r3_tree=75/75 r4_tree=75/75 seam=1/0 normalized=true other_files=74/74 stockists=204 unknown=7 quotes=3 powder=40efa1836bff private_paths=0 preserved_out=20/20"
+    }
+  ],
+  "screenshots_or_urls": [
+    "maplemoon-website/_wip/evidence/admitted_preview_runtime_r4_20260824T111607/route-homepage-390.png",
+    "maplemoon-website/_wip/evidence/admitted_preview_runtime_r4_20260824T111607/route-homepage-1440.png",
+    "maplemoon-website/_wip/evidence/admitted_preview_runtime_r4_20260824T111607/route-shop-390.png",
+    "maplemoon-website/_wip/evidence/admitted_preview_runtime_r4_20260824T111607/route-shop-1440.png",
+    "maplemoon-website/_wip/evidence/admitted_preview_runtime_r4_20260824T111607/route-our-story-390.png",
+    "maplemoon-website/_wip/evidence/admitted_preview_runtime_r4_20260824T111607/route-our-story-1440.png",
+    "maplemoon-website/_wip/evidence/admitted_preview_runtime_r4_20260824T111607/route-carob-story-390.png",
+    "maplemoon-website/_wip/evidence/admitted_preview_runtime_r4_20260824T111607/route-carob-story-1440.png",
+    "maplemoon-website/_wip/evidence/admitted_preview_runtime_r4_20260824T111607/route-faq-390.png",
+    "maplemoon-website/_wip/evidence/admitted_preview_runtime_r4_20260824T111607/route-faq-1440.png",
+    "maplemoon-website/_wip/evidence/admitted_preview_runtime_r4_20260824T111607/route-stockists-390.png",
+    "maplemoon-website/_wip/evidence/admitted_preview_runtime_r4_20260824T111607/route-stockists-1440.png",
+    "maplemoon-website/_wip/evidence/admitted_preview_runtime_r4_20260824T111607/route-pure-carob-bar-390.png",
+    "maplemoon-website/_wip/evidence/admitted_preview_runtime_r4_20260824T111607/route-pure-carob-bar-1440.png"
+  ],
+  "failures": [],
+  "unknowns": [
+    "agent-browser CLI unavailable; installed Playwright/system-Chrome fallback used.",
+    "Local preflight uses --local and therefore waives root routing; a deployed successor must rerun anonymously against its immutable URL without --local."
+  ],
+  "residual_risk": [
+    "R4 is certified for local successor review only. No preview URL exists and no deployment authority was used.",
+    "Preflight still reports two documented review-only classes in shipped bytes; these do not block the exact local verdict but require human awareness."
+  ],
+  "forbidden_path_changes": [],
+  "proposed_next_state": "certified_local_candidate_ready_for_separate_private_preview_deploy_packet",
+  "next_reviewer": "MapleMoon BOSS for exact preview-deploy packet; production, Shopify writes and client contact remain frozen"
+}

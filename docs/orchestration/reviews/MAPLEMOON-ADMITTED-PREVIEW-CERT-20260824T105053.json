@@ -1,0 +1,65 @@
+{
+  "schema": "maplemoon-receipt/v2",
+  "receipt_id": "MAPLEMOON-ADMITTED-PREVIEW-CERT-20260824T105053-RECEIPT-01",
+  "packet_id": "MAPLEMOON-ADMITTED-PREVIEW-CERT-20260824T105053",
+  "worker_thread_id": "019ffe53-6243-73a2-9d75-e1a072cd07ce",
+  "worker": "Codex /root MapleMoon BOSS",
+  "started_at": "2026-08-24T00:50:53Z",
+  "completed_at": "2026-08-24T00:53:00Z",
+  "files_read": [
+    "maplemoon-website/docs/orchestration/packets/MAPLEMOON-ADMITTED-PREVIEW-CERT-20260824T105053.md",
+    "maplemoon-website/scripts/build-maplemoon-wip-preview.py",
+    "maplemoon-website/_wip/homepage_real_1_lead_photo.WIP.html",
+    "maplemoon-website/_wip/shop.WIP.html",
+    "maplemoon-website/our-story.html",
+    "maplemoon-website/_wip/carob-story.WIP.html",
+    "maplemoon-website/_wip/faq.WIP.html",
+    "maplemoon-website/_wip/stockists.WIP.html",
+    "maplemoon-website/assets",
+    "maplemoon-website/_wip/deploy/vercel-preview.json"
+  ],
+  "files_changed": [
+    "maplemoon-website/_wip/deploy/generated/maplemoon-admitted-preview-20260824T105053",
+    "maplemoon-website/_wip/evidence/admitted_preview_cert_20260824T105053",
+    "maplemoon-website/docs/orchestration/reviews/MAPLEMOON-ADMITTED-PREVIEW-CERT-20260824T105053.json"
+  ],
+  "pre_sha256": {
+    "maplemoon-website/_wip/deploy/generated/maplemoon-admitted-preview-20260824T105053": null,
+    "maplemoon-website/_wip/evidence/admitted_preview_cert_20260824T105053": null,
+    "maplemoon-website/docs/orchestration/reviews/MAPLEMOON-ADMITTED-PREVIEW-CERT-20260824T105053.json": null
+  },
+  "post_sha256": {
+    "maplemoon-website/_wip/deploy/generated/maplemoon-admitted-preview-20260824T105053": "243574bb368c85a0a9c3525e1a13b20d6216dc2754bcc0607e63f0a1677d781d",
+    "maplemoon-website/_wip/evidence/admitted_preview_cert_20260824T105053": "25162f9ffed903615b8feb4c46d3be54a3dcef28261fe566cf798e31c96a2a9b",
+    "maplemoon-website/docs/orchestration/reviews/MAPLEMOON-ADMITTED-PREVIEW-CERT-20260824T105053.json": null
+  },
+  "checks": [
+    {
+      "command": "python3 -B scripts/check-maplemoon-receipt.py checkpoint ...; verify --phase start",
+      "exit_code": 0,
+      "result": "PASS checkpoint packet=MAPLEMOON-ADMITTED-PREVIEW-CERT-20260824T105053 files=3; PASS packet=MAPLEMOON-ADMITTED-PREVIEW-CERT-20260824T105053 phase=start scope=3"
+    },
+    {
+      "command": "python3 -B _wip/evidence/admitted_preview_cert_20260824T105053/build-admitted-preview.py",
+      "exit_code": 0,
+      "result": "BUILD PASS output=/Users/handtomouse/maplemoon-website/_wip/deploy/generated/maplemoon-admitted-preview-20260824T105053 files=75 bytes=14769349 pages=7 private_dirs=0 vercel_project_link=0 our_story_source=root_certified_frame701"
+    },
+    {
+      "command": "rg private/development path scan against generated HTML/JS/CSS",
+      "exit_code": 1,
+      "result": "FAIL shop.html:402 contains imagePath:'/out/image_candidates_20260823/powder_roasted_no_bg.png'. The referenced development path is intentionally absent from the safe build."
+    }
+  ],
+  "screenshots_or_urls": [],
+  "failures": [
+    "Required private-path check failed. Per packet STOP, browser QA, preflight, design-system checks and deployment were not run."
+  ],
+  "unknowns": [],
+  "residual_risk": [
+    "The candidate is not release-ready because its powder card requests an excluded /out/ asset.",
+    "The existing approved assets/product_shots/powder_roasted.webp fallback was not activated because this packet did not permit a Shop transformation."
+  ],
+  "forbidden_path_changes": [],
+  "proposed_next_state": "failed_requires_wrapper_only_powder_path_correction",
+  "next_reviewer": "MapleMoon root BOSS for one non-overwriting correction packet; source WIP and out remain untouched"
+}

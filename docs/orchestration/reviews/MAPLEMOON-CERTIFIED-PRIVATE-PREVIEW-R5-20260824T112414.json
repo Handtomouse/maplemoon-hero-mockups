@@ -1,0 +1,83 @@
+{
+  "schema": "maplemoon-receipt/v2",
+  "receipt_id": "MAPLEMOON-CERTIFIED-PRIVATE-PREVIEW-R5-20260824T112414-RECEIPT-01",
+  "packet_id": "MAPLEMOON-CERTIFIED-PRIVATE-PREVIEW-R5-20260824T112414",
+  "worker_thread_id": "019ffe53-6243-73a2-9d75-e1a072cd07ce",
+  "worker": "Codex /root MapleMoon BOSS",
+  "started_at": "2026-08-24T01:24:14Z",
+  "completed_at": "2026-08-24T01:30:34Z",
+  "files_read": [
+    "maplemoon-website/docs/orchestration/packets/MAPLEMOON-CERTIFIED-PRIVATE-PREVIEW-R5-20260824T112414.md",
+    "maplemoon-website/docs/orchestration/reviews/MAPLEMOON-ADMITTED-PREVIEW-RUNTIME-R4-20260824T111607.json",
+    "maplemoon-website/_wip/deploy/generated/maplemoon-admitted-preview-r4-20260824T111607",
+    "maplemoon_build_20260813/.vercel/project.json"
+  ],
+  "files_changed": [
+    "maplemoon-website/_wip/evidence/certified_private_preview_r5_20260824T112414",
+    "maplemoon-website/docs/orchestration/reviews/MAPLEMOON-CERTIFIED-PRIVATE-PREVIEW-R5-20260824T112414.json"
+  ],
+  "pre_sha256": {
+    "maplemoon-website/_wip/evidence/certified_private_preview_r5_20260824T112414": null,
+    "maplemoon-website/docs/orchestration/reviews/MAPLEMOON-CERTIFIED-PRIVATE-PREVIEW-R5-20260824T112414.json": null
+  },
+  "post_sha256": {
+    "maplemoon-website/_wip/evidence/certified_private_preview_r5_20260824T112414": "34ca2db2b605d4e34c773f21ac2c3fd2d70af02ef6582c41c2ab11809f8350a7",
+    "maplemoon-website/docs/orchestration/reviews/MAPLEMOON-CERTIFIED-PRIVATE-PREVIEW-R5-20260824T112414.json": null
+  },
+  "checks": [
+    {
+      "command": "python3 -B scripts/check-maplemoon-receipt.py checkpoint ...; verify --phase start",
+      "exit_code": 0,
+      "result": "PASS checkpoint packet=MAPLEMOON-CERTIFIED-PRIVATE-PREVIEW-R5-20260824T112414 files=2 path=/Users/handtomouse/maplemoon-website/_wip/checkpoints/MAPLEMOON-CERTIFIED-PRIVATE-PREVIEW-R5-20260824T112414_20260824_112501_AEST; PASS packet=MAPLEMOON-CERTIFIED-PRIVATE-PREVIEW-R5-20260824T112414 phase=start scope=2"
+    },
+    {
+      "command": "python3 -B _wip/evidence/certified_private_preview_r5_20260824T112414/prepare-staging.py",
+      "exit_code": 0,
+      "result": "STAGING PASS path=/private/tmp/maplemoon-r5-20260824T112414 candidate_sha256=5a649086667c7ed017e45b2cb97fdf6d356d1b4ad636a2d51b09b2b7321efe49 files=75 project=prj_uyvhJMmqX5hq2mFxzLUKu3sxqyzn org=team_385xEDn7YomEO2eo5pHTp3px link_sha256=67c7d22f79bf6ac5785d8c9b760ac5df4081448c247228a71f445c61200db902"
+    },
+    {
+      "command": "vercel deploy --yes",
+      "exit_code": 0,
+      "result": "Exactly one deployment command. Deploying handtomouses-projects/maplemoon_build_20260813; Preview https://maplemoonbuild20260813-j9pef6x3q-handtomouses-projects.vercel.app; inspect dpl_9gAxXL2uxFu4tobNeSgRR69NqgQj; no --prod, promote, alias, rollback or protection action."
+    },
+    {
+      "command": "vercel inspect maplemoonbuild20260813-j9pef6x3q-handtomouses-projects.vercel.app",
+      "exit_code": 0,
+      "result": "id=dpl_9gAxXL2uxFu4tobNeSgRR69NqgQj name=maplemoon_build_20260813 target=preview status=Ready url=https://maplemoonbuild20260813-j9pef6x3q-handtomouses-projects.vercel.app"
+    },
+    {
+      "command": "python3 -B _wip/evidence/certified_private_preview_r5_20260824T112414/verify-remote-bytes.py",
+      "exit_code": 0,
+      "result": "REMOTE_BYTES PASS deployment=dpl_9gAxXL2uxFu4tobNeSgRR69NqgQj files=16/16 status200=16/16 nonblank=16/16 byte_equal=16/16"
+    },
+    {
+      "command": "python3 -B _wip/evidence/certified_private_preview_r5_20260824T112414/verify-anonymous-qualification.py",
+      "exit_code": 0,
+      "result": "ANONYMOUS_QUALIFICATION PASS raw_preflight_exit=1 result=VERCEL_SSO_WALL protection=unchanged audience=authenticated_private_review_only"
+    },
+    {
+      "command": "vercel inspect maplemoonbuild20260813.vercel.app",
+      "exit_code": 0,
+      "result": "production freeze PASS id=dpl_G2LER2awaqyFtGRCcTserXbNynct immutable=maplemoonbuild20260813-7vjf2m50b-handtomouses-projects.vercel.app target=production status=Ready alias=maplemoonbuild20260813.vercel.app"
+    },
+    {
+      "command": "python3 -B _wip/evidence/certified_private_preview_r5_20260824T112414/verify-close-r5.py",
+      "exit_code": 0,
+      "result": "R5_CLOSE PASS r4_tree=75/75 r4_receipt=exact project=prj_uyvh staging=75/75 preview=dpl_9gAx/Ready/preview remote_bytes=16/16 anonymous=SSO_WALL production=dpl_G2LER/7vjf2m50b/Ready preserved_out=20/20"
+    }
+  ],
+  "screenshots_or_urls": [
+    "https://maplemoonbuild20260813-j9pef6x3q-handtomouses-projects.vercel.app"
+  ],
+  "failures": [],
+  "unknowns": [
+    "The preview remains protected by Vercel Authentication and is usable only by authenticated private reviewers. Protection was intentionally not changed."
+  ],
+  "residual_risk": [
+    "Anonymous/client sharing remains blocked by the SSO wall; Nate explicitly requested no client contact in this lane.",
+    "Production remains the frozen 7vjf2m50b deployment and requires a new explicit production instruction and packet."
+  ],
+  "forbidden_path_changes": [],
+  "proposed_next_state": "private_preview_ready_for_nate_review_production_frozen",
+  "next_reviewer": "Nate via authenticated private preview; no client message and no production move"
+}
