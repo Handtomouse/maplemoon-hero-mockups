@@ -53,3 +53,8 @@ _wip/masters/
 
 # Regenerable bytecode: tools/ was already covered, scripts/ was not.
 scripts/__pycache__/
+
+# Build artefacts. 4.4G of these were swept into a commit on 24 Aug 2026 and
+# blocked a push: two PSDs exceeded the 100MB per-file limit.
+_wip/deploy/generated/
+out/
