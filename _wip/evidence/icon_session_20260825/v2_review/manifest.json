@@ -1,0 +1,429 @@
+{
+  "schema": "maplemoon-icon-review/v2",
+  "generated": "2026-08-25",
+  "status": "review_only_not_approved_routes_unchanged",
+  "authority": "_wip/evidence/carli_external_icon_kit_20260825/AUTHORITY-MAP.md",
+  "iconCount": 44,
+  "sourceHashes": {
+    "brandmark": "a9c5418176d80748e5d0403821fa0833095564dad58fcd0122e311dda66f65d7",
+    "caffeineBadge": "60af82cca84d58dbf3c0810348232b2e4c7055fa4b394b8315ba6991775698fe",
+    "bar": "3292a84d7665b4ac756b1a43388ad3710a48805c9629cfbe26a096471a54e981",
+    "banana": "33139480bdef9ef0c6bd54c76e6b7fe3fdf833f1b5d933b12fc762052951b083",
+    "moon": "8e8a41d0442d76eea707a26c5d1da604d8ef95384551389547caa7fd21865295",
+    "bite": "c7bf522317b979464a9d775d94fd5c1ea1e7133d204787c0fb0ac712b559fd63",
+    "elixir": "f385c376870288eb9afd9c33d6068d82f62fc65782308cdeb1b2d9dc52478f98"
+  },
+  "sources": {
+    "brandmark": "_wip/deliverables/MapleMoon_External_Designer_Icon_Kit_20260825/03_FINAL_PRODUCTION_PENDING/01_VECTOR_SVG/MM_Brandmark_Moon-Sun.svg",
+    "caffeineBadge": "assets/brand/icon_caffeine_free.svg",
+    "bar": "assets/product_shots/bar_pure_carob_hero.webp",
+    "banana": "assets/product_shots/bananas_real.webp",
+    "moon": "assets/product_shots/moon_pure_carob.webp",
+    "bite": "assets/product_shots/eclipse_pecan_real.webp",
+    "elixir": "assets/gemini/studio/maplemoon_elixir_plain_studio_20260305.png"
+  },
+  "icons": [
+    {
+      "concept": "cart",
+      "id": "utility-cart-24",
+      "title": "Cart / bag",
+      "lane": "Utility",
+      "size": 24,
+      "source": "Shopping-bag convention with a single packaging-horizon cue",
+      "file": "individual/utility-cart-24.svg"
+    },
+    {
+      "concept": "cart",
+      "id": "utility-cart-20",
+      "title": "Cart / bag",
+      "lane": "Utility",
+      "size": 20,
+      "source": "Optically redrawn 20 px cut",
+      "file": "individual/utility-cart-20.svg"
+    },
+    {
+      "concept": "cart",
+      "id": "utility-cart-16",
+      "title": "Cart / bag",
+      "lane": "Utility",
+      "size": 16,
+      "source": "Simplified 16 px cut; horizon detail removed",
+      "file": "individual/utility-cart-16.svg"
+    },
+    {
+      "concept": "search",
+      "id": "utility-search-24",
+      "title": "Search",
+      "lane": "Utility",
+      "size": 24,
+      "source": "Recognisable lens with controlled organic asymmetry",
+      "file": "individual/utility-search-24.svg"
+    },
+    {
+      "concept": "search",
+      "id": "utility-search-20",
+      "title": "Search",
+      "lane": "Utility",
+      "size": 20,
+      "source": "Optically redrawn 20 px cut",
+      "file": "individual/utility-search-20.svg"
+    },
+    {
+      "concept": "search",
+      "id": "utility-search-16",
+      "title": "Search",
+      "lane": "Utility",
+      "size": 16,
+      "source": "Simplified 16 px cut",
+      "file": "individual/utility-search-16.svg"
+    },
+    {
+      "concept": "plus",
+      "id": "utility-plus-24",
+      "title": "Expand",
+      "lane": "Utility",
+      "size": 24,
+      "source": "Soft, asymmetric control mark",
+      "file": "individual/utility-plus-24.svg"
+    },
+    {
+      "concept": "plus",
+      "id": "utility-plus-20",
+      "title": "Expand",
+      "lane": "Utility",
+      "size": 20,
+      "source": "Optically redrawn 20 px cut",
+      "file": "individual/utility-plus-20.svg"
+    },
+    {
+      "concept": "plus",
+      "id": "utility-plus-16",
+      "title": "Expand",
+      "lane": "Utility",
+      "size": 16,
+      "source": "Simplified 16 px cut",
+      "file": "individual/utility-plus-16.svg"
+    },
+    {
+      "concept": "category-bar",
+      "id": "category-bar-20",
+      "title": "Bars",
+      "lane": "Homepage category",
+      "size": 20,
+      "source": "90 g wrapped bar silhouette; source: bar packshot",
+      "file": "individual/category-bar-20.svg"
+    },
+    {
+      "concept": "category-bar",
+      "id": "category-bar-16",
+      "title": "Bars",
+      "lane": "Homepage category",
+      "size": 16,
+      "source": "Simplified selector cut",
+      "file": "individual/category-bar-16.svg"
+    },
+    {
+      "concept": "category-banana",
+      "id": "category-banana-20",
+      "title": "Bananas",
+      "lane": "Homepage category",
+      "size": 20,
+      "source": "Coated banana silhouette; source: current banana packshot",
+      "file": "individual/category-banana-20.svg"
+    },
+    {
+      "concept": "category-banana",
+      "id": "category-banana-16",
+      "title": "Bananas",
+      "lane": "Homepage category",
+      "size": 16,
+      "source": "Simplified selector cut",
+      "file": "individual/category-banana-16.svg"
+    },
+    {
+      "concept": "category-moon",
+      "id": "category-moon-20",
+      "title": "Moons",
+      "lane": "Homepage category",
+      "size": 20,
+      "source": "Actual crescent product silhouette; source: Moon product shot",
+      "file": "individual/category-moon-20.svg"
+    },
+    {
+      "concept": "category-moon",
+      "id": "category-moon-16",
+      "title": "Moons",
+      "lane": "Homepage category",
+      "size": 16,
+      "source": "Simplified selector cut",
+      "file": "individual/category-moon-16.svg"
+    },
+    {
+      "concept": "category-bites",
+      "id": "category-bites-20",
+      "title": "Eclipse bites",
+      "lane": "Homepage category",
+      "size": 20,
+      "source": "Single domed Eclipse Bite with pecan cue; source: current product shot",
+      "file": "individual/category-bites-20.svg"
+    },
+    {
+      "concept": "category-bites",
+      "id": "category-bites-16",
+      "title": "Eclipse bites",
+      "lane": "Homepage category",
+      "size": 16,
+      "source": "Simplified single-bite selector cut",
+      "file": "individual/category-bites-16.svg"
+    },
+    {
+      "concept": "category-elixir",
+      "id": "category-elixir-20",
+      "title": "Elixirs",
+      "lane": "Homepage category",
+      "size": 20,
+      "source": "Cylindrical elixir canister; source: current product image",
+      "file": "individual/category-elixir-20.svg"
+    },
+    {
+      "concept": "category-elixir",
+      "id": "category-elixir-16",
+      "title": "Elixirs",
+      "lane": "Homepage category",
+      "size": 16,
+      "source": "Simplified selector cut",
+      "file": "individual/category-elixir-16.svg"
+    },
+    {
+      "concept": "product-bar",
+      "id": "product-bar-48",
+      "title": "Wrapped carob bar",
+      "lane": "Product master",
+      "size": 48,
+      "source": "Real wrapped pack silhouette with Moon and horizon cues",
+      "file": "individual/product-bar-48.svg"
+    },
+    {
+      "concept": "product-bar",
+      "id": "product-bar-32",
+      "title": "Wrapped carob bar",
+      "lane": "Product master",
+      "size": 32,
+      "source": "Simplified 32 px product cut",
+      "file": "individual/product-bar-32.svg"
+    },
+    {
+      "concept": "product-moon",
+      "id": "product-moon-48",
+      "title": "Carob Moon",
+      "lane": "Product master",
+      "size": 48,
+      "source": "Actual crescent product silhouette",
+      "file": "individual/product-moon-48.svg"
+    },
+    {
+      "concept": "product-moon",
+      "id": "product-moon-32",
+      "title": "Carob Moon",
+      "lane": "Product master",
+      "size": 32,
+      "source": "Simplified 32 px product cut",
+      "file": "individual/product-moon-32.svg"
+    },
+    {
+      "concept": "product-elixir",
+      "id": "product-elixir-48",
+      "title": "Carob elixir canister",
+      "lane": "Product master",
+      "size": 48,
+      "source": "Cylindrical product canister with brandmark cue",
+      "file": "individual/product-elixir-48.svg"
+    },
+    {
+      "concept": "product-elixir",
+      "id": "product-elixir-32",
+      "title": "Carob elixir canister",
+      "lane": "Product master",
+      "size": 32,
+      "source": "Simplified 32 px product cut",
+      "file": "individual/product-elixir-32.svg"
+    },
+    {
+      "concept": "process-pod",
+      "id": "process-pod-48",
+      "title": "Carob pod",
+      "lane": "Process",
+      "size": 48,
+      "source": "Organic pod and seed rhythm; source: Australian carob photography",
+      "file": "individual/process-pod-48.svg"
+    },
+    {
+      "concept": "process-pod",
+      "id": "process-pod-32",
+      "title": "Carob pod",
+      "lane": "Process",
+      "size": 32,
+      "source": "Simplified 32 px process cut",
+      "file": "individual/process-pod-32.svg"
+    },
+    {
+      "concept": "process-roast",
+      "id": "process-roast-48",
+      "title": "Roast",
+      "lane": "Process",
+      "size": 48,
+      "source": "Roasting bowl, pod rhythm and heat",
+      "file": "individual/process-roast-48.svg"
+    },
+    {
+      "concept": "process-roast",
+      "id": "process-roast-32",
+      "title": "Roast",
+      "lane": "Process",
+      "size": 32,
+      "source": "Simplified 32 px process cut",
+      "file": "individual/process-roast-32.svg"
+    },
+    {
+      "concept": "process-blend",
+      "id": "process-blend-48",
+      "title": "Blend",
+      "lane": "Process",
+      "size": 48,
+      "source": "Blend bowl with packaging-horizon rhythm",
+      "file": "individual/process-blend-48.svg"
+    },
+    {
+      "concept": "process-blend",
+      "id": "process-blend-32",
+      "title": "Blend",
+      "lane": "Process",
+      "size": 32,
+      "source": "Simplified 32 px process cut",
+      "file": "individual/process-blend-32.svg"
+    },
+    {
+      "concept": "cacao-bitter",
+      "id": "comparison-cacao-bitter-24",
+      "title": "Cacao: naturally bitter",
+      "lane": "Comparison",
+      "size": 24,
+      "source": "Cacao bean and downturned finish",
+      "file": "individual/comparison-cacao-bitter-24.svg"
+    },
+    {
+      "concept": "cacao-bitter",
+      "id": "comparison-cacao-bitter-20",
+      "title": "Cacao: naturally bitter",
+      "lane": "Comparison",
+      "size": 20,
+      "source": "Simplified 20 px comparison cut",
+      "file": "individual/comparison-cacao-bitter-20.svg"
+    },
+    {
+      "concept": "cacao-stimulation",
+      "id": "comparison-cacao-stimulation-24",
+      "title": "Cacao: stimulating",
+      "lane": "Comparison",
+      "size": 24,
+      "source": "Activation bolt with outward energy",
+      "file": "individual/comparison-cacao-stimulation-24.svg"
+    },
+    {
+      "concept": "cacao-stimulation",
+      "id": "comparison-cacao-stimulation-20",
+      "title": "Cacao: stimulating",
+      "lane": "Comparison",
+      "size": 20,
+      "source": "Simplified 20 px comparison cut",
+      "file": "individual/comparison-cacao-stimulation-20.svg"
+    },
+    {
+      "concept": "cacao-activation",
+      "id": "comparison-cacao-activation-24",
+      "title": "Cacao: activating moment",
+      "lane": "Comparison",
+      "size": 24,
+      "source": "Rising sun / activating daytime",
+      "file": "individual/comparison-cacao-activation-24.svg"
+    },
+    {
+      "concept": "cacao-activation",
+      "id": "comparison-cacao-activation-20",
+      "title": "Cacao: activating moment",
+      "lane": "Comparison",
+      "size": 20,
+      "source": "Simplified 20 px comparison cut",
+      "file": "individual/comparison-cacao-activation-20.svg"
+    },
+    {
+      "concept": "carob-sweet",
+      "id": "comparison-carob-sweet-24",
+      "title": "Carob: naturally sweet",
+      "lane": "Comparison",
+      "size": 24,
+      "source": "Carob pod plus quiet sparkle",
+      "file": "individual/comparison-carob-sweet-24.svg"
+    },
+    {
+      "concept": "carob-sweet",
+      "id": "comparison-carob-sweet-20",
+      "title": "Carob: naturally sweet",
+      "lane": "Comparison",
+      "size": 20,
+      "source": "Simplified 20 px comparison cut",
+      "file": "individual/comparison-carob-sweet-20.svg"
+    },
+    {
+      "concept": "carob-caffeine-free",
+      "id": "comparison-carob-caffeine-free-24",
+      "title": "Carob: caffeine free",
+      "lane": "Comparison",
+      "size": 24,
+      "source": "Exact central cup artwork extracted from the approved current Caffeine Free badge",
+      "file": "individual/comparison-carob-caffeine-free-24.svg"
+    },
+    {
+      "concept": "carob-caffeine-free",
+      "id": "comparison-carob-caffeine-free-20",
+      "title": "Carob: caffeine free",
+      "lane": "Comparison",
+      "size": 20,
+      "source": "Simplified 20 px cut derived from the approved cup symbol",
+      "file": "individual/comparison-carob-caffeine-free-20.svg"
+    },
+    {
+      "concept": "carob-evening",
+      "id": "comparison-carob-evening-24",
+      "title": "Carob: evening moment",
+      "lane": "Comparison",
+      "size": 24,
+      "source": "Crescent over the packaging horizon",
+      "file": "individual/comparison-carob-evening-24.svg"
+    },
+    {
+      "concept": "carob-evening",
+      "id": "comparison-carob-evening-20",
+      "title": "Carob: evening moment",
+      "lane": "Comparison",
+      "size": 20,
+      "source": "Simplified 20 px comparison cut",
+      "file": "individual/comparison-carob-evening-20.svg"
+    },
+    {
+      "concept": "comparison-check",
+      "id": "comparison-check-16",
+      "title": "Carob benefit confirmed",
+      "lane": "Comparison",
+      "size": 16,
+      "source": "Dedicated 16 px confirmation cut",
+      "file": "individual/comparison-check-16.svg"
+    }
+  ],
+  "gates": [
+    "utility_character",
+    "homepage_category_family",
+    "carob_comparison_language",
+    "process_character"
+  ]
+}

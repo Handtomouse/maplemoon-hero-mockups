@@ -1,0 +1,246 @@
+{
+  "schema": "maplemoon-icon-system/v1",
+  "generated": "2026-08-25",
+  "grid": 24,
+  "opticalCore": 18,
+  "stroke": 1.5,
+  "linecap": "round",
+  "linejoin": "round",
+  "count": 39,
+  "icons": [
+    {
+      "id": "mm-icon-menu",
+      "title": "Menu",
+      "lane": "Utility",
+      "individual": "individual/mm-menu.svg"
+    },
+    {
+      "id": "mm-icon-close",
+      "title": "Close",
+      "lane": "Utility",
+      "individual": "individual/mm-close.svg"
+    },
+    {
+      "id": "mm-icon-cart",
+      "title": "Cart",
+      "lane": "Utility",
+      "individual": "individual/mm-cart.svg"
+    },
+    {
+      "id": "mm-icon-search",
+      "title": "Search",
+      "lane": "Utility",
+      "individual": "individual/mm-search.svg"
+    },
+    {
+      "id": "mm-icon-chevron-down",
+      "title": "Chevron down",
+      "lane": "Utility",
+      "individual": "individual/mm-chevron-down.svg"
+    },
+    {
+      "id": "mm-icon-chevron-left",
+      "title": "Chevron left",
+      "lane": "Utility",
+      "individual": "individual/mm-chevron-left.svg"
+    },
+    {
+      "id": "mm-icon-chevron-right",
+      "title": "Chevron right",
+      "lane": "Utility",
+      "individual": "individual/mm-chevron-right.svg"
+    },
+    {
+      "id": "mm-icon-arrow-right",
+      "title": "Arrow right",
+      "lane": "Utility",
+      "individual": "individual/mm-arrow-right.svg"
+    },
+    {
+      "id": "mm-icon-external",
+      "title": "Open link",
+      "lane": "Utility",
+      "individual": "individual/mm-external.svg"
+    },
+    {
+      "id": "mm-icon-plus",
+      "title": "Expand",
+      "lane": "Utility",
+      "individual": "individual/mm-plus.svg"
+    },
+    {
+      "id": "mm-icon-minus",
+      "title": "Collapse",
+      "lane": "Utility",
+      "individual": "individual/mm-minus.svg"
+    },
+    {
+      "id": "mm-icon-check",
+      "title": "Check",
+      "lane": "Utility",
+      "individual": "individual/mm-check.svg"
+    },
+    {
+      "id": "mm-icon-info",
+      "title": "Information",
+      "lane": "Utility",
+      "individual": "individual/mm-info.svg"
+    },
+    {
+      "id": "mm-icon-mail",
+      "title": "Email",
+      "lane": "Utility",
+      "individual": "individual/mm-mail.svg"
+    },
+    {
+      "id": "mm-icon-map-pin",
+      "title": "Map pin",
+      "lane": "Utility",
+      "individual": "individual/mm-map-pin.svg"
+    },
+    {
+      "id": "mm-icon-locate",
+      "title": "Locate me",
+      "lane": "Utility",
+      "individual": "individual/mm-locate.svg"
+    },
+    {
+      "id": "mm-icon-truck",
+      "title": "Delivery",
+      "lane": "Utility",
+      "individual": "individual/mm-truck.svg"
+    },
+    {
+      "id": "mm-icon-lock",
+      "title": "Secure payment",
+      "lane": "Utility",
+      "individual": "individual/mm-lock.svg"
+    },
+    {
+      "id": "mm-icon-warning",
+      "title": "Warning",
+      "lane": "Utility",
+      "individual": "individual/mm-warning.svg"
+    },
+    {
+      "id": "mm-icon-storefront",
+      "title": "Stockist",
+      "lane": "Utility",
+      "individual": "individual/mm-storefront.svg"
+    },
+    {
+      "id": "mm-icon-instagram",
+      "title": "Instagram",
+      "lane": "Utility",
+      "individual": "individual/mm-instagram.svg"
+    },
+    {
+      "id": "mm-icon-facebook",
+      "title": "Facebook",
+      "lane": "Utility",
+      "individual": "individual/mm-facebook.svg"
+    },
+    {
+      "id": "mm-icon-clock",
+      "title": "Time",
+      "lane": "Utility",
+      "individual": "individual/mm-clock.svg"
+    },
+    {
+      "id": "mm-icon-bolt",
+      "title": "Stimulation",
+      "lane": "Editorial",
+      "individual": "individual/mm-bolt.svg"
+    },
+    {
+      "id": "mm-icon-sun",
+      "title": "Sun ripened",
+      "lane": "Editorial",
+      "individual": "individual/mm-sun.svg"
+    },
+    {
+      "id": "mm-icon-moon",
+      "title": "Moon",
+      "lane": "Editorial",
+      "individual": "individual/mm-moon.svg"
+    },
+    {
+      "id": "mm-icon-moon-sparkle",
+      "title": "Moon and sparkle",
+      "lane": "Editorial",
+      "individual": "individual/mm-moon-sparkle.svg"
+    },
+    {
+      "id": "mm-icon-bar",
+      "title": "Carob bar",
+      "lane": "Product format",
+      "individual": "individual/mm-bar.svg"
+    },
+    {
+      "id": "mm-icon-banana",
+      "title": "Carob banana",
+      "lane": "Product format",
+      "individual": "individual/mm-banana.svg"
+    },
+    {
+      "id": "mm-icon-moon-format",
+      "title": "Carob Moon",
+      "lane": "Product format",
+      "individual": "individual/mm-moon-format.svg"
+    },
+    {
+      "id": "mm-icon-eclipse-bites",
+      "title": "Eclipse bites",
+      "lane": "Product format",
+      "individual": "individual/mm-eclipse-bites.svg"
+    },
+    {
+      "id": "mm-icon-elixir",
+      "title": "Carob elixir",
+      "lane": "Product format",
+      "individual": "individual/mm-elixir.svg"
+    },
+    {
+      "id": "mm-icon-carob-pod",
+      "title": "Carob pod",
+      "lane": "Editorial",
+      "individual": "individual/mm-carob-pod.svg"
+    },
+    {
+      "id": "mm-icon-roast",
+      "title": "Roast",
+      "lane": "Editorial",
+      "individual": "individual/mm-roast.svg"
+    },
+    {
+      "id": "mm-icon-blend",
+      "title": "Blend",
+      "lane": "Editorial",
+      "individual": "individual/mm-blend.svg"
+    },
+    {
+      "id": "mm-icon-result",
+      "title": "Finished carob",
+      "lane": "Editorial",
+      "individual": "individual/mm-result.svg"
+    },
+    {
+      "id": "mm-icon-fibre",
+      "title": "High in fibre",
+      "lane": "Claim symbol",
+      "individual": "individual/mm-fibre.svg"
+    },
+    {
+      "id": "mm-icon-sweetness",
+      "title": "Naturally sweet",
+      "lane": "Claim symbol",
+      "individual": "individual/mm-sweetness.svg"
+    },
+    {
+      "id": "mm-icon-caffeine-free",
+      "title": "Caffeine free",
+      "lane": "Claim symbol",
+      "individual": "individual/mm-caffeine-free.svg"
+    }
+  ]
+}
