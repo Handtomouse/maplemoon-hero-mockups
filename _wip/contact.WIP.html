@@ -14,6 +14,7 @@
 <link rel="stylesheet" href="/brand_kit.css">
 <link rel="stylesheet" href="/a11y_inner.css?v=20260723">
 <link rel="stylesheet" href="/design_refinement_20260723.css">
+<link rel="stylesheet" href="/assets/icons/mm-icons.css">
 <style>
 html{scroll-behavior:smooth;}
 body{margin:0;background:#f4f2ed;}
@@ -66,8 +67,7 @@ html{background:#f4f2ed;}
 .ct-side p{margin:0;color:var(--ink-soft);font-size:.9rem;line-height:1.65;}
 .ct-side a.lnk{border-bottom:1px solid var(--line);}
 .ct-side a.lnk:hover{border-bottom-color:var(--ink);}
-.ct-pending{display:inline-block;font-size:.6rem;letter-spacing:.12em;text-transform:uppercase;
-  color:var(--ink-soft);border:1px dashed var(--line);border-radius:999px;padding:4px 10px;}
+
 .sp-ft{border-top:1px solid var(--line);}
 .sp-ft .row{display:flex;align-items:center;justify-content:space-between;gap:24px;padding:26px 0;flex-wrap:wrap;}
 .sp-ft .fnav{display:flex;gap:22px;flex-wrap:wrap;}
@@ -95,7 +95,7 @@ html{background:#f4f2ed;}
     <nav class="sp-nav" aria-label="Primary navigation"><a href="/shop">Shop</a><a href="/our-story">Our Story</a><a href="/carob-story">What is Carob</a></nav>
     <a class="sp-logo" href="/">maple moon</a>
     <nav class="sp-nav r" aria-label="Utility navigation"><a href="/stockists">Stockists</a><span class="sp-currency" aria-label="Currency, Australian dollars">AUD $</span>
-      <button class="sp-cart" type="button" aria-label="Cart, 0 items"><svg viewBox="0 0 24 24"><path d="M6 8h12l-1 12H7L6 8z"/><path d="M9 8a3 3 0 0 1 6 0"/></svg><b>0</b></button></nav>
+      <button class="sp-cart" type="button" aria-label="Cart, 0 items"><svg class="mm-icon" viewBox="0 0 24 24" aria-hidden="true"><use href="/assets/icons/mm-icons.svg#mm-icon-cart"></use></svg><b>0</b></button></nav>
   </div></header>
 
   <main id="main-content" tabindex="-1">
@@ -166,10 +166,6 @@ html{background:#f4f2ed;}
         <div>
           <h2>Find us in store</h2>
           <p><a class="lnk" href="/stockists">See our stockists</a> across Australia.</p>
-        </div>
-        <div>
-          <h2>Social</h2>
-          <p><span class="ct-pending">Links pending</span></p>
         </div>
       </aside>
     </section>

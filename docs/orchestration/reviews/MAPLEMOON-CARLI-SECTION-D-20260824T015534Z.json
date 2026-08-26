@@ -1,0 +1,88 @@
+{
+  "schema": "maplemoon-receipt/v2",
+  "receipt_id": "MAPLEMOON-CARLI-SECTION-D-RECEIPT-20260824T020023Z",
+  "packet_id": "MAPLEMOON-CARLI-SECTION-D-20260824T015534Z",
+  "worker_thread_id": "/root",
+  "worker": "Codex /root",
+  "started_at": "2026-08-24T01:55:34Z",
+  "completed_at": "2026-08-24T02:00:23Z",
+  "checkpoint": "maplemoon-website/_wip/checkpoints/MAPLEMOON-CARLI-SECTION-D-20260824T015534Z_20260824_115800_AEST",
+  "files_read": [
+    "maplemoon-website/AGENTS.md",
+    "maplemoon-website/CLAUDE.md",
+    "maplemoon-website/docs/orchestration/CONTROL_PLANE_INTERFACES.md",
+    "maplemoon-website/docs/orchestration/LOCK_MANIFEST.json",
+    "maplemoon-website/docs/orchestration/packets/MAPLEMOON-HOME-SHOP-CONTRACT-RECONCILIATION-20260824T102930.md",
+    "maplemoon-website/_wip/carob-story.WIP.html",
+    "maplemoon-website/docs/design-system/contracts/routes.v1.json",
+    "maplemoon-website/docs/design-system/contracts/exceptions.v1.json",
+    "maplemoon-website/scripts/check-maplemoon-design-system.mjs",
+    "maplemoon-website/scripts/check-maplemoon-receipt.py",
+    "Desktop/MrCC_PAI_Stage1_Files/UFC/clients/maplemoon/CARLI_WEBSITE_NOTES_20260814_CHECKLIST.md"
+  ],
+  "files_changed": [
+    "maplemoon-website/_wip/carob-story.WIP.html",
+    "maplemoon-website/docs/design-system/contracts/routes.v1.json",
+    "maplemoon-website/docs/design-system/contracts/exceptions.v1.json",
+    "maplemoon-website/docs/orchestration/reviews/MAPLEMOON-CARLI-SECTION-D-20260824T015534Z.json"
+  ],
+  "pre_sha256": {
+    "maplemoon-website/_wip/carob-story.WIP.html": "2fafd3867233a01ce6af1f4dd0a1837cc83fb69563d35d29c293e8d1d379d9e0",
+    "maplemoon-website/docs/design-system/contracts/routes.v1.json": "4c77b0a142a204d232d61ab10384a239e65beadcf7403f589ea4aa56e2cbe6a7",
+    "maplemoon-website/docs/design-system/contracts/exceptions.v1.json": "3c4df985b0a6eaad03eb0c32aedcf1386576cf4e1297424957c3008f9b843b0d",
+    "maplemoon-website/docs/orchestration/reviews/MAPLEMOON-CARLI-SECTION-D-20260824T015534Z.json": null,
+    "Desktop/MrCC_PAI_Stage1_Files/UFC/clients/maplemoon/CARLI_WEBSITE_NOTES_20260814_CHECKLIST.md": "3d6b375874237f3856ae1dc7c47e686385a9dd456f70adab6f563f9212b332bb"
+  },
+  "post_sha256": {
+    "maplemoon-website/_wip/carob-story.WIP.html": "71d5a883cfb14db45b71d7fa94211d08778bc69d037d38c46c058c2e13da90e4",
+    "maplemoon-website/docs/design-system/contracts/routes.v1.json": "5dad7a56c392c8550216fce7ad1c8053899b0e5fd09013f5887ed5ddd79cd536",
+    "maplemoon-website/docs/design-system/contracts/exceptions.v1.json": "6acf40a95385363df0617ecc026c645e0a3064797822d7344e56d45f177bd9ad",
+    "maplemoon-website/docs/orchestration/reviews/MAPLEMOON-CARLI-SECTION-D-20260824T015534Z.json": null,
+    "Desktop/MrCC_PAI_Stage1_Files/UFC/clients/maplemoon/CARLI_WEBSITE_NOTES_20260814_CHECKLIST.md": "3d6b375874237f3856ae1dc7c47e686385a9dd456f70adab6f563f9212b332bb"
+  },
+  "checks": [
+    {
+      "command": "python3 -B maplemoon-website/scripts/check-maplemoon-receipt.py checkpoint ... && verify --phase start",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "result": "PASS checkpoint packet=MAPLEMOON-CARLI-SECTION-D-20260824T015534Z files=5; PASS phase=start scope=5"
+    },
+    {
+      "command": "positive and negative D01-D11 occurrence checks against _wip/carob-story.WIP.html",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "result": "PASS all 15 assertions: D01-D10 satisfied in page source and D11 retained"
+    },
+    {
+      "command": "node scripts/check-maplemoon-design-system.mjs --contracts-only",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "result": "PASS contracts-only tokens=75 routes=6 components=15 widths=4 images=14 exceptions=7 routeConformance=SKIPPED (flag not set)"
+    },
+    {
+      "command": "node scripts/check-maplemoon-design-system.mjs --route-conformance all",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "result": "PASS route-conformance tokens=75 routes=6 components=15 widths=4 images=14 exceptions=7 routeConformance=ALL_PASS"
+    },
+    {
+      "command": "git diff --check && echo PASS git diff --check",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "result": "PASS git diff --check"
+    }
+  ],
+  "screenshots_or_urls": [],
+  "failures": [
+    "Required checklist update was rejected by the session filesystem boundary: patch rejected: writing outside of the project; rejected by user approval settings. The checklist remains byte-unchanged and D01-D10 remain unticked."
+  ],
+  "unknowns": [
+    "No Canva design file was located in the repo; external Canva accounts were not searched, as directed."
+  ],
+  "residual_risk": [
+    "Repo page and contract edits are verified but intentionally uncommitted while the required external checklist update is blocked. Other workers created unrelated untracked packet files during this lane; they were not read, modified, staged or committed."
+  ],
+  "forbidden_path_changes": [],
+  "proposed_next_state": "blocked",
+  "next_reviewer": "Nate to make the exact checklist path writable in this session or move a copy into the repo, then resume this packet; no external action is authorised"
+}

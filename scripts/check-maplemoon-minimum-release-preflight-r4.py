@@ -305,6 +305,20 @@ LEAK_CHECKS = [
     ("local-filesystem-path",
      r"/Users/handtomouse", "raw", "fail",
      "a stray path /Users/handtomouse/maplemoon_build", None),
+
+    ("temporary-bundle-release-block",
+     r"temporary_eclipse_bite_bundle_web\.webp|"
+     r"temporary_replace_before_final|"
+     r"temporary_staging_replace_before_final|"
+     r"[\"']?temporary[\"']?\s*:\s*true|"
+     r"[\"']?launch_admitted[\"']?\s*:\s*false",
+     "raw", "fail",
+     ("temporary_eclipse_bite_bundle_web.webp",
+      "temporary_replace_before_final",
+      "temporary_staging_replace_before_final",
+      "temporary:true",
+      '"launch_admitted": false'),
+     None),
 ]
 
 # Proves the strip pipeline removes what it claims to: an em dash and the word
