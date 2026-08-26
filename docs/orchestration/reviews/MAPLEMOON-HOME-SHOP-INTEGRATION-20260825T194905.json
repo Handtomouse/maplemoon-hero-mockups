@@ -1,0 +1,115 @@
+{
+  "schema": "maplemoon-receipt/v2",
+  "receipt_id": "MAPLEMOON-HOME-SHOP-INTEGRATION-20260825T194905-RECEIPT-HOLD-01",
+  "packet_id": "MAPLEMOON-HOME-SHOP-INTEGRATION-20260825T194905",
+  "worker_thread_id": "019ffe53-6243-73a2-9d75-e1a072cd07ce",
+  "worker": "MapleMoon BOSS Home + Shop single-writer integration",
+  "started_at": "2026-08-25T09:54:28Z",
+  "completed_at": "2026-08-25T10:41:11Z",
+  "files_read": [
+    "maplemoon-website/docs/orchestration/packets/MAPLEMOON-HOME-SHOP-INTEGRATION-20260825T194905.md",
+    "maplemoon-website/_wip/evidence/icon_session_20260825/v2_review",
+    "maplemoon-website/_wip/deploy/generated/maplemoon_temporary_bundle_preview_20260825t170206",
+    "maplemoon-website/_wip/our-story.WIP.html",
+    "maplemoon-website/assets/our_story/ritual_quiet_finish_20260825.webp",
+    "maplemoon-website/assets/our_story/ritual_softer_pause_20260825.webp",
+    "maplemoon-website/assets/our_story/ritual_last_cup_20260825.webp",
+    "maplemoon-website/scripts/build-maplemoon-wip-preview.py",
+    "maplemoon-website/scripts/check-maplemoon-icon-v2-review.mjs",
+    "maplemoon_build_20260813/mock-cart.js",
+    ".claude/projects/-Users-handtomouse/1fc505ef-9769-4ff7-ad04-5a047ecb5a50.jsonl"
+  ],
+  "files_changed": [
+    "maplemoon-website/_wip/homepage_real_1_lead_photo.WIP.html",
+    "maplemoon-website/_wip/shop.WIP.html",
+    "maplemoon-website/assets/icons/mm-icons-v2.svg",
+    "maplemoon-website/assets/product_shots/temporary_eclipse_bite_bundle_web.webp",
+    "maplemoon-website/_wip/deploy/generated/maplemoon-home-shop-integration-20260825T194905",
+    "maplemoon-website/_wip/evidence/home_shop_integration_20260825T194905",
+    "maplemoon-website/docs/orchestration/reviews/MAPLEMOON-HOME-SHOP-INTEGRATION-20260825T194905.json"
+  ],
+  "pre_sha256": {
+    "maplemoon-website/_wip/homepage_real_1_lead_photo.WIP.html": "ddb18820d7f8095286d7e2aec387fe0272ee1cd148ac501e8981bb4387a5fd18",
+    "maplemoon-website/_wip/shop.WIP.html": "b1834aeacb06e11dc5b5de4b851c77d47fa32fae38f0e2579a5b03235ef28ed8",
+    "maplemoon-website/assets/icons/mm-icons-v2.svg": null,
+    "maplemoon-website/assets/product_shots/temporary_eclipse_bite_bundle_web.webp": null,
+    "maplemoon-website/_wip/deploy/generated/maplemoon-home-shop-integration-20260825T194905": null,
+    "maplemoon-website/_wip/evidence/home_shop_integration_20260825T194905": null,
+    "maplemoon-website/docs/orchestration/reviews/MAPLEMOON-HOME-SHOP-INTEGRATION-20260825T194905.json": null
+  },
+  "post_sha256": {
+    "maplemoon-website/_wip/homepage_real_1_lead_photo.WIP.html": "57bfa7b17fcb4c5f872de2babb1d016d435f4fd292275bb987fe4465b1484ad6",
+    "maplemoon-website/_wip/shop.WIP.html": "46245efd1b992c2dca635f993317936d547d92f43aa4bfb1c7a52a3ea797a491",
+    "maplemoon-website/assets/icons/mm-icons-v2.svg": "9fe2b4c8e740efb0ff0566ad210e308d13a12bc64ea4c41201d4016b76111ff1",
+    "maplemoon-website/assets/product_shots/temporary_eclipse_bite_bundle_web.webp": "8bca090850c29da285ae266d8bf666199ae7cacbeee475160df13bc82c66932f",
+    "maplemoon-website/_wip/deploy/generated/maplemoon-home-shop-integration-20260825T194905": "0f733228075cd871fd5972c60ac5d208a63124d5c5ffd63e21cfbe518cb908e4",
+    "maplemoon-website/_wip/evidence/home_shop_integration_20260825T194905": "2d70cc36cf403c49b1acd562456d50309eb7affe90e86a7f716ca53339c08dde",
+    "maplemoon-website/docs/orchestration/reviews/MAPLEMOON-HOME-SHOP-INTEGRATION-20260825T194905.json": null
+  },
+  "checks": [
+    {
+      "command": "python3 -B scripts/check-maplemoon-receipt.py checkpoint --root /Users/handtomouse --packet maplemoon-website/docs/orchestration/packets/MAPLEMOON-HOME-SHOP-INTEGRATION-20260825T194905.md --destination maplemoon-website/_wip/checkpoints/MAPLEMOON-HOME-SHOP-INTEGRATION-20260825T194905_20260825_195422_AEST",
+      "exit_code": 0,
+      "result": "PASS checkpoint packet=MAPLEMOON-HOME-SHOP-INTEGRATION-20260825T194905 files=7 path=_wip/checkpoints/MAPLEMOON-HOME-SHOP-INTEGRATION-20260825T194905_20260825_195422_AEST"
+    },
+    {
+      "command": "python3 -B scripts/check-maplemoon-receipt.py verify --root /Users/handtomouse --packet maplemoon-website/docs/orchestration/packets/MAPLEMOON-HOME-SHOP-INTEGRATION-20260825T194905.md --checkpoint maplemoon-website/_wip/checkpoints/MAPLEMOON-HOME-SHOP-INTEGRATION-20260825T194905_20260825_195422_AEST --phase start",
+      "exit_code": 0,
+      "result": "PASS packet=MAPLEMOON-HOME-SHOP-INTEGRATION-20260825T194905 phase=start scope=7"
+    },
+    {
+      "command": "node scripts/check-maplemoon-icon-v2-review.mjs and sprite-geometry/static integration checks",
+      "exit_code": 0,
+      "result": "PASS icon review=44/44 sprite=44 Home invariants bites/q-segments/bare-mm-pending=23/0/0 R6=0 hero_drift=0 comparison_checks=3 ritual=preserved"
+    },
+    {
+      "command": "python3 scripts/build-maplemoon-wip-preview.py --output _wip/deploy/generated/maplemoon-home-shop-integration-20260825T194905",
+      "exit_code": 0,
+      "result": "BUILD PASS output=/Users/handtomouse/maplemoon-website/_wip/deploy/generated/maplemoon-home-shop-integration-20260825T194905 files=85 bytes=14625335 pages=7 private_dirs=0 vercel_project_link=0"
+    },
+    {
+      "command": "node _wip/evidence/home_shop_integration_20260825T194905/check-home-shop-integration.mjs before close drift",
+      "exit_code": 0,
+      "result": "SOURCE PASS pins=15 home=PASS shop=PASS sprite=44 bundle=byte-identical hero=558c-projection ritual=preserved | POSITIVE CONTROLS PASS rejected=10/10 | CANDIDATE PASS root=_wip/deploy/generated/maplemoon-home-shop-integration-20260825T194905"
+    },
+    {
+      "command": "node _wip/evidence/home_shop_integration_20260825T194905/run-home-shop-cdp-qa.mjs (authoritative attempt-004)",
+      "exit_code": 1,
+      "result": "BROWSER FAIL cases=4/4 exact_widths=4/4 projections=4/4 geometry=4/4 proofs=26/26 contacts=2/2 failures=1; Shop@1440 required targets measured 34 to 40.546875 px, below required 44 px"
+    },
+    {
+      "command": "human inspection of authoritative attempt-004 crops and contact sheets",
+      "exit_code": 1,
+      "result": "HOLD: home_ritual_390.png and the 390 contact sheet contain the fixed cart drawer over the lower ritual card; the set is not a clean visual proof"
+    },
+    {
+      "command": "protected close-pin replay and external-writer provenance audit",
+      "exit_code": 1,
+      "result": "FAIL: live Home moved after candidate seal from 77142fb603eb3caeb673ecb1fe55cfbd42fe3251701e668e2fd6208082b192e1 to 57bfa7b17fcb4c5f872de2babb1d016d435f4fd292275bb987fe4465b1484ad6; writer=Claude session 1fc505ef-9769-4ff7-ad04-5a047ecb5a50"
+    }
+  ],
+  "screenshots_or_urls": [
+    "maplemoon-website/_wip/evidence/home_shop_integration_20260825T194905/cdp-attempts/attempt-004/human-review-contact-1440.png",
+    "maplemoon-website/_wip/evidence/home_shop_integration_20260825T194905/cdp-attempts/attempt-004/human-review-contact-390.png",
+    "maplemoon-website/_wip/evidence/home_shop_integration_20260825T194905/cdp-attempts/attempt-004/human-review-crops",
+    "maplemoon-website/_wip/evidence/home_shop_integration_20260825T194905/HUMAN-VISUAL-REVIEW.md",
+    "maplemoon-website/_wip/evidence/home_shop_integration_20260825T194905/INTEGRATION-HOLD.md"
+  ],
+  "failures": [
+    "Shop interactive controls fail the packet's required 44 px minimum at 1440.",
+    "The authoritative 390 ritual crop and contact sheet are contaminated by the fixed cart drawer and cannot support a clean visual PASS.",
+    "A concurrent external Claude writer changed the protected Home source after candidate creation, so the close pin failed and single-writer control was breached."
+  ],
+  "unknowns": [
+    "The integration candidate's clean 390 ritual appearance remains unverified until a successor explicitly closes the cart before evidence capture."
+  ],
+  "residual_risk": [
+    "The sealed 85-file candidate is useful evidence but is not admission- or upload-ready.",
+    "Independent whole-site QA separately found Our Story mobile containment and main-landmark gaps, Contact/PDP shared-footer gaps, and an undersized FAQ search control.",
+    "The temporary bundle remains visibly labelled staging imagery and is not final photography.",
+    "The current live Home source includes post-candidate external edits that require a fresh checkpointed reconciliation rather than an automatic revert."
+  ],
+  "forbidden_path_changes": [],
+  "proposed_next_state": "hold",
+  "next_reviewer": "MapleMoon BOSS after a fresh single-writer correction/reconciliation packet; no promotion or upload"
+}

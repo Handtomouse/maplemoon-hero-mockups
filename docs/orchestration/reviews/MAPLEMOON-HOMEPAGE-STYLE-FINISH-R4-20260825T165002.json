@@ -1,0 +1,85 @@
+{
+  "schema": "maplemoon-receipt/v2",
+  "receipt_id": "MAPLEMOON-HOMEPAGE-STYLE-FINISH-R4-20260825T165002-RECEIPT-HOLD-01",
+  "packet_id": "MAPLEMOON-HOMEPAGE-STYLE-FINISH-R4-20260825T165002",
+  "worker_thread_id": "019ffe53-6243-73a2-9d75-e1a072cd07ce",
+  "worker": "MapleMoon BOSS immutable homepage style candidate R4",
+  "started_at": "2026-08-25T06:50:02Z",
+  "completed_at": "2026-08-25T07:14:19Z",
+  "files_read": [
+    "maplemoon-website/docs/orchestration/packets/MAPLEMOON-HOMEPAGE-STYLE-FINISH-R4-20260825T165002.md",
+    "maplemoon-website/_wip/evidence/homepage_style_finish_r4_20260825T165002/source-snapshot.WIP.html",
+    "maplemoon-website/_wip/evidence/homepage_style_finish_r4_20260825T165002/baseline",
+    "maplemoon-website/scripts/build-maplemoon-wip-preview.py",
+    "maplemoon-website/scripts/check-maplemoon-responsive-overflow.mjs",
+    "maplemoon-website/_wip/homepage_real_1_lead_photo.WIP.html"
+  ],
+  "files_changed": [
+    "maplemoon-website/scripts/build-maplemoon-homepage-style-finish-r4-20260825T165002.mjs",
+    "maplemoon-website/_wip/deploy/generated/maplemoon-homepage-style-finish-r4-20260825T165002",
+    "maplemoon-website/_wip/evidence/homepage_style_finish_r4_20260825T165002",
+    "maplemoon-website/docs/orchestration/reviews/MAPLEMOON-HOMEPAGE-STYLE-FINISH-R4-20260825T165002.json"
+  ],
+  "pre_sha256": {
+    "maplemoon-website/scripts/build-maplemoon-homepage-style-finish-r4-20260825T165002.mjs": null,
+    "maplemoon-website/_wip/deploy/generated/maplemoon-homepage-style-finish-r4-20260825T165002": null,
+    "maplemoon-website/_wip/evidence/homepage_style_finish_r4_20260825T165002": null,
+    "maplemoon-website/docs/orchestration/reviews/MAPLEMOON-HOMEPAGE-STYLE-FINISH-R4-20260825T165002.json": null
+  },
+  "post_sha256": {
+    "maplemoon-website/scripts/build-maplemoon-homepage-style-finish-r4-20260825T165002.mjs": "ce2bb9d10c093f2aa143f1c403a160ff6b6c56a3e09d0233f94905f0125659cf",
+    "maplemoon-website/_wip/deploy/generated/maplemoon-homepage-style-finish-r4-20260825T165002": "fa218fcc78f4a403b311582b8c7219dd2cac25950f7b96914ab1f8e1186cde3e",
+    "maplemoon-website/_wip/evidence/homepage_style_finish_r4_20260825T165002": "c4e5271bc69c36e6934c924b686ac4627918d091dd4a00382e7cdd4b303e2cb1",
+    "maplemoon-website/docs/orchestration/reviews/MAPLEMOON-HOMEPAGE-STYLE-FINISH-R4-20260825T165002.json": null
+  },
+  "checks": [
+    {
+      "command": "python3 -B scripts/check-maplemoon-receipt.py checkpoint --root /Users/handtomouse --packet docs/orchestration/packets/MAPLEMOON-HOMEPAGE-STYLE-FINISH-R4-20260825T165002.md --destination _wip/checkpoints/MAPLEMOON-HOMEPAGE-STYLE-FINISH-R4-20260825T165002_20260825_165002_AEST",
+      "exit_code": 0,
+      "result": "PASS checkpoint packet=MAPLEMOON-HOMEPAGE-STYLE-FINISH-R4-20260825T165002 files=4 path=_wip/checkpoints/MAPLEMOON-HOMEPAGE-STYLE-FINISH-R4-20260825T165002_20260825_165002_AEST"
+    },
+    {
+      "command": "python3 -B scripts/check-maplemoon-receipt.py verify --root /Users/handtomouse --packet docs/orchestration/packets/MAPLEMOON-HOMEPAGE-STYLE-FINISH-R4-20260825T165002.md --checkpoint _wip/checkpoints/MAPLEMOON-HOMEPAGE-STYLE-FINISH-R4-20260825T165002_20260825_165002_AEST --phase start",
+      "exit_code": 0,
+      "result": "PASS packet=MAPLEMOON-HOMEPAGE-STYLE-FINISH-R4-20260825T165002 phase=start scope=4"
+    },
+    {
+      "command": "node scripts/build-maplemoon-homepage-style-finish-r4-20260825T165002.mjs",
+      "exit_code": 0,
+      "result": "BUILD PASS packet=MAPLEMOON-HOMEPAGE-STYLE-FINISH-R4-20260825T165002 output=/Users/handtomouse/maplemoon-website/_wip/deploy/generated/maplemoon-homepage-style-finish-r4-20260825T165002 baseline_files=77 output_files=79 bytes=13035261 link_injections=1 reverse_equal=1 q_segments_dom=0 non_home_equal=1 incoming_refinements=2/2 corrections=4/4 r1_r2_r3_preserved=1 sealed_snapshot=1 sealed_baseline=1"
+    },
+    {
+      "command": "R4 builder computed browser smoke at 1440,1024,768,390,320",
+      "exit_code": 1,
+      "result": "FAIL candidate starter fan escapes its .sbox container by approximately 11.3px at 768, 9.4px at 390, and 7.6px at 320; root overflow remains zero; a read-only 14px inline inset positive fix removed the task-owned escape"
+    },
+    {
+      "command": "node _wip/evidence/homepage_style_finish_r4_20260825T165002/qa-harness.mjs",
+      "exit_code": 1,
+      "result": "HOMEPAGE_STYLE_AUTOMATED_QA FAIL widths=0/5 proofs=120/120 contacts=60/60 review_sheets=11/11 additional=16/16 positive_controls=12/12 close_pins=PASS live_rebase=HOLD; candidate-specific failure is sampler containment; inherited carousel/newsletter conflicts and harness-only rectangle/footer/baseline assumptions are separately recorded"
+    },
+    {
+      "command": "independent visual review of R4 review sheets",
+      "exit_code": 1,
+      "result": "HOLD no visual PASS: mobile full-page-derived focused contacts are contaminated by the closed off-canvas cart capture; trust remains a pale inherited field under cream candidate text; R5 must recapture clean viewport evidence and bind the trust field"
+    }
+  ],
+  "screenshots_or_urls": [
+    "maplemoon-website/_wip/evidence/homepage_style_finish_r4_20260825T165002/qa-attempts/attempt-005",
+    "maplemoon-website/_wip/evidence/homepage_style_finish_r4_20260825T165002/R4-DIAGNOSTIC-HOLD.md"
+  ],
+  "failures": [
+    "R4 rotated starter packshots escape the owned container at 768, 390 and 320.",
+    "R4 cannot receive a visual PASS because its mobile full-page-derived focused proofs capture the closed off-canvas cart overlay.",
+    "Independent visual review found the inherited high-specificity trust background still pale under the candidate cream text."
+  ],
+  "unknowns": [],
+  "residual_risk": [
+    "The inherited product carousel deliberately bleeds clipped edge items at 768 and 320; R5 must verify this as a bounded, operable carousel exception rather than silently waive it.",
+    "The inherited frozen mock-cart runtime re-enables the visibly Demo only newsletter submit; R5 may verify zero network/storage and byte equality, but a separate integration owner must resolve that runtime before release.",
+    "The live homepage continued moving after the immutable snapshot; later source ingestion requires an exact rebase packet."
+  ],
+  "forbidden_path_changes": [],
+  "proposed_next_state": "hold",
+  "next_reviewer": "MapleMoon BOSS non-overwriting R5 correction and clean visual recapture"
+}

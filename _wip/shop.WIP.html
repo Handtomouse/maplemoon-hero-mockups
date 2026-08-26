@@ -219,6 +219,7 @@ html{scroll-behavior:smooth;}
 <link rel="stylesheet" href="/assets/design-system/mm-base.css" data-mm-system-layer="base">
 <link rel="stylesheet" href="/assets/design-system/mm-chrome.css" data-mm-system-layer="chrome">
 <link rel="stylesheet" href="/assets/design-system/mm-primitives.css" data-mm-system-layer="primitives">
+<link rel="stylesheet" href="/assets/icons/mm-icons.css" data-mm-system-layer="icons">
 <style id="mm-shop-chrome-graft-20260820">
 @media (max-width:900px){
   .mm-site-header[data-mm-enhanced] :is(.mm-header__nav,.mm-header__utility-nav)[hidden]{display:none;}
@@ -238,11 +239,11 @@ html{scroll-behavior:smooth;}
   <a class="skip-link mm-skip-link" href="#catalogue-title">Skip to the catalogue</a>
 
   <header class="sp-top mm-site-header" data-mm-chrome data-header-theme="paper" data-mm-menu-state="closed"><div class="wrap bar mm-wrap mm-header__bar">
-    <button class="mm-menu-toggle mm-icon-control" type="button" data-mm-menu-toggle aria-expanded="false" aria-label="Open menu" hidden>Menu</button>
+    <button class="mm-menu-toggle mm-icon-control" type="button" data-mm-menu-toggle aria-expanded="false" aria-label="Open menu" hidden><svg class="mm-icon mm-icon--menu" viewBox="0 0 24 24" aria-hidden="true"><use href="/assets/icons/mm-icons.svg#mm-icon-menu"></use></svg><svg class="mm-icon mm-icon--close" viewBox="0 0 24 24" aria-hidden="true"><use href="/assets/icons/mm-icons.svg#mm-icon-close"></use></svg></button>
     <nav class="sp-nav mm-header__nav" id="mm-shop-primary-nav" aria-label="Primary navigation" data-mm-primary-nav><a href="/shop" class="on" aria-current="page">Shop</a><a href="/our-story">Our Story</a><a href="/carob-story">What is Carob</a></nav>
     <a class="sp-logo mm-header__home" href="/" data-mm-home-link>maple moon</a>
     <div class="mm-header__right"><nav class="sp-nav r mm-header__utility-nav" id="mm-shop-utility-nav" aria-label="Utility navigation" data-mm-utility-nav><a href="/stockists">Stockists</a><span class="sp-currency" aria-label="Currency, Australian dollars">AUD $</span></nav>
-      <button class="sp-cart mm-icon-control" data-cart-toggle data-mm-cart-toggle type="button" aria-label="Cart, 0 items, subtotal $0.00"><svg viewBox="0 0 24 24"><path d="M6 8h12l-1 12H7L6 8z"/><path d="M9 8a3 3 0 0 1 6 0"/></svg><b data-cart-count>0</b></button></div>
+      <button class="sp-cart mm-icon-control" data-cart-toggle data-mm-cart-toggle type="button" aria-label="Cart, 0 items, subtotal $0.00"><svg class="mm-icon" viewBox="0 0 24 24" aria-hidden="true"><use href="/assets/icons/mm-icons.svg#mm-icon-cart"></use></svg><b data-cart-count>0</b></button></div>
   </div></header>
 
   <main class="sp-main" id="shop-main">
@@ -384,22 +385,22 @@ html{scroll-behavior:smooth;}
       {n:'Roasted Hazelnut Moon',img:'moon_hazelnut',d:'Roasted whole hazelnuts in each crescent bite.',price:'1 $2.50 / 5 $12.19 / 10 $23.75 / 20 $44.99',size:'12g',sizes:MOON_TIERS,optionLabel:'Pack'}
     ],
     bites:[
-      {n:'Pecan Nut Eclipse Bite',img:'eclipse_pecan',d:'A blend of pecans and dates for a fudgy inside, coated in our pure carob',price:'$5.99–$59.99',size:'50g',sizes:ECLIPSE_SIZES,optionLabel:'Pack'},
+      {n:'Pecan Nut Eclipse Bite',img:'eclipse_pecan_real',d:'A blend of pecans and dates for a fudgy inside, coated in our pure carob',price:'$5.99–$59.99',size:'50g',sizes:ECLIPSE_SIZES,optionLabel:'Pack'},
       {n:'Salted Almond Eclipse Bite',img:'eclipse_almond',d:'The perfect blend of sweetness, crunch and saltiness to satisfy every sweet and savoury craving.',price:'$5.99–$59.99',size:'50g',sizes:ECLIPSE_SIZES,optionLabel:'Pack'},
       {n:'Hazelnut Eclipse Bite',img:'eclipse_hazelnut',d:'Crunchy, rich hazelnut bites crafted for the perfect indulgent pick-me-up.',price:'$5.99–$59.99',size:'50g',sizes:ECLIPSE_SIZES,optionLabel:'Pack'},
-      {n:'Goji Ripe Eclipse Bite',img:'eclipse_goji',d:'Two layers for a fruit indulgence. Goji berries, dates and almonds blended together and layered on coconut and cashews.',price:'$5.99–$59.99',size:'50g',sizes:ECLIPSE_SIZES,optionLabel:'Pack'},
+      {n:'Goji Ripe Eclipse Bite',img:'eclipse_goji_real',d:'Two layers for a fruit indulgence. Goji berries, dates and almonds blended together and layered on coconut and cashews.',price:'$5.99–$59.99',size:'50g',sizes:ECLIPSE_SIZES,optionLabel:'Pack'},
       {n:'Salted Caramel Fudge',img:'eclipse_fudge',d:'A rich fudgy texture with a satisfying crunch, finished with a generous indulgent slab of carob on top.',price:'$5.99–$59.99',size:'50g',sizes:ECLIPSE_SIZES,optionLabel:'Pack'},
-      {n:'Eclipse Bite Bundle',img:'eclipse_bundle',d:'Can\'t decide? Try the range. All 5 bites to satisfy your cravings and curiosity.',price:'$24.99',size:'5 x 50g'}
+      {n:'Eclipse Bite Bundle',img:'eclipse_bundle',imagePath:'/assets/product_shots/temporary_eclipse_bite_bundle_web.webp',flavour:'all_only',kind:'bundle',temporary:true,alt:'Temporary five-piece Eclipse Bite Bundle assortment',d:'Can\'t decide? Try the range. All 5 bites to satisfy your cravings and curiosity.',price:'$24.99',size:'5 x 50g'}
     ],
     elixirs:[
       {n:'Pure Carob Elixir',img:'elixir_plain',d:'A warm carob drink with only two ingredients, naturally sweet and caffeine free.',price:'$23.95',size:'150g'},
       {n:'Spiced Carob Elixir',img:'elixir_spiced',d:'A warm carob drink with an Ayurvedic inspired spice blend',price:'$26.95',size:'150g'}
     ],
     bananas:[
-      {n:'Carob Bananas',img:'bananas',d:'Spray Free Australian Grown Bananas coated in our pure carob for the perfect chewy treat.',price:'$2.99',size:'20g',sizes:BANANA_TIERS,optionLabel:'Pack'}
+      {n:'Carob Bananas',img:'bananas_real',d:'Spray Free Australian Grown Bananas coated in our pure carob for the perfect chewy treat.',price:'$2.99',size:'20g',sizes:BANANA_TIERS,optionLabel:'Pack'}
     ],
     powder:[
-      {n:'Carob Powder',img:'powder_roasted',imagePath:'/out/image_candidates_20260823/powder_roasted_no_bg.png',d:'Roasted organic carob powder. Caffeine free and naturally sweet, for baking, drinks and raw treats.',price:'$14.95',size:'300g'}
+      {n:'Carob Powder',img:'powder_packaged_real',d:'Roasted organic carob powder. Caffeine free and naturally sweet, for baking, drinks and raw treats.',price:'$14.95',size:'300g'}
     ]
   };
   var DIET=['Vegan','GF','No Caffeine'];
@@ -408,6 +409,7 @@ html{scroll-behavior:smooth;}
   function money(amount){return '$'+Number(amount).toFixed(2);}
   function priceNumber(price){var match=String(price).match(/\d+(?:\.\d{1,2})?/);return match?Number(match[0]):0;}
   function flavourOf(p){
+    if(p.flavour)return p.flavour;
     var hay=(p.n+' '+p.d).toLowerCase();
     if(hay.indexOf('peppermint')>-1)return 'peppermint';
     if(hay.indexOf('hazelnut')>-1)return 'hazelnut';
@@ -422,7 +424,7 @@ html{scroll-behavior:smooth;}
       var priced=!!PRICED[cat] && !p.pending;
       var cardId='product-'+cat+'-'+index;
       var cleanName=p.n.replace(/"/g,'');
-      var imageAttrs=cat==='bites'?' loading="eager" decoding="sync"':' loading="lazy" decoding="async"';
+      var imageAttrs=cat==='bites'&&index<3?' loading="eager" decoding="sync"':' loading="lazy" decoding="async"';
       var hasSizePicker=priced&&Array.isArray(p.sizes);
       var unitPrice=hasSizePicker?p.sizes[0].price:priceNumber(p.price);
       var unitQuantity=hasSizePicker?(p.sizes[0].quantity||1):1;
@@ -431,10 +433,11 @@ html{scroll-behavior:smooth;}
       var pickerLabel=p.optionLabel||'Size';
       var sizePicker=hasSizePicker?'<label class="size-picker"'+pickerAttribute+'><span>'+pickerLabel+'</span><select class="size-select" aria-label="'+pickerLabel+' for '+cleanName+'">'+p.sizes.map(function(option){return '<option value="'+option.price+'" data-quantity="'+(option.quantity||1)+'">'+option.label+' &middot; '+money(option.price)+'</option>';}).join('')+'</select></label>':'';
       var action=priced?'<button class="add" data-add-to-cart type="button" aria-label="Add '+cleanName+' to cart">Add to cart</button>':'<a class="add" aria-label="Enquire about '+cleanName+'" href="mailto:info@maplemoon.com.au?subject=Enquiry%20about%20'+encodeURIComponent(p.n)+'">Enquire</a>';
-      var el=document.createElement('article');el.className='pcard';el.setAttribute('aria-labelledby',cardId);
+      var el=document.createElement('article');el.className='pcard'+(p.kind==='bundle'?' is_bundle':'');el.setAttribute('aria-labelledby',cardId);if(p.temporary)el.dataset.assetStatus='temporary_replace_before_final';
       el.dataset.cat=cat;el.dataset.flavour=flavourOf(p);el.dataset.name=p.n.toLowerCase();el.dataset.priced=priced?'1':'0';el.dataset.order=String(index);el.dataset.unitPrice=String(unitPrice);el.dataset.unitQuantity=String(unitQuantity);
       var imageSrc=p.imagePath||PS+p.img+'.webp';
-      el.innerHTML='<div class="ph"><img src="'+imageSrc+'" alt="'+cleanName+'"'+imageAttrs+'></div>'+
+      var temporaryLabel=p.temporary?'<span class="temporary-asset-label">TEMPORARY STAGING / REPLACE BEFORE FINAL</span>':'';
+      el.innerHTML='<div class="ph">'+temporaryLabel+'<img src="'+imageSrc+'" alt="'+(p.alt||cleanName)+'"'+imageAttrs+'></div>'+
         '<div class="tx"><h3 id="'+cardId+'">'+amp(p.n)+'</h3><div class="chips">'+DIET.map(function(c){return '<span>'+c+'</span>';}).join('')+'</div>'+
         '<p class="d">'+p.d+'</p>'+
         sizePicker+'<div class="row"><div class="price-wrap"><span class="pr'+(priced?'':' pending')+'"><span data-price-label>'+ (priced?displayPrice:'Enquire for details')+'</span><span class="g">('+p.size+')</span></span></div>'+action+'</div></div>';
@@ -697,6 +700,27 @@ html{scroll-behavior:smooth;}
   .sp-top .bar{grid-template-columns:auto minmax(0,1fr) auto;column-gap:10px;}
   .sp-nav.r{gap:12px;}
 }
+
+/* touch: restore 44px minimum hit areas (Apple HIG). Selectors mirror the existing
+   quiet-mode overrides so they win on specificity; desktop is unchanged. */
+@media (pointer:coarse){
+.sp-tools.is-quiet .swatch,.sp-tools.is-quiet .view-btn{min-width:44px;min-height:44px;}
+.size-select{min-height:44px;}
+.sp-tools.is-quiet .sort-tool select{min-height:44px;}
+.sp-opening .sp-sampler .pill{min-height:44px;}
+}
+
+.pcard.is_bundle .ph{position:relative;padding:16px;}
+.pcard.is_bundle .ph img{width:96%;height:auto;max-width:96%;max-height:72%;object-fit:contain;}
+.pcard.is_bundle .ph>.temporary-asset-label{
+  position:absolute;left:10px;right:10px;top:10px;z-index:2;
+  padding:5px 7px;pointer-events:none;
+  border:1px solid rgba(231,228,202,.86);border-radius:3px;
+  background:rgba(14,31,47,.94);color:#f3edda;
+  font:600 .5rem/1.25 var(--mm-sans);letter-spacing:.075em;text-align:center;text-transform:uppercase;
+}
+.shop-list-view .pcard.is_bundle .ph{padding:12px;}
+.shop-list-view .pcard.is_bundle .ph img{width:96%;height:auto;max-width:96%;max-height:80%;}
 </style>
 </body>
 </html>

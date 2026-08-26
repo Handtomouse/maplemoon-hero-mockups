@@ -1,0 +1,71 @@
+{
+  "schema": "maplemoon-receipt/v2",
+  "receipt_id": "MAPLEMOON-HOMEPAGE-STYLE-FINISH-R3-20260825T164343-RECEIPT-HOLD-01",
+  "packet_id": "MAPLEMOON-HOMEPAGE-STYLE-FINISH-R3-20260825T164343",
+  "worker_thread_id": "019ffe53-6243-73a2-9d75-e1a072cd07ce",
+  "worker": "MapleMoon BOSS staged homepage style correction R3",
+  "started_at": "2026-08-25T06:43:43Z",
+  "completed_at": "2026-08-25T06:48:05Z",
+  "files_read": [
+    "maplemoon-website/docs/orchestration/packets/MAPLEMOON-HOMEPAGE-STYLE-FINISH-R3-20260825T164343.md",
+    "maplemoon-website/docs/orchestration/packets/MAPLEMOON-HOMEPAGE-STYLE-FINISH-R2-20260825T163529.md",
+    "maplemoon-website/docs/orchestration/reviews/MAPLEMOON-HOMEPAGE-STYLE-FINISH-R2-20260825T163529.json",
+    "maplemoon-website/scripts/build-maplemoon-homepage-style-finish-r2-20260825T163529.mjs",
+    "maplemoon-website/_wip/evidence/homepage_style_finish_r2_20260825T163529",
+    "maplemoon-website/scripts/build-maplemoon-wip-preview.py",
+    "maplemoon-website/_wip/homepage_real_1_lead_photo.WIP.html"
+  ],
+  "files_changed": [
+    "maplemoon-website/scripts/build-maplemoon-homepage-style-finish-r3-20260825T164343.mjs",
+    "maplemoon-website/_wip/deploy/generated/maplemoon-homepage-style-finish-r3-20260825T164343",
+    "maplemoon-website/_wip/evidence/homepage_style_finish_r3_20260825T164343",
+    "maplemoon-website/docs/orchestration/reviews/MAPLEMOON-HOMEPAGE-STYLE-FINISH-R3-20260825T164343.json"
+  ],
+  "pre_sha256": {
+    "maplemoon-website/scripts/build-maplemoon-homepage-style-finish-r3-20260825T164343.mjs": null,
+    "maplemoon-website/_wip/deploy/generated/maplemoon-homepage-style-finish-r3-20260825T164343": null,
+    "maplemoon-website/_wip/evidence/homepage_style_finish_r3_20260825T164343": null,
+    "maplemoon-website/docs/orchestration/reviews/MAPLEMOON-HOMEPAGE-STYLE-FINISH-R3-20260825T164343.json": null
+  },
+  "post_sha256": {
+    "maplemoon-website/scripts/build-maplemoon-homepage-style-finish-r3-20260825T164343.mjs": "8a45fbaa12a31b01c579ac02adb7ca256b5072d61497436941129659e349ca05",
+    "maplemoon-website/_wip/deploy/generated/maplemoon-homepage-style-finish-r3-20260825T164343": null,
+    "maplemoon-website/_wip/evidence/homepage_style_finish_r3_20260825T164343": "d2e85adbc54b70920406daca384e78a1ece44f8c55af9e77d39fcdfe27da8a57",
+    "maplemoon-website/docs/orchestration/reviews/MAPLEMOON-HOMEPAGE-STYLE-FINISH-R3-20260825T164343.json": null
+  },
+  "checks": [
+    {
+      "command": "python3 -B scripts/check-maplemoon-receipt.py checkpoint --root /Users/handtomouse --packet docs/orchestration/packets/MAPLEMOON-HOMEPAGE-STYLE-FINISH-R3-20260825T164343.md --destination _wip/checkpoints/MAPLEMOON-HOMEPAGE-STYLE-FINISH-R3-20260825T164343_20260825_164343_AEST",
+      "exit_code": 0,
+      "result": "PASS checkpoint packet=MAPLEMOON-HOMEPAGE-STYLE-FINISH-R3-20260825T164343 files=4 path=_wip/checkpoints/MAPLEMOON-HOMEPAGE-STYLE-FINISH-R3-20260825T164343_20260825_164343_AEST"
+    },
+    {
+      "command": "python3 -B scripts/check-maplemoon-receipt.py verify --root /Users/handtomouse --packet docs/orchestration/packets/MAPLEMOON-HOMEPAGE-STYLE-FINISH-R3-20260825T164343.md --checkpoint _wip/checkpoints/MAPLEMOON-HOMEPAGE-STYLE-FINISH-R3-20260825T164343_20260825_164343_AEST --phase start",
+      "exit_code": 0,
+      "result": "PASS packet=MAPLEMOON-HOMEPAGE-STYLE-FINISH-R3-20260825T164343 phase=start scope=4"
+    },
+    {
+      "command": "pre-build frozen-source recheck",
+      "exit_code": 1,
+      "result": "FAIL source drift expected=4a65a61df537652711749137855e9cf0adc443d2b0db2dcabc883fdc3fe442e9 actual=792e6508d21a4b1840f5a35fd28af05962030a7e2e32e73cda4651c7e5a48dd9; builder not run and output absent"
+    },
+    {
+      "command": "fresh transformed-baseline diff",
+      "exit_code": 0,
+      "result": "PASS drift is compatible CSS-only explicit 50% 50% radial sizing for hero-copy and carousel-mist fields; flow/copy/media/control projections unchanged"
+    }
+  ],
+  "screenshots_or_urls": [],
+  "failures": [
+    "Required frozen-source check stopped R3 before builder execution because the live homepage changed after phase start."
+  ],
+  "unknowns": [
+    "R3 has no derived output and no browser/rendered evidence."
+  ],
+  "residual_risk": [
+    "R3 remains HOLD; R4 must build from a task-owned immutable snapshot rather than chase the moving WIP."
+  ],
+  "forbidden_path_changes": [],
+  "proposed_next_state": "hold",
+  "next_reviewer": "MapleMoon BOSS immutable-snapshot R4"
+}

@@ -1,0 +1,91 @@
+{
+  "schema": "maplemoon-receipt/v2",
+  "receipt_id": "maplemoon_temporary_bundle_derivative_20260825t153228_receipt_01",
+  "packet_id": "maplemoon_temporary_bundle_derivative_20260825t153228",
+  "worker_thread_id": "019ffe53-6243-73a2-9d75-e1a072cd07ce",
+  "worker": "Codex /root dedicated MapleMoon five-product bundle task",
+  "started_at": "2026-08-25T05:32:28Z",
+  "completed_at": "2026-08-25T06:07:40Z",
+  "files_read": [
+    "docs/orchestration/MAPLEMOON_BOSS_EXECUTION_LEDGER_20260816.md",
+    "docs/orchestration/handoffs/MAPLEMOON_CLAUDE_DESIGN_HOMEPAGE_IMAGERY_BRIEF_20260824.md",
+    "docs/orchestration/SIDECHAT_RECEIPT_GATE.md",
+    "brand_kit.css",
+    "scripts/check-maplemoon-receipt.py",
+    "/Users/handtomouse/.agents/skills/product-photography/SKILL.md",
+    "/Users/handtomouse/.codex/generated_images/019ffe53-6243-73a2-9d75-e1a072cd07ce/exec-82159e46-662a-4e9b-af90-0e2c68af52ac.png",
+    "/Users/handtomouse/.u2net/birefnet-general.onnx"
+  ],
+  "files_changed": [
+    "_wip/evidence/maplemoon_temporary_bundle_derivative_20260825t153228",
+    "docs/orchestration/reviews/maplemoon_temporary_bundle_derivative_20260825t153228.json"
+  ],
+  "pre_sha256": {
+    "_wip/evidence/maplemoon_temporary_bundle_derivative_20260825t153228": null,
+    "docs/orchestration/reviews/maplemoon_temporary_bundle_derivative_20260825t153228.json": null
+  },
+  "post_sha256": {
+    "_wip/evidence/maplemoon_temporary_bundle_derivative_20260825t153228": "29e741e070912ddef95e1c6fa60d9b8c196949217e004a52c2ef5fc39a3e802b",
+    "docs/orchestration/reviews/maplemoon_temporary_bundle_derivative_20260825t153228.json": null
+  },
+  "checks": [
+    {
+      "command": "python3 -B scripts/check-maplemoon-receipt.py checkpoint --packet docs/orchestration/packets/maplemoon_temporary_bundle_derivative_20260825t153228.md --destination _wip/checkpoints/maplemoon_temporary_bundle_derivative_20260825t153228_20260825_153228_aest; verify --phase start",
+      "exit_code": 0,
+      "result": "PASS checkpoint packet=maplemoon_temporary_bundle_derivative_20260825t153228 files=3; PASS packet=maplemoon_temporary_bundle_derivative_20260825t153228 phase=start scope=3"
+    },
+    {
+      "command": "python3 -B _wip/evidence/maplemoon_temporary_bundle_derivative_20260825t153228/build_temporary_bundle_derivative.py (initial hard-gate run)",
+      "expected_exit_code": 1,
+      "exit_code": 1,
+      "result": "expected five major foreground components, found 4. No output directory was written by that failed run. Bounds were tightened and the mechanical attempt was rerun."
+    },
+    {
+      "command": "visual inspection of attempt_01_grabcut_failed light, dark and site-blue proofs",
+      "exit_code": 0,
+      "result": "REJECTED as staging evidence: broad beige floor/shadow remnants visible around Fudge and Goji, plus smaller remnants around Bite bodies. Preserved for audit; excluded from final derived paths."
+    },
+    {
+      "command": "NUMBA_DISABLE_JIT=1 cached local birefnet-general foreground-segmentation pass, repeated twice",
+      "exit_code": 0,
+      "result": "Attempt 02 produced byte-identical repeated binary alpha and clean proofs, but was held because partial-alpha count was zero. Preserved under attempt_02_birefnet_binary_hold."
+    },
+    {
+      "command": "python3 -B _wip/evidence/maplemoon_temporary_bundle_derivative_20260825t153228/build_temporary_bundle_derivative_v2.py",
+      "exit_code": 0,
+      "result": "TEMPORARY_BUNDLE_DERIVATIVE_V2 PASS source=b7d669130ef5c1482b4d3655e1407885087c884089cfdbadd7b0b5d0c5abdba1 model=58f621f00f5d756097615970a88a791584600dcf7c45b18a0a6267535a1ebd3c components=5 alpha={'transparent': 1098642, 'partial': 5097, 'opaque': 469125, 'total': 1572864} outputs=28"
+    },
+    {
+      "command": "python3 -B _wip/evidence/maplemoon_temporary_bundle_derivative_20260825t153228/verify_temporary_bundle_derivative.py",
+      "exit_code": 0,
+      "result": "TEMPORARY_BUNDLE_VERIFY PASS source=b7d669130ef5c1482b4d3655e1407885087c884089cfdbadd7b0b5d0c5abdba1 model=58f621f00f5d756097615970a88a791584600dcf7c45b18a0a6267535a1ebd3c rgb_equal=true components=5 major_areas=[66742, 73489, 83368, 120346, 130277] alpha=transparent:1098642,partial:5097,opaque:469125 web=1200x800 proofs=cream,dark,site_blue filenames=snake_case"
+    },
+    {
+      "command": "python3 -B refresh_temporary_bundle_manifest.py; shasum -a 256 -c temporary_bundle_source_output_hashes.sha256",
+      "exit_code": 0,
+      "result": "MANIFEST PASS entries=33; source, cached model and all 31 pinned task files returned OK. The non-fatal local Perl locale fallback warning was emitted before the OK lines."
+    },
+    {
+      "command": "visual inspection of accepted 1536px cream, dark and site-blue proofs plus 1200px site-blue web composite",
+      "exit_code": 0,
+      "result": "PASS: all five products present; no broad beige floor/shadow remnant, missing product structure or obvious light/dark/blue halo; status label prominent on all three accepted proof PNGs; web derivative edges remain clean after resize."
+    }
+  ],
+  "screenshots_or_urls": [
+    "_wip/evidence/maplemoon_temporary_bundle_derivative_20260825t153228/derived/temporary_bundle_edge_proof_cream.png",
+    "_wip/evidence/maplemoon_temporary_bundle_derivative_20260825t153228/derived/temporary_bundle_edge_proof_dark.png",
+    "_wip/evidence/maplemoon_temporary_bundle_derivative_20260825t153228/derived/temporary_bundle_edge_proof_site_blue.png"
+  ],
+  "failures": [],
+  "unknowns": [
+    "The exact left-to-right identity assignment of the two crumb-topped Almond/Hazelnut bodies remains unconfirmed; the derivative does not label or rebind them."
+  ],
+  "residual_risk": [
+    "Temporary authority does not resolve the recorded product-truth defects: Almond/Hazelnut similarity, moulded dome geometry, synthetic/regular Fudge form and unverified Goji surface.",
+    "The source contact shadows were removed rather than reconstructed, so any eventual placement would need site-side shadow treatment under a separately authorised packet.",
+    "This derivative must be replaced before final approval, launch admission, publication or client delivery."
+  ],
+  "forbidden_path_changes": [],
+  "proposed_next_state": "temporary_staging_derivative_ready_for_boss_review_unwired_replace_before_final",
+  "next_reviewer": "MapleMoon BOSS; any staging placement requires a separate exact-path checkpointed wiring packet"
+}

@@ -1,0 +1,64 @@
+{
+  "rows": [
+    {
+      "id": "exact-width-320-vs-321",
+      "caught": true,
+      "innerWidth": 321,
+      "clientWidth": 321,
+      "visual": 321
+    },
+    {
+      "id": "root-overflow",
+      "caught": true
+    },
+    {
+      "id": "semantic-clipping",
+      "caught": true
+    },
+    {
+      "id": "missing-image",
+      "caught": true
+    },
+    {
+      "id": "segment-control",
+      "caught": true
+    },
+    {
+      "id": "section-order",
+      "caught": true
+    },
+    {
+      "id": "media-or-text-drift",
+      "caught": true,
+      "mismatches": [
+        "flow",
+        "text",
+        "media"
+      ]
+    },
+    {
+      "id": "missing-proof",
+      "caught": true,
+      "observed": 119
+    },
+    {
+      "id": "blank-proof",
+      "caught": true
+    },
+    {
+      "id": "page-error",
+      "caught": true
+    },
+    {
+      "id": "sub-44-cta",
+      "caught": true
+    },
+    {
+      "id": "reduced-motion-video",
+      "caught": true
+    }
+  ],
+  "count": 12,
+  "caught": 12,
+  "pass": true
+}

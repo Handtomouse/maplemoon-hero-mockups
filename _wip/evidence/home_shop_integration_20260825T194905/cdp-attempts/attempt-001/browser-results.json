@@ -1,0 +1,76 @@
+{
+  "schema": "maplemoon-home-shop-integration-cdp-qa/v1",
+  "packetId": "MAPLEMOON-HOME-SHOP-INTEGRATION-20260825T194905",
+  "attemptRoot": "/Users/handtomouse/maplemoon-website/_wip/evidence/home_shop_integration_20260825T194905/cdp-attempts/attempt-001",
+  "browserRuntime": {
+    "protocol": "Playwright over Chrome DevTools Protocol",
+    "executable": "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome",
+    "windowSizeArgumentUsed": false
+  },
+  "base": "http://127.0.0.1:8766",
+  "outcome": "FAIL",
+  "candidate": {
+    "root": "/Users/handtomouse/maplemoon-website/_wip/deploy/generated/maplemoon-home-shop-integration-20260825T194905",
+    "homepageSha256": "66e107da9e875ddc17368100006f6da73987c4b3335b9f27c8775130c5ae6f74",
+    "shopSha256": "46245efd1b992c2dca635f993317936d547d92f43aa4bfb1c7a52a3ea797a491",
+    "bundleSha256": "8bca090850c29da285ae266d8bf666199ae7cacbeee475160df13bc82c66932f"
+  },
+  "reconstructedBaselines": {
+    "homeSourceSha256": "558c5bb86346d69029e0fa4abc34c9bff3c4386522e97eef34e5d2e655ecf1d5",
+    "homeBuiltSha256": "21ff6ae0c260d9927c5fcf390e67dd995d0f125554526f3f8259315db7f9315f",
+    "shopSourceSha256": "b1834aeacb06e11dc5b5de4b851c77d47fa32fae38f0e2579a5b03235ef28ed8",
+    "shopBuiltSha256": "b1834aeacb06e11dc5b5de4b851c77d47fa32fae38f0e2579a5b03235ef28ed8"
+  },
+  "cases": [],
+  "proofs": [
+    {
+      "name": "home_hero_header",
+      "width": 1440,
+      "file": "/Users/handtomouse/maplemoon-website/_wip/evidence/home_shop_integration_20260825T194905/cdp-attempts/attempt-001/human-review-crops/home_hero_header_1440.png",
+      "sha256": "cab0f375aa1780cbde81b00f3ffdc58b2f35f857c5f7995d3e47ad0d75f83fea",
+      "rasterWidth": 1440,
+      "rasterHeight": 1496,
+      "deviation": 136.83,
+      "nonblank": true
+    },
+    {
+      "name": "home_comparison",
+      "width": 1440,
+      "file": "/Users/handtomouse/maplemoon-website/_wip/evidence/home_shop_integration_20260825T194905/cdp-attempts/attempt-001/human-review-crops/home_comparison_1440.png",
+      "sha256": "9ace5fbc0e7fa188e3f47167071cfbc208d947e688dcee0e0a9be3af01f8be57",
+      "rasterWidth": 1240,
+      "rasterHeight": 795,
+      "deviation": 40.6,
+      "nonblank": true
+    },
+    {
+      "name": "home_range",
+      "width": 1440,
+      "file": "/Users/handtomouse/maplemoon-website/_wip/evidence/home_shop_integration_20260825T194905/cdp-attempts/attempt-001/human-review-crops/home_range_1440.png",
+      "sha256": "fac02317afe163e9ae0b4cc8dc39e4fc3f74a04188edee5b4a43553b4982cb3d",
+      "rasterWidth": 1440,
+      "rasterHeight": 1006,
+      "deviation": 109.48,
+      "nonblank": true
+    },
+    {
+      "name": "home_ritual",
+      "width": 1440,
+      "file": "/Users/handtomouse/maplemoon-website/_wip/evidence/home_shop_integration_20260825T194905/cdp-attempts/attempt-001/human-review-crops/home_ritual_1440.png",
+      "sha256": "f0318e8b6032738f74bd76ef180f98a113eb76d600b44aff0212ef5160541fe5",
+      "rasterWidth": 1180,
+      "rasterHeight": 731,
+      "deviation": 130.54,
+      "nonblank": true
+    }
+  ],
+  "contacts": [],
+  "fatal": {
+    "message": "page.screenshot: Clipped area is either empty or outside the resulting image\nCall log:\n\u001b[2m  - taking page screenshot\u001b[22m\n\u001b[2m    - disabled all CSS animations\u001b[22m\n\u001b[2m  - waiting for fonts to load...\u001b[22m\n\u001b[2m  - fonts loaded\u001b[22m\n",
+    "stack": "page.screenshot: Clipped area is either empty or outside the resulting image\nCall log:\n\u001b[2m  - taking page screenshot\u001b[22m\n\u001b[2m    - disabled all CSS animations\u001b[22m\n\u001b[2m  - waiting for fonts to load...\u001b[22m\n\u001b[2m  - fonts loaded\u001b[22m\n\n    at captureBoundary (/Users/handtomouse/maplemoon-website/_wip/evidence/home_shop_integration_20260825T194905/run-home-shop-cdp-qa.mjs:275:14)\n    at async homeChecks (/Users/handtomouse/maplemoon-website/_wip/evidence/home_shop_integration_20260825T194905/run-home-shop-cdp-qa.mjs:342:3)\n    at async file:///Users/handtomouse/maplemoon-website/_wip/evidence/home_shop_integration_20260825T194905/run-home-shop-cdp-qa.mjs:500:18"
+  },
+  "failures": [
+    "home@1440: shared-style inventory differs or held R6 is present",
+    "fatal: page.screenshot: Clipped area is either empty or outside the resulting image\nCall log:\n\u001b[2m  - taking page screenshot\u001b[22m\n\u001b[2m    - disabled all CSS animations\u001b[22m\n\u001b[2m  - waiting for fonts to load...\u001b[22m\n\u001b[2m  - fonts loaded\u001b[22m\n"
+  ]
+}

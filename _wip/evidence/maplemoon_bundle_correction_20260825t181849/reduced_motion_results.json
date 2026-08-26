@@ -1,0 +1,69 @@
+{
+  "schema": "maplemoon-reduced-motion-cssom-qa/v1",
+  "outcome": "PASS",
+  "note": "Browser CSSOM parsed the reduced-motion rules. The in-app browser host preference remained no-preference.",
+  "routes": {
+    "homepage.html": {
+      "active": false,
+      "hasAnimationNone": false,
+      "hasTransitionNone": true,
+      "rules": [
+        {
+          "condition": "(prefers-reduced-motion: reduce)",
+          "cssText": "@media (prefers-reduced-motion: reduce) {\n  *, ::before, ::after { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; scroll-behavior: auto !important; }\n}"
+        },
+        {
+          "condition": "(prefers-reduced-motion: no-preference)",
+          "cssText": "@media (prefers-reduced-motion: no-preference) {\n  html { scroll-behavior: smooth; }\n}"
+        },
+        {
+          "condition": "(prefers-reduced-motion: reduce)",
+          "cssText": "@media (prefers-reduced-motion: reduce) {\n  .wf-marq .marq { overflow: visible; mask-image: none; padding: 0px 28px; }\n  .wf-marq .marq-track { animation: auto ease 0s 1 normal none running none; transform: none; display: flex; flex-wrap: wrap; justify-content: center; white-space: normal; gap: 10px 14px; padding-left: 0px; }\n  .wf-marq .marq-track i { display: none; }\n  .wf-marq .marq-track span { font-family: var(--mm-sans,'Neue Haas Grotesk Display Pro',Helvetica,sans-serif); font-size: 0.72rem; line-height: 1; letter-spacing: 0.07em; text-transform: uppercase; border: 1px solid var(--line-soft); border-radius: 999px; padding: 8px 10px; background: rgba(251, 250, 247, 0.44); }\n}"
+        },
+        {
+          "condition": "(prefers-reduced-motion: reduce)",
+          "cssText": "@media (prefers-reduced-motion: reduce) {\n  html { scroll-behavior: auto; }\n  .wf * { transition: none !important; animation: auto ease 0s 1 normal none running none !important; scroll-behavior: auto !important; }\n}"
+        },
+        {
+          "condition": "(prefers-reduced-motion: reduce)",
+          "cssText": "@media (prefers-reduced-motion: reduce) {\n  html:focus-within { scroll-behavior: auto; }\n  *, ::before, ::after { animation-duration: var(--mm-motion-reduced) !important; animation-iteration-count: 1 !important; scroll-behavior: auto !important; transition-duration: var(--mm-motion-reduced) !important; }\n}"
+        },
+        {
+          "condition": "(prefers-reduced-motion: reduce)",
+          "cssText": "@media (prefers-reduced-motion: reduce) {\n  .mm-cart-overlay, .mm-cart-dialog { transition: none; }\n}"
+        },
+        {
+          "condition": "(prefers-reduced-motion: reduce)",
+          "cssText": "@media (prefers-reduced-motion: reduce) {\n  body.motion-on [data-reveal] { opacity: 1 !important; transform: none !important; transition: none !important; }\n}"
+        }
+      ]
+    },
+    "shop.html": {
+      "active": false,
+      "hasAnimationNone": false,
+      "hasTransitionNone": true,
+      "rules": [
+        {
+          "condition": "(prefers-reduced-motion: reduce)",
+          "cssText": "@media (prefers-reduced-motion: reduce) {\n  *, ::before, ::after { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; scroll-behavior: auto !important; }\n}"
+        },
+        {
+          "condition": "(prefers-reduced-motion: no-preference)",
+          "cssText": "@media (prefers-reduced-motion: no-preference) {\n  html { scroll-behavior: smooth; }\n}"
+        },
+        {
+          "condition": "(prefers-reduced-motion: reduce)",
+          "cssText": "@media (prefers-reduced-motion: reduce) {\n  .sp * { transition: none !important; animation: auto ease 0s 1 normal none running none !important; }\n}"
+        },
+        {
+          "condition": "(prefers-reduced-motion: reduce)",
+          "cssText": "@media (prefers-reduced-motion: reduce) {\n  html:focus-within { scroll-behavior: auto; }\n  *, ::before, ::after { animation-duration: var(--mm-motion-reduced) !important; animation-iteration-count: 1 !important; scroll-behavior: auto !important; transition-duration: var(--mm-motion-reduced) !important; }\n}"
+        },
+        {
+          "condition": "(prefers-reduced-motion: reduce)",
+          "cssText": "@media (prefers-reduced-motion: reduce) {\n  html { scroll-behavior: auto; }\n}"
+        }
+      ]
+    }
+  }
+}

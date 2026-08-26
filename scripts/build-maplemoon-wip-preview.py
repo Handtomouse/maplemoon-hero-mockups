@@ -29,6 +29,7 @@ PAGE_SOURCES = {
     "carob-story.html": REPO / "_wip/carob-story.WIP.html",
     "faq.html": REPO / "_wip/faq.WIP.html",
     "stockists.html": REPO / "_wip/stockists.WIP.html",
+    "contact.html": REPO / "_wip/contact.WIP.html",
 }
 
 PINNED_PAGE_SOURCES = {
@@ -45,6 +46,7 @@ ROUTE_REPLACEMENTS = {
     "carob-story.WIP.html": "carob-story",
     "faq.WIP.html": "faq",
     "stockists.WIP.html": "stockists",
+    "contact.WIP.html": "contact",
 }
 
 CLEAN_ROUTE_REPLACEMENTS = {
@@ -62,6 +64,8 @@ CLEAN_ROUTE_REPLACEMENTS = {
     "'/faq.html": "'/faq",
     '"/stockists.html': '"/stockists',
     "'/stockists.html": "'/stockists",
+    '"/contact.html': '"/contact',
+    "'/contact.html": "'/contact",
 }
 
 HOMEPAGE_PURE_TARGET = "url:'products/pure-carob-bar.html'"
@@ -92,7 +96,7 @@ SUPPORT_FILES = {
 PINNED_SUPPORT_FILES = {
     "mock-cart.js": (
         Path("/Users/handtomouse/maplemoon_build_20260813/mock-cart.js"),
-        "36fb46b05a46ecf1c770991c6b9cf2eb8c08fda361c7176d37df081668f123aa",
+        "aab0c1e4d45ab919559b34aa5ab8b4b15b9b4081e32649db170caaeb19ecf69c",
     ),
     "mock-cart.css": (
         Path("/Users/handtomouse/maplemoon_build_20260813/mock-cart.css"),
@@ -257,7 +261,31 @@ def build(output: Path) -> tuple[int, int]:
             cart_text.replace(route_leaf, route_leaf_normalized), encoding="utf-8"
         )
 
-        assets = referenced_assets(list(transformed.values()))
+        asset_texts = list(transformed.values())
+        asset_texts.extend(
+            source.read_text(encoding="utf-8")
+            for source in SUPPORT_FILES.values()
+            if source.suffix.lower() == ".css"
+        )
+        assets = referenced_assets(asset_texts)
+        scanned_stylesheets: set[Path] = set()
+        while True:
+            pending_stylesheets = sorted(
+                relative
+                for relative in assets
+                if relative.suffix.lower() == ".css"
+                and relative not in scanned_stylesheets
+            )
+            if not pending_stylesheets:
+                break
+            for relative in pending_stylesheets:
+                source = REPO / relative
+                if not source.is_file():
+                    raise BuildError(f"referenced stylesheet is missing: {source}")
+                assets.update(
+                    referenced_assets([source.read_text(encoding="utf-8")])
+                )
+                scanned_stylesheets.add(relative)
         for relative in sorted(assets):
             if relative.is_absolute() or ".." in relative.parts:
                 raise BuildError(f"unsafe asset path: {relative}")

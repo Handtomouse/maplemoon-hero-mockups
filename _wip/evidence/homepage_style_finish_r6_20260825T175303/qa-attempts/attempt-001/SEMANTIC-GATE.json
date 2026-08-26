@@ -1,0 +1,11 @@
+{
+  "fromInset": "padding-inline: 14px !important;",
+  "toInset": "padding-inline: 18px !important;",
+  "fromCount": 1,
+  "toCount": 1,
+  "r5Sha256": "4c353ea805be05833e44c9c76ae8ec5aae724e346a85c60a9257481da0861a36",
+  "r6Sha256": "261b94a945ddcec976ceaac7e6f647bb6839e8c7caaaff327198cbf9810c038e",
+  "reverseEqual": true,
+  "semanticChanges": 1,
+  "pass": true
+}

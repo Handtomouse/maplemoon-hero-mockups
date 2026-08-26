@@ -263,6 +263,7 @@ body{margin:0;background:#f4f2ed;}
 <link rel="stylesheet" href="/assets/design-system/mm-base.css" data-mm-system-layer="base">
 <link rel="stylesheet" href="/assets/design-system/mm-chrome.css" data-mm-system-layer="chrome">
 <link rel="stylesheet" href="/assets/design-system/mm-primitives.css" data-mm-system-layer="primitives">
+<link rel="stylesheet" href="/assets/icons/mm-icons.css" data-mm-system-layer="icons">
 <style id="mm-our-story-chrome-graft-20260821">
 @media (max-width:900px){
   .mm-site-header[data-mm-enhanced] :is(.mm-header__nav,.mm-header__utility-nav)[hidden]{display:none;}
@@ -279,26 +280,22 @@ body{margin:0;background:#f4f2ed;}
 <div class="os">
 
   <header class="os-top mm-site-header" data-mm-chrome data-header-theme="paper" data-mm-menu-state="closed"><div class="wrap bar mm-wrap mm-header__bar">
-    <button class="mm-menu-toggle mm-icon-control" type="button" data-mm-menu-toggle aria-expanded="false" aria-label="Open menu" hidden>Menu</button>
+    <button class="mm-menu-toggle mm-icon-control" type="button" data-mm-menu-toggle aria-expanded="false" aria-label="Open menu" hidden><svg class="mm-icon mm-icon--menu" viewBox="0 0 24 24" aria-hidden="true"><use href="/assets/icons/mm-icons.svg#mm-icon-menu"></use></svg><svg class="mm-icon mm-icon--close" viewBox="0 0 24 24" aria-hidden="true"><use href="/assets/icons/mm-icons.svg#mm-icon-close"></use></svg></button>
     <nav class="os-nav mm-header__nav" id="mm-our-story-primary-nav" aria-label="Primary navigation" data-mm-primary-nav><a href="/shop">Shop</a><a href="/our-story" class="on" aria-current="page">Our Story</a><a href="/carob-story">What is Carob</a></nav>
     <a class="os-logo mm-header__home" href="/" data-mm-home-link>maple moon</a>
     <div class="mm-header__right"><nav class="os-nav r mm-header__utility-nav" id="mm-our-story-utility-nav" aria-label="Utility navigation" data-mm-utility-nav><a href="/stockists">Stockists</a><span class="os-currency" aria-label="Currency, Australian dollars">AUD $</span></nav>
-      <button class="os-cart mm-icon-control" data-mm-cart-toggle type="button" aria-label="Cart, 0 items"><svg viewBox="0 0 24 24"><path d="M6 8h12l-1 12H7L6 8z"/><path d="M9 8a3 3 0 0 1 6 0"/></svg><b>0</b></button></div>
+      <button class="os-cart mm-icon-control" data-mm-cart-toggle type="button" aria-label="Cart, 0 items"><svg class="mm-icon" viewBox="0 0 24 24" aria-hidden="true"><use href="/assets/icons/mm-icons.svg#mm-icon-cart"></use></svg><b>0</b></button></div>
   </div></header>
 
   <!-- Founders-first story opening. #73 remains an external local review reference while its colour edit is active. -->
-  <section class="os-story-hero" aria-label="The makers">
+  <section class="os-story-hero os-story-hero--f98" aria-label="The makers">
     <div class="wrap">
       <div class="os-story-hero__grid">
         <div class="os-story-hero__copy">
-          <span class="os-kick">The makers</span>
-          <h1>Carli <em>&amp;</em> Dylan.</h1>
-          <div class="os-story-hero__actions" aria-label="Our Story actions">
-            <a class="pill solid" href="#people">Read our story</a>
-            <a class="pill ghost" href="/shop">Shop the range</a>
-          </div>
+          <h1>Carli &amp; <em>Dylan.</em></h1>
+          <p class="os-story-hero__intro"><span>Meet the people</span><span>behind Maple Moon.</span></p>
         </div>
-        <figure class="os-story-hero__portrait" style="position:relative"><img src="/assets/our_story/founders_portrait_h212.webp" alt="Carli and Dylan, the founders of Maple Moon" loading="eager" decoding="async"></figure>
+        <figure class="os-story-hero__portrait os-story-hero__portrait--f98"><img src="/assets/our_story/founders_pair_f98_soft_2400.webp" alt="Carli and Dylan, the founders of Maple Moon, smiling with carob bites" loading="eager" decoding="async" width="2400" height="1745"></figure>
       </div>
       <div class="os-story-signals" aria-label="Story guide">
         <span>The makers</span><span>Australian carob</span>
@@ -317,10 +314,10 @@ body{margin:0;background:#f4f2ed;}
     <div class="os-shared-story__grid os-shared-story__grid--people">
       <div>
         <h2 id="people-heading">The people behind the <em>product.</em></h2>
-        <p>Carli <span class="amp">&amp;</span> Dylan met in a health food store, a fitting beginning for two people who believe deeply that what we eat affects how we feel, physically and emotionally.</p>
+        <p>Carli <span class="amp">&amp;</span> Dylan believe deeply that what we eat affects how we feel, physically and emotionally.</p>
         <p>They began creating flavours that are rich, joyful, and deeply satisfying, an explosion of sensation without caffeine or guilt.</p>
-        <p>Maple Moon (affectionately known as "the vegan ultimate honeymooning experience") is a true reflection of who they are and what they value: nourishment, simplicity, love, and connection.</p>
-        <p>Born in Bondi but now residing in the Brunswick Heads, Northern Rivers.</p>
+        <p>Maple Moon is a true reflection of who they are and what they value: nourishment, simplicity, love, and connection.</p>
+        <p>Based in Brunswick Heads, Northern Rivers.</p>
       </div>
       <aside class="os-story-rail" aria-label="Story chapters">
         <div><span>01</span><b>The people behind the product</b><p>Meet Carli and Dylan.</p></div>
@@ -332,11 +329,11 @@ body{margin:0;background:#f4f2ed;}
   <section class="wrap os-founder-notes" aria-label="Founder profiles">
     <div class="os-founder-notes__grid">
       <article class="os-founder-note">
-        <div class="os-founder-note__portrait os-founder-placeholder" role="img" aria-label="Carli portrait pending Nate selection"><span>Founder portrait pending</span><strong>Carli</strong><small>Nate selection required</small></div>
+        <div class="os-founder-note__portrait os-founder-bio"><img src="/assets/our_story/founder_carli_701_v2_2400.webp" alt="Carli, co-founder of Maple Moon" loading="lazy" decoding="async"></div>
         <span class="os-kick">Co-founder</span><h3>Carli</h3>
         <p class="os-founder-note__lead">After struggling with gut and digestive issues, Carli learned firsthand that what you put into your body can have a profound effect on how you feel. As a Montessori school teacher, she also saw this play out through her work with children, observing and studying the impact that food and nutrition can have on behaviour, growth and development.</p>
         <details class="os-founder-note__more">
-          <summary>Read Carli's story</summary>
+          <summary><span class="os-founder-note__read-more">Read more about Carli</span><span class="os-founder-note__read-less">Read less about Carli</span></summary>
           <div>
             <p>While passionately working alongside children and families, Carli began eating carob to satisfy her afternoon and nighttime cravings for something rich and chocolatey, without the caffeine and heavy stimulants found in cacao. Cacao products often left her feeling jittery, wired and affected her sleep, which made her question the impact these stimulants could have on smaller, developing bodies.</p>
             <p>Her love for carob began when she started experimenting with it at home. Her roommate loved the flavour, and together they decided to try selling it. Although they eventually went their separate ways with the idea, the seed had been planted. Carli couldn't let go of the vision and continued to develop the concept, always believing there was something special about carob and its potential as a delicious alternative to traditional chocolate.</p>
@@ -349,11 +346,11 @@ body{margin:0;background:#f4f2ed;}
         <div><b>Maple Moon favourite</b><p>Goji Ripe Eclipse Bite</p></div>
       </article>
       <article class="os-founder-note">
-        <div class="os-founder-note__portrait os-founder-placeholder" role="img" aria-label="Dylan portrait pending Nate selection"><span>Founder portrait pending</span><strong>Dylan</strong><small>Nate selection required</small></div>
+        <div class="os-founder-note__portrait os-founder-bio"><img src="/assets/our_story/founder_dylan_701_v2_2400.webp" alt="Dylan, co-founder of Maple Moon" loading="lazy" decoding="async"></div>
         <span class="os-kick">Co-founder</span><h3>Dylan</h3>
         <p class="os-founder-note__lead">Dylan has always been a natural athlete, whether it was running, soccer or surfing. His passion for sport led him to explore how to optimise his health by understanding the body and what it needs to perform at its best. This sparked a deeper interest in nutrition, nourishment, rest and recovery, and the role they all play in supporting the body and achieving peak performance.</p>
         <details class="os-founder-note__more">
-          <summary>Read Dylan's story</summary>
+          <summary><span class="os-founder-note__read-more">Read more about Dylan</span><span class="os-founder-note__read-less">Read less about Dylan</span></summary>
           <div>
             <p>When Dylan met Carli, she shared her idea of creating and selling her own carob treats. In the early days of their relationship, they jokingly called their adventures "Maple Mooning" instead of honeymooning, as Dylan was a strict vegan at the time and didn't eat honey. Although Carli had planned to move to Byron Bay and Dylan intended to settle in Sydney, their connection, love and shared passion for health, nature and conscious living kept bringing them together. Just six months into their relationship, they decided to take a leap and start Maple Moon as a passion project, with a shared vision of creating delicious, guilt-free treats that people could genuinely feel good about eating.</p>
             <p>While Carli was the creator and flavour visionary behind the products, Dylan became the driving force behind turning the idea into a real business. He taught himself how to technically produce carob bars to perfection and, importantly, how to scale production as demand grew. From there, he took on the logistics and operations of the business, from managing the website to building relationships with stockists and distributors and ensuring the finished products made their way onto shelves across Australia.</p>
@@ -377,7 +374,7 @@ body{margin:0;background:#f4f2ed;}
         <p>But there was a problem, no carob products on the market met her standards. Most contained lectins, stabilisers, or were overly processed. So she stripped it all back and made her own.</p>
       </div>
       <div class="fig">
-        <img class="os-fig-main tall" src="/assets/hero_shots/carob_pods_cluster.jpg" alt="A cluster of ripe carob pods" decoding="async">
+        <img class="os-fig-main tall" src="/assets/our_story/founders_pair_f98_soft_2400.webp" alt="A cluster of ripe carob pods" decoding="async">
       </div>
     </div>
   </section>
@@ -444,11 +441,14 @@ body{margin:0;background:#f4f2ed;}
 .os-founder-note__more{margin-top:12px;}
 .os-founder-note__more>div{padding-top:10px;}
 .os-founder-note__more p+p{margin-top:.9em;}
-.os-founder-note__more summary{display:inline-flex;align-items:center;gap:8px;padding:7px 0;cursor:pointer;list-style:none;font-size:.63rem;letter-spacing:.16em;text-transform:uppercase;color:var(--ink-faint);}
+.os-founder-note__more summary{display:inline-flex;box-sizing:border-box;min-height:44px;align-items:center;gap:9px;padding:0 18px;border:1px solid var(--ink);border-radius:50px;background:transparent;cursor:pointer;list-style:none;font-family:var(--mm-sans);font-size:.63rem;font-weight:500;letter-spacing:.16em;text-transform:uppercase;color:var(--ink);}
 .os-founder-note__more summary::-webkit-details-marker{display:none;}
 .os-founder-note__more summary::after{content:"+";font-size:1.05rem;letter-spacing:0;line-height:1;}
 .os-founder-note__more[open] summary::after{content:"\2013";}
-.os-founder-note__more summary:hover{color:var(--ink);}
+.os-founder-note__more .os-founder-note__read-less{display:none;}
+.os-founder-note__more[open] .os-founder-note__read-more{display:none;}
+.os-founder-note__more[open] .os-founder-note__read-less{display:inline;}
+.os-founder-note__more summary:hover{background:var(--ink);color:var(--paper);}
 .os .os-founder-note__more summary:focus-visible{outline:3px solid #b88b3d;outline-offset:4px;}
 .os-ingredient-bridge{position:relative;isolation:isolate;display:block;width:100vw;max-width:none;min-height:clamp(460px,54vw,660px);margin:var(--story-chapter) calc(50% - 50vw) 0;padding:0;overflow:hidden;border:0;border-radius:0;background:#173542;}
 .os-ingredient-bridge figure{position:absolute;inset:0;margin:0;min-height:0;z-index:-2;}
@@ -591,7 +591,7 @@ body{margin:0;background:#f4f2ed;}
 .os .os-story-hero{position:relative;isolation:isolate;min-height:clamp(560px,54vw,690px);padding:0;overflow:hidden;background:#c5d5e5;}
 .os .os-story-hero__grid{position:relative;display:block;min-height:clamp(560px,54vw,690px);}
 .os .os-story-hero__portrait{position:absolute;top:0;right:calc(50% - 50vw);bottom:0;left:34%;z-index:0;height:auto;margin:0;border:0;border-radius:0;background:#426b77;overflow:hidden;}
-.os .os-story-hero__portrait::before{content:"";position:absolute;inset:-28px;z-index:0;background:url('/assets/our_story/founders_portrait_h212.webp') center 40%/cover no-repeat;filter:blur(24px);transform:scale(1.04);opacity:.78;}
+.os .os-story-hero__portrait::before{content:"";position:absolute;inset:-28px;z-index:0;background:url('/assets/our_story/founders_pair_f99_1200.webp') center 40%/cover no-repeat;filter:blur(24px);transform:scale(1.04);opacity:.78;}
 .os .os-story-hero__portrait::after{content:"";position:absolute;inset:0;z-index:2;pointer-events:none;background:linear-gradient(90deg,#c5d5e5 0%,rgba(197,213,229,.92) 9%,rgba(197,213,229,.48) 18%,rgba(197,213,229,.10) 30%,rgba(197,213,229,0) 42%),linear-gradient(180deg,rgba(197,213,229,.34) 0%,rgba(197,213,229,0) 8%,rgba(197,213,229,0) 91%,rgba(197,213,229,.34) 100%),linear-gradient(90deg,rgba(26,57,66,0) 88%,rgba(26,57,66,.20) 100%);}
 .os .os-story-hero__portrait img{position:relative;z-index:1;width:100%;height:100%;object-fit:cover;object-position:46% 40%;-webkit-mask-image:none;mask-image:none;}
 .os .os-story-hero__copy{position:relative;z-index:1;padding-top:clamp(196px,21vw,282px);max-width:35rem;}
@@ -685,7 +685,7 @@ body{margin:0;background:#f4f2ed;}
 
 /* Founder image: keep the pair intact, then let the portrait settle into the page wash. */
 .os .os-story-hero__portrait{height:auto;aspect-ratio:3/2;border:0;border-radius:0;background:transparent;isolation:isolate;}
-.os .os-story-hero__portrait img{position:relative;z-index:1;object-position:center center;}
+.os .os-story-hero__portrait img{position:relative;z-index:1;object-position:50% 8%;}
 .os .os-story-hero__portrait::after{content:"";position:absolute;inset:0;z-index:2;pointer-events:none;background:linear-gradient(90deg,rgba(197,213,229,.94) 0%,rgba(197,213,229,.68) 13%,rgba(197,213,229,0) 38%),linear-gradient(180deg,rgba(197,213,229,.12),rgba(197,213,229,0) 26%,rgba(238,242,245,.24) 100%);}
 @media(max-width:900px){
   .os .os-story-hero__portrait{height:auto;aspect-ratio:3/2;}
@@ -917,6 +917,218 @@ body{margin:0;background:#f4f2ed;}
   .os .os-shared-story__grid--people>div:first-child{padding:26px 22px;}
   .os .os-founder-placeholder{width:100%;max-width:296px;}
   .os #beginning,.os #range{margin-top:clamp(64px,18vw,84px);}
+}
+
+/* Founder bio geometry stays locked; 701_v2 is candidate-only and F76/F53 remain rollback assets. */
+.os .os-founder-bio{
+  display:block;
+  width:min(100%,296px);
+  aspect-ratio:4/5;
+  margin:0 0 22px;
+  padding:0;
+  overflow:hidden;
+  border:0;
+  border-radius:6px;
+  background:var(--story-rule);
+}
+.os .os-founder-bio img{
+  display:block;
+  width:100%;
+  height:100%;
+  aspect-ratio:auto;
+  object-fit:cover;
+  object-position:50% 35%;
+  -webkit-mask-image:linear-gradient(180deg,transparent 0,#000 8%,#000 92%,transparent 100%);
+  mask-image:linear-gradient(180deg,transparent 0,#000 8%,#000 92%,transparent 100%);
+}
+.os .os-founder-bio{width:100%;max-width:296px;}
+
+/* Nate-approved 25 Aug WIP pair-header update: F98 only; bio bindings are governed separately. */
+.os .os-story-hero__portrait--f98{
+  display:flex;
+  align-items:flex-end;
+  justify-content:center;
+  overflow:visible;
+  background:radial-gradient(ellipse at 57% 62%,rgba(216,229,240,.48) 0%,rgba(197,213,229,.2) 48%,rgba(197,213,229,0) 76%);
+  box-shadow:none;
+}
+.os .os-story-hero__portrait--f98::before,
+.os .os-story-hero__portrait--f98::after{display:none;}
+.os .os-story-hero__portrait--f98 img{
+  position:relative;
+  z-index:1;
+  display:block;
+  width:100%;
+  height:100%;
+  max-width:none;
+  object-fit:contain;
+  object-position:center bottom;
+  filter:drop-shadow(0 24px 24px rgba(34,67,84,.1));
+  -webkit-mask-image:none;
+  mask-image:none;
+}
+@media(min-width:901px){
+  .os .os-story-hero--f98 .os-story-hero__grid{
+    grid-template-columns:minmax(0,.78fr) minmax(0,1.22fr);
+    gap:clamp(30px,4vw,62px);
+  }
+}
+@media(max-width:900px){
+  .os .os-story-hero__portrait--f98{aspect-ratio:4/3;}
+  .os .os-story-hero__portrait--f98 img{filter:drop-shadow(0 16px 18px rgba(34,67,84,.08));}
+}
+
+/* Nate-directed 25 Aug pale-page pass: use only the existing Our Story wash. */
+body{background:var(--mm-color-blue-flow);}
+.os{background:linear-gradient(180deg,var(--mm-color-blue-haze),var(--mm-color-blue-flow));}
+.os .os-shared-story__grid--people>div:first-child{
+  background:var(--mm-color-blue-haze);
+}
+.os .os-founder-note{
+  background:linear-gradient(145deg,var(--mm-color-blue-haze),var(--mm-color-blue-bridge));
+}
+.os .os-cta{
+  background:radial-gradient(circle at 50% 0,var(--mm-color-blue-haze),var(--mm-color-blue-bridge) 46%,var(--mm-color-blue-flow) 100%);
+}
+.os #beginning .os-fig-main.tall{
+  object-fit:contain;
+  object-position:center;
+  background:transparent;
+}
+
+/* Nate-selected A founder header: governed F98 pair and protected two-line copy. */
+.os .os-story-hero{
+  position:relative;
+  isolation:isolate;
+  width:100%;
+  height:600px;
+  min-height:600px;
+  padding:0;
+  overflow:hidden;
+  background:transparent;
+}
+.os .os-story-hero::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  z-index:0;
+  background:
+    radial-gradient(ellipse at 78% 42%,rgba(186,211,225,.48),transparent 54%),
+    linear-gradient(118deg,var(--mm-color-blue-haze) 0%,var(--mm-color-blue-haze) 44%,var(--mm-color-blue-flow) 100%);
+}
+.os .os-story-hero::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  z-index:3;
+  pointer-events:none;
+  background:linear-gradient(90deg,
+    var(--mm-color-blue-haze) 0%,
+    var(--mm-color-blue-haze) 23%,
+    rgba(215,226,234,.98) 29%,
+    rgba(215,226,234,.82) 36%,
+    rgba(215,226,234,.38) 43%,
+    rgba(215,226,234,.08) 49%,
+    transparent 56%);
+}
+.os .os-story-hero>.wrap{
+  position:relative;
+  width:100%;
+  max-width:none;
+  height:600px;
+  padding:0 clamp(34px,7vw,92px);
+}
+.os .os-story-hero__grid{
+  position:relative;
+  display:flex;
+  align-items:center;
+  width:100%;
+  height:600px;
+  min-height:600px;
+}
+.os .os-story-hero__copy{
+  position:relative;
+  z-index:5;
+  width:auto;
+  max-width:520px;
+  padding:0;
+}
+.os .os-story-hero__copy h1{
+  max-width:5.7ch;
+  margin:0;
+  font-size:clamp(4.6rem,7.2vw,6.55rem);
+  font-weight:400;
+  letter-spacing:-.05em;
+  line-height:.93;
+  text-wrap:balance;
+}
+.os .os-story-hero__intro{
+  max-width:19ch;
+  margin:26px 0 0;
+  color:var(--ink-soft);
+  font-size:16px;
+  letter-spacing:.01em;
+  line-height:1.46;
+}
+.os .os-story-hero__intro span{display:block;white-space:nowrap;}
+.os .os-story-hero__portrait--f98{
+  position:absolute;
+  inset:0;
+  z-index:2;
+  display:block;
+  width:100%;
+  max-width:none;
+  height:100%;
+  aspect-ratio:auto;
+  overflow:visible;
+  pointer-events:none;
+  background:transparent;
+}
+.os .os-story-hero__portrait--f98 img{
+  position:absolute;
+  right:-2%;
+  bottom:-7%;
+  width:min(78%,980px);
+  max-width:none;
+  height:auto;
+  object-fit:contain;
+  object-position:center;
+}
+.os .os-story-signals{display:none;}
+
+@media(max-width:1100px){
+  .os .os-story-hero>.wrap{padding-inline:clamp(34px,6vw,68px);}
+  .os .os-story-hero__copy h1{font-size:clamp(4.2rem,8.2vw,5.6rem);}
+  .os .os-story-hero__portrait--f98 img{right:-7%;width:84%;}
+}
+
+@media(max-width:600px){
+  .os .os-story-hero{height:640px;min-height:640px;}
+  .os .os-story-hero::before{
+    background:
+      radial-gradient(ellipse at 62% 78%,rgba(182,209,224,.48),transparent 58%),
+      linear-gradient(180deg,var(--mm-color-blue-haze) 0%,var(--mm-color-blue-haze) 48%,var(--mm-color-blue-flow) 100%);
+  }
+  .os .os-story-hero::after{
+    background:linear-gradient(180deg,
+      var(--mm-color-blue-haze) 0%,
+      var(--mm-color-blue-haze) 24%,
+      rgba(215,226,234,.98) 33%,
+      rgba(215,226,234,.72) 43%,
+      rgba(215,226,234,.16) 53%,
+      transparent 62%);
+  }
+  .os .os-story-hero>.wrap{height:640px;padding:0 20px;}
+  .os .os-story-hero__grid{align-items:flex-start;height:640px;min-height:640px;}
+  .os .os-story-hero__copy{max-width:310px;padding-top:46px;}
+  .os .os-story-hero__copy h1{max-width:5.4ch;font-size:clamp(3.6rem,19.5vw,4.75rem);line-height:.92;}
+  .os .os-story-hero__intro{max-width:19ch;margin-top:16px;font-size:15px;}
+  .os .os-story-hero__portrait--f98 img{right:-19%;bottom:-1%;width:132%;}
+}
+
+@media(max-width:340px){
+  .os .os-story-hero>.wrap{padding-inline:16px;}
+  .os .os-story-hero__portrait--f98 img{right:-22%;width:138%;}
 }
 </style>
 </body>

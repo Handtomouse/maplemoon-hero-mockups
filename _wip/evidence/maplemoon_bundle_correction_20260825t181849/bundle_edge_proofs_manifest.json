@@ -1,0 +1,42 @@
+{
+  "pixel_treatment": "source composited at native dimensions without scaling, reconstruction, or colour change",
+  "proofs": [
+    {
+      "background": "#e7edf3",
+      "label": "light",
+      "path": "bundle_edge_proof_light.png",
+      "sha256": "1c3c56d1a2cc9372176547b316410385a6c66e88c44175ca21561ad71416cf9f"
+    },
+    {
+      "background": "#101923",
+      "label": "dark",
+      "path": "bundle_edge_proof_dark.png",
+      "sha256": "098c5ec7a6af1c0f9b59545af71aa761da671e512a4a978ef4b518bac6197732"
+    },
+    {
+      "background": "#e7e4ca",
+      "label": "cream",
+      "path": "bundle_edge_proof_cream.png",
+      "sha256": "1a0c1583b6f3c9e04ae924a71a7c19d8e2bdaf5ca5b6119bad8913b39ac5f0e2"
+    },
+    {
+      "background": "#1e4366",
+      "label": "site_blue",
+      "path": "bundle_edge_proof_site_blue.png",
+      "sha256": "2fd1d41e03b3f59872ca1b805e6d49a0e539033be9fdbf0beca9acc649e9c533"
+    }
+  ],
+  "schema": "maplemoon-bundle-edge-proofs/v1",
+  "source_alpha_bbox": [
+    46,
+    46,
+    1034,
+    622
+  ],
+  "source_dimensions": [
+    1080,
+    668
+  ],
+  "source_path": "_wip/deploy/generated/maplemoon_bundle_correction_20260825t181849/assets/product_shots/temporary_eclipse_bite_bundle_web.webp",
+  "source_sha256": "8bca090850c29da285ae266d8bf666199ae7cacbeee475160df13bc82c66932f"
+}

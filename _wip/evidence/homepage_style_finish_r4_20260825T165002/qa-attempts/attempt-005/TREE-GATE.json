@@ -1,0 +1,16 @@
+{
+  "additions": [
+    "homepage-style-finish-r4-manifest.json",
+    "styles/homepage-style-finish-r4.css"
+  ],
+  "mutations": [
+    "homepage.html"
+  ],
+  "allowedAdds": [
+    "homepage-style-finish-r4-manifest.json",
+    "styles/homepage-style-finish-r4.css"
+  ],
+  "linkCount": 1,
+  "reverseEqual": true,
+  "pass": true
+}

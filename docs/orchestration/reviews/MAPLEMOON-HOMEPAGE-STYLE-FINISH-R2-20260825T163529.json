@@ -1,0 +1,72 @@
+{
+  "schema": "maplemoon-receipt/v2",
+  "receipt_id": "MAPLEMOON-HOMEPAGE-STYLE-FINISH-R2-20260825T163529-RECEIPT-HOLD-01",
+  "packet_id": "MAPLEMOON-HOMEPAGE-STYLE-FINISH-R2-20260825T163529",
+  "worker_thread_id": "019ffe53-6243-73a2-9d75-e1a072cd07ce",
+  "worker": "MapleMoon BOSS staged homepage style correction R2",
+  "started_at": "2026-08-25T06:35:29Z",
+  "completed_at": "2026-08-25T06:42:23Z",
+  "files_read": [
+    "maplemoon-website/docs/orchestration/packets/MAPLEMOON-HOMEPAGE-STYLE-FINISH-R2-20260825T163529.md",
+    "maplemoon-website/docs/orchestration/packets/MAPLEMOON-HOMEPAGE-STYLE-FINISH-20260825T161314.md",
+    "maplemoon-website/docs/orchestration/reviews/MAPLEMOON-HOMEPAGE-STYLE-FINISH-20260825T161314.json",
+    "maplemoon-website/scripts/build-maplemoon-homepage-style-finish-20260825T161314.mjs",
+    "maplemoon-website/_wip/deploy/generated/maplemoon-homepage-style-finish-20260825T161314",
+    "maplemoon-website/_wip/evidence/homepage_style_finish_20260825T161314",
+    "maplemoon-website/scripts/build-maplemoon-wip-preview.py",
+    "maplemoon-website/_wip/homepage_real_1_lead_photo.WIP.html"
+  ],
+  "files_changed": [
+    "maplemoon-website/scripts/build-maplemoon-homepage-style-finish-r2-20260825T163529.mjs",
+    "maplemoon-website/_wip/deploy/generated/maplemoon-homepage-style-finish-r2-20260825T163529",
+    "maplemoon-website/_wip/evidence/homepage_style_finish_r2_20260825T163529",
+    "maplemoon-website/docs/orchestration/reviews/MAPLEMOON-HOMEPAGE-STYLE-FINISH-R2-20260825T163529.json"
+  ],
+  "pre_sha256": {
+    "maplemoon-website/scripts/build-maplemoon-homepage-style-finish-r2-20260825T163529.mjs": null,
+    "maplemoon-website/_wip/deploy/generated/maplemoon-homepage-style-finish-r2-20260825T163529": null,
+    "maplemoon-website/_wip/evidence/homepage_style_finish_r2_20260825T163529": null,
+    "maplemoon-website/docs/orchestration/reviews/MAPLEMOON-HOMEPAGE-STYLE-FINISH-R2-20260825T163529.json": null
+  },
+  "post_sha256": {
+    "maplemoon-website/scripts/build-maplemoon-homepage-style-finish-r2-20260825T163529.mjs": "60b2846b257147205d252db135b23e62e94ac428790e4d20460bb3268960d236",
+    "maplemoon-website/_wip/deploy/generated/maplemoon-homepage-style-finish-r2-20260825T163529": null,
+    "maplemoon-website/_wip/evidence/homepage_style_finish_r2_20260825T163529": "0e3af9106485405594ff1877eb606a65b27a6fdbf8d47f0cc7030c8cf65b669c",
+    "maplemoon-website/docs/orchestration/reviews/MAPLEMOON-HOMEPAGE-STYLE-FINISH-R2-20260825T163529.json": null
+  },
+  "checks": [
+    {
+      "command": "python3 -B scripts/check-maplemoon-receipt.py checkpoint --root /Users/handtomouse --packet docs/orchestration/packets/MAPLEMOON-HOMEPAGE-STYLE-FINISH-R2-20260825T163529.md --destination _wip/checkpoints/MAPLEMOON-HOMEPAGE-STYLE-FINISH-R2-20260825T163529_20260825_163529_AEST",
+      "exit_code": 0,
+      "result": "PASS checkpoint packet=MAPLEMOON-HOMEPAGE-STYLE-FINISH-R2-20260825T163529 files=4 path=_wip/checkpoints/MAPLEMOON-HOMEPAGE-STYLE-FINISH-R2-20260825T163529_20260825_163529_AEST"
+    },
+    {
+      "command": "python3 -B scripts/check-maplemoon-receipt.py verify --root /Users/handtomouse --packet docs/orchestration/packets/MAPLEMOON-HOMEPAGE-STYLE-FINISH-R2-20260825T163529.md --checkpoint _wip/checkpoints/MAPLEMOON-HOMEPAGE-STYLE-FINISH-R2-20260825T163529_20260825_163529_AEST --phase start",
+      "exit_code": 0,
+      "result": "PASS packet=MAPLEMOON-HOMEPAGE-STYLE-FINISH-R2-20260825T163529 phase=start scope=4"
+    },
+    {
+      "command": "node --check scripts/build-maplemoon-homepage-style-finish-r2-20260825T163529.mjs && node scripts/build-maplemoon-homepage-style-finish-r2-20260825T163529.mjs",
+      "exit_code": 1,
+      "result": "BUILD FAIL packet=MAPLEMOON-HOMEPAGE-STYLE-FINISH-R2-20260825T163529 reason=pinned input drift: /Users/handtomouse/maplemoon-website/_wip/homepage_real_1_lead_photo.WIP.html expected=0e979d3737dc1484c6f4a4e23feed5ab7b74871b0b3ced84faa045c817f29e1b actual=4a65a61df537652711749137855e9cf0adc443d2b0db2dcabc883fdc3fe442e9"
+    },
+    {
+      "command": "fresh transformed-baseline diff",
+      "exit_code": 0,
+      "result": "PASS drift is two compatible CSS-only refinements: smoother hero-copy radial field and radial carousel mist mask; flow/copy/media/control projections unchanged"
+    }
+  ],
+  "screenshots_or_urls": [],
+  "failures": [
+    "Required pinned-source check stopped R2 before output creation because the homepage changed after phase start."
+  ],
+  "unknowns": [
+    "R2 has no derived output and no browser or rendered evidence."
+  ],
+  "residual_risk": [
+    "R2 must remain HOLD and cannot be promoted or used as a build source."
+  ],
+  "forbidden_path_changes": [],
+  "proposed_next_state": "hold",
+  "next_reviewer": "MapleMoon BOSS R3 fresh-source repin"
+}

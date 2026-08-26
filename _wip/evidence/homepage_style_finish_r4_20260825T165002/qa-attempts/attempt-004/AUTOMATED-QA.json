@@ -1,0 +1,222 @@
+{
+  "schema": "maplemoon-homepage-style-finish-r4-automated-qa/v1",
+  "packetId": "MAPLEMOON-HOMEPAGE-STYLE-FINISH-R4-20260825T165002",
+  "attempt": "/Users/handtomouse/maplemoon-website/_wip/evidence/homepage_style_finish_r4_20260825T165002/qa-attempts/attempt-004",
+  "acquisition": {
+    "snapshot": {
+      "file": "/Users/handtomouse/maplemoon-website/_wip/evidence/homepage_style_finish_r4_20260825T165002/source-snapshot.WIP.html",
+      "sha256": "792e6508d21a4b1840f5a35fd28af05962030a7e2e32e73cda4651c7e5a48dd9",
+      "expected": "792e6508d21a4b1840f5a35fd28af05962030a7e2e32e73cda4651c7e5a48dd9"
+    },
+    "baseline": {
+      "sha256": "394b65d1f98b931cc6fa90f685a363654ad3baa691321be1c8bc524d07c825c1",
+      "count": 77
+    },
+    "candidate": {
+      "sha256": "fa218fcc78f4a403b311582b8c7219dd2cac25950f7b96914ab1f8e1186cde3e",
+      "count": 79
+    },
+    "liveHomepage": {
+      "file": "/Users/handtomouse/maplemoon-website/_wip/homepage_real_1_lead_photo.WIP.html",
+      "sha256": "538202828f60e3acf5f2e1474c129052fc21e7338b702412cd3a025f0718a33c",
+      "bytes": 194218
+    }
+  },
+  "treeGate": {
+    "additions": [
+      "homepage-style-finish-r4-manifest.json",
+      "styles/homepage-style-finish-r4.css"
+    ],
+    "mutations": [
+      "homepage.html"
+    ],
+    "allowedAdds": [
+      "homepage-style-finish-r4-manifest.json",
+      "styles/homepage-style-finish-r4.css"
+    ],
+    "linkCount": 1,
+    "reverseEqual": true,
+    "pass": true
+  },
+  "measurements": [],
+  "proofs": [
+    {
+      "root": "baseline",
+      "width": 1440,
+      "state": "full-page",
+      "file": "/Users/handtomouse/maplemoon-website/_wip/evidence/homepage_style_finish_r4_20260825T165002/qa-attempts/attempt-004/proofs/baseline-1440-full-page.png",
+      "bytes": 5639539,
+      "sha256": "68211d0f729926fbd94eb3a0bb4014ca09a0758dd4543eb45a9c3cd830ece389",
+      "height": 6659,
+      "nonblank": true
+    },
+    {
+      "root": "baseline",
+      "width": 1440,
+      "state": "hero-header",
+      "selector": "#top",
+      "box": {
+        "x": 0,
+        "y": 0,
+        "width": 1440,
+        "height": 1495.953125
+      },
+      "clip": {
+        "x": 0,
+        "y": 0,
+        "width": 1440,
+        "height": 1495.953125
+      },
+      "file": "/Users/handtomouse/maplemoon-website/_wip/evidence/homepage_style_finish_r4_20260825T165002/qa-attempts/attempt-004/proofs/baseline-1440-hero-header.png",
+      "bytes": 1573019,
+      "sha256": "9d85703576d8882df5bc4018918f054aff285597c9f1d4c8001fdf731150c13d",
+      "height": 1000,
+      "nonblank": true
+    }
+  ],
+  "contacts": [],
+  "reviewSheets": [],
+  "additional": [],
+  "positiveControls": null,
+  "close": {
+    "snapshot": {
+      "sha256": "792e6508d21a4b1840f5a35fd28af05962030a7e2e32e73cda4651c7e5a48dd9",
+      "stable": true
+    },
+    "baseline": {
+      "sha256": "394b65d1f98b931cc6fa90f685a363654ad3baa691321be1c8bc524d07c825c1",
+      "stable": true
+    },
+    "candidate": {
+      "sha256": "fa218fcc78f4a403b311582b8c7219dd2cac25950f7b96914ab1f8e1186cde3e",
+      "stable": true
+    },
+    "pinned": [
+      {
+        "file": "/Users/handtomouse/maplemoon-website/docs/orchestration/packets/MAPLEMOON-HOMEPAGE-STYLE-FINISH-R3-20260825T164343.md",
+        "expected": "f8628f037332ad8905812139c9223bcded425af978b35a29fe61cf7a04994b3b",
+        "observed": "f8628f037332ad8905812139c9223bcded425af978b35a29fe61cf7a04994b3b",
+        "close": "f8628f037332ad8905812139c9223bcded425af978b35a29fe61cf7a04994b3b",
+        "stable": true
+      },
+      {
+        "file": "/Users/handtomouse/maplemoon-website/docs/orchestration/reviews/MAPLEMOON-HOMEPAGE-STYLE-FINISH-R3-20260825T164343.json",
+        "expected": "8324a3aebb318addc8e6cd3912327337df6e8560fbc6fa85ecd8c599a2d0410d",
+        "observed": "8324a3aebb318addc8e6cd3912327337df6e8560fbc6fa85ecd8c599a2d0410d",
+        "close": "8324a3aebb318addc8e6cd3912327337df6e8560fbc6fa85ecd8c599a2d0410d",
+        "stable": true
+      },
+      {
+        "file": "/Users/handtomouse/maplemoon-website/scripts/build-maplemoon-homepage-style-finish-r3-20260825T164343.mjs",
+        "expected": "8a45fbaa12a31b01c579ac02adb7ca256b5072d61497436941129659e349ca05",
+        "observed": "8a45fbaa12a31b01c579ac02adb7ca256b5072d61497436941129659e349ca05",
+        "close": "8a45fbaa12a31b01c579ac02adb7ca256b5072d61497436941129659e349ca05",
+        "stable": true
+      },
+      {
+        "file": "/Users/handtomouse/maplemoon-website/_wip/evidence/homepage_style_finish_r3_20260825T164343/DRIFT-HOLD.md",
+        "expected": "8d03ce694368f99734e31515549550c524d176219795f926fe5abffe6a52d0fd",
+        "observed": "8d03ce694368f99734e31515549550c524d176219795f926fe5abffe6a52d0fd",
+        "close": "8d03ce694368f99734e31515549550c524d176219795f926fe5abffe6a52d0fd",
+        "stable": true
+      },
+      {
+        "file": "/Users/handtomouse/maplemoon-website/scripts/build-maplemoon-wip-preview.py",
+        "expected": "c8ea6c34d0207f9388ebf479f1c92ea77d63d61f5614cbbcf10a3896ef8c334a",
+        "observed": "c8ea6c34d0207f9388ebf479f1c92ea77d63d61f5614cbbcf10a3896ef8c334a",
+        "close": "c8ea6c34d0207f9388ebf479f1c92ea77d63d61f5614cbbcf10a3896ef8c334a",
+        "stable": true
+      },
+      {
+        "file": "/Users/handtomouse/.codex/visualizations/2026/08/12/019ff65f-fd33-7e51-8a83-360ba2f8d665/HOMEPAGE-STYLES-DECISIONS-20260824.md",
+        "expected": "c9f286b5d2c5b5367e74362e1ea69bbbf9b52be7be8bbccf6f4f668b7083a0d9",
+        "observed": "c9f286b5d2c5b5367e74362e1ea69bbbf9b52be7be8bbccf6f4f668b7083a0d9",
+        "close": "c9f286b5d2c5b5367e74362e1ea69bbbf9b52be7be8bbccf6f4f668b7083a0d9",
+        "stable": true
+      },
+      {
+        "file": "/Users/handtomouse/.codex/visualizations/2026/08/12/019ff65f-fd33-7e51-8a83-360ba2f8d665/homepage-styles-batch-01.html",
+        "expected": "15ce5c5679d9f978db50c31b25ac59fd004acd19014e9fc80e3d613b46ee642e",
+        "observed": "15ce5c5679d9f978db50c31b25ac59fd004acd19014e9fc80e3d613b46ee642e",
+        "close": "15ce5c5679d9f978db50c31b25ac59fd004acd19014e9fc80e3d613b46ee642e",
+        "stable": true
+      },
+      {
+        "file": "/Users/handtomouse/.codex/visualizations/2026/08/12/019ff65f-fd33-7e51-8a83-360ba2f8d665/maple-moon-homepage-structure-preserved-style-tuning.html",
+        "expected": "c603d3e26b4db821a18e2ca937f0b62ddc01b1ca2cc0ccb81571eb1926e0bdca",
+        "observed": "c603d3e26b4db821a18e2ca937f0b62ddc01b1ca2cc0ccb81571eb1926e0bdca",
+        "close": "c603d3e26b4db821a18e2ca937f0b62ddc01b1ca2cc0ccb81571eb1926e0bdca",
+        "stable": true
+      },
+      {
+        "file": "/Users/handtomouse/.codex/visualizations/2026/08/12/019ff65f-fd33-7e51-8a83-360ba2f8d665/homepage-what-is-carob-batch-06.html",
+        "expected": "7f95350047a7676499d785788655e34ee8c645f07e5a5a05ad6d1972addd8560",
+        "observed": "7f95350047a7676499d785788655e34ee8c645f07e5a5a05ad6d1972addd8560",
+        "close": "7f95350047a7676499d785788655e34ee8c645f07e5a5a05ad6d1972addd8560",
+        "stable": true
+      },
+      {
+        "file": "/Users/handtomouse/.codex/visualizations/2026/08/12/019ff65f-fd33-7e51-8a83-360ba2f8d665/maple-moon-homepage-hybrid-current-vs-tuned.html",
+        "expected": "1e22c01f02c973867692ccc4f942fcd150c5c1a92365a34bef2573987b3a4966",
+        "observed": "1e22c01f02c973867692ccc4f942fcd150c5c1a92365a34bef2573987b3a4966",
+        "close": "1e22c01f02c973867692ccc4f942fcd150c5c1a92365a34bef2573987b3a4966",
+        "stable": true
+      },
+      {
+        "file": "/Users/handtomouse/.codex/visualizations/2026/08/12/019ff65f-fd33-7e51-8a83-360ba2f8d665/maple-moon-lane-2-homepage-system.html",
+        "expected": "6d5b7a0986a698932b52fbdef67ef6a679b4dba4999feca9a3c686ec29328cf6",
+        "observed": "6d5b7a0986a698932b52fbdef67ef6a679b4dba4999feca9a3c686ec29328cf6",
+        "close": "6d5b7a0986a698932b52fbdef67ef6a679b4dba4999feca9a3c686ec29328cf6",
+        "stable": true
+      }
+    ],
+    "frozen": [
+      {
+        "file": "/Users/handtomouse/maplemoon-website/_wip/our-story.WIP.html",
+        "sha256": "1a24a9beb7e85f656c8f667e75b7153b52b5add5d0da8d0b52185b269ee3ab6d",
+        "close": "1a24a9beb7e85f656c8f667e75b7153b52b5add5d0da8d0b52185b269ee3ab6d",
+        "stable": true
+      },
+      {
+        "file": "/Users/handtomouse/maplemoon-website/_wip/shop.WIP.html",
+        "sha256": "d7224201966aa32ef068d6408684d6cfc65ef06021795efdc586e7e3c6531085",
+        "close": "d7224201966aa32ef068d6408684d6cfc65ef06021795efdc586e7e3c6531085",
+        "stable": true
+      },
+      {
+        "file": "/Users/handtomouse/maplemoon-website/_wip/stockists.WIP.html",
+        "sha256": "5ab5ed41026caa26012343d3fef6ab7017ca12ac33d32768743737f091a0bc0a",
+        "close": "5ab5ed41026caa26012343d3fef6ab7017ca12ac33d32768743737f091a0bc0a",
+        "stable": true
+      },
+      {
+        "file": "/Users/handtomouse/maplemoon_build_20260813/mock-cart.js",
+        "sha256": "c93a17ca336d31c08629a6e18b8244325f38d0f094d86af0d318a545c45af883",
+        "close": "c93a17ca336d31c08629a6e18b8244325f38d0f094d86af0d318a545c45af883",
+        "stable": true
+      }
+    ],
+    "liveHomepage": {
+      "sha256": "538202828f60e3acf5f2e1474c129052fc21e7338b702412cd3a025f0718a33c",
+      "bytes": 194218,
+      "requiresRebase": true,
+      "diffFile": "/Users/handtomouse/maplemoon-website/_wip/evidence/homepage_style_finish_r4_20260825T165002/qa-attempts/attempt-004/LIVE-SOURCE-REBASE.diff",
+      "diffSha256": "a6e7b616f2135ec1e084997c8a1e466471ef8be0035aca0230ea5bff82cf3c0c",
+      "diffExitCode": 1
+    }
+  },
+  "fatal": {
+    "message": "page.screenshot: Clipped area is either empty or outside the resulting image\nCall log:\n\u001b[2m  - taking page screenshot\u001b[22m\n\u001b[2m    - disabled all CSS animations\u001b[22m\n\u001b[2m  - waiting for fonts to load...\u001b[22m\n\u001b[2m  - fonts loaded\u001b[22m\n",
+    "stack": "page.screenshot: Clipped area is either empty or outside the resulting image\nCall log:\n\u001b[2m  - taking page screenshot\u001b[22m\n\u001b[2m    - disabled all CSS animations\u001b[22m\n\u001b[2m  - waiting for fonts to load...\u001b[22m\n\u001b[2m  - fonts loaded\u001b[22m\n\n    at captureState (/Users/handtomouse/maplemoon-website/_wip/evidence/homepage_style_finish_r4_20260825T165002/qa-harness.mjs:258:14)\n    at async file:///Users/handtomouse/maplemoon-website/_wip/evidence/homepage_style_finish_r4_20260825T165002/qa-harness.mjs:318:470"
+  },
+  "checks": {
+    "measurements": false,
+    "proofs": false,
+    "contacts": false,
+    "reviewSheets": false,
+    "additional": false,
+    "positiveControls": false,
+    "close": true
+  },
+  "result": "FAIL"
+}

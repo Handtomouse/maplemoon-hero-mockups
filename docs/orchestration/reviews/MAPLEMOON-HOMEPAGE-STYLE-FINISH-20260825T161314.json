@@ -1,0 +1,76 @@
+{
+  "schema": "maplemoon-receipt/v2",
+  "receipt_id": "MAPLEMOON-HOMEPAGE-STYLE-FINISH-20260825T161314-RECEIPT-FAIL-01",
+  "packet_id": "MAPLEMOON-HOMEPAGE-STYLE-FINISH-20260825T161314",
+  "worker_thread_id": "019ffe53-6243-73a2-9d75-e1a072cd07ce",
+  "worker": "MapleMoon BOSS staged homepage style integration",
+  "started_at": "2026-08-25T06:13:14Z",
+  "completed_at": "2026-08-25T06:33:41Z",
+  "files_read": [
+    "maplemoon-website/docs/orchestration/packets/MAPLEMOON-HOMEPAGE-STYLE-FINISH-20260825T161314.md",
+    "maplemoon-website/docs/orchestration/SIDECHAT_RECEIPT_GATE.md",
+    "maplemoon-website/scripts/check-maplemoon-receipt.py",
+    "maplemoon-website/scripts/build-maplemoon-wip-preview.py",
+    "maplemoon-website/_wip/homepage_real_1_lead_photo.WIP.html",
+    ".codex/visualizations/2026/08/12/019ff65f-fd33-7e51-8a83-360ba2f8d665/HOMEPAGE-STYLES-DECISIONS-20260824.md",
+    ".codex/visualizations/2026/08/12/019ff65f-fd33-7e51-8a83-360ba2f8d665/homepage-styles-batch-01.html",
+    ".codex/visualizations/2026/08/12/019ff65f-fd33-7e51-8a83-360ba2f8d665/maple-moon-homepage-structure-preserved-style-tuning.html",
+    ".codex/visualizations/2026/08/12/019ff65f-fd33-7e51-8a83-360ba2f8d665/homepage-what-is-carob-batch-06.html",
+    ".codex/visualizations/2026/08/12/019ff65f-fd33-7e51-8a83-360ba2f8d665/maple-moon-homepage-hybrid-current-vs-tuned.html",
+    ".codex/visualizations/2026/08/12/019ff65f-fd33-7e51-8a83-360ba2f8d665/maple-moon-lane-2-homepage-system.html"
+  ],
+  "files_changed": [
+    "maplemoon-website/scripts/build-maplemoon-homepage-style-finish-20260825T161314.mjs",
+    "maplemoon-website/_wip/deploy/generated/maplemoon-homepage-style-finish-20260825T161314",
+    "maplemoon-website/_wip/evidence/homepage_style_finish_20260825T161314",
+    "maplemoon-website/docs/orchestration/reviews/MAPLEMOON-HOMEPAGE-STYLE-FINISH-20260825T161314.json"
+  ],
+  "pre_sha256": {
+    "maplemoon-website/scripts/build-maplemoon-homepage-style-finish-20260825T161314.mjs": null,
+    "maplemoon-website/_wip/deploy/generated/maplemoon-homepage-style-finish-20260825T161314": null,
+    "maplemoon-website/_wip/evidence/homepage_style_finish_20260825T161314": null,
+    "maplemoon-website/docs/orchestration/reviews/MAPLEMOON-HOMEPAGE-STYLE-FINISH-20260825T161314.json": null
+  },
+  "post_sha256": {
+    "maplemoon-website/scripts/build-maplemoon-homepage-style-finish-20260825T161314.mjs": "b9188bb8d5ee3bf57f4bb9cc2b195769caf2fa69ff25747879c37cc50d00be30",
+    "maplemoon-website/_wip/deploy/generated/maplemoon-homepage-style-finish-20260825T161314": "bc214f45f21f78b41f29f01eb51340ab19f934a7405c9680b3d540dfeb4b86ee",
+    "maplemoon-website/_wip/evidence/homepage_style_finish_20260825T161314": "e4cc1f5d0ae012ea3215737abda31fb2dd9ed98d0b3018a143921793bcf50531",
+    "maplemoon-website/docs/orchestration/reviews/MAPLEMOON-HOMEPAGE-STYLE-FINISH-20260825T161314.json": null
+  },
+  "checks": [
+    {
+      "command": "python3 -B scripts/check-maplemoon-receipt.py checkpoint --root /Users/handtomouse --packet docs/orchestration/packets/MAPLEMOON-HOMEPAGE-STYLE-FINISH-20260825T161314.md --destination _wip/checkpoints/MAPLEMOON-HOMEPAGE-STYLE-FINISH-20260825T161314_20260825_161314_AEST",
+      "exit_code": 0,
+      "result": "PASS checkpoint packet=MAPLEMOON-HOMEPAGE-STYLE-FINISH-20260825T161314 files=4 path=_wip/checkpoints/MAPLEMOON-HOMEPAGE-STYLE-FINISH-20260825T161314_20260825_161314_AEST"
+    },
+    {
+      "command": "python3 -B scripts/check-maplemoon-receipt.py verify --root /Users/handtomouse --packet docs/orchestration/packets/MAPLEMOON-HOMEPAGE-STYLE-FINISH-20260825T161314.md --checkpoint _wip/checkpoints/MAPLEMOON-HOMEPAGE-STYLE-FINISH-20260825T161314_20260825_161314_AEST --phase start",
+      "exit_code": 0,
+      "result": "PASS packet=MAPLEMOON-HOMEPAGE-STYLE-FINISH-20260825T161314 phase=start scope=4"
+    },
+    {
+      "command": "node scripts/build-maplemoon-homepage-style-finish-20260825T161314.mjs",
+      "exit_code": 0,
+      "result": "BUILD PASS packet=MAPLEMOON-HOMEPAGE-STYLE-FINISH-20260825T161314 output=/Users/handtomouse/maplemoon-website/_wip/deploy/generated/maplemoon-homepage-style-finish-20260825T161314 baseline_files=77 output_files=79 bytes=13030546 link_injections=1 q_segments_dom=0 non_home_equal=1"
+    },
+    {
+      "command": "BOSS pre-browser literal contract review",
+      "exit_code": 1,
+      "result": "FAIL hotspot mobile font=12px (<14px); farm credit font=.68rem (<14px); comparison remains two-column at 768px; inherited #sampler!important leaves pale surface behind cream text"
+    }
+  ],
+  "screenshots_or_urls": [],
+  "failures": [
+    "The first derived root failed four literal pre-browser QA requirements and is preserved as FAILED_PRE_QA / NOT_ADMITTED.",
+    "No browser, rendered-evidence, completion PASS, promotion, ingestion or deployment claim is made."
+  ],
+  "unknowns": [
+    "Visual quality and seam resolution were not assessed because the literal CSS contract failed first."
+  ],
+  "residual_risk": [
+    "The preserved first derived root must never be used as a preview, ingestion or deployment source."
+  ],
+  "forbidden_path_changes": [],
+  "proposed_next_state": "hold",
+  "next_reviewer": "MapleMoon BOSS R2 non-overwriting correction packet"
+}

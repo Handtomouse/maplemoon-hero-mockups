@@ -1,0 +1,1037 @@
+{
+  "schema": "maplemoon-bundle-inapp-browser-qa/v1",
+  "base": "http://127.0.0.1:4391",
+  "outcome": "PASS",
+  "viewports": [
+    320,
+    390,
+    768,
+    1024,
+    1440
+  ],
+  "cases": 5,
+  "screenshots": 20,
+  "results": [
+    {
+      "width": 320,
+      "height": 844,
+      "dpr": 2,
+      "home": {
+        "center": {
+          "broken": [],
+          "centered": true,
+          "dpr": 2,
+          "image": {
+            "bottom": 570.518798828125,
+            "height": 227.9970703125,
+            "left": 46.0108642578125,
+            "right": 274.0067138671875,
+            "top": 342.521728515625,
+            "width": 227.995849609375
+          },
+          "imageFilter": "none",
+          "loading": "lazy",
+          "natural": [
+            1080,
+            668
+          ],
+          "overflow": [
+            320,
+            320
+          ],
+          "plate": {
+            "bottom": 571.71875,
+            "height": 230.39700317382812,
+            "left": 44.81087493896485,
+            "right": 275.2066879272461,
+            "top": 341.3217468261719,
+            "width": 230.39581298828125
+          },
+          "plateBackground": "rgb(251, 250, 247)",
+          "reducedMediaActive": false,
+          "src": "http://127.0.0.1:4391/assets/product_shots/temporary_eclipse_bite_bundle_web.webp",
+          "stage": {
+            "bottom": 607.71875,
+            "left": 28,
+            "right": 292,
+            "top": 281.71875
+          },
+          "status": "temporary_replace_before_final",
+          "transitionDuration": "0.55s, 0.55s, 0.45s"
+        },
+        "offCenterStates": [
+          {
+            "centered": false,
+            "hidden": null,
+            "plate": {
+              "bottom": 570.1124267578125,
+              "left": -11.98917007446289,
+              "right": 145.3709831237793,
+              "top": 374.65283203125
+            },
+            "stage": {
+              "bottom": 607.71875,
+              "left": 28,
+              "right": 292,
+              "top": 281.71875
+            }
+          },
+          {
+            "centered": false,
+            "hidden": "true",
+            "plate": {
+              "bottom": 0,
+              "left": 0,
+              "right": 0,
+              "top": 0
+            },
+            "stage": {
+              "bottom": 607.71875,
+              "left": 28,
+              "right": 292,
+              "top": 281.71875
+            }
+          },
+          {
+            "centered": false,
+            "hidden": "true",
+            "plate": {
+              "bottom": 0,
+              "left": 0,
+              "right": 0,
+              "top": 0
+            },
+            "stage": {
+              "bottom": 607.71875,
+              "left": 28,
+              "right": 292,
+              "top": 281.71875
+            }
+          },
+          {
+            "centered": false,
+            "hidden": "true",
+            "plate": {
+              "bottom": 0,
+              "left": 0,
+              "right": 0,
+              "top": 0
+            },
+            "stage": {
+              "bottom": 607.71875,
+              "left": 28,
+              "right": 292,
+              "top": 281.71875
+            }
+          },
+          {
+            "centered": false,
+            "hidden": null,
+            "plate": {
+              "bottom": 569.8404541015625,
+              "left": 184.43963623046875,
+              "right": 335.29974365234375,
+              "top": 377.0601806640625
+            },
+            "stage": {
+              "bottom": 607.71875,
+              "left": 28,
+              "right": 292,
+              "top": 281.71875
+            }
+          }
+        ],
+        "rightWrap": true,
+        "leftArrow": true,
+        "rightRestore": true,
+        "keyboardRight": true,
+        "keyboardLeft": true,
+        "focus": {
+          "active": true,
+          "outline": "solid",
+          "visible": true,
+          "width": "2px"
+        },
+        "swipe": true
+      },
+      "shop": {
+        "grid": {
+          "broken": [],
+          "dpr": 2,
+          "filter": "none",
+          "hidden": false,
+          "image": {
+            "height": 145.84375,
+            "width": 235.796875
+          },
+          "loading": "lazy",
+          "natural": [
+            1080,
+            668
+          ],
+          "overflow": [
+            320,
+            320
+          ],
+          "ratio": 0.899988072519084,
+          "reducedMediaActive": false,
+          "src": "http://127.0.0.1:4391/assets/product_shots/temporary_eclipse_bite_bundle_web.webp",
+          "status": "temporary_replace_before_final",
+          "transitionDuration": "0.3s",
+          "well": {
+            "height": 262,
+            "width": 262
+          }
+        },
+        "hoverTransform": "none",
+        "focus": {
+          "active": true,
+          "outline": "solid",
+          "visible": true,
+          "width": "2.5px"
+        },
+        "filters": {
+          "pure": true,
+          "almond": true,
+          "hazelnut": true,
+          "goji": true,
+          "all": false
+        },
+        "list": {
+          "bodyClass": "shop-list-view",
+          "image": {
+            "height": 145.84375,
+            "width": 235.796875
+          },
+          "overflow": [
+            320,
+            320
+          ],
+          "ratio": 0.899988072519084,
+          "well": {
+            "height": 196.5,
+            "width": 262
+          }
+        }
+      },
+      "logs": []
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "dpr": 2,
+      "home": {
+        "center": {
+          "broken": [],
+          "centered": true,
+          "dpr": 2,
+          "image": {
+            "bottom": 570.8078002929688,
+            "height": 228,
+            "left": 81,
+            "right": 309,
+            "top": 342.80780029296875,
+            "width": 228
+          },
+          "imageFilter": "none",
+          "loading": "lazy",
+          "natural": [
+            1080,
+            668
+          ],
+          "overflow": [
+            390,
+            390
+          ],
+          "plate": {
+            "bottom": 572.0078125,
+            "height": 230.4000244140625,
+            "left": 79.79999542236328,
+            "right": 310.2000198364258,
+            "top": 341.6077880859375,
+            "width": 230.4000244140625
+          },
+          "plateBackground": "rgb(251, 250, 247)",
+          "reducedMediaActive": false,
+          "src": "http://127.0.0.1:4391/assets/product_shots/temporary_eclipse_bite_bundle_web.webp",
+          "stage": {
+            "bottom": 608.0078125,
+            "left": 28,
+            "right": 362,
+            "top": 282.0078125
+          },
+          "status": "temporary_replace_before_final",
+          "transitionDuration": "0.55s, 0.55s, 0.45s"
+        },
+        "offCenterStates": [
+          {
+            "centered": false,
+            "hidden": null,
+            "plate": {
+              "bottom": 570.3541259765625,
+              "left": 22.41195297241211,
+              "right": 178.6093864440918,
+              "top": 375.37457275390625
+            },
+            "stage": {
+              "bottom": 608.0078125,
+              "left": 28,
+              "right": 362,
+              "top": 282.0078125
+            }
+          },
+          {
+            "centered": false,
+            "hidden": "true",
+            "plate": {
+              "bottom": 0,
+              "left": 0,
+              "right": 0,
+              "top": 0
+            },
+            "stage": {
+              "bottom": 608.0078125,
+              "left": 28,
+              "right": 362,
+              "top": 282.0078125
+            }
+          },
+          {
+            "centered": false,
+            "hidden": "true",
+            "plate": {
+              "bottom": 0,
+              "left": 0,
+              "right": 0,
+              "top": 0
+            },
+            "stage": {
+              "bottom": 608.0078125,
+              "left": 28,
+              "right": 362,
+              "top": 282.0078125
+            }
+          },
+          {
+            "centered": false,
+            "hidden": "true",
+            "plate": {
+              "bottom": 0,
+              "left": 0,
+              "right": 0,
+              "top": 0
+            },
+            "stage": {
+              "bottom": 608.0078125,
+              "left": 28,
+              "right": 362,
+              "top": 282.0078125
+            }
+          },
+          {
+            "centered": false,
+            "hidden": null,
+            "plate": {
+              "bottom": 570.1295166015625,
+              "left": 219.43963623046875,
+              "right": 370.29974365234375,
+              "top": 377.3492431640625
+            },
+            "stage": {
+              "bottom": 608.0078125,
+              "left": 28,
+              "right": 362,
+              "top": 282.0078125
+            }
+          }
+        ],
+        "rightWrap": true,
+        "leftArrow": true,
+        "rightRestore": true,
+        "keyboardRight": true,
+        "keyboardLeft": true,
+        "focus": {
+          "active": true,
+          "outline": "solid",
+          "visible": true,
+          "width": "2px"
+        },
+        "swipe": true
+      },
+      "shop": {
+        "grid": {
+          "broken": [],
+          "dpr": 2,
+          "filter": "none",
+          "hidden": false,
+          "image": {
+            "height": 184.8046875,
+            "width": 298.796875
+          },
+          "loading": "lazy",
+          "natural": [
+            1080,
+            668
+          ],
+          "overflow": [
+            390,
+            390
+          ],
+          "ratio": 0.8999905873493976,
+          "reducedMediaActive": false,
+          "src": "http://127.0.0.1:4391/assets/product_shots/temporary_eclipse_bite_bundle_web.webp",
+          "status": "temporary_replace_before_final",
+          "transitionDuration": "0.3s",
+          "well": {
+            "height": 332,
+            "width": 332
+          }
+        },
+        "hoverTransform": "none",
+        "focus": {
+          "active": true,
+          "outline": "solid",
+          "visible": true,
+          "width": "2.5px"
+        },
+        "filters": {
+          "pure": true,
+          "almond": true,
+          "hazelnut": true,
+          "goji": true,
+          "all": false
+        },
+        "list": {
+          "bodyClass": "shop-list-view",
+          "image": {
+            "height": 184.8046875,
+            "width": 298.796875
+          },
+          "overflow": [
+            390,
+            390
+          ],
+          "ratio": 0.8999905873493976,
+          "well": {
+            "height": 249,
+            "width": 332
+          }
+        }
+      },
+      "logs": []
+    },
+    {
+      "width": 768,
+      "height": 1000,
+      "dpr": 2,
+      "home": {
+        "center": {
+          "broken": [],
+          "centered": true,
+          "dpr": 2,
+          "image": {
+            "bottom": 648.7140502929688,
+            "height": 228,
+            "left": 270,
+            "right": 498,
+            "top": 420.7140502929687,
+            "width": 228
+          },
+          "imageFilter": "none",
+          "loading": "lazy",
+          "natural": [
+            1080,
+            668
+          ],
+          "overflow": [
+            768,
+            768
+          ],
+          "plate": {
+            "bottom": 649.9140625,
+            "height": 230.4000244140625,
+            "left": 268.79998779296875,
+            "right": 499.2000122070313,
+            "top": 419.5140380859375,
+            "width": 230.4000244140625
+          },
+          "plateBackground": "rgb(251, 250, 247)",
+          "reducedMediaActive": false,
+          "src": "http://127.0.0.1:4391/assets/product_shots/temporary_eclipse_bite_bundle_web.webp",
+          "stage": {
+            "bottom": 685.9140625,
+            "left": 28,
+            "right": 740,
+            "top": 359.9140625
+          },
+          "status": "temporary_replace_before_final",
+          "transitionDuration": "0.55s, 0.55s, 0.45s"
+        },
+        "offCenterStates": [
+          {
+            "centered": false,
+            "hidden": null,
+            "plate": {
+              "bottom": 629.58837890625,
+              "left": 165.73800659179688,
+              "right": 318.4364013671875,
+              "top": 434.3826904296875
+            },
+            "stage": {
+              "bottom": 685.9140625,
+              "left": 28,
+              "right": 740,
+              "top": 359.9140625
+            }
+          },
+          {
+            "centered": false,
+            "hidden": null,
+            "plate": {
+              "bottom": 600.4611206054688,
+              "left": -22.015113830566406,
+              "right": 59.978553771972656,
+              "top": 453.4869995117187
+            },
+            "stage": {
+              "bottom": 685.9140625,
+              "left": 28,
+              "right": 740,
+              "top": 359.9140625
+            }
+          },
+          {
+            "centered": false,
+            "hidden": "true",
+            "plate": {
+              "bottom": 0,
+              "left": 0,
+              "right": 0,
+              "top": 0
+            },
+            "stage": {
+              "bottom": 685.9140625,
+              "left": 28,
+              "right": 740,
+              "top": 359.9140625
+            }
+          },
+          {
+            "centered": false,
+            "hidden": null,
+            "plate": {
+              "bottom": 598.70703125,
+              "left": 723.283203125,
+              "right": 801.5449829101562,
+              "top": 454.6277465820313
+            },
+            "stage": {
+              "bottom": 685.9140625,
+              "left": 28,
+              "right": 740,
+              "top": 359.9140625
+            }
+          },
+          {
+            "centered": false,
+            "hidden": null,
+            "plate": {
+              "bottom": 626.9376831054688,
+              "left": 472.6926879882813,
+              "right": 616.0328369140625,
+              "top": 436.1887817382813
+            },
+            "stage": {
+              "bottom": 685.9140625,
+              "left": 28,
+              "right": 740,
+              "top": 359.9140625
+            }
+          }
+        ],
+        "rightWrap": true,
+        "leftArrow": true,
+        "rightRestore": true,
+        "keyboardRight": true,
+        "keyboardLeft": true,
+        "focus": {
+          "active": true,
+          "outline": "solid",
+          "visible": true,
+          "width": "2px"
+        },
+        "swipe": true
+      },
+      "shop": {
+        "grid": {
+          "broken": [],
+          "dpr": 2,
+          "filter": "none",
+          "hidden": false,
+          "image": {
+            "height": 193.15625,
+            "width": 312.296875
+          },
+          "loading": "lazy",
+          "natural": [
+            1080,
+            668
+          ],
+          "overflow": [
+            768,
+            768
+          ],
+          "ratio": 0.8999909942363112,
+          "reducedMediaActive": false,
+          "src": "http://127.0.0.1:4391/assets/product_shots/temporary_eclipse_bite_bundle_web.webp",
+          "status": "temporary_replace_before_final",
+          "transitionDuration": "0.3s",
+          "well": {
+            "height": 347,
+            "width": 347
+          }
+        },
+        "hoverTransform": "matrix(1.00867, 0, 0, 1.00867, 0, 0)",
+        "focus": {
+          "active": true,
+          "outline": "solid",
+          "visible": true,
+          "width": "2px"
+        },
+        "filters": {
+          "pure": true,
+          "almond": true,
+          "hazelnut": true,
+          "goji": true,
+          "all": false
+        },
+        "list": {
+          "bodyClass": "shop-list-view",
+          "image": {
+            "height": 395.2265625,
+            "width": 639
+          },
+          "overflow": [
+            768,
+            768
+          ],
+          "ratio": 0.9,
+          "well": {
+            "height": 532.5,
+            "width": 710
+          }
+        }
+      },
+      "logs": []
+    },
+    {
+      "width": 1024,
+      "height": 1000,
+      "dpr": 2,
+      "home": {
+        "center": {
+          "broken": [],
+          "centered": true,
+          "dpr": 2,
+          "image": {
+            "bottom": 674.651611328125,
+            "height": 331.2000427246094,
+            "left": 346.3999938964844,
+            "right": 677.6000366210938,
+            "top": 343.4515686035156,
+            "width": 331.2000427246094
+          },
+          "imageFilter": "none",
+          "loading": "lazy",
+          "natural": [
+            1080,
+            668
+          ],
+          "overflow": [
+            1024,
+            1024
+          ],
+          "plate": {
+            "bottom": 675.8515625,
+            "height": 333.6000061035156,
+            "left": 345.20001220703125,
+            "right": 678.7999877929688,
+            "top": 342.2515563964844,
+            "width": 333.5999755859375
+          },
+          "plateBackground": "rgb(251, 250, 247)",
+          "reducedMediaActive": false,
+          "src": "http://127.0.0.1:4391/assets/product_shots/temporary_eclipse_bite_bundle_web.webp",
+          "stage": {
+            "bottom": 751.8515625,
+            "left": 28,
+            "right": 996,
+            "top": 293.8515625
+          },
+          "status": "temporary_replace_before_final",
+          "transitionDuration": "0.55s, 0.55s, 0.45s"
+        },
+        "offCenterStates": [
+          {
+            "centered": false,
+            "hidden": null,
+            "plate": {
+              "bottom": 665.223876953125,
+              "left": 182.7091827392578,
+              "right": 404.5922546386719,
+              "top": 383.9237976074219
+            },
+            "stage": {
+              "bottom": 751.8515625,
+              "left": 28,
+              "right": 996,
+              "top": 293.8515625
+            }
+          },
+          {
+            "centered": false,
+            "hidden": null,
+            "plate": {
+              "bottom": 645.4013671875,
+              "left": 74.97492980957031,
+              "right": 209.47743225097656,
+              "top": 433.9636840820313
+            },
+            "stage": {
+              "bottom": 751.8515625,
+              "left": 28,
+              "right": 996,
+              "top": 293.8515625
+            }
+          },
+          {
+            "centered": false,
+            "hidden": "true",
+            "plate": {
+              "bottom": 0,
+              "left": 0,
+              "right": 0,
+              "top": 0
+            },
+            "stage": {
+              "bottom": 751.8515625,
+              "left": 28,
+              "right": 996,
+              "top": 293.8515625
+            }
+          },
+          {
+            "centered": false,
+            "hidden": null,
+            "plate": {
+              "bottom": 644.3138427734375,
+              "left": 824.4608154296875,
+              "right": 954.8145751953124,
+              "top": 436.6263427734375
+            },
+            "stage": {
+              "bottom": 751.8515625,
+              "left": 28,
+              "right": 996,
+              "top": 293.8515625
+            }
+          },
+          {
+            "centered": false,
+            "hidden": null,
+            "plate": {
+              "bottom": 663.4701538085938,
+              "left": 646.3680419921875,
+              "right": 855.1351928710938,
+              "top": 388.9957275390625
+            },
+            "stage": {
+              "bottom": 751.8515625,
+              "left": 28,
+              "right": 996,
+              "top": 293.8515625
+            }
+          }
+        ],
+        "rightWrap": true,
+        "leftArrow": true,
+        "rightRestore": true,
+        "keyboardRight": true,
+        "keyboardLeft": true,
+        "focus": {
+          "active": true,
+          "outline": "solid",
+          "visible": true,
+          "width": "2px"
+        },
+        "swipe": true
+      },
+      "shop": {
+        "grid": {
+          "broken": [],
+          "dpr": 2,
+          "filter": "none",
+          "hidden": false,
+          "image": {
+            "height": 171.078125,
+            "width": 276.6015625
+          },
+          "loading": "lazy",
+          "natural": [
+            1080,
+            668
+          ],
+          "overflow": [
+            1024,
+            1024
+          ],
+          "ratio": 0.89999745799334,
+          "reducedMediaActive": false,
+          "src": "http://127.0.0.1:4391/assets/product_shots/temporary_eclipse_bite_bundle_web.webp",
+          "status": "temporary_replace_before_final",
+          "transitionDuration": "0.3s",
+          "well": {
+            "height": 307.3359375,
+            "width": 307.3359375
+          }
+        },
+        "hoverTransform": "matrix(1.00419, 0, 0, 1.00419, 0, 0)",
+        "focus": {
+          "active": true,
+          "outline": "solid",
+          "visible": true,
+          "width": "2.5px"
+        },
+        "filters": {
+          "pure": true,
+          "almond": true,
+          "hazelnut": true,
+          "goji": true,
+          "all": false
+        },
+        "list": {
+          "bodyClass": "shop-list-view",
+          "image": {
+            "height": 105.765625,
+            "width": 171
+          },
+          "overflow": [
+            1024,
+            1024
+          ],
+          "ratio": 0.9,
+          "well": {
+            "height": 142.5,
+            "width": 190
+          }
+        }
+      },
+      "logs": []
+    },
+    {
+      "width": 1440,
+      "height": 1000,
+      "dpr": 2,
+      "home": {
+        "center": {
+          "broken": [],
+          "centered": true,
+          "dpr": 2,
+          "image": {
+            "bottom": 666.948486328125,
+            "height": 331.2000427246094,
+            "left": 554.4000244140625,
+            "right": 885.6000366210938,
+            "top": 335.7484436035156,
+            "width": 331.20001220703125
+          },
+          "imageFilter": "none",
+          "loading": "lazy",
+          "natural": [
+            1080,
+            668
+          ],
+          "overflow": [
+            1440,
+            1440
+          ],
+          "plate": {
+            "bottom": 668.1484375,
+            "height": 333.6000061035156,
+            "left": 553.2000122070312,
+            "right": 886.7999877929688,
+            "top": 334.5484313964844,
+            "width": 333.5999755859375
+          },
+          "plateBackground": "rgb(251, 250, 247)",
+          "reducedMediaActive": false,
+          "src": "http://127.0.0.1:4391/assets/product_shots/temporary_eclipse_bite_bundle_web.webp",
+          "stage": {
+            "bottom": 761.34375,
+            "left": 28,
+            "right": 1412,
+            "top": 286.1484375
+          },
+          "status": "temporary_replace_before_final",
+          "transitionDuration": "0.55s, 0.55s, 0.45s"
+        },
+        "offCenterStates": [
+          {
+            "centered": false,
+            "hidden": null,
+            "plate": {
+              "bottom": 657.343505859375,
+              "left": 391.7265625,
+              "right": 614.6105346679688,
+              "top": 375.6490478515625
+            },
+            "stage": {
+              "bottom": 761.34375,
+              "left": 28,
+              "right": 1412,
+              "top": 286.1484375
+            }
+          },
+          {
+            "centered": false,
+            "hidden": null,
+            "plate": {
+              "bottom": 637.6851806640625,
+              "left": 284.3402404785156,
+              "right": 419.8459167480469,
+              "top": 425.38720703125
+            },
+            "stage": {
+              "bottom": 761.34375,
+              "left": 28,
+              "right": 1412,
+              "top": 286.1484375
+            }
+          },
+          {
+            "centered": false,
+            "hidden": "true",
+            "plate": {
+              "bottom": 0,
+              "left": 0,
+              "right": 0,
+              "top": 0
+            },
+            "stage": {
+              "bottom": 761.34375,
+              "left": 28,
+              "right": 1412,
+              "top": 286.1484375
+            }
+          },
+          {
+            "centered": false,
+            "hidden": null,
+            "plate": {
+              "bottom": 636.35205078125,
+              "left": 1032.4608154296875,
+              "right": 1162.8145751953125,
+              "top": 428.66455078125
+            },
+            "stage": {
+              "bottom": 761.34375,
+              "left": 28,
+              "right": 1412,
+              "top": 286.1484375
+            }
+          },
+          {
+            "centered": false,
+            "hidden": null,
+            "plate": {
+              "bottom": 655.299072265625,
+              "left": 856.1691284179688,
+              "right": 1064.106201171875,
+              "top": 381.4866333007813
+            },
+            "stage": {
+              "bottom": 761.34375,
+              "left": 28,
+              "right": 1412,
+              "top": 286.1484375
+            }
+          }
+        ],
+        "rightWrap": true,
+        "leftArrow": true,
+        "rightRestore": true,
+        "keyboardRight": true,
+        "keyboardLeft": true,
+        "focus": {
+          "active": true,
+          "outline": "solid",
+          "visible": true,
+          "width": "2px"
+        },
+        "swipe": true
+      },
+      "shop": {
+        "grid": {
+          "broken": [],
+          "dpr": 2,
+          "filter": "none",
+          "hidden": false,
+          "image": {
+            "height": 200.0234375,
+            "width": 323.3984375
+          },
+          "loading": "lazy",
+          "natural": [
+            1080,
+            668
+          ],
+          "overflow": [
+            1440,
+            1440
+          ],
+          "ratio": 0.8999891292531796,
+          "reducedMediaActive": false,
+          "src": "http://127.0.0.1:4391/assets/product_shots/temporary_eclipse_bite_bundle_web.webp",
+          "status": "temporary_replace_before_final",
+          "transitionDuration": "0.3s",
+          "well": {
+            "height": 359.3359375,
+            "width": 359.3359375
+          }
+        },
+        "hoverTransform": "matrix(1.00623, 0, 0, 1.00623, 0, 0)",
+        "focus": {
+          "active": true,
+          "outline": "solid",
+          "visible": true,
+          "width": "2px"
+        },
+        "filters": {
+          "pure": true,
+          "almond": true,
+          "hazelnut": true,
+          "goji": true,
+          "all": false
+        },
+        "list": {
+          "bodyClass": "shop-list-view",
+          "image": {
+            "height": 105.765625,
+            "width": 171
+          },
+          "overflow": [
+            1440,
+            1440
+          ],
+          "ratio": 0.9,
+          "well": {
+            "height": 142.5,
+            "width": 190
+          }
+        }
+      },
+      "logs": []
+    }
+  ],
+  "failures": []
+}

@@ -1,0 +1,105 @@
+{
+  "schema": "maplemoon-receipt/v2",
+  "receipt_id": "maplemoon_temporary_bundle_site_fit_20260825t170206",
+  "packet_id": "maplemoon_temporary_bundle_site_fit_20260825t170206",
+  "worker_thread_id": "019ffe53-6243-73a2-9d75-e1a072cd07ce",
+  "worker": "codex_root",
+  "started_at": "2026-08-25T07:02:06Z",
+  "completed_at": "2026-08-25T07:19:15Z",
+  "files_read": [
+    "docs/orchestration/SIDECHAT_RECEIPT_GATE.md",
+    "scripts/check-maplemoon-receipt.py",
+    "_wip/deploy/generated/maplemoon-admitted-preview-r4-20260824T111607",
+    "_wip/evidence/maplemoon_temporary_bundle_derivative_20260825t153228/derived/temporary_bundle_cutout_full.png",
+    "_wip/evidence/maplemoon_temporary_bundle_derivative_20260825t153228/derived/temporary_bundle_cutout_web_1200.webp"
+  ],
+  "files_changed": [
+    "scripts/build_maplemoon_temporary_bundle_preview_20260825.py",
+    "scripts/check_maplemoon_temporary_bundle_preview_20260825.py",
+    "_wip/deploy/generated/maplemoon_temporary_bundle_preview_20260825t170206",
+    "_wip/evidence/maplemoon_temporary_bundle_site_fit_20260825t170206",
+    "docs/orchestration/reviews/maplemoon_temporary_bundle_site_fit_20260825t170206.json"
+  ],
+  "pre_sha256": {
+    "scripts/build_maplemoon_temporary_bundle_preview_20260825.py": null,
+    "scripts/check_maplemoon_temporary_bundle_preview_20260825.py": null,
+    "_wip/deploy/generated/maplemoon_temporary_bundle_preview_20260825t170206": null,
+    "_wip/evidence/maplemoon_temporary_bundle_site_fit_20260825t170206": null,
+    "docs/orchestration/reviews/maplemoon_temporary_bundle_site_fit_20260825t170206.json": null
+  },
+  "post_sha256": {
+    "scripts/build_maplemoon_temporary_bundle_preview_20260825.py": "556d9f1e96f32e785409250d4d8121d2fadb98904151d6b304a7b91544853fda",
+    "scripts/check_maplemoon_temporary_bundle_preview_20260825.py": "2d63f7da547b830b77c6bacef706e5ff8b751af7d785a42093fbf11e5a5eb1dc",
+    "_wip/deploy/generated/maplemoon_temporary_bundle_preview_20260825t170206": "b11cb60ef1629a8d4cc64dec8caa8359031361f22fb7c54d36ded55c74450bf0",
+    "_wip/evidence/maplemoon_temporary_bundle_site_fit_20260825t170206": "eac89f6d9319faff8a64c98e9c0ecc57adef5000e248cf973fc892144fe5339f",
+    "docs/orchestration/reviews/maplemoon_temporary_bundle_site_fit_20260825t170206.json": null
+  },
+  "checks": [
+    {
+      "command": "python3 -B scripts/check-maplemoon-receipt.py verify --packet docs/orchestration/packets/maplemoon_temporary_bundle_site_fit_20260825t170206.md --checkpoint _wip/checkpoints/maplemoon_temporary_bundle_site_fit_20260825t170206 --phase start",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "result": "PASS phase=start scope=5"
+    },
+    {
+      "command": "python3 -B scripts/build_maplemoon_temporary_bundle_preview_20260825.py",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "result": "BUILD PASS tree_sha256=b11cb60ef1629a8d4cc64dec8caa8359031361f22fb7c54d36ded55c74450bf0 files=77 asset_bytes=90474"
+    },
+    {
+      "command": "python3 -B scripts/check_maplemoon_temporary_bundle_preview_20260825.py --mode verify",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "result": "VERIFY PASS"
+    },
+    {
+      "command": "deterministic build replay",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "result": "Two runs returned identical output tree and asset hashes"
+    },
+    {
+      "command": "python3 -B scripts/check_maplemoon_temporary_bundle_preview_20260825.py --mode release",
+      "expected_exit_code": 2,
+      "exit_code": 2,
+      "result": "HOLD TEMPORARY_BUNDLE_REPLACE_BEFORE_FINAL matches=5"
+    },
+    {
+      "command": "node _wip/evidence/maplemoon_temporary_bundle_site_fit_20260825t170206/verify_temporary_bundle_browser.mjs http://127.0.0.1:4386",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "result": "BROWSER PASS cases=4 failures=0"
+    },
+    {
+      "command": "shasum -a 256 -c _wip/evidence/maplemoon_temporary_bundle_site_fit_20260825t170206/source_output_hashes.sha256",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "result": "19/19 listed paths OK"
+    },
+    {
+      "command": "visual inspection of web asset and six annotated Home/Shop proofs",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "result": "No task-owned halo, clipping, stretching, overflow or illegibility found"
+    }
+  ],
+  "screenshots_or_urls": [
+    "_wip/evidence/maplemoon_temporary_bundle_site_fit_20260825t170206/shop_bundle_grid_390.png",
+    "_wip/evidence/maplemoon_temporary_bundle_site_fit_20260825t170206/shop_bundle_list_390.png",
+    "_wip/evidence/maplemoon_temporary_bundle_site_fit_20260825t170206/home_bundle_center_390.png",
+    "_wip/evidence/maplemoon_temporary_bundle_site_fit_20260825t170206/shop_bundle_grid_1440.png",
+    "_wip/evidence/maplemoon_temporary_bundle_site_fit_20260825t170206/shop_bundle_list_1440.png",
+    "_wip/evidence/maplemoon_temporary_bundle_site_fit_20260825t170206/home_bundle_center_1440.png"
+  ],
+  "failures": [],
+  "unknowns": [],
+  "residual_risk": [
+    "Temporary source retains indistinct Almond versus Hazelnut treatment, mould-like dome uniformity, synthetic Fudge geometry and unverified Goji surface material.",
+    "An unrelated concurrent hash change was observed on _wip/homepage_real_1_lead_photo.WIP.html; the output is isolated from it by the pinned admitted-preview base.",
+    "The generated preview is private review evidence only and must not be deployed or promoted."
+  ],
+  "forbidden_path_changes": [],
+  "proposed_next_state": "temporary_staging_review_ready_replace_before_final",
+  "next_reviewer": "Nate"
+}

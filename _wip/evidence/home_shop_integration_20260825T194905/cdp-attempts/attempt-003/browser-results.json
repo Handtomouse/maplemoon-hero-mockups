@@ -1,0 +1,883 @@
+{
+  "schema": "maplemoon-home-shop-integration-cdp-qa/v1",
+  "packetId": "MAPLEMOON-HOME-SHOP-INTEGRATION-20260825T194905",
+  "attemptRoot": "/Users/handtomouse/maplemoon-website/_wip/evidence/home_shop_integration_20260825T194905/cdp-attempts/attempt-003",
+  "browserRuntime": {
+    "protocol": "Playwright over Chrome DevTools Protocol",
+    "executable": "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome",
+    "windowSizeArgumentUsed": false
+  },
+  "base": "http://127.0.0.1:8766",
+  "outcome": "FAIL",
+  "candidate": {
+    "root": "/Users/handtomouse/maplemoon-website/_wip/deploy/generated/maplemoon-home-shop-integration-20260825T194905",
+    "homepageSha256": "66e107da9e875ddc17368100006f6da73987c4b3335b9f27c8775130c5ae6f74",
+    "shopSha256": "46245efd1b992c2dca635f993317936d547d92f43aa4bfb1c7a52a3ea797a491",
+    "bundleSha256": "8bca090850c29da285ae266d8bf666199ae7cacbeee475160df13bc82c66932f"
+  },
+  "reconstructedBaselines": {
+    "homeSourceSha256": "558c5bb86346d69029e0fa4abc34c9bff3c4386522e97eef34e5d2e655ecf1d5",
+    "homeBuiltSha256": "21ff6ae0c260d9927c5fcf390e67dd995d0f125554526f3f8259315db7f9315f",
+    "shopSourceSha256": "b1834aeacb06e11dc5b5de4b851c77d47fa32fae38f0e2579a5b03235ef28ed8",
+    "shopBuiltSha256": "b1834aeacb06e11dc5b5de4b851c77d47fa32fae38f0e2579a5b03235ef28ed8"
+  },
+  "cases": [
+    {
+      "route": "home",
+      "width": 1440,
+      "dpr": 1,
+      "status": 200,
+      "exactMetrics": {
+        "innerWidth": 1440,
+        "clientWidth": 1440,
+        "visualWidth": 1440
+      },
+      "projectionEqual": true,
+      "geometryEqual": true,
+      "sharedStylesEqual": true,
+      "sharedStyleInventory": {
+        "sheets": [
+          "/dvz0xjs.css",
+          "/brand_kit.css",
+          "/assets/design-system/mm-tokens.css",
+          "/assets/design-system/mm-base.css",
+          "/assets/design-system/mm-chrome.css",
+          "/assets/design-system/mm-primitives.css",
+          "/assets/icons/mm-icons.css",
+          "/styles/homepage.css",
+          "/mock-cart.css"
+        ],
+        "tokens": [
+          [
+            "--ink",
+            ""
+          ],
+          [
+            "--cream",
+            ""
+          ],
+          [
+            "--mm-serif",
+            "'p22-mackinac-pro','P22 Mackinac Pro',Georgia,serif"
+          ],
+          [
+            "--mm-sans",
+            "'neue-haas-grotesk-display','Neue Haas Grotesk Display Pro','Inter','Helvetica Neue',sans-serif"
+          ],
+          [
+            "--radius",
+            ""
+          ]
+        ],
+        "heroHeading": {
+          "fontFamily": "neue-haas-grotesk-display, \"Neue Haas Grotesk Display Pro\", Inter, \"Helvetica Neue\", sans-serif",
+          "fontSize": "32px",
+          "lineHeight": "0px",
+          "color": "rgb(231, 228, 202)",
+          "borderRadius": "0px"
+        },
+        "rangeHeading": {
+          "fontFamily": "p22-mackinac-pro, \"P22 Mackinac Pro\", Georgia, serif",
+          "fontSize": "45.36px",
+          "lineHeight": "47.1744px",
+          "color": "rgb(32, 39, 42)",
+          "borderRadius": "0px"
+        },
+        "comparisonHeading": {
+          "fontFamily": "p22-mackinac-pro, \"P22 Mackinac Pro\", Georgia, serif",
+          "fontSize": "49.6px",
+          "lineHeight": "54.56px",
+          "color": "rgb(44, 42, 38)",
+          "borderRadius": "0px"
+        },
+        "ritualHeading": {
+          "fontFamily": "p22-mackinac-pro, \"P22 Mackinac Pro\", Georgia, serif",
+          "fontSize": "49.6px",
+          "lineHeight": "54.56px",
+          "color": "rgb(44, 42, 38)",
+          "borderRadius": "0px"
+        },
+        "footerHome": {
+          "fontFamily": "p22-mackinac-pro, \"P22 Mackinac Pro\", Georgia, serif",
+          "fontSize": "18.4px",
+          "lineHeight": "27.6px",
+          "color": "rgb(44, 42, 38)",
+          "borderRadius": "0px"
+        },
+        "heldR6Nodes": 0
+      },
+      "baselineErrors": {
+        "consoleErrors": [],
+        "pageErrors": [],
+        "requestFailures": [],
+        "badResponses": []
+      },
+      "errors": {
+        "consoleErrors": [],
+        "pageErrors": [],
+        "requestFailures": [
+          {
+            "url": "http://127.0.0.1:8766/assets/product_shots/bar_pure_carob_hero.webp",
+            "error": "net::ERR_ABORTED"
+          },
+          {
+            "url": "http://127.0.0.1:8766/assets/product_shots/moon_pure_carob.webp",
+            "error": "net::ERR_ABORTED"
+          },
+          {
+            "url": "http://127.0.0.1:8766/assets/carob_wordmark.svg",
+            "error": "net::ERR_ABORTED"
+          },
+          {
+            "url": "http://127.0.0.1:8766/assets/product_shots/eclipse_pecan_real.webp",
+            "error": "net::ERR_ABORTED"
+          },
+          {
+            "url": "http://127.0.0.1:8766/assets/product_shots/eclipse_almond.webp",
+            "error": "net::ERR_ABORTED"
+          },
+          {
+            "url": "http://127.0.0.1:8766/assets/product_shots/eclipse_hazelnut.webp",
+            "error": "net::ERR_ABORTED"
+          },
+          {
+            "url": "http://127.0.0.1:8766/assets/product_shots/eclipse_goji_real.webp",
+            "error": "net::ERR_ABORTED"
+          },
+          {
+            "url": "http://127.0.0.1:8766/assets/product_shots/eclipse_fudge.webp",
+            "error": "net::ERR_ABORTED"
+          },
+          {
+            "url": "http://127.0.0.1:8766/assets/product_shots/temporary_eclipse_bite_bundle_web.webp",
+            "error": "net::ERR_ABORTED"
+          },
+          {
+            "url": "http://127.0.0.1:8766/assets/hero_shots/carob_branch_dusk.jpg",
+            "error": "net::ERR_ABORTED"
+          },
+          {
+            "url": "http://127.0.0.1:8766/assets/our_story/ritual_quiet_finish_20260825.webp",
+            "error": "net::ERR_ABORTED"
+          },
+          {
+            "url": "http://127.0.0.1:8766/assets/our_story/ritual_softer_pause_20260825.webp",
+            "error": "net::ERR_ABORTED"
+          },
+          {
+            "url": "http://127.0.0.1:8766/assets/our_story/ritual_last_cup_20260825.webp",
+            "error": "net::ERR_ABORTED"
+          },
+          {
+            "url": "http://127.0.0.1:8766/assets/licensed/carob_farm/australian-carob-0205-16x9.jpg",
+            "error": "net::ERR_ABORTED"
+          },
+          {
+            "url": "http://127.0.0.1:8766/assets/our_story/founder_carli_701_v2_2400.webp",
+            "error": "net::ERR_ABORTED"
+          },
+          {
+            "url": "http://127.0.0.1:8766/assets/our_story/founder_dylan_701_v2_2400.webp",
+            "error": "net::ERR_ABORTED"
+          },
+          {
+            "url": "http://127.0.0.1:8766/assets/product_shots/bar_goji_coconut.webp",
+            "error": "net::ERR_ABORTED"
+          },
+          {
+            "url": "http://127.0.0.1:8766/assets/product_shots/bar_cayenne.webp",
+            "error": "net::ERR_ABORTED"
+          },
+          {
+            "url": "http://127.0.0.1:8766/assets/product_shots/bar_hazelnut.webp",
+            "error": "net::ERR_ABORTED"
+          },
+          {
+            "url": "http://127.0.0.1:8766/assets/product_shots/bar_peppermint.webp",
+            "error": "net::ERR_ABORTED"
+          },
+          {
+            "url": "http://127.0.0.1:8766/assets/product_shots/bar_pure_carob.webp",
+            "error": "net::ERR_ABORTED"
+          },
+          {
+            "url": "http://127.0.0.1:8766/assets/product_shots/bar_almond.webp",
+            "error": "net::ERR_ABORTED"
+          },
+          {
+            "url": "http://127.0.0.1:8766/assets/hero_videos/gen/finalists/graded_blue/finalist_wetsand2_pingpong.mp4",
+            "error": "net::ERR_ABORTED"
+          },
+          {
+            "url": "http://127.0.0.1:8766/assets/hero_shots/finalist_wetsand2_poster.webp",
+            "error": "net::ERR_ABORTED"
+          },
+          {
+            "url": "http://127.0.0.1:8766/assets/icons/mm-icons.svg",
+            "error": "net::ERR_ABORTED"
+          },
+          {
+            "url": "http://127.0.0.1:8766/assets/icons/mm-icons-v2.svg",
+            "error": "net::ERR_ABORTED"
+          },
+          {
+            "url": "https://use.typekit.net/dvz0xjs.css",
+            "error": "net::ERR_ABORTED"
+          },
+          {
+            "url": "http://127.0.0.1:8766/brand_kit.css",
+            "error": "net::ERR_ABORTED"
+          },
+          {
+            "url": "http://127.0.0.1:8766/assets/design-system/mm-tokens.css",
+            "error": "net::ERR_ABORTED"
+          },
+          {
+            "url": "http://127.0.0.1:8766/assets/design-system/mm-base.css",
+            "error": "net::ERR_ABORTED"
+          },
+          {
+            "url": "http://127.0.0.1:8766/assets/design-system/mm-chrome.css",
+            "error": "net::ERR_ABORTED"
+          },
+          {
+            "url": "http://127.0.0.1:8766/assets/design-system/mm-primitives.css",
+            "error": "net::ERR_ABORTED"
+          },
+          {
+            "url": "http://127.0.0.1:8766/assets/icons/mm-icons.css",
+            "error": "net::ERR_ABORTED"
+          },
+          {
+            "url": "http://127.0.0.1:8766/styles/homepage.css",
+            "error": "net::ERR_ABORTED"
+          },
+          {
+            "url": "http://127.0.0.1:8766/mock-cart.css",
+            "error": "net::ERR_ABORTED"
+          },
+          {
+            "url": "http://127.0.0.1:8766/assets/design-system/mm-chrome.js",
+            "error": "net::ERR_ABORTED"
+          },
+          {
+            "url": "http://127.0.0.1:8766/mock-cart.js",
+            "error": "net::ERR_ABORTED"
+          }
+        ],
+        "badResponses": []
+      },
+      "checks": {
+        "categoryRows": [
+          {
+            "category": "bars",
+            "href": "/assets/icons/mm-icons-v2.svg#mm-icon-category-bar-20",
+            "state": {
+              "stage": "bars",
+              "on": true,
+              "selected": "true"
+            }
+          },
+          {
+            "category": "bananas",
+            "href": "/assets/icons/mm-icons-v2.svg#mm-icon-category-banana-20",
+            "state": {
+              "stage": "bananas",
+              "on": true,
+              "selected": "true"
+            }
+          },
+          {
+            "category": "moons",
+            "href": "/assets/icons/mm-icons-v2.svg#mm-icon-category-moon-20",
+            "state": {
+              "stage": "moons",
+              "on": true,
+              "selected": "true"
+            }
+          },
+          {
+            "category": "eclipseBites",
+            "href": "/assets/icons/mm-icons-v2.svg#mm-icon-category-bites-20",
+            "state": {
+              "stage": "eclipseBites",
+              "on": true,
+              "selected": "true"
+            }
+          },
+          {
+            "category": "elixirs",
+            "href": "/assets/icons/mm-icons-v2.svg#mm-icon-category-elixir-20",
+            "state": {
+              "stage": "elixirs",
+              "on": true,
+              "selected": "true"
+            }
+          }
+        ],
+        "carousel": {
+          "before": "Coconut & Goji",
+          "after": "Cayenne Chilli",
+          "restored": "Coconut & Goji"
+        },
+        "comparison": {
+          "hrefs": [
+            "/assets/icons/mm-icons-v2.svg#mm-icon-comparison-cacao-bitter-24",
+            "/assets/icons/mm-icons-v2.svg#mm-icon-comparison-carob-sweet-24",
+            "/assets/icons/mm-icons-v2.svg#mm-icon-comparison-check-16",
+            "/assets/icons/mm-icons-v2.svg#mm-icon-comparison-cacao-stimulation-24",
+            "/assets/icons/mm-icons-v2.svg#mm-icon-comparison-carob-caffeine-free-24",
+            "/assets/icons/mm-icons-v2.svg#mm-icon-comparison-check-16",
+            "/assets/icons/mm-icons-v2.svg#mm-icon-comparison-cacao-activation-24",
+            "/assets/icons/mm-icons-v2.svg#mm-icon-comparison-carob-evening-24",
+            "/assets/icons/mm-icons-v2.svg#mm-icon-comparison-check-16"
+          ],
+          "panel": {
+            "left": 128,
+            "right": 1312,
+            "top": 1594.5,
+            "bottom": 2065.5
+          },
+          "rows": [
+            {
+              "box": {
+                "left": 128,
+                "right": 1312,
+                "top": 1711.5,
+                "bottom": 1829.5
+              },
+              "children": [
+                {
+                  "left": 128,
+                  "right": 172,
+                  "top": 1729.5,
+                  "bottom": 1755.09375
+                },
+                {
+                  "left": 190,
+                  "right": 742,
+                  "top": 1746.40625,
+                  "bottom": 1793.578125
+                },
+                {
+                  "left": 760,
+                  "right": 1312,
+                  "top": 1746.40625,
+                  "bottom": 1793.578125
+                }
+              ]
+            },
+            {
+              "box": {
+                "left": 128,
+                "right": 1312,
+                "top": 1829.5,
+                "bottom": 1947.5
+              },
+              "children": [
+                {
+                  "left": 128,
+                  "right": 172,
+                  "top": 1847.5,
+                  "bottom": 1873.09375
+                },
+                {
+                  "left": 190,
+                  "right": 742,
+                  "top": 1864.40625,
+                  "bottom": 1911.578125
+                },
+                {
+                  "left": 760,
+                  "right": 1312,
+                  "top": 1864.40625,
+                  "bottom": 1911.578125
+                }
+              ]
+            },
+            {
+              "box": {
+                "left": 128,
+                "right": 1312,
+                "top": 1947.5,
+                "bottom": 2065.5
+              },
+              "children": [
+                {
+                  "left": 128,
+                  "right": 172,
+                  "top": 1965.5,
+                  "bottom": 1991.09375
+                },
+                {
+                  "left": 190,
+                  "right": 742,
+                  "top": 1982.40625,
+                  "bottom": 2029.578125
+                },
+                {
+                  "left": 760,
+                  "right": 1312,
+                  "top": 1982.40625,
+                  "bottom": 2029.578125
+                }
+              ]
+            }
+          ]
+        },
+        "ritual": [
+          {
+            "src": "/assets/our_story/ritual_quiet_finish_20260825.webp",
+            "objectPosition": "50% 24%",
+            "frameRatio": 0.8000296398755126,
+            "phBottom": 2598.78125,
+            "txTop": 2598.78125,
+            "captionPosition": "relative",
+            "caption": "01 A quiet finish A sweet ending without the stimulants"
+          },
+          {
+            "src": "/assets/our_story/ritual_softer_pause_20260825.webp",
+            "objectPosition": "50% 20%",
+            "frameRatio": 0.8000296398755126,
+            "phBottom": 2598.78125,
+            "txTop": 2598.78125,
+            "captionPosition": "relative",
+            "caption": "02 A softer pause A 3:33pm pick me up without the nasties"
+          },
+          {
+            "src": "/assets/our_story/ritual_last_cup_20260825.webp",
+            "objectPosition": "50% 38%",
+            "frameRatio": 0.8000296398755126,
+            "phBottom": 2598.78125,
+            "txTop": 2598.78125,
+            "captionPosition": "relative",
+            "caption": "03 The last cup A warm drink without the activation"
+          }
+        ],
+        "bundle": {
+          "declaredLoading": "lazy",
+          "centered": true,
+          "status": "temporary_replace_before_final",
+          "src": "/assets/product_shots/temporary_eclipse_bite_bundle_web.webp",
+          "natural": [
+            1080,
+            668
+          ],
+          "alt": "Temporary five-piece Eclipse Bite Bundle assortment",
+          "label": "TEMPORARY STAGING / REPLACE BEFORE FINAL",
+          "visibleLabels": [
+            "TEMPORARY STAGING / REPLACE BEFORE FINAL"
+          ],
+          "image": {
+            "left": 572.6600341796875,
+            "top": -205.37936401367188,
+            "right": 867.3399658203125,
+            "bottom": 263.140625
+          },
+          "content": {
+            "left": 572.6600341796875,
+            "top": 80.87563024450233,
+            "right": 867.3399658203125,
+            "bottom": 263.140625
+          },
+          "stage": {
+            "left": 28,
+            "top": -138.859375,
+            "right": 1412,
+            "bottom": 336.328125
+          },
+          "labelRect": {
+            "left": 616.2421875,
+            "top": 283.140625,
+            "right": 823.7578125,
+            "bottom": 305.140625
+          },
+          "exactLabel": "TEMPORARY STAGING / REPLACE BEFORE FINAL"
+        },
+        "targets": [
+          {
+            "selector": "#catTabs .wf-tab",
+            "index": 0,
+            "visible": true,
+            "width": 143.59,
+            "height": 60
+          },
+          {
+            "selector": "#catTabs .wf-tab",
+            "index": 1,
+            "visible": true,
+            "width": 143.59,
+            "height": 60
+          },
+          {
+            "selector": "#catTabs .wf-tab",
+            "index": 2,
+            "visible": true,
+            "width": 143.61,
+            "height": 60
+          },
+          {
+            "selector": "#catTabs .wf-tab",
+            "index": 3,
+            "visible": true,
+            "width": 143.59,
+            "height": 60
+          },
+          {
+            "selector": "#catTabs .wf-tab",
+            "index": 4,
+            "visible": true,
+            "width": 143.61,
+            "height": 60
+          },
+          {
+            "selector": "#range .arw",
+            "index": 0,
+            "visible": true,
+            "width": 48,
+            "height": 48
+          },
+          {
+            "selector": "#range .arw",
+            "index": 1,
+            "visible": true,
+            "width": 48,
+            "height": 48
+          },
+          {
+            "selector": "#stage .cf-item.center",
+            "index": 0,
+            "visible": true,
+            "width": 278,
+            "height": 442
+          },
+          {
+            "selector": "#pdpAdd",
+            "index": 0,
+            "visible": true,
+            "width": 355,
+            "height": 50
+          }
+        ],
+        "overflow": {
+          "innerWidth": 1440,
+          "clientWidth": 1440,
+          "scrollWidth": 1440,
+          "overflow": 0
+        },
+        "assets": {
+          "brokenImages": [],
+          "checks": [
+            {
+              "url": "http://127.0.0.1:8766/assets/product_shots/bar_pure_carob_hero.webp",
+              "status": 200,
+              "ok": true
+            },
+            {
+              "url": "http://127.0.0.1:8766/assets/product_shots/moon_pure_carob.webp",
+              "status": 200,
+              "ok": true
+            },
+            {
+              "url": "http://127.0.0.1:8766/assets/carob_wordmark.svg",
+              "status": 200,
+              "ok": true
+            },
+            {
+              "url": "http://127.0.0.1:8766/assets/product_shots/eclipse_pecan_real.webp",
+              "status": 200,
+              "ok": true
+            },
+            {
+              "url": "http://127.0.0.1:8766/assets/product_shots/eclipse_almond.webp",
+              "status": 200,
+              "ok": true
+            },
+            {
+              "url": "http://127.0.0.1:8766/assets/product_shots/eclipse_hazelnut.webp",
+              "status": 200,
+              "ok": true
+            },
+            {
+              "url": "http://127.0.0.1:8766/assets/product_shots/eclipse_goji_real.webp",
+              "status": 200,
+              "ok": true
+            },
+            {
+              "url": "http://127.0.0.1:8766/assets/product_shots/eclipse_fudge.webp",
+              "status": 200,
+              "ok": true
+            },
+            {
+              "url": "http://127.0.0.1:8766/assets/product_shots/temporary_eclipse_bite_bundle_web.webp",
+              "status": 200,
+              "ok": true
+            },
+            {
+              "url": "http://127.0.0.1:8766/assets/hero_shots/carob_branch_dusk.jpg",
+              "status": 200,
+              "ok": true
+            },
+            {
+              "url": "http://127.0.0.1:8766/assets/our_story/ritual_quiet_finish_20260825.webp",
+              "status": 200,
+              "ok": true
+            },
+            {
+              "url": "http://127.0.0.1:8766/assets/our_story/ritual_softer_pause_20260825.webp",
+              "status": 200,
+              "ok": true
+            },
+            {
+              "url": "http://127.0.0.1:8766/assets/our_story/ritual_last_cup_20260825.webp",
+              "status": 200,
+              "ok": true
+            },
+            {
+              "url": "http://127.0.0.1:8766/assets/licensed/carob_farm/australian-carob-0205-16x9.jpg",
+              "status": 200,
+              "ok": true
+            },
+            {
+              "url": "http://127.0.0.1:8766/assets/our_story/founder_carli_701_v2_2400.webp",
+              "status": 200,
+              "ok": true
+            },
+            {
+              "url": "http://127.0.0.1:8766/assets/our_story/founder_dylan_701_v2_2400.webp",
+              "status": 200,
+              "ok": true
+            },
+            {
+              "url": "http://127.0.0.1:8766/assets/product_shots/bar_goji_coconut.webp",
+              "status": 200,
+              "ok": true
+            },
+            {
+              "url": "http://127.0.0.1:8766/assets/product_shots/bar_cayenne.webp",
+              "status": 200,
+              "ok": true
+            },
+            {
+              "url": "http://127.0.0.1:8766/assets/product_shots/bar_hazelnut.webp",
+              "status": 200,
+              "ok": true
+            },
+            {
+              "url": "http://127.0.0.1:8766/assets/product_shots/bar_peppermint.webp",
+              "status": 200,
+              "ok": true
+            },
+            {
+              "url": "http://127.0.0.1:8766/assets/product_shots/bar_pure_carob.webp",
+              "status": 200,
+              "ok": true
+            },
+            {
+              "url": "http://127.0.0.1:8766/assets/product_shots/bar_almond.webp",
+              "status": 200,
+              "ok": true
+            },
+            {
+              "url": "http://127.0.0.1:8766/assets/hero_videos/gen/finalists/graded_blue/finalist_wetsand2_pingpong.mp4",
+              "status": 200,
+              "ok": true
+            },
+            {
+              "url": "http://127.0.0.1:8766/assets/hero_shots/finalist_wetsand2_poster.webp",
+              "status": 200,
+              "ok": true
+            },
+            {
+              "url": "http://127.0.0.1:8766/assets/icons/mm-icons.svg",
+              "status": 200,
+              "ok": true
+            },
+            {
+              "url": "http://127.0.0.1:8766/assets/icons/mm-icons-v2.svg",
+              "status": 200,
+              "ok": true
+            },
+            {
+              "url": "https://use.typekit.net/dvz0xjs.css",
+              "status": 200,
+              "ok": true
+            },
+            {
+              "url": "http://127.0.0.1:8766/brand_kit.css",
+              "status": 200,
+              "ok": true
+            },
+            {
+              "url": "http://127.0.0.1:8766/assets/design-system/mm-tokens.css",
+              "status": 200,
+              "ok": true
+            },
+            {
+              "url": "http://127.0.0.1:8766/assets/design-system/mm-base.css",
+              "status": 200,
+              "ok": true
+            },
+            {
+              "url": "http://127.0.0.1:8766/assets/design-system/mm-chrome.css",
+              "status": 200,
+              "ok": true
+            },
+            {
+              "url": "http://127.0.0.1:8766/assets/design-system/mm-primitives.css",
+              "status": 200,
+              "ok": true
+            },
+            {
+              "url": "http://127.0.0.1:8766/assets/icons/mm-icons.css",
+              "status": 200,
+              "ok": true
+            },
+            {
+              "url": "http://127.0.0.1:8766/styles/homepage.css",
+              "status": 200,
+              "ok": true
+            },
+            {
+              "url": "http://127.0.0.1:8766/mock-cart.css",
+              "status": 200,
+              "ok": true
+            },
+            {
+              "url": "http://127.0.0.1:8766/assets/design-system/mm-chrome.js",
+              "status": 200,
+              "ok": true
+            },
+            {
+              "url": "http://127.0.0.1:8766/mock-cart.js",
+              "status": 200,
+              "ok": true
+            }
+          ],
+          "totalImages": 22
+        }
+      }
+    }
+  ],
+  "proofs": [
+    {
+      "name": "home_hero_header",
+      "width": 1440,
+      "file": "/Users/handtomouse/maplemoon-website/_wip/evidence/home_shop_integration_20260825T194905/cdp-attempts/attempt-003/human-review-crops/home_hero_header_1440.png",
+      "sha256": "cab0f375aa1780cbde81b00f3ffdc58b2f35f857c5f7995d3e47ad0d75f83fea",
+      "rasterWidth": 1440,
+      "rasterHeight": 1496,
+      "deviation": 136.83,
+      "nonblank": true
+    },
+    {
+      "name": "home_comparison",
+      "width": 1440,
+      "file": "/Users/handtomouse/maplemoon-website/_wip/evidence/home_shop_integration_20260825T194905/cdp-attempts/attempt-003/human-review-crops/home_comparison_1440.png",
+      "sha256": "9ace5fbc0e7fa188e3f47167071cfbc208d947e688dcee0e0a9be3af01f8be57",
+      "rasterWidth": 1240,
+      "rasterHeight": 795,
+      "deviation": 40.6,
+      "nonblank": true
+    },
+    {
+      "name": "home_range",
+      "width": 1440,
+      "file": "/Users/handtomouse/maplemoon-website/_wip/evidence/home_shop_integration_20260825T194905/cdp-attempts/attempt-003/human-review-crops/home_range_1440.png",
+      "sha256": "203ccc16e362a0519d2306a48c7402eb69bb581095e4dfc8548277f94669c740",
+      "rasterWidth": 1440,
+      "rasterHeight": 1006,
+      "deviation": 109.48,
+      "nonblank": true
+    },
+    {
+      "name": "home_ritual",
+      "width": 1440,
+      "file": "/Users/handtomouse/maplemoon-website/_wip/evidence/home_shop_integration_20260825T194905/cdp-attempts/attempt-003/human-review-crops/home_ritual_1440.png",
+      "sha256": "f0318e8b6032738f74bd76ef180f98a113eb76d600b44aff0212ef5160541fe5",
+      "rasterWidth": 1180,
+      "rasterHeight": 731,
+      "deviation": 130.54,
+      "nonblank": true
+    },
+    {
+      "name": "home_transition_range_carob",
+      "width": 1440,
+      "file": "/Users/handtomouse/maplemoon-website/_wip/evidence/home_shop_integration_20260825T194905/cdp-attempts/attempt-003/human-review-crops/home_transition_range_carob_1440.png",
+      "sha256": "6bdceae3265c698c6c1940ab9d4fba9a3fe3aab52c625f046616667be79e77cc",
+      "rasterWidth": 1440,
+      "rasterHeight": 1000,
+      "deviation": 133.91,
+      "nonblank": true
+    },
+    {
+      "name": "home_transition_carob_comparison",
+      "width": 1440,
+      "file": "/Users/handtomouse/maplemoon-website/_wip/evidence/home_shop_integration_20260825T194905/cdp-attempts/attempt-003/human-review-crops/home_transition_carob_comparison_1440.png",
+      "sha256": "a5e10e41737593950c13f5147cbcddff9cb9c074509bf4aab8ced578399d9a2d",
+      "rasterWidth": 1440,
+      "rasterHeight": 1000,
+      "deviation": 132.6,
+      "nonblank": true
+    },
+    {
+      "name": "home_transition_comparison_ritual",
+      "width": 1440,
+      "file": "/Users/handtomouse/maplemoon-website/_wip/evidence/home_shop_integration_20260825T194905/cdp-attempts/attempt-003/human-review-crops/home_transition_comparison_ritual_1440.png",
+      "sha256": "0d3466e90192e619611c05ad9a1ba65e5810dac271af24e6ffd7e5fa8a378f86",
+      "rasterWidth": 1440,
+      "rasterHeight": 1000,
+      "deviation": 106.37,
+      "nonblank": true
+    },
+    {
+      "name": "home_transition_ritual_story",
+      "width": 1440,
+      "file": "/Users/handtomouse/maplemoon-website/_wip/evidence/home_shop_integration_20260825T194905/cdp-attempts/attempt-003/human-review-crops/home_transition_ritual_story_1440.png",
+      "sha256": "e945315031469c0cc72d260c6f0b036bb7f30e9fc764ffc45d863aaf0203458f",
+      "rasterWidth": 1440,
+      "rasterHeight": 1000,
+      "deviation": 112.76,
+      "nonblank": true
+    },
+    {
+      "name": "home_transition_story_founders",
+      "width": 1440,
+      "file": "/Users/handtomouse/maplemoon-website/_wip/evidence/home_shop_integration_20260825T194905/cdp-attempts/attempt-003/human-review-crops/home_transition_story_founders_1440.png",
+      "sha256": "d4ca9f2bdf10b59ee5dd492b66a28e56ed30cdf685d79fbb506b831f824504a6",
+      "rasterWidth": 1440,
+      "rasterHeight": 1000,
+      "deviation": 157.75,
+      "nonblank": true
+    },
+    {
+      "name": "home_footer",
+      "width": 1440,
+      "file": "/Users/handtomouse/maplemoon-website/_wip/evidence/home_shop_integration_20260825T194905/cdp-attempts/attempt-003/human-review-crops/home_footer_1440.png",
+      "sha256": "ec88504676764ced5d57b14796cef1ae4da61ca3cf3417119b576b3485d68a34",
+      "rasterWidth": 1440,
+      "rasterHeight": 190,
+      "deviation": 71.12,
+      "nonblank": true
+    },
+    {
+      "name": "home_bundle",
+      "width": 1440,
+      "file": "/Users/handtomouse/maplemoon-website/_wip/evidence/home_shop_integration_20260825T194905/cdp-attempts/attempt-003/human-review-crops/home_bundle_1440.png",
+      "sha256": "1790096fabe8da7d3a8a62c3acde7f4720afce87f0526a70198d0806c8314659",
+      "rasterWidth": 1440,
+      "rasterHeight": 1006,
+      "deviation": 114.35,
+      "nonblank": true
+    }
+  ],
+  "contacts": [],
+  "fatal": {
+    "message": "page.waitForFunction: Timeout 15000ms exceeded.",
+    "stack": "page.waitForFunction: Timeout 15000ms exceeded.\n    at shopChecks (/Users/handtomouse/maplemoon-website/_wip/evidence/home_shop_integration_20260825T194905/run-home-shop-cdp-qa.mjs:409:14)\n    at async file:///Users/handtomouse/maplemoon-website/_wip/evidence/home_shop_integration_20260825T194905/run-home-shop-cdp-qa.mjs:531:18"
+  },
+  "failures": [
+    "home-candidate@1440: runtime errors {\"consoleErrors\":[],\"pageErrors\":[],\"requestFailures\":[{\"url\":\"http://127.0.0.1:8766/assets/product_shots/bar_pure_carob_hero.webp\",\"error\":\"net::ERR_ABORTED\"},{\"url\":\"http://127.0.0.1:8766/assets/product_shots/moon_pure_carob.webp\",\"error\":\"net::ERR_ABORTED\"},{\"url\":\"http://127.0.0.1:8766/assets/carob_wordmark.svg\",\"error\":\"net::ERR_ABORTED\"},{\"url\":\"http://127.0.0.1:8766/assets/product_shots/eclipse_pecan_real.webp\",\"error\":\"net::ERR_ABORTED\"},{\"url\":\"http://127.0.0.1:8766/assets/product_shots/eclipse_almond.webp\",\"error\":\"net::ERR_ABORTED\"},{\"url\":\"http://127.0.0.1:8766/assets/product_shots/eclipse_hazelnut.webp\",\"error\":\"net::ERR_ABORTED\"},{\"url\":\"http://127.0.0.1:8766/assets/product_shots/eclipse_goji_real.webp\",\"error\":\"net::ERR_ABORTED\"},{\"url\":\"http://127.0.0.1:8766/assets/product_shots/eclipse_fudge.webp\",\"error\":\"net::ERR_ABORTED\"},{\"url\":\"http://127.0.0.1:8766/assets/product_shots/temporary_eclipse_bite_bundle_web.webp\",\"error\":\"net::ERR_ABORTED\"},{\"url\":\"http://127.0.0.1:8766/assets/hero_shots/carob_branch_dusk.jpg\",\"error\":\"net::ERR_ABORTED\"},{\"url\":\"http://127.0.0.1:8766/assets/our_story/ritual_quiet_finish_20260825.webp\",\"error\":\"net::ERR_ABORTED\"},{\"url\":\"http://127.0.0.1:8766/assets/our_story/ritual_softer_pause_20260825.webp\",\"error\":\"net::ERR_ABORTED\"},{\"url\":\"http://127.0.0.1:8766/assets/our_story/ritual_last_cup_20260825.webp\",\"error\":\"net::ERR_ABORTED\"},{\"url\":\"http://127.0.0.1:8766/assets/licensed/carob_farm/australian-carob-0205-16x9.jpg\",\"error\":\"net::ERR_ABORTED\"},{\"url\":\"http://127.0.0.1:8766/assets/our_story/founder_carli_701_v2_2400.webp\",\"error\":\"net::ERR_ABORTED\"},{\"url\":\"http://127.0.0.1:8766/assets/our_story/founder_dylan_701_v2_2400.webp\",\"error\":\"net::ERR_ABORTED\"},{\"url\":\"http://127.0.0.1:8766/assets/product_shots/bar_goji_coconut.webp\",\"error\":\"net::ERR_ABORTED\"},{\"url\":\"http://127.0.0.1:8766/assets/product_shots/bar_cayenne.webp\",\"error\":\"net::ERR_ABORTED\"},{\"url\":\"http://127.0.0.1:8766/assets/product_shots/bar_hazelnut.webp\",\"error\":\"net::ERR_ABORTED\"},{\"url\":\"http://127.0.0.1:8766/assets/product_shots/bar_peppermint.webp\",\"error\":\"net::ERR_ABORTED\"},{\"url\":\"http://127.0.0.1:8766/assets/product_shots/bar_pure_carob.webp\",\"error\":\"net::ERR_ABORTED\"},{\"url\":\"http://127.0.0.1:8766/assets/product_shots/bar_almond.webp\",\"error\":\"net::ERR_ABORTED\"},{\"url\":\"http://127.0.0.1:8766/assets/hero_videos/gen/finalists/graded_blue/finalist_wetsand2_pingpong.mp4\",\"error\":\"net::ERR_ABORTED\"},{\"url\":\"http://127.0.0.1:8766/assets/hero_shots/finalist_wetsand2_poster.webp\",\"error\":\"net::ERR_ABORTED\"},{\"url\":\"http://127.0.0.1:8766/assets/icons/mm-icons.svg\",\"error\":\"net::ERR_ABORTED\"},{\"url\":\"http://127.0.0.1:8766/assets/icons/mm-icons-v2.svg\",\"error\":\"net::ERR_ABORTED\"},{\"url\":\"https://use.typekit.net/dvz0xjs.css\",\"error\":\"net::ERR_ABORTED\"},{\"url\":\"http://127.0.0.1:8766/brand_kit.css\",\"error\":\"net::ERR_ABORTED\"},{\"url\":\"http://127.0.0.1:8766/assets/design-system/mm-tokens.css\",\"error\":\"net::ERR_ABORTED\"},{\"url\":\"http://127.0.0.1:8766/assets/design-system/mm-base.css\",\"error\":\"net::ERR_ABORTED\"},{\"url\":\"http://127.0.0.1:8766/assets/design-system/mm-chrome.css\",\"error\":\"net::ERR_ABORTED\"},{\"url\":\"http://127.0.0.1:8766/assets/design-system/mm-primitives.css\",\"error\":\"net::ERR_ABORTED\"},{\"url\":\"http://127.0.0.1:8766/assets/icons/mm-icons.css\",\"error\":\"net::ERR_ABORTED\"},{\"url\":\"http://127.0.0.1:8766/styles/homepage.css\",\"error\":\"net::ERR_ABORTED\"},{\"url\":\"http://127.0.0.1:8766/mock-cart.css\",\"error\":\"net::ERR_ABORTED\"},{\"url\":\"http://127.0.0.1:8766/assets/design-system/mm-chrome.js\",\"error\":\"net::ERR_ABORTED\"},{\"url\":\"http://127.0.0.1:8766/mock-cart.js\",\"error\":\"net::ERR_ABORTED\"}],\"badResponses\":[]}",
+    "fatal: page.waitForFunction: Timeout 15000ms exceeded."
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "additions": [
+    "homepage-style-finish-r6-manifest.json",
+    "styles/homepage-style-finish-r6.css"
+  ],
+  "mutations": [
+    "homepage.html"
+  ],
+  "linkCount": 1,
+  "reverseEqual": true,
+  "pass": true
+}

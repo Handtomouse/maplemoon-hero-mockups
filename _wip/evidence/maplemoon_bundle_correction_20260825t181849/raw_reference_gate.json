@@ -1,0 +1,26 @@
+{
+  "approved_prompt": "Professional studio product photograph of exactly five Maple Moon products: one Pecan Eclipse Bite, one Salted Almond Eclipse Bite, one Hazelnut Eclipse Bite, one Salted Caramel Fudge and one Goji Coconut Bar. Treat the labelled identity sheet as SKU authority and the real-raw sheet only as scale, silhouette, texture and fudge-geometry authority. Make Almond unmistakable by showing one clean cut face with large angular almond pieces; keep Hazelnut intact with smaller rounded hazelnut crumb. Preserve the pecan-topped form. Make all three bites irregular, low and hand-dipped, never cloned domes. Make the fudge low, layered and hand-cut, not a perfect cube. Keep the Goji Coconut Bar substantial and faithful to its named reference, without invented red flecks. Arrange an asymmetrical five-item group with consistent scale, soft upper-left diffused light, neutral 5000K, natural contact shadows and crisp food texture on a transparent background. 3/4 camera, 85mm feel, deep focus. No extra pieces, duplicate bodies, props, packaging, text, logos, white panels or floating shadows.",
+  "automatic_retry": false,
+  "estimated_cost_usd": {
+    "hard_cap": 0.35,
+    "high": 0.3,
+    "low": 0.2
+  },
+  "generation_run": false,
+  "launch_admitted": false,
+  "outputs": [],
+  "raw_root": "/Users/handtomouse/Library/CloudStorage/GoogleDrive-hello@handtomouse.org/My Drive/MrCC_PAI_Stage1_Files/UFC/clients/maplemoon/deliverables/photoshoot_2026_05_24/_closeout_20260812/08_photo_production_wave/product_geometry/proxies_real_raw",
+  "raw_sha256": {},
+  "reason": "governed raw gate closed: missing=DSC01543,DSC01561,DSC01563,DSC01564,DSC01567,DSC01572,DSC01576",
+  "required_raw_stems": [
+    "DSC01543",
+    "DSC01561",
+    "DSC01563",
+    "DSC01564",
+    "DSC01567",
+    "DSC01572",
+    "DSC01576"
+  ],
+  "schema": "maplemoon-bundle-raw-reference-gate/v1",
+  "status": "HOLD"
+}

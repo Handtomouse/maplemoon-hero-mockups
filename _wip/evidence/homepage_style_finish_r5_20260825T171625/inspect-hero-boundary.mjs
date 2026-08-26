@@ -1,0 +1,16 @@
+import fs from 'node:fs';
+import path from 'node:path';
+import http from 'node:http';
+import { createRequire } from 'node:module';
+const require=createRequire(import.meta.url);
+const {chromium}=require('/Users/handtomouse/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/node_modules/playwright');
+const root='/Users/handtomouse/maplemoon-website/_wip/deploy/generated/maplemoon-homepage-style-finish-r5-20260825T171625';
+const server=http.createServer((req,res)=>{let p=decodeURIComponent(new URL(req.url,'http://x').pathname);if(p==='/')p='/homepage.html';const f=path.resolve(root,`.${p}`);if(!f.startsWith(root)||!fs.existsSync(f)){res.writeHead(404);res.end();return;}res.writeHead(200);fs.createReadStream(f).pipe(res);});
+await new Promise(r=>server.listen(0,'127.0.0.1',r));
+const browser=await chromium.launch({headless:true,executablePath:'/Applications/Google Chrome.app/Contents/MacOS/Google Chrome'});
+const context=await browser.newContext({viewport:{width:320,height:700},reducedMotion:'reduce'}),page=await context.newPage(),cdp=await context.newCDPSession(page);
+await cdp.send('Emulation.setDeviceMetricsOverride',{width:320,height:700,deviceScaleFactor:1,mobile:false});
+await page.goto(`http://127.0.0.1:${server.address().port}/homepage.html`,{waitUntil:'load'});await page.locator('#stage .cf-item').first().waitFor();await page.waitForTimeout(250);
+const result=await page.evaluate(()=>{const rect=e=>{const b=e.getBoundingClientRect();return{x:b.x,y:b.y,width:b.width,height:b.height,right:b.right,bottom:b.bottom,documentTop:b.y+scrollY,documentBottom:b.bottom+scrollY};};const top=document.querySelector('#top');const matches=[...document.querySelectorAll('a,button')].filter(e=>e.textContent.replace(/\s+/g,' ').trim()==='Shop Now').map(e=>{const ancestors=[];let n=e;while(n&&ancestors.length<8){const s=getComputedStyle(n);ancestors.push({tag:n.tagName,id:n.id,class:n.className,rect:rect(n),overflow:s.overflow,position:s.position});n=n.parentElement;}return{rect:rect(e),visible:getComputedStyle(e).display!=='none',closestSection:e.closest('section')?.id,ancestors};});return{viewport:{innerWidth,innerHeight,scrollY,scrollHeight:document.documentElement.scrollHeight},top:{rect:rect(top),overflow:getComputedStyle(top).overflow},range:rect(document.querySelector('#range')),matches};});
+console.log(JSON.stringify(result,null,2));
+await browser.close();await new Promise(r=>server.close(r));

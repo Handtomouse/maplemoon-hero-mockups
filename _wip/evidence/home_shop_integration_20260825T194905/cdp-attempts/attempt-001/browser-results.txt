@@ -1,0 +1,9 @@
+BROWSER FAIL cases=0/4 exact_widths=0/4 projections=0/4 geometry=0/4 proofs=4/26 contacts=0/2 failures=2
+FAIL home@1440: shared-style inventory differs or held R6 is present
+FAIL fatal: page.screenshot: Clipped area is either empty or outside the resulting image
+Call log:
+[2m  - taking page screenshot[22m
+[2m    - disabled all CSS animations[22m
+[2m  - waiting for fonts to load...[22m
+[2m  - fonts loaded[22m
+

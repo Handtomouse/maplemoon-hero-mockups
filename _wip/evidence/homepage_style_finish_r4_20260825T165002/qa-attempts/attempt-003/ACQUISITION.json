@@ -1,0 +1,885 @@
+{
+  "startedAt": "2026-08-25T07:02:23.353Z",
+  "packetId": "MAPLEMOON-HOMEPAGE-STYLE-FINISH-R4-20260825T165002",
+  "snapshot": {
+    "file": "/Users/handtomouse/maplemoon-website/_wip/evidence/homepage_style_finish_r4_20260825T165002/source-snapshot.WIP.html",
+    "sha256": "792e6508d21a4b1840f5a35fd28af05962030a7e2e32e73cda4651c7e5a48dd9",
+    "expected": "792e6508d21a4b1840f5a35fd28af05962030a7e2e32e73cda4651c7e5a48dd9"
+  },
+  "baseline": {
+    "root": "/Users/handtomouse/maplemoon-website/_wip/evidence/homepage_style_finish_r4_20260825T165002/baseline",
+    "sha256": "394b65d1f98b931cc6fa90f685a363654ad3baa691321be1c8bc524d07c825c1",
+    "count": 77,
+    "bytes": 13008892,
+    "files": [
+      {
+        "relative": "a11y_inner.css",
+        "sha256": "7ea80be7443dd178360aca4e8b511627aeca156e3ff46cc903a7529c75d999b0",
+        "bytes": 1714
+      },
+      {
+        "relative": "assets/carob_wordmark.svg",
+        "sha256": "2a16b6671c795ea5126d0f9de5db1238d85c574c13c64e0a32718c154da69560",
+        "bytes": 3766
+      },
+      {
+        "relative": "assets/design-system/mm-base.css",
+        "sha256": "a11dbf9b7bfa9f545849cdad5a73832b21221ff77c585d33427bbe99219e19bb",
+        "bytes": 1270
+      },
+      {
+        "relative": "assets/design-system/mm-chrome.css",
+        "sha256": "38ae8acbbdd30ebdfbe633ab1f042549fd2573c7e458e946cc2c53596b32349a",
+        "bytes": 5871
+      },
+      {
+        "relative": "assets/design-system/mm-chrome.js",
+        "sha256": "cc72e22a121cbdb1ec695d181219ca696b0e020f82fedc243e1f407154c1316c",
+        "bytes": 5025
+      },
+      {
+        "relative": "assets/design-system/mm-primitives.css",
+        "sha256": "3108718d5109a28a6221a2eca56fcf5138195f8c020e0d64983b1be1afb839c7",
+        "bytes": 9006
+      },
+      {
+        "relative": "assets/design-system/mm-tokens.css",
+        "sha256": "cab9a32ee62a5a51d9297ab0320e666c1081a7a81c8c83a3bc48d1f1d2341908",
+        "bytes": 3073
+      },
+      {
+        "relative": "assets/hero_shots/blue_fog_001.webp",
+        "sha256": "794d3096aadccde851f7045ac2a36989bffce7f57e5a3273f980b6f29bf8a669",
+        "bytes": 166356
+      },
+      {
+        "relative": "assets/hero_shots/byron_bay_silhouette.webp",
+        "sha256": "edffc47e32ec593282e50731156972de9e10a58e13a47086bfb5a95863940e64",
+        "bytes": 66264
+      },
+      {
+        "relative": "assets/hero_shots/carob_branch_dusk.jpg",
+        "sha256": "5f6fd5235bdde463a84d7133317b354208f97f84a1ca98983746be4c625efee9",
+        "bytes": 567218
+      },
+      {
+        "relative": "assets/hero_shots/carob_pods_cluster.jpg",
+        "sha256": "c2b24330e2a9363be5635619bdaa1890096ba749ccfbf271677bdf38e59046a7",
+        "bytes": 313419
+      },
+      {
+        "relative": "assets/hero_shots/finalist_wetsand2_poster.webp",
+        "sha256": "72cd115b848c6565587726ee46a21ad8f6aa3561b307cb20859fd9fd5d65e7b1",
+        "bytes": 48936
+      },
+      {
+        "relative": "assets/hero_shots/moonlit_ocean_night.webp",
+        "sha256": "76d8195360474ebc2e944bbae06abbcfb62bb4dd5d79354e12ee3088267c5e15",
+        "bytes": 138352
+      },
+      {
+        "relative": "assets/hero_shots/silhouette_closeup.webp",
+        "sha256": "ae753811391090aad4b9587792c47dfc020c99a88af443a145b3c544ff6320b7",
+        "bytes": 182582
+      },
+      {
+        "relative": "assets/hero_videos/gen/finalists/graded_blue/finalist_wetsand2_pingpong.mp4",
+        "sha256": "3f388d0e89a402db694ed181f987e61ef8ab5b1c550b3a164fb8898daa20d5ce",
+        "bytes": 1464641
+      },
+      {
+        "relative": "assets/licensed/carob_farm/australian-carob-0205-16x9.jpg",
+        "sha256": "7298b7c387549b64660a1d82d3e78196a62b2bfbc950392aabd68ed92305108f",
+        "bytes": 139958
+      },
+      {
+        "relative": "assets/licensed/carob_farm/australian-carob-0205-mobile.jpg",
+        "sha256": "03b764279d3e053779a0ca0bce5bbef2e54824c93f9a12e1fa710dbae6b1a7ac",
+        "bytes": 232605
+      },
+      {
+        "relative": "assets/licensed/carob_pods_macro.jpg",
+        "sha256": "9916815baa52b9d85dab8bbe7dc216282d7f3e012625fe7d03ad8f8cb4a3f511",
+        "bytes": 222996
+      },
+      {
+        "relative": "assets/mm_logo_icon_blk.svg",
+        "sha256": "aaffe3fbc7f38fb73f04e09d8b248e9c12184f79308dd17139ede6f26540a988",
+        "bytes": 3988
+      },
+      {
+        "relative": "assets/mm_wordmark_blk.svg",
+        "sha256": "5e1be42597c334fd33194477aa6b7c3527206d2f858fc2e9414a4d9d29e7fdcc",
+        "bytes": 7737
+      },
+      {
+        "relative": "assets/our_story/founder_carli_f76_900.webp",
+        "sha256": "70a2c35f3aa785ad041fc046c753e6d3defdaca4e41aed3406346847397296cc",
+        "bytes": 51196
+      },
+      {
+        "relative": "assets/our_story/founder_dylan_f53_900.webp",
+        "sha256": "a7bdc88c27074a26abae054d2df987b47f7782a54467e5c639ed90fe540ca27e",
+        "bytes": 33540
+      },
+      {
+        "relative": "assets/our_story/founders_pair_f99_1200.webp",
+        "sha256": "5cffb8a7aabded807553bbac9402d1e07580f32a563b5824c97d220285791fd3",
+        "bytes": 131338
+      },
+      {
+        "relative": "assets/our_story/studio_bar_almond.webp",
+        "sha256": "3b92a69d56dcc9c3bc9e57bbb6be76ae7e300aef2f62e44ea3ce673fdaa02180",
+        "bytes": 50158
+      },
+      {
+        "relative": "assets/our_story/studio_bar_rock.webp",
+        "sha256": "9b2055d5294814b6c2773a7d54bf578d4d42b0779272eb6f8b89b74b2fa76874",
+        "bytes": 145156
+      },
+      {
+        "relative": "assets/our_story/studio_moon_rock.webp",
+        "sha256": "a01dd3ae5db5c780915ed4bf1da4a814d1988190a1b7cb73e873174da7399dbe",
+        "bytes": 76970
+      },
+      {
+        "relative": "assets/photo_finals/maplemoon_heros1_brandmatched.webp",
+        "sha256": "5a0f1480ff57abf290636f9140e8e4905e1f271f84df72e9e5c645fd4fc78a63",
+        "bytes": 92688
+      },
+      {
+        "relative": "assets/photo_finals/maplemoon_heros21_brandmatched.webp",
+        "sha256": "3db9dccd65cf6003a2185d5a851c503a93d86fb4ae6ff338f0a1fbbf4c07579e",
+        "bytes": 344452
+      },
+      {
+        "relative": "assets/photo_finals/maplemoon_heros41_brandmatched.webp",
+        "sha256": "4f4d74f47385396bbbf79aba559d9dc8718c7c04ed957c737a0c7b3a8e65fb75",
+        "bytes": 248162
+      },
+      {
+        "relative": "assets/photo_finals/maplemoon_heros43_brandmatched.webp",
+        "sha256": "1b09a6bad57f079ec91d9d502fe2d01d2032ef0d8976b58f68b31cb1dbb67868",
+        "bytes": 681042
+      },
+      {
+        "relative": "assets/photo_finals/maplemoon_heros55_brandmatched.webp",
+        "sha256": "11e46744169c52ecfc339ef8876e745b1544313fcfd7e00e9ffbfdc03d0679af",
+        "bytes": 325136
+      },
+      {
+        "relative": "assets/photo_finals/maplemoon_heros55_brandmatched_atmospheric.webp",
+        "sha256": "f9f80ce6f9ec6627d58aa93c53f6b5cd9f4cdaf250800858e1414bb9803f5ef0",
+        "bytes": 224840
+      },
+      {
+        "relative": "assets/photo_finals/maplemoon_heros66_brandmatched.webp",
+        "sha256": "83c47a329de7c985804ee576be85e564e5766fa37dbb702eee96e7f4ce68ffda",
+        "bytes": 166130
+      },
+      {
+        "relative": "assets/photo_finals/mm23_xmp_blue_hero_2400.webp",
+        "sha256": "64fb77d86a2c3180ff49c77cec33277d797ec3b5d22d7ae87744856d2c0ac4f9",
+        "bytes": 361084
+      },
+      {
+        "relative": "assets/product_shots/bananas_real.webp",
+        "sha256": "33139480bdef9ef0c6bd54c76e6b7fe3fdf833f1b5d933b12fc762052951b083",
+        "bytes": 25872
+      },
+      {
+        "relative": "assets/product_shots/bar_almond.webp",
+        "sha256": "87b890393a549ba8e477f19892ac82d7a8934f101b4347441f3db2878c06c208",
+        "bytes": 127140
+      },
+      {
+        "relative": "assets/product_shots/bar_cayenne.webp",
+        "sha256": "957340b94fd87095b96eaed416ebef7c086333bd0685ab67fdabde6488542e81",
+        "bytes": 129838
+      },
+      {
+        "relative": "assets/product_shots/bar_goji_coconut.webp",
+        "sha256": "f695b7171b72ec1f9d7f7010a54a9694c372d1807b04868412107a399e5f409e",
+        "bytes": 127706
+      },
+      {
+        "relative": "assets/product_shots/bar_hazelnut.webp",
+        "sha256": "bc71c90d342d1f6fcad6d70bd239c8d425b4acb02e3afc82158699ec59e8b852",
+        "bytes": 129290
+      },
+      {
+        "relative": "assets/product_shots/bar_peppermint.webp",
+        "sha256": "4d5709e5775c71d91541e945ff8e9827d17174d1e1642d3c80225ac2db753787",
+        "bytes": 130000
+      },
+      {
+        "relative": "assets/product_shots/bar_pure_carob.webp",
+        "sha256": "ba6e31d13684f7459dd2df44c90ca804c46886aa1a2a2092e36fe627352c8db8",
+        "bytes": 122240
+      },
+      {
+        "relative": "assets/product_shots/bar_pure_carob_hero.webp",
+        "sha256": "3292a84d7665b4ac756b1a43388ad3710a48805c9629cfbe26a096471a54e981",
+        "bytes": 247106
+      },
+      {
+        "relative": "assets/product_shots/eclipse_almond.webp",
+        "sha256": "ed43b412568a4d3ac2beeee08927f9f18453838a4a3fdecd63ba98b37b8ed703",
+        "bytes": 22676
+      },
+      {
+        "relative": "assets/product_shots/eclipse_bundle.webp",
+        "sha256": "3b0515fd4deb8916da9d613f0d8fd94ba6a7c25756f188e6187a932056b6ff46",
+        "bytes": 163216
+      },
+      {
+        "relative": "assets/product_shots/eclipse_fudge.webp",
+        "sha256": "61b38e828f35e87d1c142835a03e73fcb599a09c9388cc709345ee6ff44a3e9a",
+        "bytes": 47794
+      },
+      {
+        "relative": "assets/product_shots/eclipse_goji_real.webp",
+        "sha256": "b031ad6b54c9f7891beadc71d97dc32a702a72c4395753ca4819f7eab43e7d5b",
+        "bytes": 48908
+      },
+      {
+        "relative": "assets/product_shots/eclipse_hazelnut.webp",
+        "sha256": "83413a35ce8d53a808ed6f40079e6b272b39f287d93788bdca23435c2fe16df4",
+        "bytes": 27174
+      },
+      {
+        "relative": "assets/product_shots/eclipse_pecan_real.webp",
+        "sha256": "c7bf522317b979464a9d775d94fd5c1ea1e7133d204787c0fb0ac712b559fd63",
+        "bytes": 39938
+      },
+      {
+        "relative": "assets/product_shots/elixir_plain.webp",
+        "sha256": "4398f43fcc7ff571f4eea4643e078f8416e6921f4e979f5bf31e53338e04916a",
+        "bytes": 35552
+      },
+      {
+        "relative": "assets/product_shots/elixir_spiced.webp",
+        "sha256": "9b92c0f0a0cc11b11aa9a5fa4cb7683b420db373e556c74adcb1ba576ffe1163",
+        "bytes": 64218
+      },
+      {
+        "relative": "assets/product_shots/moon_almond.webp",
+        "sha256": "de8f28186c50d7a407f2070293b418b872b4187d985b62c96f328844ba7c42f1",
+        "bytes": 9246
+      },
+      {
+        "relative": "assets/product_shots/moon_cayenne.webp",
+        "sha256": "f6f2e71b5c59abe56a79bb04afcc6c15a1597644628eda5a3c8e90d204297cc0",
+        "bytes": 17374
+      },
+      {
+        "relative": "assets/product_shots/moon_goji_coconut.webp",
+        "sha256": "fdd5be44f37e9766c966541ceaf68a044279409a2cc87f7d056c244226ac5b32",
+        "bytes": 12990
+      },
+      {
+        "relative": "assets/product_shots/moon_hazelnut.webp",
+        "sha256": "bb73f940642a56bf4a593cef58b1ba593b8664517126722690dad08453b583cc",
+        "bytes": 9198
+      },
+      {
+        "relative": "assets/product_shots/moon_peppermint.webp",
+        "sha256": "463a192590e7762ed928609b01d67555ef4869c1c13c7de43d47a757bad51b45",
+        "bytes": 9492
+      },
+      {
+        "relative": "assets/product_shots/moon_pure_carob.webp",
+        "sha256": "8e8a41d0442d76eea707a26c5d1da604d8ef95384551389547caa7fd21865295",
+        "bytes": 9134
+      },
+      {
+        "relative": "assets/product_shots/powder_packaged_real.webp",
+        "sha256": "fcb1dc9fd11f267bd1c52c0b2746b0e5238d97751b8ca0ec33d5dc4a46c36a03",
+        "bytes": 42958
+      },
+      {
+        "relative": "assets/products_new/bar_almond.png",
+        "sha256": "f276faafd7267244ce9a3c9e33d1fb0a79995d9144e64996a096e1603feea412",
+        "bytes": 624532
+      },
+      {
+        "relative": "assets/products_new/bar_cayenne.png",
+        "sha256": "98198122d6a4131dc02f3b8f8b902807d24c9815144a42e12ed76a996f07fb8f",
+        "bytes": 714910
+      },
+      {
+        "relative": "assets/products_new/bar_goji_coconut.png",
+        "sha256": "c052cf0d1a657f6c88ec8266ca2d99a4ddb78bfa3f14fa722dbb1a1bd94bda17",
+        "bytes": 792129
+      },
+      {
+        "relative": "assets/products_new/bar_hazelnut.png",
+        "sha256": "918fa46feaba6306d5a6e64e1aadc9a9e4d0270c81d12ad00a9dd3f8dbdff664",
+        "bytes": 831697
+      },
+      {
+        "relative": "assets/products_new/bar_peppermint.png",
+        "sha256": "a28f054e3717bca52dd835814630b1db045f17d6461dd289d3753ea49cd4073b",
+        "bytes": 586829
+      },
+      {
+        "relative": "assets/products_new/bar_pure_carob.png",
+        "sha256": "b6e64b00acd3e502e19c7b7ee1aa16e9669d1d9e9c19bbbe1dac0917c4967cff",
+        "bytes": 715330
+      },
+      {
+        "relative": "brand_kit.css",
+        "sha256": "53043df665ab3bc696b3d925f5ed108912cdc50330def58f92d2e7c2adbbbbe3",
+        "bytes": 10754
+      },
+      {
+        "relative": "carob-story.html",
+        "sha256": "71d5a883cfb14db45b71d7fa94211d08778bc69d037d38c46c058c2e13da90e4",
+        "bytes": 56634
+      },
+      {
+        "relative": "contact.html",
+        "sha256": "c54a280a0b11187811215e45cecda1cea6f9c1872f7e65978912185b7c294e21",
+        "bytes": 12970
+      },
+      {
+        "relative": "design_refinement_20260723.css",
+        "sha256": "90de7de62efb16b0fe10da4dfea5b1ab2889a01cc2ac4a895127466a68803df2",
+        "bytes": 4304
+      },
+      {
+        "relative": "faq.html",
+        "sha256": "354b556d01f36c60ff2bb902386bd86fb61a271ee6420b550fcce2192ec078e3",
+        "bytes": 33541
+      },
+      {
+        "relative": "homepage.html",
+        "sha256": "f55df491814c45d0a3aacdc6bd3aa44a1f3bfce6659d9dd76972c3ee6b4c9930",
+        "bytes": 190784
+      },
+      {
+        "relative": "mock-cart.css",
+        "sha256": "c17deb1f972017d9790f2191360a457e54d7287730847f9f470c9de371603308",
+        "bytes": 13576
+      },
+      {
+        "relative": "mock-cart.js",
+        "sha256": "1348dffda33dcd031fb293bf3bf6735b67e96432ac34e7703f90d4468a9d6f20",
+        "bytes": 42675
+      },
+      {
+        "relative": "our-story.html",
+        "sha256": "1a24a9beb7e85f656c8f667e75b7153b52b5add5d0da8d0b52185b269ee3ab6d",
+        "bytes": 65948
+      },
+      {
+        "relative": "products/pure-carob-bar.html",
+        "sha256": "2157a7ef9846c854a2565b9e1c4c4a3f934b8b2ab92dc1e119a31bb838109869",
+        "bytes": 25399
+      },
+      {
+        "relative": "shop.html",
+        "sha256": "d7224201966aa32ef068d6408684d6cfc65ef06021795efdc586e7e3c6531085",
+        "bytes": 53817
+      },
+      {
+        "relative": "stockists.html",
+        "sha256": "5ab5ed41026caa26012343d3fef6ab7017ca12ac33d32768743737f091a0bc0a",
+        "bytes": 113633
+      },
+      {
+        "relative": "styles/homepage.css",
+        "sha256": "2aa6e0aee5536d12356af732c5caed56975feaa8ad43be45cec9c4102a029549",
+        "bytes": 1911
+      },
+      {
+        "relative": "vercel.json",
+        "sha256": "06d2399ad511747ffb9d6b241c2329f00ce8a79ba7168050e5b7e7725915166d",
+        "bytes": 1790
+      }
+    ]
+  },
+  "candidate": {
+    "root": "/Users/handtomouse/maplemoon-website/_wip/deploy/generated/maplemoon-homepage-style-finish-r4-20260825T165002",
+    "sha256": "fa218fcc78f4a403b311582b8c7219dd2cac25950f7b96914ab1f8e1186cde3e",
+    "count": 79,
+    "bytes": 13035261,
+    "files": [
+      {
+        "relative": "a11y_inner.css",
+        "sha256": "7ea80be7443dd178360aca4e8b511627aeca156e3ff46cc903a7529c75d999b0",
+        "bytes": 1714
+      },
+      {
+        "relative": "assets/carob_wordmark.svg",
+        "sha256": "2a16b6671c795ea5126d0f9de5db1238d85c574c13c64e0a32718c154da69560",
+        "bytes": 3766
+      },
+      {
+        "relative": "assets/design-system/mm-base.css",
+        "sha256": "a11dbf9b7bfa9f545849cdad5a73832b21221ff77c585d33427bbe99219e19bb",
+        "bytes": 1270
+      },
+      {
+        "relative": "assets/design-system/mm-chrome.css",
+        "sha256": "38ae8acbbdd30ebdfbe633ab1f042549fd2573c7e458e946cc2c53596b32349a",
+        "bytes": 5871
+      },
+      {
+        "relative": "assets/design-system/mm-chrome.js",
+        "sha256": "cc72e22a121cbdb1ec695d181219ca696b0e020f82fedc243e1f407154c1316c",
+        "bytes": 5025
+      },
+      {
+        "relative": "assets/design-system/mm-primitives.css",
+        "sha256": "3108718d5109a28a6221a2eca56fcf5138195f8c020e0d64983b1be1afb839c7",
+        "bytes": 9006
+      },
+      {
+        "relative": "assets/design-system/mm-tokens.css",
+        "sha256": "cab9a32ee62a5a51d9297ab0320e666c1081a7a81c8c83a3bc48d1f1d2341908",
+        "bytes": 3073
+      },
+      {
+        "relative": "assets/hero_shots/blue_fog_001.webp",
+        "sha256": "794d3096aadccde851f7045ac2a36989bffce7f57e5a3273f980b6f29bf8a669",
+        "bytes": 166356
+      },
+      {
+        "relative": "assets/hero_shots/byron_bay_silhouette.webp",
+        "sha256": "edffc47e32ec593282e50731156972de9e10a58e13a47086bfb5a95863940e64",
+        "bytes": 66264
+      },
+      {
+        "relative": "assets/hero_shots/carob_branch_dusk.jpg",
+        "sha256": "5f6fd5235bdde463a84d7133317b354208f97f84a1ca98983746be4c625efee9",
+        "bytes": 567218
+      },
+      {
+        "relative": "assets/hero_shots/carob_pods_cluster.jpg",
+        "sha256": "c2b24330e2a9363be5635619bdaa1890096ba749ccfbf271677bdf38e59046a7",
+        "bytes": 313419
+      },
+      {
+        "relative": "assets/hero_shots/finalist_wetsand2_poster.webp",
+        "sha256": "72cd115b848c6565587726ee46a21ad8f6aa3561b307cb20859fd9fd5d65e7b1",
+        "bytes": 48936
+      },
+      {
+        "relative": "assets/hero_shots/moonlit_ocean_night.webp",
+        "sha256": "76d8195360474ebc2e944bbae06abbcfb62bb4dd5d79354e12ee3088267c5e15",
+        "bytes": 138352
+      },
+      {
+        "relative": "assets/hero_shots/silhouette_closeup.webp",
+        "sha256": "ae753811391090aad4b9587792c47dfc020c99a88af443a145b3c544ff6320b7",
+        "bytes": 182582
+      },
+      {
+        "relative": "assets/hero_videos/gen/finalists/graded_blue/finalist_wetsand2_pingpong.mp4",
+        "sha256": "3f388d0e89a402db694ed181f987e61ef8ab5b1c550b3a164fb8898daa20d5ce",
+        "bytes": 1464641
+      },
+      {
+        "relative": "assets/licensed/carob_farm/australian-carob-0205-16x9.jpg",
+        "sha256": "7298b7c387549b64660a1d82d3e78196a62b2bfbc950392aabd68ed92305108f",
+        "bytes": 139958
+      },
+      {
+        "relative": "assets/licensed/carob_farm/australian-carob-0205-mobile.jpg",
+        "sha256": "03b764279d3e053779a0ca0bce5bbef2e54824c93f9a12e1fa710dbae6b1a7ac",
+        "bytes": 232605
+      },
+      {
+        "relative": "assets/licensed/carob_pods_macro.jpg",
+        "sha256": "9916815baa52b9d85dab8bbe7dc216282d7f3e012625fe7d03ad8f8cb4a3f511",
+        "bytes": 222996
+      },
+      {
+        "relative": "assets/mm_logo_icon_blk.svg",
+        "sha256": "aaffe3fbc7f38fb73f04e09d8b248e9c12184f79308dd17139ede6f26540a988",
+        "bytes": 3988
+      },
+      {
+        "relative": "assets/mm_wordmark_blk.svg",
+        "sha256": "5e1be42597c334fd33194477aa6b7c3527206d2f858fc2e9414a4d9d29e7fdcc",
+        "bytes": 7737
+      },
+      {
+        "relative": "assets/our_story/founder_carli_f76_900.webp",
+        "sha256": "70a2c35f3aa785ad041fc046c753e6d3defdaca4e41aed3406346847397296cc",
+        "bytes": 51196
+      },
+      {
+        "relative": "assets/our_story/founder_dylan_f53_900.webp",
+        "sha256": "a7bdc88c27074a26abae054d2df987b47f7782a54467e5c639ed90fe540ca27e",
+        "bytes": 33540
+      },
+      {
+        "relative": "assets/our_story/founders_pair_f99_1200.webp",
+        "sha256": "5cffb8a7aabded807553bbac9402d1e07580f32a563b5824c97d220285791fd3",
+        "bytes": 131338
+      },
+      {
+        "relative": "assets/our_story/studio_bar_almond.webp",
+        "sha256": "3b92a69d56dcc9c3bc9e57bbb6be76ae7e300aef2f62e44ea3ce673fdaa02180",
+        "bytes": 50158
+      },
+      {
+        "relative": "assets/our_story/studio_bar_rock.webp",
+        "sha256": "9b2055d5294814b6c2773a7d54bf578d4d42b0779272eb6f8b89b74b2fa76874",
+        "bytes": 145156
+      },
+      {
+        "relative": "assets/our_story/studio_moon_rock.webp",
+        "sha256": "a01dd3ae5db5c780915ed4bf1da4a814d1988190a1b7cb73e873174da7399dbe",
+        "bytes": 76970
+      },
+      {
+        "relative": "assets/photo_finals/maplemoon_heros1_brandmatched.webp",
+        "sha256": "5a0f1480ff57abf290636f9140e8e4905e1f271f84df72e9e5c645fd4fc78a63",
+        "bytes": 92688
+      },
+      {
+        "relative": "assets/photo_finals/maplemoon_heros21_brandmatched.webp",
+        "sha256": "3db9dccd65cf6003a2185d5a851c503a93d86fb4ae6ff338f0a1fbbf4c07579e",
+        "bytes": 344452
+      },
+      {
+        "relative": "assets/photo_finals/maplemoon_heros41_brandmatched.webp",
+        "sha256": "4f4d74f47385396bbbf79aba559d9dc8718c7c04ed957c737a0c7b3a8e65fb75",
+        "bytes": 248162
+      },
+      {
+        "relative": "assets/photo_finals/maplemoon_heros43_brandmatched.webp",
+        "sha256": "1b09a6bad57f079ec91d9d502fe2d01d2032ef0d8976b58f68b31cb1dbb67868",
+        "bytes": 681042
+      },
+      {
+        "relative": "assets/photo_finals/maplemoon_heros55_brandmatched.webp",
+        "sha256": "11e46744169c52ecfc339ef8876e745b1544313fcfd7e00e9ffbfdc03d0679af",
+        "bytes": 325136
+      },
+      {
+        "relative": "assets/photo_finals/maplemoon_heros55_brandmatched_atmospheric.webp",
+        "sha256": "f9f80ce6f9ec6627d58aa93c53f6b5cd9f4cdaf250800858e1414bb9803f5ef0",
+        "bytes": 224840
+      },
+      {
+        "relative": "assets/photo_finals/maplemoon_heros66_brandmatched.webp",
+        "sha256": "83c47a329de7c985804ee576be85e564e5766fa37dbb702eee96e7f4ce68ffda",
+        "bytes": 166130
+      },
+      {
+        "relative": "assets/photo_finals/mm23_xmp_blue_hero_2400.webp",
+        "sha256": "64fb77d86a2c3180ff49c77cec33277d797ec3b5d22d7ae87744856d2c0ac4f9",
+        "bytes": 361084
+      },
+      {
+        "relative": "assets/product_shots/bananas_real.webp",
+        "sha256": "33139480bdef9ef0c6bd54c76e6b7fe3fdf833f1b5d933b12fc762052951b083",
+        "bytes": 25872
+      },
+      {
+        "relative": "assets/product_shots/bar_almond.webp",
+        "sha256": "87b890393a549ba8e477f19892ac82d7a8934f101b4347441f3db2878c06c208",
+        "bytes": 127140
+      },
+      {
+        "relative": "assets/product_shots/bar_cayenne.webp",
+        "sha256": "957340b94fd87095b96eaed416ebef7c086333bd0685ab67fdabde6488542e81",
+        "bytes": 129838
+      },
+      {
+        "relative": "assets/product_shots/bar_goji_coconut.webp",
+        "sha256": "f695b7171b72ec1f9d7f7010a54a9694c372d1807b04868412107a399e5f409e",
+        "bytes": 127706
+      },
+      {
+        "relative": "assets/product_shots/bar_hazelnut.webp",
+        "sha256": "bc71c90d342d1f6fcad6d70bd239c8d425b4acb02e3afc82158699ec59e8b852",
+        "bytes": 129290
+      },
+      {
+        "relative": "assets/product_shots/bar_peppermint.webp",
+        "sha256": "4d5709e5775c71d91541e945ff8e9827d17174d1e1642d3c80225ac2db753787",
+        "bytes": 130000
+      },
+      {
+        "relative": "assets/product_shots/bar_pure_carob.webp",
+        "sha256": "ba6e31d13684f7459dd2df44c90ca804c46886aa1a2a2092e36fe627352c8db8",
+        "bytes": 122240
+      },
+      {
+        "relative": "assets/product_shots/bar_pure_carob_hero.webp",
+        "sha256": "3292a84d7665b4ac756b1a43388ad3710a48805c9629cfbe26a096471a54e981",
+        "bytes": 247106
+      },
+      {
+        "relative": "assets/product_shots/eclipse_almond.webp",
+        "sha256": "ed43b412568a4d3ac2beeee08927f9f18453838a4a3fdecd63ba98b37b8ed703",
+        "bytes": 22676
+      },
+      {
+        "relative": "assets/product_shots/eclipse_bundle.webp",
+        "sha256": "3b0515fd4deb8916da9d613f0d8fd94ba6a7c25756f188e6187a932056b6ff46",
+        "bytes": 163216
+      },
+      {
+        "relative": "assets/product_shots/eclipse_fudge.webp",
+        "sha256": "61b38e828f35e87d1c142835a03e73fcb599a09c9388cc709345ee6ff44a3e9a",
+        "bytes": 47794
+      },
+      {
+        "relative": "assets/product_shots/eclipse_goji_real.webp",
+        "sha256": "b031ad6b54c9f7891beadc71d97dc32a702a72c4395753ca4819f7eab43e7d5b",
+        "bytes": 48908
+      },
+      {
+        "relative": "assets/product_shots/eclipse_hazelnut.webp",
+        "sha256": "83413a35ce8d53a808ed6f40079e6b272b39f287d93788bdca23435c2fe16df4",
+        "bytes": 27174
+      },
+      {
+        "relative": "assets/product_shots/eclipse_pecan_real.webp",
+        "sha256": "c7bf522317b979464a9d775d94fd5c1ea1e7133d204787c0fb0ac712b559fd63",
+        "bytes": 39938
+      },
+      {
+        "relative": "assets/product_shots/elixir_plain.webp",
+        "sha256": "4398f43fcc7ff571f4eea4643e078f8416e6921f4e979f5bf31e53338e04916a",
+        "bytes": 35552
+      },
+      {
+        "relative": "assets/product_shots/elixir_spiced.webp",
+        "sha256": "9b92c0f0a0cc11b11aa9a5fa4cb7683b420db373e556c74adcb1ba576ffe1163",
+        "bytes": 64218
+      },
+      {
+        "relative": "assets/product_shots/moon_almond.webp",
+        "sha256": "de8f28186c50d7a407f2070293b418b872b4187d985b62c96f328844ba7c42f1",
+        "bytes": 9246
+      },
+      {
+        "relative": "assets/product_shots/moon_cayenne.webp",
+        "sha256": "f6f2e71b5c59abe56a79bb04afcc6c15a1597644628eda5a3c8e90d204297cc0",
+        "bytes": 17374
+      },
+      {
+        "relative": "assets/product_shots/moon_goji_coconut.webp",
+        "sha256": "fdd5be44f37e9766c966541ceaf68a044279409a2cc87f7d056c244226ac5b32",
+        "bytes": 12990
+      },
+      {
+        "relative": "assets/product_shots/moon_hazelnut.webp",
+        "sha256": "bb73f940642a56bf4a593cef58b1ba593b8664517126722690dad08453b583cc",
+        "bytes": 9198
+      },
+      {
+        "relative": "assets/product_shots/moon_peppermint.webp",
+        "sha256": "463a192590e7762ed928609b01d67555ef4869c1c13c7de43d47a757bad51b45",
+        "bytes": 9492
+      },
+      {
+        "relative": "assets/product_shots/moon_pure_carob.webp",
+        "sha256": "8e8a41d0442d76eea707a26c5d1da604d8ef95384551389547caa7fd21865295",
+        "bytes": 9134
+      },
+      {
+        "relative": "assets/product_shots/powder_packaged_real.webp",
+        "sha256": "fcb1dc9fd11f267bd1c52c0b2746b0e5238d97751b8ca0ec33d5dc4a46c36a03",
+        "bytes": 42958
+      },
+      {
+        "relative": "assets/products_new/bar_almond.png",
+        "sha256": "f276faafd7267244ce9a3c9e33d1fb0a79995d9144e64996a096e1603feea412",
+        "bytes": 624532
+      },
+      {
+        "relative": "assets/products_new/bar_cayenne.png",
+        "sha256": "98198122d6a4131dc02f3b8f8b902807d24c9815144a42e12ed76a996f07fb8f",
+        "bytes": 714910
+      },
+      {
+        "relative": "assets/products_new/bar_goji_coconut.png",
+        "sha256": "c052cf0d1a657f6c88ec8266ca2d99a4ddb78bfa3f14fa722dbb1a1bd94bda17",
+        "bytes": 792129
+      },
+      {
+        "relative": "assets/products_new/bar_hazelnut.png",
+        "sha256": "918fa46feaba6306d5a6e64e1aadc9a9e4d0270c81d12ad00a9dd3f8dbdff664",
+        "bytes": 831697
+      },
+      {
+        "relative": "assets/products_new/bar_peppermint.png",
+        "sha256": "a28f054e3717bca52dd835814630b1db045f17d6461dd289d3753ea49cd4073b",
+        "bytes": 586829
+      },
+      {
+        "relative": "assets/products_new/bar_pure_carob.png",
+        "sha256": "b6e64b00acd3e502e19c7b7ee1aa16e9669d1d9e9c19bbbe1dac0917c4967cff",
+        "bytes": 715330
+      },
+      {
+        "relative": "brand_kit.css",
+        "sha256": "53043df665ab3bc696b3d925f5ed108912cdc50330def58f92d2e7c2adbbbbe3",
+        "bytes": 10754
+      },
+      {
+        "relative": "carob-story.html",
+        "sha256": "71d5a883cfb14db45b71d7fa94211d08778bc69d037d38c46c058c2e13da90e4",
+        "bytes": 56634
+      },
+      {
+        "relative": "contact.html",
+        "sha256": "c54a280a0b11187811215e45cecda1cea6f9c1872f7e65978912185b7c294e21",
+        "bytes": 12970
+      },
+      {
+        "relative": "design_refinement_20260723.css",
+        "sha256": "90de7de62efb16b0fe10da4dfea5b1ab2889a01cc2ac4a895127466a68803df2",
+        "bytes": 4304
+      },
+      {
+        "relative": "faq.html",
+        "sha256": "354b556d01f36c60ff2bb902386bd86fb61a271ee6420b550fcce2192ec078e3",
+        "bytes": 33541
+      },
+      {
+        "relative": "homepage-style-finish-r4-manifest.json",
+        "sha256": "2202972d589b9d89166b1a6c40663940d58e5a195f38cac7bfdce46109ff7df8",
+        "bytes": 7364
+      },
+      {
+        "relative": "homepage.html",
+        "sha256": "337be25163e150a07898db99c5d53f706d95a36cd05a9de7c007e0822dd841d2",
+        "bytes": 190910
+      },
+      {
+        "relative": "mock-cart.css",
+        "sha256": "c17deb1f972017d9790f2191360a457e54d7287730847f9f470c9de371603308",
+        "bytes": 13576
+      },
+      {
+        "relative": "mock-cart.js",
+        "sha256": "1348dffda33dcd031fb293bf3bf6735b67e96432ac34e7703f90d4468a9d6f20",
+        "bytes": 42675
+      },
+      {
+        "relative": "our-story.html",
+        "sha256": "1a24a9beb7e85f656c8f667e75b7153b52b5add5d0da8d0b52185b269ee3ab6d",
+        "bytes": 65948
+      },
+      {
+        "relative": "products/pure-carob-bar.html",
+        "sha256": "2157a7ef9846c854a2565b9e1c4c4a3f934b8b2ab92dc1e119a31bb838109869",
+        "bytes": 25399
+      },
+      {
+        "relative": "shop.html",
+        "sha256": "d7224201966aa32ef068d6408684d6cfc65ef06021795efdc586e7e3c6531085",
+        "bytes": 53817
+      },
+      {
+        "relative": "stockists.html",
+        "sha256": "5ab5ed41026caa26012343d3fef6ab7017ca12ac33d32768743737f091a0bc0a",
+        "bytes": 113633
+      },
+      {
+        "relative": "styles/homepage-style-finish-r4.css",
+        "sha256": "a8b375da22e3183b8815246b58b6cf80d75d6ffb76b5c87e42f5c8dcf3cf0a82",
+        "bytes": 18879
+      },
+      {
+        "relative": "styles/homepage.css",
+        "sha256": "2aa6e0aee5536d12356af732c5caed56975feaa8ad43be45cec9c4102a029549",
+        "bytes": 1911
+      },
+      {
+        "relative": "vercel.json",
+        "sha256": "06d2399ad511747ffb9d6b241c2329f00ce8a79ba7168050e5b7e7725915166d",
+        "bytes": 1790
+      }
+    ]
+  },
+  "pinned": [
+    {
+      "file": "/Users/handtomouse/maplemoon-website/docs/orchestration/packets/MAPLEMOON-HOMEPAGE-STYLE-FINISH-R3-20260825T164343.md",
+      "expected": "f8628f037332ad8905812139c9223bcded425af978b35a29fe61cf7a04994b3b",
+      "observed": "f8628f037332ad8905812139c9223bcded425af978b35a29fe61cf7a04994b3b"
+    },
+    {
+      "file": "/Users/handtomouse/maplemoon-website/docs/orchestration/reviews/MAPLEMOON-HOMEPAGE-STYLE-FINISH-R3-20260825T164343.json",
+      "expected": "8324a3aebb318addc8e6cd3912327337df6e8560fbc6fa85ecd8c599a2d0410d",
+      "observed": "8324a3aebb318addc8e6cd3912327337df6e8560fbc6fa85ecd8c599a2d0410d"
+    },
+    {
+      "file": "/Users/handtomouse/maplemoon-website/scripts/build-maplemoon-homepage-style-finish-r3-20260825T164343.mjs",
+      "expected": "8a45fbaa12a31b01c579ac02adb7ca256b5072d61497436941129659e349ca05",
+      "observed": "8a45fbaa12a31b01c579ac02adb7ca256b5072d61497436941129659e349ca05"
+    },
+    {
+      "file": "/Users/handtomouse/maplemoon-website/_wip/evidence/homepage_style_finish_r3_20260825T164343/DRIFT-HOLD.md",
+      "expected": "8d03ce694368f99734e31515549550c524d176219795f926fe5abffe6a52d0fd",
+      "observed": "8d03ce694368f99734e31515549550c524d176219795f926fe5abffe6a52d0fd"
+    },
+    {
+      "file": "/Users/handtomouse/maplemoon-website/scripts/build-maplemoon-wip-preview.py",
+      "expected": "c8ea6c34d0207f9388ebf479f1c92ea77d63d61f5614cbbcf10a3896ef8c334a",
+      "observed": "c8ea6c34d0207f9388ebf479f1c92ea77d63d61f5614cbbcf10a3896ef8c334a"
+    },
+    {
+      "file": "/Users/handtomouse/.codex/visualizations/2026/08/12/019ff65f-fd33-7e51-8a83-360ba2f8d665/HOMEPAGE-STYLES-DECISIONS-20260824.md",
+      "expected": "c9f286b5d2c5b5367e74362e1ea69bbbf9b52be7be8bbccf6f4f668b7083a0d9",
+      "observed": "c9f286b5d2c5b5367e74362e1ea69bbbf9b52be7be8bbccf6f4f668b7083a0d9"
+    },
+    {
+      "file": "/Users/handtomouse/.codex/visualizations/2026/08/12/019ff65f-fd33-7e51-8a83-360ba2f8d665/homepage-styles-batch-01.html",
+      "expected": "15ce5c5679d9f978db50c31b25ac59fd004acd19014e9fc80e3d613b46ee642e",
+      "observed": "15ce5c5679d9f978db50c31b25ac59fd004acd19014e9fc80e3d613b46ee642e"
+    },
+    {
+      "file": "/Users/handtomouse/.codex/visualizations/2026/08/12/019ff65f-fd33-7e51-8a83-360ba2f8d665/maple-moon-homepage-structure-preserved-style-tuning.html",
+      "expected": "c603d3e26b4db821a18e2ca937f0b62ddc01b1ca2cc0ccb81571eb1926e0bdca",
+      "observed": "c603d3e26b4db821a18e2ca937f0b62ddc01b1ca2cc0ccb81571eb1926e0bdca"
+    },
+    {
+      "file": "/Users/handtomouse/.codex/visualizations/2026/08/12/019ff65f-fd33-7e51-8a83-360ba2f8d665/homepage-what-is-carob-batch-06.html",
+      "expected": "7f95350047a7676499d785788655e34ee8c645f07e5a5a05ad6d1972addd8560",
+      "observed": "7f95350047a7676499d785788655e34ee8c645f07e5a5a05ad6d1972addd8560"
+    },
+    {
+      "file": "/Users/handtomouse/.codex/visualizations/2026/08/12/019ff65f-fd33-7e51-8a83-360ba2f8d665/maple-moon-homepage-hybrid-current-vs-tuned.html",
+      "expected": "1e22c01f02c973867692ccc4f942fcd150c5c1a92365a34bef2573987b3a4966",
+      "observed": "1e22c01f02c973867692ccc4f942fcd150c5c1a92365a34bef2573987b3a4966"
+    },
+    {
+      "file": "/Users/handtomouse/.codex/visualizations/2026/08/12/019ff65f-fd33-7e51-8a83-360ba2f8d665/maple-moon-lane-2-homepage-system.html",
+      "expected": "6d5b7a0986a698932b52fbdef67ef6a679b4dba4999feca9a3c686ec29328cf6",
+      "observed": "6d5b7a0986a698932b52fbdef67ef6a679b4dba4999feca9a3c686ec29328cf6"
+    }
+  ],
+  "frozen": [
+    {
+      "file": "/Users/handtomouse/maplemoon-website/_wip/our-story.WIP.html",
+      "sha256": "1a24a9beb7e85f656c8f667e75b7153b52b5add5d0da8d0b52185b269ee3ab6d"
+    },
+    {
+      "file": "/Users/handtomouse/maplemoon-website/_wip/shop.WIP.html",
+      "sha256": "d7224201966aa32ef068d6408684d6cfc65ef06021795efdc586e7e3c6531085"
+    },
+    {
+      "file": "/Users/handtomouse/maplemoon-website/_wip/stockists.WIP.html",
+      "sha256": "5ab5ed41026caa26012343d3fef6ab7017ca12ac33d32768743737f091a0bc0a"
+    },
+    {
+      "file": "/Users/handtomouse/maplemoon_build_20260813/mock-cart.js",
+      "sha256": "c93a17ca336d31c08629a6e18b8244325f38d0f094d86af0d318a545c45af883"
+    }
+  ],
+  "liveHomepage": {
+    "file": "/Users/handtomouse/maplemoon-website/_wip/homepage_real_1_lead_photo.WIP.html",
+    "sha256": "538202828f60e3acf5f2e1474c129052fc21e7338b702412cd3a025f0718a33c",
+    "bytes": 194218
+  }
+}

@@ -1,0 +1,82 @@
+{
+  "schema": "maplemoon-receipt/v2",
+  "receipt_id": "MAPLEMOON-HOMEPAGE-STYLE-FINISH-R5-20260825T171625-RECEIPT-HOLD-01",
+  "packet_id": "MAPLEMOON-HOMEPAGE-STYLE-FINISH-R5-20260825T171625",
+  "worker_thread_id": "019ffe53-6243-73a2-9d75-e1a072cd07ce",
+  "worker": "MapleMoon BOSS immutable homepage style candidate R5",
+  "started_at": "2026-08-25T07:17:57Z",
+  "completed_at": "2026-08-25T07:49:50Z",
+  "files_read": [
+    "maplemoon-website/docs/orchestration/packets/MAPLEMOON-HOMEPAGE-STYLE-FINISH-R5-20260825T171625.md",
+    "maplemoon-website/docs/orchestration/packets/MAPLEMOON-HOMEPAGE-STYLE-FINISH-R4-20260825T165002.md",
+    "maplemoon-website/docs/orchestration/reviews/MAPLEMOON-HOMEPAGE-STYLE-FINISH-R4-20260825T165002.json",
+    "maplemoon-website/_wip/evidence/homepage_style_finish_r4_20260825T165002/source-snapshot.WIP.html",
+    "maplemoon-website/_wip/evidence/homepage_style_finish_r4_20260825T165002/baseline",
+    "maplemoon-website/_wip/homepage_real_1_lead_photo.WIP.html",
+    "maplemoon-website/_wip/our-story.WIP.html",
+    "maplemoon-website/_wip/shop.WIP.html",
+    "maplemoon-website/_wip/stockists.WIP.html",
+    "maplemoon_build_20260813/mock-cart.js"
+  ],
+  "files_changed": [
+    "maplemoon-website/scripts/build-maplemoon-homepage-style-finish-r5-20260825T171625.mjs",
+    "maplemoon-website/_wip/deploy/generated/maplemoon-homepage-style-finish-r5-20260825T171625",
+    "maplemoon-website/_wip/evidence/homepage_style_finish_r5_20260825T171625",
+    "maplemoon-website/docs/orchestration/reviews/MAPLEMOON-HOMEPAGE-STYLE-FINISH-R5-20260825T171625.json"
+  ],
+  "pre_sha256": {
+    "maplemoon-website/scripts/build-maplemoon-homepage-style-finish-r5-20260825T171625.mjs": null,
+    "maplemoon-website/_wip/deploy/generated/maplemoon-homepage-style-finish-r5-20260825T171625": null,
+    "maplemoon-website/_wip/evidence/homepage_style_finish_r5_20260825T171625": null,
+    "maplemoon-website/docs/orchestration/reviews/MAPLEMOON-HOMEPAGE-STYLE-FINISH-R5-20260825T171625.json": null
+  },
+  "post_sha256": {
+    "maplemoon-website/scripts/build-maplemoon-homepage-style-finish-r5-20260825T171625.mjs": "1244b7afeeced6b50e1dd7ee8234e5549913f338d86c24356724c9ce43cebfad",
+    "maplemoon-website/_wip/deploy/generated/maplemoon-homepage-style-finish-r5-20260825T171625": "4148aa9117d408ee360630f8c0c0847b535a6378d1964e5fbc094e6fa4789841",
+    "maplemoon-website/_wip/evidence/homepage_style_finish_r5_20260825T171625": "ffcb38a7dbbbd481b7c188d6cd23afec4904026c032c622270f43570b9488a75",
+    "maplemoon-website/docs/orchestration/reviews/MAPLEMOON-HOMEPAGE-STYLE-FINISH-R5-20260825T171625.json": null
+  },
+  "checks": [
+    {
+      "command": "python3 -B scripts/check-maplemoon-receipt.py checkpoint --root /Users/handtomouse --packet docs/orchestration/packets/MAPLEMOON-HOMEPAGE-STYLE-FINISH-R5-20260825T171625.md --destination _wip/checkpoints/MAPLEMOON-HOMEPAGE-STYLE-FINISH-R5-20260825T171625_20260825_171625_AEST",
+      "exit_code": 0,
+      "result": "PASS checkpoint packet=MAPLEMOON-HOMEPAGE-STYLE-FINISH-R5-20260825T171625 files=4 path=_wip/checkpoints/MAPLEMOON-HOMEPAGE-STYLE-FINISH-R5-20260825T171625_20260825_171625_AEST"
+    },
+    {
+      "command": "python3 -B scripts/check-maplemoon-receipt.py verify --root /Users/handtomouse --packet docs/orchestration/packets/MAPLEMOON-HOMEPAGE-STYLE-FINISH-R5-20260825T171625.md --checkpoint _wip/checkpoints/MAPLEMOON-HOMEPAGE-STYLE-FINISH-R5-20260825T171625_20260825_171625_AEST --phase start",
+      "exit_code": 0,
+      "result": "PASS packet=MAPLEMOON-HOMEPAGE-STYLE-FINISH-R5-20260825T171625 phase=start scope=4"
+    },
+    {
+      "command": "node scripts/build-maplemoon-homepage-style-finish-r5-20260825T171625.mjs",
+      "exit_code": 0,
+      "result": "BUILD PASS packet=MAPLEMOON-HOMEPAGE-STYLE-FINISH-R5-20260825T171625 output=/Users/handtomouse/maplemoon-website/_wip/deploy/generated/maplemoon-homepage-style-finish-r5-20260825T171625 baseline_files=77 output_files=79 bytes=13034750 link_injections=1 reverse_equal=1 q_segments_dom=0 non_home_equal=1 r1_r2_r3_r4_preserved=1 sealed_snapshot=1 sealed_baseline=1 corrections=2/2"
+    },
+    {
+      "command": "node _wip/evidence/homepage_style_finish_r5_20260825T171625/qa-harness-r5.mjs",
+      "exit_code": 1,
+      "result": "HOMEPAGE_STYLE_AUTOMATED_QA FAIL widths=4/5 proofs=120/120 contacts=60/60 review_sheets=11/11 additional=16/16 carousel=PASS newsletter_equivalence=PASS integration=HOLD positive_controls=12/12 close_pins=PASS live_rebase=HOLD"
+    },
+    {
+      "command": "independent visual review of authoritative R5 attempt-003 review sheets",
+      "exit_code": 1,
+      "result": "HOLD no overall visual PASS: 11/11 review sheets across five exact widths inspected; all named visual areas pass except the 1440 starter fan, whose first rotated packshot escapes .sbox by 1.923px"
+    }
+  ],
+  "screenshots_or_urls": [
+    "maplemoon-website/_wip/evidence/homepage_style_finish_r5_20260825T171625/qa-attempts/attempt-003",
+    "maplemoon-website/_wip/evidence/homepage_style_finish_r5_20260825T171625/INDEPENDENT-VISUAL-REVIEW.md",
+    "maplemoon-website/_wip/evidence/homepage_style_finish_r5_20260825T171625/R5-DIAGNOSTIC-HOLD.md"
+  ],
+  "failures": [
+    "At exact 1440, the first rotated starter packshot begins 1.92291259765625px left of its .sbox semantic container; the required five-width containment gate therefore fails."
+  ],
+  "unknowns": [],
+  "residual_risk": [
+    "The inherited frozen mock-cart runtime re-enables the visibly Demo only newsletter submit. R5 proves baseline/candidate equality and zero network/storage side effects, but a separate integration owner must resolve the runtime before release.",
+    "The live homepage moved after the sealed snapshot; any later source ingestion requires an exact separately authorised rebase against the recorded delta."
+  ],
+  "forbidden_path_changes": [],
+  "proposed_next_state": "hold",
+  "next_reviewer": "MapleMoon BOSS non-overwriting R6 with only the 14px-to-18px starter-grid inset correction and a full evidence rerun"
+}

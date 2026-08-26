@@ -1,0 +1,162 @@
+--- /Users/handtomouse/maplemoon-website/_wip/evidence/homepage_style_finish_r4_20260825T165002/source-snapshot.WIP.html	2026-08-25 16:53:40
++++ /Users/handtomouse/maplemoon-website/_wip/homepage_real_1_lead_photo.WIP.html	2026-08-25 17:02:13
+@@ -945,7 +945,7 @@
+     <div class="mm-founder-copy"><span class="qkick">The heart behind Maple Moon</span><h2 class="lux-hd" id="who-title">Carli <span class="amp">&amp;</span> Dylan</h2><div class="lux-rule"></div><p>Meet the people behind Maple Moon and the ideas shaping its slow, thoughtful rituals.</p></div>
+     <div class="mm-founder-card"><div class="mm-pending-media" style="padding:0;overflow:hidden"><img src="/assets/our_story/founder_carli_f76_900.webp" alt="Carli, co-founder of Maple Moon" loading="lazy" decoding="async" style="width:100%;height:100%;min-height:inherit;object-fit:cover;object-position:50% 35%;display:block"></div><strong>Carli</strong><span>Co-founder</span></div>
+     <div class="mm-founder-card"><div class="mm-pending-media" style="padding:0;overflow:hidden"><img src="/assets/our_story/founder_dylan_f53_900.webp" alt="Dylan, co-founder of Maple Moon" loading="lazy" decoding="async" style="width:100%;height:100%;min-height:inherit;object-fit:cover;object-position:50% 35%;display:block"></div><strong>Dylan</strong><span>Co-founder</span></div>
+-    <div class="mm-founder-cta"><div class="mm-pending-media" style="padding:0;overflow:hidden"><img src="/assets/our_story/founders_pair_f99_1200.webp" alt="Carli and Dylan, co-founders of Maple Moon" loading="lazy" decoding="async" style="width:100%;height:100%;min-height:inherit;object-fit:cover;object-position:50% 35%;display:block"></div><span class="mm-moon">☾</span><h3>Meet Carli <span class="amp">&amp;</span> Dylan</h3><p>Explore the story and values behind Maple Moon.</p><a class="wf-pill" href="/our-story">Read our story <span aria-hidden="true">→</span></a></div>
++    <div class="mm-founder-cta"><span class="mm-moon" aria-hidden="true">☾</span><h3><span>Meet Carli</span><span><span class="amp">&amp;</span> Dylan</span></h3><p>Explore the story and values behind Maple Moon.</p><a class="wf-pill" href="/our-story">Read our story <span aria-hidden="true">→</span></a></div>
+   </section>
+ 
+   <!-- STOCKISTS (directory framing; dataset/count remains provisional) -->
+@@ -3153,8 +3153,26 @@
+   background:linear-gradient(180deg,#e4f0f8 0%,#d8e8f2 48%,#e4f0f8 100%)!important;
+ }
+ .wf-where1::before{
+-  height:112px!important;
+-  background:linear-gradient(180deg,#15314f 0%,#254762 30%,rgba(76,111,137,.72) 58%,rgba(186,211,227,.72) 80%,#e4f0f8 100%)!important;
++  height:224px!important;
++  background:linear-gradient(180deg,
++    #d6e6ed 0%,
++    #d6e6ed 4%,
++    #d2e3eb 9%,
++    #c8dce5 15%,
++    #b7ceda 22%,
++    #9fb9ca 30%,
++    #7897ad 39%,
++    #4e6e85 47%,
++    #2c4b65 54%,
++    #193653 60%,
++    #15314f 64%,
++    rgba(31,59,83,.94) 69%,
++    rgba(57,87,109,.82) 75%,
++    rgba(91,119,139,.66) 81%,
++    rgba(127,153,170,.48) 87%,
++    rgba(164,187,201,.30) 92%,
++    rgba(199,217,227,.15) 96%,
++    rgba(228,240,248,0) 100%)!important;
+ }
+ .wf-where1 .wf-photo-credit{
+   display:flex;
+@@ -3192,6 +3210,121 @@
+   .wf-line-dark .cf-item:not(.center)::after{filter:blur(8px);}
+ }
+ </style>
++<style id="homepage-priority-fixes-20260825">
++/* Slot 3 is an editorial, text-only route into the founders' story. */
++.mm-founder-cta{
++  position:relative;
++  isolation:isolate;
++  min-width:0;
++  min-height:534.63px;
++  overflow:hidden;
++  justify-content:flex-start!important;
++  padding:32px 28px 30px!important;
++  background:
++    radial-gradient(circle at 50% 19%,rgba(248,244,219,.32) 0%,rgba(226,237,239,.16) 25%,transparent 52%),
++    linear-gradient(180deg,rgba(248,252,250,.31),rgba(220,234,240,.24))!important;
++}
++.mm-founder-cta::after{
++  content:"";
++  position:absolute;
++  z-index:-1;
++  left:28px;
++  right:28px;
++  top:178px;
++  height:1px;
++  background:linear-gradient(90deg,#a78852 0%,rgba(167,136,82,.32) 62%,transparent 100%);
++}
++.mm-founder-cta .mm-moon{
++  width:116px;
++  aspect-ratio:1;
++  display:grid;
++  place-items:center;
++  margin:0 auto 52px;
++  border:1px solid rgba(167,136,82,.22);
++  border-radius:50%;
++  color:#8b7040;
++  font-size:4.6rem;
++  font-weight:300;
++  line-height:1;
++  background:radial-gradient(circle,rgba(249,245,218,.54) 0%,rgba(225,237,240,.24) 54%,transparent 72%);
++}
++.mm-founder-cta h3{
++  margin:auto 0 16px;
++  color:#263c48;
++  font-size:clamp(1.58rem,2vw,1.88rem)!important;
++  line-height:1.06;
++  letter-spacing:-.015em;
++  text-wrap:balance;
++}
++.mm-founder-cta h3>span{display:block;white-space:nowrap;}
++.mm-founder-cta p{
++  max-width:23ch;
++  margin:0 0 24px;
++  color:#526873!important;
++  font-size:.94rem;
++  line-height:1.58!important;
++  text-wrap:balance;
++}
++.mm-founder-cta .wf-pill{
++  align-self:flex-start;
++  flex:0 0 auto;
++  margin-top:0!important;
++  white-space:nowrap;
++}
++@media(max-width:900px){
++  .mm-founder-cta{min-height:350px;padding:30px 26px!important;}
++  .mm-founder-cta::after{top:154px;}
++  .mm-founder-cta .mm-moon{width:96px;margin-bottom:44px;font-size:3.8rem;}
++  .mm-founder-cta h3{font-size:1.72rem!important;}
++  .mm-founder-cta p{max-width:28ch;}
++}
++
++/* The 2:3 ritual photographs use one consistent 4:5 frame; captions live below, never on the product. */
++.q-when .q-tile{
++  min-height:0!important;
++  display:flex!important;
++  flex-direction:column;
++  background:rgba(232,241,244,.58)!important;
++}
++.q-when .q-tile .ph{
++  position:relative!important;
++  inset:auto!important;
++  flex:0 0 auto;
++  width:100%;
++  min-height:0!important;
++  aspect-ratio:4 / 5!important;
++  border-radius:23px 23px 0 0!important;
++}
++.q-when .q-tile img{
++  display:block;
++  width:100%;
++  height:100%;
++  object-fit:cover!important;
++  filter:saturate(.78) contrast(.94) brightness(.96)!important;
++}
++.q-when .q-tile:nth-child(1) img{object-position:50% 68%!important;}
++.q-when .q-tile:nth-child(2) img{object-position:50% 56%!important;}
++.q-when .q-tile:nth-child(3) img{object-position:50% 54%!important;}
++.q-when .q-tile .ph::after{background:none!important;}
++.q-when .q-tile .tx{
++  position:relative!important;
++  inset:auto!important;
++  flex:1 1 auto;
++  min-height:148px!important;
++  padding:21px 22px 24px!important;
++  border:0!important;
++  border-top:1px solid rgba(57,73,80,.16)!important;
++  border-radius:0 0 23px 23px;
++  background:linear-gradient(180deg,rgba(238,246,247,.86),rgba(222,235,241,.76))!important;
++  color:#273d49!important;
++}
++.q-when .q-tile .tx span{color:#526872!important;}
++.q-when .q-tile .tx .mo{color:#8b7040!important;}
++.q-when .q-tile strong{color:#273d49!important;}
++@media(max-width:900px){
++  .q-when .q-tile .tx{min-height:138px!important;}
++}
++</style>
+ <script id="homepage-cta-mobile-review-query-20260728">
+ (() => {
+   const q = new URLSearchParams(location.search);

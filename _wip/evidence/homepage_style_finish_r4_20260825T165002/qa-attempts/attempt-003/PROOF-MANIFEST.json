@@ -1,0 +1,40 @@
+{
+  "proofs": [
+    {
+      "root": "baseline",
+      "width": 1440,
+      "state": "full-page",
+      "file": "/Users/handtomouse/maplemoon-website/_wip/evidence/homepage_style_finish_r4_20260825T165002/qa-attempts/attempt-003/proofs/baseline-1440-full-page.png",
+      "bytes": 4977864,
+      "sha256": "d0e007212127fd635073f7eef78064d06cb61c854b6dff23cdd428dc65980e73",
+      "height": 6659,
+      "nonblank": true
+    },
+    {
+      "root": "baseline",
+      "width": 1280,
+      "state": "hero-header",
+      "selector": "#top",
+      "box": {
+        "x": 0,
+        "y": 0,
+        "width": 1280,
+        "height": 1473.8125
+      },
+      "clip": {
+        "x": 0,
+        "y": 0,
+        "width": 1440,
+        "height": 1473.8125
+      },
+      "file": "/Users/handtomouse/maplemoon-website/_wip/evidence/homepage_style_finish_r4_20260825T165002/qa-attempts/attempt-003/proofs/baseline-1440-hero-header.png",
+      "bytes": 1029576,
+      "sha256": "533698c5c70962bd6b7db5c63c59f779c9dd11110cb99701b7da43b362c275c1",
+      "height": 720,
+      "nonblank": true
+    }
+  ],
+  "contacts": [],
+  "reviewSheets": [],
+  "additional": []
+}

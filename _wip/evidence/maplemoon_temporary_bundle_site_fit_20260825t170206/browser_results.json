@@ -1,0 +1,213 @@
+{
+  "schema": "maplemoon-temporary-bundle-browser-qa/v1",
+  "base": "http://127.0.0.1:4386",
+  "outcome": "PASS",
+  "cases": 4,
+  "results": [
+    {
+      "route": "shop",
+      "width": 390,
+      "dpr": 2,
+      "status": 200,
+      "declaredLoading": "lazy",
+      "grid": {
+        "status": "temporary_replace_before_final",
+        "hidden": false,
+        "loading": "eager",
+        "src": "http://127.0.0.1:4386/assets/product_shots/temporary_eclipse_bite_bundle_web.webp",
+        "natural": [
+          1080,
+          668
+        ],
+        "image": {
+          "width": 288,
+          "height": 178.125,
+          "top": 222.03125,
+          "bottom": 400.15625
+        },
+        "well": {
+          "width": 332,
+          "height": 332,
+          "top": 145.09375,
+          "bottom": 477.09375
+        },
+        "background": "radial-gradient(at 50% 0%, rgba(255, 255, 255, 0.74), rgba(255, 255, 255, 0) 62%), linear-gradient(160deg, rgb(220, 232, 239), rgb(245, 244, 237) 84%)",
+        "overflow": [
+          390,
+          390
+        ]
+      },
+      "list": {
+        "bodyClass": "shop-list-view",
+        "image": {
+          "width": 295.671875,
+          "height": 180
+        },
+        "well": {
+          "width": 332,
+          "height": 249
+        },
+        "overflow": [
+          390,
+          390
+        ]
+      },
+      "consoleErrors": [],
+      "pageErrors": [],
+      "internalRequestFailures": [],
+      "internalBadResponses": []
+    },
+    {
+      "route": "homepage",
+      "width": 390,
+      "dpr": 2,
+      "status": 200,
+      "declaredLoading": "lazy",
+      "home": {
+        "status": "temporary_replace_before_final",
+        "centered": true,
+        "src": "http://127.0.0.1:4386/assets/product_shots/temporary_eclipse_bite_bundle_web.webp",
+        "natural": [
+          1080,
+          668
+        ],
+        "image": {
+          "left": 93.24000549316406,
+          "top": 93.68438720703125,
+          "right": 296.760009765625,
+          "bottom": 416.984375,
+          "width": 203.52000427246094,
+          "height": 323.29998779296875
+        },
+        "content": {
+          "left": 93.24000549316406,
+          "top": 291.1034834685149,
+          "right": 296.760009765625,
+          "bottom": 416.984375,
+          "width": 203.52000427246094,
+          "height": 125.88089153148509
+        },
+        "stage": {
+          "left": 28,
+          "top": 137.984375,
+          "right": 362,
+          "bottom": 463.984375,
+          "width": 334,
+          "height": 326
+        },
+        "background": "none",
+        "overflow": [
+          390,
+          390
+        ]
+      },
+      "consoleErrors": [],
+      "pageErrors": [],
+      "internalRequestFailures": [],
+      "internalBadResponses": []
+    },
+    {
+      "route": "shop",
+      "width": 1440,
+      "dpr": 1,
+      "status": 200,
+      "declaredLoading": "lazy",
+      "grid": {
+        "status": "temporary_replace_before_final",
+        "hidden": false,
+        "loading": "eager",
+        "src": "http://127.0.0.1:4386/assets/product_shots/temporary_eclipse_bite_bundle_web.webp",
+        "natural": [
+          1080,
+          668
+        ],
+        "image": {
+          "width": 314.25,
+          "height": 194.359375,
+          "top": 273,
+          "bottom": 467.359375
+        },
+        "well": {
+          "width": 359.34375,
+          "height": 359.34375,
+          "top": 190.515625,
+          "bottom": 549.859375
+        },
+        "background": "radial-gradient(at 50% 0%, rgba(255, 255, 255, 0.74), rgba(255, 255, 255, 0) 62%), linear-gradient(160deg, rgb(220, 232, 239), rgb(245, 244, 237) 84%)",
+        "overflow": [
+          1440,
+          1440
+        ]
+      },
+      "list": {
+        "bodyClass": "shop-list-view",
+        "image": {
+          "width": 159.359375,
+          "height": 94.796875
+        },
+        "well": {
+          "width": 190,
+          "height": 142.5
+        },
+        "overflow": [
+          1440,
+          1440
+        ]
+      },
+      "consoleErrors": [],
+      "pageErrors": [],
+      "internalRequestFailures": [],
+      "internalBadResponses": []
+    },
+    {
+      "route": "homepage",
+      "width": 1440,
+      "dpr": 1,
+      "status": 200,
+      "declaredLoading": "lazy",
+      "home": {
+        "status": "temporary_replace_before_final",
+        "centered": true,
+        "src": "http://127.0.0.1:4386/assets/product_shots/temporary_eclipse_bite_bundle_web.webp",
+        "natural": [
+          1080,
+          668
+        ],
+        "image": {
+          "left": 572.6600341796875,
+          "top": 36.620635986328125,
+          "right": 867.3399658203125,
+          "bottom": 505.140625,
+          "width": 294.679931640625,
+          "height": 468.5199890136719
+        },
+        "content": {
+          "left": 572.6600341796875,
+          "top": 322.8756302445023,
+          "right": 867.3399658203125,
+          "bottom": 505.140625,
+          "width": 294.679931640625,
+          "height": 182.26499475549767
+        },
+        "stage": {
+          "left": 28,
+          "top": 103.140625,
+          "right": 1412,
+          "bottom": 578.328125,
+          "width": 1384,
+          "height": 475.1875
+        },
+        "background": "none",
+        "overflow": [
+          1440,
+          1440
+        ]
+      },
+      "consoleErrors": [],
+      "pageErrors": [],
+      "internalRequestFailures": [],
+      "internalBadResponses": []
+    }
+  ],
+  "failures": []
+}

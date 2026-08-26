@@ -1,0 +1,37 @@
+{
+  "schema": "maplemoon-adversarial-product-photography-review/v1",
+  "review_scope": "temporary five-product bundle asset in the private Home and Shop successor",
+  "verdict": "HOLD",
+  "site_presentation_verdict": "PASS",
+  "product_truthfulness_verdict": "HOLD",
+  "launch_admitted": false,
+  "admission_receipt_allowed": false,
+  "source_sha256": "cbdbf30d95a5bd8a281ba0e49726881d16702ff046b73f3bbd6482a17396bb28",
+  "derivative_sha256": "8bca090850c29da285ae266d8bf666199ae7cacbeee475160df13bc82c66932f",
+  "passes": [
+    "Exactly five visible product bodies are present.",
+    "The Pecan-topped body is visibly distinct.",
+    "The transparent edge is clean on light, dark, cream, and site-blue proofs.",
+    "Home and Shop do not add a broad product halo.",
+    "Home uses a pale square plate consistent with neighbouring product imagery.",
+    "Lighting direction inside the temporary asset is internally coherent enough for staging."
+  ],
+  "launch_blockers": [
+    "Salted Almond and Hazelnut are not immediately and unmistakably recognisable as different SKUs.",
+    "The three Eclipse bodies still read as repeated moulded domes rather than irregular hand-dipped pieces.",
+    "The Salted Caramel Fudge remains too square and mechanically clean relative to the governed geometry brief.",
+    "The Goji Coconut Bar surface has not been verified against the missing governed real raws.",
+    "The temporary image is generated source material and has not earned final product-truthfulness admission.",
+    "The inherited visitor copy says All 5 bites although the named set is three Eclipse Bites, one fudge, and one bar. Copy requires an explicit final-site decision."
+  ],
+  "required_for_pass": [
+    "Restore and hash DSC01543, DSC01561, DSC01563, DSC01564, DSC01567, DSC01572, and DSC01576.",
+    "Build all three governed reference sheets from the named May identities and restored raws.",
+    "Run the one approved GPT Image 2 call without retry.",
+    "Reject unless Almond has an unmistakable angular cut face and Hazelnut remains intact with rounded crumb.",
+    "Reject cloned domes, perfect fudge geometry, incorrect relative scale, invented Goji cues, floating shadows, or incoherent lighting.",
+    "Obtain Nate's separate result acceptance before binding any replacement.",
+    "Resolve the inaccurate inherited All 5 bites visitor copy before final launch admission."
+  ],
+  "next_action": "Restore and individually hash the seven governed real raw references."
+}

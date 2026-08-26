@@ -1,0 +1,87 @@
+{
+  "alpha_counts": {
+    "opaque": 496694,
+    "partial": 5438,
+    "total": 1572864,
+    "transparent": 1070732
+  },
+  "approval_status": "TEMPORARY STAGING / REPLACE BEFORE FINAL / UNWIRED",
+  "canonical_proof_backgrounds": {
+    "cream": "#E7E4CA",
+    "dark": "#1E2A1E",
+    "site_blue": "#1E4366"
+  },
+  "major_components": [
+    {
+      "area": 67307,
+      "height": 278,
+      "width": 309,
+      "x": 147,
+      "y": 264
+    },
+    {
+      "area": 84927,
+      "height": 306,
+      "width": 350,
+      "x": 216,
+      "y": 560
+    },
+    {
+      "area": 73477,
+      "height": 286,
+      "width": 323,
+      "x": 515,
+      "y": 359
+    },
+    {
+      "area": 140927,
+      "height": 378,
+      "width": 480,
+      "x": 855,
+      "y": 194
+    },
+    {
+      "area": 135494,
+      "height": 358,
+      "width": 479,
+      "x": 879,
+      "y": 540
+    }
+  ],
+  "method": {
+    "colour_grading": false,
+    "contact_shadows_retained": false,
+    "deterministic_repeat_equal": true,
+    "full_resolution_rgb_byte_identical": true,
+    "generative_reconstruction": false,
+    "inpainting": false,
+    "iterations": 8,
+    "rng_seed": 20260825,
+    "type": "deterministic OpenCV GrabCut with manually bounded probable-foreground regions and definite source-pixel cores"
+  },
+  "outputs": {
+    "alpha_mask": "derived/temporary_bundle_alpha_mask.png",
+    "cutout_full": "derived/temporary_bundle_cutout_full.png",
+    "cutout_web_1200": "derived/temporary_bundle_cutout_web_1200.webp",
+    "proofs": {
+      "cream": "derived/temporary_bundle_edge_proof_cream.png",
+      "dark": "derived/temporary_bundle_edge_proof_dark.png",
+      "site_blue": "derived/temporary_bundle_edge_proof_site_blue.png"
+    }
+  },
+  "per_object_binary_pixels": {
+    "crumb_topped_eclipse_bite_lower_unbound": 84927,
+    "crumb_topped_eclipse_bite_upper_unbound": 73477,
+    "goji_coconut_bar": 135494,
+    "pecan_eclipse_bite": 67307,
+    "salted_caramel_fudge": 140927
+  },
+  "schema": "maplemoon-temporary-bundle-derivative-verification/v1",
+  "source": {
+    "height": 1024,
+    "mode": "RGB",
+    "path": "/Users/handtomouse/.codex/generated_images/019ffe53-6243-73a2-9d75-e1a072cd07ce/exec-82159e46-662a-4e9b-af90-0e2c68af52ac.png",
+    "sha256": "b7d669130ef5c1482b4d3655e1407885087c884089cfdbadd7b0b5d0c5abdba1",
+    "width": 1536
+  }
+}

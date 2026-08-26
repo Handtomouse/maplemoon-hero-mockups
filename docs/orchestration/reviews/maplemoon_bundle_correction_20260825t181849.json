@@ -1,0 +1,143 @@
+{
+  "schema": "maplemoon-receipt/v2",
+  "receipt_id": "maplemoon_bundle_correction_20260825t181849",
+  "packet_id": "maplemoon_bundle_correction_20260825t181849",
+  "worker_thread_id": "019ffe53-6243-73a2-9d75-e1a072cd07ce",
+  "worker": "codex_root",
+  "started_at": "2026-08-25T08:20:39Z",
+  "completed_at": "2026-08-25T09:41:20Z",
+  "files_read": [
+    "docs/orchestration/SIDECHAT_RECEIPT_GATE.md",
+    "scripts/check-maplemoon-receipt.py",
+    "_wip/deploy/generated/maplemoon-admitted-preview-r4-20260824T111607",
+    "_wip/deploy/generated/maplemoon_temporary_bundle_preview_20260825t170206",
+    "_wip/evidence/maplemoon_temporary_bundle_derivative_20260825t153228/derived/temporary_bundle_cutout_full.png",
+    "/Users/handtomouse/UFC/spins/maplemoon_bites_moodboard_export_20260516/output_PNG",
+    "/Users/handtomouse/Library/CloudStorage/GoogleDrive-hello@handtomouse.org/My Drive/MrCC_PAI_Stage1_Files/UFC/clients/maplemoon/deliverables/photoshoot_2026_05_24/_closeout_20260812/08_photo_production_wave/product_geometry/proxies_real_raw"
+  ],
+  "files_changed": [
+    "scripts/build_maplemoon_bundle_correction_20260825.py",
+    "scripts/check_maplemoon_bundle_correction_20260825.py",
+    "scripts/build_maplemoon_bundle_reference_sheets_20260825.py",
+    "scripts/check-maplemoon-minimum-release-preflight-r4.py",
+    "_wip/deploy/generated/maplemoon_bundle_correction_20260825t181849",
+    "_wip/evidence/maplemoon_bundle_correction_20260825t181849",
+    "docs/orchestration/reviews/maplemoon_bundle_correction_20260825t181849.json"
+  ],
+  "pre_sha256": {
+    "scripts/build_maplemoon_bundle_correction_20260825.py": null,
+    "scripts/check_maplemoon_bundle_correction_20260825.py": null,
+    "scripts/build_maplemoon_bundle_reference_sheets_20260825.py": null,
+    "scripts/check-maplemoon-minimum-release-preflight-r4.py": "725f33242de0eca567b994eafe2e294b6bdaaf1d0de47bec8310b97df632bc76",
+    "_wip/deploy/generated/maplemoon_bundle_correction_20260825t181849": null,
+    "_wip/evidence/maplemoon_bundle_correction_20260825t181849": null,
+    "docs/orchestration/reviews/maplemoon_bundle_correction_20260825t181849.json": null
+  },
+  "post_sha256": {
+    "scripts/build_maplemoon_bundle_correction_20260825.py": "583a16b163de02a26302cec6f89ed4c7bb72d9aa2dc15b7fd739e25e2526ea7d",
+    "scripts/check_maplemoon_bundle_correction_20260825.py": "96b75e9aa1a1278165629eafe29ec4c0fdb1621e0313bc4e6bf70eb20fc0bb46",
+    "scripts/build_maplemoon_bundle_reference_sheets_20260825.py": "ae638a08770e1a575405cdfa09a96e636c9142b3a8c25c9b2fa33e64316a018c",
+    "scripts/check-maplemoon-minimum-release-preflight-r4.py": "df83f2fba8e0c6a4703132f704da8f5dc06724a1e8b2635f8c60b5ce3bcde68e",
+    "_wip/deploy/generated/maplemoon_bundle_correction_20260825t181849": "2710d435d83d8c3810ce7a2a0b7e775926d3482eb6e36372b79b1011404063bd",
+    "_wip/evidence/maplemoon_bundle_correction_20260825t181849": "6f1718c7da20bc76adc9524ca24ecdeaf5a2bb25d3d1d947e0d5e16b0a50699a",
+    "docs/orchestration/reviews/maplemoon_bundle_correction_20260825t181849.json": null
+  },
+  "checks": [
+    {
+      "command": "python3 -B scripts/check-maplemoon-receipt.py verify --packet docs/orchestration/packets/maplemoon_bundle_correction_20260825t181849.md --checkpoint _wip/checkpoints/maplemoon_bundle_correction_20260825t181849 --phase start",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "result": "PASS packet=maplemoon_bundle_correction_20260825t181849 phase=start scope=7"
+    },
+    {
+      "command": "python3 -B scripts/build_maplemoon_bundle_correction_20260825.py --output /tmp/maplemoon_bundle_replay_b6ANgb/successor",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "result": "BUILD PASS tree_sha256=2710d435d83d8c3810ce7a2a0b7e775926d3482eb6e36372b79b1011404063bd site_tree_sha256=a66430d81fc4b72aae06d32bf49b93458e934969d2a3510e2b57279b179c897b payload_tree_sha256=6c7229ffef8f4dc4eeca0672c8728f35c37330aab83127907c8abf5d9b747208"
+    },
+    {
+      "command": "python3 -B scripts/check_maplemoon_bundle_correction_20260825.py --mode verify",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "result": "VERIFY PASS files=77 bytes=14795062 asset_sha256=8bca090850c29da285ae266d8bf666199ae7cacbeee475160df13bc82c66932f"
+    },
+    {
+      "command": "python3 -B scripts/check_maplemoon_bundle_correction_20260825.py --mode self-test",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "result": "SELF TEST PASS controls=4 changed_hash removed_status renamed_asset attempted_release"
+    },
+    {
+      "command": "in-app browser responsive QA against http://127.0.0.1:4391",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "result": "PASS viewports=320,390,768,1024,1440 dpr=2 cases=5 screenshots=20 failures=0"
+    },
+    {
+      "command": "in-app browser Shop list-layout supplement",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "result": "PASS grid_track_count=1 image_well_ratio=0.9 overflow=0 at all five widths"
+    },
+    {
+      "command": "in-app browser reduced-motion CSSOM verification",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "result": "PASS Home and Shop reduced-motion transition suppression parsed; host preference remained no-preference"
+    },
+    {
+      "command": "python3 -B _wip/evidence/maplemoon_bundle_correction_20260825t181849/render_bundle_edge_proofs.py",
+      "expected_exit_code": 0,
+      "exit_code": 0,
+      "result": "EDGE PROOF PASS proofs=4 exact native source pixels"
+    },
+    {
+      "command": "python3 -B scripts/check_maplemoon_bundle_correction_20260825.py --mode release --base-url http://127.0.0.1:4391",
+      "expected_exit_code": 2,
+      "exit_code": 2,
+      "result": "HOLD findings=9 including anonymously fetched Home and Shop temporary markers"
+    },
+    {
+      "command": "python3 -B scripts/check-maplemoon-minimum-release-preflight-r4.py http://127.0.0.1:4391 --local",
+      "expected_exit_code": 1,
+      "exit_code": 1,
+      "result": "FAIL as required on leak:temporary-bundle-release-block; all 12 matcher canaries passed"
+    },
+    {
+      "command": "python3 -B scripts/build_maplemoon_bundle_reference_sheets_20260825.py",
+      "expected_exit_code": 2,
+      "exit_code": 2,
+      "result": "REFERENCE HOLD missing all seven governed raws; no sheets and no generation"
+    },
+    {
+      "command": "adversarial product-photography review",
+      "expected_exit_code": 2,
+      "exit_code": 2,
+      "result": "HOLD product truthfulness; admission receipt not allowed"
+    }
+  ],
+  "screenshots_or_urls": [
+    "_wip/evidence/maplemoon_bundle_correction_20260825t181849/site_visual_audit_contact_sheet.png",
+    "_wip/evidence/maplemoon_bundle_correction_20260825t181849/bundle_edge_proofs_contact_sheet.png",
+    "_wip/evidence/maplemoon_bundle_correction_20260825t181849/home_bundle_center_390.png",
+    "_wip/evidence/maplemoon_bundle_correction_20260825t181849/home_bundle_center_1440.png",
+    "_wip/evidence/maplemoon_bundle_correction_20260825t181849/shop_bundle_grid_390.png",
+    "_wip/evidence/maplemoon_bundle_correction_20260825t181849/shop_bundle_grid_1440.png",
+    "_wip/evidence/maplemoon_bundle_correction_20260825t181849/shop_bundle_list_390.png",
+    "_wip/evidence/maplemoon_bundle_correction_20260825t181849/shop_bundle_list_1440.png"
+  ],
+  "failures": [],
+  "unknowns": [
+    "The governed raw root remains absent and all seven required raw references are missing.",
+    "The in-app browser host could not actively emulate reduced motion; parsed CSSOM evidence passes but computed reduced-mode behavior remains for final launch QA."
+  ],
+  "residual_risk": [
+    "The temporary product source still fails final Almond versus Hazelnut recognition, handmade dome geometry, fudge geometry, and raw-verified Goji material gates.",
+    "Inherited visitor copy says All 5 bites although the named set includes three bites, one fudge, and one bar.",
+    "The pinned R4 base carries inherited founder portrait pending review content surfaced by preflight.",
+    "This private tree is not admitted, deployed, published, promoted, wired to production, or connected to Shopify."
+  ],
+  "forbidden_path_changes": [],
+  "proposed_next_state": "private_successor_site_qa_pass_product_truthfulness_hold",
+  "next_reviewer": "Nate"
+}

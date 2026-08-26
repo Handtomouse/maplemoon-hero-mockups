@@ -1,0 +1,82 @@
+{
+  "alpha_counts": {
+    "opaque": 469125,
+    "partial": 5097,
+    "total": 1572864,
+    "transparent": 1098642
+  },
+  "approval_status": "TEMPORARY STAGING / REPLACE BEFORE FINAL / UNWIRED",
+  "canonical_proof_backgrounds": {
+    "cream": "#E7E4CA",
+    "dark": "#1E2A1E",
+    "site_blue": "#1E4366"
+  },
+  "major_components": [
+    {
+      "area": 66742,
+      "height": 278,
+      "width": 311,
+      "x": 147,
+      "y": 263
+    },
+    {
+      "area": 83368,
+      "height": 302,
+      "width": 351,
+      "x": 216,
+      "y": 563
+    },
+    {
+      "area": 73489,
+      "height": 286,
+      "width": 326,
+      "x": 514,
+      "y": 358
+    },
+    {
+      "area": 130277,
+      "height": 377,
+      "width": 468,
+      "x": 867,
+      "y": 190
+    },
+    {
+      "area": 120346,
+      "height": 341,
+      "width": 479,
+      "x": 880,
+      "y": 553
+    }
+  ],
+  "method": {
+    "colour_grading": false,
+    "contact_shadows_retained": false,
+    "deterministic_repeat_equal": true,
+    "edge_antialias": "one-pixel inward-only distance-transform alpha; no outside/background pixels admitted",
+    "full_resolution_rgb_byte_identical": true,
+    "generative_reconstruction": false,
+    "geometry_change": false,
+    "inpainting": false,
+    "model_path": "/Users/handtomouse/.u2net/birefnet-general.onnx",
+    "model_sha256": "58f621f00f5d756097615970a88a791584600dcf7c45b18a0a6267535a1ebd3c",
+    "type": "cached local BiRefNet foreground segmentation used only to derive alpha"
+  },
+  "outputs": {
+    "alpha_mask": "derived/temporary_bundle_alpha_mask.png",
+    "cutout_full": "derived/temporary_bundle_cutout_full.png",
+    "cutout_web_1200": "derived/temporary_bundle_cutout_web_1200.webp",
+    "proofs": {
+      "cream": "derived/temporary_bundle_edge_proof_cream.png",
+      "dark": "derived/temporary_bundle_edge_proof_dark.png",
+      "site_blue": "derived/temporary_bundle_edge_proof_site_blue.png"
+    }
+  },
+  "schema": "maplemoon-temporary-bundle-derivative-verification/v2",
+  "source": {
+    "height": 1024,
+    "mode": "RGB",
+    "path": "/Users/handtomouse/.codex/generated_images/019ffe53-6243-73a2-9d75-e1a072cd07ce/exec-82159e46-662a-4e9b-af90-0e2c68af52ac.png",
+    "sha256": "b7d669130ef5c1482b4d3655e1407885087c884089cfdbadd7b0b5d0c5abdba1",
+    "width": 1536
+  }
+}

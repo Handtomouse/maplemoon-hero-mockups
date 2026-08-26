@@ -1,0 +1,363 @@
+--- /Users/handtomouse/maplemoon-website/_wip/evidence/homepage_style_finish_r4_20260825T165002/source-snapshot.WIP.html	2026-08-25 16:53:40
++++ /Users/handtomouse/maplemoon-website/_wip/homepage_real_1_lead_photo.WIP.html	2026-08-25 18:01:57
+@@ -655,6 +655,7 @@
+ <link rel="stylesheet" href="/assets/design-system/mm-base.css" data-mm-system-layer="base">
+ <link rel="stylesheet" href="/assets/design-system/mm-chrome.css" data-mm-system-layer="chrome">
+ <link rel="stylesheet" href="/assets/design-system/mm-primitives.css" data-mm-system-layer="primitives">
++<link rel="stylesheet" href="/assets/icons/mm-icons.css" data-mm-system-layer="icons">
+ <link rel="stylesheet" href="/_wip/styles/homepage.css" data-mm-system-layer="homepage">
+ <link rel="stylesheet" href="/mock-cart.css">
+ <style id="mm-graft-20260816">@layer mm-graft{
+@@ -759,11 +760,11 @@
+     </div>
+ 
+     <header class="top wf-ptop mm-site-header mm-site-header--home" data-mm-chrome data-header-theme="night"><div class="wrap bar mm-wrap mm-header__bar">
+-      <button class="mm-menu-toggle mm-icon-control" type="button" data-mm-menu-toggle aria-expanded="false" aria-label="Open menu" hidden>Menu</button>
++      <button class="mm-menu-toggle mm-icon-control" type="button" data-mm-menu-toggle aria-expanded="false" aria-label="Open menu" hidden><svg class="mm-icon mm-icon--menu" viewBox="0 0 24 24" aria-hidden="true"><use href="/assets/icons/mm-icons.svg#mm-icon-menu"></use></svg><svg class="mm-icon mm-icon--close" viewBox="0 0 24 24" aria-hidden="true"><use href="/assets/icons/mm-icons.svg#mm-icon-close"></use></svg></button>
+       <nav class="wf-pnav mm-header__nav" id="mm-home-primary-nav" aria-label="Primary navigation" data-mm-primary-nav><a href="/shop">Shop</a><a href="/our-story">Our Story</a><a href="/carob-story">What is Carob</a></nav>
+       <a class="wf-plogo mm-header__home" href="#top" data-mm-home-link aria-current="page">maple moon</a>
+       <div class="wf-pnav r mm-header__right"><nav class="mm-header__utility-nav" id="mm-home-utility-nav" aria-label="Utility navigation" data-mm-utility-nav><a href="/stockists">Stockists</a><span class="wf-currency" aria-label="Currency AUD">AUD $</span></nav>
+-        <button class="wf-pcart mm-icon-control" type="button" aria-label="Cart, 0 items" data-mm-cart-toggle><svg viewBox="0 0 24 24"><path d="M6 8h12l-1 12H7L6 8z"/><path d="M9 8a3 3 0 0 1 6 0"/></svg><b>0</b></button></div>
++        <button class="wf-pcart mm-icon-control" type="button" aria-label="Cart, 0 items" data-mm-cart-toggle><svg class="mm-icon" viewBox="0 0 24 24" aria-hidden="true"><use href="/assets/icons/mm-icons.svg#mm-icon-cart"></use></svg><b>0</b></button></div>
+     </div></header>
+ 
+     <div class="center wf-pcenter wrap">
+@@ -773,13 +774,13 @@
+         <p class="wf-ptag">Naturally Sweet, Nothing Added.</p>
+         <div class="wf-pcreds"><span>No Caffeine</span><span>Organic Ingredients</span><span>Vegan Friendly</span></div>
+         <div class="wf-pactions">
+-          <a class="wf-ppill primary" href="#range">Shop the Range <svg class="wf-cta-arrow" viewBox="0 0 24 24" aria-hidden="true"><line x1="4" y1="12" x2="20" y2="12"/><polyline points="14 6 20 12 14 18"/></svg></a>
++          <a class="wf-ppill primary" href="#range">Shop the Range <svg class="mm-icon wf-cta-arrow" viewBox="0 0 24 24" aria-hidden="true"><use href="/assets/icons/mm-icons.svg#mm-icon-arrow-right"></use></svg></a>
+         </div>
+       </div>
+     </div>
+ 
+ 
+-<a class="wf-pscroll" href="#range" aria-label="Scroll to shop"><svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></a>
++<a class="wf-pscroll" href="#range" aria-label="Scroll to shop"><svg class="mm-icon" viewBox="0 0 24 24" aria-hidden="true"><use href="/assets/icons/mm-icons.svg#mm-icon-chevron-down"></use></svg></a>
+   </section>
+ 
+   <main id="main-content">
+@@ -787,9 +788,9 @@
+ <!-- LINEUP (real packshots, JS-rendered from the active category) -->
+   <section class="wrap wf-line wf-line-dark" id="range">
+     <div class="wf-stage-wrap">
+-      <button class="arw l" aria-label="Previous"><svg viewBox="0 0 24 24"><polyline points="15 6 9 12 15 18"/></svg></button>
++      <button class="arw l" aria-label="Previous"><svg class="mm-icon" viewBox="0 0 24 24" aria-hidden="true"><use href="/assets/icons/mm-icons.svg#mm-icon-chevron-left"></use></svg></button>
+       <div class="wf-cf" id="stage"></div>
+-      <button class="arw r" aria-label="Next"><svg viewBox="0 0 24 24"><polyline points="9 6 15 12 9 18"/></svg></button>
++      <button class="arw r" aria-label="Next"><svg class="mm-icon" viewBox="0 0 24 24" aria-hidden="true"><use href="/assets/icons/mm-icons.svg#mm-icon-chevron-right"></use></svg></button>
+     </div>
+ 
+     <div class="sel-head" id="shop">
+@@ -801,11 +802,11 @@
+     <div class="wf-cat-dock" aria-label="Shop by format">
+       <p class="wf-format-label">Choose your carob moment</p>
+       <div class="wf-tabs wf-range-tabs" id="catTabs" aria-label="Shop by format">
+-        <button class="wf-tab on" type="button" data-cat="bars" aria-selected="true"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="4" width="7" height="7" rx="1"/><rect x="13" y="4" width="7" height="7" rx="1"/><rect x="4" y="13" width="7" height="7" rx="1"/><rect x="13" y="13" width="7" height="7" rx="1"/></svg><span>Bars</span></button>
+-        <button class="wf-tab" type="button" data-cat="bananas" aria-selected="false"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6c1 8 6 13 14 13 1.5 0 2.5-.4 3-1-9 0-13-6-13-13 0-.7-.4-1-1-1H5c-.6 0-1 .4-1 1z"/></svg><span>Bananas</span></button>
+-        <button class="wf-tab" type="button" data-cat="moons" aria-selected="false"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17 3a9 9 0 1 0 4 12 7 7 0 0 1-4-12z"/></svg><span>Moons</span></button>
+-        <button class="wf-tab" type="button" data-cat="eclipseBites" aria-label="Eclipse Bites" aria-selected="false"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="6" cy="6" r="1.4"/><circle cx="12" cy="6" r="1.4"/><circle cx="18" cy="6" r="1.4"/><circle cx="6" cy="12" r="1.4"/><circle cx="12" cy="12" r="1.4"/><circle cx="18" cy="12" r="1.4"/><circle cx="6" cy="18" r="1.4"/><circle cx="12" cy="18" r="1.4"/><circle cx="18" cy="18" r="1.4"/></svg><span>Bites</span></button>
+-        <button class="wf-tab" type="button" data-cat="elixirs" aria-selected="false"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M10 3h4v3l2 3v11a1 1 0 0 1-1 1H9a1 1 0 0 1-1-1V9l2-3z"/></svg><span>Elixirs</span></button>
++        <button class="wf-tab on" type="button" data-cat="bars" aria-selected="true"><svg class="mm-icon" viewBox="0 0 24 24" aria-hidden="true"><use href="/assets/icons/mm-icons.svg#mm-icon-bar"></use></svg><span>Bars</span></button>
++        <button class="wf-tab" type="button" data-cat="bananas" aria-selected="false"><svg class="mm-icon" viewBox="0 0 24 24" aria-hidden="true"><use href="/assets/icons/mm-icons.svg#mm-icon-banana"></use></svg><span>Bananas</span></button>
++        <button class="wf-tab" type="button" data-cat="moons" aria-selected="false"><svg class="mm-icon" viewBox="0 0 24 24" aria-hidden="true"><use href="/assets/icons/mm-icons.svg#mm-icon-moon-format"></use></svg><span>Moons</span></button>
++        <button class="wf-tab" type="button" data-cat="eclipseBites" aria-label="Eclipse Bites" aria-selected="false"><svg class="mm-icon" viewBox="0 0 24 24" aria-hidden="true"><use href="/assets/icons/mm-icons.svg#mm-icon-eclipse-bites"></use></svg><span>Bites</span></button>
++        <button class="wf-tab" type="button" data-cat="elixirs" aria-selected="false"><svg class="mm-icon" viewBox="0 0 24 24" aria-hidden="true"><use href="/assets/icons/mm-icons.svg#mm-icon-elixir"></use></svg><span>Elixirs</span></button>
+       </div>
+     </div>
+ 
+@@ -834,15 +835,15 @@
+         <div class="lux-rule"></div>
+         <p class="bodyc" style="color:#57534b;font-size:1.05rem;max-width:40ch;line-height:1.7;margin:0 0 24px;">Carob is a naturally sweet pod that grows in the warm Australian sun. Naturally caffeine free and high in fibre. Sourced from the Australian Carob Co. in South Australia, roasted and finely ground there before reaching the kitchen.</p>
+         <div class="q-facts">
+-          <span><svg viewBox="0 0 24 24"><path d="M17 3a9 9 0 1 0 4 12 7 7 0 0 1-4-12z"/></svg>High in fibre</span>
+-          <span><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><line x1="12" y1="3" x2="12" y2="5"/><line x1="12" y1="19" x2="12" y2="21"/><line x1="3" y1="12" x2="5" y2="12"/><line x1="19" y1="12" x2="21" y2="12"/><line x1="5.5" y1="5.5" x2="7" y2="7"/><line x1="17" y1="17" x2="18.5" y2="18.5"/></svg>Naturally sweet</span>
+-          <span><svg viewBox="0 0 24 24"><path d="M4 14c6-1 10-5 16-10-2 7-5 12-12 13-2 .3-4-1-4-3z"/></svg>Caffeine free</span>
++          <span><svg class="mm-icon" viewBox="0 0 24 24" aria-hidden="true"><use href="/assets/icons/mm-icons.svg#mm-icon-fibre"></use></svg>High in fibre</span>
++          <span><svg class="mm-icon" viewBox="0 0 24 24" aria-hidden="true"><use href="/assets/icons/mm-icons.svg#mm-icon-sweetness"></use></svg>Naturally sweet</span>
++          <span><svg class="mm-icon" viewBox="0 0 24 24" aria-hidden="true"><use href="/assets/icons/mm-icons.svg#mm-icon-caffeine-free"></use></svg>Caffeine free</span>
+         </div>
+-        <a class="wf-more wf-more-strong" href="/carob-story">The full carob story <svg viewBox="0 0 24 24" width="14" height="14" style="stroke:currentColor;fill:none;stroke-width:1.6"><line x1="4" y1="12" x2="20" y2="12"/><polyline points="14 6 20 12 14 18"/></svg></a>
++        <a class="wf-more wf-more-strong" href="/carob-story">The full carob story <svg class="mm-icon mm-icon--sm" viewBox="0 0 24 24" aria-hidden="true"><use href="/assets/icons/mm-icons.svg#mm-icon-arrow-right"></use></svg></a>
+       </div>
+     </div>
+-    <div class="co flip" data-carob-callout="central-pod-cluster" style="right:clamp(460px,38vw,610px);top:56%"><span class="dot"></span><span class="line"></span><div class="lab"><div class="top"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><line x1="12" y1="3" x2="12" y2="5"/><line x1="12" y1="19" x2="12" y2="21"/><line x1="3" y1="12" x2="5" y2="12"/><line x1="19" y1="12" x2="21" y2="12"/></svg><span class="t">The pod</span><span class="n">01</span></div><span class="d">Sun-ripened, naturally sweet pulp.</span></div></div>
+-    <div class="co flip" data-carob-callout="right-pod-cluster" style="right:clamp(112px,9vw,168px);top:29%"><span class="dot"></span><span class="line"></span><div class="lab"><div class="top"><svg viewBox="0 0 24 24"><path d="M4 14c6-1 10-5 16-10-2 7-5 12-12 13-2 .3-4-1-4-3z"/></svg><span class="t">Caffeine free</span><span class="n">02</span></div><span class="d">Naturally caffeine free.</span></div></div>
++    <div class="co flip" data-carob-callout="central-pod-cluster" style="right:clamp(460px,38vw,610px);top:56%"><span class="dot"></span><span class="line"></span><div class="lab"><div class="top"><svg class="mm-icon" viewBox="0 0 24 24" aria-hidden="true"><use href="/assets/icons/mm-icons.svg#mm-icon-sun"></use></svg><span class="t">The pod</span><span class="n">01</span></div><span class="d">Sun-ripened, naturally sweet pulp.</span></div></div>
++    <div class="co flip" data-carob-callout="right-pod-cluster" style="right:clamp(112px,9vw,168px);top:29%"><span class="dot"></span><span class="line"></span><div class="lab"><div class="top"><svg class="mm-icon" viewBox="0 0 24 24" aria-hidden="true"><use href="/assets/icons/mm-icons.svg#mm-icon-caffeine-free"></use></svg><span class="t">Caffeine free</span><span class="n">02</span></div><span class="d">Naturally caffeine free.</span></div></div>
+   </section>
+ 
+   <!-- WHY (carob vs cacao, comparison panel) -->
+@@ -861,15 +862,15 @@
+           <h3>Cacao chocolate</h3>
+         </div>
+         <div class="q-panel-row">
+-          <span class="q-icon" aria-hidden="true">□</span>
++          <span class="q-icon" aria-hidden="true"><svg class="mm-icon" viewBox="0 0 24 24" aria-hidden="true"><use href="/assets/icons/mm-icons.svg#mm-icon-sweetness"></use></svg></span>
+           <div><b>Sweetness</b><p>Naturally bitter</p></div>
+         </div>
+         <div class="q-panel-row">
+-          <span class="q-icon" aria-hidden="true">ϟ</span>
++          <span class="q-icon" aria-hidden="true"><svg class="mm-icon" viewBox="0 0 24 24" aria-hidden="true"><use href="/assets/icons/mm-icons.svg#mm-icon-bolt"></use></svg></span>
+           <div><b>Caffeine</b><p>Contains caffeine and theobromine</p></div>
+         </div>
+         <div class="q-panel-row">
+-          <span class="q-icon" aria-hidden="true">◷</span>
++          <span class="q-icon" aria-hidden="true"><svg class="mm-icon" viewBox="0 0 24 24" aria-hidden="true"><use href="/assets/icons/mm-icons.svg#mm-icon-clock"></use></svg></span>
+           <div><b>Moment</b><p>Stimulating and activating</p></div>
+         </div>
+       </div>
+@@ -882,25 +883,25 @@
+           <h3>Maple Moon carob</h3>
+         </div>
+         <div class="q-panel-row">
+-          <span class="q-icon" aria-hidden="true">□</span>
++          <span class="q-icon" aria-hidden="true"><svg class="mm-icon" viewBox="0 0 24 24" aria-hidden="true"><use href="/assets/icons/mm-icons.svg#mm-icon-sweetness"></use></svg></span>
+           <div><b>Sweetness</b><p>Sweet from the pod itself, no added sugar</p></div>
+-          <span class="q-check" aria-hidden="true">✓</span>
++          <span class="q-check" aria-hidden="true"><svg class="mm-icon" viewBox="0 0 24 24" aria-hidden="true"><use href="/assets/icons/mm-icons.svg#mm-icon-check"></use></svg></span>
+         </div>
+         <div class="q-panel-row">
+-          <span class="q-icon" aria-hidden="true">☾</span>
++          <span class="q-icon" aria-hidden="true"><svg class="mm-icon" viewBox="0 0 24 24" aria-hidden="true"><use href="/assets/icons/mm-icons.svg#mm-icon-caffeine-free"></use></svg></span>
+           <div><b>Caffeine</b><p>Naturally caffeine free, any hour you like</p></div>
+-          <span class="q-check" aria-hidden="true">✓</span>
++          <span class="q-check" aria-hidden="true"><svg class="mm-icon" viewBox="0 0 24 24" aria-hidden="true"><use href="/assets/icons/mm-icons.svg#mm-icon-check"></use></svg></span>
+         </div>
+         <div class="q-panel-row">
+-          <span class="q-icon" aria-hidden="true">◷</span>
++          <span class="q-icon" aria-hidden="true"><svg class="mm-icon" viewBox="0 0 24 24" aria-hidden="true"><use href="/assets/icons/mm-icons.svg#mm-icon-clock"></use></svg></span>
+           <div><b>Moment</b><p>Stimulant free, making it perfect for arvos and slow evenings</p></div>
+-          <span class="q-check" aria-hidden="true">✓</span>
++          <span class="q-check" aria-hidden="true"><svg class="mm-icon" viewBox="0 0 24 24" aria-hidden="true"><use href="/assets/icons/mm-icons.svg#mm-icon-check"></use></svg></span>
+         </div>
+       </div>
+ 
+     </div>
+ 
+-    
++
+   </section>
+ 
+   <!-- WHEN (ritual moment tiles) -->
+@@ -932,20 +933,20 @@
+         <h2 class="lux-hd">Born from Night-time Cravings <span class="amp">&amp;</span> Kind Intentions</h2>
+         <div class="lux-rule"></div>
+         <p style="color:#57534b;font-size:1.05rem;max-width:40ch;line-height:1.7;margin:0 0 24px;">Discover the thinking behind Maple Moon: naturally sweet carob, quieter evenings, and small rituals made with care.</p>
+-        <a class="wf-more" href="/our-story">Read the Full Story <svg viewBox="0 0 24 24" width="14" height="14" style="stroke:currentColor;fill:none;stroke-width:1.6"><line x1="4" y1="12" x2="20" y2="12"/><polyline points="14 6 20 12 14 18"/></svg></a>
++        <a class="wf-more" href="/our-story">Read the Full Story <svg class="mm-icon mm-icon--sm" viewBox="0 0 24 24" aria-hidden="true"><use href="/assets/icons/mm-icons.svg#mm-icon-arrow-right"></use></svg></a>
+       </div>
+     </div>
+-    <div class="co" style="left:180px;top:22%"><span class="dot"></span><span class="line"></span><div class="lab"><div class="top"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><line x1="12" y1="3" x2="12" y2="5"/><line x1="12" y1="19" x2="12" y2="21"/><line x1="3" y1="12" x2="5" y2="12"/><line x1="19" y1="12" x2="21" y2="12"/></svg><span class="t">Sun-ripened</span><span class="n">01</span></div><span class="d">Australian-grown carob pods.</span></div></div>
+-    <div class="co" style="left:90px;top:58%"><span class="dot"></span><span class="line"></span><div class="lab"><div class="top"><svg viewBox="0 0 24 24"><path d="M12 21s-7-4.5-7-10a7 7 0 0 1 14 0c0 5.5-7 10-7 10z"/></svg><span class="t">Byron Bay</span><span class="n">02</span></div><span class="d">The Maple Moon kitchen.</span></div></div>
+-    <div class="co" style="left:400px;top:76%"><span class="dot"></span><span class="line"></span><div class="lab"><div class="top"><svg viewBox="0 0 24 24"><path d="M17 3a9 9 0 1 0 4 12 7 7 0 0 1-4-12z"/></svg><span class="t">The far north coast</span><span class="n">03</span></div><span class="d">Where the slow evenings live.</span></div></div>
++    <div class="co" style="left:180px;top:22%"><span class="dot"></span><span class="line"></span><div class="lab"><div class="top"><svg class="mm-icon" viewBox="0 0 24 24" aria-hidden="true"><use href="/assets/icons/mm-icons.svg#mm-icon-sun"></use></svg><span class="t">Sun-ripened</span><span class="n">01</span></div><span class="d">Australian-grown carob pods.</span></div></div>
++    <div class="co" style="left:90px;top:58%"><span class="dot"></span><span class="line"></span><div class="lab"><div class="top"><svg class="mm-icon" viewBox="0 0 24 24" aria-hidden="true"><use href="/assets/icons/mm-icons.svg#mm-icon-map-pin"></use></svg><span class="t">Byron Bay</span><span class="n">02</span></div><span class="d">The Maple Moon kitchen.</span></div></div>
++    <div class="co" style="left:400px;top:76%"><span class="dot"></span><span class="line"></span><div class="lab"><div class="top"><svg class="mm-icon" viewBox="0 0 24 24" aria-hidden="true"><use href="/assets/icons/mm-icons.svg#mm-icon-moon"></use></svg><span class="t">The far north coast</span><span class="n">03</span></div><span class="d">Where the slow evenings live.</span></div></div>
+   </section>
+ 
+   <!-- WHO (wireframe-led founder callout; individual portraits remain pending) -->
+   <section class="wrap mm-founder" id="who" aria-labelledby="who-title">
+     <div class="mm-founder-copy"><span class="qkick">The heart behind Maple Moon</span><h2 class="lux-hd" id="who-title">Carli <span class="amp">&amp;</span> Dylan</h2><div class="lux-rule"></div><p>Meet the people behind Maple Moon and the ideas shaping its slow, thoughtful rituals.</p></div>
+     <div class="mm-founder-card"><div class="mm-pending-media" style="padding:0;overflow:hidden"><img src="/assets/our_story/founder_carli_f76_900.webp" alt="Carli, co-founder of Maple Moon" loading="lazy" decoding="async" style="width:100%;height:100%;min-height:inherit;object-fit:cover;object-position:50% 35%;display:block"></div><strong>Carli</strong><span>Co-founder</span></div>
+-    <div class="mm-founder-card"><div class="mm-pending-media" style="padding:0;overflow:hidden"><img src="/assets/our_story/founder_dylan_f53_900.webp" alt="Dylan, co-founder of Maple Moon" loading="lazy" decoding="async" style="width:100%;height:100%;min-height:inherit;object-fit:cover;object-position:50% 35%;display:block"></div><strong>Dylan</strong><span>Co-founder</span></div>
+-    <div class="mm-founder-cta"><div class="mm-pending-media" style="padding:0;overflow:hidden"><img src="/assets/our_story/founders_pair_f99_1200.webp" alt="Carli and Dylan, co-founders of Maple Moon" loading="lazy" decoding="async" style="width:100%;height:100%;min-height:inherit;object-fit:cover;object-position:50% 35%;display:block"></div><span class="mm-moon">☾</span><h3>Meet Carli <span class="amp">&amp;</span> Dylan</h3><p>Explore the story and values behind Maple Moon.</p><a class="wf-pill" href="/our-story">Read our story <span aria-hidden="true">→</span></a></div>
++    <div class="mm-founder-card"><div class="mm-pending-media" style="padding:0;overflow:hidden"><img src="/assets/our_story/founder_dylan_f53_900.webp" alt="Dylan, co-founder of Maple Moon" loading="lazy" decoding="async" style="width:100%;height:100%;min-height:inherit;object-fit:cover;object-position:56% 35%;display:block"></div><strong>Dylan</strong><span>Co-founder</span></div>
++    <div class="mm-founder-cta"><span class="mm-moon" aria-hidden="true"><svg class="mm-icon" viewBox="0 0 24 24" aria-hidden="true"><use href="/assets/icons/mm-icons.svg#mm-icon-moon"></use></svg></span><h3><span>Meet Carli</span><span><span class="amp">&amp;</span> Dylan</span></h3><p>Explore the story and values behind Maple Moon.</p><a class="wf-pill" href="/our-story">Read our story <svg class="mm-icon mm-icon--sm" viewBox="0 0 24 24" aria-hidden="true"><use href="/assets/icons/mm-icons.svg#mm-icon-arrow-right"></use></svg></a></div>
+   </section>
+ 
+   <!-- STOCKISTS (directory framing; dataset/count remains provisional) -->
+@@ -960,7 +961,7 @@
+         <button type="submit">Find stockists</button>
+       </div>
+     </form>
+-    <a class="wf-pill" href="/stockists">View full directory <span aria-hidden="true">&rarr;</span></a>
++    <a class="wf-pill" href="/stockists">View full directory <svg class="mm-icon mm-icon--sm" viewBox="0 0 24 24" aria-hidden="true"><use href="/assets/icons/mm-icons.svg#mm-icon-arrow-right"></use></svg></a>
+   </section>
+ 
+   <!-- REVIEWS (structure only; approved testimonials pending) -->
+@@ -1001,9 +1002,9 @@
+ 
+   <!-- TRUST -->
+   <section class="wrap wf-trust" id="trust" aria-label="Shopping reassurance">
+-    <div class="wf-ti"><svg viewBox="0 0 24 24"><rect x="2" y="7" width="13" height="10" rx="1"/><path d="M15 10h4l3 3v4h-7z"/><circle cx="7" cy="18" r="1.6"/><circle cx="18" cy="18" r="1.6"/></svg><div><strong>Free Shipping</strong><span>Orders over $99</span></div></div>
+-    <div class="wf-ti"><svg viewBox="0 0 24 24"><rect x="5" y="11" width="14" height="9" rx="1.5"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg><div><strong>Secure payments</strong><span>Safe and easy checkout</span></div></div>
+-    <a class="wf-ti" href="/stockists"><svg viewBox="0 0 24 24"><path d="M12 21s-7-4.5-7-10a7 7 0 0 1 14 0c0 5.5-7 10-7 10z"/><circle cx="12" cy="11" r="2.5"/></svg><div><strong>Stockists</strong><span>200+ locations across Australia</span></div></a>
++    <div class="wf-ti"><svg class="mm-icon" viewBox="0 0 24 24" aria-hidden="true"><use href="/assets/icons/mm-icons.svg#mm-icon-truck"></use></svg><div><strong>Free Shipping</strong><span>Orders over $99</span></div></div>
++    <div class="wf-ti"><svg class="mm-icon" viewBox="0 0 24 24" aria-hidden="true"><use href="/assets/icons/mm-icons.svg#mm-icon-lock"></use></svg><div><strong>Secure payments</strong><span>Safe and easy checkout</span></div></div>
++    <a class="wf-ti" href="/stockists"><svg class="mm-icon" viewBox="0 0 24 24" aria-hidden="true"><use href="/assets/icons/mm-icons.svg#mm-icon-map-pin"></use></svg><div><strong>Stockists</strong><span>200+ locations across Australia</span></div></a>
+   </section>
+ 
+   </main>
+@@ -1020,9 +1021,9 @@
+       <a class="wf-logo mm-site-footer__home" href="#top" style="font-size:1.15rem">maple moon</a>
+       <nav class="fnav mm-site-footer__nav" aria-label="Footer navigation"><a href="/shop">Shop</a><a href="/our-story">Our Story</a><a href="/stockists">Stockists</a><a href="mailto:info@maplemoon.com.au?subject=Wholesale%20enquiry">Wholesale</a><a href="/contact">Contact</a><a href="/faq">FAQ</a></nav>
+       <div class="soc" aria-label="Social links to follow">
+-        <span aria-label="Instagram link to follow"><svg viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" rx="4.5"/><circle cx="12" cy="12" r="3.5"/></svg></span>
+-        <span aria-label="Facebook link to follow"><svg viewBox="0 0 24 24"><path d="M14 9h2.5V6H14c-2 0-3.5 1.4-3.5 3.5V11H8v3h2.5v6h3v-6H16l.5-3h-3V9.5c0-.3.2-.5.5-.5z"/></svg></span>
+-        <a href="mailto:info@maplemoon.com.au" aria-label="Email"><svg viewBox="0 0 24 24"><rect x="3" y="6" width="18" height="13" rx="2"/><path d="M4 7l8 6 8-6"/></svg></a>
++        <span aria-label="Instagram link to follow"><svg class="mm-icon" viewBox="0 0 24 24" aria-hidden="true"><use href="/assets/icons/mm-icons.svg#mm-icon-instagram"></use></svg></span>
++        <span aria-label="Facebook link to follow"><svg class="mm-icon" viewBox="0 0 24 24" aria-hidden="true"><use href="/assets/icons/mm-icons.svg#mm-icon-facebook"></use></svg></span>
++        <a href="mailto:info@maplemoon.com.au" aria-label="Email"><svg class="mm-icon" viewBox="0 0 24 24" aria-hidden="true"><use href="/assets/icons/mm-icons.svg#mm-icon-mail"></use></svg></a>
+       </div>
+     </div>
+   </div></footer>
+@@ -3153,8 +3154,26 @@
+   background:linear-gradient(180deg,#e4f0f8 0%,#d8e8f2 48%,#e4f0f8 100%)!important;
+ }
+ .wf-where1::before{
+-  height:112px!important;
+-  background:linear-gradient(180deg,#15314f 0%,#254762 30%,rgba(76,111,137,.72) 58%,rgba(186,211,227,.72) 80%,#e4f0f8 100%)!important;
++  height:224px!important;
++  background:linear-gradient(180deg,
++    #d6e6ed 0%,
++    #d6e6ed 4%,
++    #d2e3eb 9%,
++    #c8dce5 15%,
++    #b7ceda 22%,
++    #9fb9ca 30%,
++    #7897ad 39%,
++    #4e6e85 47%,
++    #2c4b65 54%,
++    #193653 60%,
++    #15314f 64%,
++    rgba(31,59,83,.94) 69%,
++    rgba(57,87,109,.82) 75%,
++    rgba(91,119,139,.66) 81%,
++    rgba(127,153,170,.48) 87%,
++    rgba(164,187,201,.30) 92%,
++    rgba(199,217,227,.15) 96%,
++    rgba(228,240,248,0) 100%)!important;
+ }
+ .wf-where1 .wf-photo-credit{
+   display:flex;
+@@ -3192,6 +3211,128 @@
+   .wf-line-dark .cf-item:not(.center)::after{filter:blur(8px);}
+ }
+ </style>
++<style id="homepage-priority-fixes-20260825">
++/* Slot 3 is an editorial, text-only route into the founders' story. */
++.mm-founder-cta{
++  position:relative;
++  isolation:isolate;
++  min-width:0;
++  min-height:534.63px;
++  overflow:hidden;
++  justify-content:flex-start!important;
++  padding:32px 28px 30px!important;
++  background:
++    radial-gradient(circle at 50% 19%,rgba(248,244,219,.32) 0%,rgba(226,237,239,.16) 25%,transparent 52%),
++    linear-gradient(180deg,rgba(248,252,250,.31),rgba(220,234,240,.24))!important;
++}
++.mm-founder-card,.mm-founder-cta{
++  border-radius:24px;
++  overflow:hidden;
++}
++.mm-founder-card .mm-pending-media{
++  flex:1 1 auto;
++}
++.mm-founder-cta::after{
++  content:"";
++  position:absolute;
++  z-index:-1;
++  left:28px;
++  right:28px;
++  top:178px;
++  height:1px;
++  background:linear-gradient(90deg,#a78852 0%,rgba(167,136,82,.32) 62%,transparent 100%);
++}
++.mm-founder-cta .mm-moon{
++  width:116px;
++  aspect-ratio:1;
++  display:grid;
++  place-items:center;
++  margin:0 auto 52px;
++  border:1px solid rgba(167,136,82,.22);
++  border-radius:50%;
++  color:#8b7040;
++  font-size:4.6rem;
++  font-weight:300;
++  line-height:1;
++  background:radial-gradient(circle,rgba(249,245,218,.54) 0%,rgba(225,237,240,.24) 54%,transparent 72%);
++}
++.mm-founder-cta h3{
++  margin:auto 0 16px;
++  color:#263c48;
++  font-size:clamp(1.58rem,2vw,1.88rem)!important;
++  line-height:1.06;
++  letter-spacing:-.015em;
++  text-wrap:balance;
++}
++.mm-founder-cta h3>span{display:block;white-space:nowrap;}
++.mm-founder-cta p{
++  max-width:23ch;
++  margin:0 0 24px;
++  color:#526873!important;
++  font-size:.94rem;
++  line-height:1.58!important;
++  text-wrap:balance;
++}
++.mm-founder-cta .wf-pill{
++  align-self:flex-start;
++  flex:0 0 auto;
++  margin-top:0!important;
++  white-space:nowrap;
++}
++@media(max-width:900px){
++  .mm-founder-cta{min-height:350px;padding:30px 26px!important;}
++  .mm-founder-cta::after{top:154px;}
++  .mm-founder-cta .mm-moon{width:96px;margin-bottom:44px;font-size:3.8rem;}
++  .mm-founder-cta h3{font-size:1.72rem!important;}
++  .mm-founder-cta p{max-width:28ch;}
++}
++
++/* The 2:3 ritual photographs use one consistent 4:5 frame; captions live below, never on the product. */
++.q-when .q-tile{
++  min-height:0!important;
++  display:flex!important;
++  flex-direction:column;
++  background:rgba(232,241,244,.58)!important;
++}
++.q-when .q-tile .ph{
++  position:relative!important;
++  inset:auto!important;
++  flex:0 0 auto;
++  width:100%;
++  min-height:0!important;
++  aspect-ratio:4 / 5!important;
++  border-radius:23px 23px 0 0!important;
++}
++.q-when .q-tile img{
++  display:block;
++  width:100%;
++  height:100%;
++  object-fit:cover!important;
++  filter:saturate(.78) contrast(.94) brightness(.96)!important;
++}
++.q-when .q-tile:nth-child(1) img{object-position:50% 68%!important;}
++.q-when .q-tile:nth-child(2) img{object-position:50% 56%!important;}
++.q-when .q-tile:nth-child(3) img{object-position:50% 54%!important;}
++.q-when .q-tile .ph::after{background:none!important;}
++.q-when .q-tile .tx{
++  position:relative!important;
++  inset:auto!important;
++  flex:1 1 auto;
++  min-height:148px!important;
++  padding:21px 22px 24px!important;
++  border:0!important;
++  border-top:1px solid rgba(57,73,80,.16)!important;
++  border-radius:0 0 23px 23px;
++  background:linear-gradient(180deg,rgba(238,246,247,.86),rgba(222,235,241,.76))!important;
++  color:#273d49!important;
++}
++.q-when .q-tile .tx span{color:#526872!important;}
++.q-when .q-tile .tx .mo{color:#8b7040!important;}
++.q-when .q-tile strong{color:#273d49!important;}
++@media(max-width:900px){
++  .q-when .q-tile .tx{min-height:138px!important;}
++}
++</style>
+ <script id="homepage-cta-mobile-review-query-20260728">
+ (() => {
+   const q = new URLSearchParams(location.search);
